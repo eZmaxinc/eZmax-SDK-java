@@ -8,7 +8,7 @@ Request for POST /2/object/ezsignfolder
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**aObjEzsignfolder** | [**List&lt;EzsignfolderRequest&gt;**](EzsignfolderRequest.md) |  |  |
+|**aObjEzsignfolder** | [**List&lt;EzsignfolderRequestCompound&gt;**](EzsignfolderRequestCompound.md) |  |  |
 
 
 

@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsignsignergroupmembership/{pkiEzsignsignergroupmembershipID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignergroupmembershipGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUPMEMBERSHIP = "objEzsignsignergroupmembership";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUPMEMBERSHIP)
-  @javax.annotation.Nonnull
   private EzsignsignergroupmembershipResponseCompound objEzsignsignergroupmembership;
 
   public EzsignsignergroupmembershipGetObjectV2ResponseMPayload() {
   }
 
-  public EzsignsignergroupmembershipGetObjectV2ResponseMPayload objEzsignsignergroupmembership(@javax.annotation.Nonnull EzsignsignergroupmembershipResponseCompound objEzsignsignergroupmembership) {
+  public EzsignsignergroupmembershipGetObjectV2ResponseMPayload objEzsignsignergroupmembership(EzsignsignergroupmembershipResponseCompound objEzsignsignergroupmembership) {
     this.objEzsignsignergroupmembership = objEzsignsignergroupmembership;
     return this;
   }
@@ -73,7 +72,7 @@ public class EzsignsignergroupmembershipGetObjectV2ResponseMPayload {
     return objEzsignsignergroupmembership;
   }
 
-  public void setObjEzsignsignergroupmembership(@javax.annotation.Nonnull EzsignsignergroupmembershipResponseCompound objEzsignsignergroupmembership) {
+  public void setObjEzsignsignergroupmembership(EzsignsignergroupmembershipResponseCompound objEzsignsignergroupmembership) {
     this.objEzsignsignergroupmembership = objEzsignsignergroupmembership;
   }
 

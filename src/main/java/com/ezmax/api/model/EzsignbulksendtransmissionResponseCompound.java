@@ -16,7 +16,6 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CustomEzsignfoldertransmissionResponse;
-import com.ezmax.api.model.EzsignbulksendtransmissionResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,17 +52,134 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksendtransmission Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignbulksendtransmissionResponseCompound extends EzsignbulksendtransmissionResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsignbulksendtransmissionResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D = "pkiEzsignbulksendtransmissionID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D)
+  private Integer pkiEzsignbulksendtransmissionID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D = "fkiEzsignbulksendID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D)
+  private Integer fkiEzsignbulksendID;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNBULKSENDTRANSMISSION_DESCRIPTION = "sEzsignbulksendtransmissionDescription";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSENDTRANSMISSION_DESCRIPTION)
+  private String sEzsignbulksendtransmissionDescription;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNBULKSENDTRANSMISSION_ERRORS = "iEzsignbulksendtransmissionErrors";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNBULKSENDTRANSMISSION_ERRORS)
+  private Integer iEzsignbulksendtransmissionErrors;
+
+  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
+  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  private CommonAudit objAudit;
+
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTRANSMISSION = "a_objEzsignfoldertransmission";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTRANSMISSION)
-  @javax.annotation.Nonnull
   private List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission = new ArrayList<>();
 
   public EzsignbulksendtransmissionResponseCompound() {
   }
 
-  public EzsignbulksendtransmissionResponseCompound aObjEzsignfoldertransmission(@javax.annotation.Nonnull List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission) {
+  public EzsignbulksendtransmissionResponseCompound pkiEzsignbulksendtransmissionID(Integer pkiEzsignbulksendtransmissionID) {
+    this.pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignbulksendtransmission
+   * minimum: 0
+   * @return pkiEzsignbulksendtransmissionID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiEzsignbulksendtransmissionID() {
+    return pkiEzsignbulksendtransmissionID;
+  }
+
+  public void setPkiEzsignbulksendtransmissionID(Integer pkiEzsignbulksendtransmissionID) {
+    this.pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID;
+  }
+
+
+  public EzsignbulksendtransmissionResponseCompound fkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
+    this.fkiEzsignbulksendID = fkiEzsignbulksendID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignbulksend
+   * minimum: 0
+   * @return fkiEzsignbulksendID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsignbulksendID() {
+    return fkiEzsignbulksendID;
+  }
+
+  public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
+    this.fkiEzsignbulksendID = fkiEzsignbulksendID;
+  }
+
+
+  public EzsignbulksendtransmissionResponseCompound sEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
+    this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Ezsignbulksendtransmission
+   * @return sEzsignbulksendtransmissionDescription
+   */
+  @javax.annotation.Nonnull
+  public String getsEzsignbulksendtransmissionDescription() {
+    return sEzsignbulksendtransmissionDescription;
+  }
+
+  public void setsEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
+    this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
+  }
+
+
+  public EzsignbulksendtransmissionResponseCompound iEzsignbulksendtransmissionErrors(Integer iEzsignbulksendtransmissionErrors) {
+    this.iEzsignbulksendtransmissionErrors = iEzsignbulksendtransmissionErrors;
+    return this;
+  }
+
+  /**
+   * The number of errors during the Ezsignbulksendtransmission
+   * minimum: 0
+   * @return iEzsignbulksendtransmissionErrors
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsignbulksendtransmissionErrors() {
+    return iEzsignbulksendtransmissionErrors;
+  }
+
+  public void setiEzsignbulksendtransmissionErrors(Integer iEzsignbulksendtransmissionErrors) {
+    this.iEzsignbulksendtransmissionErrors = iEzsignbulksendtransmissionErrors;
+  }
+
+
+  public EzsignbulksendtransmissionResponseCompound objAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+    return this;
+  }
+
+  /**
+   * Get objAudit
+   * @return objAudit
+   */
+  @javax.annotation.Nonnull
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+  }
+
+
+  public EzsignbulksendtransmissionResponseCompound aObjEzsignfoldertransmission(List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission) {
     this.aObjEzsignfoldertransmission = aObjEzsignfoldertransmission;
     return this;
   }
@@ -85,7 +201,7 @@ public class EzsignbulksendtransmissionResponseCompound extends Ezsignbulksendtr
     return aObjEzsignfoldertransmission;
   }
 
-  public void setaObjEzsignfoldertransmission(@javax.annotation.Nonnull List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission) {
+  public void setaObjEzsignfoldertransmission(List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission) {
     this.aObjEzsignfoldertransmission = aObjEzsignfoldertransmission;
   }
 
@@ -100,20 +216,28 @@ public class EzsignbulksendtransmissionResponseCompound extends Ezsignbulksendtr
       return false;
     }
     EzsignbulksendtransmissionResponseCompound ezsignbulksendtransmissionResponseCompound = (EzsignbulksendtransmissionResponseCompound) o;
-    return Objects.equals(this.aObjEzsignfoldertransmission, ezsignbulksendtransmissionResponseCompound.aObjEzsignfoldertransmission) &&
-        super.equals(o);
+    return Objects.equals(this.pkiEzsignbulksendtransmissionID, ezsignbulksendtransmissionResponseCompound.pkiEzsignbulksendtransmissionID) &&
+        Objects.equals(this.fkiEzsignbulksendID, ezsignbulksendtransmissionResponseCompound.fkiEzsignbulksendID) &&
+        Objects.equals(this.sEzsignbulksendtransmissionDescription, ezsignbulksendtransmissionResponseCompound.sEzsignbulksendtransmissionDescription) &&
+        Objects.equals(this.iEzsignbulksendtransmissionErrors, ezsignbulksendtransmissionResponseCompound.iEzsignbulksendtransmissionErrors) &&
+        Objects.equals(this.objAudit, ezsignbulksendtransmissionResponseCompound.objAudit) &&
+        Objects.equals(this.aObjEzsignfoldertransmission, ezsignbulksendtransmissionResponseCompound.aObjEzsignfoldertransmission);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzsignfoldertransmission, super.hashCode());
+    return Objects.hash(pkiEzsignbulksendtransmissionID, fkiEzsignbulksendID, sEzsignbulksendtransmissionDescription, iEzsignbulksendtransmissionErrors, objAudit, aObjEzsignfoldertransmission);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendtransmissionResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsignbulksendtransmissionID: ").append(toIndentedString(pkiEzsignbulksendtransmissionID)).append("\n");
+    sb.append("    fkiEzsignbulksendID: ").append(toIndentedString(fkiEzsignbulksendID)).append("\n");
+    sb.append("    sEzsignbulksendtransmissionDescription: ").append(toIndentedString(sEzsignbulksendtransmissionDescription)).append("\n");
+    sb.append("    iEzsignbulksendtransmissionErrors: ").append(toIndentedString(iEzsignbulksendtransmissionErrors)).append("\n");
+    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("    aObjEzsignfoldertransmission: ").append(toIndentedString(aObjEzsignfoldertransmission)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -146,12 +270,12 @@ public class EzsignbulksendtransmissionResponseCompound extends Ezsignbulksendtr
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objEzsignfoldertransmission");
     openapiRequiredFields.add("pkiEzsignbulksendtransmissionID");
     openapiRequiredFields.add("fkiEzsignbulksendID");
     openapiRequiredFields.add("sEzsignbulksendtransmissionDescription");
     openapiRequiredFields.add("iEzsignbulksendtransmissionErrors");
     openapiRequiredFields.add("objAudit");
+    openapiRequiredFields.add("a_objEzsignfoldertransmission");
   }
 
   /**
@@ -182,6 +306,11 @@ public class EzsignbulksendtransmissionResponseCompound extends Ezsignbulksendtr
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sEzsignbulksendtransmissionDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignbulksendtransmissionDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignbulksendtransmissionDescription").toString()));
+      }
+      // validate the required field `objAudit`
+      CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignfoldertransmission").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignfoldertransmission` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignfoldertransmission").toString()));

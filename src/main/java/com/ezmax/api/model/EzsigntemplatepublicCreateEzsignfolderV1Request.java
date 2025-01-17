@@ -51,32 +51,28 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplatepublic/createEzsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepublicCreateEzsignfolderV1Request {
   public static final String SERIALIZED_NAME_PKS_EZMAXCUSTOMER_CODE = "pksEzmaxcustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_EZMAXCUSTOMER_CODE)
-  @javax.annotation.Nonnull
   private String pksEzmaxcustomerCode;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_REFERENCEID = "sEzsigntemplatepublicReferenceid";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_REFERENCEID)
-  @javax.annotation.Nonnull
   private String sEzsigntemplatepublicReferenceid;
 
   public static final String SERIALIZED_NAME_A_S_EZSIGNTEMPLATESIGNER_DESCRIPTION = "a_sEzsigntemplatesignerDescription";
   @SerializedName(SERIALIZED_NAME_A_S_EZSIGNTEMPLATESIGNER_DESCRIPTION)
-  @javax.annotation.Nonnull
   private List<String> aSEzsigntemplatesignerDescription = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNER = "a_objEzsignsigner";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNER)
-  @javax.annotation.Nonnull
   private List<EzsignsignerRequestCompound> aObjEzsignsigner = new ArrayList<>();
 
   public EzsigntemplatepublicCreateEzsignfolderV1Request() {
   }
 
-  public EzsigntemplatepublicCreateEzsignfolderV1Request pksEzmaxcustomerCode(@javax.annotation.Nonnull String pksEzmaxcustomerCode) {
+  public EzsigntemplatepublicCreateEzsignfolderV1Request pksEzmaxcustomerCode(String pksEzmaxcustomerCode) {
     this.pksEzmaxcustomerCode = pksEzmaxcustomerCode;
     return this;
   }
@@ -90,12 +86,12 @@ public class EzsigntemplatepublicCreateEzsignfolderV1Request {
     return pksEzmaxcustomerCode;
   }
 
-  public void setPksEzmaxcustomerCode(@javax.annotation.Nonnull String pksEzmaxcustomerCode) {
+  public void setPksEzmaxcustomerCode(String pksEzmaxcustomerCode) {
     this.pksEzmaxcustomerCode = pksEzmaxcustomerCode;
   }
 
 
-  public EzsigntemplatepublicCreateEzsignfolderV1Request sEzsigntemplatepublicReferenceid(@javax.annotation.Nonnull String sEzsigntemplatepublicReferenceid) {
+  public EzsigntemplatepublicCreateEzsignfolderV1Request sEzsigntemplatepublicReferenceid(String sEzsigntemplatepublicReferenceid) {
     this.sEzsigntemplatepublicReferenceid = sEzsigntemplatepublicReferenceid;
     return this;
   }
@@ -109,12 +105,12 @@ public class EzsigntemplatepublicCreateEzsignfolderV1Request {
     return sEzsigntemplatepublicReferenceid;
   }
 
-  public void setsEzsigntemplatepublicReferenceid(@javax.annotation.Nonnull String sEzsigntemplatepublicReferenceid) {
+  public void setsEzsigntemplatepublicReferenceid(String sEzsigntemplatepublicReferenceid) {
     this.sEzsigntemplatepublicReferenceid = sEzsigntemplatepublicReferenceid;
   }
 
 
-  public EzsigntemplatepublicCreateEzsignfolderV1Request aSEzsigntemplatesignerDescription(@javax.annotation.Nonnull List<String> aSEzsigntemplatesignerDescription) {
+  public EzsigntemplatepublicCreateEzsignfolderV1Request aSEzsigntemplatesignerDescription(List<String> aSEzsigntemplatesignerDescription) {
     this.aSEzsigntemplatesignerDescription = aSEzsigntemplatesignerDescription;
     return this;
   }
@@ -136,12 +132,12 @@ public class EzsigntemplatepublicCreateEzsignfolderV1Request {
     return aSEzsigntemplatesignerDescription;
   }
 
-  public void setaSEzsigntemplatesignerDescription(@javax.annotation.Nonnull List<String> aSEzsigntemplatesignerDescription) {
+  public void setaSEzsigntemplatesignerDescription(List<String> aSEzsigntemplatesignerDescription) {
     this.aSEzsigntemplatesignerDescription = aSEzsigntemplatesignerDescription;
   }
 
 
-  public EzsigntemplatepublicCreateEzsignfolderV1Request aObjEzsignsigner(@javax.annotation.Nonnull List<EzsignsignerRequestCompound> aObjEzsignsigner) {
+  public EzsigntemplatepublicCreateEzsignfolderV1Request aObjEzsignsigner(List<EzsignsignerRequestCompound> aObjEzsignsigner) {
     this.aObjEzsignsigner = aObjEzsignsigner;
     return this;
   }
@@ -163,7 +159,7 @@ public class EzsigntemplatepublicCreateEzsignfolderV1Request {
     return aObjEzsignsigner;
   }
 
-  public void setaObjEzsignsigner(@javax.annotation.Nonnull List<EzsignsignerRequestCompound> aObjEzsignsigner) {
+  public void setaObjEzsignsigner(List<EzsignsignerRequestCompound> aObjEzsignsigner) {
     this.aObjEzsignsigner = aObjEzsignsigner;
   }
 

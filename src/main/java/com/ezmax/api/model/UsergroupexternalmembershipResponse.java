@@ -48,52 +48,44 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupexternalmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupexternalmembershipResponse {
   public static final String SERIALIZED_NAME_PKI_USERGROUPEXTERNALMEMBERSHIP_I_D = "pkiUsergroupexternalmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPEXTERNALMEMBERSHIP_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiUsergroupexternalmembershipID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D = "fkiUsergroupexternalID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiUsergroupexternalID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
-  @javax.annotation.Nonnull
   private String sUserFirstname;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
-  @javax.annotation.Nonnull
   private String sUserLastname;
 
   public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
   @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
-  @javax.annotation.Nonnull
   private String sUserLoginname;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  @javax.annotation.Nonnull
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME = "sUsergroupexternalName";
   @SerializedName(SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME)
-  @javax.annotation.Nonnull
   private String sUsergroupexternalName;
 
   public UsergroupexternalmembershipResponse() {
   }
 
-  public UsergroupexternalmembershipResponse pkiUsergroupexternalmembershipID(@javax.annotation.Nonnull Integer pkiUsergroupexternalmembershipID) {
+  public UsergroupexternalmembershipResponse pkiUsergroupexternalmembershipID(Integer pkiUsergroupexternalmembershipID) {
     this.pkiUsergroupexternalmembershipID = pkiUsergroupexternalmembershipID;
     return this;
   }
@@ -109,12 +101,12 @@ public class UsergroupexternalmembershipResponse {
     return pkiUsergroupexternalmembershipID;
   }
 
-  public void setPkiUsergroupexternalmembershipID(@javax.annotation.Nonnull Integer pkiUsergroupexternalmembershipID) {
+  public void setPkiUsergroupexternalmembershipID(Integer pkiUsergroupexternalmembershipID) {
     this.pkiUsergroupexternalmembershipID = pkiUsergroupexternalmembershipID;
   }
 
 
-  public UsergroupexternalmembershipResponse fkiUsergroupexternalID(@javax.annotation.Nonnull Integer fkiUsergroupexternalID) {
+  public UsergroupexternalmembershipResponse fkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
     this.fkiUsergroupexternalID = fkiUsergroupexternalID;
     return this;
   }
@@ -130,12 +122,12 @@ public class UsergroupexternalmembershipResponse {
     return fkiUsergroupexternalID;
   }
 
-  public void setFkiUsergroupexternalID(@javax.annotation.Nonnull Integer fkiUsergroupexternalID) {
+  public void setFkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
     this.fkiUsergroupexternalID = fkiUsergroupexternalID;
   }
 
 
-  public UsergroupexternalmembershipResponse fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
+  public UsergroupexternalmembershipResponse fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -150,12 +142,12 @@ public class UsergroupexternalmembershipResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public UsergroupexternalmembershipResponse sUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
+  public UsergroupexternalmembershipResponse sUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -169,12 +161,12 @@ public class UsergroupexternalmembershipResponse {
     return sUserFirstname;
   }
 
-  public void setsUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
+  public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
-  public UsergroupexternalmembershipResponse sUserLastname(@javax.annotation.Nonnull String sUserLastname) {
+  public UsergroupexternalmembershipResponse sUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -188,12 +180,12 @@ public class UsergroupexternalmembershipResponse {
     return sUserLastname;
   }
 
-  public void setsUserLastname(@javax.annotation.Nonnull String sUserLastname) {
+  public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
-  public UsergroupexternalmembershipResponse sUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
+  public UsergroupexternalmembershipResponse sUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -207,12 +199,12 @@ public class UsergroupexternalmembershipResponse {
     return sUserLoginname;
   }
 
-  public void setsUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
+  public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
-  public UsergroupexternalmembershipResponse sEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
+  public UsergroupexternalmembershipResponse sEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -226,12 +218,12 @@ public class UsergroupexternalmembershipResponse {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
+  public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public UsergroupexternalmembershipResponse sUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
+  public UsergroupexternalmembershipResponse sUsergroupexternalName(String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
     return this;
   }
@@ -245,7 +237,7 @@ public class UsergroupexternalmembershipResponse {
     return sUsergroupexternalName;
   }
 
-  public void setsUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
+  public void setsUsergroupexternalName(String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
   }
 
@@ -342,6 +334,21 @@ public class UsergroupexternalmembershipResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in UsergroupexternalmembershipResponse is not found in the empty JSON string", UsergroupexternalmembershipResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!UsergroupexternalmembershipResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UsergroupexternalmembershipResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : UsergroupexternalmembershipResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sUserFirstname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
@@ -360,6 +367,34 @@ public class UsergroupexternalmembershipResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!UsergroupexternalmembershipResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'UsergroupexternalmembershipResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<UsergroupexternalmembershipResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(UsergroupexternalmembershipResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<UsergroupexternalmembershipResponse>() {
+           @Override
+           public void write(JsonWriter out, UsergroupexternalmembershipResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public UsergroupexternalmembershipResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of UsergroupexternalmembershipResponse given an JSON string

@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EzmaxinvoicingcommissionResponseCompound;
-import com.ezmax.api.model.EzmaxinvoicingsummaryglobalResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,17 +51,457 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryglobal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzmaxinvoicingsummaryglobalResponseCompound extends EzmaxinvoicingsummaryglobalResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzmaxinvoicingsummaryglobalResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D = "pkiEzmaxinvoicingsummaryglobalID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D)
+  private Integer pkiEzmaxinvoicingsummaryglobalID;
+
+  public static final String SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D = "fkiEzmaxinvoicingID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D)
+  private Integer fkiEzmaxinvoicingID;
+
+  public static final String SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D = "fkiEzmaxproductID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D)
+  private Integer fkiEzmaxproductID;
+
+  public static final String SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X = "sEzmaxproductDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X)
+  private String sEzmaxproductDescriptionX;
+
+  public static final String SERIALIZED_NAME_DT_EZMAXINVOICINGSUMMARYGLOBAL_START = "dtEzmaxinvoicingsummaryglobalStart";
+  @SerializedName(SERIALIZED_NAME_DT_EZMAXINVOICINGSUMMARYGLOBAL_START)
+  private String dtEzmaxinvoicingsummaryglobalStart;
+
+  public static final String SERIALIZED_NAME_DT_EZMAXINVOICINGSUMMARYGLOBAL_END = "dtEzmaxinvoicingsummaryglobalEnd";
+  @SerializedName(SERIALIZED_NAME_DT_EZMAXINVOICINGSUMMARYGLOBAL_END)
+  private String dtEzmaxinvoicingsummaryglobalEnd;
+
+  public static final String SERIALIZED_NAME_I_EZMAXINVOICINGSUMMARYGLOBAL_DAYS = "iEzmaxinvoicingsummaryglobalDays";
+  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGSUMMARYGLOBAL_DAYS)
+  private Integer iEzmaxinvoicingsummaryglobalDays;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_COUNTREAL = "dEzmaxinvoicingsummaryglobalCountreal";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_COUNTREAL)
+  private String dEzmaxinvoicingsummaryglobalCountreal;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_COUNTBILLED = "dEzmaxinvoicingsummaryglobalCountbilled";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_COUNTBILLED)
+  private String dEzmaxinvoicingsummaryglobalCountbilled;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_SUBTOTAL = "dEzmaxinvoicingsummaryglobalSubtotal";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_SUBTOTAL)
+  private String dEzmaxinvoicingsummaryglobalSubtotal;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_REBATEAMOUNT = "dEzmaxinvoicingsummaryglobalRebateamount";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_REBATEAMOUNT)
+  private String dEzmaxinvoicingsummaryglobalRebateamount;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_REBATEPERCENT = "dEzmaxinvoicingsummaryglobalRebatepercent";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_REBATEPERCENT)
+  private String dEzmaxinvoicingsummaryglobalRebatepercent;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_REBATETOTAL = "dEzmaxinvoicingsummaryglobalRebatetotal";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_REBATETOTAL)
+  private String dEzmaxinvoicingsummaryglobalRebatetotal;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_TOTAL = "dEzmaxinvoicingsummaryglobalTotal";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_TOTAL)
+  private String dEzmaxinvoicingsummaryglobalTotal;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_REPRESENTATIVE = "dEzmaxinvoicingsummaryglobalRepresentative";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_REPRESENTATIVE)
+  private String dEzmaxinvoicingsummaryglobalRepresentative;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_PARTNER = "dEzmaxinvoicingsummaryglobalPartner";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_PARTNER)
+  private String dEzmaxinvoicingsummaryglobalPartner;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_NET = "dEzmaxinvoicingsummaryglobalNet";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYGLOBAL_NET)
+  private String dEzmaxinvoicingsummaryglobalNet;
+
+  public static final String SERIALIZED_NAME_B_EZMAXINVOICINGSUMMARYGLOBAL_ADJUSTMENT = "bEzmaxinvoicingsummaryglobalAdjustment";
+  @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICINGSUMMARYGLOBAL_ADJUSTMENT)
+  private Boolean bEzmaxinvoicingsummaryglobalAdjustment;
+
+  public static final String SERIALIZED_NAME_T_EZMAXPRODUCT_HELP_X = "tEzmaxproductHelpX";
+  @SerializedName(SERIALIZED_NAME_T_EZMAXPRODUCT_HELP_X)
+  private String tEzmaxproductHelpX;
+
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGCOMMISSION = "a_objEzmaxinvoicingcommission";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGCOMMISSION)
-  @javax.annotation.Nullable
   private List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission = new ArrayList<>();
 
   public EzmaxinvoicingsummaryglobalResponseCompound() {
   }
 
-  public EzmaxinvoicingsummaryglobalResponseCompound aObjEzmaxinvoicingcommission(@javax.annotation.Nullable List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission) {
+  public EzmaxinvoicingsummaryglobalResponseCompound pkiEzmaxinvoicingsummaryglobalID(Integer pkiEzmaxinvoicingsummaryglobalID) {
+    this.pkiEzmaxinvoicingsummaryglobalID = pkiEzmaxinvoicingsummaryglobalID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezmaxinvoicingsummaryglobal
+   * minimum: 0
+   * @return pkiEzmaxinvoicingsummaryglobalID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiEzmaxinvoicingsummaryglobalID() {
+    return pkiEzmaxinvoicingsummaryglobalID;
+  }
+
+  public void setPkiEzmaxinvoicingsummaryglobalID(Integer pkiEzmaxinvoicingsummaryglobalID) {
+    this.pkiEzmaxinvoicingsummaryglobalID = pkiEzmaxinvoicingsummaryglobalID;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound fkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
+    this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezmaxinvoicing
+   * minimum: 0
+   * @return fkiEzmaxinvoicingID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzmaxinvoicingID() {
+    return fkiEzmaxinvoicingID;
+  }
+
+  public void setFkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
+    this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound fkiEzmaxproductID(Integer fkiEzmaxproductID) {
+    this.fkiEzmaxproductID = fkiEzmaxproductID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezmaxproduct
+   * minimum: 1
+   * @return fkiEzmaxproductID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzmaxproductID() {
+    return fkiEzmaxproductID;
+  }
+
+  public void setFkiEzmaxproductID(Integer fkiEzmaxproductID) {
+    this.fkiEzmaxproductID = fkiEzmaxproductID;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound sEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
+    this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
+    return this;
+  }
+
+  /**
+   * The description of the Ezmaxproduct in the language of the requester
+   * @return sEzmaxproductDescriptionX
+   */
+  @javax.annotation.Nonnull
+  public String getsEzmaxproductDescriptionX() {
+    return sEzmaxproductDescriptionX;
+  }
+
+  public void setsEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
+    this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dtEzmaxinvoicingsummaryglobalStart(String dtEzmaxinvoicingsummaryglobalStart) {
+    this.dtEzmaxinvoicingsummaryglobalStart = dtEzmaxinvoicingsummaryglobalStart;
+    return this;
+  }
+
+  /**
+   * The start date for the Ezmaxinvoicingsummaryglobal
+   * @return dtEzmaxinvoicingsummaryglobalStart
+   */
+  @javax.annotation.Nonnull
+  public String getDtEzmaxinvoicingsummaryglobalStart() {
+    return dtEzmaxinvoicingsummaryglobalStart;
+  }
+
+  public void setDtEzmaxinvoicingsummaryglobalStart(String dtEzmaxinvoicingsummaryglobalStart) {
+    this.dtEzmaxinvoicingsummaryglobalStart = dtEzmaxinvoicingsummaryglobalStart;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dtEzmaxinvoicingsummaryglobalEnd(String dtEzmaxinvoicingsummaryglobalEnd) {
+    this.dtEzmaxinvoicingsummaryglobalEnd = dtEzmaxinvoicingsummaryglobalEnd;
+    return this;
+  }
+
+  /**
+   * The end date for the Ezmaxinvoicingsummaryglobal
+   * @return dtEzmaxinvoicingsummaryglobalEnd
+   */
+  @javax.annotation.Nonnull
+  public String getDtEzmaxinvoicingsummaryglobalEnd() {
+    return dtEzmaxinvoicingsummaryglobalEnd;
+  }
+
+  public void setDtEzmaxinvoicingsummaryglobalEnd(String dtEzmaxinvoicingsummaryglobalEnd) {
+    this.dtEzmaxinvoicingsummaryglobalEnd = dtEzmaxinvoicingsummaryglobalEnd;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound iEzmaxinvoicingsummaryglobalDays(Integer iEzmaxinvoicingsummaryglobalDays) {
+    this.iEzmaxinvoicingsummaryglobalDays = iEzmaxinvoicingsummaryglobalDays;
+    return this;
+  }
+
+  /**
+   * The number of days for the Ezmaxinvoicingsummaryglobal
+   * minimum: 1
+   * @return iEzmaxinvoicingsummaryglobalDays
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzmaxinvoicingsummaryglobalDays() {
+    return iEzmaxinvoicingsummaryglobalDays;
+  }
+
+  public void setiEzmaxinvoicingsummaryglobalDays(Integer iEzmaxinvoicingsummaryglobalDays) {
+    this.iEzmaxinvoicingsummaryglobalDays = iEzmaxinvoicingsummaryglobalDays;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalCountreal(String dEzmaxinvoicingsummaryglobalCountreal) {
+    this.dEzmaxinvoicingsummaryglobalCountreal = dEzmaxinvoicingsummaryglobalCountreal;
+    return this;
+  }
+
+  /**
+   * The count item calculated
+   * @return dEzmaxinvoicingsummaryglobalCountreal
+   */
+  @javax.annotation.Nonnull
+  public String getdEzmaxinvoicingsummaryglobalCountreal() {
+    return dEzmaxinvoicingsummaryglobalCountreal;
+  }
+
+  public void setdEzmaxinvoicingsummaryglobalCountreal(String dEzmaxinvoicingsummaryglobalCountreal) {
+    this.dEzmaxinvoicingsummaryglobalCountreal = dEzmaxinvoicingsummaryglobalCountreal;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalCountbilled(String dEzmaxinvoicingsummaryglobalCountbilled) {
+    this.dEzmaxinvoicingsummaryglobalCountbilled = dEzmaxinvoicingsummaryglobalCountbilled;
+    return this;
+  }
+
+  /**
+   * The count item billed
+   * @return dEzmaxinvoicingsummaryglobalCountbilled
+   */
+  @javax.annotation.Nonnull
+  public String getdEzmaxinvoicingsummaryglobalCountbilled() {
+    return dEzmaxinvoicingsummaryglobalCountbilled;
+  }
+
+  public void setdEzmaxinvoicingsummaryglobalCountbilled(String dEzmaxinvoicingsummaryglobalCountbilled) {
+    this.dEzmaxinvoicingsummaryglobalCountbilled = dEzmaxinvoicingsummaryglobalCountbilled;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalSubtotal(String dEzmaxinvoicingsummaryglobalSubtotal) {
+    this.dEzmaxinvoicingsummaryglobalSubtotal = dEzmaxinvoicingsummaryglobalSubtotal;
+    return this;
+  }
+
+  /**
+   * The Ezmaxinvoicingsummaryglobal subtotal
+   * @return dEzmaxinvoicingsummaryglobalSubtotal
+   */
+  @javax.annotation.Nonnull
+  public String getdEzmaxinvoicingsummaryglobalSubtotal() {
+    return dEzmaxinvoicingsummaryglobalSubtotal;
+  }
+
+  public void setdEzmaxinvoicingsummaryglobalSubtotal(String dEzmaxinvoicingsummaryglobalSubtotal) {
+    this.dEzmaxinvoicingsummaryglobalSubtotal = dEzmaxinvoicingsummaryglobalSubtotal;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalRebateamount(String dEzmaxinvoicingsummaryglobalRebateamount) {
+    this.dEzmaxinvoicingsummaryglobalRebateamount = dEzmaxinvoicingsummaryglobalRebateamount;
+    return this;
+  }
+
+  /**
+   * The rebate amount for the Ezmaxinvoicingsummaryglobal
+   * @return dEzmaxinvoicingsummaryglobalRebateamount
+   */
+  @javax.annotation.Nonnull
+  public String getdEzmaxinvoicingsummaryglobalRebateamount() {
+    return dEzmaxinvoicingsummaryglobalRebateamount;
+  }
+
+  public void setdEzmaxinvoicingsummaryglobalRebateamount(String dEzmaxinvoicingsummaryglobalRebateamount) {
+    this.dEzmaxinvoicingsummaryglobalRebateamount = dEzmaxinvoicingsummaryglobalRebateamount;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalRebatepercent(String dEzmaxinvoicingsummaryglobalRebatepercent) {
+    this.dEzmaxinvoicingsummaryglobalRebatepercent = dEzmaxinvoicingsummaryglobalRebatepercent;
+    return this;
+  }
+
+  /**
+   * The rebate percentage of the Ezmaxinvoicingsummaryglobal
+   * @return dEzmaxinvoicingsummaryglobalRebatepercent
+   */
+  @javax.annotation.Nonnull
+  public String getdEzmaxinvoicingsummaryglobalRebatepercent() {
+    return dEzmaxinvoicingsummaryglobalRebatepercent;
+  }
+
+  public void setdEzmaxinvoicingsummaryglobalRebatepercent(String dEzmaxinvoicingsummaryglobalRebatepercent) {
+    this.dEzmaxinvoicingsummaryglobalRebatepercent = dEzmaxinvoicingsummaryglobalRebatepercent;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalRebatetotal(String dEzmaxinvoicingsummaryglobalRebatetotal) {
+    this.dEzmaxinvoicingsummaryglobalRebatetotal = dEzmaxinvoicingsummaryglobalRebatetotal;
+    return this;
+  }
+
+  /**
+   * The rebate amount total for the Ezmaxinvoicingsummaryglobal
+   * @return dEzmaxinvoicingsummaryglobalRebatetotal
+   */
+  @javax.annotation.Nonnull
+  public String getdEzmaxinvoicingsummaryglobalRebatetotal() {
+    return dEzmaxinvoicingsummaryglobalRebatetotal;
+  }
+
+  public void setdEzmaxinvoicingsummaryglobalRebatetotal(String dEzmaxinvoicingsummaryglobalRebatetotal) {
+    this.dEzmaxinvoicingsummaryglobalRebatetotal = dEzmaxinvoicingsummaryglobalRebatetotal;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalTotal(String dEzmaxinvoicingsummaryglobalTotal) {
+    this.dEzmaxinvoicingsummaryglobalTotal = dEzmaxinvoicingsummaryglobalTotal;
+    return this;
+  }
+
+  /**
+   * The Ezmaxinvoicingsummaryglobal total
+   * @return dEzmaxinvoicingsummaryglobalTotal
+   */
+  @javax.annotation.Nonnull
+  public String getdEzmaxinvoicingsummaryglobalTotal() {
+    return dEzmaxinvoicingsummaryglobalTotal;
+  }
+
+  public void setdEzmaxinvoicingsummaryglobalTotal(String dEzmaxinvoicingsummaryglobalTotal) {
+    this.dEzmaxinvoicingsummaryglobalTotal = dEzmaxinvoicingsummaryglobalTotal;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalRepresentative(String dEzmaxinvoicingsummaryglobalRepresentative) {
+    this.dEzmaxinvoicingsummaryglobalRepresentative = dEzmaxinvoicingsummaryglobalRepresentative;
+    return this;
+  }
+
+  /**
+   * The amount of commission for the representative
+   * @return dEzmaxinvoicingsummaryglobalRepresentative
+   */
+  @javax.annotation.Nullable
+  public String getdEzmaxinvoicingsummaryglobalRepresentative() {
+    return dEzmaxinvoicingsummaryglobalRepresentative;
+  }
+
+  public void setdEzmaxinvoicingsummaryglobalRepresentative(String dEzmaxinvoicingsummaryglobalRepresentative) {
+    this.dEzmaxinvoicingsummaryglobalRepresentative = dEzmaxinvoicingsummaryglobalRepresentative;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalPartner(String dEzmaxinvoicingsummaryglobalPartner) {
+    this.dEzmaxinvoicingsummaryglobalPartner = dEzmaxinvoicingsummaryglobalPartner;
+    return this;
+  }
+
+  /**
+   * The amount of commission for the partner
+   * @return dEzmaxinvoicingsummaryglobalPartner
+   */
+  @javax.annotation.Nullable
+  public String getdEzmaxinvoicingsummaryglobalPartner() {
+    return dEzmaxinvoicingsummaryglobalPartner;
+  }
+
+  public void setdEzmaxinvoicingsummaryglobalPartner(String dEzmaxinvoicingsummaryglobalPartner) {
+    this.dEzmaxinvoicingsummaryglobalPartner = dEzmaxinvoicingsummaryglobalPartner;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound dEzmaxinvoicingsummaryglobalNet(String dEzmaxinvoicingsummaryglobalNet) {
+    this.dEzmaxinvoicingsummaryglobalNet = dEzmaxinvoicingsummaryglobalNet;
+    return this;
+  }
+
+  /**
+   * The net amount of the Ezmaxinvoicingsummaryglobal
+   * @return dEzmaxinvoicingsummaryglobalNet
+   */
+  @javax.annotation.Nullable
+  public String getdEzmaxinvoicingsummaryglobalNet() {
+    return dEzmaxinvoicingsummaryglobalNet;
+  }
+
+  public void setdEzmaxinvoicingsummaryglobalNet(String dEzmaxinvoicingsummaryglobalNet) {
+    this.dEzmaxinvoicingsummaryglobalNet = dEzmaxinvoicingsummaryglobalNet;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound bEzmaxinvoicingsummaryglobalAdjustment(Boolean bEzmaxinvoicingsummaryglobalAdjustment) {
+    this.bEzmaxinvoicingsummaryglobalAdjustment = bEzmaxinvoicingsummaryglobalAdjustment;
+    return this;
+  }
+
+  /**
+   * Whether it is adjustment for the Ezmaxinvoicingsummaryglobal
+   * @return bEzmaxinvoicingsummaryglobalAdjustment
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbEzmaxinvoicingsummaryglobalAdjustment() {
+    return bEzmaxinvoicingsummaryglobalAdjustment;
+  }
+
+  public void setbEzmaxinvoicingsummaryglobalAdjustment(Boolean bEzmaxinvoicingsummaryglobalAdjustment) {
+    this.bEzmaxinvoicingsummaryglobalAdjustment = bEzmaxinvoicingsummaryglobalAdjustment;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound tEzmaxproductHelpX(String tEzmaxproductHelpX) {
+    this.tEzmaxproductHelpX = tEzmaxproductHelpX;
+    return this;
+  }
+
+  /**
+   * The help message of the Ezmaxproduct in the language of the requester
+   * @return tEzmaxproductHelpX
+   */
+  @javax.annotation.Nonnull
+  public String gettEzmaxproductHelpX() {
+    return tEzmaxproductHelpX;
+  }
+
+  public void settEzmaxproductHelpX(String tEzmaxproductHelpX) {
+    this.tEzmaxproductHelpX = tEzmaxproductHelpX;
+  }
+
+
+  public EzmaxinvoicingsummaryglobalResponseCompound aObjEzmaxinvoicingcommission(List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission) {
     this.aObjEzmaxinvoicingcommission = aObjEzmaxinvoicingcommission;
     return this;
   }
@@ -84,7 +523,7 @@ public class EzmaxinvoicingsummaryglobalResponseCompound extends Ezmaxinvoicings
     return aObjEzmaxinvoicingcommission;
   }
 
-  public void setaObjEzmaxinvoicingcommission(@javax.annotation.Nullable List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission) {
+  public void setaObjEzmaxinvoicingcommission(List<EzmaxinvoicingcommissionResponseCompound> aObjEzmaxinvoicingcommission) {
     this.aObjEzmaxinvoicingcommission = aObjEzmaxinvoicingcommission;
   }
 
@@ -99,20 +538,56 @@ public class EzmaxinvoicingsummaryglobalResponseCompound extends Ezmaxinvoicings
       return false;
     }
     EzmaxinvoicingsummaryglobalResponseCompound ezmaxinvoicingsummaryglobalResponseCompound = (EzmaxinvoicingsummaryglobalResponseCompound) o;
-    return Objects.equals(this.aObjEzmaxinvoicingcommission, ezmaxinvoicingsummaryglobalResponseCompound.aObjEzmaxinvoicingcommission) &&
-        super.equals(o);
+    return Objects.equals(this.pkiEzmaxinvoicingsummaryglobalID, ezmaxinvoicingsummaryglobalResponseCompound.pkiEzmaxinvoicingsummaryglobalID) &&
+        Objects.equals(this.fkiEzmaxinvoicingID, ezmaxinvoicingsummaryglobalResponseCompound.fkiEzmaxinvoicingID) &&
+        Objects.equals(this.fkiEzmaxproductID, ezmaxinvoicingsummaryglobalResponseCompound.fkiEzmaxproductID) &&
+        Objects.equals(this.sEzmaxproductDescriptionX, ezmaxinvoicingsummaryglobalResponseCompound.sEzmaxproductDescriptionX) &&
+        Objects.equals(this.dtEzmaxinvoicingsummaryglobalStart, ezmaxinvoicingsummaryglobalResponseCompound.dtEzmaxinvoicingsummaryglobalStart) &&
+        Objects.equals(this.dtEzmaxinvoicingsummaryglobalEnd, ezmaxinvoicingsummaryglobalResponseCompound.dtEzmaxinvoicingsummaryglobalEnd) &&
+        Objects.equals(this.iEzmaxinvoicingsummaryglobalDays, ezmaxinvoicingsummaryglobalResponseCompound.iEzmaxinvoicingsummaryglobalDays) &&
+        Objects.equals(this.dEzmaxinvoicingsummaryglobalCountreal, ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalCountreal) &&
+        Objects.equals(this.dEzmaxinvoicingsummaryglobalCountbilled, ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalCountbilled) &&
+        Objects.equals(this.dEzmaxinvoicingsummaryglobalSubtotal, ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalSubtotal) &&
+        Objects.equals(this.dEzmaxinvoicingsummaryglobalRebateamount, ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalRebateamount) &&
+        Objects.equals(this.dEzmaxinvoicingsummaryglobalRebatepercent, ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalRebatepercent) &&
+        Objects.equals(this.dEzmaxinvoicingsummaryglobalRebatetotal, ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalRebatetotal) &&
+        Objects.equals(this.dEzmaxinvoicingsummaryglobalTotal, ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalTotal) &&
+        Objects.equals(this.dEzmaxinvoicingsummaryglobalRepresentative, ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalRepresentative) &&
+        Objects.equals(this.dEzmaxinvoicingsummaryglobalPartner, ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalPartner) &&
+        Objects.equals(this.dEzmaxinvoicingsummaryglobalNet, ezmaxinvoicingsummaryglobalResponseCompound.dEzmaxinvoicingsummaryglobalNet) &&
+        Objects.equals(this.bEzmaxinvoicingsummaryglobalAdjustment, ezmaxinvoicingsummaryglobalResponseCompound.bEzmaxinvoicingsummaryglobalAdjustment) &&
+        Objects.equals(this.tEzmaxproductHelpX, ezmaxinvoicingsummaryglobalResponseCompound.tEzmaxproductHelpX) &&
+        Objects.equals(this.aObjEzmaxinvoicingcommission, ezmaxinvoicingsummaryglobalResponseCompound.aObjEzmaxinvoicingcommission);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzmaxinvoicingcommission, super.hashCode());
+    return Objects.hash(pkiEzmaxinvoicingsummaryglobalID, fkiEzmaxinvoicingID, fkiEzmaxproductID, sEzmaxproductDescriptionX, dtEzmaxinvoicingsummaryglobalStart, dtEzmaxinvoicingsummaryglobalEnd, iEzmaxinvoicingsummaryglobalDays, dEzmaxinvoicingsummaryglobalCountreal, dEzmaxinvoicingsummaryglobalCountbilled, dEzmaxinvoicingsummaryglobalSubtotal, dEzmaxinvoicingsummaryglobalRebateamount, dEzmaxinvoicingsummaryglobalRebatepercent, dEzmaxinvoicingsummaryglobalRebatetotal, dEzmaxinvoicingsummaryglobalTotal, dEzmaxinvoicingsummaryglobalRepresentative, dEzmaxinvoicingsummaryglobalPartner, dEzmaxinvoicingsummaryglobalNet, bEzmaxinvoicingsummaryglobalAdjustment, tEzmaxproductHelpX, aObjEzmaxinvoicingcommission);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzmaxinvoicingsummaryglobalResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzmaxinvoicingsummaryglobalID: ").append(toIndentedString(pkiEzmaxinvoicingsummaryglobalID)).append("\n");
+    sb.append("    fkiEzmaxinvoicingID: ").append(toIndentedString(fkiEzmaxinvoicingID)).append("\n");
+    sb.append("    fkiEzmaxproductID: ").append(toIndentedString(fkiEzmaxproductID)).append("\n");
+    sb.append("    sEzmaxproductDescriptionX: ").append(toIndentedString(sEzmaxproductDescriptionX)).append("\n");
+    sb.append("    dtEzmaxinvoicingsummaryglobalStart: ").append(toIndentedString(dtEzmaxinvoicingsummaryglobalStart)).append("\n");
+    sb.append("    dtEzmaxinvoicingsummaryglobalEnd: ").append(toIndentedString(dtEzmaxinvoicingsummaryglobalEnd)).append("\n");
+    sb.append("    iEzmaxinvoicingsummaryglobalDays: ").append(toIndentedString(iEzmaxinvoicingsummaryglobalDays)).append("\n");
+    sb.append("    dEzmaxinvoicingsummaryglobalCountreal: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalCountreal)).append("\n");
+    sb.append("    dEzmaxinvoicingsummaryglobalCountbilled: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalCountbilled)).append("\n");
+    sb.append("    dEzmaxinvoicingsummaryglobalSubtotal: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalSubtotal)).append("\n");
+    sb.append("    dEzmaxinvoicingsummaryglobalRebateamount: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalRebateamount)).append("\n");
+    sb.append("    dEzmaxinvoicingsummaryglobalRebatepercent: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalRebatepercent)).append("\n");
+    sb.append("    dEzmaxinvoicingsummaryglobalRebatetotal: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalRebatetotal)).append("\n");
+    sb.append("    dEzmaxinvoicingsummaryglobalTotal: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalTotal)).append("\n");
+    sb.append("    dEzmaxinvoicingsummaryglobalRepresentative: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalRepresentative)).append("\n");
+    sb.append("    dEzmaxinvoicingsummaryglobalPartner: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalPartner)).append("\n");
+    sb.append("    dEzmaxinvoicingsummaryglobalNet: ").append(toIndentedString(dEzmaxinvoicingsummaryglobalNet)).append("\n");
+    sb.append("    bEzmaxinvoicingsummaryglobalAdjustment: ").append(toIndentedString(bEzmaxinvoicingsummaryglobalAdjustment)).append("\n");
+    sb.append("    tEzmaxproductHelpX: ").append(toIndentedString(tEzmaxproductHelpX)).append("\n");
     sb.append("    aObjEzmaxinvoicingcommission: ").append(toIndentedString(aObjEzmaxinvoicingcommission)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -203,6 +678,48 @@ public class EzmaxinvoicingsummaryglobalResponseCompound extends Ezmaxinvoicings
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sEzmaxproductDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzmaxproductDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzmaxproductDescriptionX").toString()));
+      }
+      if (!jsonObj.get("dtEzmaxinvoicingsummaryglobalStart").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzmaxinvoicingsummaryglobalStart` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzmaxinvoicingsummaryglobalStart").toString()));
+      }
+      if (!jsonObj.get("dtEzmaxinvoicingsummaryglobalEnd").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzmaxinvoicingsummaryglobalEnd` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzmaxinvoicingsummaryglobalEnd").toString()));
+      }
+      if (!jsonObj.get("dEzmaxinvoicingsummaryglobalCountreal").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryglobalCountreal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryglobalCountreal").toString()));
+      }
+      if (!jsonObj.get("dEzmaxinvoicingsummaryglobalCountbilled").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryglobalCountbilled` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryglobalCountbilled").toString()));
+      }
+      if (!jsonObj.get("dEzmaxinvoicingsummaryglobalSubtotal").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryglobalSubtotal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryglobalSubtotal").toString()));
+      }
+      if (!jsonObj.get("dEzmaxinvoicingsummaryglobalRebateamount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryglobalRebateamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryglobalRebateamount").toString()));
+      }
+      if (!jsonObj.get("dEzmaxinvoicingsummaryglobalRebatepercent").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryglobalRebatepercent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryglobalRebatepercent").toString()));
+      }
+      if (!jsonObj.get("dEzmaxinvoicingsummaryglobalRebatetotal").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryglobalRebatetotal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryglobalRebatetotal").toString()));
+      }
+      if (!jsonObj.get("dEzmaxinvoicingsummaryglobalTotal").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryglobalTotal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryglobalTotal").toString()));
+      }
+      if ((jsonObj.get("dEzmaxinvoicingsummaryglobalRepresentative") != null && !jsonObj.get("dEzmaxinvoicingsummaryglobalRepresentative").isJsonNull()) && !jsonObj.get("dEzmaxinvoicingsummaryglobalRepresentative").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryglobalRepresentative` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryglobalRepresentative").toString()));
+      }
+      if ((jsonObj.get("dEzmaxinvoicingsummaryglobalPartner") != null && !jsonObj.get("dEzmaxinvoicingsummaryglobalPartner").isJsonNull()) && !jsonObj.get("dEzmaxinvoicingsummaryglobalPartner").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryglobalPartner` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryglobalPartner").toString()));
+      }
+      if ((jsonObj.get("dEzmaxinvoicingsummaryglobalNet") != null && !jsonObj.get("dEzmaxinvoicingsummaryglobalNet").isJsonNull()) && !jsonObj.get("dEzmaxinvoicingsummaryglobalNet").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingsummaryglobalNet` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingsummaryglobalNet").toString()));
+      }
+      if (!jsonObj.get("tEzmaxproductHelpX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzmaxproductHelpX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzmaxproductHelpX").toString()));
+      }
       if (jsonObj.get("a_objEzmaxinvoicingcommission") != null && !jsonObj.get("a_objEzmaxinvoicingcommission").isJsonNull()) {
         JsonArray jsonArrayaObjEzmaxinvoicingcommission = jsonObj.getAsJsonArray("a_objEzmaxinvoicingcommission");
         if (jsonArrayaObjEzmaxinvoicingcommission != null) {

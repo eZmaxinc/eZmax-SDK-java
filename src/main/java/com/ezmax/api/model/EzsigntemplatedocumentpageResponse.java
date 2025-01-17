@@ -48,47 +48,40 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatedocumentpage Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatedocumentpageResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D = "pkiEzsigntemplatedocumentpageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplatedocumentpageID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_WIDTHIMAGE = "iEzsigntemplatedocumentpageWidthimage";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_WIDTHIMAGE)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentpageWidthimage;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_HEIGHTIMAGE = "iEzsigntemplatedocumentpageHeightimage";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_HEIGHTIMAGE)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentpageHeightimage;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_WIDTHPDF = "iEzsigntemplatedocumentpageWidthpdf";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_WIDTHPDF)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentpageWidthpdf;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_HEIGHTPDF = "iEzsigntemplatedocumentpageHeightpdf";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_HEIGHTPDF)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentpageHeightpdf;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_PAGENUMBER = "iEzsigntemplatedocumentpagePagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_PAGENUMBER)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentpagePagenumber;
 
   public static final String SERIALIZED_NAME_S_COMPUTED_IMAGEURL = "sComputedImageurl";
   @SerializedName(SERIALIZED_NAME_S_COMPUTED_IMAGEURL)
-  @javax.annotation.Nonnull
   private String sComputedImageurl;
 
   public EzsigntemplatedocumentpageResponse() {
   }
 
-  public EzsigntemplatedocumentpageResponse pkiEzsigntemplatedocumentpageID(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentpageID) {
+  public EzsigntemplatedocumentpageResponse pkiEzsigntemplatedocumentpageID(Integer pkiEzsigntemplatedocumentpageID) {
     this.pkiEzsigntemplatedocumentpageID = pkiEzsigntemplatedocumentpageID;
     return this;
   }
@@ -103,12 +96,12 @@ public class EzsigntemplatedocumentpageResponse {
     return pkiEzsigntemplatedocumentpageID;
   }
 
-  public void setPkiEzsigntemplatedocumentpageID(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentpageID) {
+  public void setPkiEzsigntemplatedocumentpageID(Integer pkiEzsigntemplatedocumentpageID) {
     this.pkiEzsigntemplatedocumentpageID = pkiEzsigntemplatedocumentpageID;
   }
 
 
-  public EzsigntemplatedocumentpageResponse iEzsigntemplatedocumentpageWidthimage(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageWidthimage) {
+  public EzsigntemplatedocumentpageResponse iEzsigntemplatedocumentpageWidthimage(Integer iEzsigntemplatedocumentpageWidthimage) {
     this.iEzsigntemplatedocumentpageWidthimage = iEzsigntemplatedocumentpageWidthimage;
     return this;
   }
@@ -123,12 +116,12 @@ public class EzsigntemplatedocumentpageResponse {
     return iEzsigntemplatedocumentpageWidthimage;
   }
 
-  public void setiEzsigntemplatedocumentpageWidthimage(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageWidthimage) {
+  public void setiEzsigntemplatedocumentpageWidthimage(Integer iEzsigntemplatedocumentpageWidthimage) {
     this.iEzsigntemplatedocumentpageWidthimage = iEzsigntemplatedocumentpageWidthimage;
   }
 
 
-  public EzsigntemplatedocumentpageResponse iEzsigntemplatedocumentpageHeightimage(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageHeightimage) {
+  public EzsigntemplatedocumentpageResponse iEzsigntemplatedocumentpageHeightimage(Integer iEzsigntemplatedocumentpageHeightimage) {
     this.iEzsigntemplatedocumentpageHeightimage = iEzsigntemplatedocumentpageHeightimage;
     return this;
   }
@@ -143,12 +136,12 @@ public class EzsigntemplatedocumentpageResponse {
     return iEzsigntemplatedocumentpageHeightimage;
   }
 
-  public void setiEzsigntemplatedocumentpageHeightimage(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageHeightimage) {
+  public void setiEzsigntemplatedocumentpageHeightimage(Integer iEzsigntemplatedocumentpageHeightimage) {
     this.iEzsigntemplatedocumentpageHeightimage = iEzsigntemplatedocumentpageHeightimage;
   }
 
 
-  public EzsigntemplatedocumentpageResponse iEzsigntemplatedocumentpageWidthpdf(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageWidthpdf) {
+  public EzsigntemplatedocumentpageResponse iEzsigntemplatedocumentpageWidthpdf(Integer iEzsigntemplatedocumentpageWidthpdf) {
     this.iEzsigntemplatedocumentpageWidthpdf = iEzsigntemplatedocumentpageWidthpdf;
     return this;
   }
@@ -163,12 +156,12 @@ public class EzsigntemplatedocumentpageResponse {
     return iEzsigntemplatedocumentpageWidthpdf;
   }
 
-  public void setiEzsigntemplatedocumentpageWidthpdf(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageWidthpdf) {
+  public void setiEzsigntemplatedocumentpageWidthpdf(Integer iEzsigntemplatedocumentpageWidthpdf) {
     this.iEzsigntemplatedocumentpageWidthpdf = iEzsigntemplatedocumentpageWidthpdf;
   }
 
 
-  public EzsigntemplatedocumentpageResponse iEzsigntemplatedocumentpageHeightpdf(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageHeightpdf) {
+  public EzsigntemplatedocumentpageResponse iEzsigntemplatedocumentpageHeightpdf(Integer iEzsigntemplatedocumentpageHeightpdf) {
     this.iEzsigntemplatedocumentpageHeightpdf = iEzsigntemplatedocumentpageHeightpdf;
     return this;
   }
@@ -183,12 +176,12 @@ public class EzsigntemplatedocumentpageResponse {
     return iEzsigntemplatedocumentpageHeightpdf;
   }
 
-  public void setiEzsigntemplatedocumentpageHeightpdf(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageHeightpdf) {
+  public void setiEzsigntemplatedocumentpageHeightpdf(Integer iEzsigntemplatedocumentpageHeightpdf) {
     this.iEzsigntemplatedocumentpageHeightpdf = iEzsigntemplatedocumentpageHeightpdf;
   }
 
 
-  public EzsigntemplatedocumentpageResponse iEzsigntemplatedocumentpagePagenumber(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpagePagenumber) {
+  public EzsigntemplatedocumentpageResponse iEzsigntemplatedocumentpagePagenumber(Integer iEzsigntemplatedocumentpagePagenumber) {
     this.iEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
     return this;
   }
@@ -203,12 +196,12 @@ public class EzsigntemplatedocumentpageResponse {
     return iEzsigntemplatedocumentpagePagenumber;
   }
 
-  public void setiEzsigntemplatedocumentpagePagenumber(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpagePagenumber) {
+  public void setiEzsigntemplatedocumentpagePagenumber(Integer iEzsigntemplatedocumentpagePagenumber) {
     this.iEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
   }
 
 
-  public EzsigntemplatedocumentpageResponse sComputedImageurl(@javax.annotation.Nonnull String sComputedImageurl) {
+  public EzsigntemplatedocumentpageResponse sComputedImageurl(String sComputedImageurl) {
     this.sComputedImageurl = sComputedImageurl;
     return this;
   }
@@ -222,7 +215,7 @@ public class EzsigntemplatedocumentpageResponse {
     return sComputedImageurl;
   }
 
-  public void setsComputedImageurl(@javax.annotation.Nonnull String sComputedImageurl) {
+  public void setsComputedImageurl(String sComputedImageurl) {
     this.sComputedImageurl = sComputedImageurl;
   }
 

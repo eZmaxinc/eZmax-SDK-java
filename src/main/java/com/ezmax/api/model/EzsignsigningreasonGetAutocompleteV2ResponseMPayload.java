@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezsignsigningreason/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsigningreasonGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNINGREASON = "a_objEzsignsigningreason";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNINGREASON)
-  @javax.annotation.Nonnull
   private List<EzsignsigningreasonAutocompleteElementResponse> aObjEzsignsigningreason = new ArrayList<>();
 
   public EzsignsigningreasonGetAutocompleteV2ResponseMPayload() {
   }
 
-  public EzsignsigningreasonGetAutocompleteV2ResponseMPayload aObjEzsignsigningreason(@javax.annotation.Nonnull List<EzsignsigningreasonAutocompleteElementResponse> aObjEzsignsigningreason) {
+  public EzsignsigningreasonGetAutocompleteV2ResponseMPayload aObjEzsignsigningreason(List<EzsignsigningreasonAutocompleteElementResponse> aObjEzsignsigningreason) {
     this.aObjEzsignsigningreason = aObjEzsignsigningreason;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsignsigningreasonGetAutocompleteV2ResponseMPayload {
     return aObjEzsignsigningreason;
   }
 
-  public void setaObjEzsignsigningreason(@javax.annotation.Nonnull List<EzsignsigningreasonAutocompleteElementResponse> aObjEzsignsigningreason) {
+  public void setaObjEzsignsigningreason(List<EzsignsigningreasonAutocompleteElementResponse> aObjEzsignsigningreason) {
     this.aObjEzsignsigningreason = aObjEzsignsigningreason;
   }
 

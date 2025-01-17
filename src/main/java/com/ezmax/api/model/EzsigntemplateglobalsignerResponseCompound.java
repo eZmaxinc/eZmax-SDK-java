@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsigntemplateglobalsignerResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,81 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateglobalsigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigntemplateglobalsignerResponseCompound extends EzsigntemplateglobalsignerResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsigntemplateglobalsignerResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALSIGNER_I_D = "pkiEzsigntemplateglobalsignerID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALSIGNER_I_D)
+  private Integer pkiEzsigntemplateglobalsignerID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBAL_I_D = "fkiEzsigntemplateglobalID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBAL_I_D)
+  private Integer fkiEzsigntemplateglobalID;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBALSIGNER_DESCRIPTION = "sEzsigntemplateglobalsignerDescription";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBALSIGNER_DESCRIPTION)
+  private String sEzsigntemplateglobalsignerDescription;
+
   public EzsigntemplateglobalsignerResponseCompound() {
   }
+
+  public EzsigntemplateglobalsignerResponseCompound pkiEzsigntemplateglobalsignerID(Integer pkiEzsigntemplateglobalsignerID) {
+    this.pkiEzsigntemplateglobalsignerID = pkiEzsigntemplateglobalsignerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplateglobalsigner
+   * minimum: 0
+   * @return pkiEzsigntemplateglobalsignerID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiEzsigntemplateglobalsignerID() {
+    return pkiEzsigntemplateglobalsignerID;
+  }
+
+  public void setPkiEzsigntemplateglobalsignerID(Integer pkiEzsigntemplateglobalsignerID) {
+    this.pkiEzsigntemplateglobalsignerID = pkiEzsigntemplateglobalsignerID;
+  }
+
+
+  public EzsigntemplateglobalsignerResponseCompound fkiEzsigntemplateglobalID(Integer fkiEzsigntemplateglobalID) {
+    this.fkiEzsigntemplateglobalID = fkiEzsigntemplateglobalID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplateglobal
+   * minimum: 0
+   * @return fkiEzsigntemplateglobalID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsigntemplateglobalID() {
+    return fkiEzsigntemplateglobalID;
+  }
+
+  public void setFkiEzsigntemplateglobalID(Integer fkiEzsigntemplateglobalID) {
+    this.fkiEzsigntemplateglobalID = fkiEzsigntemplateglobalID;
+  }
+
+
+  public EzsigntemplateglobalsignerResponseCompound sEzsigntemplateglobalsignerDescription(String sEzsigntemplateglobalsignerDescription) {
+    this.sEzsigntemplateglobalsignerDescription = sEzsigntemplateglobalsignerDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Ezsigntemplateglobalsigner
+   * @return sEzsigntemplateglobalsignerDescription
+   */
+  @javax.annotation.Nonnull
+  public String getsEzsigntemplateglobalsignerDescription() {
+    return sEzsigntemplateglobalsignerDescription;
+  }
+
+  public void setsEzsigntemplateglobalsignerDescription(String sEzsigntemplateglobalsignerDescription) {
+    this.sEzsigntemplateglobalsignerDescription = sEzsigntemplateglobalsignerDescription;
+  }
+
 
 
   @Override
@@ -63,19 +133,24 @@ public class EzsigntemplateglobalsignerResponseCompound extends Ezsigntemplategl
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    EzsigntemplateglobalsignerResponseCompound ezsigntemplateglobalsignerResponseCompound = (EzsigntemplateglobalsignerResponseCompound) o;
+    return Objects.equals(this.pkiEzsigntemplateglobalsignerID, ezsigntemplateglobalsignerResponseCompound.pkiEzsigntemplateglobalsignerID) &&
+        Objects.equals(this.fkiEzsigntemplateglobalID, ezsigntemplateglobalsignerResponseCompound.fkiEzsigntemplateglobalID) &&
+        Objects.equals(this.sEzsigntemplateglobalsignerDescription, ezsigntemplateglobalsignerResponseCompound.sEzsigntemplateglobalsignerDescription);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiEzsigntemplateglobalsignerID, fkiEzsigntemplateglobalID, sEzsigntemplateglobalsignerDescription);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplateglobalsignerResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsigntemplateglobalsignerID: ").append(toIndentedString(pkiEzsigntemplateglobalsignerID)).append("\n");
+    sb.append("    fkiEzsigntemplateglobalID: ").append(toIndentedString(fkiEzsigntemplateglobalID)).append("\n");
+    sb.append("    sEzsigntemplateglobalsignerDescription: ").append(toIndentedString(sEzsigntemplateglobalsignerDescription)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -135,6 +210,10 @@ public class EzsigntemplateglobalsignerResponseCompound extends Ezsigntemplategl
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sEzsigntemplateglobalsignerDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateglobalsignerDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateglobalsignerDescription").toString()));
       }
   }
 

@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocument}/getEzsigntemplatesignatures
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATESIGNATURE = "a_objEzsigntemplatesignature";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATESIGNATURE)
-  @javax.annotation.Nonnull
   private List<EzsigntemplatesignatureResponseCompound> aObjEzsigntemplatesignature = new ArrayList<>();
 
   public EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload() {
   }
 
-  public EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload aObjEzsigntemplatesignature(@javax.annotation.Nonnull List<EzsigntemplatesignatureResponseCompound> aObjEzsigntemplatesignature) {
+  public EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload aObjEzsigntemplatesignature(List<EzsigntemplatesignatureResponseCompound> aObjEzsigntemplatesignature) {
     this.aObjEzsigntemplatesignature = aObjEzsigntemplatesignature;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsigntemplatedocumentGetEzsigntemplatesignaturesV1ResponseMPayload
     return aObjEzsigntemplatesignature;
   }
 
-  public void setaObjEzsigntemplatesignature(@javax.annotation.Nonnull List<EzsigntemplatesignatureResponseCompound> aObjEzsigntemplatesignature) {
+  public void setaObjEzsigntemplatesignature(List<EzsigntemplatesignatureResponseCompound> aObjEzsigntemplatesignature) {
     this.aObjEzsigntemplatesignature = aObjEzsigntemplatesignature;
   }
 

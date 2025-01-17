@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateformfieldgroupsigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateformfieldgroupsignerResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUPSIGNER_I_D = "pkiEzsigntemplateformfieldgroupsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUPSIGNER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplateformfieldgroupsignerID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATESIGNER_I_D = "fkiEzsigntemplatesignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATESIGNER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplatesignerID;
 
   public EzsigntemplateformfieldgroupsignerResponse() {
   }
 
-  public EzsigntemplateformfieldgroupsignerResponse pkiEzsigntemplateformfieldgroupsignerID(@javax.annotation.Nonnull Integer pkiEzsigntemplateformfieldgroupsignerID) {
+  public EzsigntemplateformfieldgroupsignerResponse pkiEzsigntemplateformfieldgroupsignerID(Integer pkiEzsigntemplateformfieldgroupsignerID) {
     this.pkiEzsigntemplateformfieldgroupsignerID = pkiEzsigntemplateformfieldgroupsignerID;
     return this;
   }
@@ -78,12 +76,12 @@ public class EzsigntemplateformfieldgroupsignerResponse {
     return pkiEzsigntemplateformfieldgroupsignerID;
   }
 
-  public void setPkiEzsigntemplateformfieldgroupsignerID(@javax.annotation.Nonnull Integer pkiEzsigntemplateformfieldgroupsignerID) {
+  public void setPkiEzsigntemplateformfieldgroupsignerID(Integer pkiEzsigntemplateformfieldgroupsignerID) {
     this.pkiEzsigntemplateformfieldgroupsignerID = pkiEzsigntemplateformfieldgroupsignerID;
   }
 
 
-  public EzsigntemplateformfieldgroupsignerResponse fkiEzsigntemplatesignerID(@javax.annotation.Nonnull Integer fkiEzsigntemplatesignerID) {
+  public EzsigntemplateformfieldgroupsignerResponse fkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
     this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
     return this;
   }
@@ -98,7 +96,7 @@ public class EzsigntemplateformfieldgroupsignerResponse {
     return fkiEzsigntemplatesignerID;
   }
 
-  public void setFkiEzsigntemplatesignerID(@javax.annotation.Nonnull Integer fkiEzsigntemplatesignerID) {
+  public void setFkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
     this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
   }
 

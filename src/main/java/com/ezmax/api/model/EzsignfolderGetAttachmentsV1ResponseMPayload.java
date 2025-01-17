@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getAttachments
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderGetAttachmentsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_ATTACHMENTDOCUMENTTYPE = "a_objAttachmentdocumenttype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTACHMENTDOCUMENTTYPE)
-  @javax.annotation.Nonnull
   private List<CustomAttachmentdocumenttypeResponse> aObjAttachmentdocumenttype = new ArrayList<>();
 
   public EzsignfolderGetAttachmentsV1ResponseMPayload() {
   }
 
-  public EzsignfolderGetAttachmentsV1ResponseMPayload aObjAttachmentdocumenttype(@javax.annotation.Nonnull List<CustomAttachmentdocumenttypeResponse> aObjAttachmentdocumenttype) {
+  public EzsignfolderGetAttachmentsV1ResponseMPayload aObjAttachmentdocumenttype(List<CustomAttachmentdocumenttypeResponse> aObjAttachmentdocumenttype) {
     this.aObjAttachmentdocumenttype = aObjAttachmentdocumenttype;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsignfolderGetAttachmentsV1ResponseMPayload {
     return aObjAttachmentdocumenttype;
   }
 
-  public void setaObjAttachmentdocumenttype(@javax.annotation.Nonnull List<CustomAttachmentdocumenttypeResponse> aObjAttachmentdocumenttype) {
+  public void setaObjAttachmentdocumenttype(List<CustomAttachmentdocumenttypeResponse> aObjAttachmentdocumenttype) {
     this.aObjAttachmentdocumenttype = aObjAttachmentdocumenttype;
   }
 

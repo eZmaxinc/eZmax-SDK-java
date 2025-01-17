@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/usergroupexternal/{pkiUsergroupexternalID}/getUsergroupexternalmemberships
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUPEXTERNALMEMBERSHIP = "a_objUsergroupexternalmembership";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUPEXTERNALMEMBERSHIP)
-  @javax.annotation.Nonnull
   private List<UsergroupexternalmembershipResponseCompound> aObjUsergroupexternalmembership = new ArrayList<>();
 
   public UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload() {
   }
 
-  public UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload aObjUsergroupexternalmembership(@javax.annotation.Nonnull List<UsergroupexternalmembershipResponseCompound> aObjUsergroupexternalmembership) {
+  public UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload aObjUsergroupexternalmembership(List<UsergroupexternalmembershipResponseCompound> aObjUsergroupexternalmembership) {
     this.aObjUsergroupexternalmembership = aObjUsergroupexternalmembership;
     return this;
   }
@@ -83,7 +82,7 @@ public class UsergroupexternalGetUsergroupexternalmembershipsV1ResponseMPayload 
     return aObjUsergroupexternalmembership;
   }
 
-  public void setaObjUsergroupexternalmembership(@javax.annotation.Nonnull List<UsergroupexternalmembershipResponseCompound> aObjUsergroupexternalmembership) {
+  public void setaObjUsergroupexternalmembership(List<UsergroupexternalmembershipResponseCompound> aObjUsergroupexternalmembership) {
     this.aObjUsergroupexternalmembership = aObjUsergroupexternalmembership;
   }
 

@@ -49,42 +49,36 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryinternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingsummaryinternalResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D = "pkiEzmaxinvoicingsummaryinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzmaxinvoicingsummaryinternalID;
 
   public static final String SERIALIZED_NAME_OBJ_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION = "objEzmaxinvoicingsummaryinternalDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription;
 
   public static final String SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION_X = "sEzmaxinvoicingsummaryinternalDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYINTERNAL_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sEzmaxinvoicingsummaryinternalDescriptionX;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D = "fkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzmaxinvoicingID;
 
   public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiBillingentityinternalID;
 
   public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X = "sBillingentityinternalDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sBillingentityinternalDescriptionX;
 
   public EzmaxinvoicingsummaryinternalResponse() {
   }
 
-  public EzmaxinvoicingsummaryinternalResponse pkiEzmaxinvoicingsummaryinternalID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryinternalID) {
+  public EzmaxinvoicingsummaryinternalResponse pkiEzmaxinvoicingsummaryinternalID(Integer pkiEzmaxinvoicingsummaryinternalID) {
     this.pkiEzmaxinvoicingsummaryinternalID = pkiEzmaxinvoicingsummaryinternalID;
     return this;
   }
@@ -99,12 +93,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return pkiEzmaxinvoicingsummaryinternalID;
   }
 
-  public void setPkiEzmaxinvoicingsummaryinternalID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryinternalID) {
+  public void setPkiEzmaxinvoicingsummaryinternalID(Integer pkiEzmaxinvoicingsummaryinternalID) {
     this.pkiEzmaxinvoicingsummaryinternalID = pkiEzmaxinvoicingsummaryinternalID;
   }
 
 
-  public EzmaxinvoicingsummaryinternalResponse objEzmaxinvoicingsummaryinternalDescription(@javax.annotation.Nonnull MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription) {
+  public EzmaxinvoicingsummaryinternalResponse objEzmaxinvoicingsummaryinternalDescription(MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription) {
     this.objEzmaxinvoicingsummaryinternalDescription = objEzmaxinvoicingsummaryinternalDescription;
     return this;
   }
@@ -118,12 +112,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return objEzmaxinvoicingsummaryinternalDescription;
   }
 
-  public void setObjEzmaxinvoicingsummaryinternalDescription(@javax.annotation.Nonnull MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription) {
+  public void setObjEzmaxinvoicingsummaryinternalDescription(MultilingualEzmaxinvoicingsummaryinternalDescription objEzmaxinvoicingsummaryinternalDescription) {
     this.objEzmaxinvoicingsummaryinternalDescription = objEzmaxinvoicingsummaryinternalDescription;
   }
 
 
-  public EzmaxinvoicingsummaryinternalResponse sEzmaxinvoicingsummaryinternalDescriptionX(@javax.annotation.Nonnull String sEzmaxinvoicingsummaryinternalDescriptionX) {
+  public EzmaxinvoicingsummaryinternalResponse sEzmaxinvoicingsummaryinternalDescriptionX(String sEzmaxinvoicingsummaryinternalDescriptionX) {
     this.sEzmaxinvoicingsummaryinternalDescriptionX = sEzmaxinvoicingsummaryinternalDescriptionX;
     return this;
   }
@@ -137,12 +131,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return sEzmaxinvoicingsummaryinternalDescriptionX;
   }
 
-  public void setsEzmaxinvoicingsummaryinternalDescriptionX(@javax.annotation.Nonnull String sEzmaxinvoicingsummaryinternalDescriptionX) {
+  public void setsEzmaxinvoicingsummaryinternalDescriptionX(String sEzmaxinvoicingsummaryinternalDescriptionX) {
     this.sEzmaxinvoicingsummaryinternalDescriptionX = sEzmaxinvoicingsummaryinternalDescriptionX;
   }
 
 
-  public EzmaxinvoicingsummaryinternalResponse fkiEzmaxinvoicingID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingID) {
+  public EzmaxinvoicingsummaryinternalResponse fkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
     return this;
   }
@@ -157,12 +151,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return fkiEzmaxinvoicingID;
   }
 
-  public void setFkiEzmaxinvoicingID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingID) {
+  public void setFkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
   }
 
 
-  public EzmaxinvoicingsummaryinternalResponse fkiBillingentityinternalID(@javax.annotation.Nonnull Integer fkiBillingentityinternalID) {
+  public EzmaxinvoicingsummaryinternalResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -177,12 +171,12 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return fkiBillingentityinternalID;
   }
 
-  public void setFkiBillingentityinternalID(@javax.annotation.Nonnull Integer fkiBillingentityinternalID) {
+  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
-  public EzmaxinvoicingsummaryinternalResponse sBillingentityinternalDescriptionX(@javax.annotation.Nonnull String sBillingentityinternalDescriptionX) {
+  public EzmaxinvoicingsummaryinternalResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -196,7 +190,7 @@ public class EzmaxinvoicingsummaryinternalResponse {
     return sBillingentityinternalDescriptionX;
   }
 
-  public void setsBillingentityinternalDescriptionX(@javax.annotation.Nonnull String sBillingentityinternalDescriptionX) {
+  public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
@@ -283,6 +277,21 @@ public class EzmaxinvoicingsummaryinternalResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzmaxinvoicingsummaryinternalResponse is not found in the empty JSON string", EzmaxinvoicingsummaryinternalResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzmaxinvoicingsummaryinternalResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzmaxinvoicingsummaryinternalResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzmaxinvoicingsummaryinternalResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objEzmaxinvoicingsummaryinternalDescription`
       MultilingualEzmaxinvoicingsummaryinternalDescription.validateJsonElement(jsonObj.get("objEzmaxinvoicingsummaryinternalDescription"));
@@ -294,6 +303,34 @@ public class EzmaxinvoicingsummaryinternalResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzmaxinvoicingsummaryinternalResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzmaxinvoicingsummaryinternalResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzmaxinvoicingsummaryinternalResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzmaxinvoicingsummaryinternalResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzmaxinvoicingsummaryinternalResponse>() {
+           @Override
+           public void write(JsonWriter out, EzmaxinvoicingsummaryinternalResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzmaxinvoicingsummaryinternalResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzmaxinvoicingsummaryinternalResponse given an JSON string

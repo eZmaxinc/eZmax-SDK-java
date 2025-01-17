@@ -13,7 +13,6 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.ActivesessionResponse;
 import com.ezmax.api.model.ActivesessionResponseCompoundApikey;
 import com.ezmax.api.model.ActivesessionResponseCompoundUser;
 import com.ezmax.api.model.FieldEActivesessionEzsign;

@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CustomEzsignfolderezsigntemplatepublicResponse;
-import com.ezmax.api.model.EzsigntemplatepublicResponse;
 import com.ezmax.api.model.FieldEEzsigntemplatepublicLimittype;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

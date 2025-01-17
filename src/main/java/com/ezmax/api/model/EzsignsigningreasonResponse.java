@@ -49,27 +49,24 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsigningreason Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsigningreasonResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNINGREASON_I_D = "pkiEzsignsigningreasonID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNINGREASON_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignsigningreasonID;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNINGREASON_DESCRIPTION = "objEzsignsigningreasonDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNINGREASON_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualEzsignsigningreasonDescription objEzsignsigningreasonDescription;
 
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNINGREASON_ISACTIVE = "bEzsignsigningreasonIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNINGREASON_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bEzsignsigningreasonIsactive;
 
   public EzsignsigningreasonResponse() {
   }
 
-  public EzsignsigningreasonResponse pkiEzsignsigningreasonID(@javax.annotation.Nonnull Integer pkiEzsignsigningreasonID) {
+  public EzsignsigningreasonResponse pkiEzsignsigningreasonID(Integer pkiEzsignsigningreasonID) {
     this.pkiEzsignsigningreasonID = pkiEzsignsigningreasonID;
     return this;
   }
@@ -85,12 +82,12 @@ public class EzsignsigningreasonResponse {
     return pkiEzsignsigningreasonID;
   }
 
-  public void setPkiEzsignsigningreasonID(@javax.annotation.Nonnull Integer pkiEzsignsigningreasonID) {
+  public void setPkiEzsignsigningreasonID(Integer pkiEzsignsigningreasonID) {
     this.pkiEzsignsigningreasonID = pkiEzsignsigningreasonID;
   }
 
 
-  public EzsignsigningreasonResponse objEzsignsigningreasonDescription(@javax.annotation.Nonnull MultilingualEzsignsigningreasonDescription objEzsignsigningreasonDescription) {
+  public EzsignsigningreasonResponse objEzsignsigningreasonDescription(MultilingualEzsignsigningreasonDescription objEzsignsigningreasonDescription) {
     this.objEzsignsigningreasonDescription = objEzsignsigningreasonDescription;
     return this;
   }
@@ -104,12 +101,12 @@ public class EzsignsigningreasonResponse {
     return objEzsignsigningreasonDescription;
   }
 
-  public void setObjEzsignsigningreasonDescription(@javax.annotation.Nonnull MultilingualEzsignsigningreasonDescription objEzsignsigningreasonDescription) {
+  public void setObjEzsignsigningreasonDescription(MultilingualEzsignsigningreasonDescription objEzsignsigningreasonDescription) {
     this.objEzsignsigningreasonDescription = objEzsignsigningreasonDescription;
   }
 
 
-  public EzsignsigningreasonResponse bEzsignsigningreasonIsactive(@javax.annotation.Nonnull Boolean bEzsignsigningreasonIsactive) {
+  public EzsignsigningreasonResponse bEzsignsigningreasonIsactive(Boolean bEzsignsigningreasonIsactive) {
     this.bEzsignsigningreasonIsactive = bEzsignsigningreasonIsactive;
     return this;
   }
@@ -123,7 +120,7 @@ public class EzsignsigningreasonResponse {
     return bEzsignsigningreasonIsactive;
   }
 
-  public void setbEzsignsigningreasonIsactive(@javax.annotation.Nonnull Boolean bEzsignsigningreasonIsactive) {
+  public void setbEzsignsigningreasonIsactive(Boolean bEzsignsigningreasonIsactive) {
     this.bEzsignsigningreasonIsactive = bEzsignsigningreasonIsactive;
   }
 
@@ -200,11 +197,54 @@ public class EzsignsigningreasonResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsigningreasonResponse is not found in the empty JSON string", EzsignsigningreasonResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsignsigningreasonResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignsigningreasonResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignsigningreasonResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objEzsignsigningreasonDescription`
       MultilingualEzsignsigningreasonDescription.validateJsonElement(jsonObj.get("objEzsignsigningreasonDescription"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignsigningreasonResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignsigningreasonResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignsigningreasonResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignsigningreasonResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignsigningreasonResponse>() {
+           @Override
+           public void write(JsonWriter out, EzsignsigningreasonResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignsigningreasonResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsignsigningreasonResponse given an JSON string

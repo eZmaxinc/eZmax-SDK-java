@@ -50,37 +50,32 @@ import eZmaxAPI.JSON;
 /**
  * A Variableexpense Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VariableexpenseRequest {
   public static final String SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D = "pkiVariableexpenseID";
   @SerializedName(SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D)
-  @javax.annotation.Nullable
   private Integer pkiVariableexpenseID;
 
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_CODE = "sVariableexpenseCode";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_CODE)
-  @javax.annotation.Nonnull
   private String sVariableexpenseCode;
 
   public static final String SERIALIZED_NAME_OBJ_VARIABLEEXPENSE_DESCRIPTION = "objVariableexpenseDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_VARIABLEEXPENSE_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualVariableexpenseDescription objVariableexpenseDescription;
 
   public static final String SERIALIZED_NAME_E_VARIABLEEXPENSE_TAXABLE = "eVariableexpenseTaxable";
   @SerializedName(SERIALIZED_NAME_E_VARIABLEEXPENSE_TAXABLE)
-  @javax.annotation.Nonnull
   private FieldEVariableexpenseTaxable eVariableexpenseTaxable;
 
   public static final String SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE = "bVariableexpenseIsactive";
   @SerializedName(SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bVariableexpenseIsactive;
 
   public VariableexpenseRequest() {
   }
 
-  public VariableexpenseRequest pkiVariableexpenseID(@javax.annotation.Nullable Integer pkiVariableexpenseID) {
+  public VariableexpenseRequest pkiVariableexpenseID(Integer pkiVariableexpenseID) {
     this.pkiVariableexpenseID = pkiVariableexpenseID;
     return this;
   }
@@ -96,12 +91,12 @@ public class VariableexpenseRequest {
     return pkiVariableexpenseID;
   }
 
-  public void setPkiVariableexpenseID(@javax.annotation.Nullable Integer pkiVariableexpenseID) {
+  public void setPkiVariableexpenseID(Integer pkiVariableexpenseID) {
     this.pkiVariableexpenseID = pkiVariableexpenseID;
   }
 
 
-  public VariableexpenseRequest sVariableexpenseCode(@javax.annotation.Nonnull String sVariableexpenseCode) {
+  public VariableexpenseRequest sVariableexpenseCode(String sVariableexpenseCode) {
     this.sVariableexpenseCode = sVariableexpenseCode;
     return this;
   }
@@ -115,12 +110,12 @@ public class VariableexpenseRequest {
     return sVariableexpenseCode;
   }
 
-  public void setsVariableexpenseCode(@javax.annotation.Nonnull String sVariableexpenseCode) {
+  public void setsVariableexpenseCode(String sVariableexpenseCode) {
     this.sVariableexpenseCode = sVariableexpenseCode;
   }
 
 
-  public VariableexpenseRequest objVariableexpenseDescription(@javax.annotation.Nonnull MultilingualVariableexpenseDescription objVariableexpenseDescription) {
+  public VariableexpenseRequest objVariableexpenseDescription(MultilingualVariableexpenseDescription objVariableexpenseDescription) {
     this.objVariableexpenseDescription = objVariableexpenseDescription;
     return this;
   }
@@ -134,12 +129,12 @@ public class VariableexpenseRequest {
     return objVariableexpenseDescription;
   }
 
-  public void setObjVariableexpenseDescription(@javax.annotation.Nonnull MultilingualVariableexpenseDescription objVariableexpenseDescription) {
+  public void setObjVariableexpenseDescription(MultilingualVariableexpenseDescription objVariableexpenseDescription) {
     this.objVariableexpenseDescription = objVariableexpenseDescription;
   }
 
 
-  public VariableexpenseRequest eVariableexpenseTaxable(@javax.annotation.Nonnull FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
+  public VariableexpenseRequest eVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
     this.eVariableexpenseTaxable = eVariableexpenseTaxable;
     return this;
   }
@@ -153,12 +148,12 @@ public class VariableexpenseRequest {
     return eVariableexpenseTaxable;
   }
 
-  public void seteVariableexpenseTaxable(@javax.annotation.Nonnull FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
+  public void seteVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
     this.eVariableexpenseTaxable = eVariableexpenseTaxable;
   }
 
 
-  public VariableexpenseRequest bVariableexpenseIsactive(@javax.annotation.Nonnull Boolean bVariableexpenseIsactive) {
+  public VariableexpenseRequest bVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
     return this;
   }
@@ -172,7 +167,7 @@ public class VariableexpenseRequest {
     return bVariableexpenseIsactive;
   }
 
-  public void setbVariableexpenseIsactive(@javax.annotation.Nonnull Boolean bVariableexpenseIsactive) {
+  public void setbVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
   }
 
@@ -256,6 +251,21 @@ public class VariableexpenseRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in VariableexpenseRequest is not found in the empty JSON string", VariableexpenseRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!VariableexpenseRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `VariableexpenseRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : VariableexpenseRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sVariableexpenseCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sVariableexpenseCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sVariableexpenseCode").toString()));
@@ -266,6 +276,34 @@ public class VariableexpenseRequest {
       FieldEVariableexpenseTaxable.validateJsonElement(jsonObj.get("eVariableexpenseTaxable"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!VariableexpenseRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'VariableexpenseRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<VariableexpenseRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(VariableexpenseRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<VariableexpenseRequest>() {
+           @Override
+           public void write(JsonWriter out, VariableexpenseRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public VariableexpenseRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of VariableexpenseRequest given an JSON string

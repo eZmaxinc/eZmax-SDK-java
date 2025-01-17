@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonGetListV1ResponseMPayload;
 import com.ezmax.api.model.DomainListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/domain/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class DomainGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class DomainGetListV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
+  @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  private Integer iRowReturned;
+
+  public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
+  @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  private Integer iRowFiltered;
+
   public static final String SERIALIZED_NAME_A_OBJ_DOMAIN = "a_objDomain";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DOMAIN)
-  @javax.annotation.Nonnull
   private List<DomainListElement> aObjDomain = new ArrayList<>();
 
   public DomainGetListV1ResponseMPayload() {
   }
 
-  public DomainGetListV1ResponseMPayload aObjDomain(@javax.annotation.Nonnull List<DomainListElement> aObjDomain) {
+  public DomainGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+    return this;
+  }
+
+  /**
+   * The number of rows returned
+   * @return iRowReturned
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowReturned() {
+    return iRowReturned;
+  }
+
+  public void setiRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+  }
+
+
+  public DomainGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+    return this;
+  }
+
+  /**
+   * The number of rows matching your filters (if any) or the total number of rows
+   * @return iRowFiltered
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowFiltered() {
+    return iRowFiltered;
+  }
+
+  public void setiRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+  }
+
+
+  public DomainGetListV1ResponseMPayload aObjDomain(List<DomainListElement> aObjDomain) {
     this.aObjDomain = aObjDomain;
     return this;
   }
@@ -84,7 +128,7 @@ public class DomainGetListV1ResponseMPayload extends CommonGetListV1ResponseMPay
     return aObjDomain;
   }
 
-  public void setaObjDomain(@javax.annotation.Nonnull List<DomainListElement> aObjDomain) {
+  public void setaObjDomain(List<DomainListElement> aObjDomain) {
     this.aObjDomain = aObjDomain;
   }
 
@@ -99,20 +143,22 @@ public class DomainGetListV1ResponseMPayload extends CommonGetListV1ResponseMPay
       return false;
     }
     DomainGetListV1ResponseMPayload domainGetListV1ResponseMPayload = (DomainGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjDomain, domainGetListV1ResponseMPayload.aObjDomain) &&
-        super.equals(o);
+    return Objects.equals(this.iRowReturned, domainGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, domainGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjDomain, domainGetListV1ResponseMPayload.aObjDomain);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjDomain, super.hashCode());
+    return Objects.hash(iRowReturned, iRowFiltered, aObjDomain);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DomainGetListV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
+    sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
     sb.append("    aObjDomain: ").append(toIndentedString(aObjDomain)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -142,9 +188,9 @@ public class DomainGetListV1ResponseMPayload extends CommonGetListV1ResponseMPay
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objDomain");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objDomain");
   }
 
   /**

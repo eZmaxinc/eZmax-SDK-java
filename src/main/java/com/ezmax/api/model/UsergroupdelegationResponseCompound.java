@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.UsergroupdelegationResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,199 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupdelegation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class UsergroupdelegationResponseCompound extends UsergroupdelegationResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class UsergroupdelegationResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D = "pkiUsergroupdelegationID";
+  @SerializedName(SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D)
+  private Integer pkiUsergroupdelegationID;
+
+  public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
+  @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
+  private Integer fkiUsergroupID;
+
+  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
+  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  private Integer fkiUserID;
+
+  public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
+  @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
+  private String sUserFirstname;
+
+  public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
+  @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
+  private String sUserLastname;
+
+  public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
+  @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
+  private String sUserLoginname;
+
+  public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
+  @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  private String sEmailAddress;
+
+  public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
+  @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
+  private String sUsergroupNameX;
+
   public UsergroupdelegationResponseCompound() {
   }
+
+  public UsergroupdelegationResponseCompound pkiUsergroupdelegationID(Integer pkiUsergroupdelegationID) {
+    this.pkiUsergroupdelegationID = pkiUsergroupdelegationID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Usergroupdelegation
+   * minimum: 0
+   * maximum: 65535
+   * @return pkiUsergroupdelegationID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiUsergroupdelegationID() {
+    return pkiUsergroupdelegationID;
+  }
+
+  public void setPkiUsergroupdelegationID(Integer pkiUsergroupdelegationID) {
+    this.pkiUsergroupdelegationID = pkiUsergroupdelegationID;
+  }
+
+
+  public UsergroupdelegationResponseCompound fkiUsergroupID(Integer fkiUsergroupID) {
+    this.fkiUsergroupID = fkiUsergroupID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Usergroup
+   * minimum: 0
+   * maximum: 255
+   * @return fkiUsergroupID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiUsergroupID() {
+    return fkiUsergroupID;
+  }
+
+  public void setFkiUsergroupID(Integer fkiUsergroupID) {
+    this.fkiUsergroupID = fkiUsergroupID;
+  }
+
+
+  public UsergroupdelegationResponseCompound fkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return fkiUserID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiUserID() {
+    return fkiUserID;
+  }
+
+  public void setFkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+  }
+
+
+  public UsergroupdelegationResponseCompound sUserFirstname(String sUserFirstname) {
+    this.sUserFirstname = sUserFirstname;
+    return this;
+  }
+
+  /**
+   * The first name of the user
+   * @return sUserFirstname
+   */
+  @javax.annotation.Nonnull
+  public String getsUserFirstname() {
+    return sUserFirstname;
+  }
+
+  public void setsUserFirstname(String sUserFirstname) {
+    this.sUserFirstname = sUserFirstname;
+  }
+
+
+  public UsergroupdelegationResponseCompound sUserLastname(String sUserLastname) {
+    this.sUserLastname = sUserLastname;
+    return this;
+  }
+
+  /**
+   * The last name of the user
+   * @return sUserLastname
+   */
+  @javax.annotation.Nonnull
+  public String getsUserLastname() {
+    return sUserLastname;
+  }
+
+  public void setsUserLastname(String sUserLastname) {
+    this.sUserLastname = sUserLastname;
+  }
+
+
+  public UsergroupdelegationResponseCompound sUserLoginname(String sUserLoginname) {
+    this.sUserLoginname = sUserLoginname;
+    return this;
+  }
+
+  /**
+   * The login name of the User.
+   * @return sUserLoginname
+   */
+  @javax.annotation.Nonnull
+  public String getsUserLoginname() {
+    return sUserLoginname;
+  }
+
+  public void setsUserLoginname(String sUserLoginname) {
+    this.sUserLoginname = sUserLoginname;
+  }
+
+
+  public UsergroupdelegationResponseCompound sEmailAddress(String sEmailAddress) {
+    this.sEmailAddress = sEmailAddress;
+    return this;
+  }
+
+  /**
+   * The email address.
+   * @return sEmailAddress
+   */
+  @javax.annotation.Nullable
+  public String getsEmailAddress() {
+    return sEmailAddress;
+  }
+
+  public void setsEmailAddress(String sEmailAddress) {
+    this.sEmailAddress = sEmailAddress;
+  }
+
+
+  public UsergroupdelegationResponseCompound sUsergroupNameX(String sUsergroupNameX) {
+    this.sUsergroupNameX = sUsergroupNameX;
+    return this;
+  }
+
+  /**
+   * The Name of the Usergroup in the language of the requester
+   * @return sUsergroupNameX
+   */
+  @javax.annotation.Nonnull
+  public String getsUsergroupNameX() {
+    return sUsergroupNameX;
+  }
+
+  public void setsUsergroupNameX(String sUsergroupNameX) {
+    this.sUsergroupNameX = sUsergroupNameX;
+  }
+
 
 
   @Override
@@ -63,19 +251,34 @@ public class UsergroupdelegationResponseCompound extends UsergroupdelegationResp
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    UsergroupdelegationResponseCompound usergroupdelegationResponseCompound = (UsergroupdelegationResponseCompound) o;
+    return Objects.equals(this.pkiUsergroupdelegationID, usergroupdelegationResponseCompound.pkiUsergroupdelegationID) &&
+        Objects.equals(this.fkiUsergroupID, usergroupdelegationResponseCompound.fkiUsergroupID) &&
+        Objects.equals(this.fkiUserID, usergroupdelegationResponseCompound.fkiUserID) &&
+        Objects.equals(this.sUserFirstname, usergroupdelegationResponseCompound.sUserFirstname) &&
+        Objects.equals(this.sUserLastname, usergroupdelegationResponseCompound.sUserLastname) &&
+        Objects.equals(this.sUserLoginname, usergroupdelegationResponseCompound.sUserLoginname) &&
+        Objects.equals(this.sEmailAddress, usergroupdelegationResponseCompound.sEmailAddress) &&
+        Objects.equals(this.sUsergroupNameX, usergroupdelegationResponseCompound.sUsergroupNameX);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiUsergroupdelegationID, fkiUsergroupID, fkiUserID, sUserFirstname, sUserLastname, sUserLoginname, sEmailAddress, sUsergroupNameX);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupdelegationResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiUsergroupdelegationID: ").append(toIndentedString(pkiUsergroupdelegationID)).append("\n");
+    sb.append("    fkiUsergroupID: ").append(toIndentedString(fkiUsergroupID)).append("\n");
+    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
+    sb.append("    sUserFirstname: ").append(toIndentedString(sUserFirstname)).append("\n");
+    sb.append("    sUserLastname: ").append(toIndentedString(sUserLastname)).append("\n");
+    sb.append("    sUserLoginname: ").append(toIndentedString(sUserLoginname)).append("\n");
+    sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
+    sb.append("    sUsergroupNameX: ").append(toIndentedString(sUsergroupNameX)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -144,6 +347,22 @@ public class UsergroupdelegationResponseCompound extends UsergroupdelegationResp
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sUserFirstname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
+      }
+      if (!jsonObj.get("sUserLastname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLastname").toString()));
+      }
+      if (!jsonObj.get("sUserLoginname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLoginname").toString()));
+      }
+      if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
+      }
+      if (!jsonObj.get("sUsergroupNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUsergroupNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUsergroupNameX").toString()));
       }
   }
 

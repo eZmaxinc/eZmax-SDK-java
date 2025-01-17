@@ -51,22 +51,20 @@ import eZmaxAPI.JSON;
 /**
  * Generic CommunicationrecipientsGroup Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomCommunicationrecipientsgroupResponse {
   public static final String SERIALIZED_NAME_S_COMMUNICATIONRECIPIENTSGROUP_LABEL = "sCommunicationrecipientsgroupLabel";
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATIONRECIPIENTSGROUP_LABEL)
-  @javax.annotation.Nonnull
   private String sCommunicationrecipientsgroupLabel;
 
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONRECIPIENTSRECIPIENT = "a_objCommunicationrecipientsrecipient";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONRECIPIENTSRECIPIENT)
-  @javax.annotation.Nonnull
   private List<CustomCommunicationrecipientsrecipientResponse> aObjCommunicationrecipientsrecipient = new ArrayList<>();
 
   public CustomCommunicationrecipientsgroupResponse() {
   }
 
-  public CustomCommunicationrecipientsgroupResponse sCommunicationrecipientsgroupLabel(@javax.annotation.Nonnull String sCommunicationrecipientsgroupLabel) {
+  public CustomCommunicationrecipientsgroupResponse sCommunicationrecipientsgroupLabel(String sCommunicationrecipientsgroupLabel) {
     this.sCommunicationrecipientsgroupLabel = sCommunicationrecipientsgroupLabel;
     return this;
   }
@@ -80,12 +78,12 @@ public class CustomCommunicationrecipientsgroupResponse {
     return sCommunicationrecipientsgroupLabel;
   }
 
-  public void setsCommunicationrecipientsgroupLabel(@javax.annotation.Nonnull String sCommunicationrecipientsgroupLabel) {
+  public void setsCommunicationrecipientsgroupLabel(String sCommunicationrecipientsgroupLabel) {
     this.sCommunicationrecipientsgroupLabel = sCommunicationrecipientsgroupLabel;
   }
 
 
-  public CustomCommunicationrecipientsgroupResponse aObjCommunicationrecipientsrecipient(@javax.annotation.Nonnull List<CustomCommunicationrecipientsrecipientResponse> aObjCommunicationrecipientsrecipient) {
+  public CustomCommunicationrecipientsgroupResponse aObjCommunicationrecipientsrecipient(List<CustomCommunicationrecipientsrecipientResponse> aObjCommunicationrecipientsrecipient) {
     this.aObjCommunicationrecipientsrecipient = aObjCommunicationrecipientsrecipient;
     return this;
   }
@@ -107,7 +105,7 @@ public class CustomCommunicationrecipientsgroupResponse {
     return aObjCommunicationrecipientsrecipient;
   }
 
-  public void setaObjCommunicationrecipientsrecipient(@javax.annotation.Nonnull List<CustomCommunicationrecipientsrecipientResponse> aObjCommunicationrecipientsrecipient) {
+  public void setaObjCommunicationrecipientsrecipient(List<CustomCommunicationrecipientsrecipientResponse> aObjCommunicationrecipientsrecipient) {
     this.aObjCommunicationrecipientsrecipient = aObjCommunicationrecipientsrecipient;
   }
 

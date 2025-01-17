@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.DiscussionResponseCompound;
-import com.ezmax.api.model.EzsigndiscussionResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,10 +49,180 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigndiscussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigndiscussionResponseCompound extends EzsigndiscussionResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsigndiscussionResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D = "pkiEzsigndiscussionID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D)
+  private Integer pkiEzsigndiscussionID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNPAGE_I_D = "fkiEzsignpageID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNPAGE_I_D)
+  private Integer fkiEzsignpageID;
+
+  public static final String SERIALIZED_NAME_FKI_DISCUSSION_I_D = "fkiDiscussionID";
+  @SerializedName(SERIALIZED_NAME_FKI_DISCUSSION_I_D)
+  private Integer fkiDiscussionID;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_X = "iEzsigndiscussionX";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_X)
+  private Integer iEzsigndiscussionX;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_Y = "iEzsigndiscussionY";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_Y)
+  private Integer iEzsigndiscussionY;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_PAGENUMBER = "iEzsigndiscussionPagenumber";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_PAGENUMBER)
+  private Integer iEzsigndiscussionPagenumber;
+
+  public static final String SERIALIZED_NAME_OBJ_DISCUSSION = "objDiscussion";
+  @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSION)
+  private DiscussionResponseCompound objDiscussion;
+
   public EzsigndiscussionResponseCompound() {
   }
+
+  public EzsigndiscussionResponseCompound pkiEzsigndiscussionID(Integer pkiEzsigndiscussionID) {
+    this.pkiEzsigndiscussionID = pkiEzsigndiscussionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigndiscussion
+   * minimum: 0
+   * maximum: 16777215
+   * @return pkiEzsigndiscussionID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiEzsigndiscussionID() {
+    return pkiEzsigndiscussionID;
+  }
+
+  public void setPkiEzsigndiscussionID(Integer pkiEzsigndiscussionID) {
+    this.pkiEzsigndiscussionID = pkiEzsigndiscussionID;
+  }
+
+
+  public EzsigndiscussionResponseCompound fkiEzsignpageID(Integer fkiEzsignpageID) {
+    this.fkiEzsignpageID = fkiEzsignpageID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignpage
+   * minimum: 0
+   * @return fkiEzsignpageID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsignpageID() {
+    return fkiEzsignpageID;
+  }
+
+  public void setFkiEzsignpageID(Integer fkiEzsignpageID) {
+    this.fkiEzsignpageID = fkiEzsignpageID;
+  }
+
+
+  public EzsigndiscussionResponseCompound fkiDiscussionID(Integer fkiDiscussionID) {
+    this.fkiDiscussionID = fkiDiscussionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Discussion
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiDiscussionID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiDiscussionID() {
+    return fkiDiscussionID;
+  }
+
+  public void setFkiDiscussionID(Integer fkiDiscussionID) {
+    this.fkiDiscussionID = fkiDiscussionID;
+  }
+
+
+  public EzsigndiscussionResponseCompound iEzsigndiscussionX(Integer iEzsigndiscussionX) {
+    this.iEzsigndiscussionX = iEzsigndiscussionX;
+    return this;
+  }
+
+  /**
+   * The x of the Ezsigndiscussion
+   * minimum: 0
+   * maximum: 65535
+   * @return iEzsigndiscussionX
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndiscussionX() {
+    return iEzsigndiscussionX;
+  }
+
+  public void setiEzsigndiscussionX(Integer iEzsigndiscussionX) {
+    this.iEzsigndiscussionX = iEzsigndiscussionX;
+  }
+
+
+  public EzsigndiscussionResponseCompound iEzsigndiscussionY(Integer iEzsigndiscussionY) {
+    this.iEzsigndiscussionY = iEzsigndiscussionY;
+    return this;
+  }
+
+  /**
+   * The y of the Ezsigndiscussion
+   * minimum: 0
+   * maximum: 65535
+   * @return iEzsigndiscussionY
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndiscussionY() {
+    return iEzsigndiscussionY;
+  }
+
+  public void setiEzsigndiscussionY(Integer iEzsigndiscussionY) {
+    this.iEzsigndiscussionY = iEzsigndiscussionY;
+  }
+
+
+  public EzsigndiscussionResponseCompound iEzsigndiscussionPagenumber(Integer iEzsigndiscussionPagenumber) {
+    this.iEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
+    return this;
+  }
+
+  /**
+   * The page number in the Ezsigndocument for the Ezsigndiscussion
+   * @return iEzsigndiscussionPagenumber
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndiscussionPagenumber() {
+    return iEzsigndiscussionPagenumber;
+  }
+
+  public void setiEzsigndiscussionPagenumber(Integer iEzsigndiscussionPagenumber) {
+    this.iEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
+  }
+
+
+  public EzsigndiscussionResponseCompound objDiscussion(DiscussionResponseCompound objDiscussion) {
+    this.objDiscussion = objDiscussion;
+    return this;
+  }
+
+  /**
+   * Get objDiscussion
+   * @return objDiscussion
+   */
+  @javax.annotation.Nonnull
+  public DiscussionResponseCompound getObjDiscussion() {
+    return objDiscussion;
+  }
+
+  public void setObjDiscussion(DiscussionResponseCompound objDiscussion) {
+    this.objDiscussion = objDiscussion;
+  }
+
 
 
   @Override
@@ -64,19 +233,32 @@ public class EzsigndiscussionResponseCompound extends EzsigndiscussionResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    EzsigndiscussionResponseCompound ezsigndiscussionResponseCompound = (EzsigndiscussionResponseCompound) o;
+    return Objects.equals(this.pkiEzsigndiscussionID, ezsigndiscussionResponseCompound.pkiEzsigndiscussionID) &&
+        Objects.equals(this.fkiEzsignpageID, ezsigndiscussionResponseCompound.fkiEzsignpageID) &&
+        Objects.equals(this.fkiDiscussionID, ezsigndiscussionResponseCompound.fkiDiscussionID) &&
+        Objects.equals(this.iEzsigndiscussionX, ezsigndiscussionResponseCompound.iEzsigndiscussionX) &&
+        Objects.equals(this.iEzsigndiscussionY, ezsigndiscussionResponseCompound.iEzsigndiscussionY) &&
+        Objects.equals(this.iEzsigndiscussionPagenumber, ezsigndiscussionResponseCompound.iEzsigndiscussionPagenumber) &&
+        Objects.equals(this.objDiscussion, ezsigndiscussionResponseCompound.objDiscussion);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiEzsigndiscussionID, fkiEzsignpageID, fkiDiscussionID, iEzsigndiscussionX, iEzsigndiscussionY, iEzsigndiscussionPagenumber, objDiscussion);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndiscussionResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsigndiscussionID: ").append(toIndentedString(pkiEzsigndiscussionID)).append("\n");
+    sb.append("    fkiEzsignpageID: ").append(toIndentedString(fkiEzsignpageID)).append("\n");
+    sb.append("    fkiDiscussionID: ").append(toIndentedString(fkiDiscussionID)).append("\n");
+    sb.append("    iEzsigndiscussionX: ").append(toIndentedString(iEzsigndiscussionX)).append("\n");
+    sb.append("    iEzsigndiscussionY: ").append(toIndentedString(iEzsigndiscussionY)).append("\n");
+    sb.append("    iEzsigndiscussionPagenumber: ").append(toIndentedString(iEzsigndiscussionPagenumber)).append("\n");
+    sb.append("    objDiscussion: ").append(toIndentedString(objDiscussion)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -145,6 +327,9 @@ public class EzsigndiscussionResponseCompound extends EzsigndiscussionResponse {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objDiscussion`
+      DiscussionResponseCompound.validateJsonElement(jsonObj.get("objDiscussion"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

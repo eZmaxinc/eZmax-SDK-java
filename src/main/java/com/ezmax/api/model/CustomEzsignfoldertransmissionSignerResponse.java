@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A form Signer Object in the context of an Ezsignfoldertransmissions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignfoldertransmissionSignerResponse {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
-  @javax.annotation.Nonnull
   private String sContactFirstname;
 
   public static final String SERIALIZED_NAME_S_CONTACT_LASTNAME = "sContactLastname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_LASTNAME)
-  @javax.annotation.Nonnull
   private String sContactLastname;
 
   public CustomEzsignfoldertransmissionSignerResponse() {
   }
 
-  public CustomEzsignfoldertransmissionSignerResponse fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public CustomEzsignfoldertransmissionSignerResponse fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -83,12 +80,12 @@ public class CustomEzsignfoldertransmissionSignerResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public CustomEzsignfoldertransmissionSignerResponse sContactFirstname(@javax.annotation.Nonnull String sContactFirstname) {
+  public CustomEzsignfoldertransmissionSignerResponse sContactFirstname(String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -102,12 +99,12 @@ public class CustomEzsignfoldertransmissionSignerResponse {
     return sContactFirstname;
   }
 
-  public void setsContactFirstname(@javax.annotation.Nonnull String sContactFirstname) {
+  public void setsContactFirstname(String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
-  public CustomEzsignfoldertransmissionSignerResponse sContactLastname(@javax.annotation.Nonnull String sContactLastname) {
+  public CustomEzsignfoldertransmissionSignerResponse sContactLastname(String sContactLastname) {
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -121,7 +118,7 @@ public class CustomEzsignfoldertransmissionSignerResponse {
     return sContactLastname;
   }
 
-  public void setsContactLastname(@javax.annotation.Nonnull String sContactLastname) {
+  public void setsContactLastname(String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 

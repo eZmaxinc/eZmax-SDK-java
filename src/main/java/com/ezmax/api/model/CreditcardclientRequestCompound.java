@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CreditcardclientRequest;
 import com.ezmax.api.model.CreditcarddetailRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -50,10 +49,219 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcardclient Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CreditcardclientRequestCompound extends CreditcardclientRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CreditcardclientRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D = "pkiCreditcardclientID";
+  @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D)
+  private Integer pkiCreditcardclientID;
+
+  public static final String SERIALIZED_NAME_FKS_CREDITCARDTOKEN_I_D = "fksCreditcardtokenID";
+  @SerializedName(SERIALIZED_NAME_FKS_CREDITCARDTOKEN_I_D)
+  private String fksCreditcardtokenID;
+
+  public static final String SERIALIZED_NAME_B_CREDITCARDCLIENTRELATION_ISDEFAULT = "bCreditcardclientrelationIsdefault";
+  @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENTRELATION_ISDEFAULT)
+  private Boolean bCreditcardclientrelationIsdefault;
+
+  public static final String SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION = "sCreditcardclientDescription";
+  @SerializedName(SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION)
+  private String sCreditcardclientDescription;
+
+  public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDCOMPANYPAYMENT = "bCreditcardclientAllowedcompanypayment";
+  @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDCOMPANYPAYMENT)
+  private Boolean bCreditcardclientAllowedcompanypayment;
+
+  public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDEZSIGN = "bCreditcardclientAllowedezsign";
+  @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDEZSIGN)
+  private Boolean bCreditcardclientAllowedezsign;
+
+  public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDTRANQUILLIT = "bCreditcardclientAllowedtranquillit";
+  @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDTRANQUILLIT)
+  private Boolean bCreditcardclientAllowedtranquillit;
+
+  public static final String SERIALIZED_NAME_OBJ_CREDITCARDDETAIL = "objCreditcarddetail";
+  @SerializedName(SERIALIZED_NAME_OBJ_CREDITCARDDETAIL)
+  private CreditcarddetailRequest objCreditcarddetail;
+
+  public static final String SERIALIZED_NAME_S_CREDITCARDCLIENT_C_V_V = "sCreditcardclientCVV";
+  @SerializedName(SERIALIZED_NAME_S_CREDITCARDCLIENT_C_V_V)
+  private String sCreditcardclientCVV;
+
   public CreditcardclientRequestCompound() {
   }
+
+  public CreditcardclientRequestCompound pkiCreditcardclientID(Integer pkiCreditcardclientID) {
+    this.pkiCreditcardclientID = pkiCreditcardclientID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Creditcardclient
+   * minimum: 0
+   * maximum: 65535
+   * @return pkiCreditcardclientID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiCreditcardclientID() {
+    return pkiCreditcardclientID;
+  }
+
+  public void setPkiCreditcardclientID(Integer pkiCreditcardclientID) {
+    this.pkiCreditcardclientID = pkiCreditcardclientID;
+  }
+
+
+  public CreditcardclientRequestCompound fksCreditcardtokenID(String fksCreditcardtokenID) {
+    this.fksCreditcardtokenID = fksCreditcardtokenID;
+    return this;
+  }
+
+  /**
+   * The creditcard token identifier
+   * @return fksCreditcardtokenID
+   */
+  @javax.annotation.Nullable
+  public String getFksCreditcardtokenID() {
+    return fksCreditcardtokenID;
+  }
+
+  public void setFksCreditcardtokenID(String fksCreditcardtokenID) {
+    this.fksCreditcardtokenID = fksCreditcardtokenID;
+  }
+
+
+  public CreditcardclientRequestCompound bCreditcardclientrelationIsdefault(Boolean bCreditcardclientrelationIsdefault) {
+    this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s the creditcardclient is the default one
+   * @return bCreditcardclientrelationIsdefault
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCreditcardclientrelationIsdefault() {
+    return bCreditcardclientrelationIsdefault;
+  }
+
+  public void setbCreditcardclientrelationIsdefault(Boolean bCreditcardclientrelationIsdefault) {
+    this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
+  }
+
+
+  public CreditcardclientRequestCompound sCreditcardclientDescription(String sCreditcardclientDescription) {
+    this.sCreditcardclientDescription = sCreditcardclientDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Creditcardclient
+   * @return sCreditcardclientDescription
+   */
+  @javax.annotation.Nonnull
+  public String getsCreditcardclientDescription() {
+    return sCreditcardclientDescription;
+  }
+
+  public void setsCreditcardclientDescription(String sCreditcardclientDescription) {
+    this.sCreditcardclientDescription = sCreditcardclientDescription;
+  }
+
+
+  public CreditcardclientRequestCompound bCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
+    this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s an allowedagencypayment
+   * @return bCreditcardclientAllowedcompanypayment
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCreditcardclientAllowedcompanypayment() {
+    return bCreditcardclientAllowedcompanypayment;
+  }
+
+  public void setbCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
+    this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
+  }
+
+
+  public CreditcardclientRequestCompound bCreditcardclientAllowedezsign(Boolean bCreditcardclientAllowedezsign) {
+    this.bCreditcardclientAllowedezsign = bCreditcardclientAllowedezsign;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s an allowedroyallepageprotection
+   * @return bCreditcardclientAllowedezsign
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCreditcardclientAllowedezsign() {
+    return bCreditcardclientAllowedezsign;
+  }
+
+  public void setbCreditcardclientAllowedezsign(Boolean bCreditcardclientAllowedezsign) {
+    this.bCreditcardclientAllowedezsign = bCreditcardclientAllowedezsign;
+  }
+
+
+  public CreditcardclientRequestCompound bCreditcardclientAllowedtranquillit(Boolean bCreditcardclientAllowedtranquillit) {
+    this.bCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s an allowedtranquillit
+   * @return bCreditcardclientAllowedtranquillit
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCreditcardclientAllowedtranquillit() {
+    return bCreditcardclientAllowedtranquillit;
+  }
+
+  public void setbCreditcardclientAllowedtranquillit(Boolean bCreditcardclientAllowedtranquillit) {
+    this.bCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
+  }
+
+
+  public CreditcardclientRequestCompound objCreditcarddetail(CreditcarddetailRequest objCreditcarddetail) {
+    this.objCreditcarddetail = objCreditcarddetail;
+    return this;
+  }
+
+  /**
+   * Get objCreditcarddetail
+   * @return objCreditcarddetail
+   */
+  @javax.annotation.Nonnull
+  public CreditcarddetailRequest getObjCreditcarddetail() {
+    return objCreditcarddetail;
+  }
+
+  public void setObjCreditcarddetail(CreditcarddetailRequest objCreditcarddetail) {
+    this.objCreditcarddetail = objCreditcarddetail;
+  }
+
+
+  public CreditcardclientRequestCompound sCreditcardclientCVV(String sCreditcardclientCVV) {
+    this.sCreditcardclientCVV = sCreditcardclientCVV;
+    return this;
+  }
+
+  /**
+   * The creditcard card CVV
+   * @return sCreditcardclientCVV
+   */
+  @javax.annotation.Nonnull
+  public String getsCreditcardclientCVV() {
+    return sCreditcardclientCVV;
+  }
+
+  public void setsCreditcardclientCVV(String sCreditcardclientCVV) {
+    this.sCreditcardclientCVV = sCreditcardclientCVV;
+  }
+
 
 
   @Override
@@ -64,19 +272,36 @@ public class CreditcardclientRequestCompound extends CreditcardclientRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    CreditcardclientRequestCompound creditcardclientRequestCompound = (CreditcardclientRequestCompound) o;
+    return Objects.equals(this.pkiCreditcardclientID, creditcardclientRequestCompound.pkiCreditcardclientID) &&
+        Objects.equals(this.fksCreditcardtokenID, creditcardclientRequestCompound.fksCreditcardtokenID) &&
+        Objects.equals(this.bCreditcardclientrelationIsdefault, creditcardclientRequestCompound.bCreditcardclientrelationIsdefault) &&
+        Objects.equals(this.sCreditcardclientDescription, creditcardclientRequestCompound.sCreditcardclientDescription) &&
+        Objects.equals(this.bCreditcardclientAllowedcompanypayment, creditcardclientRequestCompound.bCreditcardclientAllowedcompanypayment) &&
+        Objects.equals(this.bCreditcardclientAllowedezsign, creditcardclientRequestCompound.bCreditcardclientAllowedezsign) &&
+        Objects.equals(this.bCreditcardclientAllowedtranquillit, creditcardclientRequestCompound.bCreditcardclientAllowedtranquillit) &&
+        Objects.equals(this.objCreditcarddetail, creditcardclientRequestCompound.objCreditcarddetail) &&
+        Objects.equals(this.sCreditcardclientCVV, creditcardclientRequestCompound.sCreditcardclientCVV);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiCreditcardclientID, fksCreditcardtokenID, bCreditcardclientrelationIsdefault, sCreditcardclientDescription, bCreditcardclientAllowedcompanypayment, bCreditcardclientAllowedezsign, bCreditcardclientAllowedtranquillit, objCreditcarddetail, sCreditcardclientCVV);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditcardclientRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiCreditcardclientID: ").append(toIndentedString(pkiCreditcardclientID)).append("\n");
+    sb.append("    fksCreditcardtokenID: ").append(toIndentedString(fksCreditcardtokenID)).append("\n");
+    sb.append("    bCreditcardclientrelationIsdefault: ").append(toIndentedString(bCreditcardclientrelationIsdefault)).append("\n");
+    sb.append("    sCreditcardclientDescription: ").append(toIndentedString(sCreditcardclientDescription)).append("\n");
+    sb.append("    bCreditcardclientAllowedcompanypayment: ").append(toIndentedString(bCreditcardclientAllowedcompanypayment)).append("\n");
+    sb.append("    bCreditcardclientAllowedezsign: ").append(toIndentedString(bCreditcardclientAllowedezsign)).append("\n");
+    sb.append("    bCreditcardclientAllowedtranquillit: ").append(toIndentedString(bCreditcardclientAllowedtranquillit)).append("\n");
+    sb.append("    objCreditcarddetail: ").append(toIndentedString(objCreditcarddetail)).append("\n");
+    sb.append("    sCreditcardclientCVV: ").append(toIndentedString(sCreditcardclientCVV)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -146,6 +371,18 @@ public class CreditcardclientRequestCompound extends CreditcardclientRequest {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("fksCreditcardtokenID") != null && !jsonObj.get("fksCreditcardtokenID").isJsonNull()) && !jsonObj.get("fksCreditcardtokenID").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `fksCreditcardtokenID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fksCreditcardtokenID").toString()));
+      }
+      if (!jsonObj.get("sCreditcardclientDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCreditcardclientDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcardclientDescription").toString()));
+      }
+      // validate the required field `objCreditcarddetail`
+      CreditcarddetailRequest.validateJsonElement(jsonObj.get("objCreditcarddetail"));
+      if (!jsonObj.get("sCreditcardclientCVV").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCreditcardclientCVV` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcardclientCVV").toString()));
       }
   }
 

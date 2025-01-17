@@ -14,8 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AttemptResponse;
-import com.ezmax.api.model.CommonWebhook;
+import com.ezmax.api.model.AttemptResponseCompound;
 import com.ezmax.api.model.CustomWebhookResponse;
 import com.ezmax.api.model.EzsignfolderResponse;
 import com.google.gson.TypeAdapter;
@@ -54,17 +53,70 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class WebhookEzsignFolderCompleted extends CommonWebhook {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class WebhookEzsignFolderCompleted {
+  public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
+  @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
+  private CustomWebhookResponse objWebhook;
+
+  public static final String SERIALIZED_NAME_A_OBJ_ATTEMPT = "a_objAttempt";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_ATTEMPT)
+  private List<AttemptResponseCompound> aObjAttempt = new ArrayList<>();
+
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)
-  @javax.annotation.Nonnull
   private EzsignfolderResponse objEzsignfolder;
 
   public WebhookEzsignFolderCompleted() {
   }
 
-  public WebhookEzsignFolderCompleted objEzsignfolder(@javax.annotation.Nonnull EzsignfolderResponse objEzsignfolder) {
+  public WebhookEzsignFolderCompleted objWebhook(CustomWebhookResponse objWebhook) {
+    this.objWebhook = objWebhook;
+    return this;
+  }
+
+  /**
+   * Get objWebhook
+   * @return objWebhook
+   */
+  @javax.annotation.Nonnull
+  public CustomWebhookResponse getObjWebhook() {
+    return objWebhook;
+  }
+
+  public void setObjWebhook(CustomWebhookResponse objWebhook) {
+    this.objWebhook = objWebhook;
+  }
+
+
+  public WebhookEzsignFolderCompleted aObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
+    this.aObjAttempt = aObjAttempt;
+    return this;
+  }
+
+  public WebhookEzsignFolderCompleted addAObjAttemptItem(AttemptResponseCompound aObjAttemptItem) {
+    if (this.aObjAttempt == null) {
+      this.aObjAttempt = new ArrayList<>();
+    }
+    this.aObjAttempt.add(aObjAttemptItem);
+    return this;
+  }
+
+  /**
+   * An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.
+   * @return aObjAttempt
+   */
+  @javax.annotation.Nonnull
+  public List<AttemptResponseCompound> getaObjAttempt() {
+    return aObjAttempt;
+  }
+
+  public void setaObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
+    this.aObjAttempt = aObjAttempt;
+  }
+
+
+  public WebhookEzsignFolderCompleted objEzsignfolder(EzsignfolderResponse objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
     return this;
   }
@@ -78,7 +130,7 @@ public class WebhookEzsignFolderCompleted extends CommonWebhook {
     return objEzsignfolder;
   }
 
-  public void setObjEzsignfolder(@javax.annotation.Nonnull EzsignfolderResponse objEzsignfolder) {
+  public void setObjEzsignfolder(EzsignfolderResponse objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
   }
 
@@ -93,20 +145,22 @@ public class WebhookEzsignFolderCompleted extends CommonWebhook {
       return false;
     }
     WebhookEzsignFolderCompleted webhookEzsignFolderCompleted = (WebhookEzsignFolderCompleted) o;
-    return Objects.equals(this.objEzsignfolder, webhookEzsignFolderCompleted.objEzsignfolder) &&
-        super.equals(o);
+    return Objects.equals(this.objWebhook, webhookEzsignFolderCompleted.objWebhook) &&
+        Objects.equals(this.aObjAttempt, webhookEzsignFolderCompleted.aObjAttempt) &&
+        Objects.equals(this.objEzsignfolder, webhookEzsignFolderCompleted.objEzsignfolder);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objEzsignfolder, super.hashCode());
+    return Objects.hash(objWebhook, aObjAttempt, objEzsignfolder);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookEzsignFolderCompleted {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    objWebhook: ").append(toIndentedString(objWebhook)).append("\n");
+    sb.append("    aObjAttempt: ").append(toIndentedString(aObjAttempt)).append("\n");
     sb.append("    objEzsignfolder: ").append(toIndentedString(objEzsignfolder)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -136,9 +190,9 @@ public class WebhookEzsignFolderCompleted extends CommonWebhook {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objEzsignfolder");
     openapiRequiredFields.add("objWebhook");
     openapiRequiredFields.add("a_objAttempt");
+    openapiRequiredFields.add("objEzsignfolder");
   }
 
   /**
@@ -169,6 +223,18 @@ public class WebhookEzsignFolderCompleted extends CommonWebhook {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objWebhook`
+      CustomWebhookResponse.validateJsonElement(jsonObj.get("objWebhook"));
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objAttempt").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objAttempt` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAttempt").toString()));
+      }
+
+      JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
+      // validate the required field `a_objAttempt` (array)
+      for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
+        AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
+      };
       // validate the required field `objEzsignfolder`
       EzsignfolderResponse.validateJsonElement(jsonObj.get("objEzsignfolder"));
   }

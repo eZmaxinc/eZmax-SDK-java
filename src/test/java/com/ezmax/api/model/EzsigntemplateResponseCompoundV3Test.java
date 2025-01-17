@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
-import com.ezmax.api.model.EzsigntemplateResponseV3;
 import com.ezmax.api.model.EzsigntemplatedocumentResponse;
 import com.ezmax.api.model.EzsigntemplatesignerResponseCompound;
 import com.ezmax.api.model.FieldEEzsigntemplateRecognition;

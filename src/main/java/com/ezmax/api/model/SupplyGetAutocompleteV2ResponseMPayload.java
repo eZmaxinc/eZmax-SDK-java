@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/supply/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SupplyGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_SUPPLY = "a_objSupply";
   @SerializedName(SERIALIZED_NAME_A_OBJ_SUPPLY)
-  @javax.annotation.Nonnull
   private List<SupplyAutocompleteElementResponse> aObjSupply = new ArrayList<>();
 
   public SupplyGetAutocompleteV2ResponseMPayload() {
   }
 
-  public SupplyGetAutocompleteV2ResponseMPayload aObjSupply(@javax.annotation.Nonnull List<SupplyAutocompleteElementResponse> aObjSupply) {
+  public SupplyGetAutocompleteV2ResponseMPayload aObjSupply(List<SupplyAutocompleteElementResponse> aObjSupply) {
     this.aObjSupply = aObjSupply;
     return this;
   }
@@ -83,7 +82,7 @@ public class SupplyGetAutocompleteV2ResponseMPayload {
     return aObjSupply;
   }
 
-  public void setaObjSupply(@javax.annotation.Nonnull List<SupplyAutocompleteElementResponse> aObjSupply) {
+  public void setaObjSupply(List<SupplyAutocompleteElementResponse> aObjSupply) {
     this.aObjSupply = aObjSupply;
   }
 

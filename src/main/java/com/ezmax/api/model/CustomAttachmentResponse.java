@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AttachmentResponse;
 import com.ezmax.api.model.AttachmentResponseCompound;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.FieldEAttachmentDocumenttype;
@@ -57,32 +56,1513 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Attachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CustomAttachmentResponse extends AttachmentResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CustomAttachmentResponse {
+  public static final String SERIALIZED_NAME_PKI_ATTACHMENT_I_D = "pkiAttachmentID";
+  @SerializedName(SERIALIZED_NAME_PKI_ATTACHMENT_I_D)
+  private Integer pkiAttachmentID;
+
+  public static final String SERIALIZED_NAME_FKI_COMPUTER_I_D = "fkiComputerID";
+  @SerializedName(SERIALIZED_NAME_FKI_COMPUTER_I_D)
+  private Integer fkiComputerID;
+
+  public static final String SERIALIZED_NAME_FKI_ADJUSTMENT_I_D = "fkiAdjustmentID";
+  @SerializedName(SERIALIZED_NAME_FKI_ADJUSTMENT_I_D)
+  private Integer fkiAdjustmentID;
+
+  public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
+  @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
+  private Integer fkiAgentID;
+
+  public static final String SERIALIZED_NAME_FKI_BANKACCOUNT_I_D = "fkiBankaccountID";
+  @SerializedName(SERIALIZED_NAME_FKI_BANKACCOUNT_I_D)
+  private Integer fkiBankaccountID;
+
+  public static final String SERIALIZED_NAME_FKI_BROKER_I_D = "fkiBrokerID";
+  @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D)
+  private Integer fkiBrokerID;
+
+  public static final String SERIALIZED_NAME_FKI_COMMISSIONADVANCE_I_D = "fkiCommissionadvanceID";
+  @SerializedName(SERIALIZED_NAME_FKI_COMMISSIONADVANCE_I_D)
+  private Integer fkiCommissionadvanceID;
+
+  public static final String SERIALIZED_NAME_FKI_COMMUNICATION_I_D = "fkiCommunicationID";
+  @SerializedName(SERIALIZED_NAME_FKI_COMMUNICATION_I_D)
+  private Integer fkiCommunicationID;
+
+  public static final String SERIALIZED_NAME_FKI_CUSTOMER_I_D = "fkiCustomerID";
+  @SerializedName(SERIALIZED_NAME_FKI_CUSTOMER_I_D)
+  private Integer fkiCustomerID;
+
+  public static final String SERIALIZED_NAME_FKI_CUSTOMERTEMPLATE_I_D = "fkiCustomertemplateID";
+  @SerializedName(SERIALIZED_NAME_FKI_CUSTOMERTEMPLATE_I_D)
+  private Integer fkiCustomertemplateID;
+
+  public static final String SERIALIZED_NAME_FKI_DEPOSIT_I_D = "fkiDepositID";
+  @SerializedName(SERIALIZED_NAME_FKI_DEPOSIT_I_D)
+  private Integer fkiDepositID;
+
+  public static final String SERIALIZED_NAME_FKI_DEPOSITTRANSITCHEQUE_I_D = "fkiDeposittransitchequeID";
+  @SerializedName(SERIALIZED_NAME_FKI_DEPOSITTRANSITCHEQUE_I_D)
+  private Integer fkiDeposittransitchequeID;
+
+  public static final String SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFER_I_D = "fkiElectronicfundstransferID";
+  @SerializedName(SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFER_I_D)
+  private Integer fkiElectronicfundstransferID;
+
+  public static final String SERIALIZED_NAME_FKI_EMPLOYEE_I_D = "fkiEmployeeID";
+  @SerializedName(SERIALIZED_NAME_FKI_EMPLOYEE_I_D)
+  private Integer fkiEmployeeID;
+
+  public static final String SERIALIZED_NAME_FKI_EXTERNALBROKER_I_D = "fkiExternalbrokerID";
+  @SerializedName(SERIALIZED_NAME_FKI_EXTERNALBROKER_I_D)
+  private Integer fkiExternalbrokerID;
+
+  public static final String SERIALIZED_NAME_FKI_EZCOMADVANCESERVER_I_D = "fkiEzcomadvanceserverID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZCOMADVANCESERVER_I_D)
+  private Integer fkiEzcomadvanceserverID;
+
+  public static final String SERIALIZED_NAME_FKI_EZCOMCOMPANY_I_D = "fkiEzcomcompanyID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZCOMCOMPANY_I_D)
+  private Integer fkiEzcomcompanyID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
+  private Integer fkiEzsigndocumentID;
+
+  public static final String SERIALIZED_NAME_FKI_GHACQCONTRACT_I_D = "fkiGhacqcontractID";
+  @SerializedName(SERIALIZED_NAME_FKI_GHACQCONTRACT_I_D)
+  private Integer fkiGhacqcontractID;
+
+  public static final String SERIALIZED_NAME_FKI_INSCRIPTION_I_D = "fkiInscriptionID";
+  @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTION_I_D)
+  private Integer fkiInscriptionID;
+
+  public static final String SERIALIZED_NAME_FKI_INSCRIPTIONTEMP_I_D = "fkiInscriptiontempID";
+  @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTIONTEMP_I_D)
+  private Integer fkiInscriptiontempID;
+
+  public static final String SERIALIZED_NAME_FKI_INSCRIPTIONNOTAUTHENTICATED_I_D = "fkiInscriptionnotauthenticatedID";
+  @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTIONNOTAUTHENTICATED_I_D)
+  private Integer fkiInscriptionnotauthenticatedID;
+
+  public static final String SERIALIZED_NAME_FKI_INVOICE_I_D = "fkiInvoiceID";
+  @SerializedName(SERIALIZED_NAME_FKI_INVOICE_I_D)
+  private Integer fkiInvoiceID;
+
+  public static final String SERIALIZED_NAME_FKI_BUYERCONTRACT_I_D = "fkiBuyercontractID";
+  @SerializedName(SERIALIZED_NAME_FKI_BUYERCONTRACT_I_D)
+  private Integer fkiBuyercontractID;
+
+  public static final String SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D = "fkiFranchisebrokerID";
+  @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D)
+  private Integer fkiFranchisebrokerID;
+
+  public static final String SERIALIZED_NAME_FKI_FRANCHISEAGENCE_I_D = "fkiFranchiseagenceID";
+  @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEAGENCE_I_D)
+  private Integer fkiFranchiseagenceID;
+
+  public static final String SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D = "fkiFranchiseofficeID";
+  @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D)
+  private Integer fkiFranchiseofficeID;
+
+  public static final String SERIALIZED_NAME_FKI_FRANCHISEFRANCHISE_I_D = "fkiFranchisefranchiseID";
+  @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEFRANCHISE_I_D)
+  private Integer fkiFranchisefranchiseID;
+
+  public static final String SERIALIZED_NAME_FKI_FRANCHISECOMPLAINT_I_D = "fkiFranchisecomplaintID";
+  @SerializedName(SERIALIZED_NAME_FKI_FRANCHISECOMPLAINT_I_D)
+  private Integer fkiFranchisecomplaintID;
+
+  public static final String SERIALIZED_NAME_FKI_LEAD_I_D = "fkiLeadID";
+  @SerializedName(SERIALIZED_NAME_FKI_LEAD_I_D)
+  private Integer fkiLeadID;
+
+  public static final String SERIALIZED_NAME_FKI_MARKETINGPROGRAM_I_D = "fkiMarketingprogramID";
+  @SerializedName(SERIALIZED_NAME_FKI_MARKETINGPROGRAM_I_D)
+  private Integer fkiMarketingprogramID;
+
+  public static final String SERIALIZED_NAME_FKI_MARKETINGFOLLOW_I_D = "fkiMarketingfollowID";
+  @SerializedName(SERIALIZED_NAME_FKI_MARKETINGFOLLOW_I_D)
+  private Integer fkiMarketingfollowID;
+
+  public static final String SERIALIZED_NAME_FKI_NOTARY_I_D = "fkiNotaryID";
+  @SerializedName(SERIALIZED_NAME_FKI_NOTARY_I_D)
+  private Integer fkiNotaryID;
+
+  public static final String SERIALIZED_NAME_FKI_OFFICETAXREPORT_I_D = "fkiOfficetaxreportID";
+  @SerializedName(SERIALIZED_NAME_FKI_OFFICETAXREPORT_I_D)
+  private Integer fkiOfficetaxreportID;
+
+  public static final String SERIALIZED_NAME_FKI_OTHERINCOME_I_D = "fkiOtherincomeID";
+  @SerializedName(SERIALIZED_NAME_FKI_OTHERINCOME_I_D)
+  private Integer fkiOtherincomeID;
+
+  public static final String SERIALIZED_NAME_FKI_PAYMENTPREPARATION_I_D = "fkiPaymentpreparationID";
+  @SerializedName(SERIALIZED_NAME_FKI_PAYMENTPREPARATION_I_D)
+  private Integer fkiPaymentpreparationID;
+
+  public static final String SERIALIZED_NAME_FKI_PURCHASE_I_D = "fkiPurchaseID";
+  @SerializedName(SERIALIZED_NAME_FKI_PURCHASE_I_D)
+  private Integer fkiPurchaseID;
+
+  public static final String SERIALIZED_NAME_FKI_SALARY_I_D = "fkiSalaryID";
+  @SerializedName(SERIALIZED_NAME_FKI_SALARY_I_D)
+  private Integer fkiSalaryID;
+
+  public static final String SERIALIZED_NAME_FKI_SUPPLIER_I_D = "fkiSupplierID";
+  @SerializedName(SERIALIZED_NAME_FKI_SUPPLIER_I_D)
+  private Integer fkiSupplierID;
+
+  public static final String SERIALIZED_NAME_FKI_TRANQCONTRACT_I_D = "fkiTranqcontractID";
+  @SerializedName(SERIALIZED_NAME_FKI_TRANQCONTRACT_I_D)
+  private Integer fkiTranqcontractID;
+
+  public static final String SERIALIZED_NAME_FKI_TEMPLATE_I_D = "fkiTemplateID";
+  @SerializedName(SERIALIZED_NAME_FKI_TEMPLATE_I_D)
+  private Integer fkiTemplateID;
+
+  public static final String SERIALIZED_NAME_FKI_INSCRIPTIONCHECKLIST_I_D = "fkiInscriptionchecklistID";
+  @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTIONCHECKLIST_I_D)
+  private Integer fkiInscriptionchecklistID;
+
+  public static final String SERIALIZED_NAME_FKI_FOLDER_I_D = "fkiFolderID";
+  @SerializedName(SERIALIZED_NAME_FKI_FOLDER_I_D)
+  private Integer fkiFolderID;
+
+  public static final String SERIALIZED_NAME_FKI_REJECTEDOFFERTOPURCHASE_I_D = "fkiRejectedoffertopurchaseID";
+  @SerializedName(SERIALIZED_NAME_FKI_REJECTEDOFFERTOPURCHASE_I_D)
+  private Integer fkiRejectedoffertopurchaseID;
+
+  public static final String SERIALIZED_NAME_FKI_DISCLOSURE_I_D = "fkiDisclosureID";
+  @SerializedName(SERIALIZED_NAME_FKI_DISCLOSURE_I_D)
+  private Integer fkiDisclosureID;
+
+  public static final String SERIALIZED_NAME_FKI_RECONCILIATION_I_D = "fkiReconciliationID";
+  @SerializedName(SERIALIZED_NAME_FKI_RECONCILIATION_I_D)
+  private Integer fkiReconciliationID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D_REFERENCE = "fkiEzsigndocumentIDReference";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D_REFERENCE)
+  private Integer fkiEzsigndocumentIDReference;
+
+  public static final String SERIALIZED_NAME_E_ATTACHMENT_DOCUMENTTYPE = "eAttachmentDocumenttype";
+  @SerializedName(SERIALIZED_NAME_E_ATTACHMENT_DOCUMENTTYPE)
+  private FieldEAttachmentDocumenttype eAttachmentDocumenttype;
+
+  public static final String SERIALIZED_NAME_S_ATTACHMENT_NAME = "sAttachmentName";
+  @SerializedName(SERIALIZED_NAME_S_ATTACHMENT_NAME)
+  private String sAttachmentName;
+
+  public static final String SERIALIZED_NAME_E_ATTACHMENT_PRIVACY = "eAttachmentPrivacy";
+  @SerializedName(SERIALIZED_NAME_E_ATTACHMENT_PRIVACY)
+  private FieldEAttachmentPrivacy eAttachmentPrivacy;
+
+  public static final String SERIALIZED_NAME_FKI_USER_I_D_SPECIFIC = "fkiUserIDSpecific";
+  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_SPECIFIC)
+  private Integer fkiUserIDSpecific;
+
+  public static final String SERIALIZED_NAME_E_ATTACHMENT_TYPE = "eAttachmentType";
+  @SerializedName(SERIALIZED_NAME_E_ATTACHMENT_TYPE)
+  private FieldEAttachmentType eAttachmentType;
+
+  public static final String SERIALIZED_NAME_I_ATTACHMENT_SIZE = "iAttachmentSize";
+  @SerializedName(SERIALIZED_NAME_I_ATTACHMENT_SIZE)
+  private Integer iAttachmentSize;
+
+  public static final String SERIALIZED_NAME_I_ATTACHMENT_E_D_MMODULEFLAG = "iAttachmentEDMmoduleflag";
+  @SerializedName(SERIALIZED_NAME_I_ATTACHMENT_E_D_MMODULEFLAG)
+  private Integer iAttachmentEDMmoduleflag;
+
+  public static final String SERIALIZED_NAME_S_ATTACHMENT_M_D5 = "sAttachmentMD5";
+  @SerializedName(SERIALIZED_NAME_S_ATTACHMENT_M_D5)
+  private String sAttachmentMD5;
+
+  public static final String SERIALIZED_NAME_B_ATTACHMENT_DELETED = "bAttachmentDeleted";
+  @SerializedName(SERIALIZED_NAME_B_ATTACHMENT_DELETED)
+  private Boolean bAttachmentDeleted;
+
+  public static final String SERIALIZED_NAME_B_ATTACHMENT_VALID = "bAttachmentValid";
+  @SerializedName(SERIALIZED_NAME_B_ATTACHMENT_VALID)
+  private Boolean bAttachmentValid;
+
+  public static final String SERIALIZED_NAME_E_ATTACHMENT_VERIFIED = "eAttachmentVerified";
+  @SerializedName(SERIALIZED_NAME_E_ATTACHMENT_VERIFIED)
+  private FieldEAttachmentVerified eAttachmentVerified;
+
+  public static final String SERIALIZED_NAME_T_ATTACHMENT_REJECTIONCOMMENT = "tAttachmentRejectioncomment";
+  @SerializedName(SERIALIZED_NAME_T_ATTACHMENT_REJECTIONCOMMENT)
+  private String tAttachmentRejectioncomment;
+
+  public static final String SERIALIZED_NAME_FKI_USER_I_D_OWNER = "fkiUserIDOwner";
+  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_OWNER)
+  private Integer fkiUserIDOwner;
+
+  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
+  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  private CommonAudit objAudit;
+
   public static final String SERIALIZED_NAME_OBJ_ATTACHMENT_PROOF = "objAttachmentProof";
   @SerializedName(SERIALIZED_NAME_OBJ_ATTACHMENT_PROOF)
-  @javax.annotation.Nullable
   private AttachmentResponseCompound objAttachmentProof;
 
   public static final String SERIALIZED_NAME_OBJ_ATTACHMENT_PROOFDOCUMENT = "objAttachmentProofdocument";
   @SerializedName(SERIALIZED_NAME_OBJ_ATTACHMENT_PROOFDOCUMENT)
-  @javax.annotation.Nullable
   private AttachmentResponseCompound objAttachmentProofdocument;
 
   public static final String SERIALIZED_NAME_A_OBJ_ATTACHMENT_ATTACHMENT = "a_objAttachmentAttachment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTACHMENT_ATTACHMENT)
-  @javax.annotation.Nullable
   private List<AttachmentResponseCompound> aObjAttachmentAttachment = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_ATTACHMENT_VERSION = "a_objAttachmentVersion";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTACHMENT_VERSION)
-  @javax.annotation.Nullable
   private List<AttachmentResponseCompound> aObjAttachmentVersion = new ArrayList<>();
 
   public CustomAttachmentResponse() {
   }
 
-  public CustomAttachmentResponse objAttachmentProof(@javax.annotation.Nullable AttachmentResponseCompound objAttachmentProof) {
+  public CustomAttachmentResponse pkiAttachmentID(Integer pkiAttachmentID) {
+    this.pkiAttachmentID = pkiAttachmentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Attachment.
+   * minimum: 0
+   * @return pkiAttachmentID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiAttachmentID() {
+    return pkiAttachmentID;
+  }
+
+  public void setPkiAttachmentID(Integer pkiAttachmentID) {
+    this.pkiAttachmentID = pkiAttachmentID;
+  }
+
+
+  public CustomAttachmentResponse fkiComputerID(Integer fkiComputerID) {
+    this.fkiComputerID = fkiComputerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Computer
+   * minimum: 1
+   * maximum: 65535
+   * @return fkiComputerID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiComputerID() {
+    return fkiComputerID;
+  }
+
+  public void setFkiComputerID(Integer fkiComputerID) {
+    this.fkiComputerID = fkiComputerID;
+  }
+
+
+  public CustomAttachmentResponse fkiAdjustmentID(Integer fkiAdjustmentID) {
+    this.fkiAdjustmentID = fkiAdjustmentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Adjustment
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiAdjustmentID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiAdjustmentID() {
+    return fkiAdjustmentID;
+  }
+
+  public void setFkiAdjustmentID(Integer fkiAdjustmentID) {
+    this.fkiAdjustmentID = fkiAdjustmentID;
+  }
+
+
+  public CustomAttachmentResponse fkiAgentID(Integer fkiAgentID) {
+    this.fkiAgentID = fkiAgentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Agent.
+   * minimum: 0
+   * @return fkiAgentID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiAgentID() {
+    return fkiAgentID;
+  }
+
+  public void setFkiAgentID(Integer fkiAgentID) {
+    this.fkiAgentID = fkiAgentID;
+  }
+
+
+  public CustomAttachmentResponse fkiBankaccountID(Integer fkiBankaccountID) {
+    this.fkiBankaccountID = fkiBankaccountID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Bankaccount
+   * minimum: 0
+   * maximum: 255
+   * @return fkiBankaccountID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiBankaccountID() {
+    return fkiBankaccountID;
+  }
+
+  public void setFkiBankaccountID(Integer fkiBankaccountID) {
+    this.fkiBankaccountID = fkiBankaccountID;
+  }
+
+
+  public CustomAttachmentResponse fkiBrokerID(Integer fkiBrokerID) {
+    this.fkiBrokerID = fkiBrokerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Broker.
+   * minimum: 0
+   * @return fkiBrokerID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiBrokerID() {
+    return fkiBrokerID;
+  }
+
+  public void setFkiBrokerID(Integer fkiBrokerID) {
+    this.fkiBrokerID = fkiBrokerID;
+  }
+
+
+  public CustomAttachmentResponse fkiCommissionadvanceID(Integer fkiCommissionadvanceID) {
+    this.fkiCommissionadvanceID = fkiCommissionadvanceID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Commissionadvance
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiCommissionadvanceID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiCommissionadvanceID() {
+    return fkiCommissionadvanceID;
+  }
+
+  public void setFkiCommissionadvanceID(Integer fkiCommissionadvanceID) {
+    this.fkiCommissionadvanceID = fkiCommissionadvanceID;
+  }
+
+
+  public CustomAttachmentResponse fkiCommunicationID(Integer fkiCommunicationID) {
+    this.fkiCommunicationID = fkiCommunicationID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Communication.
+   * minimum: 0
+   * @return fkiCommunicationID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiCommunicationID() {
+    return fkiCommunicationID;
+  }
+
+  public void setFkiCommunicationID(Integer fkiCommunicationID) {
+    this.fkiCommunicationID = fkiCommunicationID;
+  }
+
+
+  public CustomAttachmentResponse fkiCustomerID(Integer fkiCustomerID) {
+    this.fkiCustomerID = fkiCustomerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Customer.
+   * minimum: 0
+   * @return fkiCustomerID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiCustomerID() {
+    return fkiCustomerID;
+  }
+
+  public void setFkiCustomerID(Integer fkiCustomerID) {
+    this.fkiCustomerID = fkiCustomerID;
+  }
+
+
+  public CustomAttachmentResponse fkiCustomertemplateID(Integer fkiCustomertemplateID) {
+    this.fkiCustomertemplateID = fkiCustomertemplateID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Customertemplate
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiCustomertemplateID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiCustomertemplateID() {
+    return fkiCustomertemplateID;
+  }
+
+  public void setFkiCustomertemplateID(Integer fkiCustomertemplateID) {
+    this.fkiCustomertemplateID = fkiCustomertemplateID;
+  }
+
+
+  public CustomAttachmentResponse fkiDepositID(Integer fkiDepositID) {
+    this.fkiDepositID = fkiDepositID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Deposit
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiDepositID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiDepositID() {
+    return fkiDepositID;
+  }
+
+  public void setFkiDepositID(Integer fkiDepositID) {
+    this.fkiDepositID = fkiDepositID;
+  }
+
+
+  public CustomAttachmentResponse fkiDeposittransitchequeID(Integer fkiDeposittransitchequeID) {
+    this.fkiDeposittransitchequeID = fkiDeposittransitchequeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Deposittransitcheque
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiDeposittransitchequeID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiDeposittransitchequeID() {
+    return fkiDeposittransitchequeID;
+  }
+
+  public void setFkiDeposittransitchequeID(Integer fkiDeposittransitchequeID) {
+    this.fkiDeposittransitchequeID = fkiDeposittransitchequeID;
+  }
+
+
+  public CustomAttachmentResponse fkiElectronicfundstransferID(Integer fkiElectronicfundstransferID) {
+    this.fkiElectronicfundstransferID = fkiElectronicfundstransferID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Electronicfundstransfer
+   * minimum: 1
+   * maximum: 65535
+   * @return fkiElectronicfundstransferID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiElectronicfundstransferID() {
+    return fkiElectronicfundstransferID;
+  }
+
+  public void setFkiElectronicfundstransferID(Integer fkiElectronicfundstransferID) {
+    this.fkiElectronicfundstransferID = fkiElectronicfundstransferID;
+  }
+
+
+  public CustomAttachmentResponse fkiEmployeeID(Integer fkiEmployeeID) {
+    this.fkiEmployeeID = fkiEmployeeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Employee.
+   * minimum: 0
+   * @return fkiEmployeeID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEmployeeID() {
+    return fkiEmployeeID;
+  }
+
+  public void setFkiEmployeeID(Integer fkiEmployeeID) {
+    this.fkiEmployeeID = fkiEmployeeID;
+  }
+
+
+  public CustomAttachmentResponse fkiExternalbrokerID(Integer fkiExternalbrokerID) {
+    this.fkiExternalbrokerID = fkiExternalbrokerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Externalbroker.
+   * minimum: 0
+   * @return fkiExternalbrokerID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiExternalbrokerID() {
+    return fkiExternalbrokerID;
+  }
+
+  public void setFkiExternalbrokerID(Integer fkiExternalbrokerID) {
+    this.fkiExternalbrokerID = fkiExternalbrokerID;
+  }
+
+
+  public CustomAttachmentResponse fkiEzcomadvanceserverID(Integer fkiEzcomadvanceserverID) {
+    this.fkiEzcomadvanceserverID = fkiEzcomadvanceserverID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezcomadvanceserver
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiEzcomadvanceserverID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzcomadvanceserverID() {
+    return fkiEzcomadvanceserverID;
+  }
+
+  public void setFkiEzcomadvanceserverID(Integer fkiEzcomadvanceserverID) {
+    this.fkiEzcomadvanceserverID = fkiEzcomadvanceserverID;
+  }
+
+
+  public CustomAttachmentResponse fkiEzcomcompanyID(Integer fkiEzcomcompanyID) {
+    this.fkiEzcomcompanyID = fkiEzcomcompanyID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezcomcompany
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiEzcomcompanyID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzcomcompanyID() {
+    return fkiEzcomcompanyID;
+  }
+
+  public void setFkiEzcomcompanyID(Integer fkiEzcomcompanyID) {
+    this.fkiEzcomcompanyID = fkiEzcomcompanyID;
+  }
+
+
+  public CustomAttachmentResponse fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigndocument
+   * minimum: 0
+   * @return fkiEzsigndocumentID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsigndocumentID() {
+    return fkiEzsigndocumentID;
+  }
+
+  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
+  }
+
+
+  public CustomAttachmentResponse fkiGhacqcontractID(Integer fkiGhacqcontractID) {
+    this.fkiGhacqcontractID = fkiGhacqcontractID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ghacqcontract
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiGhacqcontractID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiGhacqcontractID() {
+    return fkiGhacqcontractID;
+  }
+
+  public void setFkiGhacqcontractID(Integer fkiGhacqcontractID) {
+    this.fkiGhacqcontractID = fkiGhacqcontractID;
+  }
+
+
+  public CustomAttachmentResponse fkiInscriptionID(Integer fkiInscriptionID) {
+    this.fkiInscriptionID = fkiInscriptionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Inscription.
+   * minimum: 0
+   * @return fkiInscriptionID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiInscriptionID() {
+    return fkiInscriptionID;
+  }
+
+  public void setFkiInscriptionID(Integer fkiInscriptionID) {
+    this.fkiInscriptionID = fkiInscriptionID;
+  }
+
+
+  public CustomAttachmentResponse fkiInscriptiontempID(Integer fkiInscriptiontempID) {
+    this.fkiInscriptiontempID = fkiInscriptiontempID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Inscriptiontemp
+   * minimum: 1
+   * maximum: 16777215
+   * @return fkiInscriptiontempID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiInscriptiontempID() {
+    return fkiInscriptiontempID;
+  }
+
+  public void setFkiInscriptiontempID(Integer fkiInscriptiontempID) {
+    this.fkiInscriptiontempID = fkiInscriptiontempID;
+  }
+
+
+  public CustomAttachmentResponse fkiInscriptionnotauthenticatedID(Integer fkiInscriptionnotauthenticatedID) {
+    this.fkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Inscriptionnotauthenticated.
+   * minimum: 0
+   * @return fkiInscriptionnotauthenticatedID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiInscriptionnotauthenticatedID() {
+    return fkiInscriptionnotauthenticatedID;
+  }
+
+  public void setFkiInscriptionnotauthenticatedID(Integer fkiInscriptionnotauthenticatedID) {
+    this.fkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
+  }
+
+
+  public CustomAttachmentResponse fkiInvoiceID(Integer fkiInvoiceID) {
+    this.fkiInvoiceID = fkiInvoiceID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Invoice.
+   * minimum: 0
+   * @return fkiInvoiceID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiInvoiceID() {
+    return fkiInvoiceID;
+  }
+
+  public void setFkiInvoiceID(Integer fkiInvoiceID) {
+    this.fkiInvoiceID = fkiInvoiceID;
+  }
+
+
+  public CustomAttachmentResponse fkiBuyercontractID(Integer fkiBuyercontractID) {
+    this.fkiBuyercontractID = fkiBuyercontractID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Buyercontract
+   * minimum: 1
+   * maximum: 65535
+   * @return fkiBuyercontractID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiBuyercontractID() {
+    return fkiBuyercontractID;
+  }
+
+  public void setFkiBuyercontractID(Integer fkiBuyercontractID) {
+    this.fkiBuyercontractID = fkiBuyercontractID;
+  }
+
+
+  public CustomAttachmentResponse fkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
+    this.fkiFranchisebrokerID = fkiFranchisebrokerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Franchisebroker
+   * minimum: 0
+   * @return fkiFranchisebrokerID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFranchisebrokerID() {
+    return fkiFranchisebrokerID;
+  }
+
+  public void setFkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
+    this.fkiFranchisebrokerID = fkiFranchisebrokerID;
+  }
+
+
+  public CustomAttachmentResponse fkiFranchiseagenceID(Integer fkiFranchiseagenceID) {
+    this.fkiFranchiseagenceID = fkiFranchiseagenceID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Franchiseagence
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiFranchiseagenceID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFranchiseagenceID() {
+    return fkiFranchiseagenceID;
+  }
+
+  public void setFkiFranchiseagenceID(Integer fkiFranchiseagenceID) {
+    this.fkiFranchiseagenceID = fkiFranchiseagenceID;
+  }
+
+
+  public CustomAttachmentResponse fkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
+    this.fkiFranchiseofficeID = fkiFranchiseofficeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Franchisereoffice
+   * minimum: 0
+   * @return fkiFranchiseofficeID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFranchiseofficeID() {
+    return fkiFranchiseofficeID;
+  }
+
+  public void setFkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
+    this.fkiFranchiseofficeID = fkiFranchiseofficeID;
+  }
+
+
+  public CustomAttachmentResponse fkiFranchisefranchiseID(Integer fkiFranchisefranchiseID) {
+    this.fkiFranchisefranchiseID = fkiFranchisefranchiseID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Franchisefranchise
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiFranchisefranchiseID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFranchisefranchiseID() {
+    return fkiFranchisefranchiseID;
+  }
+
+  public void setFkiFranchisefranchiseID(Integer fkiFranchisefranchiseID) {
+    this.fkiFranchisefranchiseID = fkiFranchisefranchiseID;
+  }
+
+
+  public CustomAttachmentResponse fkiFranchisecomplaintID(Integer fkiFranchisecomplaintID) {
+    this.fkiFranchisecomplaintID = fkiFranchisecomplaintID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Franchisecomplaint
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiFranchisecomplaintID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFranchisecomplaintID() {
+    return fkiFranchisecomplaintID;
+  }
+
+  public void setFkiFranchisecomplaintID(Integer fkiFranchisecomplaintID) {
+    this.fkiFranchisecomplaintID = fkiFranchisecomplaintID;
+  }
+
+
+  public CustomAttachmentResponse fkiLeadID(Integer fkiLeadID) {
+    this.fkiLeadID = fkiLeadID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Lead
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiLeadID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiLeadID() {
+    return fkiLeadID;
+  }
+
+  public void setFkiLeadID(Integer fkiLeadID) {
+    this.fkiLeadID = fkiLeadID;
+  }
+
+
+  public CustomAttachmentResponse fkiMarketingprogramID(Integer fkiMarketingprogramID) {
+    this.fkiMarketingprogramID = fkiMarketingprogramID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Marketingprogram
+   * minimum: 0
+   * maximum: 255
+   * @return fkiMarketingprogramID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiMarketingprogramID() {
+    return fkiMarketingprogramID;
+  }
+
+  public void setFkiMarketingprogramID(Integer fkiMarketingprogramID) {
+    this.fkiMarketingprogramID = fkiMarketingprogramID;
+  }
+
+
+  public CustomAttachmentResponse fkiMarketingfollowID(Integer fkiMarketingfollowID) {
+    this.fkiMarketingfollowID = fkiMarketingfollowID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Marketingfollow
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiMarketingfollowID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiMarketingfollowID() {
+    return fkiMarketingfollowID;
+  }
+
+  public void setFkiMarketingfollowID(Integer fkiMarketingfollowID) {
+    this.fkiMarketingfollowID = fkiMarketingfollowID;
+  }
+
+
+  public CustomAttachmentResponse fkiNotaryID(Integer fkiNotaryID) {
+    this.fkiNotaryID = fkiNotaryID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Notary.
+   * minimum: 0
+   * @return fkiNotaryID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiNotaryID() {
+    return fkiNotaryID;
+  }
+
+  public void setFkiNotaryID(Integer fkiNotaryID) {
+    this.fkiNotaryID = fkiNotaryID;
+  }
+
+
+  public CustomAttachmentResponse fkiOfficetaxreportID(Integer fkiOfficetaxreportID) {
+    this.fkiOfficetaxreportID = fkiOfficetaxreportID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Officetaxreport
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiOfficetaxreportID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiOfficetaxreportID() {
+    return fkiOfficetaxreportID;
+  }
+
+  public void setFkiOfficetaxreportID(Integer fkiOfficetaxreportID) {
+    this.fkiOfficetaxreportID = fkiOfficetaxreportID;
+  }
+
+
+  public CustomAttachmentResponse fkiOtherincomeID(Integer fkiOtherincomeID) {
+    this.fkiOtherincomeID = fkiOtherincomeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Otherincome
+   * minimum: 1
+   * maximum: 65535
+   * @return fkiOtherincomeID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiOtherincomeID() {
+    return fkiOtherincomeID;
+  }
+
+  public void setFkiOtherincomeID(Integer fkiOtherincomeID) {
+    this.fkiOtherincomeID = fkiOtherincomeID;
+  }
+
+
+  public CustomAttachmentResponse fkiPaymentpreparationID(Integer fkiPaymentpreparationID) {
+    this.fkiPaymentpreparationID = fkiPaymentpreparationID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Paymentpreparation
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiPaymentpreparationID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiPaymentpreparationID() {
+    return fkiPaymentpreparationID;
+  }
+
+  public void setFkiPaymentpreparationID(Integer fkiPaymentpreparationID) {
+    this.fkiPaymentpreparationID = fkiPaymentpreparationID;
+  }
+
+
+  public CustomAttachmentResponse fkiPurchaseID(Integer fkiPurchaseID) {
+    this.fkiPurchaseID = fkiPurchaseID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Purchase
+   * @return fkiPurchaseID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiPurchaseID() {
+    return fkiPurchaseID;
+  }
+
+  public void setFkiPurchaseID(Integer fkiPurchaseID) {
+    this.fkiPurchaseID = fkiPurchaseID;
+  }
+
+
+  public CustomAttachmentResponse fkiSalaryID(Integer fkiSalaryID) {
+    this.fkiSalaryID = fkiSalaryID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Salary
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiSalaryID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiSalaryID() {
+    return fkiSalaryID;
+  }
+
+  public void setFkiSalaryID(Integer fkiSalaryID) {
+    this.fkiSalaryID = fkiSalaryID;
+  }
+
+
+  public CustomAttachmentResponse fkiSupplierID(Integer fkiSupplierID) {
+    this.fkiSupplierID = fkiSupplierID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Supplier.
+   * minimum: 0
+   * @return fkiSupplierID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiSupplierID() {
+    return fkiSupplierID;
+  }
+
+  public void setFkiSupplierID(Integer fkiSupplierID) {
+    this.fkiSupplierID = fkiSupplierID;
+  }
+
+
+  public CustomAttachmentResponse fkiTranqcontractID(Integer fkiTranqcontractID) {
+    this.fkiTranqcontractID = fkiTranqcontractID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Tranqcontract
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiTranqcontractID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiTranqcontractID() {
+    return fkiTranqcontractID;
+  }
+
+  public void setFkiTranqcontractID(Integer fkiTranqcontractID) {
+    this.fkiTranqcontractID = fkiTranqcontractID;
+  }
+
+
+  public CustomAttachmentResponse fkiTemplateID(Integer fkiTemplateID) {
+    this.fkiTemplateID = fkiTemplateID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Template
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiTemplateID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiTemplateID() {
+    return fkiTemplateID;
+  }
+
+  public void setFkiTemplateID(Integer fkiTemplateID) {
+    this.fkiTemplateID = fkiTemplateID;
+  }
+
+
+  public CustomAttachmentResponse fkiInscriptionchecklistID(Integer fkiInscriptionchecklistID) {
+    this.fkiInscriptionchecklistID = fkiInscriptionchecklistID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Inscriptionchecklist
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiInscriptionchecklistID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiInscriptionchecklistID() {
+    return fkiInscriptionchecklistID;
+  }
+
+  public void setFkiInscriptionchecklistID(Integer fkiInscriptionchecklistID) {
+    this.fkiInscriptionchecklistID = fkiInscriptionchecklistID;
+  }
+
+
+  public CustomAttachmentResponse fkiFolderID(Integer fkiFolderID) {
+    this.fkiFolderID = fkiFolderID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Folder
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiFolderID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiFolderID() {
+    return fkiFolderID;
+  }
+
+  public void setFkiFolderID(Integer fkiFolderID) {
+    this.fkiFolderID = fkiFolderID;
+  }
+
+
+  public CustomAttachmentResponse fkiRejectedoffertopurchaseID(Integer fkiRejectedoffertopurchaseID) {
+    this.fkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Rejectedoffertopurchase
+   * minimum: 1
+   * maximum: 65535
+   * @return fkiRejectedoffertopurchaseID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiRejectedoffertopurchaseID() {
+    return fkiRejectedoffertopurchaseID;
+  }
+
+  public void setFkiRejectedoffertopurchaseID(Integer fkiRejectedoffertopurchaseID) {
+    this.fkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
+  }
+
+
+  public CustomAttachmentResponse fkiDisclosureID(Integer fkiDisclosureID) {
+    this.fkiDisclosureID = fkiDisclosureID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Disclosure
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiDisclosureID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiDisclosureID() {
+    return fkiDisclosureID;
+  }
+
+  public void setFkiDisclosureID(Integer fkiDisclosureID) {
+    this.fkiDisclosureID = fkiDisclosureID;
+  }
+
+
+  public CustomAttachmentResponse fkiReconciliationID(Integer fkiReconciliationID) {
+    this.fkiReconciliationID = fkiReconciliationID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Reconciliation
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiReconciliationID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiReconciliationID() {
+    return fkiReconciliationID;
+  }
+
+  public void setFkiReconciliationID(Integer fkiReconciliationID) {
+    this.fkiReconciliationID = fkiReconciliationID;
+  }
+
+
+  public CustomAttachmentResponse fkiEzsigndocumentIDReference(Integer fkiEzsigndocumentIDReference) {
+    this.fkiEzsigndocumentIDReference = fkiEzsigndocumentIDReference;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigndocument
+   * minimum: 0
+   * @return fkiEzsigndocumentIDReference
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsigndocumentIDReference() {
+    return fkiEzsigndocumentIDReference;
+  }
+
+  public void setFkiEzsigndocumentIDReference(Integer fkiEzsigndocumentIDReference) {
+    this.fkiEzsigndocumentIDReference = fkiEzsigndocumentIDReference;
+  }
+
+
+  public CustomAttachmentResponse eAttachmentDocumenttype(FieldEAttachmentDocumenttype eAttachmentDocumenttype) {
+    this.eAttachmentDocumenttype = eAttachmentDocumenttype;
+    return this;
+  }
+
+  /**
+   * Get eAttachmentDocumenttype
+   * @return eAttachmentDocumenttype
+   */
+  @javax.annotation.Nonnull
+  public FieldEAttachmentDocumenttype geteAttachmentDocumenttype() {
+    return eAttachmentDocumenttype;
+  }
+
+  public void seteAttachmentDocumenttype(FieldEAttachmentDocumenttype eAttachmentDocumenttype) {
+    this.eAttachmentDocumenttype = eAttachmentDocumenttype;
+  }
+
+
+  public CustomAttachmentResponse sAttachmentName(String sAttachmentName) {
+    this.sAttachmentName = sAttachmentName;
+    return this;
+  }
+
+  /**
+   * The name of the Attachment
+   * @return sAttachmentName
+   */
+  @javax.annotation.Nonnull
+  public String getsAttachmentName() {
+    return sAttachmentName;
+  }
+
+  public void setsAttachmentName(String sAttachmentName) {
+    this.sAttachmentName = sAttachmentName;
+  }
+
+
+  public CustomAttachmentResponse eAttachmentPrivacy(FieldEAttachmentPrivacy eAttachmentPrivacy) {
+    this.eAttachmentPrivacy = eAttachmentPrivacy;
+    return this;
+  }
+
+  /**
+   * Get eAttachmentPrivacy
+   * @return eAttachmentPrivacy
+   */
+  @javax.annotation.Nonnull
+  public FieldEAttachmentPrivacy geteAttachmentPrivacy() {
+    return eAttachmentPrivacy;
+  }
+
+  public void seteAttachmentPrivacy(FieldEAttachmentPrivacy eAttachmentPrivacy) {
+    this.eAttachmentPrivacy = eAttachmentPrivacy;
+  }
+
+
+  public CustomAttachmentResponse fkiUserIDSpecific(Integer fkiUserIDSpecific) {
+    this.fkiUserIDSpecific = fkiUserIDSpecific;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return fkiUserIDSpecific
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiUserIDSpecific() {
+    return fkiUserIDSpecific;
+  }
+
+  public void setFkiUserIDSpecific(Integer fkiUserIDSpecific) {
+    this.fkiUserIDSpecific = fkiUserIDSpecific;
+  }
+
+
+  public CustomAttachmentResponse eAttachmentType(FieldEAttachmentType eAttachmentType) {
+    this.eAttachmentType = eAttachmentType;
+    return this;
+  }
+
+  /**
+   * Get eAttachmentType
+   * @return eAttachmentType
+   */
+  @javax.annotation.Nonnull
+  public FieldEAttachmentType geteAttachmentType() {
+    return eAttachmentType;
+  }
+
+  public void seteAttachmentType(FieldEAttachmentType eAttachmentType) {
+    this.eAttachmentType = eAttachmentType;
+  }
+
+
+  public CustomAttachmentResponse iAttachmentSize(Integer iAttachmentSize) {
+    this.iAttachmentSize = iAttachmentSize;
+    return this;
+  }
+
+  /**
+   * The size of the Attachment
+   * minimum: 0
+   * maximum: 4294967295
+   * @return iAttachmentSize
+   */
+  @javax.annotation.Nonnull
+  public Integer getiAttachmentSize() {
+    return iAttachmentSize;
+  }
+
+  public void setiAttachmentSize(Integer iAttachmentSize) {
+    this.iAttachmentSize = iAttachmentSize;
+  }
+
+
+  public CustomAttachmentResponse iAttachmentEDMmoduleflag(Integer iAttachmentEDMmoduleflag) {
+    this.iAttachmentEDMmoduleflag = iAttachmentEDMmoduleflag;
+    return this;
+  }
+
+  /**
+   * The edmmoduleflag of the Attachment
+   * minimum: 0
+   * maximum: 255
+   * @return iAttachmentEDMmoduleflag
+   */
+  @javax.annotation.Nullable
+  public Integer getiAttachmentEDMmoduleflag() {
+    return iAttachmentEDMmoduleflag;
+  }
+
+  public void setiAttachmentEDMmoduleflag(Integer iAttachmentEDMmoduleflag) {
+    this.iAttachmentEDMmoduleflag = iAttachmentEDMmoduleflag;
+  }
+
+
+  public CustomAttachmentResponse sAttachmentMD5(String sAttachmentMD5) {
+    this.sAttachmentMD5 = sAttachmentMD5;
+    return this;
+  }
+
+  /**
+   * The md5 of the Attachment
+   * @return sAttachmentMD5
+   */
+  @javax.annotation.Nonnull
+  public String getsAttachmentMD5() {
+    return sAttachmentMD5;
+  }
+
+  public void setsAttachmentMD5(String sAttachmentMD5) {
+    this.sAttachmentMD5 = sAttachmentMD5;
+  }
+
+
+  public CustomAttachmentResponse bAttachmentDeleted(Boolean bAttachmentDeleted) {
+    this.bAttachmentDeleted = bAttachmentDeleted;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s deleted
+   * @return bAttachmentDeleted
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbAttachmentDeleted() {
+    return bAttachmentDeleted;
+  }
+
+  public void setbAttachmentDeleted(Boolean bAttachmentDeleted) {
+    this.bAttachmentDeleted = bAttachmentDeleted;
+  }
+
+
+  public CustomAttachmentResponse bAttachmentValid(Boolean bAttachmentValid) {
+    this.bAttachmentValid = bAttachmentValid;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s valid
+   * @return bAttachmentValid
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbAttachmentValid() {
+    return bAttachmentValid;
+  }
+
+  public void setbAttachmentValid(Boolean bAttachmentValid) {
+    this.bAttachmentValid = bAttachmentValid;
+  }
+
+
+  public CustomAttachmentResponse eAttachmentVerified(FieldEAttachmentVerified eAttachmentVerified) {
+    this.eAttachmentVerified = eAttachmentVerified;
+    return this;
+  }
+
+  /**
+   * Get eAttachmentVerified
+   * @return eAttachmentVerified
+   */
+  @javax.annotation.Nonnull
+  public FieldEAttachmentVerified geteAttachmentVerified() {
+    return eAttachmentVerified;
+  }
+
+  public void seteAttachmentVerified(FieldEAttachmentVerified eAttachmentVerified) {
+    this.eAttachmentVerified = eAttachmentVerified;
+  }
+
+
+  public CustomAttachmentResponse tAttachmentRejectioncomment(String tAttachmentRejectioncomment) {
+    this.tAttachmentRejectioncomment = tAttachmentRejectioncomment;
+    return this;
+  }
+
+  /**
+   * The rejectioncomment of the Attachment
+   * @return tAttachmentRejectioncomment
+   */
+  @javax.annotation.Nullable
+  public String gettAttachmentRejectioncomment() {
+    return tAttachmentRejectioncomment;
+  }
+
+  public void settAttachmentRejectioncomment(String tAttachmentRejectioncomment) {
+    this.tAttachmentRejectioncomment = tAttachmentRejectioncomment;
+  }
+
+
+  public CustomAttachmentResponse fkiUserIDOwner(Integer fkiUserIDOwner) {
+    this.fkiUserIDOwner = fkiUserIDOwner;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return fkiUserIDOwner
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiUserIDOwner() {
+    return fkiUserIDOwner;
+  }
+
+  public void setFkiUserIDOwner(Integer fkiUserIDOwner) {
+    this.fkiUserIDOwner = fkiUserIDOwner;
+  }
+
+
+  public CustomAttachmentResponse objAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+    return this;
+  }
+
+  /**
+   * Get objAudit
+   * @return objAudit
+   */
+  @javax.annotation.Nullable
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+  }
+
+
+  public CustomAttachmentResponse objAttachmentProof(AttachmentResponseCompound objAttachmentProof) {
     this.objAttachmentProof = objAttachmentProof;
     return this;
   }
@@ -96,12 +1576,12 @@ public class CustomAttachmentResponse extends AttachmentResponse {
     return objAttachmentProof;
   }
 
-  public void setObjAttachmentProof(@javax.annotation.Nullable AttachmentResponseCompound objAttachmentProof) {
+  public void setObjAttachmentProof(AttachmentResponseCompound objAttachmentProof) {
     this.objAttachmentProof = objAttachmentProof;
   }
 
 
-  public CustomAttachmentResponse objAttachmentProofdocument(@javax.annotation.Nullable AttachmentResponseCompound objAttachmentProofdocument) {
+  public CustomAttachmentResponse objAttachmentProofdocument(AttachmentResponseCompound objAttachmentProofdocument) {
     this.objAttachmentProofdocument = objAttachmentProofdocument;
     return this;
   }
@@ -115,12 +1595,12 @@ public class CustomAttachmentResponse extends AttachmentResponse {
     return objAttachmentProofdocument;
   }
 
-  public void setObjAttachmentProofdocument(@javax.annotation.Nullable AttachmentResponseCompound objAttachmentProofdocument) {
+  public void setObjAttachmentProofdocument(AttachmentResponseCompound objAttachmentProofdocument) {
     this.objAttachmentProofdocument = objAttachmentProofdocument;
   }
 
 
-  public CustomAttachmentResponse aObjAttachmentAttachment(@javax.annotation.Nullable List<AttachmentResponseCompound> aObjAttachmentAttachment) {
+  public CustomAttachmentResponse aObjAttachmentAttachment(List<AttachmentResponseCompound> aObjAttachmentAttachment) {
     this.aObjAttachmentAttachment = aObjAttachmentAttachment;
     return this;
   }
@@ -142,12 +1622,12 @@ public class CustomAttachmentResponse extends AttachmentResponse {
     return aObjAttachmentAttachment;
   }
 
-  public void setaObjAttachmentAttachment(@javax.annotation.Nullable List<AttachmentResponseCompound> aObjAttachmentAttachment) {
+  public void setaObjAttachmentAttachment(List<AttachmentResponseCompound> aObjAttachmentAttachment) {
     this.aObjAttachmentAttachment = aObjAttachmentAttachment;
   }
 
 
-  public CustomAttachmentResponse aObjAttachmentVersion(@javax.annotation.Nullable List<AttachmentResponseCompound> aObjAttachmentVersion) {
+  public CustomAttachmentResponse aObjAttachmentVersion(List<AttachmentResponseCompound> aObjAttachmentVersion) {
     this.aObjAttachmentVersion = aObjAttachmentVersion;
     return this;
   }
@@ -169,7 +1649,7 @@ public class CustomAttachmentResponse extends AttachmentResponse {
     return aObjAttachmentVersion;
   }
 
-  public void setaObjAttachmentVersion(@javax.annotation.Nullable List<AttachmentResponseCompound> aObjAttachmentVersion) {
+  public void setaObjAttachmentVersion(List<AttachmentResponseCompound> aObjAttachmentVersion) {
     this.aObjAttachmentVersion = aObjAttachmentVersion;
   }
 
@@ -184,23 +1664,143 @@ public class CustomAttachmentResponse extends AttachmentResponse {
       return false;
     }
     CustomAttachmentResponse customAttachmentResponse = (CustomAttachmentResponse) o;
-    return Objects.equals(this.objAttachmentProof, customAttachmentResponse.objAttachmentProof) &&
+    return Objects.equals(this.pkiAttachmentID, customAttachmentResponse.pkiAttachmentID) &&
+        Objects.equals(this.fkiComputerID, customAttachmentResponse.fkiComputerID) &&
+        Objects.equals(this.fkiAdjustmentID, customAttachmentResponse.fkiAdjustmentID) &&
+        Objects.equals(this.fkiAgentID, customAttachmentResponse.fkiAgentID) &&
+        Objects.equals(this.fkiBankaccountID, customAttachmentResponse.fkiBankaccountID) &&
+        Objects.equals(this.fkiBrokerID, customAttachmentResponse.fkiBrokerID) &&
+        Objects.equals(this.fkiCommissionadvanceID, customAttachmentResponse.fkiCommissionadvanceID) &&
+        Objects.equals(this.fkiCommunicationID, customAttachmentResponse.fkiCommunicationID) &&
+        Objects.equals(this.fkiCustomerID, customAttachmentResponse.fkiCustomerID) &&
+        Objects.equals(this.fkiCustomertemplateID, customAttachmentResponse.fkiCustomertemplateID) &&
+        Objects.equals(this.fkiDepositID, customAttachmentResponse.fkiDepositID) &&
+        Objects.equals(this.fkiDeposittransitchequeID, customAttachmentResponse.fkiDeposittransitchequeID) &&
+        Objects.equals(this.fkiElectronicfundstransferID, customAttachmentResponse.fkiElectronicfundstransferID) &&
+        Objects.equals(this.fkiEmployeeID, customAttachmentResponse.fkiEmployeeID) &&
+        Objects.equals(this.fkiExternalbrokerID, customAttachmentResponse.fkiExternalbrokerID) &&
+        Objects.equals(this.fkiEzcomadvanceserverID, customAttachmentResponse.fkiEzcomadvanceserverID) &&
+        Objects.equals(this.fkiEzcomcompanyID, customAttachmentResponse.fkiEzcomcompanyID) &&
+        Objects.equals(this.fkiEzsigndocumentID, customAttachmentResponse.fkiEzsigndocumentID) &&
+        Objects.equals(this.fkiGhacqcontractID, customAttachmentResponse.fkiGhacqcontractID) &&
+        Objects.equals(this.fkiInscriptionID, customAttachmentResponse.fkiInscriptionID) &&
+        Objects.equals(this.fkiInscriptiontempID, customAttachmentResponse.fkiInscriptiontempID) &&
+        Objects.equals(this.fkiInscriptionnotauthenticatedID, customAttachmentResponse.fkiInscriptionnotauthenticatedID) &&
+        Objects.equals(this.fkiInvoiceID, customAttachmentResponse.fkiInvoiceID) &&
+        Objects.equals(this.fkiBuyercontractID, customAttachmentResponse.fkiBuyercontractID) &&
+        Objects.equals(this.fkiFranchisebrokerID, customAttachmentResponse.fkiFranchisebrokerID) &&
+        Objects.equals(this.fkiFranchiseagenceID, customAttachmentResponse.fkiFranchiseagenceID) &&
+        Objects.equals(this.fkiFranchiseofficeID, customAttachmentResponse.fkiFranchiseofficeID) &&
+        Objects.equals(this.fkiFranchisefranchiseID, customAttachmentResponse.fkiFranchisefranchiseID) &&
+        Objects.equals(this.fkiFranchisecomplaintID, customAttachmentResponse.fkiFranchisecomplaintID) &&
+        Objects.equals(this.fkiLeadID, customAttachmentResponse.fkiLeadID) &&
+        Objects.equals(this.fkiMarketingprogramID, customAttachmentResponse.fkiMarketingprogramID) &&
+        Objects.equals(this.fkiMarketingfollowID, customAttachmentResponse.fkiMarketingfollowID) &&
+        Objects.equals(this.fkiNotaryID, customAttachmentResponse.fkiNotaryID) &&
+        Objects.equals(this.fkiOfficetaxreportID, customAttachmentResponse.fkiOfficetaxreportID) &&
+        Objects.equals(this.fkiOtherincomeID, customAttachmentResponse.fkiOtherincomeID) &&
+        Objects.equals(this.fkiPaymentpreparationID, customAttachmentResponse.fkiPaymentpreparationID) &&
+        Objects.equals(this.fkiPurchaseID, customAttachmentResponse.fkiPurchaseID) &&
+        Objects.equals(this.fkiSalaryID, customAttachmentResponse.fkiSalaryID) &&
+        Objects.equals(this.fkiSupplierID, customAttachmentResponse.fkiSupplierID) &&
+        Objects.equals(this.fkiTranqcontractID, customAttachmentResponse.fkiTranqcontractID) &&
+        Objects.equals(this.fkiTemplateID, customAttachmentResponse.fkiTemplateID) &&
+        Objects.equals(this.fkiInscriptionchecklistID, customAttachmentResponse.fkiInscriptionchecklistID) &&
+        Objects.equals(this.fkiFolderID, customAttachmentResponse.fkiFolderID) &&
+        Objects.equals(this.fkiRejectedoffertopurchaseID, customAttachmentResponse.fkiRejectedoffertopurchaseID) &&
+        Objects.equals(this.fkiDisclosureID, customAttachmentResponse.fkiDisclosureID) &&
+        Objects.equals(this.fkiReconciliationID, customAttachmentResponse.fkiReconciliationID) &&
+        Objects.equals(this.fkiEzsigndocumentIDReference, customAttachmentResponse.fkiEzsigndocumentIDReference) &&
+        Objects.equals(this.eAttachmentDocumenttype, customAttachmentResponse.eAttachmentDocumenttype) &&
+        Objects.equals(this.sAttachmentName, customAttachmentResponse.sAttachmentName) &&
+        Objects.equals(this.eAttachmentPrivacy, customAttachmentResponse.eAttachmentPrivacy) &&
+        Objects.equals(this.fkiUserIDSpecific, customAttachmentResponse.fkiUserIDSpecific) &&
+        Objects.equals(this.eAttachmentType, customAttachmentResponse.eAttachmentType) &&
+        Objects.equals(this.iAttachmentSize, customAttachmentResponse.iAttachmentSize) &&
+        Objects.equals(this.iAttachmentEDMmoduleflag, customAttachmentResponse.iAttachmentEDMmoduleflag) &&
+        Objects.equals(this.sAttachmentMD5, customAttachmentResponse.sAttachmentMD5) &&
+        Objects.equals(this.bAttachmentDeleted, customAttachmentResponse.bAttachmentDeleted) &&
+        Objects.equals(this.bAttachmentValid, customAttachmentResponse.bAttachmentValid) &&
+        Objects.equals(this.eAttachmentVerified, customAttachmentResponse.eAttachmentVerified) &&
+        Objects.equals(this.tAttachmentRejectioncomment, customAttachmentResponse.tAttachmentRejectioncomment) &&
+        Objects.equals(this.fkiUserIDOwner, customAttachmentResponse.fkiUserIDOwner) &&
+        Objects.equals(this.objAudit, customAttachmentResponse.objAudit) &&
+        Objects.equals(this.objAttachmentProof, customAttachmentResponse.objAttachmentProof) &&
         Objects.equals(this.objAttachmentProofdocument, customAttachmentResponse.objAttachmentProofdocument) &&
         Objects.equals(this.aObjAttachmentAttachment, customAttachmentResponse.aObjAttachmentAttachment) &&
-        Objects.equals(this.aObjAttachmentVersion, customAttachmentResponse.aObjAttachmentVersion) &&
-        super.equals(o);
+        Objects.equals(this.aObjAttachmentVersion, customAttachmentResponse.aObjAttachmentVersion);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objAttachmentProof, objAttachmentProofdocument, aObjAttachmentAttachment, aObjAttachmentVersion, super.hashCode());
+    return Objects.hash(pkiAttachmentID, fkiComputerID, fkiAdjustmentID, fkiAgentID, fkiBankaccountID, fkiBrokerID, fkiCommissionadvanceID, fkiCommunicationID, fkiCustomerID, fkiCustomertemplateID, fkiDepositID, fkiDeposittransitchequeID, fkiElectronicfundstransferID, fkiEmployeeID, fkiExternalbrokerID, fkiEzcomadvanceserverID, fkiEzcomcompanyID, fkiEzsigndocumentID, fkiGhacqcontractID, fkiInscriptionID, fkiInscriptiontempID, fkiInscriptionnotauthenticatedID, fkiInvoiceID, fkiBuyercontractID, fkiFranchisebrokerID, fkiFranchiseagenceID, fkiFranchiseofficeID, fkiFranchisefranchiseID, fkiFranchisecomplaintID, fkiLeadID, fkiMarketingprogramID, fkiMarketingfollowID, fkiNotaryID, fkiOfficetaxreportID, fkiOtherincomeID, fkiPaymentpreparationID, fkiPurchaseID, fkiSalaryID, fkiSupplierID, fkiTranqcontractID, fkiTemplateID, fkiInscriptionchecklistID, fkiFolderID, fkiRejectedoffertopurchaseID, fkiDisclosureID, fkiReconciliationID, fkiEzsigndocumentIDReference, eAttachmentDocumenttype, sAttachmentName, eAttachmentPrivacy, fkiUserIDSpecific, eAttachmentType, iAttachmentSize, iAttachmentEDMmoduleflag, sAttachmentMD5, bAttachmentDeleted, bAttachmentValid, eAttachmentVerified, tAttachmentRejectioncomment, fkiUserIDOwner, objAudit, objAttachmentProof, objAttachmentProofdocument, aObjAttachmentAttachment, aObjAttachmentVersion);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomAttachmentResponse {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiAttachmentID: ").append(toIndentedString(pkiAttachmentID)).append("\n");
+    sb.append("    fkiComputerID: ").append(toIndentedString(fkiComputerID)).append("\n");
+    sb.append("    fkiAdjustmentID: ").append(toIndentedString(fkiAdjustmentID)).append("\n");
+    sb.append("    fkiAgentID: ").append(toIndentedString(fkiAgentID)).append("\n");
+    sb.append("    fkiBankaccountID: ").append(toIndentedString(fkiBankaccountID)).append("\n");
+    sb.append("    fkiBrokerID: ").append(toIndentedString(fkiBrokerID)).append("\n");
+    sb.append("    fkiCommissionadvanceID: ").append(toIndentedString(fkiCommissionadvanceID)).append("\n");
+    sb.append("    fkiCommunicationID: ").append(toIndentedString(fkiCommunicationID)).append("\n");
+    sb.append("    fkiCustomerID: ").append(toIndentedString(fkiCustomerID)).append("\n");
+    sb.append("    fkiCustomertemplateID: ").append(toIndentedString(fkiCustomertemplateID)).append("\n");
+    sb.append("    fkiDepositID: ").append(toIndentedString(fkiDepositID)).append("\n");
+    sb.append("    fkiDeposittransitchequeID: ").append(toIndentedString(fkiDeposittransitchequeID)).append("\n");
+    sb.append("    fkiElectronicfundstransferID: ").append(toIndentedString(fkiElectronicfundstransferID)).append("\n");
+    sb.append("    fkiEmployeeID: ").append(toIndentedString(fkiEmployeeID)).append("\n");
+    sb.append("    fkiExternalbrokerID: ").append(toIndentedString(fkiExternalbrokerID)).append("\n");
+    sb.append("    fkiEzcomadvanceserverID: ").append(toIndentedString(fkiEzcomadvanceserverID)).append("\n");
+    sb.append("    fkiEzcomcompanyID: ").append(toIndentedString(fkiEzcomcompanyID)).append("\n");
+    sb.append("    fkiEzsigndocumentID: ").append(toIndentedString(fkiEzsigndocumentID)).append("\n");
+    sb.append("    fkiGhacqcontractID: ").append(toIndentedString(fkiGhacqcontractID)).append("\n");
+    sb.append("    fkiInscriptionID: ").append(toIndentedString(fkiInscriptionID)).append("\n");
+    sb.append("    fkiInscriptiontempID: ").append(toIndentedString(fkiInscriptiontempID)).append("\n");
+    sb.append("    fkiInscriptionnotauthenticatedID: ").append(toIndentedString(fkiInscriptionnotauthenticatedID)).append("\n");
+    sb.append("    fkiInvoiceID: ").append(toIndentedString(fkiInvoiceID)).append("\n");
+    sb.append("    fkiBuyercontractID: ").append(toIndentedString(fkiBuyercontractID)).append("\n");
+    sb.append("    fkiFranchisebrokerID: ").append(toIndentedString(fkiFranchisebrokerID)).append("\n");
+    sb.append("    fkiFranchiseagenceID: ").append(toIndentedString(fkiFranchiseagenceID)).append("\n");
+    sb.append("    fkiFranchiseofficeID: ").append(toIndentedString(fkiFranchiseofficeID)).append("\n");
+    sb.append("    fkiFranchisefranchiseID: ").append(toIndentedString(fkiFranchisefranchiseID)).append("\n");
+    sb.append("    fkiFranchisecomplaintID: ").append(toIndentedString(fkiFranchisecomplaintID)).append("\n");
+    sb.append("    fkiLeadID: ").append(toIndentedString(fkiLeadID)).append("\n");
+    sb.append("    fkiMarketingprogramID: ").append(toIndentedString(fkiMarketingprogramID)).append("\n");
+    sb.append("    fkiMarketingfollowID: ").append(toIndentedString(fkiMarketingfollowID)).append("\n");
+    sb.append("    fkiNotaryID: ").append(toIndentedString(fkiNotaryID)).append("\n");
+    sb.append("    fkiOfficetaxreportID: ").append(toIndentedString(fkiOfficetaxreportID)).append("\n");
+    sb.append("    fkiOtherincomeID: ").append(toIndentedString(fkiOtherincomeID)).append("\n");
+    sb.append("    fkiPaymentpreparationID: ").append(toIndentedString(fkiPaymentpreparationID)).append("\n");
+    sb.append("    fkiPurchaseID: ").append(toIndentedString(fkiPurchaseID)).append("\n");
+    sb.append("    fkiSalaryID: ").append(toIndentedString(fkiSalaryID)).append("\n");
+    sb.append("    fkiSupplierID: ").append(toIndentedString(fkiSupplierID)).append("\n");
+    sb.append("    fkiTranqcontractID: ").append(toIndentedString(fkiTranqcontractID)).append("\n");
+    sb.append("    fkiTemplateID: ").append(toIndentedString(fkiTemplateID)).append("\n");
+    sb.append("    fkiInscriptionchecklistID: ").append(toIndentedString(fkiInscriptionchecklistID)).append("\n");
+    sb.append("    fkiFolderID: ").append(toIndentedString(fkiFolderID)).append("\n");
+    sb.append("    fkiRejectedoffertopurchaseID: ").append(toIndentedString(fkiRejectedoffertopurchaseID)).append("\n");
+    sb.append("    fkiDisclosureID: ").append(toIndentedString(fkiDisclosureID)).append("\n");
+    sb.append("    fkiReconciliationID: ").append(toIndentedString(fkiReconciliationID)).append("\n");
+    sb.append("    fkiEzsigndocumentIDReference: ").append(toIndentedString(fkiEzsigndocumentIDReference)).append("\n");
+    sb.append("    eAttachmentDocumenttype: ").append(toIndentedString(eAttachmentDocumenttype)).append("\n");
+    sb.append("    sAttachmentName: ").append(toIndentedString(sAttachmentName)).append("\n");
+    sb.append("    eAttachmentPrivacy: ").append(toIndentedString(eAttachmentPrivacy)).append("\n");
+    sb.append("    fkiUserIDSpecific: ").append(toIndentedString(fkiUserIDSpecific)).append("\n");
+    sb.append("    eAttachmentType: ").append(toIndentedString(eAttachmentType)).append("\n");
+    sb.append("    iAttachmentSize: ").append(toIndentedString(iAttachmentSize)).append("\n");
+    sb.append("    iAttachmentEDMmoduleflag: ").append(toIndentedString(iAttachmentEDMmoduleflag)).append("\n");
+    sb.append("    sAttachmentMD5: ").append(toIndentedString(sAttachmentMD5)).append("\n");
+    sb.append("    bAttachmentDeleted: ").append(toIndentedString(bAttachmentDeleted)).append("\n");
+    sb.append("    bAttachmentValid: ").append(toIndentedString(bAttachmentValid)).append("\n");
+    sb.append("    eAttachmentVerified: ").append(toIndentedString(eAttachmentVerified)).append("\n");
+    sb.append("    tAttachmentRejectioncomment: ").append(toIndentedString(tAttachmentRejectioncomment)).append("\n");
+    sb.append("    fkiUserIDOwner: ").append(toIndentedString(fkiUserIDOwner)).append("\n");
+    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("    objAttachmentProof: ").append(toIndentedString(objAttachmentProof)).append("\n");
     sb.append("    objAttachmentProofdocument: ").append(toIndentedString(objAttachmentProofdocument)).append("\n");
     sb.append("    aObjAttachmentAttachment: ").append(toIndentedString(aObjAttachmentAttachment)).append("\n");
@@ -335,6 +1935,27 @@ public class CustomAttachmentResponse extends AttachmentResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eAttachmentDocumenttype`
+      FieldEAttachmentDocumenttype.validateJsonElement(jsonObj.get("eAttachmentDocumenttype"));
+      if (!jsonObj.get("sAttachmentName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sAttachmentName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAttachmentName").toString()));
+      }
+      // validate the required field `eAttachmentPrivacy`
+      FieldEAttachmentPrivacy.validateJsonElement(jsonObj.get("eAttachmentPrivacy"));
+      // validate the required field `eAttachmentType`
+      FieldEAttachmentType.validateJsonElement(jsonObj.get("eAttachmentType"));
+      if (!jsonObj.get("sAttachmentMD5").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sAttachmentMD5` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAttachmentMD5").toString()));
+      }
+      // validate the required field `eAttachmentVerified`
+      FieldEAttachmentVerified.validateJsonElement(jsonObj.get("eAttachmentVerified"));
+      if ((jsonObj.get("tAttachmentRejectioncomment") != null && !jsonObj.get("tAttachmentRejectioncomment").isJsonNull()) && !jsonObj.get("tAttachmentRejectioncomment").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tAttachmentRejectioncomment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tAttachmentRejectioncomment").toString()));
+      }
+      // validate the optional field `objAudit`
+      if (jsonObj.get("objAudit") != null && !jsonObj.get("objAudit").isJsonNull()) {
+        CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
+      }
       // validate the optional field `objAttachmentProof`
       if (jsonObj.get("objAttachmentProof") != null && !jsonObj.get("objAttachmentProof").isJsonNull()) {
         AttachmentResponseCompound.validateJsonElement(jsonObj.get("objAttachmentProof"));

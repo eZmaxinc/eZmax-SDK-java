@@ -13,8 +13,7 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.AttemptResponse;
-import com.ezmax.api.model.CommonWebhook;
+import com.ezmax.api.model.AttemptResponseCompound;
 import com.ezmax.api.model.CustomWebhookResponse;
 import com.ezmax.api.model.EzsignfolderResponse;
 import com.google.gson.TypeAdapter;

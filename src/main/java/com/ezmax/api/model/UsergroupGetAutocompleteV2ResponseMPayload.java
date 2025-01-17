@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/usergroup/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUP = "a_objUsergroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUP)
-  @javax.annotation.Nonnull
   private List<UsergroupAutocompleteElementResponse> aObjUsergroup = new ArrayList<>();
 
   public UsergroupGetAutocompleteV2ResponseMPayload() {
   }
 
-  public UsergroupGetAutocompleteV2ResponseMPayload aObjUsergroup(@javax.annotation.Nonnull List<UsergroupAutocompleteElementResponse> aObjUsergroup) {
+  public UsergroupGetAutocompleteV2ResponseMPayload aObjUsergroup(List<UsergroupAutocompleteElementResponse> aObjUsergroup) {
     this.aObjUsergroup = aObjUsergroup;
     return this;
   }
@@ -83,7 +82,7 @@ public class UsergroupGetAutocompleteV2ResponseMPayload {
     return aObjUsergroup;
   }
 
-  public void setaObjUsergroup(@javax.annotation.Nonnull List<UsergroupAutocompleteElementResponse> aObjUsergroup) {
+  public void setaObjUsergroup(List<UsergroupAutocompleteElementResponse> aObjUsergroup) {
     this.aObjUsergroup = aObjUsergroup;
   }
 

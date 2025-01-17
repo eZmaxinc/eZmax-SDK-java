@@ -13,7 +13,6 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.CommonResponseGetList;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayloadGetList;
 import com.ezmax.api.model.EzsignsigningreasonGetListV1ResponseMPayload;

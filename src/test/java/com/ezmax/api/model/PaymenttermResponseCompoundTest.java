@@ -16,7 +16,6 @@ package com.ezmax.api.model;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.FieldEPaymenttermType;
 import com.ezmax.api.model.MultilingualPaymenttermDescription;
-import com.ezmax.api.model.PaymenttermResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

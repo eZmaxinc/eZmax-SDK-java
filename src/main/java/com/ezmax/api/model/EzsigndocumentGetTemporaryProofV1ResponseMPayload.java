@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsigndocumentlogResponse;
+import com.ezmax.api.model.EzsigndocumentlogResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,22 +51,21 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getTemporaryProof
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENTLOG = "a_objEzsigndocumentlog";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENTLOG)
-  @javax.annotation.Nonnull
   private List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog = new ArrayList<>();
 
   public EzsigndocumentGetTemporaryProofV1ResponseMPayload() {
   }
 
-  public EzsigndocumentGetTemporaryProofV1ResponseMPayload aObjEzsigndocumentlog(@javax.annotation.Nonnull List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog) {
+  public EzsigndocumentGetTemporaryProofV1ResponseMPayload aObjEzsigndocumentlog(List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog) {
     this.aObjEzsigndocumentlog = aObjEzsigndocumentlog;
     return this;
   }
 
-  public EzsigndocumentGetTemporaryProofV1ResponseMPayload addAObjEzsigndocumentlogItem(EzsigndocumentlogResponse aObjEzsigndocumentlogItem) {
+  public EzsigndocumentGetTemporaryProofV1ResponseMPayload addAObjEzsigndocumentlogItem(EzsigndocumentlogResponseCompound aObjEzsigndocumentlogItem) {
     if (this.aObjEzsigndocumentlog == null) {
       this.aObjEzsigndocumentlog = new ArrayList<>();
     }
@@ -83,7 +82,7 @@ public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
     return aObjEzsigndocumentlog;
   }
 
-  public void setaObjEzsigndocumentlog(@javax.annotation.Nonnull List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog) {
+  public void setaObjEzsigndocumentlog(List<EzsigndocumentlogResponseCompound> aObjEzsigndocumentlog) {
     this.aObjEzsigndocumentlog = aObjEzsigndocumentlog;
   }
 
@@ -176,7 +175,7 @@ public class EzsigndocumentGetTemporaryProofV1ResponseMPayload {
       JsonArray jsonArrayaObjEzsigndocumentlog = jsonObj.getAsJsonArray("a_objEzsigndocumentlog");
       // validate the required field `a_objEzsigndocumentlog` (array)
       for (int i = 0; i < jsonArrayaObjEzsigndocumentlog.size(); i++) {
-        EzsigndocumentlogResponse.validateJsonElement(jsonArrayaObjEzsigndocumentlog.get(i));
+        EzsigndocumentlogResponseCompound.validateJsonElement(jsonArrayaObjEzsigndocumentlog.get(i));
       };
   }
 

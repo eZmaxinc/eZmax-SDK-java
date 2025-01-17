@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/variableexpense/{pkiVariableexpenseID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VariableexpenseGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_VARIABLEEXPENSE = "objVariableexpense";
   @SerializedName(SERIALIZED_NAME_OBJ_VARIABLEEXPENSE)
-  @javax.annotation.Nonnull
   private VariableexpenseResponseCompound objVariableexpense;
 
   public VariableexpenseGetObjectV2ResponseMPayload() {
   }
 
-  public VariableexpenseGetObjectV2ResponseMPayload objVariableexpense(@javax.annotation.Nonnull VariableexpenseResponseCompound objVariableexpense) {
+  public VariableexpenseGetObjectV2ResponseMPayload objVariableexpense(VariableexpenseResponseCompound objVariableexpense) {
     this.objVariableexpense = objVariableexpense;
     return this;
   }
@@ -73,7 +72,7 @@ public class VariableexpenseGetObjectV2ResponseMPayload {
     return objVariableexpense;
   }
 
-  public void setObjVariableexpense(@javax.annotation.Nonnull VariableexpenseResponseCompound objVariableexpense) {
+  public void setObjVariableexpense(VariableexpenseResponseCompound objVariableexpense) {
     this.objVariableexpense = objVariableexpense;
   }
 

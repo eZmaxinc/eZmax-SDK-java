@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/communication
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommunicationSendV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATION = "a_objCommunication";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATION)
-  @javax.annotation.Nonnull
   private List<CommunicationRequestCompound> aObjCommunication = new ArrayList<>();
 
   public CommunicationSendV1Request() {
   }
 
-  public CommunicationSendV1Request aObjCommunication(@javax.annotation.Nonnull List<CommunicationRequestCompound> aObjCommunication) {
+  public CommunicationSendV1Request aObjCommunication(List<CommunicationRequestCompound> aObjCommunication) {
     this.aObjCommunication = aObjCommunication;
     return this;
   }
@@ -83,7 +82,7 @@ public class CommunicationSendV1Request {
     return aObjCommunication;
   }
 
-  public void setaObjCommunication(@javax.annotation.Nonnull List<CommunicationRequestCompound> aObjCommunication) {
+  public void setaObjCommunication(List<CommunicationRequestCompound> aObjCommunication) {
     this.aObjCommunication = aObjCommunication;
   }
 

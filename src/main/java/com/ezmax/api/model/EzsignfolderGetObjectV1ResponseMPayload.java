@@ -17,7 +17,6 @@ import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CustomEzsignfoldertypeResponse;
 import com.ezmax.api.model.CustomTimezoneWithCodeResponse;
-import com.ezmax.api.model.EzsignfolderResponseCompound;
 import com.ezmax.api.model.FieldEEzsignfolderCompletion;
 import com.ezmax.api.model.FieldEEzsignfolderSendreminderfrequency;
 import com.ezmax.api.model.FieldEEzsignfolderStep;
@@ -55,10 +54,652 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignfolderGetObjectV1ResponseMPayload extends EzsignfolderResponseCompound {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsignfolderGetObjectV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
+  private Integer pkiEzsignfolderID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
+  private Integer fkiEzsignfoldertypeID;
+
+  public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE = "objEzsignfoldertype";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE)
+  private CustomEzsignfoldertypeResponse objEzsignfoldertype;
+
+  public static final String SERIALIZED_NAME_FKI_TIMEZONE_I_D = "fkiTimezoneID";
+  @SerializedName(SERIALIZED_NAME_FKI_TIMEZONE_I_D)
+  private Integer fkiTimezoneID;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_COMPLETION = "eEzsignfolderCompletion";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_COMPLETION)
+  private FieldEEzsignfolderCompletion eEzsignfolderCompletion;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
+  @Deprecated
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
+  private String sEzsignfoldertypeNameX;
+
+  public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
+  @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
+  private Integer fkiBillingentityinternalID;
+
+  public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X = "sBillingentityinternalDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X)
+  private String sBillingentityinternalDescriptionX;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNTSAREQUIREMENT_I_D = "fkiEzsigntsarequirementID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTSAREQUIREMENT_I_D)
+  private Integer fkiEzsigntsarequirementID;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X = "sEzsigntsarequirementDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTSAREQUIREMENT_DESCRIPTION_X)
+  private String sEzsigntsarequirementDescriptionX;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION = "sEzsignfolderDescription";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION)
+  private String sEzsignfolderDescription;
+
+  public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_NOTE = "tEzsignfolderNote";
+  @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_NOTE)
+  private String tEzsignfolderNote;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDER_ISDISPOSABLE = "bEzsignfolderIsdisposable";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDER_ISDISPOSABLE)
+  private Boolean bEzsignfolderIsdisposable;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_SENDREMINDERFREQUENCY = "eEzsignfolderSendreminderfrequency";
+  @Deprecated
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_SENDREMINDERFREQUENCY)
+  private FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNFOLDER_SENDREMINDERFIRSTDAYS = "iEzsignfolderSendreminderfirstdays";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER_SENDREMINDERFIRSTDAYS)
+  private Integer iEzsignfolderSendreminderfirstdays;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNFOLDER_SENDREMINDEROTHERDAYS = "iEzsignfolderSendreminderotherdays";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER_SENDREMINDEROTHERDAYS)
+  private Integer iEzsignfolderSendreminderotherdays;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_DELAYEDSENDDATE = "dtEzsignfolderDelayedsenddate";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_DELAYEDSENDDATE)
+  private String dtEzsignfolderDelayedsenddate;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_DUEDATE = "dtEzsignfolderDuedate";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_DUEDATE)
+  private String dtEzsignfolderDuedate;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_SENTDATE = "dtEzsignfolderSentdate";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_SENTDATE)
+  private String dtEzsignfolderSentdate;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_SCHEDULEDARCHIVE = "dtEzsignfolderScheduledarchive";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_SCHEDULEDARCHIVE)
+  private String dtEzsignfolderScheduledarchive;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_SCHEDULEDDISPOSE = "dtEzsignfolderScheduleddispose";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_SCHEDULEDDISPOSE)
+  private String dtEzsignfolderScheduleddispose;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_STEP = "eEzsignfolderStep";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_STEP)
+  private FieldEEzsignfolderStep eEzsignfolderStep;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_CLOSE = "dtEzsignfolderClose";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_CLOSE)
+  private String dtEzsignfolderClose;
+
+  public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE = "tEzsignfolderMessage";
+  @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE)
+  private String tEzsignfolderMessage;
+
+  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
+  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  private CommonAudit objAudit;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNFOLDER_EXTERNALID = "sEzsignfolderExternalid";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDER_EXTERNALID)
+  private String sEzsignfolderExternalid;
+
+  public static final String SERIALIZED_NAME_OBJ_TIMEZONE = "objTimezone";
+  @SerializedName(SERIALIZED_NAME_OBJ_TIMEZONE)
+  private CustomTimezoneWithCodeResponse objTimezone;
+
   public EzsignfolderGetObjectV1ResponseMPayload() {
   }
+
+  public EzsignfolderGetObjectV1ResponseMPayload pkiEzsignfolderID(Integer pkiEzsignfolderID) {
+    this.pkiEzsignfolderID = pkiEzsignfolderID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignfolder
+   * minimum: 0
+   * @return pkiEzsignfolderID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiEzsignfolderID() {
+    return pkiEzsignfolderID;
+  }
+
+  public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
+    this.pkiEzsignfolderID = pkiEzsignfolderID;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+    this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignfoldertype.
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiEzsignfoldertypeID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsignfoldertypeID() {
+    return fkiEzsignfoldertypeID;
+  }
+
+  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+    this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload objEzsignfoldertype(CustomEzsignfoldertypeResponse objEzsignfoldertype) {
+    this.objEzsignfoldertype = objEzsignfoldertype;
+    return this;
+  }
+
+  /**
+   * Get objEzsignfoldertype
+   * @return objEzsignfoldertype
+   */
+  @javax.annotation.Nullable
+  public CustomEzsignfoldertypeResponse getObjEzsignfoldertype() {
+    return objEzsignfoldertype;
+  }
+
+  public void setObjEzsignfoldertype(CustomEzsignfoldertypeResponse objEzsignfoldertype) {
+    this.objEzsignfoldertype = objEzsignfoldertype;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload fkiTimezoneID(Integer fkiTimezoneID) {
+    this.fkiTimezoneID = fkiTimezoneID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Timezone
+   * minimum: 0
+   * @return fkiTimezoneID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiTimezoneID() {
+    return fkiTimezoneID;
+  }
+
+  public void setFkiTimezoneID(Integer fkiTimezoneID) {
+    this.fkiTimezoneID = fkiTimezoneID;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload eEzsignfolderCompletion(FieldEEzsignfolderCompletion eEzsignfolderCompletion) {
+    this.eEzsignfolderCompletion = eEzsignfolderCompletion;
+    return this;
+  }
+
+  /**
+   * Get eEzsignfolderCompletion
+   * @return eEzsignfolderCompletion
+   */
+  @javax.annotation.Nonnull
+  public FieldEEzsignfolderCompletion geteEzsignfolderCompletion() {
+    return eEzsignfolderCompletion;
+  }
+
+  public void seteEzsignfolderCompletion(FieldEEzsignfolderCompletion eEzsignfolderCompletion) {
+    this.eEzsignfolderCompletion = eEzsignfolderCompletion;
+  }
+
+
+  @Deprecated
+  public EzsignfolderGetObjectV1ResponseMPayload sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+    this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+    return this;
+  }
+
+  /**
+   * Get sEzsignfoldertypeNameX
+   * @return sEzsignfoldertypeNameX
+   * @deprecated
+   */
+  @Deprecated
+  @javax.annotation.Nullable
+  public String getsEzsignfoldertypeNameX() {
+    return sEzsignfoldertypeNameX;
+  }
+
+  @Deprecated
+  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+    this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Billingentityinternal.
+   * minimum: 0
+   * @return fkiBillingentityinternalID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiBillingentityinternalID() {
+    return fkiBillingentityinternalID;
+  }
+
+  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+    return this;
+  }
+
+  /**
+   * The description of the Billingentityinternal in the language of the requester
+   * @return sBillingentityinternalDescriptionX
+   */
+  @javax.annotation.Nullable
+  public String getsBillingentityinternalDescriptionX() {
+    return sBillingentityinternalDescriptionX;
+  }
+
+  public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload fkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
+    this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntsarequirement.  Determine if a Time Stamping Authority should add a timestamp on each of the signature. Valid values:  |Value|Description| |-|-| |1|No. TSA Timestamping will requested. This will make all signatures a lot faster since no round-trip to the TSA server will be required. Timestamping will be made using eZsign server&#39;s time.| |2|Best effort. Timestamping from a Time Stamping Authority will be requested but is not mandatory. In the very improbable case it cannot be completed, the timestamping will be made using eZsign server&#39;s time. **Additional fee applies**| |3|Mandatory. Timestamping from a Time Stamping Authority will be requested and is mandatory. In the very improbable case it cannot be completed, the signature will fail and the user will be asked to retry. **Additional fee applies**|
+   * minimum: 1
+   * maximum: 3
+   * @return fkiEzsigntsarequirementID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsigntsarequirementID() {
+    return fkiEzsigntsarequirementID;
+  }
+
+  public void setFkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
+    this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload sEzsigntsarequirementDescriptionX(String sEzsigntsarequirementDescriptionX) {
+    this.sEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
+    return this;
+  }
+
+  /**
+   * The description of the Ezsigntsarequirement in the language of the requester
+   * @return sEzsigntsarequirementDescriptionX
+   */
+  @javax.annotation.Nullable
+  public String getsEzsigntsarequirementDescriptionX() {
+    return sEzsigntsarequirementDescriptionX;
+  }
+
+  public void setsEzsigntsarequirementDescriptionX(String sEzsigntsarequirementDescriptionX) {
+    this.sEzsigntsarequirementDescriptionX = sEzsigntsarequirementDescriptionX;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload sEzsignfolderDescription(String sEzsignfolderDescription) {
+    this.sEzsignfolderDescription = sEzsignfolderDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Ezsignfolder
+   * @return sEzsignfolderDescription
+   */
+  @javax.annotation.Nonnull
+  public String getsEzsignfolderDescription() {
+    return sEzsignfolderDescription;
+  }
+
+  public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
+    this.sEzsignfolderDescription = sEzsignfolderDescription;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload tEzsignfolderNote(String tEzsignfolderNote) {
+    this.tEzsignfolderNote = tEzsignfolderNote;
+    return this;
+  }
+
+  /**
+   * Note about the Ezsignfolder
+   * @return tEzsignfolderNote
+   */
+  @javax.annotation.Nullable
+  public String gettEzsignfolderNote() {
+    return tEzsignfolderNote;
+  }
+
+  public void settEzsignfolderNote(String tEzsignfolderNote) {
+    this.tEzsignfolderNote = tEzsignfolderNote;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload bEzsignfolderIsdisposable(Boolean bEzsignfolderIsdisposable) {
+    this.bEzsignfolderIsdisposable = bEzsignfolderIsdisposable;
+    return this;
+  }
+
+  /**
+   * If the Ezsigndocument can be disposed
+   * @return bEzsignfolderIsdisposable
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfolderIsdisposable() {
+    return bEzsignfolderIsdisposable;
+  }
+
+  public void setbEzsignfolderIsdisposable(Boolean bEzsignfolderIsdisposable) {
+    this.bEzsignfolderIsdisposable = bEzsignfolderIsdisposable;
+  }
+
+
+  @Deprecated
+  public EzsignfolderGetObjectV1ResponseMPayload eEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
+    this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
+    return this;
+  }
+
+  /**
+   * Get eEzsignfolderSendreminderfrequency
+   * @return eEzsignfolderSendreminderfrequency
+   * @deprecated
+   */
+  @Deprecated
+  @javax.annotation.Nullable
+  public FieldEEzsignfolderSendreminderfrequency geteEzsignfolderSendreminderfrequency() {
+    return eEzsignfolderSendreminderfrequency;
+  }
+
+  @Deprecated
+  public void seteEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
+    this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload iEzsignfolderSendreminderfirstdays(Integer iEzsignfolderSendreminderfirstdays) {
+    this.iEzsignfolderSendreminderfirstdays = iEzsignfolderSendreminderfirstdays;
+    return this;
+  }
+
+  /**
+   * The number of days before the the first reminder sending
+   * minimum: 0
+   * maximum: 255
+   * @return iEzsignfolderSendreminderfirstdays
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsignfolderSendreminderfirstdays() {
+    return iEzsignfolderSendreminderfirstdays;
+  }
+
+  public void setiEzsignfolderSendreminderfirstdays(Integer iEzsignfolderSendreminderfirstdays) {
+    this.iEzsignfolderSendreminderfirstdays = iEzsignfolderSendreminderfirstdays;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload iEzsignfolderSendreminderotherdays(Integer iEzsignfolderSendreminderotherdays) {
+    this.iEzsignfolderSendreminderotherdays = iEzsignfolderSendreminderotherdays;
+    return this;
+  }
+
+  /**
+   * The number of days after the first reminder sending
+   * minimum: 0
+   * maximum: 255
+   * @return iEzsignfolderSendreminderotherdays
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsignfolderSendreminderotherdays() {
+    return iEzsignfolderSendreminderotherdays;
+  }
+
+  public void setiEzsignfolderSendreminderotherdays(Integer iEzsignfolderSendreminderotherdays) {
+    this.iEzsignfolderSendreminderotherdays = iEzsignfolderSendreminderotherdays;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload dtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
+    this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
+    return this;
+  }
+
+  /**
+   * The date and time at which the Ezsignfolder will be sent in the future.
+   * @return dtEzsignfolderDelayedsenddate
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsignfolderDelayedsenddate() {
+    return dtEzsignfolderDelayedsenddate;
+  }
+
+  public void setDtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
+    this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload dtEzsignfolderDuedate(String dtEzsignfolderDuedate) {
+    this.dtEzsignfolderDuedate = dtEzsignfolderDuedate;
+    return this;
+  }
+
+  /**
+   * The maximum date and time at which the Ezsignfolder can be signed.
+   * @return dtEzsignfolderDuedate
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsignfolderDuedate() {
+    return dtEzsignfolderDuedate;
+  }
+
+  public void setDtEzsignfolderDuedate(String dtEzsignfolderDuedate) {
+    this.dtEzsignfolderDuedate = dtEzsignfolderDuedate;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload dtEzsignfolderSentdate(String dtEzsignfolderSentdate) {
+    this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
+    return this;
+  }
+
+  /**
+   * The date and time at which the Ezsignfolder was sent the last time.
+   * @return dtEzsignfolderSentdate
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsignfolderSentdate() {
+    return dtEzsignfolderSentdate;
+  }
+
+  public void setDtEzsignfolderSentdate(String dtEzsignfolderSentdate) {
+    this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload dtEzsignfolderScheduledarchive(String dtEzsignfolderScheduledarchive) {
+    this.dtEzsignfolderScheduledarchive = dtEzsignfolderScheduledarchive;
+    return this;
+  }
+
+  /**
+   * The scheduled date and time at which the Ezsignfolder should be archived.
+   * @return dtEzsignfolderScheduledarchive
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsignfolderScheduledarchive() {
+    return dtEzsignfolderScheduledarchive;
+  }
+
+  public void setDtEzsignfolderScheduledarchive(String dtEzsignfolderScheduledarchive) {
+    this.dtEzsignfolderScheduledarchive = dtEzsignfolderScheduledarchive;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload dtEzsignfolderScheduleddispose(String dtEzsignfolderScheduleddispose) {
+    this.dtEzsignfolderScheduleddispose = dtEzsignfolderScheduleddispose;
+    return this;
+  }
+
+  /**
+   * The scheduled date at which the Ezsignfolder should be Disposed.
+   * @return dtEzsignfolderScheduleddispose
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsignfolderScheduleddispose() {
+    return dtEzsignfolderScheduleddispose;
+  }
+
+  public void setDtEzsignfolderScheduleddispose(String dtEzsignfolderScheduleddispose) {
+    this.dtEzsignfolderScheduleddispose = dtEzsignfolderScheduleddispose;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload eEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
+    this.eEzsignfolderStep = eEzsignfolderStep;
+    return this;
+  }
+
+  /**
+   * Get eEzsignfolderStep
+   * @return eEzsignfolderStep
+   */
+  @javax.annotation.Nullable
+  public FieldEEzsignfolderStep geteEzsignfolderStep() {
+    return eEzsignfolderStep;
+  }
+
+  public void seteEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
+    this.eEzsignfolderStep = eEzsignfolderStep;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload dtEzsignfolderClose(String dtEzsignfolderClose) {
+    this.dtEzsignfolderClose = dtEzsignfolderClose;
+    return this;
+  }
+
+  /**
+   * The date and time at which the Ezsignfolder was closed. Either by applying the last signature or by completing it prematurely.
+   * @return dtEzsignfolderClose
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsignfolderClose() {
+    return dtEzsignfolderClose;
+  }
+
+  public void setDtEzsignfolderClose(String dtEzsignfolderClose) {
+    this.dtEzsignfolderClose = dtEzsignfolderClose;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload tEzsignfolderMessage(String tEzsignfolderMessage) {
+    this.tEzsignfolderMessage = tEzsignfolderMessage;
+    return this;
+  }
+
+  /**
+   * A custom text message that will be added to the email sent.
+   * @return tEzsignfolderMessage
+   */
+  @javax.annotation.Nullable
+  public String gettEzsignfolderMessage() {
+    return tEzsignfolderMessage;
+  }
+
+  public void settEzsignfolderMessage(String tEzsignfolderMessage) {
+    this.tEzsignfolderMessage = tEzsignfolderMessage;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload objAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+    return this;
+  }
+
+  /**
+   * Get objAudit
+   * @return objAudit
+   */
+  @javax.annotation.Nullable
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload sEzsignfolderExternalid(String sEzsignfolderExternalid) {
+    this.sEzsignfolderExternalid = sEzsignfolderExternalid;
+    return this;
+  }
+
+  /**
+   * This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+   * @return sEzsignfolderExternalid
+   */
+  @javax.annotation.Nullable
+  public String getsEzsignfolderExternalid() {
+    return sEzsignfolderExternalid;
+  }
+
+  public void setsEzsignfolderExternalid(String sEzsignfolderExternalid) {
+    this.sEzsignfolderExternalid = sEzsignfolderExternalid;
+  }
+
+
+  public EzsignfolderGetObjectV1ResponseMPayload objTimezone(CustomTimezoneWithCodeResponse objTimezone) {
+    this.objTimezone = objTimezone;
+    return this;
+  }
+
+  /**
+   * Get objTimezone
+   * @return objTimezone
+   */
+  @javax.annotation.Nullable
+  public CustomTimezoneWithCodeResponse getObjTimezone() {
+    return objTimezone;
+  }
+
+  public void setObjTimezone(CustomTimezoneWithCodeResponse objTimezone) {
+    this.objTimezone = objTimezone;
+  }
+
 
 
   @Override
@@ -69,19 +710,72 @@ public class EzsignfolderGetObjectV1ResponseMPayload extends EzsignfolderRespons
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    EzsignfolderGetObjectV1ResponseMPayload ezsignfolderGetObjectV1ResponseMPayload = (EzsignfolderGetObjectV1ResponseMPayload) o;
+    return Objects.equals(this.pkiEzsignfolderID, ezsignfolderGetObjectV1ResponseMPayload.pkiEzsignfolderID) &&
+        Objects.equals(this.fkiEzsignfoldertypeID, ezsignfolderGetObjectV1ResponseMPayload.fkiEzsignfoldertypeID) &&
+        Objects.equals(this.objEzsignfoldertype, ezsignfolderGetObjectV1ResponseMPayload.objEzsignfoldertype) &&
+        Objects.equals(this.fkiTimezoneID, ezsignfolderGetObjectV1ResponseMPayload.fkiTimezoneID) &&
+        Objects.equals(this.eEzsignfolderCompletion, ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderCompletion) &&
+        Objects.equals(this.sEzsignfoldertypeNameX, ezsignfolderGetObjectV1ResponseMPayload.sEzsignfoldertypeNameX) &&
+        Objects.equals(this.fkiBillingentityinternalID, ezsignfolderGetObjectV1ResponseMPayload.fkiBillingentityinternalID) &&
+        Objects.equals(this.sBillingentityinternalDescriptionX, ezsignfolderGetObjectV1ResponseMPayload.sBillingentityinternalDescriptionX) &&
+        Objects.equals(this.fkiEzsigntsarequirementID, ezsignfolderGetObjectV1ResponseMPayload.fkiEzsigntsarequirementID) &&
+        Objects.equals(this.sEzsigntsarequirementDescriptionX, ezsignfolderGetObjectV1ResponseMPayload.sEzsigntsarequirementDescriptionX) &&
+        Objects.equals(this.sEzsignfolderDescription, ezsignfolderGetObjectV1ResponseMPayload.sEzsignfolderDescription) &&
+        Objects.equals(this.tEzsignfolderNote, ezsignfolderGetObjectV1ResponseMPayload.tEzsignfolderNote) &&
+        Objects.equals(this.bEzsignfolderIsdisposable, ezsignfolderGetObjectV1ResponseMPayload.bEzsignfolderIsdisposable) &&
+        Objects.equals(this.eEzsignfolderSendreminderfrequency, ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderSendreminderfrequency) &&
+        Objects.equals(this.iEzsignfolderSendreminderfirstdays, ezsignfolderGetObjectV1ResponseMPayload.iEzsignfolderSendreminderfirstdays) &&
+        Objects.equals(this.iEzsignfolderSendreminderotherdays, ezsignfolderGetObjectV1ResponseMPayload.iEzsignfolderSendreminderotherdays) &&
+        Objects.equals(this.dtEzsignfolderDelayedsenddate, ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderDelayedsenddate) &&
+        Objects.equals(this.dtEzsignfolderDuedate, ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderDuedate) &&
+        Objects.equals(this.dtEzsignfolderSentdate, ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderSentdate) &&
+        Objects.equals(this.dtEzsignfolderScheduledarchive, ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderScheduledarchive) &&
+        Objects.equals(this.dtEzsignfolderScheduleddispose, ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderScheduleddispose) &&
+        Objects.equals(this.eEzsignfolderStep, ezsignfolderGetObjectV1ResponseMPayload.eEzsignfolderStep) &&
+        Objects.equals(this.dtEzsignfolderClose, ezsignfolderGetObjectV1ResponseMPayload.dtEzsignfolderClose) &&
+        Objects.equals(this.tEzsignfolderMessage, ezsignfolderGetObjectV1ResponseMPayload.tEzsignfolderMessage) &&
+        Objects.equals(this.objAudit, ezsignfolderGetObjectV1ResponseMPayload.objAudit) &&
+        Objects.equals(this.sEzsignfolderExternalid, ezsignfolderGetObjectV1ResponseMPayload.sEzsignfolderExternalid) &&
+        Objects.equals(this.objTimezone, ezsignfolderGetObjectV1ResponseMPayload.objTimezone);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, objEzsignfoldertype, fkiTimezoneID, eEzsignfolderCompletion, sEzsignfoldertypeNameX, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX, sEzsignfolderDescription, tEzsignfolderNote, bEzsignfolderIsdisposable, eEzsignfolderSendreminderfrequency, iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate, dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose, eEzsignfolderStep, dtEzsignfolderClose, tEzsignfolderMessage, objAudit, sEzsignfolderExternalid, objTimezone);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderGetObjectV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsignfolderID: ").append(toIndentedString(pkiEzsignfolderID)).append("\n");
+    sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
+    sb.append("    objEzsignfoldertype: ").append(toIndentedString(objEzsignfoldertype)).append("\n");
+    sb.append("    fkiTimezoneID: ").append(toIndentedString(fkiTimezoneID)).append("\n");
+    sb.append("    eEzsignfolderCompletion: ").append(toIndentedString(eEzsignfolderCompletion)).append("\n");
+    sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
+    sb.append("    fkiBillingentityinternalID: ").append(toIndentedString(fkiBillingentityinternalID)).append("\n");
+    sb.append("    sBillingentityinternalDescriptionX: ").append(toIndentedString(sBillingentityinternalDescriptionX)).append("\n");
+    sb.append("    fkiEzsigntsarequirementID: ").append(toIndentedString(fkiEzsigntsarequirementID)).append("\n");
+    sb.append("    sEzsigntsarequirementDescriptionX: ").append(toIndentedString(sEzsigntsarequirementDescriptionX)).append("\n");
+    sb.append("    sEzsignfolderDescription: ").append(toIndentedString(sEzsignfolderDescription)).append("\n");
+    sb.append("    tEzsignfolderNote: ").append(toIndentedString(tEzsignfolderNote)).append("\n");
+    sb.append("    bEzsignfolderIsdisposable: ").append(toIndentedString(bEzsignfolderIsdisposable)).append("\n");
+    sb.append("    eEzsignfolderSendreminderfrequency: ").append(toIndentedString(eEzsignfolderSendreminderfrequency)).append("\n");
+    sb.append("    iEzsignfolderSendreminderfirstdays: ").append(toIndentedString(iEzsignfolderSendreminderfirstdays)).append("\n");
+    sb.append("    iEzsignfolderSendreminderotherdays: ").append(toIndentedString(iEzsignfolderSendreminderotherdays)).append("\n");
+    sb.append("    dtEzsignfolderDelayedsenddate: ").append(toIndentedString(dtEzsignfolderDelayedsenddate)).append("\n");
+    sb.append("    dtEzsignfolderDuedate: ").append(toIndentedString(dtEzsignfolderDuedate)).append("\n");
+    sb.append("    dtEzsignfolderSentdate: ").append(toIndentedString(dtEzsignfolderSentdate)).append("\n");
+    sb.append("    dtEzsignfolderScheduledarchive: ").append(toIndentedString(dtEzsignfolderScheduledarchive)).append("\n");
+    sb.append("    dtEzsignfolderScheduleddispose: ").append(toIndentedString(dtEzsignfolderScheduleddispose)).append("\n");
+    sb.append("    eEzsignfolderStep: ").append(toIndentedString(eEzsignfolderStep)).append("\n");
+    sb.append("    dtEzsignfolderClose: ").append(toIndentedString(dtEzsignfolderClose)).append("\n");
+    sb.append("    tEzsignfolderMessage: ").append(toIndentedString(tEzsignfolderMessage)).append("\n");
+    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    sEzsignfolderExternalid: ").append(toIndentedString(sEzsignfolderExternalid)).append("\n");
+    sb.append("    objTimezone: ").append(toIndentedString(objTimezone)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -165,6 +859,68 @@ public class EzsignfolderGetObjectV1ResponseMPayload extends EzsignfolderRespons
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `objEzsignfoldertype`
+      if (jsonObj.get("objEzsignfoldertype") != null && !jsonObj.get("objEzsignfoldertype").isJsonNull()) {
+        CustomEzsignfoldertypeResponse.validateJsonElement(jsonObj.get("objEzsignfoldertype"));
+      }
+      // validate the required field `eEzsignfolderCompletion`
+      FieldEEzsignfolderCompletion.validateJsonElement(jsonObj.get("eEzsignfolderCompletion"));
+      if ((jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonNull()) && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
+      }
+      if ((jsonObj.get("sBillingentityinternalDescriptionX") != null && !jsonObj.get("sBillingentityinternalDescriptionX").isJsonNull()) && !jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
+      }
+      if ((jsonObj.get("sEzsigntsarequirementDescriptionX") != null && !jsonObj.get("sEzsigntsarequirementDescriptionX").isJsonNull()) && !jsonObj.get("sEzsigntsarequirementDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntsarequirementDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntsarequirementDescriptionX").toString()));
+      }
+      if (!jsonObj.get("sEzsignfolderDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfolderDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderDescription").toString()));
+      }
+      if ((jsonObj.get("tEzsignfolderNote") != null && !jsonObj.get("tEzsignfolderNote").isJsonNull()) && !jsonObj.get("tEzsignfolderNote").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzsignfolderNote` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderNote").toString()));
+      }
+      // validate the optional field `eEzsignfolderSendreminderfrequency`
+      if (jsonObj.get("eEzsignfolderSendreminderfrequency") != null && !jsonObj.get("eEzsignfolderSendreminderfrequency").isJsonNull()) {
+        FieldEEzsignfolderSendreminderfrequency.validateJsonElement(jsonObj.get("eEzsignfolderSendreminderfrequency"));
+      }
+      if ((jsonObj.get("dtEzsignfolderDelayedsenddate") != null && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonNull()) && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderDelayedsenddate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDelayedsenddate").toString()));
+      }
+      if ((jsonObj.get("dtEzsignfolderDuedate") != null && !jsonObj.get("dtEzsignfolderDuedate").isJsonNull()) && !jsonObj.get("dtEzsignfolderDuedate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDuedate").toString()));
+      }
+      if ((jsonObj.get("dtEzsignfolderSentdate") != null && !jsonObj.get("dtEzsignfolderSentdate").isJsonNull()) && !jsonObj.get("dtEzsignfolderSentdate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderSentdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderSentdate").toString()));
+      }
+      if ((jsonObj.get("dtEzsignfolderScheduledarchive") != null && !jsonObj.get("dtEzsignfolderScheduledarchive").isJsonNull()) && !jsonObj.get("dtEzsignfolderScheduledarchive").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderScheduledarchive` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderScheduledarchive").toString()));
+      }
+      if ((jsonObj.get("dtEzsignfolderScheduleddispose") != null && !jsonObj.get("dtEzsignfolderScheduleddispose").isJsonNull()) && !jsonObj.get("dtEzsignfolderScheduleddispose").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderScheduleddispose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderScheduleddispose").toString()));
+      }
+      // validate the optional field `eEzsignfolderStep`
+      if (jsonObj.get("eEzsignfolderStep") != null && !jsonObj.get("eEzsignfolderStep").isJsonNull()) {
+        FieldEEzsignfolderStep.validateJsonElement(jsonObj.get("eEzsignfolderStep"));
+      }
+      if ((jsonObj.get("dtEzsignfolderClose") != null && !jsonObj.get("dtEzsignfolderClose").isJsonNull()) && !jsonObj.get("dtEzsignfolderClose").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderClose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderClose").toString()));
+      }
+      if ((jsonObj.get("tEzsignfolderMessage") != null && !jsonObj.get("tEzsignfolderMessage").isJsonNull()) && !jsonObj.get("tEzsignfolderMessage").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzsignfolderMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderMessage").toString()));
+      }
+      // validate the optional field `objAudit`
+      if (jsonObj.get("objAudit") != null && !jsonObj.get("objAudit").isJsonNull()) {
+        CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
+      }
+      if ((jsonObj.get("sEzsignfolderExternalid") != null && !jsonObj.get("sEzsignfolderExternalid").isJsonNull()) && !jsonObj.get("sEzsignfolderExternalid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignfolderExternalid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderExternalid").toString()));
+      }
+      // validate the optional field `objTimezone`
+      if (jsonObj.get("objTimezone") != null && !jsonObj.get("objTimezone").isJsonNull()) {
+        CustomTimezoneWithCodeResponse.validateJsonElement(jsonObj.get("objTimezone"));
       }
   }
 

@@ -16,7 +16,6 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.FieldEPaymenttermType;
 import com.ezmax.api.model.MultilingualPaymenttermDescription;
-import com.ezmax.api.model.PaymenttermRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,10 +50,150 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class PaymenttermRequestCompound extends PaymenttermRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class PaymenttermRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
+  @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
+  private Integer pkiPaymenttermID;
+
+  public static final String SERIALIZED_NAME_S_PAYMENTTERM_CODE = "sPaymenttermCode";
+  @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_CODE)
+  private String sPaymenttermCode;
+
+  public static final String SERIALIZED_NAME_E_PAYMENTTERM_TYPE = "ePaymenttermType";
+  @SerializedName(SERIALIZED_NAME_E_PAYMENTTERM_TYPE)
+  private FieldEPaymenttermType ePaymenttermType;
+
+  public static final String SERIALIZED_NAME_I_PAYMENTTERM_DAY = "iPaymenttermDay";
+  @SerializedName(SERIALIZED_NAME_I_PAYMENTTERM_DAY)
+  private Integer iPaymenttermDay;
+
+  public static final String SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION = "objPaymenttermDescription";
+  @SerializedName(SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION)
+  private MultilingualPaymenttermDescription objPaymenttermDescription;
+
+  public static final String SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE = "bPaymenttermIsactive";
+  @SerializedName(SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE)
+  private Boolean bPaymenttermIsactive;
+
   public PaymenttermRequestCompound() {
   }
+
+  public PaymenttermRequestCompound pkiPaymenttermID(Integer pkiPaymenttermID) {
+    this.pkiPaymenttermID = pkiPaymenttermID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Paymentterm
+   * @return pkiPaymenttermID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiPaymenttermID() {
+    return pkiPaymenttermID;
+  }
+
+  public void setPkiPaymenttermID(Integer pkiPaymenttermID) {
+    this.pkiPaymenttermID = pkiPaymenttermID;
+  }
+
+
+  public PaymenttermRequestCompound sPaymenttermCode(String sPaymenttermCode) {
+    this.sPaymenttermCode = sPaymenttermCode;
+    return this;
+  }
+
+  /**
+   * The code of the Paymentterm
+   * @return sPaymenttermCode
+   */
+  @javax.annotation.Nonnull
+  public String getsPaymenttermCode() {
+    return sPaymenttermCode;
+  }
+
+  public void setsPaymenttermCode(String sPaymenttermCode) {
+    this.sPaymenttermCode = sPaymenttermCode;
+  }
+
+
+  public PaymenttermRequestCompound ePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
+    this.ePaymenttermType = ePaymenttermType;
+    return this;
+  }
+
+  /**
+   * Get ePaymenttermType
+   * @return ePaymenttermType
+   */
+  @javax.annotation.Nonnull
+  public FieldEPaymenttermType getePaymenttermType() {
+    return ePaymenttermType;
+  }
+
+  public void setePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
+    this.ePaymenttermType = ePaymenttermType;
+  }
+
+
+  public PaymenttermRequestCompound iPaymenttermDay(Integer iPaymenttermDay) {
+    this.iPaymenttermDay = iPaymenttermDay;
+    return this;
+  }
+
+  /**
+   * The day of the Paymentterm
+   * minimum: 0
+   * maximum: 255
+   * @return iPaymenttermDay
+   */
+  @javax.annotation.Nonnull
+  public Integer getiPaymenttermDay() {
+    return iPaymenttermDay;
+  }
+
+  public void setiPaymenttermDay(Integer iPaymenttermDay) {
+    this.iPaymenttermDay = iPaymenttermDay;
+  }
+
+
+  public PaymenttermRequestCompound objPaymenttermDescription(MultilingualPaymenttermDescription objPaymenttermDescription) {
+    this.objPaymenttermDescription = objPaymenttermDescription;
+    return this;
+  }
+
+  /**
+   * Get objPaymenttermDescription
+   * @return objPaymenttermDescription
+   */
+  @javax.annotation.Nonnull
+  public MultilingualPaymenttermDescription getObjPaymenttermDescription() {
+    return objPaymenttermDescription;
+  }
+
+  public void setObjPaymenttermDescription(MultilingualPaymenttermDescription objPaymenttermDescription) {
+    this.objPaymenttermDescription = objPaymenttermDescription;
+  }
+
+
+  public PaymenttermRequestCompound bPaymenttermIsactive(Boolean bPaymenttermIsactive) {
+    this.bPaymenttermIsactive = bPaymenttermIsactive;
+    return this;
+  }
+
+  /**
+   * Whether the Paymentterm is active or not
+   * @return bPaymenttermIsactive
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbPaymenttermIsactive() {
+    return bPaymenttermIsactive;
+  }
+
+  public void setbPaymenttermIsactive(Boolean bPaymenttermIsactive) {
+    this.bPaymenttermIsactive = bPaymenttermIsactive;
+  }
+
 
 
   @Override
@@ -65,19 +204,30 @@ public class PaymenttermRequestCompound extends PaymenttermRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    PaymenttermRequestCompound paymenttermRequestCompound = (PaymenttermRequestCompound) o;
+    return Objects.equals(this.pkiPaymenttermID, paymenttermRequestCompound.pkiPaymenttermID) &&
+        Objects.equals(this.sPaymenttermCode, paymenttermRequestCompound.sPaymenttermCode) &&
+        Objects.equals(this.ePaymenttermType, paymenttermRequestCompound.ePaymenttermType) &&
+        Objects.equals(this.iPaymenttermDay, paymenttermRequestCompound.iPaymenttermDay) &&
+        Objects.equals(this.objPaymenttermDescription, paymenttermRequestCompound.objPaymenttermDescription) &&
+        Objects.equals(this.bPaymenttermIsactive, paymenttermRequestCompound.bPaymenttermIsactive);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiPaymenttermID, sPaymenttermCode, ePaymenttermType, iPaymenttermDay, objPaymenttermDescription, bPaymenttermIsactive);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymenttermRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiPaymenttermID: ").append(toIndentedString(pkiPaymenttermID)).append("\n");
+    sb.append("    sPaymenttermCode: ").append(toIndentedString(sPaymenttermCode)).append("\n");
+    sb.append("    ePaymenttermType: ").append(toIndentedString(ePaymenttermType)).append("\n");
+    sb.append("    iPaymenttermDay: ").append(toIndentedString(iPaymenttermDay)).append("\n");
+    sb.append("    objPaymenttermDescription: ").append(toIndentedString(objPaymenttermDescription)).append("\n");
+    sb.append("    bPaymenttermIsactive: ").append(toIndentedString(bPaymenttermIsactive)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,6 +293,14 @@ public class PaymenttermRequestCompound extends PaymenttermRequest {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sPaymenttermCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPaymenttermCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPaymenttermCode").toString()));
+      }
+      // validate the required field `ePaymenttermType`
+      FieldEPaymenttermType.validateJsonElement(jsonObj.get("ePaymenttermType"));
+      // validate the required field `objPaymenttermDescription`
+      MultilingualPaymenttermDescription.validateJsonElement(jsonObj.get("objPaymenttermDescription"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

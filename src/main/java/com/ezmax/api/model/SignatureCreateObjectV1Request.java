@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/signature
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SignatureCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_SIGNATURE = "a_objSignature";
   @SerializedName(SERIALIZED_NAME_A_OBJ_SIGNATURE)
-  @javax.annotation.Nonnull
   private List<SignatureRequestCompound> aObjSignature = new ArrayList<>();
 
   public SignatureCreateObjectV1Request() {
   }
 
-  public SignatureCreateObjectV1Request aObjSignature(@javax.annotation.Nonnull List<SignatureRequestCompound> aObjSignature) {
+  public SignatureCreateObjectV1Request aObjSignature(List<SignatureRequestCompound> aObjSignature) {
     this.aObjSignature = aObjSignature;
     return this;
   }
@@ -83,7 +82,7 @@ public class SignatureCreateObjectV1Request {
     return aObjSignature;
   }
 
-  public void setaObjSignature(@javax.annotation.Nonnull List<SignatureRequestCompound> aObjSignature) {
+  public void setaObjSignature(List<SignatureRequestCompound> aObjSignature) {
     this.aObjSignature = aObjSignature;
   }
 

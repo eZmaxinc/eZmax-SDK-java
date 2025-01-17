@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplatepackagesignermembership
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackagesignermembershipCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP_I_D = "a_pkiEzsigntemplatepackagesignermembershipID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsigntemplatepackagesignermembershipID = new ArrayList<>();
 
   public EzsigntemplatepackagesignermembershipCreateObjectV1ResponseMPayload() {
   }
 
-  public EzsigntemplatepackagesignermembershipCreateObjectV1ResponseMPayload aPkiEzsigntemplatepackagesignermembershipID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplatepackagesignermembershipID) {
+  public EzsigntemplatepackagesignermembershipCreateObjectV1ResponseMPayload aPkiEzsigntemplatepackagesignermembershipID(List<Integer> aPkiEzsigntemplatepackagesignermembershipID) {
     this.aPkiEzsigntemplatepackagesignermembershipID = aPkiEzsigntemplatepackagesignermembershipID;
     return this;
   }
@@ -82,7 +81,7 @@ public class EzsigntemplatepackagesignermembershipCreateObjectV1ResponseMPayload
     return aPkiEzsigntemplatepackagesignermembershipID;
   }
 
-  public void setaPkiEzsigntemplatepackagesignermembershipID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplatepackagesignermembershipID) {
+  public void setaPkiEzsigntemplatepackagesignermembershipID(List<Integer> aPkiEzsigntemplatepackagesignermembershipID) {
     this.aPkiEzsigntemplatepackagesignermembershipID = aPkiEzsigntemplatepackagesignermembershipID;
   }
 

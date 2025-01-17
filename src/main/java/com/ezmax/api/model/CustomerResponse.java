@@ -50,267 +50,216 @@ import eZmaxAPI.JSON;
 /**
  * A Customer Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomerResponse {
   public static final String SERIALIZED_NAME_PKI_CUSTOMER_I_D = "pkiCustomerID";
   @SerializedName(SERIALIZED_NAME_PKI_CUSTOMER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiCustomerID;
 
   public static final String SERIALIZED_NAME_FKI_COMPANY_I_D = "fkiCompanyID";
   @SerializedName(SERIALIZED_NAME_FKI_COMPANY_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiCompanyID;
 
   public static final String SERIALIZED_NAME_FKI_CUSTOMERGROUP_I_D = "fkiCustomergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_CUSTOMERGROUP_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiCustomergroupID;
 
   public static final String SERIALIZED_NAME_S_CUSTOMER_NAME = "sCustomerName";
   @SerializedName(SERIALIZED_NAME_S_CUSTOMER_NAME)
-  @javax.annotation.Nonnull
   private String sCustomerName;
 
   public static final String SERIALIZED_NAME_FKI_CONTACTINFORMATIONS_I_D = "fkiContactinformationsID";
   @SerializedName(SERIALIZED_NAME_FKI_CONTACTINFORMATIONS_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiContactinformationsID;
 
   public static final String SERIALIZED_NAME_FKI_CONTACTCONTAINER_I_D = "fkiContactcontainerID";
   @SerializedName(SERIALIZED_NAME_FKI_CONTACTCONTAINER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiContactcontainerID;
 
   public static final String SERIALIZED_NAME_FKI_IMAGE_I_D = "fkiImageID";
   @SerializedName(SERIALIZED_NAME_FKI_IMAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiImageID;
 
   public static final String SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D = "fkiGlaccountcontainerID";
   @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiGlaccountcontainerID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_FKI_DEPARTMENT_I_D = "fkiDepartmentID";
   @SerializedName(SERIALIZED_NAME_FKI_DEPARTMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiDepartmentID;
 
   public static final String SERIALIZED_NAME_FKI_PAYMENTMETHOD_I_D = "fkiPaymentmethodID";
   @SerializedName(SERIALIZED_NAME_FKI_PAYMENTMETHOD_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiPaymentmethodID;
 
   public static final String SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D = "fkiElectronicfundstransferbankaccountID";
   @SerializedName(SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiElectronicfundstransferbankaccountID;
 
   public static final String SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D_DIRECTDEBIT = "fkiElectronicfundstransferbankaccountIDDirectdebit";
   @SerializedName(SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D_DIRECTDEBIT)
-  @javax.annotation.Nonnull
   private Integer fkiElectronicfundstransferbankaccountIDDirectdebit;
 
   public static final String SERIALIZED_NAME_FKI_SENDINGMETHOD_I_D = "fkiSendingmethodID";
   @SerializedName(SERIALIZED_NAME_FKI_SENDINGMETHOD_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiSendingmethodID;
 
   public static final String SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D = "fkiTaxassignmentID";
   @SerializedName(SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiTaxassignmentID;
 
   public static final String SERIALIZED_NAME_FKI_ATTENDANCESTATUS_I_D = "fkiAttendancestatusID";
   @SerializedName(SERIALIZED_NAME_FKI_ATTENDANCESTATUS_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiAttendancestatusID;
 
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D_VARIABLEEXPENSECHARGETO = "fkiAgentIDVariableexpensechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D_VARIABLEEXPENSECHARGETO)
-  @javax.annotation.Nonnull
   private Integer fkiAgentIDVariableexpensechargeto;
 
   public static final String SERIALIZED_NAME_FKI_BROKER_I_D_VARIABLEEXPENSECHARGETO = "fkiBrokerIDVariableexpensechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D_VARIABLEEXPENSECHARGETO)
-  @javax.annotation.Nonnull
   private Integer fkiBrokerIDVariableexpensechargeto;
 
   public static final String SERIALIZED_NAME_FKI_CUSTOMER_I_D_VARIABLEEXPENSECHARGETO = "fkiCustomerIDVariableexpensechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_CUSTOMER_I_D_VARIABLEEXPENSECHARGETO)
-  @javax.annotation.Nonnull
   private Integer fkiCustomerIDVariableexpensechargeto;
 
   public static final String SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_VARIABLEEXPENSECHARGETO = "fkiGlaccountcontainerIDVariableexpensechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_VARIABLEEXPENSECHARGETO)
-  @javax.annotation.Nonnull
   private Integer fkiGlaccountcontainerIDVariableexpensechargeto;
 
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D_SUPPLYCHARGECHARGETO = "fkiAgentIDSupplychargechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D_SUPPLYCHARGECHARGETO)
-  @javax.annotation.Nonnull
   private Integer fkiAgentIDSupplychargechargeto;
 
   public static final String SERIALIZED_NAME_FKI_BROKER_I_D_SUPPLYCHARGECHARGETO = "fkiBrokerIDSupplychargechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D_SUPPLYCHARGECHARGETO)
-  @javax.annotation.Nonnull
   private Integer fkiBrokerIDSupplychargechargeto;
 
   public static final String SERIALIZED_NAME_FKI_CUSTOMER_I_D_SUPPLYCHARGECHARGETO = "fkiCustomerIDSupplychargechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_CUSTOMER_I_D_SUPPLYCHARGECHARGETO)
-  @javax.annotation.Nonnull
   private Integer fkiCustomerIDSupplychargechargeto;
 
   public static final String SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_SUPPLYCHARGECHARGETO = "fkiGlaccountcontainerIDSupplychargechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_SUPPLYCHARGECHARGETO)
-  @javax.annotation.Nonnull
   private Integer fkiGlaccountcontainerIDSupplychargechargeto;
 
   public static final String SERIALIZED_NAME_FKI_INVOICEALTERNATELOGO_I_D = "fkiInvoicealternatelogoID";
   @SerializedName(SERIALIZED_NAME_FKI_INVOICEALTERNATELOGO_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiInvoicealternatelogoID;
 
   public static final String SERIALIZED_NAME_FKI_SYNCHRONIZATIONLINKSERVER_I_D = "fkiSynchronizationlinkserverID";
   @SerializedName(SERIALIZED_NAME_FKI_SYNCHRONIZATIONLINKSERVER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiSynchronizationlinkserverID;
 
   public static final String SERIALIZED_NAME_EFKI_USER_I_D = "efkiUserID";
   @SerializedName(SERIALIZED_NAME_EFKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer efkiUserID;
 
   public static final String SERIALIZED_NAME_EFKS_CUSTOMER_CODE = "efksCustomerCode";
   @SerializedName(SERIALIZED_NAME_EFKS_CUSTOMER_CODE)
-  @javax.annotation.Nullable
   private String efksCustomerCode;
 
   public static final String SERIALIZED_NAME_S_CUSTOMER_CODE = "sCustomerCode";
   @SerializedName(SERIALIZED_NAME_S_CUSTOMER_CODE)
-  @javax.annotation.Nonnull
   private String sCustomerCode;
 
   public static final String SERIALIZED_NAME_D_CUSTOMER_FULLTIMEEQUIVALENT = "dCustomerFulltimeequivalent";
   @SerializedName(SERIALIZED_NAME_D_CUSTOMER_FULLTIMEEQUIVALENT)
-  @javax.annotation.Nonnull
   private String dCustomerFulltimeequivalent;
 
   public static final String SERIALIZED_NAME_I_CUSTOMER_PHOTOCOPIERCODE = "iCustomerPhotocopiercode";
   @SerializedName(SERIALIZED_NAME_I_CUSTOMER_PHOTOCOPIERCODE)
-  @javax.annotation.Nonnull
   private Integer iCustomerPhotocopiercode;
 
   public static final String SERIALIZED_NAME_I_CUSTOMER_LONGDISTANCECODE = "iCustomerLongdistancecode";
   @SerializedName(SERIALIZED_NAME_I_CUSTOMER_LONGDISTANCECODE)
-  @javax.annotation.Nonnull
   private Integer iCustomerLongdistancecode;
 
   public static final String SERIALIZED_NAME_I_CUSTOMER_TIMEWINDOWSTART = "iCustomerTimewindowstart";
   @SerializedName(SERIALIZED_NAME_I_CUSTOMER_TIMEWINDOWSTART)
-  @javax.annotation.Nonnull
   private Integer iCustomerTimewindowstart;
 
   public static final String SERIALIZED_NAME_I_CUSTOMER_TIMEWINDOWEND = "iCustomerTimewindowend";
   @SerializedName(SERIALIZED_NAME_I_CUSTOMER_TIMEWINDOWEND)
-  @javax.annotation.Nonnull
   private Integer iCustomerTimewindowend;
 
   public static final String SERIALIZED_NAME_D_CUSTOMER_MINIMUMCHARGEABLEINTERESTS = "dCustomerMinimumchargeableinterests";
   @SerializedName(SERIALIZED_NAME_D_CUSTOMER_MINIMUMCHARGEABLEINTERESTS)
-  @javax.annotation.Nonnull
   private String dCustomerMinimumchargeableinterests;
 
   public static final String SERIALIZED_NAME_DT_CUSTOMER_BIRTHDATE = "dtCustomerBirthdate";
   @SerializedName(SERIALIZED_NAME_DT_CUSTOMER_BIRTHDATE)
-  @javax.annotation.Nonnull
   private String dtCustomerBirthdate;
 
   public static final String SERIALIZED_NAME_DT_CUSTOMER_TRANSFER = "dtCustomerTransfer";
   @SerializedName(SERIALIZED_NAME_DT_CUSTOMER_TRANSFER)
-  @javax.annotation.Nonnull
   private String dtCustomerTransfer;
 
   public static final String SERIALIZED_NAME_DT_CUSTOMER_TRANSFERAPPOINTMENT = "dtCustomerTransferappointment";
   @SerializedName(SERIALIZED_NAME_DT_CUSTOMER_TRANSFERAPPOINTMENT)
-  @javax.annotation.Nonnull
   private String dtCustomerTransferappointment;
 
   public static final String SERIALIZED_NAME_DT_CUSTOMER_TRANSFERSURVEY = "dtCustomerTransfersurvey";
   @SerializedName(SERIALIZED_NAME_DT_CUSTOMER_TRANSFERSURVEY)
-  @javax.annotation.Nonnull
   private String dtCustomerTransfersurvey;
 
   public static final String SERIALIZED_NAME_B_CUSTOMER_ISACTIVE = "bCustomerIsactive";
   @SerializedName(SERIALIZED_NAME_B_CUSTOMER_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bCustomerIsactive;
 
   public static final String SERIALIZED_NAME_B_CUSTOMER_VARIABLEEXPENSEFINANCED = "bCustomerVariableexpensefinanced";
   @SerializedName(SERIALIZED_NAME_B_CUSTOMER_VARIABLEEXPENSEFINANCED)
-  @javax.annotation.Nonnull
   private Boolean bCustomerVariableexpensefinanced;
 
   public static final String SERIALIZED_NAME_B_CUSTOMER_VARIABLEEXPENSEFINANCEDTAXES = "bCustomerVariableexpensefinancedtaxes";
   @SerializedName(SERIALIZED_NAME_B_CUSTOMER_VARIABLEEXPENSEFINANCEDTAXES)
-  @javax.annotation.Nonnull
   private Boolean bCustomerVariableexpensefinancedtaxes;
 
   public static final String SERIALIZED_NAME_B_CUSTOMER_SUPPLYCHARGEFINANCED = "bCustomerSupplychargefinanced";
   @SerializedName(SERIALIZED_NAME_B_CUSTOMER_SUPPLYCHARGEFINANCED)
-  @javax.annotation.Nonnull
   private Boolean bCustomerSupplychargefinanced;
 
   public static final String SERIALIZED_NAME_B_CUSTOMER_SUPPLYCHARGEFINANCEDTAXES = "bCustomerSupplychargefinancedtaxes";
   @SerializedName(SERIALIZED_NAME_B_CUSTOMER_SUPPLYCHARGEFINANCEDTAXES)
-  @javax.annotation.Nonnull
   private Boolean bCustomerSupplychargefinancedtaxes;
 
   public static final String SERIALIZED_NAME_B_CUSTOMER_ATTENDANCE = "bCustomerAttendance";
   @SerializedName(SERIALIZED_NAME_B_CUSTOMER_ATTENDANCE)
-  @javax.annotation.Nonnull
   private Boolean bCustomerAttendance;
 
   public static final String SERIALIZED_NAME_E_CUSTOMER_TYPE = "eCustomerType";
   @SerializedName(SERIALIZED_NAME_E_CUSTOMER_TYPE)
-  @javax.annotation.Nonnull
   private FieldECustomerType eCustomerType;
 
   public static final String SERIALIZED_NAME_E_CUSTOMER_MARKETINGCORRESPONDENCE = "eCustomerMarketingcorrespondence";
   @SerializedName(SERIALIZED_NAME_E_CUSTOMER_MARKETINGCORRESPONDENCE)
-  @javax.annotation.Nonnull
   private FieldECustomerMarketingcorrespondence eCustomerMarketingcorrespondence;
 
   public static final String SERIALIZED_NAME_B_CUSTOMER_BLACKCOPYCARBON = "bCustomerBlackcopycarbon";
   @SerializedName(SERIALIZED_NAME_B_CUSTOMER_BLACKCOPYCARBON)
-  @javax.annotation.Nonnull
   private Boolean bCustomerBlackcopycarbon;
 
   public static final String SERIALIZED_NAME_B_CUSTOMER_UNSUBSCRIBEINFO = "bCustomerUnsubscribeinfo";
   @SerializedName(SERIALIZED_NAME_B_CUSTOMER_UNSUBSCRIBEINFO)
-  @javax.annotation.Nonnull
   private Boolean bCustomerUnsubscribeinfo;
 
   public static final String SERIALIZED_NAME_T_CUSTOMER_COMMENT = "tCustomerComment";
   @SerializedName(SERIALIZED_NAME_T_CUSTOMER_COMMENT)
-  @javax.annotation.Nonnull
   private String tCustomerComment;
 
   public static final String SERIALIZED_NAME_I_M_P_O_R_T_I_D = "IMPORTID";
   @SerializedName(SERIALIZED_NAME_I_M_P_O_R_T_I_D)
-  @javax.annotation.Nullable
   private String IMPORTID;
 
   public CustomerResponse() {
   }
 
-  public CustomerResponse pkiCustomerID(@javax.annotation.Nonnull Integer pkiCustomerID) {
+  public CustomerResponse pkiCustomerID(Integer pkiCustomerID) {
     this.pkiCustomerID = pkiCustomerID;
     return this;
   }
@@ -325,12 +274,12 @@ public class CustomerResponse {
     return pkiCustomerID;
   }
 
-  public void setPkiCustomerID(@javax.annotation.Nonnull Integer pkiCustomerID) {
+  public void setPkiCustomerID(Integer pkiCustomerID) {
     this.pkiCustomerID = pkiCustomerID;
   }
 
 
-  public CustomerResponse fkiCompanyID(@javax.annotation.Nonnull Integer fkiCompanyID) {
+  public CustomerResponse fkiCompanyID(Integer fkiCompanyID) {
     this.fkiCompanyID = fkiCompanyID;
     return this;
   }
@@ -346,12 +295,12 @@ public class CustomerResponse {
     return fkiCompanyID;
   }
 
-  public void setFkiCompanyID(@javax.annotation.Nonnull Integer fkiCompanyID) {
+  public void setFkiCompanyID(Integer fkiCompanyID) {
     this.fkiCompanyID = fkiCompanyID;
   }
 
 
-  public CustomerResponse fkiCustomergroupID(@javax.annotation.Nonnull Integer fkiCustomergroupID) {
+  public CustomerResponse fkiCustomergroupID(Integer fkiCustomergroupID) {
     this.fkiCustomergroupID = fkiCustomergroupID;
     return this;
   }
@@ -367,12 +316,12 @@ public class CustomerResponse {
     return fkiCustomergroupID;
   }
 
-  public void setFkiCustomergroupID(@javax.annotation.Nonnull Integer fkiCustomergroupID) {
+  public void setFkiCustomergroupID(Integer fkiCustomergroupID) {
     this.fkiCustomergroupID = fkiCustomergroupID;
   }
 
 
-  public CustomerResponse sCustomerName(@javax.annotation.Nonnull String sCustomerName) {
+  public CustomerResponse sCustomerName(String sCustomerName) {
     this.sCustomerName = sCustomerName;
     return this;
   }
@@ -386,12 +335,12 @@ public class CustomerResponse {
     return sCustomerName;
   }
 
-  public void setsCustomerName(@javax.annotation.Nonnull String sCustomerName) {
+  public void setsCustomerName(String sCustomerName) {
     this.sCustomerName = sCustomerName;
   }
 
 
-  public CustomerResponse fkiContactinformationsID(@javax.annotation.Nonnull Integer fkiContactinformationsID) {
+  public CustomerResponse fkiContactinformationsID(Integer fkiContactinformationsID) {
     this.fkiContactinformationsID = fkiContactinformationsID;
     return this;
   }
@@ -407,12 +356,12 @@ public class CustomerResponse {
     return fkiContactinformationsID;
   }
 
-  public void setFkiContactinformationsID(@javax.annotation.Nonnull Integer fkiContactinformationsID) {
+  public void setFkiContactinformationsID(Integer fkiContactinformationsID) {
     this.fkiContactinformationsID = fkiContactinformationsID;
   }
 
 
-  public CustomerResponse fkiContactcontainerID(@javax.annotation.Nonnull Integer fkiContactcontainerID) {
+  public CustomerResponse fkiContactcontainerID(Integer fkiContactcontainerID) {
     this.fkiContactcontainerID = fkiContactcontainerID;
     return this;
   }
@@ -428,12 +377,12 @@ public class CustomerResponse {
     return fkiContactcontainerID;
   }
 
-  public void setFkiContactcontainerID(@javax.annotation.Nonnull Integer fkiContactcontainerID) {
+  public void setFkiContactcontainerID(Integer fkiContactcontainerID) {
     this.fkiContactcontainerID = fkiContactcontainerID;
   }
 
 
-  public CustomerResponse fkiImageID(@javax.annotation.Nonnull Integer fkiImageID) {
+  public CustomerResponse fkiImageID(Integer fkiImageID) {
     this.fkiImageID = fkiImageID;
     return this;
   }
@@ -447,12 +396,12 @@ public class CustomerResponse {
     return fkiImageID;
   }
 
-  public void setFkiImageID(@javax.annotation.Nonnull Integer fkiImageID) {
+  public void setFkiImageID(Integer fkiImageID) {
     this.fkiImageID = fkiImageID;
   }
 
 
-  public CustomerResponse fkiGlaccountcontainerID(@javax.annotation.Nonnull Integer fkiGlaccountcontainerID) {
+  public CustomerResponse fkiGlaccountcontainerID(Integer fkiGlaccountcontainerID) {
     this.fkiGlaccountcontainerID = fkiGlaccountcontainerID;
     return this;
   }
@@ -467,12 +416,12 @@ public class CustomerResponse {
     return fkiGlaccountcontainerID;
   }
 
-  public void setFkiGlaccountcontainerID(@javax.annotation.Nonnull Integer fkiGlaccountcontainerID) {
+  public void setFkiGlaccountcontainerID(Integer fkiGlaccountcontainerID) {
     this.fkiGlaccountcontainerID = fkiGlaccountcontainerID;
   }
 
 
-  public CustomerResponse fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public CustomerResponse fkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -488,12 +437,12 @@ public class CustomerResponse {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public CustomerResponse fkiDepartmentID(@javax.annotation.Nonnull Integer fkiDepartmentID) {
+  public CustomerResponse fkiDepartmentID(Integer fkiDepartmentID) {
     this.fkiDepartmentID = fkiDepartmentID;
     return this;
   }
@@ -508,12 +457,12 @@ public class CustomerResponse {
     return fkiDepartmentID;
   }
 
-  public void setFkiDepartmentID(@javax.annotation.Nonnull Integer fkiDepartmentID) {
+  public void setFkiDepartmentID(Integer fkiDepartmentID) {
     this.fkiDepartmentID = fkiDepartmentID;
   }
 
 
-  public CustomerResponse fkiPaymentmethodID(@javax.annotation.Nonnull Integer fkiPaymentmethodID) {
+  public CustomerResponse fkiPaymentmethodID(Integer fkiPaymentmethodID) {
     this.fkiPaymentmethodID = fkiPaymentmethodID;
     return this;
   }
@@ -529,12 +478,12 @@ public class CustomerResponse {
     return fkiPaymentmethodID;
   }
 
-  public void setFkiPaymentmethodID(@javax.annotation.Nonnull Integer fkiPaymentmethodID) {
+  public void setFkiPaymentmethodID(Integer fkiPaymentmethodID) {
     this.fkiPaymentmethodID = fkiPaymentmethodID;
   }
 
 
-  public CustomerResponse fkiElectronicfundstransferbankaccountID(@javax.annotation.Nonnull Integer fkiElectronicfundstransferbankaccountID) {
+  public CustomerResponse fkiElectronicfundstransferbankaccountID(Integer fkiElectronicfundstransferbankaccountID) {
     this.fkiElectronicfundstransferbankaccountID = fkiElectronicfundstransferbankaccountID;
     return this;
   }
@@ -550,12 +499,12 @@ public class CustomerResponse {
     return fkiElectronicfundstransferbankaccountID;
   }
 
-  public void setFkiElectronicfundstransferbankaccountID(@javax.annotation.Nonnull Integer fkiElectronicfundstransferbankaccountID) {
+  public void setFkiElectronicfundstransferbankaccountID(Integer fkiElectronicfundstransferbankaccountID) {
     this.fkiElectronicfundstransferbankaccountID = fkiElectronicfundstransferbankaccountID;
   }
 
 
-  public CustomerResponse fkiElectronicfundstransferbankaccountIDDirectdebit(@javax.annotation.Nonnull Integer fkiElectronicfundstransferbankaccountIDDirectdebit) {
+  public CustomerResponse fkiElectronicfundstransferbankaccountIDDirectdebit(Integer fkiElectronicfundstransferbankaccountIDDirectdebit) {
     this.fkiElectronicfundstransferbankaccountIDDirectdebit = fkiElectronicfundstransferbankaccountIDDirectdebit;
     return this;
   }
@@ -571,12 +520,12 @@ public class CustomerResponse {
     return fkiElectronicfundstransferbankaccountIDDirectdebit;
   }
 
-  public void setFkiElectronicfundstransferbankaccountIDDirectdebit(@javax.annotation.Nonnull Integer fkiElectronicfundstransferbankaccountIDDirectdebit) {
+  public void setFkiElectronicfundstransferbankaccountIDDirectdebit(Integer fkiElectronicfundstransferbankaccountIDDirectdebit) {
     this.fkiElectronicfundstransferbankaccountIDDirectdebit = fkiElectronicfundstransferbankaccountIDDirectdebit;
   }
 
 
-  public CustomerResponse fkiSendingmethodID(@javax.annotation.Nonnull Integer fkiSendingmethodID) {
+  public CustomerResponse fkiSendingmethodID(Integer fkiSendingmethodID) {
     this.fkiSendingmethodID = fkiSendingmethodID;
     return this;
   }
@@ -592,12 +541,12 @@ public class CustomerResponse {
     return fkiSendingmethodID;
   }
 
-  public void setFkiSendingmethodID(@javax.annotation.Nonnull Integer fkiSendingmethodID) {
+  public void setFkiSendingmethodID(Integer fkiSendingmethodID) {
     this.fkiSendingmethodID = fkiSendingmethodID;
   }
 
 
-  public CustomerResponse fkiTaxassignmentID(@javax.annotation.Nonnull Integer fkiTaxassignmentID) {
+  public CustomerResponse fkiTaxassignmentID(Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
     return this;
   }
@@ -613,12 +562,12 @@ public class CustomerResponse {
     return fkiTaxassignmentID;
   }
 
-  public void setFkiTaxassignmentID(@javax.annotation.Nonnull Integer fkiTaxassignmentID) {
+  public void setFkiTaxassignmentID(Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
   }
 
 
-  public CustomerResponse fkiAttendancestatusID(@javax.annotation.Nonnull Integer fkiAttendancestatusID) {
+  public CustomerResponse fkiAttendancestatusID(Integer fkiAttendancestatusID) {
     this.fkiAttendancestatusID = fkiAttendancestatusID;
     return this;
   }
@@ -634,12 +583,12 @@ public class CustomerResponse {
     return fkiAttendancestatusID;
   }
 
-  public void setFkiAttendancestatusID(@javax.annotation.Nonnull Integer fkiAttendancestatusID) {
+  public void setFkiAttendancestatusID(Integer fkiAttendancestatusID) {
     this.fkiAttendancestatusID = fkiAttendancestatusID;
   }
 
 
-  public CustomerResponse fkiAgentIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiAgentIDVariableexpensechargeto) {
+  public CustomerResponse fkiAgentIDVariableexpensechargeto(Integer fkiAgentIDVariableexpensechargeto) {
     this.fkiAgentIDVariableexpensechargeto = fkiAgentIDVariableexpensechargeto;
     return this;
   }
@@ -654,12 +603,12 @@ public class CustomerResponse {
     return fkiAgentIDVariableexpensechargeto;
   }
 
-  public void setFkiAgentIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiAgentIDVariableexpensechargeto) {
+  public void setFkiAgentIDVariableexpensechargeto(Integer fkiAgentIDVariableexpensechargeto) {
     this.fkiAgentIDVariableexpensechargeto = fkiAgentIDVariableexpensechargeto;
   }
 
 
-  public CustomerResponse fkiBrokerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiBrokerIDVariableexpensechargeto) {
+  public CustomerResponse fkiBrokerIDVariableexpensechargeto(Integer fkiBrokerIDVariableexpensechargeto) {
     this.fkiBrokerIDVariableexpensechargeto = fkiBrokerIDVariableexpensechargeto;
     return this;
   }
@@ -674,12 +623,12 @@ public class CustomerResponse {
     return fkiBrokerIDVariableexpensechargeto;
   }
 
-  public void setFkiBrokerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiBrokerIDVariableexpensechargeto) {
+  public void setFkiBrokerIDVariableexpensechargeto(Integer fkiBrokerIDVariableexpensechargeto) {
     this.fkiBrokerIDVariableexpensechargeto = fkiBrokerIDVariableexpensechargeto;
   }
 
 
-  public CustomerResponse fkiCustomerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiCustomerIDVariableexpensechargeto) {
+  public CustomerResponse fkiCustomerIDVariableexpensechargeto(Integer fkiCustomerIDVariableexpensechargeto) {
     this.fkiCustomerIDVariableexpensechargeto = fkiCustomerIDVariableexpensechargeto;
     return this;
   }
@@ -694,12 +643,12 @@ public class CustomerResponse {
     return fkiCustomerIDVariableexpensechargeto;
   }
 
-  public void setFkiCustomerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiCustomerIDVariableexpensechargeto) {
+  public void setFkiCustomerIDVariableexpensechargeto(Integer fkiCustomerIDVariableexpensechargeto) {
     this.fkiCustomerIDVariableexpensechargeto = fkiCustomerIDVariableexpensechargeto;
   }
 
 
-  public CustomerResponse fkiGlaccountcontainerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiGlaccountcontainerIDVariableexpensechargeto) {
+  public CustomerResponse fkiGlaccountcontainerIDVariableexpensechargeto(Integer fkiGlaccountcontainerIDVariableexpensechargeto) {
     this.fkiGlaccountcontainerIDVariableexpensechargeto = fkiGlaccountcontainerIDVariableexpensechargeto;
     return this;
   }
@@ -714,12 +663,12 @@ public class CustomerResponse {
     return fkiGlaccountcontainerIDVariableexpensechargeto;
   }
 
-  public void setFkiGlaccountcontainerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiGlaccountcontainerIDVariableexpensechargeto) {
+  public void setFkiGlaccountcontainerIDVariableexpensechargeto(Integer fkiGlaccountcontainerIDVariableexpensechargeto) {
     this.fkiGlaccountcontainerIDVariableexpensechargeto = fkiGlaccountcontainerIDVariableexpensechargeto;
   }
 
 
-  public CustomerResponse fkiAgentIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiAgentIDSupplychargechargeto) {
+  public CustomerResponse fkiAgentIDSupplychargechargeto(Integer fkiAgentIDSupplychargechargeto) {
     this.fkiAgentIDSupplychargechargeto = fkiAgentIDSupplychargechargeto;
     return this;
   }
@@ -734,12 +683,12 @@ public class CustomerResponse {
     return fkiAgentIDSupplychargechargeto;
   }
 
-  public void setFkiAgentIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiAgentIDSupplychargechargeto) {
+  public void setFkiAgentIDSupplychargechargeto(Integer fkiAgentIDSupplychargechargeto) {
     this.fkiAgentIDSupplychargechargeto = fkiAgentIDSupplychargechargeto;
   }
 
 
-  public CustomerResponse fkiBrokerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiBrokerIDSupplychargechargeto) {
+  public CustomerResponse fkiBrokerIDSupplychargechargeto(Integer fkiBrokerIDSupplychargechargeto) {
     this.fkiBrokerIDSupplychargechargeto = fkiBrokerIDSupplychargechargeto;
     return this;
   }
@@ -754,12 +703,12 @@ public class CustomerResponse {
     return fkiBrokerIDSupplychargechargeto;
   }
 
-  public void setFkiBrokerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiBrokerIDSupplychargechargeto) {
+  public void setFkiBrokerIDSupplychargechargeto(Integer fkiBrokerIDSupplychargechargeto) {
     this.fkiBrokerIDSupplychargechargeto = fkiBrokerIDSupplychargechargeto;
   }
 
 
-  public CustomerResponse fkiCustomerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiCustomerIDSupplychargechargeto) {
+  public CustomerResponse fkiCustomerIDSupplychargechargeto(Integer fkiCustomerIDSupplychargechargeto) {
     this.fkiCustomerIDSupplychargechargeto = fkiCustomerIDSupplychargechargeto;
     return this;
   }
@@ -774,12 +723,12 @@ public class CustomerResponse {
     return fkiCustomerIDSupplychargechargeto;
   }
 
-  public void setFkiCustomerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiCustomerIDSupplychargechargeto) {
+  public void setFkiCustomerIDSupplychargechargeto(Integer fkiCustomerIDSupplychargechargeto) {
     this.fkiCustomerIDSupplychargechargeto = fkiCustomerIDSupplychargechargeto;
   }
 
 
-  public CustomerResponse fkiGlaccountcontainerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiGlaccountcontainerIDSupplychargechargeto) {
+  public CustomerResponse fkiGlaccountcontainerIDSupplychargechargeto(Integer fkiGlaccountcontainerIDSupplychargechargeto) {
     this.fkiGlaccountcontainerIDSupplychargechargeto = fkiGlaccountcontainerIDSupplychargechargeto;
     return this;
   }
@@ -794,12 +743,12 @@ public class CustomerResponse {
     return fkiGlaccountcontainerIDSupplychargechargeto;
   }
 
-  public void setFkiGlaccountcontainerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiGlaccountcontainerIDSupplychargechargeto) {
+  public void setFkiGlaccountcontainerIDSupplychargechargeto(Integer fkiGlaccountcontainerIDSupplychargechargeto) {
     this.fkiGlaccountcontainerIDSupplychargechargeto = fkiGlaccountcontainerIDSupplychargechargeto;
   }
 
 
-  public CustomerResponse fkiInvoicealternatelogoID(@javax.annotation.Nonnull Integer fkiInvoicealternatelogoID) {
+  public CustomerResponse fkiInvoicealternatelogoID(Integer fkiInvoicealternatelogoID) {
     this.fkiInvoicealternatelogoID = fkiInvoicealternatelogoID;
     return this;
   }
@@ -815,12 +764,12 @@ public class CustomerResponse {
     return fkiInvoicealternatelogoID;
   }
 
-  public void setFkiInvoicealternatelogoID(@javax.annotation.Nonnull Integer fkiInvoicealternatelogoID) {
+  public void setFkiInvoicealternatelogoID(Integer fkiInvoicealternatelogoID) {
     this.fkiInvoicealternatelogoID = fkiInvoicealternatelogoID;
   }
 
 
-  public CustomerResponse fkiSynchronizationlinkserverID(@javax.annotation.Nonnull Integer fkiSynchronizationlinkserverID) {
+  public CustomerResponse fkiSynchronizationlinkserverID(Integer fkiSynchronizationlinkserverID) {
     this.fkiSynchronizationlinkserverID = fkiSynchronizationlinkserverID;
     return this;
   }
@@ -836,12 +785,12 @@ public class CustomerResponse {
     return fkiSynchronizationlinkserverID;
   }
 
-  public void setFkiSynchronizationlinkserverID(@javax.annotation.Nonnull Integer fkiSynchronizationlinkserverID) {
+  public void setFkiSynchronizationlinkserverID(Integer fkiSynchronizationlinkserverID) {
     this.fkiSynchronizationlinkserverID = fkiSynchronizationlinkserverID;
   }
 
 
-  public CustomerResponse efkiUserID(@javax.annotation.Nullable Integer efkiUserID) {
+  public CustomerResponse efkiUserID(Integer efkiUserID) {
     this.efkiUserID = efkiUserID;
     return this;
   }
@@ -856,12 +805,12 @@ public class CustomerResponse {
     return efkiUserID;
   }
 
-  public void setEfkiUserID(@javax.annotation.Nullable Integer efkiUserID) {
+  public void setEfkiUserID(Integer efkiUserID) {
     this.efkiUserID = efkiUserID;
   }
 
 
-  public CustomerResponse efksCustomerCode(@javax.annotation.Nullable String efksCustomerCode) {
+  public CustomerResponse efksCustomerCode(String efksCustomerCode) {
     this.efksCustomerCode = efksCustomerCode;
     return this;
   }
@@ -875,12 +824,12 @@ public class CustomerResponse {
     return efksCustomerCode;
   }
 
-  public void setEfksCustomerCode(@javax.annotation.Nullable String efksCustomerCode) {
+  public void setEfksCustomerCode(String efksCustomerCode) {
     this.efksCustomerCode = efksCustomerCode;
   }
 
 
-  public CustomerResponse sCustomerCode(@javax.annotation.Nonnull String sCustomerCode) {
+  public CustomerResponse sCustomerCode(String sCustomerCode) {
     this.sCustomerCode = sCustomerCode;
     return this;
   }
@@ -894,12 +843,12 @@ public class CustomerResponse {
     return sCustomerCode;
   }
 
-  public void setsCustomerCode(@javax.annotation.Nonnull String sCustomerCode) {
+  public void setsCustomerCode(String sCustomerCode) {
     this.sCustomerCode = sCustomerCode;
   }
 
 
-  public CustomerResponse dCustomerFulltimeequivalent(@javax.annotation.Nonnull String dCustomerFulltimeequivalent) {
+  public CustomerResponse dCustomerFulltimeequivalent(String dCustomerFulltimeequivalent) {
     this.dCustomerFulltimeequivalent = dCustomerFulltimeequivalent;
     return this;
   }
@@ -913,12 +862,12 @@ public class CustomerResponse {
     return dCustomerFulltimeequivalent;
   }
 
-  public void setdCustomerFulltimeequivalent(@javax.annotation.Nonnull String dCustomerFulltimeequivalent) {
+  public void setdCustomerFulltimeequivalent(String dCustomerFulltimeequivalent) {
     this.dCustomerFulltimeequivalent = dCustomerFulltimeequivalent;
   }
 
 
-  public CustomerResponse iCustomerPhotocopiercode(@javax.annotation.Nonnull Integer iCustomerPhotocopiercode) {
+  public CustomerResponse iCustomerPhotocopiercode(Integer iCustomerPhotocopiercode) {
     this.iCustomerPhotocopiercode = iCustomerPhotocopiercode;
     return this;
   }
@@ -934,12 +883,12 @@ public class CustomerResponse {
     return iCustomerPhotocopiercode;
   }
 
-  public void setiCustomerPhotocopiercode(@javax.annotation.Nonnull Integer iCustomerPhotocopiercode) {
+  public void setiCustomerPhotocopiercode(Integer iCustomerPhotocopiercode) {
     this.iCustomerPhotocopiercode = iCustomerPhotocopiercode;
   }
 
 
-  public CustomerResponse iCustomerLongdistancecode(@javax.annotation.Nonnull Integer iCustomerLongdistancecode) {
+  public CustomerResponse iCustomerLongdistancecode(Integer iCustomerLongdistancecode) {
     this.iCustomerLongdistancecode = iCustomerLongdistancecode;
     return this;
   }
@@ -955,12 +904,12 @@ public class CustomerResponse {
     return iCustomerLongdistancecode;
   }
 
-  public void setiCustomerLongdistancecode(@javax.annotation.Nonnull Integer iCustomerLongdistancecode) {
+  public void setiCustomerLongdistancecode(Integer iCustomerLongdistancecode) {
     this.iCustomerLongdistancecode = iCustomerLongdistancecode;
   }
 
 
-  public CustomerResponse iCustomerTimewindowstart(@javax.annotation.Nonnull Integer iCustomerTimewindowstart) {
+  public CustomerResponse iCustomerTimewindowstart(Integer iCustomerTimewindowstart) {
     this.iCustomerTimewindowstart = iCustomerTimewindowstart;
     return this;
   }
@@ -976,12 +925,12 @@ public class CustomerResponse {
     return iCustomerTimewindowstart;
   }
 
-  public void setiCustomerTimewindowstart(@javax.annotation.Nonnull Integer iCustomerTimewindowstart) {
+  public void setiCustomerTimewindowstart(Integer iCustomerTimewindowstart) {
     this.iCustomerTimewindowstart = iCustomerTimewindowstart;
   }
 
 
-  public CustomerResponse iCustomerTimewindowend(@javax.annotation.Nonnull Integer iCustomerTimewindowend) {
+  public CustomerResponse iCustomerTimewindowend(Integer iCustomerTimewindowend) {
     this.iCustomerTimewindowend = iCustomerTimewindowend;
     return this;
   }
@@ -997,12 +946,12 @@ public class CustomerResponse {
     return iCustomerTimewindowend;
   }
 
-  public void setiCustomerTimewindowend(@javax.annotation.Nonnull Integer iCustomerTimewindowend) {
+  public void setiCustomerTimewindowend(Integer iCustomerTimewindowend) {
     this.iCustomerTimewindowend = iCustomerTimewindowend;
   }
 
 
-  public CustomerResponse dCustomerMinimumchargeableinterests(@javax.annotation.Nonnull String dCustomerMinimumchargeableinterests) {
+  public CustomerResponse dCustomerMinimumchargeableinterests(String dCustomerMinimumchargeableinterests) {
     this.dCustomerMinimumchargeableinterests = dCustomerMinimumchargeableinterests;
     return this;
   }
@@ -1016,12 +965,12 @@ public class CustomerResponse {
     return dCustomerMinimumchargeableinterests;
   }
 
-  public void setdCustomerMinimumchargeableinterests(@javax.annotation.Nonnull String dCustomerMinimumchargeableinterests) {
+  public void setdCustomerMinimumchargeableinterests(String dCustomerMinimumchargeableinterests) {
     this.dCustomerMinimumchargeableinterests = dCustomerMinimumchargeableinterests;
   }
 
 
-  public CustomerResponse dtCustomerBirthdate(@javax.annotation.Nonnull String dtCustomerBirthdate) {
+  public CustomerResponse dtCustomerBirthdate(String dtCustomerBirthdate) {
     this.dtCustomerBirthdate = dtCustomerBirthdate;
     return this;
   }
@@ -1035,12 +984,12 @@ public class CustomerResponse {
     return dtCustomerBirthdate;
   }
 
-  public void setDtCustomerBirthdate(@javax.annotation.Nonnull String dtCustomerBirthdate) {
+  public void setDtCustomerBirthdate(String dtCustomerBirthdate) {
     this.dtCustomerBirthdate = dtCustomerBirthdate;
   }
 
 
-  public CustomerResponse dtCustomerTransfer(@javax.annotation.Nonnull String dtCustomerTransfer) {
+  public CustomerResponse dtCustomerTransfer(String dtCustomerTransfer) {
     this.dtCustomerTransfer = dtCustomerTransfer;
     return this;
   }
@@ -1054,12 +1003,12 @@ public class CustomerResponse {
     return dtCustomerTransfer;
   }
 
-  public void setDtCustomerTransfer(@javax.annotation.Nonnull String dtCustomerTransfer) {
+  public void setDtCustomerTransfer(String dtCustomerTransfer) {
     this.dtCustomerTransfer = dtCustomerTransfer;
   }
 
 
-  public CustomerResponse dtCustomerTransferappointment(@javax.annotation.Nonnull String dtCustomerTransferappointment) {
+  public CustomerResponse dtCustomerTransferappointment(String dtCustomerTransferappointment) {
     this.dtCustomerTransferappointment = dtCustomerTransferappointment;
     return this;
   }
@@ -1073,12 +1022,12 @@ public class CustomerResponse {
     return dtCustomerTransferappointment;
   }
 
-  public void setDtCustomerTransferappointment(@javax.annotation.Nonnull String dtCustomerTransferappointment) {
+  public void setDtCustomerTransferappointment(String dtCustomerTransferappointment) {
     this.dtCustomerTransferappointment = dtCustomerTransferappointment;
   }
 
 
-  public CustomerResponse dtCustomerTransfersurvey(@javax.annotation.Nonnull String dtCustomerTransfersurvey) {
+  public CustomerResponse dtCustomerTransfersurvey(String dtCustomerTransfersurvey) {
     this.dtCustomerTransfersurvey = dtCustomerTransfersurvey;
     return this;
   }
@@ -1092,12 +1041,12 @@ public class CustomerResponse {
     return dtCustomerTransfersurvey;
   }
 
-  public void setDtCustomerTransfersurvey(@javax.annotation.Nonnull String dtCustomerTransfersurvey) {
+  public void setDtCustomerTransfersurvey(String dtCustomerTransfersurvey) {
     this.dtCustomerTransfersurvey = dtCustomerTransfersurvey;
   }
 
 
-  public CustomerResponse bCustomerIsactive(@javax.annotation.Nonnull Boolean bCustomerIsactive) {
+  public CustomerResponse bCustomerIsactive(Boolean bCustomerIsactive) {
     this.bCustomerIsactive = bCustomerIsactive;
     return this;
   }
@@ -1111,12 +1060,12 @@ public class CustomerResponse {
     return bCustomerIsactive;
   }
 
-  public void setbCustomerIsactive(@javax.annotation.Nonnull Boolean bCustomerIsactive) {
+  public void setbCustomerIsactive(Boolean bCustomerIsactive) {
     this.bCustomerIsactive = bCustomerIsactive;
   }
 
 
-  public CustomerResponse bCustomerVariableexpensefinanced(@javax.annotation.Nonnull Boolean bCustomerVariableexpensefinanced) {
+  public CustomerResponse bCustomerVariableexpensefinanced(Boolean bCustomerVariableexpensefinanced) {
     this.bCustomerVariableexpensefinanced = bCustomerVariableexpensefinanced;
     return this;
   }
@@ -1130,12 +1079,12 @@ public class CustomerResponse {
     return bCustomerVariableexpensefinanced;
   }
 
-  public void setbCustomerVariableexpensefinanced(@javax.annotation.Nonnull Boolean bCustomerVariableexpensefinanced) {
+  public void setbCustomerVariableexpensefinanced(Boolean bCustomerVariableexpensefinanced) {
     this.bCustomerVariableexpensefinanced = bCustomerVariableexpensefinanced;
   }
 
 
-  public CustomerResponse bCustomerVariableexpensefinancedtaxes(@javax.annotation.Nonnull Boolean bCustomerVariableexpensefinancedtaxes) {
+  public CustomerResponse bCustomerVariableexpensefinancedtaxes(Boolean bCustomerVariableexpensefinancedtaxes) {
     this.bCustomerVariableexpensefinancedtaxes = bCustomerVariableexpensefinancedtaxes;
     return this;
   }
@@ -1149,12 +1098,12 @@ public class CustomerResponse {
     return bCustomerVariableexpensefinancedtaxes;
   }
 
-  public void setbCustomerVariableexpensefinancedtaxes(@javax.annotation.Nonnull Boolean bCustomerVariableexpensefinancedtaxes) {
+  public void setbCustomerVariableexpensefinancedtaxes(Boolean bCustomerVariableexpensefinancedtaxes) {
     this.bCustomerVariableexpensefinancedtaxes = bCustomerVariableexpensefinancedtaxes;
   }
 
 
-  public CustomerResponse bCustomerSupplychargefinanced(@javax.annotation.Nonnull Boolean bCustomerSupplychargefinanced) {
+  public CustomerResponse bCustomerSupplychargefinanced(Boolean bCustomerSupplychargefinanced) {
     this.bCustomerSupplychargefinanced = bCustomerSupplychargefinanced;
     return this;
   }
@@ -1168,12 +1117,12 @@ public class CustomerResponse {
     return bCustomerSupplychargefinanced;
   }
 
-  public void setbCustomerSupplychargefinanced(@javax.annotation.Nonnull Boolean bCustomerSupplychargefinanced) {
+  public void setbCustomerSupplychargefinanced(Boolean bCustomerSupplychargefinanced) {
     this.bCustomerSupplychargefinanced = bCustomerSupplychargefinanced;
   }
 
 
-  public CustomerResponse bCustomerSupplychargefinancedtaxes(@javax.annotation.Nonnull Boolean bCustomerSupplychargefinancedtaxes) {
+  public CustomerResponse bCustomerSupplychargefinancedtaxes(Boolean bCustomerSupplychargefinancedtaxes) {
     this.bCustomerSupplychargefinancedtaxes = bCustomerSupplychargefinancedtaxes;
     return this;
   }
@@ -1187,12 +1136,12 @@ public class CustomerResponse {
     return bCustomerSupplychargefinancedtaxes;
   }
 
-  public void setbCustomerSupplychargefinancedtaxes(@javax.annotation.Nonnull Boolean bCustomerSupplychargefinancedtaxes) {
+  public void setbCustomerSupplychargefinancedtaxes(Boolean bCustomerSupplychargefinancedtaxes) {
     this.bCustomerSupplychargefinancedtaxes = bCustomerSupplychargefinancedtaxes;
   }
 
 
-  public CustomerResponse bCustomerAttendance(@javax.annotation.Nonnull Boolean bCustomerAttendance) {
+  public CustomerResponse bCustomerAttendance(Boolean bCustomerAttendance) {
     this.bCustomerAttendance = bCustomerAttendance;
     return this;
   }
@@ -1206,12 +1155,12 @@ public class CustomerResponse {
     return bCustomerAttendance;
   }
 
-  public void setbCustomerAttendance(@javax.annotation.Nonnull Boolean bCustomerAttendance) {
+  public void setbCustomerAttendance(Boolean bCustomerAttendance) {
     this.bCustomerAttendance = bCustomerAttendance;
   }
 
 
-  public CustomerResponse eCustomerType(@javax.annotation.Nonnull FieldECustomerType eCustomerType) {
+  public CustomerResponse eCustomerType(FieldECustomerType eCustomerType) {
     this.eCustomerType = eCustomerType;
     return this;
   }
@@ -1225,12 +1174,12 @@ public class CustomerResponse {
     return eCustomerType;
   }
 
-  public void seteCustomerType(@javax.annotation.Nonnull FieldECustomerType eCustomerType) {
+  public void seteCustomerType(FieldECustomerType eCustomerType) {
     this.eCustomerType = eCustomerType;
   }
 
 
-  public CustomerResponse eCustomerMarketingcorrespondence(@javax.annotation.Nonnull FieldECustomerMarketingcorrespondence eCustomerMarketingcorrespondence) {
+  public CustomerResponse eCustomerMarketingcorrespondence(FieldECustomerMarketingcorrespondence eCustomerMarketingcorrespondence) {
     this.eCustomerMarketingcorrespondence = eCustomerMarketingcorrespondence;
     return this;
   }
@@ -1244,12 +1193,12 @@ public class CustomerResponse {
     return eCustomerMarketingcorrespondence;
   }
 
-  public void seteCustomerMarketingcorrespondence(@javax.annotation.Nonnull FieldECustomerMarketingcorrespondence eCustomerMarketingcorrespondence) {
+  public void seteCustomerMarketingcorrespondence(FieldECustomerMarketingcorrespondence eCustomerMarketingcorrespondence) {
     this.eCustomerMarketingcorrespondence = eCustomerMarketingcorrespondence;
   }
 
 
-  public CustomerResponse bCustomerBlackcopycarbon(@javax.annotation.Nonnull Boolean bCustomerBlackcopycarbon) {
+  public CustomerResponse bCustomerBlackcopycarbon(Boolean bCustomerBlackcopycarbon) {
     this.bCustomerBlackcopycarbon = bCustomerBlackcopycarbon;
     return this;
   }
@@ -1263,12 +1212,12 @@ public class CustomerResponse {
     return bCustomerBlackcopycarbon;
   }
 
-  public void setbCustomerBlackcopycarbon(@javax.annotation.Nonnull Boolean bCustomerBlackcopycarbon) {
+  public void setbCustomerBlackcopycarbon(Boolean bCustomerBlackcopycarbon) {
     this.bCustomerBlackcopycarbon = bCustomerBlackcopycarbon;
   }
 
 
-  public CustomerResponse bCustomerUnsubscribeinfo(@javax.annotation.Nonnull Boolean bCustomerUnsubscribeinfo) {
+  public CustomerResponse bCustomerUnsubscribeinfo(Boolean bCustomerUnsubscribeinfo) {
     this.bCustomerUnsubscribeinfo = bCustomerUnsubscribeinfo;
     return this;
   }
@@ -1282,12 +1231,12 @@ public class CustomerResponse {
     return bCustomerUnsubscribeinfo;
   }
 
-  public void setbCustomerUnsubscribeinfo(@javax.annotation.Nonnull Boolean bCustomerUnsubscribeinfo) {
+  public void setbCustomerUnsubscribeinfo(Boolean bCustomerUnsubscribeinfo) {
     this.bCustomerUnsubscribeinfo = bCustomerUnsubscribeinfo;
   }
 
 
-  public CustomerResponse tCustomerComment(@javax.annotation.Nonnull String tCustomerComment) {
+  public CustomerResponse tCustomerComment(String tCustomerComment) {
     this.tCustomerComment = tCustomerComment;
     return this;
   }
@@ -1301,12 +1250,12 @@ public class CustomerResponse {
     return tCustomerComment;
   }
 
-  public void settCustomerComment(@javax.annotation.Nonnull String tCustomerComment) {
+  public void settCustomerComment(String tCustomerComment) {
     this.tCustomerComment = tCustomerComment;
   }
 
 
-  public CustomerResponse IMPORTID(@javax.annotation.Nullable String IMPORTID) {
+  public CustomerResponse IMPORTID(String IMPORTID) {
     this.IMPORTID = IMPORTID;
     return this;
   }
@@ -1320,7 +1269,7 @@ public class CustomerResponse {
     return IMPORTID;
   }
 
-  public void setIMPORTID(@javax.annotation.Nullable String IMPORTID) {
+  public void setIMPORTID(String IMPORTID) {
     this.IMPORTID = IMPORTID;
   }
 
@@ -1586,6 +1535,21 @@ public class CustomerResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CustomerResponse is not found in the empty JSON string", CustomerResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!CustomerResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CustomerResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CustomerResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sCustomerName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCustomerName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCustomerName").toString()));
@@ -1626,6 +1590,34 @@ public class CustomerResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CustomerResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CustomerResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CustomerResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CustomerResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CustomerResponse>() {
+           @Override
+           public void write(JsonWriter out, CustomerResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CustomerResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of CustomerResponse given an JSON string

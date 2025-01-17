@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupexternal List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupexternalListElement {
   public static final String SERIALIZED_NAME_PKI_USERGROUPEXTERNAL_I_D = "pkiUsergroupexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPEXTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiUsergroupexternalID;
 
   public static final String SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME = "sUsergroupexternalName";
   @SerializedName(SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME)
-  @javax.annotation.Nonnull
   private String sUsergroupexternalName;
 
   public static final String SERIALIZED_NAME_S_USERGROUPEXTERNAL_I_D = "sUsergroupexternalID";
   @SerializedName(SERIALIZED_NAME_S_USERGROUPEXTERNAL_I_D)
-  @javax.annotation.Nonnull
   private String sUsergroupexternalID;
 
   public UsergroupexternalListElement() {
   }
 
-  public UsergroupexternalListElement pkiUsergroupexternalID(@javax.annotation.Nonnull Integer pkiUsergroupexternalID) {
+  public UsergroupexternalListElement pkiUsergroupexternalID(Integer pkiUsergroupexternalID) {
     this.pkiUsergroupexternalID = pkiUsergroupexternalID;
     return this;
   }
@@ -84,12 +81,12 @@ public class UsergroupexternalListElement {
     return pkiUsergroupexternalID;
   }
 
-  public void setPkiUsergroupexternalID(@javax.annotation.Nonnull Integer pkiUsergroupexternalID) {
+  public void setPkiUsergroupexternalID(Integer pkiUsergroupexternalID) {
     this.pkiUsergroupexternalID = pkiUsergroupexternalID;
   }
 
 
-  public UsergroupexternalListElement sUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
+  public UsergroupexternalListElement sUsergroupexternalName(String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
     return this;
   }
@@ -103,12 +100,12 @@ public class UsergroupexternalListElement {
     return sUsergroupexternalName;
   }
 
-  public void setsUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
+  public void setsUsergroupexternalName(String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
   }
 
 
-  public UsergroupexternalListElement sUsergroupexternalID(@javax.annotation.Nonnull String sUsergroupexternalID) {
+  public UsergroupexternalListElement sUsergroupexternalID(String sUsergroupexternalID) {
     this.sUsergroupexternalID = sUsergroupexternalID;
     return this;
   }
@@ -122,7 +119,7 @@ public class UsergroupexternalListElement {
     return sUsergroupexternalID;
   }
 
-  public void setsUsergroupexternalID(@javax.annotation.Nonnull String sUsergroupexternalID) {
+  public void setsUsergroupexternalID(String sUsergroupexternalID) {
     this.sUsergroupexternalID = sUsergroupexternalID;
   }
 

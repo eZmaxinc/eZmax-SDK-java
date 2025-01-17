@@ -48,37 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignerResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D = "pkiEzsignsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignsignerID;
 
   public static final String SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D = "fkiTaxassignmentID";
   @SerializedName(SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiTaxassignmentID;
 
   public static final String SERIALIZED_NAME_FKI_SECRETQUESTION_I_D = "fkiSecretquestionID";
   @SerializedName(SERIALIZED_NAME_FKI_SECRETQUESTION_I_D)
-  @javax.annotation.Nullable
   private Integer fkiSecretquestionID;
 
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiUserlogintypeID;
 
   public static final String SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION_X = "sUserlogintypeDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sUserlogintypeDescriptionX;
 
   public EzsignsignerResponse() {
   }
 
-  public EzsignsignerResponse pkiEzsignsignerID(@javax.annotation.Nonnull Integer pkiEzsignsignerID) {
+  public EzsignsignerResponse pkiEzsignsignerID(Integer pkiEzsignsignerID) {
     this.pkiEzsignsignerID = pkiEzsignsignerID;
     return this;
   }
@@ -93,12 +88,12 @@ public class EzsignsignerResponse {
     return pkiEzsignsignerID;
   }
 
-  public void setPkiEzsignsignerID(@javax.annotation.Nonnull Integer pkiEzsignsignerID) {
+  public void setPkiEzsignsignerID(Integer pkiEzsignsignerID) {
     this.pkiEzsignsignerID = pkiEzsignsignerID;
   }
 
 
-  public EzsignsignerResponse fkiTaxassignmentID(@javax.annotation.Nonnull Integer fkiTaxassignmentID) {
+  public EzsignsignerResponse fkiTaxassignmentID(Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
     return this;
   }
@@ -114,12 +109,12 @@ public class EzsignsignerResponse {
     return fkiTaxassignmentID;
   }
 
-  public void setFkiTaxassignmentID(@javax.annotation.Nonnull Integer fkiTaxassignmentID) {
+  public void setFkiTaxassignmentID(Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
   }
 
 
-  public EzsignsignerResponse fkiSecretquestionID(@javax.annotation.Nullable Integer fkiSecretquestionID) {
+  public EzsignsignerResponse fkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
     return this;
   }
@@ -134,12 +129,12 @@ public class EzsignsignerResponse {
     return fkiSecretquestionID;
   }
 
-  public void setFkiSecretquestionID(@javax.annotation.Nullable Integer fkiSecretquestionID) {
+  public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
   }
 
 
-  public EzsignsignerResponse fkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
+  public EzsignsignerResponse fkiUserlogintypeID(Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
@@ -154,12 +149,12 @@ public class EzsignsignerResponse {
     return fkiUserlogintypeID;
   }
 
-  public void setFkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
+  public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
-  public EzsignsignerResponse sUserlogintypeDescriptionX(@javax.annotation.Nonnull String sUserlogintypeDescriptionX) {
+  public EzsignsignerResponse sUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
     return this;
   }
@@ -173,7 +168,7 @@ public class EzsignsignerResponse {
     return sUserlogintypeDescriptionX;
   }
 
-  public void setsUserlogintypeDescriptionX(@javax.annotation.Nonnull String sUserlogintypeDescriptionX) {
+  public void setsUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
   }
 
@@ -257,12 +252,55 @@ public class EzsignsignerResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignerResponse is not found in the empty JSON string", EzsignsignerResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsignsignerResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignsignerResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignsignerResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sUserlogintypeDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserlogintypeDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserlogintypeDescriptionX").toString()));
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignsignerResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignsignerResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignsignerResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignsignerResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignsignerResponse>() {
+           @Override
+           public void write(JsonWriter out, EzsignsignerResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignsignerResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsignsignerResponse given an JSON string

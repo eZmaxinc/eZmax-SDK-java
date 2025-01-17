@@ -13,7 +13,6 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.EzdoctemplatedocumentRequest;
 import com.ezmax.api.model.FieldEEzdoctemplatedocumentPrivacylevel;
 import com.ezmax.api.model.MultilingualEzdoctemplatedocumentName;
 import com.google.gson.TypeAdapter;

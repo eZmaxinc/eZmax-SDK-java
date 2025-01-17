@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignformfield Object to fill an Ezsignform using submitForm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignformfieldRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzsignformfieldID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL = "sEzsignformfieldLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL)
-  @javax.annotation.Nullable
   private String sEzsignformfieldLabel;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELD_SELECTED = "bEzsignformfieldSelected";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELD_SELECTED)
-  @javax.annotation.Nullable
   private Boolean bEzsignformfieldSelected;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE = "sEzsignformfieldEnteredvalue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE)
-  @javax.annotation.Nullable
   private String sEzsignformfieldEnteredvalue;
 
   public CustomEzsignformfieldRequest() {
   }
 
-  public CustomEzsignformfieldRequest pkiEzsignformfieldID(@javax.annotation.Nullable Integer pkiEzsignformfieldID) {
+  public CustomEzsignformfieldRequest pkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
     return this;
   }
@@ -88,12 +84,12 @@ public class CustomEzsignformfieldRequest {
     return pkiEzsignformfieldID;
   }
 
-  public void setPkiEzsignformfieldID(@javax.annotation.Nullable Integer pkiEzsignformfieldID) {
+  public void setPkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
   }
 
 
-  public CustomEzsignformfieldRequest sEzsignformfieldLabel(@javax.annotation.Nullable String sEzsignformfieldLabel) {
+  public CustomEzsignformfieldRequest sEzsignformfieldLabel(String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
     return this;
   }
@@ -107,12 +103,12 @@ public class CustomEzsignformfieldRequest {
     return sEzsignformfieldLabel;
   }
 
-  public void setsEzsignformfieldLabel(@javax.annotation.Nullable String sEzsignformfieldLabel) {
+  public void setsEzsignformfieldLabel(String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
   }
 
 
-  public CustomEzsignformfieldRequest bEzsignformfieldSelected(@javax.annotation.Nullable Boolean bEzsignformfieldSelected) {
+  public CustomEzsignformfieldRequest bEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
     return this;
   }
@@ -126,12 +122,12 @@ public class CustomEzsignformfieldRequest {
     return bEzsignformfieldSelected;
   }
 
-  public void setbEzsignformfieldSelected(@javax.annotation.Nullable Boolean bEzsignformfieldSelected) {
+  public void setbEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
   }
 
 
-  public CustomEzsignformfieldRequest sEzsignformfieldEnteredvalue(@javax.annotation.Nullable String sEzsignformfieldEnteredvalue) {
+  public CustomEzsignformfieldRequest sEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
     return this;
   }
@@ -145,7 +141,7 @@ public class CustomEzsignformfieldRequest {
     return sEzsignformfieldEnteredvalue;
   }
 
-  public void setsEzsignformfieldEnteredvalue(@javax.annotation.Nullable String sEzsignformfieldEnteredvalue) {
+  public void setsEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
   }
 

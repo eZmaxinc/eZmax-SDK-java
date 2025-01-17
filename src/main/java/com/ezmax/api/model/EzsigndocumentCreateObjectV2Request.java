@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsigndocumentRequest;
+import com.ezmax.api.model.EzsigndocumentRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,22 +51,21 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/ezsigndocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT = "a_objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT)
-  @javax.annotation.Nonnull
   private List<EzsigndocumentRequestCompound> aObjEzsigndocument = new ArrayList<>();
 
   public EzsigndocumentCreateObjectV2Request() {
   }
 
-  public EzsigndocumentCreateObjectV2Request aObjEzsigndocument(@javax.annotation.Nonnull List<EzsigndocumentRequestCompound> aObjEzsigndocument) {
+  public EzsigndocumentCreateObjectV2Request aObjEzsigndocument(List<EzsigndocumentRequestCompound> aObjEzsigndocument) {
     this.aObjEzsigndocument = aObjEzsigndocument;
     return this;
   }
 
-  public EzsigndocumentCreateObjectV2Request addAObjEzsigndocumentItem(EzsigndocumentRequest aObjEzsigndocumentItem) {
+  public EzsigndocumentCreateObjectV2Request addAObjEzsigndocumentItem(EzsigndocumentRequestCompound aObjEzsigndocumentItem) {
     if (this.aObjEzsigndocument == null) {
       this.aObjEzsigndocument = new ArrayList<>();
     }
@@ -83,7 +82,7 @@ public class EzsigndocumentCreateObjectV2Request {
     return aObjEzsigndocument;
   }
 
-  public void setaObjEzsigndocument(@javax.annotation.Nonnull List<EzsigndocumentRequestCompound> aObjEzsigndocument) {
+  public void setaObjEzsigndocument(List<EzsigndocumentRequestCompound> aObjEzsigndocument) {
     this.aObjEzsigndocument = aObjEzsigndocument;
   }
 
@@ -176,7 +175,7 @@ public class EzsigndocumentCreateObjectV2Request {
       JsonArray jsonArrayaObjEzsigndocument = jsonObj.getAsJsonArray("a_objEzsigndocument");
       // validate the required field `a_objEzsigndocument` (array)
       for (int i = 0; i < jsonArrayaObjEzsigndocument.size(); i++) {
-        EzsigndocumentRequest.validateJsonElement(jsonArrayaObjEzsigndocument.get(i));
+        EzsigndocumentRequestCompound.validateJsonElement(jsonArrayaObjEzsigndocument.get(i));
       };
   }
 

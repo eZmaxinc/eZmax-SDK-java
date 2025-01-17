@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Branding
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualBrandingDescription {
   public static final String SERIALIZED_NAME_S_BRANDING_DESCRIPTION1 = "sBrandingDescription1";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_DESCRIPTION1)
-  @javax.annotation.Nullable
   private String sBrandingDescription1;
 
   public static final String SERIALIZED_NAME_S_BRANDING_DESCRIPTION2 = "sBrandingDescription2";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_DESCRIPTION2)
-  @javax.annotation.Nullable
   private String sBrandingDescription2;
 
   public MultilingualBrandingDescription() {
   }
 
-  public MultilingualBrandingDescription sBrandingDescription1(@javax.annotation.Nullable String sBrandingDescription1) {
+  public MultilingualBrandingDescription sBrandingDescription1(String sBrandingDescription1) {
     this.sBrandingDescription1 = sBrandingDescription1;
     return this;
   }
@@ -77,12 +75,12 @@ public class MultilingualBrandingDescription {
     return sBrandingDescription1;
   }
 
-  public void setsBrandingDescription1(@javax.annotation.Nullable String sBrandingDescription1) {
+  public void setsBrandingDescription1(String sBrandingDescription1) {
     this.sBrandingDescription1 = sBrandingDescription1;
   }
 
 
-  public MultilingualBrandingDescription sBrandingDescription2(@javax.annotation.Nullable String sBrandingDescription2) {
+  public MultilingualBrandingDescription sBrandingDescription2(String sBrandingDescription2) {
     this.sBrandingDescription2 = sBrandingDescription2;
     return this;
   }
@@ -96,7 +94,7 @@ public class MultilingualBrandingDescription {
     return sBrandingDescription2;
   }
 
-  public void setsBrandingDescription2(@javax.annotation.Nullable String sBrandingDescription2) {
+  public void setsBrandingDescription2(String sBrandingDescription2) {
     this.sBrandingDescription2 = sBrandingDescription2;
   }
 

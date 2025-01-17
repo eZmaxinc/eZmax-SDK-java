@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.ApikeyResponse;
+import com.ezmax.api.model.ApikeyResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,22 +51,21 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/user/{pkiUserID}/getApikeys
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserGetApikeysV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)
-  @javax.annotation.Nonnull
   private List<ApikeyResponseCompound> aObjApikey = new ArrayList<>();
 
   public UserGetApikeysV1ResponseMPayload() {
   }
 
-  public UserGetApikeysV1ResponseMPayload aObjApikey(@javax.annotation.Nonnull List<ApikeyResponseCompound> aObjApikey) {
+  public UserGetApikeysV1ResponseMPayload aObjApikey(List<ApikeyResponseCompound> aObjApikey) {
     this.aObjApikey = aObjApikey;
     return this;
   }
 
-  public UserGetApikeysV1ResponseMPayload addAObjApikeyItem(ApikeyResponse aObjApikeyItem) {
+  public UserGetApikeysV1ResponseMPayload addAObjApikeyItem(ApikeyResponseCompound aObjApikeyItem) {
     if (this.aObjApikey == null) {
       this.aObjApikey = new ArrayList<>();
     }
@@ -83,7 +82,7 @@ public class UserGetApikeysV1ResponseMPayload {
     return aObjApikey;
   }
 
-  public void setaObjApikey(@javax.annotation.Nonnull List<ApikeyResponseCompound> aObjApikey) {
+  public void setaObjApikey(List<ApikeyResponseCompound> aObjApikey) {
     this.aObjApikey = aObjApikey;
   }
 
@@ -176,7 +175,7 @@ public class UserGetApikeysV1ResponseMPayload {
       JsonArray jsonArrayaObjApikey = jsonObj.getAsJsonArray("a_objApikey");
       // validate the required field `a_objApikey` (array)
       for (int i = 0; i < jsonArrayaObjApikey.size(); i++) {
-        ApikeyResponse.validateJsonElement(jsonArrayaObjApikey.get(i));
+        ApikeyResponseCompound.validateJsonElement(jsonArrayaObjApikey.get(i));
       };
   }
 

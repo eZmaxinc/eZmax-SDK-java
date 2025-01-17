@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonResponseGetList;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayloadGetList;
 import com.ezmax.api.model.CreditcardclientGetListV1ResponseMPayload;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/creditcardclient/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CreditcardclientGetListV1Response extends CommonResponseGetList {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CreditcardclientGetListV1Response {
+  public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
+  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  private CommonResponseObjDebugPayloadGetList objDebugPayload;
+
+  public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
+  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  private CommonResponseObjDebug objDebug;
+
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  @javax.annotation.Nonnull
   private CreditcardclientGetListV1ResponseMPayload mPayload;
 
   public CreditcardclientGetListV1Response() {
   }
 
-  public CreditcardclientGetListV1Response mPayload(@javax.annotation.Nonnull CreditcardclientGetListV1ResponseMPayload mPayload) {
+  public CreditcardclientGetListV1Response objDebugPayload(CommonResponseObjDebugPayloadGetList objDebugPayload) {
+    this.objDebugPayload = objDebugPayload;
+    return this;
+  }
+
+  /**
+   * Get objDebugPayload
+   * @return objDebugPayload
+   */
+  @javax.annotation.Nonnull
+  public CommonResponseObjDebugPayloadGetList getObjDebugPayload() {
+    return objDebugPayload;
+  }
+
+  public void setObjDebugPayload(CommonResponseObjDebugPayloadGetList objDebugPayload) {
+    this.objDebugPayload = objDebugPayload;
+  }
+
+
+  public CreditcardclientGetListV1Response objDebug(CommonResponseObjDebug objDebug) {
+    this.objDebug = objDebug;
+    return this;
+  }
+
+  /**
+   * Get objDebug
+   * @return objDebug
+   */
+  @javax.annotation.Nullable
+  public CommonResponseObjDebug getObjDebug() {
+    return objDebug;
+  }
+
+  public void setObjDebug(CommonResponseObjDebug objDebug) {
+    this.objDebug = objDebug;
+  }
+
+
+  public CreditcardclientGetListV1Response mPayload(CreditcardclientGetListV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
@@ -76,7 +120,7 @@ public class CreditcardclientGetListV1Response extends CommonResponseGetList {
     return mPayload;
   }
 
-  public void setmPayload(@javax.annotation.Nonnull CreditcardclientGetListV1ResponseMPayload mPayload) {
+  public void setmPayload(CreditcardclientGetListV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -91,20 +135,22 @@ public class CreditcardclientGetListV1Response extends CommonResponseGetList {
       return false;
     }
     CreditcardclientGetListV1Response creditcardclientGetListV1Response = (CreditcardclientGetListV1Response) o;
-    return Objects.equals(this.mPayload, creditcardclientGetListV1Response.mPayload) &&
-        super.equals(o);
+    return Objects.equals(this.objDebugPayload, creditcardclientGetListV1Response.objDebugPayload) &&
+        Objects.equals(this.objDebug, creditcardclientGetListV1Response.objDebug) &&
+        Objects.equals(this.mPayload, creditcardclientGetListV1Response.mPayload);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mPayload, super.hashCode());
+    return Objects.hash(objDebugPayload, objDebug, mPayload);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditcardclientGetListV1Response {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
+    sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
     sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -134,8 +180,8 @@ public class CreditcardclientGetListV1Response extends CommonResponseGetList {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("mPayload");
     openapiRequiredFields.add("objDebugPayload");
+    openapiRequiredFields.add("mPayload");
   }
 
   /**
@@ -166,6 +212,12 @@ public class CreditcardclientGetListV1Response extends CommonResponseGetList {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objDebugPayload`
+      CommonResponseObjDebugPayloadGetList.validateJsonElement(jsonObj.get("objDebugPayload"));
+      // validate the optional field `objDebug`
+      if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
+        CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
+      }
       // validate the required field `mPayload`
       CreditcardclientGetListV1ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
   }

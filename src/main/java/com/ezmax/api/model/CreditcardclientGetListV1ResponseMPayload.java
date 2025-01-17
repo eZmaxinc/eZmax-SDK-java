@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonGetListV1ResponseMPayload;
 import com.ezmax.api.model.CreditcardclientListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/creditcardclient/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CreditcardclientGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CreditcardclientGetListV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
+  @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  private Integer iRowReturned;
+
+  public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
+  @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  private Integer iRowFiltered;
+
   public static final String SERIALIZED_NAME_A_OBJ_CREDITCARDCLIENT = "a_objCreditcardclient";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CREDITCARDCLIENT)
-  @javax.annotation.Nonnull
   private List<CreditcardclientListElement> aObjCreditcardclient = new ArrayList<>();
 
   public CreditcardclientGetListV1ResponseMPayload() {
   }
 
-  public CreditcardclientGetListV1ResponseMPayload aObjCreditcardclient(@javax.annotation.Nonnull List<CreditcardclientListElement> aObjCreditcardclient) {
+  public CreditcardclientGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+    return this;
+  }
+
+  /**
+   * The number of rows returned
+   * @return iRowReturned
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowReturned() {
+    return iRowReturned;
+  }
+
+  public void setiRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+  }
+
+
+  public CreditcardclientGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+    return this;
+  }
+
+  /**
+   * The number of rows matching your filters (if any) or the total number of rows
+   * @return iRowFiltered
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowFiltered() {
+    return iRowFiltered;
+  }
+
+  public void setiRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+  }
+
+
+  public CreditcardclientGetListV1ResponseMPayload aObjCreditcardclient(List<CreditcardclientListElement> aObjCreditcardclient) {
     this.aObjCreditcardclient = aObjCreditcardclient;
     return this;
   }
@@ -84,7 +128,7 @@ public class CreditcardclientGetListV1ResponseMPayload extends CommonGetListV1Re
     return aObjCreditcardclient;
   }
 
-  public void setaObjCreditcardclient(@javax.annotation.Nonnull List<CreditcardclientListElement> aObjCreditcardclient) {
+  public void setaObjCreditcardclient(List<CreditcardclientListElement> aObjCreditcardclient) {
     this.aObjCreditcardclient = aObjCreditcardclient;
   }
 
@@ -99,20 +143,22 @@ public class CreditcardclientGetListV1ResponseMPayload extends CommonGetListV1Re
       return false;
     }
     CreditcardclientGetListV1ResponseMPayload creditcardclientGetListV1ResponseMPayload = (CreditcardclientGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjCreditcardclient, creditcardclientGetListV1ResponseMPayload.aObjCreditcardclient) &&
-        super.equals(o);
+    return Objects.equals(this.iRowReturned, creditcardclientGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, creditcardclientGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjCreditcardclient, creditcardclientGetListV1ResponseMPayload.aObjCreditcardclient);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjCreditcardclient, super.hashCode());
+    return Objects.hash(iRowReturned, iRowFiltered, aObjCreditcardclient);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditcardclientGetListV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
+    sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
     sb.append("    aObjCreditcardclient: ").append(toIndentedString(aObjCreditcardclient)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -142,9 +188,9 @@ public class CreditcardclientGetListV1ResponseMPayload extends CommonGetListV1Re
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objCreditcardclient");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objCreditcardclient");
   }
 
   /**

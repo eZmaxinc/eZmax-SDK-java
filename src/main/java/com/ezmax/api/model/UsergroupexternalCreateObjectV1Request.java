@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/usergroupexternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupexternalCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUPEXTERNAL = "a_objUsergroupexternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUPEXTERNAL)
-  @javax.annotation.Nonnull
   private List<UsergroupexternalRequestCompound> aObjUsergroupexternal = new ArrayList<>();
 
   public UsergroupexternalCreateObjectV1Request() {
   }
 
-  public UsergroupexternalCreateObjectV1Request aObjUsergroupexternal(@javax.annotation.Nonnull List<UsergroupexternalRequestCompound> aObjUsergroupexternal) {
+  public UsergroupexternalCreateObjectV1Request aObjUsergroupexternal(List<UsergroupexternalRequestCompound> aObjUsergroupexternal) {
     this.aObjUsergroupexternal = aObjUsergroupexternal;
     return this;
   }
@@ -83,7 +82,7 @@ public class UsergroupexternalCreateObjectV1Request {
     return aObjUsergroupexternal;
   }
 
-  public void setaObjUsergroupexternal(@javax.annotation.Nonnull List<UsergroupexternalRequestCompound> aObjUsergroupexternal) {
+  public void setaObjUsergroupexternal(List<UsergroupexternalRequestCompound> aObjUsergroupexternal) {
     this.aObjUsergroupexternal = aObjUsergroupexternal;
   }
 

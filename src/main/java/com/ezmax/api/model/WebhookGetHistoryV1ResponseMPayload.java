@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CustomWebhooklogResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,22 +51,21 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/webhook/{pkiWebhookID}/getHistory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebhookGetHistoryV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_WEBHOOKLOG = "a_objWebhooklog";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WEBHOOKLOG)
-  @javax.annotation.Nonnull
   private List<CustomWebhooklogResponse> aObjWebhooklog = new ArrayList<>();
 
   public WebhookGetHistoryV1ResponseMPayload() {
   }
 
-  public WebhookGetHistoryV1ResponseMPayload aObjWebhooklog(@javax.annotation.Nonnull List<CustomWebhooklogResponse> aObjWebhooklog) {
+  public WebhookGetHistoryV1ResponseMPayload aObjWebhooklog(List<CustomWebhooklogResponse> aObjWebhooklog) {
     this.aObjWebhooklog = aObjWebhooklog;
     return this;
   }
 
-  public WebhookGetHistoryV1ResponseMPayload addAObjWebhooklogItem(Object aObjWebhooklogItem) {
+  public WebhookGetHistoryV1ResponseMPayload addAObjWebhooklogItem(CustomWebhooklogResponse aObjWebhooklogItem) {
     if (this.aObjWebhooklog == null) {
       this.aObjWebhooklog = new ArrayList<>();
     }
@@ -82,7 +82,7 @@ public class WebhookGetHistoryV1ResponseMPayload {
     return aObjWebhooklog;
   }
 
-  public void setaObjWebhooklog(@javax.annotation.Nonnull List<CustomWebhooklogResponse> aObjWebhooklog) {
+  public void setaObjWebhooklog(List<CustomWebhooklogResponse> aObjWebhooklog) {
     this.aObjWebhooklog = aObjWebhooklog;
   }
 
@@ -175,7 +175,7 @@ public class WebhookGetHistoryV1ResponseMPayload {
       JsonArray jsonArrayaObjWebhooklog = jsonObj.getAsJsonArray("a_objWebhooklog");
       // validate the required field `a_objWebhooklog` (array)
       for (int i = 0; i < jsonArrayaObjWebhooklog.size(); i++) {
-        Object.validateJsonElement(jsonArrayaObjWebhooklog.get(i));
+        CustomWebhooklogResponse.validateJsonElement(jsonArrayaObjWebhooklog.get(i));
       };
   }
 

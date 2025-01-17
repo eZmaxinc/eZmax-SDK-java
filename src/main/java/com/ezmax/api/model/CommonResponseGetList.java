@@ -50,22 +50,20 @@ import eZmaxAPI.JSON;
 /**
  * All API response will inherit this based Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonResponseGetList {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
-  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayloadGetList objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
-  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public CommonResponseGetList() {
   }
 
-  public CommonResponseGetList objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayloadGetList objDebugPayload) {
+  public CommonResponseGetList objDebugPayload(CommonResponseObjDebugPayloadGetList objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -79,12 +77,12 @@ public class CommonResponseGetList {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayloadGetList objDebugPayload) {
+  public void setObjDebugPayload(CommonResponseObjDebugPayloadGetList objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public CommonResponseGetList objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
+  public CommonResponseGetList objDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -98,7 +96,7 @@ public class CommonResponseGetList {
     return objDebug;
   }
 
-  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
+  public void setObjDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
@@ -170,6 +168,21 @@ public class CommonResponseGetList {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonResponseGetList is not found in the empty JSON string", CommonResponseGetList.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!CommonResponseGetList.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonResponseGetList` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CommonResponseGetList.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objDebugPayload`
       CommonResponseObjDebugPayloadGetList.validateJsonElement(jsonObj.get("objDebugPayload"));
@@ -179,6 +192,34 @@ public class CommonResponseGetList {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CommonResponseGetList.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CommonResponseGetList' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CommonResponseGetList> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CommonResponseGetList.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CommonResponseGetList>() {
+           @Override
+           public void write(JsonWriter out, CommonResponseGetList value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CommonResponseGetList read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of CommonResponseGetList given an JSON string

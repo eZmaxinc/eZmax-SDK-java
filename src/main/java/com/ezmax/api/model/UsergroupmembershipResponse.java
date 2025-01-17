@@ -48,62 +48,52 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupmembershipResponse {
   public static final String SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D = "pkiUsergroupmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPMEMBERSHIP_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiUsergroupmembershipID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiUsergroupID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D = "fkiUsergroupexternalID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUsergroupexternalID;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
-  @javax.annotation.Nullable
   private String sUserFirstname;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
-  @javax.annotation.Nullable
   private String sUserLastname;
 
   public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
   @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
-  @javax.annotation.Nullable
   private String sUserLoginname;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  @javax.annotation.Nullable
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
-  @javax.annotation.Nonnull
   private String sUsergroupNameX;
 
   public static final String SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME = "sUsergroupexternalName";
   @SerializedName(SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME)
-  @javax.annotation.Nullable
   private String sUsergroupexternalName;
 
   public UsergroupmembershipResponse() {
   }
 
-  public UsergroupmembershipResponse pkiUsergroupmembershipID(@javax.annotation.Nonnull Integer pkiUsergroupmembershipID) {
+  public UsergroupmembershipResponse pkiUsergroupmembershipID(Integer pkiUsergroupmembershipID) {
     this.pkiUsergroupmembershipID = pkiUsergroupmembershipID;
     return this;
   }
@@ -119,12 +109,12 @@ public class UsergroupmembershipResponse {
     return pkiUsergroupmembershipID;
   }
 
-  public void setPkiUsergroupmembershipID(@javax.annotation.Nonnull Integer pkiUsergroupmembershipID) {
+  public void setPkiUsergroupmembershipID(Integer pkiUsergroupmembershipID) {
     this.pkiUsergroupmembershipID = pkiUsergroupmembershipID;
   }
 
 
-  public UsergroupmembershipResponse fkiUsergroupID(@javax.annotation.Nonnull Integer fkiUsergroupID) {
+  public UsergroupmembershipResponse fkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -140,12 +130,12 @@ public class UsergroupmembershipResponse {
     return fkiUsergroupID;
   }
 
-  public void setFkiUsergroupID(@javax.annotation.Nonnull Integer fkiUsergroupID) {
+  public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
-  public UsergroupmembershipResponse fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public UsergroupmembershipResponse fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -160,12 +150,12 @@ public class UsergroupmembershipResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public UsergroupmembershipResponse fkiUsergroupexternalID(@javax.annotation.Nullable Integer fkiUsergroupexternalID) {
+  public UsergroupmembershipResponse fkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
     this.fkiUsergroupexternalID = fkiUsergroupexternalID;
     return this;
   }
@@ -181,12 +171,12 @@ public class UsergroupmembershipResponse {
     return fkiUsergroupexternalID;
   }
 
-  public void setFkiUsergroupexternalID(@javax.annotation.Nullable Integer fkiUsergroupexternalID) {
+  public void setFkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
     this.fkiUsergroupexternalID = fkiUsergroupexternalID;
   }
 
 
-  public UsergroupmembershipResponse sUserFirstname(@javax.annotation.Nullable String sUserFirstname) {
+  public UsergroupmembershipResponse sUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -200,12 +190,12 @@ public class UsergroupmembershipResponse {
     return sUserFirstname;
   }
 
-  public void setsUserFirstname(@javax.annotation.Nullable String sUserFirstname) {
+  public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
-  public UsergroupmembershipResponse sUserLastname(@javax.annotation.Nullable String sUserLastname) {
+  public UsergroupmembershipResponse sUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -219,12 +209,12 @@ public class UsergroupmembershipResponse {
     return sUserLastname;
   }
 
-  public void setsUserLastname(@javax.annotation.Nullable String sUserLastname) {
+  public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
-  public UsergroupmembershipResponse sUserLoginname(@javax.annotation.Nullable String sUserLoginname) {
+  public UsergroupmembershipResponse sUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -238,12 +228,12 @@ public class UsergroupmembershipResponse {
     return sUserLoginname;
   }
 
-  public void setsUserLoginname(@javax.annotation.Nullable String sUserLoginname) {
+  public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
-  public UsergroupmembershipResponse sEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
+  public UsergroupmembershipResponse sEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -257,12 +247,12 @@ public class UsergroupmembershipResponse {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
+  public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public UsergroupmembershipResponse sUsergroupNameX(@javax.annotation.Nonnull String sUsergroupNameX) {
+  public UsergroupmembershipResponse sUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
     return this;
   }
@@ -276,12 +266,12 @@ public class UsergroupmembershipResponse {
     return sUsergroupNameX;
   }
 
-  public void setsUsergroupNameX(@javax.annotation.Nonnull String sUsergroupNameX) {
+  public void setsUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
   }
 
 
-  public UsergroupmembershipResponse sUsergroupexternalName(@javax.annotation.Nullable String sUsergroupexternalName) {
+  public UsergroupmembershipResponse sUsergroupexternalName(String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
     return this;
   }
@@ -295,7 +285,7 @@ public class UsergroupmembershipResponse {
     return sUsergroupexternalName;
   }
 
-  public void setsUsergroupexternalName(@javax.annotation.Nullable String sUsergroupexternalName) {
+  public void setsUsergroupexternalName(String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
   }
 
@@ -393,6 +383,21 @@ public class UsergroupmembershipResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in UsergroupmembershipResponse is not found in the empty JSON string", UsergroupmembershipResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!UsergroupmembershipResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UsergroupmembershipResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : UsergroupmembershipResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("sUserFirstname") != null && !jsonObj.get("sUserFirstname").isJsonNull()) && !jsonObj.get("sUserFirstname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
@@ -414,6 +419,34 @@ public class UsergroupmembershipResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!UsergroupmembershipResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'UsergroupmembershipResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<UsergroupmembershipResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(UsergroupmembershipResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<UsergroupmembershipResponse>() {
+           @Override
+           public void write(JsonWriter out, UsergroupmembershipResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public UsergroupmembershipResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of UsergroupmembershipResponse given an JSON string

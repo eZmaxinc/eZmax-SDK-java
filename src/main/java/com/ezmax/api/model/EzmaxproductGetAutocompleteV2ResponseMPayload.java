@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezmaxproduct/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxproductGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXPRODUCT = "a_objEzmaxproduct";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXPRODUCT)
-  @javax.annotation.Nonnull
   private List<EzmaxproductAutocompleteElementResponse> aObjEzmaxproduct = new ArrayList<>();
 
   public EzmaxproductGetAutocompleteV2ResponseMPayload() {
   }
 
-  public EzmaxproductGetAutocompleteV2ResponseMPayload aObjEzmaxproduct(@javax.annotation.Nonnull List<EzmaxproductAutocompleteElementResponse> aObjEzmaxproduct) {
+  public EzmaxproductGetAutocompleteV2ResponseMPayload aObjEzmaxproduct(List<EzmaxproductAutocompleteElementResponse> aObjEzmaxproduct) {
     this.aObjEzmaxproduct = aObjEzmaxproduct;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzmaxproductGetAutocompleteV2ResponseMPayload {
     return aObjEzmaxproduct;
   }
 
-  public void setaObjEzmaxproduct(@javax.annotation.Nonnull List<EzmaxproductAutocompleteElementResponse> aObjEzmaxproduct) {
+  public void setaObjEzmaxproduct(List<EzmaxproductAutocompleteElementResponse> aObjEzmaxproduct) {
     this.aObjEzmaxproduct = aObjEzmaxproduct;
   }
 

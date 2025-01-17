@@ -51,27 +51,24 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object in the context of an EzsignsignaturesAutomatic path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION = "sEzsignfolderDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsignfolderDescription;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT = "a_objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT)
-  @javax.annotation.Nonnull
   private List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse> aObjEzsigndocument = new ArrayList<>();
 
   public CustomEzsignfolderEzsignsignaturesAutomaticResponse() {
   }
 
-  public CustomEzsignfolderEzsignsignaturesAutomaticResponse pkiEzsignfolderID(@javax.annotation.Nonnull Integer pkiEzsignfolderID) {
+  public CustomEzsignfolderEzsignsignaturesAutomaticResponse pkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
     return this;
   }
@@ -86,12 +83,12 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
     return pkiEzsignfolderID;
   }
 
-  public void setPkiEzsignfolderID(@javax.annotation.Nonnull Integer pkiEzsignfolderID) {
+  public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
   }
 
 
-  public CustomEzsignfolderEzsignsignaturesAutomaticResponse sEzsignfolderDescription(@javax.annotation.Nonnull String sEzsignfolderDescription) {
+  public CustomEzsignfolderEzsignsignaturesAutomaticResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -105,12 +102,12 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
     return sEzsignfolderDescription;
   }
 
-  public void setsEzsignfolderDescription(@javax.annotation.Nonnull String sEzsignfolderDescription) {
+  public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
-  public CustomEzsignfolderEzsignsignaturesAutomaticResponse aObjEzsigndocument(@javax.annotation.Nonnull List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse> aObjEzsigndocument) {
+  public CustomEzsignfolderEzsignsignaturesAutomaticResponse aObjEzsigndocument(List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse> aObjEzsigndocument) {
     this.aObjEzsigndocument = aObjEzsigndocument;
     return this;
   }
@@ -132,7 +129,7 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
     return aObjEzsigndocument;
   }
 
-  public void setaObjEzsigndocument(@javax.annotation.Nonnull List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse> aObjEzsigndocument) {
+  public void setaObjEzsigndocument(List<CustomEzsigndocumentEzsignsignaturesAutomaticResponse> aObjEzsigndocument) {
     this.aObjEzsigndocument = aObjEzsigndocument;
   }
 

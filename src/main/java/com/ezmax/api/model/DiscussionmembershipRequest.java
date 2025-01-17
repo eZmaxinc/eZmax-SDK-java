@@ -48,42 +48,36 @@ import eZmaxAPI.JSON;
 /**
  * A Discussionmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DiscussionmembershipRequest {
   public static final String SERIALIZED_NAME_PKI_DISCUSSIONMEMBERSHIP_I_D = "pkiDiscussionmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSIONMEMBERSHIP_I_D)
-  @javax.annotation.Nullable
   private Integer pkiDiscussionmembershipID;
 
   public static final String SERIALIZED_NAME_FKI_DISCUSSION_I_D = "fkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_FKI_DISCUSSION_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiDiscussionID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUsergroupID;
 
   public static final String SERIALIZED_NAME_FKI_MODULESECTION_I_D = "fkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_FKI_MODULESECTION_I_D)
-  @javax.annotation.Nullable
   private Integer fkiModulesectionID;
 
   public static final String SERIALIZED_NAME_DT_DISCUSSIONMEMBERSHIP_JOINED = "dtDiscussionmembershipJoined";
   @SerializedName(SERIALIZED_NAME_DT_DISCUSSIONMEMBERSHIP_JOINED)
-  @javax.annotation.Nonnull
   private String dtDiscussionmembershipJoined;
 
   public DiscussionmembershipRequest() {
   }
 
-  public DiscussionmembershipRequest pkiDiscussionmembershipID(@javax.annotation.Nullable Integer pkiDiscussionmembershipID) {
+  public DiscussionmembershipRequest pkiDiscussionmembershipID(Integer pkiDiscussionmembershipID) {
     this.pkiDiscussionmembershipID = pkiDiscussionmembershipID;
     return this;
   }
@@ -99,12 +93,12 @@ public class DiscussionmembershipRequest {
     return pkiDiscussionmembershipID;
   }
 
-  public void setPkiDiscussionmembershipID(@javax.annotation.Nullable Integer pkiDiscussionmembershipID) {
+  public void setPkiDiscussionmembershipID(Integer pkiDiscussionmembershipID) {
     this.pkiDiscussionmembershipID = pkiDiscussionmembershipID;
   }
 
 
-  public DiscussionmembershipRequest fkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
+  public DiscussionmembershipRequest fkiDiscussionID(Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
     return this;
   }
@@ -120,12 +114,12 @@ public class DiscussionmembershipRequest {
     return fkiDiscussionID;
   }
 
-  public void setFkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
+  public void setFkiDiscussionID(Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
   }
 
 
-  public DiscussionmembershipRequest fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public DiscussionmembershipRequest fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -140,12 +134,12 @@ public class DiscussionmembershipRequest {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public DiscussionmembershipRequest fkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
+  public DiscussionmembershipRequest fkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -161,12 +155,12 @@ public class DiscussionmembershipRequest {
     return fkiUsergroupID;
   }
 
-  public void setFkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
+  public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
-  public DiscussionmembershipRequest fkiModulesectionID(@javax.annotation.Nullable Integer fkiModulesectionID) {
+  public DiscussionmembershipRequest fkiModulesectionID(Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
     return this;
   }
@@ -181,12 +175,12 @@ public class DiscussionmembershipRequest {
     return fkiModulesectionID;
   }
 
-  public void setFkiModulesectionID(@javax.annotation.Nullable Integer fkiModulesectionID) {
+  public void setFkiModulesectionID(Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
   }
 
 
-  public DiscussionmembershipRequest dtDiscussionmembershipJoined(@javax.annotation.Nonnull String dtDiscussionmembershipJoined) {
+  public DiscussionmembershipRequest dtDiscussionmembershipJoined(String dtDiscussionmembershipJoined) {
     this.dtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
     return this;
   }
@@ -200,7 +194,7 @@ public class DiscussionmembershipRequest {
     return dtDiscussionmembershipJoined;
   }
 
-  public void setDtDiscussionmembershipJoined(@javax.annotation.Nonnull String dtDiscussionmembershipJoined) {
+  public void setDtDiscussionmembershipJoined(String dtDiscussionmembershipJoined) {
     this.dtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
   }
 
@@ -285,12 +279,55 @@ public class DiscussionmembershipRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in DiscussionmembershipRequest is not found in the empty JSON string", DiscussionmembershipRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!DiscussionmembershipRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DiscussionmembershipRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : DiscussionmembershipRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dtDiscussionmembershipJoined").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtDiscussionmembershipJoined` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtDiscussionmembershipJoined").toString()));
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!DiscussionmembershipRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'DiscussionmembershipRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<DiscussionmembershipRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(DiscussionmembershipRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<DiscussionmembershipRequest>() {
+           @Override
+           public void write(JsonWriter out, DiscussionmembershipRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public DiscussionmembershipRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of DiscussionmembershipRequest given an JSON string

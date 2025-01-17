@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Modulesection Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ModulesectionResponse {
   public static final String SERIALIZED_NAME_PKI_MODULESECTION_I_D = "pkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULESECTION_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiModulesectionID;
 
   public static final String SERIALIZED_NAME_FKI_MODULE_I_D = "fkiModuleID";
   @SerializedName(SERIALIZED_NAME_FKI_MODULE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiModuleID;
 
   public static final String SERIALIZED_NAME_S_MODULESECTION_INTERNALNAME = "sModulesectionInternalname";
   @SerializedName(SERIALIZED_NAME_S_MODULESECTION_INTERNALNAME)
-  @javax.annotation.Nonnull
   private String sModulesectionInternalname;
 
   public static final String SERIALIZED_NAME_S_MODULESECTION_NAME_X = "sModulesectionNameX";
   @SerializedName(SERIALIZED_NAME_S_MODULESECTION_NAME_X)
-  @javax.annotation.Nonnull
   private String sModulesectionNameX;
 
   public ModulesectionResponse() {
   }
 
-  public ModulesectionResponse pkiModulesectionID(@javax.annotation.Nonnull Integer pkiModulesectionID) {
+  public ModulesectionResponse pkiModulesectionID(Integer pkiModulesectionID) {
     this.pkiModulesectionID = pkiModulesectionID;
     return this;
   }
@@ -88,12 +84,12 @@ public class ModulesectionResponse {
     return pkiModulesectionID;
   }
 
-  public void setPkiModulesectionID(@javax.annotation.Nonnull Integer pkiModulesectionID) {
+  public void setPkiModulesectionID(Integer pkiModulesectionID) {
     this.pkiModulesectionID = pkiModulesectionID;
   }
 
 
-  public ModulesectionResponse fkiModuleID(@javax.annotation.Nonnull Integer fkiModuleID) {
+  public ModulesectionResponse fkiModuleID(Integer fkiModuleID) {
     this.fkiModuleID = fkiModuleID;
     return this;
   }
@@ -108,12 +104,12 @@ public class ModulesectionResponse {
     return fkiModuleID;
   }
 
-  public void setFkiModuleID(@javax.annotation.Nonnull Integer fkiModuleID) {
+  public void setFkiModuleID(Integer fkiModuleID) {
     this.fkiModuleID = fkiModuleID;
   }
 
 
-  public ModulesectionResponse sModulesectionInternalname(@javax.annotation.Nonnull String sModulesectionInternalname) {
+  public ModulesectionResponse sModulesectionInternalname(String sModulesectionInternalname) {
     this.sModulesectionInternalname = sModulesectionInternalname;
     return this;
   }
@@ -127,12 +123,12 @@ public class ModulesectionResponse {
     return sModulesectionInternalname;
   }
 
-  public void setsModulesectionInternalname(@javax.annotation.Nonnull String sModulesectionInternalname) {
+  public void setsModulesectionInternalname(String sModulesectionInternalname) {
     this.sModulesectionInternalname = sModulesectionInternalname;
   }
 
 
-  public ModulesectionResponse sModulesectionNameX(@javax.annotation.Nonnull String sModulesectionNameX) {
+  public ModulesectionResponse sModulesectionNameX(String sModulesectionNameX) {
     this.sModulesectionNameX = sModulesectionNameX;
     return this;
   }
@@ -146,7 +142,7 @@ public class ModulesectionResponse {
     return sModulesectionNameX;
   }
 
-  public void setsModulesectionNameX(@javax.annotation.Nonnull String sModulesectionNameX) {
+  public void setsModulesectionNameX(String sModulesectionNameX) {
     this.sModulesectionNameX = sModulesectionNameX;
   }
 
@@ -227,6 +223,21 @@ public class ModulesectionResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ModulesectionResponse is not found in the empty JSON string", ModulesectionResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!ModulesectionResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ModulesectionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ModulesectionResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sModulesectionInternalname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sModulesectionInternalname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModulesectionInternalname").toString()));
@@ -236,6 +247,34 @@ public class ModulesectionResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!ModulesectionResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ModulesectionResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<ModulesectionResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ModulesectionResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<ModulesectionResponse>() {
+           @Override
+           public void write(JsonWriter out, ModulesectionResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public ModulesectionResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of ModulesectionResponse given an JSON string

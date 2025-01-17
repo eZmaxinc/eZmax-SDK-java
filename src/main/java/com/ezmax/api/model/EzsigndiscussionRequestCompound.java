@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.DiscussionRequest;
-import com.ezmax.api.model.EzsigndiscussionRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,10 +49,155 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigndiscussion Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigndiscussionRequestCompound extends EzsigndiscussionRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsigndiscussionRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D = "pkiEzsigndiscussionID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D)
+  private Integer pkiEzsigndiscussionID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
+  private Integer fkiEzsigndocumentID;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_PAGENUMBER = "iEzsigndiscussionPagenumber";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_PAGENUMBER)
+  private Integer iEzsigndiscussionPagenumber;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_X = "iEzsigndiscussionX";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_X)
+  private Integer iEzsigndiscussionX;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_Y = "iEzsigndiscussionY";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_Y)
+  private Integer iEzsigndiscussionY;
+
+  public static final String SERIALIZED_NAME_OBJ_DISCUSSION = "objDiscussion";
+  @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSION)
+  private DiscussionRequest objDiscussion;
+
   public EzsigndiscussionRequestCompound() {
   }
+
+  public EzsigndiscussionRequestCompound pkiEzsigndiscussionID(Integer pkiEzsigndiscussionID) {
+    this.pkiEzsigndiscussionID = pkiEzsigndiscussionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigndiscussion
+   * minimum: 0
+   * maximum: 16777215
+   * @return pkiEzsigndiscussionID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiEzsigndiscussionID() {
+    return pkiEzsigndiscussionID;
+  }
+
+  public void setPkiEzsigndiscussionID(Integer pkiEzsigndiscussionID) {
+    this.pkiEzsigndiscussionID = pkiEzsigndiscussionID;
+  }
+
+
+  public EzsigndiscussionRequestCompound fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigndocument
+   * minimum: 0
+   * @return fkiEzsigndocumentID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsigndocumentID() {
+    return fkiEzsigndocumentID;
+  }
+
+  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
+  }
+
+
+  public EzsigndiscussionRequestCompound iEzsigndiscussionPagenumber(Integer iEzsigndiscussionPagenumber) {
+    this.iEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
+    return this;
+  }
+
+  /**
+   * The page number in the Ezsigndocument for the Ezsigndiscussion
+   * @return iEzsigndiscussionPagenumber
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndiscussionPagenumber() {
+    return iEzsigndiscussionPagenumber;
+  }
+
+  public void setiEzsigndiscussionPagenumber(Integer iEzsigndiscussionPagenumber) {
+    this.iEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
+  }
+
+
+  public EzsigndiscussionRequestCompound iEzsigndiscussionX(Integer iEzsigndiscussionX) {
+    this.iEzsigndiscussionX = iEzsigndiscussionX;
+    return this;
+  }
+
+  /**
+   * The x of the Ezsigndiscussion
+   * minimum: 0
+   * maximum: 65535
+   * @return iEzsigndiscussionX
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndiscussionX() {
+    return iEzsigndiscussionX;
+  }
+
+  public void setiEzsigndiscussionX(Integer iEzsigndiscussionX) {
+    this.iEzsigndiscussionX = iEzsigndiscussionX;
+  }
+
+
+  public EzsigndiscussionRequestCompound iEzsigndiscussionY(Integer iEzsigndiscussionY) {
+    this.iEzsigndiscussionY = iEzsigndiscussionY;
+    return this;
+  }
+
+  /**
+   * The y of the Ezsigndiscussion
+   * minimum: 0
+   * maximum: 65535
+   * @return iEzsigndiscussionY
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndiscussionY() {
+    return iEzsigndiscussionY;
+  }
+
+  public void setiEzsigndiscussionY(Integer iEzsigndiscussionY) {
+    this.iEzsigndiscussionY = iEzsigndiscussionY;
+  }
+
+
+  public EzsigndiscussionRequestCompound objDiscussion(DiscussionRequest objDiscussion) {
+    this.objDiscussion = objDiscussion;
+    return this;
+  }
+
+  /**
+   * Get objDiscussion
+   * @return objDiscussion
+   */
+  @javax.annotation.Nonnull
+  public DiscussionRequest getObjDiscussion() {
+    return objDiscussion;
+  }
+
+  public void setObjDiscussion(DiscussionRequest objDiscussion) {
+    this.objDiscussion = objDiscussion;
+  }
+
 
 
   @Override
@@ -64,19 +208,30 @@ public class EzsigndiscussionRequestCompound extends EzsigndiscussionRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    EzsigndiscussionRequestCompound ezsigndiscussionRequestCompound = (EzsigndiscussionRequestCompound) o;
+    return Objects.equals(this.pkiEzsigndiscussionID, ezsigndiscussionRequestCompound.pkiEzsigndiscussionID) &&
+        Objects.equals(this.fkiEzsigndocumentID, ezsigndiscussionRequestCompound.fkiEzsigndocumentID) &&
+        Objects.equals(this.iEzsigndiscussionPagenumber, ezsigndiscussionRequestCompound.iEzsigndiscussionPagenumber) &&
+        Objects.equals(this.iEzsigndiscussionX, ezsigndiscussionRequestCompound.iEzsigndiscussionX) &&
+        Objects.equals(this.iEzsigndiscussionY, ezsigndiscussionRequestCompound.iEzsigndiscussionY) &&
+        Objects.equals(this.objDiscussion, ezsigndiscussionRequestCompound.objDiscussion);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiEzsigndiscussionID, fkiEzsigndocumentID, iEzsigndiscussionPagenumber, iEzsigndiscussionX, iEzsigndiscussionY, objDiscussion);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndiscussionRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsigndiscussionID: ").append(toIndentedString(pkiEzsigndiscussionID)).append("\n");
+    sb.append("    fkiEzsigndocumentID: ").append(toIndentedString(fkiEzsigndocumentID)).append("\n");
+    sb.append("    iEzsigndiscussionPagenumber: ").append(toIndentedString(iEzsigndiscussionPagenumber)).append("\n");
+    sb.append("    iEzsigndiscussionX: ").append(toIndentedString(iEzsigndiscussionX)).append("\n");
+    sb.append("    iEzsigndiscussionY: ").append(toIndentedString(iEzsigndiscussionY)).append("\n");
+    sb.append("    objDiscussion: ").append(toIndentedString(objDiscussion)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -142,6 +297,9 @@ public class EzsigndiscussionRequestCompound extends EzsigndiscussionRequest {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objDiscussion`
+      DiscussionRequest.validateJsonElement(jsonObj.get("objDiscussion"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

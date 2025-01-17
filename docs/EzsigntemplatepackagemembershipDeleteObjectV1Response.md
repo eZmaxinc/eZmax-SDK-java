@@ -8,6 +8,8 @@ Response for DELETE /1/object/ezsigntemplatepackagemembership/{pkiEzsigntemplate
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

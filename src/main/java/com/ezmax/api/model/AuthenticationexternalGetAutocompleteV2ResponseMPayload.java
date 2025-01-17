@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/authenticationexternal/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AuthenticationexternalGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_AUTHENTICATIONEXTERNAL = "a_objAuthenticationexternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_AUTHENTICATIONEXTERNAL)
-  @javax.annotation.Nonnull
   private List<AuthenticationexternalAutocompleteElementResponse> aObjAuthenticationexternal = new ArrayList<>();
 
   public AuthenticationexternalGetAutocompleteV2ResponseMPayload() {
   }
 
-  public AuthenticationexternalGetAutocompleteV2ResponseMPayload aObjAuthenticationexternal(@javax.annotation.Nonnull List<AuthenticationexternalAutocompleteElementResponse> aObjAuthenticationexternal) {
+  public AuthenticationexternalGetAutocompleteV2ResponseMPayload aObjAuthenticationexternal(List<AuthenticationexternalAutocompleteElementResponse> aObjAuthenticationexternal) {
     this.aObjAuthenticationexternal = aObjAuthenticationexternal;
     return this;
   }
@@ -83,7 +82,7 @@ public class AuthenticationexternalGetAutocompleteV2ResponseMPayload {
     return aObjAuthenticationexternal;
   }
 
-  public void setaObjAuthenticationexternal(@javax.annotation.Nonnull List<AuthenticationexternalAutocompleteElementResponse> aObjAuthenticationexternal) {
+  public void setaObjAuthenticationexternal(List<AuthenticationexternalAutocompleteElementResponse> aObjAuthenticationexternal) {
     this.aObjAuthenticationexternal = aObjAuthenticationexternal;
   }
 

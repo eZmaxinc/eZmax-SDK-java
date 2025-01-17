@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.ActivesessionListElement;
-import com.ezmax.api.model.CommonGetListV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class ActivesessionGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class ActivesessionGetListV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
+  @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  private Integer iRowReturned;
+
+  public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
+  @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  private Integer iRowFiltered;
+
   public static final String SERIALIZED_NAME_A_OBJ_ACTIVESESSION = "a_objActivesession";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ACTIVESESSION)
-  @javax.annotation.Nonnull
   private List<ActivesessionListElement> aObjActivesession = new ArrayList<>();
 
   public ActivesessionGetListV1ResponseMPayload() {
   }
 
-  public ActivesessionGetListV1ResponseMPayload aObjActivesession(@javax.annotation.Nonnull List<ActivesessionListElement> aObjActivesession) {
+  public ActivesessionGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+    return this;
+  }
+
+  /**
+   * The number of rows returned
+   * @return iRowReturned
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowReturned() {
+    return iRowReturned;
+  }
+
+  public void setiRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+  }
+
+
+  public ActivesessionGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+    return this;
+  }
+
+  /**
+   * The number of rows matching your filters (if any) or the total number of rows
+   * @return iRowFiltered
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowFiltered() {
+    return iRowFiltered;
+  }
+
+  public void setiRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+  }
+
+
+  public ActivesessionGetListV1ResponseMPayload aObjActivesession(List<ActivesessionListElement> aObjActivesession) {
     this.aObjActivesession = aObjActivesession;
     return this;
   }
@@ -84,7 +128,7 @@ public class ActivesessionGetListV1ResponseMPayload extends CommonGetListV1Respo
     return aObjActivesession;
   }
 
-  public void setaObjActivesession(@javax.annotation.Nonnull List<ActivesessionListElement> aObjActivesession) {
+  public void setaObjActivesession(List<ActivesessionListElement> aObjActivesession) {
     this.aObjActivesession = aObjActivesession;
   }
 
@@ -99,20 +143,22 @@ public class ActivesessionGetListV1ResponseMPayload extends CommonGetListV1Respo
       return false;
     }
     ActivesessionGetListV1ResponseMPayload activesessionGetListV1ResponseMPayload = (ActivesessionGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjActivesession, activesessionGetListV1ResponseMPayload.aObjActivesession) &&
-        super.equals(o);
+    return Objects.equals(this.iRowReturned, activesessionGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, activesessionGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjActivesession, activesessionGetListV1ResponseMPayload.aObjActivesession);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjActivesession, super.hashCode());
+    return Objects.hash(iRowReturned, iRowFiltered, aObjActivesession);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ActivesessionGetListV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
+    sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
     sb.append("    aObjActivesession: ").append(toIndentedString(aObjActivesession)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -142,9 +188,9 @@ public class ActivesessionGetListV1ResponseMPayload extends CommonGetListV1Respo
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objActivesession");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objActivesession");
   }
 
   /**

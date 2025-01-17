@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * An Attempt object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AttemptResponseCompound {
   public static final String SERIALIZED_NAME_DT_ATTEMPT_START = "dtAttemptStart";
   @SerializedName(SERIALIZED_NAME_DT_ATTEMPT_START)
-  @javax.annotation.Nonnull
   private String dtAttemptStart;
 
   public static final String SERIALIZED_NAME_S_ATTEMPT_RESULT = "sAttemptResult";
   @SerializedName(SERIALIZED_NAME_S_ATTEMPT_RESULT)
-  @javax.annotation.Nonnull
   private String sAttemptResult;
 
   public static final String SERIALIZED_NAME_I_ATTEMPT_DURATION = "iAttemptDuration";
   @SerializedName(SERIALIZED_NAME_I_ATTEMPT_DURATION)
-  @javax.annotation.Nonnull
   private Integer iAttemptDuration;
 
   public AttemptResponseCompound() {
   }
 
-  public AttemptResponseCompound dtAttemptStart(@javax.annotation.Nonnull String dtAttemptStart) {
+  public AttemptResponseCompound dtAttemptStart(String dtAttemptStart) {
     this.dtAttemptStart = dtAttemptStart;
     return this;
   }
@@ -82,12 +79,12 @@ public class AttemptResponseCompound {
     return dtAttemptStart;
   }
 
-  public void setDtAttemptStart(@javax.annotation.Nonnull String dtAttemptStart) {
+  public void setDtAttemptStart(String dtAttemptStart) {
     this.dtAttemptStart = dtAttemptStart;
   }
 
 
-  public AttemptResponseCompound sAttemptResult(@javax.annotation.Nonnull String sAttemptResult) {
+  public AttemptResponseCompound sAttemptResult(String sAttemptResult) {
     this.sAttemptResult = sAttemptResult;
     return this;
   }
@@ -101,12 +98,12 @@ public class AttemptResponseCompound {
     return sAttemptResult;
   }
 
-  public void setsAttemptResult(@javax.annotation.Nonnull String sAttemptResult) {
+  public void setsAttemptResult(String sAttemptResult) {
     this.sAttemptResult = sAttemptResult;
   }
 
 
-  public AttemptResponseCompound iAttemptDuration(@javax.annotation.Nonnull Integer iAttemptDuration) {
+  public AttemptResponseCompound iAttemptDuration(Integer iAttemptDuration) {
     this.iAttemptDuration = iAttemptDuration;
     return this;
   }
@@ -120,7 +117,7 @@ public class AttemptResponseCompound {
     return iAttemptDuration;
   }
 
-  public void setiAttemptDuration(@javax.annotation.Nonnull Integer iAttemptDuration) {
+  public void setiAttemptDuration(Integer iAttemptDuration) {
     this.iAttemptDuration = iAttemptDuration;
   }
 

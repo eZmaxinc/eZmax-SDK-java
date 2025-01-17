@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Ezdoctemplatetype AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzdoctemplatetypeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_EZDOCTEMPLATETYPE_I_D = "pkiEzdoctemplatetypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZDOCTEMPLATETYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzdoctemplatetypeID;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATETYPE_DESCRIPTION_X = "sEzdoctemplatetypeDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATETYPE_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sEzdoctemplatetypeDescriptionX;
 
   public static final String SERIALIZED_NAME_B_EZDOCTEMPLATETYPE_ISACTIVE = "bEzdoctemplatetypeIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZDOCTEMPLATETYPE_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bEzdoctemplatetypeIsactive;
 
   public EzdoctemplatetypeAutocompleteElementResponse() {
   }
 
-  public EzdoctemplatetypeAutocompleteElementResponse pkiEzdoctemplatetypeID(@javax.annotation.Nonnull Integer pkiEzdoctemplatetypeID) {
+  public EzdoctemplatetypeAutocompleteElementResponse pkiEzdoctemplatetypeID(Integer pkiEzdoctemplatetypeID) {
     this.pkiEzdoctemplatetypeID = pkiEzdoctemplatetypeID;
     return this;
   }
@@ -84,12 +81,12 @@ public class EzdoctemplatetypeAutocompleteElementResponse {
     return pkiEzdoctemplatetypeID;
   }
 
-  public void setPkiEzdoctemplatetypeID(@javax.annotation.Nonnull Integer pkiEzdoctemplatetypeID) {
+  public void setPkiEzdoctemplatetypeID(Integer pkiEzdoctemplatetypeID) {
     this.pkiEzdoctemplatetypeID = pkiEzdoctemplatetypeID;
   }
 
 
-  public EzdoctemplatetypeAutocompleteElementResponse sEzdoctemplatetypeDescriptionX(@javax.annotation.Nonnull String sEzdoctemplatetypeDescriptionX) {
+  public EzdoctemplatetypeAutocompleteElementResponse sEzdoctemplatetypeDescriptionX(String sEzdoctemplatetypeDescriptionX) {
     this.sEzdoctemplatetypeDescriptionX = sEzdoctemplatetypeDescriptionX;
     return this;
   }
@@ -103,12 +100,12 @@ public class EzdoctemplatetypeAutocompleteElementResponse {
     return sEzdoctemplatetypeDescriptionX;
   }
 
-  public void setsEzdoctemplatetypeDescriptionX(@javax.annotation.Nonnull String sEzdoctemplatetypeDescriptionX) {
+  public void setsEzdoctemplatetypeDescriptionX(String sEzdoctemplatetypeDescriptionX) {
     this.sEzdoctemplatetypeDescriptionX = sEzdoctemplatetypeDescriptionX;
   }
 
 
-  public EzdoctemplatetypeAutocompleteElementResponse bEzdoctemplatetypeIsactive(@javax.annotation.Nonnull Boolean bEzdoctemplatetypeIsactive) {
+  public EzdoctemplatetypeAutocompleteElementResponse bEzdoctemplatetypeIsactive(Boolean bEzdoctemplatetypeIsactive) {
     this.bEzdoctemplatetypeIsactive = bEzdoctemplatetypeIsactive;
     return this;
   }
@@ -122,7 +119,7 @@ public class EzdoctemplatetypeAutocompleteElementResponse {
     return bEzdoctemplatetypeIsactive;
   }
 
-  public void setbEzdoctemplatetypeIsactive(@javax.annotation.Nonnull Boolean bEzdoctemplatetypeIsactive) {
+  public void setbEzdoctemplatetypeIsactive(Boolean bEzdoctemplatetypeIsactive) {
     this.bEzdoctemplatetypeIsactive = bEzdoctemplatetypeIsactive;
   }
 

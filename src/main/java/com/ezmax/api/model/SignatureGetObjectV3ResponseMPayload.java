@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /3/object/signature/{pkiSignatureID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SignatureGetObjectV3ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_SIGNATURE = "objSignature";
   @SerializedName(SERIALIZED_NAME_OBJ_SIGNATURE)
-  @javax.annotation.Nonnull
   private SignatureResponseCompoundV3 objSignature;
 
   public SignatureGetObjectV3ResponseMPayload() {
   }
 
-  public SignatureGetObjectV3ResponseMPayload objSignature(@javax.annotation.Nonnull SignatureResponseCompoundV3 objSignature) {
+  public SignatureGetObjectV3ResponseMPayload objSignature(SignatureResponseCompoundV3 objSignature) {
     this.objSignature = objSignature;
     return this;
   }
@@ -73,7 +72,7 @@ public class SignatureGetObjectV3ResponseMPayload {
     return objSignature;
   }
 
-  public void setObjSignature(@javax.annotation.Nonnull SignatureResponseCompoundV3 objSignature) {
+  public void setObjSignature(SignatureResponseCompoundV3 objSignature) {
     this.objSignature = objSignature;
   }
 

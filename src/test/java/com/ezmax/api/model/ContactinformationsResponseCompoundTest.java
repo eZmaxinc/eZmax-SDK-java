@@ -13,12 +13,11 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.AddressResponse;
-import com.ezmax.api.model.ContactinformationsResponse;
-import com.ezmax.api.model.EmailResponse;
+import com.ezmax.api.model.AddressResponseCompound;
+import com.ezmax.api.model.EmailResponseCompound;
 import com.ezmax.api.model.FieldEContactinformationsType;
 import com.ezmax.api.model.PhoneResponseCompound;
-import com.ezmax.api.model.WebsiteResponse;
+import com.ezmax.api.model.WebsiteResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

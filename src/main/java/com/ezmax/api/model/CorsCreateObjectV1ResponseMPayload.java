@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/cors
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CorsCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_CORS_I_D = "a_pkiCorsID";
   @SerializedName(SERIALIZED_NAME_A_PKI_CORS_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiCorsID = new ArrayList<>();
 
   public CorsCreateObjectV1ResponseMPayload() {
   }
 
-  public CorsCreateObjectV1ResponseMPayload aPkiCorsID(@javax.annotation.Nonnull List<Integer> aPkiCorsID) {
+  public CorsCreateObjectV1ResponseMPayload aPkiCorsID(List<Integer> aPkiCorsID) {
     this.aPkiCorsID = aPkiCorsID;
     return this;
   }
@@ -82,7 +81,7 @@ public class CorsCreateObjectV1ResponseMPayload {
     return aPkiCorsID;
   }
 
-  public void setaPkiCorsID(@javax.annotation.Nonnull List<Integer> aPkiCorsID) {
+  public void setaPkiCorsID(List<Integer> aPkiCorsID) {
     this.aPkiCorsID = aPkiCorsID;
   }
 

@@ -48,47 +48,40 @@ import eZmaxAPI.JSON;
 /**
  * A Discussionmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DiscussionmembershipResponse {
   public static final String SERIALIZED_NAME_PKI_DISCUSSIONMEMBERSHIP_I_D = "pkiDiscussionmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSIONMEMBERSHIP_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiDiscussionmembershipID;
 
   public static final String SERIALIZED_NAME_FKI_DISCUSSION_I_D = "fkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_FKI_DISCUSSION_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiDiscussionID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUsergroupID;
 
   public static final String SERIALIZED_NAME_FKI_MODULESECTION_I_D = "fkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_FKI_MODULESECTION_I_D)
-  @javax.annotation.Nullable
   private Integer fkiModulesectionID;
 
   public static final String SERIALIZED_NAME_S_DISCUSSIONMEMBERSHIP_DESCRIPTION = "sDiscussionmembershipDescription";
   @SerializedName(SERIALIZED_NAME_S_DISCUSSIONMEMBERSHIP_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sDiscussionmembershipDescription;
 
   public static final String SERIALIZED_NAME_DT_DISCUSSIONMEMBERSHIP_JOINED = "dtDiscussionmembershipJoined";
   @SerializedName(SERIALIZED_NAME_DT_DISCUSSIONMEMBERSHIP_JOINED)
-  @javax.annotation.Nonnull
   private String dtDiscussionmembershipJoined;
 
   public DiscussionmembershipResponse() {
   }
 
-  public DiscussionmembershipResponse pkiDiscussionmembershipID(@javax.annotation.Nonnull Integer pkiDiscussionmembershipID) {
+  public DiscussionmembershipResponse pkiDiscussionmembershipID(Integer pkiDiscussionmembershipID) {
     this.pkiDiscussionmembershipID = pkiDiscussionmembershipID;
     return this;
   }
@@ -104,12 +97,12 @@ public class DiscussionmembershipResponse {
     return pkiDiscussionmembershipID;
   }
 
-  public void setPkiDiscussionmembershipID(@javax.annotation.Nonnull Integer pkiDiscussionmembershipID) {
+  public void setPkiDiscussionmembershipID(Integer pkiDiscussionmembershipID) {
     this.pkiDiscussionmembershipID = pkiDiscussionmembershipID;
   }
 
 
-  public DiscussionmembershipResponse fkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
+  public DiscussionmembershipResponse fkiDiscussionID(Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
     return this;
   }
@@ -125,12 +118,12 @@ public class DiscussionmembershipResponse {
     return fkiDiscussionID;
   }
 
-  public void setFkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
+  public void setFkiDiscussionID(Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
   }
 
 
-  public DiscussionmembershipResponse fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public DiscussionmembershipResponse fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -145,12 +138,12 @@ public class DiscussionmembershipResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public DiscussionmembershipResponse fkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
+  public DiscussionmembershipResponse fkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -166,12 +159,12 @@ public class DiscussionmembershipResponse {
     return fkiUsergroupID;
   }
 
-  public void setFkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
+  public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
-  public DiscussionmembershipResponse fkiModulesectionID(@javax.annotation.Nullable Integer fkiModulesectionID) {
+  public DiscussionmembershipResponse fkiModulesectionID(Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
     return this;
   }
@@ -186,12 +179,12 @@ public class DiscussionmembershipResponse {
     return fkiModulesectionID;
   }
 
-  public void setFkiModulesectionID(@javax.annotation.Nullable Integer fkiModulesectionID) {
+  public void setFkiModulesectionID(Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
   }
 
 
-  public DiscussionmembershipResponse sDiscussionmembershipDescription(@javax.annotation.Nonnull String sDiscussionmembershipDescription) {
+  public DiscussionmembershipResponse sDiscussionmembershipDescription(String sDiscussionmembershipDescription) {
     this.sDiscussionmembershipDescription = sDiscussionmembershipDescription;
     return this;
   }
@@ -205,12 +198,12 @@ public class DiscussionmembershipResponse {
     return sDiscussionmembershipDescription;
   }
 
-  public void setsDiscussionmembershipDescription(@javax.annotation.Nonnull String sDiscussionmembershipDescription) {
+  public void setsDiscussionmembershipDescription(String sDiscussionmembershipDescription) {
     this.sDiscussionmembershipDescription = sDiscussionmembershipDescription;
   }
 
 
-  public DiscussionmembershipResponse dtDiscussionmembershipJoined(@javax.annotation.Nonnull String dtDiscussionmembershipJoined) {
+  public DiscussionmembershipResponse dtDiscussionmembershipJoined(String dtDiscussionmembershipJoined) {
     this.dtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
     return this;
   }
@@ -224,7 +217,7 @@ public class DiscussionmembershipResponse {
     return dtDiscussionmembershipJoined;
   }
 
-  public void setDtDiscussionmembershipJoined(@javax.annotation.Nonnull String dtDiscussionmembershipJoined) {
+  public void setDtDiscussionmembershipJoined(String dtDiscussionmembershipJoined) {
     this.dtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
   }
 
@@ -314,6 +307,21 @@ public class DiscussionmembershipResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in DiscussionmembershipResponse is not found in the empty JSON string", DiscussionmembershipResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!DiscussionmembershipResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DiscussionmembershipResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : DiscussionmembershipResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sDiscussionmembershipDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sDiscussionmembershipDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDiscussionmembershipDescription").toString()));
@@ -323,6 +331,34 @@ public class DiscussionmembershipResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!DiscussionmembershipResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'DiscussionmembershipResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<DiscussionmembershipResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(DiscussionmembershipResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<DiscussionmembershipResponse>() {
+           @Override
+           public void write(JsonWriter out, DiscussionmembershipResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public DiscussionmembershipResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of DiscussionmembershipResponse given an JSON string

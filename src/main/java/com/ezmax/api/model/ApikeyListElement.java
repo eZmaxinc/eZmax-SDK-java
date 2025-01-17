@@ -48,42 +48,36 @@ import eZmaxAPI.JSON;
 /**
  * A Branding List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ApikeyListElement {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiApikeyID;
 
   public static final String SERIALIZED_NAME_S_APIKEY_DESCRIPTION_X = "sApikeyDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_APIKEY_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sApikeyDescriptionX;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
-  @javax.annotation.Nonnull
   private String sUserFirstname;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
-  @javax.annotation.Nonnull
   private String sUserLastname;
 
   public static final String SERIALIZED_NAME_B_APIKEY_ISACTIVE = "bApikeyIsactive";
   @SerializedName(SERIALIZED_NAME_B_APIKEY_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bApikeyIsactive;
 
   public static final String SERIALIZED_NAME_B_APIKEY_ISSIGNED = "bApikeyIssigned";
   @SerializedName(SERIALIZED_NAME_B_APIKEY_ISSIGNED)
-  @javax.annotation.Nonnull
   private Boolean bApikeyIssigned;
 
   public ApikeyListElement() {
   }
 
-  public ApikeyListElement pkiApikeyID(@javax.annotation.Nonnull Integer pkiApikeyID) {
+  public ApikeyListElement pkiApikeyID(Integer pkiApikeyID) {
     this.pkiApikeyID = pkiApikeyID;
     return this;
   }
@@ -98,12 +92,12 @@ public class ApikeyListElement {
     return pkiApikeyID;
   }
 
-  public void setPkiApikeyID(@javax.annotation.Nonnull Integer pkiApikeyID) {
+  public void setPkiApikeyID(Integer pkiApikeyID) {
     this.pkiApikeyID = pkiApikeyID;
   }
 
 
-  public ApikeyListElement sApikeyDescriptionX(@javax.annotation.Nonnull String sApikeyDescriptionX) {
+  public ApikeyListElement sApikeyDescriptionX(String sApikeyDescriptionX) {
     this.sApikeyDescriptionX = sApikeyDescriptionX;
     return this;
   }
@@ -117,12 +111,12 @@ public class ApikeyListElement {
     return sApikeyDescriptionX;
   }
 
-  public void setsApikeyDescriptionX(@javax.annotation.Nonnull String sApikeyDescriptionX) {
+  public void setsApikeyDescriptionX(String sApikeyDescriptionX) {
     this.sApikeyDescriptionX = sApikeyDescriptionX;
   }
 
 
-  public ApikeyListElement sUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
+  public ApikeyListElement sUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -136,12 +130,12 @@ public class ApikeyListElement {
     return sUserFirstname;
   }
 
-  public void setsUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
+  public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
-  public ApikeyListElement sUserLastname(@javax.annotation.Nonnull String sUserLastname) {
+  public ApikeyListElement sUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -155,12 +149,12 @@ public class ApikeyListElement {
     return sUserLastname;
   }
 
-  public void setsUserLastname(@javax.annotation.Nonnull String sUserLastname) {
+  public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
-  public ApikeyListElement bApikeyIsactive(@javax.annotation.Nonnull Boolean bApikeyIsactive) {
+  public ApikeyListElement bApikeyIsactive(Boolean bApikeyIsactive) {
     this.bApikeyIsactive = bApikeyIsactive;
     return this;
   }
@@ -174,12 +168,12 @@ public class ApikeyListElement {
     return bApikeyIsactive;
   }
 
-  public void setbApikeyIsactive(@javax.annotation.Nonnull Boolean bApikeyIsactive) {
+  public void setbApikeyIsactive(Boolean bApikeyIsactive) {
     this.bApikeyIsactive = bApikeyIsactive;
   }
 
 
-  public ApikeyListElement bApikeyIssigned(@javax.annotation.Nonnull Boolean bApikeyIssigned) {
+  public ApikeyListElement bApikeyIssigned(Boolean bApikeyIssigned) {
     this.bApikeyIssigned = bApikeyIssigned;
     return this;
   }
@@ -193,7 +187,7 @@ public class ApikeyListElement {
     return bApikeyIssigned;
   }
 
-  public void setbApikeyIssigned(@javax.annotation.Nonnull Boolean bApikeyIssigned) {
+  public void setbApikeyIssigned(Boolean bApikeyIssigned) {
     this.bApikeyIssigned = bApikeyIssigned;
   }
 

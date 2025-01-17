@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagemembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackagemembershipRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D = "pkiEzsigntemplatepackagemembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzsigntemplatepackagemembershipID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplatepackageID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplateID;
 
   public EzsigntemplatepackagemembershipRequest() {
   }
 
-  public EzsigntemplatepackagemembershipRequest pkiEzsigntemplatepackagemembershipID(@javax.annotation.Nullable Integer pkiEzsigntemplatepackagemembershipID) {
+  public EzsigntemplatepackagemembershipRequest pkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
     this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
     return this;
   }
@@ -83,12 +80,12 @@ public class EzsigntemplatepackagemembershipRequest {
     return pkiEzsigntemplatepackagemembershipID;
   }
 
-  public void setPkiEzsigntemplatepackagemembershipID(@javax.annotation.Nullable Integer pkiEzsigntemplatepackagemembershipID) {
+  public void setPkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
     this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
   }
 
 
-  public EzsigntemplatepackagemembershipRequest fkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackageID) {
+  public EzsigntemplatepackagemembershipRequest fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -103,12 +100,12 @@ public class EzsigntemplatepackagemembershipRequest {
     return fkiEzsigntemplatepackageID;
   }
 
-  public void setFkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackageID) {
+  public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
-  public EzsigntemplatepackagemembershipRequest fkiEzsigntemplateID(@javax.annotation.Nonnull Integer fkiEzsigntemplateID) {
+  public EzsigntemplatepackagemembershipRequest fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -123,7 +120,7 @@ public class EzsigntemplatepackagemembershipRequest {
     return fkiEzsigntemplateID;
   }
 
-  public void setFkiEzsigntemplateID(@javax.annotation.Nonnull Integer fkiEzsigntemplateID) {
+  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
@@ -199,9 +196,52 @@ public class EzsigntemplatepackagemembershipRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigntemplatepackagemembershipRequest is not found in the empty JSON string", EzsigntemplatepackagemembershipRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsigntemplatepackagemembershipRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigntemplatepackagemembershipRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsigntemplatepackagemembershipRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsigntemplatepackagemembershipRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsigntemplatepackagemembershipRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsigntemplatepackagemembershipRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsigntemplatepackagemembershipRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsigntemplatepackagemembershipRequest>() {
+           @Override
+           public void write(JsonWriter out, EzsigntemplatepackagemembershipRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsigntemplatepackagemembershipRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsigntemplatepackagemembershipRequest given an JSON string

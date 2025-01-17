@@ -14,7 +14,6 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -25,6 +24,7 @@ import com.ezmax.api.model.UserCreateObjectV2Response;
 import com.ezmax.api.model.UserEditColleaguesV2Request;
 import com.ezmax.api.model.UserEditColleaguesV2Response;
 import com.ezmax.api.model.UserEditObjectV1Request;
+import com.ezmax.api.model.UserEditObjectV1Response;
 import com.ezmax.api.model.UserEditPermissionsV1Request;
 import com.ezmax.api.model.UserEditPermissionsV1Response;
 import com.ezmax.api.model.UserGetApikeysV1Response;
@@ -37,6 +37,7 @@ import com.ezmax.api.model.UserGetPermissionsV1Response;
 import com.ezmax.api.model.UserGetSubnetsV1Response;
 import com.ezmax.api.model.UserGetUsergroupexternalsV1Response;
 import com.ezmax.api.model.UserGetUsergroupsV1Response;
+import com.ezmax.api.model.UserSendPasswordResetV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -107,7 +108,7 @@ public class ObjectUserApiTest {
     public void userEditObjectV1Test() throws ApiException {
         Integer pkiUserID = null;
         UserEditObjectV1Request userEditObjectV1Request = null;
-        CommonResponse response = api.userEditObjectV1(pkiUserID, userEditObjectV1Request);
+        UserEditObjectV1Response response = api.userEditObjectV1(pkiUserID, userEditObjectV1Request);
         // TODO: test validations
     }
 
@@ -272,7 +273,7 @@ public class ObjectUserApiTest {
     public void userSendPasswordResetV1Test() throws ApiException {
         Integer pkiUserID = null;
         Object body = null;
-        CommonResponse response = api.userSendPasswordResetV1(pkiUserID, body);
+        UserSendPasswordResetV1Response response = api.userSendPasswordResetV1(pkiUserID, body);
         // TODO: test validations
     }
 

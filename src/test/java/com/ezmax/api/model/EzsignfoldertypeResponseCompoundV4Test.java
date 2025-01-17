@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
-import com.ezmax.api.model.EzsignfoldertypeResponseV4;
 import com.ezmax.api.model.FieldEEzsignfoldertypeCompletion;
 import com.ezmax.api.model.FieldEEzsignfoldertypeDisposal;
 import com.ezmax.api.model.FieldEEzsignfoldertypeDocumentdependency;

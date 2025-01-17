@@ -13,7 +13,6 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CustomCreditcardtransactionresponseResponse;
 import com.ezmax.api.model.FieldEErrorCode;
 import com.google.gson.TypeAdapter;

@@ -51,47 +51,40 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PaymenttermResponse {
   public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiPaymenttermID;
 
   public static final String SERIALIZED_NAME_S_PAYMENTTERM_CODE = "sPaymenttermCode";
   @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_CODE)
-  @javax.annotation.Nonnull
   private String sPaymenttermCode;
 
   public static final String SERIALIZED_NAME_E_PAYMENTTERM_TYPE = "ePaymenttermType";
   @SerializedName(SERIALIZED_NAME_E_PAYMENTTERM_TYPE)
-  @javax.annotation.Nonnull
   private FieldEPaymenttermType ePaymenttermType;
 
   public static final String SERIALIZED_NAME_I_PAYMENTTERM_DAY = "iPaymenttermDay";
   @SerializedName(SERIALIZED_NAME_I_PAYMENTTERM_DAY)
-  @javax.annotation.Nonnull
   private Integer iPaymenttermDay;
 
   public static final String SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION = "objPaymenttermDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualPaymenttermDescription objPaymenttermDescription;
 
   public static final String SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE = "bPaymenttermIsactive";
   @SerializedName(SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bPaymenttermIsactive;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nonnull
   private CommonAudit objAudit;
 
   public PaymenttermResponse() {
   }
 
-  public PaymenttermResponse pkiPaymenttermID(@javax.annotation.Nonnull Integer pkiPaymenttermID) {
+  public PaymenttermResponse pkiPaymenttermID(Integer pkiPaymenttermID) {
     this.pkiPaymenttermID = pkiPaymenttermID;
     return this;
   }
@@ -105,12 +98,12 @@ public class PaymenttermResponse {
     return pkiPaymenttermID;
   }
 
-  public void setPkiPaymenttermID(@javax.annotation.Nonnull Integer pkiPaymenttermID) {
+  public void setPkiPaymenttermID(Integer pkiPaymenttermID) {
     this.pkiPaymenttermID = pkiPaymenttermID;
   }
 
 
-  public PaymenttermResponse sPaymenttermCode(@javax.annotation.Nonnull String sPaymenttermCode) {
+  public PaymenttermResponse sPaymenttermCode(String sPaymenttermCode) {
     this.sPaymenttermCode = sPaymenttermCode;
     return this;
   }
@@ -124,12 +117,12 @@ public class PaymenttermResponse {
     return sPaymenttermCode;
   }
 
-  public void setsPaymenttermCode(@javax.annotation.Nonnull String sPaymenttermCode) {
+  public void setsPaymenttermCode(String sPaymenttermCode) {
     this.sPaymenttermCode = sPaymenttermCode;
   }
 
 
-  public PaymenttermResponse ePaymenttermType(@javax.annotation.Nonnull FieldEPaymenttermType ePaymenttermType) {
+  public PaymenttermResponse ePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
     this.ePaymenttermType = ePaymenttermType;
     return this;
   }
@@ -143,12 +136,12 @@ public class PaymenttermResponse {
     return ePaymenttermType;
   }
 
-  public void setePaymenttermType(@javax.annotation.Nonnull FieldEPaymenttermType ePaymenttermType) {
+  public void setePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
     this.ePaymenttermType = ePaymenttermType;
   }
 
 
-  public PaymenttermResponse iPaymenttermDay(@javax.annotation.Nonnull Integer iPaymenttermDay) {
+  public PaymenttermResponse iPaymenttermDay(Integer iPaymenttermDay) {
     this.iPaymenttermDay = iPaymenttermDay;
     return this;
   }
@@ -164,12 +157,12 @@ public class PaymenttermResponse {
     return iPaymenttermDay;
   }
 
-  public void setiPaymenttermDay(@javax.annotation.Nonnull Integer iPaymenttermDay) {
+  public void setiPaymenttermDay(Integer iPaymenttermDay) {
     this.iPaymenttermDay = iPaymenttermDay;
   }
 
 
-  public PaymenttermResponse objPaymenttermDescription(@javax.annotation.Nonnull MultilingualPaymenttermDescription objPaymenttermDescription) {
+  public PaymenttermResponse objPaymenttermDescription(MultilingualPaymenttermDescription objPaymenttermDescription) {
     this.objPaymenttermDescription = objPaymenttermDescription;
     return this;
   }
@@ -183,12 +176,12 @@ public class PaymenttermResponse {
     return objPaymenttermDescription;
   }
 
-  public void setObjPaymenttermDescription(@javax.annotation.Nonnull MultilingualPaymenttermDescription objPaymenttermDescription) {
+  public void setObjPaymenttermDescription(MultilingualPaymenttermDescription objPaymenttermDescription) {
     this.objPaymenttermDescription = objPaymenttermDescription;
   }
 
 
-  public PaymenttermResponse bPaymenttermIsactive(@javax.annotation.Nonnull Boolean bPaymenttermIsactive) {
+  public PaymenttermResponse bPaymenttermIsactive(Boolean bPaymenttermIsactive) {
     this.bPaymenttermIsactive = bPaymenttermIsactive;
     return this;
   }
@@ -202,12 +195,12 @@ public class PaymenttermResponse {
     return bPaymenttermIsactive;
   }
 
-  public void setbPaymenttermIsactive(@javax.annotation.Nonnull Boolean bPaymenttermIsactive) {
+  public void setbPaymenttermIsactive(Boolean bPaymenttermIsactive) {
     this.bPaymenttermIsactive = bPaymenttermIsactive;
   }
 
 
-  public PaymenttermResponse objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public PaymenttermResponse objAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -221,7 +214,7 @@ public class PaymenttermResponse {
     return objAudit;
   }
 
-  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
@@ -314,6 +307,21 @@ public class PaymenttermResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in PaymenttermResponse is not found in the empty JSON string", PaymenttermResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!PaymenttermResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PaymenttermResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : PaymenttermResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sPaymenttermCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sPaymenttermCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPaymenttermCode").toString()));
@@ -326,6 +334,34 @@ public class PaymenttermResponse {
       CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!PaymenttermResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'PaymenttermResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<PaymenttermResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(PaymenttermResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<PaymenttermResponse>() {
+           @Override
+           public void write(JsonWriter out, PaymenttermResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public PaymenttermResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of PaymenttermResponse given an JSON string

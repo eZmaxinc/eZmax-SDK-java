@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationrecipients
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderGetCommunicationrecipientsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONRECIPIENTSGROUP = "a_objCommunicationrecipientsgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONRECIPIENTSGROUP)
-  @javax.annotation.Nonnull
   private List<CustomCommunicationrecipientsgroupResponse> aObjCommunicationrecipientsgroup = new ArrayList<>();
 
   public EzsignfolderGetCommunicationrecipientsV1ResponseMPayload() {
   }
 
-  public EzsignfolderGetCommunicationrecipientsV1ResponseMPayload aObjCommunicationrecipientsgroup(@javax.annotation.Nonnull List<CustomCommunicationrecipientsgroupResponse> aObjCommunicationrecipientsgroup) {
+  public EzsignfolderGetCommunicationrecipientsV1ResponseMPayload aObjCommunicationrecipientsgroup(List<CustomCommunicationrecipientsgroupResponse> aObjCommunicationrecipientsgroup) {
     this.aObjCommunicationrecipientsgroup = aObjCommunicationrecipientsgroup;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsignfolderGetCommunicationrecipientsV1ResponseMPayload {
     return aObjCommunicationrecipientsgroup;
   }
 
-  public void setaObjCommunicationrecipientsgroup(@javax.annotation.Nonnull List<CustomCommunicationrecipientsgroupResponse> aObjCommunicationrecipientsgroup) {
+  public void setaObjCommunicationrecipientsgroup(List<CustomCommunicationrecipientsgroupResponse> aObjCommunicationrecipientsgroup) {
     this.aObjCommunicationrecipientsgroup = aObjCommunicationrecipientsgroup;
   }
 

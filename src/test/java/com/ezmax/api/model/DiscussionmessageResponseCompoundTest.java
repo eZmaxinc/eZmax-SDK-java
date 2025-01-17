@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
-import com.ezmax.api.model.DiscussionmessageResponse;
 import com.ezmax.api.model.FieldEDiscussionmessageStatus;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

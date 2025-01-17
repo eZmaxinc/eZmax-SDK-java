@@ -17,7 +17,6 @@ import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.ComputedEEzsigndocumentSteptype;
 import com.ezmax.api.model.CustomEzsignfoldersignerassociationstatusResponse;
-import com.ezmax.api.model.EzsigndocumentResponseCompound;
 import com.ezmax.api.model.EzsigndocumentdependencyResponse;
 import com.ezmax.api.model.FieldEEzsigndocumentStep;
 import com.google.gson.TypeAdapter;
@@ -56,10 +55,750 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigndocumentGetObjectV1ResponseMPayload extends EzsigndocumentResponseCompound {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsigndocumentGetObjectV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
+  private Integer pkiEzsigndocumentID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
+  private Integer fkiEzsignfolderID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D_DECLINEDTOSIGN = "fkiEzsignfoldersignerassociationIDDeclinedtosign";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D_DECLINEDTOSIGN)
+  private Integer fkiEzsignfoldersignerassociationIDDeclinedtosign;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE = "dtEzsigndocumentDuedate";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE)
+  private String dtEzsigndocumentDuedate;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNFORM_COMPLETED = "dtEzsignformCompleted";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFORM_COMPLETED)
+  private String dtEzsignformCompleted;
+
+  public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
+  @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  private Integer fkiLanguageID;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME = "sEzsigndocumentName";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME)
+  private String sEzsigndocumentName;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEP = "eEzsigndocumentStep";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEP)
+  private FieldEEzsigndocumentStep eEzsigndocumentStep;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_FIRSTSEND = "dtEzsigndocumentFirstsend";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_FIRSTSEND)
+  private String dtEzsigndocumentFirstsend;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_LASTSEND = "dtEzsigndocumentLastsend";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_LASTSEND)
+  private String dtEzsigndocumentLastsend;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_ORDER = "iEzsigndocumentOrder";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_ORDER)
+  private Integer iEzsigndocumentOrder;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_PAGETOTAL = "iEzsigndocumentPagetotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_PAGETOTAL)
+  private Integer iEzsigndocumentPagetotal;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_SIGNATURESIGNED = "iEzsigndocumentSignaturesigned";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_SIGNATURESIGNED)
+  private Integer iEzsigndocumentSignaturesigned;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_SIGNATURETOTAL = "iEzsigndocumentSignaturetotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_SIGNATURETOTAL)
+  private Integer iEzsigndocumentSignaturetotal;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_FORMFIELDTOTAL = "iEzsigndocumentFormfieldtotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_FORMFIELDTOTAL)
+  private Integer iEzsigndocumentFormfieldtotal;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_M_D5INITIAL = "sEzsigndocumentMD5initial";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_M_D5INITIAL)
+  private String sEzsigndocumentMD5initial;
+
+  public static final String SERIALIZED_NAME_T_EZSIGNDOCUMENT_DECLINEDTOSIGNREASON = "tEzsigndocumentDeclinedtosignreason";
+  @SerializedName(SERIALIZED_NAME_T_EZSIGNDOCUMENT_DECLINEDTOSIGNREASON)
+  private String tEzsigndocumentDeclinedtosignreason;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_M_D5SIGNED = "sEzsigndocumentMD5signed";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_M_D5SIGNED)
+  private String sEzsigndocumentMD5signed;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNDOCUMENT_EZSIGNFORM = "bEzsigndocumentEzsignform";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNDOCUMENT_EZSIGNFORM)
+  private Boolean bEzsigndocumentEzsignform;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNDOCUMENT_HASSIGNEDSIGNATURES = "bEzsigndocumentHassignedsignatures";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNDOCUMENT_HASSIGNEDSIGNATURES)
+  private Boolean bEzsigndocumentHassignedsignatures;
+
+  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
+  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  private CommonAudit objAudit;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_EXTERNALID = "sEzsigndocumentExternalid";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_EXTERNALID)
+  private String sEzsigndocumentExternalid;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNSIGNATUREATTACHMENTTOTAL = "iEzsigndocumentEzsignsignatureattachmenttotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNSIGNATUREATTACHMENTTOTAL)
+  private Integer iEzsigndocumentEzsignsignatureattachmenttotal;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNDISCUSSIONTOTAL = "iEzsigndocumentEzsigndiscussiontotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_EZSIGNDISCUSSIONTOTAL)
+  private Integer iEzsigndocumentEzsigndiscussiontotal;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEPTYPE = "eEzsigndocumentSteptype";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENT_STEPTYPE)
+  private ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL = "iEzsigndocumentStepformtotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMTOTAL)
+  private Integer iEzsigndocumentStepformtotal;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMCURRENT = "iEzsigndocumentStepformcurrent";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPFORMCURRENT)
+  private Integer iEzsigndocumentStepformcurrent;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURETOTAL = "iEzsigndocumentStepsignaturetotal";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURETOTAL)
+  private Integer iEzsigndocumentStepsignaturetotal;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURE_CURRENT = "iEzsigndocumentStepsignatureCurrent";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_STEPSIGNATURE_CURRENT)
+  private Integer iEzsigndocumentStepsignatureCurrent;
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS = "a_objEzsignfoldersignerassociationstatus";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS)
+  private List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENTDEPENDENCY = "a_objEzsigndocumentdependency";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENTDEPENDENCY)
+  private List<EzsigndocumentdependencyResponse> aObjEzsigndocumentdependency = new ArrayList<>();
+
   public EzsigndocumentGetObjectV1ResponseMPayload() {
   }
+
+  public EzsigndocumentGetObjectV1ResponseMPayload pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
+    this.pkiEzsigndocumentID = pkiEzsigndocumentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigndocument
+   * minimum: 0
+   * @return pkiEzsigndocumentID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiEzsigndocumentID() {
+    return pkiEzsigndocumentID;
+  }
+
+  public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
+    this.pkiEzsigndocumentID = pkiEzsigndocumentID;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload fkiEzsignfolderID(Integer fkiEzsignfolderID) {
+    this.fkiEzsignfolderID = fkiEzsignfolderID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignfolder
+   * minimum: 0
+   * @return fkiEzsignfolderID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsignfolderID() {
+    return fkiEzsignfolderID;
+  }
+
+  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
+    this.fkiEzsignfolderID = fkiEzsignfolderID;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload fkiEzsignfoldersignerassociationIDDeclinedtosign(Integer fkiEzsignfoldersignerassociationIDDeclinedtosign) {
+    this.fkiEzsignfoldersignerassociationIDDeclinedtosign = fkiEzsignfoldersignerassociationIDDeclinedtosign;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignfoldersignerassociation
+   * minimum: 0
+   * @return fkiEzsignfoldersignerassociationIDDeclinedtosign
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsignfoldersignerassociationIDDeclinedtosign() {
+    return fkiEzsignfoldersignerassociationIDDeclinedtosign;
+  }
+
+  public void setFkiEzsignfoldersignerassociationIDDeclinedtosign(Integer fkiEzsignfoldersignerassociationIDDeclinedtosign) {
+    this.fkiEzsignfoldersignerassociationIDDeclinedtosign = fkiEzsignfoldersignerassociationIDDeclinedtosign;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload dtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
+    this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
+    return this;
+  }
+
+  /**
+   * The maximum date and time at which the Ezsigndocument can be signed.
+   * @return dtEzsigndocumentDuedate
+   */
+  @javax.annotation.Nonnull
+  public String getDtEzsigndocumentDuedate() {
+    return dtEzsigndocumentDuedate;
+  }
+
+  public void setDtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
+    this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload dtEzsignformCompleted(String dtEzsignformCompleted) {
+    this.dtEzsignformCompleted = dtEzsignformCompleted;
+    return this;
+  }
+
+  /**
+   * The date and time at which the Ezsignform has been completed.
+   * @return dtEzsignformCompleted
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsignformCompleted() {
+    return dtEzsignformCompleted;
+  }
+
+  public void setDtEzsignformCompleted(String dtEzsignformCompleted) {
+    this.dtEzsignformCompleted = dtEzsignformCompleted;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload fkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+   * minimum: 1
+   * maximum: 2
+   * @return fkiLanguageID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiLanguageID() {
+    return fkiLanguageID;
+  }
+
+  public void setFkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload sEzsigndocumentName(String sEzsigndocumentName) {
+    this.sEzsigndocumentName = sEzsigndocumentName;
+    return this;
+  }
+
+  /**
+   * The name of the document that will be presented to Ezsignfoldersignerassociations
+   * @return sEzsigndocumentName
+   */
+  @javax.annotation.Nonnull
+  public String getsEzsigndocumentName() {
+    return sEzsigndocumentName;
+  }
+
+  public void setsEzsigndocumentName(String sEzsigndocumentName) {
+    this.sEzsigndocumentName = sEzsigndocumentName;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload eEzsigndocumentStep(FieldEEzsigndocumentStep eEzsigndocumentStep) {
+    this.eEzsigndocumentStep = eEzsigndocumentStep;
+    return this;
+  }
+
+  /**
+   * Get eEzsigndocumentStep
+   * @return eEzsigndocumentStep
+   */
+  @javax.annotation.Nonnull
+  public FieldEEzsigndocumentStep geteEzsigndocumentStep() {
+    return eEzsigndocumentStep;
+  }
+
+  public void seteEzsigndocumentStep(FieldEEzsigndocumentStep eEzsigndocumentStep) {
+    this.eEzsigndocumentStep = eEzsigndocumentStep;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload dtEzsigndocumentFirstsend(String dtEzsigndocumentFirstsend) {
+    this.dtEzsigndocumentFirstsend = dtEzsigndocumentFirstsend;
+    return this;
+  }
+
+  /**
+   * The date and time when the Ezsigndocument was first sent.
+   * @return dtEzsigndocumentFirstsend
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsigndocumentFirstsend() {
+    return dtEzsigndocumentFirstsend;
+  }
+
+  public void setDtEzsigndocumentFirstsend(String dtEzsigndocumentFirstsend) {
+    this.dtEzsigndocumentFirstsend = dtEzsigndocumentFirstsend;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload dtEzsigndocumentLastsend(String dtEzsigndocumentLastsend) {
+    this.dtEzsigndocumentLastsend = dtEzsigndocumentLastsend;
+    return this;
+  }
+
+  /**
+   * The date and time when the Ezsigndocument was sent the last time.
+   * @return dtEzsigndocumentLastsend
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsigndocumentLastsend() {
+    return dtEzsigndocumentLastsend;
+  }
+
+  public void setDtEzsigndocumentLastsend(String dtEzsigndocumentLastsend) {
+    this.dtEzsigndocumentLastsend = dtEzsigndocumentLastsend;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentOrder(Integer iEzsigndocumentOrder) {
+    this.iEzsigndocumentOrder = iEzsigndocumentOrder;
+    return this;
+  }
+
+  /**
+   * The order in which the Ezsigndocument will be presented to the signatory in the Ezsignfolder.
+   * minimum: 1
+   * @return iEzsigndocumentOrder
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentOrder() {
+    return iEzsigndocumentOrder;
+  }
+
+  public void setiEzsigndocumentOrder(Integer iEzsigndocumentOrder) {
+    this.iEzsigndocumentOrder = iEzsigndocumentOrder;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentPagetotal(Integer iEzsigndocumentPagetotal) {
+    this.iEzsigndocumentPagetotal = iEzsigndocumentPagetotal;
+    return this;
+  }
+
+  /**
+   * The number of pages in the Ezsigndocument.
+   * minimum: 1
+   * @return iEzsigndocumentPagetotal
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentPagetotal() {
+    return iEzsigndocumentPagetotal;
+  }
+
+  public void setiEzsigndocumentPagetotal(Integer iEzsigndocumentPagetotal) {
+    this.iEzsigndocumentPagetotal = iEzsigndocumentPagetotal;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentSignaturesigned(Integer iEzsigndocumentSignaturesigned) {
+    this.iEzsigndocumentSignaturesigned = iEzsigndocumentSignaturesigned;
+    return this;
+  }
+
+  /**
+   * The number of signatures that were signed in the document.
+   * minimum: 0
+   * @return iEzsigndocumentSignaturesigned
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentSignaturesigned() {
+    return iEzsigndocumentSignaturesigned;
+  }
+
+  public void setiEzsigndocumentSignaturesigned(Integer iEzsigndocumentSignaturesigned) {
+    this.iEzsigndocumentSignaturesigned = iEzsigndocumentSignaturesigned;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentSignaturetotal(Integer iEzsigndocumentSignaturetotal) {
+    this.iEzsigndocumentSignaturetotal = iEzsigndocumentSignaturetotal;
+    return this;
+  }
+
+  /**
+   * The number of total signatures that were requested in the Ezsigndocument.
+   * minimum: 0
+   * @return iEzsigndocumentSignaturetotal
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentSignaturetotal() {
+    return iEzsigndocumentSignaturetotal;
+  }
+
+  public void setiEzsigndocumentSignaturetotal(Integer iEzsigndocumentSignaturetotal) {
+    this.iEzsigndocumentSignaturetotal = iEzsigndocumentSignaturetotal;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentFormfieldtotal(Integer iEzsigndocumentFormfieldtotal) {
+    this.iEzsigndocumentFormfieldtotal = iEzsigndocumentFormfieldtotal;
+    return this;
+  }
+
+  /**
+   * The number of total Ezsignformfield that were requested in the Ezsigndocument.
+   * minimum: 0
+   * @return iEzsigndocumentFormfieldtotal
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentFormfieldtotal() {
+    return iEzsigndocumentFormfieldtotal;
+  }
+
+  public void setiEzsigndocumentFormfieldtotal(Integer iEzsigndocumentFormfieldtotal) {
+    this.iEzsigndocumentFormfieldtotal = iEzsigndocumentFormfieldtotal;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload sEzsigndocumentMD5initial(String sEzsigndocumentMD5initial) {
+    this.sEzsigndocumentMD5initial = sEzsigndocumentMD5initial;
+    return this;
+  }
+
+  /**
+   * MD5 Hash of the initial PDF Document before signatures were applied to it.
+   * @return sEzsigndocumentMD5initial
+   */
+  @javax.annotation.Nullable
+  public String getsEzsigndocumentMD5initial() {
+    return sEzsigndocumentMD5initial;
+  }
+
+  public void setsEzsigndocumentMD5initial(String sEzsigndocumentMD5initial) {
+    this.sEzsigndocumentMD5initial = sEzsigndocumentMD5initial;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload tEzsigndocumentDeclinedtosignreason(String tEzsigndocumentDeclinedtosignreason) {
+    this.tEzsigndocumentDeclinedtosignreason = tEzsigndocumentDeclinedtosignreason;
+    return this;
+  }
+
+  /**
+   * A custom text message that will contain the refusal message if the Ezsigndocument is declined to sign
+   * @return tEzsigndocumentDeclinedtosignreason
+   */
+  @javax.annotation.Nullable
+  public String gettEzsigndocumentDeclinedtosignreason() {
+    return tEzsigndocumentDeclinedtosignreason;
+  }
+
+  public void settEzsigndocumentDeclinedtosignreason(String tEzsigndocumentDeclinedtosignreason) {
+    this.tEzsigndocumentDeclinedtosignreason = tEzsigndocumentDeclinedtosignreason;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload sEzsigndocumentMD5signed(String sEzsigndocumentMD5signed) {
+    this.sEzsigndocumentMD5signed = sEzsigndocumentMD5signed;
+    return this;
+  }
+
+  /**
+   * MD5 Hash of the final PDF Document after all signatures were applied to it.
+   * @return sEzsigndocumentMD5signed
+   */
+  @javax.annotation.Nullable
+  public String getsEzsigndocumentMD5signed() {
+    return sEzsigndocumentMD5signed;
+  }
+
+  public void setsEzsigndocumentMD5signed(String sEzsigndocumentMD5signed) {
+    this.sEzsigndocumentMD5signed = sEzsigndocumentMD5signed;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload bEzsigndocumentEzsignform(Boolean bEzsigndocumentEzsignform) {
+    this.bEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
+    return this;
+  }
+
+  /**
+   * If the Ezsigndocument contains an Ezsignform or not
+   * @return bEzsigndocumentEzsignform
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsigndocumentEzsignform() {
+    return bEzsigndocumentEzsignform;
+  }
+
+  public void setbEzsigndocumentEzsignform(Boolean bEzsigndocumentEzsignform) {
+    this.bEzsigndocumentEzsignform = bEzsigndocumentEzsignform;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload bEzsigndocumentHassignedsignatures(Boolean bEzsigndocumentHassignedsignatures) {
+    this.bEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
+    return this;
+  }
+
+  /**
+   * If the Ezsigndocument contains signed signatures (From internal or external sources)
+   * @return bEzsigndocumentHassignedsignatures
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsigndocumentHassignedsignatures() {
+    return bEzsigndocumentHassignedsignatures;
+  }
+
+  public void setbEzsigndocumentHassignedsignatures(Boolean bEzsigndocumentHassignedsignatures) {
+    this.bEzsigndocumentHassignedsignatures = bEzsigndocumentHassignedsignatures;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload objAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+    return this;
+  }
+
+  /**
+   * Get objAudit
+   * @return objAudit
+   */
+  @javax.annotation.Nullable
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload sEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
+    this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
+    return this;
+  }
+
+  /**
+   * This field can be used to store an External ID from the client&#39;s system.  Anything can be stored in this field, it will never be evaluated by the eZmax system and will be returned AS-IS.  To store multiple values, consider using a JSON formatted structure, a URL encoded string, a CSV or any other custom format. 
+   * @return sEzsigndocumentExternalid
+   */
+  @javax.annotation.Nullable
+  public String getsEzsigndocumentExternalid() {
+    return sEzsigndocumentExternalid;
+  }
+
+  public void setsEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
+    this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentEzsignsignatureattachmenttotal(Integer iEzsigndocumentEzsignsignatureattachmenttotal) {
+    this.iEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
+    return this;
+  }
+
+  /**
+   * The number of Ezsigndocumentattachment total
+   * minimum: 0
+   * @return iEzsigndocumentEzsignsignatureattachmenttotal
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentEzsignsignatureattachmenttotal() {
+    return iEzsigndocumentEzsignsignatureattachmenttotal;
+  }
+
+  public void setiEzsigndocumentEzsignsignatureattachmenttotal(Integer iEzsigndocumentEzsignsignatureattachmenttotal) {
+    this.iEzsigndocumentEzsignsignatureattachmenttotal = iEzsigndocumentEzsignsignatureattachmenttotal;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentEzsigndiscussiontotal(Integer iEzsigndocumentEzsigndiscussiontotal) {
+    this.iEzsigndocumentEzsigndiscussiontotal = iEzsigndocumentEzsigndiscussiontotal;
+    return this;
+  }
+
+  /**
+   * The total number of Ezsigndiscussions
+   * @return iEzsigndocumentEzsigndiscussiontotal
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentEzsigndiscussiontotal() {
+    return iEzsigndocumentEzsigndiscussiontotal;
+  }
+
+  public void setiEzsigndocumentEzsigndiscussiontotal(Integer iEzsigndocumentEzsigndiscussiontotal) {
+    this.iEzsigndocumentEzsigndiscussiontotal = iEzsigndocumentEzsigndiscussiontotal;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload eEzsigndocumentSteptype(ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype) {
+    this.eEzsigndocumentSteptype = eEzsigndocumentSteptype;
+    return this;
+  }
+
+  /**
+   * Get eEzsigndocumentSteptype
+   * @return eEzsigndocumentSteptype
+   */
+  @javax.annotation.Nonnull
+  public ComputedEEzsigndocumentSteptype geteEzsigndocumentSteptype() {
+    return eEzsigndocumentSteptype;
+  }
+
+  public void seteEzsigndocumentSteptype(ComputedEEzsigndocumentSteptype eEzsigndocumentSteptype) {
+    this.eEzsigndocumentSteptype = eEzsigndocumentSteptype;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepformtotal(Integer iEzsigndocumentStepformtotal) {
+    this.iEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
+    return this;
+  }
+
+  /**
+   * The total number of steps in the form filling phase
+   * @return iEzsigndocumentStepformtotal
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentStepformtotal() {
+    return iEzsigndocumentStepformtotal;
+  }
+
+  public void setiEzsigndocumentStepformtotal(Integer iEzsigndocumentStepformtotal) {
+    this.iEzsigndocumentStepformtotal = iEzsigndocumentStepformtotal;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepformcurrent(Integer iEzsigndocumentStepformcurrent) {
+    this.iEzsigndocumentStepformcurrent = iEzsigndocumentStepformcurrent;
+    return this;
+  }
+
+  /**
+   * The current step in the form filling phase
+   * @return iEzsigndocumentStepformcurrent
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentStepformcurrent() {
+    return iEzsigndocumentStepformcurrent;
+  }
+
+  public void setiEzsigndocumentStepformcurrent(Integer iEzsigndocumentStepformcurrent) {
+    this.iEzsigndocumentStepformcurrent = iEzsigndocumentStepformcurrent;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepsignaturetotal(Integer iEzsigndocumentStepsignaturetotal) {
+    this.iEzsigndocumentStepsignaturetotal = iEzsigndocumentStepsignaturetotal;
+    return this;
+  }
+
+  /**
+   * The total number of steps in the signature filling phase
+   * @return iEzsigndocumentStepsignaturetotal
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentStepsignaturetotal() {
+    return iEzsigndocumentStepsignaturetotal;
+  }
+
+  public void setiEzsigndocumentStepsignaturetotal(Integer iEzsigndocumentStepsignaturetotal) {
+    this.iEzsigndocumentStepsignaturetotal = iEzsigndocumentStepsignaturetotal;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload iEzsigndocumentStepsignatureCurrent(Integer iEzsigndocumentStepsignatureCurrent) {
+    this.iEzsigndocumentStepsignatureCurrent = iEzsigndocumentStepsignatureCurrent;
+    return this;
+  }
+
+  /**
+   * The current step in the signature phase
+   * @return iEzsigndocumentStepsignatureCurrent
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigndocumentStepsignatureCurrent() {
+    return iEzsigndocumentStepsignatureCurrent;
+  }
+
+  public void setiEzsigndocumentStepsignatureCurrent(Integer iEzsigndocumentStepsignatureCurrent) {
+    this.iEzsigndocumentStepsignatureCurrent = iEzsigndocumentStepsignatureCurrent;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload aObjEzsignfoldersignerassociationstatus(List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus) {
+    this.aObjEzsignfoldersignerassociationstatus = aObjEzsignfoldersignerassociationstatus;
+    return this;
+  }
+
+  public EzsigndocumentGetObjectV1ResponseMPayload addAObjEzsignfoldersignerassociationstatusItem(CustomEzsignfoldersignerassociationstatusResponse aObjEzsignfoldersignerassociationstatusItem) {
+    if (this.aObjEzsignfoldersignerassociationstatus == null) {
+      this.aObjEzsignfoldersignerassociationstatus = new ArrayList<>();
+    }
+    this.aObjEzsignfoldersignerassociationstatus.add(aObjEzsignfoldersignerassociationstatusItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzsignfoldersignerassociationstatus
+   * @return aObjEzsignfoldersignerassociationstatus
+   */
+  @javax.annotation.Nonnull
+  public List<CustomEzsignfoldersignerassociationstatusResponse> getaObjEzsignfoldersignerassociationstatus() {
+    return aObjEzsignfoldersignerassociationstatus;
+  }
+
+  public void setaObjEzsignfoldersignerassociationstatus(List<CustomEzsignfoldersignerassociationstatusResponse> aObjEzsignfoldersignerassociationstatus) {
+    this.aObjEzsignfoldersignerassociationstatus = aObjEzsignfoldersignerassociationstatus;
+  }
+
+
+  public EzsigndocumentGetObjectV1ResponseMPayload aObjEzsigndocumentdependency(List<EzsigndocumentdependencyResponse> aObjEzsigndocumentdependency) {
+    this.aObjEzsigndocumentdependency = aObjEzsigndocumentdependency;
+    return this;
+  }
+
+  public EzsigndocumentGetObjectV1ResponseMPayload addAObjEzsigndocumentdependencyItem(EzsigndocumentdependencyResponse aObjEzsigndocumentdependencyItem) {
+    if (this.aObjEzsigndocumentdependency == null) {
+      this.aObjEzsigndocumentdependency = new ArrayList<>();
+    }
+    this.aObjEzsigndocumentdependency.add(aObjEzsigndocumentdependencyItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzsigndocumentdependency
+   * @return aObjEzsigndocumentdependency
+   */
+  @javax.annotation.Nullable
+  public List<EzsigndocumentdependencyResponse> getaObjEzsigndocumentdependency() {
+    return aObjEzsigndocumentdependency;
+  }
+
+  public void setaObjEzsigndocumentdependency(List<EzsigndocumentdependencyResponse> aObjEzsigndocumentdependency) {
+    this.aObjEzsigndocumentdependency = aObjEzsigndocumentdependency;
+  }
+
 
 
   @Override
@@ -70,19 +809,80 @@ public class EzsigndocumentGetObjectV1ResponseMPayload extends EzsigndocumentRes
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    EzsigndocumentGetObjectV1ResponseMPayload ezsigndocumentGetObjectV1ResponseMPayload = (EzsigndocumentGetObjectV1ResponseMPayload) o;
+    return Objects.equals(this.pkiEzsigndocumentID, ezsigndocumentGetObjectV1ResponseMPayload.pkiEzsigndocumentID) &&
+        Objects.equals(this.fkiEzsignfolderID, ezsigndocumentGetObjectV1ResponseMPayload.fkiEzsignfolderID) &&
+        Objects.equals(this.fkiEzsignfoldersignerassociationIDDeclinedtosign, ezsigndocumentGetObjectV1ResponseMPayload.fkiEzsignfoldersignerassociationIDDeclinedtosign) &&
+        Objects.equals(this.dtEzsigndocumentDuedate, ezsigndocumentGetObjectV1ResponseMPayload.dtEzsigndocumentDuedate) &&
+        Objects.equals(this.dtEzsignformCompleted, ezsigndocumentGetObjectV1ResponseMPayload.dtEzsignformCompleted) &&
+        Objects.equals(this.fkiLanguageID, ezsigndocumentGetObjectV1ResponseMPayload.fkiLanguageID) &&
+        Objects.equals(this.sEzsigndocumentName, ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentName) &&
+        Objects.equals(this.eEzsigndocumentStep, ezsigndocumentGetObjectV1ResponseMPayload.eEzsigndocumentStep) &&
+        Objects.equals(this.dtEzsigndocumentFirstsend, ezsigndocumentGetObjectV1ResponseMPayload.dtEzsigndocumentFirstsend) &&
+        Objects.equals(this.dtEzsigndocumentLastsend, ezsigndocumentGetObjectV1ResponseMPayload.dtEzsigndocumentLastsend) &&
+        Objects.equals(this.iEzsigndocumentOrder, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentOrder) &&
+        Objects.equals(this.iEzsigndocumentPagetotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentPagetotal) &&
+        Objects.equals(this.iEzsigndocumentSignaturesigned, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentSignaturesigned) &&
+        Objects.equals(this.iEzsigndocumentSignaturetotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentSignaturetotal) &&
+        Objects.equals(this.iEzsigndocumentFormfieldtotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentFormfieldtotal) &&
+        Objects.equals(this.sEzsigndocumentMD5initial, ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentMD5initial) &&
+        Objects.equals(this.tEzsigndocumentDeclinedtosignreason, ezsigndocumentGetObjectV1ResponseMPayload.tEzsigndocumentDeclinedtosignreason) &&
+        Objects.equals(this.sEzsigndocumentMD5signed, ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentMD5signed) &&
+        Objects.equals(this.bEzsigndocumentEzsignform, ezsigndocumentGetObjectV1ResponseMPayload.bEzsigndocumentEzsignform) &&
+        Objects.equals(this.bEzsigndocumentHassignedsignatures, ezsigndocumentGetObjectV1ResponseMPayload.bEzsigndocumentHassignedsignatures) &&
+        Objects.equals(this.objAudit, ezsigndocumentGetObjectV1ResponseMPayload.objAudit) &&
+        Objects.equals(this.sEzsigndocumentExternalid, ezsigndocumentGetObjectV1ResponseMPayload.sEzsigndocumentExternalid) &&
+        Objects.equals(this.iEzsigndocumentEzsignsignatureattachmenttotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentEzsignsignatureattachmenttotal) &&
+        Objects.equals(this.iEzsigndocumentEzsigndiscussiontotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentEzsigndiscussiontotal) &&
+        Objects.equals(this.eEzsigndocumentSteptype, ezsigndocumentGetObjectV1ResponseMPayload.eEzsigndocumentSteptype) &&
+        Objects.equals(this.iEzsigndocumentStepformtotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformtotal) &&
+        Objects.equals(this.iEzsigndocumentStepformcurrent, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepformcurrent) &&
+        Objects.equals(this.iEzsigndocumentStepsignaturetotal, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepsignaturetotal) &&
+        Objects.equals(this.iEzsigndocumentStepsignatureCurrent, ezsigndocumentGetObjectV1ResponseMPayload.iEzsigndocumentStepsignatureCurrent) &&
+        Objects.equals(this.aObjEzsignfoldersignerassociationstatus, ezsigndocumentGetObjectV1ResponseMPayload.aObjEzsignfoldersignerassociationstatus) &&
+        Objects.equals(this.aObjEzsigndocumentdependency, ezsigndocumentGetObjectV1ResponseMPayload.aObjEzsigndocumentdependency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsignfoldersignerassociationIDDeclinedtosign, dtEzsigndocumentDuedate, dtEzsignformCompleted, fkiLanguageID, sEzsigndocumentName, eEzsigndocumentStep, dtEzsigndocumentFirstsend, dtEzsigndocumentLastsend, iEzsigndocumentOrder, iEzsigndocumentPagetotal, iEzsigndocumentSignaturesigned, iEzsigndocumentSignaturetotal, iEzsigndocumentFormfieldtotal, sEzsigndocumentMD5initial, tEzsigndocumentDeclinedtosignreason, sEzsigndocumentMD5signed, bEzsigndocumentEzsignform, bEzsigndocumentHassignedsignatures, objAudit, sEzsigndocumentExternalid, iEzsigndocumentEzsignsignatureattachmenttotal, iEzsigndocumentEzsigndiscussiontotal, eEzsigndocumentSteptype, iEzsigndocumentStepformtotal, iEzsigndocumentStepformcurrent, iEzsigndocumentStepsignaturetotal, iEzsigndocumentStepsignatureCurrent, aObjEzsignfoldersignerassociationstatus, aObjEzsigndocumentdependency);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentGetObjectV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsigndocumentID: ").append(toIndentedString(pkiEzsigndocumentID)).append("\n");
+    sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
+    sb.append("    fkiEzsignfoldersignerassociationIDDeclinedtosign: ").append(toIndentedString(fkiEzsignfoldersignerassociationIDDeclinedtosign)).append("\n");
+    sb.append("    dtEzsigndocumentDuedate: ").append(toIndentedString(dtEzsigndocumentDuedate)).append("\n");
+    sb.append("    dtEzsignformCompleted: ").append(toIndentedString(dtEzsignformCompleted)).append("\n");
+    sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
+    sb.append("    sEzsigndocumentName: ").append(toIndentedString(sEzsigndocumentName)).append("\n");
+    sb.append("    eEzsigndocumentStep: ").append(toIndentedString(eEzsigndocumentStep)).append("\n");
+    sb.append("    dtEzsigndocumentFirstsend: ").append(toIndentedString(dtEzsigndocumentFirstsend)).append("\n");
+    sb.append("    dtEzsigndocumentLastsend: ").append(toIndentedString(dtEzsigndocumentLastsend)).append("\n");
+    sb.append("    iEzsigndocumentOrder: ").append(toIndentedString(iEzsigndocumentOrder)).append("\n");
+    sb.append("    iEzsigndocumentPagetotal: ").append(toIndentedString(iEzsigndocumentPagetotal)).append("\n");
+    sb.append("    iEzsigndocumentSignaturesigned: ").append(toIndentedString(iEzsigndocumentSignaturesigned)).append("\n");
+    sb.append("    iEzsigndocumentSignaturetotal: ").append(toIndentedString(iEzsigndocumentSignaturetotal)).append("\n");
+    sb.append("    iEzsigndocumentFormfieldtotal: ").append(toIndentedString(iEzsigndocumentFormfieldtotal)).append("\n");
+    sb.append("    sEzsigndocumentMD5initial: ").append(toIndentedString(sEzsigndocumentMD5initial)).append("\n");
+    sb.append("    tEzsigndocumentDeclinedtosignreason: ").append(toIndentedString(tEzsigndocumentDeclinedtosignreason)).append("\n");
+    sb.append("    sEzsigndocumentMD5signed: ").append(toIndentedString(sEzsigndocumentMD5signed)).append("\n");
+    sb.append("    bEzsigndocumentEzsignform: ").append(toIndentedString(bEzsigndocumentEzsignform)).append("\n");
+    sb.append("    bEzsigndocumentHassignedsignatures: ").append(toIndentedString(bEzsigndocumentHassignedsignatures)).append("\n");
+    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    sEzsigndocumentExternalid: ").append(toIndentedString(sEzsigndocumentExternalid)).append("\n");
+    sb.append("    iEzsigndocumentEzsignsignatureattachmenttotal: ").append(toIndentedString(iEzsigndocumentEzsignsignatureattachmenttotal)).append("\n");
+    sb.append("    iEzsigndocumentEzsigndiscussiontotal: ").append(toIndentedString(iEzsigndocumentEzsigndiscussiontotal)).append("\n");
+    sb.append("    eEzsigndocumentSteptype: ").append(toIndentedString(eEzsigndocumentSteptype)).append("\n");
+    sb.append("    iEzsigndocumentStepformtotal: ").append(toIndentedString(iEzsigndocumentStepformtotal)).append("\n");
+    sb.append("    iEzsigndocumentStepformcurrent: ").append(toIndentedString(iEzsigndocumentStepformcurrent)).append("\n");
+    sb.append("    iEzsigndocumentStepsignaturetotal: ").append(toIndentedString(iEzsigndocumentStepsignaturetotal)).append("\n");
+    sb.append("    iEzsigndocumentStepsignatureCurrent: ").append(toIndentedString(iEzsigndocumentStepsignatureCurrent)).append("\n");
+    sb.append("    aObjEzsignfoldersignerassociationstatus: ").append(toIndentedString(aObjEzsignfoldersignerassociationstatus)).append("\n");
+    sb.append("    aObjEzsigndocumentdependency: ").append(toIndentedString(aObjEzsigndocumentdependency)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -184,6 +984,66 @@ public class EzsigndocumentGetObjectV1ResponseMPayload extends EzsigndocumentRes
       for (String requiredField : EzsigndocumentGetObjectV1ResponseMPayload.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("dtEzsigndocumentDuedate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentDuedate").toString()));
+      }
+      if ((jsonObj.get("dtEzsignformCompleted") != null && !jsonObj.get("dtEzsignformCompleted").isJsonNull()) && !jsonObj.get("dtEzsignformCompleted").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignformCompleted` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignformCompleted").toString()));
+      }
+      if (!jsonObj.get("sEzsigndocumentName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentName").toString()));
+      }
+      // validate the required field `eEzsigndocumentStep`
+      FieldEEzsigndocumentStep.validateJsonElement(jsonObj.get("eEzsigndocumentStep"));
+      if ((jsonObj.get("dtEzsigndocumentFirstsend") != null && !jsonObj.get("dtEzsigndocumentFirstsend").isJsonNull()) && !jsonObj.get("dtEzsigndocumentFirstsend").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentFirstsend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentFirstsend").toString()));
+      }
+      if ((jsonObj.get("dtEzsigndocumentLastsend") != null && !jsonObj.get("dtEzsigndocumentLastsend").isJsonNull()) && !jsonObj.get("dtEzsigndocumentLastsend").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsigndocumentLastsend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentLastsend").toString()));
+      }
+      if ((jsonObj.get("sEzsigndocumentMD5initial") != null && !jsonObj.get("sEzsigndocumentMD5initial").isJsonNull()) && !jsonObj.get("sEzsigndocumentMD5initial").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentMD5initial` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentMD5initial").toString()));
+      }
+      if ((jsonObj.get("tEzsigndocumentDeclinedtosignreason") != null && !jsonObj.get("tEzsigndocumentDeclinedtosignreason").isJsonNull()) && !jsonObj.get("tEzsigndocumentDeclinedtosignreason").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzsigndocumentDeclinedtosignreason` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsigndocumentDeclinedtosignreason").toString()));
+      }
+      if ((jsonObj.get("sEzsigndocumentMD5signed") != null && !jsonObj.get("sEzsigndocumentMD5signed").isJsonNull()) && !jsonObj.get("sEzsigndocumentMD5signed").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentMD5signed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentMD5signed").toString()));
+      }
+      // validate the optional field `objAudit`
+      if (jsonObj.get("objAudit") != null && !jsonObj.get("objAudit").isJsonNull()) {
+        CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
+      }
+      if ((jsonObj.get("sEzsigndocumentExternalid") != null && !jsonObj.get("sEzsigndocumentExternalid").isJsonNull()) && !jsonObj.get("sEzsigndocumentExternalid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigndocumentExternalid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigndocumentExternalid").toString()));
+      }
+      // validate the required field `eEzsigndocumentSteptype`
+      ComputedEEzsigndocumentSteptype.validateJsonElement(jsonObj.get("eEzsigndocumentSteptype"));
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objEzsignfoldersignerassociationstatus").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignfoldersignerassociationstatus` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignfoldersignerassociationstatus").toString()));
+      }
+
+      JsonArray jsonArrayaObjEzsignfoldersignerassociationstatus = jsonObj.getAsJsonArray("a_objEzsignfoldersignerassociationstatus");
+      // validate the required field `a_objEzsignfoldersignerassociationstatus` (array)
+      for (int i = 0; i < jsonArrayaObjEzsignfoldersignerassociationstatus.size(); i++) {
+        CustomEzsignfoldersignerassociationstatusResponse.validateJsonElement(jsonArrayaObjEzsignfoldersignerassociationstatus.get(i));
+      };
+      if (jsonObj.get("a_objEzsigndocumentdependency") != null && !jsonObj.get("a_objEzsigndocumentdependency").isJsonNull()) {
+        JsonArray jsonArrayaObjEzsigndocumentdependency = jsonObj.getAsJsonArray("a_objEzsigndocumentdependency");
+        if (jsonArrayaObjEzsigndocumentdependency != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("a_objEzsigndocumentdependency").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `a_objEzsigndocumentdependency` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigndocumentdependency").toString()));
+          }
+
+          // validate the optional field `a_objEzsigndocumentdependency` (array)
+          for (int i = 0; i < jsonArrayaObjEzsigndocumentdependency.size(); i++) {
+            EzsigndocumentdependencyResponse.validateJsonElement(jsonArrayaObjEzsigndocumentdependency.get(i));
+          };
         }
       }
   }

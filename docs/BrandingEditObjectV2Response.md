@@ -8,6 +8,8 @@ Response for PUT /2/object/branding/{pkiBrandingID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 
 
 

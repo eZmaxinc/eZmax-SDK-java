@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignsignergroupmembership
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignergroupmembershipCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNERGROUPMEMBERSHIP = "a_objEzsignsignergroupmembership";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNERGROUPMEMBERSHIP)
-  @javax.annotation.Nonnull
   private List<EzsignsignergroupmembershipRequestCompound> aObjEzsignsignergroupmembership = new ArrayList<>();
 
   public EzsignsignergroupmembershipCreateObjectV1Request() {
   }
 
-  public EzsignsignergroupmembershipCreateObjectV1Request aObjEzsignsignergroupmembership(@javax.annotation.Nonnull List<EzsignsignergroupmembershipRequestCompound> aObjEzsignsignergroupmembership) {
+  public EzsignsignergroupmembershipCreateObjectV1Request aObjEzsignsignergroupmembership(List<EzsignsignergroupmembershipRequestCompound> aObjEzsignsignergroupmembership) {
     this.aObjEzsignsignergroupmembership = aObjEzsignsignergroupmembership;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsignsignergroupmembershipCreateObjectV1Request {
     return aObjEzsignsignergroupmembership;
   }
 
-  public void setaObjEzsignsignergroupmembership(@javax.annotation.Nonnull List<EzsignsignergroupmembershipRequestCompound> aObjEzsignsignergroupmembership) {
+  public void setaObjEzsignsignergroupmembership(List<EzsignsignergroupmembershipRequestCompound> aObjEzsignsignergroupmembership) {
     this.aObjEzsignsignergroupmembership = aObjEzsignsignergroupmembership;
   }
 

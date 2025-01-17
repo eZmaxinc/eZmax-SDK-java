@@ -48,47 +48,40 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksend Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignbulksendRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzsignbulksendID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION = "sEzsignbulksendDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsignbulksendDescription;
 
   public static final String SERIALIZED_NAME_T_EZSIGNBULKSEND_NOTE = "tEzsignbulksendNote";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNBULKSEND_NOTE)
-  @javax.annotation.Nonnull
   private String tEzsignbulksendNote;
 
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION = "bEzsignbulksendNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION)
-  @javax.annotation.Nonnull
   private Boolean bEzsignbulksendNeedvalidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE = "bEzsignbulksendIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bEzsignbulksendIsactive;
 
   public EzsignbulksendRequest() {
   }
 
-  public EzsignbulksendRequest pkiEzsignbulksendID(@javax.annotation.Nullable Integer pkiEzsignbulksendID) {
+  public EzsignbulksendRequest pkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
     return this;
   }
@@ -103,12 +96,12 @@ public class EzsignbulksendRequest {
     return pkiEzsignbulksendID;
   }
 
-  public void setPkiEzsignbulksendID(@javax.annotation.Nullable Integer pkiEzsignbulksendID) {
+  public void setPkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
   }
 
 
-  public EzsignbulksendRequest fkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
+  public EzsignbulksendRequest fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -124,12 +117,12 @@ public class EzsignbulksendRequest {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public EzsignbulksendRequest fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public EzsignbulksendRequest fkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -145,12 +138,12 @@ public class EzsignbulksendRequest {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public EzsignbulksendRequest sEzsignbulksendDescription(@javax.annotation.Nonnull String sEzsignbulksendDescription) {
+  public EzsignbulksendRequest sEzsignbulksendDescription(String sEzsignbulksendDescription) {
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
     return this;
   }
@@ -164,12 +157,12 @@ public class EzsignbulksendRequest {
     return sEzsignbulksendDescription;
   }
 
-  public void setsEzsignbulksendDescription(@javax.annotation.Nonnull String sEzsignbulksendDescription) {
+  public void setsEzsignbulksendDescription(String sEzsignbulksendDescription) {
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
   }
 
 
-  public EzsignbulksendRequest tEzsignbulksendNote(@javax.annotation.Nonnull String tEzsignbulksendNote) {
+  public EzsignbulksendRequest tEzsignbulksendNote(String tEzsignbulksendNote) {
     this.tEzsignbulksendNote = tEzsignbulksendNote;
     return this;
   }
@@ -183,12 +176,12 @@ public class EzsignbulksendRequest {
     return tEzsignbulksendNote;
   }
 
-  public void settEzsignbulksendNote(@javax.annotation.Nonnull String tEzsignbulksendNote) {
+  public void settEzsignbulksendNote(String tEzsignbulksendNote) {
     this.tEzsignbulksendNote = tEzsignbulksendNote;
   }
 
 
-  public EzsignbulksendRequest bEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
+  public EzsignbulksendRequest bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
@@ -202,12 +195,12 @@ public class EzsignbulksendRequest {
     return bEzsignbulksendNeedvalidation;
   }
 
-  public void setbEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
+  public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 
 
-  public EzsignbulksendRequest bEzsignbulksendIsactive(@javax.annotation.Nonnull Boolean bEzsignbulksendIsactive) {
+  public EzsignbulksendRequest bEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
     return this;
   }
@@ -221,7 +214,7 @@ public class EzsignbulksendRequest {
     return bEzsignbulksendIsactive;
   }
 
-  public void setbEzsignbulksendIsactive(@javax.annotation.Nonnull Boolean bEzsignbulksendIsactive) {
+  public void setbEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
   }
 
@@ -313,6 +306,21 @@ public class EzsignbulksendRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignbulksendRequest is not found in the empty JSON string", EzsignbulksendRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsignbulksendRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignbulksendRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignbulksendRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sEzsignbulksendDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignbulksendDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignbulksendDescription").toString()));
@@ -322,6 +330,34 @@ public class EzsignbulksendRequest {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignbulksendRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignbulksendRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignbulksendRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignbulksendRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignbulksendRequest>() {
+           @Override
+           public void write(JsonWriter out, EzsignbulksendRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignbulksendRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsignbulksendRequest given an JSON string

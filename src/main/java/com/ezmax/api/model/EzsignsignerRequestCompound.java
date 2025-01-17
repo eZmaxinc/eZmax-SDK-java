@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsignsignerRequest;
 import com.ezmax.api.model.EzsignsignerRequestCompoundContact;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -50,17 +49,198 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsigner Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignsignerRequestCompound extends EzsignsignerRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsignsignerRequestCompound {
+  public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
+  @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
+  private Integer fkiUserlogintypeID;
+
+  public static final String SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D = "fkiTaxassignmentID";
+  @SerializedName(SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D)
+  private Integer fkiTaxassignmentID;
+
+  public static final String SERIALIZED_NAME_FKI_SECRETQUESTION_I_D = "fkiSecretquestionID";
+  @SerializedName(SERIALIZED_NAME_FKI_SECRETQUESTION_I_D)
+  private Integer fkiSecretquestionID;
+
+  /**
+   * The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
+   */
+  @JsonAdapter(EEzsignsignerLogintypeEnum.Adapter.class)
+  public enum EEzsignsignerLogintypeEnum {
+    PASSWORD("Password"),
+    
+    PASSWORD_PHONE("PasswordPhone"),
+    
+    PASSWORD_QUESTION("PasswordQuestion"),
+    
+    IN_PERSON_PHONE("InPersonPhone"),
+    
+    IN_PERSON("InPerson");
+
+    private String value;
+
+    EEzsignsignerLogintypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static EEzsignsignerLogintypeEnum fromValue(String value) {
+      for (EEzsignsignerLogintypeEnum b : EEzsignsignerLogintypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<EEzsignsignerLogintypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final EEzsignsignerLogintypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public EEzsignsignerLogintypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return EEzsignsignerLogintypeEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EEzsignsignerLogintypeEnum.fromValue(value);
+    }
+  }
+
+  public static final String SERIALIZED_NAME_E_EZSIGNSIGNER_LOGINTYPE = "eEzsignsignerLogintype";
+  @Deprecated
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNER_LOGINTYPE)
+  private EEzsignsignerLogintypeEnum eEzsignsignerLogintype;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNSIGNER_SECRETANSWER = "sEzsignsignerSecretanswer";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNER_SECRETANSWER)
+  private String sEzsignsignerSecretanswer;
+
   public static final String SERIALIZED_NAME_OBJ_CONTACT = "objContact";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT)
-  @javax.annotation.Nonnull
   private EzsignsignerRequestCompoundContact objContact;
 
   public EzsignsignerRequestCompound() {
   }
 
-  public EzsignsignerRequestCompound objContact(@javax.annotation.Nonnull EzsignsignerRequestCompoundContact objContact) {
+  public EzsignsignerRequestCompound fkiUserlogintypeID(Integer fkiUserlogintypeID) {
+    this.fkiUserlogintypeID = fkiUserlogintypeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Userlogintype  Valid values:  |Value|Description|Detail| |-|-|-| |1|**Email Only**|The Ezsignsigner will receive a secure link by email| |2|**Email and phone or SMS**|The Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**| |3|**Email and secret question**|The Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer| |4|**In person only**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type| |5|**In person with phone or SMS**|The Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**| |6|**Embedded**|The Ezsignsigner will only be able to sign in the embedded solution. No email will be sent for invitation to sign. **Additional fee applies**|   |7|**Embedded with phone or SMS**|The Ezsignsigner will only be able to sign in the embedded solution and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**|   |8|**No validation**|The Ezsignsigner will not receive an email and won&#39;t have to validate his connection using 2 factor. **Additional fee applies**|      |9|**Sms only**|The Ezsignsigner will not receive an email but will will need to authenticate using SMS. **Additional fee applies**|     
+   * minimum: 0
+   * @return fkiUserlogintypeID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiUserlogintypeID() {
+    return fkiUserlogintypeID;
+  }
+
+  public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
+    this.fkiUserlogintypeID = fkiUserlogintypeID;
+  }
+
+
+  public EzsignsignerRequestCompound fkiTaxassignmentID(Integer fkiTaxassignmentID) {
+    this.fkiTaxassignmentID = fkiTaxassignmentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable|
+   * minimum: 0
+   * maximum: 15
+   * @return fkiTaxassignmentID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiTaxassignmentID() {
+    return fkiTaxassignmentID;
+  }
+
+  public void setFkiTaxassignmentID(Integer fkiTaxassignmentID) {
+    this.fkiTaxassignmentID = fkiTaxassignmentID;
+  }
+
+
+  public EzsignsignerRequestCompound fkiSecretquestionID(Integer fkiSecretquestionID) {
+    this.fkiSecretquestionID = fkiSecretquestionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+   * minimum: 0
+   * @return fkiSecretquestionID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiSecretquestionID() {
+    return fkiSecretquestionID;
+  }
+
+  public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
+    this.fkiSecretquestionID = fkiSecretquestionID;
+  }
+
+
+  @Deprecated
+  public EzsignsignerRequestCompound eEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
+    this.eEzsignsignerLogintype = eEzsignsignerLogintype;
+    return this;
+  }
+
+  /**
+   * The method the Ezsignsigner will authenticate to the signing platform.  1. **Password** means the Ezsignsigner will receive a secure link by email. 2. **PasswordPhone** means the Ezsignsigner will receive a secure link by email and will need to authenticate using SMS or Phone call. **Additional fee applies**. 3. **PasswordQuestion** means the Ezsignsigner will receive a secure link by email and will need to authenticate using a predefined question and answer. 4. **InPersonPhone** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and will need to authenticate using SMS or Phone call. No email will be sent for invitation to sign. **Additional fee applies**. 5. **InPerson** means the Ezsignsigner will only be able to sign \&quot;In-Person\&quot; and there won&#39;t be any authentication. No email will be sent for invitation to sign. Make sure you evaluate the risk of signature denial and at minimum, we recommend you use a handwritten signature type.
+   * @return eEzsignsignerLogintype
+   * @deprecated
+   */
+  @Deprecated
+  @javax.annotation.Nullable
+  public EEzsignsignerLogintypeEnum geteEzsignsignerLogintype() {
+    return eEzsignsignerLogintype;
+  }
+
+  @Deprecated
+  public void seteEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
+    this.eEzsignsignerLogintype = eEzsignsignerLogintype;
+  }
+
+
+  public EzsignsignerRequestCompound sEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
+    this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
+    return this;
+  }
+
+  /**
+   * The predefined answer to the secret question the Ezsignsigner will need to provide to successfully authenticate.
+   * @return sEzsignsignerSecretanswer
+   */
+  @javax.annotation.Nullable
+  public String getsEzsignsignerSecretanswer() {
+    return sEzsignsignerSecretanswer;
+  }
+
+  public void setsEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
+    this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
+  }
+
+
+  public EzsignsignerRequestCompound objContact(EzsignsignerRequestCompoundContact objContact) {
     this.objContact = objContact;
     return this;
   }
@@ -74,7 +254,7 @@ public class EzsignsignerRequestCompound extends EzsignsignerRequest {
     return objContact;
   }
 
-  public void setObjContact(@javax.annotation.Nonnull EzsignsignerRequestCompoundContact objContact) {
+  public void setObjContact(EzsignsignerRequestCompoundContact objContact) {
     this.objContact = objContact;
   }
 
@@ -89,20 +269,28 @@ public class EzsignsignerRequestCompound extends EzsignsignerRequest {
       return false;
     }
     EzsignsignerRequestCompound ezsignsignerRequestCompound = (EzsignsignerRequestCompound) o;
-    return Objects.equals(this.objContact, ezsignsignerRequestCompound.objContact) &&
-        super.equals(o);
+    return Objects.equals(this.fkiUserlogintypeID, ezsignsignerRequestCompound.fkiUserlogintypeID) &&
+        Objects.equals(this.fkiTaxassignmentID, ezsignsignerRequestCompound.fkiTaxassignmentID) &&
+        Objects.equals(this.fkiSecretquestionID, ezsignsignerRequestCompound.fkiSecretquestionID) &&
+        Objects.equals(this.eEzsignsignerLogintype, ezsignsignerRequestCompound.eEzsignsignerLogintype) &&
+        Objects.equals(this.sEzsignsignerSecretanswer, ezsignsignerRequestCompound.sEzsignsignerSecretanswer) &&
+        Objects.equals(this.objContact, ezsignsignerRequestCompound.objContact);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objContact, super.hashCode());
+    return Objects.hash(fkiUserlogintypeID, fkiTaxassignmentID, fkiSecretquestionID, eEzsignsignerLogintype, sEzsignsignerSecretanswer, objContact);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignsignerRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    fkiUserlogintypeID: ").append(toIndentedString(fkiUserlogintypeID)).append("\n");
+    sb.append("    fkiTaxassignmentID: ").append(toIndentedString(fkiTaxassignmentID)).append("\n");
+    sb.append("    fkiSecretquestionID: ").append(toIndentedString(fkiSecretquestionID)).append("\n");
+    sb.append("    eEzsignsignerLogintype: ").append(toIndentedString(eEzsignsignerLogintype)).append("\n");
+    sb.append("    sEzsignsignerSecretanswer: ").append(toIndentedString(sEzsignsignerSecretanswer)).append("\n");
     sb.append("    objContact: ").append(toIndentedString(objContact)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -135,8 +323,8 @@ public class EzsignsignerRequestCompound extends EzsignsignerRequest {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objContact");
     openapiRequiredFields.add("fkiTaxassignmentID");
+    openapiRequiredFields.add("objContact");
   }
 
   /**
@@ -167,6 +355,16 @@ public class EzsignsignerRequestCompound extends EzsignsignerRequest {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("eEzsignsignerLogintype") != null && !jsonObj.get("eEzsignsignerLogintype").isJsonNull()) && !jsonObj.get("eEzsignsignerLogintype").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eEzsignsignerLogintype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsignsignerLogintype").toString()));
+      }
+      // validate the optional field `eEzsignsignerLogintype`
+      if (jsonObj.get("eEzsignsignerLogintype") != null && !jsonObj.get("eEzsignsignerLogintype").isJsonNull()) {
+        EEzsignsignerLogintypeEnum.validateJsonElement(jsonObj.get("eEzsignsignerLogintype"));
+      }
+      if ((jsonObj.get("sEzsignsignerSecretanswer") != null && !jsonObj.get("sEzsignsignerSecretanswer").isJsonNull()) && !jsonObj.get("sEzsignsignerSecretanswer").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignsignerSecretanswer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignerSecretanswer").toString()));
+      }
       // validate the required field `objContact`
       EzsignsignerRequestCompoundContact.validateJsonElement(jsonObj.get("objContact"));
   }

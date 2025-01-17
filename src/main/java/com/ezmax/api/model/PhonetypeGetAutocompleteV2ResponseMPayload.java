@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/phonetype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PhonetypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_PHONETYPE = "a_objPhonetype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PHONETYPE)
-  @javax.annotation.Nonnull
   private List<PhonetypeAutocompleteElementResponse> aObjPhonetype = new ArrayList<>();
 
   public PhonetypeGetAutocompleteV2ResponseMPayload() {
   }
 
-  public PhonetypeGetAutocompleteV2ResponseMPayload aObjPhonetype(@javax.annotation.Nonnull List<PhonetypeAutocompleteElementResponse> aObjPhonetype) {
+  public PhonetypeGetAutocompleteV2ResponseMPayload aObjPhonetype(List<PhonetypeAutocompleteElementResponse> aObjPhonetype) {
     this.aObjPhonetype = aObjPhonetype;
     return this;
   }
@@ -83,7 +82,7 @@ public class PhonetypeGetAutocompleteV2ResponseMPayload {
     return aObjPhonetype;
   }
 
-  public void setaObjPhonetype(@javax.annotation.Nonnull List<PhonetypeAutocompleteElementResponse> aObjPhonetype) {
+  public void setaObjPhonetype(List<PhonetypeAutocompleteElementResponse> aObjPhonetype) {
     this.aObjPhonetype = aObjPhonetype;
   }
 

@@ -16,11 +16,13 @@ package com.ezmax.api;
 import eZmaxAPI.ApiException;
 import com.ezmax.api.model.AuthenticationexternalCreateObjectV1Request;
 import com.ezmax.api.model.AuthenticationexternalCreateObjectV1Response;
+import com.ezmax.api.model.AuthenticationexternalDeleteObjectV1Response;
 import com.ezmax.api.model.AuthenticationexternalEditObjectV1Request;
+import com.ezmax.api.model.AuthenticationexternalEditObjectV1Response;
 import com.ezmax.api.model.AuthenticationexternalGetAutocompleteV2Response;
 import com.ezmax.api.model.AuthenticationexternalGetListV1Response;
 import com.ezmax.api.model.AuthenticationexternalGetObjectV2Response;
-import com.ezmax.api.model.CommonResponse;
+import com.ezmax.api.model.AuthenticationexternalResetAuthorizationV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -64,7 +66,7 @@ public class ObjectAuthenticationexternalApiTest {
     @Test
     public void authenticationexternalDeleteObjectV1Test() throws ApiException {
         Integer pkiAuthenticationexternalID = null;
-        CommonResponse response = api.authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID);
+        AuthenticationexternalDeleteObjectV1Response response = api.authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID);
         // TODO: test validations
     }
 
@@ -79,7 +81,7 @@ public class ObjectAuthenticationexternalApiTest {
     public void authenticationexternalEditObjectV1Test() throws ApiException {
         Integer pkiAuthenticationexternalID = null;
         AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request = null;
-        CommonResponse response = api.authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
+        AuthenticationexternalEditObjectV1Response response = api.authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
         // TODO: test validations
     }
 
@@ -143,7 +145,7 @@ public class ObjectAuthenticationexternalApiTest {
     public void authenticationexternalResetAuthorizationV1Test() throws ApiException {
         Integer pkiAuthenticationexternalID = null;
         Object body = null;
-        CommonResponse response = api.authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body);
+        AuthenticationexternalResetAuthorizationV1Response response = api.authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body);
         // TODO: test validations
     }
 

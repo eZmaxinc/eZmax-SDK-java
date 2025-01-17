@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Paymentterm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualPaymenttermDescription {
   public static final String SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION1 = "sPaymenttermDescription1";
   @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION1)
-  @javax.annotation.Nullable
   private String sPaymenttermDescription1;
 
   public static final String SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION2 = "sPaymenttermDescription2";
   @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION2)
-  @javax.annotation.Nullable
   private String sPaymenttermDescription2;
 
   public MultilingualPaymenttermDescription() {
   }
 
-  public MultilingualPaymenttermDescription sPaymenttermDescription1(@javax.annotation.Nullable String sPaymenttermDescription1) {
+  public MultilingualPaymenttermDescription sPaymenttermDescription1(String sPaymenttermDescription1) {
     this.sPaymenttermDescription1 = sPaymenttermDescription1;
     return this;
   }
@@ -77,12 +75,12 @@ public class MultilingualPaymenttermDescription {
     return sPaymenttermDescription1;
   }
 
-  public void setsPaymenttermDescription1(@javax.annotation.Nullable String sPaymenttermDescription1) {
+  public void setsPaymenttermDescription1(String sPaymenttermDescription1) {
     this.sPaymenttermDescription1 = sPaymenttermDescription1;
   }
 
 
-  public MultilingualPaymenttermDescription sPaymenttermDescription2(@javax.annotation.Nullable String sPaymenttermDescription2) {
+  public MultilingualPaymenttermDescription sPaymenttermDescription2(String sPaymenttermDescription2) {
     this.sPaymenttermDescription2 = sPaymenttermDescription2;
     return this;
   }
@@ -96,7 +94,7 @@ public class MultilingualPaymenttermDescription {
     return sPaymenttermDescription2;
   }
 
-  public void setsPaymenttermDescription2(@javax.annotation.Nullable String sPaymenttermDescription2) {
+  public void setsPaymenttermDescription2(String sPaymenttermDescription2) {
     this.sPaymenttermDescription2 = sPaymenttermDescription2;
   }
 

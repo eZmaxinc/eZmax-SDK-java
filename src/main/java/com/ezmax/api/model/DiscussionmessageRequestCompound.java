@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.DiscussionmessageRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,108 @@ import eZmaxAPI.JSON;
 /**
  * A Discussionmessage Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class DiscussionmessageRequestCompound extends DiscussionmessageRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class DiscussionmessageRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D = "pkiDiscussionmessageID";
+  @SerializedName(SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D)
+  private Integer pkiDiscussionmessageID;
+
+  public static final String SERIALIZED_NAME_FKI_DISCUSSION_I_D = "fkiDiscussionID";
+  @SerializedName(SERIALIZED_NAME_FKI_DISCUSSION_I_D)
+  private Integer fkiDiscussionID;
+
+  public static final String SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D_ACTIONREQUIRED = "fkiDiscussionmembershipIDActionrequired";
+  @SerializedName(SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D_ACTIONREQUIRED)
+  private Integer fkiDiscussionmembershipIDActionrequired;
+
+  public static final String SERIALIZED_NAME_T_DISCUSSIONMESSAGE_CONTENT = "tDiscussionmessageContent";
+  @SerializedName(SERIALIZED_NAME_T_DISCUSSIONMESSAGE_CONTENT)
+  private String tDiscussionmessageContent;
+
   public DiscussionmessageRequestCompound() {
   }
+
+  public DiscussionmessageRequestCompound pkiDiscussionmessageID(Integer pkiDiscussionmessageID) {
+    this.pkiDiscussionmessageID = pkiDiscussionmessageID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Discussionmessage
+   * minimum: 0
+   * maximum: 16777215
+   * @return pkiDiscussionmessageID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiDiscussionmessageID() {
+    return pkiDiscussionmessageID;
+  }
+
+  public void setPkiDiscussionmessageID(Integer pkiDiscussionmessageID) {
+    this.pkiDiscussionmessageID = pkiDiscussionmessageID;
+  }
+
+
+  public DiscussionmessageRequestCompound fkiDiscussionID(Integer fkiDiscussionID) {
+    this.fkiDiscussionID = fkiDiscussionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Discussion
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiDiscussionID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiDiscussionID() {
+    return fkiDiscussionID;
+  }
+
+  public void setFkiDiscussionID(Integer fkiDiscussionID) {
+    this.fkiDiscussionID = fkiDiscussionID;
+  }
+
+
+  public DiscussionmessageRequestCompound fkiDiscussionmembershipIDActionrequired(Integer fkiDiscussionmembershipIDActionrequired) {
+    this.fkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Discussionmembership
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiDiscussionmembershipIDActionrequired
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiDiscussionmembershipIDActionrequired() {
+    return fkiDiscussionmembershipIDActionrequired;
+  }
+
+  public void setFkiDiscussionmembershipIDActionrequired(Integer fkiDiscussionmembershipIDActionrequired) {
+    this.fkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
+  }
+
+
+  public DiscussionmessageRequestCompound tDiscussionmessageContent(String tDiscussionmessageContent) {
+    this.tDiscussionmessageContent = tDiscussionmessageContent;
+    return this;
+  }
+
+  /**
+   * The content of the Discussionmessage
+   * @return tDiscussionmessageContent
+   */
+  @javax.annotation.Nonnull
+  public String gettDiscussionmessageContent() {
+    return tDiscussionmessageContent;
+  }
+
+  public void settDiscussionmessageContent(String tDiscussionmessageContent) {
+    this.tDiscussionmessageContent = tDiscussionmessageContent;
+  }
+
 
 
   @Override
@@ -63,19 +160,26 @@ public class DiscussionmessageRequestCompound extends DiscussionmessageRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    DiscussionmessageRequestCompound discussionmessageRequestCompound = (DiscussionmessageRequestCompound) o;
+    return Objects.equals(this.pkiDiscussionmessageID, discussionmessageRequestCompound.pkiDiscussionmessageID) &&
+        Objects.equals(this.fkiDiscussionID, discussionmessageRequestCompound.fkiDiscussionID) &&
+        Objects.equals(this.fkiDiscussionmembershipIDActionrequired, discussionmessageRequestCompound.fkiDiscussionmembershipIDActionrequired) &&
+        Objects.equals(this.tDiscussionmessageContent, discussionmessageRequestCompound.tDiscussionmessageContent);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiDiscussionmessageID, fkiDiscussionID, fkiDiscussionmembershipIDActionrequired, tDiscussionmessageContent);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiscussionmessageRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiDiscussionmessageID: ").append(toIndentedString(pkiDiscussionmessageID)).append("\n");
+    sb.append("    fkiDiscussionID: ").append(toIndentedString(fkiDiscussionID)).append("\n");
+    sb.append("    fkiDiscussionmembershipIDActionrequired: ").append(toIndentedString(fkiDiscussionmembershipIDActionrequired)).append("\n");
+    sb.append("    tDiscussionmessageContent: ").append(toIndentedString(tDiscussionmessageContent)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -135,6 +239,10 @@ public class DiscussionmessageRequestCompound extends DiscussionmessageRequest {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("tDiscussionmessageContent").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tDiscussionmessageContent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tDiscussionmessageContent").toString()));
       }
   }
 

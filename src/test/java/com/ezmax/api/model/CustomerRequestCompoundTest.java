@@ -13,7 +13,6 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.CustomerRequest;
 import com.ezmax.api.model.FieldECustomerMarketingcorrespondence;
 import com.ezmax.api.model.FieldECustomerType;
 import com.google.gson.TypeAdapter;

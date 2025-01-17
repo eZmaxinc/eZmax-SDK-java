@@ -51,39 +51,34 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldersignerassociationstatus Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignfoldersignerassociationstatusResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldersignerassociationID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_LASTNAME = "sEzsignfoldersignerassociationstatusLastname";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_LASTNAME)
-  @javax.annotation.Nullable
   private String sEzsignfoldersignerassociationstatusLastname;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_FIRSTNAME = "sEzsignfoldersignerassociationstatusFirstname";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_FIRSTNAME)
-  @javax.annotation.Nullable
   private String sEzsignfoldersignerassociationstatusFirstname;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_DESCRIPTION_X = "sEzsignfoldersignerassociationstatusDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERSIGNERASSOCIATIONSTATUS_DESCRIPTION_X)
-  @javax.annotation.Nullable
   private String sEzsignfoldersignerassociationstatusDescriptionX;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURESTATUS = "a_objEzsignsignaturestatus";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURESTATUS)
-  @javax.annotation.Nonnull
   private List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus = new ArrayList<>();
 
   public CustomEzsignfoldersignerassociationstatusResponse() {
   }
 
-  public CustomEzsignfoldersignerassociationstatusResponse fkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Integer fkiEzsignfoldersignerassociationID) {
+  public CustomEzsignfoldersignerassociationstatusResponse fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -98,13 +93,13 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return fkiEzsignfoldersignerassociationID;
   }
 
-  public void setFkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Integer fkiEzsignfoldersignerassociationID) {
+  public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
   }
 
 
   @Deprecated
-  public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusLastname(@javax.annotation.Nullable String sEzsignfoldersignerassociationstatusLastname) {
+  public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusLastname(String sEzsignfoldersignerassociationstatusLastname) {
     this.sEzsignfoldersignerassociationstatusLastname = sEzsignfoldersignerassociationstatusLastname;
     return this;
   }
@@ -121,13 +116,13 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
   }
 
   @Deprecated
-  public void setsEzsignfoldersignerassociationstatusLastname(@javax.annotation.Nullable String sEzsignfoldersignerassociationstatusLastname) {
+  public void setsEzsignfoldersignerassociationstatusLastname(String sEzsignfoldersignerassociationstatusLastname) {
     this.sEzsignfoldersignerassociationstatusLastname = sEzsignfoldersignerassociationstatusLastname;
   }
 
 
   @Deprecated
-  public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusFirstname(@javax.annotation.Nullable String sEzsignfoldersignerassociationstatusFirstname) {
+  public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusFirstname(String sEzsignfoldersignerassociationstatusFirstname) {
     this.sEzsignfoldersignerassociationstatusFirstname = sEzsignfoldersignerassociationstatusFirstname;
     return this;
   }
@@ -144,12 +139,12 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
   }
 
   @Deprecated
-  public void setsEzsignfoldersignerassociationstatusFirstname(@javax.annotation.Nullable String sEzsignfoldersignerassociationstatusFirstname) {
+  public void setsEzsignfoldersignerassociationstatusFirstname(String sEzsignfoldersignerassociationstatusFirstname) {
     this.sEzsignfoldersignerassociationstatusFirstname = sEzsignfoldersignerassociationstatusFirstname;
   }
 
 
-  public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusDescriptionX(@javax.annotation.Nullable String sEzsignfoldersignerassociationstatusDescriptionX) {
+  public CustomEzsignfoldersignerassociationstatusResponse sEzsignfoldersignerassociationstatusDescriptionX(String sEzsignfoldersignerassociationstatusDescriptionX) {
     this.sEzsignfoldersignerassociationstatusDescriptionX = sEzsignfoldersignerassociationstatusDescriptionX;
     return this;
   }
@@ -163,12 +158,12 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return sEzsignfoldersignerassociationstatusDescriptionX;
   }
 
-  public void setsEzsignfoldersignerassociationstatusDescriptionX(@javax.annotation.Nullable String sEzsignfoldersignerassociationstatusDescriptionX) {
+  public void setsEzsignfoldersignerassociationstatusDescriptionX(String sEzsignfoldersignerassociationstatusDescriptionX) {
     this.sEzsignfoldersignerassociationstatusDescriptionX = sEzsignfoldersignerassociationstatusDescriptionX;
   }
 
 
-  public CustomEzsignfoldersignerassociationstatusResponse aObjEzsignsignaturestatus(@javax.annotation.Nonnull List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus) {
+  public CustomEzsignfoldersignerassociationstatusResponse aObjEzsignsignaturestatus(List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus) {
     this.aObjEzsignsignaturestatus = aObjEzsignsignaturestatus;
     return this;
   }
@@ -190,7 +185,7 @@ public class CustomEzsignfoldersignerassociationstatusResponse {
     return aObjEzsignsignaturestatus;
   }
 
-  public void setaObjEzsignsignaturestatus(@javax.annotation.Nonnull List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus) {
+  public void setaObjEzsignsignaturestatus(List<CustomEzsignsignaturestatusResponse> aObjEzsignsignaturestatus) {
     this.aObjEzsignsignaturestatus = aObjEzsignsignaturestatus;
   }
 

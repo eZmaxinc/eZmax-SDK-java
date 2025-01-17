@@ -14,11 +14,12 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplateformfieldgroupCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplateformfieldgroupCreateObjectV1Response;
+import com.ezmax.api.model.EzsigntemplateformfieldgroupDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplateformfieldgroupEditObjectV1Request;
+import com.ezmax.api.model.EzsigntemplateformfieldgroupEditObjectV1Response;
 import com.ezmax.api.model.EzsigntemplateformfieldgroupGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -60,7 +61,7 @@ public class ObjectEzsigntemplateformfieldgroupApiTest {
     @Test
     public void ezsigntemplateformfieldgroupDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplateformfieldgroupID = null;
-        CommonResponse response = api.ezsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID);
+        EzsigntemplateformfieldgroupDeleteObjectV1Response response = api.ezsigntemplateformfieldgroupDeleteObjectV1(pkiEzsigntemplateformfieldgroupID);
         // TODO: test validations
     }
 
@@ -75,7 +76,7 @@ public class ObjectEzsigntemplateformfieldgroupApiTest {
     public void ezsigntemplateformfieldgroupEditObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplateformfieldgroupID = null;
         EzsigntemplateformfieldgroupEditObjectV1Request ezsigntemplateformfieldgroupEditObjectV1Request = null;
-        CommonResponse response = api.ezsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request);
+        EzsigntemplateformfieldgroupEditObjectV1Response response = api.ezsigntemplateformfieldgroupEditObjectV1(pkiEzsigntemplateformfieldgroupID, ezsigntemplateformfieldgroupEditObjectV1Request);
         // TODO: test validations
     }
 

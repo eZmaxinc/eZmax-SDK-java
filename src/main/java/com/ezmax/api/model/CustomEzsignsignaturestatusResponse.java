@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsignaturestatus Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignsignaturestatusResponse {
   /**
    * Type of step
@@ -104,33 +104,28 @@ public class CustomEzsignsignaturestatusResponse {
 
   public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURESTATUS_STEPTYPE = "eEzsignsignaturestatusSteptype";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURESTATUS_STEPTYPE)
-  @javax.annotation.Nonnull
   private EEzsignsignaturestatusSteptypeEnum eEzsignsignaturestatusSteptype;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURESTATUS_STEP = "iEzsignsignaturestatusStep";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURESTATUS_STEP)
-  @javax.annotation.Nonnull
   private Integer iEzsignsignaturestatusStep;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURESTATUS_TOTAL = "iEzsignsignaturestatusTotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURESTATUS_TOTAL)
-  @javax.annotation.Nonnull
   private Integer iEzsignsignaturestatusTotal;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURESTATUS_SIGNED = "iEzsignsignaturestatusSigned";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURESTATUS_SIGNED)
-  @javax.annotation.Nonnull
   private Integer iEzsignsignaturestatusSigned;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURESTATUS_CONDITIONAL = "iEzsignsignaturestatusConditional";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURESTATUS_CONDITIONAL)
-  @javax.annotation.Nonnull
   private Integer iEzsignsignaturestatusConditional;
 
   public CustomEzsignsignaturestatusResponse() {
   }
 
-  public CustomEzsignsignaturestatusResponse eEzsignsignaturestatusSteptype(@javax.annotation.Nonnull EEzsignsignaturestatusSteptypeEnum eEzsignsignaturestatusSteptype) {
+  public CustomEzsignsignaturestatusResponse eEzsignsignaturestatusSteptype(EEzsignsignaturestatusSteptypeEnum eEzsignsignaturestatusSteptype) {
     this.eEzsignsignaturestatusSteptype = eEzsignsignaturestatusSteptype;
     return this;
   }
@@ -144,12 +139,12 @@ public class CustomEzsignsignaturestatusResponse {
     return eEzsignsignaturestatusSteptype;
   }
 
-  public void seteEzsignsignaturestatusSteptype(@javax.annotation.Nonnull EEzsignsignaturestatusSteptypeEnum eEzsignsignaturestatusSteptype) {
+  public void seteEzsignsignaturestatusSteptype(EEzsignsignaturestatusSteptypeEnum eEzsignsignaturestatusSteptype) {
     this.eEzsignsignaturestatusSteptype = eEzsignsignaturestatusSteptype;
   }
 
 
-  public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusStep(@javax.annotation.Nonnull Integer iEzsignsignaturestatusStep) {
+  public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusStep(Integer iEzsignsignaturestatusStep) {
     this.iEzsignsignaturestatusStep = iEzsignsignaturestatusStep;
     return this;
   }
@@ -163,12 +158,12 @@ public class CustomEzsignsignaturestatusResponse {
     return iEzsignsignaturestatusStep;
   }
 
-  public void setiEzsignsignaturestatusStep(@javax.annotation.Nonnull Integer iEzsignsignaturestatusStep) {
+  public void setiEzsignsignaturestatusStep(Integer iEzsignsignaturestatusStep) {
     this.iEzsignsignaturestatusStep = iEzsignsignaturestatusStep;
   }
 
 
-  public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusTotal(@javax.annotation.Nonnull Integer iEzsignsignaturestatusTotal) {
+  public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusTotal(Integer iEzsignsignaturestatusTotal) {
     this.iEzsignsignaturestatusTotal = iEzsignsignaturestatusTotal;
     return this;
   }
@@ -182,12 +177,12 @@ public class CustomEzsignsignaturestatusResponse {
     return iEzsignsignaturestatusTotal;
   }
 
-  public void setiEzsignsignaturestatusTotal(@javax.annotation.Nonnull Integer iEzsignsignaturestatusTotal) {
+  public void setiEzsignsignaturestatusTotal(Integer iEzsignsignaturestatusTotal) {
     this.iEzsignsignaturestatusTotal = iEzsignsignaturestatusTotal;
   }
 
 
-  public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusSigned(@javax.annotation.Nonnull Integer iEzsignsignaturestatusSigned) {
+  public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusSigned(Integer iEzsignsignaturestatusSigned) {
     this.iEzsignsignaturestatusSigned = iEzsignsignaturestatusSigned;
     return this;
   }
@@ -201,12 +196,12 @@ public class CustomEzsignsignaturestatusResponse {
     return iEzsignsignaturestatusSigned;
   }
 
-  public void setiEzsignsignaturestatusSigned(@javax.annotation.Nonnull Integer iEzsignsignaturestatusSigned) {
+  public void setiEzsignsignaturestatusSigned(Integer iEzsignsignaturestatusSigned) {
     this.iEzsignsignaturestatusSigned = iEzsignsignaturestatusSigned;
   }
 
 
-  public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusConditional(@javax.annotation.Nonnull Integer iEzsignsignaturestatusConditional) {
+  public CustomEzsignsignaturestatusResponse iEzsignsignaturestatusConditional(Integer iEzsignsignaturestatusConditional) {
     this.iEzsignsignaturestatusConditional = iEzsignsignaturestatusConditional;
     return this;
   }
@@ -220,7 +215,7 @@ public class CustomEzsignsignaturestatusResponse {
     return iEzsignsignaturestatusConditional;
   }
 
-  public void setiEzsignsignaturestatusConditional(@javax.annotation.Nonnull Integer iEzsignsignaturestatusConditional) {
+  public void setiEzsignsignaturestatusConditional(Integer iEzsignsignaturestatusConditional) {
     this.iEzsignsignaturestatusConditional = iEzsignsignaturestatusConditional;
   }
 

@@ -49,47 +49,40 @@ import eZmaxAPI.JSON;
 /**
  * A Discussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DiscussionResponse {
   public static final String SERIALIZED_NAME_PKI_DISCUSSION_I_D = "pkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSION_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiDiscussionID;
 
   public static final String SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION = "sDiscussionDescription";
   @SerializedName(SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sDiscussionDescription;
 
   public static final String SERIALIZED_NAME_B_DISCUSSION_CLOSED = "bDiscussionClosed";
   @SerializedName(SERIALIZED_NAME_B_DISCUSSION_CLOSED)
-  @javax.annotation.Nonnull
   private Boolean bDiscussionClosed;
 
   public static final String SERIALIZED_NAME_DT_DISCUSSION_LASTREAD = "dtDiscussionLastread";
   @SerializedName(SERIALIZED_NAME_DT_DISCUSSION_LASTREAD)
-  @javax.annotation.Nullable
   private String dtDiscussionLastread;
 
   public static final String SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNT = "iDiscussionmessageCount";
   @SerializedName(SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNT)
-  @javax.annotation.Nonnull
   private Integer iDiscussionmessageCount;
 
   public static final String SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNTUNREAD = "iDiscussionmessageCountunread";
   @SerializedName(SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNTUNREAD)
-  @javax.annotation.Nonnull
   private Integer iDiscussionmessageCountunread;
 
   public static final String SERIALIZED_NAME_OBJ_DISCUSSIONCONFIGURATION = "objDiscussionconfiguration";
   @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSIONCONFIGURATION)
-  @javax.annotation.Nullable
   private CustomDiscussionconfigurationResponse objDiscussionconfiguration;
 
   public DiscussionResponse() {
   }
 
-  public DiscussionResponse pkiDiscussionID(@javax.annotation.Nonnull Integer pkiDiscussionID) {
+  public DiscussionResponse pkiDiscussionID(Integer pkiDiscussionID) {
     this.pkiDiscussionID = pkiDiscussionID;
     return this;
   }
@@ -105,12 +98,12 @@ public class DiscussionResponse {
     return pkiDiscussionID;
   }
 
-  public void setPkiDiscussionID(@javax.annotation.Nonnull Integer pkiDiscussionID) {
+  public void setPkiDiscussionID(Integer pkiDiscussionID) {
     this.pkiDiscussionID = pkiDiscussionID;
   }
 
 
-  public DiscussionResponse sDiscussionDescription(@javax.annotation.Nonnull String sDiscussionDescription) {
+  public DiscussionResponse sDiscussionDescription(String sDiscussionDescription) {
     this.sDiscussionDescription = sDiscussionDescription;
     return this;
   }
@@ -124,12 +117,12 @@ public class DiscussionResponse {
     return sDiscussionDescription;
   }
 
-  public void setsDiscussionDescription(@javax.annotation.Nonnull String sDiscussionDescription) {
+  public void setsDiscussionDescription(String sDiscussionDescription) {
     this.sDiscussionDescription = sDiscussionDescription;
   }
 
 
-  public DiscussionResponse bDiscussionClosed(@javax.annotation.Nonnull Boolean bDiscussionClosed) {
+  public DiscussionResponse bDiscussionClosed(Boolean bDiscussionClosed) {
     this.bDiscussionClosed = bDiscussionClosed;
     return this;
   }
@@ -143,12 +136,12 @@ public class DiscussionResponse {
     return bDiscussionClosed;
   }
 
-  public void setbDiscussionClosed(@javax.annotation.Nonnull Boolean bDiscussionClosed) {
+  public void setbDiscussionClosed(Boolean bDiscussionClosed) {
     this.bDiscussionClosed = bDiscussionClosed;
   }
 
 
-  public DiscussionResponse dtDiscussionLastread(@javax.annotation.Nullable String dtDiscussionLastread) {
+  public DiscussionResponse dtDiscussionLastread(String dtDiscussionLastread) {
     this.dtDiscussionLastread = dtDiscussionLastread;
     return this;
   }
@@ -162,12 +155,12 @@ public class DiscussionResponse {
     return dtDiscussionLastread;
   }
 
-  public void setDtDiscussionLastread(@javax.annotation.Nullable String dtDiscussionLastread) {
+  public void setDtDiscussionLastread(String dtDiscussionLastread) {
     this.dtDiscussionLastread = dtDiscussionLastread;
   }
 
 
-  public DiscussionResponse iDiscussionmessageCount(@javax.annotation.Nonnull Integer iDiscussionmessageCount) {
+  public DiscussionResponse iDiscussionmessageCount(Integer iDiscussionmessageCount) {
     this.iDiscussionmessageCount = iDiscussionmessageCount;
     return this;
   }
@@ -181,12 +174,12 @@ public class DiscussionResponse {
     return iDiscussionmessageCount;
   }
 
-  public void setiDiscussionmessageCount(@javax.annotation.Nonnull Integer iDiscussionmessageCount) {
+  public void setiDiscussionmessageCount(Integer iDiscussionmessageCount) {
     this.iDiscussionmessageCount = iDiscussionmessageCount;
   }
 
 
-  public DiscussionResponse iDiscussionmessageCountunread(@javax.annotation.Nonnull Integer iDiscussionmessageCountunread) {
+  public DiscussionResponse iDiscussionmessageCountunread(Integer iDiscussionmessageCountunread) {
     this.iDiscussionmessageCountunread = iDiscussionmessageCountunread;
     return this;
   }
@@ -200,12 +193,12 @@ public class DiscussionResponse {
     return iDiscussionmessageCountunread;
   }
 
-  public void setiDiscussionmessageCountunread(@javax.annotation.Nonnull Integer iDiscussionmessageCountunread) {
+  public void setiDiscussionmessageCountunread(Integer iDiscussionmessageCountunread) {
     this.iDiscussionmessageCountunread = iDiscussionmessageCountunread;
   }
 
 
-  public DiscussionResponse objDiscussionconfiguration(@javax.annotation.Nullable CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
+  public DiscussionResponse objDiscussionconfiguration(CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
     this.objDiscussionconfiguration = objDiscussionconfiguration;
     return this;
   }
@@ -219,7 +212,7 @@ public class DiscussionResponse {
     return objDiscussionconfiguration;
   }
 
-  public void setObjDiscussionconfiguration(@javax.annotation.Nullable CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
+  public void setObjDiscussionconfiguration(CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
     this.objDiscussionconfiguration = objDiscussionconfiguration;
   }
 
@@ -310,6 +303,21 @@ public class DiscussionResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in DiscussionResponse is not found in the empty JSON string", DiscussionResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!DiscussionResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DiscussionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : DiscussionResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sDiscussionDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sDiscussionDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDiscussionDescription").toString()));
@@ -323,6 +331,34 @@ public class DiscussionResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!DiscussionResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'DiscussionResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<DiscussionResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(DiscussionResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<DiscussionResponse>() {
+           @Override
+           public void write(JsonWriter out, DiscussionResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public DiscussionResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of DiscussionResponse given an JSON string

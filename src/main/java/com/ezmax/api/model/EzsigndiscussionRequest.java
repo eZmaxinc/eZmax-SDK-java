@@ -49,42 +49,36 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndiscussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndiscussionRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D = "pkiEzsigndiscussionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzsigndiscussionID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_PAGENUMBER = "iEzsigndiscussionPagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_PAGENUMBER)
-  @javax.annotation.Nonnull
   private Integer iEzsigndiscussionPagenumber;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_X = "iEzsigndiscussionX";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_X)
-  @javax.annotation.Nonnull
   private Integer iEzsigndiscussionX;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_Y = "iEzsigndiscussionY";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_Y)
-  @javax.annotation.Nonnull
   private Integer iEzsigndiscussionY;
 
   public static final String SERIALIZED_NAME_OBJ_DISCUSSION = "objDiscussion";
   @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSION)
-  @javax.annotation.Nonnull
   private DiscussionRequest objDiscussion;
 
   public EzsigndiscussionRequest() {
   }
 
-  public EzsigndiscussionRequest pkiEzsigndiscussionID(@javax.annotation.Nullable Integer pkiEzsigndiscussionID) {
+  public EzsigndiscussionRequest pkiEzsigndiscussionID(Integer pkiEzsigndiscussionID) {
     this.pkiEzsigndiscussionID = pkiEzsigndiscussionID;
     return this;
   }
@@ -100,12 +94,12 @@ public class EzsigndiscussionRequest {
     return pkiEzsigndiscussionID;
   }
 
-  public void setPkiEzsigndiscussionID(@javax.annotation.Nullable Integer pkiEzsigndiscussionID) {
+  public void setPkiEzsigndiscussionID(Integer pkiEzsigndiscussionID) {
     this.pkiEzsigndiscussionID = pkiEzsigndiscussionID;
   }
 
 
-  public EzsigndiscussionRequest fkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
+  public EzsigndiscussionRequest fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
     return this;
   }
@@ -120,12 +114,12 @@ public class EzsigndiscussionRequest {
     return fkiEzsigndocumentID;
   }
 
-  public void setFkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
+  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
 
-  public EzsigndiscussionRequest iEzsigndiscussionPagenumber(@javax.annotation.Nonnull Integer iEzsigndiscussionPagenumber) {
+  public EzsigndiscussionRequest iEzsigndiscussionPagenumber(Integer iEzsigndiscussionPagenumber) {
     this.iEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
     return this;
   }
@@ -139,12 +133,12 @@ public class EzsigndiscussionRequest {
     return iEzsigndiscussionPagenumber;
   }
 
-  public void setiEzsigndiscussionPagenumber(@javax.annotation.Nonnull Integer iEzsigndiscussionPagenumber) {
+  public void setiEzsigndiscussionPagenumber(Integer iEzsigndiscussionPagenumber) {
     this.iEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
   }
 
 
-  public EzsigndiscussionRequest iEzsigndiscussionX(@javax.annotation.Nonnull Integer iEzsigndiscussionX) {
+  public EzsigndiscussionRequest iEzsigndiscussionX(Integer iEzsigndiscussionX) {
     this.iEzsigndiscussionX = iEzsigndiscussionX;
     return this;
   }
@@ -160,12 +154,12 @@ public class EzsigndiscussionRequest {
     return iEzsigndiscussionX;
   }
 
-  public void setiEzsigndiscussionX(@javax.annotation.Nonnull Integer iEzsigndiscussionX) {
+  public void setiEzsigndiscussionX(Integer iEzsigndiscussionX) {
     this.iEzsigndiscussionX = iEzsigndiscussionX;
   }
 
 
-  public EzsigndiscussionRequest iEzsigndiscussionY(@javax.annotation.Nonnull Integer iEzsigndiscussionY) {
+  public EzsigndiscussionRequest iEzsigndiscussionY(Integer iEzsigndiscussionY) {
     this.iEzsigndiscussionY = iEzsigndiscussionY;
     return this;
   }
@@ -181,12 +175,12 @@ public class EzsigndiscussionRequest {
     return iEzsigndiscussionY;
   }
 
-  public void setiEzsigndiscussionY(@javax.annotation.Nonnull Integer iEzsigndiscussionY) {
+  public void setiEzsigndiscussionY(Integer iEzsigndiscussionY) {
     this.iEzsigndiscussionY = iEzsigndiscussionY;
   }
 
 
-  public EzsigndiscussionRequest objDiscussion(@javax.annotation.Nonnull DiscussionRequest objDiscussion) {
+  public EzsigndiscussionRequest objDiscussion(DiscussionRequest objDiscussion) {
     this.objDiscussion = objDiscussion;
     return this;
   }
@@ -200,7 +194,7 @@ public class EzsigndiscussionRequest {
     return objDiscussion;
   }
 
-  public void setObjDiscussion(@javax.annotation.Nonnull DiscussionRequest objDiscussion) {
+  public void setObjDiscussion(DiscussionRequest objDiscussion) {
     this.objDiscussion = objDiscussion;
   }
 
@@ -288,11 +282,54 @@ public class EzsigndiscussionRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigndiscussionRequest is not found in the empty JSON string", EzsigndiscussionRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsigndiscussionRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigndiscussionRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsigndiscussionRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objDiscussion`
       DiscussionRequest.validateJsonElement(jsonObj.get("objDiscussion"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsigndiscussionRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsigndiscussionRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsigndiscussionRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsigndiscussionRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsigndiscussionRequest>() {
+           @Override
+           public void write(JsonWriter out, EzsigndiscussionRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsigndiscussionRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsigndiscussionRequest given an JSON string

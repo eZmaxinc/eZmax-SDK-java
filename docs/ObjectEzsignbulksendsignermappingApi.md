@@ -80,7 +80,7 @@ public class Example {
 
 <a id="ezsignbulksendsignermappingDeleteObjectV1"></a>
 # **ezsignbulksendsignermappingDeleteObjectV1**
-> CommonResponse ezsignbulksendsignermappingDeleteObjectV1(pkiEzsignbulksendsignermappingID)
+> EzsignbulksendsignermappingDeleteObjectV1Response ezsignbulksendsignermappingDeleteObjectV1(pkiEzsignbulksendsignermappingID)
 
 Delete an existing Ezsignbulksendsignermapping
 
@@ -110,7 +110,7 @@ public class Example {
     ObjectEzsignbulksendsignermappingApi apiInstance = new ObjectEzsignbulksendsignermappingApi(defaultClient);
     Integer pkiEzsignbulksendsignermappingID = 56; // Integer | 
     try {
-      CommonResponse result = apiInstance.ezsignbulksendsignermappingDeleteObjectV1(pkiEzsignbulksendsignermappingID);
+      EzsignbulksendsignermappingDeleteObjectV1Response result = apiInstance.ezsignbulksendsignermappingDeleteObjectV1(pkiEzsignbulksendsignermappingID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignbulksendsignermappingApi#ezsignbulksendsignermappingDeleteObjectV1");
@@ -131,7 +131,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignbulksendsignermappingDeleteObjectV1Response**](EzsignbulksendsignermappingDeleteObjectV1Response.md)
 
 ### Authorization
 

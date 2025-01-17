@@ -235,7 +235,7 @@ public class Example {
 
 <a id="userEditObjectV1"></a>
 # **userEditObjectV1**
-> CommonResponse userEditObjectV1(pkiUserID, userEditObjectV1Request)
+> UserEditObjectV1Response userEditObjectV1(pkiUserID, userEditObjectV1Request)
 
 Edit an existing User
 
@@ -266,7 +266,7 @@ public class Example {
     Integer pkiUserID = 56; // Integer | The unique ID of the User
     UserEditObjectV1Request userEditObjectV1Request = new UserEditObjectV1Request(); // UserEditObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.userEditObjectV1(pkiUserID, userEditObjectV1Request);
+      UserEditObjectV1Response result = apiInstance.userEditObjectV1(pkiUserID, userEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectUserApi#userEditObjectV1");
@@ -288,7 +288,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UserEditObjectV1Response**](UserEditObjectV1Response.md)
 
 ### Authorization
 
@@ -1082,7 +1082,7 @@ public class Example {
 
 <a id="userSendPasswordResetV1"></a>
 # **userSendPasswordResetV1**
-> CommonResponse userSendPasswordResetV1(pkiUserID, body)
+> UserSendPasswordResetV1Response userSendPasswordResetV1(pkiUserID, body)
 
 Send password reset
 
@@ -1113,7 +1113,7 @@ public class Example {
     Integer pkiUserID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      CommonResponse result = apiInstance.userSendPasswordResetV1(pkiUserID, body);
+      UserSendPasswordResetV1Response result = apiInstance.userSendPasswordResetV1(pkiUserID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectUserApi#userSendPasswordResetV1");
@@ -1135,7 +1135,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UserSendPasswordResetV1Response**](UserSendPasswordResetV1Response.md)
 
 ### Authorization
 

@@ -50,82 +50,68 @@ import eZmaxAPI.JSON;
 /**
  * A Colleague Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ColleagueRequestV2 {
   public static final String SERIALIZED_NAME_PKI_COLLEAGUE_I_D = "pkiColleagueID";
   @SerializedName(SERIALIZED_NAME_PKI_COLLEAGUE_I_D)
-  @javax.annotation.Nullable
   private Integer pkiColleagueID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D_COLLEAGUE = "fkiUserIDColleague";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_COLLEAGUE)
-  @javax.annotation.Nonnull
   private Integer fkiUserIDColleague;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_EZSIGNEMAIL = "bColleagueEzsignemail";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_EZSIGNEMAIL)
-  @javax.annotation.Nonnull
   private Boolean bColleagueEzsignemail;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_FINANCIAL = "bColleagueFinancial";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_FINANCIAL)
-  @javax.annotation.Nonnull
   private Boolean bColleagueFinancial;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_USECLONEEMAIL = "bColleagueUsecloneemail";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_USECLONEEMAIL)
-  @javax.annotation.Nonnull
   private Boolean bColleagueUsecloneemail;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_ATTACHMENT = "bColleagueAttachment";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_ATTACHMENT)
-  @javax.annotation.Nonnull
   private Boolean bColleagueAttachment;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_CANAFE = "bColleagueCanafe";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_CANAFE)
-  @javax.annotation.Nonnull
   private Boolean bColleagueCanafe;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_PERMISSION = "bColleaguePermission";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_PERMISSION)
-  @javax.annotation.Nonnull
   private Boolean bColleaguePermission;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_REALESTATECOMPLETED = "bColleagueRealestatecompleted";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_REALESTATECOMPLETED)
-  @javax.annotation.Nonnull
   private Boolean bColleagueRealestatecompleted;
 
   public static final String SERIALIZED_NAME_DT_COLLEAGUE_FROM = "dtColleagueFrom";
   @SerializedName(SERIALIZED_NAME_DT_COLLEAGUE_FROM)
-  @javax.annotation.Nullable
   private String dtColleagueFrom;
 
   public static final String SERIALIZED_NAME_DT_COLLEAGUE_TO = "dtColleagueTo";
   @SerializedName(SERIALIZED_NAME_DT_COLLEAGUE_TO)
-  @javax.annotation.Nullable
   private String dtColleagueTo;
 
   public static final String SERIALIZED_NAME_E_COLLEAGUE_EZSIGN = "eColleagueEzsign";
   @SerializedName(SERIALIZED_NAME_E_COLLEAGUE_EZSIGN)
-  @javax.annotation.Nonnull
   private FieldEColleagueEzsign eColleagueEzsign;
 
   public static final String SERIALIZED_NAME_E_COLLEAGUE_REALESTATEINPROGRESS = "eColleagueRealestateinprogress";
   @SerializedName(SERIALIZED_NAME_E_COLLEAGUE_REALESTATEINPROGRESS)
-  @javax.annotation.Nonnull
   private FieldEColleagueRealestateinprogess eColleagueRealestateinprogress;
 
   public ColleagueRequestV2() {
   }
 
-  public ColleagueRequestV2 pkiColleagueID(@javax.annotation.Nullable Integer pkiColleagueID) {
+  public ColleagueRequestV2 pkiColleagueID(Integer pkiColleagueID) {
     this.pkiColleagueID = pkiColleagueID;
     return this;
   }
@@ -141,12 +127,12 @@ public class ColleagueRequestV2 {
     return pkiColleagueID;
   }
 
-  public void setPkiColleagueID(@javax.annotation.Nullable Integer pkiColleagueID) {
+  public void setPkiColleagueID(Integer pkiColleagueID) {
     this.pkiColleagueID = pkiColleagueID;
   }
 
 
-  public ColleagueRequestV2 fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
+  public ColleagueRequestV2 fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -161,12 +147,12 @@ public class ColleagueRequestV2 {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public ColleagueRequestV2 fkiUserIDColleague(@javax.annotation.Nonnull Integer fkiUserIDColleague) {
+  public ColleagueRequestV2 fkiUserIDColleague(Integer fkiUserIDColleague) {
     this.fkiUserIDColleague = fkiUserIDColleague;
     return this;
   }
@@ -181,12 +167,12 @@ public class ColleagueRequestV2 {
     return fkiUserIDColleague;
   }
 
-  public void setFkiUserIDColleague(@javax.annotation.Nonnull Integer fkiUserIDColleague) {
+  public void setFkiUserIDColleague(Integer fkiUserIDColleague) {
     this.fkiUserIDColleague = fkiUserIDColleague;
   }
 
 
-  public ColleagueRequestV2 bColleagueEzsignemail(@javax.annotation.Nonnull Boolean bColleagueEzsignemail) {
+  public ColleagueRequestV2 bColleagueEzsignemail(Boolean bColleagueEzsignemail) {
     this.bColleagueEzsignemail = bColleagueEzsignemail;
     return this;
   }
@@ -200,12 +186,12 @@ public class ColleagueRequestV2 {
     return bColleagueEzsignemail;
   }
 
-  public void setbColleagueEzsignemail(@javax.annotation.Nonnull Boolean bColleagueEzsignemail) {
+  public void setbColleagueEzsignemail(Boolean bColleagueEzsignemail) {
     this.bColleagueEzsignemail = bColleagueEzsignemail;
   }
 
 
-  public ColleagueRequestV2 bColleagueFinancial(@javax.annotation.Nonnull Boolean bColleagueFinancial) {
+  public ColleagueRequestV2 bColleagueFinancial(Boolean bColleagueFinancial) {
     this.bColleagueFinancial = bColleagueFinancial;
     return this;
   }
@@ -219,12 +205,12 @@ public class ColleagueRequestV2 {
     return bColleagueFinancial;
   }
 
-  public void setbColleagueFinancial(@javax.annotation.Nonnull Boolean bColleagueFinancial) {
+  public void setbColleagueFinancial(Boolean bColleagueFinancial) {
     this.bColleagueFinancial = bColleagueFinancial;
   }
 
 
-  public ColleagueRequestV2 bColleagueUsecloneemail(@javax.annotation.Nonnull Boolean bColleagueUsecloneemail) {
+  public ColleagueRequestV2 bColleagueUsecloneemail(Boolean bColleagueUsecloneemail) {
     this.bColleagueUsecloneemail = bColleagueUsecloneemail;
     return this;
   }
@@ -238,12 +224,12 @@ public class ColleagueRequestV2 {
     return bColleagueUsecloneemail;
   }
 
-  public void setbColleagueUsecloneemail(@javax.annotation.Nonnull Boolean bColleagueUsecloneemail) {
+  public void setbColleagueUsecloneemail(Boolean bColleagueUsecloneemail) {
     this.bColleagueUsecloneemail = bColleagueUsecloneemail;
   }
 
 
-  public ColleagueRequestV2 bColleagueAttachment(@javax.annotation.Nonnull Boolean bColleagueAttachment) {
+  public ColleagueRequestV2 bColleagueAttachment(Boolean bColleagueAttachment) {
     this.bColleagueAttachment = bColleagueAttachment;
     return this;
   }
@@ -257,12 +243,12 @@ public class ColleagueRequestV2 {
     return bColleagueAttachment;
   }
 
-  public void setbColleagueAttachment(@javax.annotation.Nonnull Boolean bColleagueAttachment) {
+  public void setbColleagueAttachment(Boolean bColleagueAttachment) {
     this.bColleagueAttachment = bColleagueAttachment;
   }
 
 
-  public ColleagueRequestV2 bColleagueCanafe(@javax.annotation.Nonnull Boolean bColleagueCanafe) {
+  public ColleagueRequestV2 bColleagueCanafe(Boolean bColleagueCanafe) {
     this.bColleagueCanafe = bColleagueCanafe;
     return this;
   }
@@ -276,12 +262,12 @@ public class ColleagueRequestV2 {
     return bColleagueCanafe;
   }
 
-  public void setbColleagueCanafe(@javax.annotation.Nonnull Boolean bColleagueCanafe) {
+  public void setbColleagueCanafe(Boolean bColleagueCanafe) {
     this.bColleagueCanafe = bColleagueCanafe;
   }
 
 
-  public ColleagueRequestV2 bColleaguePermission(@javax.annotation.Nonnull Boolean bColleaguePermission) {
+  public ColleagueRequestV2 bColleaguePermission(Boolean bColleaguePermission) {
     this.bColleaguePermission = bColleaguePermission;
     return this;
   }
@@ -295,12 +281,12 @@ public class ColleagueRequestV2 {
     return bColleaguePermission;
   }
 
-  public void setbColleaguePermission(@javax.annotation.Nonnull Boolean bColleaguePermission) {
+  public void setbColleaguePermission(Boolean bColleaguePermission) {
     this.bColleaguePermission = bColleaguePermission;
   }
 
 
-  public ColleagueRequestV2 bColleagueRealestatecompleted(@javax.annotation.Nonnull Boolean bColleagueRealestatecompleted) {
+  public ColleagueRequestV2 bColleagueRealestatecompleted(Boolean bColleagueRealestatecompleted) {
     this.bColleagueRealestatecompleted = bColleagueRealestatecompleted;
     return this;
   }
@@ -314,12 +300,12 @@ public class ColleagueRequestV2 {
     return bColleagueRealestatecompleted;
   }
 
-  public void setbColleagueRealestatecompleted(@javax.annotation.Nonnull Boolean bColleagueRealestatecompleted) {
+  public void setbColleagueRealestatecompleted(Boolean bColleagueRealestatecompleted) {
     this.bColleagueRealestatecompleted = bColleagueRealestatecompleted;
   }
 
 
-  public ColleagueRequestV2 dtColleagueFrom(@javax.annotation.Nullable String dtColleagueFrom) {
+  public ColleagueRequestV2 dtColleagueFrom(String dtColleagueFrom) {
     this.dtColleagueFrom = dtColleagueFrom;
     return this;
   }
@@ -333,12 +319,12 @@ public class ColleagueRequestV2 {
     return dtColleagueFrom;
   }
 
-  public void setDtColleagueFrom(@javax.annotation.Nullable String dtColleagueFrom) {
+  public void setDtColleagueFrom(String dtColleagueFrom) {
     this.dtColleagueFrom = dtColleagueFrom;
   }
 
 
-  public ColleagueRequestV2 dtColleagueTo(@javax.annotation.Nullable String dtColleagueTo) {
+  public ColleagueRequestV2 dtColleagueTo(String dtColleagueTo) {
     this.dtColleagueTo = dtColleagueTo;
     return this;
   }
@@ -352,12 +338,12 @@ public class ColleagueRequestV2 {
     return dtColleagueTo;
   }
 
-  public void setDtColleagueTo(@javax.annotation.Nullable String dtColleagueTo) {
+  public void setDtColleagueTo(String dtColleagueTo) {
     this.dtColleagueTo = dtColleagueTo;
   }
 
 
-  public ColleagueRequestV2 eColleagueEzsign(@javax.annotation.Nonnull FieldEColleagueEzsign eColleagueEzsign) {
+  public ColleagueRequestV2 eColleagueEzsign(FieldEColleagueEzsign eColleagueEzsign) {
     this.eColleagueEzsign = eColleagueEzsign;
     return this;
   }
@@ -371,12 +357,12 @@ public class ColleagueRequestV2 {
     return eColleagueEzsign;
   }
 
-  public void seteColleagueEzsign(@javax.annotation.Nonnull FieldEColleagueEzsign eColleagueEzsign) {
+  public void seteColleagueEzsign(FieldEColleagueEzsign eColleagueEzsign) {
     this.eColleagueEzsign = eColleagueEzsign;
   }
 
 
-  public ColleagueRequestV2 eColleagueRealestateinprogress(@javax.annotation.Nonnull FieldEColleagueRealestateinprogess eColleagueRealestateinprogress) {
+  public ColleagueRequestV2 eColleagueRealestateinprogress(FieldEColleagueRealestateinprogess eColleagueRealestateinprogress) {
     this.eColleagueRealestateinprogress = eColleagueRealestateinprogress;
     return this;
   }
@@ -390,7 +376,7 @@ public class ColleagueRequestV2 {
     return eColleagueRealestateinprogress;
   }
 
-  public void seteColleagueRealestateinprogress(@javax.annotation.Nonnull FieldEColleagueRealestateinprogess eColleagueRealestateinprogress) {
+  public void seteColleagueRealestateinprogress(FieldEColleagueRealestateinprogess eColleagueRealestateinprogress) {
     this.eColleagueRealestateinprogress = eColleagueRealestateinprogress;
   }
 
@@ -508,6 +494,21 @@ public class ColleagueRequestV2 {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ColleagueRequestV2 is not found in the empty JSON string", ColleagueRequestV2.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!ColleagueRequestV2.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ColleagueRequestV2` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ColleagueRequestV2.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("dtColleagueFrom") != null && !jsonObj.get("dtColleagueFrom").isJsonNull()) && !jsonObj.get("dtColleagueFrom").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtColleagueFrom` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtColleagueFrom").toString()));
@@ -521,6 +522,34 @@ public class ColleagueRequestV2 {
       FieldEColleagueRealestateinprogess.validateJsonElement(jsonObj.get("eColleagueRealestateinprogress"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!ColleagueRequestV2.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ColleagueRequestV2' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<ColleagueRequestV2> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ColleagueRequestV2.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<ColleagueRequestV2>() {
+           @Override
+           public void write(JsonWriter out, ColleagueRequestV2 value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public ColleagueRequestV2 read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of ColleagueRequestV2 given an JSON string

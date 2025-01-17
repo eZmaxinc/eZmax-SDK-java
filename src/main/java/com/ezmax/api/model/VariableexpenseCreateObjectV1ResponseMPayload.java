@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/variableexpense
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VariableexpenseCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_VARIABLEEXPENSE_I_D = "a_pkiVariableexpenseID";
   @SerializedName(SERIALIZED_NAME_A_PKI_VARIABLEEXPENSE_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiVariableexpenseID = new ArrayList<>();
 
   public VariableexpenseCreateObjectV1ResponseMPayload() {
   }
 
-  public VariableexpenseCreateObjectV1ResponseMPayload aPkiVariableexpenseID(@javax.annotation.Nonnull List<Integer> aPkiVariableexpenseID) {
+  public VariableexpenseCreateObjectV1ResponseMPayload aPkiVariableexpenseID(List<Integer> aPkiVariableexpenseID) {
     this.aPkiVariableexpenseID = aPkiVariableexpenseID;
     return this;
   }
@@ -82,7 +81,7 @@ public class VariableexpenseCreateObjectV1ResponseMPayload {
     return aPkiVariableexpenseID;
   }
 
-  public void setaPkiVariableexpenseID(@javax.annotation.Nonnull List<Integer> aPkiVariableexpenseID) {
+  public void setaPkiVariableexpenseID(List<Integer> aPkiVariableexpenseID) {
     this.aPkiVariableexpenseID = aPkiVariableexpenseID;
   }
 

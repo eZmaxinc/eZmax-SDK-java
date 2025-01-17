@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * A custom Webhooklog object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomWebhooklogResponse {
   public static final String SERIALIZED_NAME_DT_WEBHOOKLOG_DATE = "dtWebhooklogDate";
   @SerializedName(SERIALIZED_NAME_DT_WEBHOOKLOG_DATE)
-  @javax.annotation.Nonnull
   private String dtWebhooklogDate;
 
   public static final String SERIALIZED_NAME_T_WEBHOOKLOG_JSON = "tWebhooklogJson";
   @SerializedName(SERIALIZED_NAME_T_WEBHOOKLOG_JSON)
-  @javax.annotation.Nonnull
   private String tWebhooklogJson;
 
   public CustomWebhooklogResponse() {
   }
 
-  public CustomWebhooklogResponse dtWebhooklogDate(@javax.annotation.Nonnull String dtWebhooklogDate) {
+  public CustomWebhooklogResponse dtWebhooklogDate(String dtWebhooklogDate) {
     this.dtWebhooklogDate = dtWebhooklogDate;
     return this;
   }
@@ -77,12 +75,12 @@ public class CustomWebhooklogResponse {
     return dtWebhooklogDate;
   }
 
-  public void setDtWebhooklogDate(@javax.annotation.Nonnull String dtWebhooklogDate) {
+  public void setDtWebhooklogDate(String dtWebhooklogDate) {
     this.dtWebhooklogDate = dtWebhooklogDate;
   }
 
 
-  public CustomWebhooklogResponse tWebhooklogJson(@javax.annotation.Nonnull String tWebhooklogJson) {
+  public CustomWebhooklogResponse tWebhooklogJson(String tWebhooklogJson) {
     this.tWebhooklogJson = tWebhooklogJson;
     return this;
   }
@@ -96,7 +94,7 @@ public class CustomWebhooklogResponse {
     return tWebhooklogJson;
   }
 
-  public void settWebhooklogJson(@javax.annotation.Nonnull String tWebhooklogJson) {
+  public void settWebhooklogJson(String tWebhooklogJson) {
     this.tWebhooklogJson = tWebhooklogJson;
   }
 

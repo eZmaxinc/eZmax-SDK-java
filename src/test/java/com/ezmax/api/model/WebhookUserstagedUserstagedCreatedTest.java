@@ -13,10 +13,9 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.AttemptResponse;
-import com.ezmax.api.model.CommonWebhook;
+import com.ezmax.api.model.AttemptResponseCompound;
 import com.ezmax.api.model.CustomWebhookResponse;
-import com.ezmax.api.model.UserstagedResponse;
+import com.ezmax.api.model.UserstagedResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

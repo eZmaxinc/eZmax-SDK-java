@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Timezone AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TimezoneAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_TIMEZONE_NAME = "sTimezoneName";
   @SerializedName(SERIALIZED_NAME_S_TIMEZONE_NAME)
-  @javax.annotation.Nonnull
   private String sTimezoneName;
 
   public static final String SERIALIZED_NAME_PKI_TIMEZONE_I_D = "pkiTimezoneID";
   @SerializedName(SERIALIZED_NAME_PKI_TIMEZONE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiTimezoneID;
 
   public static final String SERIALIZED_NAME_B_TIMEZONE_ISACTIVE = "bTimezoneIsactive";
   @SerializedName(SERIALIZED_NAME_B_TIMEZONE_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bTimezoneIsactive;
 
   public TimezoneAutocompleteElementResponse() {
   }
 
-  public TimezoneAutocompleteElementResponse sTimezoneName(@javax.annotation.Nonnull String sTimezoneName) {
+  public TimezoneAutocompleteElementResponse sTimezoneName(String sTimezoneName) {
     this.sTimezoneName = sTimezoneName;
     return this;
   }
@@ -82,12 +79,12 @@ public class TimezoneAutocompleteElementResponse {
     return sTimezoneName;
   }
 
-  public void setsTimezoneName(@javax.annotation.Nonnull String sTimezoneName) {
+  public void setsTimezoneName(String sTimezoneName) {
     this.sTimezoneName = sTimezoneName;
   }
 
 
-  public TimezoneAutocompleteElementResponse pkiTimezoneID(@javax.annotation.Nonnull Integer pkiTimezoneID) {
+  public TimezoneAutocompleteElementResponse pkiTimezoneID(Integer pkiTimezoneID) {
     this.pkiTimezoneID = pkiTimezoneID;
     return this;
   }
@@ -102,12 +99,12 @@ public class TimezoneAutocompleteElementResponse {
     return pkiTimezoneID;
   }
 
-  public void setPkiTimezoneID(@javax.annotation.Nonnull Integer pkiTimezoneID) {
+  public void setPkiTimezoneID(Integer pkiTimezoneID) {
     this.pkiTimezoneID = pkiTimezoneID;
   }
 
 
-  public TimezoneAutocompleteElementResponse bTimezoneIsactive(@javax.annotation.Nonnull Boolean bTimezoneIsactive) {
+  public TimezoneAutocompleteElementResponse bTimezoneIsactive(Boolean bTimezoneIsactive) {
     this.bTimezoneIsactive = bTimezoneIsactive;
     return this;
   }
@@ -121,7 +118,7 @@ public class TimezoneAutocompleteElementResponse {
     return bTimezoneIsactive;
   }
 
-  public void setbTimezoneIsactive(@javax.annotation.Nonnull Boolean bTimezoneIsactive) {
+  public void setbTimezoneIsactive(Boolean bTimezoneIsactive) {
     this.bTimezoneIsactive = bTimezoneIsactive;
   }
 

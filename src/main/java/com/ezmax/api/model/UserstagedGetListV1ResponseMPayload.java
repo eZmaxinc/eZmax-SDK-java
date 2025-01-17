@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonGetListV1ResponseMPayload;
 import com.ezmax.api.model.UserstagedListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/userstaged/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class UserstagedGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class UserstagedGetListV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
+  @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  private Integer iRowReturned;
+
+  public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
+  @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  private Integer iRowFiltered;
+
   public static final String SERIALIZED_NAME_A_OBJ_USERSTAGED = "a_objUserstaged";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERSTAGED)
-  @javax.annotation.Nonnull
   private List<UserstagedListElement> aObjUserstaged = new ArrayList<>();
 
   public UserstagedGetListV1ResponseMPayload() {
   }
 
-  public UserstagedGetListV1ResponseMPayload aObjUserstaged(@javax.annotation.Nonnull List<UserstagedListElement> aObjUserstaged) {
+  public UserstagedGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+    return this;
+  }
+
+  /**
+   * The number of rows returned
+   * @return iRowReturned
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowReturned() {
+    return iRowReturned;
+  }
+
+  public void setiRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+  }
+
+
+  public UserstagedGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+    return this;
+  }
+
+  /**
+   * The number of rows matching your filters (if any) or the total number of rows
+   * @return iRowFiltered
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowFiltered() {
+    return iRowFiltered;
+  }
+
+  public void setiRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+  }
+
+
+  public UserstagedGetListV1ResponseMPayload aObjUserstaged(List<UserstagedListElement> aObjUserstaged) {
     this.aObjUserstaged = aObjUserstaged;
     return this;
   }
@@ -84,7 +128,7 @@ public class UserstagedGetListV1ResponseMPayload extends CommonGetListV1Response
     return aObjUserstaged;
   }
 
-  public void setaObjUserstaged(@javax.annotation.Nonnull List<UserstagedListElement> aObjUserstaged) {
+  public void setaObjUserstaged(List<UserstagedListElement> aObjUserstaged) {
     this.aObjUserstaged = aObjUserstaged;
   }
 
@@ -99,20 +143,22 @@ public class UserstagedGetListV1ResponseMPayload extends CommonGetListV1Response
       return false;
     }
     UserstagedGetListV1ResponseMPayload userstagedGetListV1ResponseMPayload = (UserstagedGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjUserstaged, userstagedGetListV1ResponseMPayload.aObjUserstaged) &&
-        super.equals(o);
+    return Objects.equals(this.iRowReturned, userstagedGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, userstagedGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjUserstaged, userstagedGetListV1ResponseMPayload.aObjUserstaged);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjUserstaged, super.hashCode());
+    return Objects.hash(iRowReturned, iRowFiltered, aObjUserstaged);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserstagedGetListV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
+    sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
     sb.append("    aObjUserstaged: ").append(toIndentedString(aObjUserstaged)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -142,9 +188,9 @@ public class UserstagedGetListV1ResponseMPayload extends CommonGetListV1Response
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objUserstaged");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objUserstaged");
   }
 
   /**

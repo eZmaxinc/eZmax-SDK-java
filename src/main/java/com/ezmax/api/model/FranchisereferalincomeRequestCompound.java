@@ -16,7 +16,6 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.AddressRequest;
 import com.ezmax.api.model.ContactRequestCompound;
-import com.ezmax.api.model.FranchisereferalincomeRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,22 +52,301 @@ import eZmaxAPI.JSON;
 /**
  * A Franchisereferalincome Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class FranchisereferalincomeRequestCompound extends FranchisereferalincomeRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class FranchisereferalincomeRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
+  @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
+  private Integer pkiFranchisereferalincomeID;
+
+  public static final String SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D = "fkiFranchisebrokerID";
+  @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D)
+  private Integer fkiFranchisebrokerID;
+
+  public static final String SERIALIZED_NAME_FKI_FRANCHISEREFERALINCOMEPROGRAM_I_D = "fkiFranchisereferalincomeprogramID";
+  @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEREFERALINCOMEPROGRAM_I_D)
+  private Integer fkiFranchisereferalincomeprogramID;
+
+  public static final String SERIALIZED_NAME_FKI_PERIOD_I_D = "fkiPeriodID";
+  @SerializedName(SERIALIZED_NAME_FKI_PERIOD_I_D)
+  private Integer fkiPeriodID;
+
+  public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_LOAN = "dFranchisereferalincomeLoan";
+  @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_LOAN)
+  private String dFranchisereferalincomeLoan;
+
+  public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISEAMOUNT = "dFranchisereferalincomeFranchiseamount";
+  @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISEAMOUNT)
+  private String dFranchisereferalincomeFranchiseamount;
+
+  public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISORAMOUNT = "dFranchisereferalincomeFranchisoramount";
+  @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISORAMOUNT)
+  private String dFranchisereferalincomeFranchisoramount;
+
+  public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_AGENTAMOUNT = "dFranchisereferalincomeAgentamount";
+  @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_AGENTAMOUNT)
+  private String dFranchisereferalincomeAgentamount;
+
+  public static final String SERIALIZED_NAME_DT_FRANCHISEREFERALINCOME_DISBURSED = "dtFranchisereferalincomeDisbursed";
+  @SerializedName(SERIALIZED_NAME_DT_FRANCHISEREFERALINCOME_DISBURSED)
+  private String dtFranchisereferalincomeDisbursed;
+
+  public static final String SERIALIZED_NAME_T_FRANCHISEREFERALINCOME_COMMENT = "tFranchisereferalincomeComment";
+  @SerializedName(SERIALIZED_NAME_T_FRANCHISEREFERALINCOME_COMMENT)
+  private String tFranchisereferalincomeComment;
+
+  public static final String SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D = "fkiFranchiseofficeID";
+  @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D)
+  private Integer fkiFranchiseofficeID;
+
+  public static final String SERIALIZED_NAME_S_FRANCHISEREFERALINCOME_REMOTEID = "sFranchisereferalincomeRemoteid";
+  @SerializedName(SERIALIZED_NAME_S_FRANCHISEREFERALINCOME_REMOTEID)
+  private String sFranchisereferalincomeRemoteid;
+
   public static final String SERIALIZED_NAME_OBJ_ADDRESS = "objAddress";
   @SerializedName(SERIALIZED_NAME_OBJ_ADDRESS)
-  @javax.annotation.Nullable
   private AddressRequest objAddress;
 
   public static final String SERIALIZED_NAME_A_OBJ_CONTACT = "a_objContact";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CONTACT)
-  @javax.annotation.Nonnull
   private List<ContactRequestCompound> aObjContact = new ArrayList<>();
 
   public FranchisereferalincomeRequestCompound() {
   }
 
-  public FranchisereferalincomeRequestCompound objAddress(@javax.annotation.Nullable AddressRequest objAddress) {
+  public FranchisereferalincomeRequestCompound pkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
+    this.pkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Franchisereferalincome
+   * minimum: 0
+   * @return pkiFranchisereferalincomeID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiFranchisereferalincomeID() {
+    return pkiFranchisereferalincomeID;
+  }
+
+  public void setPkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
+    this.pkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
+  }
+
+
+  public FranchisereferalincomeRequestCompound fkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
+    this.fkiFranchisebrokerID = fkiFranchisebrokerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Franchisebroker
+   * minimum: 0
+   * @return fkiFranchisebrokerID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiFranchisebrokerID() {
+    return fkiFranchisebrokerID;
+  }
+
+  public void setFkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
+    this.fkiFranchisebrokerID = fkiFranchisebrokerID;
+  }
+
+
+  public FranchisereferalincomeRequestCompound fkiFranchisereferalincomeprogramID(Integer fkiFranchisereferalincomeprogramID) {
+    this.fkiFranchisereferalincomeprogramID = fkiFranchisereferalincomeprogramID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Franchisereferalincomeprogram
+   * minimum: 0
+   * @return fkiFranchisereferalincomeprogramID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiFranchisereferalincomeprogramID() {
+    return fkiFranchisereferalincomeprogramID;
+  }
+
+  public void setFkiFranchisereferalincomeprogramID(Integer fkiFranchisereferalincomeprogramID) {
+    this.fkiFranchisereferalincomeprogramID = fkiFranchisereferalincomeprogramID;
+  }
+
+
+  public FranchisereferalincomeRequestCompound fkiPeriodID(Integer fkiPeriodID) {
+    this.fkiPeriodID = fkiPeriodID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Period
+   * minimum: 0
+   * @return fkiPeriodID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiPeriodID() {
+    return fkiPeriodID;
+  }
+
+  public void setFkiPeriodID(Integer fkiPeriodID) {
+    this.fkiPeriodID = fkiPeriodID;
+  }
+
+
+  public FranchisereferalincomeRequestCompound dFranchisereferalincomeLoan(String dFranchisereferalincomeLoan) {
+    this.dFranchisereferalincomeLoan = dFranchisereferalincomeLoan;
+    return this;
+  }
+
+  /**
+   * The loan amount
+   * @return dFranchisereferalincomeLoan
+   */
+  @javax.annotation.Nonnull
+  public String getdFranchisereferalincomeLoan() {
+    return dFranchisereferalincomeLoan;
+  }
+
+  public void setdFranchisereferalincomeLoan(String dFranchisereferalincomeLoan) {
+    this.dFranchisereferalincomeLoan = dFranchisereferalincomeLoan;
+  }
+
+
+  public FranchisereferalincomeRequestCompound dFranchisereferalincomeFranchiseamount(String dFranchisereferalincomeFranchiseamount) {
+    this.dFranchisereferalincomeFranchiseamount = dFranchisereferalincomeFranchiseamount;
+    return this;
+  }
+
+  /**
+   * The amount that will be given to the franchise
+   * @return dFranchisereferalincomeFranchiseamount
+   */
+  @javax.annotation.Nonnull
+  public String getdFranchisereferalincomeFranchiseamount() {
+    return dFranchisereferalincomeFranchiseamount;
+  }
+
+  public void setdFranchisereferalincomeFranchiseamount(String dFranchisereferalincomeFranchiseamount) {
+    this.dFranchisereferalincomeFranchiseamount = dFranchisereferalincomeFranchiseamount;
+  }
+
+
+  public FranchisereferalincomeRequestCompound dFranchisereferalincomeFranchisoramount(String dFranchisereferalincomeFranchisoramount) {
+    this.dFranchisereferalincomeFranchisoramount = dFranchisereferalincomeFranchisoramount;
+    return this;
+  }
+
+  /**
+   * The amount that will be kept by the franchisor
+   * @return dFranchisereferalincomeFranchisoramount
+   */
+  @javax.annotation.Nonnull
+  public String getdFranchisereferalincomeFranchisoramount() {
+    return dFranchisereferalincomeFranchisoramount;
+  }
+
+  public void setdFranchisereferalincomeFranchisoramount(String dFranchisereferalincomeFranchisoramount) {
+    this.dFranchisereferalincomeFranchisoramount = dFranchisereferalincomeFranchisoramount;
+  }
+
+
+  public FranchisereferalincomeRequestCompound dFranchisereferalincomeAgentamount(String dFranchisereferalincomeAgentamount) {
+    this.dFranchisereferalincomeAgentamount = dFranchisereferalincomeAgentamount;
+    return this;
+  }
+
+  /**
+   * The amount that will be given to the agent
+   * @return dFranchisereferalincomeAgentamount
+   */
+  @javax.annotation.Nonnull
+  public String getdFranchisereferalincomeAgentamount() {
+    return dFranchisereferalincomeAgentamount;
+  }
+
+  public void setdFranchisereferalincomeAgentamount(String dFranchisereferalincomeAgentamount) {
+    this.dFranchisereferalincomeAgentamount = dFranchisereferalincomeAgentamount;
+  }
+
+
+  public FranchisereferalincomeRequestCompound dtFranchisereferalincomeDisbursed(String dtFranchisereferalincomeDisbursed) {
+    this.dtFranchisereferalincomeDisbursed = dtFranchisereferalincomeDisbursed;
+    return this;
+  }
+
+  /**
+   * The date the amounts were disbursed
+   * @return dtFranchisereferalincomeDisbursed
+   */
+  @javax.annotation.Nonnull
+  public String getDtFranchisereferalincomeDisbursed() {
+    return dtFranchisereferalincomeDisbursed;
+  }
+
+  public void setDtFranchisereferalincomeDisbursed(String dtFranchisereferalincomeDisbursed) {
+    this.dtFranchisereferalincomeDisbursed = dtFranchisereferalincomeDisbursed;
+  }
+
+
+  public FranchisereferalincomeRequestCompound tFranchisereferalincomeComment(String tFranchisereferalincomeComment) {
+    this.tFranchisereferalincomeComment = tFranchisereferalincomeComment;
+    return this;
+  }
+
+  /**
+   * Comment about the transaction
+   * @return tFranchisereferalincomeComment
+   */
+  @javax.annotation.Nonnull
+  public String gettFranchisereferalincomeComment() {
+    return tFranchisereferalincomeComment;
+  }
+
+  public void settFranchisereferalincomeComment(String tFranchisereferalincomeComment) {
+    this.tFranchisereferalincomeComment = tFranchisereferalincomeComment;
+  }
+
+
+  public FranchisereferalincomeRequestCompound fkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
+    this.fkiFranchiseofficeID = fkiFranchiseofficeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Franchisereoffice
+   * minimum: 0
+   * @return fkiFranchiseofficeID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiFranchiseofficeID() {
+    return fkiFranchiseofficeID;
+  }
+
+  public void setFkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
+    this.fkiFranchiseofficeID = fkiFranchiseofficeID;
+  }
+
+
+  public FranchisereferalincomeRequestCompound sFranchisereferalincomeRemoteid(String sFranchisereferalincomeRemoteid) {
+    this.sFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
+    return this;
+  }
+
+  /**
+   * 
+   * @return sFranchisereferalincomeRemoteid
+   */
+  @javax.annotation.Nonnull
+  public String getsFranchisereferalincomeRemoteid() {
+    return sFranchisereferalincomeRemoteid;
+  }
+
+  public void setsFranchisereferalincomeRemoteid(String sFranchisereferalincomeRemoteid) {
+    this.sFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
+  }
+
+
+  public FranchisereferalincomeRequestCompound objAddress(AddressRequest objAddress) {
     this.objAddress = objAddress;
     return this;
   }
@@ -82,12 +360,12 @@ public class FranchisereferalincomeRequestCompound extends Franchisereferalincom
     return objAddress;
   }
 
-  public void setObjAddress(@javax.annotation.Nullable AddressRequest objAddress) {
+  public void setObjAddress(AddressRequest objAddress) {
     this.objAddress = objAddress;
   }
 
 
-  public FranchisereferalincomeRequestCompound aObjContact(@javax.annotation.Nonnull List<ContactRequestCompound> aObjContact) {
+  public FranchisereferalincomeRequestCompound aObjContact(List<ContactRequestCompound> aObjContact) {
     this.aObjContact = aObjContact;
     return this;
   }
@@ -109,7 +387,7 @@ public class FranchisereferalincomeRequestCompound extends Franchisereferalincom
     return aObjContact;
   }
 
-  public void setaObjContact(@javax.annotation.Nonnull List<ContactRequestCompound> aObjContact) {
+  public void setaObjContact(List<ContactRequestCompound> aObjContact) {
     this.aObjContact = aObjContact;
   }
 
@@ -124,21 +402,43 @@ public class FranchisereferalincomeRequestCompound extends Franchisereferalincom
       return false;
     }
     FranchisereferalincomeRequestCompound franchisereferalincomeRequestCompound = (FranchisereferalincomeRequestCompound) o;
-    return Objects.equals(this.objAddress, franchisereferalincomeRequestCompound.objAddress) &&
-        Objects.equals(this.aObjContact, franchisereferalincomeRequestCompound.aObjContact) &&
-        super.equals(o);
+    return Objects.equals(this.pkiFranchisereferalincomeID, franchisereferalincomeRequestCompound.pkiFranchisereferalincomeID) &&
+        Objects.equals(this.fkiFranchisebrokerID, franchisereferalincomeRequestCompound.fkiFranchisebrokerID) &&
+        Objects.equals(this.fkiFranchisereferalincomeprogramID, franchisereferalincomeRequestCompound.fkiFranchisereferalincomeprogramID) &&
+        Objects.equals(this.fkiPeriodID, franchisereferalincomeRequestCompound.fkiPeriodID) &&
+        Objects.equals(this.dFranchisereferalincomeLoan, franchisereferalincomeRequestCompound.dFranchisereferalincomeLoan) &&
+        Objects.equals(this.dFranchisereferalincomeFranchiseamount, franchisereferalincomeRequestCompound.dFranchisereferalincomeFranchiseamount) &&
+        Objects.equals(this.dFranchisereferalincomeFranchisoramount, franchisereferalincomeRequestCompound.dFranchisereferalincomeFranchisoramount) &&
+        Objects.equals(this.dFranchisereferalincomeAgentamount, franchisereferalincomeRequestCompound.dFranchisereferalincomeAgentamount) &&
+        Objects.equals(this.dtFranchisereferalincomeDisbursed, franchisereferalincomeRequestCompound.dtFranchisereferalincomeDisbursed) &&
+        Objects.equals(this.tFranchisereferalincomeComment, franchisereferalincomeRequestCompound.tFranchisereferalincomeComment) &&
+        Objects.equals(this.fkiFranchiseofficeID, franchisereferalincomeRequestCompound.fkiFranchiseofficeID) &&
+        Objects.equals(this.sFranchisereferalincomeRemoteid, franchisereferalincomeRequestCompound.sFranchisereferalincomeRemoteid) &&
+        Objects.equals(this.objAddress, franchisereferalincomeRequestCompound.objAddress) &&
+        Objects.equals(this.aObjContact, franchisereferalincomeRequestCompound.aObjContact);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objAddress, aObjContact, super.hashCode());
+    return Objects.hash(pkiFranchisereferalincomeID, fkiFranchisebrokerID, fkiFranchisereferalincomeprogramID, fkiPeriodID, dFranchisereferalincomeLoan, dFranchisereferalincomeFranchiseamount, dFranchisereferalincomeFranchisoramount, dFranchisereferalincomeAgentamount, dtFranchisereferalincomeDisbursed, tFranchisereferalincomeComment, fkiFranchiseofficeID, sFranchisereferalincomeRemoteid, objAddress, aObjContact);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FranchisereferalincomeRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiFranchisereferalincomeID: ").append(toIndentedString(pkiFranchisereferalincomeID)).append("\n");
+    sb.append("    fkiFranchisebrokerID: ").append(toIndentedString(fkiFranchisebrokerID)).append("\n");
+    sb.append("    fkiFranchisereferalincomeprogramID: ").append(toIndentedString(fkiFranchisereferalincomeprogramID)).append("\n");
+    sb.append("    fkiPeriodID: ").append(toIndentedString(fkiPeriodID)).append("\n");
+    sb.append("    dFranchisereferalincomeLoan: ").append(toIndentedString(dFranchisereferalincomeLoan)).append("\n");
+    sb.append("    dFranchisereferalincomeFranchiseamount: ").append(toIndentedString(dFranchisereferalincomeFranchiseamount)).append("\n");
+    sb.append("    dFranchisereferalincomeFranchisoramount: ").append(toIndentedString(dFranchisereferalincomeFranchisoramount)).append("\n");
+    sb.append("    dFranchisereferalincomeAgentamount: ").append(toIndentedString(dFranchisereferalincomeAgentamount)).append("\n");
+    sb.append("    dtFranchisereferalincomeDisbursed: ").append(toIndentedString(dtFranchisereferalincomeDisbursed)).append("\n");
+    sb.append("    tFranchisereferalincomeComment: ").append(toIndentedString(tFranchisereferalincomeComment)).append("\n");
+    sb.append("    fkiFranchiseofficeID: ").append(toIndentedString(fkiFranchiseofficeID)).append("\n");
+    sb.append("    sFranchisereferalincomeRemoteid: ").append(toIndentedString(sFranchisereferalincomeRemoteid)).append("\n");
     sb.append("    objAddress: ").append(toIndentedString(objAddress)).append("\n");
     sb.append("    aObjContact: ").append(toIndentedString(aObjContact)).append("\n");
     sb.append("}");
@@ -180,7 +480,6 @@ public class FranchisereferalincomeRequestCompound extends Franchisereferalincom
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objContact");
     openapiRequiredFields.add("fkiFranchisebrokerID");
     openapiRequiredFields.add("fkiFranchisereferalincomeprogramID");
     openapiRequiredFields.add("fkiPeriodID");
@@ -192,6 +491,7 @@ public class FranchisereferalincomeRequestCompound extends Franchisereferalincom
     openapiRequiredFields.add("tFranchisereferalincomeComment");
     openapiRequiredFields.add("fkiFranchiseofficeID");
     openapiRequiredFields.add("sFranchisereferalincomeRemoteid");
+    openapiRequiredFields.add("a_objContact");
   }
 
   /**
@@ -222,6 +522,27 @@ public class FranchisereferalincomeRequestCompound extends Franchisereferalincom
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("dFranchisereferalincomeLoan").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dFranchisereferalincomeLoan` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeLoan").toString()));
+      }
+      if (!jsonObj.get("dFranchisereferalincomeFranchiseamount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dFranchisereferalincomeFranchiseamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeFranchiseamount").toString()));
+      }
+      if (!jsonObj.get("dFranchisereferalincomeFranchisoramount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dFranchisereferalincomeFranchisoramount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeFranchisoramount").toString()));
+      }
+      if (!jsonObj.get("dFranchisereferalincomeAgentamount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dFranchisereferalincomeAgentamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeAgentamount").toString()));
+      }
+      if (!jsonObj.get("dtFranchisereferalincomeDisbursed").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtFranchisereferalincomeDisbursed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtFranchisereferalincomeDisbursed").toString()));
+      }
+      if (!jsonObj.get("tFranchisereferalincomeComment").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tFranchisereferalincomeComment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tFranchisereferalincomeComment").toString()));
+      }
+      if (!jsonObj.get("sFranchisereferalincomeRemoteid").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sFranchisereferalincomeRemoteid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFranchisereferalincomeRemoteid").toString()));
+      }
       // validate the optional field `objAddress`
       if (jsonObj.get("objAddress") != null && !jsonObj.get("objAddress").isJsonNull()) {
         AddressRequest.validateJsonElement(jsonObj.get("objAddress"));

@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.FieldESignaturePreference;
-import com.ezmax.api.model.SignatureResponseV3;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,10 +49,128 @@ import eZmaxAPI.JSON;
 /**
  * A Signature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class SignatureResponseCompoundV3 extends SignatureResponseV3 {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class SignatureResponseCompoundV3 {
+  public static final String SERIALIZED_NAME_PKI_SIGNATURE_I_D = "pkiSignatureID";
+  @SerializedName(SERIALIZED_NAME_PKI_SIGNATURE_I_D)
+  private Integer pkiSignatureID;
+
+  public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
+  @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
+  private Integer fkiFontID;
+
+  public static final String SERIALIZED_NAME_E_SIGNATURE_PREFERENCE = "eSignaturePreference";
+  @SerializedName(SERIALIZED_NAME_E_SIGNATURE_PREFERENCE)
+  private FieldESignaturePreference eSignaturePreference;
+
+  public static final String SERIALIZED_NAME_B_SIGNATURE_SVG = "bSignatureSvg";
+  @SerializedName(SERIALIZED_NAME_B_SIGNATURE_SVG)
+  private Boolean bSignatureSvg;
+
+  public static final String SERIALIZED_NAME_B_SIGNATURE_SVGINITIALS = "bSignatureSvginitials";
+  @SerializedName(SERIALIZED_NAME_B_SIGNATURE_SVGINITIALS)
+  private Boolean bSignatureSvginitials;
+
   public SignatureResponseCompoundV3() {
   }
+
+  public SignatureResponseCompoundV3 pkiSignatureID(Integer pkiSignatureID) {
+    this.pkiSignatureID = pkiSignatureID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Signature
+   * minimum: 0
+   * maximum: 16777215
+   * @return pkiSignatureID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiSignatureID() {
+    return pkiSignatureID;
+  }
+
+  public void setPkiSignatureID(Integer pkiSignatureID) {
+    this.pkiSignatureID = pkiSignatureID;
+  }
+
+
+  public SignatureResponseCompoundV3 fkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   * @return fkiFontID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiFontID() {
+    return fkiFontID;
+  }
+
+  public void setFkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+  }
+
+
+  public SignatureResponseCompoundV3 eSignaturePreference(FieldESignaturePreference eSignaturePreference) {
+    this.eSignaturePreference = eSignaturePreference;
+    return this;
+  }
+
+  /**
+   * Get eSignaturePreference
+   * @return eSignaturePreference
+   */
+  @javax.annotation.Nonnull
+  public FieldESignaturePreference geteSignaturePreference() {
+    return eSignaturePreference;
+  }
+
+  public void seteSignaturePreference(FieldESignaturePreference eSignaturePreference) {
+    this.eSignaturePreference = eSignaturePreference;
+  }
+
+
+  public SignatureResponseCompoundV3 bSignatureSvg(Boolean bSignatureSvg) {
+    this.bSignatureSvg = bSignatureSvg;
+    return this;
+  }
+
+  /**
+   * Whether the signature has a SVG or not
+   * @return bSignatureSvg
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbSignatureSvg() {
+    return bSignatureSvg;
+  }
+
+  public void setbSignatureSvg(Boolean bSignatureSvg) {
+    this.bSignatureSvg = bSignatureSvg;
+  }
+
+
+  public SignatureResponseCompoundV3 bSignatureSvginitials(Boolean bSignatureSvginitials) {
+    this.bSignatureSvginitials = bSignatureSvginitials;
+    return this;
+  }
+
+  /**
+   * Whether the initials has a SVG or not
+   * @return bSignatureSvginitials
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbSignatureSvginitials() {
+    return bSignatureSvginitials;
+  }
+
+  public void setbSignatureSvginitials(Boolean bSignatureSvginitials) {
+    this.bSignatureSvginitials = bSignatureSvginitials;
+  }
+
 
 
   @Override
@@ -64,19 +181,28 @@ public class SignatureResponseCompoundV3 extends SignatureResponseV3 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    SignatureResponseCompoundV3 signatureResponseCompoundV3 = (SignatureResponseCompoundV3) o;
+    return Objects.equals(this.pkiSignatureID, signatureResponseCompoundV3.pkiSignatureID) &&
+        Objects.equals(this.fkiFontID, signatureResponseCompoundV3.fkiFontID) &&
+        Objects.equals(this.eSignaturePreference, signatureResponseCompoundV3.eSignaturePreference) &&
+        Objects.equals(this.bSignatureSvg, signatureResponseCompoundV3.bSignatureSvg) &&
+        Objects.equals(this.bSignatureSvginitials, signatureResponseCompoundV3.bSignatureSvginitials);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiSignatureID, fkiFontID, eSignaturePreference, bSignatureSvg, bSignatureSvginitials);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureResponseCompoundV3 {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiSignatureID: ").append(toIndentedString(pkiSignatureID)).append("\n");
+    sb.append("    fkiFontID: ").append(toIndentedString(fkiFontID)).append("\n");
+    sb.append("    eSignaturePreference: ").append(toIndentedString(eSignaturePreference)).append("\n");
+    sb.append("    bSignatureSvg: ").append(toIndentedString(bSignatureSvg)).append("\n");
+    sb.append("    bSignatureSvginitials: ").append(toIndentedString(bSignatureSvginitials)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -141,6 +267,9 @@ public class SignatureResponseCompoundV3 extends SignatureResponseV3 {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eSignaturePreference`
+      FieldESignaturePreference.validateJsonElement(jsonObj.get("eSignaturePreference"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

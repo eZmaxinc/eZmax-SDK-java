@@ -48,52 +48,44 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcarddetail Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreditcarddetailResponse {
   public static final String SERIALIZED_NAME_PKI_CREDITCARDDETAIL_I_D = "pkiCreditcarddetailID";
   @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDDETAIL_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiCreditcarddetailID;
 
   public static final String SERIALIZED_NAME_FKI_CREDITCARDTYPE_I_D = "fkiCreditcardtypeID";
   @SerializedName(SERIALIZED_NAME_FKI_CREDITCARDTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiCreditcardtypeID;
 
   public static final String SERIALIZED_NAME_I_CREDITCARDDETAIL_LASTDIGITS = "iCreditcarddetailLastdigits";
   @SerializedName(SERIALIZED_NAME_I_CREDITCARDDETAIL_LASTDIGITS)
-  @javax.annotation.Nonnull
   private Integer iCreditcarddetailLastdigits;
 
   public static final String SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONMONTH = "iCreditcarddetailExpirationmonth";
   @SerializedName(SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONMONTH)
-  @javax.annotation.Nonnull
   private Integer iCreditcarddetailExpirationmonth;
 
   public static final String SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONYEAR = "iCreditcarddetailExpirationyear";
   @SerializedName(SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONYEAR)
-  @javax.annotation.Nonnull
   private Integer iCreditcarddetailExpirationyear;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDDETAIL_CIVIC = "sCreditcarddetailCivic";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDDETAIL_CIVIC)
-  @javax.annotation.Nonnull
   private String sCreditcarddetailCivic;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDDETAIL_STREET = "sCreditcarddetailStreet";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDDETAIL_STREET)
-  @javax.annotation.Nonnull
   private String sCreditcarddetailStreet;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDDETAIL_ZIP = "sCreditcarddetailZip";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDDETAIL_ZIP)
-  @javax.annotation.Nonnull
   private String sCreditcarddetailZip;
 
   public CreditcarddetailResponse() {
   }
 
-  public CreditcarddetailResponse pkiCreditcarddetailID(@javax.annotation.Nonnull Integer pkiCreditcarddetailID) {
+  public CreditcarddetailResponse pkiCreditcarddetailID(Integer pkiCreditcarddetailID) {
     this.pkiCreditcarddetailID = pkiCreditcarddetailID;
     return this;
   }
@@ -109,12 +101,12 @@ public class CreditcarddetailResponse {
     return pkiCreditcarddetailID;
   }
 
-  public void setPkiCreditcarddetailID(@javax.annotation.Nonnull Integer pkiCreditcarddetailID) {
+  public void setPkiCreditcarddetailID(Integer pkiCreditcarddetailID) {
     this.pkiCreditcarddetailID = pkiCreditcarddetailID;
   }
 
 
-  public CreditcarddetailResponse fkiCreditcardtypeID(@javax.annotation.Nonnull Integer fkiCreditcardtypeID) {
+  public CreditcarddetailResponse fkiCreditcardtypeID(Integer fkiCreditcardtypeID) {
     this.fkiCreditcardtypeID = fkiCreditcardtypeID;
     return this;
   }
@@ -130,12 +122,12 @@ public class CreditcarddetailResponse {
     return fkiCreditcardtypeID;
   }
 
-  public void setFkiCreditcardtypeID(@javax.annotation.Nonnull Integer fkiCreditcardtypeID) {
+  public void setFkiCreditcardtypeID(Integer fkiCreditcardtypeID) {
     this.fkiCreditcardtypeID = fkiCreditcardtypeID;
   }
 
 
-  public CreditcarddetailResponse iCreditcarddetailLastdigits(@javax.annotation.Nonnull Integer iCreditcarddetailLastdigits) {
+  public CreditcarddetailResponse iCreditcarddetailLastdigits(Integer iCreditcarddetailLastdigits) {
     this.iCreditcarddetailLastdigits = iCreditcarddetailLastdigits;
     return this;
   }
@@ -151,12 +143,12 @@ public class CreditcarddetailResponse {
     return iCreditcarddetailLastdigits;
   }
 
-  public void setiCreditcarddetailLastdigits(@javax.annotation.Nonnull Integer iCreditcarddetailLastdigits) {
+  public void setiCreditcarddetailLastdigits(Integer iCreditcarddetailLastdigits) {
     this.iCreditcarddetailLastdigits = iCreditcarddetailLastdigits;
   }
 
 
-  public CreditcarddetailResponse iCreditcarddetailExpirationmonth(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationmonth) {
+  public CreditcarddetailResponse iCreditcarddetailExpirationmonth(Integer iCreditcarddetailExpirationmonth) {
     this.iCreditcarddetailExpirationmonth = iCreditcarddetailExpirationmonth;
     return this;
   }
@@ -172,12 +164,12 @@ public class CreditcarddetailResponse {
     return iCreditcarddetailExpirationmonth;
   }
 
-  public void setiCreditcarddetailExpirationmonth(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationmonth) {
+  public void setiCreditcarddetailExpirationmonth(Integer iCreditcarddetailExpirationmonth) {
     this.iCreditcarddetailExpirationmonth = iCreditcarddetailExpirationmonth;
   }
 
 
-  public CreditcarddetailResponse iCreditcarddetailExpirationyear(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationyear) {
+  public CreditcarddetailResponse iCreditcarddetailExpirationyear(Integer iCreditcarddetailExpirationyear) {
     this.iCreditcarddetailExpirationyear = iCreditcarddetailExpirationyear;
     return this;
   }
@@ -193,12 +185,12 @@ public class CreditcarddetailResponse {
     return iCreditcarddetailExpirationyear;
   }
 
-  public void setiCreditcarddetailExpirationyear(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationyear) {
+  public void setiCreditcarddetailExpirationyear(Integer iCreditcarddetailExpirationyear) {
     this.iCreditcarddetailExpirationyear = iCreditcarddetailExpirationyear;
   }
 
 
-  public CreditcarddetailResponse sCreditcarddetailCivic(@javax.annotation.Nonnull String sCreditcarddetailCivic) {
+  public CreditcarddetailResponse sCreditcarddetailCivic(String sCreditcarddetailCivic) {
     this.sCreditcarddetailCivic = sCreditcarddetailCivic;
     return this;
   }
@@ -212,12 +204,12 @@ public class CreditcarddetailResponse {
     return sCreditcarddetailCivic;
   }
 
-  public void setsCreditcarddetailCivic(@javax.annotation.Nonnull String sCreditcarddetailCivic) {
+  public void setsCreditcarddetailCivic(String sCreditcarddetailCivic) {
     this.sCreditcarddetailCivic = sCreditcarddetailCivic;
   }
 
 
-  public CreditcarddetailResponse sCreditcarddetailStreet(@javax.annotation.Nonnull String sCreditcarddetailStreet) {
+  public CreditcarddetailResponse sCreditcarddetailStreet(String sCreditcarddetailStreet) {
     this.sCreditcarddetailStreet = sCreditcarddetailStreet;
     return this;
   }
@@ -231,12 +223,12 @@ public class CreditcarddetailResponse {
     return sCreditcarddetailStreet;
   }
 
-  public void setsCreditcarddetailStreet(@javax.annotation.Nonnull String sCreditcarddetailStreet) {
+  public void setsCreditcarddetailStreet(String sCreditcarddetailStreet) {
     this.sCreditcarddetailStreet = sCreditcarddetailStreet;
   }
 
 
-  public CreditcarddetailResponse sCreditcarddetailZip(@javax.annotation.Nonnull String sCreditcarddetailZip) {
+  public CreditcarddetailResponse sCreditcarddetailZip(String sCreditcarddetailZip) {
     this.sCreditcarddetailZip = sCreditcarddetailZip;
     return this;
   }
@@ -250,7 +242,7 @@ public class CreditcarddetailResponse {
     return sCreditcarddetailZip;
   }
 
-  public void setsCreditcarddetailZip(@javax.annotation.Nonnull String sCreditcarddetailZip) {
+  public void setsCreditcarddetailZip(String sCreditcarddetailZip) {
     this.sCreditcarddetailZip = sCreditcarddetailZip;
   }
 
@@ -347,6 +339,21 @@ public class CreditcarddetailResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CreditcarddetailResponse is not found in the empty JSON string", CreditcarddetailResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!CreditcarddetailResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreditcarddetailResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CreditcarddetailResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sCreditcarddetailCivic").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCreditcarddetailCivic` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcarddetailCivic").toString()));
@@ -359,6 +366,34 @@ public class CreditcarddetailResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CreditcarddetailResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CreditcarddetailResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CreditcarddetailResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CreditcarddetailResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CreditcarddetailResponse>() {
+           @Override
+           public void write(JsonWriter out, CreditcarddetailResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CreditcarddetailResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of CreditcarddetailResponse given an JSON string

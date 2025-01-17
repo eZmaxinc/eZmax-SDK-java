@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AttachmentGetAttachmentlogsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_ATTACHMENTLOG = "a_objAttachmentlog";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTACHMENTLOG)
-  @javax.annotation.Nonnull
   private List<AttachmentlogResponseCompound> aObjAttachmentlog = new ArrayList<>();
 
   public AttachmentGetAttachmentlogsV1ResponseMPayload() {
   }
 
-  public AttachmentGetAttachmentlogsV1ResponseMPayload aObjAttachmentlog(@javax.annotation.Nonnull List<AttachmentlogResponseCompound> aObjAttachmentlog) {
+  public AttachmentGetAttachmentlogsV1ResponseMPayload aObjAttachmentlog(List<AttachmentlogResponseCompound> aObjAttachmentlog) {
     this.aObjAttachmentlog = aObjAttachmentlog;
     return this;
   }
@@ -83,7 +82,7 @@ public class AttachmentGetAttachmentlogsV1ResponseMPayload {
     return aObjAttachmentlog;
   }
 
-  public void setaObjAttachmentlog(@javax.annotation.Nonnull List<AttachmentlogResponseCompound> aObjAttachmentlog) {
+  public void setaObjAttachmentlog(List<AttachmentlogResponseCompound> aObjAttachmentlog) {
     this.aObjAttachmentlog = aObjAttachmentlog;
   }
 

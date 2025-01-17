@@ -49,62 +49,53 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PhoneRequest {
   public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
-  @javax.annotation.Nullable
   private Integer pkiPhoneID;
 
   public static final String SERIALIZED_NAME_FKI_PHONETYPE_I_D = "fkiPhonetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_PHONETYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiPhonetypeID;
 
   public static final String SERIALIZED_NAME_E_PHONE_TYPE = "ePhoneType";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_E_PHONE_TYPE)
-  @javax.annotation.Nullable
   private FieldEPhoneType ePhoneType;
 
   public static final String SERIALIZED_NAME_S_PHONE_REGION = "sPhoneRegion";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_S_PHONE_REGION)
-  @javax.annotation.Nullable
   private String sPhoneRegion;
 
   public static final String SERIALIZED_NAME_S_PHONE_EXCHANGE = "sPhoneExchange";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_S_PHONE_EXCHANGE)
-  @javax.annotation.Nullable
   private String sPhoneExchange;
 
   public static final String SERIALIZED_NAME_S_PHONE_NUMBER = "sPhoneNumber";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_S_PHONE_NUMBER)
-  @javax.annotation.Nullable
   private String sPhoneNumber;
 
   public static final String SERIALIZED_NAME_S_PHONE_INTERNATIONAL = "sPhoneInternational";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_S_PHONE_INTERNATIONAL)
-  @javax.annotation.Nullable
   private String sPhoneInternational;
 
   public static final String SERIALIZED_NAME_S_PHONE_EXTENSION = "sPhoneExtension";
   @SerializedName(SERIALIZED_NAME_S_PHONE_EXTENSION)
-  @javax.annotation.Nullable
   private String sPhoneExtension;
 
   public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
   @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
-  @javax.annotation.Nullable
   private String sPhoneE164;
 
   public PhoneRequest() {
   }
 
-  public PhoneRequest pkiPhoneID(@javax.annotation.Nullable Integer pkiPhoneID) {
+  public PhoneRequest pkiPhoneID(Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
     return this;
   }
@@ -119,12 +110,12 @@ public class PhoneRequest {
     return pkiPhoneID;
   }
 
-  public void setPkiPhoneID(@javax.annotation.Nullable Integer pkiPhoneID) {
+  public void setPkiPhoneID(Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
   }
 
 
-  public PhoneRequest fkiPhonetypeID(@javax.annotation.Nonnull Integer fkiPhonetypeID) {
+  public PhoneRequest fkiPhonetypeID(Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
     return this;
   }
@@ -139,13 +130,13 @@ public class PhoneRequest {
     return fkiPhonetypeID;
   }
 
-  public void setFkiPhonetypeID(@javax.annotation.Nonnull Integer fkiPhonetypeID) {
+  public void setFkiPhonetypeID(Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
   }
 
 
   @Deprecated
-  public PhoneRequest ePhoneType(@javax.annotation.Nullable FieldEPhoneType ePhoneType) {
+  public PhoneRequest ePhoneType(FieldEPhoneType ePhoneType) {
     this.ePhoneType = ePhoneType;
     return this;
   }
@@ -162,13 +153,13 @@ public class PhoneRequest {
   }
 
   @Deprecated
-  public void setePhoneType(@javax.annotation.Nullable FieldEPhoneType ePhoneType) {
+  public void setePhoneType(FieldEPhoneType ePhoneType) {
     this.ePhoneType = ePhoneType;
   }
 
 
   @Deprecated
-  public PhoneRequest sPhoneRegion(@javax.annotation.Nullable String sPhoneRegion) {
+  public PhoneRequest sPhoneRegion(String sPhoneRegion) {
     this.sPhoneRegion = sPhoneRegion;
     return this;
   }
@@ -185,13 +176,13 @@ public class PhoneRequest {
   }
 
   @Deprecated
-  public void setsPhoneRegion(@javax.annotation.Nullable String sPhoneRegion) {
+  public void setsPhoneRegion(String sPhoneRegion) {
     this.sPhoneRegion = sPhoneRegion;
   }
 
 
   @Deprecated
-  public PhoneRequest sPhoneExchange(@javax.annotation.Nullable String sPhoneExchange) {
+  public PhoneRequest sPhoneExchange(String sPhoneExchange) {
     this.sPhoneExchange = sPhoneExchange;
     return this;
   }
@@ -208,13 +199,13 @@ public class PhoneRequest {
   }
 
   @Deprecated
-  public void setsPhoneExchange(@javax.annotation.Nullable String sPhoneExchange) {
+  public void setsPhoneExchange(String sPhoneExchange) {
     this.sPhoneExchange = sPhoneExchange;
   }
 
 
   @Deprecated
-  public PhoneRequest sPhoneNumber(@javax.annotation.Nullable String sPhoneNumber) {
+  public PhoneRequest sPhoneNumber(String sPhoneNumber) {
     this.sPhoneNumber = sPhoneNumber;
     return this;
   }
@@ -231,13 +222,13 @@ public class PhoneRequest {
   }
 
   @Deprecated
-  public void setsPhoneNumber(@javax.annotation.Nullable String sPhoneNumber) {
+  public void setsPhoneNumber(String sPhoneNumber) {
     this.sPhoneNumber = sPhoneNumber;
   }
 
 
   @Deprecated
-  public PhoneRequest sPhoneInternational(@javax.annotation.Nullable String sPhoneInternational) {
+  public PhoneRequest sPhoneInternational(String sPhoneInternational) {
     this.sPhoneInternational = sPhoneInternational;
     return this;
   }
@@ -254,12 +245,12 @@ public class PhoneRequest {
   }
 
   @Deprecated
-  public void setsPhoneInternational(@javax.annotation.Nullable String sPhoneInternational) {
+  public void setsPhoneInternational(String sPhoneInternational) {
     this.sPhoneInternational = sPhoneInternational;
   }
 
 
-  public PhoneRequest sPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
+  public PhoneRequest sPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -273,12 +264,12 @@ public class PhoneRequest {
     return sPhoneExtension;
   }
 
-  public void setsPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
+  public void setsPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
   }
 
 
-  public PhoneRequest sPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
+  public PhoneRequest sPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -292,7 +283,7 @@ public class PhoneRequest {
     return sPhoneE164;
   }
 
-  public void setsPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
+  public void setsPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 

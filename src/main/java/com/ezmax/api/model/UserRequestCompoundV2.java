@@ -14,12 +14,11 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EmailRequest;
+import com.ezmax.api.model.EmailRequestCompound;
 import com.ezmax.api.model.FieldEUserEzsignaccess;
 import com.ezmax.api.model.FieldEUserLogintype;
 import com.ezmax.api.model.FieldEUserType;
-import com.ezmax.api.model.PhoneRequestV2;
-import com.ezmax.api.model.UserRequestV2;
+import com.ezmax.api.model.PhoneRequestCompoundV2;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -54,10 +53,668 @@ import eZmaxAPI.JSON;
 /**
  * A User Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class UserRequestCompoundV2 extends UserRequestV2 {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class UserRequestCompoundV2 {
+  public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
+  @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
+  private Integer pkiUserID;
+
+  public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
+  @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
+  private Integer fkiAgentID;
+
+  public static final String SERIALIZED_NAME_FKI_BROKER_I_D = "fkiBrokerID";
+  @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D)
+  private Integer fkiBrokerID;
+
+  public static final String SERIALIZED_NAME_FKI_ASSISTANT_I_D = "fkiAssistantID";
+  @SerializedName(SERIALIZED_NAME_FKI_ASSISTANT_I_D)
+  private Integer fkiAssistantID;
+
+  public static final String SERIALIZED_NAME_FKI_EMPLOYEE_I_D = "fkiEmployeeID";
+  @SerializedName(SERIALIZED_NAME_FKI_EMPLOYEE_I_D)
+  private Integer fkiEmployeeID;
+
+  public static final String SERIALIZED_NAME_FKI_COMPANY_I_D_DEFAULT = "fkiCompanyIDDefault";
+  @SerializedName(SERIALIZED_NAME_FKI_COMPANY_I_D_DEFAULT)
+  private Integer fkiCompanyIDDefault;
+
+  public static final String SERIALIZED_NAME_FKI_DEPARTMENT_I_D_DEFAULT = "fkiDepartmentIDDefault";
+  @SerializedName(SERIALIZED_NAME_FKI_DEPARTMENT_I_D_DEFAULT)
+  private Integer fkiDepartmentIDDefault;
+
+  public static final String SERIALIZED_NAME_FKI_TIMEZONE_I_D = "fkiTimezoneID";
+  @SerializedName(SERIALIZED_NAME_FKI_TIMEZONE_I_D)
+  private Integer fkiTimezoneID;
+
+  public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
+  @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  private Integer fkiLanguageID;
+
+  public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
+  @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
+  private EmailRequestCompound objEmail;
+
+  public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
+  @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
+  private Integer fkiBillingentityinternalID;
+
+  public static final String SERIALIZED_NAME_OBJ_PHONE_HOME = "objPhoneHome";
+  @SerializedName(SERIALIZED_NAME_OBJ_PHONE_HOME)
+  private PhoneRequestCompoundV2 objPhoneHome;
+
+  public static final String SERIALIZED_NAME_OBJ_PHONE_S_M_S = "objPhoneSMS";
+  @SerializedName(SERIALIZED_NAME_OBJ_PHONE_S_M_S)
+  private PhoneRequestCompoundV2 objPhoneSMS;
+
+  public static final String SERIALIZED_NAME_FKI_SECRETQUESTION_I_D = "fkiSecretquestionID";
+  @SerializedName(SERIALIZED_NAME_FKI_SECRETQUESTION_I_D)
+  private Integer fkiSecretquestionID;
+
+  public static final String SERIALIZED_NAME_S_USER_SECRETRESPONSE = "sUserSecretresponse";
+  @SerializedName(SERIALIZED_NAME_S_USER_SECRETRESPONSE)
+  private String sUserSecretresponse;
+
+  public static final String SERIALIZED_NAME_FKI_MODULE_I_D_FORM = "fkiModuleIDForm";
+  @SerializedName(SERIALIZED_NAME_FKI_MODULE_I_D_FORM)
+  private Integer fkiModuleIDForm;
+
+  public static final String SERIALIZED_NAME_E_USER_TYPE = "eUserType";
+  @SerializedName(SERIALIZED_NAME_E_USER_TYPE)
+  private FieldEUserType eUserType;
+
+  public static final String SERIALIZED_NAME_E_USER_LOGINTYPE = "eUserLogintype";
+  @SerializedName(SERIALIZED_NAME_E_USER_LOGINTYPE)
+  private FieldEUserLogintype eUserLogintype;
+
+  public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
+  @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
+  private String sUserFirstname;
+
+  public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
+  @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
+  private String sUserLastname;
+
+  public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
+  @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
+  private String sUserLoginname;
+
+  public static final String SERIALIZED_NAME_S_USER_JOBTITLE = "sUserJobtitle";
+  @SerializedName(SERIALIZED_NAME_S_USER_JOBTITLE)
+  private String sUserJobtitle;
+
+  public static final String SERIALIZED_NAME_E_USER_EZSIGNACCESS = "eUserEzsignaccess";
+  @SerializedName(SERIALIZED_NAME_E_USER_EZSIGNACCESS)
+  private FieldEUserEzsignaccess eUserEzsignaccess;
+
+  public static final String SERIALIZED_NAME_B_USER_ISACTIVE = "bUserIsactive";
+  @SerializedName(SERIALIZED_NAME_B_USER_ISACTIVE)
+  private Boolean bUserIsactive;
+
+  public static final String SERIALIZED_NAME_B_USER_VALIDATEBYADMINISTRATION = "bUserValidatebyadministration";
+  @SerializedName(SERIALIZED_NAME_B_USER_VALIDATEBYADMINISTRATION)
+  private Boolean bUserValidatebyadministration;
+
+  public static final String SERIALIZED_NAME_B_USER_VALIDATEBYDIRECTOR = "bUserValidatebydirector";
+  @SerializedName(SERIALIZED_NAME_B_USER_VALIDATEBYDIRECTOR)
+  private Boolean bUserValidatebydirector;
+
+  public static final String SERIALIZED_NAME_B_USER_ATTACHMENTAUTOVERIFIED = "bUserAttachmentautoverified";
+  @SerializedName(SERIALIZED_NAME_B_USER_ATTACHMENTAUTOVERIFIED)
+  private Boolean bUserAttachmentautoverified;
+
+  public static final String SERIALIZED_NAME_B_USER_CHANGEPASSWORD = "bUserChangepassword";
+  @SerializedName(SERIALIZED_NAME_B_USER_CHANGEPASSWORD)
+  private Boolean bUserChangepassword;
+
   public UserRequestCompoundV2() {
   }
+
+  public UserRequestCompoundV2 pkiUserID(Integer pkiUserID) {
+    this.pkiUserID = pkiUserID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return pkiUserID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiUserID() {
+    return pkiUserID;
+  }
+
+  public void setPkiUserID(Integer pkiUserID) {
+    this.pkiUserID = pkiUserID;
+  }
+
+
+  public UserRequestCompoundV2 fkiAgentID(Integer fkiAgentID) {
+    this.fkiAgentID = fkiAgentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Agent.
+   * minimum: 0
+   * @return fkiAgentID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiAgentID() {
+    return fkiAgentID;
+  }
+
+  public void setFkiAgentID(Integer fkiAgentID) {
+    this.fkiAgentID = fkiAgentID;
+  }
+
+
+  public UserRequestCompoundV2 fkiBrokerID(Integer fkiBrokerID) {
+    this.fkiBrokerID = fkiBrokerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Broker.
+   * minimum: 0
+   * @return fkiBrokerID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiBrokerID() {
+    return fkiBrokerID;
+  }
+
+  public void setFkiBrokerID(Integer fkiBrokerID) {
+    this.fkiBrokerID = fkiBrokerID;
+  }
+
+
+  public UserRequestCompoundV2 fkiAssistantID(Integer fkiAssistantID) {
+    this.fkiAssistantID = fkiAssistantID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Assistant.
+   * minimum: 0
+   * @return fkiAssistantID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiAssistantID() {
+    return fkiAssistantID;
+  }
+
+  public void setFkiAssistantID(Integer fkiAssistantID) {
+    this.fkiAssistantID = fkiAssistantID;
+  }
+
+
+  public UserRequestCompoundV2 fkiEmployeeID(Integer fkiEmployeeID) {
+    this.fkiEmployeeID = fkiEmployeeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Employee.
+   * minimum: 0
+   * @return fkiEmployeeID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEmployeeID() {
+    return fkiEmployeeID;
+  }
+
+  public void setFkiEmployeeID(Integer fkiEmployeeID) {
+    this.fkiEmployeeID = fkiEmployeeID;
+  }
+
+
+  public UserRequestCompoundV2 fkiCompanyIDDefault(Integer fkiCompanyIDDefault) {
+    this.fkiCompanyIDDefault = fkiCompanyIDDefault;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Company
+   * minimum: 1
+   * maximum: 255
+   * @return fkiCompanyIDDefault
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiCompanyIDDefault() {
+    return fkiCompanyIDDefault;
+  }
+
+  public void setFkiCompanyIDDefault(Integer fkiCompanyIDDefault) {
+    this.fkiCompanyIDDefault = fkiCompanyIDDefault;
+  }
+
+
+  public UserRequestCompoundV2 fkiDepartmentIDDefault(Integer fkiDepartmentIDDefault) {
+    this.fkiDepartmentIDDefault = fkiDepartmentIDDefault;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Department
+   * minimum: 0
+   * @return fkiDepartmentIDDefault
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiDepartmentIDDefault() {
+    return fkiDepartmentIDDefault;
+  }
+
+  public void setFkiDepartmentIDDefault(Integer fkiDepartmentIDDefault) {
+    this.fkiDepartmentIDDefault = fkiDepartmentIDDefault;
+  }
+
+
+  public UserRequestCompoundV2 fkiTimezoneID(Integer fkiTimezoneID) {
+    this.fkiTimezoneID = fkiTimezoneID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Timezone
+   * minimum: 0
+   * @return fkiTimezoneID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiTimezoneID() {
+    return fkiTimezoneID;
+  }
+
+  public void setFkiTimezoneID(Integer fkiTimezoneID) {
+    this.fkiTimezoneID = fkiTimezoneID;
+  }
+
+
+  public UserRequestCompoundV2 fkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+   * minimum: 1
+   * maximum: 2
+   * @return fkiLanguageID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiLanguageID() {
+    return fkiLanguageID;
+  }
+
+  public void setFkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
+  }
+
+
+  public UserRequestCompoundV2 objEmail(EmailRequestCompound objEmail) {
+    this.objEmail = objEmail;
+    return this;
+  }
+
+  /**
+   * Get objEmail
+   * @return objEmail
+   */
+  @javax.annotation.Nonnull
+  public EmailRequestCompound getObjEmail() {
+    return objEmail;
+  }
+
+  public void setObjEmail(EmailRequestCompound objEmail) {
+    this.objEmail = objEmail;
+  }
+
+
+  public UserRequestCompoundV2 fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Billingentityinternal.
+   * minimum: 0
+   * @return fkiBillingentityinternalID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiBillingentityinternalID() {
+    return fkiBillingentityinternalID;
+  }
+
+  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
+  }
+
+
+  public UserRequestCompoundV2 objPhoneHome(PhoneRequestCompoundV2 objPhoneHome) {
+    this.objPhoneHome = objPhoneHome;
+    return this;
+  }
+
+  /**
+   * Get objPhoneHome
+   * @return objPhoneHome
+   */
+  @javax.annotation.Nullable
+  public PhoneRequestCompoundV2 getObjPhoneHome() {
+    return objPhoneHome;
+  }
+
+  public void setObjPhoneHome(PhoneRequestCompoundV2 objPhoneHome) {
+    this.objPhoneHome = objPhoneHome;
+  }
+
+
+  public UserRequestCompoundV2 objPhoneSMS(PhoneRequestCompoundV2 objPhoneSMS) {
+    this.objPhoneSMS = objPhoneSMS;
+    return this;
+  }
+
+  /**
+   * Get objPhoneSMS
+   * @return objPhoneSMS
+   */
+  @javax.annotation.Nullable
+  public PhoneRequestCompoundV2 getObjPhoneSMS() {
+    return objPhoneSMS;
+  }
+
+  public void setObjPhoneSMS(PhoneRequestCompoundV2 objPhoneSMS) {
+    this.objPhoneSMS = objPhoneSMS;
+  }
+
+
+  public UserRequestCompoundV2 fkiSecretquestionID(Integer fkiSecretquestionID) {
+    this.fkiSecretquestionID = fkiSecretquestionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+   * minimum: 0
+   * @return fkiSecretquestionID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiSecretquestionID() {
+    return fkiSecretquestionID;
+  }
+
+  public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
+    this.fkiSecretquestionID = fkiSecretquestionID;
+  }
+
+
+  public UserRequestCompoundV2 sUserSecretresponse(String sUserSecretresponse) {
+    this.sUserSecretresponse = sUserSecretresponse;
+    return this;
+  }
+
+  /**
+   * The answer to the Secretquestion
+   * @return sUserSecretresponse
+   */
+  @javax.annotation.Nullable
+  public String getsUserSecretresponse() {
+    return sUserSecretresponse;
+  }
+
+  public void setsUserSecretresponse(String sUserSecretresponse) {
+    this.sUserSecretresponse = sUserSecretresponse;
+  }
+
+
+  public UserRequestCompoundV2 fkiModuleIDForm(Integer fkiModuleIDForm) {
+    this.fkiModuleIDForm = fkiModuleIDForm;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Module
+   * minimum: 0
+   * @return fkiModuleIDForm
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiModuleIDForm() {
+    return fkiModuleIDForm;
+  }
+
+  public void setFkiModuleIDForm(Integer fkiModuleIDForm) {
+    this.fkiModuleIDForm = fkiModuleIDForm;
+  }
+
+
+  public UserRequestCompoundV2 eUserType(FieldEUserType eUserType) {
+    this.eUserType = eUserType;
+    return this;
+  }
+
+  /**
+   * Get eUserType
+   * @return eUserType
+   */
+  @javax.annotation.Nonnull
+  public FieldEUserType geteUserType() {
+    return eUserType;
+  }
+
+  public void seteUserType(FieldEUserType eUserType) {
+    this.eUserType = eUserType;
+  }
+
+
+  public UserRequestCompoundV2 eUserLogintype(FieldEUserLogintype eUserLogintype) {
+    this.eUserLogintype = eUserLogintype;
+    return this;
+  }
+
+  /**
+   * Get eUserLogintype
+   * @return eUserLogintype
+   */
+  @javax.annotation.Nonnull
+  public FieldEUserLogintype geteUserLogintype() {
+    return eUserLogintype;
+  }
+
+  public void seteUserLogintype(FieldEUserLogintype eUserLogintype) {
+    this.eUserLogintype = eUserLogintype;
+  }
+
+
+  public UserRequestCompoundV2 sUserFirstname(String sUserFirstname) {
+    this.sUserFirstname = sUserFirstname;
+    return this;
+  }
+
+  /**
+   * The first name of the user
+   * @return sUserFirstname
+   */
+  @javax.annotation.Nonnull
+  public String getsUserFirstname() {
+    return sUserFirstname;
+  }
+
+  public void setsUserFirstname(String sUserFirstname) {
+    this.sUserFirstname = sUserFirstname;
+  }
+
+
+  public UserRequestCompoundV2 sUserLastname(String sUserLastname) {
+    this.sUserLastname = sUserLastname;
+    return this;
+  }
+
+  /**
+   * The last name of the user
+   * @return sUserLastname
+   */
+  @javax.annotation.Nonnull
+  public String getsUserLastname() {
+    return sUserLastname;
+  }
+
+  public void setsUserLastname(String sUserLastname) {
+    this.sUserLastname = sUserLastname;
+  }
+
+
+  public UserRequestCompoundV2 sUserLoginname(String sUserLoginname) {
+    this.sUserLoginname = sUserLoginname;
+    return this;
+  }
+
+  /**
+   * The login name of the User.
+   * @return sUserLoginname
+   */
+  @javax.annotation.Nonnull
+  public String getsUserLoginname() {
+    return sUserLoginname;
+  }
+
+  public void setsUserLoginname(String sUserLoginname) {
+    this.sUserLoginname = sUserLoginname;
+  }
+
+
+  public UserRequestCompoundV2 sUserJobtitle(String sUserJobtitle) {
+    this.sUserJobtitle = sUserJobtitle;
+    return this;
+  }
+
+  /**
+   * The job title of the user
+   * @return sUserJobtitle
+   */
+  @javax.annotation.Nullable
+  public String getsUserJobtitle() {
+    return sUserJobtitle;
+  }
+
+  public void setsUserJobtitle(String sUserJobtitle) {
+    this.sUserJobtitle = sUserJobtitle;
+  }
+
+
+  public UserRequestCompoundV2 eUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
+    this.eUserEzsignaccess = eUserEzsignaccess;
+    return this;
+  }
+
+  /**
+   * Get eUserEzsignaccess
+   * @return eUserEzsignaccess
+   */
+  @javax.annotation.Nonnull
+  public FieldEUserEzsignaccess geteUserEzsignaccess() {
+    return eUserEzsignaccess;
+  }
+
+  public void seteUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
+    this.eUserEzsignaccess = eUserEzsignaccess;
+  }
+
+
+  public UserRequestCompoundV2 bUserIsactive(Boolean bUserIsactive) {
+    this.bUserIsactive = bUserIsactive;
+    return this;
+  }
+
+  /**
+   * Whether the User is active or not
+   * @return bUserIsactive
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbUserIsactive() {
+    return bUserIsactive;
+  }
+
+  public void setbUserIsactive(Boolean bUserIsactive) {
+    this.bUserIsactive = bUserIsactive;
+  }
+
+
+  public UserRequestCompoundV2 bUserValidatebyadministration(Boolean bUserValidatebyadministration) {
+    this.bUserValidatebyadministration = bUserValidatebyadministration;
+    return this;
+  }
+
+  /**
+   * Whether if the transactions in which the User is implicated must be validated by administrative personnel or not
+   * @return bUserValidatebyadministration
+   */
+  @javax.annotation.Nullable
+  public Boolean getbUserValidatebyadministration() {
+    return bUserValidatebyadministration;
+  }
+
+  public void setbUserValidatebyadministration(Boolean bUserValidatebyadministration) {
+    this.bUserValidatebyadministration = bUserValidatebyadministration;
+  }
+
+
+  public UserRequestCompoundV2 bUserValidatebydirector(Boolean bUserValidatebydirector) {
+    this.bUserValidatebydirector = bUserValidatebydirector;
+    return this;
+  }
+
+  /**
+   * Whether if the transactions in which the User is implicated must be validated by a director or not
+   * @return bUserValidatebydirector
+   */
+  @javax.annotation.Nullable
+  public Boolean getbUserValidatebydirector() {
+    return bUserValidatebydirector;
+  }
+
+  public void setbUserValidatebydirector(Boolean bUserValidatebydirector) {
+    this.bUserValidatebydirector = bUserValidatebydirector;
+  }
+
+
+  public UserRequestCompoundV2 bUserAttachmentautoverified(Boolean bUserAttachmentautoverified) {
+    this.bUserAttachmentautoverified = bUserAttachmentautoverified;
+    return this;
+  }
+
+  /**
+   * Whether if Attachments uploaded by the User must be validated or not
+   * @return bUserAttachmentautoverified
+   */
+  @javax.annotation.Nullable
+  public Boolean getbUserAttachmentautoverified() {
+    return bUserAttachmentautoverified;
+  }
+
+  public void setbUserAttachmentautoverified(Boolean bUserAttachmentautoverified) {
+    this.bUserAttachmentautoverified = bUserAttachmentautoverified;
+  }
+
+
+  public UserRequestCompoundV2 bUserChangepassword(Boolean bUserChangepassword) {
+    this.bUserChangepassword = bUserChangepassword;
+    return this;
+  }
+
+  /**
+   * Whether if the User is forced to change its password
+   * @return bUserChangepassword
+   */
+  @javax.annotation.Nullable
+  public Boolean getbUserChangepassword() {
+    return bUserChangepassword;
+  }
+
+  public void setbUserChangepassword(Boolean bUserChangepassword) {
+    this.bUserChangepassword = bUserChangepassword;
+  }
+
 
 
   @Override
@@ -68,19 +725,74 @@ public class UserRequestCompoundV2 extends UserRequestV2 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    UserRequestCompoundV2 userRequestCompoundV2 = (UserRequestCompoundV2) o;
+    return Objects.equals(this.pkiUserID, userRequestCompoundV2.pkiUserID) &&
+        Objects.equals(this.fkiAgentID, userRequestCompoundV2.fkiAgentID) &&
+        Objects.equals(this.fkiBrokerID, userRequestCompoundV2.fkiBrokerID) &&
+        Objects.equals(this.fkiAssistantID, userRequestCompoundV2.fkiAssistantID) &&
+        Objects.equals(this.fkiEmployeeID, userRequestCompoundV2.fkiEmployeeID) &&
+        Objects.equals(this.fkiCompanyIDDefault, userRequestCompoundV2.fkiCompanyIDDefault) &&
+        Objects.equals(this.fkiDepartmentIDDefault, userRequestCompoundV2.fkiDepartmentIDDefault) &&
+        Objects.equals(this.fkiTimezoneID, userRequestCompoundV2.fkiTimezoneID) &&
+        Objects.equals(this.fkiLanguageID, userRequestCompoundV2.fkiLanguageID) &&
+        Objects.equals(this.objEmail, userRequestCompoundV2.objEmail) &&
+        Objects.equals(this.fkiBillingentityinternalID, userRequestCompoundV2.fkiBillingentityinternalID) &&
+        Objects.equals(this.objPhoneHome, userRequestCompoundV2.objPhoneHome) &&
+        Objects.equals(this.objPhoneSMS, userRequestCompoundV2.objPhoneSMS) &&
+        Objects.equals(this.fkiSecretquestionID, userRequestCompoundV2.fkiSecretquestionID) &&
+        Objects.equals(this.sUserSecretresponse, userRequestCompoundV2.sUserSecretresponse) &&
+        Objects.equals(this.fkiModuleIDForm, userRequestCompoundV2.fkiModuleIDForm) &&
+        Objects.equals(this.eUserType, userRequestCompoundV2.eUserType) &&
+        Objects.equals(this.eUserLogintype, userRequestCompoundV2.eUserLogintype) &&
+        Objects.equals(this.sUserFirstname, userRequestCompoundV2.sUserFirstname) &&
+        Objects.equals(this.sUserLastname, userRequestCompoundV2.sUserLastname) &&
+        Objects.equals(this.sUserLoginname, userRequestCompoundV2.sUserLoginname) &&
+        Objects.equals(this.sUserJobtitle, userRequestCompoundV2.sUserJobtitle) &&
+        Objects.equals(this.eUserEzsignaccess, userRequestCompoundV2.eUserEzsignaccess) &&
+        Objects.equals(this.bUserIsactive, userRequestCompoundV2.bUserIsactive) &&
+        Objects.equals(this.bUserValidatebyadministration, userRequestCompoundV2.bUserValidatebyadministration) &&
+        Objects.equals(this.bUserValidatebydirector, userRequestCompoundV2.bUserValidatebydirector) &&
+        Objects.equals(this.bUserAttachmentautoverified, userRequestCompoundV2.bUserAttachmentautoverified) &&
+        Objects.equals(this.bUserChangepassword, userRequestCompoundV2.bUserChangepassword);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiUserID, fkiAgentID, fkiBrokerID, fkiAssistantID, fkiEmployeeID, fkiCompanyIDDefault, fkiDepartmentIDDefault, fkiTimezoneID, fkiLanguageID, objEmail, fkiBillingentityinternalID, objPhoneHome, objPhoneSMS, fkiSecretquestionID, sUserSecretresponse, fkiModuleIDForm, eUserType, eUserLogintype, sUserFirstname, sUserLastname, sUserLoginname, sUserJobtitle, eUserEzsignaccess, bUserIsactive, bUserValidatebyadministration, bUserValidatebydirector, bUserAttachmentautoverified, bUserChangepassword);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserRequestCompoundV2 {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiUserID: ").append(toIndentedString(pkiUserID)).append("\n");
+    sb.append("    fkiAgentID: ").append(toIndentedString(fkiAgentID)).append("\n");
+    sb.append("    fkiBrokerID: ").append(toIndentedString(fkiBrokerID)).append("\n");
+    sb.append("    fkiAssistantID: ").append(toIndentedString(fkiAssistantID)).append("\n");
+    sb.append("    fkiEmployeeID: ").append(toIndentedString(fkiEmployeeID)).append("\n");
+    sb.append("    fkiCompanyIDDefault: ").append(toIndentedString(fkiCompanyIDDefault)).append("\n");
+    sb.append("    fkiDepartmentIDDefault: ").append(toIndentedString(fkiDepartmentIDDefault)).append("\n");
+    sb.append("    fkiTimezoneID: ").append(toIndentedString(fkiTimezoneID)).append("\n");
+    sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
+    sb.append("    objEmail: ").append(toIndentedString(objEmail)).append("\n");
+    sb.append("    fkiBillingentityinternalID: ").append(toIndentedString(fkiBillingentityinternalID)).append("\n");
+    sb.append("    objPhoneHome: ").append(toIndentedString(objPhoneHome)).append("\n");
+    sb.append("    objPhoneSMS: ").append(toIndentedString(objPhoneSMS)).append("\n");
+    sb.append("    fkiSecretquestionID: ").append(toIndentedString(fkiSecretquestionID)).append("\n");
+    sb.append("    sUserSecretresponse: ").append(toIndentedString(sUserSecretresponse)).append("\n");
+    sb.append("    fkiModuleIDForm: ").append(toIndentedString(fkiModuleIDForm)).append("\n");
+    sb.append("    eUserType: ").append(toIndentedString(eUserType)).append("\n");
+    sb.append("    eUserLogintype: ").append(toIndentedString(eUserLogintype)).append("\n");
+    sb.append("    sUserFirstname: ").append(toIndentedString(sUserFirstname)).append("\n");
+    sb.append("    sUserLastname: ").append(toIndentedString(sUserLastname)).append("\n");
+    sb.append("    sUserLoginname: ").append(toIndentedString(sUserLoginname)).append("\n");
+    sb.append("    sUserJobtitle: ").append(toIndentedString(sUserJobtitle)).append("\n");
+    sb.append("    eUserEzsignaccess: ").append(toIndentedString(eUserEzsignaccess)).append("\n");
+    sb.append("    bUserIsactive: ").append(toIndentedString(bUserIsactive)).append("\n");
+    sb.append("    bUserValidatebyadministration: ").append(toIndentedString(bUserValidatebyadministration)).append("\n");
+    sb.append("    bUserValidatebydirector: ").append(toIndentedString(bUserValidatebydirector)).append("\n");
+    sb.append("    bUserAttachmentautoverified: ").append(toIndentedString(bUserAttachmentautoverified)).append("\n");
+    sb.append("    bUserChangepassword: ").append(toIndentedString(bUserChangepassword)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -176,6 +888,38 @@ public class UserRequestCompoundV2 extends UserRequestV2 {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objEmail`
+      EmailRequestCompound.validateJsonElement(jsonObj.get("objEmail"));
+      // validate the optional field `objPhoneHome`
+      if (jsonObj.get("objPhoneHome") != null && !jsonObj.get("objPhoneHome").isJsonNull()) {
+        PhoneRequestCompoundV2.validateJsonElement(jsonObj.get("objPhoneHome"));
+      }
+      // validate the optional field `objPhoneSMS`
+      if (jsonObj.get("objPhoneSMS") != null && !jsonObj.get("objPhoneSMS").isJsonNull()) {
+        PhoneRequestCompoundV2.validateJsonElement(jsonObj.get("objPhoneSMS"));
+      }
+      if ((jsonObj.get("sUserSecretresponse") != null && !jsonObj.get("sUserSecretresponse").isJsonNull()) && !jsonObj.get("sUserSecretresponse").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserSecretresponse` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserSecretresponse").toString()));
+      }
+      // validate the required field `eUserType`
+      FieldEUserType.validateJsonElement(jsonObj.get("eUserType"));
+      // validate the required field `eUserLogintype`
+      FieldEUserLogintype.validateJsonElement(jsonObj.get("eUserLogintype"));
+      if (!jsonObj.get("sUserFirstname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
+      }
+      if (!jsonObj.get("sUserLastname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLastname").toString()));
+      }
+      if (!jsonObj.get("sUserLoginname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLoginname").toString()));
+      }
+      if ((jsonObj.get("sUserJobtitle") != null && !jsonObj.get("sUserJobtitle").isJsonNull()) && !jsonObj.get("sUserJobtitle").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sUserJobtitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserJobtitle").toString()));
+      }
+      // validate the required field `eUserEzsignaccess`
+      FieldEUserEzsignaccess.validateJsonElement(jsonObj.get("eUserEzsignaccess"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

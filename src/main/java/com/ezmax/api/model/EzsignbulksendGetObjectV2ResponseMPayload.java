@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsignbulksend/{pkiEzsignbulksendID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignbulksendGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNBULKSEND = "objEzsignbulksend";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNBULKSEND)
-  @javax.annotation.Nonnull
   private EzsignbulksendResponseCompound objEzsignbulksend;
 
   public EzsignbulksendGetObjectV2ResponseMPayload() {
   }
 
-  public EzsignbulksendGetObjectV2ResponseMPayload objEzsignbulksend(@javax.annotation.Nonnull EzsignbulksendResponseCompound objEzsignbulksend) {
+  public EzsignbulksendGetObjectV2ResponseMPayload objEzsignbulksend(EzsignbulksendResponseCompound objEzsignbulksend) {
     this.objEzsignbulksend = objEzsignbulksend;
     return this;
   }
@@ -73,7 +72,7 @@ public class EzsignbulksendGetObjectV2ResponseMPayload {
     return objEzsignbulksend;
   }
 
-  public void setObjEzsignbulksend(@javax.annotation.Nonnull EzsignbulksendResponseCompound objEzsignbulksend) {
+  public void setObjEzsignbulksend(EzsignbulksendResponseCompound objEzsignbulksend) {
     this.objEzsignbulksend = objEzsignbulksend;
   }
 

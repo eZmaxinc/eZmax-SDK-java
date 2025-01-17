@@ -49,27 +49,24 @@ import eZmaxAPI.JSON;
 /**
  * Creditcardtype AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreditcardtypeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_CREDITCARDTYPE_NAME = "sCreditcardtypeName";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDTYPE_NAME)
-  @javax.annotation.Nonnull
   private String sCreditcardtypeName;
 
   public static final String SERIALIZED_NAME_PKI_CREDITCARDTYPE_I_D = "pkiCreditcardtypeID";
   @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiCreditcardtypeID;
 
   public static final String SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME = "eCreditcardtypeCodename";
   @SerializedName(SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME)
-  @javax.annotation.Nonnull
   private FieldECreditcardtypeCodename eCreditcardtypeCodename;
 
   public CreditcardtypeAutocompleteElementResponse() {
   }
 
-  public CreditcardtypeAutocompleteElementResponse sCreditcardtypeName(@javax.annotation.Nonnull String sCreditcardtypeName) {
+  public CreditcardtypeAutocompleteElementResponse sCreditcardtypeName(String sCreditcardtypeName) {
     this.sCreditcardtypeName = sCreditcardtypeName;
     return this;
   }
@@ -83,12 +80,12 @@ public class CreditcardtypeAutocompleteElementResponse {
     return sCreditcardtypeName;
   }
 
-  public void setsCreditcardtypeName(@javax.annotation.Nonnull String sCreditcardtypeName) {
+  public void setsCreditcardtypeName(String sCreditcardtypeName) {
     this.sCreditcardtypeName = sCreditcardtypeName;
   }
 
 
-  public CreditcardtypeAutocompleteElementResponse pkiCreditcardtypeID(@javax.annotation.Nonnull Integer pkiCreditcardtypeID) {
+  public CreditcardtypeAutocompleteElementResponse pkiCreditcardtypeID(Integer pkiCreditcardtypeID) {
     this.pkiCreditcardtypeID = pkiCreditcardtypeID;
     return this;
   }
@@ -104,12 +101,12 @@ public class CreditcardtypeAutocompleteElementResponse {
     return pkiCreditcardtypeID;
   }
 
-  public void setPkiCreditcardtypeID(@javax.annotation.Nonnull Integer pkiCreditcardtypeID) {
+  public void setPkiCreditcardtypeID(Integer pkiCreditcardtypeID) {
     this.pkiCreditcardtypeID = pkiCreditcardtypeID;
   }
 
 
-  public CreditcardtypeAutocompleteElementResponse eCreditcardtypeCodename(@javax.annotation.Nonnull FieldECreditcardtypeCodename eCreditcardtypeCodename) {
+  public CreditcardtypeAutocompleteElementResponse eCreditcardtypeCodename(FieldECreditcardtypeCodename eCreditcardtypeCodename) {
     this.eCreditcardtypeCodename = eCreditcardtypeCodename;
     return this;
   }
@@ -123,7 +120,7 @@ public class CreditcardtypeAutocompleteElementResponse {
     return eCreditcardtypeCodename;
   }
 
-  public void seteCreditcardtypeCodename(@javax.annotation.Nonnull FieldECreditcardtypeCodename eCreditcardtypeCodename) {
+  public void seteCreditcardtypeCodename(FieldECreditcardtypeCodename eCreditcardtypeCodename) {
     this.eCreditcardtypeCodename = eCreditcardtypeCodename;
   }
 

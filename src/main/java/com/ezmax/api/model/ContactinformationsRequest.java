@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ContactinformationsRequest {
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
-  @javax.annotation.Nonnull
   private Integer iAddressDefault;
 
   public static final String SERIALIZED_NAME_I_PHONE_DEFAULT = "iPhoneDefault";
   @SerializedName(SERIALIZED_NAME_I_PHONE_DEFAULT)
-  @javax.annotation.Nonnull
   private Integer iPhoneDefault;
 
   public static final String SERIALIZED_NAME_I_EMAIL_DEFAULT = "iEmailDefault";
   @SerializedName(SERIALIZED_NAME_I_EMAIL_DEFAULT)
-  @javax.annotation.Nonnull
   private Integer iEmailDefault;
 
   public static final String SERIALIZED_NAME_I_WEBSITE_DEFAULT = "iWebsiteDefault";
   @SerializedName(SERIALIZED_NAME_I_WEBSITE_DEFAULT)
-  @javax.annotation.Nonnull
   private Integer iWebsiteDefault;
 
   public ContactinformationsRequest() {
   }
 
-  public ContactinformationsRequest iAddressDefault(@javax.annotation.Nonnull Integer iAddressDefault) {
+  public ContactinformationsRequest iAddressDefault(Integer iAddressDefault) {
     this.iAddressDefault = iAddressDefault;
     return this;
   }
@@ -87,12 +83,12 @@ public class ContactinformationsRequest {
     return iAddressDefault;
   }
 
-  public void setiAddressDefault(@javax.annotation.Nonnull Integer iAddressDefault) {
+  public void setiAddressDefault(Integer iAddressDefault) {
     this.iAddressDefault = iAddressDefault;
   }
 
 
-  public ContactinformationsRequest iPhoneDefault(@javax.annotation.Nonnull Integer iPhoneDefault) {
+  public ContactinformationsRequest iPhoneDefault(Integer iPhoneDefault) {
     this.iPhoneDefault = iPhoneDefault;
     return this;
   }
@@ -106,12 +102,12 @@ public class ContactinformationsRequest {
     return iPhoneDefault;
   }
 
-  public void setiPhoneDefault(@javax.annotation.Nonnull Integer iPhoneDefault) {
+  public void setiPhoneDefault(Integer iPhoneDefault) {
     this.iPhoneDefault = iPhoneDefault;
   }
 
 
-  public ContactinformationsRequest iEmailDefault(@javax.annotation.Nonnull Integer iEmailDefault) {
+  public ContactinformationsRequest iEmailDefault(Integer iEmailDefault) {
     this.iEmailDefault = iEmailDefault;
     return this;
   }
@@ -125,12 +121,12 @@ public class ContactinformationsRequest {
     return iEmailDefault;
   }
 
-  public void setiEmailDefault(@javax.annotation.Nonnull Integer iEmailDefault) {
+  public void setiEmailDefault(Integer iEmailDefault) {
     this.iEmailDefault = iEmailDefault;
   }
 
 
-  public ContactinformationsRequest iWebsiteDefault(@javax.annotation.Nonnull Integer iWebsiteDefault) {
+  public ContactinformationsRequest iWebsiteDefault(Integer iWebsiteDefault) {
     this.iWebsiteDefault = iWebsiteDefault;
     return this;
   }
@@ -144,7 +140,7 @@ public class ContactinformationsRequest {
     return iWebsiteDefault;
   }
 
-  public void setiWebsiteDefault(@javax.annotation.Nonnull Integer iWebsiteDefault) {
+  public void setiWebsiteDefault(Integer iWebsiteDefault) {
     this.iWebsiteDefault = iWebsiteDefault;
   }
 
@@ -225,9 +221,52 @@ public class ContactinformationsRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ContactinformationsRequest is not found in the empty JSON string", ContactinformationsRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!ContactinformationsRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ContactinformationsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ContactinformationsRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!ContactinformationsRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ContactinformationsRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<ContactinformationsRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ContactinformationsRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<ContactinformationsRequest>() {
+           @Override
+           public void write(JsonWriter out, ContactinformationsRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public ContactinformationsRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of ContactinformationsRequest given an JSON string

@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * ScimEmail
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ScimEmail {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
-  @javax.annotation.Nullable
   private String value;
 
   public static final String SERIALIZED_NAME_PRIMARY = "primary";
   @SerializedName(SERIALIZED_NAME_PRIMARY)
-  @javax.annotation.Nullable
   private Boolean primary;
 
   public ScimEmail() {
   }
 
-  public ScimEmail value(@javax.annotation.Nullable String value) {
+  public ScimEmail value(String value) {
     this.value = value;
     return this;
   }
@@ -77,12 +75,12 @@ public class ScimEmail {
     return value;
   }
 
-  public void setValue(@javax.annotation.Nullable String value) {
+  public void setValue(String value) {
     this.value = value;
   }
 
 
-  public ScimEmail primary(@javax.annotation.Nullable Boolean primary) {
+  public ScimEmail primary(Boolean primary) {
     this.primary = primary;
     return this;
   }
@@ -96,7 +94,7 @@ public class ScimEmail {
     return primary;
   }
 
-  public void setPrimary(@javax.annotation.Nullable Boolean primary) {
+  public void setPrimary(Boolean primary) {
     this.primary = primary;
   }
 

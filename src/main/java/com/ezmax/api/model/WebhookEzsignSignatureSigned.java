@@ -14,8 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AttemptResponse;
-import com.ezmax.api.model.CommonWebhook;
+import com.ezmax.api.model.AttemptResponseCompound;
 import com.ezmax.api.model.CustomWebhookResponse;
 import com.ezmax.api.model.EzsignsignatureResponse;
 import com.google.gson.TypeAdapter;
@@ -54,17 +53,70 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class WebhookEzsignSignatureSigned extends CommonWebhook {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class WebhookEzsignSignatureSigned {
+  public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
+  @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
+  private CustomWebhookResponse objWebhook;
+
+  public static final String SERIALIZED_NAME_A_OBJ_ATTEMPT = "a_objAttempt";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_ATTEMPT)
+  private List<AttemptResponseCompound> aObjAttempt = new ArrayList<>();
+
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE = "objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE)
-  @javax.annotation.Nonnull
   private EzsignsignatureResponse objEzsignsignature;
 
   public WebhookEzsignSignatureSigned() {
   }
 
-  public WebhookEzsignSignatureSigned objEzsignsignature(@javax.annotation.Nonnull EzsignsignatureResponse objEzsignsignature) {
+  public WebhookEzsignSignatureSigned objWebhook(CustomWebhookResponse objWebhook) {
+    this.objWebhook = objWebhook;
+    return this;
+  }
+
+  /**
+   * Get objWebhook
+   * @return objWebhook
+   */
+  @javax.annotation.Nonnull
+  public CustomWebhookResponse getObjWebhook() {
+    return objWebhook;
+  }
+
+  public void setObjWebhook(CustomWebhookResponse objWebhook) {
+    this.objWebhook = objWebhook;
+  }
+
+
+  public WebhookEzsignSignatureSigned aObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
+    this.aObjAttempt = aObjAttempt;
+    return this;
+  }
+
+  public WebhookEzsignSignatureSigned addAObjAttemptItem(AttemptResponseCompound aObjAttemptItem) {
+    if (this.aObjAttempt == null) {
+      this.aObjAttempt = new ArrayList<>();
+    }
+    this.aObjAttempt.add(aObjAttemptItem);
+    return this;
+  }
+
+  /**
+   * An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.
+   * @return aObjAttempt
+   */
+  @javax.annotation.Nonnull
+  public List<AttemptResponseCompound> getaObjAttempt() {
+    return aObjAttempt;
+  }
+
+  public void setaObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
+    this.aObjAttempt = aObjAttempt;
+  }
+
+
+  public WebhookEzsignSignatureSigned objEzsignsignature(EzsignsignatureResponse objEzsignsignature) {
     this.objEzsignsignature = objEzsignsignature;
     return this;
   }
@@ -78,7 +130,7 @@ public class WebhookEzsignSignatureSigned extends CommonWebhook {
     return objEzsignsignature;
   }
 
-  public void setObjEzsignsignature(@javax.annotation.Nonnull EzsignsignatureResponse objEzsignsignature) {
+  public void setObjEzsignsignature(EzsignsignatureResponse objEzsignsignature) {
     this.objEzsignsignature = objEzsignsignature;
   }
 
@@ -93,20 +145,22 @@ public class WebhookEzsignSignatureSigned extends CommonWebhook {
       return false;
     }
     WebhookEzsignSignatureSigned webhookEzsignSignatureSigned = (WebhookEzsignSignatureSigned) o;
-    return Objects.equals(this.objEzsignsignature, webhookEzsignSignatureSigned.objEzsignsignature) &&
-        super.equals(o);
+    return Objects.equals(this.objWebhook, webhookEzsignSignatureSigned.objWebhook) &&
+        Objects.equals(this.aObjAttempt, webhookEzsignSignatureSigned.aObjAttempt) &&
+        Objects.equals(this.objEzsignsignature, webhookEzsignSignatureSigned.objEzsignsignature);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objEzsignsignature, super.hashCode());
+    return Objects.hash(objWebhook, aObjAttempt, objEzsignsignature);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookEzsignSignatureSigned {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    objWebhook: ").append(toIndentedString(objWebhook)).append("\n");
+    sb.append("    aObjAttempt: ").append(toIndentedString(aObjAttempt)).append("\n");
     sb.append("    objEzsignsignature: ").append(toIndentedString(objEzsignsignature)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -136,9 +190,9 @@ public class WebhookEzsignSignatureSigned extends CommonWebhook {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objEzsignsignature");
     openapiRequiredFields.add("objWebhook");
     openapiRequiredFields.add("a_objAttempt");
+    openapiRequiredFields.add("objEzsignsignature");
   }
 
   /**
@@ -169,6 +223,18 @@ public class WebhookEzsignSignatureSigned extends CommonWebhook {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objWebhook`
+      CustomWebhookResponse.validateJsonElement(jsonObj.get("objWebhook"));
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objAttempt").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objAttempt` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAttempt").toString()));
+      }
+
+      JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
+      // validate the required field `a_objAttempt` (array)
+      for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
+        AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
+      };
       // validate the required field `objEzsignsignature`
       EzsignsignatureResponse.validateJsonElement(jsonObj.get("objEzsignsignature"));
   }

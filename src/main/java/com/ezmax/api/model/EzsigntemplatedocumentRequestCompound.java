@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsigntemplatedocumentRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,462 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatedocument Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigntemplatedocumentRequestCompound extends EzsigntemplatedocumentRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsigntemplatedocumentRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D = "pkiEzsigntemplatedocumentID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D)
+  private Integer pkiEzsigntemplatedocumentID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
+  private Integer fkiEzsigntemplateID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
+  private Integer fkiEzsigndocumentID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATESIGNER_I_D = "fkiEzsigntemplatesignerID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATESIGNER_I_D)
+  private Integer fkiEzsigntemplatesignerID;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_NAME = "sEzsigntemplatedocumentName";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_NAME)
+  private String sEzsigntemplatedocumentName;
+
+  /**
+   * Indicates where to look for the document binary content.
+   */
+  @JsonAdapter(EEzsigntemplatedocumentSourceEnum.Adapter.class)
+  public enum EEzsigntemplatedocumentSourceEnum {
+    BASE64("Base64"),
+    
+    URL("Url"),
+    
+    EZSIGNDOCUMENT("Ezsigndocument");
+
+    private String value;
+
+    EEzsigntemplatedocumentSourceEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static EEzsigntemplatedocumentSourceEnum fromValue(String value) {
+      for (EEzsigntemplatedocumentSourceEnum b : EEzsigntemplatedocumentSourceEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<EEzsigntemplatedocumentSourceEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final EEzsigntemplatedocumentSourceEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public EEzsigntemplatedocumentSourceEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return EEzsigntemplatedocumentSourceEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EEzsigntemplatedocumentSourceEnum.fromValue(value);
+    }
+  }
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEDOCUMENT_SOURCE = "eEzsigntemplatedocumentSource";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEDOCUMENT_SOURCE)
+  private EEzsigntemplatedocumentSourceEnum eEzsigntemplatedocumentSource;
+
+  /**
+   * Indicates the format of the template.
+   */
+  @JsonAdapter(EEzsigntemplatedocumentFormatEnum.Adapter.class)
+  public enum EEzsigntemplatedocumentFormatEnum {
+    PDF("Pdf"),
+    
+    DOC("Doc"),
+    
+    DOCX("Docx"),
+    
+    XLS("Xls"),
+    
+    XLSX("Xlsx"),
+    
+    PPT("Ppt"),
+    
+    PPTX("Pptx");
+
+    private String value;
+
+    EEzsigntemplatedocumentFormatEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static EEzsigntemplatedocumentFormatEnum fromValue(String value) {
+      for (EEzsigntemplatedocumentFormatEnum b : EEzsigntemplatedocumentFormatEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<EEzsigntemplatedocumentFormatEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final EEzsigntemplatedocumentFormatEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public EEzsigntemplatedocumentFormatEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return EEzsigntemplatedocumentFormatEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EEzsigntemplatedocumentFormatEnum.fromValue(value);
+    }
+  }
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEDOCUMENT_FORMAT = "eEzsigntemplatedocumentFormat";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEDOCUMENT_FORMAT)
+  private EEzsigntemplatedocumentFormatEnum eEzsigntemplatedocumentFormat;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_BASE64 = "sEzsigntemplatedocumentBase64";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_BASE64)
+  private byte[] sEzsigntemplatedocumentBase64;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_URL = "sEzsigntemplatedocumentUrl";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_URL)
+  private String sEzsigntemplatedocumentUrl;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEDOCUMENT_FORCEREPAIR = "bEzsigntemplatedocumentForcerepair";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEDOCUMENT_FORCEREPAIR)
+  private Boolean bEzsigntemplatedocumentForcerepair;
+
+  /**
+   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document.
+   */
+  @JsonAdapter(EEzsigntemplatedocumentFormEnum.Adapter.class)
+  public enum EEzsigntemplatedocumentFormEnum {
+    KEEP("Keep"),
+    
+    CONVERT("Convert"),
+    
+    DISCARD("Discard"),
+    
+    FLATTEN("Flatten");
+
+    private String value;
+
+    EEzsigntemplatedocumentFormEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static EEzsigntemplatedocumentFormEnum fromValue(String value) {
+      for (EEzsigntemplatedocumentFormEnum b : EEzsigntemplatedocumentFormEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<EEzsigntemplatedocumentFormEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final EEzsigntemplatedocumentFormEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public EEzsigntemplatedocumentFormEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return EEzsigntemplatedocumentFormEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      EEzsigntemplatedocumentFormEnum.fromValue(value);
+    }
+  }
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEDOCUMENT_FORM = "eEzsigntemplatedocumentForm";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEDOCUMENT_FORM)
+  private EEzsigntemplatedocumentFormEnum eEzsigntemplatedocumentForm;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_PASSWORD = "sEzsigntemplatedocumentPassword";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_PASSWORD)
+  private String sEzsigntemplatedocumentPassword = "";
+
   public EzsigntemplatedocumentRequestCompound() {
   }
+
+  public EzsigntemplatedocumentRequestCompound pkiEzsigntemplatedocumentID(Integer pkiEzsigntemplatedocumentID) {
+    this.pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplatedocument
+   * minimum: 0
+   * @return pkiEzsigntemplatedocumentID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiEzsigntemplatedocumentID() {
+    return pkiEzsigntemplatedocumentID;
+  }
+
+  public void setPkiEzsigntemplatedocumentID(Integer pkiEzsigntemplatedocumentID) {
+    this.pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID;
+  }
+
+
+  public EzsigntemplatedocumentRequestCompound fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+    this.fkiEzsigntemplateID = fkiEzsigntemplateID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplate
+   * minimum: 0
+   * @return fkiEzsigntemplateID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsigntemplateID() {
+    return fkiEzsigntemplateID;
+  }
+
+  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+    this.fkiEzsigntemplateID = fkiEzsigntemplateID;
+  }
+
+
+  public EzsigntemplatedocumentRequestCompound fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigndocument
+   * minimum: 0
+   * @return fkiEzsigndocumentID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsigndocumentID() {
+    return fkiEzsigndocumentID;
+  }
+
+  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+    this.fkiEzsigndocumentID = fkiEzsigndocumentID;
+  }
+
+
+  public EzsigntemplatedocumentRequestCompound fkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
+    this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplatesigner
+   * minimum: 0
+   * @return fkiEzsigntemplatesignerID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsigntemplatesignerID() {
+    return fkiEzsigntemplatesignerID;
+  }
+
+  public void setFkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
+    this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
+  }
+
+
+  public EzsigntemplatedocumentRequestCompound sEzsigntemplatedocumentName(String sEzsigntemplatedocumentName) {
+    this.sEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
+    return this;
+  }
+
+  /**
+   * The name of the Ezsigntemplatedocument.
+   * @return sEzsigntemplatedocumentName
+   */
+  @javax.annotation.Nonnull
+  public String getsEzsigntemplatedocumentName() {
+    return sEzsigntemplatedocumentName;
+  }
+
+  public void setsEzsigntemplatedocumentName(String sEzsigntemplatedocumentName) {
+    this.sEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
+  }
+
+
+  public EzsigntemplatedocumentRequestCompound eEzsigntemplatedocumentSource(EEzsigntemplatedocumentSourceEnum eEzsigntemplatedocumentSource) {
+    this.eEzsigntemplatedocumentSource = eEzsigntemplatedocumentSource;
+    return this;
+  }
+
+  /**
+   * Indicates where to look for the document binary content.
+   * @return eEzsigntemplatedocumentSource
+   */
+  @javax.annotation.Nonnull
+  public EEzsigntemplatedocumentSourceEnum geteEzsigntemplatedocumentSource() {
+    return eEzsigntemplatedocumentSource;
+  }
+
+  public void seteEzsigntemplatedocumentSource(EEzsigntemplatedocumentSourceEnum eEzsigntemplatedocumentSource) {
+    this.eEzsigntemplatedocumentSource = eEzsigntemplatedocumentSource;
+  }
+
+
+  public EzsigntemplatedocumentRequestCompound eEzsigntemplatedocumentFormat(EEzsigntemplatedocumentFormatEnum eEzsigntemplatedocumentFormat) {
+    this.eEzsigntemplatedocumentFormat = eEzsigntemplatedocumentFormat;
+    return this;
+  }
+
+  /**
+   * Indicates the format of the template.
+   * @return eEzsigntemplatedocumentFormat
+   */
+  @javax.annotation.Nullable
+  public EEzsigntemplatedocumentFormatEnum geteEzsigntemplatedocumentFormat() {
+    return eEzsigntemplatedocumentFormat;
+  }
+
+  public void seteEzsigntemplatedocumentFormat(EEzsigntemplatedocumentFormatEnum eEzsigntemplatedocumentFormat) {
+    this.eEzsigntemplatedocumentFormat = eEzsigntemplatedocumentFormat;
+  }
+
+
+  public EzsigntemplatedocumentRequestCompound sEzsigntemplatedocumentBase64(byte[] sEzsigntemplatedocumentBase64) {
+    this.sEzsigntemplatedocumentBase64 = sEzsigntemplatedocumentBase64;
+    return this;
+  }
+
+  /**
+   * The Base64 encoded binary content of the document.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Base64.
+   * @return sEzsigntemplatedocumentBase64
+   */
+  @javax.annotation.Nullable
+  public byte[] getsEzsigntemplatedocumentBase64() {
+    return sEzsigntemplatedocumentBase64;
+  }
+
+  public void setsEzsigntemplatedocumentBase64(byte[] sEzsigntemplatedocumentBase64) {
+    this.sEzsigntemplatedocumentBase64 = sEzsigntemplatedocumentBase64;
+  }
+
+
+  public EzsigntemplatedocumentRequestCompound sEzsigntemplatedocumentUrl(String sEzsigntemplatedocumentUrl) {
+    this.sEzsigntemplatedocumentUrl = sEzsigntemplatedocumentUrl;
+    return this;
+  }
+
+  /**
+   * The url where the document content resides.  This field is Required when eEzsigntemplatedocumentSource &#x3D; Url.
+   * @return sEzsigntemplatedocumentUrl
+   */
+  @javax.annotation.Nullable
+  public String getsEzsigntemplatedocumentUrl() {
+    return sEzsigntemplatedocumentUrl;
+  }
+
+  public void setsEzsigntemplatedocumentUrl(String sEzsigntemplatedocumentUrl) {
+    this.sEzsigntemplatedocumentUrl = sEzsigntemplatedocumentUrl;
+  }
+
+
+  public EzsigntemplatedocumentRequestCompound bEzsigntemplatedocumentForcerepair(Boolean bEzsigntemplatedocumentForcerepair) {
+    this.bEzsigntemplatedocumentForcerepair = bEzsigntemplatedocumentForcerepair;
+    return this;
+  }
+
+  /**
+   * Try to repair the document or flatten it if it cannot be used for electronic signature.
+   * @return bEzsigntemplatedocumentForcerepair
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsigntemplatedocumentForcerepair() {
+    return bEzsigntemplatedocumentForcerepair;
+  }
+
+  public void setbEzsigntemplatedocumentForcerepair(Boolean bEzsigntemplatedocumentForcerepair) {
+    this.bEzsigntemplatedocumentForcerepair = bEzsigntemplatedocumentForcerepair;
+  }
+
+
+  public EzsigntemplatedocumentRequestCompound eEzsigntemplatedocumentForm(EEzsigntemplatedocumentFormEnum eEzsigntemplatedocumentForm) {
+    this.eEzsigntemplatedocumentForm = eEzsigntemplatedocumentForm;
+    return this;
+  }
+
+  /**
+   * If the document contains an existing PDF form this property must be set.  **Keep** leaves the form as-is in the document.  **Convert** removes the form and convert all the existing fields to Ezsigntemplateformfieldgroups and assign them to the specified **fkiEzsigntemplatesignerID**  **Discard** removes the form from the document  **Flatten** prints the form values in the document.
+   * @return eEzsigntemplatedocumentForm
+   */
+  @javax.annotation.Nullable
+  public EEzsigntemplatedocumentFormEnum geteEzsigntemplatedocumentForm() {
+    return eEzsigntemplatedocumentForm;
+  }
+
+  public void seteEzsigntemplatedocumentForm(EEzsigntemplatedocumentFormEnum eEzsigntemplatedocumentForm) {
+    this.eEzsigntemplatedocumentForm = eEzsigntemplatedocumentForm;
+  }
+
+
+  public EzsigntemplatedocumentRequestCompound sEzsigntemplatedocumentPassword(String sEzsigntemplatedocumentPassword) {
+    this.sEzsigntemplatedocumentPassword = sEzsigntemplatedocumentPassword;
+    return this;
+  }
+
+  /**
+   * If the source template is password protected, the password to open/modify it.
+   * @return sEzsigntemplatedocumentPassword
+   */
+  @javax.annotation.Nullable
+  public String getsEzsigntemplatedocumentPassword() {
+    return sEzsigntemplatedocumentPassword;
+  }
+
+  public void setsEzsigntemplatedocumentPassword(String sEzsigntemplatedocumentPassword) {
+    this.sEzsigntemplatedocumentPassword = sEzsigntemplatedocumentPassword;
+  }
+
 
 
   @Override
@@ -63,19 +514,42 @@ public class EzsigntemplatedocumentRequestCompound extends Ezsigntemplatedocumen
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    EzsigntemplatedocumentRequestCompound ezsigntemplatedocumentRequestCompound = (EzsigntemplatedocumentRequestCompound) o;
+    return Objects.equals(this.pkiEzsigntemplatedocumentID, ezsigntemplatedocumentRequestCompound.pkiEzsigntemplatedocumentID) &&
+        Objects.equals(this.fkiEzsigntemplateID, ezsigntemplatedocumentRequestCompound.fkiEzsigntemplateID) &&
+        Objects.equals(this.fkiEzsigndocumentID, ezsigntemplatedocumentRequestCompound.fkiEzsigndocumentID) &&
+        Objects.equals(this.fkiEzsigntemplatesignerID, ezsigntemplatedocumentRequestCompound.fkiEzsigntemplatesignerID) &&
+        Objects.equals(this.sEzsigntemplatedocumentName, ezsigntemplatedocumentRequestCompound.sEzsigntemplatedocumentName) &&
+        Objects.equals(this.eEzsigntemplatedocumentSource, ezsigntemplatedocumentRequestCompound.eEzsigntemplatedocumentSource) &&
+        Objects.equals(this.eEzsigntemplatedocumentFormat, ezsigntemplatedocumentRequestCompound.eEzsigntemplatedocumentFormat) &&
+        Arrays.equals(this.sEzsigntemplatedocumentBase64, ezsigntemplatedocumentRequestCompound.sEzsigntemplatedocumentBase64) &&
+        Objects.equals(this.sEzsigntemplatedocumentUrl, ezsigntemplatedocumentRequestCompound.sEzsigntemplatedocumentUrl) &&
+        Objects.equals(this.bEzsigntemplatedocumentForcerepair, ezsigntemplatedocumentRequestCompound.bEzsigntemplatedocumentForcerepair) &&
+        Objects.equals(this.eEzsigntemplatedocumentForm, ezsigntemplatedocumentRequestCompound.eEzsigntemplatedocumentForm) &&
+        Objects.equals(this.sEzsigntemplatedocumentPassword, ezsigntemplatedocumentRequestCompound.sEzsigntemplatedocumentPassword);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiEzsigntemplatedocumentID, fkiEzsigntemplateID, fkiEzsigndocumentID, fkiEzsigntemplatesignerID, sEzsigntemplatedocumentName, eEzsigntemplatedocumentSource, eEzsigntemplatedocumentFormat, Arrays.hashCode(sEzsigntemplatedocumentBase64), sEzsigntemplatedocumentUrl, bEzsigntemplatedocumentForcerepair, eEzsigntemplatedocumentForm, sEzsigntemplatedocumentPassword);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatedocumentRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsigntemplatedocumentID: ").append(toIndentedString(pkiEzsigntemplatedocumentID)).append("\n");
+    sb.append("    fkiEzsigntemplateID: ").append(toIndentedString(fkiEzsigntemplateID)).append("\n");
+    sb.append("    fkiEzsigndocumentID: ").append(toIndentedString(fkiEzsigndocumentID)).append("\n");
+    sb.append("    fkiEzsigntemplatesignerID: ").append(toIndentedString(fkiEzsigntemplatesignerID)).append("\n");
+    sb.append("    sEzsigntemplatedocumentName: ").append(toIndentedString(sEzsigntemplatedocumentName)).append("\n");
+    sb.append("    eEzsigntemplatedocumentSource: ").append(toIndentedString(eEzsigntemplatedocumentSource)).append("\n");
+    sb.append("    eEzsigntemplatedocumentFormat: ").append(toIndentedString(eEzsigntemplatedocumentFormat)).append("\n");
+    sb.append("    sEzsigntemplatedocumentBase64: ").append(toIndentedString(sEzsigntemplatedocumentBase64)).append("\n");
+    sb.append("    sEzsigntemplatedocumentUrl: ").append(toIndentedString(sEzsigntemplatedocumentUrl)).append("\n");
+    sb.append("    bEzsigntemplatedocumentForcerepair: ").append(toIndentedString(bEzsigntemplatedocumentForcerepair)).append("\n");
+    sb.append("    eEzsigntemplatedocumentForm: ").append(toIndentedString(eEzsigntemplatedocumentForm)).append("\n");
+    sb.append("    sEzsigntemplatedocumentPassword: ").append(toIndentedString(sEzsigntemplatedocumentPassword)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -144,6 +618,35 @@ public class EzsigntemplatedocumentRequestCompound extends Ezsigntemplatedocumen
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sEzsigntemplatedocumentName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplatedocumentName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatedocumentName").toString()));
+      }
+      if (!jsonObj.get("eEzsigntemplatedocumentSource").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eEzsigntemplatedocumentSource` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsigntemplatedocumentSource").toString()));
+      }
+      // validate the required field `eEzsigntemplatedocumentSource`
+      EEzsigntemplatedocumentSourceEnum.validateJsonElement(jsonObj.get("eEzsigntemplatedocumentSource"));
+      if ((jsonObj.get("eEzsigntemplatedocumentFormat") != null && !jsonObj.get("eEzsigntemplatedocumentFormat").isJsonNull()) && !jsonObj.get("eEzsigntemplatedocumentFormat").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eEzsigntemplatedocumentFormat` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsigntemplatedocumentFormat").toString()));
+      }
+      // validate the optional field `eEzsigntemplatedocumentFormat`
+      if (jsonObj.get("eEzsigntemplatedocumentFormat") != null && !jsonObj.get("eEzsigntemplatedocumentFormat").isJsonNull()) {
+        EEzsigntemplatedocumentFormatEnum.validateJsonElement(jsonObj.get("eEzsigntemplatedocumentFormat"));
+      }
+      if ((jsonObj.get("sEzsigntemplatedocumentUrl") != null && !jsonObj.get("sEzsigntemplatedocumentUrl").isJsonNull()) && !jsonObj.get("sEzsigntemplatedocumentUrl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplatedocumentUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatedocumentUrl").toString()));
+      }
+      if ((jsonObj.get("eEzsigntemplatedocumentForm") != null && !jsonObj.get("eEzsigntemplatedocumentForm").isJsonNull()) && !jsonObj.get("eEzsigntemplatedocumentForm").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eEzsigntemplatedocumentForm` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsigntemplatedocumentForm").toString()));
+      }
+      // validate the optional field `eEzsigntemplatedocumentForm`
+      if (jsonObj.get("eEzsigntemplatedocumentForm") != null && !jsonObj.get("eEzsigntemplatedocumentForm").isJsonNull()) {
+        EEzsigntemplatedocumentFormEnum.validateJsonElement(jsonObj.get("eEzsigntemplatedocumentForm"));
+      }
+      if ((jsonObj.get("sEzsigntemplatedocumentPassword") != null && !jsonObj.get("sEzsigntemplatedocumentPassword").isJsonNull()) && !jsonObj.get("sEzsigntemplatedocumentPassword").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplatedocumentPassword` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatedocumentPassword").toString()));
       }
   }
 

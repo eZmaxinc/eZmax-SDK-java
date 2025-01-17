@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/creditcardclient
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreditcardclientCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_CREDITCARDCLIENT_I_D = "a_pkiCreditcardclientID";
   @SerializedName(SERIALIZED_NAME_A_PKI_CREDITCARDCLIENT_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiCreditcardclientID = new ArrayList<>();
 
   public CreditcardclientCreateObjectV1ResponseMPayload() {
   }
 
-  public CreditcardclientCreateObjectV1ResponseMPayload aPkiCreditcardclientID(@javax.annotation.Nonnull List<Integer> aPkiCreditcardclientID) {
+  public CreditcardclientCreateObjectV1ResponseMPayload aPkiCreditcardclientID(List<Integer> aPkiCreditcardclientID) {
     this.aPkiCreditcardclientID = aPkiCreditcardclientID;
     return this;
   }
@@ -82,7 +81,7 @@ public class CreditcardclientCreateObjectV1ResponseMPayload {
     return aPkiCreditcardclientID;
   }
 
-  public void setaPkiCreditcardclientID(@javax.annotation.Nonnull List<Integer> aPkiCreditcardclientID) {
+  public void setaPkiCreditcardclientID(List<Integer> aPkiCreditcardclientID) {
     this.aPkiCreditcardclientID = aPkiCreditcardclientID;
   }
 

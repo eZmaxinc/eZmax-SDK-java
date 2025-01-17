@@ -8,7 +8,7 @@ Payload for GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/g
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**aObjEzsigntemplatedocumentpage** | [**List&lt;EzsigntemplatedocumentpageResponse&gt;**](EzsigntemplatedocumentpageResponse.md) |  |  |
+|**aObjEzsigntemplatedocumentpage** | [**List&lt;EzsigntemplatedocumentpageResponseCompound&gt;**](EzsigntemplatedocumentpageResponseCompound.md) |  |  |
 
 
 

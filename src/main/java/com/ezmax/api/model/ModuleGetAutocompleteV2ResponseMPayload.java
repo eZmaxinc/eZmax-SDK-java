@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/module/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ModuleGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_MODULE = "a_objModule";
   @SerializedName(SERIALIZED_NAME_A_OBJ_MODULE)
-  @javax.annotation.Nonnull
   private List<ModuleAutocompleteElementResponse> aObjModule = new ArrayList<>();
 
   public ModuleGetAutocompleteV2ResponseMPayload() {
   }
 
-  public ModuleGetAutocompleteV2ResponseMPayload aObjModule(@javax.annotation.Nonnull List<ModuleAutocompleteElementResponse> aObjModule) {
+  public ModuleGetAutocompleteV2ResponseMPayload aObjModule(List<ModuleAutocompleteElementResponse> aObjModule) {
     this.aObjModule = aObjModule;
     return this;
   }
@@ -83,7 +82,7 @@ public class ModuleGetAutocompleteV2ResponseMPayload {
     return aObjModule;
   }
 
-  public void setaObjModule(@javax.annotation.Nonnull List<ModuleAutocompleteElementResponse> aObjModule) {
+  public void setaObjModule(List<ModuleAutocompleteElementResponse> aObjModule) {
     this.aObjModule = aObjModule;
   }
 

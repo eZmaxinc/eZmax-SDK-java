@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT = "a_objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT)
-  @javax.annotation.Nonnull
   private List<EzsigndocumentResponseCompound> aObjEzsigndocument = new ArrayList<>();
 
   public EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload() {
   }
 
-  public EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload aObjEzsigndocument(@javax.annotation.Nonnull List<EzsigndocumentResponseCompound> aObjEzsigndocument) {
+  public EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload aObjEzsigndocument(List<EzsigndocumentResponseCompound> aObjEzsigndocument) {
     this.aObjEzsigndocument = aObjEzsigndocument;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsignfolderImportEzsigntemplatepackageV1ResponseMPayload {
     return aObjEzsigndocument;
   }
 
-  public void setaObjEzsigndocument(@javax.annotation.Nonnull List<EzsigndocumentResponseCompound> aObjEzsigndocument) {
+  public void setaObjEzsigndocument(List<EzsigndocumentResponseCompound> aObjEzsigndocument) {
     this.aObjEzsigndocument = aObjEzsigndocument;
   }
 

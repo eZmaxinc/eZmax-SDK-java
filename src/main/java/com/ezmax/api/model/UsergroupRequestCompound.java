@@ -16,7 +16,6 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.EmailRequest;
 import com.ezmax.api.model.MultilingualUsergroupName;
-import com.ezmax.api.model.UsergroupRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,10 +50,81 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class UsergroupRequestCompound extends UsergroupRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class UsergroupRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
+  @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
+  private Integer pkiUsergroupID;
+
+  public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
+  @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
+  private EmailRequest objEmail;
+
+  public static final String SERIALIZED_NAME_OBJ_USERGROUP_NAME = "objUsergroupName";
+  @SerializedName(SERIALIZED_NAME_OBJ_USERGROUP_NAME)
+  private MultilingualUsergroupName objUsergroupName;
+
   public UsergroupRequestCompound() {
   }
+
+  public UsergroupRequestCompound pkiUsergroupID(Integer pkiUsergroupID) {
+    this.pkiUsergroupID = pkiUsergroupID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Usergroup
+   * minimum: 0
+   * maximum: 255
+   * @return pkiUsergroupID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiUsergroupID() {
+    return pkiUsergroupID;
+  }
+
+  public void setPkiUsergroupID(Integer pkiUsergroupID) {
+    this.pkiUsergroupID = pkiUsergroupID;
+  }
+
+
+  public UsergroupRequestCompound objEmail(EmailRequest objEmail) {
+    this.objEmail = objEmail;
+    return this;
+  }
+
+  /**
+   * Get objEmail
+   * @return objEmail
+   */
+  @javax.annotation.Nullable
+  public EmailRequest getObjEmail() {
+    return objEmail;
+  }
+
+  public void setObjEmail(EmailRequest objEmail) {
+    this.objEmail = objEmail;
+  }
+
+
+  public UsergroupRequestCompound objUsergroupName(MultilingualUsergroupName objUsergroupName) {
+    this.objUsergroupName = objUsergroupName;
+    return this;
+  }
+
+  /**
+   * Get objUsergroupName
+   * @return objUsergroupName
+   */
+  @javax.annotation.Nonnull
+  public MultilingualUsergroupName getObjUsergroupName() {
+    return objUsergroupName;
+  }
+
+  public void setObjUsergroupName(MultilingualUsergroupName objUsergroupName) {
+    this.objUsergroupName = objUsergroupName;
+  }
+
 
 
   @Override
@@ -65,19 +135,24 @@ public class UsergroupRequestCompound extends UsergroupRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    UsergroupRequestCompound usergroupRequestCompound = (UsergroupRequestCompound) o;
+    return Objects.equals(this.pkiUsergroupID, usergroupRequestCompound.pkiUsergroupID) &&
+        Objects.equals(this.objEmail, usergroupRequestCompound.objEmail) &&
+        Objects.equals(this.objUsergroupName, usergroupRequestCompound.objUsergroupName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiUsergroupID, objEmail, objUsergroupName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiUsergroupID: ").append(toIndentedString(pkiUsergroupID)).append("\n");
+    sb.append("    objEmail: ").append(toIndentedString(objEmail)).append("\n");
+    sb.append("    objUsergroupName: ").append(toIndentedString(objUsergroupName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -136,6 +211,13 @@ public class UsergroupRequestCompound extends UsergroupRequest {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `objEmail`
+      if (jsonObj.get("objEmail") != null && !jsonObj.get("objEmail").isJsonNull()) {
+        EmailRequest.validateJsonElement(jsonObj.get("objEmail"));
+      }
+      // validate the required field `objUsergroupName`
+      MultilingualUsergroupName.validateJsonElement(jsonObj.get("objUsergroupName"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -13,7 +13,6 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.CommunicationrecipientRequest;
 import com.ezmax.api.model.FieldECommunicationrecipientType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

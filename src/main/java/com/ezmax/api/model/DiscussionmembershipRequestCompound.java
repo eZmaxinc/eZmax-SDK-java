@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.DiscussionmembershipRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,156 @@ import eZmaxAPI.JSON;
 /**
  * A Discussionmembership Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class DiscussionmembershipRequestCompound extends DiscussionmembershipRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class DiscussionmembershipRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_DISCUSSIONMEMBERSHIP_I_D = "pkiDiscussionmembershipID";
+  @SerializedName(SERIALIZED_NAME_PKI_DISCUSSIONMEMBERSHIP_I_D)
+  private Integer pkiDiscussionmembershipID;
+
+  public static final String SERIALIZED_NAME_FKI_DISCUSSION_I_D = "fkiDiscussionID";
+  @SerializedName(SERIALIZED_NAME_FKI_DISCUSSION_I_D)
+  private Integer fkiDiscussionID;
+
+  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
+  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  private Integer fkiUserID;
+
+  public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
+  @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
+  private Integer fkiUsergroupID;
+
+  public static final String SERIALIZED_NAME_FKI_MODULESECTION_I_D = "fkiModulesectionID";
+  @SerializedName(SERIALIZED_NAME_FKI_MODULESECTION_I_D)
+  private Integer fkiModulesectionID;
+
+  public static final String SERIALIZED_NAME_DT_DISCUSSIONMEMBERSHIP_JOINED = "dtDiscussionmembershipJoined";
+  @SerializedName(SERIALIZED_NAME_DT_DISCUSSIONMEMBERSHIP_JOINED)
+  private String dtDiscussionmembershipJoined;
+
   public DiscussionmembershipRequestCompound() {
   }
+
+  public DiscussionmembershipRequestCompound pkiDiscussionmembershipID(Integer pkiDiscussionmembershipID) {
+    this.pkiDiscussionmembershipID = pkiDiscussionmembershipID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Discussionmembership
+   * minimum: 0
+   * maximum: 16777215
+   * @return pkiDiscussionmembershipID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiDiscussionmembershipID() {
+    return pkiDiscussionmembershipID;
+  }
+
+  public void setPkiDiscussionmembershipID(Integer pkiDiscussionmembershipID) {
+    this.pkiDiscussionmembershipID = pkiDiscussionmembershipID;
+  }
+
+
+  public DiscussionmembershipRequestCompound fkiDiscussionID(Integer fkiDiscussionID) {
+    this.fkiDiscussionID = fkiDiscussionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Discussion
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiDiscussionID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiDiscussionID() {
+    return fkiDiscussionID;
+  }
+
+  public void setFkiDiscussionID(Integer fkiDiscussionID) {
+    this.fkiDiscussionID = fkiDiscussionID;
+  }
+
+
+  public DiscussionmembershipRequestCompound fkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return fkiUserID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiUserID() {
+    return fkiUserID;
+  }
+
+  public void setFkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+  }
+
+
+  public DiscussionmembershipRequestCompound fkiUsergroupID(Integer fkiUsergroupID) {
+    this.fkiUsergroupID = fkiUsergroupID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Usergroup
+   * minimum: 0
+   * maximum: 255
+   * @return fkiUsergroupID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiUsergroupID() {
+    return fkiUsergroupID;
+  }
+
+  public void setFkiUsergroupID(Integer fkiUsergroupID) {
+    this.fkiUsergroupID = fkiUsergroupID;
+  }
+
+
+  public DiscussionmembershipRequestCompound fkiModulesectionID(Integer fkiModulesectionID) {
+    this.fkiModulesectionID = fkiModulesectionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Modulesection
+   * minimum: 0
+   * @return fkiModulesectionID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiModulesectionID() {
+    return fkiModulesectionID;
+  }
+
+  public void setFkiModulesectionID(Integer fkiModulesectionID) {
+    this.fkiModulesectionID = fkiModulesectionID;
+  }
+
+
+  public DiscussionmembershipRequestCompound dtDiscussionmembershipJoined(String dtDiscussionmembershipJoined) {
+    this.dtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
+    return this;
+  }
+
+  /**
+   * The joined date of the Discussionmembership
+   * @return dtDiscussionmembershipJoined
+   */
+  @javax.annotation.Nonnull
+  public String getDtDiscussionmembershipJoined() {
+    return dtDiscussionmembershipJoined;
+  }
+
+  public void setDtDiscussionmembershipJoined(String dtDiscussionmembershipJoined) {
+    this.dtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
+  }
+
 
 
   @Override
@@ -63,19 +208,30 @@ public class DiscussionmembershipRequestCompound extends DiscussionmembershipReq
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    DiscussionmembershipRequestCompound discussionmembershipRequestCompound = (DiscussionmembershipRequestCompound) o;
+    return Objects.equals(this.pkiDiscussionmembershipID, discussionmembershipRequestCompound.pkiDiscussionmembershipID) &&
+        Objects.equals(this.fkiDiscussionID, discussionmembershipRequestCompound.fkiDiscussionID) &&
+        Objects.equals(this.fkiUserID, discussionmembershipRequestCompound.fkiUserID) &&
+        Objects.equals(this.fkiUsergroupID, discussionmembershipRequestCompound.fkiUsergroupID) &&
+        Objects.equals(this.fkiModulesectionID, discussionmembershipRequestCompound.fkiModulesectionID) &&
+        Objects.equals(this.dtDiscussionmembershipJoined, discussionmembershipRequestCompound.dtDiscussionmembershipJoined);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiDiscussionmembershipID, fkiDiscussionID, fkiUserID, fkiUsergroupID, fkiModulesectionID, dtDiscussionmembershipJoined);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiscussionmembershipRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiDiscussionmembershipID: ").append(toIndentedString(pkiDiscussionmembershipID)).append("\n");
+    sb.append("    fkiDiscussionID: ").append(toIndentedString(fkiDiscussionID)).append("\n");
+    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
+    sb.append("    fkiUsergroupID: ").append(toIndentedString(fkiUsergroupID)).append("\n");
+    sb.append("    fkiModulesectionID: ").append(toIndentedString(fkiModulesectionID)).append("\n");
+    sb.append("    dtDiscussionmembershipJoined: ").append(toIndentedString(dtDiscussionmembershipJoined)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -137,6 +293,10 @@ public class DiscussionmembershipRequestCompound extends DiscussionmembershipReq
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("dtDiscussionmembershipJoined").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtDiscussionmembershipJoined` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtDiscussionmembershipJoined").toString()));
       }
   }
 

@@ -48,72 +48,60 @@ import eZmaxAPI.JSON;
 /**
  * An Franchisereferalincome Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FranchisereferalincomeRequest {
   public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
-  @javax.annotation.Nullable
   private Integer pkiFranchisereferalincomeID;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D = "fkiFranchisebrokerID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFranchisebrokerID;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEREFERALINCOMEPROGRAM_I_D = "fkiFranchisereferalincomeprogramID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEREFERALINCOMEPROGRAM_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFranchisereferalincomeprogramID;
 
   public static final String SERIALIZED_NAME_FKI_PERIOD_I_D = "fkiPeriodID";
   @SerializedName(SERIALIZED_NAME_FKI_PERIOD_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiPeriodID;
 
   public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_LOAN = "dFranchisereferalincomeLoan";
   @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_LOAN)
-  @javax.annotation.Nonnull
   private String dFranchisereferalincomeLoan;
 
   public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISEAMOUNT = "dFranchisereferalincomeFranchiseamount";
   @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISEAMOUNT)
-  @javax.annotation.Nonnull
   private String dFranchisereferalincomeFranchiseamount;
 
   public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISORAMOUNT = "dFranchisereferalincomeFranchisoramount";
   @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISORAMOUNT)
-  @javax.annotation.Nonnull
   private String dFranchisereferalincomeFranchisoramount;
 
   public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_AGENTAMOUNT = "dFranchisereferalincomeAgentamount";
   @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_AGENTAMOUNT)
-  @javax.annotation.Nonnull
   private String dFranchisereferalincomeAgentamount;
 
   public static final String SERIALIZED_NAME_DT_FRANCHISEREFERALINCOME_DISBURSED = "dtFranchisereferalincomeDisbursed";
   @SerializedName(SERIALIZED_NAME_DT_FRANCHISEREFERALINCOME_DISBURSED)
-  @javax.annotation.Nonnull
   private String dtFranchisereferalincomeDisbursed;
 
   public static final String SERIALIZED_NAME_T_FRANCHISEREFERALINCOME_COMMENT = "tFranchisereferalincomeComment";
   @SerializedName(SERIALIZED_NAME_T_FRANCHISEREFERALINCOME_COMMENT)
-  @javax.annotation.Nonnull
   private String tFranchisereferalincomeComment;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D = "fkiFranchiseofficeID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFranchiseofficeID;
 
   public static final String SERIALIZED_NAME_S_FRANCHISEREFERALINCOME_REMOTEID = "sFranchisereferalincomeRemoteid";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEREFERALINCOME_REMOTEID)
-  @javax.annotation.Nonnull
   private String sFranchisereferalincomeRemoteid;
 
   public FranchisereferalincomeRequest() {
   }
 
-  public FranchisereferalincomeRequest pkiFranchisereferalincomeID(@javax.annotation.Nullable Integer pkiFranchisereferalincomeID) {
+  public FranchisereferalincomeRequest pkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
     this.pkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
     return this;
   }
@@ -128,12 +116,12 @@ public class FranchisereferalincomeRequest {
     return pkiFranchisereferalincomeID;
   }
 
-  public void setPkiFranchisereferalincomeID(@javax.annotation.Nullable Integer pkiFranchisereferalincomeID) {
+  public void setPkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
     this.pkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
   }
 
 
-  public FranchisereferalincomeRequest fkiFranchisebrokerID(@javax.annotation.Nonnull Integer fkiFranchisebrokerID) {
+  public FranchisereferalincomeRequest fkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
     this.fkiFranchisebrokerID = fkiFranchisebrokerID;
     return this;
   }
@@ -148,12 +136,12 @@ public class FranchisereferalincomeRequest {
     return fkiFranchisebrokerID;
   }
 
-  public void setFkiFranchisebrokerID(@javax.annotation.Nonnull Integer fkiFranchisebrokerID) {
+  public void setFkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
     this.fkiFranchisebrokerID = fkiFranchisebrokerID;
   }
 
 
-  public FranchisereferalincomeRequest fkiFranchisereferalincomeprogramID(@javax.annotation.Nonnull Integer fkiFranchisereferalincomeprogramID) {
+  public FranchisereferalincomeRequest fkiFranchisereferalincomeprogramID(Integer fkiFranchisereferalincomeprogramID) {
     this.fkiFranchisereferalincomeprogramID = fkiFranchisereferalincomeprogramID;
     return this;
   }
@@ -168,12 +156,12 @@ public class FranchisereferalincomeRequest {
     return fkiFranchisereferalincomeprogramID;
   }
 
-  public void setFkiFranchisereferalincomeprogramID(@javax.annotation.Nonnull Integer fkiFranchisereferalincomeprogramID) {
+  public void setFkiFranchisereferalincomeprogramID(Integer fkiFranchisereferalincomeprogramID) {
     this.fkiFranchisereferalincomeprogramID = fkiFranchisereferalincomeprogramID;
   }
 
 
-  public FranchisereferalincomeRequest fkiPeriodID(@javax.annotation.Nonnull Integer fkiPeriodID) {
+  public FranchisereferalincomeRequest fkiPeriodID(Integer fkiPeriodID) {
     this.fkiPeriodID = fkiPeriodID;
     return this;
   }
@@ -188,12 +176,12 @@ public class FranchisereferalincomeRequest {
     return fkiPeriodID;
   }
 
-  public void setFkiPeriodID(@javax.annotation.Nonnull Integer fkiPeriodID) {
+  public void setFkiPeriodID(Integer fkiPeriodID) {
     this.fkiPeriodID = fkiPeriodID;
   }
 
 
-  public FranchisereferalincomeRequest dFranchisereferalincomeLoan(@javax.annotation.Nonnull String dFranchisereferalincomeLoan) {
+  public FranchisereferalincomeRequest dFranchisereferalincomeLoan(String dFranchisereferalincomeLoan) {
     this.dFranchisereferalincomeLoan = dFranchisereferalincomeLoan;
     return this;
   }
@@ -207,12 +195,12 @@ public class FranchisereferalincomeRequest {
     return dFranchisereferalincomeLoan;
   }
 
-  public void setdFranchisereferalincomeLoan(@javax.annotation.Nonnull String dFranchisereferalincomeLoan) {
+  public void setdFranchisereferalincomeLoan(String dFranchisereferalincomeLoan) {
     this.dFranchisereferalincomeLoan = dFranchisereferalincomeLoan;
   }
 
 
-  public FranchisereferalincomeRequest dFranchisereferalincomeFranchiseamount(@javax.annotation.Nonnull String dFranchisereferalincomeFranchiseamount) {
+  public FranchisereferalincomeRequest dFranchisereferalincomeFranchiseamount(String dFranchisereferalincomeFranchiseamount) {
     this.dFranchisereferalincomeFranchiseamount = dFranchisereferalincomeFranchiseamount;
     return this;
   }
@@ -226,12 +214,12 @@ public class FranchisereferalincomeRequest {
     return dFranchisereferalincomeFranchiseamount;
   }
 
-  public void setdFranchisereferalincomeFranchiseamount(@javax.annotation.Nonnull String dFranchisereferalincomeFranchiseamount) {
+  public void setdFranchisereferalincomeFranchiseamount(String dFranchisereferalincomeFranchiseamount) {
     this.dFranchisereferalincomeFranchiseamount = dFranchisereferalincomeFranchiseamount;
   }
 
 
-  public FranchisereferalincomeRequest dFranchisereferalincomeFranchisoramount(@javax.annotation.Nonnull String dFranchisereferalincomeFranchisoramount) {
+  public FranchisereferalincomeRequest dFranchisereferalincomeFranchisoramount(String dFranchisereferalincomeFranchisoramount) {
     this.dFranchisereferalincomeFranchisoramount = dFranchisereferalincomeFranchisoramount;
     return this;
   }
@@ -245,12 +233,12 @@ public class FranchisereferalincomeRequest {
     return dFranchisereferalincomeFranchisoramount;
   }
 
-  public void setdFranchisereferalincomeFranchisoramount(@javax.annotation.Nonnull String dFranchisereferalincomeFranchisoramount) {
+  public void setdFranchisereferalincomeFranchisoramount(String dFranchisereferalincomeFranchisoramount) {
     this.dFranchisereferalincomeFranchisoramount = dFranchisereferalincomeFranchisoramount;
   }
 
 
-  public FranchisereferalincomeRequest dFranchisereferalincomeAgentamount(@javax.annotation.Nonnull String dFranchisereferalincomeAgentamount) {
+  public FranchisereferalincomeRequest dFranchisereferalincomeAgentamount(String dFranchisereferalincomeAgentamount) {
     this.dFranchisereferalincomeAgentamount = dFranchisereferalincomeAgentamount;
     return this;
   }
@@ -264,12 +252,12 @@ public class FranchisereferalincomeRequest {
     return dFranchisereferalincomeAgentamount;
   }
 
-  public void setdFranchisereferalincomeAgentamount(@javax.annotation.Nonnull String dFranchisereferalincomeAgentamount) {
+  public void setdFranchisereferalincomeAgentamount(String dFranchisereferalincomeAgentamount) {
     this.dFranchisereferalincomeAgentamount = dFranchisereferalincomeAgentamount;
   }
 
 
-  public FranchisereferalincomeRequest dtFranchisereferalincomeDisbursed(@javax.annotation.Nonnull String dtFranchisereferalincomeDisbursed) {
+  public FranchisereferalincomeRequest dtFranchisereferalincomeDisbursed(String dtFranchisereferalincomeDisbursed) {
     this.dtFranchisereferalincomeDisbursed = dtFranchisereferalincomeDisbursed;
     return this;
   }
@@ -283,12 +271,12 @@ public class FranchisereferalincomeRequest {
     return dtFranchisereferalincomeDisbursed;
   }
 
-  public void setDtFranchisereferalincomeDisbursed(@javax.annotation.Nonnull String dtFranchisereferalincomeDisbursed) {
+  public void setDtFranchisereferalincomeDisbursed(String dtFranchisereferalincomeDisbursed) {
     this.dtFranchisereferalincomeDisbursed = dtFranchisereferalincomeDisbursed;
   }
 
 
-  public FranchisereferalincomeRequest tFranchisereferalincomeComment(@javax.annotation.Nonnull String tFranchisereferalincomeComment) {
+  public FranchisereferalincomeRequest tFranchisereferalincomeComment(String tFranchisereferalincomeComment) {
     this.tFranchisereferalincomeComment = tFranchisereferalincomeComment;
     return this;
   }
@@ -302,12 +290,12 @@ public class FranchisereferalincomeRequest {
     return tFranchisereferalincomeComment;
   }
 
-  public void settFranchisereferalincomeComment(@javax.annotation.Nonnull String tFranchisereferalincomeComment) {
+  public void settFranchisereferalincomeComment(String tFranchisereferalincomeComment) {
     this.tFranchisereferalincomeComment = tFranchisereferalincomeComment;
   }
 
 
-  public FranchisereferalincomeRequest fkiFranchiseofficeID(@javax.annotation.Nonnull Integer fkiFranchiseofficeID) {
+  public FranchisereferalincomeRequest fkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
     return this;
   }
@@ -322,12 +310,12 @@ public class FranchisereferalincomeRequest {
     return fkiFranchiseofficeID;
   }
 
-  public void setFkiFranchiseofficeID(@javax.annotation.Nonnull Integer fkiFranchiseofficeID) {
+  public void setFkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
   }
 
 
-  public FranchisereferalincomeRequest sFranchisereferalincomeRemoteid(@javax.annotation.Nonnull String sFranchisereferalincomeRemoteid) {
+  public FranchisereferalincomeRequest sFranchisereferalincomeRemoteid(String sFranchisereferalincomeRemoteid) {
     this.sFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
     return this;
   }
@@ -341,7 +329,7 @@ public class FranchisereferalincomeRequest {
     return sFranchisereferalincomeRemoteid;
   }
 
-  public void setsFranchisereferalincomeRemoteid(@javax.annotation.Nonnull String sFranchisereferalincomeRemoteid) {
+  public void setsFranchisereferalincomeRemoteid(String sFranchisereferalincomeRemoteid) {
     this.sFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
   }
 
@@ -453,6 +441,21 @@ public class FranchisereferalincomeRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in FranchisereferalincomeRequest is not found in the empty JSON string", FranchisereferalincomeRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!FranchisereferalincomeRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FranchisereferalincomeRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : FranchisereferalincomeRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dFranchisereferalincomeLoan").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dFranchisereferalincomeLoan` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeLoan").toString()));
@@ -477,6 +480,34 @@ public class FranchisereferalincomeRequest {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!FranchisereferalincomeRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'FranchisereferalincomeRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<FranchisereferalincomeRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(FranchisereferalincomeRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<FranchisereferalincomeRequest>() {
+           @Override
+           public void write(JsonWriter out, FranchisereferalincomeRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public FranchisereferalincomeRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of FranchisereferalincomeRequest given an JSON string

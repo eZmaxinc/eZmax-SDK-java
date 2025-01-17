@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigndiscussion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndiscussionCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNDISCUSSION_I_D = "a_pkiEzsigndiscussionID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNDISCUSSION_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsigndiscussionID = new ArrayList<>();
 
   public EzsigndiscussionCreateObjectV1ResponseMPayload() {
   }
 
-  public EzsigndiscussionCreateObjectV1ResponseMPayload aPkiEzsigndiscussionID(@javax.annotation.Nonnull List<Integer> aPkiEzsigndiscussionID) {
+  public EzsigndiscussionCreateObjectV1ResponseMPayload aPkiEzsigndiscussionID(List<Integer> aPkiEzsigndiscussionID) {
     this.aPkiEzsigndiscussionID = aPkiEzsigndiscussionID;
     return this;
   }
@@ -82,7 +81,7 @@ public class EzsigndiscussionCreateObjectV1ResponseMPayload {
     return aPkiEzsigndiscussionID;
   }
 
-  public void setaPkiEzsigndiscussionID(@javax.annotation.Nonnull List<Integer> aPkiEzsigndiscussionID) {
+  public void setaPkiEzsigndiscussionID(List<Integer> aPkiEzsigndiscussionID) {
     this.aPkiEzsigndiscussionID = aPkiEzsigndiscussionID;
   }
 

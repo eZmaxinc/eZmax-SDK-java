@@ -49,37 +49,32 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationexternalrecipient Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommunicationexternalrecipientRequest {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALRECIPIENT_I_D = "pkiCommunicationexternalrecipientID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALRECIPIENT_I_D)
-  @javax.annotation.Nullable
   private Integer pkiCommunicationexternalrecipientID;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  @javax.annotation.Nullable
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
   @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
-  @javax.annotation.Nullable
   private String sPhoneE164;
 
   public static final String SERIALIZED_NAME_E_COMMUNICATIONEXTERNALRECIPIENT_TYPE = "eCommunicationexternalrecipientType";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATIONEXTERNALRECIPIENT_TYPE)
-  @javax.annotation.Nullable
   private FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType;
 
   public static final String SERIALIZED_NAME_S_COMMUNICATIONEXTERNALRECIPIENT_NAME = "sCommunicationexternalrecipientName";
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATIONEXTERNALRECIPIENT_NAME)
-  @javax.annotation.Nullable
   private String sCommunicationexternalrecipientName;
 
   public CommunicationexternalrecipientRequest() {
   }
 
-  public CommunicationexternalrecipientRequest pkiCommunicationexternalrecipientID(@javax.annotation.Nullable Integer pkiCommunicationexternalrecipientID) {
+  public CommunicationexternalrecipientRequest pkiCommunicationexternalrecipientID(Integer pkiCommunicationexternalrecipientID) {
     this.pkiCommunicationexternalrecipientID = pkiCommunicationexternalrecipientID;
     return this;
   }
@@ -93,12 +88,12 @@ public class CommunicationexternalrecipientRequest {
     return pkiCommunicationexternalrecipientID;
   }
 
-  public void setPkiCommunicationexternalrecipientID(@javax.annotation.Nullable Integer pkiCommunicationexternalrecipientID) {
+  public void setPkiCommunicationexternalrecipientID(Integer pkiCommunicationexternalrecipientID) {
     this.pkiCommunicationexternalrecipientID = pkiCommunicationexternalrecipientID;
   }
 
 
-  public CommunicationexternalrecipientRequest sEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
+  public CommunicationexternalrecipientRequest sEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -112,12 +107,12 @@ public class CommunicationexternalrecipientRequest {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
+  public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public CommunicationexternalrecipientRequest sPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
+  public CommunicationexternalrecipientRequest sPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -131,12 +126,12 @@ public class CommunicationexternalrecipientRequest {
     return sPhoneE164;
   }
 
-  public void setsPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
+  public void setsPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 
 
-  public CommunicationexternalrecipientRequest eCommunicationexternalrecipientType(@javax.annotation.Nullable FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType) {
+  public CommunicationexternalrecipientRequest eCommunicationexternalrecipientType(FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType) {
     this.eCommunicationexternalrecipientType = eCommunicationexternalrecipientType;
     return this;
   }
@@ -150,12 +145,12 @@ public class CommunicationexternalrecipientRequest {
     return eCommunicationexternalrecipientType;
   }
 
-  public void seteCommunicationexternalrecipientType(@javax.annotation.Nullable FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType) {
+  public void seteCommunicationexternalrecipientType(FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType) {
     this.eCommunicationexternalrecipientType = eCommunicationexternalrecipientType;
   }
 
 
-  public CommunicationexternalrecipientRequest sCommunicationexternalrecipientName(@javax.annotation.Nullable String sCommunicationexternalrecipientName) {
+  public CommunicationexternalrecipientRequest sCommunicationexternalrecipientName(String sCommunicationexternalrecipientName) {
     this.sCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
     return this;
   }
@@ -169,7 +164,7 @@ public class CommunicationexternalrecipientRequest {
     return sCommunicationexternalrecipientName;
   }
 
-  public void setsCommunicationexternalrecipientName(@javax.annotation.Nullable String sCommunicationexternalrecipientName) {
+  public void setsCommunicationexternalrecipientName(String sCommunicationexternalrecipientName) {
     this.sCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
   }
 
@@ -249,6 +244,14 @@ public class CommunicationexternalrecipientRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommunicationexternalrecipientRequest is not found in the empty JSON string", CommunicationexternalrecipientRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!CommunicationexternalrecipientRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommunicationexternalrecipientRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
@@ -265,6 +268,34 @@ public class CommunicationexternalrecipientRequest {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CommunicationexternalrecipientRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CommunicationexternalrecipientRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CommunicationexternalrecipientRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CommunicationexternalrecipientRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CommunicationexternalrecipientRequest>() {
+           @Override
+           public void write(JsonWriter out, CommunicationexternalrecipientRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CommunicationexternalrecipientRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of CommunicationexternalrecipientRequest given an JSON string

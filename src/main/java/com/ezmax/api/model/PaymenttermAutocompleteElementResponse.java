@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PaymenttermAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiPaymenttermID;
 
   public static final String SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION_X = "sPaymenttermDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sPaymenttermDescriptionX;
 
   public static final String SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE = "bPaymenttermIsactive";
   @SerializedName(SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bPaymenttermIsactive;
 
   public PaymenttermAutocompleteElementResponse() {
   }
 
-  public PaymenttermAutocompleteElementResponse pkiPaymenttermID(@javax.annotation.Nonnull Integer pkiPaymenttermID) {
+  public PaymenttermAutocompleteElementResponse pkiPaymenttermID(Integer pkiPaymenttermID) {
     this.pkiPaymenttermID = pkiPaymenttermID;
     return this;
   }
@@ -82,12 +79,12 @@ public class PaymenttermAutocompleteElementResponse {
     return pkiPaymenttermID;
   }
 
-  public void setPkiPaymenttermID(@javax.annotation.Nonnull Integer pkiPaymenttermID) {
+  public void setPkiPaymenttermID(Integer pkiPaymenttermID) {
     this.pkiPaymenttermID = pkiPaymenttermID;
   }
 
 
-  public PaymenttermAutocompleteElementResponse sPaymenttermDescriptionX(@javax.annotation.Nonnull String sPaymenttermDescriptionX) {
+  public PaymenttermAutocompleteElementResponse sPaymenttermDescriptionX(String sPaymenttermDescriptionX) {
     this.sPaymenttermDescriptionX = sPaymenttermDescriptionX;
     return this;
   }
@@ -101,12 +98,12 @@ public class PaymenttermAutocompleteElementResponse {
     return sPaymenttermDescriptionX;
   }
 
-  public void setsPaymenttermDescriptionX(@javax.annotation.Nonnull String sPaymenttermDescriptionX) {
+  public void setsPaymenttermDescriptionX(String sPaymenttermDescriptionX) {
     this.sPaymenttermDescriptionX = sPaymenttermDescriptionX;
   }
 
 
-  public PaymenttermAutocompleteElementResponse bPaymenttermIsactive(@javax.annotation.Nonnull Boolean bPaymenttermIsactive) {
+  public PaymenttermAutocompleteElementResponse bPaymenttermIsactive(Boolean bPaymenttermIsactive) {
     this.bPaymenttermIsactive = bPaymenttermIsactive;
     return this;
   }
@@ -120,7 +117,7 @@ public class PaymenttermAutocompleteElementResponse {
     return bPaymenttermIsactive;
   }
 
-  public void setbPaymenttermIsactive(@javax.annotation.Nonnull Boolean bPaymenttermIsactive) {
+  public void setbPaymenttermIsactive(Boolean bPaymenttermIsactive) {
     this.bPaymenttermIsactive = bPaymenttermIsactive;
   }
 

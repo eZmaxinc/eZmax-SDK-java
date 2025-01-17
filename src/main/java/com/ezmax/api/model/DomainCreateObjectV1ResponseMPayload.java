@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/domain
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DomainCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_DOMAIN_I_D = "a_pkiDomainID";
   @SerializedName(SERIALIZED_NAME_A_PKI_DOMAIN_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiDomainID = new ArrayList<>();
 
   public DomainCreateObjectV1ResponseMPayload() {
   }
 
-  public DomainCreateObjectV1ResponseMPayload aPkiDomainID(@javax.annotation.Nonnull List<Integer> aPkiDomainID) {
+  public DomainCreateObjectV1ResponseMPayload aPkiDomainID(List<Integer> aPkiDomainID) {
     this.aPkiDomainID = aPkiDomainID;
     return this;
   }
@@ -82,7 +81,7 @@ public class DomainCreateObjectV1ResponseMPayload {
     return aPkiDomainID;
   }
 
-  public void setaPkiDomainID(@javax.annotation.Nonnull List<Integer> aPkiDomainID) {
+  public void setaPkiDomainID(List<Integer> aPkiDomainID) {
     this.aPkiDomainID = aPkiDomainID;
   }
 

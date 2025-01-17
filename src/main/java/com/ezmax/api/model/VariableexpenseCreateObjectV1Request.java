@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/variableexpense
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VariableexpenseCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_VARIABLEEXPENSE = "a_objVariableexpense";
   @SerializedName(SERIALIZED_NAME_A_OBJ_VARIABLEEXPENSE)
-  @javax.annotation.Nonnull
   private List<VariableexpenseRequestCompound> aObjVariableexpense = new ArrayList<>();
 
   public VariableexpenseCreateObjectV1Request() {
   }
 
-  public VariableexpenseCreateObjectV1Request aObjVariableexpense(@javax.annotation.Nonnull List<VariableexpenseRequestCompound> aObjVariableexpense) {
+  public VariableexpenseCreateObjectV1Request aObjVariableexpense(List<VariableexpenseRequestCompound> aObjVariableexpense) {
     this.aObjVariableexpense = aObjVariableexpense;
     return this;
   }
@@ -83,7 +82,7 @@ public class VariableexpenseCreateObjectV1Request {
     return aObjVariableexpense;
   }
 
-  public void setaObjVariableexpense(@javax.annotation.Nonnull List<VariableexpenseRequestCompound> aObjVariableexpense) {
+  public void setaObjVariableexpense(List<VariableexpenseRequestCompound> aObjVariableexpense) {
     this.aObjVariableexpense = aObjVariableexpense;
   }
 

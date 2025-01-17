@@ -51,57 +51,48 @@ import eZmaxAPI.JSON;
 /**
  * A Communication List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomCommunicationListElementResponse {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiCommunicationID;
 
   public static final String SERIALIZED_NAME_DT_CREATED_DATE = "dtCreatedDate";
   @SerializedName(SERIALIZED_NAME_DT_CREATED_DATE)
-  @javax.annotation.Nonnull
   private String dtCreatedDate;
 
   public static final String SERIALIZED_NAME_E_COMMUNICATION_DIRECTION = "eCommunicationDirection";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_DIRECTION)
-  @javax.annotation.Nonnull
   private ComputedECommunicationDirection eCommunicationDirection;
 
   public static final String SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE = "eCommunicationImportance";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE)
-  @javax.annotation.Nonnull
   private FieldECommunicationImportance eCommunicationImportance;
 
   public static final String SERIALIZED_NAME_E_COMMUNICATION_TYPE = "eCommunicationType";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_TYPE)
-  @javax.annotation.Nonnull
   private FieldECommunicationType eCommunicationType;
 
   public static final String SERIALIZED_NAME_I_COMMUNICATIONRECIPIENT_COUNT = "iCommunicationrecipientCount";
   @SerializedName(SERIALIZED_NAME_I_COMMUNICATIONRECIPIENT_COUNT)
-  @javax.annotation.Nonnull
   private Integer iCommunicationrecipientCount;
 
   public static final String SERIALIZED_NAME_S_COMMUNICATION_SUBJECT = "sCommunicationSubject";
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_SUBJECT)
-  @javax.annotation.Nonnull
   private String sCommunicationSubject;
 
   public static final String SERIALIZED_NAME_S_COMMUNICATION_SENDER = "sCommunicationSender";
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_SENDER)
-  @javax.annotation.Nonnull
   private String sCommunicationSender;
 
   public static final String SERIALIZED_NAME_S_COMMUNICATION_RECIPIENT = "sCommunicationRecipient";
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_RECIPIENT)
-  @javax.annotation.Nonnull
   private String sCommunicationRecipient;
 
   public CustomCommunicationListElementResponse() {
   }
 
-  public CustomCommunicationListElementResponse pkiCommunicationID(@javax.annotation.Nonnull Integer pkiCommunicationID) {
+  public CustomCommunicationListElementResponse pkiCommunicationID(Integer pkiCommunicationID) {
     this.pkiCommunicationID = pkiCommunicationID;
     return this;
   }
@@ -116,12 +107,12 @@ public class CustomCommunicationListElementResponse {
     return pkiCommunicationID;
   }
 
-  public void setPkiCommunicationID(@javax.annotation.Nonnull Integer pkiCommunicationID) {
+  public void setPkiCommunicationID(Integer pkiCommunicationID) {
     this.pkiCommunicationID = pkiCommunicationID;
   }
 
 
-  public CustomCommunicationListElementResponse dtCreatedDate(@javax.annotation.Nonnull String dtCreatedDate) {
+  public CustomCommunicationListElementResponse dtCreatedDate(String dtCreatedDate) {
     this.dtCreatedDate = dtCreatedDate;
     return this;
   }
@@ -135,12 +126,12 @@ public class CustomCommunicationListElementResponse {
     return dtCreatedDate;
   }
 
-  public void setDtCreatedDate(@javax.annotation.Nonnull String dtCreatedDate) {
+  public void setDtCreatedDate(String dtCreatedDate) {
     this.dtCreatedDate = dtCreatedDate;
   }
 
 
-  public CustomCommunicationListElementResponse eCommunicationDirection(@javax.annotation.Nonnull ComputedECommunicationDirection eCommunicationDirection) {
+  public CustomCommunicationListElementResponse eCommunicationDirection(ComputedECommunicationDirection eCommunicationDirection) {
     this.eCommunicationDirection = eCommunicationDirection;
     return this;
   }
@@ -154,12 +145,12 @@ public class CustomCommunicationListElementResponse {
     return eCommunicationDirection;
   }
 
-  public void seteCommunicationDirection(@javax.annotation.Nonnull ComputedECommunicationDirection eCommunicationDirection) {
+  public void seteCommunicationDirection(ComputedECommunicationDirection eCommunicationDirection) {
     this.eCommunicationDirection = eCommunicationDirection;
   }
 
 
-  public CustomCommunicationListElementResponse eCommunicationImportance(@javax.annotation.Nonnull FieldECommunicationImportance eCommunicationImportance) {
+  public CustomCommunicationListElementResponse eCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
     this.eCommunicationImportance = eCommunicationImportance;
     return this;
   }
@@ -173,12 +164,12 @@ public class CustomCommunicationListElementResponse {
     return eCommunicationImportance;
   }
 
-  public void seteCommunicationImportance(@javax.annotation.Nonnull FieldECommunicationImportance eCommunicationImportance) {
+  public void seteCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
     this.eCommunicationImportance = eCommunicationImportance;
   }
 
 
-  public CustomCommunicationListElementResponse eCommunicationType(@javax.annotation.Nonnull FieldECommunicationType eCommunicationType) {
+  public CustomCommunicationListElementResponse eCommunicationType(FieldECommunicationType eCommunicationType) {
     this.eCommunicationType = eCommunicationType;
     return this;
   }
@@ -192,12 +183,12 @@ public class CustomCommunicationListElementResponse {
     return eCommunicationType;
   }
 
-  public void seteCommunicationType(@javax.annotation.Nonnull FieldECommunicationType eCommunicationType) {
+  public void seteCommunicationType(FieldECommunicationType eCommunicationType) {
     this.eCommunicationType = eCommunicationType;
   }
 
 
-  public CustomCommunicationListElementResponse iCommunicationrecipientCount(@javax.annotation.Nonnull Integer iCommunicationrecipientCount) {
+  public CustomCommunicationListElementResponse iCommunicationrecipientCount(Integer iCommunicationrecipientCount) {
     this.iCommunicationrecipientCount = iCommunicationrecipientCount;
     return this;
   }
@@ -211,12 +202,12 @@ public class CustomCommunicationListElementResponse {
     return iCommunicationrecipientCount;
   }
 
-  public void setiCommunicationrecipientCount(@javax.annotation.Nonnull Integer iCommunicationrecipientCount) {
+  public void setiCommunicationrecipientCount(Integer iCommunicationrecipientCount) {
     this.iCommunicationrecipientCount = iCommunicationrecipientCount;
   }
 
 
-  public CustomCommunicationListElementResponse sCommunicationSubject(@javax.annotation.Nonnull String sCommunicationSubject) {
+  public CustomCommunicationListElementResponse sCommunicationSubject(String sCommunicationSubject) {
     this.sCommunicationSubject = sCommunicationSubject;
     return this;
   }
@@ -230,12 +221,12 @@ public class CustomCommunicationListElementResponse {
     return sCommunicationSubject;
   }
 
-  public void setsCommunicationSubject(@javax.annotation.Nonnull String sCommunicationSubject) {
+  public void setsCommunicationSubject(String sCommunicationSubject) {
     this.sCommunicationSubject = sCommunicationSubject;
   }
 
 
-  public CustomCommunicationListElementResponse sCommunicationSender(@javax.annotation.Nonnull String sCommunicationSender) {
+  public CustomCommunicationListElementResponse sCommunicationSender(String sCommunicationSender) {
     this.sCommunicationSender = sCommunicationSender;
     return this;
   }
@@ -249,12 +240,12 @@ public class CustomCommunicationListElementResponse {
     return sCommunicationSender;
   }
 
-  public void setsCommunicationSender(@javax.annotation.Nonnull String sCommunicationSender) {
+  public void setsCommunicationSender(String sCommunicationSender) {
     this.sCommunicationSender = sCommunicationSender;
   }
 
 
-  public CustomCommunicationListElementResponse sCommunicationRecipient(@javax.annotation.Nonnull String sCommunicationRecipient) {
+  public CustomCommunicationListElementResponse sCommunicationRecipient(String sCommunicationRecipient) {
     this.sCommunicationRecipient = sCommunicationRecipient;
     return this;
   }
@@ -268,7 +259,7 @@ public class CustomCommunicationListElementResponse {
     return sCommunicationRecipient;
   }
 
-  public void setsCommunicationRecipient(@javax.annotation.Nonnull String sCommunicationRecipient) {
+  public void setsCommunicationRecipient(String sCommunicationRecipient) {
     this.sCommunicationRecipient = sCommunicationRecipient;
   }
 

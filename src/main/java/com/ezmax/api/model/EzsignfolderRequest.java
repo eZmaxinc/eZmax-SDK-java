@@ -49,53 +49,45 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_FKI_TIMEZONE_I_D = "fkiTimezoneID";
   @SerializedName(SERIALIZED_NAME_FKI_TIMEZONE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiTimezoneID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTSAREQUIREMENT_I_D = "fkiEzsigntsarequirementID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTSAREQUIREMENT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsigntsarequirementID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION = "sEzsignfolderDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsignfolderDescription;
 
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_NOTE = "tEzsignfolderNote";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_NOTE)
-  @javax.annotation.Nullable
   private String tEzsignfolderNote;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_SENDREMINDERFREQUENCY = "eEzsignfolderSendreminderfrequency";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_SENDREMINDERFREQUENCY)
-  @javax.annotation.Nonnull
   private FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDER_EXTERNALID = "sEzsignfolderExternalid";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDER_EXTERNALID)
-  @javax.annotation.Nullable
   private String sEzsignfolderExternalid;
 
   public EzsignfolderRequest() {
   }
 
-  public EzsignfolderRequest pkiEzsignfolderID(@javax.annotation.Nullable Integer pkiEzsignfolderID) {
+  public EzsignfolderRequest pkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
     return this;
   }
@@ -110,12 +102,12 @@ public class EzsignfolderRequest {
     return pkiEzsignfolderID;
   }
 
-  public void setPkiEzsignfolderID(@javax.annotation.Nullable Integer pkiEzsignfolderID) {
+  public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
   }
 
 
-  public EzsignfolderRequest fkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
+  public EzsignfolderRequest fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -131,12 +123,12 @@ public class EzsignfolderRequest {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public EzsignfolderRequest fkiTimezoneID(@javax.annotation.Nullable Integer fkiTimezoneID) {
+  public EzsignfolderRequest fkiTimezoneID(Integer fkiTimezoneID) {
     this.fkiTimezoneID = fkiTimezoneID;
     return this;
   }
@@ -151,12 +143,12 @@ public class EzsignfolderRequest {
     return fkiTimezoneID;
   }
 
-  public void setFkiTimezoneID(@javax.annotation.Nullable Integer fkiTimezoneID) {
+  public void setFkiTimezoneID(Integer fkiTimezoneID) {
     this.fkiTimezoneID = fkiTimezoneID;
   }
 
 
-  public EzsignfolderRequest fkiEzsigntsarequirementID(@javax.annotation.Nullable Integer fkiEzsigntsarequirementID) {
+  public EzsignfolderRequest fkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
     return this;
   }
@@ -172,12 +164,12 @@ public class EzsignfolderRequest {
     return fkiEzsigntsarequirementID;
   }
 
-  public void setFkiEzsigntsarequirementID(@javax.annotation.Nullable Integer fkiEzsigntsarequirementID) {
+  public void setFkiEzsigntsarequirementID(Integer fkiEzsigntsarequirementID) {
     this.fkiEzsigntsarequirementID = fkiEzsigntsarequirementID;
   }
 
 
-  public EzsignfolderRequest sEzsignfolderDescription(@javax.annotation.Nonnull String sEzsignfolderDescription) {
+  public EzsignfolderRequest sEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -191,12 +183,12 @@ public class EzsignfolderRequest {
     return sEzsignfolderDescription;
   }
 
-  public void setsEzsignfolderDescription(@javax.annotation.Nonnull String sEzsignfolderDescription) {
+  public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
-  public EzsignfolderRequest tEzsignfolderNote(@javax.annotation.Nullable String tEzsignfolderNote) {
+  public EzsignfolderRequest tEzsignfolderNote(String tEzsignfolderNote) {
     this.tEzsignfolderNote = tEzsignfolderNote;
     return this;
   }
@@ -210,13 +202,13 @@ public class EzsignfolderRequest {
     return tEzsignfolderNote;
   }
 
-  public void settEzsignfolderNote(@javax.annotation.Nullable String tEzsignfolderNote) {
+  public void settEzsignfolderNote(String tEzsignfolderNote) {
     this.tEzsignfolderNote = tEzsignfolderNote;
   }
 
 
   @Deprecated
-  public EzsignfolderRequest eEzsignfolderSendreminderfrequency(@javax.annotation.Nonnull FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
+  public EzsignfolderRequest eEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
     this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
     return this;
   }
@@ -233,12 +225,12 @@ public class EzsignfolderRequest {
   }
 
   @Deprecated
-  public void seteEzsignfolderSendreminderfrequency(@javax.annotation.Nonnull FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
+  public void seteEzsignfolderSendreminderfrequency(FieldEEzsignfolderSendreminderfrequency eEzsignfolderSendreminderfrequency) {
     this.eEzsignfolderSendreminderfrequency = eEzsignfolderSendreminderfrequency;
   }
 
 
-  public EzsignfolderRequest sEzsignfolderExternalid(@javax.annotation.Nullable String sEzsignfolderExternalid) {
+  public EzsignfolderRequest sEzsignfolderExternalid(String sEzsignfolderExternalid) {
     this.sEzsignfolderExternalid = sEzsignfolderExternalid;
     return this;
   }
@@ -252,7 +244,7 @@ public class EzsignfolderRequest {
     return sEzsignfolderExternalid;
   }
 
-  public void setsEzsignfolderExternalid(@javax.annotation.Nullable String sEzsignfolderExternalid) {
+  public void setsEzsignfolderExternalid(String sEzsignfolderExternalid) {
     this.sEzsignfolderExternalid = sEzsignfolderExternalid;
   }
 

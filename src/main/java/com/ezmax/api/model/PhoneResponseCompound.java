@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.FieldEPhoneType;
-import com.ezmax.api.model.PhoneResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,17 +49,138 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class PhoneResponseCompound extends PhoneResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class PhoneResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
+  @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
+  private Integer pkiPhoneID;
+
+  public static final String SERIALIZED_NAME_FKI_PHONETYPE_I_D = "fkiPhonetypeID";
+  @SerializedName(SERIALIZED_NAME_FKI_PHONETYPE_I_D)
+  private Integer fkiPhonetypeID;
+
+  public static final String SERIALIZED_NAME_E_PHONE_TYPE = "ePhoneType";
+  @Deprecated
+  @SerializedName(SERIALIZED_NAME_E_PHONE_TYPE)
+  private FieldEPhoneType ePhoneType;
+
+  public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
+  @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
+  private String sPhoneE164;
+
+  public static final String SERIALIZED_NAME_S_PHONE_EXTENSION = "sPhoneExtension";
+  @SerializedName(SERIALIZED_NAME_S_PHONE_EXTENSION)
+  private String sPhoneExtension;
+
   public static final String SERIALIZED_NAME_B_PHONE_INTERNATIONAL = "bPhoneInternational";
   @SerializedName(SERIALIZED_NAME_B_PHONE_INTERNATIONAL)
-  @javax.annotation.Nullable
   private Boolean bPhoneInternational;
 
   public PhoneResponseCompound() {
   }
 
-  public PhoneResponseCompound bPhoneInternational(@javax.annotation.Nullable Boolean bPhoneInternational) {
+  public PhoneResponseCompound pkiPhoneID(Integer pkiPhoneID) {
+    this.pkiPhoneID = pkiPhoneID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Phone.
+   * minimum: 0
+   * @return pkiPhoneID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiPhoneID() {
+    return pkiPhoneID;
+  }
+
+  public void setPkiPhoneID(Integer pkiPhoneID) {
+    this.pkiPhoneID = pkiPhoneID;
+  }
+
+
+  public PhoneResponseCompound fkiPhonetypeID(Integer fkiPhonetypeID) {
+    this.fkiPhonetypeID = fkiPhonetypeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Phonetype.  Valid values:  |Value|Description| |-|-| |1|Office| |2|Home| |3|Mobile| |4|Fax| |5|Pager| |6|Toll Free|
+   * minimum: 0
+   * @return fkiPhonetypeID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiPhonetypeID() {
+    return fkiPhonetypeID;
+  }
+
+  public void setFkiPhonetypeID(Integer fkiPhonetypeID) {
+    this.fkiPhonetypeID = fkiPhonetypeID;
+  }
+
+
+  @Deprecated
+  public PhoneResponseCompound ePhoneType(FieldEPhoneType ePhoneType) {
+    this.ePhoneType = ePhoneType;
+    return this;
+  }
+
+  /**
+   * Get ePhoneType
+   * @return ePhoneType
+   * @deprecated
+   */
+  @Deprecated
+  @javax.annotation.Nullable
+  public FieldEPhoneType getePhoneType() {
+    return ePhoneType;
+  }
+
+  @Deprecated
+  public void setePhoneType(FieldEPhoneType ePhoneType) {
+    this.ePhoneType = ePhoneType;
+  }
+
+
+  public PhoneResponseCompound sPhoneE164(String sPhoneE164) {
+    this.sPhoneE164 = sPhoneE164;
+    return this;
+  }
+
+  /**
+   * A phone number in E.164 Format
+   * @return sPhoneE164
+   */
+  @javax.annotation.Nullable
+  public String getsPhoneE164() {
+    return sPhoneE164;
+  }
+
+  public void setsPhoneE164(String sPhoneE164) {
+    this.sPhoneE164 = sPhoneE164;
+  }
+
+
+  public PhoneResponseCompound sPhoneExtension(String sPhoneExtension) {
+    this.sPhoneExtension = sPhoneExtension;
+    return this;
+  }
+
+  /**
+   * The extension of the phone number.  The extension is the \&quot;123\&quot; section in this sample phone number: (514) 990-1516 x123.  It can also be used with international phone numbers
+   * @return sPhoneExtension
+   */
+  @javax.annotation.Nullable
+  public String getsPhoneExtension() {
+    return sPhoneExtension;
+  }
+
+  public void setsPhoneExtension(String sPhoneExtension) {
+    this.sPhoneExtension = sPhoneExtension;
+  }
+
+
+  public PhoneResponseCompound bPhoneInternational(Boolean bPhoneInternational) {
     this.bPhoneInternational = bPhoneInternational;
     return this;
   }
@@ -74,7 +194,7 @@ public class PhoneResponseCompound extends PhoneResponse {
     return bPhoneInternational;
   }
 
-  public void setbPhoneInternational(@javax.annotation.Nullable Boolean bPhoneInternational) {
+  public void setbPhoneInternational(Boolean bPhoneInternational) {
     this.bPhoneInternational = bPhoneInternational;
   }
 
@@ -89,20 +209,28 @@ public class PhoneResponseCompound extends PhoneResponse {
       return false;
     }
     PhoneResponseCompound phoneResponseCompound = (PhoneResponseCompound) o;
-    return Objects.equals(this.bPhoneInternational, phoneResponseCompound.bPhoneInternational) &&
-        super.equals(o);
+    return Objects.equals(this.pkiPhoneID, phoneResponseCompound.pkiPhoneID) &&
+        Objects.equals(this.fkiPhonetypeID, phoneResponseCompound.fkiPhonetypeID) &&
+        Objects.equals(this.ePhoneType, phoneResponseCompound.ePhoneType) &&
+        Objects.equals(this.sPhoneE164, phoneResponseCompound.sPhoneE164) &&
+        Objects.equals(this.sPhoneExtension, phoneResponseCompound.sPhoneExtension) &&
+        Objects.equals(this.bPhoneInternational, phoneResponseCompound.bPhoneInternational);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(bPhoneInternational, super.hashCode());
+    return Objects.hash(pkiPhoneID, fkiPhonetypeID, ePhoneType, sPhoneE164, sPhoneExtension, bPhoneInternational);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PhoneResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiPhoneID: ").append(toIndentedString(pkiPhoneID)).append("\n");
+    sb.append("    fkiPhonetypeID: ").append(toIndentedString(fkiPhonetypeID)).append("\n");
+    sb.append("    ePhoneType: ").append(toIndentedString(ePhoneType)).append("\n");
+    sb.append("    sPhoneE164: ").append(toIndentedString(sPhoneE164)).append("\n");
+    sb.append("    sPhoneExtension: ").append(toIndentedString(sPhoneExtension)).append("\n");
     sb.append("    bPhoneInternational: ").append(toIndentedString(bPhoneInternational)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -167,6 +295,16 @@ public class PhoneResponseCompound extends PhoneResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `ePhoneType`
+      if (jsonObj.get("ePhoneType") != null && !jsonObj.get("ePhoneType").isJsonNull()) {
+        FieldEPhoneType.validateJsonElement(jsonObj.get("ePhoneType"));
+      }
+      if ((jsonObj.get("sPhoneE164") != null && !jsonObj.get("sPhoneE164").isJsonNull()) && !jsonObj.get("sPhoneE164").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneE164` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneE164").toString()));
+      }
+      if ((jsonObj.get("sPhoneExtension") != null && !jsonObj.get("sPhoneExtension").isJsonNull()) && !jsonObj.get("sPhoneExtension").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneExtension` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneExtension").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

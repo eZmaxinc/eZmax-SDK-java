@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Apikeyfederation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomApikeyfederation {
   public static final String SERIALIZED_NAME_S_APIKEYFEDERATION_KEY = "sApikeyfederationKey";
   @SerializedName(SERIALIZED_NAME_S_APIKEYFEDERATION_KEY)
-  @javax.annotation.Nonnull
   private String sApikeyfederationKey;
 
   public static final String SERIALIZED_NAME_S_APIKEYFEDERATION_SECRET = "sApikeyfederationSecret";
   @SerializedName(SERIALIZED_NAME_S_APIKEYFEDERATION_SECRET)
-  @javax.annotation.Nonnull
   private String sApikeyfederationSecret;
 
   public CustomApikeyfederation() {
   }
 
-  public CustomApikeyfederation sApikeyfederationKey(@javax.annotation.Nonnull String sApikeyfederationKey) {
+  public CustomApikeyfederation sApikeyfederationKey(String sApikeyfederationKey) {
     this.sApikeyfederationKey = sApikeyfederationKey;
     return this;
   }
@@ -77,12 +75,12 @@ public class CustomApikeyfederation {
     return sApikeyfederationKey;
   }
 
-  public void setsApikeyfederationKey(@javax.annotation.Nonnull String sApikeyfederationKey) {
+  public void setsApikeyfederationKey(String sApikeyfederationKey) {
     this.sApikeyfederationKey = sApikeyfederationKey;
   }
 
 
-  public CustomApikeyfederation sApikeyfederationSecret(@javax.annotation.Nonnull String sApikeyfederationSecret) {
+  public CustomApikeyfederation sApikeyfederationSecret(String sApikeyfederationSecret) {
     this.sApikeyfederationSecret = sApikeyfederationSecret;
     return this;
   }
@@ -96,7 +94,7 @@ public class CustomApikeyfederation {
     return sApikeyfederationSecret;
   }
 
-  public void setsApikeyfederationSecret(@javax.annotation.Nonnull String sApikeyfederationSecret) {
+  public void setsApikeyfederationSecret(String sApikeyfederationSecret) {
     this.sApikeyfederationSecret = sApikeyfederationSecret;
   }
 

@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/ezmaxclient/{pksEzmaxclientOs}/version
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GlobalEzmaxclientVersionV1Response {
   public static final String SERIALIZED_NAME_S_EZMAXCLIENT_VERSION = "sEzmaxclientVersion";
   @SerializedName(SERIALIZED_NAME_S_EZMAXCLIENT_VERSION)
-  @javax.annotation.Nonnull
   private String sEzmaxclientVersion;
 
   public static final String SERIALIZED_NAME_S_EZMAXCLIENT_OSLATESTVERSION = "sEzmaxclientOslatestversion";
   @SerializedName(SERIALIZED_NAME_S_EZMAXCLIENT_OSLATESTVERSION)
-  @javax.annotation.Nonnull
   private String sEzmaxclientOslatestversion = "11";
 
   public GlobalEzmaxclientVersionV1Response() {
   }
 
-  public GlobalEzmaxclientVersionV1Response sEzmaxclientVersion(@javax.annotation.Nonnull String sEzmaxclientVersion) {
+  public GlobalEzmaxclientVersionV1Response sEzmaxclientVersion(String sEzmaxclientVersion) {
     this.sEzmaxclientVersion = sEzmaxclientVersion;
     return this;
   }
@@ -77,12 +75,12 @@ public class GlobalEzmaxclientVersionV1Response {
     return sEzmaxclientVersion;
   }
 
-  public void setsEzmaxclientVersion(@javax.annotation.Nonnull String sEzmaxclientVersion) {
+  public void setsEzmaxclientVersion(String sEzmaxclientVersion) {
     this.sEzmaxclientVersion = sEzmaxclientVersion;
   }
 
 
-  public GlobalEzmaxclientVersionV1Response sEzmaxclientOslatestversion(@javax.annotation.Nonnull String sEzmaxclientOslatestversion) {
+  public GlobalEzmaxclientVersionV1Response sEzmaxclientOslatestversion(String sEzmaxclientOslatestversion) {
     this.sEzmaxclientOslatestversion = sEzmaxclientOslatestversion;
     return this;
   }
@@ -96,7 +94,7 @@ public class GlobalEzmaxclientVersionV1Response {
     return sEzmaxclientOslatestversion;
   }
 
-  public void setsEzmaxclientOslatestversion(@javax.annotation.Nonnull String sEzmaxclientOslatestversion) {
+  public void setsEzmaxclientOslatestversion(String sEzmaxclientOslatestversion) {
     this.sEzmaxclientOslatestversion = sEzmaxclientOslatestversion;
   }
 

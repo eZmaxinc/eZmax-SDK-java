@@ -51,67 +51,56 @@ import eZmaxAPI.JSON;
 /**
  * A User List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserListElement {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiUserID;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
-  @javax.annotation.Nonnull
   private String sUserFirstname;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
-  @javax.annotation.Nonnull
   private String sUserLastname;
 
   public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
   @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
-  @javax.annotation.Nonnull
   private String sUserLoginname;
 
   public static final String SERIALIZED_NAME_B_USER_ISACTIVE = "bUserIsactive";
   @SerializedName(SERIALIZED_NAME_B_USER_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bUserIsactive;
 
   public static final String SERIALIZED_NAME_E_USER_TYPE = "eUserType";
   @SerializedName(SERIALIZED_NAME_E_USER_TYPE)
-  @javax.annotation.Nonnull
   private FieldEUserType eUserType;
 
   public static final String SERIALIZED_NAME_E_USER_ORIGIN = "eUserOrigin";
   @SerializedName(SERIALIZED_NAME_E_USER_ORIGIN)
-  @javax.annotation.Nonnull
   private FieldEUserOrigin eUserOrigin;
 
   public static final String SERIALIZED_NAME_E_USER_EZSIGNACCESS = "eUserEzsignaccess";
   @SerializedName(SERIALIZED_NAME_E_USER_EZSIGNACCESS)
-  @javax.annotation.Nonnull
   private FieldEUserEzsignaccess eUserEzsignaccess;
 
   public static final String SERIALIZED_NAME_DT_USER_EZSIGNPREPAIDEXPIRATION = "dtUserEzsignprepaidexpiration";
   @SerializedName(SERIALIZED_NAME_DT_USER_EZSIGNPREPAIDEXPIRATION)
-  @javax.annotation.Nullable
   private String dtUserEzsignprepaidexpiration;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  @javax.annotation.Nonnull
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_S_USER_JOBTITLE = "sUserJobtitle";
   @SerializedName(SERIALIZED_NAME_S_USER_JOBTITLE)
-  @javax.annotation.Nullable
   private String sUserJobtitle;
 
   public UserListElement() {
   }
 
-  public UserListElement pkiUserID(@javax.annotation.Nonnull Integer pkiUserID) {
+  public UserListElement pkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -126,12 +115,12 @@ public class UserListElement {
     return pkiUserID;
   }
 
-  public void setPkiUserID(@javax.annotation.Nonnull Integer pkiUserID) {
+  public void setPkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 
 
-  public UserListElement sUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
+  public UserListElement sUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -145,12 +134,12 @@ public class UserListElement {
     return sUserFirstname;
   }
 
-  public void setsUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
+  public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
-  public UserListElement sUserLastname(@javax.annotation.Nonnull String sUserLastname) {
+  public UserListElement sUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -164,12 +153,12 @@ public class UserListElement {
     return sUserLastname;
   }
 
-  public void setsUserLastname(@javax.annotation.Nonnull String sUserLastname) {
+  public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
-  public UserListElement sUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
+  public UserListElement sUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -183,12 +172,12 @@ public class UserListElement {
     return sUserLoginname;
   }
 
-  public void setsUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
+  public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
-  public UserListElement bUserIsactive(@javax.annotation.Nonnull Boolean bUserIsactive) {
+  public UserListElement bUserIsactive(Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
     return this;
   }
@@ -202,12 +191,12 @@ public class UserListElement {
     return bUserIsactive;
   }
 
-  public void setbUserIsactive(@javax.annotation.Nonnull Boolean bUserIsactive) {
+  public void setbUserIsactive(Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
   }
 
 
-  public UserListElement eUserType(@javax.annotation.Nonnull FieldEUserType eUserType) {
+  public UserListElement eUserType(FieldEUserType eUserType) {
     this.eUserType = eUserType;
     return this;
   }
@@ -221,12 +210,12 @@ public class UserListElement {
     return eUserType;
   }
 
-  public void seteUserType(@javax.annotation.Nonnull FieldEUserType eUserType) {
+  public void seteUserType(FieldEUserType eUserType) {
     this.eUserType = eUserType;
   }
 
 
-  public UserListElement eUserOrigin(@javax.annotation.Nonnull FieldEUserOrigin eUserOrigin) {
+  public UserListElement eUserOrigin(FieldEUserOrigin eUserOrigin) {
     this.eUserOrigin = eUserOrigin;
     return this;
   }
@@ -240,12 +229,12 @@ public class UserListElement {
     return eUserOrigin;
   }
 
-  public void seteUserOrigin(@javax.annotation.Nonnull FieldEUserOrigin eUserOrigin) {
+  public void seteUserOrigin(FieldEUserOrigin eUserOrigin) {
     this.eUserOrigin = eUserOrigin;
   }
 
 
-  public UserListElement eUserEzsignaccess(@javax.annotation.Nonnull FieldEUserEzsignaccess eUserEzsignaccess) {
+  public UserListElement eUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
     this.eUserEzsignaccess = eUserEzsignaccess;
     return this;
   }
@@ -259,12 +248,12 @@ public class UserListElement {
     return eUserEzsignaccess;
   }
 
-  public void seteUserEzsignaccess(@javax.annotation.Nonnull FieldEUserEzsignaccess eUserEzsignaccess) {
+  public void seteUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
     this.eUserEzsignaccess = eUserEzsignaccess;
   }
 
 
-  public UserListElement dtUserEzsignprepaidexpiration(@javax.annotation.Nullable String dtUserEzsignprepaidexpiration) {
+  public UserListElement dtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
     this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
     return this;
   }
@@ -278,12 +267,12 @@ public class UserListElement {
     return dtUserEzsignprepaidexpiration;
   }
 
-  public void setDtUserEzsignprepaidexpiration(@javax.annotation.Nullable String dtUserEzsignprepaidexpiration) {
+  public void setDtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
     this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
   }
 
 
-  public UserListElement sEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
+  public UserListElement sEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -297,12 +286,12 @@ public class UserListElement {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
+  public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public UserListElement sUserJobtitle(@javax.annotation.Nullable String sUserJobtitle) {
+  public UserListElement sUserJobtitle(String sUserJobtitle) {
     this.sUserJobtitle = sUserJobtitle;
     return this;
   }
@@ -316,7 +305,7 @@ public class UserListElement {
     return sUserJobtitle;
   }
 
-  public void setsUserJobtitle(@javax.annotation.Nullable String sUserJobtitle) {
+  public void setsUserJobtitle(String sUserJobtitle) {
     this.sUserJobtitle = sUserJobtitle;
   }
 

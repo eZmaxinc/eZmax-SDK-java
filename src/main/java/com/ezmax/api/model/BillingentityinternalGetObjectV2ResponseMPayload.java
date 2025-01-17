@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/billingentityinternal/{pkiBillingentityinternalID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BillingentityinternalGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL = "objBillingentityinternal";
   @SerializedName(SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL)
-  @javax.annotation.Nonnull
   private BillingentityinternalResponseCompound objBillingentityinternal;
 
   public BillingentityinternalGetObjectV2ResponseMPayload() {
   }
 
-  public BillingentityinternalGetObjectV2ResponseMPayload objBillingentityinternal(@javax.annotation.Nonnull BillingentityinternalResponseCompound objBillingentityinternal) {
+  public BillingentityinternalGetObjectV2ResponseMPayload objBillingentityinternal(BillingentityinternalResponseCompound objBillingentityinternal) {
     this.objBillingentityinternal = objBillingentityinternal;
     return this;
   }
@@ -73,7 +72,7 @@ public class BillingentityinternalGetObjectV2ResponseMPayload {
     return objBillingentityinternal;
   }
 
-  public void setObjBillingentityinternal(@javax.annotation.Nonnull BillingentityinternalResponseCompound objBillingentityinternal) {
+  public void setObjBillingentityinternal(BillingentityinternalResponseCompound objBillingentityinternal) {
     this.objBillingentityinternal = objBillingentityinternal;
   }
 

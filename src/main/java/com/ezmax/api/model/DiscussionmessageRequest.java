@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Discussionmessage Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DiscussionmessageRequest {
   public static final String SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D = "pkiDiscussionmessageID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D)
-  @javax.annotation.Nullable
   private Integer pkiDiscussionmessageID;
 
   public static final String SERIALIZED_NAME_FKI_DISCUSSION_I_D = "fkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_FKI_DISCUSSION_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiDiscussionID;
 
   public static final String SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D_ACTIONREQUIRED = "fkiDiscussionmembershipIDActionrequired";
   @SerializedName(SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D_ACTIONREQUIRED)
-  @javax.annotation.Nullable
   private Integer fkiDiscussionmembershipIDActionrequired;
 
   public static final String SERIALIZED_NAME_T_DISCUSSIONMESSAGE_CONTENT = "tDiscussionmessageContent";
   @SerializedName(SERIALIZED_NAME_T_DISCUSSIONMESSAGE_CONTENT)
-  @javax.annotation.Nonnull
   private String tDiscussionmessageContent;
 
   public DiscussionmessageRequest() {
   }
 
-  public DiscussionmessageRequest pkiDiscussionmessageID(@javax.annotation.Nullable Integer pkiDiscussionmessageID) {
+  public DiscussionmessageRequest pkiDiscussionmessageID(Integer pkiDiscussionmessageID) {
     this.pkiDiscussionmessageID = pkiDiscussionmessageID;
     return this;
   }
@@ -89,12 +85,12 @@ public class DiscussionmessageRequest {
     return pkiDiscussionmessageID;
   }
 
-  public void setPkiDiscussionmessageID(@javax.annotation.Nullable Integer pkiDiscussionmessageID) {
+  public void setPkiDiscussionmessageID(Integer pkiDiscussionmessageID) {
     this.pkiDiscussionmessageID = pkiDiscussionmessageID;
   }
 
 
-  public DiscussionmessageRequest fkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
+  public DiscussionmessageRequest fkiDiscussionID(Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
     return this;
   }
@@ -110,12 +106,12 @@ public class DiscussionmessageRequest {
     return fkiDiscussionID;
   }
 
-  public void setFkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
+  public void setFkiDiscussionID(Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
   }
 
 
-  public DiscussionmessageRequest fkiDiscussionmembershipIDActionrequired(@javax.annotation.Nullable Integer fkiDiscussionmembershipIDActionrequired) {
+  public DiscussionmessageRequest fkiDiscussionmembershipIDActionrequired(Integer fkiDiscussionmembershipIDActionrequired) {
     this.fkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
     return this;
   }
@@ -131,12 +127,12 @@ public class DiscussionmessageRequest {
     return fkiDiscussionmembershipIDActionrequired;
   }
 
-  public void setFkiDiscussionmembershipIDActionrequired(@javax.annotation.Nullable Integer fkiDiscussionmembershipIDActionrequired) {
+  public void setFkiDiscussionmembershipIDActionrequired(Integer fkiDiscussionmembershipIDActionrequired) {
     this.fkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
   }
 
 
-  public DiscussionmessageRequest tDiscussionmessageContent(@javax.annotation.Nonnull String tDiscussionmessageContent) {
+  public DiscussionmessageRequest tDiscussionmessageContent(String tDiscussionmessageContent) {
     this.tDiscussionmessageContent = tDiscussionmessageContent;
     return this;
   }
@@ -150,7 +146,7 @@ public class DiscussionmessageRequest {
     return tDiscussionmessageContent;
   }
 
-  public void settDiscussionmessageContent(@javax.annotation.Nonnull String tDiscussionmessageContent) {
+  public void settDiscussionmessageContent(String tDiscussionmessageContent) {
     this.tDiscussionmessageContent = tDiscussionmessageContent;
   }
 
@@ -229,12 +225,55 @@ public class DiscussionmessageRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in DiscussionmessageRequest is not found in the empty JSON string", DiscussionmessageRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!DiscussionmessageRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DiscussionmessageRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : DiscussionmessageRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("tDiscussionmessageContent").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tDiscussionmessageContent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tDiscussionmessageContent").toString()));
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!DiscussionmessageRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'DiscussionmessageRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<DiscussionmessageRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(DiscussionmessageRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<DiscussionmessageRequest>() {
+           @Override
+           public void write(JsonWriter out, DiscussionmessageRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public DiscussionmessageRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of DiscussionmessageRequest given an JSON string

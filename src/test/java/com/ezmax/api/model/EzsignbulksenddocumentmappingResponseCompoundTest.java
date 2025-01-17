@@ -13,7 +13,6 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.EzsignbulksenddocumentmappingResponse;
 import com.ezmax.api.model.EzsigntemplateResponseCompound;
 import com.ezmax.api.model.EzsigntemplatepackageResponseCompound;
 import com.google.gson.TypeAdapter;

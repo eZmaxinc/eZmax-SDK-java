@@ -14,13 +14,14 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.UsergroupexternalCreateObjectV1Request;
 import com.ezmax.api.model.UsergroupexternalCreateObjectV1Response;
+import com.ezmax.api.model.UsergroupexternalDeleteObjectV1Response;
 import com.ezmax.api.model.UsergroupexternalEditObjectV1Request;
+import com.ezmax.api.model.UsergroupexternalEditObjectV1Response;
 import com.ezmax.api.model.UsergroupexternalGetAutocompleteV2Response;
 import com.ezmax.api.model.UsergroupexternalGetListV1Response;
 import com.ezmax.api.model.UsergroupexternalGetObjectV2Response;
@@ -66,7 +67,7 @@ public class ObjectUsergroupexternalApiTest {
     @Test
     public void usergroupexternalDeleteObjectV1Test() throws ApiException {
         Integer pkiUsergroupexternalID = null;
-        CommonResponse response = api.usergroupexternalDeleteObjectV1(pkiUsergroupexternalID);
+        UsergroupexternalDeleteObjectV1Response response = api.usergroupexternalDeleteObjectV1(pkiUsergroupexternalID);
         // TODO: test validations
     }
 
@@ -81,7 +82,7 @@ public class ObjectUsergroupexternalApiTest {
     public void usergroupexternalEditObjectV1Test() throws ApiException {
         Integer pkiUsergroupexternalID = null;
         UsergroupexternalEditObjectV1Request usergroupexternalEditObjectV1Request = null;
-        CommonResponse response = api.usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request);
+        UsergroupexternalEditObjectV1Response response = api.usergroupexternalEditObjectV1(pkiUsergroupexternalID, usergroupexternalEditObjectV1Request);
         // TODO: test validations
     }
 

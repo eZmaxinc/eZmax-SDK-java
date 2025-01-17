@@ -14,11 +14,11 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EmailRequest;
+import com.ezmax.api.model.EmailRequestCompound;
 import com.ezmax.api.model.FieldEUserEzsignaccess;
 import com.ezmax.api.model.FieldEUserLogintype;
 import com.ezmax.api.model.FieldEUserType;
-import com.ezmax.api.model.PhoneRequest;
+import com.ezmax.api.model.PhoneRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,152 +53,124 @@ import eZmaxAPI.JSON;
 /**
  * A User Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserRequest {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer pkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiAgentID;
 
   public static final String SERIALIZED_NAME_FKI_BROKER_I_D = "fkiBrokerID";
   @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiBrokerID;
 
   public static final String SERIALIZED_NAME_FKI_ASSISTANT_I_D = "fkiAssistantID";
   @SerializedName(SERIALIZED_NAME_FKI_ASSISTANT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiAssistantID;
 
   public static final String SERIALIZED_NAME_FKI_EMPLOYEE_I_D = "fkiEmployeeID";
   @SerializedName(SERIALIZED_NAME_FKI_EMPLOYEE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEmployeeID;
 
   public static final String SERIALIZED_NAME_FKI_COMPANY_I_D_DEFAULT = "fkiCompanyIDDefault";
   @SerializedName(SERIALIZED_NAME_FKI_COMPANY_I_D_DEFAULT)
-  @javax.annotation.Nonnull
   private Integer fkiCompanyIDDefault;
 
   public static final String SERIALIZED_NAME_FKI_DEPARTMENT_I_D_DEFAULT = "fkiDepartmentIDDefault";
   @SerializedName(SERIALIZED_NAME_FKI_DEPARTMENT_I_D_DEFAULT)
-  @javax.annotation.Nonnull
   private Integer fkiDepartmentIDDefault;
 
   public static final String SERIALIZED_NAME_FKI_TIMEZONE_I_D = "fkiTimezoneID";
   @SerializedName(SERIALIZED_NAME_FKI_TIMEZONE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiTimezoneID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
   @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
-  @javax.annotation.Nonnull
-  private EmailRequest objEmail;
+  private EmailRequestCompound objEmail;
 
   public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiBillingentityinternalID;
 
   public static final String SERIALIZED_NAME_OBJ_PHONE_HOME = "objPhoneHome";
   @SerializedName(SERIALIZED_NAME_OBJ_PHONE_HOME)
-  @javax.annotation.Nullable
-  private PhoneRequest objPhoneHome;
+  private PhoneRequestCompound objPhoneHome;
 
   public static final String SERIALIZED_NAME_OBJ_PHONE_S_M_S = "objPhoneSMS";
   @SerializedName(SERIALIZED_NAME_OBJ_PHONE_S_M_S)
-  @javax.annotation.Nullable
-  private PhoneRequest objPhoneSMS;
+  private PhoneRequestCompound objPhoneSMS;
 
   public static final String SERIALIZED_NAME_FKI_SECRETQUESTION_I_D = "fkiSecretquestionID";
   @SerializedName(SERIALIZED_NAME_FKI_SECRETQUESTION_I_D)
-  @javax.annotation.Nullable
   private Integer fkiSecretquestionID;
 
   public static final String SERIALIZED_NAME_S_USER_SECRETRESPONSE = "sUserSecretresponse";
   @SerializedName(SERIALIZED_NAME_S_USER_SECRETRESPONSE)
-  @javax.annotation.Nullable
   private String sUserSecretresponse;
 
   public static final String SERIALIZED_NAME_FKI_MODULE_I_D_FORM = "fkiModuleIDForm";
   @SerializedName(SERIALIZED_NAME_FKI_MODULE_I_D_FORM)
-  @javax.annotation.Nullable
   private Integer fkiModuleIDForm;
 
   public static final String SERIALIZED_NAME_E_USER_TYPE = "eUserType";
   @SerializedName(SERIALIZED_NAME_E_USER_TYPE)
-  @javax.annotation.Nonnull
   private FieldEUserType eUserType;
 
   public static final String SERIALIZED_NAME_E_USER_LOGINTYPE = "eUserLogintype";
   @SerializedName(SERIALIZED_NAME_E_USER_LOGINTYPE)
-  @javax.annotation.Nonnull
   private FieldEUserLogintype eUserLogintype;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
-  @javax.annotation.Nonnull
   private String sUserFirstname;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
-  @javax.annotation.Nonnull
   private String sUserLastname;
 
   public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
   @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
-  @javax.annotation.Nonnull
   private String sUserLoginname;
 
   public static final String SERIALIZED_NAME_S_USER_JOBTITLE = "sUserJobtitle";
   @SerializedName(SERIALIZED_NAME_S_USER_JOBTITLE)
-  @javax.annotation.Nullable
   private String sUserJobtitle;
 
   public static final String SERIALIZED_NAME_E_USER_EZSIGNACCESS = "eUserEzsignaccess";
   @SerializedName(SERIALIZED_NAME_E_USER_EZSIGNACCESS)
-  @javax.annotation.Nonnull
   private FieldEUserEzsignaccess eUserEzsignaccess;
 
   public static final String SERIALIZED_NAME_B_USER_ISACTIVE = "bUserIsactive";
   @SerializedName(SERIALIZED_NAME_B_USER_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bUserIsactive;
 
   public static final String SERIALIZED_NAME_B_USER_VALIDATEBYADMINISTRATION = "bUserValidatebyadministration";
   @SerializedName(SERIALIZED_NAME_B_USER_VALIDATEBYADMINISTRATION)
-  @javax.annotation.Nullable
   private Boolean bUserValidatebyadministration;
 
   public static final String SERIALIZED_NAME_B_USER_VALIDATEBYDIRECTOR = "bUserValidatebydirector";
   @SerializedName(SERIALIZED_NAME_B_USER_VALIDATEBYDIRECTOR)
-  @javax.annotation.Nullable
   private Boolean bUserValidatebydirector;
 
   public static final String SERIALIZED_NAME_B_USER_ATTACHMENTAUTOVERIFIED = "bUserAttachmentautoverified";
   @SerializedName(SERIALIZED_NAME_B_USER_ATTACHMENTAUTOVERIFIED)
-  @javax.annotation.Nullable
   private Boolean bUserAttachmentautoverified;
 
   public static final String SERIALIZED_NAME_B_USER_CHANGEPASSWORD = "bUserChangepassword";
   @SerializedName(SERIALIZED_NAME_B_USER_CHANGEPASSWORD)
-  @javax.annotation.Nullable
   private Boolean bUserChangepassword;
 
   public UserRequest() {
   }
 
-  public UserRequest pkiUserID(@javax.annotation.Nullable Integer pkiUserID) {
+  public UserRequest pkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -213,12 +185,12 @@ public class UserRequest {
     return pkiUserID;
   }
 
-  public void setPkiUserID(@javax.annotation.Nullable Integer pkiUserID) {
+  public void setPkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 
 
-  public UserRequest fkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
+  public UserRequest fkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
     return this;
   }
@@ -233,12 +205,12 @@ public class UserRequest {
     return fkiAgentID;
   }
 
-  public void setFkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
+  public void setFkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
   }
 
 
-  public UserRequest fkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
+  public UserRequest fkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
     return this;
   }
@@ -253,12 +225,12 @@ public class UserRequest {
     return fkiBrokerID;
   }
 
-  public void setFkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
+  public void setFkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
   }
 
 
-  public UserRequest fkiAssistantID(@javax.annotation.Nullable Integer fkiAssistantID) {
+  public UserRequest fkiAssistantID(Integer fkiAssistantID) {
     this.fkiAssistantID = fkiAssistantID;
     return this;
   }
@@ -273,12 +245,12 @@ public class UserRequest {
     return fkiAssistantID;
   }
 
-  public void setFkiAssistantID(@javax.annotation.Nullable Integer fkiAssistantID) {
+  public void setFkiAssistantID(Integer fkiAssistantID) {
     this.fkiAssistantID = fkiAssistantID;
   }
 
 
-  public UserRequest fkiEmployeeID(@javax.annotation.Nullable Integer fkiEmployeeID) {
+  public UserRequest fkiEmployeeID(Integer fkiEmployeeID) {
     this.fkiEmployeeID = fkiEmployeeID;
     return this;
   }
@@ -293,12 +265,12 @@ public class UserRequest {
     return fkiEmployeeID;
   }
 
-  public void setFkiEmployeeID(@javax.annotation.Nullable Integer fkiEmployeeID) {
+  public void setFkiEmployeeID(Integer fkiEmployeeID) {
     this.fkiEmployeeID = fkiEmployeeID;
   }
 
 
-  public UserRequest fkiCompanyIDDefault(@javax.annotation.Nonnull Integer fkiCompanyIDDefault) {
+  public UserRequest fkiCompanyIDDefault(Integer fkiCompanyIDDefault) {
     this.fkiCompanyIDDefault = fkiCompanyIDDefault;
     return this;
   }
@@ -314,12 +286,12 @@ public class UserRequest {
     return fkiCompanyIDDefault;
   }
 
-  public void setFkiCompanyIDDefault(@javax.annotation.Nonnull Integer fkiCompanyIDDefault) {
+  public void setFkiCompanyIDDefault(Integer fkiCompanyIDDefault) {
     this.fkiCompanyIDDefault = fkiCompanyIDDefault;
   }
 
 
-  public UserRequest fkiDepartmentIDDefault(@javax.annotation.Nonnull Integer fkiDepartmentIDDefault) {
+  public UserRequest fkiDepartmentIDDefault(Integer fkiDepartmentIDDefault) {
     this.fkiDepartmentIDDefault = fkiDepartmentIDDefault;
     return this;
   }
@@ -334,12 +306,12 @@ public class UserRequest {
     return fkiDepartmentIDDefault;
   }
 
-  public void setFkiDepartmentIDDefault(@javax.annotation.Nonnull Integer fkiDepartmentIDDefault) {
+  public void setFkiDepartmentIDDefault(Integer fkiDepartmentIDDefault) {
     this.fkiDepartmentIDDefault = fkiDepartmentIDDefault;
   }
 
 
-  public UserRequest fkiTimezoneID(@javax.annotation.Nonnull Integer fkiTimezoneID) {
+  public UserRequest fkiTimezoneID(Integer fkiTimezoneID) {
     this.fkiTimezoneID = fkiTimezoneID;
     return this;
   }
@@ -354,12 +326,12 @@ public class UserRequest {
     return fkiTimezoneID;
   }
 
-  public void setFkiTimezoneID(@javax.annotation.Nonnull Integer fkiTimezoneID) {
+  public void setFkiTimezoneID(Integer fkiTimezoneID) {
     this.fkiTimezoneID = fkiTimezoneID;
   }
 
 
-  public UserRequest fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public UserRequest fkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -375,31 +347,31 @@ public class UserRequest {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public UserRequest objEmail(@javax.annotation.Nonnull EmailRequest objEmail) {
+  public UserRequest objEmail(EmailRequestCompound objEmail) {
     this.objEmail = objEmail;
     return this;
   }
 
   /**
-   * An Email Object and children to create a complete structure
+   * Get objEmail
    * @return objEmail
    */
   @javax.annotation.Nonnull
-  public EmailRequest getObjEmail() {
+  public EmailRequestCompound getObjEmail() {
     return objEmail;
   }
 
-  public void setObjEmail(@javax.annotation.Nonnull EmailRequest objEmail) {
+  public void setObjEmail(EmailRequestCompound objEmail) {
     this.objEmail = objEmail;
   }
 
 
-  public UserRequest fkiBillingentityinternalID(@javax.annotation.Nonnull Integer fkiBillingentityinternalID) {
+  public UserRequest fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -414,50 +386,50 @@ public class UserRequest {
     return fkiBillingentityinternalID;
   }
 
-  public void setFkiBillingentityinternalID(@javax.annotation.Nonnull Integer fkiBillingentityinternalID) {
+  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
-  public UserRequest objPhoneHome(@javax.annotation.Nullable PhoneRequest objPhoneHome) {
+  public UserRequest objPhoneHome(PhoneRequestCompound objPhoneHome) {
     this.objPhoneHome = objPhoneHome;
     return this;
   }
 
   /**
-   * A Phone Object and children to create a complete structure
+   * Get objPhoneHome
    * @return objPhoneHome
    */
   @javax.annotation.Nullable
-  public PhoneRequest getObjPhoneHome() {
+  public PhoneRequestCompound getObjPhoneHome() {
     return objPhoneHome;
   }
 
-  public void setObjPhoneHome(@javax.annotation.Nullable PhoneRequest objPhoneHome) {
+  public void setObjPhoneHome(PhoneRequestCompound objPhoneHome) {
     this.objPhoneHome = objPhoneHome;
   }
 
 
-  public UserRequest objPhoneSMS(@javax.annotation.Nullable PhoneRequest objPhoneSMS) {
+  public UserRequest objPhoneSMS(PhoneRequestCompound objPhoneSMS) {
     this.objPhoneSMS = objPhoneSMS;
     return this;
   }
 
   /**
-   * A Phone Object and children to create a complete structure
+   * Get objPhoneSMS
    * @return objPhoneSMS
    */
   @javax.annotation.Nullable
-  public PhoneRequest getObjPhoneSMS() {
+  public PhoneRequestCompound getObjPhoneSMS() {
     return objPhoneSMS;
   }
 
-  public void setObjPhoneSMS(@javax.annotation.Nullable PhoneRequest objPhoneSMS) {
+  public void setObjPhoneSMS(PhoneRequestCompound objPhoneSMS) {
     this.objPhoneSMS = objPhoneSMS;
   }
 
 
-  public UserRequest fkiSecretquestionID(@javax.annotation.Nullable Integer fkiSecretquestionID) {
+  public UserRequest fkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
     return this;
   }
@@ -472,12 +444,12 @@ public class UserRequest {
     return fkiSecretquestionID;
   }
 
-  public void setFkiSecretquestionID(@javax.annotation.Nullable Integer fkiSecretquestionID) {
+  public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
   }
 
 
-  public UserRequest sUserSecretresponse(@javax.annotation.Nullable String sUserSecretresponse) {
+  public UserRequest sUserSecretresponse(String sUserSecretresponse) {
     this.sUserSecretresponse = sUserSecretresponse;
     return this;
   }
@@ -491,12 +463,12 @@ public class UserRequest {
     return sUserSecretresponse;
   }
 
-  public void setsUserSecretresponse(@javax.annotation.Nullable String sUserSecretresponse) {
+  public void setsUserSecretresponse(String sUserSecretresponse) {
     this.sUserSecretresponse = sUserSecretresponse;
   }
 
 
-  public UserRequest fkiModuleIDForm(@javax.annotation.Nullable Integer fkiModuleIDForm) {
+  public UserRequest fkiModuleIDForm(Integer fkiModuleIDForm) {
     this.fkiModuleIDForm = fkiModuleIDForm;
     return this;
   }
@@ -511,12 +483,12 @@ public class UserRequest {
     return fkiModuleIDForm;
   }
 
-  public void setFkiModuleIDForm(@javax.annotation.Nullable Integer fkiModuleIDForm) {
+  public void setFkiModuleIDForm(Integer fkiModuleIDForm) {
     this.fkiModuleIDForm = fkiModuleIDForm;
   }
 
 
-  public UserRequest eUserType(@javax.annotation.Nonnull FieldEUserType eUserType) {
+  public UserRequest eUserType(FieldEUserType eUserType) {
     this.eUserType = eUserType;
     return this;
   }
@@ -530,12 +502,12 @@ public class UserRequest {
     return eUserType;
   }
 
-  public void seteUserType(@javax.annotation.Nonnull FieldEUserType eUserType) {
+  public void seteUserType(FieldEUserType eUserType) {
     this.eUserType = eUserType;
   }
 
 
-  public UserRequest eUserLogintype(@javax.annotation.Nonnull FieldEUserLogintype eUserLogintype) {
+  public UserRequest eUserLogintype(FieldEUserLogintype eUserLogintype) {
     this.eUserLogintype = eUserLogintype;
     return this;
   }
@@ -549,12 +521,12 @@ public class UserRequest {
     return eUserLogintype;
   }
 
-  public void seteUserLogintype(@javax.annotation.Nonnull FieldEUserLogintype eUserLogintype) {
+  public void seteUserLogintype(FieldEUserLogintype eUserLogintype) {
     this.eUserLogintype = eUserLogintype;
   }
 
 
-  public UserRequest sUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
+  public UserRequest sUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -568,12 +540,12 @@ public class UserRequest {
     return sUserFirstname;
   }
 
-  public void setsUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
+  public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
-  public UserRequest sUserLastname(@javax.annotation.Nonnull String sUserLastname) {
+  public UserRequest sUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -587,12 +559,12 @@ public class UserRequest {
     return sUserLastname;
   }
 
-  public void setsUserLastname(@javax.annotation.Nonnull String sUserLastname) {
+  public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
-  public UserRequest sUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
+  public UserRequest sUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -606,12 +578,12 @@ public class UserRequest {
     return sUserLoginname;
   }
 
-  public void setsUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
+  public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
-  public UserRequest sUserJobtitle(@javax.annotation.Nullable String sUserJobtitle) {
+  public UserRequest sUserJobtitle(String sUserJobtitle) {
     this.sUserJobtitle = sUserJobtitle;
     return this;
   }
@@ -625,12 +597,12 @@ public class UserRequest {
     return sUserJobtitle;
   }
 
-  public void setsUserJobtitle(@javax.annotation.Nullable String sUserJobtitle) {
+  public void setsUserJobtitle(String sUserJobtitle) {
     this.sUserJobtitle = sUserJobtitle;
   }
 
 
-  public UserRequest eUserEzsignaccess(@javax.annotation.Nonnull FieldEUserEzsignaccess eUserEzsignaccess) {
+  public UserRequest eUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
     this.eUserEzsignaccess = eUserEzsignaccess;
     return this;
   }
@@ -644,12 +616,12 @@ public class UserRequest {
     return eUserEzsignaccess;
   }
 
-  public void seteUserEzsignaccess(@javax.annotation.Nonnull FieldEUserEzsignaccess eUserEzsignaccess) {
+  public void seteUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
     this.eUserEzsignaccess = eUserEzsignaccess;
   }
 
 
-  public UserRequest bUserIsactive(@javax.annotation.Nonnull Boolean bUserIsactive) {
+  public UserRequest bUserIsactive(Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
     return this;
   }
@@ -663,12 +635,12 @@ public class UserRequest {
     return bUserIsactive;
   }
 
-  public void setbUserIsactive(@javax.annotation.Nonnull Boolean bUserIsactive) {
+  public void setbUserIsactive(Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
   }
 
 
-  public UserRequest bUserValidatebyadministration(@javax.annotation.Nullable Boolean bUserValidatebyadministration) {
+  public UserRequest bUserValidatebyadministration(Boolean bUserValidatebyadministration) {
     this.bUserValidatebyadministration = bUserValidatebyadministration;
     return this;
   }
@@ -682,12 +654,12 @@ public class UserRequest {
     return bUserValidatebyadministration;
   }
 
-  public void setbUserValidatebyadministration(@javax.annotation.Nullable Boolean bUserValidatebyadministration) {
+  public void setbUserValidatebyadministration(Boolean bUserValidatebyadministration) {
     this.bUserValidatebyadministration = bUserValidatebyadministration;
   }
 
 
-  public UserRequest bUserValidatebydirector(@javax.annotation.Nullable Boolean bUserValidatebydirector) {
+  public UserRequest bUserValidatebydirector(Boolean bUserValidatebydirector) {
     this.bUserValidatebydirector = bUserValidatebydirector;
     return this;
   }
@@ -701,12 +673,12 @@ public class UserRequest {
     return bUserValidatebydirector;
   }
 
-  public void setbUserValidatebydirector(@javax.annotation.Nullable Boolean bUserValidatebydirector) {
+  public void setbUserValidatebydirector(Boolean bUserValidatebydirector) {
     this.bUserValidatebydirector = bUserValidatebydirector;
   }
 
 
-  public UserRequest bUserAttachmentautoverified(@javax.annotation.Nullable Boolean bUserAttachmentautoverified) {
+  public UserRequest bUserAttachmentautoverified(Boolean bUserAttachmentautoverified) {
     this.bUserAttachmentautoverified = bUserAttachmentautoverified;
     return this;
   }
@@ -720,12 +692,12 @@ public class UserRequest {
     return bUserAttachmentautoverified;
   }
 
-  public void setbUserAttachmentautoverified(@javax.annotation.Nullable Boolean bUserAttachmentautoverified) {
+  public void setbUserAttachmentautoverified(Boolean bUserAttachmentautoverified) {
     this.bUserAttachmentautoverified = bUserAttachmentautoverified;
   }
 
 
-  public UserRequest bUserChangepassword(@javax.annotation.Nullable Boolean bUserChangepassword) {
+  public UserRequest bUserChangepassword(Boolean bUserChangepassword) {
     this.bUserChangepassword = bUserChangepassword;
     return this;
   }
@@ -739,7 +711,7 @@ public class UserRequest {
     return bUserChangepassword;
   }
 
-  public void setbUserChangepassword(@javax.annotation.Nullable Boolean bUserChangepassword) {
+  public void setbUserChangepassword(Boolean bUserChangepassword) {
     this.bUserChangepassword = bUserChangepassword;
   }
 
@@ -901,16 +873,31 @@ public class UserRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in UserRequest is not found in the empty JSON string", UserRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!UserRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UserRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : UserRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objEmail`
-      EmailRequest.validateJsonElement(jsonObj.get("objEmail"));
+      EmailRequestCompound.validateJsonElement(jsonObj.get("objEmail"));
       // validate the optional field `objPhoneHome`
       if (jsonObj.get("objPhoneHome") != null && !jsonObj.get("objPhoneHome").isJsonNull()) {
-        PhoneRequest.validateJsonElement(jsonObj.get("objPhoneHome"));
+        PhoneRequestCompound.validateJsonElement(jsonObj.get("objPhoneHome"));
       }
       // validate the optional field `objPhoneSMS`
       if (jsonObj.get("objPhoneSMS") != null && !jsonObj.get("objPhoneSMS").isJsonNull()) {
-        PhoneRequest.validateJsonElement(jsonObj.get("objPhoneSMS"));
+        PhoneRequestCompound.validateJsonElement(jsonObj.get("objPhoneSMS"));
       }
       if ((jsonObj.get("sUserSecretresponse") != null && !jsonObj.get("sUserSecretresponse").isJsonNull()) && !jsonObj.get("sUserSecretresponse").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserSecretresponse` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserSecretresponse").toString()));
@@ -935,6 +922,34 @@ public class UserRequest {
       FieldEUserEzsignaccess.validateJsonElement(jsonObj.get("eUserEzsignaccess"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!UserRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'UserRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<UserRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(UserRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<UserRequest>() {
+           @Override
+           public void write(JsonWriter out, UserRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public UserRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of UserRequest given an JSON string

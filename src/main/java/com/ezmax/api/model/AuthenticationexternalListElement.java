@@ -49,32 +49,28 @@ import eZmaxAPI.JSON;
 /**
  * A Authenticationexternal List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AuthenticationexternalListElement {
   public static final String SERIALIZED_NAME_PKI_AUTHENTICATIONEXTERNAL_I_D = "pkiAuthenticationexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_AUTHENTICATIONEXTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiAuthenticationexternalID;
 
   public static final String SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION = "sAuthenticationexternalDescription";
   @SerializedName(SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sAuthenticationexternalDescription;
 
   public static final String SERIALIZED_NAME_E_AUTHENTICATIONEXTERNAL_TYPE = "eAuthenticationexternalType";
   @SerializedName(SERIALIZED_NAME_E_AUTHENTICATIONEXTERNAL_TYPE)
-  @javax.annotation.Nonnull
   private FieldEAuthenticationexternalType eAuthenticationexternalType;
 
   public static final String SERIALIZED_NAME_B_AUTHENTICATIONEXTERNAL_CONNECTED = "bAuthenticationexternalConnected";
   @SerializedName(SERIALIZED_NAME_B_AUTHENTICATIONEXTERNAL_CONNECTED)
-  @javax.annotation.Nonnull
   private Boolean bAuthenticationexternalConnected;
 
   public AuthenticationexternalListElement() {
   }
 
-  public AuthenticationexternalListElement pkiAuthenticationexternalID(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID) {
+  public AuthenticationexternalListElement pkiAuthenticationexternalID(Integer pkiAuthenticationexternalID) {
     this.pkiAuthenticationexternalID = pkiAuthenticationexternalID;
     return this;
   }
@@ -90,12 +86,12 @@ public class AuthenticationexternalListElement {
     return pkiAuthenticationexternalID;
   }
 
-  public void setPkiAuthenticationexternalID(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID) {
+  public void setPkiAuthenticationexternalID(Integer pkiAuthenticationexternalID) {
     this.pkiAuthenticationexternalID = pkiAuthenticationexternalID;
   }
 
 
-  public AuthenticationexternalListElement sAuthenticationexternalDescription(@javax.annotation.Nonnull String sAuthenticationexternalDescription) {
+  public AuthenticationexternalListElement sAuthenticationexternalDescription(String sAuthenticationexternalDescription) {
     this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
     return this;
   }
@@ -109,12 +105,12 @@ public class AuthenticationexternalListElement {
     return sAuthenticationexternalDescription;
   }
 
-  public void setsAuthenticationexternalDescription(@javax.annotation.Nonnull String sAuthenticationexternalDescription) {
+  public void setsAuthenticationexternalDescription(String sAuthenticationexternalDescription) {
     this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
   }
 
 
-  public AuthenticationexternalListElement eAuthenticationexternalType(@javax.annotation.Nonnull FieldEAuthenticationexternalType eAuthenticationexternalType) {
+  public AuthenticationexternalListElement eAuthenticationexternalType(FieldEAuthenticationexternalType eAuthenticationexternalType) {
     this.eAuthenticationexternalType = eAuthenticationexternalType;
     return this;
   }
@@ -128,12 +124,12 @@ public class AuthenticationexternalListElement {
     return eAuthenticationexternalType;
   }
 
-  public void seteAuthenticationexternalType(@javax.annotation.Nonnull FieldEAuthenticationexternalType eAuthenticationexternalType) {
+  public void seteAuthenticationexternalType(FieldEAuthenticationexternalType eAuthenticationexternalType) {
     this.eAuthenticationexternalType = eAuthenticationexternalType;
   }
 
 
-  public AuthenticationexternalListElement bAuthenticationexternalConnected(@javax.annotation.Nonnull Boolean bAuthenticationexternalConnected) {
+  public AuthenticationexternalListElement bAuthenticationexternalConnected(Boolean bAuthenticationexternalConnected) {
     this.bAuthenticationexternalConnected = bAuthenticationexternalConnected;
     return this;
   }
@@ -147,7 +143,7 @@ public class AuthenticationexternalListElement {
     return bAuthenticationexternalConnected;
   }
 
-  public void setbAuthenticationexternalConnected(@javax.annotation.Nonnull Boolean bAuthenticationexternalConnected) {
+  public void setbAuthenticationexternalConnected(Boolean bAuthenticationexternalConnected) {
     this.bAuthenticationexternalConnected = bAuthenticationexternalConnected;
   }
 

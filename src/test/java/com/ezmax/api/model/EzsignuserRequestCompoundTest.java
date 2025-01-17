@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.ContactRequestCompoundV2;
-import com.ezmax.api.model.EzsignuserRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

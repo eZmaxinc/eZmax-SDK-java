@@ -50,27 +50,24 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupRequest {
   public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
-  @javax.annotation.Nullable
   private Integer pkiUsergroupID;
 
   public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
   @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
-  @javax.annotation.Nullable
   private EmailRequest objEmail;
 
   public static final String SERIALIZED_NAME_OBJ_USERGROUP_NAME = "objUsergroupName";
   @SerializedName(SERIALIZED_NAME_OBJ_USERGROUP_NAME)
-  @javax.annotation.Nonnull
   private MultilingualUsergroupName objUsergroupName;
 
   public UsergroupRequest() {
   }
 
-  public UsergroupRequest pkiUsergroupID(@javax.annotation.Nullable Integer pkiUsergroupID) {
+  public UsergroupRequest pkiUsergroupID(Integer pkiUsergroupID) {
     this.pkiUsergroupID = pkiUsergroupID;
     return this;
   }
@@ -86,12 +83,12 @@ public class UsergroupRequest {
     return pkiUsergroupID;
   }
 
-  public void setPkiUsergroupID(@javax.annotation.Nullable Integer pkiUsergroupID) {
+  public void setPkiUsergroupID(Integer pkiUsergroupID) {
     this.pkiUsergroupID = pkiUsergroupID;
   }
 
 
-  public UsergroupRequest objEmail(@javax.annotation.Nullable EmailRequest objEmail) {
+  public UsergroupRequest objEmail(EmailRequest objEmail) {
     this.objEmail = objEmail;
     return this;
   }
@@ -105,12 +102,12 @@ public class UsergroupRequest {
     return objEmail;
   }
 
-  public void setObjEmail(@javax.annotation.Nullable EmailRequest objEmail) {
+  public void setObjEmail(EmailRequest objEmail) {
     this.objEmail = objEmail;
   }
 
 
-  public UsergroupRequest objUsergroupName(@javax.annotation.Nonnull MultilingualUsergroupName objUsergroupName) {
+  public UsergroupRequest objUsergroupName(MultilingualUsergroupName objUsergroupName) {
     this.objUsergroupName = objUsergroupName;
     return this;
   }
@@ -124,7 +121,7 @@ public class UsergroupRequest {
     return objUsergroupName;
   }
 
-  public void setObjUsergroupName(@javax.annotation.Nonnull MultilingualUsergroupName objUsergroupName) {
+  public void setObjUsergroupName(MultilingualUsergroupName objUsergroupName) {
     this.objUsergroupName = objUsergroupName;
   }
 
@@ -199,6 +196,21 @@ public class UsergroupRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in UsergroupRequest is not found in the empty JSON string", UsergroupRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!UsergroupRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UsergroupRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : UsergroupRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `objEmail`
       if (jsonObj.get("objEmail") != null && !jsonObj.get("objEmail").isJsonNull()) {
@@ -208,6 +220,34 @@ public class UsergroupRequest {
       MultilingualUsergroupName.validateJsonElement(jsonObj.get("objUsergroupName"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!UsergroupRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'UsergroupRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<UsergroupRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(UsergroupRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<UsergroupRequest>() {
+           @Override
+           public void write(JsonWriter out, UsergroupRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public UsergroupRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of UsergroupRequest given an JSON string

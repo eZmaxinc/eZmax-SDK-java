@@ -50,72 +50,60 @@ import eZmaxAPI.JSON;
 /**
  * A Ezdoctemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzdoctemplatedocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D = "pkiEzdoctemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzdoctemplatedocumentID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATETYPE_I_D = "fkiEzdoctemplatetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATETYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzdoctemplatetypeID;
 
   public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATEFIELDTYPECATEGORY_I_D = "fkiEzdoctemplatefieldtypecategoryID";
   @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATEFIELDTYPECATEGORY_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzdoctemplatefieldtypecategoryID;
 
   public static final String SERIALIZED_NAME_E_EZDOCTEMPLATEDOCUMENT_PRIVACYLEVEL = "eEzdoctemplatedocumentPrivacylevel";
   @SerializedName(SERIALIZED_NAME_E_EZDOCTEMPLATEDOCUMENT_PRIVACYLEVEL)
-  @javax.annotation.Nullable
   private FieldEEzdoctemplatedocumentPrivacylevel eEzdoctemplatedocumentPrivacylevel;
 
   public static final String SERIALIZED_NAME_B_EZDOCTEMPLATEDOCUMENT_ISACTIVE = "bEzdoctemplatedocumentIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZDOCTEMPLATEDOCUMENT_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bEzdoctemplatedocumentIsactive;
 
   public static final String SERIALIZED_NAME_OBJ_EZDOCTEMPLATEDOCUMENT_NAME = "objEzdoctemplatedocumentName";
   @SerializedName(SERIALIZED_NAME_OBJ_EZDOCTEMPLATEDOCUMENT_NAME)
-  @javax.annotation.Nonnull
   private MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X = "sEzdoctemplatedocumentNameX";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X)
-  @javax.annotation.Nullable
   private String sEzdoctemplatedocumentNameX;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
-  @javax.annotation.Nullable
   private String sEzsignfoldertypeNameX;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEFIELDTYPECATEGORY_DESCRIPTION_X = "sEzdoctemplatefieldtypecategoryDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEFIELDTYPECATEGORY_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sEzdoctemplatefieldtypecategoryDescriptionX;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATETYPE_DESCRIPTION_X = "sEzdoctemplatetypeDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATETYPE_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sEzdoctemplatetypeDescriptionX;
 
   public EzdoctemplatedocumentResponse() {
   }
 
-  public EzdoctemplatedocumentResponse pkiEzdoctemplatedocumentID(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID) {
+  public EzdoctemplatedocumentResponse pkiEzdoctemplatedocumentID(Integer pkiEzdoctemplatedocumentID) {
     this.pkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
     return this;
   }
@@ -131,12 +119,12 @@ public class EzdoctemplatedocumentResponse {
     return pkiEzdoctemplatedocumentID;
   }
 
-  public void setPkiEzdoctemplatedocumentID(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID) {
+  public void setPkiEzdoctemplatedocumentID(Integer pkiEzdoctemplatedocumentID) {
     this.pkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
   }
 
 
-  public EzdoctemplatedocumentResponse fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public EzdoctemplatedocumentResponse fkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -152,12 +140,12 @@ public class EzdoctemplatedocumentResponse {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public EzdoctemplatedocumentResponse fkiEzsignfoldertypeID(@javax.annotation.Nullable Integer fkiEzsignfoldertypeID) {
+  public EzdoctemplatedocumentResponse fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -173,12 +161,12 @@ public class EzdoctemplatedocumentResponse {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(@javax.annotation.Nullable Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public EzdoctemplatedocumentResponse fkiEzdoctemplatetypeID(@javax.annotation.Nonnull Integer fkiEzdoctemplatetypeID) {
+  public EzdoctemplatedocumentResponse fkiEzdoctemplatetypeID(Integer fkiEzdoctemplatetypeID) {
     this.fkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
     return this;
   }
@@ -194,12 +182,12 @@ public class EzdoctemplatedocumentResponse {
     return fkiEzdoctemplatetypeID;
   }
 
-  public void setFkiEzdoctemplatetypeID(@javax.annotation.Nonnull Integer fkiEzdoctemplatetypeID) {
+  public void setFkiEzdoctemplatetypeID(Integer fkiEzdoctemplatetypeID) {
     this.fkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
   }
 
 
-  public EzdoctemplatedocumentResponse fkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nonnull Integer fkiEzdoctemplatefieldtypecategoryID) {
+  public EzdoctemplatedocumentResponse fkiEzdoctemplatefieldtypecategoryID(Integer fkiEzdoctemplatefieldtypecategoryID) {
     this.fkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
     return this;
   }
@@ -215,12 +203,12 @@ public class EzdoctemplatedocumentResponse {
     return fkiEzdoctemplatefieldtypecategoryID;
   }
 
-  public void setFkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nonnull Integer fkiEzdoctemplatefieldtypecategoryID) {
+  public void setFkiEzdoctemplatefieldtypecategoryID(Integer fkiEzdoctemplatefieldtypecategoryID) {
     this.fkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
   }
 
 
-  public EzdoctemplatedocumentResponse eEzdoctemplatedocumentPrivacylevel(@javax.annotation.Nullable FieldEEzdoctemplatedocumentPrivacylevel eEzdoctemplatedocumentPrivacylevel) {
+  public EzdoctemplatedocumentResponse eEzdoctemplatedocumentPrivacylevel(FieldEEzdoctemplatedocumentPrivacylevel eEzdoctemplatedocumentPrivacylevel) {
     this.eEzdoctemplatedocumentPrivacylevel = eEzdoctemplatedocumentPrivacylevel;
     return this;
   }
@@ -234,12 +222,12 @@ public class EzdoctemplatedocumentResponse {
     return eEzdoctemplatedocumentPrivacylevel;
   }
 
-  public void seteEzdoctemplatedocumentPrivacylevel(@javax.annotation.Nullable FieldEEzdoctemplatedocumentPrivacylevel eEzdoctemplatedocumentPrivacylevel) {
+  public void seteEzdoctemplatedocumentPrivacylevel(FieldEEzdoctemplatedocumentPrivacylevel eEzdoctemplatedocumentPrivacylevel) {
     this.eEzdoctemplatedocumentPrivacylevel = eEzdoctemplatedocumentPrivacylevel;
   }
 
 
-  public EzdoctemplatedocumentResponse bEzdoctemplatedocumentIsactive(@javax.annotation.Nonnull Boolean bEzdoctemplatedocumentIsactive) {
+  public EzdoctemplatedocumentResponse bEzdoctemplatedocumentIsactive(Boolean bEzdoctemplatedocumentIsactive) {
     this.bEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
     return this;
   }
@@ -253,12 +241,12 @@ public class EzdoctemplatedocumentResponse {
     return bEzdoctemplatedocumentIsactive;
   }
 
-  public void setbEzdoctemplatedocumentIsactive(@javax.annotation.Nonnull Boolean bEzdoctemplatedocumentIsactive) {
+  public void setbEzdoctemplatedocumentIsactive(Boolean bEzdoctemplatedocumentIsactive) {
     this.bEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
   }
 
 
-  public EzdoctemplatedocumentResponse objEzdoctemplatedocumentName(@javax.annotation.Nonnull MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName) {
+  public EzdoctemplatedocumentResponse objEzdoctemplatedocumentName(MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName) {
     this.objEzdoctemplatedocumentName = objEzdoctemplatedocumentName;
     return this;
   }
@@ -272,12 +260,12 @@ public class EzdoctemplatedocumentResponse {
     return objEzdoctemplatedocumentName;
   }
 
-  public void setObjEzdoctemplatedocumentName(@javax.annotation.Nonnull MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName) {
+  public void setObjEzdoctemplatedocumentName(MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName) {
     this.objEzdoctemplatedocumentName = objEzdoctemplatedocumentName;
   }
 
 
-  public EzdoctemplatedocumentResponse sEzdoctemplatedocumentNameX(@javax.annotation.Nullable String sEzdoctemplatedocumentNameX) {
+  public EzdoctemplatedocumentResponse sEzdoctemplatedocumentNameX(String sEzdoctemplatedocumentNameX) {
     this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
     return this;
   }
@@ -291,12 +279,12 @@ public class EzdoctemplatedocumentResponse {
     return sEzdoctemplatedocumentNameX;
   }
 
-  public void setsEzdoctemplatedocumentNameX(@javax.annotation.Nullable String sEzdoctemplatedocumentNameX) {
+  public void setsEzdoctemplatedocumentNameX(String sEzdoctemplatedocumentNameX) {
     this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
   }
 
 
-  public EzdoctemplatedocumentResponse sEzsignfoldertypeNameX(@javax.annotation.Nullable String sEzsignfoldertypeNameX) {
+  public EzdoctemplatedocumentResponse sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -310,12 +298,12 @@ public class EzdoctemplatedocumentResponse {
     return sEzsignfoldertypeNameX;
   }
 
-  public void setsEzsignfoldertypeNameX(@javax.annotation.Nullable String sEzsignfoldertypeNameX) {
+  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
-  public EzdoctemplatedocumentResponse sEzdoctemplatefieldtypecategoryDescriptionX(@javax.annotation.Nonnull String sEzdoctemplatefieldtypecategoryDescriptionX) {
+  public EzdoctemplatedocumentResponse sEzdoctemplatefieldtypecategoryDescriptionX(String sEzdoctemplatefieldtypecategoryDescriptionX) {
     this.sEzdoctemplatefieldtypecategoryDescriptionX = sEzdoctemplatefieldtypecategoryDescriptionX;
     return this;
   }
@@ -329,12 +317,12 @@ public class EzdoctemplatedocumentResponse {
     return sEzdoctemplatefieldtypecategoryDescriptionX;
   }
 
-  public void setsEzdoctemplatefieldtypecategoryDescriptionX(@javax.annotation.Nonnull String sEzdoctemplatefieldtypecategoryDescriptionX) {
+  public void setsEzdoctemplatefieldtypecategoryDescriptionX(String sEzdoctemplatefieldtypecategoryDescriptionX) {
     this.sEzdoctemplatefieldtypecategoryDescriptionX = sEzdoctemplatefieldtypecategoryDescriptionX;
   }
 
 
-  public EzdoctemplatedocumentResponse sEzdoctemplatetypeDescriptionX(@javax.annotation.Nonnull String sEzdoctemplatetypeDescriptionX) {
+  public EzdoctemplatedocumentResponse sEzdoctemplatetypeDescriptionX(String sEzdoctemplatetypeDescriptionX) {
     this.sEzdoctemplatetypeDescriptionX = sEzdoctemplatetypeDescriptionX;
     return this;
   }
@@ -348,7 +336,7 @@ public class EzdoctemplatedocumentResponse {
     return sEzdoctemplatetypeDescriptionX;
   }
 
-  public void setsEzdoctemplatetypeDescriptionX(@javax.annotation.Nonnull String sEzdoctemplatetypeDescriptionX) {
+  public void setsEzdoctemplatetypeDescriptionX(String sEzdoctemplatetypeDescriptionX) {
     this.sEzdoctemplatetypeDescriptionX = sEzdoctemplatetypeDescriptionX;
   }
 
@@ -457,6 +445,21 @@ public class EzdoctemplatedocumentResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzdoctemplatedocumentResponse is not found in the empty JSON string", EzdoctemplatedocumentResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzdoctemplatedocumentResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzdoctemplatedocumentResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzdoctemplatedocumentResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `eEzdoctemplatedocumentPrivacylevel`
       if (jsonObj.get("eEzdoctemplatedocumentPrivacylevel") != null && !jsonObj.get("eEzdoctemplatedocumentPrivacylevel").isJsonNull()) {
@@ -478,6 +481,34 @@ public class EzdoctemplatedocumentResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzdoctemplatedocumentResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzdoctemplatedocumentResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzdoctemplatedocumentResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzdoctemplatedocumentResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzdoctemplatedocumentResponse>() {
+           @Override
+           public void write(JsonWriter out, EzdoctemplatedocumentResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzdoctemplatedocumentResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzdoctemplatedocumentResponse given an JSON string

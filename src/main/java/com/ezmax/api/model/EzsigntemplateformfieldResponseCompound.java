@@ -15,8 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EnumHorizontalalignment;
-import com.ezmax.api.model.EzsigntemplateelementdependencyResponse;
-import com.ezmax.api.model.EzsigntemplateformfieldResponse;
+import com.ezmax.api.model.EzsigntemplateelementdependencyResponseCompound;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldPositioning;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldPositioningoccurence;
@@ -57,22 +56,441 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateformfield Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigntemplateformfieldResponseCompound extends EzsigntemplateformfieldResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsigntemplateformfieldResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D = "pkiEzsigntemplateformfieldID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D)
+  private Integer pkiEzsigntemplateformfieldID;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_POSITIONING = "eEzsigntemplateformfieldPositioning";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_POSITIONING)
+  private FieldEEzsigntemplateformfieldPositioning eEzsigntemplateformfieldPositioning = FieldEEzsigntemplateformfieldPositioning.PER_COORDINATES;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_PAGENUMBER = "iEzsigntemplatedocumentpagePagenumber";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_PAGENUMBER)
+  private Integer iEzsigntemplatedocumentpagePagenumber;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEFORMFIELD_LABEL = "sEzsigntemplateformfieldLabel";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEFORMFIELD_LABEL)
+  private String sEzsigntemplateformfieldLabel;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEFORMFIELD_VALUE = "sEzsigntemplateformfieldValue";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEFORMFIELD_VALUE)
+  private String sEzsigntemplateformfieldValue;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_X = "iEzsigntemplateformfieldX";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_X)
+  private Integer iEzsigntemplateformfieldX;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_Y = "iEzsigntemplateformfieldY";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_Y)
+  private Integer iEzsigntemplateformfieldY;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_WIDTH = "iEzsigntemplateformfieldWidth";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_WIDTH)
+  private Integer iEzsigntemplateformfieldWidth;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_HEIGHT = "iEzsigntemplateformfieldHeight";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_HEIGHT)
+  private Integer iEzsigntemplateformfieldHeight;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEFORMFIELD_AUTOCOMPLETE = "bEzsigntemplateformfieldAutocomplete";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEFORMFIELD_AUTOCOMPLETE)
+  private Boolean bEzsigntemplateformfieldAutocomplete;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEFORMFIELD_SELECTED = "bEzsigntemplateformfieldSelected";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEFORMFIELD_SELECTED)
+  private Boolean bEzsigntemplateformfieldSelected;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_DEPENDENCYREQUIREMENT = "eEzsigntemplateformfieldDependencyrequirement";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_DEPENDENCYREQUIREMENT)
+  private FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEFORMFIELD_POSITIONINGPATTERN = "sEzsigntemplateformfieldPositioningpattern";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEFORMFIELD_POSITIONINGPATTERN)
+  private String sEzsigntemplateformfieldPositioningpattern;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_POSITIONINGOFFSETX = "iEzsigntemplateformfieldPositioningoffsetx";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_POSITIONINGOFFSETX)
+  private Integer iEzsigntemplateformfieldPositioningoffsetx;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_POSITIONINGOFFSETY = "iEzsigntemplateformfieldPositioningoffsety";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEFORMFIELD_POSITIONINGOFFSETY)
+  private Integer iEzsigntemplateformfieldPositioningoffsety;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_POSITIONINGOCCURENCE = "eEzsigntemplateformfieldPositioningoccurence";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_POSITIONINGOCCURENCE)
+  private FieldEEzsigntemplateformfieldPositioningoccurence eEzsigntemplateformfieldPositioningoccurence;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_HORIZONTALALIGNMENT = "eEzsigntemplateformfieldHorizontalalignment";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEFORMFIELD_HORIZONTALALIGNMENT)
+  private EnumHorizontalalignment eEzsigntemplateformfieldHorizontalalignment;
+
+  public static final String SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC = "objTextstylestatic";
+  @SerializedName(SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC)
+  private TextstylestaticResponseCompound objTextstylestatic;
+
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEELEMENTDEPENDENCY = "a_objEzsigntemplateelementdependency";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEELEMENTDEPENDENCY)
-  @javax.annotation.Nullable
   private List<EzsigntemplateelementdependencyResponseCompound> aObjEzsigntemplateelementdependency = new ArrayList<>();
 
   public EzsigntemplateformfieldResponseCompound() {
   }
 
-  public EzsigntemplateformfieldResponseCompound aObjEzsigntemplateelementdependency(@javax.annotation.Nullable List<EzsigntemplateelementdependencyResponseCompound> aObjEzsigntemplateelementdependency) {
+  public EzsigntemplateformfieldResponseCompound pkiEzsigntemplateformfieldID(Integer pkiEzsigntemplateformfieldID) {
+    this.pkiEzsigntemplateformfieldID = pkiEzsigntemplateformfieldID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplateformfield
+   * minimum: 0
+   * @return pkiEzsigntemplateformfieldID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiEzsigntemplateformfieldID() {
+    return pkiEzsigntemplateformfieldID;
+  }
+
+  public void setPkiEzsigntemplateformfieldID(Integer pkiEzsigntemplateformfieldID) {
+    this.pkiEzsigntemplateformfieldID = pkiEzsigntemplateformfieldID;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound eEzsigntemplateformfieldPositioning(FieldEEzsigntemplateformfieldPositioning eEzsigntemplateformfieldPositioning) {
+    this.eEzsigntemplateformfieldPositioning = eEzsigntemplateformfieldPositioning;
+    return this;
+  }
+
+  /**
+   * Get eEzsigntemplateformfieldPositioning
+   * @return eEzsigntemplateformfieldPositioning
+   */
+  @javax.annotation.Nullable
+  public FieldEEzsigntemplateformfieldPositioning geteEzsigntemplateformfieldPositioning() {
+    return eEzsigntemplateformfieldPositioning;
+  }
+
+  public void seteEzsigntemplateformfieldPositioning(FieldEEzsigntemplateformfieldPositioning eEzsigntemplateformfieldPositioning) {
+    this.eEzsigntemplateformfieldPositioning = eEzsigntemplateformfieldPositioning;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound iEzsigntemplatedocumentpagePagenumber(Integer iEzsigntemplatedocumentpagePagenumber) {
+    this.iEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
+    return this;
+  }
+
+  /**
+   * The page number in the Ezsigntemplatedocument
+   * minimum: 1
+   * @return iEzsigntemplatedocumentpagePagenumber
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigntemplatedocumentpagePagenumber() {
+    return iEzsigntemplatedocumentpagePagenumber;
+  }
+
+  public void setiEzsigntemplatedocumentpagePagenumber(Integer iEzsigntemplatedocumentpagePagenumber) {
+    this.iEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound sEzsigntemplateformfieldLabel(String sEzsigntemplateformfieldLabel) {
+    this.sEzsigntemplateformfieldLabel = sEzsigntemplateformfieldLabel;
+    return this;
+  }
+
+  /**
+   * The Label for the Ezsigntemplateformfield
+   * @return sEzsigntemplateformfieldLabel
+   */
+  @javax.annotation.Nonnull
+  public String getsEzsigntemplateformfieldLabel() {
+    return sEzsigntemplateformfieldLabel;
+  }
+
+  public void setsEzsigntemplateformfieldLabel(String sEzsigntemplateformfieldLabel) {
+    this.sEzsigntemplateformfieldLabel = sEzsigntemplateformfieldLabel;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound sEzsigntemplateformfieldValue(String sEzsigntemplateformfieldValue) {
+    this.sEzsigntemplateformfieldValue = sEzsigntemplateformfieldValue;
+    return this;
+  }
+
+  /**
+   * The value for the Ezsigntemplateformfield
+   * @return sEzsigntemplateformfieldValue
+   */
+  @javax.annotation.Nullable
+  public String getsEzsigntemplateformfieldValue() {
+    return sEzsigntemplateformfieldValue;
+  }
+
+  public void setsEzsigntemplateformfieldValue(String sEzsigntemplateformfieldValue) {
+    this.sEzsigntemplateformfieldValue = sEzsigntemplateformfieldValue;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound iEzsigntemplateformfieldX(Integer iEzsigntemplateformfieldX) {
+    this.iEzsigntemplateformfieldX = iEzsigntemplateformfieldX;
+    return this;
+  }
+
+  /**
+   * The X coordinate (Horizontal) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate.
+   * minimum: 0
+   * @return iEzsigntemplateformfieldX
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplateformfieldX() {
+    return iEzsigntemplateformfieldX;
+  }
+
+  public void setiEzsigntemplateformfieldX(Integer iEzsigntemplateformfieldX) {
+    this.iEzsigntemplateformfieldX = iEzsigntemplateformfieldX;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound iEzsigntemplateformfieldY(Integer iEzsigntemplateformfieldY) {
+    this.iEzsigntemplateformfieldY = iEzsigntemplateformfieldY;
+    return this;
+  }
+
+  /**
+   * The Y coordinate (Vertical) where to put the Ezsigntemplateformfield on the Ezsigntemplatepage.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsigntemplateformfield 3 inches from the top border of the page, you would use \&quot;300\&quot; for the Y coordinate.
+   * minimum: 0
+   * @return iEzsigntemplateformfieldY
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplateformfieldY() {
+    return iEzsigntemplateformfieldY;
+  }
+
+  public void setiEzsigntemplateformfieldY(Integer iEzsigntemplateformfieldY) {
+    this.iEzsigntemplateformfieldY = iEzsigntemplateformfieldY;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound iEzsigntemplateformfieldWidth(Integer iEzsigntemplateformfieldWidth) {
+    this.iEzsigntemplateformfieldWidth = iEzsigntemplateformfieldWidth;
+    return this;
+  }
+
+  /**
+   * The Width of the Ezsigntemplateformfield in pixels calculated at 100 DPI
+   * minimum: 0
+   * @return iEzsigntemplateformfieldWidth
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigntemplateformfieldWidth() {
+    return iEzsigntemplateformfieldWidth;
+  }
+
+  public void setiEzsigntemplateformfieldWidth(Integer iEzsigntemplateformfieldWidth) {
+    this.iEzsigntemplateformfieldWidth = iEzsigntemplateformfieldWidth;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound iEzsigntemplateformfieldHeight(Integer iEzsigntemplateformfieldHeight) {
+    this.iEzsigntemplateformfieldHeight = iEzsigntemplateformfieldHeight;
+    return this;
+  }
+
+  /**
+   * The Height of the Ezsigntemplateformfield in pixels calculated at 100 DPI 
+   * minimum: 0
+   * @return iEzsigntemplateformfieldHeight
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigntemplateformfieldHeight() {
+    return iEzsigntemplateformfieldHeight;
+  }
+
+  public void setiEzsigntemplateformfieldHeight(Integer iEzsigntemplateformfieldHeight) {
+    this.iEzsigntemplateformfieldHeight = iEzsigntemplateformfieldHeight;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound bEzsigntemplateformfieldAutocomplete(Boolean bEzsigntemplateformfieldAutocomplete) {
+    this.bEzsigntemplateformfieldAutocomplete = bEzsigntemplateformfieldAutocomplete;
+    return this;
+  }
+
+  /**
+   * Whether the Ezsigntemplateformfield allows the use of the autocomplete of the browser.  This can only be set if eEzsigntemplateformfieldgroupType is **Text**
+   * @return bEzsigntemplateformfieldAutocomplete
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsigntemplateformfieldAutocomplete() {
+    return bEzsigntemplateformfieldAutocomplete;
+  }
+
+  public void setbEzsigntemplateformfieldAutocomplete(Boolean bEzsigntemplateformfieldAutocomplete) {
+    this.bEzsigntemplateformfieldAutocomplete = bEzsigntemplateformfieldAutocomplete;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound bEzsigntemplateformfieldSelected(Boolean bEzsigntemplateformfieldSelected) {
+    this.bEzsigntemplateformfieldSelected = bEzsigntemplateformfieldSelected;
+    return this;
+  }
+
+  /**
+   * Whether the Ezsigntemplateformfield is selected or not by default.  This can only be set if eEzsigntemplateformfieldgroupType is **Checkbox** or **Radio**
+   * @return bEzsigntemplateformfieldSelected
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsigntemplateformfieldSelected() {
+    return bEzsigntemplateformfieldSelected;
+  }
+
+  public void setbEzsigntemplateformfieldSelected(Boolean bEzsigntemplateformfieldSelected) {
+    this.bEzsigntemplateformfieldSelected = bEzsigntemplateformfieldSelected;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound eEzsigntemplateformfieldDependencyrequirement(FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement) {
+    this.eEzsigntemplateformfieldDependencyrequirement = eEzsigntemplateformfieldDependencyrequirement;
+    return this;
+  }
+
+  /**
+   * Get eEzsigntemplateformfieldDependencyrequirement
+   * @return eEzsigntemplateformfieldDependencyrequirement
+   */
+  @javax.annotation.Nullable
+  public FieldEEzsigntemplateformfieldDependencyrequirement geteEzsigntemplateformfieldDependencyrequirement() {
+    return eEzsigntemplateformfieldDependencyrequirement;
+  }
+
+  public void seteEzsigntemplateformfieldDependencyrequirement(FieldEEzsigntemplateformfieldDependencyrequirement eEzsigntemplateformfieldDependencyrequirement) {
+    this.eEzsigntemplateformfieldDependencyrequirement = eEzsigntemplateformfieldDependencyrequirement;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound sEzsigntemplateformfieldPositioningpattern(String sEzsigntemplateformfieldPositioningpattern) {
+    this.sEzsigntemplateformfieldPositioningpattern = sEzsigntemplateformfieldPositioningpattern;
+    return this;
+  }
+
+  /**
+   * The string pattern to search for the positioning. **This is not a regexp**  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+   * @return sEzsigntemplateformfieldPositioningpattern
+   */
+  @javax.annotation.Nullable
+  public String getsEzsigntemplateformfieldPositioningpattern() {
+    return sEzsigntemplateformfieldPositioningpattern;
+  }
+
+  public void setsEzsigntemplateformfieldPositioningpattern(String sEzsigntemplateformfieldPositioningpattern) {
+    this.sEzsigntemplateformfieldPositioningpattern = sEzsigntemplateformfieldPositioningpattern;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound iEzsigntemplateformfieldPositioningoffsetx(Integer iEzsigntemplateformfieldPositioningoffsetx) {
+    this.iEzsigntemplateformfieldPositioningoffsetx = iEzsigntemplateformfieldPositioningoffsetx;
+    return this;
+  }
+
+  /**
+   * The offset X  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+   * @return iEzsigntemplateformfieldPositioningoffsetx
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplateformfieldPositioningoffsetx() {
+    return iEzsigntemplateformfieldPositioningoffsetx;
+  }
+
+  public void setiEzsigntemplateformfieldPositioningoffsetx(Integer iEzsigntemplateformfieldPositioningoffsetx) {
+    this.iEzsigntemplateformfieldPositioningoffsetx = iEzsigntemplateformfieldPositioningoffsetx;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound iEzsigntemplateformfieldPositioningoffsety(Integer iEzsigntemplateformfieldPositioningoffsety) {
+    this.iEzsigntemplateformfieldPositioningoffsety = iEzsigntemplateformfieldPositioningoffsety;
+    return this;
+  }
+
+  /**
+   * The offset Y  This will be required if **eEzsigntemplateformfieldPositioning** is set to **PerCoordinates**
+   * @return iEzsigntemplateformfieldPositioningoffsety
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplateformfieldPositioningoffsety() {
+    return iEzsigntemplateformfieldPositioningoffsety;
+  }
+
+  public void setiEzsigntemplateformfieldPositioningoffsety(Integer iEzsigntemplateformfieldPositioningoffsety) {
+    this.iEzsigntemplateformfieldPositioningoffsety = iEzsigntemplateformfieldPositioningoffsety;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound eEzsigntemplateformfieldPositioningoccurence(FieldEEzsigntemplateformfieldPositioningoccurence eEzsigntemplateformfieldPositioningoccurence) {
+    this.eEzsigntemplateformfieldPositioningoccurence = eEzsigntemplateformfieldPositioningoccurence;
+    return this;
+  }
+
+  /**
+   * Get eEzsigntemplateformfieldPositioningoccurence
+   * @return eEzsigntemplateformfieldPositioningoccurence
+   */
+  @javax.annotation.Nullable
+  public FieldEEzsigntemplateformfieldPositioningoccurence geteEzsigntemplateformfieldPositioningoccurence() {
+    return eEzsigntemplateformfieldPositioningoccurence;
+  }
+
+  public void seteEzsigntemplateformfieldPositioningoccurence(FieldEEzsigntemplateformfieldPositioningoccurence eEzsigntemplateformfieldPositioningoccurence) {
+    this.eEzsigntemplateformfieldPositioningoccurence = eEzsigntemplateformfieldPositioningoccurence;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound eEzsigntemplateformfieldHorizontalalignment(EnumHorizontalalignment eEzsigntemplateformfieldHorizontalalignment) {
+    this.eEzsigntemplateformfieldHorizontalalignment = eEzsigntemplateformfieldHorizontalalignment;
+    return this;
+  }
+
+  /**
+   * Get eEzsigntemplateformfieldHorizontalalignment
+   * @return eEzsigntemplateformfieldHorizontalalignment
+   */
+  @javax.annotation.Nullable
+  public EnumHorizontalalignment geteEzsigntemplateformfieldHorizontalalignment() {
+    return eEzsigntemplateformfieldHorizontalalignment;
+  }
+
+  public void seteEzsigntemplateformfieldHorizontalalignment(EnumHorizontalalignment eEzsigntemplateformfieldHorizontalalignment) {
+    this.eEzsigntemplateformfieldHorizontalalignment = eEzsigntemplateformfieldHorizontalalignment;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound objTextstylestatic(TextstylestaticResponseCompound objTextstylestatic) {
+    this.objTextstylestatic = objTextstylestatic;
+    return this;
+  }
+
+  /**
+   * Get objTextstylestatic
+   * @return objTextstylestatic
+   */
+  @javax.annotation.Nullable
+  public TextstylestaticResponseCompound getObjTextstylestatic() {
+    return objTextstylestatic;
+  }
+
+  public void setObjTextstylestatic(TextstylestaticResponseCompound objTextstylestatic) {
+    this.objTextstylestatic = objTextstylestatic;
+  }
+
+
+  public EzsigntemplateformfieldResponseCompound aObjEzsigntemplateelementdependency(List<EzsigntemplateelementdependencyResponseCompound> aObjEzsigntemplateelementdependency) {
     this.aObjEzsigntemplateelementdependency = aObjEzsigntemplateelementdependency;
     return this;
   }
 
-  public EzsigntemplateformfieldResponseCompound addAObjEzsigntemplateelementdependencyItem(EzsigntemplateelementdependencyResponse aObjEzsigntemplateelementdependencyItem) {
+  public EzsigntemplateformfieldResponseCompound addAObjEzsigntemplateelementdependencyItem(EzsigntemplateelementdependencyResponseCompound aObjEzsigntemplateelementdependencyItem) {
     if (this.aObjEzsigntemplateelementdependency == null) {
       this.aObjEzsigntemplateelementdependency = new ArrayList<>();
     }
@@ -89,7 +507,7 @@ public class EzsigntemplateformfieldResponseCompound extends Ezsigntemplateformf
     return aObjEzsigntemplateelementdependency;
   }
 
-  public void setaObjEzsigntemplateelementdependency(@javax.annotation.Nullable List<EzsigntemplateelementdependencyResponseCompound> aObjEzsigntemplateelementdependency) {
+  public void setaObjEzsigntemplateelementdependency(List<EzsigntemplateelementdependencyResponseCompound> aObjEzsigntemplateelementdependency) {
     this.aObjEzsigntemplateelementdependency = aObjEzsigntemplateelementdependency;
   }
 
@@ -104,20 +522,54 @@ public class EzsigntemplateformfieldResponseCompound extends Ezsigntemplateformf
       return false;
     }
     EzsigntemplateformfieldResponseCompound ezsigntemplateformfieldResponseCompound = (EzsigntemplateformfieldResponseCompound) o;
-    return Objects.equals(this.aObjEzsigntemplateelementdependency, ezsigntemplateformfieldResponseCompound.aObjEzsigntemplateelementdependency) &&
-        super.equals(o);
+    return Objects.equals(this.pkiEzsigntemplateformfieldID, ezsigntemplateformfieldResponseCompound.pkiEzsigntemplateformfieldID) &&
+        Objects.equals(this.eEzsigntemplateformfieldPositioning, ezsigntemplateformfieldResponseCompound.eEzsigntemplateformfieldPositioning) &&
+        Objects.equals(this.iEzsigntemplatedocumentpagePagenumber, ezsigntemplateformfieldResponseCompound.iEzsigntemplatedocumentpagePagenumber) &&
+        Objects.equals(this.sEzsigntemplateformfieldLabel, ezsigntemplateformfieldResponseCompound.sEzsigntemplateformfieldLabel) &&
+        Objects.equals(this.sEzsigntemplateformfieldValue, ezsigntemplateformfieldResponseCompound.sEzsigntemplateformfieldValue) &&
+        Objects.equals(this.iEzsigntemplateformfieldX, ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldX) &&
+        Objects.equals(this.iEzsigntemplateformfieldY, ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldY) &&
+        Objects.equals(this.iEzsigntemplateformfieldWidth, ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldWidth) &&
+        Objects.equals(this.iEzsigntemplateformfieldHeight, ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldHeight) &&
+        Objects.equals(this.bEzsigntemplateformfieldAutocomplete, ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldAutocomplete) &&
+        Objects.equals(this.bEzsigntemplateformfieldSelected, ezsigntemplateformfieldResponseCompound.bEzsigntemplateformfieldSelected) &&
+        Objects.equals(this.eEzsigntemplateformfieldDependencyrequirement, ezsigntemplateformfieldResponseCompound.eEzsigntemplateformfieldDependencyrequirement) &&
+        Objects.equals(this.sEzsigntemplateformfieldPositioningpattern, ezsigntemplateformfieldResponseCompound.sEzsigntemplateformfieldPositioningpattern) &&
+        Objects.equals(this.iEzsigntemplateformfieldPositioningoffsetx, ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldPositioningoffsetx) &&
+        Objects.equals(this.iEzsigntemplateformfieldPositioningoffsety, ezsigntemplateformfieldResponseCompound.iEzsigntemplateformfieldPositioningoffsety) &&
+        Objects.equals(this.eEzsigntemplateformfieldPositioningoccurence, ezsigntemplateformfieldResponseCompound.eEzsigntemplateformfieldPositioningoccurence) &&
+        Objects.equals(this.eEzsigntemplateformfieldHorizontalalignment, ezsigntemplateformfieldResponseCompound.eEzsigntemplateformfieldHorizontalalignment) &&
+        Objects.equals(this.objTextstylestatic, ezsigntemplateformfieldResponseCompound.objTextstylestatic) &&
+        Objects.equals(this.aObjEzsigntemplateelementdependency, ezsigntemplateformfieldResponseCompound.aObjEzsigntemplateelementdependency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzsigntemplateelementdependency, super.hashCode());
+    return Objects.hash(pkiEzsigntemplateformfieldID, eEzsigntemplateformfieldPositioning, iEzsigntemplatedocumentpagePagenumber, sEzsigntemplateformfieldLabel, sEzsigntemplateformfieldValue, iEzsigntemplateformfieldX, iEzsigntemplateformfieldY, iEzsigntemplateformfieldWidth, iEzsigntemplateformfieldHeight, bEzsigntemplateformfieldAutocomplete, bEzsigntemplateformfieldSelected, eEzsigntemplateformfieldDependencyrequirement, sEzsigntemplateformfieldPositioningpattern, iEzsigntemplateformfieldPositioningoffsetx, iEzsigntemplateformfieldPositioningoffsety, eEzsigntemplateformfieldPositioningoccurence, eEzsigntemplateformfieldHorizontalalignment, objTextstylestatic, aObjEzsigntemplateelementdependency);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplateformfieldResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsigntemplateformfieldID: ").append(toIndentedString(pkiEzsigntemplateformfieldID)).append("\n");
+    sb.append("    eEzsigntemplateformfieldPositioning: ").append(toIndentedString(eEzsigntemplateformfieldPositioning)).append("\n");
+    sb.append("    iEzsigntemplatedocumentpagePagenumber: ").append(toIndentedString(iEzsigntemplatedocumentpagePagenumber)).append("\n");
+    sb.append("    sEzsigntemplateformfieldLabel: ").append(toIndentedString(sEzsigntemplateformfieldLabel)).append("\n");
+    sb.append("    sEzsigntemplateformfieldValue: ").append(toIndentedString(sEzsigntemplateformfieldValue)).append("\n");
+    sb.append("    iEzsigntemplateformfieldX: ").append(toIndentedString(iEzsigntemplateformfieldX)).append("\n");
+    sb.append("    iEzsigntemplateformfieldY: ").append(toIndentedString(iEzsigntemplateformfieldY)).append("\n");
+    sb.append("    iEzsigntemplateformfieldWidth: ").append(toIndentedString(iEzsigntemplateformfieldWidth)).append("\n");
+    sb.append("    iEzsigntemplateformfieldHeight: ").append(toIndentedString(iEzsigntemplateformfieldHeight)).append("\n");
+    sb.append("    bEzsigntemplateformfieldAutocomplete: ").append(toIndentedString(bEzsigntemplateformfieldAutocomplete)).append("\n");
+    sb.append("    bEzsigntemplateformfieldSelected: ").append(toIndentedString(bEzsigntemplateformfieldSelected)).append("\n");
+    sb.append("    eEzsigntemplateformfieldDependencyrequirement: ").append(toIndentedString(eEzsigntemplateformfieldDependencyrequirement)).append("\n");
+    sb.append("    sEzsigntemplateformfieldPositioningpattern: ").append(toIndentedString(sEzsigntemplateformfieldPositioningpattern)).append("\n");
+    sb.append("    iEzsigntemplateformfieldPositioningoffsetx: ").append(toIndentedString(iEzsigntemplateformfieldPositioningoffsetx)).append("\n");
+    sb.append("    iEzsigntemplateformfieldPositioningoffsety: ").append(toIndentedString(iEzsigntemplateformfieldPositioningoffsety)).append("\n");
+    sb.append("    eEzsigntemplateformfieldPositioningoccurence: ").append(toIndentedString(eEzsigntemplateformfieldPositioningoccurence)).append("\n");
+    sb.append("    eEzsigntemplateformfieldHorizontalalignment: ").append(toIndentedString(eEzsigntemplateformfieldHorizontalalignment)).append("\n");
+    sb.append("    objTextstylestatic: ").append(toIndentedString(objTextstylestatic)).append("\n");
     sb.append("    aObjEzsigntemplateelementdependency: ").append(toIndentedString(aObjEzsigntemplateelementdependency)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -198,6 +650,35 @@ public class EzsigntemplateformfieldResponseCompound extends Ezsigntemplateformf
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `eEzsigntemplateformfieldPositioning`
+      if (jsonObj.get("eEzsigntemplateformfieldPositioning") != null && !jsonObj.get("eEzsigntemplateformfieldPositioning").isJsonNull()) {
+        FieldEEzsigntemplateformfieldPositioning.validateJsonElement(jsonObj.get("eEzsigntemplateformfieldPositioning"));
+      }
+      if (!jsonObj.get("sEzsigntemplateformfieldLabel").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateformfieldLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateformfieldLabel").toString()));
+      }
+      if ((jsonObj.get("sEzsigntemplateformfieldValue") != null && !jsonObj.get("sEzsigntemplateformfieldValue").isJsonNull()) && !jsonObj.get("sEzsigntemplateformfieldValue").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateformfieldValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateformfieldValue").toString()));
+      }
+      // validate the optional field `eEzsigntemplateformfieldDependencyrequirement`
+      if (jsonObj.get("eEzsigntemplateformfieldDependencyrequirement") != null && !jsonObj.get("eEzsigntemplateformfieldDependencyrequirement").isJsonNull()) {
+        FieldEEzsigntemplateformfieldDependencyrequirement.validateJsonElement(jsonObj.get("eEzsigntemplateformfieldDependencyrequirement"));
+      }
+      if ((jsonObj.get("sEzsigntemplateformfieldPositioningpattern") != null && !jsonObj.get("sEzsigntemplateformfieldPositioningpattern").isJsonNull()) && !jsonObj.get("sEzsigntemplateformfieldPositioningpattern").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateformfieldPositioningpattern` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateformfieldPositioningpattern").toString()));
+      }
+      // validate the optional field `eEzsigntemplateformfieldPositioningoccurence`
+      if (jsonObj.get("eEzsigntemplateformfieldPositioningoccurence") != null && !jsonObj.get("eEzsigntemplateformfieldPositioningoccurence").isJsonNull()) {
+        FieldEEzsigntemplateformfieldPositioningoccurence.validateJsonElement(jsonObj.get("eEzsigntemplateformfieldPositioningoccurence"));
+      }
+      // validate the optional field `eEzsigntemplateformfieldHorizontalalignment`
+      if (jsonObj.get("eEzsigntemplateformfieldHorizontalalignment") != null && !jsonObj.get("eEzsigntemplateformfieldHorizontalalignment").isJsonNull()) {
+        EnumHorizontalalignment.validateJsonElement(jsonObj.get("eEzsigntemplateformfieldHorizontalalignment"));
+      }
+      // validate the optional field `objTextstylestatic`
+      if (jsonObj.get("objTextstylestatic") != null && !jsonObj.get("objTextstylestatic").isJsonNull()) {
+        TextstylestaticResponseCompound.validateJsonElement(jsonObj.get("objTextstylestatic"));
+      }
       if (jsonObj.get("a_objEzsigntemplateelementdependency") != null && !jsonObj.get("a_objEzsigntemplateelementdependency").isJsonNull()) {
         JsonArray jsonArrayaObjEzsigntemplateelementdependency = jsonObj.getAsJsonArray("a_objEzsigntemplateelementdependency");
         if (jsonArrayaObjEzsigntemplateelementdependency != null) {
@@ -208,7 +689,7 @@ public class EzsigntemplateformfieldResponseCompound extends Ezsigntemplateformf
 
           // validate the optional field `a_objEzsigntemplateelementdependency` (array)
           for (int i = 0; i < jsonArrayaObjEzsigntemplateelementdependency.size(); i++) {
-            EzsigntemplateelementdependencyResponse.validateJsonElement(jsonArrayaObjEzsigntemplateelementdependency.get(i));
+            EzsigntemplateelementdependencyResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplateelementdependency.get(i));
           };
         }
       }

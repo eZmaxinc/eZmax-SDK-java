@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Country AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CountryAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_COUNTRY_I_D = "pkiCountryID";
   @SerializedName(SERIALIZED_NAME_PKI_COUNTRY_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiCountryID;
 
   public static final String SERIALIZED_NAME_S_COUNTRY_NAME_X = "sCountryNameX";
   @SerializedName(SERIALIZED_NAME_S_COUNTRY_NAME_X)
-  @javax.annotation.Nonnull
   private String sCountryNameX;
 
   public static final String SERIALIZED_NAME_S_COUNTRY_SHORTNAME = "sCountryShortname";
   @SerializedName(SERIALIZED_NAME_S_COUNTRY_SHORTNAME)
-  @javax.annotation.Nonnull
   private String sCountryShortname;
 
   public static final String SERIALIZED_NAME_B_COUNTRY_ISACTIVE = "bCountryIsactive";
   @SerializedName(SERIALIZED_NAME_B_COUNTRY_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bCountryIsactive;
 
   public CountryAutocompleteElementResponse() {
   }
 
-  public CountryAutocompleteElementResponse pkiCountryID(@javax.annotation.Nonnull Integer pkiCountryID) {
+  public CountryAutocompleteElementResponse pkiCountryID(Integer pkiCountryID) {
     this.pkiCountryID = pkiCountryID;
     return this;
   }
@@ -88,12 +84,12 @@ public class CountryAutocompleteElementResponse {
     return pkiCountryID;
   }
 
-  public void setPkiCountryID(@javax.annotation.Nonnull Integer pkiCountryID) {
+  public void setPkiCountryID(Integer pkiCountryID) {
     this.pkiCountryID = pkiCountryID;
   }
 
 
-  public CountryAutocompleteElementResponse sCountryNameX(@javax.annotation.Nonnull String sCountryNameX) {
+  public CountryAutocompleteElementResponse sCountryNameX(String sCountryNameX) {
     this.sCountryNameX = sCountryNameX;
     return this;
   }
@@ -107,12 +103,12 @@ public class CountryAutocompleteElementResponse {
     return sCountryNameX;
   }
 
-  public void setsCountryNameX(@javax.annotation.Nonnull String sCountryNameX) {
+  public void setsCountryNameX(String sCountryNameX) {
     this.sCountryNameX = sCountryNameX;
   }
 
 
-  public CountryAutocompleteElementResponse sCountryShortname(@javax.annotation.Nonnull String sCountryShortname) {
+  public CountryAutocompleteElementResponse sCountryShortname(String sCountryShortname) {
     this.sCountryShortname = sCountryShortname;
     return this;
   }
@@ -126,12 +122,12 @@ public class CountryAutocompleteElementResponse {
     return sCountryShortname;
   }
 
-  public void setsCountryShortname(@javax.annotation.Nonnull String sCountryShortname) {
+  public void setsCountryShortname(String sCountryShortname) {
     this.sCountryShortname = sCountryShortname;
   }
 
 
-  public CountryAutocompleteElementResponse bCountryIsactive(@javax.annotation.Nonnull Boolean bCountryIsactive) {
+  public CountryAutocompleteElementResponse bCountryIsactive(Boolean bCountryIsactive) {
     this.bCountryIsactive = bCountryIsactive;
     return this;
   }
@@ -145,7 +141,7 @@ public class CountryAutocompleteElementResponse {
     return bCountryIsactive;
   }
 
-  public void setbCountryIsactive(@javax.annotation.Nonnull Boolean bCountryIsactive) {
+  public void setbCountryIsactive(Boolean bCountryIsactive) {
     this.bCountryIsactive = bCountryIsactive;
   }
 

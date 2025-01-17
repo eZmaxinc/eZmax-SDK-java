@@ -14,8 +14,8 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsignpageConsultV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -41,7 +41,7 @@ public class ObjectEzsignpageApiTest {
     public void ezsignpageConsultV1Test() throws ApiException {
         Integer pkiEzsignpageID = null;
         Object body = null;
-        CommonResponse response = api.ezsignpageConsultV1(pkiEzsignpageID, body);
+        EzsignpageConsultV1Response response = api.ezsignpageConsultV1(pkiEzsignpageID, body);
         // TODO: test validations
     }
 

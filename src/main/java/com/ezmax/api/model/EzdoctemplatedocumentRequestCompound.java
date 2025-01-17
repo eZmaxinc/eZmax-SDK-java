@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzdoctemplatedocumentRequest;
 import com.ezmax.api.model.FieldEEzdoctemplatedocumentPrivacylevel;
 import com.ezmax.api.model.MultilingualEzdoctemplatedocumentName;
 import com.google.gson.TypeAdapter;
@@ -51,10 +50,204 @@ import eZmaxAPI.JSON;
 /**
  * A Ezdoctemplatedocument Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzdoctemplatedocumentRequestCompound extends EzdoctemplatedocumentRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzdoctemplatedocumentRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D = "pkiEzdoctemplatedocumentID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D)
+  private Integer pkiEzdoctemplatedocumentID;
+
+  public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
+  @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  private Integer fkiLanguageID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
+  private Integer fkiEzsignfoldertypeID;
+
+  public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATETYPE_I_D = "fkiEzdoctemplatetypeID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATETYPE_I_D)
+  private Integer fkiEzdoctemplatetypeID;
+
+  public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATEFIELDTYPECATEGORY_I_D = "fkiEzdoctemplatefieldtypecategoryID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATEFIELDTYPECATEGORY_I_D)
+  private Integer fkiEzdoctemplatefieldtypecategoryID;
+
+  public static final String SERIALIZED_NAME_E_EZDOCTEMPLATEDOCUMENT_PRIVACYLEVEL = "eEzdoctemplatedocumentPrivacylevel";
+  @SerializedName(SERIALIZED_NAME_E_EZDOCTEMPLATEDOCUMENT_PRIVACYLEVEL)
+  private FieldEEzdoctemplatedocumentPrivacylevel eEzdoctemplatedocumentPrivacylevel;
+
+  public static final String SERIALIZED_NAME_B_EZDOCTEMPLATEDOCUMENT_ISACTIVE = "bEzdoctemplatedocumentIsactive";
+  @SerializedName(SERIALIZED_NAME_B_EZDOCTEMPLATEDOCUMENT_ISACTIVE)
+  private Boolean bEzdoctemplatedocumentIsactive;
+
+  public static final String SERIALIZED_NAME_OBJ_EZDOCTEMPLATEDOCUMENT_NAME = "objEzdoctemplatedocumentName";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZDOCTEMPLATEDOCUMENT_NAME)
+  private MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName;
+
   public EzdoctemplatedocumentRequestCompound() {
   }
+
+  public EzdoctemplatedocumentRequestCompound pkiEzdoctemplatedocumentID(Integer pkiEzdoctemplatedocumentID) {
+    this.pkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezdoctemplatedocument
+   * minimum: 0
+   * maximum: 65535
+   * @return pkiEzdoctemplatedocumentID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiEzdoctemplatedocumentID() {
+    return pkiEzdoctemplatedocumentID;
+  }
+
+  public void setPkiEzdoctemplatedocumentID(Integer pkiEzdoctemplatedocumentID) {
+    this.pkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
+  }
+
+
+  public EzdoctemplatedocumentRequestCompound fkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+   * minimum: 1
+   * maximum: 2
+   * @return fkiLanguageID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiLanguageID() {
+    return fkiLanguageID;
+  }
+
+  public void setFkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
+  }
+
+
+  public EzdoctemplatedocumentRequestCompound fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+    this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignfoldertype.
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiEzsignfoldertypeID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsignfoldertypeID() {
+    return fkiEzsignfoldertypeID;
+  }
+
+  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+    this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+  }
+
+
+  public EzdoctemplatedocumentRequestCompound fkiEzdoctemplatetypeID(Integer fkiEzdoctemplatetypeID) {
+    this.fkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezdoctemplatetype
+   * minimum: 0
+   * maximum: 255
+   * @return fkiEzdoctemplatetypeID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzdoctemplatetypeID() {
+    return fkiEzdoctemplatetypeID;
+  }
+
+  public void setFkiEzdoctemplatetypeID(Integer fkiEzdoctemplatetypeID) {
+    this.fkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
+  }
+
+
+  public EzdoctemplatedocumentRequestCompound fkiEzdoctemplatefieldtypecategoryID(Integer fkiEzdoctemplatefieldtypecategoryID) {
+    this.fkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezdoctemplatefieldtypecategory
+   * minimum: 0
+   * maximum: 255
+   * @return fkiEzdoctemplatefieldtypecategoryID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzdoctemplatefieldtypecategoryID() {
+    return fkiEzdoctemplatefieldtypecategoryID;
+  }
+
+  public void setFkiEzdoctemplatefieldtypecategoryID(Integer fkiEzdoctemplatefieldtypecategoryID) {
+    this.fkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
+  }
+
+
+  public EzdoctemplatedocumentRequestCompound eEzdoctemplatedocumentPrivacylevel(FieldEEzdoctemplatedocumentPrivacylevel eEzdoctemplatedocumentPrivacylevel) {
+    this.eEzdoctemplatedocumentPrivacylevel = eEzdoctemplatedocumentPrivacylevel;
+    return this;
+  }
+
+  /**
+   * Get eEzdoctemplatedocumentPrivacylevel
+   * @return eEzdoctemplatedocumentPrivacylevel
+   */
+  @javax.annotation.Nullable
+  public FieldEEzdoctemplatedocumentPrivacylevel geteEzdoctemplatedocumentPrivacylevel() {
+    return eEzdoctemplatedocumentPrivacylevel;
+  }
+
+  public void seteEzdoctemplatedocumentPrivacylevel(FieldEEzdoctemplatedocumentPrivacylevel eEzdoctemplatedocumentPrivacylevel) {
+    this.eEzdoctemplatedocumentPrivacylevel = eEzdoctemplatedocumentPrivacylevel;
+  }
+
+
+  public EzdoctemplatedocumentRequestCompound bEzdoctemplatedocumentIsactive(Boolean bEzdoctemplatedocumentIsactive) {
+    this.bEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
+    return this;
+  }
+
+  /**
+   * Whether the ezdoctemplatedocument is active or not
+   * @return bEzdoctemplatedocumentIsactive
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbEzdoctemplatedocumentIsactive() {
+    return bEzdoctemplatedocumentIsactive;
+  }
+
+  public void setbEzdoctemplatedocumentIsactive(Boolean bEzdoctemplatedocumentIsactive) {
+    this.bEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
+  }
+
+
+  public EzdoctemplatedocumentRequestCompound objEzdoctemplatedocumentName(MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName) {
+    this.objEzdoctemplatedocumentName = objEzdoctemplatedocumentName;
+    return this;
+  }
+
+  /**
+   * Get objEzdoctemplatedocumentName
+   * @return objEzdoctemplatedocumentName
+   */
+  @javax.annotation.Nonnull
+  public MultilingualEzdoctemplatedocumentName getObjEzdoctemplatedocumentName() {
+    return objEzdoctemplatedocumentName;
+  }
+
+  public void setObjEzdoctemplatedocumentName(MultilingualEzdoctemplatedocumentName objEzdoctemplatedocumentName) {
+    this.objEzdoctemplatedocumentName = objEzdoctemplatedocumentName;
+  }
+
 
 
   @Override
@@ -65,19 +258,34 @@ public class EzdoctemplatedocumentRequestCompound extends EzdoctemplatedocumentR
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    EzdoctemplatedocumentRequestCompound ezdoctemplatedocumentRequestCompound = (EzdoctemplatedocumentRequestCompound) o;
+    return Objects.equals(this.pkiEzdoctemplatedocumentID, ezdoctemplatedocumentRequestCompound.pkiEzdoctemplatedocumentID) &&
+        Objects.equals(this.fkiLanguageID, ezdoctemplatedocumentRequestCompound.fkiLanguageID) &&
+        Objects.equals(this.fkiEzsignfoldertypeID, ezdoctemplatedocumentRequestCompound.fkiEzsignfoldertypeID) &&
+        Objects.equals(this.fkiEzdoctemplatetypeID, ezdoctemplatedocumentRequestCompound.fkiEzdoctemplatetypeID) &&
+        Objects.equals(this.fkiEzdoctemplatefieldtypecategoryID, ezdoctemplatedocumentRequestCompound.fkiEzdoctemplatefieldtypecategoryID) &&
+        Objects.equals(this.eEzdoctemplatedocumentPrivacylevel, ezdoctemplatedocumentRequestCompound.eEzdoctemplatedocumentPrivacylevel) &&
+        Objects.equals(this.bEzdoctemplatedocumentIsactive, ezdoctemplatedocumentRequestCompound.bEzdoctemplatedocumentIsactive) &&
+        Objects.equals(this.objEzdoctemplatedocumentName, ezdoctemplatedocumentRequestCompound.objEzdoctemplatedocumentName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiEzdoctemplatedocumentID, fkiLanguageID, fkiEzsignfoldertypeID, fkiEzdoctemplatetypeID, fkiEzdoctemplatefieldtypecategoryID, eEzdoctemplatedocumentPrivacylevel, bEzdoctemplatedocumentIsactive, objEzdoctemplatedocumentName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzdoctemplatedocumentRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzdoctemplatedocumentID: ").append(toIndentedString(pkiEzdoctemplatedocumentID)).append("\n");
+    sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
+    sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
+    sb.append("    fkiEzdoctemplatetypeID: ").append(toIndentedString(fkiEzdoctemplatetypeID)).append("\n");
+    sb.append("    fkiEzdoctemplatefieldtypecategoryID: ").append(toIndentedString(fkiEzdoctemplatefieldtypecategoryID)).append("\n");
+    sb.append("    eEzdoctemplatedocumentPrivacylevel: ").append(toIndentedString(eEzdoctemplatedocumentPrivacylevel)).append("\n");
+    sb.append("    bEzdoctemplatedocumentIsactive: ").append(toIndentedString(bEzdoctemplatedocumentIsactive)).append("\n");
+    sb.append("    objEzdoctemplatedocumentName: ").append(toIndentedString(objEzdoctemplatedocumentName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -145,6 +353,13 @@ public class EzdoctemplatedocumentRequestCompound extends EzdoctemplatedocumentR
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `eEzdoctemplatedocumentPrivacylevel`
+      if (jsonObj.get("eEzdoctemplatedocumentPrivacylevel") != null && !jsonObj.get("eEzdoctemplatedocumentPrivacylevel").isJsonNull()) {
+        FieldEEzdoctemplatedocumentPrivacylevel.validateJsonElement(jsonObj.get("eEzdoctemplatedocumentPrivacylevel"));
+      }
+      // validate the required field `objEzdoctemplatedocumentName`
+      MultilingualEzdoctemplatedocumentName.validateJsonElement(jsonObj.get("objEzdoctemplatedocumentName"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

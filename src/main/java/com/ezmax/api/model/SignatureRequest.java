@@ -49,37 +49,32 @@ import eZmaxAPI.JSON;
 /**
  * A Signature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SignatureRequest {
   public static final String SERIALIZED_NAME_PKI_SIGNATURE_I_D = "pkiSignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_SIGNATURE_I_D)
-  @javax.annotation.Nullable
   private Integer pkiSignatureID;
 
   public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
   @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFontID;
 
   public static final String SERIALIZED_NAME_E_SIGNATURE_PREFERENCE = "eSignaturePreference";
   @SerializedName(SERIALIZED_NAME_E_SIGNATURE_PREFERENCE)
-  @javax.annotation.Nonnull
   private FieldESignaturePreference eSignaturePreference;
 
   public static final String SERIALIZED_NAME_T_SIGNATURE_SVG = "tSignatureSvg";
   @SerializedName(SERIALIZED_NAME_T_SIGNATURE_SVG)
-  @javax.annotation.Nullable
   private String tSignatureSvg;
 
   public static final String SERIALIZED_NAME_T_SIGNATURE_SVGINITIALS = "tSignatureSvginitials";
   @SerializedName(SERIALIZED_NAME_T_SIGNATURE_SVGINITIALS)
-  @javax.annotation.Nullable
   private String tSignatureSvginitials;
 
   public SignatureRequest() {
   }
 
-  public SignatureRequest pkiSignatureID(@javax.annotation.Nullable Integer pkiSignatureID) {
+  public SignatureRequest pkiSignatureID(Integer pkiSignatureID) {
     this.pkiSignatureID = pkiSignatureID;
     return this;
   }
@@ -95,12 +90,12 @@ public class SignatureRequest {
     return pkiSignatureID;
   }
 
-  public void setPkiSignatureID(@javax.annotation.Nullable Integer pkiSignatureID) {
+  public void setPkiSignatureID(Integer pkiSignatureID) {
     this.pkiSignatureID = pkiSignatureID;
   }
 
 
-  public SignatureRequest fkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
+  public SignatureRequest fkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
     return this;
   }
@@ -115,12 +110,12 @@ public class SignatureRequest {
     return fkiFontID;
   }
 
-  public void setFkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
+  public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
   }
 
 
-  public SignatureRequest eSignaturePreference(@javax.annotation.Nonnull FieldESignaturePreference eSignaturePreference) {
+  public SignatureRequest eSignaturePreference(FieldESignaturePreference eSignaturePreference) {
     this.eSignaturePreference = eSignaturePreference;
     return this;
   }
@@ -134,12 +129,12 @@ public class SignatureRequest {
     return eSignaturePreference;
   }
 
-  public void seteSignaturePreference(@javax.annotation.Nonnull FieldESignaturePreference eSignaturePreference) {
+  public void seteSignaturePreference(FieldESignaturePreference eSignaturePreference) {
     this.eSignaturePreference = eSignaturePreference;
   }
 
 
-  public SignatureRequest tSignatureSvg(@javax.annotation.Nullable String tSignatureSvg) {
+  public SignatureRequest tSignatureSvg(String tSignatureSvg) {
     this.tSignatureSvg = tSignatureSvg;
     return this;
   }
@@ -153,12 +148,12 @@ public class SignatureRequest {
     return tSignatureSvg;
   }
 
-  public void settSignatureSvg(@javax.annotation.Nullable String tSignatureSvg) {
+  public void settSignatureSvg(String tSignatureSvg) {
     this.tSignatureSvg = tSignatureSvg;
   }
 
 
-  public SignatureRequest tSignatureSvginitials(@javax.annotation.Nullable String tSignatureSvginitials) {
+  public SignatureRequest tSignatureSvginitials(String tSignatureSvginitials) {
     this.tSignatureSvginitials = tSignatureSvginitials;
     return this;
   }
@@ -172,7 +167,7 @@ public class SignatureRequest {
     return tSignatureSvginitials;
   }
 
-  public void settSignatureSvginitials(@javax.annotation.Nullable String tSignatureSvginitials) {
+  public void settSignatureSvginitials(String tSignatureSvginitials) {
     this.tSignatureSvginitials = tSignatureSvginitials;
   }
 
@@ -254,6 +249,21 @@ public class SignatureRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in SignatureRequest is not found in the empty JSON string", SignatureRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!SignatureRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SignatureRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : SignatureRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `eSignaturePreference`
       FieldESignaturePreference.validateJsonElement(jsonObj.get("eSignaturePreference"));
@@ -265,6 +275,34 @@ public class SignatureRequest {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!SignatureRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'SignatureRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<SignatureRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(SignatureRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<SignatureRequest>() {
+           @Override
+           public void write(JsonWriter out, SignatureRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public SignatureRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of SignatureRequest given an JSON string

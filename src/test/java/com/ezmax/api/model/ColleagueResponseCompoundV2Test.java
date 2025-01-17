@@ -13,7 +13,6 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.ColleagueResponseV2;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CustomUserNameResponse;
 import com.ezmax.api.model.FieldEColleagueEzsign;

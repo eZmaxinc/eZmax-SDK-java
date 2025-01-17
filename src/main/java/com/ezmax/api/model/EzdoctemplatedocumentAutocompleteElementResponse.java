@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Ezdoctemplatedocument AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzdoctemplatedocumentAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D = "pkiEzdoctemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzdoctemplatedocumentID;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X = "sEzdoctemplatedocumentNameX";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X)
-  @javax.annotation.Nonnull
   private String sEzdoctemplatedocumentNameX;
 
   public static final String SERIALIZED_NAME_B_EZDOCTEMPLATEDOCUMENT_ISACTIVE = "bEzdoctemplatedocumentIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZDOCTEMPLATEDOCUMENT_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bEzdoctemplatedocumentIsactive;
 
   public EzdoctemplatedocumentAutocompleteElementResponse() {
   }
 
-  public EzdoctemplatedocumentAutocompleteElementResponse pkiEzdoctemplatedocumentID(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID) {
+  public EzdoctemplatedocumentAutocompleteElementResponse pkiEzdoctemplatedocumentID(Integer pkiEzdoctemplatedocumentID) {
     this.pkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
     return this;
   }
@@ -84,12 +81,12 @@ public class EzdoctemplatedocumentAutocompleteElementResponse {
     return pkiEzdoctemplatedocumentID;
   }
 
-  public void setPkiEzdoctemplatedocumentID(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID) {
+  public void setPkiEzdoctemplatedocumentID(Integer pkiEzdoctemplatedocumentID) {
     this.pkiEzdoctemplatedocumentID = pkiEzdoctemplatedocumentID;
   }
 
 
-  public EzdoctemplatedocumentAutocompleteElementResponse sEzdoctemplatedocumentNameX(@javax.annotation.Nonnull String sEzdoctemplatedocumentNameX) {
+  public EzdoctemplatedocumentAutocompleteElementResponse sEzdoctemplatedocumentNameX(String sEzdoctemplatedocumentNameX) {
     this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
     return this;
   }
@@ -103,12 +100,12 @@ public class EzdoctemplatedocumentAutocompleteElementResponse {
     return sEzdoctemplatedocumentNameX;
   }
 
-  public void setsEzdoctemplatedocumentNameX(@javax.annotation.Nonnull String sEzdoctemplatedocumentNameX) {
+  public void setsEzdoctemplatedocumentNameX(String sEzdoctemplatedocumentNameX) {
     this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
   }
 
 
-  public EzdoctemplatedocumentAutocompleteElementResponse bEzdoctemplatedocumentIsactive(@javax.annotation.Nonnull Boolean bEzdoctemplatedocumentIsactive) {
+  public EzdoctemplatedocumentAutocompleteElementResponse bEzdoctemplatedocumentIsactive(Boolean bEzdoctemplatedocumentIsactive) {
     this.bEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
     return this;
   }
@@ -122,7 +119,7 @@ public class EzdoctemplatedocumentAutocompleteElementResponse {
     return bEzdoctemplatedocumentIsactive;
   }
 
-  public void setbEzdoctemplatedocumentIsactive(@javax.annotation.Nonnull Boolean bEzdoctemplatedocumentIsactive) {
+  public void setbEzdoctemplatedocumentIsactive(Boolean bEzdoctemplatedocumentIsactive) {
     this.bEzdoctemplatedocumentIsactive = bEzdoctemplatedocumentIsactive;
   }
 

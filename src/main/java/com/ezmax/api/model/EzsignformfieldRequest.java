@@ -51,82 +51,68 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignformfield Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignformfieldRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzsignformfieldID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER = "iEzsignpagePagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER)
-  @javax.annotation.Nonnull
   private Integer iEzsignpagePagenumber;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL = "sEzsignformfieldLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL)
-  @javax.annotation.Nonnull
   private String sEzsignformfieldLabel;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_VALUE = "sEzsignformfieldValue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_VALUE)
-  @javax.annotation.Nullable
   private String sEzsignformfieldValue;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_X = "iEzsignformfieldX";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_X)
-  @javax.annotation.Nonnull
   private Integer iEzsignformfieldX;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_Y = "iEzsignformfieldY";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_Y)
-  @javax.annotation.Nonnull
   private Integer iEzsignformfieldY;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_WIDTH = "iEzsignformfieldWidth";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_WIDTH)
-  @javax.annotation.Nonnull
   private Integer iEzsignformfieldWidth;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_HEIGHT = "iEzsignformfieldHeight";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_HEIGHT)
-  @javax.annotation.Nonnull
   private Integer iEzsignformfieldHeight;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELD_AUTOCOMPLETE = "bEzsignformfieldAutocomplete";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELD_AUTOCOMPLETE)
-  @javax.annotation.Nullable
   private Boolean bEzsignformfieldAutocomplete;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELD_SELECTED = "bEzsignformfieldSelected";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELD_SELECTED)
-  @javax.annotation.Nullable
   private Boolean bEzsignformfieldSelected;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE = "sEzsignformfieldEnteredvalue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE)
-  @javax.annotation.Nullable
   private String sEzsignformfieldEnteredvalue;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELD_DEPENDENCYREQUIREMENT = "eEzsignformfieldDependencyrequirement";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELD_DEPENDENCYREQUIREMENT)
-  @javax.annotation.Nullable
   private FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELD_HORIZONTALALIGNMENT = "eEzsignformfieldHorizontalalignment";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELD_HORIZONTALALIGNMENT)
-  @javax.annotation.Nullable
   private EnumHorizontalalignment eEzsignformfieldHorizontalalignment;
 
   public static final String SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC = "objTextstylestatic";
   @SerializedName(SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC)
-  @javax.annotation.Nullable
   private TextstylestaticRequestCompound objTextstylestatic;
 
   public EzsignformfieldRequest() {
   }
 
-  public EzsignformfieldRequest pkiEzsignformfieldID(@javax.annotation.Nullable Integer pkiEzsignformfieldID) {
+  public EzsignformfieldRequest pkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
     return this;
   }
@@ -141,12 +127,12 @@ public class EzsignformfieldRequest {
     return pkiEzsignformfieldID;
   }
 
-  public void setPkiEzsignformfieldID(@javax.annotation.Nullable Integer pkiEzsignformfieldID) {
+  public void setPkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
   }
 
 
-  public EzsignformfieldRequest iEzsignpagePagenumber(@javax.annotation.Nonnull Integer iEzsignpagePagenumber) {
+  public EzsignformfieldRequest iEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
     return this;
   }
@@ -161,12 +147,12 @@ public class EzsignformfieldRequest {
     return iEzsignpagePagenumber;
   }
 
-  public void setiEzsignpagePagenumber(@javax.annotation.Nonnull Integer iEzsignpagePagenumber) {
+  public void setiEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
   }
 
 
-  public EzsignformfieldRequest sEzsignformfieldLabel(@javax.annotation.Nonnull String sEzsignformfieldLabel) {
+  public EzsignformfieldRequest sEzsignformfieldLabel(String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
     return this;
   }
@@ -180,12 +166,12 @@ public class EzsignformfieldRequest {
     return sEzsignformfieldLabel;
   }
 
-  public void setsEzsignformfieldLabel(@javax.annotation.Nonnull String sEzsignformfieldLabel) {
+  public void setsEzsignformfieldLabel(String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
   }
 
 
-  public EzsignformfieldRequest sEzsignformfieldValue(@javax.annotation.Nullable String sEzsignformfieldValue) {
+  public EzsignformfieldRequest sEzsignformfieldValue(String sEzsignformfieldValue) {
     this.sEzsignformfieldValue = sEzsignformfieldValue;
     return this;
   }
@@ -199,12 +185,12 @@ public class EzsignformfieldRequest {
     return sEzsignformfieldValue;
   }
 
-  public void setsEzsignformfieldValue(@javax.annotation.Nullable String sEzsignformfieldValue) {
+  public void setsEzsignformfieldValue(String sEzsignformfieldValue) {
     this.sEzsignformfieldValue = sEzsignformfieldValue;
   }
 
 
-  public EzsignformfieldRequest iEzsignformfieldX(@javax.annotation.Nonnull Integer iEzsignformfieldX) {
+  public EzsignformfieldRequest iEzsignformfieldX(Integer iEzsignformfieldX) {
     this.iEzsignformfieldX = iEzsignformfieldX;
     return this;
   }
@@ -219,12 +205,12 @@ public class EzsignformfieldRequest {
     return iEzsignformfieldX;
   }
 
-  public void setiEzsignformfieldX(@javax.annotation.Nonnull Integer iEzsignformfieldX) {
+  public void setiEzsignformfieldX(Integer iEzsignformfieldX) {
     this.iEzsignformfieldX = iEzsignformfieldX;
   }
 
 
-  public EzsignformfieldRequest iEzsignformfieldY(@javax.annotation.Nonnull Integer iEzsignformfieldY) {
+  public EzsignformfieldRequest iEzsignformfieldY(Integer iEzsignformfieldY) {
     this.iEzsignformfieldY = iEzsignformfieldY;
     return this;
   }
@@ -239,12 +225,12 @@ public class EzsignformfieldRequest {
     return iEzsignformfieldY;
   }
 
-  public void setiEzsignformfieldY(@javax.annotation.Nonnull Integer iEzsignformfieldY) {
+  public void setiEzsignformfieldY(Integer iEzsignformfieldY) {
     this.iEzsignformfieldY = iEzsignformfieldY;
   }
 
 
-  public EzsignformfieldRequest iEzsignformfieldWidth(@javax.annotation.Nonnull Integer iEzsignformfieldWidth) {
+  public EzsignformfieldRequest iEzsignformfieldWidth(Integer iEzsignformfieldWidth) {
     this.iEzsignformfieldWidth = iEzsignformfieldWidth;
     return this;
   }
@@ -259,12 +245,12 @@ public class EzsignformfieldRequest {
     return iEzsignformfieldWidth;
   }
 
-  public void setiEzsignformfieldWidth(@javax.annotation.Nonnull Integer iEzsignformfieldWidth) {
+  public void setiEzsignformfieldWidth(Integer iEzsignformfieldWidth) {
     this.iEzsignformfieldWidth = iEzsignformfieldWidth;
   }
 
 
-  public EzsignformfieldRequest iEzsignformfieldHeight(@javax.annotation.Nonnull Integer iEzsignformfieldHeight) {
+  public EzsignformfieldRequest iEzsignformfieldHeight(Integer iEzsignformfieldHeight) {
     this.iEzsignformfieldHeight = iEzsignformfieldHeight;
     return this;
   }
@@ -279,12 +265,12 @@ public class EzsignformfieldRequest {
     return iEzsignformfieldHeight;
   }
 
-  public void setiEzsignformfieldHeight(@javax.annotation.Nonnull Integer iEzsignformfieldHeight) {
+  public void setiEzsignformfieldHeight(Integer iEzsignformfieldHeight) {
     this.iEzsignformfieldHeight = iEzsignformfieldHeight;
   }
 
 
-  public EzsignformfieldRequest bEzsignformfieldAutocomplete(@javax.annotation.Nullable Boolean bEzsignformfieldAutocomplete) {
+  public EzsignformfieldRequest bEzsignformfieldAutocomplete(Boolean bEzsignformfieldAutocomplete) {
     this.bEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
     return this;
   }
@@ -298,12 +284,12 @@ public class EzsignformfieldRequest {
     return bEzsignformfieldAutocomplete;
   }
 
-  public void setbEzsignformfieldAutocomplete(@javax.annotation.Nullable Boolean bEzsignformfieldAutocomplete) {
+  public void setbEzsignformfieldAutocomplete(Boolean bEzsignformfieldAutocomplete) {
     this.bEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
   }
 
 
-  public EzsignformfieldRequest bEzsignformfieldSelected(@javax.annotation.Nullable Boolean bEzsignformfieldSelected) {
+  public EzsignformfieldRequest bEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
     return this;
   }
@@ -317,12 +303,12 @@ public class EzsignformfieldRequest {
     return bEzsignformfieldSelected;
   }
 
-  public void setbEzsignformfieldSelected(@javax.annotation.Nullable Boolean bEzsignformfieldSelected) {
+  public void setbEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
   }
 
 
-  public EzsignformfieldRequest sEzsignformfieldEnteredvalue(@javax.annotation.Nullable String sEzsignformfieldEnteredvalue) {
+  public EzsignformfieldRequest sEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
     return this;
   }
@@ -336,12 +322,12 @@ public class EzsignformfieldRequest {
     return sEzsignformfieldEnteredvalue;
   }
 
-  public void setsEzsignformfieldEnteredvalue(@javax.annotation.Nullable String sEzsignformfieldEnteredvalue) {
+  public void setsEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
   }
 
 
-  public EzsignformfieldRequest eEzsignformfieldDependencyrequirement(@javax.annotation.Nullable FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
+  public EzsignformfieldRequest eEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
     this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
     return this;
   }
@@ -355,12 +341,12 @@ public class EzsignformfieldRequest {
     return eEzsignformfieldDependencyrequirement;
   }
 
-  public void seteEzsignformfieldDependencyrequirement(@javax.annotation.Nullable FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
+  public void seteEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
     this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
   }
 
 
-  public EzsignformfieldRequest eEzsignformfieldHorizontalalignment(@javax.annotation.Nullable EnumHorizontalalignment eEzsignformfieldHorizontalalignment) {
+  public EzsignformfieldRequest eEzsignformfieldHorizontalalignment(EnumHorizontalalignment eEzsignformfieldHorizontalalignment) {
     this.eEzsignformfieldHorizontalalignment = eEzsignformfieldHorizontalalignment;
     return this;
   }
@@ -374,12 +360,12 @@ public class EzsignformfieldRequest {
     return eEzsignformfieldHorizontalalignment;
   }
 
-  public void seteEzsignformfieldHorizontalalignment(@javax.annotation.Nullable EnumHorizontalalignment eEzsignformfieldHorizontalalignment) {
+  public void seteEzsignformfieldHorizontalalignment(EnumHorizontalalignment eEzsignformfieldHorizontalalignment) {
     this.eEzsignformfieldHorizontalalignment = eEzsignformfieldHorizontalalignment;
   }
 
 
-  public EzsignformfieldRequest objTextstylestatic(@javax.annotation.Nullable TextstylestaticRequestCompound objTextstylestatic) {
+  public EzsignformfieldRequest objTextstylestatic(TextstylestaticRequestCompound objTextstylestatic) {
     this.objTextstylestatic = objTextstylestatic;
     return this;
   }
@@ -393,7 +379,7 @@ public class EzsignformfieldRequest {
     return objTextstylestatic;
   }
 
-  public void setObjTextstylestatic(@javax.annotation.Nullable TextstylestaticRequestCompound objTextstylestatic) {
+  public void setObjTextstylestatic(TextstylestaticRequestCompound objTextstylestatic) {
     this.objTextstylestatic = objTextstylestatic;
   }
 
@@ -506,6 +492,21 @@ public class EzsignformfieldRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignformfieldRequest is not found in the empty JSON string", EzsignformfieldRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsignformfieldRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignformfieldRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignformfieldRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sEzsignformfieldLabel").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignformfieldLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldLabel").toString()));
@@ -530,6 +531,34 @@ public class EzsignformfieldRequest {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignformfieldRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignformfieldRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignformfieldRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignformfieldRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignformfieldRequest>() {
+           @Override
+           public void write(JsonWriter out, EzsignformfieldRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignformfieldRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsignformfieldRequest given an JSON string

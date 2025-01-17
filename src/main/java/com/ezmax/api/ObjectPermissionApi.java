@@ -27,11 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.PermissionCreateObjectV1Request;
 import com.ezmax.api.model.PermissionCreateObjectV1Response;
+import com.ezmax.api.model.PermissionDeleteObjectV1Response;
 import com.ezmax.api.model.PermissionEditObjectV1Request;
+import com.ezmax.api.model.PermissionEditObjectV1Response;
 import com.ezmax.api.model.PermissionGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -84,8 +85,7 @@ public class ObjectPermissionApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -154,8 +154,7 @@ public class ObjectPermissionApi {
      * @return PermissionCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -173,8 +172,7 @@ public class ObjectPermissionApi {
      * @return ApiResponse&lt;PermissionCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -194,8 +192,7 @@ public class ObjectPermissionApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -215,8 +212,7 @@ public class ObjectPermissionApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -282,18 +278,17 @@ public class ObjectPermissionApi {
      * Delete an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission (required)
-     * @return CommonResponse
+     * @return PermissionDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse permissionDeleteObjectV1(Integer pkiPermissionID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = permissionDeleteObjectV1WithHttpInfo(pkiPermissionID);
+    public PermissionDeleteObjectV1Response permissionDeleteObjectV1(Integer pkiPermissionID) throws ApiException {
+        ApiResponse<PermissionDeleteObjectV1Response> localVarResp = permissionDeleteObjectV1WithHttpInfo(pkiPermissionID);
         return localVarResp.getData();
     }
 
@@ -301,19 +296,18 @@ public class ObjectPermissionApi {
      * Delete an existing Permission
      * 
      * @param pkiPermissionID The unique ID of the Permission (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;PermissionDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> permissionDeleteObjectV1WithHttpInfo(Integer pkiPermissionID) throws ApiException {
+    public ApiResponse<PermissionDeleteObjectV1Response> permissionDeleteObjectV1WithHttpInfo(Integer pkiPermissionID) throws ApiException {
         okhttp3.Call localVarCall = permissionDeleteObjectV1ValidateBeforeCall(pkiPermissionID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<PermissionDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -325,17 +319,16 @@ public class ObjectPermissionApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call permissionDeleteObjectV1Async(Integer pkiPermissionID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call permissionDeleteObjectV1Async(Integer pkiPermissionID, final ApiCallback<PermissionDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = permissionDeleteObjectV1ValidateBeforeCall(pkiPermissionID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<PermissionDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -347,8 +340,7 @@ public class ObjectPermissionApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -422,19 +414,18 @@ public class ObjectPermissionApi {
      * 
      * @param pkiPermissionID The unique ID of the Permission (required)
      * @param permissionEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return PermissionEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse permissionEditObjectV1(Integer pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = permissionEditObjectV1WithHttpInfo(pkiPermissionID, permissionEditObjectV1Request);
+    public PermissionEditObjectV1Response permissionEditObjectV1(Integer pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request) throws ApiException {
+        ApiResponse<PermissionEditObjectV1Response> localVarResp = permissionEditObjectV1WithHttpInfo(pkiPermissionID, permissionEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -443,20 +434,19 @@ public class ObjectPermissionApi {
      * 
      * @param pkiPermissionID The unique ID of the Permission (required)
      * @param permissionEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;PermissionEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> permissionEditObjectV1WithHttpInfo(Integer pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request) throws ApiException {
+    public ApiResponse<PermissionEditObjectV1Response> permissionEditObjectV1WithHttpInfo(Integer pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = permissionEditObjectV1ValidateBeforeCall(pkiPermissionID, permissionEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<PermissionEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -469,18 +459,17 @@ public class ObjectPermissionApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call permissionEditObjectV1Async(Integer pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call permissionEditObjectV1Async(Integer pkiPermissionID, PermissionEditObjectV1Request permissionEditObjectV1Request, final ApiCallback<PermissionEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = permissionEditObjectV1ValidateBeforeCall(pkiPermissionID, permissionEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<PermissionEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -491,8 +480,7 @@ public class ObjectPermissionApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -561,8 +549,7 @@ public class ObjectPermissionApi {
      * @return PermissionGetObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -580,8 +567,7 @@ public class ObjectPermissionApi {
      * @return ApiResponse&lt;PermissionGetObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -601,8 +587,7 @@ public class ObjectPermissionApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>

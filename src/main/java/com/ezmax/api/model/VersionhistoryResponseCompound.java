@@ -17,7 +17,6 @@ import java.util.Objects;
 import com.ezmax.api.model.FieldEVersionhistoryType;
 import com.ezmax.api.model.FieldEVersionhistoryUsertype;
 import com.ezmax.api.model.MultilingualVersionhistoryDetail;
-import com.ezmax.api.model.VersionhistoryResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,10 +51,266 @@ import eZmaxAPI.JSON;
 /**
  * A Versionhistory Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class VersionhistoryResponseCompound extends VersionhistoryResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class VersionhistoryResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D = "pkiVersionhistoryID";
+  @SerializedName(SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D)
+  private Integer pkiVersionhistoryID;
+
+  public static final String SERIALIZED_NAME_FKI_MODULE_I_D = "fkiModuleID";
+  @SerializedName(SERIALIZED_NAME_FKI_MODULE_I_D)
+  private Integer fkiModuleID;
+
+  public static final String SERIALIZED_NAME_FKI_MODULESECTION_I_D = "fkiModulesectionID";
+  @SerializedName(SERIALIZED_NAME_FKI_MODULESECTION_I_D)
+  private Integer fkiModulesectionID;
+
+  public static final String SERIALIZED_NAME_S_MODULE_NAME_X = "sModuleNameX";
+  @SerializedName(SERIALIZED_NAME_S_MODULE_NAME_X)
+  private String sModuleNameX;
+
+  public static final String SERIALIZED_NAME_S_MODULESECTION_NAME_X = "sModulesectionNameX";
+  @SerializedName(SERIALIZED_NAME_S_MODULESECTION_NAME_X)
+  private String sModulesectionNameX;
+
+  public static final String SERIALIZED_NAME_E_VERSIONHISTORY_USERTYPE = "eVersionhistoryUsertype";
+  @SerializedName(SERIALIZED_NAME_E_VERSIONHISTORY_USERTYPE)
+  private FieldEVersionhistoryUsertype eVersionhistoryUsertype;
+
+  public static final String SERIALIZED_NAME_OBJ_VERSIONHISTORY_DETAIL = "objVersionhistoryDetail";
+  @SerializedName(SERIALIZED_NAME_OBJ_VERSIONHISTORY_DETAIL)
+  private MultilingualVersionhistoryDetail objVersionhistoryDetail;
+
+  public static final String SERIALIZED_NAME_DT_VERSIONHISTORY_DATE = "dtVersionhistoryDate";
+  @SerializedName(SERIALIZED_NAME_DT_VERSIONHISTORY_DATE)
+  private String dtVersionhistoryDate;
+
+  public static final String SERIALIZED_NAME_DT_VERSIONHISTORY_DATEEND = "dtVersionhistoryDateend";
+  @SerializedName(SERIALIZED_NAME_DT_VERSIONHISTORY_DATEEND)
+  private String dtVersionhistoryDateend;
+
+  public static final String SERIALIZED_NAME_E_VERSIONHISTORY_TYPE = "eVersionhistoryType";
+  @SerializedName(SERIALIZED_NAME_E_VERSIONHISTORY_TYPE)
+  private FieldEVersionhistoryType eVersionhistoryType;
+
+  public static final String SERIALIZED_NAME_B_VERSIONHISTORY_DRAFT = "bVersionhistoryDraft";
+  @SerializedName(SERIALIZED_NAME_B_VERSIONHISTORY_DRAFT)
+  private Boolean bVersionhistoryDraft;
+
   public VersionhistoryResponseCompound() {
   }
+
+  public VersionhistoryResponseCompound pkiVersionhistoryID(Integer pkiVersionhistoryID) {
+    this.pkiVersionhistoryID = pkiVersionhistoryID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Versionhistory
+   * minimum: 0
+   * @return pkiVersionhistoryID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiVersionhistoryID() {
+    return pkiVersionhistoryID;
+  }
+
+  public void setPkiVersionhistoryID(Integer pkiVersionhistoryID) {
+    this.pkiVersionhistoryID = pkiVersionhistoryID;
+  }
+
+
+  public VersionhistoryResponseCompound fkiModuleID(Integer fkiModuleID) {
+    this.fkiModuleID = fkiModuleID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Module
+   * minimum: 0
+   * @return fkiModuleID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiModuleID() {
+    return fkiModuleID;
+  }
+
+  public void setFkiModuleID(Integer fkiModuleID) {
+    this.fkiModuleID = fkiModuleID;
+  }
+
+
+  public VersionhistoryResponseCompound fkiModulesectionID(Integer fkiModulesectionID) {
+    this.fkiModulesectionID = fkiModulesectionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Modulesection
+   * minimum: 0
+   * @return fkiModulesectionID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiModulesectionID() {
+    return fkiModulesectionID;
+  }
+
+  public void setFkiModulesectionID(Integer fkiModulesectionID) {
+    this.fkiModulesectionID = fkiModulesectionID;
+  }
+
+
+  public VersionhistoryResponseCompound sModuleNameX(String sModuleNameX) {
+    this.sModuleNameX = sModuleNameX;
+    return this;
+  }
+
+  /**
+   * The Name of the Module in the language of the requester
+   * @return sModuleNameX
+   */
+  @javax.annotation.Nullable
+  public String getsModuleNameX() {
+    return sModuleNameX;
+  }
+
+  public void setsModuleNameX(String sModuleNameX) {
+    this.sModuleNameX = sModuleNameX;
+  }
+
+
+  public VersionhistoryResponseCompound sModulesectionNameX(String sModulesectionNameX) {
+    this.sModulesectionNameX = sModulesectionNameX;
+    return this;
+  }
+
+  /**
+   * The Name of the Modulesection in the language of the requester
+   * @return sModulesectionNameX
+   */
+  @javax.annotation.Nullable
+  public String getsModulesectionNameX() {
+    return sModulesectionNameX;
+  }
+
+  public void setsModulesectionNameX(String sModulesectionNameX) {
+    this.sModulesectionNameX = sModulesectionNameX;
+  }
+
+
+  public VersionhistoryResponseCompound eVersionhistoryUsertype(FieldEVersionhistoryUsertype eVersionhistoryUsertype) {
+    this.eVersionhistoryUsertype = eVersionhistoryUsertype;
+    return this;
+  }
+
+  /**
+   * Get eVersionhistoryUsertype
+   * @return eVersionhistoryUsertype
+   */
+  @javax.annotation.Nullable
+  public FieldEVersionhistoryUsertype geteVersionhistoryUsertype() {
+    return eVersionhistoryUsertype;
+  }
+
+  public void seteVersionhistoryUsertype(FieldEVersionhistoryUsertype eVersionhistoryUsertype) {
+    this.eVersionhistoryUsertype = eVersionhistoryUsertype;
+  }
+
+
+  public VersionhistoryResponseCompound objVersionhistoryDetail(MultilingualVersionhistoryDetail objVersionhistoryDetail) {
+    this.objVersionhistoryDetail = objVersionhistoryDetail;
+    return this;
+  }
+
+  /**
+   * Get objVersionhistoryDetail
+   * @return objVersionhistoryDetail
+   */
+  @javax.annotation.Nonnull
+  public MultilingualVersionhistoryDetail getObjVersionhistoryDetail() {
+    return objVersionhistoryDetail;
+  }
+
+  public void setObjVersionhistoryDetail(MultilingualVersionhistoryDetail objVersionhistoryDetail) {
+    this.objVersionhistoryDetail = objVersionhistoryDetail;
+  }
+
+
+  public VersionhistoryResponseCompound dtVersionhistoryDate(String dtVersionhistoryDate) {
+    this.dtVersionhistoryDate = dtVersionhistoryDate;
+    return this;
+  }
+
+  /**
+   * The date  at which the Versionhistory was published or should be published
+   * @return dtVersionhistoryDate
+   */
+  @javax.annotation.Nonnull
+  public String getDtVersionhistoryDate() {
+    return dtVersionhistoryDate;
+  }
+
+  public void setDtVersionhistoryDate(String dtVersionhistoryDate) {
+    this.dtVersionhistoryDate = dtVersionhistoryDate;
+  }
+
+
+  public VersionhistoryResponseCompound dtVersionhistoryDateend(String dtVersionhistoryDateend) {
+    this.dtVersionhistoryDateend = dtVersionhistoryDateend;
+    return this;
+  }
+
+  /**
+   * The date  at which the Versionhistory will no longer be visible
+   * @return dtVersionhistoryDateend
+   */
+  @javax.annotation.Nullable
+  public String getDtVersionhistoryDateend() {
+    return dtVersionhistoryDateend;
+  }
+
+  public void setDtVersionhistoryDateend(String dtVersionhistoryDateend) {
+    this.dtVersionhistoryDateend = dtVersionhistoryDateend;
+  }
+
+
+  public VersionhistoryResponseCompound eVersionhistoryType(FieldEVersionhistoryType eVersionhistoryType) {
+    this.eVersionhistoryType = eVersionhistoryType;
+    return this;
+  }
+
+  /**
+   * Get eVersionhistoryType
+   * @return eVersionhistoryType
+   */
+  @javax.annotation.Nonnull
+  public FieldEVersionhistoryType geteVersionhistoryType() {
+    return eVersionhistoryType;
+  }
+
+  public void seteVersionhistoryType(FieldEVersionhistoryType eVersionhistoryType) {
+    this.eVersionhistoryType = eVersionhistoryType;
+  }
+
+
+  public VersionhistoryResponseCompound bVersionhistoryDraft(Boolean bVersionhistoryDraft) {
+    this.bVersionhistoryDraft = bVersionhistoryDraft;
+    return this;
+  }
+
+  /**
+   * Whether the Versionhistory is published or still a draft
+   * @return bVersionhistoryDraft
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbVersionhistoryDraft() {
+    return bVersionhistoryDraft;
+  }
+
+  public void setbVersionhistoryDraft(Boolean bVersionhistoryDraft) {
+    this.bVersionhistoryDraft = bVersionhistoryDraft;
+  }
+
 
 
   @Override
@@ -66,19 +321,40 @@ public class VersionhistoryResponseCompound extends VersionhistoryResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    VersionhistoryResponseCompound versionhistoryResponseCompound = (VersionhistoryResponseCompound) o;
+    return Objects.equals(this.pkiVersionhistoryID, versionhistoryResponseCompound.pkiVersionhistoryID) &&
+        Objects.equals(this.fkiModuleID, versionhistoryResponseCompound.fkiModuleID) &&
+        Objects.equals(this.fkiModulesectionID, versionhistoryResponseCompound.fkiModulesectionID) &&
+        Objects.equals(this.sModuleNameX, versionhistoryResponseCompound.sModuleNameX) &&
+        Objects.equals(this.sModulesectionNameX, versionhistoryResponseCompound.sModulesectionNameX) &&
+        Objects.equals(this.eVersionhistoryUsertype, versionhistoryResponseCompound.eVersionhistoryUsertype) &&
+        Objects.equals(this.objVersionhistoryDetail, versionhistoryResponseCompound.objVersionhistoryDetail) &&
+        Objects.equals(this.dtVersionhistoryDate, versionhistoryResponseCompound.dtVersionhistoryDate) &&
+        Objects.equals(this.dtVersionhistoryDateend, versionhistoryResponseCompound.dtVersionhistoryDateend) &&
+        Objects.equals(this.eVersionhistoryType, versionhistoryResponseCompound.eVersionhistoryType) &&
+        Objects.equals(this.bVersionhistoryDraft, versionhistoryResponseCompound.bVersionhistoryDraft);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiVersionhistoryID, fkiModuleID, fkiModulesectionID, sModuleNameX, sModulesectionNameX, eVersionhistoryUsertype, objVersionhistoryDetail, dtVersionhistoryDate, dtVersionhistoryDateend, eVersionhistoryType, bVersionhistoryDraft);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VersionhistoryResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiVersionhistoryID: ").append(toIndentedString(pkiVersionhistoryID)).append("\n");
+    sb.append("    fkiModuleID: ").append(toIndentedString(fkiModuleID)).append("\n");
+    sb.append("    fkiModulesectionID: ").append(toIndentedString(fkiModulesectionID)).append("\n");
+    sb.append("    sModuleNameX: ").append(toIndentedString(sModuleNameX)).append("\n");
+    sb.append("    sModulesectionNameX: ").append(toIndentedString(sModulesectionNameX)).append("\n");
+    sb.append("    eVersionhistoryUsertype: ").append(toIndentedString(eVersionhistoryUsertype)).append("\n");
+    sb.append("    objVersionhistoryDetail: ").append(toIndentedString(objVersionhistoryDetail)).append("\n");
+    sb.append("    dtVersionhistoryDate: ").append(toIndentedString(dtVersionhistoryDate)).append("\n");
+    sb.append("    dtVersionhistoryDateend: ").append(toIndentedString(dtVersionhistoryDateend)).append("\n");
+    sb.append("    eVersionhistoryType: ").append(toIndentedString(eVersionhistoryType)).append("\n");
+    sb.append("    bVersionhistoryDraft: ").append(toIndentedString(bVersionhistoryDraft)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -149,6 +425,27 @@ public class VersionhistoryResponseCompound extends VersionhistoryResponse {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("sModuleNameX") != null && !jsonObj.get("sModuleNameX").isJsonNull()) && !jsonObj.get("sModuleNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sModuleNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModuleNameX").toString()));
+      }
+      if ((jsonObj.get("sModulesectionNameX") != null && !jsonObj.get("sModulesectionNameX").isJsonNull()) && !jsonObj.get("sModulesectionNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sModulesectionNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModulesectionNameX").toString()));
+      }
+      // validate the optional field `eVersionhistoryUsertype`
+      if (jsonObj.get("eVersionhistoryUsertype") != null && !jsonObj.get("eVersionhistoryUsertype").isJsonNull()) {
+        FieldEVersionhistoryUsertype.validateJsonElement(jsonObj.get("eVersionhistoryUsertype"));
+      }
+      // validate the required field `objVersionhistoryDetail`
+      MultilingualVersionhistoryDetail.validateJsonElement(jsonObj.get("objVersionhistoryDetail"));
+      if (!jsonObj.get("dtVersionhistoryDate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtVersionhistoryDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtVersionhistoryDate").toString()));
+      }
+      if ((jsonObj.get("dtVersionhistoryDateend") != null && !jsonObj.get("dtVersionhistoryDateend").isJsonNull()) && !jsonObj.get("dtVersionhistoryDateend").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtVersionhistoryDateend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtVersionhistoryDateend").toString()));
+      }
+      // validate the required field `eVersionhistoryType`
+      FieldEVersionhistoryType.validateJsonElement(jsonObj.get("eVersionhistoryType"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -52,98 +52,81 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfieldgroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignformfieldgroupResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignformfieldgroupID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TYPE = "eEzsignformfieldgroupType";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TYPE)
-  @javax.annotation.Nonnull
   private FieldEEzsignformfieldgroupType eEzsignformfieldgroupType;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_SIGNERREQUIREMENT = "eEzsignformfieldgroupSignerrequirement";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_SIGNERREQUIREMENT)
-  @javax.annotation.Nullable
   private FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_LABEL = "sEzsignformfieldgroupLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_LABEL)
-  @javax.annotation.Nonnull
   private String sEzsignformfieldgroupLabel;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_STEP = "iEzsignformfieldgroupStep";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_STEP)
-  @javax.annotation.Nonnull
   private Integer iEzsignformfieldgroupStep;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_DEFAULTVALUE = "sEzsignformfieldgroupDefaultvalue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_DEFAULTVALUE)
-  @javax.annotation.Nullable
   private String sEzsignformfieldgroupDefaultvalue;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_FILLEDMIN = "iEzsignformfieldgroupFilledmin";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_FILLEDMIN)
-  @javax.annotation.Nonnull
   private Integer iEzsignformfieldgroupFilledmin;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_FILLEDMAX = "iEzsignformfieldgroupFilledmax";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_FILLEDMAX)
-  @javax.annotation.Nonnull
   private Integer iEzsignformfieldgroupFilledmax;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELDGROUP_READONLY = "bEzsignformfieldgroupReadonly";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELDGROUP_READONLY)
-  @javax.annotation.Nonnull
   private Boolean bEzsignformfieldgroupReadonly;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_MAXLENGTH = "iEzsignformfieldgroupMaxlength";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_MAXLENGTH)
-  @javax.annotation.Nullable
   private Integer iEzsignformfieldgroupMaxlength;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELDGROUP_ENCRYPTED = "bEzsignformfieldgroupEncrypted";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELDGROUP_ENCRYPTED)
-  @javax.annotation.Nullable
   private Boolean bEzsignformfieldgroupEncrypted;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TEXTVALIDATION = "eEzsignformfieldgroupTextvalidation";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TEXTVALIDATION)
-  @javax.annotation.Nullable
   private EnumTextvalidation eEzsignformfieldgroupTextvalidation;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_REGEXP = "sEzsignformfieldgroupRegexp";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_REGEXP)
-  @javax.annotation.Nullable
   private String sEzsignformfieldgroupRegexp;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_TEXTVALIDATIONCUSTOMMESSAGE = "sEzsignformfieldgroupTextvalidationcustommessage";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_TEXTVALIDATIONCUSTOMMESSAGE)
-  @javax.annotation.Nullable
   private String sEzsignformfieldgroupTextvalidationcustommessage;
 
   public static final String SERIALIZED_NAME_T_EZSIGNFORMFIELDGROUP_TOOLTIP = "tEzsignformfieldgroupTooltip";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFORMFIELDGROUP_TOOLTIP)
-  @javax.annotation.Nullable
   private String tEzsignformfieldgroupTooltip;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TOOLTIPPOSITION = "eEzsignformfieldgroupTooltipposition";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELDGROUP_TOOLTIPPOSITION)
-  @javax.annotation.Nullable
   private FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition;
 
   public EzsignformfieldgroupResponse() {
   }
 
-  public EzsignformfieldgroupResponse pkiEzsignformfieldgroupID(@javax.annotation.Nonnull Integer pkiEzsignformfieldgroupID) {
+  public EzsignformfieldgroupResponse pkiEzsignformfieldgroupID(Integer pkiEzsignformfieldgroupID) {
     this.pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
     return this;
   }
@@ -158,12 +141,12 @@ public class EzsignformfieldgroupResponse {
     return pkiEzsignformfieldgroupID;
   }
 
-  public void setPkiEzsignformfieldgroupID(@javax.annotation.Nonnull Integer pkiEzsignformfieldgroupID) {
+  public void setPkiEzsignformfieldgroupID(Integer pkiEzsignformfieldgroupID) {
     this.pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
   }
 
 
-  public EzsignformfieldgroupResponse fkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
+  public EzsignformfieldgroupResponse fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
     return this;
   }
@@ -178,12 +161,12 @@ public class EzsignformfieldgroupResponse {
     return fkiEzsigndocumentID;
   }
 
-  public void setFkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
+  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
 
-  public EzsignformfieldgroupResponse eEzsignformfieldgroupType(@javax.annotation.Nonnull FieldEEzsignformfieldgroupType eEzsignformfieldgroupType) {
+  public EzsignformfieldgroupResponse eEzsignformfieldgroupType(FieldEEzsignformfieldgroupType eEzsignformfieldgroupType) {
     this.eEzsignformfieldgroupType = eEzsignformfieldgroupType;
     return this;
   }
@@ -197,13 +180,13 @@ public class EzsignformfieldgroupResponse {
     return eEzsignformfieldgroupType;
   }
 
-  public void seteEzsignformfieldgroupType(@javax.annotation.Nonnull FieldEEzsignformfieldgroupType eEzsignformfieldgroupType) {
+  public void seteEzsignformfieldgroupType(FieldEEzsignformfieldgroupType eEzsignformfieldgroupType) {
     this.eEzsignformfieldgroupType = eEzsignformfieldgroupType;
   }
 
 
   @Deprecated
-  public EzsignformfieldgroupResponse eEzsignformfieldgroupSignerrequirement(@javax.annotation.Nullable FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement) {
+  public EzsignformfieldgroupResponse eEzsignformfieldgroupSignerrequirement(FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement) {
     this.eEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
     return this;
   }
@@ -220,12 +203,12 @@ public class EzsignformfieldgroupResponse {
   }
 
   @Deprecated
-  public void seteEzsignformfieldgroupSignerrequirement(@javax.annotation.Nullable FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement) {
+  public void seteEzsignformfieldgroupSignerrequirement(FieldEEzsignformfieldgroupSignerrequirement eEzsignformfieldgroupSignerrequirement) {
     this.eEzsignformfieldgroupSignerrequirement = eEzsignformfieldgroupSignerrequirement;
   }
 
 
-  public EzsignformfieldgroupResponse sEzsignformfieldgroupLabel(@javax.annotation.Nonnull String sEzsignformfieldgroupLabel) {
+  public EzsignformfieldgroupResponse sEzsignformfieldgroupLabel(String sEzsignformfieldgroupLabel) {
     this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
     return this;
   }
@@ -239,12 +222,12 @@ public class EzsignformfieldgroupResponse {
     return sEzsignformfieldgroupLabel;
   }
 
-  public void setsEzsignformfieldgroupLabel(@javax.annotation.Nonnull String sEzsignformfieldgroupLabel) {
+  public void setsEzsignformfieldgroupLabel(String sEzsignformfieldgroupLabel) {
     this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
   }
 
 
-  public EzsignformfieldgroupResponse iEzsignformfieldgroupStep(@javax.annotation.Nonnull Integer iEzsignformfieldgroupStep) {
+  public EzsignformfieldgroupResponse iEzsignformfieldgroupStep(Integer iEzsignformfieldgroupStep) {
     this.iEzsignformfieldgroupStep = iEzsignformfieldgroupStep;
     return this;
   }
@@ -259,12 +242,12 @@ public class EzsignformfieldgroupResponse {
     return iEzsignformfieldgroupStep;
   }
 
-  public void setiEzsignformfieldgroupStep(@javax.annotation.Nonnull Integer iEzsignformfieldgroupStep) {
+  public void setiEzsignformfieldgroupStep(Integer iEzsignformfieldgroupStep) {
     this.iEzsignformfieldgroupStep = iEzsignformfieldgroupStep;
   }
 
 
-  public EzsignformfieldgroupResponse sEzsignformfieldgroupDefaultvalue(@javax.annotation.Nullable String sEzsignformfieldgroupDefaultvalue) {
+  public EzsignformfieldgroupResponse sEzsignformfieldgroupDefaultvalue(String sEzsignformfieldgroupDefaultvalue) {
     this.sEzsignformfieldgroupDefaultvalue = sEzsignformfieldgroupDefaultvalue;
     return this;
   }
@@ -278,12 +261,12 @@ public class EzsignformfieldgroupResponse {
     return sEzsignformfieldgroupDefaultvalue;
   }
 
-  public void setsEzsignformfieldgroupDefaultvalue(@javax.annotation.Nullable String sEzsignformfieldgroupDefaultvalue) {
+  public void setsEzsignformfieldgroupDefaultvalue(String sEzsignformfieldgroupDefaultvalue) {
     this.sEzsignformfieldgroupDefaultvalue = sEzsignformfieldgroupDefaultvalue;
   }
 
 
-  public EzsignformfieldgroupResponse iEzsignformfieldgroupFilledmin(@javax.annotation.Nonnull Integer iEzsignformfieldgroupFilledmin) {
+  public EzsignformfieldgroupResponse iEzsignformfieldgroupFilledmin(Integer iEzsignformfieldgroupFilledmin) {
     this.iEzsignformfieldgroupFilledmin = iEzsignformfieldgroupFilledmin;
     return this;
   }
@@ -298,12 +281,12 @@ public class EzsignformfieldgroupResponse {
     return iEzsignformfieldgroupFilledmin;
   }
 
-  public void setiEzsignformfieldgroupFilledmin(@javax.annotation.Nonnull Integer iEzsignformfieldgroupFilledmin) {
+  public void setiEzsignformfieldgroupFilledmin(Integer iEzsignformfieldgroupFilledmin) {
     this.iEzsignformfieldgroupFilledmin = iEzsignformfieldgroupFilledmin;
   }
 
 
-  public EzsignformfieldgroupResponse iEzsignformfieldgroupFilledmax(@javax.annotation.Nonnull Integer iEzsignformfieldgroupFilledmax) {
+  public EzsignformfieldgroupResponse iEzsignformfieldgroupFilledmax(Integer iEzsignformfieldgroupFilledmax) {
     this.iEzsignformfieldgroupFilledmax = iEzsignformfieldgroupFilledmax;
     return this;
   }
@@ -318,12 +301,12 @@ public class EzsignformfieldgroupResponse {
     return iEzsignformfieldgroupFilledmax;
   }
 
-  public void setiEzsignformfieldgroupFilledmax(@javax.annotation.Nonnull Integer iEzsignformfieldgroupFilledmax) {
+  public void setiEzsignformfieldgroupFilledmax(Integer iEzsignformfieldgroupFilledmax) {
     this.iEzsignformfieldgroupFilledmax = iEzsignformfieldgroupFilledmax;
   }
 
 
-  public EzsignformfieldgroupResponse bEzsignformfieldgroupReadonly(@javax.annotation.Nonnull Boolean bEzsignformfieldgroupReadonly) {
+  public EzsignformfieldgroupResponse bEzsignformfieldgroupReadonly(Boolean bEzsignformfieldgroupReadonly) {
     this.bEzsignformfieldgroupReadonly = bEzsignformfieldgroupReadonly;
     return this;
   }
@@ -337,12 +320,12 @@ public class EzsignformfieldgroupResponse {
     return bEzsignformfieldgroupReadonly;
   }
 
-  public void setbEzsignformfieldgroupReadonly(@javax.annotation.Nonnull Boolean bEzsignformfieldgroupReadonly) {
+  public void setbEzsignformfieldgroupReadonly(Boolean bEzsignformfieldgroupReadonly) {
     this.bEzsignformfieldgroupReadonly = bEzsignformfieldgroupReadonly;
   }
 
 
-  public EzsignformfieldgroupResponse iEzsignformfieldgroupMaxlength(@javax.annotation.Nullable Integer iEzsignformfieldgroupMaxlength) {
+  public EzsignformfieldgroupResponse iEzsignformfieldgroupMaxlength(Integer iEzsignformfieldgroupMaxlength) {
     this.iEzsignformfieldgroupMaxlength = iEzsignformfieldgroupMaxlength;
     return this;
   }
@@ -358,12 +341,12 @@ public class EzsignformfieldgroupResponse {
     return iEzsignformfieldgroupMaxlength;
   }
 
-  public void setiEzsignformfieldgroupMaxlength(@javax.annotation.Nullable Integer iEzsignformfieldgroupMaxlength) {
+  public void setiEzsignformfieldgroupMaxlength(Integer iEzsignformfieldgroupMaxlength) {
     this.iEzsignformfieldgroupMaxlength = iEzsignformfieldgroupMaxlength;
   }
 
 
-  public EzsignformfieldgroupResponse bEzsignformfieldgroupEncrypted(@javax.annotation.Nullable Boolean bEzsignformfieldgroupEncrypted) {
+  public EzsignformfieldgroupResponse bEzsignformfieldgroupEncrypted(Boolean bEzsignformfieldgroupEncrypted) {
     this.bEzsignformfieldgroupEncrypted = bEzsignformfieldgroupEncrypted;
     return this;
   }
@@ -377,12 +360,12 @@ public class EzsignformfieldgroupResponse {
     return bEzsignformfieldgroupEncrypted;
   }
 
-  public void setbEzsignformfieldgroupEncrypted(@javax.annotation.Nullable Boolean bEzsignformfieldgroupEncrypted) {
+  public void setbEzsignformfieldgroupEncrypted(Boolean bEzsignformfieldgroupEncrypted) {
     this.bEzsignformfieldgroupEncrypted = bEzsignformfieldgroupEncrypted;
   }
 
 
-  public EzsignformfieldgroupResponse eEzsignformfieldgroupTextvalidation(@javax.annotation.Nullable EnumTextvalidation eEzsignformfieldgroupTextvalidation) {
+  public EzsignformfieldgroupResponse eEzsignformfieldgroupTextvalidation(EnumTextvalidation eEzsignformfieldgroupTextvalidation) {
     this.eEzsignformfieldgroupTextvalidation = eEzsignformfieldgroupTextvalidation;
     return this;
   }
@@ -396,12 +379,12 @@ public class EzsignformfieldgroupResponse {
     return eEzsignformfieldgroupTextvalidation;
   }
 
-  public void seteEzsignformfieldgroupTextvalidation(@javax.annotation.Nullable EnumTextvalidation eEzsignformfieldgroupTextvalidation) {
+  public void seteEzsignformfieldgroupTextvalidation(EnumTextvalidation eEzsignformfieldgroupTextvalidation) {
     this.eEzsignformfieldgroupTextvalidation = eEzsignformfieldgroupTextvalidation;
   }
 
 
-  public EzsignformfieldgroupResponse sEzsignformfieldgroupRegexp(@javax.annotation.Nullable String sEzsignformfieldgroupRegexp) {
+  public EzsignformfieldgroupResponse sEzsignformfieldgroupRegexp(String sEzsignformfieldgroupRegexp) {
     this.sEzsignformfieldgroupRegexp = sEzsignformfieldgroupRegexp;
     return this;
   }
@@ -415,12 +398,12 @@ public class EzsignformfieldgroupResponse {
     return sEzsignformfieldgroupRegexp;
   }
 
-  public void setsEzsignformfieldgroupRegexp(@javax.annotation.Nullable String sEzsignformfieldgroupRegexp) {
+  public void setsEzsignformfieldgroupRegexp(String sEzsignformfieldgroupRegexp) {
     this.sEzsignformfieldgroupRegexp = sEzsignformfieldgroupRegexp;
   }
 
 
-  public EzsignformfieldgroupResponse sEzsignformfieldgroupTextvalidationcustommessage(@javax.annotation.Nullable String sEzsignformfieldgroupTextvalidationcustommessage) {
+  public EzsignformfieldgroupResponse sEzsignformfieldgroupTextvalidationcustommessage(String sEzsignformfieldgroupTextvalidationcustommessage) {
     this.sEzsignformfieldgroupTextvalidationcustommessage = sEzsignformfieldgroupTextvalidationcustommessage;
     return this;
   }
@@ -434,12 +417,12 @@ public class EzsignformfieldgroupResponse {
     return sEzsignformfieldgroupTextvalidationcustommessage;
   }
 
-  public void setsEzsignformfieldgroupTextvalidationcustommessage(@javax.annotation.Nullable String sEzsignformfieldgroupTextvalidationcustommessage) {
+  public void setsEzsignformfieldgroupTextvalidationcustommessage(String sEzsignformfieldgroupTextvalidationcustommessage) {
     this.sEzsignformfieldgroupTextvalidationcustommessage = sEzsignformfieldgroupTextvalidationcustommessage;
   }
 
 
-  public EzsignformfieldgroupResponse tEzsignformfieldgroupTooltip(@javax.annotation.Nullable String tEzsignformfieldgroupTooltip) {
+  public EzsignformfieldgroupResponse tEzsignformfieldgroupTooltip(String tEzsignformfieldgroupTooltip) {
     this.tEzsignformfieldgroupTooltip = tEzsignformfieldgroupTooltip;
     return this;
   }
@@ -453,12 +436,12 @@ public class EzsignformfieldgroupResponse {
     return tEzsignformfieldgroupTooltip;
   }
 
-  public void settEzsignformfieldgroupTooltip(@javax.annotation.Nullable String tEzsignformfieldgroupTooltip) {
+  public void settEzsignformfieldgroupTooltip(String tEzsignformfieldgroupTooltip) {
     this.tEzsignformfieldgroupTooltip = tEzsignformfieldgroupTooltip;
   }
 
 
-  public EzsignformfieldgroupResponse eEzsignformfieldgroupTooltipposition(@javax.annotation.Nullable FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition) {
+  public EzsignformfieldgroupResponse eEzsignformfieldgroupTooltipposition(FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition) {
     this.eEzsignformfieldgroupTooltipposition = eEzsignformfieldgroupTooltipposition;
     return this;
   }
@@ -472,7 +455,7 @@ public class EzsignformfieldgroupResponse {
     return eEzsignformfieldgroupTooltipposition;
   }
 
-  public void seteEzsignformfieldgroupTooltipposition(@javax.annotation.Nullable FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition) {
+  public void seteEzsignformfieldgroupTooltipposition(FieldEEzsignformfieldgroupTooltipposition eEzsignformfieldgroupTooltipposition) {
     this.eEzsignformfieldgroupTooltipposition = eEzsignformfieldgroupTooltipposition;
   }
 
@@ -596,6 +579,21 @@ public class EzsignformfieldgroupResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignformfieldgroupResponse is not found in the empty JSON string", EzsignformfieldgroupResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsignformfieldgroupResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignformfieldgroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignformfieldgroupResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `eEzsignformfieldgroupType`
       FieldEEzsignformfieldgroupType.validateJsonElement(jsonObj.get("eEzsignformfieldgroupType"));
@@ -628,6 +626,34 @@ public class EzsignformfieldgroupResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignformfieldgroupResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignformfieldgroupResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignformfieldgroupResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignformfieldgroupResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignformfieldgroupResponse>() {
+           @Override
+           public void write(JsonWriter out, EzsignformfieldgroupResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignformfieldgroupResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsignformfieldgroupResponse given an JSON string

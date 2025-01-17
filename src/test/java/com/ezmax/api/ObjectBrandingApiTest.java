@@ -17,10 +17,10 @@ import eZmaxAPI.ApiException;
 import com.ezmax.api.model.BrandingCreateObjectV2Request;
 import com.ezmax.api.model.BrandingCreateObjectV2Response;
 import com.ezmax.api.model.BrandingEditObjectV2Request;
+import com.ezmax.api.model.BrandingEditObjectV2Response;
 import com.ezmax.api.model.BrandingGetAutocompleteV2Response;
 import com.ezmax.api.model.BrandingGetListV1Response;
 import com.ezmax.api.model.BrandingGetObjectV3Response;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -65,7 +65,7 @@ public class ObjectBrandingApiTest {
     public void brandingEditObjectV2Test() throws ApiException {
         Integer pkiBrandingID = null;
         BrandingEditObjectV2Request brandingEditObjectV2Request = null;
-        CommonResponse response = api.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
+        BrandingEditObjectV2Response response = api.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
         // TODO: test validations
     }
 

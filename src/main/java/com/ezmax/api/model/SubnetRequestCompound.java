@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.MultilingualSubnetDescription;
-import com.ezmax.api.model.SubnetRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,10 +49,156 @@ import eZmaxAPI.JSON;
 /**
  * A Subnet Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class SubnetRequestCompound extends SubnetRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class SubnetRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_SUBNET_I_D = "pkiSubnetID";
+  @SerializedName(SERIALIZED_NAME_PKI_SUBNET_I_D)
+  private Integer pkiSubnetID;
+
+  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
+  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  private Integer fkiUserID;
+
+  public static final String SERIALIZED_NAME_FKI_APIKEY_I_D = "fkiApikeyID";
+  @SerializedName(SERIALIZED_NAME_FKI_APIKEY_I_D)
+  private Integer fkiApikeyID;
+
+  public static final String SERIALIZED_NAME_OBJ_SUBNET_DESCRIPTION = "objSubnetDescription";
+  @SerializedName(SERIALIZED_NAME_OBJ_SUBNET_DESCRIPTION)
+  private MultilingualSubnetDescription objSubnetDescription;
+
+  public static final String SERIALIZED_NAME_I_SUBNET_NETWORK = "iSubnetNetwork";
+  @SerializedName(SERIALIZED_NAME_I_SUBNET_NETWORK)
+  private Long iSubnetNetwork;
+
+  public static final String SERIALIZED_NAME_I_SUBNET_MASK = "iSubnetMask";
+  @SerializedName(SERIALIZED_NAME_I_SUBNET_MASK)
+  private Long iSubnetMask;
+
   public SubnetRequestCompound() {
   }
+
+  public SubnetRequestCompound pkiSubnetID(Integer pkiSubnetID) {
+    this.pkiSubnetID = pkiSubnetID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Subnet
+   * minimum: 0
+   * maximum: 65535
+   * @return pkiSubnetID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiSubnetID() {
+    return pkiSubnetID;
+  }
+
+  public void setPkiSubnetID(Integer pkiSubnetID) {
+    this.pkiSubnetID = pkiSubnetID;
+  }
+
+
+  public SubnetRequestCompound fkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return fkiUserID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiUserID() {
+    return fkiUserID;
+  }
+
+  public void setFkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+  }
+
+
+  public SubnetRequestCompound fkiApikeyID(Integer fkiApikeyID) {
+    this.fkiApikeyID = fkiApikeyID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Apikey
+   * minimum: 0
+   * @return fkiApikeyID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiApikeyID() {
+    return fkiApikeyID;
+  }
+
+  public void setFkiApikeyID(Integer fkiApikeyID) {
+    this.fkiApikeyID = fkiApikeyID;
+  }
+
+
+  public SubnetRequestCompound objSubnetDescription(MultilingualSubnetDescription objSubnetDescription) {
+    this.objSubnetDescription = objSubnetDescription;
+    return this;
+  }
+
+  /**
+   * Get objSubnetDescription
+   * @return objSubnetDescription
+   */
+  @javax.annotation.Nonnull
+  public MultilingualSubnetDescription getObjSubnetDescription() {
+    return objSubnetDescription;
+  }
+
+  public void setObjSubnetDescription(MultilingualSubnetDescription objSubnetDescription) {
+    this.objSubnetDescription = objSubnetDescription;
+  }
+
+
+  public SubnetRequestCompound iSubnetNetwork(Long iSubnetNetwork) {
+    this.iSubnetNetwork = iSubnetNetwork;
+    return this;
+  }
+
+  /**
+   * The network of the Subnet in integer form. For example 8.8.8.0 would be 134744064
+   * minimum: 0
+   * maximum: 4294967295
+   * @return iSubnetNetwork
+   */
+  @javax.annotation.Nonnull
+  public Long getiSubnetNetwork() {
+    return iSubnetNetwork;
+  }
+
+  public void setiSubnetNetwork(Long iSubnetNetwork) {
+    this.iSubnetNetwork = iSubnetNetwork;
+  }
+
+
+  public SubnetRequestCompound iSubnetMask(Long iSubnetMask) {
+    this.iSubnetMask = iSubnetMask;
+    return this;
+  }
+
+  /**
+   * The mask of the Subnet  in integer form. For example 255.255.255.0 would be 4294967040
+   * minimum: 0
+   * maximum: 4294967295
+   * @return iSubnetMask
+   */
+  @javax.annotation.Nonnull
+  public Long getiSubnetMask() {
+    return iSubnetMask;
+  }
+
+  public void setiSubnetMask(Long iSubnetMask) {
+    this.iSubnetMask = iSubnetMask;
+  }
+
 
 
   @Override
@@ -64,19 +209,30 @@ public class SubnetRequestCompound extends SubnetRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    SubnetRequestCompound subnetRequestCompound = (SubnetRequestCompound) o;
+    return Objects.equals(this.pkiSubnetID, subnetRequestCompound.pkiSubnetID) &&
+        Objects.equals(this.fkiUserID, subnetRequestCompound.fkiUserID) &&
+        Objects.equals(this.fkiApikeyID, subnetRequestCompound.fkiApikeyID) &&
+        Objects.equals(this.objSubnetDescription, subnetRequestCompound.objSubnetDescription) &&
+        Objects.equals(this.iSubnetNetwork, subnetRequestCompound.iSubnetNetwork) &&
+        Objects.equals(this.iSubnetMask, subnetRequestCompound.iSubnetMask);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiSubnetID, fkiUserID, fkiApikeyID, objSubnetDescription, iSubnetNetwork, iSubnetMask);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SubnetRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiSubnetID: ").append(toIndentedString(pkiSubnetID)).append("\n");
+    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
+    sb.append("    fkiApikeyID: ").append(toIndentedString(fkiApikeyID)).append("\n");
+    sb.append("    objSubnetDescription: ").append(toIndentedString(objSubnetDescription)).append("\n");
+    sb.append("    iSubnetNetwork: ").append(toIndentedString(iSubnetNetwork)).append("\n");
+    sb.append("    iSubnetMask: ").append(toIndentedString(iSubnetMask)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -140,6 +296,9 @@ public class SubnetRequestCompound extends SubnetRequest {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objSubnetDescription`
+      MultilingualSubnetDescription.validateJsonElement(jsonObj.get("objSubnetDescription"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

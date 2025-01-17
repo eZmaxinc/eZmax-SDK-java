@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.BrandingRequestV2;
 import com.ezmax.api.model.FieldEBrandingAlignlogo;
 import com.ezmax.api.model.FieldEBrandingLogo;
 import com.ezmax.api.model.MultilingualBrandingDescription;
@@ -52,10 +51,220 @@ import eZmaxAPI.JSON;
 /**
  * A Branding Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class BrandingRequestCompoundV2 extends BrandingRequestV2 {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class BrandingRequestCompoundV2 {
+  public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
+  @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
+  private Integer pkiBrandingID;
+
+  public static final String SERIALIZED_NAME_OBJ_BRANDING_DESCRIPTION = "objBrandingDescription";
+  @SerializedName(SERIALIZED_NAME_OBJ_BRANDING_DESCRIPTION)
+  private MultilingualBrandingDescription objBrandingDescription;
+
+  public static final String SERIALIZED_NAME_E_BRANDING_LOGO = "eBrandingLogo";
+  @SerializedName(SERIALIZED_NAME_E_BRANDING_LOGO)
+  private FieldEBrandingLogo eBrandingLogo;
+
+  public static final String SERIALIZED_NAME_E_BRANDING_ALIGNLOGO = "eBrandingAlignlogo";
+  @SerializedName(SERIALIZED_NAME_E_BRANDING_ALIGNLOGO)
+  private FieldEBrandingAlignlogo eBrandingAlignlogo;
+
+  public static final String SERIALIZED_NAME_S_BRANDING_BASE64 = "sBrandingBase64";
+  @SerializedName(SERIALIZED_NAME_S_BRANDING_BASE64)
+  private byte[] sBrandingBase64;
+
+  public static final String SERIALIZED_NAME_I_BRANDING_COLOR = "iBrandingColor";
+  @SerializedName(SERIALIZED_NAME_I_BRANDING_COLOR)
+  private Integer iBrandingColor;
+
+  public static final String SERIALIZED_NAME_S_BRANDING_NAME = "sBrandingName";
+  @SerializedName(SERIALIZED_NAME_S_BRANDING_NAME)
+  private String sBrandingName;
+
+  public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
+  @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  private String sEmailAddress;
+
+  public static final String SERIALIZED_NAME_B_BRANDING_ISACTIVE = "bBrandingIsactive";
+  @SerializedName(SERIALIZED_NAME_B_BRANDING_ISACTIVE)
+  private Boolean bBrandingIsactive;
+
   public BrandingRequestCompoundV2() {
   }
+
+  public BrandingRequestCompoundV2 pkiBrandingID(Integer pkiBrandingID) {
+    this.pkiBrandingID = pkiBrandingID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Branding
+   * minimum: 0
+   * @return pkiBrandingID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiBrandingID() {
+    return pkiBrandingID;
+  }
+
+  public void setPkiBrandingID(Integer pkiBrandingID) {
+    this.pkiBrandingID = pkiBrandingID;
+  }
+
+
+  public BrandingRequestCompoundV2 objBrandingDescription(MultilingualBrandingDescription objBrandingDescription) {
+    this.objBrandingDescription = objBrandingDescription;
+    return this;
+  }
+
+  /**
+   * Get objBrandingDescription
+   * @return objBrandingDescription
+   */
+  @javax.annotation.Nonnull
+  public MultilingualBrandingDescription getObjBrandingDescription() {
+    return objBrandingDescription;
+  }
+
+  public void setObjBrandingDescription(MultilingualBrandingDescription objBrandingDescription) {
+    this.objBrandingDescription = objBrandingDescription;
+  }
+
+
+  public BrandingRequestCompoundV2 eBrandingLogo(FieldEBrandingLogo eBrandingLogo) {
+    this.eBrandingLogo = eBrandingLogo;
+    return this;
+  }
+
+  /**
+   * Get eBrandingLogo
+   * @return eBrandingLogo
+   */
+  @javax.annotation.Nonnull
+  public FieldEBrandingLogo geteBrandingLogo() {
+    return eBrandingLogo;
+  }
+
+  public void seteBrandingLogo(FieldEBrandingLogo eBrandingLogo) {
+    this.eBrandingLogo = eBrandingLogo;
+  }
+
+
+  public BrandingRequestCompoundV2 eBrandingAlignlogo(FieldEBrandingAlignlogo eBrandingAlignlogo) {
+    this.eBrandingAlignlogo = eBrandingAlignlogo;
+    return this;
+  }
+
+  /**
+   * Get eBrandingAlignlogo
+   * @return eBrandingAlignlogo
+   */
+  @javax.annotation.Nullable
+  public FieldEBrandingAlignlogo geteBrandingAlignlogo() {
+    return eBrandingAlignlogo;
+  }
+
+  public void seteBrandingAlignlogo(FieldEBrandingAlignlogo eBrandingAlignlogo) {
+    this.eBrandingAlignlogo = eBrandingAlignlogo;
+  }
+
+
+  public BrandingRequestCompoundV2 sBrandingBase64(byte[] sBrandingBase64) {
+    this.sBrandingBase64 = sBrandingBase64;
+    return this;
+  }
+
+  /**
+   * The Base64 encoded binary content of the branding logo. This need to match image type selected in eBrandingLogo if you supply an image. If you select &#39;Default&#39;, the logo will be deleted and the default one will be used.
+   * @return sBrandingBase64
+   */
+  @javax.annotation.Nullable
+  public byte[] getsBrandingBase64() {
+    return sBrandingBase64;
+  }
+
+  public void setsBrandingBase64(byte[] sBrandingBase64) {
+    this.sBrandingBase64 = sBrandingBase64;
+  }
+
+
+  public BrandingRequestCompoundV2 iBrandingColor(Integer iBrandingColor) {
+    this.iBrandingColor = iBrandingColor;
+    return this;
+  }
+
+  /**
+   * The primary color. This is a RGB color converted into integer
+   * minimum: 0
+   * maximum: 16777215
+   * @return iBrandingColor
+   */
+  @javax.annotation.Nonnull
+  public Integer getiBrandingColor() {
+    return iBrandingColor;
+  }
+
+  public void setiBrandingColor(Integer iBrandingColor) {
+    this.iBrandingColor = iBrandingColor;
+  }
+
+
+  public BrandingRequestCompoundV2 sBrandingName(String sBrandingName) {
+    this.sBrandingName = sBrandingName;
+    return this;
+  }
+
+  /**
+   * The name of the Branding  This value will only be set if you wish to overwrite the default name. If you want to keep the default name, leave this property empty
+   * @return sBrandingName
+   */
+  @javax.annotation.Nullable
+  public String getsBrandingName() {
+    return sBrandingName;
+  }
+
+  public void setsBrandingName(String sBrandingName) {
+    this.sBrandingName = sBrandingName;
+  }
+
+
+  public BrandingRequestCompoundV2 sEmailAddress(String sEmailAddress) {
+    this.sEmailAddress = sEmailAddress;
+    return this;
+  }
+
+  /**
+   * The email address.
+   * @return sEmailAddress
+   */
+  @javax.annotation.Nullable
+  public String getsEmailAddress() {
+    return sEmailAddress;
+  }
+
+  public void setsEmailAddress(String sEmailAddress) {
+    this.sEmailAddress = sEmailAddress;
+  }
+
+
+  public BrandingRequestCompoundV2 bBrandingIsactive(Boolean bBrandingIsactive) {
+    this.bBrandingIsactive = bBrandingIsactive;
+    return this;
+  }
+
+  /**
+   * Whether the Branding is active or not
+   * @return bBrandingIsactive
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbBrandingIsactive() {
+    return bBrandingIsactive;
+  }
+
+  public void setbBrandingIsactive(Boolean bBrandingIsactive) {
+    this.bBrandingIsactive = bBrandingIsactive;
+  }
+
 
 
   @Override
@@ -66,19 +275,36 @@ public class BrandingRequestCompoundV2 extends BrandingRequestV2 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    BrandingRequestCompoundV2 brandingRequestCompoundV2 = (BrandingRequestCompoundV2) o;
+    return Objects.equals(this.pkiBrandingID, brandingRequestCompoundV2.pkiBrandingID) &&
+        Objects.equals(this.objBrandingDescription, brandingRequestCompoundV2.objBrandingDescription) &&
+        Objects.equals(this.eBrandingLogo, brandingRequestCompoundV2.eBrandingLogo) &&
+        Objects.equals(this.eBrandingAlignlogo, brandingRequestCompoundV2.eBrandingAlignlogo) &&
+        Arrays.equals(this.sBrandingBase64, brandingRequestCompoundV2.sBrandingBase64) &&
+        Objects.equals(this.iBrandingColor, brandingRequestCompoundV2.iBrandingColor) &&
+        Objects.equals(this.sBrandingName, brandingRequestCompoundV2.sBrandingName) &&
+        Objects.equals(this.sEmailAddress, brandingRequestCompoundV2.sEmailAddress) &&
+        Objects.equals(this.bBrandingIsactive, brandingRequestCompoundV2.bBrandingIsactive);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiBrandingID, objBrandingDescription, eBrandingLogo, eBrandingAlignlogo, Arrays.hashCode(sBrandingBase64), iBrandingColor, sBrandingName, sEmailAddress, bBrandingIsactive);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandingRequestCompoundV2 {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiBrandingID: ").append(toIndentedString(pkiBrandingID)).append("\n");
+    sb.append("    objBrandingDescription: ").append(toIndentedString(objBrandingDescription)).append("\n");
+    sb.append("    eBrandingLogo: ").append(toIndentedString(eBrandingLogo)).append("\n");
+    sb.append("    eBrandingAlignlogo: ").append(toIndentedString(eBrandingAlignlogo)).append("\n");
+    sb.append("    sBrandingBase64: ").append(toIndentedString(sBrandingBase64)).append("\n");
+    sb.append("    iBrandingColor: ").append(toIndentedString(iBrandingColor)).append("\n");
+    sb.append("    sBrandingName: ").append(toIndentedString(sBrandingName)).append("\n");
+    sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
+    sb.append("    bBrandingIsactive: ").append(toIndentedString(bBrandingIsactive)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -145,6 +371,21 @@ public class BrandingRequestCompoundV2 extends BrandingRequestV2 {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objBrandingDescription`
+      MultilingualBrandingDescription.validateJsonElement(jsonObj.get("objBrandingDescription"));
+      // validate the required field `eBrandingLogo`
+      FieldEBrandingLogo.validateJsonElement(jsonObj.get("eBrandingLogo"));
+      // validate the optional field `eBrandingAlignlogo`
+      if (jsonObj.get("eBrandingAlignlogo") != null && !jsonObj.get("eBrandingAlignlogo").isJsonNull()) {
+        FieldEBrandingAlignlogo.validateJsonElement(jsonObj.get("eBrandingAlignlogo"));
+      }
+      if ((jsonObj.get("sBrandingName") != null && !jsonObj.get("sBrandingName").isJsonNull()) && !jsonObj.get("sBrandingName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sBrandingName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingName").toString()));
+      }
+      if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
       }
   }
 

@@ -49,42 +49,36 @@ import eZmaxAPI.JSON;
 /**
  * A Subnet Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SubnetResponse {
   public static final String SERIALIZED_NAME_PKI_SUBNET_I_D = "pkiSubnetID";
   @SerializedName(SERIALIZED_NAME_PKI_SUBNET_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiSubnetID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_APIKEY_I_D = "fkiApikeyID";
   @SerializedName(SERIALIZED_NAME_FKI_APIKEY_I_D)
-  @javax.annotation.Nullable
   private Integer fkiApikeyID;
 
   public static final String SERIALIZED_NAME_OBJ_SUBNET_DESCRIPTION = "objSubnetDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_SUBNET_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualSubnetDescription objSubnetDescription;
 
   public static final String SERIALIZED_NAME_I_SUBNET_NETWORK = "iSubnetNetwork";
   @SerializedName(SERIALIZED_NAME_I_SUBNET_NETWORK)
-  @javax.annotation.Nonnull
   private Long iSubnetNetwork;
 
   public static final String SERIALIZED_NAME_I_SUBNET_MASK = "iSubnetMask";
   @SerializedName(SERIALIZED_NAME_I_SUBNET_MASK)
-  @javax.annotation.Nonnull
   private Long iSubnetMask;
 
   public SubnetResponse() {
   }
 
-  public SubnetResponse pkiSubnetID(@javax.annotation.Nonnull Integer pkiSubnetID) {
+  public SubnetResponse pkiSubnetID(Integer pkiSubnetID) {
     this.pkiSubnetID = pkiSubnetID;
     return this;
   }
@@ -100,12 +94,12 @@ public class SubnetResponse {
     return pkiSubnetID;
   }
 
-  public void setPkiSubnetID(@javax.annotation.Nonnull Integer pkiSubnetID) {
+  public void setPkiSubnetID(Integer pkiSubnetID) {
     this.pkiSubnetID = pkiSubnetID;
   }
 
 
-  public SubnetResponse fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public SubnetResponse fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -120,12 +114,12 @@ public class SubnetResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public SubnetResponse fkiApikeyID(@javax.annotation.Nullable Integer fkiApikeyID) {
+  public SubnetResponse fkiApikeyID(Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
     return this;
   }
@@ -140,12 +134,12 @@ public class SubnetResponse {
     return fkiApikeyID;
   }
 
-  public void setFkiApikeyID(@javax.annotation.Nullable Integer fkiApikeyID) {
+  public void setFkiApikeyID(Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
   }
 
 
-  public SubnetResponse objSubnetDescription(@javax.annotation.Nonnull MultilingualSubnetDescription objSubnetDescription) {
+  public SubnetResponse objSubnetDescription(MultilingualSubnetDescription objSubnetDescription) {
     this.objSubnetDescription = objSubnetDescription;
     return this;
   }
@@ -159,12 +153,12 @@ public class SubnetResponse {
     return objSubnetDescription;
   }
 
-  public void setObjSubnetDescription(@javax.annotation.Nonnull MultilingualSubnetDescription objSubnetDescription) {
+  public void setObjSubnetDescription(MultilingualSubnetDescription objSubnetDescription) {
     this.objSubnetDescription = objSubnetDescription;
   }
 
 
-  public SubnetResponse iSubnetNetwork(@javax.annotation.Nonnull Long iSubnetNetwork) {
+  public SubnetResponse iSubnetNetwork(Long iSubnetNetwork) {
     this.iSubnetNetwork = iSubnetNetwork;
     return this;
   }
@@ -180,12 +174,12 @@ public class SubnetResponse {
     return iSubnetNetwork;
   }
 
-  public void setiSubnetNetwork(@javax.annotation.Nonnull Long iSubnetNetwork) {
+  public void setiSubnetNetwork(Long iSubnetNetwork) {
     this.iSubnetNetwork = iSubnetNetwork;
   }
 
 
-  public SubnetResponse iSubnetMask(@javax.annotation.Nonnull Long iSubnetMask) {
+  public SubnetResponse iSubnetMask(Long iSubnetMask) {
     this.iSubnetMask = iSubnetMask;
     return this;
   }
@@ -201,7 +195,7 @@ public class SubnetResponse {
     return iSubnetMask;
   }
 
-  public void setiSubnetMask(@javax.annotation.Nonnull Long iSubnetMask) {
+  public void setiSubnetMask(Long iSubnetMask) {
     this.iSubnetMask = iSubnetMask;
   }
 
@@ -288,11 +282,54 @@ public class SubnetResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in SubnetResponse is not found in the empty JSON string", SubnetResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!SubnetResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SubnetResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : SubnetResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objSubnetDescription`
       MultilingualSubnetDescription.validateJsonElement(jsonObj.get("objSubnetDescription"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!SubnetResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'SubnetResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<SubnetResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(SubnetResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<SubnetResponse>() {
+           @Override
+           public void write(JsonWriter out, SubnetResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public SubnetResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of SubnetResponse given an JSON string

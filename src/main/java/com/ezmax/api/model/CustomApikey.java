@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Apikey Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomApikey {
   public static final String SERIALIZED_NAME_S_APIKEY_KEY = "sApikeyKey";
   @SerializedName(SERIALIZED_NAME_S_APIKEY_KEY)
-  @javax.annotation.Nonnull
   private String sApikeyKey;
 
   public static final String SERIALIZED_NAME_S_APIKEY_SECRET = "sApikeySecret";
   @SerializedName(SERIALIZED_NAME_S_APIKEY_SECRET)
-  @javax.annotation.Nonnull
   private String sApikeySecret;
 
   public CustomApikey() {
   }
 
-  public CustomApikey sApikeyKey(@javax.annotation.Nonnull String sApikeyKey) {
+  public CustomApikey sApikeyKey(String sApikeyKey) {
     this.sApikeyKey = sApikeyKey;
     return this;
   }
@@ -77,12 +75,12 @@ public class CustomApikey {
     return sApikeyKey;
   }
 
-  public void setsApikeyKey(@javax.annotation.Nonnull String sApikeyKey) {
+  public void setsApikeyKey(String sApikeyKey) {
     this.sApikeyKey = sApikeyKey;
   }
 
 
-  public CustomApikey sApikeySecret(@javax.annotation.Nonnull String sApikeySecret) {
+  public CustomApikey sApikeySecret(String sApikeySecret) {
     this.sApikeySecret = sApikeySecret;
     return this;
   }
@@ -96,7 +94,7 @@ public class CustomApikey {
     return sApikeySecret;
   }
 
-  public void setsApikeySecret(@javax.annotation.Nonnull String sApikeySecret) {
+  public void setsApikeySecret(String sApikeySecret) {
     this.sApikeySecret = sApikeySecret;
   }
 

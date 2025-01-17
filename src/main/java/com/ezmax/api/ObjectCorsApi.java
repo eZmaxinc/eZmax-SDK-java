@@ -27,11 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CorsCreateObjectV1Request;
 import com.ezmax.api.model.CorsCreateObjectV1Response;
+import com.ezmax.api.model.CorsDeleteObjectV1Response;
 import com.ezmax.api.model.CorsEditObjectV1Request;
+import com.ezmax.api.model.CorsEditObjectV1Response;
 import com.ezmax.api.model.CorsGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -84,8 +85,7 @@ public class ObjectCorsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -153,8 +153,7 @@ public class ObjectCorsApi {
      * @return CorsCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -171,8 +170,7 @@ public class ObjectCorsApi {
      * @return ApiResponse&lt;CorsCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -191,8 +189,7 @@ public class ObjectCorsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -211,8 +208,7 @@ public class ObjectCorsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -278,18 +274,17 @@ public class ObjectCorsApi {
      * Delete an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors (required)
-     * @return CommonResponse
+     * @return CorsDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse corsDeleteObjectV1(Integer pkiCorsID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = corsDeleteObjectV1WithHttpInfo(pkiCorsID);
+    public CorsDeleteObjectV1Response corsDeleteObjectV1(Integer pkiCorsID) throws ApiException {
+        ApiResponse<CorsDeleteObjectV1Response> localVarResp = corsDeleteObjectV1WithHttpInfo(pkiCorsID);
         return localVarResp.getData();
     }
 
@@ -297,19 +292,18 @@ public class ObjectCorsApi {
      * Delete an existing Cors
      * 
      * @param pkiCorsID The unique ID of the Cors (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;CorsDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> corsDeleteObjectV1WithHttpInfo(Integer pkiCorsID) throws ApiException {
+    public ApiResponse<CorsDeleteObjectV1Response> corsDeleteObjectV1WithHttpInfo(Integer pkiCorsID) throws ApiException {
         okhttp3.Call localVarCall = corsDeleteObjectV1ValidateBeforeCall(pkiCorsID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CorsDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -321,17 +315,16 @@ public class ObjectCorsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call corsDeleteObjectV1Async(Integer pkiCorsID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call corsDeleteObjectV1Async(Integer pkiCorsID, final ApiCallback<CorsDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = corsDeleteObjectV1ValidateBeforeCall(pkiCorsID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CorsDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -343,8 +336,7 @@ public class ObjectCorsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -418,19 +410,18 @@ public class ObjectCorsApi {
      * 
      * @param pkiCorsID The unique ID of the Cors (required)
      * @param corsEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return CorsEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse corsEditObjectV1(Integer pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = corsEditObjectV1WithHttpInfo(pkiCorsID, corsEditObjectV1Request);
+    public CorsEditObjectV1Response corsEditObjectV1(Integer pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request) throws ApiException {
+        ApiResponse<CorsEditObjectV1Response> localVarResp = corsEditObjectV1WithHttpInfo(pkiCorsID, corsEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -439,20 +430,19 @@ public class ObjectCorsApi {
      * 
      * @param pkiCorsID The unique ID of the Cors (required)
      * @param corsEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;CorsEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> corsEditObjectV1WithHttpInfo(Integer pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request) throws ApiException {
+    public ApiResponse<CorsEditObjectV1Response> corsEditObjectV1WithHttpInfo(Integer pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = corsEditObjectV1ValidateBeforeCall(pkiCorsID, corsEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CorsEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -465,18 +455,17 @@ public class ObjectCorsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call corsEditObjectV1Async(Integer pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call corsEditObjectV1Async(Integer pkiCorsID, CorsEditObjectV1Request corsEditObjectV1Request, final ApiCallback<CorsEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = corsEditObjectV1ValidateBeforeCall(pkiCorsID, corsEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<CorsEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -487,8 +476,7 @@ public class ObjectCorsApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -557,8 +545,7 @@ public class ObjectCorsApi {
      * @return CorsGetObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -576,8 +563,7 @@ public class ObjectCorsApi {
      * @return ApiResponse&lt;CorsGetObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -597,8 +583,7 @@ public class ObjectCorsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>

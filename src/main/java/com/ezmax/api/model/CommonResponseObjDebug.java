@@ -51,37 +51,32 @@ import eZmaxAPI.JSON;
 /**
  * This is a generic debug object that is returned by all API requests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonResponseObjDebug {
   public static final String SERIALIZED_NAME_S_MEMORY_USAGE = "sMemoryUsage";
   @SerializedName(SERIALIZED_NAME_S_MEMORY_USAGE)
-  @javax.annotation.Nonnull
   private String sMemoryUsage;
 
   public static final String SERIALIZED_NAME_S_RUN_TIME = "sRunTime";
   @SerializedName(SERIALIZED_NAME_S_RUN_TIME)
-  @javax.annotation.Nonnull
   private String sRunTime;
 
   public static final String SERIALIZED_NAME_I_S_Q_L_SELECTS = "iSQLSelects";
   @SerializedName(SERIALIZED_NAME_I_S_Q_L_SELECTS)
-  @javax.annotation.Nonnull
   private Integer iSQLSelects;
 
   public static final String SERIALIZED_NAME_I_S_Q_L_QUERIES = "iSQLQueries";
   @SerializedName(SERIALIZED_NAME_I_S_Q_L_QUERIES)
-  @javax.annotation.Nonnull
   private Integer iSQLQueries;
 
   public static final String SERIALIZED_NAME_A_OBJ_S_Q_L_QUERY = "a_objSQLQuery";
   @SerializedName(SERIALIZED_NAME_A_OBJ_S_Q_L_QUERY)
-  @javax.annotation.Nonnull
   private List<CommonResponseObjSQLQuery> aObjSQLQuery = new ArrayList<>();
 
   public CommonResponseObjDebug() {
   }
 
-  public CommonResponseObjDebug sMemoryUsage(@javax.annotation.Nonnull String sMemoryUsage) {
+  public CommonResponseObjDebug sMemoryUsage(String sMemoryUsage) {
     this.sMemoryUsage = sMemoryUsage;
     return this;
   }
@@ -95,12 +90,12 @@ public class CommonResponseObjDebug {
     return sMemoryUsage;
   }
 
-  public void setsMemoryUsage(@javax.annotation.Nonnull String sMemoryUsage) {
+  public void setsMemoryUsage(String sMemoryUsage) {
     this.sMemoryUsage = sMemoryUsage;
   }
 
 
-  public CommonResponseObjDebug sRunTime(@javax.annotation.Nonnull String sRunTime) {
+  public CommonResponseObjDebug sRunTime(String sRunTime) {
     this.sRunTime = sRunTime;
     return this;
   }
@@ -114,12 +109,12 @@ public class CommonResponseObjDebug {
     return sRunTime;
   }
 
-  public void setsRunTime(@javax.annotation.Nonnull String sRunTime) {
+  public void setsRunTime(String sRunTime) {
     this.sRunTime = sRunTime;
   }
 
 
-  public CommonResponseObjDebug iSQLSelects(@javax.annotation.Nonnull Integer iSQLSelects) {
+  public CommonResponseObjDebug iSQLSelects(Integer iSQLSelects) {
     this.iSQLSelects = iSQLSelects;
     return this;
   }
@@ -133,12 +128,12 @@ public class CommonResponseObjDebug {
     return iSQLSelects;
   }
 
-  public void setiSQLSelects(@javax.annotation.Nonnull Integer iSQLSelects) {
+  public void setiSQLSelects(Integer iSQLSelects) {
     this.iSQLSelects = iSQLSelects;
   }
 
 
-  public CommonResponseObjDebug iSQLQueries(@javax.annotation.Nonnull Integer iSQLQueries) {
+  public CommonResponseObjDebug iSQLQueries(Integer iSQLQueries) {
     this.iSQLQueries = iSQLQueries;
     return this;
   }
@@ -152,12 +147,12 @@ public class CommonResponseObjDebug {
     return iSQLQueries;
   }
 
-  public void setiSQLQueries(@javax.annotation.Nonnull Integer iSQLQueries) {
+  public void setiSQLQueries(Integer iSQLQueries) {
     this.iSQLQueries = iSQLQueries;
   }
 
 
-  public CommonResponseObjDebug aObjSQLQuery(@javax.annotation.Nonnull List<CommonResponseObjSQLQuery> aObjSQLQuery) {
+  public CommonResponseObjDebug aObjSQLQuery(List<CommonResponseObjSQLQuery> aObjSQLQuery) {
     this.aObjSQLQuery = aObjSQLQuery;
     return this;
   }
@@ -179,7 +174,7 @@ public class CommonResponseObjDebug {
     return aObjSQLQuery;
   }
 
-  public void setaObjSQLQuery(@javax.annotation.Nonnull List<CommonResponseObjSQLQuery> aObjSQLQuery) {
+  public void setaObjSQLQuery(List<CommonResponseObjSQLQuery> aObjSQLQuery) {
     this.aObjSQLQuery = aObjSQLQuery;
   }
 

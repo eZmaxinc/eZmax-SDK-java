@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CustomDiscussionconfigurationResponse;
-import com.ezmax.api.model.DiscussionResponse;
 import com.ezmax.api.model.DiscussionmembershipResponseCompound;
 import com.ezmax.api.model.DiscussionmessageResponseCompound;
 import com.google.gson.TypeAdapter;

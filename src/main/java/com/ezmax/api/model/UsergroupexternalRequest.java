@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupexternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupexternalRequest {
   public static final String SERIALIZED_NAME_PKI_USERGROUPEXTERNAL_I_D = "pkiUsergroupexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPEXTERNAL_I_D)
-  @javax.annotation.Nullable
   private Integer pkiUsergroupexternalID;
 
   public static final String SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME = "sUsergroupexternalName";
   @SerializedName(SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME)
-  @javax.annotation.Nonnull
   private String sUsergroupexternalName;
 
   public static final String SERIALIZED_NAME_S_USERGROUPEXTERNAL_I_D = "sUsergroupexternalID";
   @SerializedName(SERIALIZED_NAME_S_USERGROUPEXTERNAL_I_D)
-  @javax.annotation.Nonnull
   private String sUsergroupexternalID;
 
   public UsergroupexternalRequest() {
   }
 
-  public UsergroupexternalRequest pkiUsergroupexternalID(@javax.annotation.Nullable Integer pkiUsergroupexternalID) {
+  public UsergroupexternalRequest pkiUsergroupexternalID(Integer pkiUsergroupexternalID) {
     this.pkiUsergroupexternalID = pkiUsergroupexternalID;
     return this;
   }
@@ -84,12 +81,12 @@ public class UsergroupexternalRequest {
     return pkiUsergroupexternalID;
   }
 
-  public void setPkiUsergroupexternalID(@javax.annotation.Nullable Integer pkiUsergroupexternalID) {
+  public void setPkiUsergroupexternalID(Integer pkiUsergroupexternalID) {
     this.pkiUsergroupexternalID = pkiUsergroupexternalID;
   }
 
 
-  public UsergroupexternalRequest sUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
+  public UsergroupexternalRequest sUsergroupexternalName(String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
     return this;
   }
@@ -103,12 +100,12 @@ public class UsergroupexternalRequest {
     return sUsergroupexternalName;
   }
 
-  public void setsUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
+  public void setsUsergroupexternalName(String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
   }
 
 
-  public UsergroupexternalRequest sUsergroupexternalID(@javax.annotation.Nonnull String sUsergroupexternalID) {
+  public UsergroupexternalRequest sUsergroupexternalID(String sUsergroupexternalID) {
     this.sUsergroupexternalID = sUsergroupexternalID;
     return this;
   }
@@ -122,7 +119,7 @@ public class UsergroupexternalRequest {
     return sUsergroupexternalID;
   }
 
-  public void setsUsergroupexternalID(@javax.annotation.Nonnull String sUsergroupexternalID) {
+  public void setsUsergroupexternalID(String sUsergroupexternalID) {
     this.sUsergroupexternalID = sUsergroupexternalID;
   }
 
@@ -198,6 +195,21 @@ public class UsergroupexternalRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in UsergroupexternalRequest is not found in the empty JSON string", UsergroupexternalRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!UsergroupexternalRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UsergroupexternalRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : UsergroupexternalRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sUsergroupexternalName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUsergroupexternalName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUsergroupexternalName").toString()));
@@ -207,6 +219,34 @@ public class UsergroupexternalRequest {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!UsergroupexternalRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'UsergroupexternalRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<UsergroupexternalRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(UsergroupexternalRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<UsergroupexternalRequest>() {
+           @Override
+           public void write(JsonWriter out, UsergroupexternalRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public UsergroupexternalRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of UsergroupexternalRequest given an JSON string

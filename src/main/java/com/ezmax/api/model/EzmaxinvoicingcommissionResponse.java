@@ -48,52 +48,44 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingcommission Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingcommissionResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGCOMMISSION_I_D = "pkiEzmaxinvoicingcommissionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGCOMMISSION_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzmaxinvoicingcommissionID;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D = "fkiEzmaxinvoicingsummaryglobalID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICINGSUMMARYGLOBAL_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzmaxinvoicingsummaryglobalID;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXPARTNER_I_D = "fkiEzmaxpartnerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXPARTNER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzmaxpartnerID;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXREPRESENTATIVE_I_D = "fkiEzmaxrepresentativeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXREPRESENTATIVE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzmaxrepresentativeID;
 
   public static final String SERIALIZED_NAME_DT_EZMAXINVOICINGCOMMISSION_START = "dtEzmaxinvoicingcommissionStart";
   @SerializedName(SERIALIZED_NAME_DT_EZMAXINVOICINGCOMMISSION_START)
-  @javax.annotation.Nonnull
   private String dtEzmaxinvoicingcommissionStart;
 
   public static final String SERIALIZED_NAME_DT_EZMAXINVOICINGCOMMISSION_END = "dtEzmaxinvoicingcommissionEnd";
   @SerializedName(SERIALIZED_NAME_DT_EZMAXINVOICINGCOMMISSION_END)
-  @javax.annotation.Nonnull
   private String dtEzmaxinvoicingcommissionEnd;
 
   public static final String SERIALIZED_NAME_I_EZMAXINVOICINGCOMMISSION_DAYS = "iEzmaxinvoicingcommissionDays";
   @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGCOMMISSION_DAYS)
-  @javax.annotation.Nonnull
   private Integer iEzmaxinvoicingcommissionDays;
 
   public static final String SERIALIZED_NAME_D_EZMAXINVOICINGCOMMISSION_AMOUNT = "dEzmaxinvoicingcommissionAmount";
   @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGCOMMISSION_AMOUNT)
-  @javax.annotation.Nonnull
   private String dEzmaxinvoicingcommissionAmount;
 
   public EzmaxinvoicingcommissionResponse() {
   }
 
-  public EzmaxinvoicingcommissionResponse pkiEzmaxinvoicingcommissionID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingcommissionID) {
+  public EzmaxinvoicingcommissionResponse pkiEzmaxinvoicingcommissionID(Integer pkiEzmaxinvoicingcommissionID) {
     this.pkiEzmaxinvoicingcommissionID = pkiEzmaxinvoicingcommissionID;
     return this;
   }
@@ -107,12 +99,12 @@ public class EzmaxinvoicingcommissionResponse {
     return pkiEzmaxinvoicingcommissionID;
   }
 
-  public void setPkiEzmaxinvoicingcommissionID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingcommissionID) {
+  public void setPkiEzmaxinvoicingcommissionID(Integer pkiEzmaxinvoicingcommissionID) {
     this.pkiEzmaxinvoicingcommissionID = pkiEzmaxinvoicingcommissionID;
   }
 
 
-  public EzmaxinvoicingcommissionResponse fkiEzmaxinvoicingsummaryglobalID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingsummaryglobalID) {
+  public EzmaxinvoicingcommissionResponse fkiEzmaxinvoicingsummaryglobalID(Integer fkiEzmaxinvoicingsummaryglobalID) {
     this.fkiEzmaxinvoicingsummaryglobalID = fkiEzmaxinvoicingsummaryglobalID;
     return this;
   }
@@ -127,12 +119,12 @@ public class EzmaxinvoicingcommissionResponse {
     return fkiEzmaxinvoicingsummaryglobalID;
   }
 
-  public void setFkiEzmaxinvoicingsummaryglobalID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingsummaryglobalID) {
+  public void setFkiEzmaxinvoicingsummaryglobalID(Integer fkiEzmaxinvoicingsummaryglobalID) {
     this.fkiEzmaxinvoicingsummaryglobalID = fkiEzmaxinvoicingsummaryglobalID;
   }
 
 
-  public EzmaxinvoicingcommissionResponse fkiEzmaxpartnerID(@javax.annotation.Nullable Integer fkiEzmaxpartnerID) {
+  public EzmaxinvoicingcommissionResponse fkiEzmaxpartnerID(Integer fkiEzmaxpartnerID) {
     this.fkiEzmaxpartnerID = fkiEzmaxpartnerID;
     return this;
   }
@@ -147,12 +139,12 @@ public class EzmaxinvoicingcommissionResponse {
     return fkiEzmaxpartnerID;
   }
 
-  public void setFkiEzmaxpartnerID(@javax.annotation.Nullable Integer fkiEzmaxpartnerID) {
+  public void setFkiEzmaxpartnerID(Integer fkiEzmaxpartnerID) {
     this.fkiEzmaxpartnerID = fkiEzmaxpartnerID;
   }
 
 
-  public EzmaxinvoicingcommissionResponse fkiEzmaxrepresentativeID(@javax.annotation.Nullable Integer fkiEzmaxrepresentativeID) {
+  public EzmaxinvoicingcommissionResponse fkiEzmaxrepresentativeID(Integer fkiEzmaxrepresentativeID) {
     this.fkiEzmaxrepresentativeID = fkiEzmaxrepresentativeID;
     return this;
   }
@@ -167,12 +159,12 @@ public class EzmaxinvoicingcommissionResponse {
     return fkiEzmaxrepresentativeID;
   }
 
-  public void setFkiEzmaxrepresentativeID(@javax.annotation.Nullable Integer fkiEzmaxrepresentativeID) {
+  public void setFkiEzmaxrepresentativeID(Integer fkiEzmaxrepresentativeID) {
     this.fkiEzmaxrepresentativeID = fkiEzmaxrepresentativeID;
   }
 
 
-  public EzmaxinvoicingcommissionResponse dtEzmaxinvoicingcommissionStart(@javax.annotation.Nonnull String dtEzmaxinvoicingcommissionStart) {
+  public EzmaxinvoicingcommissionResponse dtEzmaxinvoicingcommissionStart(String dtEzmaxinvoicingcommissionStart) {
     this.dtEzmaxinvoicingcommissionStart = dtEzmaxinvoicingcommissionStart;
     return this;
   }
@@ -186,12 +178,12 @@ public class EzmaxinvoicingcommissionResponse {
     return dtEzmaxinvoicingcommissionStart;
   }
 
-  public void setDtEzmaxinvoicingcommissionStart(@javax.annotation.Nonnull String dtEzmaxinvoicingcommissionStart) {
+  public void setDtEzmaxinvoicingcommissionStart(String dtEzmaxinvoicingcommissionStart) {
     this.dtEzmaxinvoicingcommissionStart = dtEzmaxinvoicingcommissionStart;
   }
 
 
-  public EzmaxinvoicingcommissionResponse dtEzmaxinvoicingcommissionEnd(@javax.annotation.Nonnull String dtEzmaxinvoicingcommissionEnd) {
+  public EzmaxinvoicingcommissionResponse dtEzmaxinvoicingcommissionEnd(String dtEzmaxinvoicingcommissionEnd) {
     this.dtEzmaxinvoicingcommissionEnd = dtEzmaxinvoicingcommissionEnd;
     return this;
   }
@@ -205,12 +197,12 @@ public class EzmaxinvoicingcommissionResponse {
     return dtEzmaxinvoicingcommissionEnd;
   }
 
-  public void setDtEzmaxinvoicingcommissionEnd(@javax.annotation.Nonnull String dtEzmaxinvoicingcommissionEnd) {
+  public void setDtEzmaxinvoicingcommissionEnd(String dtEzmaxinvoicingcommissionEnd) {
     this.dtEzmaxinvoicingcommissionEnd = dtEzmaxinvoicingcommissionEnd;
   }
 
 
-  public EzmaxinvoicingcommissionResponse iEzmaxinvoicingcommissionDays(@javax.annotation.Nonnull Integer iEzmaxinvoicingcommissionDays) {
+  public EzmaxinvoicingcommissionResponse iEzmaxinvoicingcommissionDays(Integer iEzmaxinvoicingcommissionDays) {
     this.iEzmaxinvoicingcommissionDays = iEzmaxinvoicingcommissionDays;
     return this;
   }
@@ -225,12 +217,12 @@ public class EzmaxinvoicingcommissionResponse {
     return iEzmaxinvoicingcommissionDays;
   }
 
-  public void setiEzmaxinvoicingcommissionDays(@javax.annotation.Nonnull Integer iEzmaxinvoicingcommissionDays) {
+  public void setiEzmaxinvoicingcommissionDays(Integer iEzmaxinvoicingcommissionDays) {
     this.iEzmaxinvoicingcommissionDays = iEzmaxinvoicingcommissionDays;
   }
 
 
-  public EzmaxinvoicingcommissionResponse dEzmaxinvoicingcommissionAmount(@javax.annotation.Nonnull String dEzmaxinvoicingcommissionAmount) {
+  public EzmaxinvoicingcommissionResponse dEzmaxinvoicingcommissionAmount(String dEzmaxinvoicingcommissionAmount) {
     this.dEzmaxinvoicingcommissionAmount = dEzmaxinvoicingcommissionAmount;
     return this;
   }
@@ -244,7 +236,7 @@ public class EzmaxinvoicingcommissionResponse {
     return dEzmaxinvoicingcommissionAmount;
   }
 
-  public void setdEzmaxinvoicingcommissionAmount(@javax.annotation.Nonnull String dEzmaxinvoicingcommissionAmount) {
+  public void setdEzmaxinvoicingcommissionAmount(String dEzmaxinvoicingcommissionAmount) {
     this.dEzmaxinvoicingcommissionAmount = dEzmaxinvoicingcommissionAmount;
   }
 
@@ -337,6 +329,21 @@ public class EzmaxinvoicingcommissionResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzmaxinvoicingcommissionResponse is not found in the empty JSON string", EzmaxinvoicingcommissionResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzmaxinvoicingcommissionResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzmaxinvoicingcommissionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzmaxinvoicingcommissionResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dtEzmaxinvoicingcommissionStart").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzmaxinvoicingcommissionStart` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzmaxinvoicingcommissionStart").toString()));
@@ -349,6 +356,34 @@ public class EzmaxinvoicingcommissionResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzmaxinvoicingcommissionResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzmaxinvoicingcommissionResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzmaxinvoicingcommissionResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzmaxinvoicingcommissionResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzmaxinvoicingcommissionResponse>() {
+           @Override
+           public void write(JsonWriter out, EzmaxinvoicingcommissionResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzmaxinvoicingcommissionResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzmaxinvoicingcommissionResponse given an JSON string

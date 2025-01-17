@@ -48,17 +48,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/apikey/generateDelegatedCredentials
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ApikeyGenerateDelegatedCredentialsV1Request {
   public static final String SERIALIZED_NAME_I_EXPIRATION_MINUTES = "iExpirationMinutes";
   @SerializedName(SERIALIZED_NAME_I_EXPIRATION_MINUTES)
-  @javax.annotation.Nonnull
   private Integer iExpirationMinutes;
 
   public ApikeyGenerateDelegatedCredentialsV1Request() {
   }
 
-  public ApikeyGenerateDelegatedCredentialsV1Request iExpirationMinutes(@javax.annotation.Nonnull Integer iExpirationMinutes) {
+  public ApikeyGenerateDelegatedCredentialsV1Request iExpirationMinutes(Integer iExpirationMinutes) {
     this.iExpirationMinutes = iExpirationMinutes;
     return this;
   }
@@ -74,7 +73,7 @@ public class ApikeyGenerateDelegatedCredentialsV1Request {
     return iExpirationMinutes;
   }
 
-  public void setiExpirationMinutes(@javax.annotation.Nonnull Integer iExpirationMinutes) {
+  public void setiExpirationMinutes(Integer iExpirationMinutes) {
     this.iExpirationMinutes = iExpirationMinutes;
   }
 

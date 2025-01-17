@@ -49,62 +49,52 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatesigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatesignerResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNER_I_D = "pkiEzsigntemplatesignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplatesignerID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplateID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUsergroupID;
 
   public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D = "fkiEzdoctemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzdoctemplatedocumentID;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNER_RECEIVECOPY = "bEzsigntemplatesignerReceivecopy";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNER_RECEIVECOPY)
-  @javax.annotation.Nullable
   private Boolean bEzsigntemplatesignerReceivecopy;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNER_MAPPING = "eEzsigntemplatesignerMapping";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNER_MAPPING)
-  @javax.annotation.Nullable
   private FieldEEzsigntemplatesignerMapping eEzsigntemplatesignerMapping;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNER_DESCRIPTION = "sEzsigntemplatesignerDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNER_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsigntemplatesignerDescription;
 
   public static final String SERIALIZED_NAME_S_USER_NAME = "sUserName";
   @SerializedName(SERIALIZED_NAME_S_USER_NAME)
-  @javax.annotation.Nullable
   private String sUserName;
 
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
-  @javax.annotation.Nullable
   private String sUsergroupNameX;
 
   public EzsigntemplatesignerResponse() {
   }
 
-  public EzsigntemplatesignerResponse pkiEzsigntemplatesignerID(@javax.annotation.Nonnull Integer pkiEzsigntemplatesignerID) {
+  public EzsigntemplatesignerResponse pkiEzsigntemplatesignerID(Integer pkiEzsigntemplatesignerID) {
     this.pkiEzsigntemplatesignerID = pkiEzsigntemplatesignerID;
     return this;
   }
@@ -119,12 +109,12 @@ public class EzsigntemplatesignerResponse {
     return pkiEzsigntemplatesignerID;
   }
 
-  public void setPkiEzsigntemplatesignerID(@javax.annotation.Nonnull Integer pkiEzsigntemplatesignerID) {
+  public void setPkiEzsigntemplatesignerID(Integer pkiEzsigntemplatesignerID) {
     this.pkiEzsigntemplatesignerID = pkiEzsigntemplatesignerID;
   }
 
 
-  public EzsigntemplatesignerResponse fkiEzsigntemplateID(@javax.annotation.Nonnull Integer fkiEzsigntemplateID) {
+  public EzsigntemplatesignerResponse fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -139,12 +129,12 @@ public class EzsigntemplatesignerResponse {
     return fkiEzsigntemplateID;
   }
 
-  public void setFkiEzsigntemplateID(@javax.annotation.Nonnull Integer fkiEzsigntemplateID) {
+  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
-  public EzsigntemplatesignerResponse fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public EzsigntemplatesignerResponse fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -159,12 +149,12 @@ public class EzsigntemplatesignerResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public EzsigntemplatesignerResponse fkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
+  public EzsigntemplatesignerResponse fkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -180,12 +170,12 @@ public class EzsigntemplatesignerResponse {
     return fkiUsergroupID;
   }
 
-  public void setFkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
+  public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
-  public EzsigntemplatesignerResponse fkiEzdoctemplatedocumentID(@javax.annotation.Nullable Integer fkiEzdoctemplatedocumentID) {
+  public EzsigntemplatesignerResponse fkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
     this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
     return this;
   }
@@ -201,12 +191,12 @@ public class EzsigntemplatesignerResponse {
     return fkiEzdoctemplatedocumentID;
   }
 
-  public void setFkiEzdoctemplatedocumentID(@javax.annotation.Nullable Integer fkiEzdoctemplatedocumentID) {
+  public void setFkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
     this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
   }
 
 
-  public EzsigntemplatesignerResponse bEzsigntemplatesignerReceivecopy(@javax.annotation.Nullable Boolean bEzsigntemplatesignerReceivecopy) {
+  public EzsigntemplatesignerResponse bEzsigntemplatesignerReceivecopy(Boolean bEzsigntemplatesignerReceivecopy) {
     this.bEzsigntemplatesignerReceivecopy = bEzsigntemplatesignerReceivecopy;
     return this;
   }
@@ -220,12 +210,12 @@ public class EzsigntemplatesignerResponse {
     return bEzsigntemplatesignerReceivecopy;
   }
 
-  public void setbEzsigntemplatesignerReceivecopy(@javax.annotation.Nullable Boolean bEzsigntemplatesignerReceivecopy) {
+  public void setbEzsigntemplatesignerReceivecopy(Boolean bEzsigntemplatesignerReceivecopy) {
     this.bEzsigntemplatesignerReceivecopy = bEzsigntemplatesignerReceivecopy;
   }
 
 
-  public EzsigntemplatesignerResponse eEzsigntemplatesignerMapping(@javax.annotation.Nullable FieldEEzsigntemplatesignerMapping eEzsigntemplatesignerMapping) {
+  public EzsigntemplatesignerResponse eEzsigntemplatesignerMapping(FieldEEzsigntemplatesignerMapping eEzsigntemplatesignerMapping) {
     this.eEzsigntemplatesignerMapping = eEzsigntemplatesignerMapping;
     return this;
   }
@@ -239,12 +229,12 @@ public class EzsigntemplatesignerResponse {
     return eEzsigntemplatesignerMapping;
   }
 
-  public void seteEzsigntemplatesignerMapping(@javax.annotation.Nullable FieldEEzsigntemplatesignerMapping eEzsigntemplatesignerMapping) {
+  public void seteEzsigntemplatesignerMapping(FieldEEzsigntemplatesignerMapping eEzsigntemplatesignerMapping) {
     this.eEzsigntemplatesignerMapping = eEzsigntemplatesignerMapping;
   }
 
 
-  public EzsigntemplatesignerResponse sEzsigntemplatesignerDescription(@javax.annotation.Nonnull String sEzsigntemplatesignerDescription) {
+  public EzsigntemplatesignerResponse sEzsigntemplatesignerDescription(String sEzsigntemplatesignerDescription) {
     this.sEzsigntemplatesignerDescription = sEzsigntemplatesignerDescription;
     return this;
   }
@@ -258,12 +248,12 @@ public class EzsigntemplatesignerResponse {
     return sEzsigntemplatesignerDescription;
   }
 
-  public void setsEzsigntemplatesignerDescription(@javax.annotation.Nonnull String sEzsigntemplatesignerDescription) {
+  public void setsEzsigntemplatesignerDescription(String sEzsigntemplatesignerDescription) {
     this.sEzsigntemplatesignerDescription = sEzsigntemplatesignerDescription;
   }
 
 
-  public EzsigntemplatesignerResponse sUserName(@javax.annotation.Nullable String sUserName) {
+  public EzsigntemplatesignerResponse sUserName(String sUserName) {
     this.sUserName = sUserName;
     return this;
   }
@@ -277,12 +267,12 @@ public class EzsigntemplatesignerResponse {
     return sUserName;
   }
 
-  public void setsUserName(@javax.annotation.Nullable String sUserName) {
+  public void setsUserName(String sUserName) {
     this.sUserName = sUserName;
   }
 
 
-  public EzsigntemplatesignerResponse sUsergroupNameX(@javax.annotation.Nullable String sUsergroupNameX) {
+  public EzsigntemplatesignerResponse sUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
     return this;
   }
@@ -296,7 +286,7 @@ public class EzsigntemplatesignerResponse {
     return sUsergroupNameX;
   }
 
-  public void setsUsergroupNameX(@javax.annotation.Nullable String sUsergroupNameX) {
+  public void setsUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
   }
 
@@ -394,6 +384,21 @@ public class EzsigntemplatesignerResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigntemplatesignerResponse is not found in the empty JSON string", EzsigntemplatesignerResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsigntemplatesignerResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigntemplatesignerResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsigntemplatesignerResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `eEzsigntemplatesignerMapping`
       if (jsonObj.get("eEzsigntemplatesignerMapping") != null && !jsonObj.get("eEzsigntemplatesignerMapping").isJsonNull()) {
@@ -410,6 +415,34 @@ public class EzsigntemplatesignerResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsigntemplatesignerResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsigntemplatesignerResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsigntemplatesignerResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsigntemplatesignerResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsigntemplatesignerResponse>() {
+           @Override
+           public void write(JsonWriter out, EzsigntemplatesignerResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsigntemplatesignerResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsigntemplatesignerResponse given an JSON string

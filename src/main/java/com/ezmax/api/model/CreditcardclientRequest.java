@@ -49,57 +49,48 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcardclient Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreditcardclientRequest {
   public static final String SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D = "pkiCreditcardclientID";
   @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D)
-  @javax.annotation.Nullable
   private Integer pkiCreditcardclientID;
 
   public static final String SERIALIZED_NAME_FKS_CREDITCARDTOKEN_I_D = "fksCreditcardtokenID";
   @SerializedName(SERIALIZED_NAME_FKS_CREDITCARDTOKEN_I_D)
-  @javax.annotation.Nullable
   private String fksCreditcardtokenID;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENTRELATION_ISDEFAULT = "bCreditcardclientrelationIsdefault";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENTRELATION_ISDEFAULT)
-  @javax.annotation.Nonnull
   private Boolean bCreditcardclientrelationIsdefault;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION = "sCreditcardclientDescription";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sCreditcardclientDescription;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDCOMPANYPAYMENT = "bCreditcardclientAllowedcompanypayment";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDCOMPANYPAYMENT)
-  @javax.annotation.Nonnull
   private Boolean bCreditcardclientAllowedcompanypayment;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDEZSIGN = "bCreditcardclientAllowedezsign";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDEZSIGN)
-  @javax.annotation.Nonnull
   private Boolean bCreditcardclientAllowedezsign;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDTRANQUILLIT = "bCreditcardclientAllowedtranquillit";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDTRANQUILLIT)
-  @javax.annotation.Nonnull
   private Boolean bCreditcardclientAllowedtranquillit;
 
   public static final String SERIALIZED_NAME_OBJ_CREDITCARDDETAIL = "objCreditcarddetail";
   @SerializedName(SERIALIZED_NAME_OBJ_CREDITCARDDETAIL)
-  @javax.annotation.Nonnull
   private CreditcarddetailRequest objCreditcarddetail;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDCLIENT_C_V_V = "sCreditcardclientCVV";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDCLIENT_C_V_V)
-  @javax.annotation.Nonnull
   private String sCreditcardclientCVV;
 
   public CreditcardclientRequest() {
   }
 
-  public CreditcardclientRequest pkiCreditcardclientID(@javax.annotation.Nullable Integer pkiCreditcardclientID) {
+  public CreditcardclientRequest pkiCreditcardclientID(Integer pkiCreditcardclientID) {
     this.pkiCreditcardclientID = pkiCreditcardclientID;
     return this;
   }
@@ -115,12 +106,12 @@ public class CreditcardclientRequest {
     return pkiCreditcardclientID;
   }
 
-  public void setPkiCreditcardclientID(@javax.annotation.Nullable Integer pkiCreditcardclientID) {
+  public void setPkiCreditcardclientID(Integer pkiCreditcardclientID) {
     this.pkiCreditcardclientID = pkiCreditcardclientID;
   }
 
 
-  public CreditcardclientRequest fksCreditcardtokenID(@javax.annotation.Nullable String fksCreditcardtokenID) {
+  public CreditcardclientRequest fksCreditcardtokenID(String fksCreditcardtokenID) {
     this.fksCreditcardtokenID = fksCreditcardtokenID;
     return this;
   }
@@ -134,12 +125,12 @@ public class CreditcardclientRequest {
     return fksCreditcardtokenID;
   }
 
-  public void setFksCreditcardtokenID(@javax.annotation.Nullable String fksCreditcardtokenID) {
+  public void setFksCreditcardtokenID(String fksCreditcardtokenID) {
     this.fksCreditcardtokenID = fksCreditcardtokenID;
   }
 
 
-  public CreditcardclientRequest bCreditcardclientrelationIsdefault(@javax.annotation.Nonnull Boolean bCreditcardclientrelationIsdefault) {
+  public CreditcardclientRequest bCreditcardclientrelationIsdefault(Boolean bCreditcardclientrelationIsdefault) {
     this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
     return this;
   }
@@ -153,12 +144,12 @@ public class CreditcardclientRequest {
     return bCreditcardclientrelationIsdefault;
   }
 
-  public void setbCreditcardclientrelationIsdefault(@javax.annotation.Nonnull Boolean bCreditcardclientrelationIsdefault) {
+  public void setbCreditcardclientrelationIsdefault(Boolean bCreditcardclientrelationIsdefault) {
     this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
   }
 
 
-  public CreditcardclientRequest sCreditcardclientDescription(@javax.annotation.Nonnull String sCreditcardclientDescription) {
+  public CreditcardclientRequest sCreditcardclientDescription(String sCreditcardclientDescription) {
     this.sCreditcardclientDescription = sCreditcardclientDescription;
     return this;
   }
@@ -172,12 +163,12 @@ public class CreditcardclientRequest {
     return sCreditcardclientDescription;
   }
 
-  public void setsCreditcardclientDescription(@javax.annotation.Nonnull String sCreditcardclientDescription) {
+  public void setsCreditcardclientDescription(String sCreditcardclientDescription) {
     this.sCreditcardclientDescription = sCreditcardclientDescription;
   }
 
 
-  public CreditcardclientRequest bCreditcardclientAllowedcompanypayment(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedcompanypayment) {
+  public CreditcardclientRequest bCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
     this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
     return this;
   }
@@ -191,12 +182,12 @@ public class CreditcardclientRequest {
     return bCreditcardclientAllowedcompanypayment;
   }
 
-  public void setbCreditcardclientAllowedcompanypayment(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedcompanypayment) {
+  public void setbCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
     this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
   }
 
 
-  public CreditcardclientRequest bCreditcardclientAllowedezsign(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedezsign) {
+  public CreditcardclientRequest bCreditcardclientAllowedezsign(Boolean bCreditcardclientAllowedezsign) {
     this.bCreditcardclientAllowedezsign = bCreditcardclientAllowedezsign;
     return this;
   }
@@ -210,12 +201,12 @@ public class CreditcardclientRequest {
     return bCreditcardclientAllowedezsign;
   }
 
-  public void setbCreditcardclientAllowedezsign(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedezsign) {
+  public void setbCreditcardclientAllowedezsign(Boolean bCreditcardclientAllowedezsign) {
     this.bCreditcardclientAllowedezsign = bCreditcardclientAllowedezsign;
   }
 
 
-  public CreditcardclientRequest bCreditcardclientAllowedtranquillit(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedtranquillit) {
+  public CreditcardclientRequest bCreditcardclientAllowedtranquillit(Boolean bCreditcardclientAllowedtranquillit) {
     this.bCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
     return this;
   }
@@ -229,12 +220,12 @@ public class CreditcardclientRequest {
     return bCreditcardclientAllowedtranquillit;
   }
 
-  public void setbCreditcardclientAllowedtranquillit(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedtranquillit) {
+  public void setbCreditcardclientAllowedtranquillit(Boolean bCreditcardclientAllowedtranquillit) {
     this.bCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
   }
 
 
-  public CreditcardclientRequest objCreditcarddetail(@javax.annotation.Nonnull CreditcarddetailRequest objCreditcarddetail) {
+  public CreditcardclientRequest objCreditcarddetail(CreditcarddetailRequest objCreditcarddetail) {
     this.objCreditcarddetail = objCreditcarddetail;
     return this;
   }
@@ -248,12 +239,12 @@ public class CreditcardclientRequest {
     return objCreditcarddetail;
   }
 
-  public void setObjCreditcarddetail(@javax.annotation.Nonnull CreditcarddetailRequest objCreditcarddetail) {
+  public void setObjCreditcarddetail(CreditcarddetailRequest objCreditcarddetail) {
     this.objCreditcarddetail = objCreditcarddetail;
   }
 
 
-  public CreditcardclientRequest sCreditcardclientCVV(@javax.annotation.Nonnull String sCreditcardclientCVV) {
+  public CreditcardclientRequest sCreditcardclientCVV(String sCreditcardclientCVV) {
     this.sCreditcardclientCVV = sCreditcardclientCVV;
     return this;
   }
@@ -267,7 +258,7 @@ public class CreditcardclientRequest {
     return sCreditcardclientCVV;
   }
 
-  public void setsCreditcardclientCVV(@javax.annotation.Nonnull String sCreditcardclientCVV) {
+  public void setsCreditcardclientCVV(String sCreditcardclientCVV) {
     this.sCreditcardclientCVV = sCreditcardclientCVV;
   }
 
@@ -366,6 +357,21 @@ public class CreditcardclientRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CreditcardclientRequest is not found in the empty JSON string", CreditcardclientRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!CreditcardclientRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreditcardclientRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CreditcardclientRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("fksCreditcardtokenID") != null && !jsonObj.get("fksCreditcardtokenID").isJsonNull()) && !jsonObj.get("fksCreditcardtokenID").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `fksCreditcardtokenID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("fksCreditcardtokenID").toString()));
@@ -380,6 +386,34 @@ public class CreditcardclientRequest {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CreditcardclientRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CreditcardclientRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CreditcardclientRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CreditcardclientRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CreditcardclientRequest>() {
+           @Override
+           public void write(JsonWriter out, CreditcardclientRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CreditcardclientRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of CreditcardclientRequest given an JSON string

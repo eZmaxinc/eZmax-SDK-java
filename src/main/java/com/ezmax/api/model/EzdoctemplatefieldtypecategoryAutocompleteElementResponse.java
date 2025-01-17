@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Ezdoctemplatefieldtypecategory AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzdoctemplatefieldtypecategoryAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_EZDOCTEMPLATEFIELDTYPECATEGORY_I_D = "pkiEzdoctemplatefieldtypecategoryID";
   @SerializedName(SERIALIZED_NAME_PKI_EZDOCTEMPLATEFIELDTYPECATEGORY_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzdoctemplatefieldtypecategoryID;
 
   public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATETYPE_I_D = "fkiEzdoctemplatetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATETYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzdoctemplatetypeID;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEFIELDTYPECATEGORY_DESCRIPTION_X = "sEzdoctemplatefieldtypecategoryDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEFIELDTYPECATEGORY_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sEzdoctemplatefieldtypecategoryDescriptionX;
 
   public static final String SERIALIZED_NAME_B_EZDOCTEMPLATEFIELDTYPECATEGORY_ISACTIVE = "bEzdoctemplatefieldtypecategoryIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZDOCTEMPLATEFIELDTYPECATEGORY_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bEzdoctemplatefieldtypecategoryIsactive;
 
   public EzdoctemplatefieldtypecategoryAutocompleteElementResponse() {
   }
 
-  public EzdoctemplatefieldtypecategoryAutocompleteElementResponse pkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nonnull Integer pkiEzdoctemplatefieldtypecategoryID) {
+  public EzdoctemplatefieldtypecategoryAutocompleteElementResponse pkiEzdoctemplatefieldtypecategoryID(Integer pkiEzdoctemplatefieldtypecategoryID) {
     this.pkiEzdoctemplatefieldtypecategoryID = pkiEzdoctemplatefieldtypecategoryID;
     return this;
   }
@@ -89,12 +85,12 @@ public class EzdoctemplatefieldtypecategoryAutocompleteElementResponse {
     return pkiEzdoctemplatefieldtypecategoryID;
   }
 
-  public void setPkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nonnull Integer pkiEzdoctemplatefieldtypecategoryID) {
+  public void setPkiEzdoctemplatefieldtypecategoryID(Integer pkiEzdoctemplatefieldtypecategoryID) {
     this.pkiEzdoctemplatefieldtypecategoryID = pkiEzdoctemplatefieldtypecategoryID;
   }
 
 
-  public EzdoctemplatefieldtypecategoryAutocompleteElementResponse fkiEzdoctemplatetypeID(@javax.annotation.Nonnull Integer fkiEzdoctemplatetypeID) {
+  public EzdoctemplatefieldtypecategoryAutocompleteElementResponse fkiEzdoctemplatetypeID(Integer fkiEzdoctemplatetypeID) {
     this.fkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
     return this;
   }
@@ -110,12 +106,12 @@ public class EzdoctemplatefieldtypecategoryAutocompleteElementResponse {
     return fkiEzdoctemplatetypeID;
   }
 
-  public void setFkiEzdoctemplatetypeID(@javax.annotation.Nonnull Integer fkiEzdoctemplatetypeID) {
+  public void setFkiEzdoctemplatetypeID(Integer fkiEzdoctemplatetypeID) {
     this.fkiEzdoctemplatetypeID = fkiEzdoctemplatetypeID;
   }
 
 
-  public EzdoctemplatefieldtypecategoryAutocompleteElementResponse sEzdoctemplatefieldtypecategoryDescriptionX(@javax.annotation.Nonnull String sEzdoctemplatefieldtypecategoryDescriptionX) {
+  public EzdoctemplatefieldtypecategoryAutocompleteElementResponse sEzdoctemplatefieldtypecategoryDescriptionX(String sEzdoctemplatefieldtypecategoryDescriptionX) {
     this.sEzdoctemplatefieldtypecategoryDescriptionX = sEzdoctemplatefieldtypecategoryDescriptionX;
     return this;
   }
@@ -129,12 +125,12 @@ public class EzdoctemplatefieldtypecategoryAutocompleteElementResponse {
     return sEzdoctemplatefieldtypecategoryDescriptionX;
   }
 
-  public void setsEzdoctemplatefieldtypecategoryDescriptionX(@javax.annotation.Nonnull String sEzdoctemplatefieldtypecategoryDescriptionX) {
+  public void setsEzdoctemplatefieldtypecategoryDescriptionX(String sEzdoctemplatefieldtypecategoryDescriptionX) {
     this.sEzdoctemplatefieldtypecategoryDescriptionX = sEzdoctemplatefieldtypecategoryDescriptionX;
   }
 
 
-  public EzdoctemplatefieldtypecategoryAutocompleteElementResponse bEzdoctemplatefieldtypecategoryIsactive(@javax.annotation.Nonnull Boolean bEzdoctemplatefieldtypecategoryIsactive) {
+  public EzdoctemplatefieldtypecategoryAutocompleteElementResponse bEzdoctemplatefieldtypecategoryIsactive(Boolean bEzdoctemplatefieldtypecategoryIsactive) {
     this.bEzdoctemplatefieldtypecategoryIsactive = bEzdoctemplatefieldtypecategoryIsactive;
     return this;
   }
@@ -148,7 +144,7 @@ public class EzdoctemplatefieldtypecategoryAutocompleteElementResponse {
     return bEzdoctemplatefieldtypecategoryIsactive;
   }
 
-  public void setbEzdoctemplatefieldtypecategoryIsactive(@javax.annotation.Nonnull Boolean bEzdoctemplatefieldtypecategoryIsactive) {
+  public void setbEzdoctemplatefieldtypecategoryIsactive(Boolean bEzdoctemplatefieldtypecategoryIsactive) {
     this.bEzdoctemplatefieldtypecategoryIsactive = bEzdoctemplatefieldtypecategoryIsactive;
   }
 

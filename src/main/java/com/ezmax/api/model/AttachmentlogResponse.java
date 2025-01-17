@@ -49,37 +49,32 @@ import eZmaxAPI.JSON;
 /**
  * An Attachmentlog Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AttachmentlogResponse {
   public static final String SERIALIZED_NAME_FKI_ATTACHMENT_I_D = "fkiAttachmentID";
   @SerializedName(SERIALIZED_NAME_FKI_ATTACHMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiAttachmentID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_DT_ATTACHMENTLOG_DATETIME = "dtAttachmentlogDatetime";
   @SerializedName(SERIALIZED_NAME_DT_ATTACHMENTLOG_DATETIME)
-  @javax.annotation.Nonnull
   private String dtAttachmentlogDatetime;
 
   public static final String SERIALIZED_NAME_E_ATTACHMENTLOG_TYPE = "eAttachmentlogType";
   @SerializedName(SERIALIZED_NAME_E_ATTACHMENTLOG_TYPE)
-  @javax.annotation.Nonnull
   private FieldEAttachmentlogType eAttachmentlogType;
 
   public static final String SERIALIZED_NAME_S_ATTACHMENTLOG_DETAIL = "sAttachmentlogDetail";
   @SerializedName(SERIALIZED_NAME_S_ATTACHMENTLOG_DETAIL)
-  @javax.annotation.Nullable
   private String sAttachmentlogDetail;
 
   public AttachmentlogResponse() {
   }
 
-  public AttachmentlogResponse fkiAttachmentID(@javax.annotation.Nonnull Integer fkiAttachmentID) {
+  public AttachmentlogResponse fkiAttachmentID(Integer fkiAttachmentID) {
     this.fkiAttachmentID = fkiAttachmentID;
     return this;
   }
@@ -94,12 +89,12 @@ public class AttachmentlogResponse {
     return fkiAttachmentID;
   }
 
-  public void setFkiAttachmentID(@javax.annotation.Nonnull Integer fkiAttachmentID) {
+  public void setFkiAttachmentID(Integer fkiAttachmentID) {
     this.fkiAttachmentID = fkiAttachmentID;
   }
 
 
-  public AttachmentlogResponse fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
+  public AttachmentlogResponse fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -114,12 +109,12 @@ public class AttachmentlogResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public AttachmentlogResponse dtAttachmentlogDatetime(@javax.annotation.Nonnull String dtAttachmentlogDatetime) {
+  public AttachmentlogResponse dtAttachmentlogDatetime(String dtAttachmentlogDatetime) {
     this.dtAttachmentlogDatetime = dtAttachmentlogDatetime;
     return this;
   }
@@ -133,12 +128,12 @@ public class AttachmentlogResponse {
     return dtAttachmentlogDatetime;
   }
 
-  public void setDtAttachmentlogDatetime(@javax.annotation.Nonnull String dtAttachmentlogDatetime) {
+  public void setDtAttachmentlogDatetime(String dtAttachmentlogDatetime) {
     this.dtAttachmentlogDatetime = dtAttachmentlogDatetime;
   }
 
 
-  public AttachmentlogResponse eAttachmentlogType(@javax.annotation.Nonnull FieldEAttachmentlogType eAttachmentlogType) {
+  public AttachmentlogResponse eAttachmentlogType(FieldEAttachmentlogType eAttachmentlogType) {
     this.eAttachmentlogType = eAttachmentlogType;
     return this;
   }
@@ -152,12 +147,12 @@ public class AttachmentlogResponse {
     return eAttachmentlogType;
   }
 
-  public void seteAttachmentlogType(@javax.annotation.Nonnull FieldEAttachmentlogType eAttachmentlogType) {
+  public void seteAttachmentlogType(FieldEAttachmentlogType eAttachmentlogType) {
     this.eAttachmentlogType = eAttachmentlogType;
   }
 
 
-  public AttachmentlogResponse sAttachmentlogDetail(@javax.annotation.Nullable String sAttachmentlogDetail) {
+  public AttachmentlogResponse sAttachmentlogDetail(String sAttachmentlogDetail) {
     this.sAttachmentlogDetail = sAttachmentlogDetail;
     return this;
   }
@@ -171,7 +166,7 @@ public class AttachmentlogResponse {
     return sAttachmentlogDetail;
   }
 
-  public void setsAttachmentlogDetail(@javax.annotation.Nullable String sAttachmentlogDetail) {
+  public void setsAttachmentlogDetail(String sAttachmentlogDetail) {
     this.sAttachmentlogDetail = sAttachmentlogDetail;
   }
 
@@ -255,6 +250,21 @@ public class AttachmentlogResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in AttachmentlogResponse is not found in the empty JSON string", AttachmentlogResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!AttachmentlogResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AttachmentlogResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : AttachmentlogResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dtAttachmentlogDatetime").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtAttachmentlogDatetime` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAttachmentlogDatetime").toString()));
@@ -266,6 +276,34 @@ public class AttachmentlogResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!AttachmentlogResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'AttachmentlogResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<AttachmentlogResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(AttachmentlogResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<AttachmentlogResponse>() {
+           @Override
+           public void write(JsonWriter out, AttachmentlogResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public AttachmentlogResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of AttachmentlogResponse given an JSON string

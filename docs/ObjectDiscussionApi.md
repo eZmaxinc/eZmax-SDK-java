@@ -82,7 +82,7 @@ public class Example {
 
 <a id="discussionDeleteObjectV1"></a>
 # **discussionDeleteObjectV1**
-> CommonResponse discussionDeleteObjectV1(pkiDiscussionID)
+> DiscussionDeleteObjectV1Response discussionDeleteObjectV1(pkiDiscussionID)
 
 Delete an existing Discussion
 
@@ -112,7 +112,7 @@ public class Example {
     ObjectDiscussionApi apiInstance = new ObjectDiscussionApi(defaultClient);
     Integer pkiDiscussionID = 56; // Integer | The unique ID of the Discussion
     try {
-      CommonResponse result = apiInstance.discussionDeleteObjectV1(pkiDiscussionID);
+      DiscussionDeleteObjectV1Response result = apiInstance.discussionDeleteObjectV1(pkiDiscussionID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectDiscussionApi#discussionDeleteObjectV1");
@@ -133,7 +133,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionDeleteObjectV1Response**](DiscussionDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -222,7 +222,7 @@ public class Example {
 
 <a id="discussionPatchObjectV1"></a>
 # **discussionPatchObjectV1**
-> CommonResponse discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request)
+> DiscussionPatchObjectV1Response discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request)
 
 Patch an existing Discussion
 
@@ -253,7 +253,7 @@ public class Example {
     Integer pkiDiscussionID = 56; // Integer | The unique ID of the Discussion
     DiscussionPatchObjectV1Request discussionPatchObjectV1Request = new DiscussionPatchObjectV1Request(); // DiscussionPatchObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request);
+      DiscussionPatchObjectV1Response result = apiInstance.discussionPatchObjectV1(pkiDiscussionID, discussionPatchObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectDiscussionApi#discussionPatchObjectV1");
@@ -275,7 +275,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionPatchObjectV1Response**](DiscussionPatchObjectV1Response.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ public class Example {
 
 <a id="discussionUpdateDiscussionreadstatusV1"></a>
 # **discussionUpdateDiscussionreadstatusV1**
-> CommonResponse discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request)
+> DiscussionUpdateDiscussionreadstatusV1Response discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request)
 
 Update the read status of the discussion
 
@@ -324,7 +324,7 @@ public class Example {
     Integer pkiDiscussionID = 56; // Integer | 
     DiscussionUpdateDiscussionreadstatusV1Request discussionUpdateDiscussionreadstatusV1Request = new DiscussionUpdateDiscussionreadstatusV1Request(); // DiscussionUpdateDiscussionreadstatusV1Request | 
     try {
-      CommonResponse result = apiInstance.discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request);
+      DiscussionUpdateDiscussionreadstatusV1Response result = apiInstance.discussionUpdateDiscussionreadstatusV1(pkiDiscussionID, discussionUpdateDiscussionreadstatusV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectDiscussionApi#discussionUpdateDiscussionreadstatusV1");
@@ -346,7 +346,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionUpdateDiscussionreadstatusV1Response**](DiscussionUpdateDiscussionreadstatusV1Response.md)
 
 ### Authorization
 

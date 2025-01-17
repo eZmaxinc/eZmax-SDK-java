@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.ModuleResponseCompound;
-import com.ezmax.api.model.ModulegroupResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,17 +51,64 @@ import eZmaxAPI.JSON;
 /**
  * A Modulegroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class ModulegroupResponseCompound extends ModulegroupResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class ModulegroupResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_MODULEGROUP_I_D = "pkiModulegroupID";
+  @SerializedName(SERIALIZED_NAME_PKI_MODULEGROUP_I_D)
+  private Integer pkiModulegroupID;
+
+  public static final String SERIALIZED_NAME_S_MODULEGROUP_NAME_X = "sModulegroupNameX";
+  @SerializedName(SERIALIZED_NAME_S_MODULEGROUP_NAME_X)
+  private String sModulegroupNameX;
+
   public static final String SERIALIZED_NAME_A_OBJ_MODULE = "a_objModule";
   @SerializedName(SERIALIZED_NAME_A_OBJ_MODULE)
-  @javax.annotation.Nullable
   private List<ModuleResponseCompound> aObjModule = new ArrayList<>();
 
   public ModulegroupResponseCompound() {
   }
 
-  public ModulegroupResponseCompound aObjModule(@javax.annotation.Nullable List<ModuleResponseCompound> aObjModule) {
+  public ModulegroupResponseCompound pkiModulegroupID(Integer pkiModulegroupID) {
+    this.pkiModulegroupID = pkiModulegroupID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Modulegroup
+   * minimum: 1
+   * maximum: 255
+   * @return pkiModulegroupID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiModulegroupID() {
+    return pkiModulegroupID;
+  }
+
+  public void setPkiModulegroupID(Integer pkiModulegroupID) {
+    this.pkiModulegroupID = pkiModulegroupID;
+  }
+
+
+  public ModulegroupResponseCompound sModulegroupNameX(String sModulegroupNameX) {
+    this.sModulegroupNameX = sModulegroupNameX;
+    return this;
+  }
+
+  /**
+   * The name of the Modulegroup in the language of the requester
+   * @return sModulegroupNameX
+   */
+  @javax.annotation.Nonnull
+  public String getsModulegroupNameX() {
+    return sModulegroupNameX;
+  }
+
+  public void setsModulegroupNameX(String sModulegroupNameX) {
+    this.sModulegroupNameX = sModulegroupNameX;
+  }
+
+
+  public ModulegroupResponseCompound aObjModule(List<ModuleResponseCompound> aObjModule) {
     this.aObjModule = aObjModule;
     return this;
   }
@@ -84,7 +130,7 @@ public class ModulegroupResponseCompound extends ModulegroupResponse {
     return aObjModule;
   }
 
-  public void setaObjModule(@javax.annotation.Nullable List<ModuleResponseCompound> aObjModule) {
+  public void setaObjModule(List<ModuleResponseCompound> aObjModule) {
     this.aObjModule = aObjModule;
   }
 
@@ -99,20 +145,22 @@ public class ModulegroupResponseCompound extends ModulegroupResponse {
       return false;
     }
     ModulegroupResponseCompound modulegroupResponseCompound = (ModulegroupResponseCompound) o;
-    return Objects.equals(this.aObjModule, modulegroupResponseCompound.aObjModule) &&
-        super.equals(o);
+    return Objects.equals(this.pkiModulegroupID, modulegroupResponseCompound.pkiModulegroupID) &&
+        Objects.equals(this.sModulegroupNameX, modulegroupResponseCompound.sModulegroupNameX) &&
+        Objects.equals(this.aObjModule, modulegroupResponseCompound.aObjModule);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjModule, super.hashCode());
+    return Objects.hash(pkiModulegroupID, sModulegroupNameX, aObjModule);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ModulegroupResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiModulegroupID: ").append(toIndentedString(pkiModulegroupID)).append("\n");
+    sb.append("    sModulegroupNameX: ").append(toIndentedString(sModulegroupNameX)).append("\n");
     sb.append("    aObjModule: ").append(toIndentedString(aObjModule)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -174,6 +222,9 @@ public class ModulegroupResponseCompound extends ModulegroupResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sModulegroupNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sModulegroupNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModulegroupNameX").toString()));
+      }
       if (jsonObj.get("a_objModule") != null && !jsonObj.get("a_objModule").isJsonNull()) {
         JsonArray jsonArrayaObjModule = jsonObj.getAsJsonArray("a_objModule");
         if (jsonArrayaObjModule != null) {

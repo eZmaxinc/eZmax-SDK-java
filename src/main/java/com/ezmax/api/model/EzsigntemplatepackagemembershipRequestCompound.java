@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsigntemplatepackagemembershipRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,82 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagemembership Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigntemplatepackagemembershipRequestCompound extends EzsigntemplatepackagemembershipRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsigntemplatepackagemembershipRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D = "pkiEzsigntemplatepackagemembershipID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D)
+  private Integer pkiEzsigntemplatepackagemembershipID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
+  private Integer fkiEzsigntemplatepackageID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
+  private Integer fkiEzsigntemplateID;
+
   public EzsigntemplatepackagemembershipRequestCompound() {
   }
+
+  public EzsigntemplatepackagemembershipRequestCompound pkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
+    this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplatepackagemembership
+   * minimum: 0
+   * @return pkiEzsigntemplatepackagemembershipID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiEzsigntemplatepackagemembershipID() {
+    return pkiEzsigntemplatepackagemembershipID;
+  }
+
+  public void setPkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
+    this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
+  }
+
+
+  public EzsigntemplatepackagemembershipRequestCompound fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
+    this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplatepackage
+   * minimum: 0
+   * @return fkiEzsigntemplatepackageID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsigntemplatepackageID() {
+    return fkiEzsigntemplatepackageID;
+  }
+
+  public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
+    this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
+  }
+
+
+  public EzsigntemplatepackagemembershipRequestCompound fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+    this.fkiEzsigntemplateID = fkiEzsigntemplateID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplate
+   * minimum: 0
+   * @return fkiEzsigntemplateID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsigntemplateID() {
+    return fkiEzsigntemplateID;
+  }
+
+  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+    this.fkiEzsigntemplateID = fkiEzsigntemplateID;
+  }
+
 
 
   @Override
@@ -63,19 +134,24 @@ public class EzsigntemplatepackagemembershipRequestCompound extends Ezsigntempla
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    EzsigntemplatepackagemembershipRequestCompound ezsigntemplatepackagemembershipRequestCompound = (EzsigntemplatepackagemembershipRequestCompound) o;
+    return Objects.equals(this.pkiEzsigntemplatepackagemembershipID, ezsigntemplatepackagemembershipRequestCompound.pkiEzsigntemplatepackagemembershipID) &&
+        Objects.equals(this.fkiEzsigntemplatepackageID, ezsigntemplatepackagemembershipRequestCompound.fkiEzsigntemplatepackageID) &&
+        Objects.equals(this.fkiEzsigntemplateID, ezsigntemplatepackagemembershipRequestCompound.fkiEzsigntemplateID);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiEzsigntemplatepackagemembershipID, fkiEzsigntemplatepackageID, fkiEzsigntemplateID);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatepackagemembershipRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsigntemplatepackagemembershipID: ").append(toIndentedString(pkiEzsigntemplatepackagemembershipID)).append("\n");
+    sb.append("    fkiEzsigntemplatepackageID: ").append(toIndentedString(fkiEzsigntemplatepackageID)).append("\n");
+    sb.append("    fkiEzsigntemplateID: ").append(toIndentedString(fkiEzsigntemplateID)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -135,6 +211,7 @@ public class EzsigntemplatepackagemembershipRequestCompound extends Ezsigntempla
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

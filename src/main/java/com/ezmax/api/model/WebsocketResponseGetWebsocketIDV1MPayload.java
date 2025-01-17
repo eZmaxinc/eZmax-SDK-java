@@ -48,17 +48,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for Websocket GetWebsocketID V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebsocketResponseGetWebsocketIDV1MPayload {
   public static final String SERIALIZED_NAME_S_WEBSOCKET_I_D = "sWebsocketID";
   @SerializedName(SERIALIZED_NAME_S_WEBSOCKET_I_D)
-  @javax.annotation.Nonnull
   private String sWebsocketID;
 
   public WebsocketResponseGetWebsocketIDV1MPayload() {
   }
 
-  public WebsocketResponseGetWebsocketIDV1MPayload sWebsocketID(@javax.annotation.Nonnull String sWebsocketID) {
+  public WebsocketResponseGetWebsocketIDV1MPayload sWebsocketID(String sWebsocketID) {
     this.sWebsocketID = sWebsocketID;
     return this;
   }
@@ -72,7 +71,7 @@ public class WebsocketResponseGetWebsocketIDV1MPayload {
     return sWebsocketID;
   }
 
-  public void setsWebsocketID(@javax.annotation.Nonnull String sWebsocketID) {
+  public void setsWebsocketID(String sWebsocketID) {
     this.sWebsocketID = sWebsocketID;
   }
 

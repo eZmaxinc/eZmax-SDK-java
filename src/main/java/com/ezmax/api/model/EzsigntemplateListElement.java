@@ -49,62 +49,52 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplateID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATE_DESCRIPTION = "sEzsigntemplateDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATE_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsigntemplateDescription;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_PAGETOTAL = "iEzsigntemplatedocumentPagetotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_PAGETOTAL)
-  @javax.annotation.Nullable
   private Integer iEzsigntemplatedocumentPagetotal;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATE_SIGNATURETOTAL = "iEzsigntemplateSignaturetotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATE_SIGNATURETOTAL)
-  @javax.annotation.Nullable
   private Integer iEzsigntemplateSignaturetotal;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATE_FORMFIELDTOTAL = "iEzsigntemplateFormfieldtotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATE_FORMFIELDTOTAL)
-  @javax.annotation.Nullable
   private Integer iEzsigntemplateFormfieldtotal;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATE_INCOMPLETE = "bEzsigntemplateIncomplete";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATE_INCOMPLETE)
-  @javax.annotation.Nonnull
   private Boolean bEzsigntemplateIncomplete;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
-  @javax.annotation.Nullable
   private String sEzsignfoldertypeNameX;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATE_TYPE = "eEzsigntemplateType";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATE_TYPE)
-  @javax.annotation.Nonnull
   private FieldEEzsigntemplateType eEzsigntemplateType;
 
   public EzsigntemplateListElement() {
   }
 
-  public EzsigntemplateListElement pkiEzsigntemplateID(@javax.annotation.Nonnull Integer pkiEzsigntemplateID) {
+  public EzsigntemplateListElement pkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
     return this;
   }
@@ -119,12 +109,12 @@ public class EzsigntemplateListElement {
     return pkiEzsigntemplateID;
   }
 
-  public void setPkiEzsigntemplateID(@javax.annotation.Nonnull Integer pkiEzsigntemplateID) {
+  public void setPkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
   }
 
 
-  public EzsigntemplateListElement fkiEzsignfoldertypeID(@javax.annotation.Nullable Integer fkiEzsignfoldertypeID) {
+  public EzsigntemplateListElement fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -140,12 +130,12 @@ public class EzsigntemplateListElement {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(@javax.annotation.Nullable Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public EzsigntemplateListElement fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public EzsigntemplateListElement fkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -161,12 +151,12 @@ public class EzsigntemplateListElement {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public EzsigntemplateListElement sEzsigntemplateDescription(@javax.annotation.Nonnull String sEzsigntemplateDescription) {
+  public EzsigntemplateListElement sEzsigntemplateDescription(String sEzsigntemplateDescription) {
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
     return this;
   }
@@ -180,12 +170,12 @@ public class EzsigntemplateListElement {
     return sEzsigntemplateDescription;
   }
 
-  public void setsEzsigntemplateDescription(@javax.annotation.Nonnull String sEzsigntemplateDescription) {
+  public void setsEzsigntemplateDescription(String sEzsigntemplateDescription) {
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
   }
 
 
-  public EzsigntemplateListElement iEzsigntemplatedocumentPagetotal(@javax.annotation.Nullable Integer iEzsigntemplatedocumentPagetotal) {
+  public EzsigntemplateListElement iEzsigntemplatedocumentPagetotal(Integer iEzsigntemplatedocumentPagetotal) {
     this.iEzsigntemplatedocumentPagetotal = iEzsigntemplatedocumentPagetotal;
     return this;
   }
@@ -200,12 +190,12 @@ public class EzsigntemplateListElement {
     return iEzsigntemplatedocumentPagetotal;
   }
 
-  public void setiEzsigntemplatedocumentPagetotal(@javax.annotation.Nullable Integer iEzsigntemplatedocumentPagetotal) {
+  public void setiEzsigntemplatedocumentPagetotal(Integer iEzsigntemplatedocumentPagetotal) {
     this.iEzsigntemplatedocumentPagetotal = iEzsigntemplatedocumentPagetotal;
   }
 
 
-  public EzsigntemplateListElement iEzsigntemplateSignaturetotal(@javax.annotation.Nullable Integer iEzsigntemplateSignaturetotal) {
+  public EzsigntemplateListElement iEzsigntemplateSignaturetotal(Integer iEzsigntemplateSignaturetotal) {
     this.iEzsigntemplateSignaturetotal = iEzsigntemplateSignaturetotal;
     return this;
   }
@@ -219,12 +209,12 @@ public class EzsigntemplateListElement {
     return iEzsigntemplateSignaturetotal;
   }
 
-  public void setiEzsigntemplateSignaturetotal(@javax.annotation.Nullable Integer iEzsigntemplateSignaturetotal) {
+  public void setiEzsigntemplateSignaturetotal(Integer iEzsigntemplateSignaturetotal) {
     this.iEzsigntemplateSignaturetotal = iEzsigntemplateSignaturetotal;
   }
 
 
-  public EzsigntemplateListElement iEzsigntemplateFormfieldtotal(@javax.annotation.Nullable Integer iEzsigntemplateFormfieldtotal) {
+  public EzsigntemplateListElement iEzsigntemplateFormfieldtotal(Integer iEzsigntemplateFormfieldtotal) {
     this.iEzsigntemplateFormfieldtotal = iEzsigntemplateFormfieldtotal;
     return this;
   }
@@ -238,12 +228,12 @@ public class EzsigntemplateListElement {
     return iEzsigntemplateFormfieldtotal;
   }
 
-  public void setiEzsigntemplateFormfieldtotal(@javax.annotation.Nullable Integer iEzsigntemplateFormfieldtotal) {
+  public void setiEzsigntemplateFormfieldtotal(Integer iEzsigntemplateFormfieldtotal) {
     this.iEzsigntemplateFormfieldtotal = iEzsigntemplateFormfieldtotal;
   }
 
 
-  public EzsigntemplateListElement bEzsigntemplateIncomplete(@javax.annotation.Nonnull Boolean bEzsigntemplateIncomplete) {
+  public EzsigntemplateListElement bEzsigntemplateIncomplete(Boolean bEzsigntemplateIncomplete) {
     this.bEzsigntemplateIncomplete = bEzsigntemplateIncomplete;
     return this;
   }
@@ -257,12 +247,12 @@ public class EzsigntemplateListElement {
     return bEzsigntemplateIncomplete;
   }
 
-  public void setbEzsigntemplateIncomplete(@javax.annotation.Nonnull Boolean bEzsigntemplateIncomplete) {
+  public void setbEzsigntemplateIncomplete(Boolean bEzsigntemplateIncomplete) {
     this.bEzsigntemplateIncomplete = bEzsigntemplateIncomplete;
   }
 
 
-  public EzsigntemplateListElement sEzsignfoldertypeNameX(@javax.annotation.Nullable String sEzsignfoldertypeNameX) {
+  public EzsigntemplateListElement sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -276,12 +266,12 @@ public class EzsigntemplateListElement {
     return sEzsignfoldertypeNameX;
   }
 
-  public void setsEzsignfoldertypeNameX(@javax.annotation.Nullable String sEzsignfoldertypeNameX) {
+  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
-  public EzsigntemplateListElement eEzsigntemplateType(@javax.annotation.Nonnull FieldEEzsigntemplateType eEzsigntemplateType) {
+  public EzsigntemplateListElement eEzsigntemplateType(FieldEEzsigntemplateType eEzsigntemplateType) {
     this.eEzsigntemplateType = eEzsigntemplateType;
     return this;
   }
@@ -295,7 +285,7 @@ public class EzsigntemplateListElement {
     return eEzsigntemplateType;
   }
 
-  public void seteEzsigntemplateType(@javax.annotation.Nonnull FieldEEzsigntemplateType eEzsigntemplateType) {
+  public void seteEzsigntemplateType(FieldEEzsigntemplateType eEzsigntemplateType) {
     this.eEzsigntemplateType = eEzsigntemplateType;
   }
 

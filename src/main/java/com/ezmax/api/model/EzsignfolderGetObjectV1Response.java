@@ -14,10 +14,9 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
-import com.ezmax.api.model.EzsignfolderResponseCompound;
+import com.ezmax.api.model.EzsignfolderGetObjectV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,31 +51,76 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignfolderGetObjectV1Response extends CommonResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsignfolderGetObjectV1Response {
+  public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
+  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  private CommonResponseObjDebugPayload objDebugPayload;
+
+  public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
+  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  private CommonResponseObjDebug objDebug;
+
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  @javax.annotation.Nonnull
-  private EzsignfolderResponseCompound mPayload;
+  private EzsignfolderGetObjectV1ResponseMPayload mPayload;
 
   public EzsignfolderGetObjectV1Response() {
   }
 
-  public EzsignfolderGetObjectV1Response mPayload(@javax.annotation.Nonnull EzsignfolderResponseCompound mPayload) {
+  public EzsignfolderGetObjectV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+    this.objDebugPayload = objDebugPayload;
+    return this;
+  }
+
+  /**
+   * Get objDebugPayload
+   * @return objDebugPayload
+   */
+  @javax.annotation.Nonnull
+  public CommonResponseObjDebugPayload getObjDebugPayload() {
+    return objDebugPayload;
+  }
+
+  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+    this.objDebugPayload = objDebugPayload;
+  }
+
+
+  public EzsignfolderGetObjectV1Response objDebug(CommonResponseObjDebug objDebug) {
+    this.objDebug = objDebug;
+    return this;
+  }
+
+  /**
+   * Get objDebug
+   * @return objDebug
+   */
+  @javax.annotation.Nullable
+  public CommonResponseObjDebug getObjDebug() {
+    return objDebug;
+  }
+
+  public void setObjDebug(CommonResponseObjDebug objDebug) {
+    this.objDebug = objDebug;
+  }
+
+
+  public EzsignfolderGetObjectV1Response mPayload(EzsignfolderGetObjectV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
 
   /**
-   * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
+   * Get mPayload
    * @return mPayload
    */
   @javax.annotation.Nonnull
-  public EzsignfolderResponseCompound getmPayload() {
+  public EzsignfolderGetObjectV1ResponseMPayload getmPayload() {
     return mPayload;
   }
 
-  public void setmPayload(@javax.annotation.Nonnull EzsignfolderResponseCompound mPayload) {
+  public void setmPayload(EzsignfolderGetObjectV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -91,20 +135,22 @@ public class EzsignfolderGetObjectV1Response extends CommonResponse {
       return false;
     }
     EzsignfolderGetObjectV1Response ezsignfolderGetObjectV1Response = (EzsignfolderGetObjectV1Response) o;
-    return Objects.equals(this.mPayload, ezsignfolderGetObjectV1Response.mPayload) &&
-        super.equals(o);
+    return Objects.equals(this.objDebugPayload, ezsignfolderGetObjectV1Response.objDebugPayload) &&
+        Objects.equals(this.objDebug, ezsignfolderGetObjectV1Response.objDebug) &&
+        Objects.equals(this.mPayload, ezsignfolderGetObjectV1Response.mPayload);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mPayload, super.hashCode());
+    return Objects.hash(objDebugPayload, objDebug, mPayload);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderGetObjectV1Response {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
+    sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
     sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -134,8 +180,8 @@ public class EzsignfolderGetObjectV1Response extends CommonResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("mPayload");
     openapiRequiredFields.add("objDebugPayload");
+    openapiRequiredFields.add("mPayload");
   }
 
   /**
@@ -166,8 +212,14 @@ public class EzsignfolderGetObjectV1Response extends CommonResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objDebugPayload`
+      CommonResponseObjDebugPayload.validateJsonElement(jsonObj.get("objDebugPayload"));
+      // validate the optional field `objDebug`
+      if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
+        CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
+      }
       // validate the required field `mPayload`
-      EzsignfolderResponseCompound.validateJsonElement(jsonObj.get("mPayload"));
+      EzsignfolderGetObjectV1ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

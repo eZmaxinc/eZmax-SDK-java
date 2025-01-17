@@ -8,6 +8,8 @@ Response for GET /1/object/authenticationexternal/getList
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**objDebugPayload** | [**CommonResponseObjDebugPayloadGetList**](CommonResponseObjDebugPayloadGetList.md) |  |  |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**AuthenticationexternalGetListV1ResponseMPayload**](AuthenticationexternalGetListV1ResponseMPayload.md) |  |  |
 
 

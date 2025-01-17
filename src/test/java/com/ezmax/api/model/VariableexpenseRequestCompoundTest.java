@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.FieldEVariableexpenseTaxable;
 import com.ezmax.api.model.MultilingualVariableexpenseDescription;
-import com.ezmax.api.model.VariableexpenseRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

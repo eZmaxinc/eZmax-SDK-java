@@ -82,7 +82,7 @@ public class Example {
 
 <a id="variableexpenseEditObjectV1"></a>
 # **variableexpenseEditObjectV1**
-> CommonResponse variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
+> VariableexpenseEditObjectV1Response variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request)
 
 Edit an existing Variableexpense
 
@@ -113,7 +113,7 @@ public class Example {
     Integer pkiVariableexpenseID = 56; // Integer | 
     VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request = new VariableexpenseEditObjectV1Request(); // VariableexpenseEditObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
+      VariableexpenseEditObjectV1Response result = apiInstance.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectVariableexpenseApi#variableexpenseEditObjectV1");
@@ -135,7 +135,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**VariableexpenseEditObjectV1Response**](VariableexpenseEditObjectV1Response.md)
 
 ### Authorization
 

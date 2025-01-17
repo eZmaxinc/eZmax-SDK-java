@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Website Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebsiteResponse {
   public static final String SERIALIZED_NAME_PKI_WEBSITE_I_D = "pkiWebsiteID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBSITE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiWebsiteID;
 
   public static final String SERIALIZED_NAME_FKI_WEBSITETYPE_I_D = "fkiWebsitetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_WEBSITETYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiWebsitetypeID;
 
   public static final String SERIALIZED_NAME_S_WEBSITE_ADDRESS = "sWebsiteAddress";
   @SerializedName(SERIALIZED_NAME_S_WEBSITE_ADDRESS)
-  @javax.annotation.Nonnull
   private String sWebsiteAddress;
 
   public WebsiteResponse() {
   }
 
-  public WebsiteResponse pkiWebsiteID(@javax.annotation.Nonnull Integer pkiWebsiteID) {
+  public WebsiteResponse pkiWebsiteID(Integer pkiWebsiteID) {
     this.pkiWebsiteID = pkiWebsiteID;
     return this;
   }
@@ -84,12 +81,12 @@ public class WebsiteResponse {
     return pkiWebsiteID;
   }
 
-  public void setPkiWebsiteID(@javax.annotation.Nonnull Integer pkiWebsiteID) {
+  public void setPkiWebsiteID(Integer pkiWebsiteID) {
     this.pkiWebsiteID = pkiWebsiteID;
   }
 
 
-  public WebsiteResponse fkiWebsitetypeID(@javax.annotation.Nonnull Integer fkiWebsitetypeID) {
+  public WebsiteResponse fkiWebsitetypeID(Integer fkiWebsitetypeID) {
     this.fkiWebsitetypeID = fkiWebsitetypeID;
     return this;
   }
@@ -104,12 +101,12 @@ public class WebsiteResponse {
     return fkiWebsitetypeID;
   }
 
-  public void setFkiWebsitetypeID(@javax.annotation.Nonnull Integer fkiWebsitetypeID) {
+  public void setFkiWebsitetypeID(Integer fkiWebsitetypeID) {
     this.fkiWebsitetypeID = fkiWebsitetypeID;
   }
 
 
-  public WebsiteResponse sWebsiteAddress(@javax.annotation.Nonnull String sWebsiteAddress) {
+  public WebsiteResponse sWebsiteAddress(String sWebsiteAddress) {
     this.sWebsiteAddress = sWebsiteAddress;
     return this;
   }
@@ -123,7 +120,7 @@ public class WebsiteResponse {
     return sWebsiteAddress;
   }
 
-  public void setsWebsiteAddress(@javax.annotation.Nonnull String sWebsiteAddress) {
+  public void setsWebsiteAddress(String sWebsiteAddress) {
     this.sWebsiteAddress = sWebsiteAddress;
   }
 

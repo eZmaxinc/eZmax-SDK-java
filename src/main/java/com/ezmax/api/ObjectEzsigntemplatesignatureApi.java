@@ -27,11 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV2Request;
 import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV2Response;
+import com.ezmax.api.model.EzsigntemplatesignatureDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV2Request;
+import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV2Response;
 import com.ezmax.api.model.EzsigntemplatesignatureGetObjectV3Response;
 
 import java.lang.reflect.Type;
@@ -84,8 +85,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -153,8 +153,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return EzsigntemplatesignatureCreateObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -171,8 +170,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return ApiResponse&lt;EzsigntemplatesignatureCreateObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -191,8 +189,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -211,8 +208,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -278,18 +274,17 @@ public class ObjectEzsigntemplatesignatureApi {
      * Delete an existing Ezsigntemplatesignature
      * 
      * @param pkiEzsigntemplatesignatureID  (required)
-     * @return CommonResponse
+     * @return EzsigntemplatesignatureDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsigntemplatesignatureDeleteObjectV1(Integer pkiEzsigntemplatesignatureID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigntemplatesignatureDeleteObjectV1WithHttpInfo(pkiEzsigntemplatesignatureID);
+    public EzsigntemplatesignatureDeleteObjectV1Response ezsigntemplatesignatureDeleteObjectV1(Integer pkiEzsigntemplatesignatureID) throws ApiException {
+        ApiResponse<EzsigntemplatesignatureDeleteObjectV1Response> localVarResp = ezsigntemplatesignatureDeleteObjectV1WithHttpInfo(pkiEzsigntemplatesignatureID);
         return localVarResp.getData();
     }
 
@@ -297,19 +292,18 @@ public class ObjectEzsigntemplatesignatureApi {
      * Delete an existing Ezsigntemplatesignature
      * 
      * @param pkiEzsigntemplatesignatureID  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigntemplatesignatureDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsigntemplatesignatureDeleteObjectV1WithHttpInfo(Integer pkiEzsigntemplatesignatureID) throws ApiException {
+    public ApiResponse<EzsigntemplatesignatureDeleteObjectV1Response> ezsigntemplatesignatureDeleteObjectV1WithHttpInfo(Integer pkiEzsigntemplatesignatureID) throws ApiException {
         okhttp3.Call localVarCall = ezsigntemplatesignatureDeleteObjectV1ValidateBeforeCall(pkiEzsigntemplatesignatureID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -321,17 +315,16 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatesignatureDeleteObjectV1Async(Integer pkiEzsigntemplatesignatureID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatesignatureDeleteObjectV1Async(Integer pkiEzsigntemplatesignatureID, final ApiCallback<EzsigntemplatesignatureDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigntemplatesignatureDeleteObjectV1ValidateBeforeCall(pkiEzsigntemplatesignatureID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -343,8 +336,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -418,19 +410,18 @@ public class ObjectEzsigntemplatesignatureApi {
      * 
      * @param pkiEzsigntemplatesignatureID  (required)
      * @param ezsigntemplatesignatureEditObjectV2Request  (required)
-     * @return CommonResponse
+     * @return EzsigntemplatesignatureEditObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsigntemplatesignatureEditObjectV2(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigntemplatesignatureEditObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request);
+    public EzsigntemplatesignatureEditObjectV2Response ezsigntemplatesignatureEditObjectV2(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request) throws ApiException {
+        ApiResponse<EzsigntemplatesignatureEditObjectV2Response> localVarResp = ezsigntemplatesignatureEditObjectV2WithHttpInfo(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request);
         return localVarResp.getData();
     }
 
@@ -439,20 +430,19 @@ public class ObjectEzsigntemplatesignatureApi {
      * 
      * @param pkiEzsigntemplatesignatureID  (required)
      * @param ezsigntemplatesignatureEditObjectV2Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigntemplatesignatureEditObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsigntemplatesignatureEditObjectV2WithHttpInfo(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request) throws ApiException {
+    public ApiResponse<EzsigntemplatesignatureEditObjectV2Response> ezsigntemplatesignatureEditObjectV2WithHttpInfo(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigntemplatesignatureEditObjectV2ValidateBeforeCall(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureEditObjectV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -465,18 +455,17 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatesignatureEditObjectV2Async(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatesignatureEditObjectV2Async(Integer pkiEzsigntemplatesignatureID, EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request, final ApiCallback<EzsigntemplatesignatureEditObjectV2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigntemplatesignatureEditObjectV2ValidateBeforeCall(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigntemplatesignatureEditObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -487,8 +476,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -557,8 +545,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return EzsigntemplatesignatureGetObjectV3Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -576,8 +563,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return ApiResponse&lt;EzsigntemplatesignatureGetObjectV3Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -597,8 +583,7 @@ public class ObjectEzsigntemplatesignatureApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>

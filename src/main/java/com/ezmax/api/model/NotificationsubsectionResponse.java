@@ -49,37 +49,32 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationsubsection Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class NotificationsubsectionResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D = "pkiNotificationsubsectionID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiNotificationsubsectionID;
 
   public static final String SERIALIZED_NAME_FKI_NOTIFICATIONSECTION_I_D = "fkiNotificationsectionID";
   @SerializedName(SERIALIZED_NAME_FKI_NOTIFICATIONSECTION_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiNotificationsectionID;
 
   public static final String SERIALIZED_NAME_OBJ_NOTIFICATIONSUBSECTION_NAME = "objNotificationsubsectionName";
   @SerializedName(SERIALIZED_NAME_OBJ_NOTIFICATIONSUBSECTION_NAME)
-  @javax.annotation.Nullable
   private MultilingualNotificationsubsectionName objNotificationsubsectionName;
 
   public static final String SERIALIZED_NAME_S_NOTIFICATIONSECTION_NAME_X = "sNotificationsectionNameX";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONSECTION_NAME_X)
-  @javax.annotation.Nullable
   private String sNotificationsectionNameX;
 
   public static final String SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME_X = "sNotificationsubsectionNameX";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME_X)
-  @javax.annotation.Nonnull
   private String sNotificationsubsectionNameX;
 
   public NotificationsubsectionResponse() {
   }
 
-  public NotificationsubsectionResponse pkiNotificationsubsectionID(@javax.annotation.Nonnull Integer pkiNotificationsubsectionID) {
+  public NotificationsubsectionResponse pkiNotificationsubsectionID(Integer pkiNotificationsubsectionID) {
     this.pkiNotificationsubsectionID = pkiNotificationsubsectionID;
     return this;
   }
@@ -94,12 +89,12 @@ public class NotificationsubsectionResponse {
     return pkiNotificationsubsectionID;
   }
 
-  public void setPkiNotificationsubsectionID(@javax.annotation.Nonnull Integer pkiNotificationsubsectionID) {
+  public void setPkiNotificationsubsectionID(Integer pkiNotificationsubsectionID) {
     this.pkiNotificationsubsectionID = pkiNotificationsubsectionID;
   }
 
 
-  public NotificationsubsectionResponse fkiNotificationsectionID(@javax.annotation.Nonnull Integer fkiNotificationsectionID) {
+  public NotificationsubsectionResponse fkiNotificationsectionID(Integer fkiNotificationsectionID) {
     this.fkiNotificationsectionID = fkiNotificationsectionID;
     return this;
   }
@@ -114,12 +109,12 @@ public class NotificationsubsectionResponse {
     return fkiNotificationsectionID;
   }
 
-  public void setFkiNotificationsectionID(@javax.annotation.Nonnull Integer fkiNotificationsectionID) {
+  public void setFkiNotificationsectionID(Integer fkiNotificationsectionID) {
     this.fkiNotificationsectionID = fkiNotificationsectionID;
   }
 
 
-  public NotificationsubsectionResponse objNotificationsubsectionName(@javax.annotation.Nullable MultilingualNotificationsubsectionName objNotificationsubsectionName) {
+  public NotificationsubsectionResponse objNotificationsubsectionName(MultilingualNotificationsubsectionName objNotificationsubsectionName) {
     this.objNotificationsubsectionName = objNotificationsubsectionName;
     return this;
   }
@@ -133,12 +128,12 @@ public class NotificationsubsectionResponse {
     return objNotificationsubsectionName;
   }
 
-  public void setObjNotificationsubsectionName(@javax.annotation.Nullable MultilingualNotificationsubsectionName objNotificationsubsectionName) {
+  public void setObjNotificationsubsectionName(MultilingualNotificationsubsectionName objNotificationsubsectionName) {
     this.objNotificationsubsectionName = objNotificationsubsectionName;
   }
 
 
-  public NotificationsubsectionResponse sNotificationsectionNameX(@javax.annotation.Nullable String sNotificationsectionNameX) {
+  public NotificationsubsectionResponse sNotificationsectionNameX(String sNotificationsectionNameX) {
     this.sNotificationsectionNameX = sNotificationsectionNameX;
     return this;
   }
@@ -152,12 +147,12 @@ public class NotificationsubsectionResponse {
     return sNotificationsectionNameX;
   }
 
-  public void setsNotificationsectionNameX(@javax.annotation.Nullable String sNotificationsectionNameX) {
+  public void setsNotificationsectionNameX(String sNotificationsectionNameX) {
     this.sNotificationsectionNameX = sNotificationsectionNameX;
   }
 
 
-  public NotificationsubsectionResponse sNotificationsubsectionNameX(@javax.annotation.Nonnull String sNotificationsubsectionNameX) {
+  public NotificationsubsectionResponse sNotificationsubsectionNameX(String sNotificationsubsectionNameX) {
     this.sNotificationsubsectionNameX = sNotificationsubsectionNameX;
     return this;
   }
@@ -171,7 +166,7 @@ public class NotificationsubsectionResponse {
     return sNotificationsubsectionNameX;
   }
 
-  public void setsNotificationsubsectionNameX(@javax.annotation.Nonnull String sNotificationsubsectionNameX) {
+  public void setsNotificationsubsectionNameX(String sNotificationsubsectionNameX) {
     this.sNotificationsubsectionNameX = sNotificationsubsectionNameX;
   }
 
@@ -254,6 +249,21 @@ public class NotificationsubsectionResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in NotificationsubsectionResponse is not found in the empty JSON string", NotificationsubsectionResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!NotificationsubsectionResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `NotificationsubsectionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : NotificationsubsectionResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `objNotificationsubsectionName`
       if (jsonObj.get("objNotificationsubsectionName") != null && !jsonObj.get("objNotificationsubsectionName").isJsonNull()) {
@@ -267,6 +277,34 @@ public class NotificationsubsectionResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!NotificationsubsectionResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'NotificationsubsectionResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<NotificationsubsectionResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(NotificationsubsectionResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<NotificationsubsectionResponse>() {
+           @Override
+           public void write(JsonWriter out, NotificationsubsectionResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public NotificationsubsectionResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of NotificationsubsectionResponse given an JSON string

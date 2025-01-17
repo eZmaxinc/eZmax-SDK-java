@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.FieldEErrorCode;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,10 +51,87 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CommonResponseErrorTooManyRequests extends CommonResponseError {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CommonResponseErrorTooManyRequests {
+  public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
+  @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
+  private String sErrorMessage;
+
+  public static final String SERIALIZED_NAME_E_ERROR_CODE = "eErrorCode";
+  @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
+  private FieldEErrorCode eErrorCode;
+
+  public static final String SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL = "a_sErrorMessagedetail";
+  @SerializedName(SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL)
+  private List<String> aSErrorMessagedetail = new ArrayList<>();
+
   public CommonResponseErrorTooManyRequests() {
   }
+
+  public CommonResponseErrorTooManyRequests sErrorMessage(String sErrorMessage) {
+    this.sErrorMessage = sErrorMessage;
+    return this;
+  }
+
+  /**
+   * The message giving details about the error
+   * @return sErrorMessage
+   */
+  @javax.annotation.Nonnull
+  public String getsErrorMessage() {
+    return sErrorMessage;
+  }
+
+  public void setsErrorMessage(String sErrorMessage) {
+    this.sErrorMessage = sErrorMessage;
+  }
+
+
+  public CommonResponseErrorTooManyRequests eErrorCode(FieldEErrorCode eErrorCode) {
+    this.eErrorCode = eErrorCode;
+    return this;
+  }
+
+  /**
+   * Get eErrorCode
+   * @return eErrorCode
+   */
+  @javax.annotation.Nonnull
+  public FieldEErrorCode geteErrorCode() {
+    return eErrorCode;
+  }
+
+  public void seteErrorCode(FieldEErrorCode eErrorCode) {
+    this.eErrorCode = eErrorCode;
+  }
+
+
+  public CommonResponseErrorTooManyRequests aSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+    this.aSErrorMessagedetail = aSErrorMessagedetail;
+    return this;
+  }
+
+  public CommonResponseErrorTooManyRequests addASErrorMessagedetailItem(String aSErrorMessagedetailItem) {
+    if (this.aSErrorMessagedetail == null) {
+      this.aSErrorMessagedetail = new ArrayList<>();
+    }
+    this.aSErrorMessagedetail.add(aSErrorMessagedetailItem);
+    return this;
+  }
+
+  /**
+   * More error message detail
+   * @return aSErrorMessagedetail
+   */
+  @javax.annotation.Nullable
+  public List<String> getaSErrorMessagedetail() {
+    return aSErrorMessagedetail;
+  }
+
+  public void setaSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+    this.aSErrorMessagedetail = aSErrorMessagedetail;
+  }
+
 
 
   @Override
@@ -66,19 +142,24 @@ public class CommonResponseErrorTooManyRequests extends CommonResponseError {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    CommonResponseErrorTooManyRequests commonResponseErrorTooManyRequests = (CommonResponseErrorTooManyRequests) o;
+    return Objects.equals(this.sErrorMessage, commonResponseErrorTooManyRequests.sErrorMessage) &&
+        Objects.equals(this.eErrorCode, commonResponseErrorTooManyRequests.eErrorCode) &&
+        Objects.equals(this.aSErrorMessagedetail, commonResponseErrorTooManyRequests.aSErrorMessagedetail);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(sErrorMessage, eErrorCode, aSErrorMessagedetail);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonResponseErrorTooManyRequests {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    sErrorMessage: ").append(toIndentedString(sErrorMessage)).append("\n");
+    sb.append("    eErrorCode: ").append(toIndentedString(eErrorCode)).append("\n");
+    sb.append("    aSErrorMessagedetail: ").append(toIndentedString(aSErrorMessagedetail)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -137,6 +218,16 @@ public class CommonResponseErrorTooManyRequests extends CommonResponseError {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sErrorMessage").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sErrorMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sErrorMessage").toString()));
+      }
+      // validate the required field `eErrorCode`
+      FieldEErrorCode.validateJsonElement(jsonObj.get("eErrorCode"));
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("a_sErrorMessagedetail") != null && !jsonObj.get("a_sErrorMessagedetail").isJsonNull() && !jsonObj.get("a_sErrorMessagedetail").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_sErrorMessagedetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_sErrorMessagedetail").toString()));
       }
   }
 

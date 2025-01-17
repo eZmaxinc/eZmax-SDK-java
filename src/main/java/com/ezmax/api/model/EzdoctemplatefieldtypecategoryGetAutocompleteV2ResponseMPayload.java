@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezdoctemplatefieldtypecategory/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZDOCTEMPLATEFIELDTYPECATEGORY = "a_objEzdoctemplatefieldtypecategory";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZDOCTEMPLATEFIELDTYPECATEGORY)
-  @javax.annotation.Nonnull
   private List<EzdoctemplatefieldtypecategoryAutocompleteElementResponse> aObjEzdoctemplatefieldtypecategory = new ArrayList<>();
 
   public EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload() {
   }
 
-  public EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload aObjEzdoctemplatefieldtypecategory(@javax.annotation.Nonnull List<EzdoctemplatefieldtypecategoryAutocompleteElementResponse> aObjEzdoctemplatefieldtypecategory) {
+  public EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload aObjEzdoctemplatefieldtypecategory(List<EzdoctemplatefieldtypecategoryAutocompleteElementResponse> aObjEzdoctemplatefieldtypecategory) {
     this.aObjEzdoctemplatefieldtypecategory = aObjEzdoctemplatefieldtypecategory;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload {
     return aObjEzdoctemplatefieldtypecategory;
   }
 
-  public void setaObjEzdoctemplatefieldtypecategory(@javax.annotation.Nonnull List<EzdoctemplatefieldtypecategoryAutocompleteElementResponse> aObjEzdoctemplatefieldtypecategory) {
+  public void setaObjEzdoctemplatefieldtypecategory(List<EzdoctemplatefieldtypecategoryAutocompleteElementResponse> aObjEzdoctemplatefieldtypecategory) {
     this.aObjEzdoctemplatefieldtypecategory = aObjEzdoctemplatefieldtypecategory;
   }
 

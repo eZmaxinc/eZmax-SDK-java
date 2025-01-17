@@ -51,37 +51,32 @@ import eZmaxAPI.JSON;
 /**
  * ScimUserList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ScimUserList {
   public static final String SERIALIZED_NAME_TOTAL_RESULTS = "totalResults";
   @SerializedName(SERIALIZED_NAME_TOTAL_RESULTS)
-  @javax.annotation.Nullable
   private Integer totalResults;
 
   public static final String SERIALIZED_NAME_ITEMS_PER_PAGE = "itemsPerPage";
   @SerializedName(SERIALIZED_NAME_ITEMS_PER_PAGE)
-  @javax.annotation.Nullable
   private Integer itemsPerPage;
 
   public static final String SERIALIZED_NAME_START_INDEX = "startIndex";
   @SerializedName(SERIALIZED_NAME_START_INDEX)
-  @javax.annotation.Nullable
   private Integer startIndex;
 
   public static final String SERIALIZED_NAME_SCHEMAS = "schemas";
   @SerializedName(SERIALIZED_NAME_SCHEMAS)
-  @javax.annotation.Nullable
   private List<String> schemas = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_RESOURCES = "Resources";
   @SerializedName(SERIALIZED_NAME_RESOURCES)
-  @javax.annotation.Nullable
   private List<ScimUser> resources = new ArrayList<>();
 
   public ScimUserList() {
   }
 
-  public ScimUserList totalResults(@javax.annotation.Nullable Integer totalResults) {
+  public ScimUserList totalResults(Integer totalResults) {
     this.totalResults = totalResults;
     return this;
   }
@@ -95,12 +90,12 @@ public class ScimUserList {
     return totalResults;
   }
 
-  public void setTotalResults(@javax.annotation.Nullable Integer totalResults) {
+  public void setTotalResults(Integer totalResults) {
     this.totalResults = totalResults;
   }
 
 
-  public ScimUserList itemsPerPage(@javax.annotation.Nullable Integer itemsPerPage) {
+  public ScimUserList itemsPerPage(Integer itemsPerPage) {
     this.itemsPerPage = itemsPerPage;
     return this;
   }
@@ -114,12 +109,12 @@ public class ScimUserList {
     return itemsPerPage;
   }
 
-  public void setItemsPerPage(@javax.annotation.Nullable Integer itemsPerPage) {
+  public void setItemsPerPage(Integer itemsPerPage) {
     this.itemsPerPage = itemsPerPage;
   }
 
 
-  public ScimUserList startIndex(@javax.annotation.Nullable Integer startIndex) {
+  public ScimUserList startIndex(Integer startIndex) {
     this.startIndex = startIndex;
     return this;
   }
@@ -133,12 +128,12 @@ public class ScimUserList {
     return startIndex;
   }
 
-  public void setStartIndex(@javax.annotation.Nullable Integer startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
-  public ScimUserList schemas(@javax.annotation.Nullable List<String> schemas) {
+  public ScimUserList schemas(List<String> schemas) {
     this.schemas = schemas;
     return this;
   }
@@ -160,12 +155,12 @@ public class ScimUserList {
     return schemas;
   }
 
-  public void setSchemas(@javax.annotation.Nullable List<String> schemas) {
+  public void setSchemas(List<String> schemas) {
     this.schemas = schemas;
   }
 
 
-  public ScimUserList resources(@javax.annotation.Nullable List<ScimUser> resources) {
+  public ScimUserList resources(List<ScimUser> resources) {
     this.resources = resources;
     return this;
   }
@@ -187,7 +182,7 @@ public class ScimUserList {
     return resources;
   }
 
-  public void setResources(@javax.annotation.Nullable List<ScimUser> resources) {
+  public void setResources(List<ScimUser> resources) {
     this.resources = resources;
   }
 

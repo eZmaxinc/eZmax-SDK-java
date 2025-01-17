@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsigndocumentdependencyRequest;
+import com.ezmax.api.model.EzsigndocumentdependencyRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,22 +51,20 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsigndocumentRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENTDEPENDENCY = "a_objEzsigndocumentdependency";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENTDEPENDENCY)
-  @javax.annotation.Nonnull
   private List<EzsigndocumentdependencyRequestCompound> aObjEzsigndocumentdependency = new ArrayList<>();
 
   public CustomEzsigndocumentRequest() {
   }
 
-  public CustomEzsigndocumentRequest pkiEzsigndocumentID(@javax.annotation.Nonnull Integer pkiEzsigndocumentID) {
+  public CustomEzsigndocumentRequest pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
     return this;
   }
@@ -81,17 +79,17 @@ public class CustomEzsigndocumentRequest {
     return pkiEzsigndocumentID;
   }
 
-  public void setPkiEzsigndocumentID(@javax.annotation.Nonnull Integer pkiEzsigndocumentID) {
+  public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
   }
 
 
-  public CustomEzsigndocumentRequest aObjEzsigndocumentdependency(@javax.annotation.Nonnull List<EzsigndocumentdependencyRequestCompound> aObjEzsigndocumentdependency) {
+  public CustomEzsigndocumentRequest aObjEzsigndocumentdependency(List<EzsigndocumentdependencyRequestCompound> aObjEzsigndocumentdependency) {
     this.aObjEzsigndocumentdependency = aObjEzsigndocumentdependency;
     return this;
   }
 
-  public CustomEzsigndocumentRequest addAObjEzsigndocumentdependencyItem(EzsigndocumentdependencyRequest aObjEzsigndocumentdependencyItem) {
+  public CustomEzsigndocumentRequest addAObjEzsigndocumentdependencyItem(EzsigndocumentdependencyRequestCompound aObjEzsigndocumentdependencyItem) {
     if (this.aObjEzsigndocumentdependency == null) {
       this.aObjEzsigndocumentdependency = new ArrayList<>();
     }
@@ -108,7 +106,7 @@ public class CustomEzsigndocumentRequest {
     return aObjEzsigndocumentdependency;
   }
 
-  public void setaObjEzsigndocumentdependency(@javax.annotation.Nonnull List<EzsigndocumentdependencyRequestCompound> aObjEzsigndocumentdependency) {
+  public void setaObjEzsigndocumentdependency(List<EzsigndocumentdependencyRequestCompound> aObjEzsigndocumentdependency) {
     this.aObjEzsigndocumentdependency = aObjEzsigndocumentdependency;
   }
 
@@ -205,7 +203,7 @@ public class CustomEzsigndocumentRequest {
       JsonArray jsonArrayaObjEzsigndocumentdependency = jsonObj.getAsJsonArray("a_objEzsigndocumentdependency");
       // validate the required field `a_objEzsigndocumentdependency` (array)
       for (int i = 0; i < jsonArrayaObjEzsigndocumentdependency.size(); i++) {
-        EzsigndocumentdependencyRequest.validateJsonElement(jsonArrayaObjEzsigndocumentdependency.get(i));
+        EzsigndocumentdependencyRequestCompound.validateJsonElement(jsonArrayaObjEzsigndocumentdependency.get(i));
       };
   }
 

@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class NotificationsectionGetNotificationtestsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_NOTIFICATIONSUBSECTION = "a_objNotificationsubsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_NOTIFICATIONSUBSECTION)
-  @javax.annotation.Nonnull
   private List<CustomNotificationsubsectiongetnotificationtestsResponse> aObjNotificationsubsection = new ArrayList<>();
 
   public NotificationsectionGetNotificationtestsV1ResponseMPayload() {
   }
 
-  public NotificationsectionGetNotificationtestsV1ResponseMPayload aObjNotificationsubsection(@javax.annotation.Nonnull List<CustomNotificationsubsectiongetnotificationtestsResponse> aObjNotificationsubsection) {
+  public NotificationsectionGetNotificationtestsV1ResponseMPayload aObjNotificationsubsection(List<CustomNotificationsubsectiongetnotificationtestsResponse> aObjNotificationsubsection) {
     this.aObjNotificationsubsection = aObjNotificationsubsection;
     return this;
   }
@@ -83,7 +82,7 @@ public class NotificationsectionGetNotificationtestsV1ResponseMPayload {
     return aObjNotificationsubsection;
   }
 
-  public void setaObjNotificationsubsection(@javax.annotation.Nonnull List<CustomNotificationsubsectiongetnotificationtestsResponse> aObjNotificationsubsection) {
+  public void setaObjNotificationsubsection(List<CustomNotificationsubsectiongetnotificationtestsResponse> aObjNotificationsubsection) {
     this.aObjNotificationsubsection = aObjNotificationsubsection;
   }
 

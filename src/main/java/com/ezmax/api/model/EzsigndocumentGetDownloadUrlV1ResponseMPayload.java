@@ -48,17 +48,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getDownloadUrl
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentGetDownloadUrlV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_DOWNLOAD_URL = "sDownloadUrl";
   @SerializedName(SERIALIZED_NAME_S_DOWNLOAD_URL)
-  @javax.annotation.Nonnull
   private String sDownloadUrl;
 
   public EzsigndocumentGetDownloadUrlV1ResponseMPayload() {
   }
 
-  public EzsigndocumentGetDownloadUrlV1ResponseMPayload sDownloadUrl(@javax.annotation.Nonnull String sDownloadUrl) {
+  public EzsigndocumentGetDownloadUrlV1ResponseMPayload sDownloadUrl(String sDownloadUrl) {
     this.sDownloadUrl = sDownloadUrl;
     return this;
   }
@@ -72,7 +71,7 @@ public class EzsigndocumentGetDownloadUrlV1ResponseMPayload {
     return sDownloadUrl;
   }
 
-  public void setsDownloadUrl(@javax.annotation.Nonnull String sDownloadUrl) {
+  public void setsDownloadUrl(String sDownloadUrl) {
     this.sDownloadUrl = sDownloadUrl;
   }
 

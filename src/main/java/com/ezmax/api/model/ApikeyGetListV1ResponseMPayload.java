@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.ApikeyListElement;
-import com.ezmax.api.model.CommonGetListV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/apikey/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class ApikeyGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class ApikeyGetListV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
+  @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  private Integer iRowReturned;
+
+  public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
+  @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  private Integer iRowFiltered;
+
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)
-  @javax.annotation.Nonnull
   private List<ApikeyListElement> aObjApikey = new ArrayList<>();
 
   public ApikeyGetListV1ResponseMPayload() {
   }
 
-  public ApikeyGetListV1ResponseMPayload aObjApikey(@javax.annotation.Nonnull List<ApikeyListElement> aObjApikey) {
+  public ApikeyGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+    return this;
+  }
+
+  /**
+   * The number of rows returned
+   * @return iRowReturned
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowReturned() {
+    return iRowReturned;
+  }
+
+  public void setiRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+  }
+
+
+  public ApikeyGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+    return this;
+  }
+
+  /**
+   * The number of rows matching your filters (if any) or the total number of rows
+   * @return iRowFiltered
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowFiltered() {
+    return iRowFiltered;
+  }
+
+  public void setiRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+  }
+
+
+  public ApikeyGetListV1ResponseMPayload aObjApikey(List<ApikeyListElement> aObjApikey) {
     this.aObjApikey = aObjApikey;
     return this;
   }
@@ -84,7 +128,7 @@ public class ApikeyGetListV1ResponseMPayload extends CommonGetListV1ResponseMPay
     return aObjApikey;
   }
 
-  public void setaObjApikey(@javax.annotation.Nonnull List<ApikeyListElement> aObjApikey) {
+  public void setaObjApikey(List<ApikeyListElement> aObjApikey) {
     this.aObjApikey = aObjApikey;
   }
 
@@ -99,20 +143,22 @@ public class ApikeyGetListV1ResponseMPayload extends CommonGetListV1ResponseMPay
       return false;
     }
     ApikeyGetListV1ResponseMPayload apikeyGetListV1ResponseMPayload = (ApikeyGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjApikey, apikeyGetListV1ResponseMPayload.aObjApikey) &&
-        super.equals(o);
+    return Objects.equals(this.iRowReturned, apikeyGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, apikeyGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjApikey, apikeyGetListV1ResponseMPayload.aObjApikey);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjApikey, super.hashCode());
+    return Objects.hash(iRowReturned, iRowFiltered, aObjApikey);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApikeyGetListV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
+    sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
     sb.append("    aObjApikey: ").append(toIndentedString(aObjApikey)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -142,9 +188,9 @@ public class ApikeyGetListV1ResponseMPayload extends CommonGetListV1ResponseMPay
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objApikey");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objApikey");
   }
 
   /**

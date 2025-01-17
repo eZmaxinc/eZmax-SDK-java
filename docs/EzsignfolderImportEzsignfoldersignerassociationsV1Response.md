@@ -8,6 +8,8 @@ Response for POST /1/object/ezsignfolder/{pkiEzsignfolder}/importEzsignfoldersig
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload**](EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload.md) |  |  |
 
 

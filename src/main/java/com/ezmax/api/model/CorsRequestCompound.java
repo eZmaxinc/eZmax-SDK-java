@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CorsRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,82 @@ import eZmaxAPI.JSON;
 /**
  * A Cors Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CorsRequestCompound extends CorsRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CorsRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_CORS_I_D = "pkiCorsID";
+  @SerializedName(SERIALIZED_NAME_PKI_CORS_I_D)
+  private Integer pkiCorsID;
+
+  public static final String SERIALIZED_NAME_FKI_APIKEY_I_D = "fkiApikeyID";
+  @SerializedName(SERIALIZED_NAME_FKI_APIKEY_I_D)
+  private Integer fkiApikeyID;
+
+  public static final String SERIALIZED_NAME_S_CORS_ENTRYURL = "sCorsEntryurl";
+  @SerializedName(SERIALIZED_NAME_S_CORS_ENTRYURL)
+  private String sCorsEntryurl;
+
   public CorsRequestCompound() {
   }
+
+  public CorsRequestCompound pkiCorsID(Integer pkiCorsID) {
+    this.pkiCorsID = pkiCorsID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Cors
+   * minimum: 0
+   * maximum: 65535
+   * @return pkiCorsID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiCorsID() {
+    return pkiCorsID;
+  }
+
+  public void setPkiCorsID(Integer pkiCorsID) {
+    this.pkiCorsID = pkiCorsID;
+  }
+
+
+  public CorsRequestCompound fkiApikeyID(Integer fkiApikeyID) {
+    this.fkiApikeyID = fkiApikeyID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Apikey
+   * minimum: 0
+   * @return fkiApikeyID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiApikeyID() {
+    return fkiApikeyID;
+  }
+
+  public void setFkiApikeyID(Integer fkiApikeyID) {
+    this.fkiApikeyID = fkiApikeyID;
+  }
+
+
+  public CorsRequestCompound sCorsEntryurl(String sCorsEntryurl) {
+    this.sCorsEntryurl = sCorsEntryurl;
+    return this;
+  }
+
+  /**
+   * The entryurl of the Cors
+   * @return sCorsEntryurl
+   */
+  @javax.annotation.Nonnull
+  public String getsCorsEntryurl() {
+    return sCorsEntryurl;
+  }
+
+  public void setsCorsEntryurl(String sCorsEntryurl) {
+    this.sCorsEntryurl = sCorsEntryurl;
+  }
+
 
 
   @Override
@@ -63,19 +134,24 @@ public class CorsRequestCompound extends CorsRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    CorsRequestCompound corsRequestCompound = (CorsRequestCompound) o;
+    return Objects.equals(this.pkiCorsID, corsRequestCompound.pkiCorsID) &&
+        Objects.equals(this.fkiApikeyID, corsRequestCompound.fkiApikeyID) &&
+        Objects.equals(this.sCorsEntryurl, corsRequestCompound.sCorsEntryurl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiCorsID, fkiApikeyID, sCorsEntryurl);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CorsRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiCorsID: ").append(toIndentedString(pkiCorsID)).append("\n");
+    sb.append("    fkiApikeyID: ").append(toIndentedString(fkiApikeyID)).append("\n");
+    sb.append("    sCorsEntryurl: ").append(toIndentedString(sCorsEntryurl)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -134,6 +210,10 @@ public class CorsRequestCompound extends CorsRequest {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sCorsEntryurl").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCorsEntryurl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCorsEntryurl").toString()));
       }
   }
 

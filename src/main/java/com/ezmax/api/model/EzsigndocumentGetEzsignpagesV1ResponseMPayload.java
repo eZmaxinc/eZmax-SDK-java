@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsignpageResponse;
+import com.ezmax.api.model.EzsignpageResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,22 +51,21 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNPAGE = "a_objEzsignpage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNPAGE)
-  @javax.annotation.Nonnull
   private List<EzsignpageResponseCompound> aObjEzsignpage = new ArrayList<>();
 
   public EzsigndocumentGetEzsignpagesV1ResponseMPayload() {
   }
 
-  public EzsigndocumentGetEzsignpagesV1ResponseMPayload aObjEzsignpage(@javax.annotation.Nonnull List<EzsignpageResponseCompound> aObjEzsignpage) {
+  public EzsigndocumentGetEzsignpagesV1ResponseMPayload aObjEzsignpage(List<EzsignpageResponseCompound> aObjEzsignpage) {
     this.aObjEzsignpage = aObjEzsignpage;
     return this;
   }
 
-  public EzsigndocumentGetEzsignpagesV1ResponseMPayload addAObjEzsignpageItem(EzsignpageResponse aObjEzsignpageItem) {
+  public EzsigndocumentGetEzsignpagesV1ResponseMPayload addAObjEzsignpageItem(EzsignpageResponseCompound aObjEzsignpageItem) {
     if (this.aObjEzsignpage == null) {
       this.aObjEzsignpage = new ArrayList<>();
     }
@@ -83,7 +82,7 @@ public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
     return aObjEzsignpage;
   }
 
-  public void setaObjEzsignpage(@javax.annotation.Nonnull List<EzsignpageResponseCompound> aObjEzsignpage) {
+  public void setaObjEzsignpage(List<EzsignpageResponseCompound> aObjEzsignpage) {
     this.aObjEzsignpage = aObjEzsignpage;
   }
 
@@ -176,7 +175,7 @@ public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
       JsonArray jsonArrayaObjEzsignpage = jsonObj.getAsJsonArray("a_objEzsignpage");
       // validate the required field `a_objEzsignpage` (array)
       for (int i = 0; i < jsonArrayaObjEzsignpage.size(); i++) {
-        EzsignpageResponse.validateJsonElement(jsonArrayaObjEzsignpage.get(i));
+        EzsignpageResponseCompound.validateJsonElement(jsonArrayaObjEzsignpage.get(i));
       };
   }
 

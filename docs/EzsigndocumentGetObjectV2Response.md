@@ -8,6 +8,8 @@ Response for GET /2/object/ezsigndocument/{pkiEzsigndocumentID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**EzsigndocumentGetObjectV2ResponseMPayload**](EzsigndocumentGetObjectV2ResponseMPayload.md) |  |  |
 
 

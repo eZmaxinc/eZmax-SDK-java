@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * The description of the Subnet
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualSubnetDescription {
   public static final String SERIALIZED_NAME_S_SUBNET_DESCRIPTION1 = "sSubnetDescription1";
   @SerializedName(SERIALIZED_NAME_S_SUBNET_DESCRIPTION1)
-  @javax.annotation.Nullable
   private String sSubnetDescription1;
 
   public static final String SERIALIZED_NAME_S_SUBNET_DESCRIPTION2 = "sSubnetDescription2";
   @SerializedName(SERIALIZED_NAME_S_SUBNET_DESCRIPTION2)
-  @javax.annotation.Nullable
   private String sSubnetDescription2;
 
   public MultilingualSubnetDescription() {
   }
 
-  public MultilingualSubnetDescription sSubnetDescription1(@javax.annotation.Nullable String sSubnetDescription1) {
+  public MultilingualSubnetDescription sSubnetDescription1(String sSubnetDescription1) {
     this.sSubnetDescription1 = sSubnetDescription1;
     return this;
   }
@@ -77,12 +75,12 @@ public class MultilingualSubnetDescription {
     return sSubnetDescription1;
   }
 
-  public void setsSubnetDescription1(@javax.annotation.Nullable String sSubnetDescription1) {
+  public void setsSubnetDescription1(String sSubnetDescription1) {
     this.sSubnetDescription1 = sSubnetDescription1;
   }
 
 
-  public MultilingualSubnetDescription sSubnetDescription2(@javax.annotation.Nullable String sSubnetDescription2) {
+  public MultilingualSubnetDescription sSubnetDescription2(String sSubnetDescription2) {
     this.sSubnetDescription2 = sSubnetDescription2;
     return this;
   }
@@ -96,7 +94,7 @@ public class MultilingualSubnetDescription {
     return sSubnetDescription2;
   }
 
-  public void setsSubnetDescription2(@javax.annotation.Nullable String sSubnetDescription2) {
+  public void setsSubnetDescription2(String sSubnetDescription2) {
     this.sSubnetDescription2 = sSubnetDescription2;
   }
 

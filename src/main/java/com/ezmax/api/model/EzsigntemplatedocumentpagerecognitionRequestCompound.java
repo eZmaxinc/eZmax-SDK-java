@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionRequest;
 import com.ezmax.api.model.FieldEEzsigntemplatedocumentpagerecognitionOperator;
 import com.ezmax.api.model.FieldEEzsigntemplatedocumentpagerecognitionSection;
 import com.google.gson.TypeAdapter;
@@ -51,10 +50,253 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatedocumentpagerecognition Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigntemplatedocumentpagerecognitionRequestCompound extends EzsigntemplatedocumentpagerecognitionRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsigntemplatedocumentpagerecognitionRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_I_D = "pkiEzsigntemplatedocumentpagerecognitionID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_I_D)
+  private Integer pkiEzsigntemplatedocumentpagerecognitionID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D = "fkiEzsigntemplatedocumentpageID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D)
+  private Integer fkiEzsigntemplatedocumentpageID;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_OPERATOR = "eEzsigntemplatedocumentpagerecognitionOperator";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_OPERATOR)
+  private FieldEEzsigntemplatedocumentpagerecognitionOperator eEzsigntemplatedocumentpagerecognitionOperator;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_SECTION = "eEzsigntemplatedocumentpagerecognitionSection";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_SECTION)
+  private FieldEEzsigntemplatedocumentpagerecognitionSection eEzsigntemplatedocumentpagerecognitionSection;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_SIMILARPERCENTAGE = "iEzsigntemplatedocumentpagerecognitionSimilarpercentage";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_SIMILARPERCENTAGE)
+  private Integer iEzsigntemplatedocumentpagerecognitionSimilarpercentage;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_X = "iEzsigntemplatedocumentpagerecognitionX";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_X)
+  private Integer iEzsigntemplatedocumentpagerecognitionX;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_Y = "iEzsigntemplatedocumentpagerecognitionY";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_Y)
+  private Integer iEzsigntemplatedocumentpagerecognitionY;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_WIDTH = "iEzsigntemplatedocumentpagerecognitionWidth";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_WIDTH)
+  private Integer iEzsigntemplatedocumentpagerecognitionWidth;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_HEIGHT = "iEzsigntemplatedocumentpagerecognitionHeight";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_HEIGHT)
+  private Integer iEzsigntemplatedocumentpagerecognitionHeight;
+
+  public static final String SERIALIZED_NAME_T_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_TEXT = "tEzsigntemplatedocumentpagerecognitionText";
+  @SerializedName(SERIALIZED_NAME_T_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_TEXT)
+  private String tEzsigntemplatedocumentpagerecognitionText;
+
   public EzsigntemplatedocumentpagerecognitionRequestCompound() {
   }
+
+  public EzsigntemplatedocumentpagerecognitionRequestCompound pkiEzsigntemplatedocumentpagerecognitionID(Integer pkiEzsigntemplatedocumentpagerecognitionID) {
+    this.pkiEzsigntemplatedocumentpagerecognitionID = pkiEzsigntemplatedocumentpagerecognitionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplatedocumentpagerecognition
+   * minimum: 0
+   * maximum: 65535
+   * @return pkiEzsigntemplatedocumentpagerecognitionID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiEzsigntemplatedocumentpagerecognitionID() {
+    return pkiEzsigntemplatedocumentpagerecognitionID;
+  }
+
+  public void setPkiEzsigntemplatedocumentpagerecognitionID(Integer pkiEzsigntemplatedocumentpagerecognitionID) {
+    this.pkiEzsigntemplatedocumentpagerecognitionID = pkiEzsigntemplatedocumentpagerecognitionID;
+  }
+
+
+  public EzsigntemplatedocumentpagerecognitionRequestCompound fkiEzsigntemplatedocumentpageID(Integer fkiEzsigntemplatedocumentpageID) {
+    this.fkiEzsigntemplatedocumentpageID = fkiEzsigntemplatedocumentpageID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplatedocumentpage
+   * minimum: 0
+   * @return fkiEzsigntemplatedocumentpageID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsigntemplatedocumentpageID() {
+    return fkiEzsigntemplatedocumentpageID;
+  }
+
+  public void setFkiEzsigntemplatedocumentpageID(Integer fkiEzsigntemplatedocumentpageID) {
+    this.fkiEzsigntemplatedocumentpageID = fkiEzsigntemplatedocumentpageID;
+  }
+
+
+  public EzsigntemplatedocumentpagerecognitionRequestCompound eEzsigntemplatedocumentpagerecognitionOperator(FieldEEzsigntemplatedocumentpagerecognitionOperator eEzsigntemplatedocumentpagerecognitionOperator) {
+    this.eEzsigntemplatedocumentpagerecognitionOperator = eEzsigntemplatedocumentpagerecognitionOperator;
+    return this;
+  }
+
+  /**
+   * Get eEzsigntemplatedocumentpagerecognitionOperator
+   * @return eEzsigntemplatedocumentpagerecognitionOperator
+   */
+  @javax.annotation.Nonnull
+  public FieldEEzsigntemplatedocumentpagerecognitionOperator geteEzsigntemplatedocumentpagerecognitionOperator() {
+    return eEzsigntemplatedocumentpagerecognitionOperator;
+  }
+
+  public void seteEzsigntemplatedocumentpagerecognitionOperator(FieldEEzsigntemplatedocumentpagerecognitionOperator eEzsigntemplatedocumentpagerecognitionOperator) {
+    this.eEzsigntemplatedocumentpagerecognitionOperator = eEzsigntemplatedocumentpagerecognitionOperator;
+  }
+
+
+  public EzsigntemplatedocumentpagerecognitionRequestCompound eEzsigntemplatedocumentpagerecognitionSection(FieldEEzsigntemplatedocumentpagerecognitionSection eEzsigntemplatedocumentpagerecognitionSection) {
+    this.eEzsigntemplatedocumentpagerecognitionSection = eEzsigntemplatedocumentpagerecognitionSection;
+    return this;
+  }
+
+  /**
+   * Get eEzsigntemplatedocumentpagerecognitionSection
+   * @return eEzsigntemplatedocumentpagerecognitionSection
+   */
+  @javax.annotation.Nonnull
+  public FieldEEzsigntemplatedocumentpagerecognitionSection geteEzsigntemplatedocumentpagerecognitionSection() {
+    return eEzsigntemplatedocumentpagerecognitionSection;
+  }
+
+  public void seteEzsigntemplatedocumentpagerecognitionSection(FieldEEzsigntemplatedocumentpagerecognitionSection eEzsigntemplatedocumentpagerecognitionSection) {
+    this.eEzsigntemplatedocumentpagerecognitionSection = eEzsigntemplatedocumentpagerecognitionSection;
+  }
+
+
+  public EzsigntemplatedocumentpagerecognitionRequestCompound iEzsigntemplatedocumentpagerecognitionSimilarpercentage(Integer iEzsigntemplatedocumentpagerecognitionSimilarpercentage) {
+    this.iEzsigntemplatedocumentpagerecognitionSimilarpercentage = iEzsigntemplatedocumentpagerecognitionSimilarpercentage;
+    return this;
+  }
+
+  /**
+   * The similarpercentage of the Ezsigntemplatedocumentpagerecognition
+   * minimum: 60
+   * maximum: 100
+   * @return iEzsigntemplatedocumentpagerecognitionSimilarpercentage
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplatedocumentpagerecognitionSimilarpercentage() {
+    return iEzsigntemplatedocumentpagerecognitionSimilarpercentage;
+  }
+
+  public void setiEzsigntemplatedocumentpagerecognitionSimilarpercentage(Integer iEzsigntemplatedocumentpagerecognitionSimilarpercentage) {
+    this.iEzsigntemplatedocumentpagerecognitionSimilarpercentage = iEzsigntemplatedocumentpagerecognitionSimilarpercentage;
+  }
+
+
+  public EzsigntemplatedocumentpagerecognitionRequestCompound iEzsigntemplatedocumentpagerecognitionX(Integer iEzsigntemplatedocumentpagerecognitionX) {
+    this.iEzsigntemplatedocumentpagerecognitionX = iEzsigntemplatedocumentpagerecognitionX;
+    return this;
+  }
+
+  /**
+   * The x of the Ezsigntemplatedocumentpagerecognition
+   * minimum: 0
+   * maximum: 65535
+   * @return iEzsigntemplatedocumentpagerecognitionX
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplatedocumentpagerecognitionX() {
+    return iEzsigntemplatedocumentpagerecognitionX;
+  }
+
+  public void setiEzsigntemplatedocumentpagerecognitionX(Integer iEzsigntemplatedocumentpagerecognitionX) {
+    this.iEzsigntemplatedocumentpagerecognitionX = iEzsigntemplatedocumentpagerecognitionX;
+  }
+
+
+  public EzsigntemplatedocumentpagerecognitionRequestCompound iEzsigntemplatedocumentpagerecognitionY(Integer iEzsigntemplatedocumentpagerecognitionY) {
+    this.iEzsigntemplatedocumentpagerecognitionY = iEzsigntemplatedocumentpagerecognitionY;
+    return this;
+  }
+
+  /**
+   * The y of the Ezsigntemplatedocumentpagerecognition
+   * minimum: 0
+   * maximum: 65535
+   * @return iEzsigntemplatedocumentpagerecognitionY
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplatedocumentpagerecognitionY() {
+    return iEzsigntemplatedocumentpagerecognitionY;
+  }
+
+  public void setiEzsigntemplatedocumentpagerecognitionY(Integer iEzsigntemplatedocumentpagerecognitionY) {
+    this.iEzsigntemplatedocumentpagerecognitionY = iEzsigntemplatedocumentpagerecognitionY;
+  }
+
+
+  public EzsigntemplatedocumentpagerecognitionRequestCompound iEzsigntemplatedocumentpagerecognitionWidth(Integer iEzsigntemplatedocumentpagerecognitionWidth) {
+    this.iEzsigntemplatedocumentpagerecognitionWidth = iEzsigntemplatedocumentpagerecognitionWidth;
+    return this;
+  }
+
+  /**
+   * The width of the Ezsigntemplatedocumentpagerecognition
+   * minimum: 0
+   * maximum: 65535
+   * @return iEzsigntemplatedocumentpagerecognitionWidth
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplatedocumentpagerecognitionWidth() {
+    return iEzsigntemplatedocumentpagerecognitionWidth;
+  }
+
+  public void setiEzsigntemplatedocumentpagerecognitionWidth(Integer iEzsigntemplatedocumentpagerecognitionWidth) {
+    this.iEzsigntemplatedocumentpagerecognitionWidth = iEzsigntemplatedocumentpagerecognitionWidth;
+  }
+
+
+  public EzsigntemplatedocumentpagerecognitionRequestCompound iEzsigntemplatedocumentpagerecognitionHeight(Integer iEzsigntemplatedocumentpagerecognitionHeight) {
+    this.iEzsigntemplatedocumentpagerecognitionHeight = iEzsigntemplatedocumentpagerecognitionHeight;
+    return this;
+  }
+
+  /**
+   * The height of the Ezsigntemplatedocumentpagerecognition
+   * minimum: 0
+   * maximum: 65535
+   * @return iEzsigntemplatedocumentpagerecognitionHeight
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsigntemplatedocumentpagerecognitionHeight() {
+    return iEzsigntemplatedocumentpagerecognitionHeight;
+  }
+
+  public void setiEzsigntemplatedocumentpagerecognitionHeight(Integer iEzsigntemplatedocumentpagerecognitionHeight) {
+    this.iEzsigntemplatedocumentpagerecognitionHeight = iEzsigntemplatedocumentpagerecognitionHeight;
+  }
+
+
+  public EzsigntemplatedocumentpagerecognitionRequestCompound tEzsigntemplatedocumentpagerecognitionText(String tEzsigntemplatedocumentpagerecognitionText) {
+    this.tEzsigntemplatedocumentpagerecognitionText = tEzsigntemplatedocumentpagerecognitionText;
+    return this;
+  }
+
+  /**
+   * The text of the Ezsigntemplatedocumentpagerecognition
+   * @return tEzsigntemplatedocumentpagerecognitionText
+   */
+  @javax.annotation.Nonnull
+  public String gettEzsigntemplatedocumentpagerecognitionText() {
+    return tEzsigntemplatedocumentpagerecognitionText;
+  }
+
+  public void settEzsigntemplatedocumentpagerecognitionText(String tEzsigntemplatedocumentpagerecognitionText) {
+    this.tEzsigntemplatedocumentpagerecognitionText = tEzsigntemplatedocumentpagerecognitionText;
+  }
+
 
 
   @Override
@@ -65,19 +307,38 @@ public class EzsigntemplatedocumentpagerecognitionRequestCompound extends Ezsign
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    EzsigntemplatedocumentpagerecognitionRequestCompound ezsigntemplatedocumentpagerecognitionRequestCompound = (EzsigntemplatedocumentpagerecognitionRequestCompound) o;
+    return Objects.equals(this.pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionRequestCompound.pkiEzsigntemplatedocumentpagerecognitionID) &&
+        Objects.equals(this.fkiEzsigntemplatedocumentpageID, ezsigntemplatedocumentpagerecognitionRequestCompound.fkiEzsigntemplatedocumentpageID) &&
+        Objects.equals(this.eEzsigntemplatedocumentpagerecognitionOperator, ezsigntemplatedocumentpagerecognitionRequestCompound.eEzsigntemplatedocumentpagerecognitionOperator) &&
+        Objects.equals(this.eEzsigntemplatedocumentpagerecognitionSection, ezsigntemplatedocumentpagerecognitionRequestCompound.eEzsigntemplatedocumentpagerecognitionSection) &&
+        Objects.equals(this.iEzsigntemplatedocumentpagerecognitionSimilarpercentage, ezsigntemplatedocumentpagerecognitionRequestCompound.iEzsigntemplatedocumentpagerecognitionSimilarpercentage) &&
+        Objects.equals(this.iEzsigntemplatedocumentpagerecognitionX, ezsigntemplatedocumentpagerecognitionRequestCompound.iEzsigntemplatedocumentpagerecognitionX) &&
+        Objects.equals(this.iEzsigntemplatedocumentpagerecognitionY, ezsigntemplatedocumentpagerecognitionRequestCompound.iEzsigntemplatedocumentpagerecognitionY) &&
+        Objects.equals(this.iEzsigntemplatedocumentpagerecognitionWidth, ezsigntemplatedocumentpagerecognitionRequestCompound.iEzsigntemplatedocumentpagerecognitionWidth) &&
+        Objects.equals(this.iEzsigntemplatedocumentpagerecognitionHeight, ezsigntemplatedocumentpagerecognitionRequestCompound.iEzsigntemplatedocumentpagerecognitionHeight) &&
+        Objects.equals(this.tEzsigntemplatedocumentpagerecognitionText, ezsigntemplatedocumentpagerecognitionRequestCompound.tEzsigntemplatedocumentpagerecognitionText);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiEzsigntemplatedocumentpagerecognitionID, fkiEzsigntemplatedocumentpageID, eEzsigntemplatedocumentpagerecognitionOperator, eEzsigntemplatedocumentpagerecognitionSection, iEzsigntemplatedocumentpagerecognitionSimilarpercentage, iEzsigntemplatedocumentpagerecognitionX, iEzsigntemplatedocumentpagerecognitionY, iEzsigntemplatedocumentpagerecognitionWidth, iEzsigntemplatedocumentpagerecognitionHeight, tEzsigntemplatedocumentpagerecognitionText);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatedocumentpagerecognitionRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsigntemplatedocumentpagerecognitionID: ").append(toIndentedString(pkiEzsigntemplatedocumentpagerecognitionID)).append("\n");
+    sb.append("    fkiEzsigntemplatedocumentpageID: ").append(toIndentedString(fkiEzsigntemplatedocumentpageID)).append("\n");
+    sb.append("    eEzsigntemplatedocumentpagerecognitionOperator: ").append(toIndentedString(eEzsigntemplatedocumentpagerecognitionOperator)).append("\n");
+    sb.append("    eEzsigntemplatedocumentpagerecognitionSection: ").append(toIndentedString(eEzsigntemplatedocumentpagerecognitionSection)).append("\n");
+    sb.append("    iEzsigntemplatedocumentpagerecognitionSimilarpercentage: ").append(toIndentedString(iEzsigntemplatedocumentpagerecognitionSimilarpercentage)).append("\n");
+    sb.append("    iEzsigntemplatedocumentpagerecognitionX: ").append(toIndentedString(iEzsigntemplatedocumentpagerecognitionX)).append("\n");
+    sb.append("    iEzsigntemplatedocumentpagerecognitionY: ").append(toIndentedString(iEzsigntemplatedocumentpagerecognitionY)).append("\n");
+    sb.append("    iEzsigntemplatedocumentpagerecognitionWidth: ").append(toIndentedString(iEzsigntemplatedocumentpagerecognitionWidth)).append("\n");
+    sb.append("    iEzsigntemplatedocumentpagerecognitionHeight: ").append(toIndentedString(iEzsigntemplatedocumentpagerecognitionHeight)).append("\n");
+    sb.append("    tEzsigntemplatedocumentpagerecognitionText: ").append(toIndentedString(tEzsigntemplatedocumentpagerecognitionText)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -145,6 +406,14 @@ public class EzsigntemplatedocumentpagerecognitionRequestCompound extends Ezsign
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `eEzsigntemplatedocumentpagerecognitionOperator`
+      FieldEEzsigntemplatedocumentpagerecognitionOperator.validateJsonElement(jsonObj.get("eEzsigntemplatedocumentpagerecognitionOperator"));
+      // validate the required field `eEzsigntemplatedocumentpagerecognitionSection`
+      FieldEEzsigntemplatedocumentpagerecognitionSection.validateJsonElement(jsonObj.get("eEzsigntemplatedocumentpagerecognitionSection"));
+      if (!jsonObj.get("tEzsigntemplatedocumentpagerecognitionText").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzsigntemplatedocumentpagerecognitionText` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsigntemplatedocumentpagerecognitionText").toString()));
       }
   }
 

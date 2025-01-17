@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.CustomEzsignformfielderrorResponse;
 import com.ezmax.api.model.FieldEErrorCode;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,22 +52,98 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CommonResponseErrorEzsignformValidation extends CommonResponseError {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CommonResponseErrorEzsignformValidation {
+  public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
+  @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
+  private String sErrorMessage;
+
+  public static final String SERIALIZED_NAME_E_ERROR_CODE = "eErrorCode";
+  @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
+  private FieldEErrorCode eErrorCode;
+
+  public static final String SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL = "a_sErrorMessagedetail";
+  @SerializedName(SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL)
+  private List<String> aSErrorMessagedetail = new ArrayList<>();
+
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDERROR = "a_objEzsignformfielderror";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDERROR)
-  @javax.annotation.Nonnull
   private List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror = new ArrayList<>();
 
   public CommonResponseErrorEzsignformValidation() {
   }
 
-  public CommonResponseErrorEzsignformValidation aObjEzsignformfielderror(@javax.annotation.Nonnull List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror) {
+  public CommonResponseErrorEzsignformValidation sErrorMessage(String sErrorMessage) {
+    this.sErrorMessage = sErrorMessage;
+    return this;
+  }
+
+  /**
+   * The message giving details about the error
+   * @return sErrorMessage
+   */
+  @javax.annotation.Nonnull
+  public String getsErrorMessage() {
+    return sErrorMessage;
+  }
+
+  public void setsErrorMessage(String sErrorMessage) {
+    this.sErrorMessage = sErrorMessage;
+  }
+
+
+  public CommonResponseErrorEzsignformValidation eErrorCode(FieldEErrorCode eErrorCode) {
+    this.eErrorCode = eErrorCode;
+    return this;
+  }
+
+  /**
+   * Get eErrorCode
+   * @return eErrorCode
+   */
+  @javax.annotation.Nonnull
+  public FieldEErrorCode geteErrorCode() {
+    return eErrorCode;
+  }
+
+  public void seteErrorCode(FieldEErrorCode eErrorCode) {
+    this.eErrorCode = eErrorCode;
+  }
+
+
+  public CommonResponseErrorEzsignformValidation aSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+    this.aSErrorMessagedetail = aSErrorMessagedetail;
+    return this;
+  }
+
+  public CommonResponseErrorEzsignformValidation addASErrorMessagedetailItem(String aSErrorMessagedetailItem) {
+    if (this.aSErrorMessagedetail == null) {
+      this.aSErrorMessagedetail = new ArrayList<>();
+    }
+    this.aSErrorMessagedetail.add(aSErrorMessagedetailItem);
+    return this;
+  }
+
+  /**
+   * More error message detail
+   * @return aSErrorMessagedetail
+   */
+  @javax.annotation.Nullable
+  public List<String> getaSErrorMessagedetail() {
+    return aSErrorMessagedetail;
+  }
+
+  public void setaSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+    this.aSErrorMessagedetail = aSErrorMessagedetail;
+  }
+
+
+  public CommonResponseErrorEzsignformValidation aObjEzsignformfielderror(List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror) {
     this.aObjEzsignformfielderror = aObjEzsignformfielderror;
     return this;
   }
 
-  public CommonResponseErrorEzsignformValidation addAObjEzsignformfielderrorItem(Object aObjEzsignformfielderrorItem) {
+  public CommonResponseErrorEzsignformValidation addAObjEzsignformfielderrorItem(CustomEzsignformfielderrorResponse aObjEzsignformfielderrorItem) {
     if (this.aObjEzsignformfielderror == null) {
       this.aObjEzsignformfielderror = new ArrayList<>();
     }
@@ -84,7 +160,7 @@ public class CommonResponseErrorEzsignformValidation extends CommonResponseError
     return aObjEzsignformfielderror;
   }
 
-  public void setaObjEzsignformfielderror(@javax.annotation.Nonnull List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror) {
+  public void setaObjEzsignformfielderror(List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror) {
     this.aObjEzsignformfielderror = aObjEzsignformfielderror;
   }
 
@@ -99,20 +175,24 @@ public class CommonResponseErrorEzsignformValidation extends CommonResponseError
       return false;
     }
     CommonResponseErrorEzsignformValidation commonResponseErrorEzsignformValidation = (CommonResponseErrorEzsignformValidation) o;
-    return Objects.equals(this.aObjEzsignformfielderror, commonResponseErrorEzsignformValidation.aObjEzsignformfielderror) &&
-        super.equals(o);
+    return Objects.equals(this.sErrorMessage, commonResponseErrorEzsignformValidation.sErrorMessage) &&
+        Objects.equals(this.eErrorCode, commonResponseErrorEzsignformValidation.eErrorCode) &&
+        Objects.equals(this.aSErrorMessagedetail, commonResponseErrorEzsignformValidation.aSErrorMessagedetail) &&
+        Objects.equals(this.aObjEzsignformfielderror, commonResponseErrorEzsignformValidation.aObjEzsignformfielderror);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzsignformfielderror, super.hashCode());
+    return Objects.hash(sErrorMessage, eErrorCode, aSErrorMessagedetail, aObjEzsignformfielderror);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonResponseErrorEzsignformValidation {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    sErrorMessage: ").append(toIndentedString(sErrorMessage)).append("\n");
+    sb.append("    eErrorCode: ").append(toIndentedString(eErrorCode)).append("\n");
+    sb.append("    aSErrorMessagedetail: ").append(toIndentedString(aSErrorMessagedetail)).append("\n");
     sb.append("    aObjEzsignformfielderror: ").append(toIndentedString(aObjEzsignformfielderror)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -143,9 +223,9 @@ public class CommonResponseErrorEzsignformValidation extends CommonResponseError
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objEzsignformfielderror");
     openapiRequiredFields.add("sErrorMessage");
     openapiRequiredFields.add("eErrorCode");
+    openapiRequiredFields.add("a_objEzsignformfielderror");
   }
 
   /**
@@ -176,6 +256,15 @@ public class CommonResponseErrorEzsignformValidation extends CommonResponseError
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sErrorMessage").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sErrorMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sErrorMessage").toString()));
+      }
+      // validate the required field `eErrorCode`
+      FieldEErrorCode.validateJsonElement(jsonObj.get("eErrorCode"));
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("a_sErrorMessagedetail") != null && !jsonObj.get("a_sErrorMessagedetail").isJsonNull() && !jsonObj.get("a_sErrorMessagedetail").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_sErrorMessagedetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_sErrorMessagedetail").toString()));
+      }
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignformfielderror").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignformfielderror` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfielderror").toString()));
@@ -184,7 +273,7 @@ public class CommonResponseErrorEzsignformValidation extends CommonResponseError
       JsonArray jsonArrayaObjEzsignformfielderror = jsonObj.getAsJsonArray("a_objEzsignformfielderror");
       // validate the required field `a_objEzsignformfielderror` (array)
       for (int i = 0; i < jsonArrayaObjEzsignformfielderror.size(); i++) {
-        Object.validateJsonElement(jsonArrayaObjEzsignformfielderror.get(i));
+        CustomEzsignformfielderrorResponse.validateJsonElement(jsonArrayaObjEzsignformfielderror.get(i));
       };
   }
 

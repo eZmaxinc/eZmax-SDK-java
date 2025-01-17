@@ -49,22 +49,20 @@ import eZmaxAPI.JSON;
 /**
  * Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, objAuditdetailModified won&#39;t be returned. 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonAudit {
   public static final String SERIALIZED_NAME_OBJ_AUDITDETAIL_CREATED = "objAuditdetailCreated";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDITDETAIL_CREATED)
-  @javax.annotation.Nonnull
   private CommonAuditdetail objAuditdetailCreated;
 
   public static final String SERIALIZED_NAME_OBJ_AUDITDETAIL_MODIFIED = "objAuditdetailModified";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDITDETAIL_MODIFIED)
-  @javax.annotation.Nullable
   private CommonAuditdetail objAuditdetailModified;
 
   public CommonAudit() {
   }
 
-  public CommonAudit objAuditdetailCreated(@javax.annotation.Nonnull CommonAuditdetail objAuditdetailCreated) {
+  public CommonAudit objAuditdetailCreated(CommonAuditdetail objAuditdetailCreated) {
     this.objAuditdetailCreated = objAuditdetailCreated;
     return this;
   }
@@ -78,12 +76,12 @@ public class CommonAudit {
     return objAuditdetailCreated;
   }
 
-  public void setObjAuditdetailCreated(@javax.annotation.Nonnull CommonAuditdetail objAuditdetailCreated) {
+  public void setObjAuditdetailCreated(CommonAuditdetail objAuditdetailCreated) {
     this.objAuditdetailCreated = objAuditdetailCreated;
   }
 
 
-  public CommonAudit objAuditdetailModified(@javax.annotation.Nullable CommonAuditdetail objAuditdetailModified) {
+  public CommonAudit objAuditdetailModified(CommonAuditdetail objAuditdetailModified) {
     this.objAuditdetailModified = objAuditdetailModified;
     return this;
   }
@@ -97,7 +95,7 @@ public class CommonAudit {
     return objAuditdetailModified;
   }
 
-  public void setObjAuditdetailModified(@javax.annotation.Nullable CommonAuditdetail objAuditdetailModified) {
+  public void setObjAuditdetailModified(CommonAuditdetail objAuditdetailModified) {
     this.objAuditdetailModified = objAuditdetailModified;
   }
 

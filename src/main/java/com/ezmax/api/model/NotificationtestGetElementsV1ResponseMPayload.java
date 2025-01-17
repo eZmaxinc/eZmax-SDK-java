@@ -51,32 +51,28 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/notificationtest/{pkiNotificationtestID}/getElements
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class NotificationtestGetElementsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiNotificationtestID;
 
   public static final String SERIALIZED_NAME_S_NOTIFICATIONTEST_FUNCTION = "sNotificationtestFunction";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONTEST_FUNCTION)
-  @javax.annotation.Nonnull
   private String sNotificationtestFunction;
 
   public static final String SERIALIZED_NAME_A_S_VARIABLEOBJECT_PROPERTY = "a_sVariableobjectProperty";
   @SerializedName(SERIALIZED_NAME_A_S_VARIABLEOBJECT_PROPERTY)
-  @javax.annotation.Nonnull
   private List<String> aSVariableobjectProperty = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_VARIABLEOBJECT = "a_objVariableobject";
   @SerializedName(SERIALIZED_NAME_A_OBJ_VARIABLEOBJECT)
-  @javax.annotation.Nonnull
   private List<Map<String, Object>> aObjVariableobject = new ArrayList<>();
 
   public NotificationtestGetElementsV1ResponseMPayload() {
   }
 
-  public NotificationtestGetElementsV1ResponseMPayload pkiNotificationtestID(@javax.annotation.Nonnull Integer pkiNotificationtestID) {
+  public NotificationtestGetElementsV1ResponseMPayload pkiNotificationtestID(Integer pkiNotificationtestID) {
     this.pkiNotificationtestID = pkiNotificationtestID;
     return this;
   }
@@ -91,12 +87,12 @@ public class NotificationtestGetElementsV1ResponseMPayload {
     return pkiNotificationtestID;
   }
 
-  public void setPkiNotificationtestID(@javax.annotation.Nonnull Integer pkiNotificationtestID) {
+  public void setPkiNotificationtestID(Integer pkiNotificationtestID) {
     this.pkiNotificationtestID = pkiNotificationtestID;
   }
 
 
-  public NotificationtestGetElementsV1ResponseMPayload sNotificationtestFunction(@javax.annotation.Nonnull String sNotificationtestFunction) {
+  public NotificationtestGetElementsV1ResponseMPayload sNotificationtestFunction(String sNotificationtestFunction) {
     this.sNotificationtestFunction = sNotificationtestFunction;
     return this;
   }
@@ -110,12 +106,12 @@ public class NotificationtestGetElementsV1ResponseMPayload {
     return sNotificationtestFunction;
   }
 
-  public void setsNotificationtestFunction(@javax.annotation.Nonnull String sNotificationtestFunction) {
+  public void setsNotificationtestFunction(String sNotificationtestFunction) {
     this.sNotificationtestFunction = sNotificationtestFunction;
   }
 
 
-  public NotificationtestGetElementsV1ResponseMPayload aSVariableobjectProperty(@javax.annotation.Nonnull List<String> aSVariableobjectProperty) {
+  public NotificationtestGetElementsV1ResponseMPayload aSVariableobjectProperty(List<String> aSVariableobjectProperty) {
     this.aSVariableobjectProperty = aSVariableobjectProperty;
     return this;
   }
@@ -137,12 +133,12 @@ public class NotificationtestGetElementsV1ResponseMPayload {
     return aSVariableobjectProperty;
   }
 
-  public void setaSVariableobjectProperty(@javax.annotation.Nonnull List<String> aSVariableobjectProperty) {
+  public void setaSVariableobjectProperty(List<String> aSVariableobjectProperty) {
     this.aSVariableobjectProperty = aSVariableobjectProperty;
   }
 
 
-  public NotificationtestGetElementsV1ResponseMPayload aObjVariableobject(@javax.annotation.Nonnull List<Map<String, Object>> aObjVariableobject) {
+  public NotificationtestGetElementsV1ResponseMPayload aObjVariableobject(List<Map<String, Object>> aObjVariableobject) {
     this.aObjVariableobject = aObjVariableobject;
     return this;
   }
@@ -164,7 +160,7 @@ public class NotificationtestGetElementsV1ResponseMPayload {
     return aObjVariableobject;
   }
 
-  public void setaObjVariableobject(@javax.annotation.Nonnull List<Map<String, Object>> aObjVariableobject) {
+  public void setaObjVariableobject(List<Map<String, Object>> aObjVariableobject) {
     this.aObjVariableobject = aObjVariableobject;
   }
 

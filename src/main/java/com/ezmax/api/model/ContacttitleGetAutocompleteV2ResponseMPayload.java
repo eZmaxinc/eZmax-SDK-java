@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/contacttitle/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ContacttitleGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_CONTACTTITLE = "a_objContacttitle";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CONTACTTITLE)
-  @javax.annotation.Nonnull
   private List<ContacttitleAutocompleteElementResponse> aObjContacttitle = new ArrayList<>();
 
   public ContacttitleGetAutocompleteV2ResponseMPayload() {
   }
 
-  public ContacttitleGetAutocompleteV2ResponseMPayload aObjContacttitle(@javax.annotation.Nonnull List<ContacttitleAutocompleteElementResponse> aObjContacttitle) {
+  public ContacttitleGetAutocompleteV2ResponseMPayload aObjContacttitle(List<ContacttitleAutocompleteElementResponse> aObjContacttitle) {
     this.aObjContacttitle = aObjContacttitle;
     return this;
   }
@@ -83,7 +82,7 @@ public class ContacttitleGetAutocompleteV2ResponseMPayload {
     return aObjContacttitle;
   }
 
-  public void setaObjContacttitle(@javax.annotation.Nonnull List<ContacttitleAutocompleteElementResponse> aObjContacttitle) {
+  public void setaObjContacttitle(List<ContacttitleAutocompleteElementResponse> aObjContacttitle) {
     this.aObjContacttitle = aObjContacttitle;
   }
 

@@ -27,11 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.DiscussionmessageCreateObjectV1Request;
 import com.ezmax.api.model.DiscussionmessageCreateObjectV1Response;
+import com.ezmax.api.model.DiscussionmessageDeleteObjectV1Response;
 import com.ezmax.api.model.DiscussionmessagePatchObjectV1Request;
+import com.ezmax.api.model.DiscussionmessagePatchObjectV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -83,8 +84,7 @@ public class ObjectDiscussionmessageApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -152,8 +152,7 @@ public class ObjectDiscussionmessageApi {
      * @return DiscussionmessageCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -170,8 +169,7 @@ public class ObjectDiscussionmessageApi {
      * @return ApiResponse&lt;DiscussionmessageCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -190,8 +188,7 @@ public class ObjectDiscussionmessageApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -210,8 +207,7 @@ public class ObjectDiscussionmessageApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -278,19 +274,18 @@ public class ObjectDiscussionmessageApi {
      * Delete an existing Discussionmessage
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage (required)
-     * @return CommonResponse
+     * @return DiscussionmessageDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse discussionmessageDeleteObjectV1(Integer pkiDiscussionmessageID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = discussionmessageDeleteObjectV1WithHttpInfo(pkiDiscussionmessageID);
+    public DiscussionmessageDeleteObjectV1Response discussionmessageDeleteObjectV1(Integer pkiDiscussionmessageID) throws ApiException {
+        ApiResponse<DiscussionmessageDeleteObjectV1Response> localVarResp = discussionmessageDeleteObjectV1WithHttpInfo(pkiDiscussionmessageID);
         return localVarResp.getData();
     }
 
@@ -298,20 +293,19 @@ public class ObjectDiscussionmessageApi {
      * Delete an existing Discussionmessage
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;DiscussionmessageDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> discussionmessageDeleteObjectV1WithHttpInfo(Integer pkiDiscussionmessageID) throws ApiException {
+    public ApiResponse<DiscussionmessageDeleteObjectV1Response> discussionmessageDeleteObjectV1WithHttpInfo(Integer pkiDiscussionmessageID) throws ApiException {
         okhttp3.Call localVarCall = discussionmessageDeleteObjectV1ValidateBeforeCall(pkiDiscussionmessageID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<DiscussionmessageDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -323,18 +317,17 @@ public class ObjectDiscussionmessageApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call discussionmessageDeleteObjectV1Async(Integer pkiDiscussionmessageID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call discussionmessageDeleteObjectV1Async(Integer pkiDiscussionmessageID, final ApiCallback<DiscussionmessageDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = discussionmessageDeleteObjectV1ValidateBeforeCall(pkiDiscussionmessageID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<DiscussionmessageDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -346,8 +339,7 @@ public class ObjectDiscussionmessageApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -421,19 +413,18 @@ public class ObjectDiscussionmessageApi {
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage (required)
      * @param discussionmessagePatchObjectV1Request  (required)
-     * @return CommonResponse
+     * @return DiscussionmessagePatchObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse discussionmessagePatchObjectV1(Integer pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = discussionmessagePatchObjectV1WithHttpInfo(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request);
+    public DiscussionmessagePatchObjectV1Response discussionmessagePatchObjectV1(Integer pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request) throws ApiException {
+        ApiResponse<DiscussionmessagePatchObjectV1Response> localVarResp = discussionmessagePatchObjectV1WithHttpInfo(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -442,20 +433,19 @@ public class ObjectDiscussionmessageApi {
      * 
      * @param pkiDiscussionmessageID The unique ID of the Discussionmessage (required)
      * @param discussionmessagePatchObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;DiscussionmessagePatchObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> discussionmessagePatchObjectV1WithHttpInfo(Integer pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request) throws ApiException {
+    public ApiResponse<DiscussionmessagePatchObjectV1Response> discussionmessagePatchObjectV1WithHttpInfo(Integer pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = discussionmessagePatchObjectV1ValidateBeforeCall(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<DiscussionmessagePatchObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -468,18 +458,17 @@ public class ObjectDiscussionmessageApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call discussionmessagePatchObjectV1Async(Integer pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call discussionmessagePatchObjectV1Async(Integer pkiDiscussionmessageID, DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request, final ApiCallback<DiscussionmessagePatchObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = discussionmessagePatchObjectV1ValidateBeforeCall(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<DiscussionmessagePatchObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

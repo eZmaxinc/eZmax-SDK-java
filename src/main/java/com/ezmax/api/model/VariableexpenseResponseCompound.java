@@ -16,7 +16,6 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.FieldEVariableexpenseTaxable;
 import com.ezmax.api.model.MultilingualVariableexpenseDescription;
-import com.ezmax.api.model.VariableexpenseResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,10 +50,127 @@ import eZmaxAPI.JSON;
 /**
  * A Variableexpense Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class VariableexpenseResponseCompound extends VariableexpenseResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class VariableexpenseResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D = "pkiVariableexpenseID";
+  @SerializedName(SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D)
+  private Integer pkiVariableexpenseID;
+
+  public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_CODE = "sVariableexpenseCode";
+  @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_CODE)
+  private String sVariableexpenseCode;
+
+  public static final String SERIALIZED_NAME_OBJ_VARIABLEEXPENSE_DESCRIPTION = "objVariableexpenseDescription";
+  @SerializedName(SERIALIZED_NAME_OBJ_VARIABLEEXPENSE_DESCRIPTION)
+  private MultilingualVariableexpenseDescription objVariableexpenseDescription;
+
+  public static final String SERIALIZED_NAME_E_VARIABLEEXPENSE_TAXABLE = "eVariableexpenseTaxable";
+  @SerializedName(SERIALIZED_NAME_E_VARIABLEEXPENSE_TAXABLE)
+  private FieldEVariableexpenseTaxable eVariableexpenseTaxable;
+
+  public static final String SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE = "bVariableexpenseIsactive";
+  @SerializedName(SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE)
+  private Boolean bVariableexpenseIsactive;
+
   public VariableexpenseResponseCompound() {
   }
+
+  public VariableexpenseResponseCompound pkiVariableexpenseID(Integer pkiVariableexpenseID) {
+    this.pkiVariableexpenseID = pkiVariableexpenseID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Variableexpense
+   * minimum: 1
+   * maximum: 255
+   * @return pkiVariableexpenseID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiVariableexpenseID() {
+    return pkiVariableexpenseID;
+  }
+
+  public void setPkiVariableexpenseID(Integer pkiVariableexpenseID) {
+    this.pkiVariableexpenseID = pkiVariableexpenseID;
+  }
+
+
+  public VariableexpenseResponseCompound sVariableexpenseCode(String sVariableexpenseCode) {
+    this.sVariableexpenseCode = sVariableexpenseCode;
+    return this;
+  }
+
+  /**
+   * The code of the Variableexpense
+   * @return sVariableexpenseCode
+   */
+  @javax.annotation.Nullable
+  public String getsVariableexpenseCode() {
+    return sVariableexpenseCode;
+  }
+
+  public void setsVariableexpenseCode(String sVariableexpenseCode) {
+    this.sVariableexpenseCode = sVariableexpenseCode;
+  }
+
+
+  public VariableexpenseResponseCompound objVariableexpenseDescription(MultilingualVariableexpenseDescription objVariableexpenseDescription) {
+    this.objVariableexpenseDescription = objVariableexpenseDescription;
+    return this;
+  }
+
+  /**
+   * Get objVariableexpenseDescription
+   * @return objVariableexpenseDescription
+   */
+  @javax.annotation.Nonnull
+  public MultilingualVariableexpenseDescription getObjVariableexpenseDescription() {
+    return objVariableexpenseDescription;
+  }
+
+  public void setObjVariableexpenseDescription(MultilingualVariableexpenseDescription objVariableexpenseDescription) {
+    this.objVariableexpenseDescription = objVariableexpenseDescription;
+  }
+
+
+  public VariableexpenseResponseCompound eVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
+    this.eVariableexpenseTaxable = eVariableexpenseTaxable;
+    return this;
+  }
+
+  /**
+   * Get eVariableexpenseTaxable
+   * @return eVariableexpenseTaxable
+   */
+  @javax.annotation.Nullable
+  public FieldEVariableexpenseTaxable geteVariableexpenseTaxable() {
+    return eVariableexpenseTaxable;
+  }
+
+  public void seteVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
+    this.eVariableexpenseTaxable = eVariableexpenseTaxable;
+  }
+
+
+  public VariableexpenseResponseCompound bVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
+    this.bVariableexpenseIsactive = bVariableexpenseIsactive;
+    return this;
+  }
+
+  /**
+   * Whether the variableexpense is active or not
+   * @return bVariableexpenseIsactive
+   */
+  @javax.annotation.Nullable
+  public Boolean getbVariableexpenseIsactive() {
+    return bVariableexpenseIsactive;
+  }
+
+  public void setbVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
+    this.bVariableexpenseIsactive = bVariableexpenseIsactive;
+  }
+
 
 
   @Override
@@ -65,19 +181,28 @@ public class VariableexpenseResponseCompound extends VariableexpenseResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    VariableexpenseResponseCompound variableexpenseResponseCompound = (VariableexpenseResponseCompound) o;
+    return Objects.equals(this.pkiVariableexpenseID, variableexpenseResponseCompound.pkiVariableexpenseID) &&
+        Objects.equals(this.sVariableexpenseCode, variableexpenseResponseCompound.sVariableexpenseCode) &&
+        Objects.equals(this.objVariableexpenseDescription, variableexpenseResponseCompound.objVariableexpenseDescription) &&
+        Objects.equals(this.eVariableexpenseTaxable, variableexpenseResponseCompound.eVariableexpenseTaxable) &&
+        Objects.equals(this.bVariableexpenseIsactive, variableexpenseResponseCompound.bVariableexpenseIsactive);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiVariableexpenseID, sVariableexpenseCode, objVariableexpenseDescription, eVariableexpenseTaxable, bVariableexpenseIsactive);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VariableexpenseResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiVariableexpenseID: ").append(toIndentedString(pkiVariableexpenseID)).append("\n");
+    sb.append("    sVariableexpenseCode: ").append(toIndentedString(sVariableexpenseCode)).append("\n");
+    sb.append("    objVariableexpenseDescription: ").append(toIndentedString(objVariableexpenseDescription)).append("\n");
+    sb.append("    eVariableexpenseTaxable: ").append(toIndentedString(eVariableexpenseTaxable)).append("\n");
+    sb.append("    bVariableexpenseIsactive: ").append(toIndentedString(bVariableexpenseIsactive)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -138,6 +263,16 @@ public class VariableexpenseResponseCompound extends VariableexpenseResponse {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("sVariableexpenseCode") != null && !jsonObj.get("sVariableexpenseCode").isJsonNull()) && !jsonObj.get("sVariableexpenseCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sVariableexpenseCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sVariableexpenseCode").toString()));
+      }
+      // validate the required field `objVariableexpenseDescription`
+      MultilingualVariableexpenseDescription.validateJsonElement(jsonObj.get("objVariableexpenseDescription"));
+      // validate the optional field `eVariableexpenseTaxable`
+      if (jsonObj.get("eVariableexpenseTaxable") != null && !jsonObj.get("eVariableexpenseTaxable").isJsonNull()) {
+        FieldEVariableexpenseTaxable.validateJsonElement(jsonObj.get("eVariableexpenseTaxable"));
       }
   }
 

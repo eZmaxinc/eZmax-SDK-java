@@ -48,37 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationsender Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomCommunicationsenderRequest {
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiAgentID;
 
   public static final String SERIALIZED_NAME_FKI_BROKER_I_D = "fkiBrokerID";
   @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiBrokerID;
 
   public static final String SERIALIZED_NAME_FKI_MAILBOXSHARED_I_D = "fkiMailboxsharedID";
   @SerializedName(SERIALIZED_NAME_FKI_MAILBOXSHARED_I_D)
-  @javax.annotation.Nullable
   private Integer fkiMailboxsharedID;
 
   public static final String SERIALIZED_NAME_FKI_PHONELINESHARED_I_D = "fkiPhonelinesharedID";
   @SerializedName(SERIALIZED_NAME_FKI_PHONELINESHARED_I_D)
-  @javax.annotation.Nullable
   private Integer fkiPhonelinesharedID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public CustomCommunicationsenderRequest() {
   }
 
-  public CustomCommunicationsenderRequest fkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
+  public CustomCommunicationsenderRequest fkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
     return this;
   }
@@ -93,12 +88,12 @@ public class CustomCommunicationsenderRequest {
     return fkiAgentID;
   }
 
-  public void setFkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
+  public void setFkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
   }
 
 
-  public CustomCommunicationsenderRequest fkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
+  public CustomCommunicationsenderRequest fkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
     return this;
   }
@@ -113,12 +108,12 @@ public class CustomCommunicationsenderRequest {
     return fkiBrokerID;
   }
 
-  public void setFkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
+  public void setFkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
   }
 
 
-  public CustomCommunicationsenderRequest fkiMailboxsharedID(@javax.annotation.Nullable Integer fkiMailboxsharedID) {
+  public CustomCommunicationsenderRequest fkiMailboxsharedID(Integer fkiMailboxsharedID) {
     this.fkiMailboxsharedID = fkiMailboxsharedID;
     return this;
   }
@@ -134,12 +129,12 @@ public class CustomCommunicationsenderRequest {
     return fkiMailboxsharedID;
   }
 
-  public void setFkiMailboxsharedID(@javax.annotation.Nullable Integer fkiMailboxsharedID) {
+  public void setFkiMailboxsharedID(Integer fkiMailboxsharedID) {
     this.fkiMailboxsharedID = fkiMailboxsharedID;
   }
 
 
-  public CustomCommunicationsenderRequest fkiPhonelinesharedID(@javax.annotation.Nullable Integer fkiPhonelinesharedID) {
+  public CustomCommunicationsenderRequest fkiPhonelinesharedID(Integer fkiPhonelinesharedID) {
     this.fkiPhonelinesharedID = fkiPhonelinesharedID;
     return this;
   }
@@ -155,12 +150,12 @@ public class CustomCommunicationsenderRequest {
     return fkiPhonelinesharedID;
   }
 
-  public void setFkiPhonelinesharedID(@javax.annotation.Nullable Integer fkiPhonelinesharedID) {
+  public void setFkiPhonelinesharedID(Integer fkiPhonelinesharedID) {
     this.fkiPhonelinesharedID = fkiPhonelinesharedID;
   }
 
 
-  public CustomCommunicationsenderRequest fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public CustomCommunicationsenderRequest fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -175,7 +170,7 @@ public class CustomCommunicationsenderRequest {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 

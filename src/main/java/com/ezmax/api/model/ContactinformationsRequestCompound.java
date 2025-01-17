@@ -14,11 +14,10 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AddressRequest;
-import com.ezmax.api.model.ContactinformationsRequest;
-import com.ezmax.api.model.EmailRequest;
-import com.ezmax.api.model.PhoneRequest;
-import com.ezmax.api.model.WebsiteRequest;
+import com.ezmax.api.model.AddressRequestCompound;
+import com.ezmax.api.model.EmailRequestCompound;
+import com.ezmax.api.model.PhoneRequestCompound;
+import com.ezmax.api.model.WebsiteRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -55,37 +54,125 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class ContactinformationsRequestCompound extends ContactinformationsRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class ContactinformationsRequestCompound {
+  public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
+  @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
+  private Integer iAddressDefault;
+
+  public static final String SERIALIZED_NAME_I_PHONE_DEFAULT = "iPhoneDefault";
+  @SerializedName(SERIALIZED_NAME_I_PHONE_DEFAULT)
+  private Integer iPhoneDefault;
+
+  public static final String SERIALIZED_NAME_I_EMAIL_DEFAULT = "iEmailDefault";
+  @SerializedName(SERIALIZED_NAME_I_EMAIL_DEFAULT)
+  private Integer iEmailDefault;
+
+  public static final String SERIALIZED_NAME_I_WEBSITE_DEFAULT = "iWebsiteDefault";
+  @SerializedName(SERIALIZED_NAME_I_WEBSITE_DEFAULT)
+  private Integer iWebsiteDefault;
+
   public static final String SERIALIZED_NAME_A_OBJ_ADDRESS = "a_objAddress";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ADDRESS)
-  @javax.annotation.Nonnull
   private List<AddressRequestCompound> aObjAddress = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_PHONE = "a_objPhone";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PHONE)
-  @javax.annotation.Nonnull
   private List<PhoneRequestCompound> aObjPhone = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EMAIL = "a_objEmail";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EMAIL)
-  @javax.annotation.Nonnull
   private List<EmailRequestCompound> aObjEmail = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_WEBSITE = "a_objWebsite";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WEBSITE)
-  @javax.annotation.Nonnull
   private List<WebsiteRequestCompound> aObjWebsite = new ArrayList<>();
 
   public ContactinformationsRequestCompound() {
   }
 
-  public ContactinformationsRequestCompound aObjAddress(@javax.annotation.Nonnull List<AddressRequestCompound> aObjAddress) {
+  public ContactinformationsRequestCompound iAddressDefault(Integer iAddressDefault) {
+    this.iAddressDefault = iAddressDefault;
+    return this;
+  }
+
+  /**
+   * The index in the a_objAddress array (zero based index) representing the Address object that should become the default one.  You can leave the value to 0 if the array is empty.
+   * @return iAddressDefault
+   */
+  @javax.annotation.Nonnull
+  public Integer getiAddressDefault() {
+    return iAddressDefault;
+  }
+
+  public void setiAddressDefault(Integer iAddressDefault) {
+    this.iAddressDefault = iAddressDefault;
+  }
+
+
+  public ContactinformationsRequestCompound iPhoneDefault(Integer iPhoneDefault) {
+    this.iPhoneDefault = iPhoneDefault;
+    return this;
+  }
+
+  /**
+   * The index in the a_objPhone array (zero based index) representing the Phone object that should become the default one.  You can leave the value to 0 if the array is empty.
+   * @return iPhoneDefault
+   */
+  @javax.annotation.Nonnull
+  public Integer getiPhoneDefault() {
+    return iPhoneDefault;
+  }
+
+  public void setiPhoneDefault(Integer iPhoneDefault) {
+    this.iPhoneDefault = iPhoneDefault;
+  }
+
+
+  public ContactinformationsRequestCompound iEmailDefault(Integer iEmailDefault) {
+    this.iEmailDefault = iEmailDefault;
+    return this;
+  }
+
+  /**
+   * The index in the a_objEmail array (zero based index) representing the Email object that should become the default one.  You can leave the value to 0 if the array is empty.
+   * @return iEmailDefault
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEmailDefault() {
+    return iEmailDefault;
+  }
+
+  public void setiEmailDefault(Integer iEmailDefault) {
+    this.iEmailDefault = iEmailDefault;
+  }
+
+
+  public ContactinformationsRequestCompound iWebsiteDefault(Integer iWebsiteDefault) {
+    this.iWebsiteDefault = iWebsiteDefault;
+    return this;
+  }
+
+  /**
+   * The index in the a_objWebsite array (zero based index) representing the Website object that should become the default one.  You can leave the value to 0 if the array is empty.
+   * @return iWebsiteDefault
+   */
+  @javax.annotation.Nonnull
+  public Integer getiWebsiteDefault() {
+    return iWebsiteDefault;
+  }
+
+  public void setiWebsiteDefault(Integer iWebsiteDefault) {
+    this.iWebsiteDefault = iWebsiteDefault;
+  }
+
+
+  public ContactinformationsRequestCompound aObjAddress(List<AddressRequestCompound> aObjAddress) {
     this.aObjAddress = aObjAddress;
     return this;
   }
 
-  public ContactinformationsRequestCompound addAObjAddressItem(AddressRequest aObjAddressItem) {
+  public ContactinformationsRequestCompound addAObjAddressItem(AddressRequestCompound aObjAddressItem) {
     if (this.aObjAddress == null) {
       this.aObjAddress = new ArrayList<>();
     }
@@ -102,17 +189,17 @@ public class ContactinformationsRequestCompound extends ContactinformationsReque
     return aObjAddress;
   }
 
-  public void setaObjAddress(@javax.annotation.Nonnull List<AddressRequestCompound> aObjAddress) {
+  public void setaObjAddress(List<AddressRequestCompound> aObjAddress) {
     this.aObjAddress = aObjAddress;
   }
 
 
-  public ContactinformationsRequestCompound aObjPhone(@javax.annotation.Nonnull List<PhoneRequestCompound> aObjPhone) {
+  public ContactinformationsRequestCompound aObjPhone(List<PhoneRequestCompound> aObjPhone) {
     this.aObjPhone = aObjPhone;
     return this;
   }
 
-  public ContactinformationsRequestCompound addAObjPhoneItem(PhoneRequest aObjPhoneItem) {
+  public ContactinformationsRequestCompound addAObjPhoneItem(PhoneRequestCompound aObjPhoneItem) {
     if (this.aObjPhone == null) {
       this.aObjPhone = new ArrayList<>();
     }
@@ -129,17 +216,17 @@ public class ContactinformationsRequestCompound extends ContactinformationsReque
     return aObjPhone;
   }
 
-  public void setaObjPhone(@javax.annotation.Nonnull List<PhoneRequestCompound> aObjPhone) {
+  public void setaObjPhone(List<PhoneRequestCompound> aObjPhone) {
     this.aObjPhone = aObjPhone;
   }
 
 
-  public ContactinformationsRequestCompound aObjEmail(@javax.annotation.Nonnull List<EmailRequestCompound> aObjEmail) {
+  public ContactinformationsRequestCompound aObjEmail(List<EmailRequestCompound> aObjEmail) {
     this.aObjEmail = aObjEmail;
     return this;
   }
 
-  public ContactinformationsRequestCompound addAObjEmailItem(EmailRequest aObjEmailItem) {
+  public ContactinformationsRequestCompound addAObjEmailItem(EmailRequestCompound aObjEmailItem) {
     if (this.aObjEmail == null) {
       this.aObjEmail = new ArrayList<>();
     }
@@ -156,17 +243,17 @@ public class ContactinformationsRequestCompound extends ContactinformationsReque
     return aObjEmail;
   }
 
-  public void setaObjEmail(@javax.annotation.Nonnull List<EmailRequestCompound> aObjEmail) {
+  public void setaObjEmail(List<EmailRequestCompound> aObjEmail) {
     this.aObjEmail = aObjEmail;
   }
 
 
-  public ContactinformationsRequestCompound aObjWebsite(@javax.annotation.Nonnull List<WebsiteRequestCompound> aObjWebsite) {
+  public ContactinformationsRequestCompound aObjWebsite(List<WebsiteRequestCompound> aObjWebsite) {
     this.aObjWebsite = aObjWebsite;
     return this;
   }
 
-  public ContactinformationsRequestCompound addAObjWebsiteItem(WebsiteRequest aObjWebsiteItem) {
+  public ContactinformationsRequestCompound addAObjWebsiteItem(WebsiteRequestCompound aObjWebsiteItem) {
     if (this.aObjWebsite == null) {
       this.aObjWebsite = new ArrayList<>();
     }
@@ -183,7 +270,7 @@ public class ContactinformationsRequestCompound extends ContactinformationsReque
     return aObjWebsite;
   }
 
-  public void setaObjWebsite(@javax.annotation.Nonnull List<WebsiteRequestCompound> aObjWebsite) {
+  public void setaObjWebsite(List<WebsiteRequestCompound> aObjWebsite) {
     this.aObjWebsite = aObjWebsite;
   }
 
@@ -198,23 +285,29 @@ public class ContactinformationsRequestCompound extends ContactinformationsReque
       return false;
     }
     ContactinformationsRequestCompound contactinformationsRequestCompound = (ContactinformationsRequestCompound) o;
-    return Objects.equals(this.aObjAddress, contactinformationsRequestCompound.aObjAddress) &&
+    return Objects.equals(this.iAddressDefault, contactinformationsRequestCompound.iAddressDefault) &&
+        Objects.equals(this.iPhoneDefault, contactinformationsRequestCompound.iPhoneDefault) &&
+        Objects.equals(this.iEmailDefault, contactinformationsRequestCompound.iEmailDefault) &&
+        Objects.equals(this.iWebsiteDefault, contactinformationsRequestCompound.iWebsiteDefault) &&
+        Objects.equals(this.aObjAddress, contactinformationsRequestCompound.aObjAddress) &&
         Objects.equals(this.aObjPhone, contactinformationsRequestCompound.aObjPhone) &&
         Objects.equals(this.aObjEmail, contactinformationsRequestCompound.aObjEmail) &&
-        Objects.equals(this.aObjWebsite, contactinformationsRequestCompound.aObjWebsite) &&
-        super.equals(o);
+        Objects.equals(this.aObjWebsite, contactinformationsRequestCompound.aObjWebsite);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjAddress, aObjPhone, aObjEmail, aObjWebsite, super.hashCode());
+    return Objects.hash(iAddressDefault, iPhoneDefault, iEmailDefault, iWebsiteDefault, aObjAddress, aObjPhone, aObjEmail, aObjWebsite);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactinformationsRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    iAddressDefault: ").append(toIndentedString(iAddressDefault)).append("\n");
+    sb.append("    iPhoneDefault: ").append(toIndentedString(iPhoneDefault)).append("\n");
+    sb.append("    iEmailDefault: ").append(toIndentedString(iEmailDefault)).append("\n");
+    sb.append("    iWebsiteDefault: ").append(toIndentedString(iWebsiteDefault)).append("\n");
     sb.append("    aObjAddress: ").append(toIndentedString(aObjAddress)).append("\n");
     sb.append("    aObjPhone: ").append(toIndentedString(aObjPhone)).append("\n");
     sb.append("    aObjEmail: ").append(toIndentedString(aObjEmail)).append("\n");
@@ -252,14 +345,14 @@ public class ContactinformationsRequestCompound extends ContactinformationsReque
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objAddress");
-    openapiRequiredFields.add("a_objPhone");
-    openapiRequiredFields.add("a_objEmail");
-    openapiRequiredFields.add("a_objWebsite");
     openapiRequiredFields.add("iAddressDefault");
     openapiRequiredFields.add("iPhoneDefault");
     openapiRequiredFields.add("iEmailDefault");
     openapiRequiredFields.add("iWebsiteDefault");
+    openapiRequiredFields.add("a_objAddress");
+    openapiRequiredFields.add("a_objPhone");
+    openapiRequiredFields.add("a_objEmail");
+    openapiRequiredFields.add("a_objWebsite");
   }
 
   /**
@@ -298,7 +391,7 @@ public class ContactinformationsRequestCompound extends ContactinformationsReque
       JsonArray jsonArrayaObjAddress = jsonObj.getAsJsonArray("a_objAddress");
       // validate the required field `a_objAddress` (array)
       for (int i = 0; i < jsonArrayaObjAddress.size(); i++) {
-        AddressRequest.validateJsonElement(jsonArrayaObjAddress.get(i));
+        AddressRequestCompound.validateJsonElement(jsonArrayaObjAddress.get(i));
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objPhone").isJsonArray()) {
@@ -308,7 +401,7 @@ public class ContactinformationsRequestCompound extends ContactinformationsReque
       JsonArray jsonArrayaObjPhone = jsonObj.getAsJsonArray("a_objPhone");
       // validate the required field `a_objPhone` (array)
       for (int i = 0; i < jsonArrayaObjPhone.size(); i++) {
-        PhoneRequest.validateJsonElement(jsonArrayaObjPhone.get(i));
+        PhoneRequestCompound.validateJsonElement(jsonArrayaObjPhone.get(i));
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objEmail").isJsonArray()) {
@@ -318,7 +411,7 @@ public class ContactinformationsRequestCompound extends ContactinformationsReque
       JsonArray jsonArrayaObjEmail = jsonObj.getAsJsonArray("a_objEmail");
       // validate the required field `a_objEmail` (array)
       for (int i = 0; i < jsonArrayaObjEmail.size(); i++) {
-        EmailRequest.validateJsonElement(jsonArrayaObjEmail.get(i));
+        EmailRequestCompound.validateJsonElement(jsonArrayaObjEmail.get(i));
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objWebsite").isJsonArray()) {
@@ -328,7 +421,7 @@ public class ContactinformationsRequestCompound extends ContactinformationsReque
       JsonArray jsonArrayaObjWebsite = jsonObj.getAsJsonArray("a_objWebsite");
       // validate the required field `a_objWebsite` (array)
       for (int i = 0; i < jsonArrayaObjWebsite.size(); i++) {
-        WebsiteRequest.validateJsonElement(jsonArrayaObjWebsite.get(i));
+        WebsiteRequestCompound.validateJsonElement(jsonArrayaObjWebsite.get(i));
       };
   }
 

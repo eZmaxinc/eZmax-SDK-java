@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Dnsrecord Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomDnsrecordResponse {
   /**
    * The type of the Dnsrecord
@@ -106,7 +106,6 @@ public class CustomDnsrecordResponse {
 
   public static final String SERIALIZED_NAME_E_DNSRECORD_TYPE = "eDnsrecordType";
   @SerializedName(SERIALIZED_NAME_E_DNSRECORD_TYPE)
-  @javax.annotation.Nonnull
   private EDnsrecordTypeEnum eDnsrecordType;
 
   /**
@@ -165,33 +164,28 @@ public class CustomDnsrecordResponse {
 
   public static final String SERIALIZED_NAME_E_DNSRECORD_VALIDATION = "eDnsrecordValidation";
   @SerializedName(SERIALIZED_NAME_E_DNSRECORD_VALIDATION)
-  @javax.annotation.Nonnull
   private EDnsrecordValidationEnum eDnsrecordValidation;
 
   public static final String SERIALIZED_NAME_S_DNSRECORD_NAME = "sDnsrecordName";
   @SerializedName(SERIALIZED_NAME_S_DNSRECORD_NAME)
-  @javax.annotation.Nonnull
   private String sDnsrecordName;
 
   public static final String SERIALIZED_NAME_S_DNSRECORD_VALUE = "sDnsrecordValue";
   @SerializedName(SERIALIZED_NAME_S_DNSRECORD_VALUE)
-  @javax.annotation.Nullable
   private String sDnsrecordValue;
 
   public static final String SERIALIZED_NAME_S_DNSRECORD_EXPECTEDVALUE = "sDnsrecordExpectedvalue";
   @SerializedName(SERIALIZED_NAME_S_DNSRECORD_EXPECTEDVALUE)
-  @javax.annotation.Nullable
   private String sDnsrecordExpectedvalue;
 
   public static final String SERIALIZED_NAME_B_DNSRECORD_MUST_MATCH = "bDnsrecordMustMatch";
   @SerializedName(SERIALIZED_NAME_B_DNSRECORD_MUST_MATCH)
-  @javax.annotation.Nonnull
   private Boolean bDnsrecordMustMatch;
 
   public CustomDnsrecordResponse() {
   }
 
-  public CustomDnsrecordResponse eDnsrecordType(@javax.annotation.Nonnull EDnsrecordTypeEnum eDnsrecordType) {
+  public CustomDnsrecordResponse eDnsrecordType(EDnsrecordTypeEnum eDnsrecordType) {
     this.eDnsrecordType = eDnsrecordType;
     return this;
   }
@@ -205,12 +199,12 @@ public class CustomDnsrecordResponse {
     return eDnsrecordType;
   }
 
-  public void seteDnsrecordType(@javax.annotation.Nonnull EDnsrecordTypeEnum eDnsrecordType) {
+  public void seteDnsrecordType(EDnsrecordTypeEnum eDnsrecordType) {
     this.eDnsrecordType = eDnsrecordType;
   }
 
 
-  public CustomDnsrecordResponse eDnsrecordValidation(@javax.annotation.Nonnull EDnsrecordValidationEnum eDnsrecordValidation) {
+  public CustomDnsrecordResponse eDnsrecordValidation(EDnsrecordValidationEnum eDnsrecordValidation) {
     this.eDnsrecordValidation = eDnsrecordValidation;
     return this;
   }
@@ -224,12 +218,12 @@ public class CustomDnsrecordResponse {
     return eDnsrecordValidation;
   }
 
-  public void seteDnsrecordValidation(@javax.annotation.Nonnull EDnsrecordValidationEnum eDnsrecordValidation) {
+  public void seteDnsrecordValidation(EDnsrecordValidationEnum eDnsrecordValidation) {
     this.eDnsrecordValidation = eDnsrecordValidation;
   }
 
 
-  public CustomDnsrecordResponse sDnsrecordName(@javax.annotation.Nonnull String sDnsrecordName) {
+  public CustomDnsrecordResponse sDnsrecordName(String sDnsrecordName) {
     this.sDnsrecordName = sDnsrecordName;
     return this;
   }
@@ -243,12 +237,12 @@ public class CustomDnsrecordResponse {
     return sDnsrecordName;
   }
 
-  public void setsDnsrecordName(@javax.annotation.Nonnull String sDnsrecordName) {
+  public void setsDnsrecordName(String sDnsrecordName) {
     this.sDnsrecordName = sDnsrecordName;
   }
 
 
-  public CustomDnsrecordResponse sDnsrecordValue(@javax.annotation.Nullable String sDnsrecordValue) {
+  public CustomDnsrecordResponse sDnsrecordValue(String sDnsrecordValue) {
     this.sDnsrecordValue = sDnsrecordValue;
     return this;
   }
@@ -262,12 +256,12 @@ public class CustomDnsrecordResponse {
     return sDnsrecordValue;
   }
 
-  public void setsDnsrecordValue(@javax.annotation.Nullable String sDnsrecordValue) {
+  public void setsDnsrecordValue(String sDnsrecordValue) {
     this.sDnsrecordValue = sDnsrecordValue;
   }
 
 
-  public CustomDnsrecordResponse sDnsrecordExpectedvalue(@javax.annotation.Nullable String sDnsrecordExpectedvalue) {
+  public CustomDnsrecordResponse sDnsrecordExpectedvalue(String sDnsrecordExpectedvalue) {
     this.sDnsrecordExpectedvalue = sDnsrecordExpectedvalue;
     return this;
   }
@@ -281,12 +275,12 @@ public class CustomDnsrecordResponse {
     return sDnsrecordExpectedvalue;
   }
 
-  public void setsDnsrecordExpectedvalue(@javax.annotation.Nullable String sDnsrecordExpectedvalue) {
+  public void setsDnsrecordExpectedvalue(String sDnsrecordExpectedvalue) {
     this.sDnsrecordExpectedvalue = sDnsrecordExpectedvalue;
   }
 
 
-  public CustomDnsrecordResponse bDnsrecordMustMatch(@javax.annotation.Nonnull Boolean bDnsrecordMustMatch) {
+  public CustomDnsrecordResponse bDnsrecordMustMatch(Boolean bDnsrecordMustMatch) {
     this.bDnsrecordMustMatch = bDnsrecordMustMatch;
     return this;
   }
@@ -300,7 +294,7 @@ public class CustomDnsrecordResponse {
     return bDnsrecordMustMatch;
   }
 
-  public void setbDnsrecordMustMatch(@javax.annotation.Nonnull Boolean bDnsrecordMustMatch) {
+  public void setbDnsrecordMustMatch(Boolean bDnsrecordMustMatch) {
     this.bDnsrecordMustMatch = bDnsrecordMustMatch;
   }
 

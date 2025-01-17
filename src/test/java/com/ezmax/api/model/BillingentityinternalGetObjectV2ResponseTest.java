@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.BillingentityinternalGetObjectV2ResponseMPayload;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.google.gson.TypeAdapter;

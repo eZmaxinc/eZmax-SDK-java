@@ -15,8 +15,9 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.CustomEzmaxinvoicingEzsigndocumentResponse;
+import com.ezmax.api.model.CustomEzmaxinvoicingEzsignfolderResponse;
 import com.ezmax.api.model.CustomEzmaxpricingResponse;
-import com.ezmax.api.model.EzmaxinvoicingResponseCompound;
 import com.ezmax.api.model.EzmaxinvoicingagentResponseCompound;
 import com.ezmax.api.model.EzmaxinvoicingcontractResponseCompound;
 import com.ezmax.api.model.EzmaxinvoicingsummaryexternalResponseCompound;
@@ -60,10 +61,578 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezmaxinvoicing/getProvisional
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzmaxinvoicingGetProvisionalV1ResponseMPayload extends EzmaxinvoicingResponseCompound {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D = "pkiEzmaxinvoicingID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D)
+  private Integer pkiEzmaxinvoicingID;
+
+  public static final String SERIALIZED_NAME_FKI_EZMAXINVOICINGCONTRACT_I_D = "fkiEzmaxinvoicingcontractID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICINGCONTRACT_I_D)
+  private Integer fkiEzmaxinvoicingcontractID;
+
+  public static final String SERIALIZED_NAME_FKI_EZMAXPRICING_I_D = "fkiEzmaxpricingID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZMAXPRICING_I_D)
+  private Integer fkiEzmaxpricingID;
+
+  public static final String SERIALIZED_NAME_FKI_SYSTEMCONFIGURATIONTYPE_I_D = "fkiSystemconfigurationtypeID";
+  @SerializedName(SERIALIZED_NAME_FKI_SYSTEMCONFIGURATIONTYPE_I_D)
+  private Integer fkiSystemconfigurationtypeID;
+
+  public static final String SERIALIZED_NAME_S_SYSTEMCONFIGURATIONTYPE_DESCRIPTION_X = "sSystemconfigurationtypeDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_SYSTEMCONFIGURATIONTYPE_DESCRIPTION_X)
+  private String sSystemconfigurationtypeDescriptionX;
+
+  public static final String SERIALIZED_NAME_YYYYMM_EZMAXINVOICING = "yyyymmEzmaxinvoicing";
+  @SerializedName(SERIALIZED_NAME_YYYYMM_EZMAXINVOICING)
+  private String yyyymmEzmaxinvoicing;
+
+  public static final String SERIALIZED_NAME_I_EZMAXINVOICING_DAYS = "iEzmaxinvoicingDays";
+  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICING_DAYS)
+  private Integer iEzmaxinvoicingDays;
+
+  public static final String SERIALIZED_NAME_E_EZMAXINVOICING_PAYMENTTYPE = "eEzmaxinvoicingPaymenttype";
+  @SerializedName(SERIALIZED_NAME_E_EZMAXINVOICING_PAYMENTTYPE)
+  private FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICING_REBATEPAYMENTTYPE = "dEzmaxinvoicingRebatepaymenttype";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICING_REBATEPAYMENTTYPE)
+  private String dEzmaxinvoicingRebatepaymenttype;
+
+  public static final String SERIALIZED_NAME_I_EZMAXINVOICING_CONTRACTLENGTH = "iEzmaxinvoicingContractlength";
+  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICING_CONTRACTLENGTH)
+  private Integer iEzmaxinvoicingContractlength;
+
+  public static final String SERIALIZED_NAME_D_EZMAXINVOICING_REBATECONTRACTLENGTH = "dEzmaxinvoicingRebatecontractlength";
+  @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICING_REBATECONTRACTLENGTH)
+  private String dEzmaxinvoicingRebatecontractlength;
+
+  public static final String SERIALIZED_NAME_B_EZMAXINVOICING_REBATE_EZSIGNALLAGENTS = "bEzmaxinvoicingRebateEzsignallagents";
+  @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICING_REBATE_EZSIGNALLAGENTS)
+  private Boolean bEzmaxinvoicingRebateEzsignallagents;
+
+  public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
+  @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  private CommonAudit objAudit;
+
+  public static final String SERIALIZED_NAME_OBJ_EZMAXINVOICINGCONTRACT = "objEzmaxinvoicingcontract";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZMAXINVOICINGCONTRACT)
+  private EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract;
+
+  public static final String SERIALIZED_NAME_OBJ_EZMAXPRICING = "objEzmaxpricing";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZMAXPRICING)
+  private CustomEzmaxpricingResponse objEzmaxpricing;
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYGLOBAL = "a_objEzmaxinvoicingsummaryglobal";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYGLOBAL)
+  private List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYEXTERNAL = "a_objEzmaxinvoicingsummaryexternal";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYEXTERNAL)
+  private List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYINTERNAL = "a_objEzmaxinvoicingsummaryinternal";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYINTERNAL)
+  private List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGAGENT = "a_objEzmaxinvoicingagent";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGAGENT)
+  private List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGUSER = "a_objEzmaxinvoicinguser";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGUSER)
+  private List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGEZSIGNFOLDER = "a_objEzmaxinvoicingezsignfolder";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGEZSIGNFOLDER)
+  private List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGEZSIGNDOCUMENT = "a_objEzmaxinvoicingezsigndocument";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGEZSIGNDOCUMENT)
+  private List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument = new ArrayList<>();
+
   public EzmaxinvoicingGetProvisionalV1ResponseMPayload() {
   }
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload pkiEzmaxinvoicingID(Integer pkiEzmaxinvoicingID) {
+    this.pkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezmaxinvoicing
+   * minimum: 0
+   * @return pkiEzmaxinvoicingID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiEzmaxinvoicingID() {
+    return pkiEzmaxinvoicingID;
+  }
+
+  public void setPkiEzmaxinvoicingID(Integer pkiEzmaxinvoicingID) {
+    this.pkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload fkiEzmaxinvoicingcontractID(Integer fkiEzmaxinvoicingcontractID) {
+    this.fkiEzmaxinvoicingcontractID = fkiEzmaxinvoicingcontractID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezmaxinvoicingcontract
+   * minimum: 1
+   * @return fkiEzmaxinvoicingcontractID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzmaxinvoicingcontractID() {
+    return fkiEzmaxinvoicingcontractID;
+  }
+
+  public void setFkiEzmaxinvoicingcontractID(Integer fkiEzmaxinvoicingcontractID) {
+    this.fkiEzmaxinvoicingcontractID = fkiEzmaxinvoicingcontractID;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload fkiEzmaxpricingID(Integer fkiEzmaxpricingID) {
+    this.fkiEzmaxpricingID = fkiEzmaxpricingID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezmaxpricing
+   * minimum: 1
+   * @return fkiEzmaxpricingID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzmaxpricingID() {
+    return fkiEzmaxpricingID;
+  }
+
+  public void setFkiEzmaxpricingID(Integer fkiEzmaxpricingID) {
+    this.fkiEzmaxpricingID = fkiEzmaxpricingID;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload fkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
+    this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Systemconfigurationtype
+   * minimum: 1
+   * @return fkiSystemconfigurationtypeID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiSystemconfigurationtypeID() {
+    return fkiSystemconfigurationtypeID;
+  }
+
+  public void setFkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
+    this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload sSystemconfigurationtypeDescriptionX(String sSystemconfigurationtypeDescriptionX) {
+    this.sSystemconfigurationtypeDescriptionX = sSystemconfigurationtypeDescriptionX;
+    return this;
+  }
+
+  /**
+   * The description of the Systemconfigurationtype in the language of the requester
+   * @return sSystemconfigurationtypeDescriptionX
+   */
+  @javax.annotation.Nonnull
+  public String getsSystemconfigurationtypeDescriptionX() {
+    return sSystemconfigurationtypeDescriptionX;
+  }
+
+  public void setsSystemconfigurationtypeDescriptionX(String sSystemconfigurationtypeDescriptionX) {
+    this.sSystemconfigurationtypeDescriptionX = sSystemconfigurationtypeDescriptionX;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload yyyymmEzmaxinvoicing(String yyyymmEzmaxinvoicing) {
+    this.yyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
+    return this;
+  }
+
+  /**
+   * The YYYYMM period of the Ezmaxinvoicing
+   * @return yyyymmEzmaxinvoicing
+   */
+  @javax.annotation.Nonnull
+  public String getYyyymmEzmaxinvoicing() {
+    return yyyymmEzmaxinvoicing;
+  }
+
+  public void setYyyymmEzmaxinvoicing(String yyyymmEzmaxinvoicing) {
+    this.yyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload iEzmaxinvoicingDays(Integer iEzmaxinvoicingDays) {
+    this.iEzmaxinvoicingDays = iEzmaxinvoicingDays;
+    return this;
+  }
+
+  /**
+   * The number of days invoiced
+   * minimum: 1
+   * @return iEzmaxinvoicingDays
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzmaxinvoicingDays() {
+    return iEzmaxinvoicingDays;
+  }
+
+  public void setiEzmaxinvoicingDays(Integer iEzmaxinvoicingDays) {
+    this.iEzmaxinvoicingDays = iEzmaxinvoicingDays;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload eEzmaxinvoicingPaymenttype(FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype) {
+    this.eEzmaxinvoicingPaymenttype = eEzmaxinvoicingPaymenttype;
+    return this;
+  }
+
+  /**
+   * Get eEzmaxinvoicingPaymenttype
+   * @return eEzmaxinvoicingPaymenttype
+   */
+  @javax.annotation.Nonnull
+  public FieldEEzmaxinvoicingPaymenttype geteEzmaxinvoicingPaymenttype() {
+    return eEzmaxinvoicingPaymenttype;
+  }
+
+  public void seteEzmaxinvoicingPaymenttype(FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype) {
+    this.eEzmaxinvoicingPaymenttype = eEzmaxinvoicingPaymenttype;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload dEzmaxinvoicingRebatepaymenttype(String dEzmaxinvoicingRebatepaymenttype) {
+    this.dEzmaxinvoicingRebatepaymenttype = dEzmaxinvoicingRebatepaymenttype;
+    return this;
+  }
+
+  /**
+   * The percentage of rebate depending of the payment type
+   * @return dEzmaxinvoicingRebatepaymenttype
+   */
+  @javax.annotation.Nonnull
+  public String getdEzmaxinvoicingRebatepaymenttype() {
+    return dEzmaxinvoicingRebatepaymenttype;
+  }
+
+  public void setdEzmaxinvoicingRebatepaymenttype(String dEzmaxinvoicingRebatepaymenttype) {
+    this.dEzmaxinvoicingRebatepaymenttype = dEzmaxinvoicingRebatepaymenttype;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload iEzmaxinvoicingContractlength(Integer iEzmaxinvoicingContractlength) {
+    this.iEzmaxinvoicingContractlength = iEzmaxinvoicingContractlength;
+    return this;
+  }
+
+  /**
+   * The length of the contract in years
+   * minimum: 1
+   * @return iEzmaxinvoicingContractlength
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzmaxinvoicingContractlength() {
+    return iEzmaxinvoicingContractlength;
+  }
+
+  public void setiEzmaxinvoicingContractlength(Integer iEzmaxinvoicingContractlength) {
+    this.iEzmaxinvoicingContractlength = iEzmaxinvoicingContractlength;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload dEzmaxinvoicingRebatecontractlength(String dEzmaxinvoicingRebatecontractlength) {
+    this.dEzmaxinvoicingRebatecontractlength = dEzmaxinvoicingRebatecontractlength;
+    return this;
+  }
+
+  /**
+   * The percentage of rebate depending of the contract length
+   * @return dEzmaxinvoicingRebatecontractlength
+   */
+  @javax.annotation.Nonnull
+  public String getdEzmaxinvoicingRebatecontractlength() {
+    return dEzmaxinvoicingRebatecontractlength;
+  }
+
+  public void setdEzmaxinvoicingRebatecontractlength(String dEzmaxinvoicingRebatecontractlength) {
+    this.dEzmaxinvoicingRebatecontractlength = dEzmaxinvoicingRebatecontractlength;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload bEzmaxinvoicingRebateEzsignallagents(Boolean bEzmaxinvoicingRebateEzsignallagents) {
+    this.bEzmaxinvoicingRebateEzsignallagents = bEzmaxinvoicingRebateEzsignallagents;
+    return this;
+  }
+
+  /**
+   * Whether the rebate for eZsign is for all agents
+   * @return bEzmaxinvoicingRebateEzsignallagents
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbEzmaxinvoicingRebateEzsignallagents() {
+    return bEzmaxinvoicingRebateEzsignallagents;
+  }
+
+  public void setbEzmaxinvoicingRebateEzsignallagents(Boolean bEzmaxinvoicingRebateEzsignallagents) {
+    this.bEzmaxinvoicingRebateEzsignallagents = bEzmaxinvoicingRebateEzsignallagents;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload objAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+    return this;
+  }
+
+  /**
+   * Get objAudit
+   * @return objAudit
+   */
+  @javax.annotation.Nullable
+  public CommonAudit getObjAudit() {
+    return objAudit;
+  }
+
+  public void setObjAudit(CommonAudit objAudit) {
+    this.objAudit = objAudit;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload objEzmaxinvoicingcontract(EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract) {
+    this.objEzmaxinvoicingcontract = objEzmaxinvoicingcontract;
+    return this;
+  }
+
+  /**
+   * Get objEzmaxinvoicingcontract
+   * @return objEzmaxinvoicingcontract
+   */
+  @javax.annotation.Nonnull
+  public EzmaxinvoicingcontractResponseCompound getObjEzmaxinvoicingcontract() {
+    return objEzmaxinvoicingcontract;
+  }
+
+  public void setObjEzmaxinvoicingcontract(EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract) {
+    this.objEzmaxinvoicingcontract = objEzmaxinvoicingcontract;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload objEzmaxpricing(CustomEzmaxpricingResponse objEzmaxpricing) {
+    this.objEzmaxpricing = objEzmaxpricing;
+    return this;
+  }
+
+  /**
+   * Get objEzmaxpricing
+   * @return objEzmaxpricing
+   */
+  @javax.annotation.Nonnull
+  public CustomEzmaxpricingResponse getObjEzmaxpricing() {
+    return objEzmaxpricing;
+  }
+
+  public void setObjEzmaxpricing(CustomEzmaxpricingResponse objEzmaxpricing) {
+    this.objEzmaxpricing = objEzmaxpricing;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingsummaryglobal(List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal) {
+    this.aObjEzmaxinvoicingsummaryglobal = aObjEzmaxinvoicingsummaryglobal;
+    return this;
+  }
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload addAObjEzmaxinvoicingsummaryglobalItem(EzmaxinvoicingsummaryglobalResponseCompound aObjEzmaxinvoicingsummaryglobalItem) {
+    if (this.aObjEzmaxinvoicingsummaryglobal == null) {
+      this.aObjEzmaxinvoicingsummaryglobal = new ArrayList<>();
+    }
+    this.aObjEzmaxinvoicingsummaryglobal.add(aObjEzmaxinvoicingsummaryglobalItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzmaxinvoicingsummaryglobal
+   * @return aObjEzmaxinvoicingsummaryglobal
+   */
+  @javax.annotation.Nonnull
+  public List<EzmaxinvoicingsummaryglobalResponseCompound> getaObjEzmaxinvoicingsummaryglobal() {
+    return aObjEzmaxinvoicingsummaryglobal;
+  }
+
+  public void setaObjEzmaxinvoicingsummaryglobal(List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal) {
+    this.aObjEzmaxinvoicingsummaryglobal = aObjEzmaxinvoicingsummaryglobal;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingsummaryexternal(List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal) {
+    this.aObjEzmaxinvoicingsummaryexternal = aObjEzmaxinvoicingsummaryexternal;
+    return this;
+  }
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload addAObjEzmaxinvoicingsummaryexternalItem(EzmaxinvoicingsummaryexternalResponseCompound aObjEzmaxinvoicingsummaryexternalItem) {
+    if (this.aObjEzmaxinvoicingsummaryexternal == null) {
+      this.aObjEzmaxinvoicingsummaryexternal = new ArrayList<>();
+    }
+    this.aObjEzmaxinvoicingsummaryexternal.add(aObjEzmaxinvoicingsummaryexternalItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzmaxinvoicingsummaryexternal
+   * @return aObjEzmaxinvoicingsummaryexternal
+   */
+  @javax.annotation.Nonnull
+  public List<EzmaxinvoicingsummaryexternalResponseCompound> getaObjEzmaxinvoicingsummaryexternal() {
+    return aObjEzmaxinvoicingsummaryexternal;
+  }
+
+  public void setaObjEzmaxinvoicingsummaryexternal(List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal) {
+    this.aObjEzmaxinvoicingsummaryexternal = aObjEzmaxinvoicingsummaryexternal;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingsummaryinternal(List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal) {
+    this.aObjEzmaxinvoicingsummaryinternal = aObjEzmaxinvoicingsummaryinternal;
+    return this;
+  }
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload addAObjEzmaxinvoicingsummaryinternalItem(EzmaxinvoicingsummaryinternalResponseCompound aObjEzmaxinvoicingsummaryinternalItem) {
+    if (this.aObjEzmaxinvoicingsummaryinternal == null) {
+      this.aObjEzmaxinvoicingsummaryinternal = new ArrayList<>();
+    }
+    this.aObjEzmaxinvoicingsummaryinternal.add(aObjEzmaxinvoicingsummaryinternalItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzmaxinvoicingsummaryinternal
+   * @return aObjEzmaxinvoicingsummaryinternal
+   */
+  @javax.annotation.Nonnull
+  public List<EzmaxinvoicingsummaryinternalResponseCompound> getaObjEzmaxinvoicingsummaryinternal() {
+    return aObjEzmaxinvoicingsummaryinternal;
+  }
+
+  public void setaObjEzmaxinvoicingsummaryinternal(List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal) {
+    this.aObjEzmaxinvoicingsummaryinternal = aObjEzmaxinvoicingsummaryinternal;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingagent(List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent) {
+    this.aObjEzmaxinvoicingagent = aObjEzmaxinvoicingagent;
+    return this;
+  }
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload addAObjEzmaxinvoicingagentItem(EzmaxinvoicingagentResponseCompound aObjEzmaxinvoicingagentItem) {
+    if (this.aObjEzmaxinvoicingagent == null) {
+      this.aObjEzmaxinvoicingagent = new ArrayList<>();
+    }
+    this.aObjEzmaxinvoicingagent.add(aObjEzmaxinvoicingagentItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzmaxinvoicingagent
+   * @return aObjEzmaxinvoicingagent
+   */
+  @javax.annotation.Nonnull
+  public List<EzmaxinvoicingagentResponseCompound> getaObjEzmaxinvoicingagent() {
+    return aObjEzmaxinvoicingagent;
+  }
+
+  public void setaObjEzmaxinvoicingagent(List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent) {
+    this.aObjEzmaxinvoicingagent = aObjEzmaxinvoicingagent;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicinguser(List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser) {
+    this.aObjEzmaxinvoicinguser = aObjEzmaxinvoicinguser;
+    return this;
+  }
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload addAObjEzmaxinvoicinguserItem(EzmaxinvoicinguserResponseCompound aObjEzmaxinvoicinguserItem) {
+    if (this.aObjEzmaxinvoicinguser == null) {
+      this.aObjEzmaxinvoicinguser = new ArrayList<>();
+    }
+    this.aObjEzmaxinvoicinguser.add(aObjEzmaxinvoicinguserItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzmaxinvoicinguser
+   * @return aObjEzmaxinvoicinguser
+   */
+  @javax.annotation.Nonnull
+  public List<EzmaxinvoicinguserResponseCompound> getaObjEzmaxinvoicinguser() {
+    return aObjEzmaxinvoicinguser;
+  }
+
+  public void setaObjEzmaxinvoicinguser(List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser) {
+    this.aObjEzmaxinvoicinguser = aObjEzmaxinvoicinguser;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingezsignfolder(List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder) {
+    this.aObjEzmaxinvoicingezsignfolder = aObjEzmaxinvoicingezsignfolder;
+    return this;
+  }
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload addAObjEzmaxinvoicingezsignfolderItem(CustomEzmaxinvoicingEzsignfolderResponse aObjEzmaxinvoicingezsignfolderItem) {
+    if (this.aObjEzmaxinvoicingezsignfolder == null) {
+      this.aObjEzmaxinvoicingezsignfolder = new ArrayList<>();
+    }
+    this.aObjEzmaxinvoicingezsignfolder.add(aObjEzmaxinvoicingezsignfolderItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzmaxinvoicingezsignfolder
+   * @return aObjEzmaxinvoicingezsignfolder
+   */
+  @javax.annotation.Nonnull
+  public List<CustomEzmaxinvoicingEzsignfolderResponse> getaObjEzmaxinvoicingezsignfolder() {
+    return aObjEzmaxinvoicingezsignfolder;
+  }
+
+  public void setaObjEzmaxinvoicingezsignfolder(List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder) {
+    this.aObjEzmaxinvoicingezsignfolder = aObjEzmaxinvoicingezsignfolder;
+  }
+
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload aObjEzmaxinvoicingezsigndocument(List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument) {
+    this.aObjEzmaxinvoicingezsigndocument = aObjEzmaxinvoicingezsigndocument;
+    return this;
+  }
+
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload addAObjEzmaxinvoicingezsigndocumentItem(CustomEzmaxinvoicingEzsigndocumentResponse aObjEzmaxinvoicingezsigndocumentItem) {
+    if (this.aObjEzmaxinvoicingezsigndocument == null) {
+      this.aObjEzmaxinvoicingezsigndocument = new ArrayList<>();
+    }
+    this.aObjEzmaxinvoicingezsigndocument.add(aObjEzmaxinvoicingezsigndocumentItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzmaxinvoicingezsigndocument
+   * @return aObjEzmaxinvoicingezsigndocument
+   */
+  @javax.annotation.Nonnull
+  public List<CustomEzmaxinvoicingEzsigndocumentResponse> getaObjEzmaxinvoicingezsigndocument() {
+    return aObjEzmaxinvoicingezsigndocument;
+  }
+
+  public void setaObjEzmaxinvoicingezsigndocument(List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument) {
+    this.aObjEzmaxinvoicingezsigndocument = aObjEzmaxinvoicingezsigndocument;
+  }
+
 
 
   @Override
@@ -74,19 +643,62 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload extends Ezmaxinvoici
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    EzmaxinvoicingGetProvisionalV1ResponseMPayload ezmaxinvoicingGetProvisionalV1ResponseMPayload = (EzmaxinvoicingGetProvisionalV1ResponseMPayload) o;
+    return Objects.equals(this.pkiEzmaxinvoicingID, ezmaxinvoicingGetProvisionalV1ResponseMPayload.pkiEzmaxinvoicingID) &&
+        Objects.equals(this.fkiEzmaxinvoicingcontractID, ezmaxinvoicingGetProvisionalV1ResponseMPayload.fkiEzmaxinvoicingcontractID) &&
+        Objects.equals(this.fkiEzmaxpricingID, ezmaxinvoicingGetProvisionalV1ResponseMPayload.fkiEzmaxpricingID) &&
+        Objects.equals(this.fkiSystemconfigurationtypeID, ezmaxinvoicingGetProvisionalV1ResponseMPayload.fkiSystemconfigurationtypeID) &&
+        Objects.equals(this.sSystemconfigurationtypeDescriptionX, ezmaxinvoicingGetProvisionalV1ResponseMPayload.sSystemconfigurationtypeDescriptionX) &&
+        Objects.equals(this.yyyymmEzmaxinvoicing, ezmaxinvoicingGetProvisionalV1ResponseMPayload.yyyymmEzmaxinvoicing) &&
+        Objects.equals(this.iEzmaxinvoicingDays, ezmaxinvoicingGetProvisionalV1ResponseMPayload.iEzmaxinvoicingDays) &&
+        Objects.equals(this.eEzmaxinvoicingPaymenttype, ezmaxinvoicingGetProvisionalV1ResponseMPayload.eEzmaxinvoicingPaymenttype) &&
+        Objects.equals(this.dEzmaxinvoicingRebatepaymenttype, ezmaxinvoicingGetProvisionalV1ResponseMPayload.dEzmaxinvoicingRebatepaymenttype) &&
+        Objects.equals(this.iEzmaxinvoicingContractlength, ezmaxinvoicingGetProvisionalV1ResponseMPayload.iEzmaxinvoicingContractlength) &&
+        Objects.equals(this.dEzmaxinvoicingRebatecontractlength, ezmaxinvoicingGetProvisionalV1ResponseMPayload.dEzmaxinvoicingRebatecontractlength) &&
+        Objects.equals(this.bEzmaxinvoicingRebateEzsignallagents, ezmaxinvoicingGetProvisionalV1ResponseMPayload.bEzmaxinvoicingRebateEzsignallagents) &&
+        Objects.equals(this.objAudit, ezmaxinvoicingGetProvisionalV1ResponseMPayload.objAudit) &&
+        Objects.equals(this.objEzmaxinvoicingcontract, ezmaxinvoicingGetProvisionalV1ResponseMPayload.objEzmaxinvoicingcontract) &&
+        Objects.equals(this.objEzmaxpricing, ezmaxinvoicingGetProvisionalV1ResponseMPayload.objEzmaxpricing) &&
+        Objects.equals(this.aObjEzmaxinvoicingsummaryglobal, ezmaxinvoicingGetProvisionalV1ResponseMPayload.aObjEzmaxinvoicingsummaryglobal) &&
+        Objects.equals(this.aObjEzmaxinvoicingsummaryexternal, ezmaxinvoicingGetProvisionalV1ResponseMPayload.aObjEzmaxinvoicingsummaryexternal) &&
+        Objects.equals(this.aObjEzmaxinvoicingsummaryinternal, ezmaxinvoicingGetProvisionalV1ResponseMPayload.aObjEzmaxinvoicingsummaryinternal) &&
+        Objects.equals(this.aObjEzmaxinvoicingagent, ezmaxinvoicingGetProvisionalV1ResponseMPayload.aObjEzmaxinvoicingagent) &&
+        Objects.equals(this.aObjEzmaxinvoicinguser, ezmaxinvoicingGetProvisionalV1ResponseMPayload.aObjEzmaxinvoicinguser) &&
+        Objects.equals(this.aObjEzmaxinvoicingezsignfolder, ezmaxinvoicingGetProvisionalV1ResponseMPayload.aObjEzmaxinvoicingezsignfolder) &&
+        Objects.equals(this.aObjEzmaxinvoicingezsigndocument, ezmaxinvoicingGetProvisionalV1ResponseMPayload.aObjEzmaxinvoicingezsigndocument);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiEzmaxinvoicingID, fkiEzmaxinvoicingcontractID, fkiEzmaxpricingID, fkiSystemconfigurationtypeID, sSystemconfigurationtypeDescriptionX, yyyymmEzmaxinvoicing, iEzmaxinvoicingDays, eEzmaxinvoicingPaymenttype, dEzmaxinvoicingRebatepaymenttype, iEzmaxinvoicingContractlength, dEzmaxinvoicingRebatecontractlength, bEzmaxinvoicingRebateEzsignallagents, objAudit, objEzmaxinvoicingcontract, objEzmaxpricing, aObjEzmaxinvoicingsummaryglobal, aObjEzmaxinvoicingsummaryexternal, aObjEzmaxinvoicingsummaryinternal, aObjEzmaxinvoicingagent, aObjEzmaxinvoicinguser, aObjEzmaxinvoicingezsignfolder, aObjEzmaxinvoicingezsigndocument);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzmaxinvoicingGetProvisionalV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzmaxinvoicingID: ").append(toIndentedString(pkiEzmaxinvoicingID)).append("\n");
+    sb.append("    fkiEzmaxinvoicingcontractID: ").append(toIndentedString(fkiEzmaxinvoicingcontractID)).append("\n");
+    sb.append("    fkiEzmaxpricingID: ").append(toIndentedString(fkiEzmaxpricingID)).append("\n");
+    sb.append("    fkiSystemconfigurationtypeID: ").append(toIndentedString(fkiSystemconfigurationtypeID)).append("\n");
+    sb.append("    sSystemconfigurationtypeDescriptionX: ").append(toIndentedString(sSystemconfigurationtypeDescriptionX)).append("\n");
+    sb.append("    yyyymmEzmaxinvoicing: ").append(toIndentedString(yyyymmEzmaxinvoicing)).append("\n");
+    sb.append("    iEzmaxinvoicingDays: ").append(toIndentedString(iEzmaxinvoicingDays)).append("\n");
+    sb.append("    eEzmaxinvoicingPaymenttype: ").append(toIndentedString(eEzmaxinvoicingPaymenttype)).append("\n");
+    sb.append("    dEzmaxinvoicingRebatepaymenttype: ").append(toIndentedString(dEzmaxinvoicingRebatepaymenttype)).append("\n");
+    sb.append("    iEzmaxinvoicingContractlength: ").append(toIndentedString(iEzmaxinvoicingContractlength)).append("\n");
+    sb.append("    dEzmaxinvoicingRebatecontractlength: ").append(toIndentedString(dEzmaxinvoicingRebatecontractlength)).append("\n");
+    sb.append("    bEzmaxinvoicingRebateEzsignallagents: ").append(toIndentedString(bEzmaxinvoicingRebateEzsignallagents)).append("\n");
+    sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
+    sb.append("    objEzmaxinvoicingcontract: ").append(toIndentedString(objEzmaxinvoicingcontract)).append("\n");
+    sb.append("    objEzmaxpricing: ").append(toIndentedString(objEzmaxpricing)).append("\n");
+    sb.append("    aObjEzmaxinvoicingsummaryglobal: ").append(toIndentedString(aObjEzmaxinvoicingsummaryglobal)).append("\n");
+    sb.append("    aObjEzmaxinvoicingsummaryexternal: ").append(toIndentedString(aObjEzmaxinvoicingsummaryexternal)).append("\n");
+    sb.append("    aObjEzmaxinvoicingsummaryinternal: ").append(toIndentedString(aObjEzmaxinvoicingsummaryinternal)).append("\n");
+    sb.append("    aObjEzmaxinvoicingagent: ").append(toIndentedString(aObjEzmaxinvoicingagent)).append("\n");
+    sb.append("    aObjEzmaxinvoicinguser: ").append(toIndentedString(aObjEzmaxinvoicinguser)).append("\n");
+    sb.append("    aObjEzmaxinvoicingezsignfolder: ").append(toIndentedString(aObjEzmaxinvoicingezsignfolder)).append("\n");
+    sb.append("    aObjEzmaxinvoicingezsigndocument: ").append(toIndentedString(aObjEzmaxinvoicingezsigndocument)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -183,6 +795,99 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload extends Ezmaxinvoici
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sSystemconfigurationtypeDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sSystemconfigurationtypeDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sSystemconfigurationtypeDescriptionX").toString()));
+      }
+      if (!jsonObj.get("yyyymmEzmaxinvoicing").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `yyyymmEzmaxinvoicing` to be a primitive type in the JSON string but got `%s`", jsonObj.get("yyyymmEzmaxinvoicing").toString()));
+      }
+      // validate the required field `eEzmaxinvoicingPaymenttype`
+      FieldEEzmaxinvoicingPaymenttype.validateJsonElement(jsonObj.get("eEzmaxinvoicingPaymenttype"));
+      if (!jsonObj.get("dEzmaxinvoicingRebatepaymenttype").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingRebatepaymenttype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingRebatepaymenttype").toString()));
+      }
+      if (!jsonObj.get("dEzmaxinvoicingRebatecontractlength").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dEzmaxinvoicingRebatecontractlength` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzmaxinvoicingRebatecontractlength").toString()));
+      }
+      // validate the optional field `objAudit`
+      if (jsonObj.get("objAudit") != null && !jsonObj.get("objAudit").isJsonNull()) {
+        CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
+      }
+      // validate the required field `objEzmaxinvoicingcontract`
+      EzmaxinvoicingcontractResponseCompound.validateJsonElement(jsonObj.get("objEzmaxinvoicingcontract"));
+      // validate the required field `objEzmaxpricing`
+      CustomEzmaxpricingResponse.validateJsonElement(jsonObj.get("objEzmaxpricing"));
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objEzmaxinvoicingsummaryglobal").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objEzmaxinvoicingsummaryglobal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryglobal").toString()));
+      }
+
+      JsonArray jsonArrayaObjEzmaxinvoicingsummaryglobal = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryglobal");
+      // validate the required field `a_objEzmaxinvoicingsummaryglobal` (array)
+      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryglobal.size(); i++) {
+        EzmaxinvoicingsummaryglobalResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryglobal.get(i));
+      };
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objEzmaxinvoicingsummaryexternal").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objEzmaxinvoicingsummaryexternal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryexternal").toString()));
+      }
+
+      JsonArray jsonArrayaObjEzmaxinvoicingsummaryexternal = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryexternal");
+      // validate the required field `a_objEzmaxinvoicingsummaryexternal` (array)
+      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryexternal.size(); i++) {
+        EzmaxinvoicingsummaryexternalResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryexternal.get(i));
+      };
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objEzmaxinvoicingsummaryinternal").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objEzmaxinvoicingsummaryinternal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryinternal").toString()));
+      }
+
+      JsonArray jsonArrayaObjEzmaxinvoicingsummaryinternal = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryinternal");
+      // validate the required field `a_objEzmaxinvoicingsummaryinternal` (array)
+      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryinternal.size(); i++) {
+        EzmaxinvoicingsummaryinternalResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryinternal.get(i));
+      };
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objEzmaxinvoicingagent").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objEzmaxinvoicingagent` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingagent").toString()));
+      }
+
+      JsonArray jsonArrayaObjEzmaxinvoicingagent = jsonObj.getAsJsonArray("a_objEzmaxinvoicingagent");
+      // validate the required field `a_objEzmaxinvoicingagent` (array)
+      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingagent.size(); i++) {
+        EzmaxinvoicingagentResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingagent.get(i));
+      };
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objEzmaxinvoicinguser").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objEzmaxinvoicinguser` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicinguser").toString()));
+      }
+
+      JsonArray jsonArrayaObjEzmaxinvoicinguser = jsonObj.getAsJsonArray("a_objEzmaxinvoicinguser");
+      // validate the required field `a_objEzmaxinvoicinguser` (array)
+      for (int i = 0; i < jsonArrayaObjEzmaxinvoicinguser.size(); i++) {
+        EzmaxinvoicinguserResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicinguser.get(i));
+      };
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objEzmaxinvoicingezsignfolder").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objEzmaxinvoicingezsignfolder` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingezsignfolder").toString()));
+      }
+
+      JsonArray jsonArrayaObjEzmaxinvoicingezsignfolder = jsonObj.getAsJsonArray("a_objEzmaxinvoicingezsignfolder");
+      // validate the required field `a_objEzmaxinvoicingezsignfolder` (array)
+      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingezsignfolder.size(); i++) {
+        CustomEzmaxinvoicingEzsignfolderResponse.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsignfolder.get(i));
+      };
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objEzmaxinvoicingezsigndocument").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objEzmaxinvoicingezsigndocument` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingezsigndocument").toString()));
+      }
+
+      JsonArray jsonArrayaObjEzmaxinvoicingezsigndocument = jsonObj.getAsJsonArray("a_objEzmaxinvoicingezsigndocument");
+      // validate the required field `a_objEzmaxinvoicingezsigndocument` (array)
+      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingezsigndocument.size(); i++) {
+        CustomEzmaxinvoicingEzsigndocumentResponse.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsigndocument.get(i));
+      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

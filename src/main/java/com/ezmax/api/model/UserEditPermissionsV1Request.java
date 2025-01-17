@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.PermissionRequest;
+import com.ezmax.api.model.PermissionRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,22 +51,21 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/user/{pkiUserID}/editPermissions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserEditPermissionsV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_PERMISSION = "a_objPermission";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PERMISSION)
-  @javax.annotation.Nonnull
   private List<PermissionRequestCompound> aObjPermission = new ArrayList<>();
 
   public UserEditPermissionsV1Request() {
   }
 
-  public UserEditPermissionsV1Request aObjPermission(@javax.annotation.Nonnull List<PermissionRequestCompound> aObjPermission) {
+  public UserEditPermissionsV1Request aObjPermission(List<PermissionRequestCompound> aObjPermission) {
     this.aObjPermission = aObjPermission;
     return this;
   }
 
-  public UserEditPermissionsV1Request addAObjPermissionItem(PermissionRequest aObjPermissionItem) {
+  public UserEditPermissionsV1Request addAObjPermissionItem(PermissionRequestCompound aObjPermissionItem) {
     if (this.aObjPermission == null) {
       this.aObjPermission = new ArrayList<>();
     }
@@ -83,7 +82,7 @@ public class UserEditPermissionsV1Request {
     return aObjPermission;
   }
 
-  public void setaObjPermission(@javax.annotation.Nonnull List<PermissionRequestCompound> aObjPermission) {
+  public void setaObjPermission(List<PermissionRequestCompound> aObjPermission) {
     this.aObjPermission = aObjPermission;
   }
 
@@ -176,7 +175,7 @@ public class UserEditPermissionsV1Request {
       JsonArray jsonArrayaObjPermission = jsonObj.getAsJsonArray("a_objPermission");
       // validate the required field `a_objPermission` (array)
       for (int i = 0; i < jsonArrayaObjPermission.size(); i++) {
-        PermissionRequest.validateJsonElement(jsonArrayaObjPermission.get(i));
+        PermissionRequestCompound.validateJsonElement(jsonArrayaObjPermission.get(i));
       };
   }
 

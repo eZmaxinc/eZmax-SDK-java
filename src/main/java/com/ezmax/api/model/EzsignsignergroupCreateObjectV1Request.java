@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignsignergroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignergroupCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNERGROUP = "a_objEzsignsignergroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNERGROUP)
-  @javax.annotation.Nonnull
   private List<EzsignsignergroupRequestCompound> aObjEzsignsignergroup = new ArrayList<>();
 
   public EzsignsignergroupCreateObjectV1Request() {
   }
 
-  public EzsignsignergroupCreateObjectV1Request aObjEzsignsignergroup(@javax.annotation.Nonnull List<EzsignsignergroupRequestCompound> aObjEzsignsignergroup) {
+  public EzsignsignergroupCreateObjectV1Request aObjEzsignsignergroup(List<EzsignsignergroupRequestCompound> aObjEzsignsignergroup) {
     this.aObjEzsignsignergroup = aObjEzsignsignergroup;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsignsignergroupCreateObjectV1Request {
     return aObjEzsignsignergroup;
   }
 
-  public void setaObjEzsignsignergroup(@javax.annotation.Nonnull List<EzsignsignergroupRequestCompound> aObjEzsignsignergroup) {
+  public void setaObjEzsignsignergroup(List<EzsignsignergroupRequestCompound> aObjEzsignsignergroup) {
     this.aObjEzsignsignergroup = aObjEzsignsignergroup;
   }
 

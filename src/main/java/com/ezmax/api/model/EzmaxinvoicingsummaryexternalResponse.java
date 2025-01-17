@@ -48,37 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryexternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingsummaryexternalResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNAL_I_D = "pkiEzmaxinvoicingsummaryexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNAL_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzmaxinvoicingsummaryexternalID;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D = "fkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzmaxinvoicingID;
 
   public static final String SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D = "fkiBillingentityexternalID";
   @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiBillingentityexternalID;
 
   public static final String SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION = "sBillingentityexternalDescription";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sBillingentityexternalDescription;
 
   public static final String SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYEXTERNAL_DESCRIPTION = "sEzmaxinvoicingsummaryexternalDescription";
   @SerializedName(SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYEXTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzmaxinvoicingsummaryexternalDescription;
 
   public EzmaxinvoicingsummaryexternalResponse() {
   }
 
-  public EzmaxinvoicingsummaryexternalResponse pkiEzmaxinvoicingsummaryexternalID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryexternalID) {
+  public EzmaxinvoicingsummaryexternalResponse pkiEzmaxinvoicingsummaryexternalID(Integer pkiEzmaxinvoicingsummaryexternalID) {
     this.pkiEzmaxinvoicingsummaryexternalID = pkiEzmaxinvoicingsummaryexternalID;
     return this;
   }
@@ -93,12 +88,12 @@ public class EzmaxinvoicingsummaryexternalResponse {
     return pkiEzmaxinvoicingsummaryexternalID;
   }
 
-  public void setPkiEzmaxinvoicingsummaryexternalID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryexternalID) {
+  public void setPkiEzmaxinvoicingsummaryexternalID(Integer pkiEzmaxinvoicingsummaryexternalID) {
     this.pkiEzmaxinvoicingsummaryexternalID = pkiEzmaxinvoicingsummaryexternalID;
   }
 
 
-  public EzmaxinvoicingsummaryexternalResponse fkiEzmaxinvoicingID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingID) {
+  public EzmaxinvoicingsummaryexternalResponse fkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
     return this;
   }
@@ -113,12 +108,12 @@ public class EzmaxinvoicingsummaryexternalResponse {
     return fkiEzmaxinvoicingID;
   }
 
-  public void setFkiEzmaxinvoicingID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingID) {
+  public void setFkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
   }
 
 
-  public EzmaxinvoicingsummaryexternalResponse fkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
+  public EzmaxinvoicingsummaryexternalResponse fkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
     this.fkiBillingentityexternalID = fkiBillingentityexternalID;
     return this;
   }
@@ -133,12 +128,12 @@ public class EzmaxinvoicingsummaryexternalResponse {
     return fkiBillingentityexternalID;
   }
 
-  public void setFkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
+  public void setFkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
     this.fkiBillingentityexternalID = fkiBillingentityexternalID;
   }
 
 
-  public EzmaxinvoicingsummaryexternalResponse sBillingentityexternalDescription(@javax.annotation.Nonnull String sBillingentityexternalDescription) {
+  public EzmaxinvoicingsummaryexternalResponse sBillingentityexternalDescription(String sBillingentityexternalDescription) {
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;
     return this;
   }
@@ -152,12 +147,12 @@ public class EzmaxinvoicingsummaryexternalResponse {
     return sBillingentityexternalDescription;
   }
 
-  public void setsBillingentityexternalDescription(@javax.annotation.Nonnull String sBillingentityexternalDescription) {
+  public void setsBillingentityexternalDescription(String sBillingentityexternalDescription) {
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;
   }
 
 
-  public EzmaxinvoicingsummaryexternalResponse sEzmaxinvoicingsummaryexternalDescription(@javax.annotation.Nonnull String sEzmaxinvoicingsummaryexternalDescription) {
+  public EzmaxinvoicingsummaryexternalResponse sEzmaxinvoicingsummaryexternalDescription(String sEzmaxinvoicingsummaryexternalDescription) {
     this.sEzmaxinvoicingsummaryexternalDescription = sEzmaxinvoicingsummaryexternalDescription;
     return this;
   }
@@ -171,7 +166,7 @@ public class EzmaxinvoicingsummaryexternalResponse {
     return sEzmaxinvoicingsummaryexternalDescription;
   }
 
-  public void setsEzmaxinvoicingsummaryexternalDescription(@javax.annotation.Nonnull String sEzmaxinvoicingsummaryexternalDescription) {
+  public void setsEzmaxinvoicingsummaryexternalDescription(String sEzmaxinvoicingsummaryexternalDescription) {
     this.sEzmaxinvoicingsummaryexternalDescription = sEzmaxinvoicingsummaryexternalDescription;
   }
 
@@ -254,6 +249,21 @@ public class EzmaxinvoicingsummaryexternalResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzmaxinvoicingsummaryexternalResponse is not found in the empty JSON string", EzmaxinvoicingsummaryexternalResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzmaxinvoicingsummaryexternalResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzmaxinvoicingsummaryexternalResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzmaxinvoicingsummaryexternalResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sBillingentityexternalDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sBillingentityexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityexternalDescription").toString()));
@@ -263,6 +273,34 @@ public class EzmaxinvoicingsummaryexternalResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzmaxinvoicingsummaryexternalResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzmaxinvoicingsummaryexternalResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzmaxinvoicingsummaryexternalResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzmaxinvoicingsummaryexternalResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzmaxinvoicingsummaryexternalResponse>() {
+           @Override
+           public void write(JsonWriter out, EzmaxinvoicingsummaryexternalResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzmaxinvoicingsummaryexternalResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzmaxinvoicingsummaryexternalResponse given an JSON string

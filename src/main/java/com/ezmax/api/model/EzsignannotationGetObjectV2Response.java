@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.ezmax.api.model.EzsignannotationGetObjectV2ResponseMPayload;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /2/object/ezsignannotation/{pkiEzsignannotationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignannotationGetObjectV2Response extends CommonResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsignannotationGetObjectV2Response {
+  public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
+  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  private CommonResponseObjDebugPayload objDebugPayload;
+
+  public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
+  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  private CommonResponseObjDebug objDebug;
+
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  @javax.annotation.Nonnull
   private EzsignannotationGetObjectV2ResponseMPayload mPayload;
 
   public EzsignannotationGetObjectV2Response() {
   }
 
-  public EzsignannotationGetObjectV2Response mPayload(@javax.annotation.Nonnull EzsignannotationGetObjectV2ResponseMPayload mPayload) {
+  public EzsignannotationGetObjectV2Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+    this.objDebugPayload = objDebugPayload;
+    return this;
+  }
+
+  /**
+   * Get objDebugPayload
+   * @return objDebugPayload
+   */
+  @javax.annotation.Nonnull
+  public CommonResponseObjDebugPayload getObjDebugPayload() {
+    return objDebugPayload;
+  }
+
+  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+    this.objDebugPayload = objDebugPayload;
+  }
+
+
+  public EzsignannotationGetObjectV2Response objDebug(CommonResponseObjDebug objDebug) {
+    this.objDebug = objDebug;
+    return this;
+  }
+
+  /**
+   * Get objDebug
+   * @return objDebug
+   */
+  @javax.annotation.Nullable
+  public CommonResponseObjDebug getObjDebug() {
+    return objDebug;
+  }
+
+  public void setObjDebug(CommonResponseObjDebug objDebug) {
+    this.objDebug = objDebug;
+  }
+
+
+  public EzsignannotationGetObjectV2Response mPayload(EzsignannotationGetObjectV2ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
@@ -76,7 +120,7 @@ public class EzsignannotationGetObjectV2Response extends CommonResponse {
     return mPayload;
   }
 
-  public void setmPayload(@javax.annotation.Nonnull EzsignannotationGetObjectV2ResponseMPayload mPayload) {
+  public void setmPayload(EzsignannotationGetObjectV2ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -91,20 +135,22 @@ public class EzsignannotationGetObjectV2Response extends CommonResponse {
       return false;
     }
     EzsignannotationGetObjectV2Response ezsignannotationGetObjectV2Response = (EzsignannotationGetObjectV2Response) o;
-    return Objects.equals(this.mPayload, ezsignannotationGetObjectV2Response.mPayload) &&
-        super.equals(o);
+    return Objects.equals(this.objDebugPayload, ezsignannotationGetObjectV2Response.objDebugPayload) &&
+        Objects.equals(this.objDebug, ezsignannotationGetObjectV2Response.objDebug) &&
+        Objects.equals(this.mPayload, ezsignannotationGetObjectV2Response.mPayload);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mPayload, super.hashCode());
+    return Objects.hash(objDebugPayload, objDebug, mPayload);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignannotationGetObjectV2Response {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
+    sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
     sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -134,8 +180,8 @@ public class EzsignannotationGetObjectV2Response extends CommonResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("mPayload");
     openapiRequiredFields.add("objDebugPayload");
+    openapiRequiredFields.add("mPayload");
   }
 
   /**
@@ -166,6 +212,12 @@ public class EzsignannotationGetObjectV2Response extends CommonResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objDebugPayload`
+      CommonResponseObjDebugPayload.validateJsonElement(jsonObj.get("objDebugPayload"));
+      // validate the optional field `objDebug`
+      if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
+        CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
+      }
       // validate the required field `mPayload`
       EzsignannotationGetObjectV2ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
   }

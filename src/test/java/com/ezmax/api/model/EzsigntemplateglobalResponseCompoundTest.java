@@ -13,7 +13,6 @@
 
 package com.ezmax.api.model;
 
-import com.ezmax.api.model.EzsigntemplateglobalResponse;
 import com.ezmax.api.model.EzsigntemplateglobaldocumentResponse;
 import com.ezmax.api.model.EzsigntemplateglobalsignerResponseCompound;
 import com.ezmax.api.model.FieldEEzsigntemplateglobalModule;

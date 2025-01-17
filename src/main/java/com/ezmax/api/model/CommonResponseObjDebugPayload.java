@@ -50,37 +50,32 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
-  @javax.annotation.Nonnull
   private Integer iVersionMin;
 
   public static final String SERIALIZED_NAME_I_VERSION_MAX = "iVersionMax";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MAX)
-  @javax.annotation.Nonnull
   private Integer iVersionMax;
 
   public static final String SERIALIZED_NAME_A_REQUIRED_PERMISSION = "a_RequiredPermission";
   @SerializedName(SERIALIZED_NAME_A_REQUIRED_PERMISSION)
-  @javax.annotation.Nonnull
   private List<Integer> aRequiredPermission = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_B_VERSION_DEPRECATED = "bVersionDeprecated";
   @SerializedName(SERIALIZED_NAME_B_VERSION_DEPRECATED)
-  @javax.annotation.Nonnull
   private Boolean bVersionDeprecated;
 
   public static final String SERIALIZED_NAME_DT_RESPONSE_DATE = "dtResponseDate";
   @SerializedName(SERIALIZED_NAME_DT_RESPONSE_DATE)
-  @javax.annotation.Nonnull
   private String dtResponseDate;
 
   public CommonResponseObjDebugPayload() {
   }
 
-  public CommonResponseObjDebugPayload iVersionMin(@javax.annotation.Nonnull Integer iVersionMin) {
+  public CommonResponseObjDebugPayload iVersionMin(Integer iVersionMin) {
     this.iVersionMin = iVersionMin;
     return this;
   }
@@ -94,12 +89,12 @@ public class CommonResponseObjDebugPayload {
     return iVersionMin;
   }
 
-  public void setiVersionMin(@javax.annotation.Nonnull Integer iVersionMin) {
+  public void setiVersionMin(Integer iVersionMin) {
     this.iVersionMin = iVersionMin;
   }
 
 
-  public CommonResponseObjDebugPayload iVersionMax(@javax.annotation.Nonnull Integer iVersionMax) {
+  public CommonResponseObjDebugPayload iVersionMax(Integer iVersionMax) {
     this.iVersionMax = iVersionMax;
     return this;
   }
@@ -113,12 +108,12 @@ public class CommonResponseObjDebugPayload {
     return iVersionMax;
   }
 
-  public void setiVersionMax(@javax.annotation.Nonnull Integer iVersionMax) {
+  public void setiVersionMax(Integer iVersionMax) {
     this.iVersionMax = iVersionMax;
   }
 
 
-  public CommonResponseObjDebugPayload aRequiredPermission(@javax.annotation.Nonnull List<Integer> aRequiredPermission) {
+  public CommonResponseObjDebugPayload aRequiredPermission(List<Integer> aRequiredPermission) {
     this.aRequiredPermission = aRequiredPermission;
     return this;
   }
@@ -140,12 +135,12 @@ public class CommonResponseObjDebugPayload {
     return aRequiredPermission;
   }
 
-  public void setaRequiredPermission(@javax.annotation.Nonnull List<Integer> aRequiredPermission) {
+  public void setaRequiredPermission(List<Integer> aRequiredPermission) {
     this.aRequiredPermission = aRequiredPermission;
   }
 
 
-  public CommonResponseObjDebugPayload bVersionDeprecated(@javax.annotation.Nonnull Boolean bVersionDeprecated) {
+  public CommonResponseObjDebugPayload bVersionDeprecated(Boolean bVersionDeprecated) {
     this.bVersionDeprecated = bVersionDeprecated;
     return this;
   }
@@ -159,12 +154,12 @@ public class CommonResponseObjDebugPayload {
     return bVersionDeprecated;
   }
 
-  public void setbVersionDeprecated(@javax.annotation.Nonnull Boolean bVersionDeprecated) {
+  public void setbVersionDeprecated(Boolean bVersionDeprecated) {
     this.bVersionDeprecated = bVersionDeprecated;
   }
 
 
-  public CommonResponseObjDebugPayload dtResponseDate(@javax.annotation.Nonnull String dtResponseDate) {
+  public CommonResponseObjDebugPayload dtResponseDate(String dtResponseDate) {
     this.dtResponseDate = dtResponseDate;
     return this;
   }
@@ -178,7 +173,7 @@ public class CommonResponseObjDebugPayload {
     return dtResponseDate;
   }
 
-  public void setDtResponseDate(@javax.annotation.Nonnull String dtResponseDate) {
+  public void setDtResponseDate(String dtResponseDate) {
     this.dtResponseDate = dtResponseDate;
   }
 
@@ -263,6 +258,21 @@ public class CommonResponseObjDebugPayload {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommonResponseObjDebugPayload is not found in the empty JSON string", CommonResponseObjDebugPayload.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!CommonResponseObjDebugPayload.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommonResponseObjDebugPayload` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CommonResponseObjDebugPayload.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the required json array is present
       if (jsonObj.get("a_RequiredPermission") == null) {
@@ -275,6 +285,34 @@ public class CommonResponseObjDebugPayload {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CommonResponseObjDebugPayload.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CommonResponseObjDebugPayload' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CommonResponseObjDebugPayload> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CommonResponseObjDebugPayload.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CommonResponseObjDebugPayload>() {
+           @Override
+           public void write(JsonWriter out, CommonResponseObjDebugPayload value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CommonResponseObjDebugPayload read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of CommonResponseObjDebugPayload given an JSON string

@@ -8,7 +8,9 @@ Response for GET /1/object/ezmaxinvoicing/getProvisional
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**mPayload** | [**EzmaxinvoicingResponseCompound**](EzmaxinvoicingResponseCompound.md) | Payload for GET /1/object/ezmaxinvoicing/getProvisional |  |
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**mPayload** | [**EzmaxinvoicingGetProvisionalV1ResponseMPayload**](EzmaxinvoicingGetProvisionalV1ResponseMPayload.md) |  |  |
 
 
 

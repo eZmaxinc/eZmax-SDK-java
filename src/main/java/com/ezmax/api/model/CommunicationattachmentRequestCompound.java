@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommunicationattachmentRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,105 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationattachment Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CommunicationattachmentRequestCompound extends CommunicationattachmentRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CommunicationattachmentRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_COMMUNICATIONATTACHMENT_I_D = "pkiCommunicationattachmentID";
+  @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONATTACHMENT_I_D)
+  private Integer pkiCommunicationattachmentID;
+
+  public static final String SERIALIZED_NAME_FKI_ATTACHMENT_I_D = "fkiAttachmentID";
+  @SerializedName(SERIALIZED_NAME_FKI_ATTACHMENT_I_D)
+  private Integer fkiAttachmentID;
+
+  public static final String SERIALIZED_NAME_FKI_INVOICE_I_D = "fkiInvoiceID";
+  @SerializedName(SERIALIZED_NAME_FKI_INVOICE_I_D)
+  private Integer fkiInvoiceID;
+
+  public static final String SERIALIZED_NAME_FKI_SALARYPREPARATION_I_D = "fkiSalarypreparationID";
+  @SerializedName(SERIALIZED_NAME_FKI_SALARYPREPARATION_I_D)
+  private Integer fkiSalarypreparationID;
+
   public CommunicationattachmentRequestCompound() {
   }
+
+  public CommunicationattachmentRequestCompound pkiCommunicationattachmentID(Integer pkiCommunicationattachmentID) {
+    this.pkiCommunicationattachmentID = pkiCommunicationattachmentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Communicationattachment
+   * @return pkiCommunicationattachmentID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiCommunicationattachmentID() {
+    return pkiCommunicationattachmentID;
+  }
+
+  public void setPkiCommunicationattachmentID(Integer pkiCommunicationattachmentID) {
+    this.pkiCommunicationattachmentID = pkiCommunicationattachmentID;
+  }
+
+
+  public CommunicationattachmentRequestCompound fkiAttachmentID(Integer fkiAttachmentID) {
+    this.fkiAttachmentID = fkiAttachmentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Attachment.
+   * minimum: 0
+   * @return fkiAttachmentID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiAttachmentID() {
+    return fkiAttachmentID;
+  }
+
+  public void setFkiAttachmentID(Integer fkiAttachmentID) {
+    this.fkiAttachmentID = fkiAttachmentID;
+  }
+
+
+  public CommunicationattachmentRequestCompound fkiInvoiceID(Integer fkiInvoiceID) {
+    this.fkiInvoiceID = fkiInvoiceID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Invoice.
+   * minimum: 0
+   * @return fkiInvoiceID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiInvoiceID() {
+    return fkiInvoiceID;
+  }
+
+  public void setFkiInvoiceID(Integer fkiInvoiceID) {
+    this.fkiInvoiceID = fkiInvoiceID;
+  }
+
+
+  public CommunicationattachmentRequestCompound fkiSalarypreparationID(Integer fkiSalarypreparationID) {
+    this.fkiSalarypreparationID = fkiSalarypreparationID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Salarypreparation.
+   * minimum: 0
+   * @return fkiSalarypreparationID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiSalarypreparationID() {
+    return fkiSalarypreparationID;
+  }
+
+  public void setFkiSalarypreparationID(Integer fkiSalarypreparationID) {
+    this.fkiSalarypreparationID = fkiSalarypreparationID;
+  }
+
 
 
   @Override
@@ -63,19 +157,26 @@ public class CommunicationattachmentRequestCompound extends Communicationattachm
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    CommunicationattachmentRequestCompound communicationattachmentRequestCompound = (CommunicationattachmentRequestCompound) o;
+    return Objects.equals(this.pkiCommunicationattachmentID, communicationattachmentRequestCompound.pkiCommunicationattachmentID) &&
+        Objects.equals(this.fkiAttachmentID, communicationattachmentRequestCompound.fkiAttachmentID) &&
+        Objects.equals(this.fkiInvoiceID, communicationattachmentRequestCompound.fkiInvoiceID) &&
+        Objects.equals(this.fkiSalarypreparationID, communicationattachmentRequestCompound.fkiSalarypreparationID);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiCommunicationattachmentID, fkiAttachmentID, fkiInvoiceID, fkiSalarypreparationID);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationattachmentRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiCommunicationattachmentID: ").append(toIndentedString(pkiCommunicationattachmentID)).append("\n");
+    sb.append("    fkiAttachmentID: ").append(toIndentedString(fkiAttachmentID)).append("\n");
+    sb.append("    fkiInvoiceID: ").append(toIndentedString(fkiInvoiceID)).append("\n");
+    sb.append("    fkiSalarypreparationID: ").append(toIndentedString(fkiSalarypreparationID)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -127,6 +228,7 @@ public class CommunicationattachmentRequestCompound extends Communicationattachm
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommunicationattachmentRequestCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

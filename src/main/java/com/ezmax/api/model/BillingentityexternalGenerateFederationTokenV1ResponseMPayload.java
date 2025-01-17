@@ -49,22 +49,20 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BillingentityexternalGenerateFederationTokenV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_APIKEYFEDERATION = "objApikeyfederation";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEYFEDERATION)
-  @javax.annotation.Nonnull
   private CustomApikeyfederation objApikeyfederation;
 
   public static final String SERIALIZED_NAME_S_EZMAXCUSTOMERCODE_URL = "sEzmaxcustomercodeUrl";
   @SerializedName(SERIALIZED_NAME_S_EZMAXCUSTOMERCODE_URL)
-  @javax.annotation.Nonnull
   private String sEzmaxcustomercodeUrl;
 
   public BillingentityexternalGenerateFederationTokenV1ResponseMPayload() {
   }
 
-  public BillingentityexternalGenerateFederationTokenV1ResponseMPayload objApikeyfederation(@javax.annotation.Nonnull CustomApikeyfederation objApikeyfederation) {
+  public BillingentityexternalGenerateFederationTokenV1ResponseMPayload objApikeyfederation(CustomApikeyfederation objApikeyfederation) {
     this.objApikeyfederation = objApikeyfederation;
     return this;
   }
@@ -78,12 +76,12 @@ public class BillingentityexternalGenerateFederationTokenV1ResponseMPayload {
     return objApikeyfederation;
   }
 
-  public void setObjApikeyfederation(@javax.annotation.Nonnull CustomApikeyfederation objApikeyfederation) {
+  public void setObjApikeyfederation(CustomApikeyfederation objApikeyfederation) {
     this.objApikeyfederation = objApikeyfederation;
   }
 
 
-  public BillingentityexternalGenerateFederationTokenV1ResponseMPayload sEzmaxcustomercodeUrl(@javax.annotation.Nonnull String sEzmaxcustomercodeUrl) {
+  public BillingentityexternalGenerateFederationTokenV1ResponseMPayload sEzmaxcustomercodeUrl(String sEzmaxcustomercodeUrl) {
     this.sEzmaxcustomercodeUrl = sEzmaxcustomercodeUrl;
     return this;
   }
@@ -97,7 +95,7 @@ public class BillingentityexternalGenerateFederationTokenV1ResponseMPayload {
     return sEzmaxcustomercodeUrl;
   }
 
-  public void setsEzmaxcustomercodeUrl(@javax.annotation.Nonnull String sEzmaxcustomercodeUrl) {
+  public void setsEzmaxcustomercodeUrl(String sEzmaxcustomercodeUrl) {
     this.sEzmaxcustomercodeUrl = sEzmaxcustomercodeUrl;
   }
 

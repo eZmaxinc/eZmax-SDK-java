@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Period AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PeriodAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_PERIOD_Y_Y_Y_Y_M_M = "sPeriodYYYYMM";
   @SerializedName(SERIALIZED_NAME_S_PERIOD_Y_Y_Y_Y_M_M)
-  @javax.annotation.Nonnull
   private String sPeriodYYYYMM;
 
   public static final String SERIALIZED_NAME_PKI_PERIOD_I_D = "pkiPeriodID";
   @SerializedName(SERIALIZED_NAME_PKI_PERIOD_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiPeriodID;
 
   public static final String SERIALIZED_NAME_B_PERIOD_ISACTIVE = "bPeriodIsactive";
   @SerializedName(SERIALIZED_NAME_B_PERIOD_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bPeriodIsactive;
 
   public PeriodAutocompleteElementResponse() {
   }
 
-  public PeriodAutocompleteElementResponse sPeriodYYYYMM(@javax.annotation.Nonnull String sPeriodYYYYMM) {
+  public PeriodAutocompleteElementResponse sPeriodYYYYMM(String sPeriodYYYYMM) {
     this.sPeriodYYYYMM = sPeriodYYYYMM;
     return this;
   }
@@ -82,12 +79,12 @@ public class PeriodAutocompleteElementResponse {
     return sPeriodYYYYMM;
   }
 
-  public void setsPeriodYYYYMM(@javax.annotation.Nonnull String sPeriodYYYYMM) {
+  public void setsPeriodYYYYMM(String sPeriodYYYYMM) {
     this.sPeriodYYYYMM = sPeriodYYYYMM;
   }
 
 
-  public PeriodAutocompleteElementResponse pkiPeriodID(@javax.annotation.Nonnull Integer pkiPeriodID) {
+  public PeriodAutocompleteElementResponse pkiPeriodID(Integer pkiPeriodID) {
     this.pkiPeriodID = pkiPeriodID;
     return this;
   }
@@ -102,12 +99,12 @@ public class PeriodAutocompleteElementResponse {
     return pkiPeriodID;
   }
 
-  public void setPkiPeriodID(@javax.annotation.Nonnull Integer pkiPeriodID) {
+  public void setPkiPeriodID(Integer pkiPeriodID) {
     this.pkiPeriodID = pkiPeriodID;
   }
 
 
-  public PeriodAutocompleteElementResponse bPeriodIsactive(@javax.annotation.Nonnull Boolean bPeriodIsactive) {
+  public PeriodAutocompleteElementResponse bPeriodIsactive(Boolean bPeriodIsactive) {
     this.bPeriodIsactive = bPeriodIsactive;
     return this;
   }
@@ -121,7 +118,7 @@ public class PeriodAutocompleteElementResponse {
     return bPeriodIsactive;
   }
 
-  public void setbPeriodIsactive(@javax.annotation.Nonnull Boolean bPeriodIsactive) {
+  public void setbPeriodIsactive(Boolean bPeriodIsactive) {
     this.bPeriodIsactive = bPeriodIsactive;
   }
 

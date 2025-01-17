@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplatepublic/getEzsigntemplatepublicDetails
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request {
   public static final String SERIALIZED_NAME_PKS_EZMAXCUSTOMER_CODE = "pksEzmaxcustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_EZMAXCUSTOMER_CODE)
-  @javax.annotation.Nonnull
   private String pksEzmaxcustomerCode;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_REFERENCEID = "sEzsigntemplatepublicReferenceid";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_REFERENCEID)
-  @javax.annotation.Nonnull
   private String sEzsigntemplatepublicReferenceid;
 
   public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request() {
   }
 
-  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request pksEzmaxcustomerCode(@javax.annotation.Nonnull String pksEzmaxcustomerCode) {
+  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request pksEzmaxcustomerCode(String pksEzmaxcustomerCode) {
     this.pksEzmaxcustomerCode = pksEzmaxcustomerCode;
     return this;
   }
@@ -77,12 +75,12 @@ public class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request {
     return pksEzmaxcustomerCode;
   }
 
-  public void setPksEzmaxcustomerCode(@javax.annotation.Nonnull String pksEzmaxcustomerCode) {
+  public void setPksEzmaxcustomerCode(String pksEzmaxcustomerCode) {
     this.pksEzmaxcustomerCode = pksEzmaxcustomerCode;
   }
 
 
-  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request sEzsigntemplatepublicReferenceid(@javax.annotation.Nonnull String sEzsigntemplatepublicReferenceid) {
+  public EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request sEzsigntemplatepublicReferenceid(String sEzsigntemplatepublicReferenceid) {
     this.sEzsigntemplatepublicReferenceid = sEzsigntemplatepublicReferenceid;
     return this;
   }
@@ -96,7 +94,7 @@ public class EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request {
     return sEzsigntemplatepublicReferenceid;
   }
 
-  public void setsEzsigntemplatepublicReferenceid(@javax.annotation.Nonnull String sEzsigntemplatepublicReferenceid) {
+  public void setsEzsigntemplatepublicReferenceid(String sEzsigntemplatepublicReferenceid) {
     this.sEzsigntemplatepublicReferenceid = sEzsigntemplatepublicReferenceid;
   }
 

@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/authenticationexternal/{pkiAuthenticationexternalID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AuthenticationexternalGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_AUTHENTICATIONEXTERNAL = "objAuthenticationexternal";
   @SerializedName(SERIALIZED_NAME_OBJ_AUTHENTICATIONEXTERNAL)
-  @javax.annotation.Nonnull
   private AuthenticationexternalResponseCompound objAuthenticationexternal;
 
   public AuthenticationexternalGetObjectV2ResponseMPayload() {
   }
 
-  public AuthenticationexternalGetObjectV2ResponseMPayload objAuthenticationexternal(@javax.annotation.Nonnull AuthenticationexternalResponseCompound objAuthenticationexternal) {
+  public AuthenticationexternalGetObjectV2ResponseMPayload objAuthenticationexternal(AuthenticationexternalResponseCompound objAuthenticationexternal) {
     this.objAuthenticationexternal = objAuthenticationexternal;
     return this;
   }
@@ -73,7 +72,7 @@ public class AuthenticationexternalGetObjectV2ResponseMPayload {
     return objAuthenticationexternal;
   }
 
-  public void setObjAuthenticationexternal(@javax.annotation.Nonnull AuthenticationexternalResponseCompound objAuthenticationexternal) {
+  public void setObjAuthenticationexternal(AuthenticationexternalResponseCompound objAuthenticationexternal) {
     this.objAuthenticationexternal = objAuthenticationexternal;
   }
 

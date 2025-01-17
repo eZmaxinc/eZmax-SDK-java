@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/paymentterm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PaymenttermCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_PAYMENTTERM = "a_objPaymentterm";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PAYMENTTERM)
-  @javax.annotation.Nonnull
   private List<PaymenttermRequestCompound> aObjPaymentterm = new ArrayList<>();
 
   public PaymenttermCreateObjectV1Request() {
   }
 
-  public PaymenttermCreateObjectV1Request aObjPaymentterm(@javax.annotation.Nonnull List<PaymenttermRequestCompound> aObjPaymentterm) {
+  public PaymenttermCreateObjectV1Request aObjPaymentterm(List<PaymenttermRequestCompound> aObjPaymentterm) {
     this.aObjPaymentterm = aObjPaymentterm;
     return this;
   }
@@ -83,7 +82,7 @@ public class PaymenttermCreateObjectV1Request {
     return aObjPaymentterm;
   }
 
-  public void setaObjPaymentterm(@javax.annotation.Nonnull List<PaymenttermRequestCompound> aObjPaymentterm) {
+  public void setaObjPaymentterm(List<PaymenttermRequestCompound> aObjPaymentterm) {
     this.aObjPaymentterm = aObjPaymentterm;
   }
 

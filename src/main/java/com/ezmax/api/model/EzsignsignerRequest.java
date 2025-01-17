@@ -48,21 +48,18 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignerRequest {
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserlogintypeID;
 
   public static final String SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D = "fkiTaxassignmentID";
   @SerializedName(SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiTaxassignmentID;
 
   public static final String SERIALIZED_NAME_FKI_SECRETQUESTION_I_D = "fkiSecretquestionID";
   @SerializedName(SERIALIZED_NAME_FKI_SECRETQUESTION_I_D)
-  @javax.annotation.Nullable
   private Integer fkiSecretquestionID;
 
   /**
@@ -126,18 +123,16 @@ public class EzsignsignerRequest {
   public static final String SERIALIZED_NAME_E_EZSIGNSIGNER_LOGINTYPE = "eEzsignsignerLogintype";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNER_LOGINTYPE)
-  @javax.annotation.Nullable
   private EEzsignsignerLogintypeEnum eEzsignsignerLogintype;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNER_SECRETANSWER = "sEzsignsignerSecretanswer";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNER_SECRETANSWER)
-  @javax.annotation.Nullable
   private String sEzsignsignerSecretanswer;
 
   public EzsignsignerRequest() {
   }
 
-  public EzsignsignerRequest fkiUserlogintypeID(@javax.annotation.Nullable Integer fkiUserlogintypeID) {
+  public EzsignsignerRequest fkiUserlogintypeID(Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
@@ -152,12 +147,12 @@ public class EzsignsignerRequest {
     return fkiUserlogintypeID;
   }
 
-  public void setFkiUserlogintypeID(@javax.annotation.Nullable Integer fkiUserlogintypeID) {
+  public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
-  public EzsignsignerRequest fkiTaxassignmentID(@javax.annotation.Nonnull Integer fkiTaxassignmentID) {
+  public EzsignsignerRequest fkiTaxassignmentID(Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
     return this;
   }
@@ -173,12 +168,12 @@ public class EzsignsignerRequest {
     return fkiTaxassignmentID;
   }
 
-  public void setFkiTaxassignmentID(@javax.annotation.Nonnull Integer fkiTaxassignmentID) {
+  public void setFkiTaxassignmentID(Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
   }
 
 
-  public EzsignsignerRequest fkiSecretquestionID(@javax.annotation.Nullable Integer fkiSecretquestionID) {
+  public EzsignsignerRequest fkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
     return this;
   }
@@ -193,13 +188,13 @@ public class EzsignsignerRequest {
     return fkiSecretquestionID;
   }
 
-  public void setFkiSecretquestionID(@javax.annotation.Nullable Integer fkiSecretquestionID) {
+  public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
   }
 
 
   @Deprecated
-  public EzsignsignerRequest eEzsignsignerLogintype(@javax.annotation.Nullable EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
+  public EzsignsignerRequest eEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
     this.eEzsignsignerLogintype = eEzsignsignerLogintype;
     return this;
   }
@@ -216,12 +211,12 @@ public class EzsignsignerRequest {
   }
 
   @Deprecated
-  public void seteEzsignsignerLogintype(@javax.annotation.Nullable EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
+  public void seteEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
     this.eEzsignsignerLogintype = eEzsignsignerLogintype;
   }
 
 
-  public EzsignsignerRequest sEzsignsignerSecretanswer(@javax.annotation.Nullable String sEzsignsignerSecretanswer) {
+  public EzsignsignerRequest sEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
     this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
     return this;
   }
@@ -235,7 +230,7 @@ public class EzsignsignerRequest {
     return sEzsignsignerSecretanswer;
   }
 
-  public void setsEzsignsignerSecretanswer(@javax.annotation.Nullable String sEzsignsignerSecretanswer) {
+  public void setsEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
     this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
   }
 
@@ -316,6 +311,21 @@ public class EzsignsignerRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignerRequest is not found in the empty JSON string", EzsignsignerRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsignsignerRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignsignerRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignsignerRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("eEzsignsignerLogintype") != null && !jsonObj.get("eEzsignsignerLogintype").isJsonNull()) && !jsonObj.get("eEzsignsignerLogintype").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eEzsignsignerLogintype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzsignsignerLogintype").toString()));
@@ -329,6 +339,34 @@ public class EzsignsignerRequest {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignsignerRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignsignerRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignsignerRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignsignerRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignsignerRequest>() {
+           @Override
+           public void write(JsonWriter out, EzsignsignerRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignsignerRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsignsignerRequest given an JSON string

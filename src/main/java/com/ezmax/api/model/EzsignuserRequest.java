@@ -49,27 +49,24 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignuser Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignuserRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNUSER_I_D = "pkiEzsignuserID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNUSER_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzsignuserID;
 
   public static final String SERIALIZED_NAME_FKI_CONTACT_I_D = "fkiContactID";
   @SerializedName(SERIALIZED_NAME_FKI_CONTACT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiContactID;
 
   public static final String SERIALIZED_NAME_OBJ_CONTACT = "objContact";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT)
-  @javax.annotation.Nonnull
   private ContactRequestCompoundV2 objContact;
 
   public EzsignuserRequest() {
   }
 
-  public EzsignuserRequest pkiEzsignuserID(@javax.annotation.Nullable Integer pkiEzsignuserID) {
+  public EzsignuserRequest pkiEzsignuserID(Integer pkiEzsignuserID) {
     this.pkiEzsignuserID = pkiEzsignuserID;
     return this;
   }
@@ -85,12 +82,12 @@ public class EzsignuserRequest {
     return pkiEzsignuserID;
   }
 
-  public void setPkiEzsignuserID(@javax.annotation.Nullable Integer pkiEzsignuserID) {
+  public void setPkiEzsignuserID(Integer pkiEzsignuserID) {
     this.pkiEzsignuserID = pkiEzsignuserID;
   }
 
 
-  public EzsignuserRequest fkiContactID(@javax.annotation.Nonnull Integer fkiContactID) {
+  public EzsignuserRequest fkiContactID(Integer fkiContactID) {
     this.fkiContactID = fkiContactID;
     return this;
   }
@@ -105,12 +102,12 @@ public class EzsignuserRequest {
     return fkiContactID;
   }
 
-  public void setFkiContactID(@javax.annotation.Nonnull Integer fkiContactID) {
+  public void setFkiContactID(Integer fkiContactID) {
     this.fkiContactID = fkiContactID;
   }
 
 
-  public EzsignuserRequest objContact(@javax.annotation.Nonnull ContactRequestCompoundV2 objContact) {
+  public EzsignuserRequest objContact(ContactRequestCompoundV2 objContact) {
     this.objContact = objContact;
     return this;
   }
@@ -124,7 +121,7 @@ public class EzsignuserRequest {
     return objContact;
   }
 
-  public void setObjContact(@javax.annotation.Nonnull ContactRequestCompoundV2 objContact) {
+  public void setObjContact(ContactRequestCompoundV2 objContact) {
     this.objContact = objContact;
   }
 
@@ -200,11 +197,54 @@ public class EzsignuserRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignuserRequest is not found in the empty JSON string", EzsignuserRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsignuserRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignuserRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignuserRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objContact`
       ContactRequestCompoundV2.validateJsonElement(jsonObj.get("objContact"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignuserRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignuserRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignuserRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignuserRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignuserRequest>() {
+           @Override
+           public void write(JsonWriter out, EzsignuserRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignuserRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsignuserRequest given an JSON string

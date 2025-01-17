@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * Name of the Notificationsubsection
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualNotificationsubsectionName {
   public static final String SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME1 = "sNotificationsubsectionName1";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME1)
-  @javax.annotation.Nullable
   private String sNotificationsubsectionName1;
 
   public static final String SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME2 = "sNotificationsubsectionName2";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME2)
-  @javax.annotation.Nullable
   private String sNotificationsubsectionName2;
 
   public MultilingualNotificationsubsectionName() {
   }
 
-  public MultilingualNotificationsubsectionName sNotificationsubsectionName1(@javax.annotation.Nullable String sNotificationsubsectionName1) {
+  public MultilingualNotificationsubsectionName sNotificationsubsectionName1(String sNotificationsubsectionName1) {
     this.sNotificationsubsectionName1 = sNotificationsubsectionName1;
     return this;
   }
@@ -77,12 +75,12 @@ public class MultilingualNotificationsubsectionName {
     return sNotificationsubsectionName1;
   }
 
-  public void setsNotificationsubsectionName1(@javax.annotation.Nullable String sNotificationsubsectionName1) {
+  public void setsNotificationsubsectionName1(String sNotificationsubsectionName1) {
     this.sNotificationsubsectionName1 = sNotificationsubsectionName1;
   }
 
 
-  public MultilingualNotificationsubsectionName sNotificationsubsectionName2(@javax.annotation.Nullable String sNotificationsubsectionName2) {
+  public MultilingualNotificationsubsectionName sNotificationsubsectionName2(String sNotificationsubsectionName2) {
     this.sNotificationsubsectionName2 = sNotificationsubsectionName2;
     return this;
   }
@@ -96,7 +94,7 @@ public class MultilingualNotificationsubsectionName {
     return sNotificationsubsectionName2;
   }
 
-  public void setsNotificationsubsectionName2(@javax.annotation.Nullable String sNotificationsubsectionName2) {
+  public void setsNotificationsubsectionName2(String sNotificationsubsectionName2) {
     this.sNotificationsubsectionName2 = sNotificationsubsectionName2;
   }
 

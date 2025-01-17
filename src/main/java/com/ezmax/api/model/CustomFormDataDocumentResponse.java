@@ -51,37 +51,32 @@ import eZmaxAPI.JSON;
 /**
  * A form Data Document Object 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomFormDataDocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME = "sEzsigndocumentName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME)
-  @javax.annotation.Nonnull
   private String sEzsigndocumentName;
 
   public static final String SERIALIZED_NAME_DT_MODIFIED_DATE = "dtModifiedDate";
   @SerializedName(SERIALIZED_NAME_DT_MODIFIED_DATE)
-  @javax.annotation.Nonnull
   private String dtModifiedDate;
 
   public static final String SERIALIZED_NAME_A_OBJ_FORM_DATA_SIGNER = "a_objFormDataSigner";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FORM_DATA_SIGNER)
-  @javax.annotation.Nonnull
   private List<CustomFormDataSignerResponse> aObjFormDataSigner = new ArrayList<>();
 
   public CustomFormDataDocumentResponse() {
   }
 
-  public CustomFormDataDocumentResponse pkiEzsigndocumentID(@javax.annotation.Nonnull Integer pkiEzsigndocumentID) {
+  public CustomFormDataDocumentResponse pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
     return this;
   }
@@ -96,12 +91,12 @@ public class CustomFormDataDocumentResponse {
     return pkiEzsigndocumentID;
   }
 
-  public void setPkiEzsigndocumentID(@javax.annotation.Nonnull Integer pkiEzsigndocumentID) {
+  public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
   }
 
 
-  public CustomFormDataDocumentResponse fkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
+  public CustomFormDataDocumentResponse fkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -116,12 +111,12 @@ public class CustomFormDataDocumentResponse {
     return fkiEzsignfolderID;
   }
 
-  public void setFkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
+  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
-  public CustomFormDataDocumentResponse sEzsigndocumentName(@javax.annotation.Nonnull String sEzsigndocumentName) {
+  public CustomFormDataDocumentResponse sEzsigndocumentName(String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
     return this;
   }
@@ -135,12 +130,12 @@ public class CustomFormDataDocumentResponse {
     return sEzsigndocumentName;
   }
 
-  public void setsEzsigndocumentName(@javax.annotation.Nonnull String sEzsigndocumentName) {
+  public void setsEzsigndocumentName(String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
   }
 
 
-  public CustomFormDataDocumentResponse dtModifiedDate(@javax.annotation.Nonnull String dtModifiedDate) {
+  public CustomFormDataDocumentResponse dtModifiedDate(String dtModifiedDate) {
     this.dtModifiedDate = dtModifiedDate;
     return this;
   }
@@ -154,12 +149,12 @@ public class CustomFormDataDocumentResponse {
     return dtModifiedDate;
   }
 
-  public void setDtModifiedDate(@javax.annotation.Nonnull String dtModifiedDate) {
+  public void setDtModifiedDate(String dtModifiedDate) {
     this.dtModifiedDate = dtModifiedDate;
   }
 
 
-  public CustomFormDataDocumentResponse aObjFormDataSigner(@javax.annotation.Nonnull List<CustomFormDataSignerResponse> aObjFormDataSigner) {
+  public CustomFormDataDocumentResponse aObjFormDataSigner(List<CustomFormDataSignerResponse> aObjFormDataSigner) {
     this.aObjFormDataSigner = aObjFormDataSigner;
     return this;
   }
@@ -181,7 +176,7 @@ public class CustomFormDataDocumentResponse {
     return aObjFormDataSigner;
   }
 
-  public void setaObjFormDataSigner(@javax.annotation.Nonnull List<CustomFormDataSignerResponse> aObjFormDataSigner) {
+  public void setaObjFormDataSigner(List<CustomFormDataSignerResponse> aObjFormDataSigner) {
     this.aObjFormDataSigner = aObjFormDataSigner;
   }
 

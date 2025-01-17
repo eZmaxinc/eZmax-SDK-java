@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsignfolder/{pkiEzsignfolder}/importEzsignfoldersignerassociations
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "a_pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsignfoldersignerassociationID = new ArrayList<>();
 
   public EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload() {
   }
 
-  public EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload aPkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull List<Integer> aPkiEzsignfoldersignerassociationID) {
+  public EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload aPkiEzsignfoldersignerassociationID(List<Integer> aPkiEzsignfoldersignerassociationID) {
     this.aPkiEzsignfoldersignerassociationID = aPkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -82,7 +81,7 @@ public class EzsignfolderImportEzsignfoldersignerassociationsV1ResponseMPayload 
     return aPkiEzsignfoldersignerassociationID;
   }
 
-  public void setaPkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull List<Integer> aPkiEzsignfoldersignerassociationID) {
+  public void setaPkiEzsignfoldersignerassociationID(List<Integer> aPkiEzsignfoldersignerassociationID) {
     this.aPkiEzsignfoldersignerassociationID = aPkiEzsignfoldersignerassociationID;
   }
 

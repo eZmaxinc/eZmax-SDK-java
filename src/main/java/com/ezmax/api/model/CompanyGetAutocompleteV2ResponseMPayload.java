@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/company/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CompanyGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COMPANY = "a_objCompany";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMPANY)
-  @javax.annotation.Nonnull
   private List<CompanyAutocompleteElementResponse> aObjCompany = new ArrayList<>();
 
   public CompanyGetAutocompleteV2ResponseMPayload() {
   }
 
-  public CompanyGetAutocompleteV2ResponseMPayload aObjCompany(@javax.annotation.Nonnull List<CompanyAutocompleteElementResponse> aObjCompany) {
+  public CompanyGetAutocompleteV2ResponseMPayload aObjCompany(List<CompanyAutocompleteElementResponse> aObjCompany) {
     this.aObjCompany = aObjCompany;
     return this;
   }
@@ -83,7 +82,7 @@ public class CompanyGetAutocompleteV2ResponseMPayload {
     return aObjCompany;
   }
 
-  public void setaObjCompany(@javax.annotation.Nonnull List<CompanyAutocompleteElementResponse> aObjCompany) {
+  public void setaObjCompany(List<CompanyAutocompleteElementResponse> aObjCompany) {
     this.aObjCompany = aObjCompany;
   }
 

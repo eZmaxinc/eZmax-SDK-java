@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Glaccountcontainer AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GlaccountcontainerAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_GLACCOUNTCONTAINER_I_D = "pkiGlaccountcontainerID";
   @SerializedName(SERIALIZED_NAME_PKI_GLACCOUNTCONTAINER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiGlaccountcontainerID;
 
   public static final String SERIALIZED_NAME_S_GLACCOUNTCONTAINER_LONGCODE = "sGlaccountcontainerLongcode";
   @SerializedName(SERIALIZED_NAME_S_GLACCOUNTCONTAINER_LONGCODE)
-  @javax.annotation.Nonnull
   private String sGlaccountcontainerLongcode;
 
   public static final String SERIALIZED_NAME_S_GLACCOUNTCONTAINER_LONGDESCRIPTION_X = "sGlaccountcontainerLongdescriptionX";
   @SerializedName(SERIALIZED_NAME_S_GLACCOUNTCONTAINER_LONGDESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sGlaccountcontainerLongdescriptionX;
 
   public static final String SERIALIZED_NAME_B_GLACCOUNTCONTAINER_ISACTIVE = "bGlaccountcontainerIsactive";
   @SerializedName(SERIALIZED_NAME_B_GLACCOUNTCONTAINER_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bGlaccountcontainerIsactive;
 
   public GlaccountcontainerAutocompleteElementResponse() {
   }
 
-  public GlaccountcontainerAutocompleteElementResponse pkiGlaccountcontainerID(@javax.annotation.Nonnull Integer pkiGlaccountcontainerID) {
+  public GlaccountcontainerAutocompleteElementResponse pkiGlaccountcontainerID(Integer pkiGlaccountcontainerID) {
     this.pkiGlaccountcontainerID = pkiGlaccountcontainerID;
     return this;
   }
@@ -88,12 +84,12 @@ public class GlaccountcontainerAutocompleteElementResponse {
     return pkiGlaccountcontainerID;
   }
 
-  public void setPkiGlaccountcontainerID(@javax.annotation.Nonnull Integer pkiGlaccountcontainerID) {
+  public void setPkiGlaccountcontainerID(Integer pkiGlaccountcontainerID) {
     this.pkiGlaccountcontainerID = pkiGlaccountcontainerID;
   }
 
 
-  public GlaccountcontainerAutocompleteElementResponse sGlaccountcontainerLongcode(@javax.annotation.Nonnull String sGlaccountcontainerLongcode) {
+  public GlaccountcontainerAutocompleteElementResponse sGlaccountcontainerLongcode(String sGlaccountcontainerLongcode) {
     this.sGlaccountcontainerLongcode = sGlaccountcontainerLongcode;
     return this;
   }
@@ -107,12 +103,12 @@ public class GlaccountcontainerAutocompleteElementResponse {
     return sGlaccountcontainerLongcode;
   }
 
-  public void setsGlaccountcontainerLongcode(@javax.annotation.Nonnull String sGlaccountcontainerLongcode) {
+  public void setsGlaccountcontainerLongcode(String sGlaccountcontainerLongcode) {
     this.sGlaccountcontainerLongcode = sGlaccountcontainerLongcode;
   }
 
 
-  public GlaccountcontainerAutocompleteElementResponse sGlaccountcontainerLongdescriptionX(@javax.annotation.Nonnull String sGlaccountcontainerLongdescriptionX) {
+  public GlaccountcontainerAutocompleteElementResponse sGlaccountcontainerLongdescriptionX(String sGlaccountcontainerLongdescriptionX) {
     this.sGlaccountcontainerLongdescriptionX = sGlaccountcontainerLongdescriptionX;
     return this;
   }
@@ -126,12 +122,12 @@ public class GlaccountcontainerAutocompleteElementResponse {
     return sGlaccountcontainerLongdescriptionX;
   }
 
-  public void setsGlaccountcontainerLongdescriptionX(@javax.annotation.Nonnull String sGlaccountcontainerLongdescriptionX) {
+  public void setsGlaccountcontainerLongdescriptionX(String sGlaccountcontainerLongdescriptionX) {
     this.sGlaccountcontainerLongdescriptionX = sGlaccountcontainerLongdescriptionX;
   }
 
 
-  public GlaccountcontainerAutocompleteElementResponse bGlaccountcontainerIsactive(@javax.annotation.Nonnull Boolean bGlaccountcontainerIsactive) {
+  public GlaccountcontainerAutocompleteElementResponse bGlaccountcontainerIsactive(Boolean bGlaccountcontainerIsactive) {
     this.bGlaccountcontainerIsactive = bGlaccountcontainerIsactive;
     return this;
   }
@@ -145,7 +141,7 @@ public class GlaccountcontainerAutocompleteElementResponse {
     return bGlaccountcontainerIsactive;
   }
 
-  public void setbGlaccountcontainerIsactive(@javax.annotation.Nonnull Boolean bGlaccountcontainerIsactive) {
+  public void setbGlaccountcontainerIsactive(Boolean bGlaccountcontainerIsactive) {
     this.bGlaccountcontainerIsactive = bGlaccountcontainerIsactive;
   }
 

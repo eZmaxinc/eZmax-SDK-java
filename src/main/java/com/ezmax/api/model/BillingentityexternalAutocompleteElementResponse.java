@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityexternal AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BillingentityexternalAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYEXTERNAL_I_D = "pkiBillingentityexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYEXTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiBillingentityexternalID;
 
   public static final String SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION = "sBillingentityexternalDescription";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sBillingentityexternalDescription;
 
   public static final String SERIALIZED_NAME_B_BILLINGENTITYEXTERNAL_ISACTIVE = "bBillingentityexternalIsactive";
   @SerializedName(SERIALIZED_NAME_B_BILLINGENTITYEXTERNAL_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bBillingentityexternalIsactive;
 
   public BillingentityexternalAutocompleteElementResponse() {
   }
 
-  public BillingentityexternalAutocompleteElementResponse pkiBillingentityexternalID(@javax.annotation.Nonnull Integer pkiBillingentityexternalID) {
+  public BillingentityexternalAutocompleteElementResponse pkiBillingentityexternalID(Integer pkiBillingentityexternalID) {
     this.pkiBillingentityexternalID = pkiBillingentityexternalID;
     return this;
   }
@@ -83,12 +80,12 @@ public class BillingentityexternalAutocompleteElementResponse {
     return pkiBillingentityexternalID;
   }
 
-  public void setPkiBillingentityexternalID(@javax.annotation.Nonnull Integer pkiBillingentityexternalID) {
+  public void setPkiBillingentityexternalID(Integer pkiBillingentityexternalID) {
     this.pkiBillingentityexternalID = pkiBillingentityexternalID;
   }
 
 
-  public BillingentityexternalAutocompleteElementResponse sBillingentityexternalDescription(@javax.annotation.Nonnull String sBillingentityexternalDescription) {
+  public BillingentityexternalAutocompleteElementResponse sBillingentityexternalDescription(String sBillingentityexternalDescription) {
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;
     return this;
   }
@@ -102,12 +99,12 @@ public class BillingentityexternalAutocompleteElementResponse {
     return sBillingentityexternalDescription;
   }
 
-  public void setsBillingentityexternalDescription(@javax.annotation.Nonnull String sBillingentityexternalDescription) {
+  public void setsBillingentityexternalDescription(String sBillingentityexternalDescription) {
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;
   }
 
 
-  public BillingentityexternalAutocompleteElementResponse bBillingentityexternalIsactive(@javax.annotation.Nonnull Boolean bBillingentityexternalIsactive) {
+  public BillingentityexternalAutocompleteElementResponse bBillingentityexternalIsactive(Boolean bBillingentityexternalIsactive) {
     this.bBillingentityexternalIsactive = bBillingentityexternalIsactive;
     return this;
   }
@@ -121,7 +118,7 @@ public class BillingentityexternalAutocompleteElementResponse {
     return bBillingentityexternalIsactive;
   }
 
-  public void setbBillingentityexternalIsactive(@javax.annotation.Nonnull Boolean bBillingentityexternalIsactive) {
+  public void setbBillingentityexternalIsactive(Boolean bBillingentityexternalIsactive) {
     this.bBillingentityexternalIsactive = bBillingentityexternalIsactive;
   }
 

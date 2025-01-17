@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * The object used in /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage Request
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomImportEzsigntemplatepackageRelationRequest {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D = "fkiEzsigntemplatepackagesignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsigntemplatepackagesignerID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldersignerassociationID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPACKAGESIGNER_DESCRIPTION = "sEzsigntemplatepackagesignerDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPACKAGESIGNER_DESCRIPTION)
-  @javax.annotation.Nullable
   private String sEzsigntemplatepackagesignerDescription;
 
   public CustomImportEzsigntemplatepackageRelationRequest() {
   }
 
-  public CustomImportEzsigntemplatepackageRelationRequest fkiEzsigntemplatepackagesignerID(@javax.annotation.Nullable Integer fkiEzsigntemplatepackagesignerID) {
+  public CustomImportEzsigntemplatepackageRelationRequest fkiEzsigntemplatepackagesignerID(Integer fkiEzsigntemplatepackagesignerID) {
     this.fkiEzsigntemplatepackagesignerID = fkiEzsigntemplatepackagesignerID;
     return this;
   }
@@ -83,12 +80,12 @@ public class CustomImportEzsigntemplatepackageRelationRequest {
     return fkiEzsigntemplatepackagesignerID;
   }
 
-  public void setFkiEzsigntemplatepackagesignerID(@javax.annotation.Nullable Integer fkiEzsigntemplatepackagesignerID) {
+  public void setFkiEzsigntemplatepackagesignerID(Integer fkiEzsigntemplatepackagesignerID) {
     this.fkiEzsigntemplatepackagesignerID = fkiEzsigntemplatepackagesignerID;
   }
 
 
-  public CustomImportEzsigntemplatepackageRelationRequest fkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Integer fkiEzsignfoldersignerassociationID) {
+  public CustomImportEzsigntemplatepackageRelationRequest fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -103,12 +100,12 @@ public class CustomImportEzsigntemplatepackageRelationRequest {
     return fkiEzsignfoldersignerassociationID;
   }
 
-  public void setFkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Integer fkiEzsignfoldersignerassociationID) {
+  public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
   }
 
 
-  public CustomImportEzsigntemplatepackageRelationRequest sEzsigntemplatepackagesignerDescription(@javax.annotation.Nullable String sEzsigntemplatepackagesignerDescription) {
+  public CustomImportEzsigntemplatepackageRelationRequest sEzsigntemplatepackagesignerDescription(String sEzsigntemplatepackagesignerDescription) {
     this.sEzsigntemplatepackagesignerDescription = sEzsigntemplatepackagesignerDescription;
     return this;
   }
@@ -122,7 +119,7 @@ public class CustomImportEzsigntemplatepackageRelationRequest {
     return sEzsigntemplatepackagesignerDescription;
   }
 
-  public void setsEzsigntemplatepackagesignerDescription(@javax.annotation.Nullable String sEzsigntemplatepackagesignerDescription) {
+  public void setsEzsigntemplatepackagesignerDescription(String sEzsigntemplatepackagesignerDescription) {
     this.sEzsigntemplatepackagesignerDescription = sEzsigntemplatepackagesignerDescription;
   }
 

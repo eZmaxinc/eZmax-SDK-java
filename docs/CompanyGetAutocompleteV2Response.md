@@ -8,6 +8,8 @@ Response for GET /2/object/company/getAutocomplete
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**CompanyGetAutocompleteV2ResponseMPayload**](CompanyGetAutocompleteV2ResponseMPayload.md) |  |  |
 
 

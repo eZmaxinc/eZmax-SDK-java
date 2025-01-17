@@ -49,27 +49,24 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsignergroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignergroupRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D = "pkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUP_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzsignsignergroupID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP_DESCRIPTION = "objEzsignsignergroupDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription;
 
   public EzsignsignergroupRequest() {
   }
 
-  public EzsignsignergroupRequest pkiEzsignsignergroupID(@javax.annotation.Nullable Integer pkiEzsignsignergroupID) {
+  public EzsignsignergroupRequest pkiEzsignsignergroupID(Integer pkiEzsignsignergroupID) {
     this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
     return this;
   }
@@ -85,12 +82,12 @@ public class EzsignsignergroupRequest {
     return pkiEzsignsignergroupID;
   }
 
-  public void setPkiEzsignsignergroupID(@javax.annotation.Nullable Integer pkiEzsignsignergroupID) {
+  public void setPkiEzsignsignergroupID(Integer pkiEzsignsignergroupID) {
     this.pkiEzsignsignergroupID = pkiEzsignsignergroupID;
   }
 
 
-  public EzsignsignergroupRequest fkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
+  public EzsignsignergroupRequest fkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -105,12 +102,12 @@ public class EzsignsignergroupRequest {
     return fkiEzsignfolderID;
   }
 
-  public void setFkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
+  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
-  public EzsignsignergroupRequest objEzsignsignergroupDescription(@javax.annotation.Nonnull MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
+  public EzsignsignergroupRequest objEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
     this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
     return this;
   }
@@ -124,7 +121,7 @@ public class EzsignsignergroupRequest {
     return objEzsignsignergroupDescription;
   }
 
-  public void setObjEzsignsignergroupDescription(@javax.annotation.Nonnull MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
+  public void setObjEzsignsignergroupDescription(MultilingualEzsignsignergroupDescription objEzsignsignergroupDescription) {
     this.objEzsignsignergroupDescription = objEzsignsignergroupDescription;
   }
 
@@ -200,11 +197,54 @@ public class EzsignsignergroupRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignsignergroupRequest is not found in the empty JSON string", EzsignsignergroupRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsignsignergroupRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignsignergroupRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignsignergroupRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objEzsignsignergroupDescription`
       MultilingualEzsignsignergroupDescription.validateJsonElement(jsonObj.get("objEzsignsignergroupDescription"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignsignergroupRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignsignergroupRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignsignergroupRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignsignergroupRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignsignergroupRequest>() {
+           @Override
+           public void write(JsonWriter out, EzsignsignergroupRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignsignergroupRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsignsignergroupRequest given an JSON string

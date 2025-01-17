@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Signature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SignatureResponse {
   public static final String SERIALIZED_NAME_PKI_SIGNATURE_I_D = "pkiSignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_SIGNATURE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiSignatureID;
 
   public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
   @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiFontID;
 
   public static final String SERIALIZED_NAME_S_SIGNATURE_URL = "sSignatureUrl";
   @SerializedName(SERIALIZED_NAME_S_SIGNATURE_URL)
-  @javax.annotation.Nullable
   private String sSignatureUrl;
 
   public static final String SERIALIZED_NAME_S_SIGNATURE_URLINITIALS = "sSignatureUrlinitials";
   @SerializedName(SERIALIZED_NAME_S_SIGNATURE_URLINITIALS)
-  @javax.annotation.Nullable
   private String sSignatureUrlinitials;
 
   public SignatureResponse() {
   }
 
-  public SignatureResponse pkiSignatureID(@javax.annotation.Nonnull Integer pkiSignatureID) {
+  public SignatureResponse pkiSignatureID(Integer pkiSignatureID) {
     this.pkiSignatureID = pkiSignatureID;
     return this;
   }
@@ -89,12 +85,12 @@ public class SignatureResponse {
     return pkiSignatureID;
   }
 
-  public void setPkiSignatureID(@javax.annotation.Nonnull Integer pkiSignatureID) {
+  public void setPkiSignatureID(Integer pkiSignatureID) {
     this.pkiSignatureID = pkiSignatureID;
   }
 
 
-  public SignatureResponse fkiFontID(@javax.annotation.Nullable Integer fkiFontID) {
+  public SignatureResponse fkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
     return this;
   }
@@ -109,12 +105,12 @@ public class SignatureResponse {
     return fkiFontID;
   }
 
-  public void setFkiFontID(@javax.annotation.Nullable Integer fkiFontID) {
+  public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
   }
 
 
-  public SignatureResponse sSignatureUrl(@javax.annotation.Nullable String sSignatureUrl) {
+  public SignatureResponse sSignatureUrl(String sSignatureUrl) {
     this.sSignatureUrl = sSignatureUrl;
     return this;
   }
@@ -128,12 +124,12 @@ public class SignatureResponse {
     return sSignatureUrl;
   }
 
-  public void setsSignatureUrl(@javax.annotation.Nullable String sSignatureUrl) {
+  public void setsSignatureUrl(String sSignatureUrl) {
     this.sSignatureUrl = sSignatureUrl;
   }
 
 
-  public SignatureResponse sSignatureUrlinitials(@javax.annotation.Nullable String sSignatureUrlinitials) {
+  public SignatureResponse sSignatureUrlinitials(String sSignatureUrlinitials) {
     this.sSignatureUrlinitials = sSignatureUrlinitials;
     return this;
   }
@@ -147,7 +143,7 @@ public class SignatureResponse {
     return sSignatureUrlinitials;
   }
 
-  public void setsSignatureUrlinitials(@javax.annotation.Nullable String sSignatureUrlinitials) {
+  public void setsSignatureUrlinitials(String sSignatureUrlinitials) {
     this.sSignatureUrlinitials = sSignatureUrlinitials;
   }
 
@@ -225,6 +221,21 @@ public class SignatureResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in SignatureResponse is not found in the empty JSON string", SignatureResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!SignatureResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SignatureResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : SignatureResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("sSignatureUrl") != null && !jsonObj.get("sSignatureUrl").isJsonNull()) && !jsonObj.get("sSignatureUrl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sSignatureUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sSignatureUrl").toString()));
@@ -234,6 +245,34 @@ public class SignatureResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!SignatureResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'SignatureResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<SignatureResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(SignatureResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<SignatureResponse>() {
+           @Override
+           public void write(JsonWriter out, SignatureResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public SignatureResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of SignatureResponse given an JSON string

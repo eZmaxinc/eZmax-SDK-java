@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.TextstylestaticRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,176 @@ import eZmaxAPI.JSON;
 /**
  * A Textstylestatic Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class TextstylestaticRequestCompound extends TextstylestaticRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class TextstylestaticRequestCompound {
+  public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
+  @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
+  private Integer fkiFontID;
+
+  public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_BOLD = "bTextstylestaticBold";
+  @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_BOLD)
+  private Boolean bTextstylestaticBold;
+
+  public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_UNDERLINE = "bTextstylestaticUnderline";
+  @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_UNDERLINE)
+  private Boolean bTextstylestaticUnderline;
+
+  public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_ITALIC = "bTextstylestaticItalic";
+  @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_ITALIC)
+  private Boolean bTextstylestaticItalic;
+
+  public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_STRIKETHROUGH = "bTextstylestaticStrikethrough";
+  @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_STRIKETHROUGH)
+  private Boolean bTextstylestaticStrikethrough;
+
+  public static final String SERIALIZED_NAME_I_TEXTSTYLESTATIC_FONTCOLOR = "iTextstylestaticFontcolor";
+  @SerializedName(SERIALIZED_NAME_I_TEXTSTYLESTATIC_FONTCOLOR)
+  private Integer iTextstylestaticFontcolor;
+
+  public static final String SERIALIZED_NAME_I_TEXTSTYLESTATIC_SIZE = "iTextstylestaticSize";
+  @SerializedName(SERIALIZED_NAME_I_TEXTSTYLESTATIC_SIZE)
+  private Integer iTextstylestaticSize;
+
   public TextstylestaticRequestCompound() {
   }
+
+  public TextstylestaticRequestCompound fkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Font
+   * minimum: 0
+   * @return fkiFontID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiFontID() {
+    return fkiFontID;
+  }
+
+  public void setFkiFontID(Integer fkiFontID) {
+    this.fkiFontID = fkiFontID;
+  }
+
+
+  public TextstylestaticRequestCompound bTextstylestaticBold(Boolean bTextstylestaticBold) {
+    this.bTextstylestaticBold = bTextstylestaticBold;
+    return this;
+  }
+
+  /**
+   * Whether the Textstylestatic is Bold or not
+   * @return bTextstylestaticBold
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbTextstylestaticBold() {
+    return bTextstylestaticBold;
+  }
+
+  public void setbTextstylestaticBold(Boolean bTextstylestaticBold) {
+    this.bTextstylestaticBold = bTextstylestaticBold;
+  }
+
+
+  public TextstylestaticRequestCompound bTextstylestaticUnderline(Boolean bTextstylestaticUnderline) {
+    this.bTextstylestaticUnderline = bTextstylestaticUnderline;
+    return this;
+  }
+
+  /**
+   * Whether the Textstylestatic is Underline or not
+   * @return bTextstylestaticUnderline
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbTextstylestaticUnderline() {
+    return bTextstylestaticUnderline;
+  }
+
+  public void setbTextstylestaticUnderline(Boolean bTextstylestaticUnderline) {
+    this.bTextstylestaticUnderline = bTextstylestaticUnderline;
+  }
+
+
+  public TextstylestaticRequestCompound bTextstylestaticItalic(Boolean bTextstylestaticItalic) {
+    this.bTextstylestaticItalic = bTextstylestaticItalic;
+    return this;
+  }
+
+  /**
+   * Whether the Textstylestatic is Italic or not
+   * @return bTextstylestaticItalic
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbTextstylestaticItalic() {
+    return bTextstylestaticItalic;
+  }
+
+  public void setbTextstylestaticItalic(Boolean bTextstylestaticItalic) {
+    this.bTextstylestaticItalic = bTextstylestaticItalic;
+  }
+
+
+  public TextstylestaticRequestCompound bTextstylestaticStrikethrough(Boolean bTextstylestaticStrikethrough) {
+    this.bTextstylestaticStrikethrough = bTextstylestaticStrikethrough;
+    return this;
+  }
+
+  /**
+   * Whether the Textstylestatic is Strikethrough or not
+   * @return bTextstylestaticStrikethrough
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbTextstylestaticStrikethrough() {
+    return bTextstylestaticStrikethrough;
+  }
+
+  public void setbTextstylestaticStrikethrough(Boolean bTextstylestaticStrikethrough) {
+    this.bTextstylestaticStrikethrough = bTextstylestaticStrikethrough;
+  }
+
+
+  public TextstylestaticRequestCompound iTextstylestaticFontcolor(Integer iTextstylestaticFontcolor) {
+    this.iTextstylestaticFontcolor = iTextstylestaticFontcolor;
+    return this;
+  }
+
+  /**
+   * The int32 representation of the Fontcolor. For example, RGB color #39435B would be 3752795
+   * minimum: 0
+   * maximum: 16777215
+   * @return iTextstylestaticFontcolor
+   */
+  @javax.annotation.Nonnull
+  public Integer getiTextstylestaticFontcolor() {
+    return iTextstylestaticFontcolor;
+  }
+
+  public void setiTextstylestaticFontcolor(Integer iTextstylestaticFontcolor) {
+    this.iTextstylestaticFontcolor = iTextstylestaticFontcolor;
+  }
+
+
+  public TextstylestaticRequestCompound iTextstylestaticSize(Integer iTextstylestaticSize) {
+    this.iTextstylestaticSize = iTextstylestaticSize;
+    return this;
+  }
+
+  /**
+   * The Size for the Font of the Textstylestatic
+   * minimum: 1
+   * maximum: 255
+   * @return iTextstylestaticSize
+   */
+  @javax.annotation.Nonnull
+  public Integer getiTextstylestaticSize() {
+    return iTextstylestaticSize;
+  }
+
+  public void setiTextstylestaticSize(Integer iTextstylestaticSize) {
+    this.iTextstylestaticSize = iTextstylestaticSize;
+  }
+
 
 
   @Override
@@ -63,19 +228,32 @@ public class TextstylestaticRequestCompound extends TextstylestaticRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    TextstylestaticRequestCompound textstylestaticRequestCompound = (TextstylestaticRequestCompound) o;
+    return Objects.equals(this.fkiFontID, textstylestaticRequestCompound.fkiFontID) &&
+        Objects.equals(this.bTextstylestaticBold, textstylestaticRequestCompound.bTextstylestaticBold) &&
+        Objects.equals(this.bTextstylestaticUnderline, textstylestaticRequestCompound.bTextstylestaticUnderline) &&
+        Objects.equals(this.bTextstylestaticItalic, textstylestaticRequestCompound.bTextstylestaticItalic) &&
+        Objects.equals(this.bTextstylestaticStrikethrough, textstylestaticRequestCompound.bTextstylestaticStrikethrough) &&
+        Objects.equals(this.iTextstylestaticFontcolor, textstylestaticRequestCompound.iTextstylestaticFontcolor) &&
+        Objects.equals(this.iTextstylestaticSize, textstylestaticRequestCompound.iTextstylestaticSize);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(fkiFontID, bTextstylestaticBold, bTextstylestaticUnderline, bTextstylestaticItalic, bTextstylestaticStrikethrough, iTextstylestaticFontcolor, iTextstylestaticSize);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TextstylestaticRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    fkiFontID: ").append(toIndentedString(fkiFontID)).append("\n");
+    sb.append("    bTextstylestaticBold: ").append(toIndentedString(bTextstylestaticBold)).append("\n");
+    sb.append("    bTextstylestaticUnderline: ").append(toIndentedString(bTextstylestaticUnderline)).append("\n");
+    sb.append("    bTextstylestaticItalic: ").append(toIndentedString(bTextstylestaticItalic)).append("\n");
+    sb.append("    bTextstylestaticStrikethrough: ").append(toIndentedString(bTextstylestaticStrikethrough)).append("\n");
+    sb.append("    iTextstylestaticFontcolor: ").append(toIndentedString(iTextstylestaticFontcolor)).append("\n");
+    sb.append("    iTextstylestaticSize: ").append(toIndentedString(iTextstylestaticSize)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -144,6 +322,7 @@ public class TextstylestaticRequestCompound extends TextstylestaticRequest {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

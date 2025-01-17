@@ -82,7 +82,7 @@ public class Example {
 
 <a id="billingentityinternalEditObjectV1"></a>
 # **billingentityinternalEditObjectV1**
-> CommonResponse billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
+> BillingentityinternalEditObjectV1Response billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request)
 
 Edit an existing Billingentityinternal
 
@@ -113,7 +113,7 @@ public class Example {
     Integer pkiBillingentityinternalID = 56; // Integer | 
     BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request = new BillingentityinternalEditObjectV1Request(); // BillingentityinternalEditObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+      BillingentityinternalEditObjectV1Response result = apiInstance.billingentityinternalEditObjectV1(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectBillingentityinternalApi#billingentityinternalEditObjectV1");
@@ -135,7 +135,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**BillingentityinternalEditObjectV1Response**](BillingentityinternalEditObjectV1Response.md)
 
 ### Authorization
 

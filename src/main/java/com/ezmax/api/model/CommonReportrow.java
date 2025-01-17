@@ -51,22 +51,20 @@ import eZmaxAPI.JSON;
 /**
  * A row in a Reportsubsectionpart 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonReportrow {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTCELL = "a_objReportcell";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTCELL)
-  @javax.annotation.Nonnull
   private List<CommonReportcell> aObjReportcell = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_I_REPORTROW_HEIGHT = "iReportrowHeight";
   @SerializedName(SERIALIZED_NAME_I_REPORTROW_HEIGHT)
-  @javax.annotation.Nonnull
   private Integer iReportrowHeight;
 
   public CommonReportrow() {
   }
 
-  public CommonReportrow aObjReportcell(@javax.annotation.Nonnull List<CommonReportcell> aObjReportcell) {
+  public CommonReportrow aObjReportcell(List<CommonReportcell> aObjReportcell) {
     this.aObjReportcell = aObjReportcell;
     return this;
   }
@@ -88,12 +86,12 @@ public class CommonReportrow {
     return aObjReportcell;
   }
 
-  public void setaObjReportcell(@javax.annotation.Nonnull List<CommonReportcell> aObjReportcell) {
+  public void setaObjReportcell(List<CommonReportcell> aObjReportcell) {
     this.aObjReportcell = aObjReportcell;
   }
 
 
-  public CommonReportrow iReportrowHeight(@javax.annotation.Nonnull Integer iReportrowHeight) {
+  public CommonReportrow iReportrowHeight(Integer iReportrowHeight) {
     this.iReportrowHeight = iReportrowHeight;
     return this;
   }
@@ -107,7 +105,7 @@ public class CommonReportrow {
     return iReportrowHeight;
   }
 
-  public void setiReportrowHeight(@javax.annotation.Nonnull Integer iReportrowHeight) {
+  public void setiReportrowHeight(Integer iReportrowHeight) {
     this.iReportrowHeight = iReportrowHeight;
   }
 

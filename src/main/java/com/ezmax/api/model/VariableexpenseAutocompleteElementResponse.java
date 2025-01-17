@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Variableexpense AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VariableexpenseAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION_X = "sVariableexpenseDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sVariableexpenseDescriptionX;
 
   public static final String SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D = "pkiVariableexpenseID";
   @SerializedName(SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiVariableexpenseID;
 
   public static final String SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE = "bVariableexpenseIsactive";
   @SerializedName(SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bVariableexpenseIsactive;
 
   public VariableexpenseAutocompleteElementResponse() {
   }
 
-  public VariableexpenseAutocompleteElementResponse sVariableexpenseDescriptionX(@javax.annotation.Nonnull String sVariableexpenseDescriptionX) {
+  public VariableexpenseAutocompleteElementResponse sVariableexpenseDescriptionX(String sVariableexpenseDescriptionX) {
     this.sVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
     return this;
   }
@@ -82,12 +79,12 @@ public class VariableexpenseAutocompleteElementResponse {
     return sVariableexpenseDescriptionX;
   }
 
-  public void setsVariableexpenseDescriptionX(@javax.annotation.Nonnull String sVariableexpenseDescriptionX) {
+  public void setsVariableexpenseDescriptionX(String sVariableexpenseDescriptionX) {
     this.sVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
   }
 
 
-  public VariableexpenseAutocompleteElementResponse pkiVariableexpenseID(@javax.annotation.Nonnull Integer pkiVariableexpenseID) {
+  public VariableexpenseAutocompleteElementResponse pkiVariableexpenseID(Integer pkiVariableexpenseID) {
     this.pkiVariableexpenseID = pkiVariableexpenseID;
     return this;
   }
@@ -103,12 +100,12 @@ public class VariableexpenseAutocompleteElementResponse {
     return pkiVariableexpenseID;
   }
 
-  public void setPkiVariableexpenseID(@javax.annotation.Nonnull Integer pkiVariableexpenseID) {
+  public void setPkiVariableexpenseID(Integer pkiVariableexpenseID) {
     this.pkiVariableexpenseID = pkiVariableexpenseID;
   }
 
 
-  public VariableexpenseAutocompleteElementResponse bVariableexpenseIsactive(@javax.annotation.Nonnull Boolean bVariableexpenseIsactive) {
+  public VariableexpenseAutocompleteElementResponse bVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
     return this;
   }
@@ -122,7 +119,7 @@ public class VariableexpenseAutocompleteElementResponse {
     return bVariableexpenseIsactive;
   }
 
-  public void setbVariableexpenseIsactive(@javax.annotation.Nonnull Boolean bVariableexpenseIsactive) {
+  public void setbVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
   }
 

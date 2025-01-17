@@ -48,47 +48,40 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternalproduct Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BillingentityinternalproductResponse {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNALPRODUCT_I_D = "pkiBillingentityinternalproductID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNALPRODUCT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiBillingentityinternalproductID;
 
   public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiBillingentityinternalID;
 
   public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X = "sBillingentityinternalDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sBillingentityinternalDescriptionX;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D = "fkiEzmaxproductID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzmaxproductID;
 
   public static final String SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X = "sEzmaxproductDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sEzmaxproductDescriptionX;
 
   public static final String SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D = "fkiBillingentityexternalID";
   @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiBillingentityexternalID;
 
   public static final String SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION = "sBillingentityexternalDescription";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sBillingentityexternalDescription;
 
   public BillingentityinternalproductResponse() {
   }
 
-  public BillingentityinternalproductResponse pkiBillingentityinternalproductID(@javax.annotation.Nonnull Integer pkiBillingentityinternalproductID) {
+  public BillingentityinternalproductResponse pkiBillingentityinternalproductID(Integer pkiBillingentityinternalproductID) {
     this.pkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
     return this;
   }
@@ -104,12 +97,12 @@ public class BillingentityinternalproductResponse {
     return pkiBillingentityinternalproductID;
   }
 
-  public void setPkiBillingentityinternalproductID(@javax.annotation.Nonnull Integer pkiBillingentityinternalproductID) {
+  public void setPkiBillingentityinternalproductID(Integer pkiBillingentityinternalproductID) {
     this.pkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
   }
 
 
-  public BillingentityinternalproductResponse fkiBillingentityinternalID(@javax.annotation.Nonnull Integer fkiBillingentityinternalID) {
+  public BillingentityinternalproductResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -124,12 +117,12 @@ public class BillingentityinternalproductResponse {
     return fkiBillingentityinternalID;
   }
 
-  public void setFkiBillingentityinternalID(@javax.annotation.Nonnull Integer fkiBillingentityinternalID) {
+  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
-  public BillingentityinternalproductResponse sBillingentityinternalDescriptionX(@javax.annotation.Nonnull String sBillingentityinternalDescriptionX) {
+  public BillingentityinternalproductResponse sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
     return this;
   }
@@ -143,12 +136,12 @@ public class BillingentityinternalproductResponse {
     return sBillingentityinternalDescriptionX;
   }
 
-  public void setsBillingentityinternalDescriptionX(@javax.annotation.Nonnull String sBillingentityinternalDescriptionX) {
+  public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
     this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
   }
 
 
-  public BillingentityinternalproductResponse fkiEzmaxproductID(@javax.annotation.Nonnull Integer fkiEzmaxproductID) {
+  public BillingentityinternalproductResponse fkiEzmaxproductID(Integer fkiEzmaxproductID) {
     this.fkiEzmaxproductID = fkiEzmaxproductID;
     return this;
   }
@@ -163,12 +156,12 @@ public class BillingentityinternalproductResponse {
     return fkiEzmaxproductID;
   }
 
-  public void setFkiEzmaxproductID(@javax.annotation.Nonnull Integer fkiEzmaxproductID) {
+  public void setFkiEzmaxproductID(Integer fkiEzmaxproductID) {
     this.fkiEzmaxproductID = fkiEzmaxproductID;
   }
 
 
-  public BillingentityinternalproductResponse sEzmaxproductDescriptionX(@javax.annotation.Nonnull String sEzmaxproductDescriptionX) {
+  public BillingentityinternalproductResponse sEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
     return this;
   }
@@ -182,12 +175,12 @@ public class BillingentityinternalproductResponse {
     return sEzmaxproductDescriptionX;
   }
 
-  public void setsEzmaxproductDescriptionX(@javax.annotation.Nonnull String sEzmaxproductDescriptionX) {
+  public void setsEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
   }
 
 
-  public BillingentityinternalproductResponse fkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
+  public BillingentityinternalproductResponse fkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
     this.fkiBillingentityexternalID = fkiBillingentityexternalID;
     return this;
   }
@@ -202,12 +195,12 @@ public class BillingentityinternalproductResponse {
     return fkiBillingentityexternalID;
   }
 
-  public void setFkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
+  public void setFkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
     this.fkiBillingentityexternalID = fkiBillingentityexternalID;
   }
 
 
-  public BillingentityinternalproductResponse sBillingentityexternalDescription(@javax.annotation.Nonnull String sBillingentityexternalDescription) {
+  public BillingentityinternalproductResponse sBillingentityexternalDescription(String sBillingentityexternalDescription) {
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;
     return this;
   }
@@ -221,7 +214,7 @@ public class BillingentityinternalproductResponse {
     return sBillingentityexternalDescription;
   }
 
-  public void setsBillingentityexternalDescription(@javax.annotation.Nonnull String sBillingentityexternalDescription) {
+  public void setsBillingentityexternalDescription(String sBillingentityexternalDescription) {
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;
   }
 
@@ -314,6 +307,21 @@ public class BillingentityinternalproductResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in BillingentityinternalproductResponse is not found in the empty JSON string", BillingentityinternalproductResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!BillingentityinternalproductResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `BillingentityinternalproductResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : BillingentityinternalproductResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
@@ -326,6 +334,34 @@ public class BillingentityinternalproductResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!BillingentityinternalproductResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'BillingentityinternalproductResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<BillingentityinternalproductResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(BillingentityinternalproductResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<BillingentityinternalproductResponse>() {
+           @Override
+           public void write(JsonWriter out, BillingentityinternalproductResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public BillingentityinternalproductResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of BillingentityinternalproductResponse given an JSON string

@@ -48,47 +48,40 @@ import eZmaxAPI.JSON;
 /**
  * An EzmaxinvoicingEzsignfolder object containing information about the Ezmaxinvoicing for an Ezsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzmaxinvoicingEzsignfolderResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
-  @javax.annotation.Nullable
   private Integer fkiBillingentityinternalID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION = "sEzsignfolderDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsignfolderDescription;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTSAREQUIREMENT_BILLABLE = "bEzsigntsarequirementBillable";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTSAREQUIREMENT_BILLABLE)
-  @javax.annotation.Nonnull
   private Boolean bEzsigntsarequirementBillable;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDER_MFAUSED = "bEzsignfolderMfaused";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDER_MFAUSED)
-  @javax.annotation.Nonnull
   private Boolean bEzsignfolderMfaused;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDER_PAYMENTUSED = "bEzsignfolderPaymentused";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDER_PAYMENTUSED)
-  @javax.annotation.Nonnull
   private Boolean bEzsignfolderPaymentused;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDER_ALLOWED = "bEzsignfolderAllowed";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDER_ALLOWED)
-  @javax.annotation.Nonnull
   private Boolean bEzsignfolderAllowed;
 
   public CustomEzmaxinvoicingEzsignfolderResponse() {
   }
 
-  public CustomEzmaxinvoicingEzsignfolderResponse fkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
+  public CustomEzmaxinvoicingEzsignfolderResponse fkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -103,12 +96,12 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return fkiEzsignfolderID;
   }
 
-  public void setFkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
+  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
-  public CustomEzmaxinvoicingEzsignfolderResponse fkiBillingentityinternalID(@javax.annotation.Nullable Integer fkiBillingentityinternalID) {
+  public CustomEzmaxinvoicingEzsignfolderResponse fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
     return this;
   }
@@ -123,12 +116,12 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return fkiBillingentityinternalID;
   }
 
-  public void setFkiBillingentityinternalID(@javax.annotation.Nullable Integer fkiBillingentityinternalID) {
+  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
     this.fkiBillingentityinternalID = fkiBillingentityinternalID;
   }
 
 
-  public CustomEzmaxinvoicingEzsignfolderResponse sEzsignfolderDescription(@javax.annotation.Nonnull String sEzsignfolderDescription) {
+  public CustomEzmaxinvoicingEzsignfolderResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -142,12 +135,12 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return sEzsignfolderDescription;
   }
 
-  public void setsEzsignfolderDescription(@javax.annotation.Nonnull String sEzsignfolderDescription) {
+  public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
-  public CustomEzmaxinvoicingEzsignfolderResponse bEzsigntsarequirementBillable(@javax.annotation.Nonnull Boolean bEzsigntsarequirementBillable) {
+  public CustomEzmaxinvoicingEzsignfolderResponse bEzsigntsarequirementBillable(Boolean bEzsigntsarequirementBillable) {
     this.bEzsigntsarequirementBillable = bEzsigntsarequirementBillable;
     return this;
   }
@@ -161,12 +154,12 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return bEzsigntsarequirementBillable;
   }
 
-  public void setbEzsigntsarequirementBillable(@javax.annotation.Nonnull Boolean bEzsigntsarequirementBillable) {
+  public void setbEzsigntsarequirementBillable(Boolean bEzsigntsarequirementBillable) {
     this.bEzsigntsarequirementBillable = bEzsigntsarequirementBillable;
   }
 
 
-  public CustomEzmaxinvoicingEzsignfolderResponse bEzsignfolderMfaused(@javax.annotation.Nonnull Boolean bEzsignfolderMfaused) {
+  public CustomEzmaxinvoicingEzsignfolderResponse bEzsignfolderMfaused(Boolean bEzsignfolderMfaused) {
     this.bEzsignfolderMfaused = bEzsignfolderMfaused;
     return this;
   }
@@ -180,12 +173,12 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return bEzsignfolderMfaused;
   }
 
-  public void setbEzsignfolderMfaused(@javax.annotation.Nonnull Boolean bEzsignfolderMfaused) {
+  public void setbEzsignfolderMfaused(Boolean bEzsignfolderMfaused) {
     this.bEzsignfolderMfaused = bEzsignfolderMfaused;
   }
 
 
-  public CustomEzmaxinvoicingEzsignfolderResponse bEzsignfolderPaymentused(@javax.annotation.Nonnull Boolean bEzsignfolderPaymentused) {
+  public CustomEzmaxinvoicingEzsignfolderResponse bEzsignfolderPaymentused(Boolean bEzsignfolderPaymentused) {
     this.bEzsignfolderPaymentused = bEzsignfolderPaymentused;
     return this;
   }
@@ -199,12 +192,12 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return bEzsignfolderPaymentused;
   }
 
-  public void setbEzsignfolderPaymentused(@javax.annotation.Nonnull Boolean bEzsignfolderPaymentused) {
+  public void setbEzsignfolderPaymentused(Boolean bEzsignfolderPaymentused) {
     this.bEzsignfolderPaymentused = bEzsignfolderPaymentused;
   }
 
 
-  public CustomEzmaxinvoicingEzsignfolderResponse bEzsignfolderAllowed(@javax.annotation.Nonnull Boolean bEzsignfolderAllowed) {
+  public CustomEzmaxinvoicingEzsignfolderResponse bEzsignfolderAllowed(Boolean bEzsignfolderAllowed) {
     this.bEzsignfolderAllowed = bEzsignfolderAllowed;
     return this;
   }
@@ -218,7 +211,7 @@ public class CustomEzmaxinvoicingEzsignfolderResponse {
     return bEzsignfolderAllowed;
   }
 
-  public void setbEzsignfolderAllowed(@javax.annotation.Nonnull Boolean bEzsignfolderAllowed) {
+  public void setbEzsignfolderAllowed(Boolean bEzsignfolderAllowed) {
     this.bEzsignfolderAllowed = bEzsignfolderAllowed;
   }
 

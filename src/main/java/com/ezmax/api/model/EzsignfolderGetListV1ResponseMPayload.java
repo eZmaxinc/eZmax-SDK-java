@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonGetListV1ResponseMPayload;
 import com.ezmax.api.model.EzsignfolderListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfolder/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignfolderGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsignfolderGetListV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
+  @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  private Integer iRowReturned;
+
+  public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
+  @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  private Integer iRowFiltered;
+
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER = "a_objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER)
-  @javax.annotation.Nonnull
   private List<EzsignfolderListElement> aObjEzsignfolder = new ArrayList<>();
 
   public EzsignfolderGetListV1ResponseMPayload() {
   }
 
-  public EzsignfolderGetListV1ResponseMPayload aObjEzsignfolder(@javax.annotation.Nonnull List<EzsignfolderListElement> aObjEzsignfolder) {
+  public EzsignfolderGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+    return this;
+  }
+
+  /**
+   * The number of rows returned
+   * @return iRowReturned
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowReturned() {
+    return iRowReturned;
+  }
+
+  public void setiRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+  }
+
+
+  public EzsignfolderGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+    return this;
+  }
+
+  /**
+   * The number of rows matching your filters (if any) or the total number of rows
+   * @return iRowFiltered
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowFiltered() {
+    return iRowFiltered;
+  }
+
+  public void setiRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+  }
+
+
+  public EzsignfolderGetListV1ResponseMPayload aObjEzsignfolder(List<EzsignfolderListElement> aObjEzsignfolder) {
     this.aObjEzsignfolder = aObjEzsignfolder;
     return this;
   }
@@ -84,7 +128,7 @@ public class EzsignfolderGetListV1ResponseMPayload extends CommonGetListV1Respon
     return aObjEzsignfolder;
   }
 
-  public void setaObjEzsignfolder(@javax.annotation.Nonnull List<EzsignfolderListElement> aObjEzsignfolder) {
+  public void setaObjEzsignfolder(List<EzsignfolderListElement> aObjEzsignfolder) {
     this.aObjEzsignfolder = aObjEzsignfolder;
   }
 
@@ -99,20 +143,22 @@ public class EzsignfolderGetListV1ResponseMPayload extends CommonGetListV1Respon
       return false;
     }
     EzsignfolderGetListV1ResponseMPayload ezsignfolderGetListV1ResponseMPayload = (EzsignfolderGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjEzsignfolder, ezsignfolderGetListV1ResponseMPayload.aObjEzsignfolder) &&
-        super.equals(o);
+    return Objects.equals(this.iRowReturned, ezsignfolderGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, ezsignfolderGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjEzsignfolder, ezsignfolderGetListV1ResponseMPayload.aObjEzsignfolder);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzsignfolder, super.hashCode());
+    return Objects.hash(iRowReturned, iRowFiltered, aObjEzsignfolder);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfolderGetListV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
+    sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
     sb.append("    aObjEzsignfolder: ").append(toIndentedString(aObjEzsignfolder)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -142,9 +188,9 @@ public class EzsignfolderGetListV1ResponseMPayload extends CommonGetListV1Respon
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objEzsignfolder");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objEzsignfolder");
   }
 
   /**

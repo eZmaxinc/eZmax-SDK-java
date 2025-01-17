@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * Detail of the Versionhistory
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualVersionhistoryDetail {
   public static final String SERIALIZED_NAME_T_VERSIONHISTORY_DETAIL1 = "tVersionhistoryDetail1";
   @SerializedName(SERIALIZED_NAME_T_VERSIONHISTORY_DETAIL1)
-  @javax.annotation.Nullable
   private String tVersionhistoryDetail1;
 
   public static final String SERIALIZED_NAME_T_VERSIONHISTORY_DETAIL2 = "tVersionhistoryDetail2";
   @SerializedName(SERIALIZED_NAME_T_VERSIONHISTORY_DETAIL2)
-  @javax.annotation.Nullable
   private String tVersionhistoryDetail2;
 
   public MultilingualVersionhistoryDetail() {
   }
 
-  public MultilingualVersionhistoryDetail tVersionhistoryDetail1(@javax.annotation.Nullable String tVersionhistoryDetail1) {
+  public MultilingualVersionhistoryDetail tVersionhistoryDetail1(String tVersionhistoryDetail1) {
     this.tVersionhistoryDetail1 = tVersionhistoryDetail1;
     return this;
   }
@@ -77,12 +75,12 @@ public class MultilingualVersionhistoryDetail {
     return tVersionhistoryDetail1;
   }
 
-  public void settVersionhistoryDetail1(@javax.annotation.Nullable String tVersionhistoryDetail1) {
+  public void settVersionhistoryDetail1(String tVersionhistoryDetail1) {
     this.tVersionhistoryDetail1 = tVersionhistoryDetail1;
   }
 
 
-  public MultilingualVersionhistoryDetail tVersionhistoryDetail2(@javax.annotation.Nullable String tVersionhistoryDetail2) {
+  public MultilingualVersionhistoryDetail tVersionhistoryDetail2(String tVersionhistoryDetail2) {
     this.tVersionhistoryDetail2 = tVersionhistoryDetail2;
     return this;
   }
@@ -96,7 +94,7 @@ public class MultilingualVersionhistoryDetail {
     return tVersionhistoryDetail2;
   }
 
-  public void settVersionhistoryDetail2(@javax.annotation.Nullable String tVersionhistoryDetail2) {
+  public void settVersionhistoryDetail2(String tVersionhistoryDetail2) {
     this.tVersionhistoryDetail2 = tVersionhistoryDetail2;
   }
 

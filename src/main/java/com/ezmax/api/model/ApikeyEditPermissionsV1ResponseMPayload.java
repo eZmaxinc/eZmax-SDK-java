@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for PUT /1/object/apikey/{pkiApikeyID}/editPermissions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ApikeyEditPermissionsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_PERMISSION_I_D = "a_pkiPermissionID";
   @SerializedName(SERIALIZED_NAME_A_PKI_PERMISSION_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiPermissionID = new ArrayList<>();
 
   public ApikeyEditPermissionsV1ResponseMPayload() {
   }
 
-  public ApikeyEditPermissionsV1ResponseMPayload aPkiPermissionID(@javax.annotation.Nonnull List<Integer> aPkiPermissionID) {
+  public ApikeyEditPermissionsV1ResponseMPayload aPkiPermissionID(List<Integer> aPkiPermissionID) {
     this.aPkiPermissionID = aPkiPermissionID;
     return this;
   }
@@ -82,7 +81,7 @@ public class ApikeyEditPermissionsV1ResponseMPayload {
     return aPkiPermissionID;
   }
 
-  public void setaPkiPermissionID(@javax.annotation.Nonnull List<Integer> aPkiPermissionID) {
+  public void setaPkiPermissionID(List<Integer> aPkiPermissionID) {
     this.aPkiPermissionID = aPkiPermissionID;
   }
 

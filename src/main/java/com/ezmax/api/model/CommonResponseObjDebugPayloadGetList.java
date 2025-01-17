@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonResponseFilter;
-import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -54,32 +53,151 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CommonResponseObjDebugPayloadGetList extends CommonResponseObjDebugPayload {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CommonResponseObjDebugPayloadGetList {
+  public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
+  @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
+  private Integer iVersionMin;
+
+  public static final String SERIALIZED_NAME_I_VERSION_MAX = "iVersionMax";
+  @SerializedName(SERIALIZED_NAME_I_VERSION_MAX)
+  private Integer iVersionMax;
+
+  public static final String SERIALIZED_NAME_A_REQUIRED_PERMISSION = "a_RequiredPermission";
+  @SerializedName(SERIALIZED_NAME_A_REQUIRED_PERMISSION)
+  private List<Integer> aRequiredPermission = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_B_VERSION_DEPRECATED = "bVersionDeprecated";
+  @SerializedName(SERIALIZED_NAME_B_VERSION_DEPRECATED)
+  private Boolean bVersionDeprecated;
+
+  public static final String SERIALIZED_NAME_DT_RESPONSE_DATE = "dtResponseDate";
+  @SerializedName(SERIALIZED_NAME_DT_RESPONSE_DATE)
+  private String dtResponseDate;
+
   public static final String SERIALIZED_NAME_A_FILTER = "a_Filter";
   @SerializedName(SERIALIZED_NAME_A_FILTER)
-  @javax.annotation.Nonnull
   private CommonResponseFilter aFilter;
 
   public static final String SERIALIZED_NAME_A_ORDER_BY = "a_OrderBy";
   @SerializedName(SERIALIZED_NAME_A_ORDER_BY)
-  @javax.annotation.Nonnull
   private Map<String, String> aOrderBy = new HashMap<>();
 
   public static final String SERIALIZED_NAME_I_ROW_MAX = "iRowMax";
   @SerializedName(SERIALIZED_NAME_I_ROW_MAX)
-  @javax.annotation.Nonnull
   private Integer iRowMax;
 
   public static final String SERIALIZED_NAME_I_ROW_OFFSET = "iRowOffset";
   @SerializedName(SERIALIZED_NAME_I_ROW_OFFSET)
-  @javax.annotation.Nonnull
   private Integer iRowOffset = 0;
 
   public CommonResponseObjDebugPayloadGetList() {
   }
 
-  public CommonResponseObjDebugPayloadGetList aFilter(@javax.annotation.Nonnull CommonResponseFilter aFilter) {
+  public CommonResponseObjDebugPayloadGetList iVersionMin(Integer iVersionMin) {
+    this.iVersionMin = iVersionMin;
+    return this;
+  }
+
+  /**
+   * The minimum version of the function that can be called
+   * @return iVersionMin
+   */
+  @javax.annotation.Nonnull
+  public Integer getiVersionMin() {
+    return iVersionMin;
+  }
+
+  public void setiVersionMin(Integer iVersionMin) {
+    this.iVersionMin = iVersionMin;
+  }
+
+
+  public CommonResponseObjDebugPayloadGetList iVersionMax(Integer iVersionMax) {
+    this.iVersionMax = iVersionMax;
+    return this;
+  }
+
+  /**
+   * The maximum version of the function that can be called
+   * @return iVersionMax
+   */
+  @javax.annotation.Nonnull
+  public Integer getiVersionMax() {
+    return iVersionMax;
+  }
+
+  public void setiVersionMax(Integer iVersionMax) {
+    this.iVersionMax = iVersionMax;
+  }
+
+
+  public CommonResponseObjDebugPayloadGetList aRequiredPermission(List<Integer> aRequiredPermission) {
+    this.aRequiredPermission = aRequiredPermission;
+    return this;
+  }
+
+  public CommonResponseObjDebugPayloadGetList addARequiredPermissionItem(Integer aRequiredPermissionItem) {
+    if (this.aRequiredPermission == null) {
+      this.aRequiredPermission = new ArrayList<>();
+    }
+    this.aRequiredPermission.add(aRequiredPermissionItem);
+    return this;
+  }
+
+  /**
+   * An array of permissions required to access this function.  If the value \&quot;0\&quot; is present in the array, anyone can call this function.  You must have one of the permission to access the function. You don&#39;t need to have all of them.
+   * @return aRequiredPermission
+   */
+  @javax.annotation.Nonnull
+  public List<Integer> getaRequiredPermission() {
+    return aRequiredPermission;
+  }
+
+  public void setaRequiredPermission(List<Integer> aRequiredPermission) {
+    this.aRequiredPermission = aRequiredPermission;
+  }
+
+
+  public CommonResponseObjDebugPayloadGetList bVersionDeprecated(Boolean bVersionDeprecated) {
+    this.bVersionDeprecated = bVersionDeprecated;
+    return this;
+  }
+
+  /**
+   * Wheter the current route is deprecated or not
+   * @return bVersionDeprecated
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbVersionDeprecated() {
+    return bVersionDeprecated;
+  }
+
+  public void setbVersionDeprecated(Boolean bVersionDeprecated) {
+    this.bVersionDeprecated = bVersionDeprecated;
+  }
+
+
+  public CommonResponseObjDebugPayloadGetList dtResponseDate(String dtResponseDate) {
+    this.dtResponseDate = dtResponseDate;
+    return this;
+  }
+
+  /**
+   * Represent a Date Time. The timezone is the one configured in the User&#39;s profile.
+   * @return dtResponseDate
+   */
+  @javax.annotation.Nonnull
+  public String getDtResponseDate() {
+    return dtResponseDate;
+  }
+
+  public void setDtResponseDate(String dtResponseDate) {
+    this.dtResponseDate = dtResponseDate;
+  }
+
+
+  public CommonResponseObjDebugPayloadGetList aFilter(CommonResponseFilter aFilter) {
     this.aFilter = aFilter;
     return this;
   }
@@ -93,12 +211,12 @@ public class CommonResponseObjDebugPayloadGetList extends CommonResponseObjDebug
     return aFilter;
   }
 
-  public void setaFilter(@javax.annotation.Nonnull CommonResponseFilter aFilter) {
+  public void setaFilter(CommonResponseFilter aFilter) {
     this.aFilter = aFilter;
   }
 
 
-  public CommonResponseObjDebugPayloadGetList aOrderBy(@javax.annotation.Nonnull Map<String, String> aOrderBy) {
+  public CommonResponseObjDebugPayloadGetList aOrderBy(Map<String, String> aOrderBy) {
     this.aOrderBy = aOrderBy;
     return this;
   }
@@ -120,12 +238,12 @@ public class CommonResponseObjDebugPayloadGetList extends CommonResponseObjDebug
     return aOrderBy;
   }
 
-  public void setaOrderBy(@javax.annotation.Nonnull Map<String, String> aOrderBy) {
+  public void setaOrderBy(Map<String, String> aOrderBy) {
     this.aOrderBy = aOrderBy;
   }
 
 
-  public CommonResponseObjDebugPayloadGetList iRowMax(@javax.annotation.Nonnull Integer iRowMax) {
+  public CommonResponseObjDebugPayloadGetList iRowMax(Integer iRowMax) {
     this.iRowMax = iRowMax;
     return this;
   }
@@ -141,12 +259,12 @@ public class CommonResponseObjDebugPayloadGetList extends CommonResponseObjDebug
     return iRowMax;
   }
 
-  public void setiRowMax(@javax.annotation.Nonnull Integer iRowMax) {
+  public void setiRowMax(Integer iRowMax) {
     this.iRowMax = iRowMax;
   }
 
 
-  public CommonResponseObjDebugPayloadGetList iRowOffset(@javax.annotation.Nonnull Integer iRowOffset) {
+  public CommonResponseObjDebugPayloadGetList iRowOffset(Integer iRowOffset) {
     this.iRowOffset = iRowOffset;
     return this;
   }
@@ -161,7 +279,7 @@ public class CommonResponseObjDebugPayloadGetList extends CommonResponseObjDebug
     return iRowOffset;
   }
 
-  public void setiRowOffset(@javax.annotation.Nonnull Integer iRowOffset) {
+  public void setiRowOffset(Integer iRowOffset) {
     this.iRowOffset = iRowOffset;
   }
 
@@ -176,23 +294,31 @@ public class CommonResponseObjDebugPayloadGetList extends CommonResponseObjDebug
       return false;
     }
     CommonResponseObjDebugPayloadGetList commonResponseObjDebugPayloadGetList = (CommonResponseObjDebugPayloadGetList) o;
-    return Objects.equals(this.aFilter, commonResponseObjDebugPayloadGetList.aFilter) &&
+    return Objects.equals(this.iVersionMin, commonResponseObjDebugPayloadGetList.iVersionMin) &&
+        Objects.equals(this.iVersionMax, commonResponseObjDebugPayloadGetList.iVersionMax) &&
+        Objects.equals(this.aRequiredPermission, commonResponseObjDebugPayloadGetList.aRequiredPermission) &&
+        Objects.equals(this.bVersionDeprecated, commonResponseObjDebugPayloadGetList.bVersionDeprecated) &&
+        Objects.equals(this.dtResponseDate, commonResponseObjDebugPayloadGetList.dtResponseDate) &&
+        Objects.equals(this.aFilter, commonResponseObjDebugPayloadGetList.aFilter) &&
         Objects.equals(this.aOrderBy, commonResponseObjDebugPayloadGetList.aOrderBy) &&
         Objects.equals(this.iRowMax, commonResponseObjDebugPayloadGetList.iRowMax) &&
-        Objects.equals(this.iRowOffset, commonResponseObjDebugPayloadGetList.iRowOffset) &&
-        super.equals(o);
+        Objects.equals(this.iRowOffset, commonResponseObjDebugPayloadGetList.iRowOffset);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aFilter, aOrderBy, iRowMax, iRowOffset, super.hashCode());
+    return Objects.hash(iVersionMin, iVersionMax, aRequiredPermission, bVersionDeprecated, dtResponseDate, aFilter, aOrderBy, iRowMax, iRowOffset);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonResponseObjDebugPayloadGetList {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    iVersionMin: ").append(toIndentedString(iVersionMin)).append("\n");
+    sb.append("    iVersionMax: ").append(toIndentedString(iVersionMax)).append("\n");
+    sb.append("    aRequiredPermission: ").append(toIndentedString(aRequiredPermission)).append("\n");
+    sb.append("    bVersionDeprecated: ").append(toIndentedString(bVersionDeprecated)).append("\n");
+    sb.append("    dtResponseDate: ").append(toIndentedString(dtResponseDate)).append("\n");
     sb.append("    aFilter: ").append(toIndentedString(aFilter)).append("\n");
     sb.append("    aOrderBy: ").append(toIndentedString(aOrderBy)).append("\n");
     sb.append("    iRowMax: ").append(toIndentedString(iRowMax)).append("\n");
@@ -231,15 +357,15 @@ public class CommonResponseObjDebugPayloadGetList extends CommonResponseObjDebug
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_Filter");
-    openapiRequiredFields.add("a_OrderBy");
-    openapiRequiredFields.add("iRowMax");
-    openapiRequiredFields.add("iRowOffset");
     openapiRequiredFields.add("iVersionMin");
     openapiRequiredFields.add("iVersionMax");
     openapiRequiredFields.add("a_RequiredPermission");
     openapiRequiredFields.add("bVersionDeprecated");
     openapiRequiredFields.add("dtResponseDate");
+    openapiRequiredFields.add("a_Filter");
+    openapiRequiredFields.add("a_OrderBy");
+    openapiRequiredFields.add("iRowMax");
+    openapiRequiredFields.add("iRowOffset");
   }
 
   /**
@@ -270,6 +396,15 @@ public class CommonResponseObjDebugPayloadGetList extends CommonResponseObjDebug
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the required json array is present
+      if (jsonObj.get("a_RequiredPermission") == null) {
+        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
+      } else if (!jsonObj.get("a_RequiredPermission").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_RequiredPermission` to be an array in the JSON string but got `%s`", jsonObj.get("a_RequiredPermission").toString()));
+      }
+      if (!jsonObj.get("dtResponseDate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtResponseDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtResponseDate").toString()));
+      }
       // validate the required field `a_Filter`
       CommonResponseFilter.validateJsonElement(jsonObj.get("a_Filter"));
   }

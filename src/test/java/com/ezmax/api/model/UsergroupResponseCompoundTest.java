@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.EmailRequest;
 import com.ezmax.api.model.MultilingualUsergroupName;
-import com.ezmax.api.model.UsergroupResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

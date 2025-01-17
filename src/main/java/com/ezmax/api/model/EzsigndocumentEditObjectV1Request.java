@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsigndocumentRequest;
+import com.ezmax.api.model.EzsigndocumentRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,31 +49,30 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT = "objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT)
-  @javax.annotation.Nonnull
-  private EzsigndocumentRequest objEzsigndocument;
+  private EzsigndocumentRequestCompound objEzsigndocument;
 
   public EzsigndocumentEditObjectV1Request() {
   }
 
-  public EzsigndocumentEditObjectV1Request objEzsigndocument(@javax.annotation.Nonnull EzsigndocumentRequest objEzsigndocument) {
+  public EzsigndocumentEditObjectV1Request objEzsigndocument(EzsigndocumentRequestCompound objEzsigndocument) {
     this.objEzsigndocument = objEzsigndocument;
     return this;
   }
 
   /**
-   * An Ezsigndocument Object and children to create a complete structure
+   * Get objEzsigndocument
    * @return objEzsigndocument
    */
   @javax.annotation.Nonnull
-  public EzsigndocumentRequest getObjEzsigndocument() {
+  public EzsigndocumentRequestCompound getObjEzsigndocument() {
     return objEzsigndocument;
   }
 
-  public void setObjEzsigndocument(@javax.annotation.Nonnull EzsigndocumentRequest objEzsigndocument) {
+  public void setObjEzsigndocument(EzsigndocumentRequestCompound objEzsigndocument) {
     this.objEzsigndocument = objEzsigndocument;
   }
 
@@ -159,7 +158,7 @@ public class EzsigndocumentEditObjectV1Request {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objEzsigndocument`
-      EzsigndocumentRequest.validateJsonElement(jsonObj.get("objEzsigndocument"));
+      EzsigndocumentRequestCompound.validateJsonElement(jsonObj.get("objEzsigndocument"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

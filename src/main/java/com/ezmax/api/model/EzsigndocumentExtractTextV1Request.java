@@ -48,11 +48,10 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentExtractTextV1Request {
   public static final String SERIALIZED_NAME_I_PAGE = "iPage";
   @SerializedName(SERIALIZED_NAME_I_PAGE)
-  @javax.annotation.Nonnull
   private Integer iPage;
 
   /**
@@ -111,33 +110,28 @@ public class EzsigndocumentExtractTextV1Request {
 
   public static final String SERIALIZED_NAME_E_SECTION = "eSection";
   @SerializedName(SERIALIZED_NAME_E_SECTION)
-  @javax.annotation.Nullable
   private ESectionEnum eSection;
 
   public static final String SERIALIZED_NAME_I_X = "iX";
   @SerializedName(SERIALIZED_NAME_I_X)
-  @javax.annotation.Nullable
   private Integer iX;
 
   public static final String SERIALIZED_NAME_I_Y = "iY";
   @SerializedName(SERIALIZED_NAME_I_Y)
-  @javax.annotation.Nullable
   private Integer iY;
 
   public static final String SERIALIZED_NAME_I_WIDTH = "iWidth";
   @SerializedName(SERIALIZED_NAME_I_WIDTH)
-  @javax.annotation.Nullable
   private Integer iWidth;
 
   public static final String SERIALIZED_NAME_I_HEIGHT = "iHeight";
   @SerializedName(SERIALIZED_NAME_I_HEIGHT)
-  @javax.annotation.Nullable
   private Integer iHeight;
 
   public EzsigndocumentExtractTextV1Request() {
   }
 
-  public EzsigndocumentExtractTextV1Request iPage(@javax.annotation.Nonnull Integer iPage) {
+  public EzsigndocumentExtractTextV1Request iPage(Integer iPage) {
     this.iPage = iPage;
     return this;
   }
@@ -151,12 +145,12 @@ public class EzsigndocumentExtractTextV1Request {
     return iPage;
   }
 
-  public void setiPage(@javax.annotation.Nonnull Integer iPage) {
+  public void setiPage(Integer iPage) {
     this.iPage = iPage;
   }
 
 
-  public EzsigndocumentExtractTextV1Request eSection(@javax.annotation.Nullable ESectionEnum eSection) {
+  public EzsigndocumentExtractTextV1Request eSection(ESectionEnum eSection) {
     this.eSection = eSection;
     return this;
   }
@@ -170,12 +164,12 @@ public class EzsigndocumentExtractTextV1Request {
     return eSection;
   }
 
-  public void seteSection(@javax.annotation.Nullable ESectionEnum eSection) {
+  public void seteSection(ESectionEnum eSection) {
     this.eSection = eSection;
   }
 
 
-  public EzsigndocumentExtractTextV1Request iX(@javax.annotation.Nullable Integer iX) {
+  public EzsigndocumentExtractTextV1Request iX(Integer iX) {
     this.iX = iX;
     return this;
   }
@@ -189,12 +183,12 @@ public class EzsigndocumentExtractTextV1Request {
     return iX;
   }
 
-  public void setiX(@javax.annotation.Nullable Integer iX) {
+  public void setiX(Integer iX) {
     this.iX = iX;
   }
 
 
-  public EzsigndocumentExtractTextV1Request iY(@javax.annotation.Nullable Integer iY) {
+  public EzsigndocumentExtractTextV1Request iY(Integer iY) {
     this.iY = iY;
     return this;
   }
@@ -208,12 +202,12 @@ public class EzsigndocumentExtractTextV1Request {
     return iY;
   }
 
-  public void setiY(@javax.annotation.Nullable Integer iY) {
+  public void setiY(Integer iY) {
     this.iY = iY;
   }
 
 
-  public EzsigndocumentExtractTextV1Request iWidth(@javax.annotation.Nullable Integer iWidth) {
+  public EzsigndocumentExtractTextV1Request iWidth(Integer iWidth) {
     this.iWidth = iWidth;
     return this;
   }
@@ -227,12 +221,12 @@ public class EzsigndocumentExtractTextV1Request {
     return iWidth;
   }
 
-  public void setiWidth(@javax.annotation.Nullable Integer iWidth) {
+  public void setiWidth(Integer iWidth) {
     this.iWidth = iWidth;
   }
 
 
-  public EzsigndocumentExtractTextV1Request iHeight(@javax.annotation.Nullable Integer iHeight) {
+  public EzsigndocumentExtractTextV1Request iHeight(Integer iHeight) {
     this.iHeight = iHeight;
     return this;
   }
@@ -246,7 +240,7 @@ public class EzsigndocumentExtractTextV1Request {
     return iHeight;
   }
 
-  public void setiHeight(@javax.annotation.Nullable Integer iHeight) {
+  public void setiHeight(Integer iHeight) {
     this.iHeight = iHeight;
   }
 

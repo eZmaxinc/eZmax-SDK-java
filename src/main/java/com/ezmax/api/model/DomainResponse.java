@@ -49,42 +49,36 @@ import eZmaxAPI.JSON;
 /**
  * A Domain Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DomainResponse {
   public static final String SERIALIZED_NAME_PKI_DOMAIN_I_D = "pkiDomainID";
   @SerializedName(SERIALIZED_NAME_PKI_DOMAIN_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiDomainID;
 
   public static final String SERIALIZED_NAME_S_DOMAIN_NAME = "sDomainName";
   @SerializedName(SERIALIZED_NAME_S_DOMAIN_NAME)
-  @javax.annotation.Nonnull
   private String sDomainName;
 
   public static final String SERIALIZED_NAME_B_DOMAIN_VALIDDKIM = "bDomainValiddkim";
   @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDDKIM)
-  @javax.annotation.Nonnull
   private Boolean bDomainValiddkim;
 
   public static final String SERIALIZED_NAME_B_DOMAIN_VALIDMAILFROM = "bDomainValidmailfrom";
   @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDMAILFROM)
-  @javax.annotation.Nonnull
   private Boolean bDomainValidmailfrom;
 
   public static final String SERIALIZED_NAME_B_DOMAIN_VALIDCUSTOMER = "bDomainValidcustomer";
   @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDCUSTOMER)
-  @javax.annotation.Nonnull
   private Boolean bDomainValidcustomer;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nonnull
   private CommonAudit objAudit;
 
   public DomainResponse() {
   }
 
-  public DomainResponse pkiDomainID(@javax.annotation.Nonnull Integer pkiDomainID) {
+  public DomainResponse pkiDomainID(Integer pkiDomainID) {
     this.pkiDomainID = pkiDomainID;
     return this;
   }
@@ -100,12 +94,12 @@ public class DomainResponse {
     return pkiDomainID;
   }
 
-  public void setPkiDomainID(@javax.annotation.Nonnull Integer pkiDomainID) {
+  public void setPkiDomainID(Integer pkiDomainID) {
     this.pkiDomainID = pkiDomainID;
   }
 
 
-  public DomainResponse sDomainName(@javax.annotation.Nonnull String sDomainName) {
+  public DomainResponse sDomainName(String sDomainName) {
     this.sDomainName = sDomainName;
     return this;
   }
@@ -119,12 +113,12 @@ public class DomainResponse {
     return sDomainName;
   }
 
-  public void setsDomainName(@javax.annotation.Nonnull String sDomainName) {
+  public void setsDomainName(String sDomainName) {
     this.sDomainName = sDomainName;
   }
 
 
-  public DomainResponse bDomainValiddkim(@javax.annotation.Nonnull Boolean bDomainValiddkim) {
+  public DomainResponse bDomainValiddkim(Boolean bDomainValiddkim) {
     this.bDomainValiddkim = bDomainValiddkim;
     return this;
   }
@@ -138,12 +132,12 @@ public class DomainResponse {
     return bDomainValiddkim;
   }
 
-  public void setbDomainValiddkim(@javax.annotation.Nonnull Boolean bDomainValiddkim) {
+  public void setbDomainValiddkim(Boolean bDomainValiddkim) {
     this.bDomainValiddkim = bDomainValiddkim;
   }
 
 
-  public DomainResponse bDomainValidmailfrom(@javax.annotation.Nonnull Boolean bDomainValidmailfrom) {
+  public DomainResponse bDomainValidmailfrom(Boolean bDomainValidmailfrom) {
     this.bDomainValidmailfrom = bDomainValidmailfrom;
     return this;
   }
@@ -157,12 +151,12 @@ public class DomainResponse {
     return bDomainValidmailfrom;
   }
 
-  public void setbDomainValidmailfrom(@javax.annotation.Nonnull Boolean bDomainValidmailfrom) {
+  public void setbDomainValidmailfrom(Boolean bDomainValidmailfrom) {
     this.bDomainValidmailfrom = bDomainValidmailfrom;
   }
 
 
-  public DomainResponse bDomainValidcustomer(@javax.annotation.Nonnull Boolean bDomainValidcustomer) {
+  public DomainResponse bDomainValidcustomer(Boolean bDomainValidcustomer) {
     this.bDomainValidcustomer = bDomainValidcustomer;
     return this;
   }
@@ -176,12 +170,12 @@ public class DomainResponse {
     return bDomainValidcustomer;
   }
 
-  public void setbDomainValidcustomer(@javax.annotation.Nonnull Boolean bDomainValidcustomer) {
+  public void setbDomainValidcustomer(Boolean bDomainValidcustomer) {
     this.bDomainValidcustomer = bDomainValidcustomer;
   }
 
 
-  public DomainResponse objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public DomainResponse objAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -195,7 +189,7 @@ public class DomainResponse {
     return objAudit;
   }
 
-  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
@@ -284,6 +278,21 @@ public class DomainResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in DomainResponse is not found in the empty JSON string", DomainResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!DomainResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DomainResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : DomainResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sDomainName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sDomainName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDomainName").toString()));
@@ -292,6 +301,34 @@ public class DomainResponse {
       CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!DomainResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'DomainResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<DomainResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(DomainResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<DomainResponse>() {
+           @Override
+           public void write(JsonWriter out, DomainResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public DomainResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of DomainResponse given an JSON string

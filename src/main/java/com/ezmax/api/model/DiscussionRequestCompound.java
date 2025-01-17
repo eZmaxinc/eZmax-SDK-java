@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.DiscussionRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,81 @@ import eZmaxAPI.JSON;
 /**
  * A Discussion Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class DiscussionRequestCompound extends DiscussionRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class DiscussionRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_DISCUSSION_I_D = "pkiDiscussionID";
+  @SerializedName(SERIALIZED_NAME_PKI_DISCUSSION_I_D)
+  private Integer pkiDiscussionID;
+
+  public static final String SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION = "sDiscussionDescription";
+  @SerializedName(SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION)
+  private String sDiscussionDescription;
+
+  public static final String SERIALIZED_NAME_B_DISCUSSION_CLOSED = "bDiscussionClosed";
+  @SerializedName(SERIALIZED_NAME_B_DISCUSSION_CLOSED)
+  private Boolean bDiscussionClosed;
+
   public DiscussionRequestCompound() {
   }
+
+  public DiscussionRequestCompound pkiDiscussionID(Integer pkiDiscussionID) {
+    this.pkiDiscussionID = pkiDiscussionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Discussion
+   * minimum: 0
+   * maximum: 16777215
+   * @return pkiDiscussionID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiDiscussionID() {
+    return pkiDiscussionID;
+  }
+
+  public void setPkiDiscussionID(Integer pkiDiscussionID) {
+    this.pkiDiscussionID = pkiDiscussionID;
+  }
+
+
+  public DiscussionRequestCompound sDiscussionDescription(String sDiscussionDescription) {
+    this.sDiscussionDescription = sDiscussionDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Discussion
+   * @return sDiscussionDescription
+   */
+  @javax.annotation.Nonnull
+  public String getsDiscussionDescription() {
+    return sDiscussionDescription;
+  }
+
+  public void setsDiscussionDescription(String sDiscussionDescription) {
+    this.sDiscussionDescription = sDiscussionDescription;
+  }
+
+
+  public DiscussionRequestCompound bDiscussionClosed(Boolean bDiscussionClosed) {
+    this.bDiscussionClosed = bDiscussionClosed;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s an closed
+   * @return bDiscussionClosed
+   */
+  @javax.annotation.Nullable
+  public Boolean getbDiscussionClosed() {
+    return bDiscussionClosed;
+  }
+
+  public void setbDiscussionClosed(Boolean bDiscussionClosed) {
+    this.bDiscussionClosed = bDiscussionClosed;
+  }
+
 
 
   @Override
@@ -63,19 +133,24 @@ public class DiscussionRequestCompound extends DiscussionRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    DiscussionRequestCompound discussionRequestCompound = (DiscussionRequestCompound) o;
+    return Objects.equals(this.pkiDiscussionID, discussionRequestCompound.pkiDiscussionID) &&
+        Objects.equals(this.sDiscussionDescription, discussionRequestCompound.sDiscussionDescription) &&
+        Objects.equals(this.bDiscussionClosed, discussionRequestCompound.bDiscussionClosed);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiDiscussionID, sDiscussionDescription, bDiscussionClosed);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiscussionRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiDiscussionID: ").append(toIndentedString(pkiDiscussionID)).append("\n");
+    sb.append("    sDiscussionDescription: ").append(toIndentedString(sDiscussionDescription)).append("\n");
+    sb.append("    bDiscussionClosed: ").append(toIndentedString(bDiscussionClosed)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -133,6 +208,10 @@ public class DiscussionRequestCompound extends DiscussionRequest {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sDiscussionDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sDiscussionDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDiscussionDescription").toString()));
       }
   }
 

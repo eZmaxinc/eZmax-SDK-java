@@ -8,6 +8,8 @@ Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCoun
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
 |**mPayload** | [**EzsignfolderGetCommunicationCountV1ResponseMPayload**](EzsignfolderGetCommunicationCountV1ResponseMPayload.md) |  |  |
 
 

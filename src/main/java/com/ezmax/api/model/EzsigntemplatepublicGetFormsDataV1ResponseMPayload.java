@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}/getFormsData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepublicGetFormsDataV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_FORMS_DATA_FOLDER = "a_objFormsDataFolder";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FORMS_DATA_FOLDER)
-  @javax.annotation.Nonnull
   private List<CustomFormsDataFolderResponse> aObjFormsDataFolder = new ArrayList<>();
 
   public EzsigntemplatepublicGetFormsDataV1ResponseMPayload() {
   }
 
-  public EzsigntemplatepublicGetFormsDataV1ResponseMPayload aObjFormsDataFolder(@javax.annotation.Nonnull List<CustomFormsDataFolderResponse> aObjFormsDataFolder) {
+  public EzsigntemplatepublicGetFormsDataV1ResponseMPayload aObjFormsDataFolder(List<CustomFormsDataFolderResponse> aObjFormsDataFolder) {
     this.aObjFormsDataFolder = aObjFormsDataFolder;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsigntemplatepublicGetFormsDataV1ResponseMPayload {
     return aObjFormsDataFolder;
   }
 
-  public void setaObjFormsDataFolder(@javax.annotation.Nonnull List<CustomFormsDataFolderResponse> aObjFormsDataFolder) {
+  public void setaObjFormsDataFolder(List<CustomFormsDataFolderResponse> aObjFormsDataFolder) {
     this.aObjFormsDataFolder = aObjFormsDataFolder;
   }
 

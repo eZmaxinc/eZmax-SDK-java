@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * An Email Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EmailRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EMAIL_I_D = "pkiEmailID";
   @SerializedName(SERIALIZED_NAME_PKI_EMAIL_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEmailID;
 
   public static final String SERIALIZED_NAME_FKI_EMAILTYPE_I_D = "fkiEmailtypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EMAILTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEmailtypeID;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  @javax.annotation.Nonnull
   private String sEmailAddress;
 
   public EmailRequestCompound() {
   }
 
-  public EmailRequestCompound pkiEmailID(@javax.annotation.Nullable Integer pkiEmailID) {
+  public EmailRequestCompound pkiEmailID(Integer pkiEmailID) {
     this.pkiEmailID = pkiEmailID;
     return this;
   }
@@ -84,12 +81,12 @@ public class EmailRequestCompound {
     return pkiEmailID;
   }
 
-  public void setPkiEmailID(@javax.annotation.Nullable Integer pkiEmailID) {
+  public void setPkiEmailID(Integer pkiEmailID) {
     this.pkiEmailID = pkiEmailID;
   }
 
 
-  public EmailRequestCompound fkiEmailtypeID(@javax.annotation.Nonnull Integer fkiEmailtypeID) {
+  public EmailRequestCompound fkiEmailtypeID(Integer fkiEmailtypeID) {
     this.fkiEmailtypeID = fkiEmailtypeID;
     return this;
   }
@@ -104,12 +101,12 @@ public class EmailRequestCompound {
     return fkiEmailtypeID;
   }
 
-  public void setFkiEmailtypeID(@javax.annotation.Nonnull Integer fkiEmailtypeID) {
+  public void setFkiEmailtypeID(Integer fkiEmailtypeID) {
     this.fkiEmailtypeID = fkiEmailtypeID;
   }
 
 
-  public EmailRequestCompound sEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
+  public EmailRequestCompound sEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -123,7 +120,7 @@ public class EmailRequestCompound {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
+  public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 

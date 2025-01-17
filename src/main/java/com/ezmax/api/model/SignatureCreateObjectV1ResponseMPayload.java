@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/signature
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SignatureCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_SIGNATURE_I_D = "a_pkiSignatureID";
   @SerializedName(SERIALIZED_NAME_A_PKI_SIGNATURE_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiSignatureID = new ArrayList<>();
 
   public SignatureCreateObjectV1ResponseMPayload() {
   }
 
-  public SignatureCreateObjectV1ResponseMPayload aPkiSignatureID(@javax.annotation.Nonnull List<Integer> aPkiSignatureID) {
+  public SignatureCreateObjectV1ResponseMPayload aPkiSignatureID(List<Integer> aPkiSignatureID) {
     this.aPkiSignatureID = aPkiSignatureID;
     return this;
   }
@@ -82,7 +81,7 @@ public class SignatureCreateObjectV1ResponseMPayload {
     return aPkiSignatureID;
   }
 
-  public void setaPkiSignatureID(@javax.annotation.Nonnull List<Integer> aPkiSignatureID) {
+  public void setaPkiSignatureID(List<Integer> aPkiSignatureID) {
     this.aPkiSignatureID = aPkiSignatureID;
   }
 

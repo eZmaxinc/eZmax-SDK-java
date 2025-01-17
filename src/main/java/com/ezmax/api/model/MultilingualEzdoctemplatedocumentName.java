@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * The name1 of the Ezdoctemplatedocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualEzdoctemplatedocumentName {
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME1 = "sEzdoctemplatedocumentName1";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME1)
-  @javax.annotation.Nullable
   private String sEzdoctemplatedocumentName1;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME2 = "sEzdoctemplatedocumentName2";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME2)
-  @javax.annotation.Nullable
   private String sEzdoctemplatedocumentName2;
 
   public MultilingualEzdoctemplatedocumentName() {
   }
 
-  public MultilingualEzdoctemplatedocumentName sEzdoctemplatedocumentName1(@javax.annotation.Nullable String sEzdoctemplatedocumentName1) {
+  public MultilingualEzdoctemplatedocumentName sEzdoctemplatedocumentName1(String sEzdoctemplatedocumentName1) {
     this.sEzdoctemplatedocumentName1 = sEzdoctemplatedocumentName1;
     return this;
   }
@@ -77,12 +75,12 @@ public class MultilingualEzdoctemplatedocumentName {
     return sEzdoctemplatedocumentName1;
   }
 
-  public void setsEzdoctemplatedocumentName1(@javax.annotation.Nullable String sEzdoctemplatedocumentName1) {
+  public void setsEzdoctemplatedocumentName1(String sEzdoctemplatedocumentName1) {
     this.sEzdoctemplatedocumentName1 = sEzdoctemplatedocumentName1;
   }
 
 
-  public MultilingualEzdoctemplatedocumentName sEzdoctemplatedocumentName2(@javax.annotation.Nullable String sEzdoctemplatedocumentName2) {
+  public MultilingualEzdoctemplatedocumentName sEzdoctemplatedocumentName2(String sEzdoctemplatedocumentName2) {
     this.sEzdoctemplatedocumentName2 = sEzdoctemplatedocumentName2;
     return this;
   }
@@ -96,7 +94,7 @@ public class MultilingualEzdoctemplatedocumentName {
     return sEzdoctemplatedocumentName2;
   }
 
-  public void setsEzdoctemplatedocumentName2(@javax.annotation.Nullable String sEzdoctemplatedocumentName2) {
+  public void setsEzdoctemplatedocumentName2(String sEzdoctemplatedocumentName2) {
     this.sEzdoctemplatedocumentName2 = sEzdoctemplatedocumentName2;
   }
 

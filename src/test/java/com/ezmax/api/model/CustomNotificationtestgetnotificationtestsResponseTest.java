@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.FieldENotificationpreferenceStatus;
 import com.ezmax.api.model.MultilingualNotificationtestName;
-import com.ezmax.api.model.NotificationtestResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

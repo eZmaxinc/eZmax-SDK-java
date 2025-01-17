@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A webhookheader object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebhookheaderRequest {
   public static final String SERIALIZED_NAME_PKI_WEBHOOKHEADER_I_D = "pkiWebhookheaderID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOKHEADER_I_D)
-  @javax.annotation.Nullable
   private Integer pkiWebhookheaderID;
 
   public static final String SERIALIZED_NAME_S_WEBHOOKHEADER_NAME = "sWebhookheaderName";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOKHEADER_NAME)
-  @javax.annotation.Nonnull
   private String sWebhookheaderName;
 
   public static final String SERIALIZED_NAME_S_WEBHOOKHEADER_VALUE = "sWebhookheaderValue";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOKHEADER_VALUE)
-  @javax.annotation.Nonnull
   private String sWebhookheaderValue;
 
   public WebhookheaderRequest() {
   }
 
-  public WebhookheaderRequest pkiWebhookheaderID(@javax.annotation.Nullable Integer pkiWebhookheaderID) {
+  public WebhookheaderRequest pkiWebhookheaderID(Integer pkiWebhookheaderID) {
     this.pkiWebhookheaderID = pkiWebhookheaderID;
     return this;
   }
@@ -82,12 +79,12 @@ public class WebhookheaderRequest {
     return pkiWebhookheaderID;
   }
 
-  public void setPkiWebhookheaderID(@javax.annotation.Nullable Integer pkiWebhookheaderID) {
+  public void setPkiWebhookheaderID(Integer pkiWebhookheaderID) {
     this.pkiWebhookheaderID = pkiWebhookheaderID;
   }
 
 
-  public WebhookheaderRequest sWebhookheaderName(@javax.annotation.Nonnull String sWebhookheaderName) {
+  public WebhookheaderRequest sWebhookheaderName(String sWebhookheaderName) {
     this.sWebhookheaderName = sWebhookheaderName;
     return this;
   }
@@ -101,12 +98,12 @@ public class WebhookheaderRequest {
     return sWebhookheaderName;
   }
 
-  public void setsWebhookheaderName(@javax.annotation.Nonnull String sWebhookheaderName) {
+  public void setsWebhookheaderName(String sWebhookheaderName) {
     this.sWebhookheaderName = sWebhookheaderName;
   }
 
 
-  public WebhookheaderRequest sWebhookheaderValue(@javax.annotation.Nonnull String sWebhookheaderValue) {
+  public WebhookheaderRequest sWebhookheaderValue(String sWebhookheaderValue) {
     this.sWebhookheaderValue = sWebhookheaderValue;
     return this;
   }
@@ -120,7 +117,7 @@ public class WebhookheaderRequest {
     return sWebhookheaderValue;
   }
 
-  public void setsWebhookheaderValue(@javax.annotation.Nonnull String sWebhookheaderValue) {
+  public void setsWebhookheaderValue(String sWebhookheaderValue) {
     this.sWebhookheaderValue = sWebhookheaderValue;
   }
 
@@ -196,6 +193,21 @@ public class WebhookheaderRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in WebhookheaderRequest is not found in the empty JSON string", WebhookheaderRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!WebhookheaderRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `WebhookheaderRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : WebhookheaderRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sWebhookheaderName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sWebhookheaderName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookheaderName").toString()));
@@ -205,6 +217,34 @@ public class WebhookheaderRequest {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!WebhookheaderRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'WebhookheaderRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<WebhookheaderRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(WebhookheaderRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<WebhookheaderRequest>() {
+           @Override
+           public void write(JsonWriter out, WebhookheaderRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public WebhookheaderRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of WebhookheaderRequest given an JSON string

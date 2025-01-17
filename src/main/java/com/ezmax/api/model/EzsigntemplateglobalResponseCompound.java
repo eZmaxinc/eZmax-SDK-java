@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsigntemplateglobalResponse;
 import com.ezmax.api.model.EzsigntemplateglobaldocumentResponse;
 import com.ezmax.api.model.EzsigntemplateglobalsignerResponseCompound;
 import com.ezmax.api.model.FieldEEzsigntemplateglobalModule;
@@ -55,22 +54,255 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateglobal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigntemplateglobalResponseCompound extends EzsigntemplateglobalResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsigntemplateglobalResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D = "pkiEzsigntemplateglobalID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D)
+  private Integer pkiEzsigntemplateglobalID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBALDOCUMENT_I_D = "fkiEzsigntemplateglobaldocumentID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBALDOCUMENT_I_D)
+  private Integer fkiEzsigntemplateglobaldocumentID;
+
+  public static final String SERIALIZED_NAME_FKI_MODULE_I_D = "fkiModuleID";
+  @SerializedName(SERIALIZED_NAME_FKI_MODULE_I_D)
+  private Integer fkiModuleID;
+
+  public static final String SERIALIZED_NAME_S_MODULE_NAME_X = "sModuleNameX";
+  @SerializedName(SERIALIZED_NAME_S_MODULE_NAME_X)
+  private String sModuleNameX;
+
+  public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
+  @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  private Integer fkiLanguageID;
+
+  public static final String SERIALIZED_NAME_S_LANGUAGE_NAME_X = "sLanguageNameX";
+  @SerializedName(SERIALIZED_NAME_S_LANGUAGE_NAME_X)
+  private String sLanguageNameX;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEGLOBAL_MODULE = "eEzsigntemplateglobalModule";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEGLOBAL_MODULE)
+  private FieldEEzsigntemplateglobalModule eEzsigntemplateglobalModule;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEGLOBAL_SUPPLIER = "eEzsigntemplateglobalSupplier";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEGLOBAL_SUPPLIER)
+  private FieldEEzsigntemplateglobalSupplier eEzsigntemplateglobalSupplier;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBAL_CODE = "sEzsigntemplateglobalCode";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBAL_CODE)
+  private String sEzsigntemplateglobalCode;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBAL_DESCRIPTION = "sEzsigntemplateglobalDescription";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBAL_DESCRIPTION)
+  private String sEzsigntemplateglobalDescription;
+
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEGLOBALDOCUMENT = "objEzsigntemplateglobaldocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEGLOBALDOCUMENT)
-  @javax.annotation.Nullable
   private EzsigntemplateglobaldocumentResponse objEzsigntemplateglobaldocument;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEGLOBALSIGNER = "a_objEzsigntemplateglobalsigner";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEGLOBALSIGNER)
-  @javax.annotation.Nonnull
   private List<EzsigntemplateglobalsignerResponseCompound> aObjEzsigntemplateglobalsigner = new ArrayList<>();
 
   public EzsigntemplateglobalResponseCompound() {
   }
 
-  public EzsigntemplateglobalResponseCompound objEzsigntemplateglobaldocument(@javax.annotation.Nullable EzsigntemplateglobaldocumentResponse objEzsigntemplateglobaldocument) {
+  public EzsigntemplateglobalResponseCompound pkiEzsigntemplateglobalID(Integer pkiEzsigntemplateglobalID) {
+    this.pkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplateglobal
+   * minimum: 0
+   * @return pkiEzsigntemplateglobalID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiEzsigntemplateglobalID() {
+    return pkiEzsigntemplateglobalID;
+  }
+
+  public void setPkiEzsigntemplateglobalID(Integer pkiEzsigntemplateglobalID) {
+    this.pkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
+  }
+
+
+  public EzsigntemplateglobalResponseCompound fkiEzsigntemplateglobaldocumentID(Integer fkiEzsigntemplateglobaldocumentID) {
+    this.fkiEzsigntemplateglobaldocumentID = fkiEzsigntemplateglobaldocumentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplateglobaldocument
+   * minimum: 0
+   * @return fkiEzsigntemplateglobaldocumentID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsigntemplateglobaldocumentID() {
+    return fkiEzsigntemplateglobaldocumentID;
+  }
+
+  public void setFkiEzsigntemplateglobaldocumentID(Integer fkiEzsigntemplateglobaldocumentID) {
+    this.fkiEzsigntemplateglobaldocumentID = fkiEzsigntemplateglobaldocumentID;
+  }
+
+
+  public EzsigntemplateglobalResponseCompound fkiModuleID(Integer fkiModuleID) {
+    this.fkiModuleID = fkiModuleID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Module
+   * minimum: 0
+   * @return fkiModuleID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiModuleID() {
+    return fkiModuleID;
+  }
+
+  public void setFkiModuleID(Integer fkiModuleID) {
+    this.fkiModuleID = fkiModuleID;
+  }
+
+
+  public EzsigntemplateglobalResponseCompound sModuleNameX(String sModuleNameX) {
+    this.sModuleNameX = sModuleNameX;
+    return this;
+  }
+
+  /**
+   * The Name of the Module in the language of the requester
+   * @return sModuleNameX
+   */
+  @javax.annotation.Nullable
+  public String getsModuleNameX() {
+    return sModuleNameX;
+  }
+
+  public void setsModuleNameX(String sModuleNameX) {
+    this.sModuleNameX = sModuleNameX;
+  }
+
+
+  public EzsigntemplateglobalResponseCompound fkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+   * minimum: 1
+   * maximum: 2
+   * @return fkiLanguageID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiLanguageID() {
+    return fkiLanguageID;
+  }
+
+  public void setFkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
+  }
+
+
+  public EzsigntemplateglobalResponseCompound sLanguageNameX(String sLanguageNameX) {
+    this.sLanguageNameX = sLanguageNameX;
+    return this;
+  }
+
+  /**
+   * The Name of the Language in the language of the requester
+   * @return sLanguageNameX
+   */
+  @javax.annotation.Nonnull
+  public String getsLanguageNameX() {
+    return sLanguageNameX;
+  }
+
+  public void setsLanguageNameX(String sLanguageNameX) {
+    this.sLanguageNameX = sLanguageNameX;
+  }
+
+
+  public EzsigntemplateglobalResponseCompound eEzsigntemplateglobalModule(FieldEEzsigntemplateglobalModule eEzsigntemplateglobalModule) {
+    this.eEzsigntemplateglobalModule = eEzsigntemplateglobalModule;
+    return this;
+  }
+
+  /**
+   * Get eEzsigntemplateglobalModule
+   * @return eEzsigntemplateglobalModule
+   */
+  @javax.annotation.Nonnull
+  public FieldEEzsigntemplateglobalModule geteEzsigntemplateglobalModule() {
+    return eEzsigntemplateglobalModule;
+  }
+
+  public void seteEzsigntemplateglobalModule(FieldEEzsigntemplateglobalModule eEzsigntemplateglobalModule) {
+    this.eEzsigntemplateglobalModule = eEzsigntemplateglobalModule;
+  }
+
+
+  public EzsigntemplateglobalResponseCompound eEzsigntemplateglobalSupplier(FieldEEzsigntemplateglobalSupplier eEzsigntemplateglobalSupplier) {
+    this.eEzsigntemplateglobalSupplier = eEzsigntemplateglobalSupplier;
+    return this;
+  }
+
+  /**
+   * Get eEzsigntemplateglobalSupplier
+   * @return eEzsigntemplateglobalSupplier
+   */
+  @javax.annotation.Nonnull
+  public FieldEEzsigntemplateglobalSupplier geteEzsigntemplateglobalSupplier() {
+    return eEzsigntemplateglobalSupplier;
+  }
+
+  public void seteEzsigntemplateglobalSupplier(FieldEEzsigntemplateglobalSupplier eEzsigntemplateglobalSupplier) {
+    this.eEzsigntemplateglobalSupplier = eEzsigntemplateglobalSupplier;
+  }
+
+
+  public EzsigntemplateglobalResponseCompound sEzsigntemplateglobalCode(String sEzsigntemplateglobalCode) {
+    this.sEzsigntemplateglobalCode = sEzsigntemplateglobalCode;
+    return this;
+  }
+
+  /**
+   * The Code of the Ezsigntemplateglobal
+   * @return sEzsigntemplateglobalCode
+   */
+  @javax.annotation.Nonnull
+  public String getsEzsigntemplateglobalCode() {
+    return sEzsigntemplateglobalCode;
+  }
+
+  public void setsEzsigntemplateglobalCode(String sEzsigntemplateglobalCode) {
+    this.sEzsigntemplateglobalCode = sEzsigntemplateglobalCode;
+  }
+
+
+  public EzsigntemplateglobalResponseCompound sEzsigntemplateglobalDescription(String sEzsigntemplateglobalDescription) {
+    this.sEzsigntemplateglobalDescription = sEzsigntemplateglobalDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Ezsigntemplate
+   * @return sEzsigntemplateglobalDescription
+   */
+  @javax.annotation.Nonnull
+  public String getsEzsigntemplateglobalDescription() {
+    return sEzsigntemplateglobalDescription;
+  }
+
+  public void setsEzsigntemplateglobalDescription(String sEzsigntemplateglobalDescription) {
+    this.sEzsigntemplateglobalDescription = sEzsigntemplateglobalDescription;
+  }
+
+
+  public EzsigntemplateglobalResponseCompound objEzsigntemplateglobaldocument(EzsigntemplateglobaldocumentResponse objEzsigntemplateglobaldocument) {
     this.objEzsigntemplateglobaldocument = objEzsigntemplateglobaldocument;
     return this;
   }
@@ -84,12 +316,12 @@ public class EzsigntemplateglobalResponseCompound extends EzsigntemplateglobalRe
     return objEzsigntemplateglobaldocument;
   }
 
-  public void setObjEzsigntemplateglobaldocument(@javax.annotation.Nullable EzsigntemplateglobaldocumentResponse objEzsigntemplateglobaldocument) {
+  public void setObjEzsigntemplateglobaldocument(EzsigntemplateglobaldocumentResponse objEzsigntemplateglobaldocument) {
     this.objEzsigntemplateglobaldocument = objEzsigntemplateglobaldocument;
   }
 
 
-  public EzsigntemplateglobalResponseCompound aObjEzsigntemplateglobalsigner(@javax.annotation.Nonnull List<EzsigntemplateglobalsignerResponseCompound> aObjEzsigntemplateglobalsigner) {
+  public EzsigntemplateglobalResponseCompound aObjEzsigntemplateglobalsigner(List<EzsigntemplateglobalsignerResponseCompound> aObjEzsigntemplateglobalsigner) {
     this.aObjEzsigntemplateglobalsigner = aObjEzsigntemplateglobalsigner;
     return this;
   }
@@ -111,7 +343,7 @@ public class EzsigntemplateglobalResponseCompound extends EzsigntemplateglobalRe
     return aObjEzsigntemplateglobalsigner;
   }
 
-  public void setaObjEzsigntemplateglobalsigner(@javax.annotation.Nonnull List<EzsigntemplateglobalsignerResponseCompound> aObjEzsigntemplateglobalsigner) {
+  public void setaObjEzsigntemplateglobalsigner(List<EzsigntemplateglobalsignerResponseCompound> aObjEzsigntemplateglobalsigner) {
     this.aObjEzsigntemplateglobalsigner = aObjEzsigntemplateglobalsigner;
   }
 
@@ -126,21 +358,39 @@ public class EzsigntemplateglobalResponseCompound extends EzsigntemplateglobalRe
       return false;
     }
     EzsigntemplateglobalResponseCompound ezsigntemplateglobalResponseCompound = (EzsigntemplateglobalResponseCompound) o;
-    return Objects.equals(this.objEzsigntemplateglobaldocument, ezsigntemplateglobalResponseCompound.objEzsigntemplateglobaldocument) &&
-        Objects.equals(this.aObjEzsigntemplateglobalsigner, ezsigntemplateglobalResponseCompound.aObjEzsigntemplateglobalsigner) &&
-        super.equals(o);
+    return Objects.equals(this.pkiEzsigntemplateglobalID, ezsigntemplateglobalResponseCompound.pkiEzsigntemplateglobalID) &&
+        Objects.equals(this.fkiEzsigntemplateglobaldocumentID, ezsigntemplateglobalResponseCompound.fkiEzsigntemplateglobaldocumentID) &&
+        Objects.equals(this.fkiModuleID, ezsigntemplateglobalResponseCompound.fkiModuleID) &&
+        Objects.equals(this.sModuleNameX, ezsigntemplateglobalResponseCompound.sModuleNameX) &&
+        Objects.equals(this.fkiLanguageID, ezsigntemplateglobalResponseCompound.fkiLanguageID) &&
+        Objects.equals(this.sLanguageNameX, ezsigntemplateglobalResponseCompound.sLanguageNameX) &&
+        Objects.equals(this.eEzsigntemplateglobalModule, ezsigntemplateglobalResponseCompound.eEzsigntemplateglobalModule) &&
+        Objects.equals(this.eEzsigntemplateglobalSupplier, ezsigntemplateglobalResponseCompound.eEzsigntemplateglobalSupplier) &&
+        Objects.equals(this.sEzsigntemplateglobalCode, ezsigntemplateglobalResponseCompound.sEzsigntemplateglobalCode) &&
+        Objects.equals(this.sEzsigntemplateglobalDescription, ezsigntemplateglobalResponseCompound.sEzsigntemplateglobalDescription) &&
+        Objects.equals(this.objEzsigntemplateglobaldocument, ezsigntemplateglobalResponseCompound.objEzsigntemplateglobaldocument) &&
+        Objects.equals(this.aObjEzsigntemplateglobalsigner, ezsigntemplateglobalResponseCompound.aObjEzsigntemplateglobalsigner);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objEzsigntemplateglobaldocument, aObjEzsigntemplateglobalsigner, super.hashCode());
+    return Objects.hash(pkiEzsigntemplateglobalID, fkiEzsigntemplateglobaldocumentID, fkiModuleID, sModuleNameX, fkiLanguageID, sLanguageNameX, eEzsigntemplateglobalModule, eEzsigntemplateglobalSupplier, sEzsigntemplateglobalCode, sEzsigntemplateglobalDescription, objEzsigntemplateglobaldocument, aObjEzsigntemplateglobalsigner);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplateglobalResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsigntemplateglobalID: ").append(toIndentedString(pkiEzsigntemplateglobalID)).append("\n");
+    sb.append("    fkiEzsigntemplateglobaldocumentID: ").append(toIndentedString(fkiEzsigntemplateglobaldocumentID)).append("\n");
+    sb.append("    fkiModuleID: ").append(toIndentedString(fkiModuleID)).append("\n");
+    sb.append("    sModuleNameX: ").append(toIndentedString(sModuleNameX)).append("\n");
+    sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
+    sb.append("    sLanguageNameX: ").append(toIndentedString(sLanguageNameX)).append("\n");
+    sb.append("    eEzsigntemplateglobalModule: ").append(toIndentedString(eEzsigntemplateglobalModule)).append("\n");
+    sb.append("    eEzsigntemplateglobalSupplier: ").append(toIndentedString(eEzsigntemplateglobalSupplier)).append("\n");
+    sb.append("    sEzsigntemplateglobalCode: ").append(toIndentedString(sEzsigntemplateglobalCode)).append("\n");
+    sb.append("    sEzsigntemplateglobalDescription: ").append(toIndentedString(sEzsigntemplateglobalDescription)).append("\n");
     sb.append("    objEzsigntemplateglobaldocument: ").append(toIndentedString(objEzsigntemplateglobaldocument)).append("\n");
     sb.append("    aObjEzsigntemplateglobalsigner: ").append(toIndentedString(aObjEzsigntemplateglobalsigner)).append("\n");
     sb.append("}");
@@ -180,7 +430,6 @@ public class EzsigntemplateglobalResponseCompound extends EzsigntemplateglobalRe
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objEzsigntemplateglobalsigner");
     openapiRequiredFields.add("pkiEzsigntemplateglobalID");
     openapiRequiredFields.add("fkiEzsigntemplateglobaldocumentID");
     openapiRequiredFields.add("fkiModuleID");
@@ -190,6 +439,7 @@ public class EzsigntemplateglobalResponseCompound extends EzsigntemplateglobalRe
     openapiRequiredFields.add("eEzsigntemplateglobalSupplier");
     openapiRequiredFields.add("sEzsigntemplateglobalCode");
     openapiRequiredFields.add("sEzsigntemplateglobalDescription");
+    openapiRequiredFields.add("a_objEzsigntemplateglobalsigner");
   }
 
   /**
@@ -220,6 +470,22 @@ public class EzsigntemplateglobalResponseCompound extends EzsigntemplateglobalRe
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("sModuleNameX") != null && !jsonObj.get("sModuleNameX").isJsonNull()) && !jsonObj.get("sModuleNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sModuleNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModuleNameX").toString()));
+      }
+      if (!jsonObj.get("sLanguageNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sLanguageNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sLanguageNameX").toString()));
+      }
+      // validate the required field `eEzsigntemplateglobalModule`
+      FieldEEzsigntemplateglobalModule.validateJsonElement(jsonObj.get("eEzsigntemplateglobalModule"));
+      // validate the required field `eEzsigntemplateglobalSupplier`
+      FieldEEzsigntemplateglobalSupplier.validateJsonElement(jsonObj.get("eEzsigntemplateglobalSupplier"));
+      if (!jsonObj.get("sEzsigntemplateglobalCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateglobalCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateglobalCode").toString()));
+      }
+      if (!jsonObj.get("sEzsigntemplateglobalDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateglobalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateglobalDescription").toString()));
+      }
       // validate the optional field `objEzsigntemplateglobaldocument`
       if (jsonObj.get("objEzsigntemplateglobaldocument") != null && !jsonObj.get("objEzsigntemplateglobaldocument").isJsonNull()) {
         EzsigntemplateglobaldocumentResponse.validateJsonElement(jsonObj.get("objEzsigntemplateglobaldocument"));

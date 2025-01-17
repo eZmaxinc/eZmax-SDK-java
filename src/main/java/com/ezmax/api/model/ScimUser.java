@@ -51,32 +51,28 @@ import eZmaxAPI.JSON;
 /**
  * ScimUser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ScimUser {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
-  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_USER_NAME = "userName";
   @SerializedName(SERIALIZED_NAME_USER_NAME)
-  @javax.annotation.Nonnull
   private String userName;
 
   public static final String SERIALIZED_NAME_DISPLAY_NAME = "displayName";
   @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
-  @javax.annotation.Nullable
   private String displayName;
 
   public static final String SERIALIZED_NAME_EMAILS = "emails";
   @SerializedName(SERIALIZED_NAME_EMAILS)
-  @javax.annotation.Nullable
   private List<ScimEmail> emails = new ArrayList<>();
 
   public ScimUser() {
   }
 
-  public ScimUser id(@javax.annotation.Nullable String id) {
+  public ScimUser id(String id) {
     this.id = id;
     return this;
   }
@@ -90,12 +86,12 @@ public class ScimUser {
     return id;
   }
 
-  public void setId(@javax.annotation.Nullable String id) {
+  public void setId(String id) {
     this.id = id;
   }
 
 
-  public ScimUser userName(@javax.annotation.Nonnull String userName) {
+  public ScimUser userName(String userName) {
     this.userName = userName;
     return this;
   }
@@ -109,12 +105,12 @@ public class ScimUser {
     return userName;
   }
 
-  public void setUserName(@javax.annotation.Nonnull String userName) {
+  public void setUserName(String userName) {
     this.userName = userName;
   }
 
 
-  public ScimUser displayName(@javax.annotation.Nullable String displayName) {
+  public ScimUser displayName(String displayName) {
     this.displayName = displayName;
     return this;
   }
@@ -128,12 +124,12 @@ public class ScimUser {
     return displayName;
   }
 
-  public void setDisplayName(@javax.annotation.Nullable String displayName) {
+  public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
 
-  public ScimUser emails(@javax.annotation.Nullable List<ScimEmail> emails) {
+  public ScimUser emails(List<ScimEmail> emails) {
     this.emails = emails;
     return this;
   }
@@ -155,7 +151,7 @@ public class ScimUser {
     return emails;
   }
 
-  public void setEmails(@javax.annotation.Nullable List<ScimEmail> emails) {
+  public void setEmails(List<ScimEmail> emails) {
     this.emails = emails;
   }
 

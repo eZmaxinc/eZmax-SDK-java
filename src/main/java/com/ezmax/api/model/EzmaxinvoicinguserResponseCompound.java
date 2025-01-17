@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CustomContactNameResponse;
-import com.ezmax.api.model.EzmaxinvoicinguserResponse;
 import com.ezmax.api.model.FieldEEzmaxinvoicinguserVariationezsign;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -51,17 +50,228 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicinguser Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzmaxinvoicinguserResponseCompound extends EzmaxinvoicinguserResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzmaxinvoicinguserResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGUSER_I_D = "pkiEzmaxinvoicinguserID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGUSER_I_D)
+  private Integer pkiEzmaxinvoicinguserID;
+
+  public static final String SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D = "fkiEzmaxinvoicingID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D)
+  private Integer fkiEzmaxinvoicingID;
+
+  public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
+  @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
+  private Integer fkiBillingentityinternalID;
+
+  public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X = "sBillingentityinternalDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X)
+  private String sBillingentityinternalDescriptionX;
+
+  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
+  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  private Integer fkiUserID;
+
+  public static final String SERIALIZED_NAME_I_EZMAXINVOICINGUSER_EZSIGNDOCUMENT = "iEzmaxinvoicinguserEzsigndocument";
+  @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICINGUSER_EZSIGNDOCUMENT)
+  private Integer iEzmaxinvoicinguserEzsigndocument;
+
+  public static final String SERIALIZED_NAME_B_EZMAXINVOICINGUSER_EZSIGNACCOUNT = "bEzmaxinvoicinguserEzsignaccount";
+  @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICINGUSER_EZSIGNACCOUNT)
+  private Boolean bEzmaxinvoicinguserEzsignaccount;
+
+  public static final String SERIALIZED_NAME_B_EZMAXINVOICINGUSER_BILLABLEEZSIGN = "bEzmaxinvoicinguserBillableezsign";
+  @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICINGUSER_BILLABLEEZSIGN)
+  private Boolean bEzmaxinvoicinguserBillableezsign;
+
+  public static final String SERIALIZED_NAME_E_EZMAXINVOICINGUSER_VARIATIONEZSIGN = "eEzmaxinvoicinguserVariationezsign";
+  @SerializedName(SERIALIZED_NAME_E_EZMAXINVOICINGUSER_VARIATIONEZSIGN)
+  private FieldEEzmaxinvoicinguserVariationezsign eEzmaxinvoicinguserVariationezsign;
+
   public static final String SERIALIZED_NAME_OBJ_CONTACT_NAME = "objContactName";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT_NAME)
-  @javax.annotation.Nonnull
   private CustomContactNameResponse objContactName;
 
   public EzmaxinvoicinguserResponseCompound() {
   }
 
-  public EzmaxinvoicinguserResponseCompound objContactName(@javax.annotation.Nonnull CustomContactNameResponse objContactName) {
+  public EzmaxinvoicinguserResponseCompound pkiEzmaxinvoicinguserID(Integer pkiEzmaxinvoicinguserID) {
+    this.pkiEzmaxinvoicinguserID = pkiEzmaxinvoicinguserID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezmaxinvoicinguser
+   * minimum: 0
+   * @return pkiEzmaxinvoicinguserID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiEzmaxinvoicinguserID() {
+    return pkiEzmaxinvoicinguserID;
+  }
+
+  public void setPkiEzmaxinvoicinguserID(Integer pkiEzmaxinvoicinguserID) {
+    this.pkiEzmaxinvoicinguserID = pkiEzmaxinvoicinguserID;
+  }
+
+
+  public EzmaxinvoicinguserResponseCompound fkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
+    this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezmaxinvoicing
+   * minimum: 0
+   * @return fkiEzmaxinvoicingID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzmaxinvoicingID() {
+    return fkiEzmaxinvoicingID;
+  }
+
+  public void setFkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
+    this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
+  }
+
+
+  public EzmaxinvoicinguserResponseCompound fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Billingentityinternal.
+   * minimum: 0
+   * @return fkiBillingentityinternalID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiBillingentityinternalID() {
+    return fkiBillingentityinternalID;
+  }
+
+  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
+  }
+
+
+  public EzmaxinvoicinguserResponseCompound sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+    return this;
+  }
+
+  /**
+   * The description of the Billingentityinternal in the language of the requester
+   * @return sBillingentityinternalDescriptionX
+   */
+  @javax.annotation.Nonnull
+  public String getsBillingentityinternalDescriptionX() {
+    return sBillingentityinternalDescriptionX;
+  }
+
+  public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+  }
+
+
+  public EzmaxinvoicinguserResponseCompound fkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return fkiUserID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiUserID() {
+    return fkiUserID;
+  }
+
+  public void setFkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+  }
+
+
+  public EzmaxinvoicinguserResponseCompound iEzmaxinvoicinguserEzsigndocument(Integer iEzmaxinvoicinguserEzsigndocument) {
+    this.iEzmaxinvoicinguserEzsigndocument = iEzmaxinvoicinguserEzsigndocument;
+    return this;
+  }
+
+  /**
+   * The number of ezsign documents
+   * minimum: 0
+   * @return iEzmaxinvoicinguserEzsigndocument
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzmaxinvoicinguserEzsigndocument() {
+    return iEzmaxinvoicinguserEzsigndocument;
+  }
+
+  public void setiEzmaxinvoicinguserEzsigndocument(Integer iEzmaxinvoicinguserEzsigndocument) {
+    this.iEzmaxinvoicinguserEzsigndocument = iEzmaxinvoicinguserEzsigndocument;
+  }
+
+
+  public EzmaxinvoicinguserResponseCompound bEzmaxinvoicinguserEzsignaccount(Boolean bEzmaxinvoicinguserEzsignaccount) {
+    this.bEzmaxinvoicinguserEzsignaccount = bEzmaxinvoicinguserEzsignaccount;
+    return this;
+  }
+
+  /**
+   * Whether there is an eZsign account
+   * @return bEzmaxinvoicinguserEzsignaccount
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbEzmaxinvoicinguserEzsignaccount() {
+    return bEzmaxinvoicinguserEzsignaccount;
+  }
+
+  public void setbEzmaxinvoicinguserEzsignaccount(Boolean bEzmaxinvoicinguserEzsignaccount) {
+    this.bEzmaxinvoicinguserEzsignaccount = bEzmaxinvoicinguserEzsignaccount;
+  }
+
+
+  public EzmaxinvoicinguserResponseCompound bEzmaxinvoicinguserBillableezsign(Boolean bEzmaxinvoicinguserBillableezsign) {
+    this.bEzmaxinvoicinguserBillableezsign = bEzmaxinvoicinguserBillableezsign;
+    return this;
+  }
+
+  /**
+   * Whether it is billable for eZsign
+   * @return bEzmaxinvoicinguserBillableezsign
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbEzmaxinvoicinguserBillableezsign() {
+    return bEzmaxinvoicinguserBillableezsign;
+  }
+
+  public void setbEzmaxinvoicinguserBillableezsign(Boolean bEzmaxinvoicinguserBillableezsign) {
+    this.bEzmaxinvoicinguserBillableezsign = bEzmaxinvoicinguserBillableezsign;
+  }
+
+
+  public EzmaxinvoicinguserResponseCompound eEzmaxinvoicinguserVariationezsign(FieldEEzmaxinvoicinguserVariationezsign eEzmaxinvoicinguserVariationezsign) {
+    this.eEzmaxinvoicinguserVariationezsign = eEzmaxinvoicinguserVariationezsign;
+    return this;
+  }
+
+  /**
+   * Get eEzmaxinvoicinguserVariationezsign
+   * @return eEzmaxinvoicinguserVariationezsign
+   */
+  @javax.annotation.Nonnull
+  public FieldEEzmaxinvoicinguserVariationezsign geteEzmaxinvoicinguserVariationezsign() {
+    return eEzmaxinvoicinguserVariationezsign;
+  }
+
+  public void seteEzmaxinvoicinguserVariationezsign(FieldEEzmaxinvoicinguserVariationezsign eEzmaxinvoicinguserVariationezsign) {
+    this.eEzmaxinvoicinguserVariationezsign = eEzmaxinvoicinguserVariationezsign;
+  }
+
+
+  public EzmaxinvoicinguserResponseCompound objContactName(CustomContactNameResponse objContactName) {
     this.objContactName = objContactName;
     return this;
   }
@@ -75,7 +285,7 @@ public class EzmaxinvoicinguserResponseCompound extends EzmaxinvoicinguserRespon
     return objContactName;
   }
 
-  public void setObjContactName(@javax.annotation.Nonnull CustomContactNameResponse objContactName) {
+  public void setObjContactName(CustomContactNameResponse objContactName) {
     this.objContactName = objContactName;
   }
 
@@ -90,20 +300,36 @@ public class EzmaxinvoicinguserResponseCompound extends EzmaxinvoicinguserRespon
       return false;
     }
     EzmaxinvoicinguserResponseCompound ezmaxinvoicinguserResponseCompound = (EzmaxinvoicinguserResponseCompound) o;
-    return Objects.equals(this.objContactName, ezmaxinvoicinguserResponseCompound.objContactName) &&
-        super.equals(o);
+    return Objects.equals(this.pkiEzmaxinvoicinguserID, ezmaxinvoicinguserResponseCompound.pkiEzmaxinvoicinguserID) &&
+        Objects.equals(this.fkiEzmaxinvoicingID, ezmaxinvoicinguserResponseCompound.fkiEzmaxinvoicingID) &&
+        Objects.equals(this.fkiBillingentityinternalID, ezmaxinvoicinguserResponseCompound.fkiBillingentityinternalID) &&
+        Objects.equals(this.sBillingentityinternalDescriptionX, ezmaxinvoicinguserResponseCompound.sBillingentityinternalDescriptionX) &&
+        Objects.equals(this.fkiUserID, ezmaxinvoicinguserResponseCompound.fkiUserID) &&
+        Objects.equals(this.iEzmaxinvoicinguserEzsigndocument, ezmaxinvoicinguserResponseCompound.iEzmaxinvoicinguserEzsigndocument) &&
+        Objects.equals(this.bEzmaxinvoicinguserEzsignaccount, ezmaxinvoicinguserResponseCompound.bEzmaxinvoicinguserEzsignaccount) &&
+        Objects.equals(this.bEzmaxinvoicinguserBillableezsign, ezmaxinvoicinguserResponseCompound.bEzmaxinvoicinguserBillableezsign) &&
+        Objects.equals(this.eEzmaxinvoicinguserVariationezsign, ezmaxinvoicinguserResponseCompound.eEzmaxinvoicinguserVariationezsign) &&
+        Objects.equals(this.objContactName, ezmaxinvoicinguserResponseCompound.objContactName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objContactName, super.hashCode());
+    return Objects.hash(pkiEzmaxinvoicinguserID, fkiEzmaxinvoicingID, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiUserID, iEzmaxinvoicinguserEzsigndocument, bEzmaxinvoicinguserEzsignaccount, bEzmaxinvoicinguserBillableezsign, eEzmaxinvoicinguserVariationezsign, objContactName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzmaxinvoicinguserResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzmaxinvoicinguserID: ").append(toIndentedString(pkiEzmaxinvoicinguserID)).append("\n");
+    sb.append("    fkiEzmaxinvoicingID: ").append(toIndentedString(fkiEzmaxinvoicingID)).append("\n");
+    sb.append("    fkiBillingentityinternalID: ").append(toIndentedString(fkiBillingentityinternalID)).append("\n");
+    sb.append("    sBillingentityinternalDescriptionX: ").append(toIndentedString(sBillingentityinternalDescriptionX)).append("\n");
+    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
+    sb.append("    iEzmaxinvoicinguserEzsigndocument: ").append(toIndentedString(iEzmaxinvoicinguserEzsigndocument)).append("\n");
+    sb.append("    bEzmaxinvoicinguserEzsignaccount: ").append(toIndentedString(bEzmaxinvoicinguserEzsignaccount)).append("\n");
+    sb.append("    bEzmaxinvoicinguserBillableezsign: ").append(toIndentedString(bEzmaxinvoicinguserBillableezsign)).append("\n");
+    sb.append("    eEzmaxinvoicinguserVariationezsign: ").append(toIndentedString(eEzmaxinvoicinguserVariationezsign)).append("\n");
     sb.append("    objContactName: ").append(toIndentedString(objContactName)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -140,7 +366,6 @@ public class EzmaxinvoicinguserResponseCompound extends EzmaxinvoicinguserRespon
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objContactName");
     openapiRequiredFields.add("fkiBillingentityinternalID");
     openapiRequiredFields.add("sBillingentityinternalDescriptionX");
     openapiRequiredFields.add("fkiUserID");
@@ -148,6 +373,7 @@ public class EzmaxinvoicinguserResponseCompound extends EzmaxinvoicinguserRespon
     openapiRequiredFields.add("bEzmaxinvoicinguserEzsignaccount");
     openapiRequiredFields.add("bEzmaxinvoicinguserBillableezsign");
     openapiRequiredFields.add("eEzmaxinvoicinguserVariationezsign");
+    openapiRequiredFields.add("objContactName");
   }
 
   /**
@@ -178,6 +404,11 @@ public class EzmaxinvoicinguserResponseCompound extends EzmaxinvoicinguserRespon
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
+      }
+      // validate the required field `eEzmaxinvoicinguserVariationezsign`
+      FieldEEzmaxinvoicinguserVariationezsign.validateJsonElement(jsonObj.get("eEzmaxinvoicinguserVariationezsign"));
       // validate the required field `objContactName`
       CustomContactNameResponse.validateJsonElement(jsonObj.get("objContactName"));
   }

@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/creditcardclient/{pkiCreditcardclientID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreditcardclientGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_CREDITCARDCLIENT = "objCreditcardclient";
   @SerializedName(SERIALIZED_NAME_OBJ_CREDITCARDCLIENT)
-  @javax.annotation.Nonnull
   private CreditcardclientResponseCompound objCreditcardclient;
 
   public CreditcardclientGetObjectV2ResponseMPayload() {
   }
 
-  public CreditcardclientGetObjectV2ResponseMPayload objCreditcardclient(@javax.annotation.Nonnull CreditcardclientResponseCompound objCreditcardclient) {
+  public CreditcardclientGetObjectV2ResponseMPayload objCreditcardclient(CreditcardclientResponseCompound objCreditcardclient) {
     this.objCreditcardclient = objCreditcardclient;
     return this;
   }
@@ -73,7 +72,7 @@ public class CreditcardclientGetObjectV2ResponseMPayload {
     return objCreditcardclient;
   }
 
-  public void setObjCreditcardclient(@javax.annotation.Nonnull CreditcardclientResponseCompound objCreditcardclient) {
+  public void setObjCreditcardclient(CreditcardclientResponseCompound objCreditcardclient) {
     this.objCreditcardclient = objCreditcardclient;
   }
 

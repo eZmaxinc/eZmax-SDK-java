@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateglobalsigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateglobalsignerResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALSIGNER_I_D = "pkiEzsigntemplateglobalsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALSIGNER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplateglobalsignerID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBAL_I_D = "fkiEzsigntemplateglobalID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBAL_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplateglobalID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBALSIGNER_DESCRIPTION = "sEzsigntemplateglobalsignerDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBALSIGNER_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsigntemplateglobalsignerDescription;
 
   public EzsigntemplateglobalsignerResponse() {
   }
 
-  public EzsigntemplateglobalsignerResponse pkiEzsigntemplateglobalsignerID(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobalsignerID) {
+  public EzsigntemplateglobalsignerResponse pkiEzsigntemplateglobalsignerID(Integer pkiEzsigntemplateglobalsignerID) {
     this.pkiEzsigntemplateglobalsignerID = pkiEzsigntemplateglobalsignerID;
     return this;
   }
@@ -83,12 +80,12 @@ public class EzsigntemplateglobalsignerResponse {
     return pkiEzsigntemplateglobalsignerID;
   }
 
-  public void setPkiEzsigntemplateglobalsignerID(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobalsignerID) {
+  public void setPkiEzsigntemplateglobalsignerID(Integer pkiEzsigntemplateglobalsignerID) {
     this.pkiEzsigntemplateglobalsignerID = pkiEzsigntemplateglobalsignerID;
   }
 
 
-  public EzsigntemplateglobalsignerResponse fkiEzsigntemplateglobalID(@javax.annotation.Nonnull Integer fkiEzsigntemplateglobalID) {
+  public EzsigntemplateglobalsignerResponse fkiEzsigntemplateglobalID(Integer fkiEzsigntemplateglobalID) {
     this.fkiEzsigntemplateglobalID = fkiEzsigntemplateglobalID;
     return this;
   }
@@ -103,12 +100,12 @@ public class EzsigntemplateglobalsignerResponse {
     return fkiEzsigntemplateglobalID;
   }
 
-  public void setFkiEzsigntemplateglobalID(@javax.annotation.Nonnull Integer fkiEzsigntemplateglobalID) {
+  public void setFkiEzsigntemplateglobalID(Integer fkiEzsigntemplateglobalID) {
     this.fkiEzsigntemplateglobalID = fkiEzsigntemplateglobalID;
   }
 
 
-  public EzsigntemplateglobalsignerResponse sEzsigntemplateglobalsignerDescription(@javax.annotation.Nonnull String sEzsigntemplateglobalsignerDescription) {
+  public EzsigntemplateglobalsignerResponse sEzsigntemplateglobalsignerDescription(String sEzsigntemplateglobalsignerDescription) {
     this.sEzsigntemplateglobalsignerDescription = sEzsigntemplateglobalsignerDescription;
     return this;
   }
@@ -122,7 +119,7 @@ public class EzsigntemplateglobalsignerResponse {
     return sEzsigntemplateglobalsignerDescription;
   }
 
-  public void setsEzsigntemplateglobalsignerDescription(@javax.annotation.Nonnull String sEzsigntemplateglobalsignerDescription) {
+  public void setsEzsigntemplateglobalsignerDescription(String sEzsigntemplateglobalsignerDescription) {
     this.sEzsigntemplateglobalsignerDescription = sEzsigntemplateglobalsignerDescription;
   }
 
@@ -199,12 +196,55 @@ public class EzsigntemplateglobalsignerResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsigntemplateglobalsignerResponse is not found in the empty JSON string", EzsigntemplateglobalsignerResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsigntemplateglobalsignerResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsigntemplateglobalsignerResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsigntemplateglobalsignerResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sEzsigntemplateglobalsignerDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsigntemplateglobalsignerDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateglobalsignerDescription").toString()));
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsigntemplateglobalsignerResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsigntemplateglobalsignerResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsigntemplateglobalsignerResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsigntemplateglobalsignerResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsigntemplateglobalsignerResponse>() {
+           @Override
+           public void write(JsonWriter out, EzsigntemplateglobalsignerResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsigntemplateglobalsignerResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsigntemplateglobalsignerResponse given an JSON string

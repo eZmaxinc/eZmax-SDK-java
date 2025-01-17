@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.ColleagueRequestV2;
 import com.ezmax.api.model.FieldEColleagueEzsign;
 import com.ezmax.api.model.FieldEColleagueRealestateinprogess;
 import com.google.gson.TypeAdapter;
@@ -51,10 +50,336 @@ import eZmaxAPI.JSON;
 /**
  * A Colleague Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class ColleagueRequestCompoundV2 extends ColleagueRequestV2 {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class ColleagueRequestCompoundV2 {
+  public static final String SERIALIZED_NAME_PKI_COLLEAGUE_I_D = "pkiColleagueID";
+  @SerializedName(SERIALIZED_NAME_PKI_COLLEAGUE_I_D)
+  private Integer pkiColleagueID;
+
+  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
+  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  private Integer fkiUserID;
+
+  public static final String SERIALIZED_NAME_FKI_USER_I_D_COLLEAGUE = "fkiUserIDColleague";
+  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_COLLEAGUE)
+  private Integer fkiUserIDColleague;
+
+  public static final String SERIALIZED_NAME_B_COLLEAGUE_EZSIGNEMAIL = "bColleagueEzsignemail";
+  @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_EZSIGNEMAIL)
+  private Boolean bColleagueEzsignemail;
+
+  public static final String SERIALIZED_NAME_B_COLLEAGUE_FINANCIAL = "bColleagueFinancial";
+  @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_FINANCIAL)
+  private Boolean bColleagueFinancial;
+
+  public static final String SERIALIZED_NAME_B_COLLEAGUE_USECLONEEMAIL = "bColleagueUsecloneemail";
+  @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_USECLONEEMAIL)
+  private Boolean bColleagueUsecloneemail;
+
+  public static final String SERIALIZED_NAME_B_COLLEAGUE_ATTACHMENT = "bColleagueAttachment";
+  @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_ATTACHMENT)
+  private Boolean bColleagueAttachment;
+
+  public static final String SERIALIZED_NAME_B_COLLEAGUE_CANAFE = "bColleagueCanafe";
+  @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_CANAFE)
+  private Boolean bColleagueCanafe;
+
+  public static final String SERIALIZED_NAME_B_COLLEAGUE_PERMISSION = "bColleaguePermission";
+  @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_PERMISSION)
+  private Boolean bColleaguePermission;
+
+  public static final String SERIALIZED_NAME_B_COLLEAGUE_REALESTATECOMPLETED = "bColleagueRealestatecompleted";
+  @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_REALESTATECOMPLETED)
+  private Boolean bColleagueRealestatecompleted;
+
+  public static final String SERIALIZED_NAME_DT_COLLEAGUE_FROM = "dtColleagueFrom";
+  @SerializedName(SERIALIZED_NAME_DT_COLLEAGUE_FROM)
+  private String dtColleagueFrom;
+
+  public static final String SERIALIZED_NAME_DT_COLLEAGUE_TO = "dtColleagueTo";
+  @SerializedName(SERIALIZED_NAME_DT_COLLEAGUE_TO)
+  private String dtColleagueTo;
+
+  public static final String SERIALIZED_NAME_E_COLLEAGUE_EZSIGN = "eColleagueEzsign";
+  @SerializedName(SERIALIZED_NAME_E_COLLEAGUE_EZSIGN)
+  private FieldEColleagueEzsign eColleagueEzsign;
+
+  public static final String SERIALIZED_NAME_E_COLLEAGUE_REALESTATEINPROGRESS = "eColleagueRealestateinprogress";
+  @SerializedName(SERIALIZED_NAME_E_COLLEAGUE_REALESTATEINPROGRESS)
+  private FieldEColleagueRealestateinprogess eColleagueRealestateinprogress;
+
   public ColleagueRequestCompoundV2() {
   }
+
+  public ColleagueRequestCompoundV2 pkiColleagueID(Integer pkiColleagueID) {
+    this.pkiColleagueID = pkiColleagueID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Colleague
+   * minimum: 0
+   * maximum: 65535
+   * @return pkiColleagueID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiColleagueID() {
+    return pkiColleagueID;
+  }
+
+  public void setPkiColleagueID(Integer pkiColleagueID) {
+    this.pkiColleagueID = pkiColleagueID;
+  }
+
+
+  public ColleagueRequestCompoundV2 fkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return fkiUserID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiUserID() {
+    return fkiUserID;
+  }
+
+  public void setFkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+  }
+
+
+  public ColleagueRequestCompoundV2 fkiUserIDColleague(Integer fkiUserIDColleague) {
+    this.fkiUserIDColleague = fkiUserIDColleague;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return fkiUserIDColleague
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiUserIDColleague() {
+    return fkiUserIDColleague;
+  }
+
+  public void setFkiUserIDColleague(Integer fkiUserIDColleague) {
+    this.fkiUserIDColleague = fkiUserIDColleague;
+  }
+
+
+  public ColleagueRequestCompoundV2 bColleagueEzsignemail(Boolean bColleagueEzsignemail) {
+    this.bColleagueEzsignemail = bColleagueEzsignemail;
+    return this;
+  }
+
+  /**
+   * Whether the email can be used by the cloning user in Ezsign
+   * @return bColleagueEzsignemail
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbColleagueEzsignemail() {
+    return bColleagueEzsignemail;
+  }
+
+  public void setbColleagueEzsignemail(Boolean bColleagueEzsignemail) {
+    this.bColleagueEzsignemail = bColleagueEzsignemail;
+  }
+
+
+  public ColleagueRequestCompoundV2 bColleagueFinancial(Boolean bColleagueFinancial) {
+    this.bColleagueFinancial = bColleagueFinancial;
+    return this;
+  }
+
+  /**
+   * Whether the cloning user has access to the financial
+   * @return bColleagueFinancial
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbColleagueFinancial() {
+    return bColleagueFinancial;
+  }
+
+  public void setbColleagueFinancial(Boolean bColleagueFinancial) {
+    this.bColleagueFinancial = bColleagueFinancial;
+  }
+
+
+  public ColleagueRequestCompoundV2 bColleagueUsecloneemail(Boolean bColleagueUsecloneemail) {
+    this.bColleagueUsecloneemail = bColleagueUsecloneemail;
+    return this;
+  }
+
+  /**
+   * Whether the cloning user has access to the cloned user email to send communications
+   * @return bColleagueUsecloneemail
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbColleagueUsecloneemail() {
+    return bColleagueUsecloneemail;
+  }
+
+  public void setbColleagueUsecloneemail(Boolean bColleagueUsecloneemail) {
+    this.bColleagueUsecloneemail = bColleagueUsecloneemail;
+  }
+
+
+  public ColleagueRequestCompoundV2 bColleagueAttachment(Boolean bColleagueAttachment) {
+    this.bColleagueAttachment = bColleagueAttachment;
+    return this;
+  }
+
+  /**
+   * Whether the cloning user has access to the attachment
+   * @return bColleagueAttachment
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbColleagueAttachment() {
+    return bColleagueAttachment;
+  }
+
+  public void setbColleagueAttachment(Boolean bColleagueAttachment) {
+    this.bColleagueAttachment = bColleagueAttachment;
+  }
+
+
+  public ColleagueRequestCompoundV2 bColleagueCanafe(Boolean bColleagueCanafe) {
+    this.bColleagueCanafe = bColleagueCanafe;
+    return this;
+  }
+
+  /**
+   * Whether the cloning user has access to canafe
+   * @return bColleagueCanafe
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbColleagueCanafe() {
+    return bColleagueCanafe;
+  }
+
+  public void setbColleagueCanafe(Boolean bColleagueCanafe) {
+    this.bColleagueCanafe = bColleagueCanafe;
+  }
+
+
+  public ColleagueRequestCompoundV2 bColleaguePermission(Boolean bColleaguePermission) {
+    this.bColleaguePermission = bColleaguePermission;
+    return this;
+  }
+
+  /**
+   * Whether the cloning user copies the permission of the cloned user
+   * @return bColleaguePermission
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbColleaguePermission() {
+    return bColleaguePermission;
+  }
+
+  public void setbColleaguePermission(Boolean bColleaguePermission) {
+    this.bColleaguePermission = bColleaguePermission;
+  }
+
+
+  public ColleagueRequestCompoundV2 bColleagueRealestatecompleted(Boolean bColleagueRealestatecompleted) {
+    this.bColleagueRealestatecompleted = bColleagueRealestatecompleted;
+    return this;
+  }
+
+  /**
+   * Whether if the cloning user has access to the completed folders in real estate
+   * @return bColleagueRealestatecompleted
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbColleagueRealestatecompleted() {
+    return bColleagueRealestatecompleted;
+  }
+
+  public void setbColleagueRealestatecompleted(Boolean bColleagueRealestatecompleted) {
+    this.bColleagueRealestatecompleted = bColleagueRealestatecompleted;
+  }
+
+
+  public ColleagueRequestCompoundV2 dtColleagueFrom(String dtColleagueFrom) {
+    this.dtColleagueFrom = dtColleagueFrom;
+    return this;
+  }
+
+  /**
+   * The from of the Colleague
+   * @return dtColleagueFrom
+   */
+  @javax.annotation.Nullable
+  public String getDtColleagueFrom() {
+    return dtColleagueFrom;
+  }
+
+  public void setDtColleagueFrom(String dtColleagueFrom) {
+    this.dtColleagueFrom = dtColleagueFrom;
+  }
+
+
+  public ColleagueRequestCompoundV2 dtColleagueTo(String dtColleagueTo) {
+    this.dtColleagueTo = dtColleagueTo;
+    return this;
+  }
+
+  /**
+   * The to of the Colleague
+   * @return dtColleagueTo
+   */
+  @javax.annotation.Nullable
+  public String getDtColleagueTo() {
+    return dtColleagueTo;
+  }
+
+  public void setDtColleagueTo(String dtColleagueTo) {
+    this.dtColleagueTo = dtColleagueTo;
+  }
+
+
+  public ColleagueRequestCompoundV2 eColleagueEzsign(FieldEColleagueEzsign eColleagueEzsign) {
+    this.eColleagueEzsign = eColleagueEzsign;
+    return this;
+  }
+
+  /**
+   * Get eColleagueEzsign
+   * @return eColleagueEzsign
+   */
+  @javax.annotation.Nonnull
+  public FieldEColleagueEzsign geteColleagueEzsign() {
+    return eColleagueEzsign;
+  }
+
+  public void seteColleagueEzsign(FieldEColleagueEzsign eColleagueEzsign) {
+    this.eColleagueEzsign = eColleagueEzsign;
+  }
+
+
+  public ColleagueRequestCompoundV2 eColleagueRealestateinprogress(FieldEColleagueRealestateinprogess eColleagueRealestateinprogress) {
+    this.eColleagueRealestateinprogress = eColleagueRealestateinprogress;
+    return this;
+  }
+
+  /**
+   * Get eColleagueRealestateinprogress
+   * @return eColleagueRealestateinprogress
+   */
+  @javax.annotation.Nonnull
+  public FieldEColleagueRealestateinprogess geteColleagueRealestateinprogress() {
+    return eColleagueRealestateinprogress;
+  }
+
+  public void seteColleagueRealestateinprogress(FieldEColleagueRealestateinprogess eColleagueRealestateinprogress) {
+    this.eColleagueRealestateinprogress = eColleagueRealestateinprogress;
+  }
+
 
 
   @Override
@@ -65,19 +390,46 @@ public class ColleagueRequestCompoundV2 extends ColleagueRequestV2 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    ColleagueRequestCompoundV2 colleagueRequestCompoundV2 = (ColleagueRequestCompoundV2) o;
+    return Objects.equals(this.pkiColleagueID, colleagueRequestCompoundV2.pkiColleagueID) &&
+        Objects.equals(this.fkiUserID, colleagueRequestCompoundV2.fkiUserID) &&
+        Objects.equals(this.fkiUserIDColleague, colleagueRequestCompoundV2.fkiUserIDColleague) &&
+        Objects.equals(this.bColleagueEzsignemail, colleagueRequestCompoundV2.bColleagueEzsignemail) &&
+        Objects.equals(this.bColleagueFinancial, colleagueRequestCompoundV2.bColleagueFinancial) &&
+        Objects.equals(this.bColleagueUsecloneemail, colleagueRequestCompoundV2.bColleagueUsecloneemail) &&
+        Objects.equals(this.bColleagueAttachment, colleagueRequestCompoundV2.bColleagueAttachment) &&
+        Objects.equals(this.bColleagueCanafe, colleagueRequestCompoundV2.bColleagueCanafe) &&
+        Objects.equals(this.bColleaguePermission, colleagueRequestCompoundV2.bColleaguePermission) &&
+        Objects.equals(this.bColleagueRealestatecompleted, colleagueRequestCompoundV2.bColleagueRealestatecompleted) &&
+        Objects.equals(this.dtColleagueFrom, colleagueRequestCompoundV2.dtColleagueFrom) &&
+        Objects.equals(this.dtColleagueTo, colleagueRequestCompoundV2.dtColleagueTo) &&
+        Objects.equals(this.eColleagueEzsign, colleagueRequestCompoundV2.eColleagueEzsign) &&
+        Objects.equals(this.eColleagueRealestateinprogress, colleagueRequestCompoundV2.eColleagueRealestateinprogress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiColleagueID, fkiUserID, fkiUserIDColleague, bColleagueEzsignemail, bColleagueFinancial, bColleagueUsecloneemail, bColleagueAttachment, bColleagueCanafe, bColleaguePermission, bColleagueRealestatecompleted, dtColleagueFrom, dtColleagueTo, eColleagueEzsign, eColleagueRealestateinprogress);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ColleagueRequestCompoundV2 {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiColleagueID: ").append(toIndentedString(pkiColleagueID)).append("\n");
+    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
+    sb.append("    fkiUserIDColleague: ").append(toIndentedString(fkiUserIDColleague)).append("\n");
+    sb.append("    bColleagueEzsignemail: ").append(toIndentedString(bColleagueEzsignemail)).append("\n");
+    sb.append("    bColleagueFinancial: ").append(toIndentedString(bColleagueFinancial)).append("\n");
+    sb.append("    bColleagueUsecloneemail: ").append(toIndentedString(bColleagueUsecloneemail)).append("\n");
+    sb.append("    bColleagueAttachment: ").append(toIndentedString(bColleagueAttachment)).append("\n");
+    sb.append("    bColleagueCanafe: ").append(toIndentedString(bColleagueCanafe)).append("\n");
+    sb.append("    bColleaguePermission: ").append(toIndentedString(bColleaguePermission)).append("\n");
+    sb.append("    bColleagueRealestatecompleted: ").append(toIndentedString(bColleagueRealestatecompleted)).append("\n");
+    sb.append("    dtColleagueFrom: ").append(toIndentedString(dtColleagueFrom)).append("\n");
+    sb.append("    dtColleagueTo: ").append(toIndentedString(dtColleagueTo)).append("\n");
+    sb.append("    eColleagueEzsign: ").append(toIndentedString(eColleagueEzsign)).append("\n");
+    sb.append("    eColleagueRealestateinprogress: ").append(toIndentedString(eColleagueRealestateinprogress)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -157,6 +509,17 @@ public class ColleagueRequestCompoundV2 extends ColleagueRequestV2 {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("dtColleagueFrom") != null && !jsonObj.get("dtColleagueFrom").isJsonNull()) && !jsonObj.get("dtColleagueFrom").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtColleagueFrom` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtColleagueFrom").toString()));
+      }
+      if ((jsonObj.get("dtColleagueTo") != null && !jsonObj.get("dtColleagueTo").isJsonNull()) && !jsonObj.get("dtColleagueTo").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtColleagueTo` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtColleagueTo").toString()));
+      }
+      // validate the required field `eColleagueEzsign`
+      FieldEColleagueEzsign.validateJsonElement(jsonObj.get("eColleagueEzsign"));
+      // validate the required field `eColleagueRealestateinprogress`
+      FieldEColleagueRealestateinprogess.validateJsonElement(jsonObj.get("eColleagueRealestateinprogress"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

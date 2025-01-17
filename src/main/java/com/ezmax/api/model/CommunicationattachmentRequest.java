@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationattachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommunicationattachmentRequest {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONATTACHMENT_I_D = "pkiCommunicationattachmentID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONATTACHMENT_I_D)
-  @javax.annotation.Nullable
   private Integer pkiCommunicationattachmentID;
 
   public static final String SERIALIZED_NAME_FKI_ATTACHMENT_I_D = "fkiAttachmentID";
   @SerializedName(SERIALIZED_NAME_FKI_ATTACHMENT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiAttachmentID;
 
   public static final String SERIALIZED_NAME_FKI_INVOICE_I_D = "fkiInvoiceID";
   @SerializedName(SERIALIZED_NAME_FKI_INVOICE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiInvoiceID;
 
   public static final String SERIALIZED_NAME_FKI_SALARYPREPARATION_I_D = "fkiSalarypreparationID";
   @SerializedName(SERIALIZED_NAME_FKI_SALARYPREPARATION_I_D)
-  @javax.annotation.Nullable
   private Integer fkiSalarypreparationID;
 
   public CommunicationattachmentRequest() {
   }
 
-  public CommunicationattachmentRequest pkiCommunicationattachmentID(@javax.annotation.Nullable Integer pkiCommunicationattachmentID) {
+  public CommunicationattachmentRequest pkiCommunicationattachmentID(Integer pkiCommunicationattachmentID) {
     this.pkiCommunicationattachmentID = pkiCommunicationattachmentID;
     return this;
   }
@@ -87,12 +83,12 @@ public class CommunicationattachmentRequest {
     return pkiCommunicationattachmentID;
   }
 
-  public void setPkiCommunicationattachmentID(@javax.annotation.Nullable Integer pkiCommunicationattachmentID) {
+  public void setPkiCommunicationattachmentID(Integer pkiCommunicationattachmentID) {
     this.pkiCommunicationattachmentID = pkiCommunicationattachmentID;
   }
 
 
-  public CommunicationattachmentRequest fkiAttachmentID(@javax.annotation.Nullable Integer fkiAttachmentID) {
+  public CommunicationattachmentRequest fkiAttachmentID(Integer fkiAttachmentID) {
     this.fkiAttachmentID = fkiAttachmentID;
     return this;
   }
@@ -107,12 +103,12 @@ public class CommunicationattachmentRequest {
     return fkiAttachmentID;
   }
 
-  public void setFkiAttachmentID(@javax.annotation.Nullable Integer fkiAttachmentID) {
+  public void setFkiAttachmentID(Integer fkiAttachmentID) {
     this.fkiAttachmentID = fkiAttachmentID;
   }
 
 
-  public CommunicationattachmentRequest fkiInvoiceID(@javax.annotation.Nullable Integer fkiInvoiceID) {
+  public CommunicationattachmentRequest fkiInvoiceID(Integer fkiInvoiceID) {
     this.fkiInvoiceID = fkiInvoiceID;
     return this;
   }
@@ -127,12 +123,12 @@ public class CommunicationattachmentRequest {
     return fkiInvoiceID;
   }
 
-  public void setFkiInvoiceID(@javax.annotation.Nullable Integer fkiInvoiceID) {
+  public void setFkiInvoiceID(Integer fkiInvoiceID) {
     this.fkiInvoiceID = fkiInvoiceID;
   }
 
 
-  public CommunicationattachmentRequest fkiSalarypreparationID(@javax.annotation.Nullable Integer fkiSalarypreparationID) {
+  public CommunicationattachmentRequest fkiSalarypreparationID(Integer fkiSalarypreparationID) {
     this.fkiSalarypreparationID = fkiSalarypreparationID;
     return this;
   }
@@ -147,7 +143,7 @@ public class CommunicationattachmentRequest {
     return fkiSalarypreparationID;
   }
 
-  public void setFkiSalarypreparationID(@javax.annotation.Nullable Integer fkiSalarypreparationID) {
+  public void setFkiSalarypreparationID(Integer fkiSalarypreparationID) {
     this.fkiSalarypreparationID = fkiSalarypreparationID;
   }
 
@@ -224,9 +220,45 @@ public class CommunicationattachmentRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CommunicationattachmentRequest is not found in the empty JSON string", CommunicationattachmentRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!CommunicationattachmentRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommunicationattachmentRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CommunicationattachmentRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CommunicationattachmentRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CommunicationattachmentRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CommunicationattachmentRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CommunicationattachmentRequest>() {
+           @Override
+           public void write(JsonWriter out, CommunicationattachmentRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CommunicationattachmentRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of CommunicationattachmentRequest given an JSON string

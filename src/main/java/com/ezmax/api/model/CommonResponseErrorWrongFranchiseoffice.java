@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.FieldEErrorCode;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,32 +51,105 @@ import eZmaxAPI.JSON;
 /**
  * Error Message when a Franchisebroker is not in this Franchiseoffice.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CommonResponseErrorWrongFranchiseoffice extends CommonResponseError {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CommonResponseErrorWrongFranchiseoffice {
+  public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
+  @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
+  private String sErrorMessage;
+
+  public static final String SERIALIZED_NAME_E_ERROR_CODE = "eErrorCode";
+  @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
+  private FieldEErrorCode eErrorCode;
+
+  public static final String SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL = "a_sErrorMessagedetail";
+  @SerializedName(SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL)
+  private List<String> aSErrorMessagedetail = new ArrayList<>();
+
   public static final String SERIALIZED_NAME_FKI_FRANCHISEAGENCE_I_D = "fkiFranchiseagenceID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEAGENCE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFranchiseagenceID;
 
   public static final String SERIALIZED_NAME_S_FRANCHISEAGENCE_NAME = "sFranchiseagenceName";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEAGENCE_NAME)
-  @javax.annotation.Nonnull
   private String sFranchiseagenceName;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D = "fkiFranchiseofficeID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFranchiseofficeID;
 
   public static final String SERIALIZED_NAME_I_FRANCHISEOFFICE_CODE = "iFranchiseofficeCode";
   @SerializedName(SERIALIZED_NAME_I_FRANCHISEOFFICE_CODE)
-  @javax.annotation.Nonnull
   private String iFranchiseofficeCode;
 
   public CommonResponseErrorWrongFranchiseoffice() {
   }
 
-  public CommonResponseErrorWrongFranchiseoffice fkiFranchiseagenceID(@javax.annotation.Nonnull Integer fkiFranchiseagenceID) {
+  public CommonResponseErrorWrongFranchiseoffice sErrorMessage(String sErrorMessage) {
+    this.sErrorMessage = sErrorMessage;
+    return this;
+  }
+
+  /**
+   * The message giving details about the error
+   * @return sErrorMessage
+   */
+  @javax.annotation.Nonnull
+  public String getsErrorMessage() {
+    return sErrorMessage;
+  }
+
+  public void setsErrorMessage(String sErrorMessage) {
+    this.sErrorMessage = sErrorMessage;
+  }
+
+
+  public CommonResponseErrorWrongFranchiseoffice eErrorCode(FieldEErrorCode eErrorCode) {
+    this.eErrorCode = eErrorCode;
+    return this;
+  }
+
+  /**
+   * Get eErrorCode
+   * @return eErrorCode
+   */
+  @javax.annotation.Nonnull
+  public FieldEErrorCode geteErrorCode() {
+    return eErrorCode;
+  }
+
+  public void seteErrorCode(FieldEErrorCode eErrorCode) {
+    this.eErrorCode = eErrorCode;
+  }
+
+
+  public CommonResponseErrorWrongFranchiseoffice aSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+    this.aSErrorMessagedetail = aSErrorMessagedetail;
+    return this;
+  }
+
+  public CommonResponseErrorWrongFranchiseoffice addASErrorMessagedetailItem(String aSErrorMessagedetailItem) {
+    if (this.aSErrorMessagedetail == null) {
+      this.aSErrorMessagedetail = new ArrayList<>();
+    }
+    this.aSErrorMessagedetail.add(aSErrorMessagedetailItem);
+    return this;
+  }
+
+  /**
+   * More error message detail
+   * @return aSErrorMessagedetail
+   */
+  @javax.annotation.Nullable
+  public List<String> getaSErrorMessagedetail() {
+    return aSErrorMessagedetail;
+  }
+
+  public void setaSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+    this.aSErrorMessagedetail = aSErrorMessagedetail;
+  }
+
+
+  public CommonResponseErrorWrongFranchiseoffice fkiFranchiseagenceID(Integer fkiFranchiseagenceID) {
     this.fkiFranchiseagenceID = fkiFranchiseagenceID;
     return this;
   }
@@ -93,12 +165,12 @@ public class CommonResponseErrorWrongFranchiseoffice extends CommonResponseError
     return fkiFranchiseagenceID;
   }
 
-  public void setFkiFranchiseagenceID(@javax.annotation.Nonnull Integer fkiFranchiseagenceID) {
+  public void setFkiFranchiseagenceID(Integer fkiFranchiseagenceID) {
     this.fkiFranchiseagenceID = fkiFranchiseagenceID;
   }
 
 
-  public CommonResponseErrorWrongFranchiseoffice sFranchiseagenceName(@javax.annotation.Nonnull String sFranchiseagenceName) {
+  public CommonResponseErrorWrongFranchiseoffice sFranchiseagenceName(String sFranchiseagenceName) {
     this.sFranchiseagenceName = sFranchiseagenceName;
     return this;
   }
@@ -112,12 +184,12 @@ public class CommonResponseErrorWrongFranchiseoffice extends CommonResponseError
     return sFranchiseagenceName;
   }
 
-  public void setsFranchiseagenceName(@javax.annotation.Nonnull String sFranchiseagenceName) {
+  public void setsFranchiseagenceName(String sFranchiseagenceName) {
     this.sFranchiseagenceName = sFranchiseagenceName;
   }
 
 
-  public CommonResponseErrorWrongFranchiseoffice fkiFranchiseofficeID(@javax.annotation.Nonnull Integer fkiFranchiseofficeID) {
+  public CommonResponseErrorWrongFranchiseoffice fkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
     return this;
   }
@@ -132,12 +204,12 @@ public class CommonResponseErrorWrongFranchiseoffice extends CommonResponseError
     return fkiFranchiseofficeID;
   }
 
-  public void setFkiFranchiseofficeID(@javax.annotation.Nonnull Integer fkiFranchiseofficeID) {
+  public void setFkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
   }
 
 
-  public CommonResponseErrorWrongFranchiseoffice iFranchiseofficeCode(@javax.annotation.Nonnull String iFranchiseofficeCode) {
+  public CommonResponseErrorWrongFranchiseoffice iFranchiseofficeCode(String iFranchiseofficeCode) {
     this.iFranchiseofficeCode = iFranchiseofficeCode;
     return this;
   }
@@ -151,7 +223,7 @@ public class CommonResponseErrorWrongFranchiseoffice extends CommonResponseError
     return iFranchiseofficeCode;
   }
 
-  public void setiFranchiseofficeCode(@javax.annotation.Nonnull String iFranchiseofficeCode) {
+  public void setiFranchiseofficeCode(String iFranchiseofficeCode) {
     this.iFranchiseofficeCode = iFranchiseofficeCode;
   }
 
@@ -166,23 +238,27 @@ public class CommonResponseErrorWrongFranchiseoffice extends CommonResponseError
       return false;
     }
     CommonResponseErrorWrongFranchiseoffice commonResponseErrorWrongFranchiseoffice = (CommonResponseErrorWrongFranchiseoffice) o;
-    return Objects.equals(this.fkiFranchiseagenceID, commonResponseErrorWrongFranchiseoffice.fkiFranchiseagenceID) &&
+    return Objects.equals(this.sErrorMessage, commonResponseErrorWrongFranchiseoffice.sErrorMessage) &&
+        Objects.equals(this.eErrorCode, commonResponseErrorWrongFranchiseoffice.eErrorCode) &&
+        Objects.equals(this.aSErrorMessagedetail, commonResponseErrorWrongFranchiseoffice.aSErrorMessagedetail) &&
+        Objects.equals(this.fkiFranchiseagenceID, commonResponseErrorWrongFranchiseoffice.fkiFranchiseagenceID) &&
         Objects.equals(this.sFranchiseagenceName, commonResponseErrorWrongFranchiseoffice.sFranchiseagenceName) &&
         Objects.equals(this.fkiFranchiseofficeID, commonResponseErrorWrongFranchiseoffice.fkiFranchiseofficeID) &&
-        Objects.equals(this.iFranchiseofficeCode, commonResponseErrorWrongFranchiseoffice.iFranchiseofficeCode) &&
-        super.equals(o);
+        Objects.equals(this.iFranchiseofficeCode, commonResponseErrorWrongFranchiseoffice.iFranchiseofficeCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiFranchiseagenceID, sFranchiseagenceName, fkiFranchiseofficeID, iFranchiseofficeCode, super.hashCode());
+    return Objects.hash(sErrorMessage, eErrorCode, aSErrorMessagedetail, fkiFranchiseagenceID, sFranchiseagenceName, fkiFranchiseofficeID, iFranchiseofficeCode);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonResponseErrorWrongFranchiseoffice {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    sErrorMessage: ").append(toIndentedString(sErrorMessage)).append("\n");
+    sb.append("    eErrorCode: ").append(toIndentedString(eErrorCode)).append("\n");
+    sb.append("    aSErrorMessagedetail: ").append(toIndentedString(aSErrorMessagedetail)).append("\n");
     sb.append("    fkiFranchiseagenceID: ").append(toIndentedString(fkiFranchiseagenceID)).append("\n");
     sb.append("    sFranchiseagenceName: ").append(toIndentedString(sFranchiseagenceName)).append("\n");
     sb.append("    fkiFranchiseofficeID: ").append(toIndentedString(fkiFranchiseofficeID)).append("\n");
@@ -219,12 +295,12 @@ public class CommonResponseErrorWrongFranchiseoffice extends CommonResponseError
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("sErrorMessage");
+    openapiRequiredFields.add("eErrorCode");
     openapiRequiredFields.add("fkiFranchiseagenceID");
     openapiRequiredFields.add("sFranchiseagenceName");
     openapiRequiredFields.add("fkiFranchiseofficeID");
     openapiRequiredFields.add("iFranchiseofficeCode");
-    openapiRequiredFields.add("sErrorMessage");
-    openapiRequiredFields.add("eErrorCode");
   }
 
   /**
@@ -255,6 +331,15 @@ public class CommonResponseErrorWrongFranchiseoffice extends CommonResponseError
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sErrorMessage").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sErrorMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sErrorMessage").toString()));
+      }
+      // validate the required field `eErrorCode`
+      FieldEErrorCode.validateJsonElement(jsonObj.get("eErrorCode"));
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("a_sErrorMessagedetail") != null && !jsonObj.get("a_sErrorMessagedetail").isJsonNull() && !jsonObj.get("a_sErrorMessagedetail").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_sErrorMessagedetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_sErrorMessagedetail").toString()));
+      }
       if (!jsonObj.get("sFranchiseagenceName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sFranchiseagenceName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFranchiseagenceName").toString()));
       }

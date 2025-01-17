@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/franchisereferalincome
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FranchisereferalincomeCreateObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_FRANCHISEREFERALINCOME_I_D = "a_pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_A_PKI_FRANCHISEREFERALINCOME_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiFranchisereferalincomeID = new ArrayList<>();
 
   public FranchisereferalincomeCreateObjectV2ResponseMPayload() {
   }
 
-  public FranchisereferalincomeCreateObjectV2ResponseMPayload aPkiFranchisereferalincomeID(@javax.annotation.Nonnull List<Integer> aPkiFranchisereferalincomeID) {
+  public FranchisereferalincomeCreateObjectV2ResponseMPayload aPkiFranchisereferalincomeID(List<Integer> aPkiFranchisereferalincomeID) {
     this.aPkiFranchisereferalincomeID = aPkiFranchisereferalincomeID;
     return this;
   }
@@ -82,7 +81,7 @@ public class FranchisereferalincomeCreateObjectV2ResponseMPayload {
     return aPkiFranchisereferalincomeID;
   }
 
-  public void setaPkiFranchisereferalincomeID(@javax.annotation.Nonnull List<Integer> aPkiFranchisereferalincomeID) {
+  public void setaPkiFranchisereferalincomeID(List<Integer> aPkiFranchisereferalincomeID) {
     this.aPkiFranchisereferalincomeID = aPkiFranchisereferalincomeID;
   }
 

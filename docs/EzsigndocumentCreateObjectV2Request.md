@@ -8,7 +8,7 @@ Request for POST /2/object/ezsigndocument
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**aObjEzsigndocument** | [**List&lt;EzsigndocumentRequest&gt;**](EzsigndocumentRequest.md) |  |  |
+|**aObjEzsigndocument** | [**List&lt;EzsigndocumentRequestCompound&gt;**](EzsigndocumentRequestCompound.md) |  |  |
 
 
 

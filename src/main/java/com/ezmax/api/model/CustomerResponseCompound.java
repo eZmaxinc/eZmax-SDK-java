@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CustomerResponse;
 import com.ezmax.api.model.FieldECustomerMarketingcorrespondence;
 import com.ezmax.api.model.FieldECustomerType;
 import com.google.gson.TypeAdapter;
@@ -51,10 +50,1229 @@ import eZmaxAPI.JSON;
 /**
  * A Customer Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CustomerResponseCompound extends CustomerResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CustomerResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_CUSTOMER_I_D = "pkiCustomerID";
+  @SerializedName(SERIALIZED_NAME_PKI_CUSTOMER_I_D)
+  private Integer pkiCustomerID;
+
+  public static final String SERIALIZED_NAME_FKI_COMPANY_I_D = "fkiCompanyID";
+  @SerializedName(SERIALIZED_NAME_FKI_COMPANY_I_D)
+  private Integer fkiCompanyID;
+
+  public static final String SERIALIZED_NAME_FKI_CUSTOMERGROUP_I_D = "fkiCustomergroupID";
+  @SerializedName(SERIALIZED_NAME_FKI_CUSTOMERGROUP_I_D)
+  private Integer fkiCustomergroupID;
+
+  public static final String SERIALIZED_NAME_S_CUSTOMER_NAME = "sCustomerName";
+  @SerializedName(SERIALIZED_NAME_S_CUSTOMER_NAME)
+  private String sCustomerName;
+
+  public static final String SERIALIZED_NAME_FKI_CONTACTINFORMATIONS_I_D = "fkiContactinformationsID";
+  @SerializedName(SERIALIZED_NAME_FKI_CONTACTINFORMATIONS_I_D)
+  private Integer fkiContactinformationsID;
+
+  public static final String SERIALIZED_NAME_FKI_CONTACTCONTAINER_I_D = "fkiContactcontainerID";
+  @SerializedName(SERIALIZED_NAME_FKI_CONTACTCONTAINER_I_D)
+  private Integer fkiContactcontainerID;
+
+  public static final String SERIALIZED_NAME_FKI_IMAGE_I_D = "fkiImageID";
+  @SerializedName(SERIALIZED_NAME_FKI_IMAGE_I_D)
+  private Integer fkiImageID;
+
+  public static final String SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D = "fkiGlaccountcontainerID";
+  @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D)
+  private Integer fkiGlaccountcontainerID;
+
+  public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
+  @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  private Integer fkiLanguageID;
+
+  public static final String SERIALIZED_NAME_FKI_DEPARTMENT_I_D = "fkiDepartmentID";
+  @SerializedName(SERIALIZED_NAME_FKI_DEPARTMENT_I_D)
+  private Integer fkiDepartmentID;
+
+  public static final String SERIALIZED_NAME_FKI_PAYMENTMETHOD_I_D = "fkiPaymentmethodID";
+  @SerializedName(SERIALIZED_NAME_FKI_PAYMENTMETHOD_I_D)
+  private Integer fkiPaymentmethodID;
+
+  public static final String SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D = "fkiElectronicfundstransferbankaccountID";
+  @SerializedName(SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D)
+  private Integer fkiElectronicfundstransferbankaccountID;
+
+  public static final String SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D_DIRECTDEBIT = "fkiElectronicfundstransferbankaccountIDDirectdebit";
+  @SerializedName(SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D_DIRECTDEBIT)
+  private Integer fkiElectronicfundstransferbankaccountIDDirectdebit;
+
+  public static final String SERIALIZED_NAME_FKI_SENDINGMETHOD_I_D = "fkiSendingmethodID";
+  @SerializedName(SERIALIZED_NAME_FKI_SENDINGMETHOD_I_D)
+  private Integer fkiSendingmethodID;
+
+  public static final String SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D = "fkiTaxassignmentID";
+  @SerializedName(SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D)
+  private Integer fkiTaxassignmentID;
+
+  public static final String SERIALIZED_NAME_FKI_ATTENDANCESTATUS_I_D = "fkiAttendancestatusID";
+  @SerializedName(SERIALIZED_NAME_FKI_ATTENDANCESTATUS_I_D)
+  private Integer fkiAttendancestatusID;
+
+  public static final String SERIALIZED_NAME_FKI_AGENT_I_D_VARIABLEEXPENSECHARGETO = "fkiAgentIDVariableexpensechargeto";
+  @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D_VARIABLEEXPENSECHARGETO)
+  private Integer fkiAgentIDVariableexpensechargeto;
+
+  public static final String SERIALIZED_NAME_FKI_BROKER_I_D_VARIABLEEXPENSECHARGETO = "fkiBrokerIDVariableexpensechargeto";
+  @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D_VARIABLEEXPENSECHARGETO)
+  private Integer fkiBrokerIDVariableexpensechargeto;
+
+  public static final String SERIALIZED_NAME_FKI_CUSTOMER_I_D_VARIABLEEXPENSECHARGETO = "fkiCustomerIDVariableexpensechargeto";
+  @SerializedName(SERIALIZED_NAME_FKI_CUSTOMER_I_D_VARIABLEEXPENSECHARGETO)
+  private Integer fkiCustomerIDVariableexpensechargeto;
+
+  public static final String SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_VARIABLEEXPENSECHARGETO = "fkiGlaccountcontainerIDVariableexpensechargeto";
+  @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_VARIABLEEXPENSECHARGETO)
+  private Integer fkiGlaccountcontainerIDVariableexpensechargeto;
+
+  public static final String SERIALIZED_NAME_FKI_AGENT_I_D_SUPPLYCHARGECHARGETO = "fkiAgentIDSupplychargechargeto";
+  @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D_SUPPLYCHARGECHARGETO)
+  private Integer fkiAgentIDSupplychargechargeto;
+
+  public static final String SERIALIZED_NAME_FKI_BROKER_I_D_SUPPLYCHARGECHARGETO = "fkiBrokerIDSupplychargechargeto";
+  @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D_SUPPLYCHARGECHARGETO)
+  private Integer fkiBrokerIDSupplychargechargeto;
+
+  public static final String SERIALIZED_NAME_FKI_CUSTOMER_I_D_SUPPLYCHARGECHARGETO = "fkiCustomerIDSupplychargechargeto";
+  @SerializedName(SERIALIZED_NAME_FKI_CUSTOMER_I_D_SUPPLYCHARGECHARGETO)
+  private Integer fkiCustomerIDSupplychargechargeto;
+
+  public static final String SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_SUPPLYCHARGECHARGETO = "fkiGlaccountcontainerIDSupplychargechargeto";
+  @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_SUPPLYCHARGECHARGETO)
+  private Integer fkiGlaccountcontainerIDSupplychargechargeto;
+
+  public static final String SERIALIZED_NAME_FKI_INVOICEALTERNATELOGO_I_D = "fkiInvoicealternatelogoID";
+  @SerializedName(SERIALIZED_NAME_FKI_INVOICEALTERNATELOGO_I_D)
+  private Integer fkiInvoicealternatelogoID;
+
+  public static final String SERIALIZED_NAME_FKI_SYNCHRONIZATIONLINKSERVER_I_D = "fkiSynchronizationlinkserverID";
+  @SerializedName(SERIALIZED_NAME_FKI_SYNCHRONIZATIONLINKSERVER_I_D)
+  private Integer fkiSynchronizationlinkserverID;
+
+  public static final String SERIALIZED_NAME_EFKI_USER_I_D = "efkiUserID";
+  @SerializedName(SERIALIZED_NAME_EFKI_USER_I_D)
+  private Integer efkiUserID;
+
+  public static final String SERIALIZED_NAME_EFKS_CUSTOMER_CODE = "efksCustomerCode";
+  @SerializedName(SERIALIZED_NAME_EFKS_CUSTOMER_CODE)
+  private String efksCustomerCode;
+
+  public static final String SERIALIZED_NAME_S_CUSTOMER_CODE = "sCustomerCode";
+  @SerializedName(SERIALIZED_NAME_S_CUSTOMER_CODE)
+  private String sCustomerCode;
+
+  public static final String SERIALIZED_NAME_D_CUSTOMER_FULLTIMEEQUIVALENT = "dCustomerFulltimeequivalent";
+  @SerializedName(SERIALIZED_NAME_D_CUSTOMER_FULLTIMEEQUIVALENT)
+  private String dCustomerFulltimeequivalent;
+
+  public static final String SERIALIZED_NAME_I_CUSTOMER_PHOTOCOPIERCODE = "iCustomerPhotocopiercode";
+  @SerializedName(SERIALIZED_NAME_I_CUSTOMER_PHOTOCOPIERCODE)
+  private Integer iCustomerPhotocopiercode;
+
+  public static final String SERIALIZED_NAME_I_CUSTOMER_LONGDISTANCECODE = "iCustomerLongdistancecode";
+  @SerializedName(SERIALIZED_NAME_I_CUSTOMER_LONGDISTANCECODE)
+  private Integer iCustomerLongdistancecode;
+
+  public static final String SERIALIZED_NAME_I_CUSTOMER_TIMEWINDOWSTART = "iCustomerTimewindowstart";
+  @SerializedName(SERIALIZED_NAME_I_CUSTOMER_TIMEWINDOWSTART)
+  private Integer iCustomerTimewindowstart;
+
+  public static final String SERIALIZED_NAME_I_CUSTOMER_TIMEWINDOWEND = "iCustomerTimewindowend";
+  @SerializedName(SERIALIZED_NAME_I_CUSTOMER_TIMEWINDOWEND)
+  private Integer iCustomerTimewindowend;
+
+  public static final String SERIALIZED_NAME_D_CUSTOMER_MINIMUMCHARGEABLEINTERESTS = "dCustomerMinimumchargeableinterests";
+  @SerializedName(SERIALIZED_NAME_D_CUSTOMER_MINIMUMCHARGEABLEINTERESTS)
+  private String dCustomerMinimumchargeableinterests;
+
+  public static final String SERIALIZED_NAME_DT_CUSTOMER_BIRTHDATE = "dtCustomerBirthdate";
+  @SerializedName(SERIALIZED_NAME_DT_CUSTOMER_BIRTHDATE)
+  private String dtCustomerBirthdate;
+
+  public static final String SERIALIZED_NAME_DT_CUSTOMER_TRANSFER = "dtCustomerTransfer";
+  @SerializedName(SERIALIZED_NAME_DT_CUSTOMER_TRANSFER)
+  private String dtCustomerTransfer;
+
+  public static final String SERIALIZED_NAME_DT_CUSTOMER_TRANSFERAPPOINTMENT = "dtCustomerTransferappointment";
+  @SerializedName(SERIALIZED_NAME_DT_CUSTOMER_TRANSFERAPPOINTMENT)
+  private String dtCustomerTransferappointment;
+
+  public static final String SERIALIZED_NAME_DT_CUSTOMER_TRANSFERSURVEY = "dtCustomerTransfersurvey";
+  @SerializedName(SERIALIZED_NAME_DT_CUSTOMER_TRANSFERSURVEY)
+  private String dtCustomerTransfersurvey;
+
+  public static final String SERIALIZED_NAME_B_CUSTOMER_ISACTIVE = "bCustomerIsactive";
+  @SerializedName(SERIALIZED_NAME_B_CUSTOMER_ISACTIVE)
+  private Boolean bCustomerIsactive;
+
+  public static final String SERIALIZED_NAME_B_CUSTOMER_VARIABLEEXPENSEFINANCED = "bCustomerVariableexpensefinanced";
+  @SerializedName(SERIALIZED_NAME_B_CUSTOMER_VARIABLEEXPENSEFINANCED)
+  private Boolean bCustomerVariableexpensefinanced;
+
+  public static final String SERIALIZED_NAME_B_CUSTOMER_VARIABLEEXPENSEFINANCEDTAXES = "bCustomerVariableexpensefinancedtaxes";
+  @SerializedName(SERIALIZED_NAME_B_CUSTOMER_VARIABLEEXPENSEFINANCEDTAXES)
+  private Boolean bCustomerVariableexpensefinancedtaxes;
+
+  public static final String SERIALIZED_NAME_B_CUSTOMER_SUPPLYCHARGEFINANCED = "bCustomerSupplychargefinanced";
+  @SerializedName(SERIALIZED_NAME_B_CUSTOMER_SUPPLYCHARGEFINANCED)
+  private Boolean bCustomerSupplychargefinanced;
+
+  public static final String SERIALIZED_NAME_B_CUSTOMER_SUPPLYCHARGEFINANCEDTAXES = "bCustomerSupplychargefinancedtaxes";
+  @SerializedName(SERIALIZED_NAME_B_CUSTOMER_SUPPLYCHARGEFINANCEDTAXES)
+  private Boolean bCustomerSupplychargefinancedtaxes;
+
+  public static final String SERIALIZED_NAME_B_CUSTOMER_ATTENDANCE = "bCustomerAttendance";
+  @SerializedName(SERIALIZED_NAME_B_CUSTOMER_ATTENDANCE)
+  private Boolean bCustomerAttendance;
+
+  public static final String SERIALIZED_NAME_E_CUSTOMER_TYPE = "eCustomerType";
+  @SerializedName(SERIALIZED_NAME_E_CUSTOMER_TYPE)
+  private FieldECustomerType eCustomerType;
+
+  public static final String SERIALIZED_NAME_E_CUSTOMER_MARKETINGCORRESPONDENCE = "eCustomerMarketingcorrespondence";
+  @SerializedName(SERIALIZED_NAME_E_CUSTOMER_MARKETINGCORRESPONDENCE)
+  private FieldECustomerMarketingcorrespondence eCustomerMarketingcorrespondence;
+
+  public static final String SERIALIZED_NAME_B_CUSTOMER_BLACKCOPYCARBON = "bCustomerBlackcopycarbon";
+  @SerializedName(SERIALIZED_NAME_B_CUSTOMER_BLACKCOPYCARBON)
+  private Boolean bCustomerBlackcopycarbon;
+
+  public static final String SERIALIZED_NAME_B_CUSTOMER_UNSUBSCRIBEINFO = "bCustomerUnsubscribeinfo";
+  @SerializedName(SERIALIZED_NAME_B_CUSTOMER_UNSUBSCRIBEINFO)
+  private Boolean bCustomerUnsubscribeinfo;
+
+  public static final String SERIALIZED_NAME_T_CUSTOMER_COMMENT = "tCustomerComment";
+  @SerializedName(SERIALIZED_NAME_T_CUSTOMER_COMMENT)
+  private String tCustomerComment;
+
+  public static final String SERIALIZED_NAME_I_M_P_O_R_T_I_D = "IMPORTID";
+  @SerializedName(SERIALIZED_NAME_I_M_P_O_R_T_I_D)
+  private String IMPORTID;
+
   public CustomerResponseCompound() {
   }
+
+  public CustomerResponseCompound pkiCustomerID(Integer pkiCustomerID) {
+    this.pkiCustomerID = pkiCustomerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Customer.
+   * minimum: 0
+   * @return pkiCustomerID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiCustomerID() {
+    return pkiCustomerID;
+  }
+
+  public void setPkiCustomerID(Integer pkiCustomerID) {
+    this.pkiCustomerID = pkiCustomerID;
+  }
+
+
+  public CustomerResponseCompound fkiCompanyID(Integer fkiCompanyID) {
+    this.fkiCompanyID = fkiCompanyID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Company
+   * minimum: 1
+   * maximum: 255
+   * @return fkiCompanyID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiCompanyID() {
+    return fkiCompanyID;
+  }
+
+  public void setFkiCompanyID(Integer fkiCompanyID) {
+    this.fkiCompanyID = fkiCompanyID;
+  }
+
+
+  public CustomerResponseCompound fkiCustomergroupID(Integer fkiCustomergroupID) {
+    this.fkiCustomergroupID = fkiCustomergroupID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Customergroup
+   * minimum: 0
+   * maximum: 255
+   * @return fkiCustomergroupID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiCustomergroupID() {
+    return fkiCustomergroupID;
+  }
+
+  public void setFkiCustomergroupID(Integer fkiCustomergroupID) {
+    this.fkiCustomergroupID = fkiCustomergroupID;
+  }
+
+
+  public CustomerResponseCompound sCustomerName(String sCustomerName) {
+    this.sCustomerName = sCustomerName;
+    return this;
+  }
+
+  /**
+   * The name of the Customer
+   * @return sCustomerName
+   */
+  @javax.annotation.Nonnull
+  public String getsCustomerName() {
+    return sCustomerName;
+  }
+
+  public void setsCustomerName(String sCustomerName) {
+    this.sCustomerName = sCustomerName;
+  }
+
+
+  public CustomerResponseCompound fkiContactinformationsID(Integer fkiContactinformationsID) {
+    this.fkiContactinformationsID = fkiContactinformationsID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Contactinformations
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiContactinformationsID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiContactinformationsID() {
+    return fkiContactinformationsID;
+  }
+
+  public void setFkiContactinformationsID(Integer fkiContactinformationsID) {
+    this.fkiContactinformationsID = fkiContactinformationsID;
+  }
+
+
+  public CustomerResponseCompound fkiContactcontainerID(Integer fkiContactcontainerID) {
+    this.fkiContactcontainerID = fkiContactcontainerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Contactcontainer
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiContactcontainerID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiContactcontainerID() {
+    return fkiContactcontainerID;
+  }
+
+  public void setFkiContactcontainerID(Integer fkiContactcontainerID) {
+    this.fkiContactcontainerID = fkiContactcontainerID;
+  }
+
+
+  public CustomerResponseCompound fkiImageID(Integer fkiImageID) {
+    this.fkiImageID = fkiImageID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Image
+   * @return fkiImageID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiImageID() {
+    return fkiImageID;
+  }
+
+  public void setFkiImageID(Integer fkiImageID) {
+    this.fkiImageID = fkiImageID;
+  }
+
+
+  public CustomerResponseCompound fkiGlaccountcontainerID(Integer fkiGlaccountcontainerID) {
+    this.fkiGlaccountcontainerID = fkiGlaccountcontainerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Glaccountcontainer
+   * minimum: 0
+   * @return fkiGlaccountcontainerID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiGlaccountcontainerID() {
+    return fkiGlaccountcontainerID;
+  }
+
+  public void setFkiGlaccountcontainerID(Integer fkiGlaccountcontainerID) {
+    this.fkiGlaccountcontainerID = fkiGlaccountcontainerID;
+  }
+
+
+  public CustomerResponseCompound fkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Language.  Valid values:  |Value|Description| |-|-| |1|French| |2|English|
+   * minimum: 1
+   * maximum: 2
+   * @return fkiLanguageID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiLanguageID() {
+    return fkiLanguageID;
+  }
+
+  public void setFkiLanguageID(Integer fkiLanguageID) {
+    this.fkiLanguageID = fkiLanguageID;
+  }
+
+
+  public CustomerResponseCompound fkiDepartmentID(Integer fkiDepartmentID) {
+    this.fkiDepartmentID = fkiDepartmentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Department
+   * minimum: 0
+   * @return fkiDepartmentID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiDepartmentID() {
+    return fkiDepartmentID;
+  }
+
+  public void setFkiDepartmentID(Integer fkiDepartmentID) {
+    this.fkiDepartmentID = fkiDepartmentID;
+  }
+
+
+  public CustomerResponseCompound fkiPaymentmethodID(Integer fkiPaymentmethodID) {
+    this.fkiPaymentmethodID = fkiPaymentmethodID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Paymentmethod
+   * minimum: 0
+   * maximum: 255
+   * @return fkiPaymentmethodID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiPaymentmethodID() {
+    return fkiPaymentmethodID;
+  }
+
+  public void setFkiPaymentmethodID(Integer fkiPaymentmethodID) {
+    this.fkiPaymentmethodID = fkiPaymentmethodID;
+  }
+
+
+  public CustomerResponseCompound fkiElectronicfundstransferbankaccountID(Integer fkiElectronicfundstransferbankaccountID) {
+    this.fkiElectronicfundstransferbankaccountID = fkiElectronicfundstransferbankaccountID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Electronicfundstransferbankaccount
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiElectronicfundstransferbankaccountID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiElectronicfundstransferbankaccountID() {
+    return fkiElectronicfundstransferbankaccountID;
+  }
+
+  public void setFkiElectronicfundstransferbankaccountID(Integer fkiElectronicfundstransferbankaccountID) {
+    this.fkiElectronicfundstransferbankaccountID = fkiElectronicfundstransferbankaccountID;
+  }
+
+
+  public CustomerResponseCompound fkiElectronicfundstransferbankaccountIDDirectdebit(Integer fkiElectronicfundstransferbankaccountIDDirectdebit) {
+    this.fkiElectronicfundstransferbankaccountIDDirectdebit = fkiElectronicfundstransferbankaccountIDDirectdebit;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Electronicfundstransferbankaccount
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiElectronicfundstransferbankaccountIDDirectdebit
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiElectronicfundstransferbankaccountIDDirectdebit() {
+    return fkiElectronicfundstransferbankaccountIDDirectdebit;
+  }
+
+  public void setFkiElectronicfundstransferbankaccountIDDirectdebit(Integer fkiElectronicfundstransferbankaccountIDDirectdebit) {
+    this.fkiElectronicfundstransferbankaccountIDDirectdebit = fkiElectronicfundstransferbankaccountIDDirectdebit;
+  }
+
+
+  public CustomerResponseCompound fkiSendingmethodID(Integer fkiSendingmethodID) {
+    this.fkiSendingmethodID = fkiSendingmethodID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Sendingmethod
+   * minimum: 0
+   * maximum: 255
+   * @return fkiSendingmethodID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiSendingmethodID() {
+    return fkiSendingmethodID;
+  }
+
+  public void setFkiSendingmethodID(Integer fkiSendingmethodID) {
+    this.fkiSendingmethodID = fkiSendingmethodID;
+  }
+
+
+  public CustomerResponseCompound fkiTaxassignmentID(Integer fkiTaxassignmentID) {
+    this.fkiTaxassignmentID = fkiTaxassignmentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Taxassignment.  Valid values:  |Value|Description| |-|-| |1|No tax| |2|GST| |3|HST (ON)| |4|HST (NB)| |5|HST (NS)| |6|HST (NL)| |7|HST (PE)| |8|GST + QST (QC)| |9|GST + QST (QC) Non-Recoverable| |10|GST + PST (BC)| |11|GST + PST (SK)| |12|GST + RST (MB)| |13|GST + PST (BC) Non-Recoverable| |14|GST + PST (SK) Non-Recoverable| |15|GST + RST (MB) Non-Recoverable|
+   * minimum: 0
+   * maximum: 15
+   * @return fkiTaxassignmentID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiTaxassignmentID() {
+    return fkiTaxassignmentID;
+  }
+
+  public void setFkiTaxassignmentID(Integer fkiTaxassignmentID) {
+    this.fkiTaxassignmentID = fkiTaxassignmentID;
+  }
+
+
+  public CustomerResponseCompound fkiAttendancestatusID(Integer fkiAttendancestatusID) {
+    this.fkiAttendancestatusID = fkiAttendancestatusID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Attendancestatus
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiAttendancestatusID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiAttendancestatusID() {
+    return fkiAttendancestatusID;
+  }
+
+  public void setFkiAttendancestatusID(Integer fkiAttendancestatusID) {
+    this.fkiAttendancestatusID = fkiAttendancestatusID;
+  }
+
+
+  public CustomerResponseCompound fkiAgentIDVariableexpensechargeto(Integer fkiAgentIDVariableexpensechargeto) {
+    this.fkiAgentIDVariableexpensechargeto = fkiAgentIDVariableexpensechargeto;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Agent.
+   * minimum: 0
+   * @return fkiAgentIDVariableexpensechargeto
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiAgentIDVariableexpensechargeto() {
+    return fkiAgentIDVariableexpensechargeto;
+  }
+
+  public void setFkiAgentIDVariableexpensechargeto(Integer fkiAgentIDVariableexpensechargeto) {
+    this.fkiAgentIDVariableexpensechargeto = fkiAgentIDVariableexpensechargeto;
+  }
+
+
+  public CustomerResponseCompound fkiBrokerIDVariableexpensechargeto(Integer fkiBrokerIDVariableexpensechargeto) {
+    this.fkiBrokerIDVariableexpensechargeto = fkiBrokerIDVariableexpensechargeto;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Broker.
+   * minimum: 0
+   * @return fkiBrokerIDVariableexpensechargeto
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiBrokerIDVariableexpensechargeto() {
+    return fkiBrokerIDVariableexpensechargeto;
+  }
+
+  public void setFkiBrokerIDVariableexpensechargeto(Integer fkiBrokerIDVariableexpensechargeto) {
+    this.fkiBrokerIDVariableexpensechargeto = fkiBrokerIDVariableexpensechargeto;
+  }
+
+
+  public CustomerResponseCompound fkiCustomerIDVariableexpensechargeto(Integer fkiCustomerIDVariableexpensechargeto) {
+    this.fkiCustomerIDVariableexpensechargeto = fkiCustomerIDVariableexpensechargeto;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Customer.
+   * minimum: 0
+   * @return fkiCustomerIDVariableexpensechargeto
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiCustomerIDVariableexpensechargeto() {
+    return fkiCustomerIDVariableexpensechargeto;
+  }
+
+  public void setFkiCustomerIDVariableexpensechargeto(Integer fkiCustomerIDVariableexpensechargeto) {
+    this.fkiCustomerIDVariableexpensechargeto = fkiCustomerIDVariableexpensechargeto;
+  }
+
+
+  public CustomerResponseCompound fkiGlaccountcontainerIDVariableexpensechargeto(Integer fkiGlaccountcontainerIDVariableexpensechargeto) {
+    this.fkiGlaccountcontainerIDVariableexpensechargeto = fkiGlaccountcontainerIDVariableexpensechargeto;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Glaccountcontainer
+   * minimum: 0
+   * @return fkiGlaccountcontainerIDVariableexpensechargeto
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiGlaccountcontainerIDVariableexpensechargeto() {
+    return fkiGlaccountcontainerIDVariableexpensechargeto;
+  }
+
+  public void setFkiGlaccountcontainerIDVariableexpensechargeto(Integer fkiGlaccountcontainerIDVariableexpensechargeto) {
+    this.fkiGlaccountcontainerIDVariableexpensechargeto = fkiGlaccountcontainerIDVariableexpensechargeto;
+  }
+
+
+  public CustomerResponseCompound fkiAgentIDSupplychargechargeto(Integer fkiAgentIDSupplychargechargeto) {
+    this.fkiAgentIDSupplychargechargeto = fkiAgentIDSupplychargechargeto;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Agent.
+   * minimum: 0
+   * @return fkiAgentIDSupplychargechargeto
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiAgentIDSupplychargechargeto() {
+    return fkiAgentIDSupplychargechargeto;
+  }
+
+  public void setFkiAgentIDSupplychargechargeto(Integer fkiAgentIDSupplychargechargeto) {
+    this.fkiAgentIDSupplychargechargeto = fkiAgentIDSupplychargechargeto;
+  }
+
+
+  public CustomerResponseCompound fkiBrokerIDSupplychargechargeto(Integer fkiBrokerIDSupplychargechargeto) {
+    this.fkiBrokerIDSupplychargechargeto = fkiBrokerIDSupplychargechargeto;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Broker.
+   * minimum: 0
+   * @return fkiBrokerIDSupplychargechargeto
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiBrokerIDSupplychargechargeto() {
+    return fkiBrokerIDSupplychargechargeto;
+  }
+
+  public void setFkiBrokerIDSupplychargechargeto(Integer fkiBrokerIDSupplychargechargeto) {
+    this.fkiBrokerIDSupplychargechargeto = fkiBrokerIDSupplychargechargeto;
+  }
+
+
+  public CustomerResponseCompound fkiCustomerIDSupplychargechargeto(Integer fkiCustomerIDSupplychargechargeto) {
+    this.fkiCustomerIDSupplychargechargeto = fkiCustomerIDSupplychargechargeto;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Customer.
+   * minimum: 0
+   * @return fkiCustomerIDSupplychargechargeto
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiCustomerIDSupplychargechargeto() {
+    return fkiCustomerIDSupplychargechargeto;
+  }
+
+  public void setFkiCustomerIDSupplychargechargeto(Integer fkiCustomerIDSupplychargechargeto) {
+    this.fkiCustomerIDSupplychargechargeto = fkiCustomerIDSupplychargechargeto;
+  }
+
+
+  public CustomerResponseCompound fkiGlaccountcontainerIDSupplychargechargeto(Integer fkiGlaccountcontainerIDSupplychargechargeto) {
+    this.fkiGlaccountcontainerIDSupplychargechargeto = fkiGlaccountcontainerIDSupplychargechargeto;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Glaccountcontainer
+   * minimum: 0
+   * @return fkiGlaccountcontainerIDSupplychargechargeto
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiGlaccountcontainerIDSupplychargechargeto() {
+    return fkiGlaccountcontainerIDSupplychargechargeto;
+  }
+
+  public void setFkiGlaccountcontainerIDSupplychargechargeto(Integer fkiGlaccountcontainerIDSupplychargechargeto) {
+    this.fkiGlaccountcontainerIDSupplychargechargeto = fkiGlaccountcontainerIDSupplychargechargeto;
+  }
+
+
+  public CustomerResponseCompound fkiInvoicealternatelogoID(Integer fkiInvoicealternatelogoID) {
+    this.fkiInvoicealternatelogoID = fkiInvoicealternatelogoID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Invoicealternatelogo
+   * minimum: 0
+   * maximum: 255
+   * @return fkiInvoicealternatelogoID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiInvoicealternatelogoID() {
+    return fkiInvoicealternatelogoID;
+  }
+
+  public void setFkiInvoicealternatelogoID(Integer fkiInvoicealternatelogoID) {
+    this.fkiInvoicealternatelogoID = fkiInvoicealternatelogoID;
+  }
+
+
+  public CustomerResponseCompound fkiSynchronizationlinkserverID(Integer fkiSynchronizationlinkserverID) {
+    this.fkiSynchronizationlinkserverID = fkiSynchronizationlinkserverID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Synchronizationlinkserver
+   * minimum: 0
+   * maximum: 255
+   * @return fkiSynchronizationlinkserverID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiSynchronizationlinkserverID() {
+    return fkiSynchronizationlinkserverID;
+  }
+
+  public void setFkiSynchronizationlinkserverID(Integer fkiSynchronizationlinkserverID) {
+    this.fkiSynchronizationlinkserverID = fkiSynchronizationlinkserverID;
+  }
+
+
+  public CustomerResponseCompound efkiUserID(Integer efkiUserID) {
+    this.efkiUserID = efkiUserID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return efkiUserID
+   */
+  @javax.annotation.Nullable
+  public Integer getEfkiUserID() {
+    return efkiUserID;
+  }
+
+  public void setEfkiUserID(Integer efkiUserID) {
+    this.efkiUserID = efkiUserID;
+  }
+
+
+  public CustomerResponseCompound efksCustomerCode(String efksCustomerCode) {
+    this.efksCustomerCode = efksCustomerCode;
+    return this;
+  }
+
+  /**
+   * The code of the Customer
+   * @return efksCustomerCode
+   */
+  @javax.annotation.Nullable
+  public String getEfksCustomerCode() {
+    return efksCustomerCode;
+  }
+
+  public void setEfksCustomerCode(String efksCustomerCode) {
+    this.efksCustomerCode = efksCustomerCode;
+  }
+
+
+  public CustomerResponseCompound sCustomerCode(String sCustomerCode) {
+    this.sCustomerCode = sCustomerCode;
+    return this;
+  }
+
+  /**
+   * The code of the Customer
+   * @return sCustomerCode
+   */
+  @javax.annotation.Nonnull
+  public String getsCustomerCode() {
+    return sCustomerCode;
+  }
+
+  public void setsCustomerCode(String sCustomerCode) {
+    this.sCustomerCode = sCustomerCode;
+  }
+
+
+  public CustomerResponseCompound dCustomerFulltimeequivalent(String dCustomerFulltimeequivalent) {
+    this.dCustomerFulltimeequivalent = dCustomerFulltimeequivalent;
+    return this;
+  }
+
+  /**
+   * The fulltimeequivalent of the Customer
+   * @return dCustomerFulltimeequivalent
+   */
+  @javax.annotation.Nonnull
+  public String getdCustomerFulltimeequivalent() {
+    return dCustomerFulltimeequivalent;
+  }
+
+  public void setdCustomerFulltimeequivalent(String dCustomerFulltimeequivalent) {
+    this.dCustomerFulltimeequivalent = dCustomerFulltimeequivalent;
+  }
+
+
+  public CustomerResponseCompound iCustomerPhotocopiercode(Integer iCustomerPhotocopiercode) {
+    this.iCustomerPhotocopiercode = iCustomerPhotocopiercode;
+    return this;
+  }
+
+  /**
+   * The photocopiercode of the Customer
+   * minimum: 0
+   * maximum: 16777215
+   * @return iCustomerPhotocopiercode
+   */
+  @javax.annotation.Nonnull
+  public Integer getiCustomerPhotocopiercode() {
+    return iCustomerPhotocopiercode;
+  }
+
+  public void setiCustomerPhotocopiercode(Integer iCustomerPhotocopiercode) {
+    this.iCustomerPhotocopiercode = iCustomerPhotocopiercode;
+  }
+
+
+  public CustomerResponseCompound iCustomerLongdistancecode(Integer iCustomerLongdistancecode) {
+    this.iCustomerLongdistancecode = iCustomerLongdistancecode;
+    return this;
+  }
+
+  /**
+   * The longdistancecode of the Customer
+   * minimum: 0
+   * maximum: 16777215
+   * @return iCustomerLongdistancecode
+   */
+  @javax.annotation.Nonnull
+  public Integer getiCustomerLongdistancecode() {
+    return iCustomerLongdistancecode;
+  }
+
+  public void setiCustomerLongdistancecode(Integer iCustomerLongdistancecode) {
+    this.iCustomerLongdistancecode = iCustomerLongdistancecode;
+  }
+
+
+  public CustomerResponseCompound iCustomerTimewindowstart(Integer iCustomerTimewindowstart) {
+    this.iCustomerTimewindowstart = iCustomerTimewindowstart;
+    return this;
+  }
+
+  /**
+   * The timewindowstart of the Customer
+   * minimum: 0
+   * maximum: 255
+   * @return iCustomerTimewindowstart
+   */
+  @javax.annotation.Nonnull
+  public Integer getiCustomerTimewindowstart() {
+    return iCustomerTimewindowstart;
+  }
+
+  public void setiCustomerTimewindowstart(Integer iCustomerTimewindowstart) {
+    this.iCustomerTimewindowstart = iCustomerTimewindowstart;
+  }
+
+
+  public CustomerResponseCompound iCustomerTimewindowend(Integer iCustomerTimewindowend) {
+    this.iCustomerTimewindowend = iCustomerTimewindowend;
+    return this;
+  }
+
+  /**
+   * The timewindowend of the Customer
+   * minimum: 0
+   * maximum: 255
+   * @return iCustomerTimewindowend
+   */
+  @javax.annotation.Nonnull
+  public Integer getiCustomerTimewindowend() {
+    return iCustomerTimewindowend;
+  }
+
+  public void setiCustomerTimewindowend(Integer iCustomerTimewindowend) {
+    this.iCustomerTimewindowend = iCustomerTimewindowend;
+  }
+
+
+  public CustomerResponseCompound dCustomerMinimumchargeableinterests(String dCustomerMinimumchargeableinterests) {
+    this.dCustomerMinimumchargeableinterests = dCustomerMinimumchargeableinterests;
+    return this;
+  }
+
+  /**
+   * The minimumchargeableinterests of the Customer
+   * @return dCustomerMinimumchargeableinterests
+   */
+  @javax.annotation.Nonnull
+  public String getdCustomerMinimumchargeableinterests() {
+    return dCustomerMinimumchargeableinterests;
+  }
+
+  public void setdCustomerMinimumchargeableinterests(String dCustomerMinimumchargeableinterests) {
+    this.dCustomerMinimumchargeableinterests = dCustomerMinimumchargeableinterests;
+  }
+
+
+  public CustomerResponseCompound dtCustomerBirthdate(String dtCustomerBirthdate) {
+    this.dtCustomerBirthdate = dtCustomerBirthdate;
+    return this;
+  }
+
+  /**
+   * The birthdate of the Customer
+   * @return dtCustomerBirthdate
+   */
+  @javax.annotation.Nonnull
+  public String getDtCustomerBirthdate() {
+    return dtCustomerBirthdate;
+  }
+
+  public void setDtCustomerBirthdate(String dtCustomerBirthdate) {
+    this.dtCustomerBirthdate = dtCustomerBirthdate;
+  }
+
+
+  public CustomerResponseCompound dtCustomerTransfer(String dtCustomerTransfer) {
+    this.dtCustomerTransfer = dtCustomerTransfer;
+    return this;
+  }
+
+  /**
+   * The transfer of the Customer
+   * @return dtCustomerTransfer
+   */
+  @javax.annotation.Nonnull
+  public String getDtCustomerTransfer() {
+    return dtCustomerTransfer;
+  }
+
+  public void setDtCustomerTransfer(String dtCustomerTransfer) {
+    this.dtCustomerTransfer = dtCustomerTransfer;
+  }
+
+
+  public CustomerResponseCompound dtCustomerTransferappointment(String dtCustomerTransferappointment) {
+    this.dtCustomerTransferappointment = dtCustomerTransferappointment;
+    return this;
+  }
+
+  /**
+   * The transferappointment of the Customer
+   * @return dtCustomerTransferappointment
+   */
+  @javax.annotation.Nonnull
+  public String getDtCustomerTransferappointment() {
+    return dtCustomerTransferappointment;
+  }
+
+  public void setDtCustomerTransferappointment(String dtCustomerTransferappointment) {
+    this.dtCustomerTransferappointment = dtCustomerTransferappointment;
+  }
+
+
+  public CustomerResponseCompound dtCustomerTransfersurvey(String dtCustomerTransfersurvey) {
+    this.dtCustomerTransfersurvey = dtCustomerTransfersurvey;
+    return this;
+  }
+
+  /**
+   * The transfersurvey of the Customer
+   * @return dtCustomerTransfersurvey
+   */
+  @javax.annotation.Nonnull
+  public String getDtCustomerTransfersurvey() {
+    return dtCustomerTransfersurvey;
+  }
+
+  public void setDtCustomerTransfersurvey(String dtCustomerTransfersurvey) {
+    this.dtCustomerTransfersurvey = dtCustomerTransfersurvey;
+  }
+
+
+  public CustomerResponseCompound bCustomerIsactive(Boolean bCustomerIsactive) {
+    this.bCustomerIsactive = bCustomerIsactive;
+    return this;
+  }
+
+  /**
+   * Whether the customer is active or not
+   * @return bCustomerIsactive
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCustomerIsactive() {
+    return bCustomerIsactive;
+  }
+
+  public void setbCustomerIsactive(Boolean bCustomerIsactive) {
+    this.bCustomerIsactive = bCustomerIsactive;
+  }
+
+
+  public CustomerResponseCompound bCustomerVariableexpensefinanced(Boolean bCustomerVariableexpensefinanced) {
+    this.bCustomerVariableexpensefinanced = bCustomerVariableexpensefinanced;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s an variableexpensefinanced
+   * @return bCustomerVariableexpensefinanced
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCustomerVariableexpensefinanced() {
+    return bCustomerVariableexpensefinanced;
+  }
+
+  public void setbCustomerVariableexpensefinanced(Boolean bCustomerVariableexpensefinanced) {
+    this.bCustomerVariableexpensefinanced = bCustomerVariableexpensefinanced;
+  }
+
+
+  public CustomerResponseCompound bCustomerVariableexpensefinancedtaxes(Boolean bCustomerVariableexpensefinancedtaxes) {
+    this.bCustomerVariableexpensefinancedtaxes = bCustomerVariableexpensefinancedtaxes;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s an variableexpensefinancedtaxes
+   * @return bCustomerVariableexpensefinancedtaxes
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCustomerVariableexpensefinancedtaxes() {
+    return bCustomerVariableexpensefinancedtaxes;
+  }
+
+  public void setbCustomerVariableexpensefinancedtaxes(Boolean bCustomerVariableexpensefinancedtaxes) {
+    this.bCustomerVariableexpensefinancedtaxes = bCustomerVariableexpensefinancedtaxes;
+  }
+
+
+  public CustomerResponseCompound bCustomerSupplychargefinanced(Boolean bCustomerSupplychargefinanced) {
+    this.bCustomerSupplychargefinanced = bCustomerSupplychargefinanced;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s an supplychargefinanced
+   * @return bCustomerSupplychargefinanced
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCustomerSupplychargefinanced() {
+    return bCustomerSupplychargefinanced;
+  }
+
+  public void setbCustomerSupplychargefinanced(Boolean bCustomerSupplychargefinanced) {
+    this.bCustomerSupplychargefinanced = bCustomerSupplychargefinanced;
+  }
+
+
+  public CustomerResponseCompound bCustomerSupplychargefinancedtaxes(Boolean bCustomerSupplychargefinancedtaxes) {
+    this.bCustomerSupplychargefinancedtaxes = bCustomerSupplychargefinancedtaxes;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s an supplychargefinancedtaxes
+   * @return bCustomerSupplychargefinancedtaxes
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCustomerSupplychargefinancedtaxes() {
+    return bCustomerSupplychargefinancedtaxes;
+  }
+
+  public void setbCustomerSupplychargefinancedtaxes(Boolean bCustomerSupplychargefinancedtaxes) {
+    this.bCustomerSupplychargefinancedtaxes = bCustomerSupplychargefinancedtaxes;
+  }
+
+
+  public CustomerResponseCompound bCustomerAttendance(Boolean bCustomerAttendance) {
+    this.bCustomerAttendance = bCustomerAttendance;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s an attendance
+   * @return bCustomerAttendance
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCustomerAttendance() {
+    return bCustomerAttendance;
+  }
+
+  public void setbCustomerAttendance(Boolean bCustomerAttendance) {
+    this.bCustomerAttendance = bCustomerAttendance;
+  }
+
+
+  public CustomerResponseCompound eCustomerType(FieldECustomerType eCustomerType) {
+    this.eCustomerType = eCustomerType;
+    return this;
+  }
+
+  /**
+   * Get eCustomerType
+   * @return eCustomerType
+   */
+  @javax.annotation.Nonnull
+  public FieldECustomerType geteCustomerType() {
+    return eCustomerType;
+  }
+
+  public void seteCustomerType(FieldECustomerType eCustomerType) {
+    this.eCustomerType = eCustomerType;
+  }
+
+
+  public CustomerResponseCompound eCustomerMarketingcorrespondence(FieldECustomerMarketingcorrespondence eCustomerMarketingcorrespondence) {
+    this.eCustomerMarketingcorrespondence = eCustomerMarketingcorrespondence;
+    return this;
+  }
+
+  /**
+   * Get eCustomerMarketingcorrespondence
+   * @return eCustomerMarketingcorrespondence
+   */
+  @javax.annotation.Nonnull
+  public FieldECustomerMarketingcorrespondence geteCustomerMarketingcorrespondence() {
+    return eCustomerMarketingcorrespondence;
+  }
+
+  public void seteCustomerMarketingcorrespondence(FieldECustomerMarketingcorrespondence eCustomerMarketingcorrespondence) {
+    this.eCustomerMarketingcorrespondence = eCustomerMarketingcorrespondence;
+  }
+
+
+  public CustomerResponseCompound bCustomerBlackcopycarbon(Boolean bCustomerBlackcopycarbon) {
+    this.bCustomerBlackcopycarbon = bCustomerBlackcopycarbon;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s an blackcopycarbon
+   * @return bCustomerBlackcopycarbon
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCustomerBlackcopycarbon() {
+    return bCustomerBlackcopycarbon;
+  }
+
+  public void setbCustomerBlackcopycarbon(Boolean bCustomerBlackcopycarbon) {
+    this.bCustomerBlackcopycarbon = bCustomerBlackcopycarbon;
+  }
+
+
+  public CustomerResponseCompound bCustomerUnsubscribeinfo(Boolean bCustomerUnsubscribeinfo) {
+    this.bCustomerUnsubscribeinfo = bCustomerUnsubscribeinfo;
+    return this;
+  }
+
+  /**
+   * Whether if it&#39;s an unsubscribeinfo
+   * @return bCustomerUnsubscribeinfo
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCustomerUnsubscribeinfo() {
+    return bCustomerUnsubscribeinfo;
+  }
+
+  public void setbCustomerUnsubscribeinfo(Boolean bCustomerUnsubscribeinfo) {
+    this.bCustomerUnsubscribeinfo = bCustomerUnsubscribeinfo;
+  }
+
+
+  public CustomerResponseCompound tCustomerComment(String tCustomerComment) {
+    this.tCustomerComment = tCustomerComment;
+    return this;
+  }
+
+  /**
+   * The comment of the Customer
+   * @return tCustomerComment
+   */
+  @javax.annotation.Nonnull
+  public String gettCustomerComment() {
+    return tCustomerComment;
+  }
+
+  public void settCustomerComment(String tCustomerComment) {
+    this.tCustomerComment = tCustomerComment;
+  }
+
+
+  public CustomerResponseCompound IMPORTID(String IMPORTID) {
+    this.IMPORTID = IMPORTID;
+    return this;
+  }
+
+  /**
+   * Get IMPORTID
+   * @return IMPORTID
+   */
+  @javax.annotation.Nullable
+  public String getIMPORTID() {
+    return IMPORTID;
+  }
+
+  public void setIMPORTID(String IMPORTID) {
+    this.IMPORTID = IMPORTID;
+  }
+
 
 
   @Override
@@ -65,19 +1283,120 @@ public class CustomerResponseCompound extends CustomerResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    CustomerResponseCompound customerResponseCompound = (CustomerResponseCompound) o;
+    return Objects.equals(this.pkiCustomerID, customerResponseCompound.pkiCustomerID) &&
+        Objects.equals(this.fkiCompanyID, customerResponseCompound.fkiCompanyID) &&
+        Objects.equals(this.fkiCustomergroupID, customerResponseCompound.fkiCustomergroupID) &&
+        Objects.equals(this.sCustomerName, customerResponseCompound.sCustomerName) &&
+        Objects.equals(this.fkiContactinformationsID, customerResponseCompound.fkiContactinformationsID) &&
+        Objects.equals(this.fkiContactcontainerID, customerResponseCompound.fkiContactcontainerID) &&
+        Objects.equals(this.fkiImageID, customerResponseCompound.fkiImageID) &&
+        Objects.equals(this.fkiGlaccountcontainerID, customerResponseCompound.fkiGlaccountcontainerID) &&
+        Objects.equals(this.fkiLanguageID, customerResponseCompound.fkiLanguageID) &&
+        Objects.equals(this.fkiDepartmentID, customerResponseCompound.fkiDepartmentID) &&
+        Objects.equals(this.fkiPaymentmethodID, customerResponseCompound.fkiPaymentmethodID) &&
+        Objects.equals(this.fkiElectronicfundstransferbankaccountID, customerResponseCompound.fkiElectronicfundstransferbankaccountID) &&
+        Objects.equals(this.fkiElectronicfundstransferbankaccountIDDirectdebit, customerResponseCompound.fkiElectronicfundstransferbankaccountIDDirectdebit) &&
+        Objects.equals(this.fkiSendingmethodID, customerResponseCompound.fkiSendingmethodID) &&
+        Objects.equals(this.fkiTaxassignmentID, customerResponseCompound.fkiTaxassignmentID) &&
+        Objects.equals(this.fkiAttendancestatusID, customerResponseCompound.fkiAttendancestatusID) &&
+        Objects.equals(this.fkiAgentIDVariableexpensechargeto, customerResponseCompound.fkiAgentIDVariableexpensechargeto) &&
+        Objects.equals(this.fkiBrokerIDVariableexpensechargeto, customerResponseCompound.fkiBrokerIDVariableexpensechargeto) &&
+        Objects.equals(this.fkiCustomerIDVariableexpensechargeto, customerResponseCompound.fkiCustomerIDVariableexpensechargeto) &&
+        Objects.equals(this.fkiGlaccountcontainerIDVariableexpensechargeto, customerResponseCompound.fkiGlaccountcontainerIDVariableexpensechargeto) &&
+        Objects.equals(this.fkiAgentIDSupplychargechargeto, customerResponseCompound.fkiAgentIDSupplychargechargeto) &&
+        Objects.equals(this.fkiBrokerIDSupplychargechargeto, customerResponseCompound.fkiBrokerIDSupplychargechargeto) &&
+        Objects.equals(this.fkiCustomerIDSupplychargechargeto, customerResponseCompound.fkiCustomerIDSupplychargechargeto) &&
+        Objects.equals(this.fkiGlaccountcontainerIDSupplychargechargeto, customerResponseCompound.fkiGlaccountcontainerIDSupplychargechargeto) &&
+        Objects.equals(this.fkiInvoicealternatelogoID, customerResponseCompound.fkiInvoicealternatelogoID) &&
+        Objects.equals(this.fkiSynchronizationlinkserverID, customerResponseCompound.fkiSynchronizationlinkserverID) &&
+        Objects.equals(this.efkiUserID, customerResponseCompound.efkiUserID) &&
+        Objects.equals(this.efksCustomerCode, customerResponseCompound.efksCustomerCode) &&
+        Objects.equals(this.sCustomerCode, customerResponseCompound.sCustomerCode) &&
+        Objects.equals(this.dCustomerFulltimeequivalent, customerResponseCompound.dCustomerFulltimeequivalent) &&
+        Objects.equals(this.iCustomerPhotocopiercode, customerResponseCompound.iCustomerPhotocopiercode) &&
+        Objects.equals(this.iCustomerLongdistancecode, customerResponseCompound.iCustomerLongdistancecode) &&
+        Objects.equals(this.iCustomerTimewindowstart, customerResponseCompound.iCustomerTimewindowstart) &&
+        Objects.equals(this.iCustomerTimewindowend, customerResponseCompound.iCustomerTimewindowend) &&
+        Objects.equals(this.dCustomerMinimumchargeableinterests, customerResponseCompound.dCustomerMinimumchargeableinterests) &&
+        Objects.equals(this.dtCustomerBirthdate, customerResponseCompound.dtCustomerBirthdate) &&
+        Objects.equals(this.dtCustomerTransfer, customerResponseCompound.dtCustomerTransfer) &&
+        Objects.equals(this.dtCustomerTransferappointment, customerResponseCompound.dtCustomerTransferappointment) &&
+        Objects.equals(this.dtCustomerTransfersurvey, customerResponseCompound.dtCustomerTransfersurvey) &&
+        Objects.equals(this.bCustomerIsactive, customerResponseCompound.bCustomerIsactive) &&
+        Objects.equals(this.bCustomerVariableexpensefinanced, customerResponseCompound.bCustomerVariableexpensefinanced) &&
+        Objects.equals(this.bCustomerVariableexpensefinancedtaxes, customerResponseCompound.bCustomerVariableexpensefinancedtaxes) &&
+        Objects.equals(this.bCustomerSupplychargefinanced, customerResponseCompound.bCustomerSupplychargefinanced) &&
+        Objects.equals(this.bCustomerSupplychargefinancedtaxes, customerResponseCompound.bCustomerSupplychargefinancedtaxes) &&
+        Objects.equals(this.bCustomerAttendance, customerResponseCompound.bCustomerAttendance) &&
+        Objects.equals(this.eCustomerType, customerResponseCompound.eCustomerType) &&
+        Objects.equals(this.eCustomerMarketingcorrespondence, customerResponseCompound.eCustomerMarketingcorrespondence) &&
+        Objects.equals(this.bCustomerBlackcopycarbon, customerResponseCompound.bCustomerBlackcopycarbon) &&
+        Objects.equals(this.bCustomerUnsubscribeinfo, customerResponseCompound.bCustomerUnsubscribeinfo) &&
+        Objects.equals(this.tCustomerComment, customerResponseCompound.tCustomerComment) &&
+        Objects.equals(this.IMPORTID, customerResponseCompound.IMPORTID);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiCustomerID, fkiCompanyID, fkiCustomergroupID, sCustomerName, fkiContactinformationsID, fkiContactcontainerID, fkiImageID, fkiGlaccountcontainerID, fkiLanguageID, fkiDepartmentID, fkiPaymentmethodID, fkiElectronicfundstransferbankaccountID, fkiElectronicfundstransferbankaccountIDDirectdebit, fkiSendingmethodID, fkiTaxassignmentID, fkiAttendancestatusID, fkiAgentIDVariableexpensechargeto, fkiBrokerIDVariableexpensechargeto, fkiCustomerIDVariableexpensechargeto, fkiGlaccountcontainerIDVariableexpensechargeto, fkiAgentIDSupplychargechargeto, fkiBrokerIDSupplychargechargeto, fkiCustomerIDSupplychargechargeto, fkiGlaccountcontainerIDSupplychargechargeto, fkiInvoicealternatelogoID, fkiSynchronizationlinkserverID, efkiUserID, efksCustomerCode, sCustomerCode, dCustomerFulltimeequivalent, iCustomerPhotocopiercode, iCustomerLongdistancecode, iCustomerTimewindowstart, iCustomerTimewindowend, dCustomerMinimumchargeableinterests, dtCustomerBirthdate, dtCustomerTransfer, dtCustomerTransferappointment, dtCustomerTransfersurvey, bCustomerIsactive, bCustomerVariableexpensefinanced, bCustomerVariableexpensefinancedtaxes, bCustomerSupplychargefinanced, bCustomerSupplychargefinancedtaxes, bCustomerAttendance, eCustomerType, eCustomerMarketingcorrespondence, bCustomerBlackcopycarbon, bCustomerUnsubscribeinfo, tCustomerComment, IMPORTID);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomerResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiCustomerID: ").append(toIndentedString(pkiCustomerID)).append("\n");
+    sb.append("    fkiCompanyID: ").append(toIndentedString(fkiCompanyID)).append("\n");
+    sb.append("    fkiCustomergroupID: ").append(toIndentedString(fkiCustomergroupID)).append("\n");
+    sb.append("    sCustomerName: ").append(toIndentedString(sCustomerName)).append("\n");
+    sb.append("    fkiContactinformationsID: ").append(toIndentedString(fkiContactinformationsID)).append("\n");
+    sb.append("    fkiContactcontainerID: ").append(toIndentedString(fkiContactcontainerID)).append("\n");
+    sb.append("    fkiImageID: ").append(toIndentedString(fkiImageID)).append("\n");
+    sb.append("    fkiGlaccountcontainerID: ").append(toIndentedString(fkiGlaccountcontainerID)).append("\n");
+    sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
+    sb.append("    fkiDepartmentID: ").append(toIndentedString(fkiDepartmentID)).append("\n");
+    sb.append("    fkiPaymentmethodID: ").append(toIndentedString(fkiPaymentmethodID)).append("\n");
+    sb.append("    fkiElectronicfundstransferbankaccountID: ").append(toIndentedString(fkiElectronicfundstransferbankaccountID)).append("\n");
+    sb.append("    fkiElectronicfundstransferbankaccountIDDirectdebit: ").append(toIndentedString(fkiElectronicfundstransferbankaccountIDDirectdebit)).append("\n");
+    sb.append("    fkiSendingmethodID: ").append(toIndentedString(fkiSendingmethodID)).append("\n");
+    sb.append("    fkiTaxassignmentID: ").append(toIndentedString(fkiTaxassignmentID)).append("\n");
+    sb.append("    fkiAttendancestatusID: ").append(toIndentedString(fkiAttendancestatusID)).append("\n");
+    sb.append("    fkiAgentIDVariableexpensechargeto: ").append(toIndentedString(fkiAgentIDVariableexpensechargeto)).append("\n");
+    sb.append("    fkiBrokerIDVariableexpensechargeto: ").append(toIndentedString(fkiBrokerIDVariableexpensechargeto)).append("\n");
+    sb.append("    fkiCustomerIDVariableexpensechargeto: ").append(toIndentedString(fkiCustomerIDVariableexpensechargeto)).append("\n");
+    sb.append("    fkiGlaccountcontainerIDVariableexpensechargeto: ").append(toIndentedString(fkiGlaccountcontainerIDVariableexpensechargeto)).append("\n");
+    sb.append("    fkiAgentIDSupplychargechargeto: ").append(toIndentedString(fkiAgentIDSupplychargechargeto)).append("\n");
+    sb.append("    fkiBrokerIDSupplychargechargeto: ").append(toIndentedString(fkiBrokerIDSupplychargechargeto)).append("\n");
+    sb.append("    fkiCustomerIDSupplychargechargeto: ").append(toIndentedString(fkiCustomerIDSupplychargechargeto)).append("\n");
+    sb.append("    fkiGlaccountcontainerIDSupplychargechargeto: ").append(toIndentedString(fkiGlaccountcontainerIDSupplychargechargeto)).append("\n");
+    sb.append("    fkiInvoicealternatelogoID: ").append(toIndentedString(fkiInvoicealternatelogoID)).append("\n");
+    sb.append("    fkiSynchronizationlinkserverID: ").append(toIndentedString(fkiSynchronizationlinkserverID)).append("\n");
+    sb.append("    efkiUserID: ").append(toIndentedString(efkiUserID)).append("\n");
+    sb.append("    efksCustomerCode: ").append(toIndentedString(efksCustomerCode)).append("\n");
+    sb.append("    sCustomerCode: ").append(toIndentedString(sCustomerCode)).append("\n");
+    sb.append("    dCustomerFulltimeequivalent: ").append(toIndentedString(dCustomerFulltimeequivalent)).append("\n");
+    sb.append("    iCustomerPhotocopiercode: ").append(toIndentedString(iCustomerPhotocopiercode)).append("\n");
+    sb.append("    iCustomerLongdistancecode: ").append(toIndentedString(iCustomerLongdistancecode)).append("\n");
+    sb.append("    iCustomerTimewindowstart: ").append(toIndentedString(iCustomerTimewindowstart)).append("\n");
+    sb.append("    iCustomerTimewindowend: ").append(toIndentedString(iCustomerTimewindowend)).append("\n");
+    sb.append("    dCustomerMinimumchargeableinterests: ").append(toIndentedString(dCustomerMinimumchargeableinterests)).append("\n");
+    sb.append("    dtCustomerBirthdate: ").append(toIndentedString(dtCustomerBirthdate)).append("\n");
+    sb.append("    dtCustomerTransfer: ").append(toIndentedString(dtCustomerTransfer)).append("\n");
+    sb.append("    dtCustomerTransferappointment: ").append(toIndentedString(dtCustomerTransferappointment)).append("\n");
+    sb.append("    dtCustomerTransfersurvey: ").append(toIndentedString(dtCustomerTransfersurvey)).append("\n");
+    sb.append("    bCustomerIsactive: ").append(toIndentedString(bCustomerIsactive)).append("\n");
+    sb.append("    bCustomerVariableexpensefinanced: ").append(toIndentedString(bCustomerVariableexpensefinanced)).append("\n");
+    sb.append("    bCustomerVariableexpensefinancedtaxes: ").append(toIndentedString(bCustomerVariableexpensefinancedtaxes)).append("\n");
+    sb.append("    bCustomerSupplychargefinanced: ").append(toIndentedString(bCustomerSupplychargefinanced)).append("\n");
+    sb.append("    bCustomerSupplychargefinancedtaxes: ").append(toIndentedString(bCustomerSupplychargefinancedtaxes)).append("\n");
+    sb.append("    bCustomerAttendance: ").append(toIndentedString(bCustomerAttendance)).append("\n");
+    sb.append("    eCustomerType: ").append(toIndentedString(eCustomerType)).append("\n");
+    sb.append("    eCustomerMarketingcorrespondence: ").append(toIndentedString(eCustomerMarketingcorrespondence)).append("\n");
+    sb.append("    bCustomerBlackcopycarbon: ").append(toIndentedString(bCustomerBlackcopycarbon)).append("\n");
+    sb.append("    bCustomerUnsubscribeinfo: ").append(toIndentedString(bCustomerUnsubscribeinfo)).append("\n");
+    sb.append("    tCustomerComment: ").append(toIndentedString(tCustomerComment)).append("\n");
+    sb.append("    IMPORTID: ").append(toIndentedString(IMPORTID)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -230,6 +1549,44 @@ public class CustomerResponseCompound extends CustomerResponse {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sCustomerName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCustomerName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCustomerName").toString()));
+      }
+      if ((jsonObj.get("efksCustomerCode") != null && !jsonObj.get("efksCustomerCode").isJsonNull()) && !jsonObj.get("efksCustomerCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `efksCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("efksCustomerCode").toString()));
+      }
+      if (!jsonObj.get("sCustomerCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCustomerCode").toString()));
+      }
+      if (!jsonObj.get("dCustomerFulltimeequivalent").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dCustomerFulltimeequivalent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dCustomerFulltimeequivalent").toString()));
+      }
+      if (!jsonObj.get("dCustomerMinimumchargeableinterests").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dCustomerMinimumchargeableinterests` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dCustomerMinimumchargeableinterests").toString()));
+      }
+      if (!jsonObj.get("dtCustomerBirthdate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtCustomerBirthdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCustomerBirthdate").toString()));
+      }
+      if (!jsonObj.get("dtCustomerTransfer").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtCustomerTransfer` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCustomerTransfer").toString()));
+      }
+      if (!jsonObj.get("dtCustomerTransferappointment").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtCustomerTransferappointment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCustomerTransferappointment").toString()));
+      }
+      if (!jsonObj.get("dtCustomerTransfersurvey").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtCustomerTransfersurvey` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCustomerTransfersurvey").toString()));
+      }
+      // validate the required field `eCustomerType`
+      FieldECustomerType.validateJsonElement(jsonObj.get("eCustomerType"));
+      // validate the required field `eCustomerMarketingcorrespondence`
+      FieldECustomerMarketingcorrespondence.validateJsonElement(jsonObj.get("eCustomerMarketingcorrespondence"));
+      if (!jsonObj.get("tCustomerComment").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tCustomerComment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tCustomerComment").toString()));
+      }
+      if ((jsonObj.get("IMPORTID") != null && !jsonObj.get("IMPORTID").isJsonNull()) && !jsonObj.get("IMPORTID").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `IMPORTID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("IMPORTID").toString()));
       }
   }
 

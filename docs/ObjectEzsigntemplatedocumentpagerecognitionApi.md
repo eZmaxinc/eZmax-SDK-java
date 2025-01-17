@@ -81,7 +81,7 @@ public class Example {
 
 <a id="ezsigntemplatedocumentpagerecognitionDeleteObjectV1"></a>
 # **ezsigntemplatedocumentpagerecognitionDeleteObjectV1**
-> CommonResponse ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID)
+> EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID)
 
 Delete an existing Ezsigntemplatedocumentpagerecognition
 
@@ -111,7 +111,7 @@ public class Example {
     ObjectEzsigntemplatedocumentpagerecognitionApi apiInstance = new ObjectEzsigntemplatedocumentpagerecognitionApi(defaultClient);
     Integer pkiEzsigntemplatedocumentpagerecognitionID = 56; // Integer | The unique ID of the Ezsigntemplatedocumentpagerecognition
     try {
-      CommonResponse result = apiInstance.ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID);
+      EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response result = apiInstance.ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigntemplatedocumentpagerecognitionApi#ezsigntemplatedocumentpagerecognitionDeleteObjectV1");
@@ -132,7 +132,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response**](EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ public class Example {
 
 <a id="ezsigntemplatedocumentpagerecognitionEditObjectV1"></a>
 # **ezsigntemplatedocumentpagerecognitionEditObjectV1**
-> CommonResponse ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
+> EzsigntemplatedocumentpagerecognitionEditObjectV1Response ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request)
 
 Edit an existing Ezsigntemplatedocumentpagerecognition
 
@@ -182,7 +182,7 @@ public class Example {
     Integer pkiEzsigntemplatedocumentpagerecognitionID = 56; // Integer | The unique ID of the Ezsigntemplatedocumentpagerecognition
     EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request = new EzsigntemplatedocumentpagerecognitionEditObjectV1Request(); // EzsigntemplatedocumentpagerecognitionEditObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
+      EzsigntemplatedocumentpagerecognitionEditObjectV1Response result = apiInstance.ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigntemplatedocumentpagerecognitionApi#ezsigntemplatedocumentpagerecognitionEditObjectV1");
@@ -204,7 +204,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatedocumentpagerecognitionEditObjectV1Response**](EzsigntemplatedocumentpagerecognitionEditObjectV1Response.md)
 
 ### Authorization
 

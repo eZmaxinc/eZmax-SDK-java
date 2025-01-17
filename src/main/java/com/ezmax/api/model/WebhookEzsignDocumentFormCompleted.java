@@ -14,8 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AttemptResponse;
-import com.ezmax.api.model.CommonWebhook;
+import com.ezmax.api.model.AttemptResponseCompound;
 import com.ezmax.api.model.CustomWebhookResponse;
 import com.ezmax.api.model.EzsigndocumentResponse;
 import com.google.gson.TypeAdapter;
@@ -54,17 +53,70 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class WebhookEzsignDocumentFormCompleted extends CommonWebhook {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class WebhookEzsignDocumentFormCompleted {
+  public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
+  @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
+  private CustomWebhookResponse objWebhook;
+
+  public static final String SERIALIZED_NAME_A_OBJ_ATTEMPT = "a_objAttempt";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_ATTEMPT)
+  private List<AttemptResponseCompound> aObjAttempt = new ArrayList<>();
+
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT = "objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT)
-  @javax.annotation.Nonnull
   private EzsigndocumentResponse objEzsigndocument;
 
   public WebhookEzsignDocumentFormCompleted() {
   }
 
-  public WebhookEzsignDocumentFormCompleted objEzsigndocument(@javax.annotation.Nonnull EzsigndocumentResponse objEzsigndocument) {
+  public WebhookEzsignDocumentFormCompleted objWebhook(CustomWebhookResponse objWebhook) {
+    this.objWebhook = objWebhook;
+    return this;
+  }
+
+  /**
+   * Get objWebhook
+   * @return objWebhook
+   */
+  @javax.annotation.Nonnull
+  public CustomWebhookResponse getObjWebhook() {
+    return objWebhook;
+  }
+
+  public void setObjWebhook(CustomWebhookResponse objWebhook) {
+    this.objWebhook = objWebhook;
+  }
+
+
+  public WebhookEzsignDocumentFormCompleted aObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
+    this.aObjAttempt = aObjAttempt;
+    return this;
+  }
+
+  public WebhookEzsignDocumentFormCompleted addAObjAttemptItem(AttemptResponseCompound aObjAttemptItem) {
+    if (this.aObjAttempt == null) {
+      this.aObjAttempt = new ArrayList<>();
+    }
+    this.aObjAttempt.add(aObjAttemptItem);
+    return this;
+  }
+
+  /**
+   * An array containing details of previous attempts that were made to deliver the message. The array is empty if it&#39;s the first attempt.
+   * @return aObjAttempt
+   */
+  @javax.annotation.Nonnull
+  public List<AttemptResponseCompound> getaObjAttempt() {
+    return aObjAttempt;
+  }
+
+  public void setaObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
+    this.aObjAttempt = aObjAttempt;
+  }
+
+
+  public WebhookEzsignDocumentFormCompleted objEzsigndocument(EzsigndocumentResponse objEzsigndocument) {
     this.objEzsigndocument = objEzsigndocument;
     return this;
   }
@@ -78,7 +130,7 @@ public class WebhookEzsignDocumentFormCompleted extends CommonWebhook {
     return objEzsigndocument;
   }
 
-  public void setObjEzsigndocument(@javax.annotation.Nonnull EzsigndocumentResponse objEzsigndocument) {
+  public void setObjEzsigndocument(EzsigndocumentResponse objEzsigndocument) {
     this.objEzsigndocument = objEzsigndocument;
   }
 
@@ -93,20 +145,22 @@ public class WebhookEzsignDocumentFormCompleted extends CommonWebhook {
       return false;
     }
     WebhookEzsignDocumentFormCompleted webhookEzsignDocumentFormCompleted = (WebhookEzsignDocumentFormCompleted) o;
-    return Objects.equals(this.objEzsigndocument, webhookEzsignDocumentFormCompleted.objEzsigndocument) &&
-        super.equals(o);
+    return Objects.equals(this.objWebhook, webhookEzsignDocumentFormCompleted.objWebhook) &&
+        Objects.equals(this.aObjAttempt, webhookEzsignDocumentFormCompleted.aObjAttempt) &&
+        Objects.equals(this.objEzsigndocument, webhookEzsignDocumentFormCompleted.objEzsigndocument);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objEzsigndocument, super.hashCode());
+    return Objects.hash(objWebhook, aObjAttempt, objEzsigndocument);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookEzsignDocumentFormCompleted {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    objWebhook: ").append(toIndentedString(objWebhook)).append("\n");
+    sb.append("    aObjAttempt: ").append(toIndentedString(aObjAttempt)).append("\n");
     sb.append("    objEzsigndocument: ").append(toIndentedString(objEzsigndocument)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -136,9 +190,9 @@ public class WebhookEzsignDocumentFormCompleted extends CommonWebhook {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("objEzsigndocument");
     openapiRequiredFields.add("objWebhook");
     openapiRequiredFields.add("a_objAttempt");
+    openapiRequiredFields.add("objEzsigndocument");
   }
 
   /**
@@ -169,6 +223,18 @@ public class WebhookEzsignDocumentFormCompleted extends CommonWebhook {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objWebhook`
+      CustomWebhookResponse.validateJsonElement(jsonObj.get("objWebhook"));
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objAttempt").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objAttempt` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAttempt").toString()));
+      }
+
+      JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
+      // validate the required field `a_objAttempt` (array)
+      for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
+        AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
+      };
       // validate the required field `objEzsigndocument`
       EzsigndocumentResponse.validateJsonElement(jsonObj.get("objEzsigndocument"));
   }

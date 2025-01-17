@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezdoctemplatedocument/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzdoctemplatedocumentGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZDOCTEMPLATEDOCUMENT = "a_objEzdoctemplatedocument";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZDOCTEMPLATEDOCUMENT)
-  @javax.annotation.Nonnull
   private List<EzdoctemplatedocumentAutocompleteElementResponse> aObjEzdoctemplatedocument = new ArrayList<>();
 
   public EzdoctemplatedocumentGetAutocompleteV2ResponseMPayload() {
   }
 
-  public EzdoctemplatedocumentGetAutocompleteV2ResponseMPayload aObjEzdoctemplatedocument(@javax.annotation.Nonnull List<EzdoctemplatedocumentAutocompleteElementResponse> aObjEzdoctemplatedocument) {
+  public EzdoctemplatedocumentGetAutocompleteV2ResponseMPayload aObjEzdoctemplatedocument(List<EzdoctemplatedocumentAutocompleteElementResponse> aObjEzdoctemplatedocument) {
     this.aObjEzdoctemplatedocument = aObjEzdoctemplatedocument;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzdoctemplatedocumentGetAutocompleteV2ResponseMPayload {
     return aObjEzdoctemplatedocument;
   }
 
-  public void setaObjEzdoctemplatedocument(@javax.annotation.Nonnull List<EzdoctemplatedocumentAutocompleteElementResponse> aObjEzdoctemplatedocument) {
+  public void setaObjEzdoctemplatedocument(List<EzdoctemplatedocumentAutocompleteElementResponse> aObjEzdoctemplatedocument) {
     this.aObjEzdoctemplatedocument = aObjEzdoctemplatedocument;
   }
 

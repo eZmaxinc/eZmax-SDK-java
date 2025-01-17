@@ -49,38 +49,33 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PhoneResponse {
   public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiPhoneID;
 
   public static final String SERIALIZED_NAME_FKI_PHONETYPE_I_D = "fkiPhonetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_PHONETYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiPhonetypeID;
 
   public static final String SERIALIZED_NAME_E_PHONE_TYPE = "ePhoneType";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_E_PHONE_TYPE)
-  @javax.annotation.Nullable
   private FieldEPhoneType ePhoneType;
 
   public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
   @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
-  @javax.annotation.Nullable
   private String sPhoneE164;
 
   public static final String SERIALIZED_NAME_S_PHONE_EXTENSION = "sPhoneExtension";
   @SerializedName(SERIALIZED_NAME_S_PHONE_EXTENSION)
-  @javax.annotation.Nullable
   private String sPhoneExtension;
 
   public PhoneResponse() {
   }
 
-  public PhoneResponse pkiPhoneID(@javax.annotation.Nonnull Integer pkiPhoneID) {
+  public PhoneResponse pkiPhoneID(Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
     return this;
   }
@@ -95,12 +90,12 @@ public class PhoneResponse {
     return pkiPhoneID;
   }
 
-  public void setPkiPhoneID(@javax.annotation.Nonnull Integer pkiPhoneID) {
+  public void setPkiPhoneID(Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
   }
 
 
-  public PhoneResponse fkiPhonetypeID(@javax.annotation.Nonnull Integer fkiPhonetypeID) {
+  public PhoneResponse fkiPhonetypeID(Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
     return this;
   }
@@ -115,13 +110,13 @@ public class PhoneResponse {
     return fkiPhonetypeID;
   }
 
-  public void setFkiPhonetypeID(@javax.annotation.Nonnull Integer fkiPhonetypeID) {
+  public void setFkiPhonetypeID(Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
   }
 
 
   @Deprecated
-  public PhoneResponse ePhoneType(@javax.annotation.Nullable FieldEPhoneType ePhoneType) {
+  public PhoneResponse ePhoneType(FieldEPhoneType ePhoneType) {
     this.ePhoneType = ePhoneType;
     return this;
   }
@@ -138,12 +133,12 @@ public class PhoneResponse {
   }
 
   @Deprecated
-  public void setePhoneType(@javax.annotation.Nullable FieldEPhoneType ePhoneType) {
+  public void setePhoneType(FieldEPhoneType ePhoneType) {
     this.ePhoneType = ePhoneType;
   }
 
 
-  public PhoneResponse sPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
+  public PhoneResponse sPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -157,12 +152,12 @@ public class PhoneResponse {
     return sPhoneE164;
   }
 
-  public void setsPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
+  public void setsPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 
 
-  public PhoneResponse sPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
+  public PhoneResponse sPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -176,7 +171,7 @@ public class PhoneResponse {
     return sPhoneExtension;
   }
 
-  public void setsPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
+  public void setsPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
   }
 
@@ -258,6 +253,21 @@ public class PhoneResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in PhoneResponse is not found in the empty JSON string", PhoneResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!PhoneResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PhoneResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : PhoneResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `ePhoneType`
       if (jsonObj.get("ePhoneType") != null && !jsonObj.get("ePhoneType").isJsonNull()) {
@@ -271,6 +281,34 @@ public class PhoneResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!PhoneResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'PhoneResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<PhoneResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(PhoneResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<PhoneResponse>() {
+           @Override
+           public void write(JsonWriter out, PhoneResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public PhoneResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of PhoneResponse given an JSON string

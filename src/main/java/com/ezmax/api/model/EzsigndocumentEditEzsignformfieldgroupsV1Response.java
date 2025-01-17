@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.ezmax.api.model.EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Response for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigndocumentEditEzsignformfieldgroupsV1Response extends CommonResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsigndocumentEditEzsignformfieldgroupsV1Response {
+  public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
+  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  private CommonResponseObjDebugPayload objDebugPayload;
+
+  public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
+  @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  private CommonResponseObjDebug objDebug;
+
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  @javax.annotation.Nonnull
   private EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload mPayload;
 
   public EzsigndocumentEditEzsignformfieldgroupsV1Response() {
   }
 
-  public EzsigndocumentEditEzsignformfieldgroupsV1Response mPayload(@javax.annotation.Nonnull EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload mPayload) {
+  public EzsigndocumentEditEzsignformfieldgroupsV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+    this.objDebugPayload = objDebugPayload;
+    return this;
+  }
+
+  /**
+   * Get objDebugPayload
+   * @return objDebugPayload
+   */
+  @javax.annotation.Nonnull
+  public CommonResponseObjDebugPayload getObjDebugPayload() {
+    return objDebugPayload;
+  }
+
+  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+    this.objDebugPayload = objDebugPayload;
+  }
+
+
+  public EzsigndocumentEditEzsignformfieldgroupsV1Response objDebug(CommonResponseObjDebug objDebug) {
+    this.objDebug = objDebug;
+    return this;
+  }
+
+  /**
+   * Get objDebug
+   * @return objDebug
+   */
+  @javax.annotation.Nullable
+  public CommonResponseObjDebug getObjDebug() {
+    return objDebug;
+  }
+
+  public void setObjDebug(CommonResponseObjDebug objDebug) {
+    this.objDebug = objDebug;
+  }
+
+
+  public EzsigndocumentEditEzsignformfieldgroupsV1Response mPayload(EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
@@ -76,7 +120,7 @@ public class EzsigndocumentEditEzsignformfieldgroupsV1Response extends CommonRes
     return mPayload;
   }
 
-  public void setmPayload(@javax.annotation.Nonnull EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload mPayload) {
+  public void setmPayload(EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -91,20 +135,22 @@ public class EzsigndocumentEditEzsignformfieldgroupsV1Response extends CommonRes
       return false;
     }
     EzsigndocumentEditEzsignformfieldgroupsV1Response ezsigndocumentEditEzsignformfieldgroupsV1Response = (EzsigndocumentEditEzsignformfieldgroupsV1Response) o;
-    return Objects.equals(this.mPayload, ezsigndocumentEditEzsignformfieldgroupsV1Response.mPayload) &&
-        super.equals(o);
+    return Objects.equals(this.objDebugPayload, ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebugPayload) &&
+        Objects.equals(this.objDebug, ezsigndocumentEditEzsignformfieldgroupsV1Response.objDebug) &&
+        Objects.equals(this.mPayload, ezsigndocumentEditEzsignformfieldgroupsV1Response.mPayload);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mPayload, super.hashCode());
+    return Objects.hash(objDebugPayload, objDebug, mPayload);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigndocumentEditEzsignformfieldgroupsV1Response {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    objDebugPayload: ").append(toIndentedString(objDebugPayload)).append("\n");
+    sb.append("    objDebug: ").append(toIndentedString(objDebug)).append("\n");
     sb.append("    mPayload: ").append(toIndentedString(mPayload)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -134,8 +180,8 @@ public class EzsigndocumentEditEzsignformfieldgroupsV1Response extends CommonRes
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("mPayload");
     openapiRequiredFields.add("objDebugPayload");
+    openapiRequiredFields.add("mPayload");
   }
 
   /**
@@ -166,6 +212,12 @@ public class EzsigndocumentEditEzsignformfieldgroupsV1Response extends CommonRes
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objDebugPayload`
+      CommonResponseObjDebugPayload.validateJsonElement(jsonObj.get("objDebugPayload"));
+      // validate the optional field `objDebug`
+      if (jsonObj.get("objDebug") != null && !jsonObj.get("objDebug").isJsonNull()) {
+        CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
+      }
       // validate the required field `mPayload`
       EzsigndocumentEditEzsignformfieldgroupsV1ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
   }

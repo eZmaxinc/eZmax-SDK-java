@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommunicationexternalrecipientRequest;
 import com.ezmax.api.model.FieldECommunicationexternalrecipientType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -50,10 +49,125 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationexternalrecipient Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class CommunicationexternalrecipientRequestCompound extends CommunicationexternalrecipientRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CommunicationexternalrecipientRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALRECIPIENT_I_D = "pkiCommunicationexternalrecipientID";
+  @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALRECIPIENT_I_D)
+  private Integer pkiCommunicationexternalrecipientID;
+
+  public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
+  @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  private String sEmailAddress;
+
+  public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
+  @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
+  private String sPhoneE164;
+
+  public static final String SERIALIZED_NAME_E_COMMUNICATIONEXTERNALRECIPIENT_TYPE = "eCommunicationexternalrecipientType";
+  @SerializedName(SERIALIZED_NAME_E_COMMUNICATIONEXTERNALRECIPIENT_TYPE)
+  private FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType;
+
+  public static final String SERIALIZED_NAME_S_COMMUNICATIONEXTERNALRECIPIENT_NAME = "sCommunicationexternalrecipientName";
+  @SerializedName(SERIALIZED_NAME_S_COMMUNICATIONEXTERNALRECIPIENT_NAME)
+  private String sCommunicationexternalrecipientName;
+
   public CommunicationexternalrecipientRequestCompound() {
   }
+
+  public CommunicationexternalrecipientRequestCompound pkiCommunicationexternalrecipientID(Integer pkiCommunicationexternalrecipientID) {
+    this.pkiCommunicationexternalrecipientID = pkiCommunicationexternalrecipientID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Communicationexternalrecipient
+   * @return pkiCommunicationexternalrecipientID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiCommunicationexternalrecipientID() {
+    return pkiCommunicationexternalrecipientID;
+  }
+
+  public void setPkiCommunicationexternalrecipientID(Integer pkiCommunicationexternalrecipientID) {
+    this.pkiCommunicationexternalrecipientID = pkiCommunicationexternalrecipientID;
+  }
+
+
+  public CommunicationexternalrecipientRequestCompound sEmailAddress(String sEmailAddress) {
+    this.sEmailAddress = sEmailAddress;
+    return this;
+  }
+
+  /**
+   * The email address.
+   * @return sEmailAddress
+   */
+  @javax.annotation.Nullable
+  public String getsEmailAddress() {
+    return sEmailAddress;
+  }
+
+  public void setsEmailAddress(String sEmailAddress) {
+    this.sEmailAddress = sEmailAddress;
+  }
+
+
+  public CommunicationexternalrecipientRequestCompound sPhoneE164(String sPhoneE164) {
+    this.sPhoneE164 = sPhoneE164;
+    return this;
+  }
+
+  /**
+   * A phone number in E.164 Format
+   * @return sPhoneE164
+   */
+  @javax.annotation.Nullable
+  public String getsPhoneE164() {
+    return sPhoneE164;
+  }
+
+  public void setsPhoneE164(String sPhoneE164) {
+    this.sPhoneE164 = sPhoneE164;
+  }
+
+
+  public CommunicationexternalrecipientRequestCompound eCommunicationexternalrecipientType(FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType) {
+    this.eCommunicationexternalrecipientType = eCommunicationexternalrecipientType;
+    return this;
+  }
+
+  /**
+   * Get eCommunicationexternalrecipientType
+   * @return eCommunicationexternalrecipientType
+   */
+  @javax.annotation.Nullable
+  public FieldECommunicationexternalrecipientType geteCommunicationexternalrecipientType() {
+    return eCommunicationexternalrecipientType;
+  }
+
+  public void seteCommunicationexternalrecipientType(FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType) {
+    this.eCommunicationexternalrecipientType = eCommunicationexternalrecipientType;
+  }
+
+
+  public CommunicationexternalrecipientRequestCompound sCommunicationexternalrecipientName(String sCommunicationexternalrecipientName) {
+    this.sCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
+    return this;
+  }
+
+  /**
+   * The name of the Communicationexternalrecipient
+   * @return sCommunicationexternalrecipientName
+   */
+  @javax.annotation.Nullable
+  public String getsCommunicationexternalrecipientName() {
+    return sCommunicationexternalrecipientName;
+  }
+
+  public void setsCommunicationexternalrecipientName(String sCommunicationexternalrecipientName) {
+    this.sCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
+  }
+
 
 
   @Override
@@ -64,19 +178,28 @@ public class CommunicationexternalrecipientRequestCompound extends Communication
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    CommunicationexternalrecipientRequestCompound communicationexternalrecipientRequestCompound = (CommunicationexternalrecipientRequestCompound) o;
+    return Objects.equals(this.pkiCommunicationexternalrecipientID, communicationexternalrecipientRequestCompound.pkiCommunicationexternalrecipientID) &&
+        Objects.equals(this.sEmailAddress, communicationexternalrecipientRequestCompound.sEmailAddress) &&
+        Objects.equals(this.sPhoneE164, communicationexternalrecipientRequestCompound.sPhoneE164) &&
+        Objects.equals(this.eCommunicationexternalrecipientType, communicationexternalrecipientRequestCompound.eCommunicationexternalrecipientType) &&
+        Objects.equals(this.sCommunicationexternalrecipientName, communicationexternalrecipientRequestCompound.sCommunicationexternalrecipientName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiCommunicationexternalrecipientID, sEmailAddress, sPhoneE164, eCommunicationexternalrecipientType, sCommunicationexternalrecipientName);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommunicationexternalrecipientRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiCommunicationexternalrecipientID: ").append(toIndentedString(pkiCommunicationexternalrecipientID)).append("\n");
+    sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
+    sb.append("    sPhoneE164: ").append(toIndentedString(sPhoneE164)).append("\n");
+    sb.append("    eCommunicationexternalrecipientType: ").append(toIndentedString(eCommunicationexternalrecipientType)).append("\n");
+    sb.append("    sCommunicationexternalrecipientName: ").append(toIndentedString(sCommunicationexternalrecipientName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -128,6 +251,20 @@ public class CommunicationexternalrecipientRequestCompound extends Communication
         if (!CommunicationexternalrecipientRequestCompound.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CommunicationexternalrecipientRequestCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
+      }
+      if ((jsonObj.get("sPhoneE164") != null && !jsonObj.get("sPhoneE164").isJsonNull()) && !jsonObj.get("sPhoneE164").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sPhoneE164` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneE164").toString()));
+      }
+      // validate the optional field `eCommunicationexternalrecipientType`
+      if (jsonObj.get("eCommunicationexternalrecipientType") != null && !jsonObj.get("eCommunicationexternalrecipientType").isJsonNull()) {
+        FieldECommunicationexternalrecipientType.validateJsonElement(jsonObj.get("eCommunicationexternalrecipientType"));
+      }
+      if ((jsonObj.get("sCommunicationexternalrecipientName") != null && !jsonObj.get("sCommunicationexternalrecipientName").isJsonNull()) && !jsonObj.get("sCommunicationexternalrecipientName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCommunicationexternalrecipientName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationexternalrecipientName").toString()));
       }
   }
 

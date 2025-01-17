@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsignfoldersignerassociationResponse;
 import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompoundUser;
 import com.ezmax.api.model.EzsignsignerResponseCompound;
 import com.ezmax.api.model.EzsignsignergroupResponseCompound;
@@ -52,27 +51,164 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldersignerassociation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignfoldersignerassociationResponseCompound extends EzsignfoldersignerassociationResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsignfoldersignerassociationResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
+  private Integer pkiEzsignfoldersignerassociationID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
+  private Integer fkiEzsignfolderID;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_DELAYEDSEND = "bEzsignfoldersignerassociationDelayedsend";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_DELAYEDSEND)
+  private Boolean bEzsignfoldersignerassociationDelayedsend;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_RECEIVECOPY = "bEzsignfoldersignerassociationReceivecopy";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_RECEIVECOPY)
+  private Boolean bEzsignfoldersignerassociationReceivecopy;
+
+  public static final String SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE = "tEzsignfoldersignerassociationMessage";
+  @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE)
+  private String tEzsignfoldersignerassociationMessage;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_ALLOWSIGNINGINPERSON = "bEzsignfoldersignerassociationAllowsigninginperson";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_ALLOWSIGNINGINPERSON)
+  private Boolean bEzsignfoldersignerassociationAllowsigninginperson;
+
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP = "objEzsignsignergroup";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP)
-  @javax.annotation.Nullable
   private EzsignsignergroupResponseCompound objEzsignsignergroup;
 
   public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
   @SerializedName(SERIALIZED_NAME_OBJ_USER)
-  @javax.annotation.Nullable
   private EzsignfoldersignerassociationResponseCompoundUser objUser;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNER = "objEzsignsigner";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNER)
-  @javax.annotation.Nullable
   private EzsignsignerResponseCompound objEzsignsigner;
 
   public EzsignfoldersignerassociationResponseCompound() {
   }
 
-  public EzsignfoldersignerassociationResponseCompound objEzsignsignergroup(@javax.annotation.Nullable EzsignsignergroupResponseCompound objEzsignsignergroup) {
+  public EzsignfoldersignerassociationResponseCompound pkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
+    this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignfoldersignerassociation
+   * minimum: 0
+   * @return pkiEzsignfoldersignerassociationID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiEzsignfoldersignerassociationID() {
+    return pkiEzsignfoldersignerassociationID;
+  }
+
+  public void setPkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
+    this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
+  }
+
+
+  public EzsignfoldersignerassociationResponseCompound fkiEzsignfolderID(Integer fkiEzsignfolderID) {
+    this.fkiEzsignfolderID = fkiEzsignfolderID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignfolder
+   * minimum: 0
+   * @return fkiEzsignfolderID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsignfolderID() {
+    return fkiEzsignfolderID;
+  }
+
+  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
+    this.fkiEzsignfolderID = fkiEzsignfolderID;
+  }
+
+
+  public EzsignfoldersignerassociationResponseCompound bEzsignfoldersignerassociationDelayedsend(Boolean bEzsignfoldersignerassociationDelayedsend) {
+    this.bEzsignfoldersignerassociationDelayedsend = bEzsignfoldersignerassociationDelayedsend;
+    return this;
+  }
+
+  /**
+   * If this flag is true the signatory is part of a delayed send.
+   * @return bEzsignfoldersignerassociationDelayedsend
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbEzsignfoldersignerassociationDelayedsend() {
+    return bEzsignfoldersignerassociationDelayedsend;
+  }
+
+  public void setbEzsignfoldersignerassociationDelayedsend(Boolean bEzsignfoldersignerassociationDelayedsend) {
+    this.bEzsignfoldersignerassociationDelayedsend = bEzsignfoldersignerassociationDelayedsend;
+  }
+
+
+  public EzsignfoldersignerassociationResponseCompound bEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
+    this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
+    return this;
+  }
+
+  /**
+   * If this flag is true. The signatory will receive a copy of every signed Ezsigndocument even if it ain&#39;t required to sign the document.
+   * @return bEzsignfoldersignerassociationReceivecopy
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbEzsignfoldersignerassociationReceivecopy() {
+    return bEzsignfoldersignerassociationReceivecopy;
+  }
+
+  public void setbEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
+    this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
+  }
+
+
+  public EzsignfoldersignerassociationResponseCompound tEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
+    this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
+    return this;
+  }
+
+  /**
+   * A custom text message that will be added to the email sent.
+   * @return tEzsignfoldersignerassociationMessage
+   */
+  @javax.annotation.Nonnull
+  public String gettEzsignfoldersignerassociationMessage() {
+    return tEzsignfoldersignerassociationMessage;
+  }
+
+  public void settEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
+    this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
+  }
+
+
+  public EzsignfoldersignerassociationResponseCompound bEzsignfoldersignerassociationAllowsigninginperson(Boolean bEzsignfoldersignerassociationAllowsigninginperson) {
+    this.bEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+    return this;
+  }
+
+  /**
+   * If the Ezsignfoldersignerassociation is allowed to sign in person or not
+   * @return bEzsignfoldersignerassociationAllowsigninginperson
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbEzsignfoldersignerassociationAllowsigninginperson() {
+    return bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+
+  public void setbEzsignfoldersignerassociationAllowsigninginperson(Boolean bEzsignfoldersignerassociationAllowsigninginperson) {
+    this.bEzsignfoldersignerassociationAllowsigninginperson = bEzsignfoldersignerassociationAllowsigninginperson;
+  }
+
+
+  public EzsignfoldersignerassociationResponseCompound objEzsignsignergroup(EzsignsignergroupResponseCompound objEzsignsignergroup) {
     this.objEzsignsignergroup = objEzsignsignergroup;
     return this;
   }
@@ -86,12 +222,12 @@ public class EzsignfoldersignerassociationResponseCompound extends Ezsignfolders
     return objEzsignsignergroup;
   }
 
-  public void setObjEzsignsignergroup(@javax.annotation.Nullable EzsignsignergroupResponseCompound objEzsignsignergroup) {
+  public void setObjEzsignsignergroup(EzsignsignergroupResponseCompound objEzsignsignergroup) {
     this.objEzsignsignergroup = objEzsignsignergroup;
   }
 
 
-  public EzsignfoldersignerassociationResponseCompound objUser(@javax.annotation.Nullable EzsignfoldersignerassociationResponseCompoundUser objUser) {
+  public EzsignfoldersignerassociationResponseCompound objUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
     this.objUser = objUser;
     return this;
   }
@@ -105,12 +241,12 @@ public class EzsignfoldersignerassociationResponseCompound extends Ezsignfolders
     return objUser;
   }
 
-  public void setObjUser(@javax.annotation.Nullable EzsignfoldersignerassociationResponseCompoundUser objUser) {
+  public void setObjUser(EzsignfoldersignerassociationResponseCompoundUser objUser) {
     this.objUser = objUser;
   }
 
 
-  public EzsignfoldersignerassociationResponseCompound objEzsignsigner(@javax.annotation.Nullable EzsignsignerResponseCompound objEzsignsigner) {
+  public EzsignfoldersignerassociationResponseCompound objEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
     this.objEzsignsigner = objEzsignsigner;
     return this;
   }
@@ -124,7 +260,7 @@ public class EzsignfoldersignerassociationResponseCompound extends Ezsignfolders
     return objEzsignsigner;
   }
 
-  public void setObjEzsignsigner(@javax.annotation.Nullable EzsignsignerResponseCompound objEzsignsigner) {
+  public void setObjEzsignsigner(EzsignsignerResponseCompound objEzsignsigner) {
     this.objEzsignsigner = objEzsignsigner;
   }
 
@@ -139,22 +275,32 @@ public class EzsignfoldersignerassociationResponseCompound extends Ezsignfolders
       return false;
     }
     EzsignfoldersignerassociationResponseCompound ezsignfoldersignerassociationResponseCompound = (EzsignfoldersignerassociationResponseCompound) o;
-    return Objects.equals(this.objEzsignsignergroup, ezsignfoldersignerassociationResponseCompound.objEzsignsignergroup) &&
+    return Objects.equals(this.pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationResponseCompound.pkiEzsignfoldersignerassociationID) &&
+        Objects.equals(this.fkiEzsignfolderID, ezsignfoldersignerassociationResponseCompound.fkiEzsignfolderID) &&
+        Objects.equals(this.bEzsignfoldersignerassociationDelayedsend, ezsignfoldersignerassociationResponseCompound.bEzsignfoldersignerassociationDelayedsend) &&
+        Objects.equals(this.bEzsignfoldersignerassociationReceivecopy, ezsignfoldersignerassociationResponseCompound.bEzsignfoldersignerassociationReceivecopy) &&
+        Objects.equals(this.tEzsignfoldersignerassociationMessage, ezsignfoldersignerassociationResponseCompound.tEzsignfoldersignerassociationMessage) &&
+        Objects.equals(this.bEzsignfoldersignerassociationAllowsigninginperson, ezsignfoldersignerassociationResponseCompound.bEzsignfoldersignerassociationAllowsigninginperson) &&
+        Objects.equals(this.objEzsignsignergroup, ezsignfoldersignerassociationResponseCompound.objEzsignsignergroup) &&
         Objects.equals(this.objUser, ezsignfoldersignerassociationResponseCompound.objUser) &&
-        Objects.equals(this.objEzsignsigner, ezsignfoldersignerassociationResponseCompound.objEzsignsigner) &&
-        super.equals(o);
+        Objects.equals(this.objEzsignsigner, ezsignfoldersignerassociationResponseCompound.objEzsignsigner);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objEzsignsignergroup, objUser, objEzsignsigner, super.hashCode());
+    return Objects.hash(pkiEzsignfoldersignerassociationID, fkiEzsignfolderID, bEzsignfoldersignerassociationDelayedsend, bEzsignfoldersignerassociationReceivecopy, tEzsignfoldersignerassociationMessage, bEzsignfoldersignerassociationAllowsigninginperson, objEzsignsignergroup, objUser, objEzsignsigner);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignfoldersignerassociationResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsignfoldersignerassociationID: ").append(toIndentedString(pkiEzsignfoldersignerassociationID)).append("\n");
+    sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
+    sb.append("    bEzsignfoldersignerassociationDelayedsend: ").append(toIndentedString(bEzsignfoldersignerassociationDelayedsend)).append("\n");
+    sb.append("    bEzsignfoldersignerassociationReceivecopy: ").append(toIndentedString(bEzsignfoldersignerassociationReceivecopy)).append("\n");
+    sb.append("    tEzsignfoldersignerassociationMessage: ").append(toIndentedString(tEzsignfoldersignerassociationMessage)).append("\n");
+    sb.append("    bEzsignfoldersignerassociationAllowsigninginperson: ").append(toIndentedString(bEzsignfoldersignerassociationAllowsigninginperson)).append("\n");
     sb.append("    objEzsignsignergroup: ").append(toIndentedString(objEzsignsignergroup)).append("\n");
     sb.append("    objUser: ").append(toIndentedString(objUser)).append("\n");
     sb.append("    objEzsignsigner: ").append(toIndentedString(objEzsignsigner)).append("\n");
@@ -212,7 +358,25 @@ public class EzsignfoldersignerassociationResponseCompound extends Ezsignfolders
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignfoldersignerassociationResponseCompound is not found in the empty JSON string", EzsignfoldersignerassociationResponseCompound.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsignfoldersignerassociationResponseCompound.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignfoldersignerassociationResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignfoldersignerassociationResponseCompound.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("tEzsignfoldersignerassociationMessage").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `tEzsignfoldersignerassociationMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfoldersignerassociationMessage").toString()));
+      }
       // validate the optional field `objEzsignsignergroup`
       if (jsonObj.get("objEzsignsignergroup") != null && !jsonObj.get("objEzsignsignergroup").isJsonNull()) {
         EzsignsignergroupResponseCompound.validateJsonElement(jsonObj.get("objEzsignsignergroup"));
@@ -227,6 +391,34 @@ public class EzsignfoldersignerassociationResponseCompound extends Ezsignfolders
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignfoldersignerassociationResponseCompound.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignfoldersignerassociationResponseCompound' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignfoldersignerassociationResponseCompound> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignfoldersignerassociationResponseCompound.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignfoldersignerassociationResponseCompound>() {
+           @Override
+           public void write(JsonWriter out, EzsignfoldersignerassociationResponseCompound value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignfoldersignerassociationResponseCompound read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsignfoldersignerassociationResponseCompound given an JSON string

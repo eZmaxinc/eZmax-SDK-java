@@ -30,10 +30,10 @@ import java.io.IOException;
 import com.ezmax.api.model.BillingentityinternalCreateObjectV1Request;
 import com.ezmax.api.model.BillingentityinternalCreateObjectV1Response;
 import com.ezmax.api.model.BillingentityinternalEditObjectV1Request;
+import com.ezmax.api.model.BillingentityinternalEditObjectV1Response;
 import com.ezmax.api.model.BillingentityinternalGetAutocompleteV2Response;
 import com.ezmax.api.model.BillingentityinternalGetListV1Response;
 import com.ezmax.api.model.BillingentityinternalGetObjectV2Response;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -88,8 +88,7 @@ public class ObjectBillingentityinternalApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -157,8 +156,7 @@ public class ObjectBillingentityinternalApi {
      * @return BillingentityinternalCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -175,8 +173,7 @@ public class ObjectBillingentityinternalApi {
      * @return ApiResponse&lt;BillingentityinternalCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -195,8 +192,7 @@ public class ObjectBillingentityinternalApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -216,8 +212,7 @@ public class ObjectBillingentityinternalApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -291,19 +286,18 @@ public class ObjectBillingentityinternalApi {
      * 
      * @param pkiBillingentityinternalID  (required)
      * @param billingentityinternalEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return BillingentityinternalEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse billingentityinternalEditObjectV1(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+    public BillingentityinternalEditObjectV1Response billingentityinternalEditObjectV1(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
+        ApiResponse<BillingentityinternalEditObjectV1Response> localVarResp = billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -312,20 +306,19 @@ public class ObjectBillingentityinternalApi {
      * 
      * @param pkiBillingentityinternalID  (required)
      * @param billingentityinternalEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;BillingentityinternalEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> billingentityinternalEditObjectV1WithHttpInfo(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
+    public ApiResponse<BillingentityinternalEditObjectV1Response> billingentityinternalEditObjectV1WithHttpInfo(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = billingentityinternalEditObjectV1ValidateBeforeCall(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<BillingentityinternalEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -338,18 +331,17 @@ public class ObjectBillingentityinternalApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call billingentityinternalEditObjectV1Async(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call billingentityinternalEditObjectV1Async(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final ApiCallback<BillingentityinternalEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = billingentityinternalEditObjectV1ValidateBeforeCall(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<BillingentityinternalEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -363,8 +355,7 @@ public class ObjectBillingentityinternalApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -403,6 +394,10 @@ public class ObjectBillingentityinternalApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("sQuery", sQuery));
         }
 
+        if (acceptLanguage != null) {
+            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
+        }
+
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -417,11 +412,6 @@ public class ObjectBillingentityinternalApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
-
-        if (acceptLanguage != null) {
-            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
-        }
-
 
         String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -448,8 +438,7 @@ public class ObjectBillingentityinternalApi {
      * @return BillingentityinternalGetAutocompleteV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -469,8 +458,7 @@ public class ObjectBillingentityinternalApi {
      * @return ApiResponse&lt;BillingentityinternalGetAutocompleteV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -492,8 +480,7 @@ public class ObjectBillingentityinternalApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -516,8 +503,7 @@ public class ObjectBillingentityinternalApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
@@ -564,6 +550,10 @@ public class ObjectBillingentityinternalApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("sFilter", sFilter));
         }
 
+        if (acceptLanguage != null) {
+            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
+        }
+
         final String[] localVarAccepts = {
             "application/json",
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
@@ -579,11 +569,6 @@ public class ObjectBillingentityinternalApi {
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
-
-        if (acceptLanguage != null) {
-            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
-        }
-
 
         String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
@@ -606,8 +591,7 @@ public class ObjectBillingentityinternalApi {
      * @return BillingentityinternalGetListV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
@@ -629,8 +613,7 @@ public class ObjectBillingentityinternalApi {
      * @return ApiResponse&lt;BillingentityinternalGetListV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
@@ -654,8 +637,7 @@ public class ObjectBillingentityinternalApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
@@ -675,8 +657,7 @@ public class ObjectBillingentityinternalApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -745,8 +726,7 @@ public class ObjectBillingentityinternalApi {
      * @return BillingentityinternalGetObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -764,8 +744,7 @@ public class ObjectBillingentityinternalApi {
      * @return ApiResponse&lt;BillingentityinternalGetObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -785,8 +764,7 @@ public class ObjectBillingentityinternalApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>

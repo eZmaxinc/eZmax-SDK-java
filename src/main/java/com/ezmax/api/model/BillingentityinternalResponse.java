@@ -49,22 +49,20 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BillingentityinternalResponse {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiBillingentityinternalID;
 
   public static final String SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL_DESCRIPTION = "objBillingentityinternalDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualBillingentityinternalDescription objBillingentityinternalDescription;
 
   public BillingentityinternalResponse() {
   }
 
-  public BillingentityinternalResponse pkiBillingentityinternalID(@javax.annotation.Nonnull Integer pkiBillingentityinternalID) {
+  public BillingentityinternalResponse pkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
     return this;
   }
@@ -79,12 +77,12 @@ public class BillingentityinternalResponse {
     return pkiBillingentityinternalID;
   }
 
-  public void setPkiBillingentityinternalID(@javax.annotation.Nonnull Integer pkiBillingentityinternalID) {
+  public void setPkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
   }
 
 
-  public BillingentityinternalResponse objBillingentityinternalDescription(@javax.annotation.Nonnull MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
+  public BillingentityinternalResponse objBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
     this.objBillingentityinternalDescription = objBillingentityinternalDescription;
     return this;
   }
@@ -98,7 +96,7 @@ public class BillingentityinternalResponse {
     return objBillingentityinternalDescription;
   }
 
-  public void setObjBillingentityinternalDescription(@javax.annotation.Nonnull MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
+  public void setObjBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
     this.objBillingentityinternalDescription = objBillingentityinternalDescription;
   }
 
@@ -171,11 +169,54 @@ public class BillingentityinternalResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in BillingentityinternalResponse is not found in the empty JSON string", BillingentityinternalResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!BillingentityinternalResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `BillingentityinternalResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : BillingentityinternalResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objBillingentityinternalDescription`
       MultilingualBillingentityinternalDescription.validateJsonElement(jsonObj.get("objBillingentityinternalDescription"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!BillingentityinternalResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'BillingentityinternalResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<BillingentityinternalResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(BillingentityinternalResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<BillingentityinternalResponse>() {
+           @Override
+           public void write(JsonWriter out, BillingentityinternalResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public BillingentityinternalResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of BillingentityinternalResponse given an JSON string

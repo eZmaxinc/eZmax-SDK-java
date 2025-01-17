@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.BillingentityinternalproductResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,176 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternalproduct Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class BillingentityinternalproductResponseCompound extends BillingentityinternalproductResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class BillingentityinternalproductResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNALPRODUCT_I_D = "pkiBillingentityinternalproductID";
+  @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNALPRODUCT_I_D)
+  private Integer pkiBillingentityinternalproductID;
+
+  public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
+  @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
+  private Integer fkiBillingentityinternalID;
+
+  public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X = "sBillingentityinternalDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION_X)
+  private String sBillingentityinternalDescriptionX;
+
+  public static final String SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D = "fkiEzmaxproductID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D)
+  private Integer fkiEzmaxproductID;
+
+  public static final String SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X = "sEzmaxproductDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X)
+  private String sEzmaxproductDescriptionX;
+
+  public static final String SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D = "fkiBillingentityexternalID";
+  @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D)
+  private Integer fkiBillingentityexternalID;
+
+  public static final String SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION = "sBillingentityexternalDescription";
+  @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION)
+  private String sBillingentityexternalDescription;
+
   public BillingentityinternalproductResponseCompound() {
   }
+
+  public BillingentityinternalproductResponseCompound pkiBillingentityinternalproductID(Integer pkiBillingentityinternalproductID) {
+    this.pkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Billingentityinternalproduct
+   * minimum: 0
+   * maximum: 255
+   * @return pkiBillingentityinternalproductID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiBillingentityinternalproductID() {
+    return pkiBillingentityinternalproductID;
+  }
+
+  public void setPkiBillingentityinternalproductID(Integer pkiBillingentityinternalproductID) {
+    this.pkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
+  }
+
+
+  public BillingentityinternalproductResponseCompound fkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Billingentityinternal.
+   * minimum: 0
+   * @return fkiBillingentityinternalID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiBillingentityinternalID() {
+    return fkiBillingentityinternalID;
+  }
+
+  public void setFkiBillingentityinternalID(Integer fkiBillingentityinternalID) {
+    this.fkiBillingentityinternalID = fkiBillingentityinternalID;
+  }
+
+
+  public BillingentityinternalproductResponseCompound sBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+    return this;
+  }
+
+  /**
+   * The description of the Billingentityinternal in the language of the requester
+   * @return sBillingentityinternalDescriptionX
+   */
+  @javax.annotation.Nonnull
+  public String getsBillingentityinternalDescriptionX() {
+    return sBillingentityinternalDescriptionX;
+  }
+
+  public void setsBillingentityinternalDescriptionX(String sBillingentityinternalDescriptionX) {
+    this.sBillingentityinternalDescriptionX = sBillingentityinternalDescriptionX;
+  }
+
+
+  public BillingentityinternalproductResponseCompound fkiEzmaxproductID(Integer fkiEzmaxproductID) {
+    this.fkiEzmaxproductID = fkiEzmaxproductID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezmaxproduct
+   * minimum: 1
+   * @return fkiEzmaxproductID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzmaxproductID() {
+    return fkiEzmaxproductID;
+  }
+
+  public void setFkiEzmaxproductID(Integer fkiEzmaxproductID) {
+    this.fkiEzmaxproductID = fkiEzmaxproductID;
+  }
+
+
+  public BillingentityinternalproductResponseCompound sEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
+    this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
+    return this;
+  }
+
+  /**
+   * The description of the Ezmaxproduct in the language of the requester
+   * @return sEzmaxproductDescriptionX
+   */
+  @javax.annotation.Nonnull
+  public String getsEzmaxproductDescriptionX() {
+    return sEzmaxproductDescriptionX;
+  }
+
+  public void setsEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
+    this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
+  }
+
+
+  public BillingentityinternalproductResponseCompound fkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
+    this.fkiBillingentityexternalID = fkiBillingentityexternalID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Billingentityexternal
+   * minimum: 1
+   * @return fkiBillingentityexternalID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiBillingentityexternalID() {
+    return fkiBillingentityexternalID;
+  }
+
+  public void setFkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
+    this.fkiBillingentityexternalID = fkiBillingentityexternalID;
+  }
+
+
+  public BillingentityinternalproductResponseCompound sBillingentityexternalDescription(String sBillingentityexternalDescription) {
+    this.sBillingentityexternalDescription = sBillingentityexternalDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Billingentityexternal
+   * @return sBillingentityexternalDescription
+   */
+  @javax.annotation.Nonnull
+  public String getsBillingentityexternalDescription() {
+    return sBillingentityexternalDescription;
+  }
+
+  public void setsBillingentityexternalDescription(String sBillingentityexternalDescription) {
+    this.sBillingentityexternalDescription = sBillingentityexternalDescription;
+  }
+
 
 
   @Override
@@ -63,19 +228,32 @@ public class BillingentityinternalproductResponseCompound extends Billingentityi
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    BillingentityinternalproductResponseCompound billingentityinternalproductResponseCompound = (BillingentityinternalproductResponseCompound) o;
+    return Objects.equals(this.pkiBillingentityinternalproductID, billingentityinternalproductResponseCompound.pkiBillingentityinternalproductID) &&
+        Objects.equals(this.fkiBillingentityinternalID, billingentityinternalproductResponseCompound.fkiBillingentityinternalID) &&
+        Objects.equals(this.sBillingentityinternalDescriptionX, billingentityinternalproductResponseCompound.sBillingentityinternalDescriptionX) &&
+        Objects.equals(this.fkiEzmaxproductID, billingentityinternalproductResponseCompound.fkiEzmaxproductID) &&
+        Objects.equals(this.sEzmaxproductDescriptionX, billingentityinternalproductResponseCompound.sEzmaxproductDescriptionX) &&
+        Objects.equals(this.fkiBillingentityexternalID, billingentityinternalproductResponseCompound.fkiBillingentityexternalID) &&
+        Objects.equals(this.sBillingentityexternalDescription, billingentityinternalproductResponseCompound.sBillingentityexternalDescription);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiBillingentityinternalproductID, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzmaxproductID, sEzmaxproductDescriptionX, fkiBillingentityexternalID, sBillingentityexternalDescription);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingentityinternalproductResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiBillingentityinternalproductID: ").append(toIndentedString(pkiBillingentityinternalproductID)).append("\n");
+    sb.append("    fkiBillingentityinternalID: ").append(toIndentedString(fkiBillingentityinternalID)).append("\n");
+    sb.append("    sBillingentityinternalDescriptionX: ").append(toIndentedString(sBillingentityinternalDescriptionX)).append("\n");
+    sb.append("    fkiEzmaxproductID: ").append(toIndentedString(fkiEzmaxproductID)).append("\n");
+    sb.append("    sEzmaxproductDescriptionX: ").append(toIndentedString(sEzmaxproductDescriptionX)).append("\n");
+    sb.append("    fkiBillingentityexternalID: ").append(toIndentedString(fkiBillingentityexternalID)).append("\n");
+    sb.append("    sBillingentityexternalDescription: ").append(toIndentedString(sBillingentityexternalDescription)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,6 +321,16 @@ public class BillingentityinternalproductResponseCompound extends Billingentityi
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
+      }
+      if (!jsonObj.get("sEzmaxproductDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzmaxproductDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzmaxproductDescriptionX").toString()));
+      }
+      if (!jsonObj.get("sBillingentityexternalDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sBillingentityexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityexternalDescription").toString()));
       }
   }
 

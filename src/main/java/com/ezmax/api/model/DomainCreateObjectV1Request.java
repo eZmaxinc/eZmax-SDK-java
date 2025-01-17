@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/domain
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DomainCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_DOMAIN = "a_objDomain";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DOMAIN)
-  @javax.annotation.Nonnull
   private List<DomainRequestCompound> aObjDomain = new ArrayList<>();
 
   public DomainCreateObjectV1Request() {
   }
 
-  public DomainCreateObjectV1Request aObjDomain(@javax.annotation.Nonnull List<DomainRequestCompound> aObjDomain) {
+  public DomainCreateObjectV1Request aObjDomain(List<DomainRequestCompound> aObjDomain) {
     this.aObjDomain = aObjDomain;
     return this;
   }
@@ -83,7 +82,7 @@ public class DomainCreateObjectV1Request {
     return aObjDomain;
   }
 
-  public void setaObjDomain(@javax.annotation.Nonnull List<DomainRequestCompound> aObjDomain) {
+  public void setaObjDomain(List<DomainRequestCompound> aObjDomain) {
     this.aObjDomain = aObjDomain;
   }
 

@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/customer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomerCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_CUSTOMER_I_D = "a_pkiCustomerID";
   @SerializedName(SERIALIZED_NAME_A_PKI_CUSTOMER_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiCustomerID = new ArrayList<>();
 
   public CustomerCreateObjectV1ResponseMPayload() {
   }
 
-  public CustomerCreateObjectV1ResponseMPayload aPkiCustomerID(@javax.annotation.Nonnull List<Integer> aPkiCustomerID) {
+  public CustomerCreateObjectV1ResponseMPayload aPkiCustomerID(List<Integer> aPkiCustomerID) {
     this.aPkiCustomerID = aPkiCustomerID;
     return this;
   }
@@ -82,7 +81,7 @@ public class CustomerCreateObjectV1ResponseMPayload {
     return aPkiCustomerID;
   }
 
-  public void setaPkiCustomerID(@javax.annotation.Nonnull List<Integer> aPkiCustomerID) {
+  public void setaPkiCustomerID(List<Integer> aPkiCustomerID) {
     this.aPkiCustomerID = aPkiCustomerID;
   }
 

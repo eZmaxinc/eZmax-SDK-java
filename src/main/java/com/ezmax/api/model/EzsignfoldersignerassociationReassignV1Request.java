@@ -48,17 +48,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}/reassign
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfoldersignerassociationReassignV1Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsignfoldersignerassociationID;
 
   public EzsignfoldersignerassociationReassignV1Request() {
   }
 
-  public EzsignfoldersignerassociationReassignV1Request fkiEzsignfoldersignerassociationID(@javax.annotation.Nullable Integer fkiEzsignfoldersignerassociationID) {
+  public EzsignfoldersignerassociationReassignV1Request fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -73,7 +72,7 @@ public class EzsignfoldersignerassociationReassignV1Request {
     return fkiEzsignfoldersignerassociationID;
   }
 
-  public void setFkiEzsignfoldersignerassociationID(@javax.annotation.Nullable Integer fkiEzsignfoldersignerassociationID) {
+  public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
   }
 

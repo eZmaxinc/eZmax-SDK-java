@@ -48,37 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksenddocumentmapping Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignbulksenddocumentmappingResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D = "pkiEzsignbulksenddocumentmappingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDDOCUMENTMAPPING_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignbulksenddocumentmappingID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D = "fkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignbulksendID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsigntemplatepackageID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsigntemplateID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNBULKSENDDOCUMENTMAPPING_ORDER = "iEzsignbulksenddocumentmappingOrder";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNBULKSENDDOCUMENTMAPPING_ORDER)
-  @javax.annotation.Nonnull
   private Integer iEzsignbulksenddocumentmappingOrder;
 
   public EzsignbulksenddocumentmappingResponse() {
   }
 
-  public EzsignbulksenddocumentmappingResponse pkiEzsignbulksenddocumentmappingID(@javax.annotation.Nonnull Integer pkiEzsignbulksenddocumentmappingID) {
+  public EzsignbulksenddocumentmappingResponse pkiEzsignbulksenddocumentmappingID(Integer pkiEzsignbulksenddocumentmappingID) {
     this.pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID;
     return this;
   }
@@ -93,12 +88,12 @@ public class EzsignbulksenddocumentmappingResponse {
     return pkiEzsignbulksenddocumentmappingID;
   }
 
-  public void setPkiEzsignbulksenddocumentmappingID(@javax.annotation.Nonnull Integer pkiEzsignbulksenddocumentmappingID) {
+  public void setPkiEzsignbulksenddocumentmappingID(Integer pkiEzsignbulksenddocumentmappingID) {
     this.pkiEzsignbulksenddocumentmappingID = pkiEzsignbulksenddocumentmappingID;
   }
 
 
-  public EzsignbulksenddocumentmappingResponse fkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
+  public EzsignbulksenddocumentmappingResponse fkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
     return this;
   }
@@ -113,12 +108,12 @@ public class EzsignbulksenddocumentmappingResponse {
     return fkiEzsignbulksendID;
   }
 
-  public void setFkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
+  public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
   }
 
 
-  public EzsignbulksenddocumentmappingResponse fkiEzsigntemplatepackageID(@javax.annotation.Nullable Integer fkiEzsigntemplatepackageID) {
+  public EzsignbulksenddocumentmappingResponse fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -133,12 +128,12 @@ public class EzsignbulksenddocumentmappingResponse {
     return fkiEzsigntemplatepackageID;
   }
 
-  public void setFkiEzsigntemplatepackageID(@javax.annotation.Nullable Integer fkiEzsigntemplatepackageID) {
+  public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
-  public EzsignbulksenddocumentmappingResponse fkiEzsigntemplateID(@javax.annotation.Nullable Integer fkiEzsigntemplateID) {
+  public EzsignbulksenddocumentmappingResponse fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -153,12 +148,12 @@ public class EzsignbulksenddocumentmappingResponse {
     return fkiEzsigntemplateID;
   }
 
-  public void setFkiEzsigntemplateID(@javax.annotation.Nullable Integer fkiEzsigntemplateID) {
+  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
-  public EzsignbulksenddocumentmappingResponse iEzsignbulksenddocumentmappingOrder(@javax.annotation.Nonnull Integer iEzsignbulksenddocumentmappingOrder) {
+  public EzsignbulksenddocumentmappingResponse iEzsignbulksenddocumentmappingOrder(Integer iEzsignbulksenddocumentmappingOrder) {
     this.iEzsignbulksenddocumentmappingOrder = iEzsignbulksenddocumentmappingOrder;
     return this;
   }
@@ -173,7 +168,7 @@ public class EzsignbulksenddocumentmappingResponse {
     return iEzsignbulksenddocumentmappingOrder;
   }
 
-  public void setiEzsignbulksenddocumentmappingOrder(@javax.annotation.Nonnull Integer iEzsignbulksenddocumentmappingOrder) {
+  public void setiEzsignbulksenddocumentmappingOrder(Integer iEzsignbulksenddocumentmappingOrder) {
     this.iEzsignbulksenddocumentmappingOrder = iEzsignbulksenddocumentmappingOrder;
   }
 
@@ -256,9 +251,52 @@ public class EzsignbulksenddocumentmappingResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in EzsignbulksenddocumentmappingResponse is not found in the empty JSON string", EzsignbulksenddocumentmappingResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!EzsignbulksenddocumentmappingResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `EzsignbulksenddocumentmappingResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : EzsignbulksenddocumentmappingResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!EzsignbulksenddocumentmappingResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzsignbulksenddocumentmappingResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<EzsignbulksenddocumentmappingResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzsignbulksenddocumentmappingResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<EzsignbulksenddocumentmappingResponse>() {
+           @Override
+           public void write(JsonWriter out, EzsignbulksenddocumentmappingResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public EzsignbulksenddocumentmappingResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of EzsignbulksenddocumentmappingResponse given an JSON string

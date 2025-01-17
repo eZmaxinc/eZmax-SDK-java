@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.UserResponse;
+import com.ezmax.api.model.UserResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,31 +49,30 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/user/{pkiUserID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
   @SerializedName(SERIALIZED_NAME_OBJ_USER)
-  @javax.annotation.Nonnull
-  private UserResponse objUser;
+  private UserResponseCompound objUser;
 
   public UserGetObjectV2ResponseMPayload() {
   }
 
-  public UserGetObjectV2ResponseMPayload objUser(@javax.annotation.Nonnull UserResponse objUser) {
+  public UserGetObjectV2ResponseMPayload objUser(UserResponseCompound objUser) {
     this.objUser = objUser;
     return this;
   }
 
   /**
-   * A User Object and children to create a complete structure
+   * Get objUser
    * @return objUser
    */
   @javax.annotation.Nonnull
-  public UserResponse getObjUser() {
+  public UserResponseCompound getObjUser() {
     return objUser;
   }
 
-  public void setObjUser(@javax.annotation.Nonnull UserResponse objUser) {
+  public void setObjUser(UserResponseCompound objUser) {
     this.objUser = objUser;
   }
 
@@ -159,7 +158,7 @@ public class UserGetObjectV2ResponseMPayload {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objUser`
-      UserResponse.validateJsonElement(jsonObj.get("objUser"));
+      UserResponseCompound.validateJsonElement(jsonObj.get("objUser"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

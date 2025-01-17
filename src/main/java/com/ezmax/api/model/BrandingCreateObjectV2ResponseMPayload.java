@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/branding
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BrandingCreateObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_BRANDING_I_D = "a_pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_A_PKI_BRANDING_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiBrandingID = new ArrayList<>();
 
   public BrandingCreateObjectV2ResponseMPayload() {
   }
 
-  public BrandingCreateObjectV2ResponseMPayload aPkiBrandingID(@javax.annotation.Nonnull List<Integer> aPkiBrandingID) {
+  public BrandingCreateObjectV2ResponseMPayload aPkiBrandingID(List<Integer> aPkiBrandingID) {
     this.aPkiBrandingID = aPkiBrandingID;
     return this;
   }
@@ -82,7 +81,7 @@ public class BrandingCreateObjectV2ResponseMPayload {
     return aPkiBrandingID;
   }
 
-  public void setaPkiBrandingID(@javax.annotation.Nonnull List<Integer> aPkiBrandingID) {
+  public void setaPkiBrandingID(List<Integer> aPkiBrandingID) {
     this.aPkiBrandingID = aPkiBrandingID;
   }
 

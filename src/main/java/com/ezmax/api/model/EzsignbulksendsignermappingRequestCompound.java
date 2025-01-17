@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsignbulksendsignermappingRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,105 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksendsignermapping Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsignbulksendsignermappingRequestCompound extends EzsignbulksendsignermappingRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsignbulksendsignermappingRequestCompound {
+  public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D = "pkiEzsignbulksendsignermappingID";
+  @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D)
+  private Integer pkiEzsignbulksendsignermappingID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D = "fkiEzsignbulksendID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D)
+  private Integer fkiEzsignbulksendID;
+
+  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
+  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  private Integer fkiUserID;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNBULKSENDSIGNERMAPPING_DESCRIPTION = "sEzsignbulksendsignermappingDescription";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSENDSIGNERMAPPING_DESCRIPTION)
+  private String sEzsignbulksendsignermappingDescription;
+
   public EzsignbulksendsignermappingRequestCompound() {
   }
+
+  public EzsignbulksendsignermappingRequestCompound pkiEzsignbulksendsignermappingID(Integer pkiEzsignbulksendsignermappingID) {
+    this.pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignbulksendsignermapping
+   * minimum: 0
+   * @return pkiEzsignbulksendsignermappingID
+   */
+  @javax.annotation.Nullable
+  public Integer getPkiEzsignbulksendsignermappingID() {
+    return pkiEzsignbulksendsignermappingID;
+  }
+
+  public void setPkiEzsignbulksendsignermappingID(Integer pkiEzsignbulksendsignermappingID) {
+    this.pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID;
+  }
+
+
+  public EzsignbulksendsignermappingRequestCompound fkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
+    this.fkiEzsignbulksendID = fkiEzsignbulksendID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignbulksend
+   * minimum: 0
+   * @return fkiEzsignbulksendID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiEzsignbulksendID() {
+    return fkiEzsignbulksendID;
+  }
+
+  public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
+    this.fkiEzsignbulksendID = fkiEzsignbulksendID;
+  }
+
+
+  public EzsignbulksendsignermappingRequestCompound fkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the User
+   * minimum: 0
+   * @return fkiUserID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiUserID() {
+    return fkiUserID;
+  }
+
+  public void setFkiUserID(Integer fkiUserID) {
+    this.fkiUserID = fkiUserID;
+  }
+
+
+  public EzsignbulksendsignermappingRequestCompound sEzsignbulksendsignermappingDescription(String sEzsignbulksendsignermappingDescription) {
+    this.sEzsignbulksendsignermappingDescription = sEzsignbulksendsignermappingDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Ezsignbulksendsignermapping
+   * @return sEzsignbulksendsignermappingDescription
+   */
+  @javax.annotation.Nonnull
+  public String getsEzsignbulksendsignermappingDescription() {
+    return sEzsignbulksendsignermappingDescription;
+  }
+
+  public void setsEzsignbulksendsignermappingDescription(String sEzsignbulksendsignermappingDescription) {
+    this.sEzsignbulksendsignermappingDescription = sEzsignbulksendsignermappingDescription;
+  }
+
 
 
   @Override
@@ -63,19 +157,26 @@ public class EzsignbulksendsignermappingRequestCompound extends Ezsignbulksendsi
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    EzsignbulksendsignermappingRequestCompound ezsignbulksendsignermappingRequestCompound = (EzsignbulksendsignermappingRequestCompound) o;
+    return Objects.equals(this.pkiEzsignbulksendsignermappingID, ezsignbulksendsignermappingRequestCompound.pkiEzsignbulksendsignermappingID) &&
+        Objects.equals(this.fkiEzsignbulksendID, ezsignbulksendsignermappingRequestCompound.fkiEzsignbulksendID) &&
+        Objects.equals(this.fkiUserID, ezsignbulksendsignermappingRequestCompound.fkiUserID) &&
+        Objects.equals(this.sEzsignbulksendsignermappingDescription, ezsignbulksendsignermappingRequestCompound.sEzsignbulksendsignermappingDescription);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiEzsignbulksendsignermappingID, fkiEzsignbulksendID, fkiUserID, sEzsignbulksendsignermappingDescription);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsignbulksendsignermappingRequestCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiEzsignbulksendsignermappingID: ").append(toIndentedString(pkiEzsignbulksendsignermappingID)).append("\n");
+    sb.append("    fkiEzsignbulksendID: ").append(toIndentedString(fkiEzsignbulksendID)).append("\n");
+    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
+    sb.append("    sEzsignbulksendsignermappingDescription: ").append(toIndentedString(sEzsignbulksendsignermappingDescription)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -135,6 +236,10 @@ public class EzsignbulksendsignermappingRequestCompound extends Ezsignbulksendsi
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sEzsignbulksendsignermappingDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sEzsignbulksendsignermappingDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignbulksendsignermappingDescription").toString()));
       }
   }
 

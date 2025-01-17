@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatedocumentpagerecognitionEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION = "objEzsigntemplatedocumentpagerecognition";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION)
-  @javax.annotation.Nonnull
   private EzsigntemplatedocumentpagerecognitionRequestCompound objEzsigntemplatedocumentpagerecognition;
 
   public EzsigntemplatedocumentpagerecognitionEditObjectV1Request() {
   }
 
-  public EzsigntemplatedocumentpagerecognitionEditObjectV1Request objEzsigntemplatedocumentpagerecognition(@javax.annotation.Nonnull EzsigntemplatedocumentpagerecognitionRequestCompound objEzsigntemplatedocumentpagerecognition) {
+  public EzsigntemplatedocumentpagerecognitionEditObjectV1Request objEzsigntemplatedocumentpagerecognition(EzsigntemplatedocumentpagerecognitionRequestCompound objEzsigntemplatedocumentpagerecognition) {
     this.objEzsigntemplatedocumentpagerecognition = objEzsigntemplatedocumentpagerecognition;
     return this;
   }
@@ -73,7 +72,7 @@ public class EzsigntemplatedocumentpagerecognitionEditObjectV1Request {
     return objEzsigntemplatedocumentpagerecognition;
   }
 
-  public void setObjEzsigntemplatedocumentpagerecognition(@javax.annotation.Nonnull EzsigntemplatedocumentpagerecognitionRequestCompound objEzsigntemplatedocumentpagerecognition) {
+  public void setObjEzsigntemplatedocumentpagerecognition(EzsigntemplatedocumentpagerecognitionRequestCompound objEzsigntemplatedocumentpagerecognition) {
     this.objEzsigntemplatedocumentpagerecognition = objEzsigntemplatedocumentpagerecognition;
   }
 

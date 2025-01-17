@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/billingentityinternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BillingentityinternalCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_BILLINGENTITYINTERNAL_I_D = "a_pkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_A_PKI_BILLINGENTITYINTERNAL_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiBillingentityinternalID = new ArrayList<>();
 
   public BillingentityinternalCreateObjectV1ResponseMPayload() {
   }
 
-  public BillingentityinternalCreateObjectV1ResponseMPayload aPkiBillingentityinternalID(@javax.annotation.Nonnull List<Integer> aPkiBillingentityinternalID) {
+  public BillingentityinternalCreateObjectV1ResponseMPayload aPkiBillingentityinternalID(List<Integer> aPkiBillingentityinternalID) {
     this.aPkiBillingentityinternalID = aPkiBillingentityinternalID;
     return this;
   }
@@ -82,7 +81,7 @@ public class BillingentityinternalCreateObjectV1ResponseMPayload {
     return aPkiBillingentityinternalID;
   }
 
-  public void setaPkiBillingentityinternalID(@javax.annotation.Nonnull List<Integer> aPkiBillingentityinternalID) {
+  public void setaPkiBillingentityinternalID(List<Integer> aPkiBillingentityinternalID) {
     this.aPkiBillingentityinternalID = aPkiBillingentityinternalID;
   }
 

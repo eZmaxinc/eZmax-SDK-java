@@ -49,22 +49,20 @@ import eZmaxAPI.JSON;
 /**
  * Payload for Websocket Error V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebsocketResponseErrorV1MPayload {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
-  @javax.annotation.Nonnull
   private String sErrorMessage;
 
   public static final String SERIALIZED_NAME_E_ERROR_CODE = "eErrorCode";
   @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
-  @javax.annotation.Nonnull
   private FieldEErrorCode eErrorCode;
 
   public WebsocketResponseErrorV1MPayload() {
   }
 
-  public WebsocketResponseErrorV1MPayload sErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
+  public WebsocketResponseErrorV1MPayload sErrorMessage(String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
     return this;
   }
@@ -78,12 +76,12 @@ public class WebsocketResponseErrorV1MPayload {
     return sErrorMessage;
   }
 
-  public void setsErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
+  public void setsErrorMessage(String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
   }
 
 
-  public WebsocketResponseErrorV1MPayload eErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
+  public WebsocketResponseErrorV1MPayload eErrorCode(FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
     return this;
   }
@@ -97,7 +95,7 @@ public class WebsocketResponseErrorV1MPayload {
     return eErrorCode;
   }
 
-  public void seteErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
+  public void seteErrorCode(FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
   }
 

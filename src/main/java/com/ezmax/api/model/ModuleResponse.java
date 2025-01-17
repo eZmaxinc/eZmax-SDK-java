@@ -48,42 +48,36 @@ import eZmaxAPI.JSON;
 /**
  * A Module Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ModuleResponse {
   public static final String SERIALIZED_NAME_PKI_MODULE_I_D = "pkiModuleID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiModuleID;
 
   public static final String SERIALIZED_NAME_FKI_MODULEGROUP_I_D = "fkiModulegroupID";
   @SerializedName(SERIALIZED_NAME_FKI_MODULEGROUP_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiModulegroupID;
 
   public static final String SERIALIZED_NAME_E_MODULE_INTERNALNAME = "eModuleInternalname";
   @SerializedName(SERIALIZED_NAME_E_MODULE_INTERNALNAME)
-  @javax.annotation.Nonnull
   private String eModuleInternalname;
 
   public static final String SERIALIZED_NAME_S_MODULE_NAME_X = "sModuleNameX";
   @SerializedName(SERIALIZED_NAME_S_MODULE_NAME_X)
-  @javax.annotation.Nonnull
   private String sModuleNameX;
 
   public static final String SERIALIZED_NAME_B_MODULE_REGISTERED = "bModuleRegistered";
   @SerializedName(SERIALIZED_NAME_B_MODULE_REGISTERED)
-  @javax.annotation.Nonnull
   private Boolean bModuleRegistered;
 
   public static final String SERIALIZED_NAME_B_MODULE_REGISTEREDAPI = "bModuleRegisteredapi";
   @SerializedName(SERIALIZED_NAME_B_MODULE_REGISTEREDAPI)
-  @javax.annotation.Nonnull
   private Boolean bModuleRegisteredapi;
 
   public ModuleResponse() {
   }
 
-  public ModuleResponse pkiModuleID(@javax.annotation.Nonnull Integer pkiModuleID) {
+  public ModuleResponse pkiModuleID(Integer pkiModuleID) {
     this.pkiModuleID = pkiModuleID;
     return this;
   }
@@ -98,12 +92,12 @@ public class ModuleResponse {
     return pkiModuleID;
   }
 
-  public void setPkiModuleID(@javax.annotation.Nonnull Integer pkiModuleID) {
+  public void setPkiModuleID(Integer pkiModuleID) {
     this.pkiModuleID = pkiModuleID;
   }
 
 
-  public ModuleResponse fkiModulegroupID(@javax.annotation.Nonnull Integer fkiModulegroupID) {
+  public ModuleResponse fkiModulegroupID(Integer fkiModulegroupID) {
     this.fkiModulegroupID = fkiModulegroupID;
     return this;
   }
@@ -119,12 +113,12 @@ public class ModuleResponse {
     return fkiModulegroupID;
   }
 
-  public void setFkiModulegroupID(@javax.annotation.Nonnull Integer fkiModulegroupID) {
+  public void setFkiModulegroupID(Integer fkiModulegroupID) {
     this.fkiModulegroupID = fkiModulegroupID;
   }
 
 
-  public ModuleResponse eModuleInternalname(@javax.annotation.Nonnull String eModuleInternalname) {
+  public ModuleResponse eModuleInternalname(String eModuleInternalname) {
     this.eModuleInternalname = eModuleInternalname;
     return this;
   }
@@ -138,12 +132,12 @@ public class ModuleResponse {
     return eModuleInternalname;
   }
 
-  public void seteModuleInternalname(@javax.annotation.Nonnull String eModuleInternalname) {
+  public void seteModuleInternalname(String eModuleInternalname) {
     this.eModuleInternalname = eModuleInternalname;
   }
 
 
-  public ModuleResponse sModuleNameX(@javax.annotation.Nonnull String sModuleNameX) {
+  public ModuleResponse sModuleNameX(String sModuleNameX) {
     this.sModuleNameX = sModuleNameX;
     return this;
   }
@@ -157,12 +151,12 @@ public class ModuleResponse {
     return sModuleNameX;
   }
 
-  public void setsModuleNameX(@javax.annotation.Nonnull String sModuleNameX) {
+  public void setsModuleNameX(String sModuleNameX) {
     this.sModuleNameX = sModuleNameX;
   }
 
 
-  public ModuleResponse bModuleRegistered(@javax.annotation.Nonnull Boolean bModuleRegistered) {
+  public ModuleResponse bModuleRegistered(Boolean bModuleRegistered) {
     this.bModuleRegistered = bModuleRegistered;
     return this;
   }
@@ -176,12 +170,12 @@ public class ModuleResponse {
     return bModuleRegistered;
   }
 
-  public void setbModuleRegistered(@javax.annotation.Nonnull Boolean bModuleRegistered) {
+  public void setbModuleRegistered(Boolean bModuleRegistered) {
     this.bModuleRegistered = bModuleRegistered;
   }
 
 
-  public ModuleResponse bModuleRegisteredapi(@javax.annotation.Nonnull Boolean bModuleRegisteredapi) {
+  public ModuleResponse bModuleRegisteredapi(Boolean bModuleRegisteredapi) {
     this.bModuleRegisteredapi = bModuleRegisteredapi;
     return this;
   }
@@ -195,7 +189,7 @@ public class ModuleResponse {
     return bModuleRegisteredapi;
   }
 
-  public void setbModuleRegisteredapi(@javax.annotation.Nonnull Boolean bModuleRegisteredapi) {
+  public void setbModuleRegisteredapi(Boolean bModuleRegisteredapi) {
     this.bModuleRegisteredapi = bModuleRegisteredapi;
   }
 
@@ -284,6 +278,21 @@ public class ModuleResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ModuleResponse is not found in the empty JSON string", ModuleResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!ModuleResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ModuleResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ModuleResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("eModuleInternalname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `eModuleInternalname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eModuleInternalname").toString()));
@@ -293,6 +302,34 @@ public class ModuleResponse {
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!ModuleResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ModuleResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<ModuleResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ModuleResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<ModuleResponse>() {
+           @Override
+           public void write(JsonWriter out, ModuleResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public ModuleResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of ModuleResponse given an JSON string

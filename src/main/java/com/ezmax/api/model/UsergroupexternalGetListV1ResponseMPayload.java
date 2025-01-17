@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonGetListV1ResponseMPayload;
 import com.ezmax.api.model.UsergroupexternalListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/usergroupexternal/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class UsergroupexternalGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class UsergroupexternalGetListV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
+  @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  private Integer iRowReturned;
+
+  public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
+  @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  private Integer iRowFiltered;
+
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUPEXTERNAL = "a_objUsergroupexternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUPEXTERNAL)
-  @javax.annotation.Nonnull
   private List<UsergroupexternalListElement> aObjUsergroupexternal = new ArrayList<>();
 
   public UsergroupexternalGetListV1ResponseMPayload() {
   }
 
-  public UsergroupexternalGetListV1ResponseMPayload aObjUsergroupexternal(@javax.annotation.Nonnull List<UsergroupexternalListElement> aObjUsergroupexternal) {
+  public UsergroupexternalGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+    return this;
+  }
+
+  /**
+   * The number of rows returned
+   * @return iRowReturned
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowReturned() {
+    return iRowReturned;
+  }
+
+  public void setiRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+  }
+
+
+  public UsergroupexternalGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+    return this;
+  }
+
+  /**
+   * The number of rows matching your filters (if any) or the total number of rows
+   * @return iRowFiltered
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowFiltered() {
+    return iRowFiltered;
+  }
+
+  public void setiRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+  }
+
+
+  public UsergroupexternalGetListV1ResponseMPayload aObjUsergroupexternal(List<UsergroupexternalListElement> aObjUsergroupexternal) {
     this.aObjUsergroupexternal = aObjUsergroupexternal;
     return this;
   }
@@ -84,7 +128,7 @@ public class UsergroupexternalGetListV1ResponseMPayload extends CommonGetListV1R
     return aObjUsergroupexternal;
   }
 
-  public void setaObjUsergroupexternal(@javax.annotation.Nonnull List<UsergroupexternalListElement> aObjUsergroupexternal) {
+  public void setaObjUsergroupexternal(List<UsergroupexternalListElement> aObjUsergroupexternal) {
     this.aObjUsergroupexternal = aObjUsergroupexternal;
   }
 
@@ -99,20 +143,22 @@ public class UsergroupexternalGetListV1ResponseMPayload extends CommonGetListV1R
       return false;
     }
     UsergroupexternalGetListV1ResponseMPayload usergroupexternalGetListV1ResponseMPayload = (UsergroupexternalGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjUsergroupexternal, usergroupexternalGetListV1ResponseMPayload.aObjUsergroupexternal) &&
-        super.equals(o);
+    return Objects.equals(this.iRowReturned, usergroupexternalGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, usergroupexternalGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjUsergroupexternal, usergroupexternalGetListV1ResponseMPayload.aObjUsergroupexternal);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjUsergroupexternal, super.hashCode());
+    return Objects.hash(iRowReturned, iRowFiltered, aObjUsergroupexternal);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsergroupexternalGetListV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
+    sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
     sb.append("    aObjUsergroupexternal: ").append(toIndentedString(aObjUsergroupexternal)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -142,9 +188,9 @@ public class UsergroupexternalGetListV1ResponseMPayload extends CommonGetListV1R
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objUsergroupexternal");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objUsergroupexternal");
   }
 
   /**

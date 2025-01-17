@@ -49,27 +49,24 @@ import eZmaxAPI.JSON;
 /**
  * An Userlogintype Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserlogintypeResponse {
   public static final String SERIALIZED_NAME_PKI_USERLOGINTYPE_I_D = "pkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_PKI_USERLOGINTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiUserlogintypeID;
 
   public static final String SERIALIZED_NAME_OBJ_USERLOGINTYPE_DESCRIPTION = "objUserlogintypeDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_USERLOGINTYPE_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualUserlogintypeDescription objUserlogintypeDescription;
 
   public static final String SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION_X = "sUserlogintypeDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sUserlogintypeDescriptionX;
 
   public UserlogintypeResponse() {
   }
 
-  public UserlogintypeResponse pkiUserlogintypeID(@javax.annotation.Nonnull Integer pkiUserlogintypeID) {
+  public UserlogintypeResponse pkiUserlogintypeID(Integer pkiUserlogintypeID) {
     this.pkiUserlogintypeID = pkiUserlogintypeID;
     return this;
   }
@@ -84,12 +81,12 @@ public class UserlogintypeResponse {
     return pkiUserlogintypeID;
   }
 
-  public void setPkiUserlogintypeID(@javax.annotation.Nonnull Integer pkiUserlogintypeID) {
+  public void setPkiUserlogintypeID(Integer pkiUserlogintypeID) {
     this.pkiUserlogintypeID = pkiUserlogintypeID;
   }
 
 
-  public UserlogintypeResponse objUserlogintypeDescription(@javax.annotation.Nonnull MultilingualUserlogintypeDescription objUserlogintypeDescription) {
+  public UserlogintypeResponse objUserlogintypeDescription(MultilingualUserlogintypeDescription objUserlogintypeDescription) {
     this.objUserlogintypeDescription = objUserlogintypeDescription;
     return this;
   }
@@ -103,12 +100,12 @@ public class UserlogintypeResponse {
     return objUserlogintypeDescription;
   }
 
-  public void setObjUserlogintypeDescription(@javax.annotation.Nonnull MultilingualUserlogintypeDescription objUserlogintypeDescription) {
+  public void setObjUserlogintypeDescription(MultilingualUserlogintypeDescription objUserlogintypeDescription) {
     this.objUserlogintypeDescription = objUserlogintypeDescription;
   }
 
 
-  public UserlogintypeResponse sUserlogintypeDescriptionX(@javax.annotation.Nonnull String sUserlogintypeDescriptionX) {
+  public UserlogintypeResponse sUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
     return this;
   }
@@ -122,7 +119,7 @@ public class UserlogintypeResponse {
     return sUserlogintypeDescriptionX;
   }
 
-  public void setsUserlogintypeDescriptionX(@javax.annotation.Nonnull String sUserlogintypeDescriptionX) {
+  public void setsUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
   }
 

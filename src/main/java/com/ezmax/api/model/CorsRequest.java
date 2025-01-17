@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Cors Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CorsRequest {
   public static final String SERIALIZED_NAME_PKI_CORS_I_D = "pkiCorsID";
   @SerializedName(SERIALIZED_NAME_PKI_CORS_I_D)
-  @javax.annotation.Nullable
   private Integer pkiCorsID;
 
   public static final String SERIALIZED_NAME_FKI_APIKEY_I_D = "fkiApikeyID";
   @SerializedName(SERIALIZED_NAME_FKI_APIKEY_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiApikeyID;
 
   public static final String SERIALIZED_NAME_S_CORS_ENTRYURL = "sCorsEntryurl";
   @SerializedName(SERIALIZED_NAME_S_CORS_ENTRYURL)
-  @javax.annotation.Nonnull
   private String sCorsEntryurl;
 
   public CorsRequest() {
   }
 
-  public CorsRequest pkiCorsID(@javax.annotation.Nullable Integer pkiCorsID) {
+  public CorsRequest pkiCorsID(Integer pkiCorsID) {
     this.pkiCorsID = pkiCorsID;
     return this;
   }
@@ -84,12 +81,12 @@ public class CorsRequest {
     return pkiCorsID;
   }
 
-  public void setPkiCorsID(@javax.annotation.Nullable Integer pkiCorsID) {
+  public void setPkiCorsID(Integer pkiCorsID) {
     this.pkiCorsID = pkiCorsID;
   }
 
 
-  public CorsRequest fkiApikeyID(@javax.annotation.Nonnull Integer fkiApikeyID) {
+  public CorsRequest fkiApikeyID(Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
     return this;
   }
@@ -104,12 +101,12 @@ public class CorsRequest {
     return fkiApikeyID;
   }
 
-  public void setFkiApikeyID(@javax.annotation.Nonnull Integer fkiApikeyID) {
+  public void setFkiApikeyID(Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
   }
 
 
-  public CorsRequest sCorsEntryurl(@javax.annotation.Nonnull String sCorsEntryurl) {
+  public CorsRequest sCorsEntryurl(String sCorsEntryurl) {
     this.sCorsEntryurl = sCorsEntryurl;
     return this;
   }
@@ -123,7 +120,7 @@ public class CorsRequest {
     return sCorsEntryurl;
   }
 
-  public void setsCorsEntryurl(@javax.annotation.Nonnull String sCorsEntryurl) {
+  public void setsCorsEntryurl(String sCorsEntryurl) {
     this.sCorsEntryurl = sCorsEntryurl;
   }
 
@@ -199,12 +196,55 @@ public class CorsRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in CorsRequest is not found in the empty JSON string", CorsRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!CorsRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CorsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : CorsRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sCorsEntryurl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sCorsEntryurl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCorsEntryurl").toString()));
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!CorsRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'CorsRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<CorsRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(CorsRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<CorsRequest>() {
+           @Override
+           public void write(JsonWriter out, CorsRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public CorsRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of CorsRequest given an JSON string

@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /3/object/ezsignfoldertype
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfoldertypeCreateObjectV3ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFOLDERTYPE_I_D = "a_pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFOLDERTYPE_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsignfoldertypeID = new ArrayList<>();
 
   public EzsignfoldertypeCreateObjectV3ResponseMPayload() {
   }
 
-  public EzsignfoldertypeCreateObjectV3ResponseMPayload aPkiEzsignfoldertypeID(@javax.annotation.Nonnull List<Integer> aPkiEzsignfoldertypeID) {
+  public EzsignfoldertypeCreateObjectV3ResponseMPayload aPkiEzsignfoldertypeID(List<Integer> aPkiEzsignfoldertypeID) {
     this.aPkiEzsignfoldertypeID = aPkiEzsignfoldertypeID;
     return this;
   }
@@ -82,7 +81,7 @@ public class EzsignfoldertypeCreateObjectV3ResponseMPayload {
     return aPkiEzsignfoldertypeID;
   }
 
-  public void setaPkiEzsignfoldertypeID(@javax.annotation.Nonnull List<Integer> aPkiEzsignfoldertypeID) {
+  public void setaPkiEzsignfoldertypeID(List<Integer> aPkiEzsignfoldertypeID) {
     this.aPkiEzsignfoldertypeID = aPkiEzsignfoldertypeID;
   }
 

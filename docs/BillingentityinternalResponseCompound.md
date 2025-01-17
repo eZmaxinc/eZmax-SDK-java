@@ -8,6 +8,8 @@ A Billingentityinternal Object
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**pkiBillingentityinternalID** | **Integer** | The unique ID of the Billingentityinternal. |  |
+|**objBillingentityinternalDescription** | [**MultilingualBillingentityinternalDescription**](MultilingualBillingentityinternalDescription.md) |  |  |
 |**aObjBillingentityinternalproduct** | [**List&lt;BillingentityinternalproductResponseCompound&gt;**](BillingentityinternalproductResponseCompound.md) |  |  |
 
 

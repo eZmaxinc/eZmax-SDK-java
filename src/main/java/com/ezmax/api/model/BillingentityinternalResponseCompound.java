@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.BillingentityinternalResponse;
 import com.ezmax.api.model.BillingentityinternalproductResponseCompound;
 import com.ezmax.api.model.MultilingualBillingentityinternalDescription;
 import com.google.gson.TypeAdapter;
@@ -53,17 +52,63 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class BillingentityinternalResponseCompound extends BillingentityinternalResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class BillingentityinternalResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
+  @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)
+  private Integer pkiBillingentityinternalID;
+
+  public static final String SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL_DESCRIPTION = "objBillingentityinternalDescription";
+  @SerializedName(SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL_DESCRIPTION)
+  private MultilingualBillingentityinternalDescription objBillingentityinternalDescription;
+
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNALPRODUCT = "a_objBillingentityinternalproduct";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNALPRODUCT)
-  @javax.annotation.Nonnull
   private List<BillingentityinternalproductResponseCompound> aObjBillingentityinternalproduct = new ArrayList<>();
 
   public BillingentityinternalResponseCompound() {
   }
 
-  public BillingentityinternalResponseCompound aObjBillingentityinternalproduct(@javax.annotation.Nonnull List<BillingentityinternalproductResponseCompound> aObjBillingentityinternalproduct) {
+  public BillingentityinternalResponseCompound pkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
+    this.pkiBillingentityinternalID = pkiBillingentityinternalID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Billingentityinternal.
+   * minimum: 0
+   * @return pkiBillingentityinternalID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiBillingentityinternalID() {
+    return pkiBillingentityinternalID;
+  }
+
+  public void setPkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
+    this.pkiBillingentityinternalID = pkiBillingentityinternalID;
+  }
+
+
+  public BillingentityinternalResponseCompound objBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
+    this.objBillingentityinternalDescription = objBillingentityinternalDescription;
+    return this;
+  }
+
+  /**
+   * Get objBillingentityinternalDescription
+   * @return objBillingentityinternalDescription
+   */
+  @javax.annotation.Nonnull
+  public MultilingualBillingentityinternalDescription getObjBillingentityinternalDescription() {
+    return objBillingentityinternalDescription;
+  }
+
+  public void setObjBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
+    this.objBillingentityinternalDescription = objBillingentityinternalDescription;
+  }
+
+
+  public BillingentityinternalResponseCompound aObjBillingentityinternalproduct(List<BillingentityinternalproductResponseCompound> aObjBillingentityinternalproduct) {
     this.aObjBillingentityinternalproduct = aObjBillingentityinternalproduct;
     return this;
   }
@@ -85,7 +130,7 @@ public class BillingentityinternalResponseCompound extends Billingentityinternal
     return aObjBillingentityinternalproduct;
   }
 
-  public void setaObjBillingentityinternalproduct(@javax.annotation.Nonnull List<BillingentityinternalproductResponseCompound> aObjBillingentityinternalproduct) {
+  public void setaObjBillingentityinternalproduct(List<BillingentityinternalproductResponseCompound> aObjBillingentityinternalproduct) {
     this.aObjBillingentityinternalproduct = aObjBillingentityinternalproduct;
   }
 
@@ -100,20 +145,22 @@ public class BillingentityinternalResponseCompound extends Billingentityinternal
       return false;
     }
     BillingentityinternalResponseCompound billingentityinternalResponseCompound = (BillingentityinternalResponseCompound) o;
-    return Objects.equals(this.aObjBillingentityinternalproduct, billingentityinternalResponseCompound.aObjBillingentityinternalproduct) &&
-        super.equals(o);
+    return Objects.equals(this.pkiBillingentityinternalID, billingentityinternalResponseCompound.pkiBillingentityinternalID) &&
+        Objects.equals(this.objBillingentityinternalDescription, billingentityinternalResponseCompound.objBillingentityinternalDescription) &&
+        Objects.equals(this.aObjBillingentityinternalproduct, billingentityinternalResponseCompound.aObjBillingentityinternalproduct);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjBillingentityinternalproduct, super.hashCode());
+    return Objects.hash(pkiBillingentityinternalID, objBillingentityinternalDescription, aObjBillingentityinternalproduct);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingentityinternalResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiBillingentityinternalID: ").append(toIndentedString(pkiBillingentityinternalID)).append("\n");
+    sb.append("    objBillingentityinternalDescription: ").append(toIndentedString(objBillingentityinternalDescription)).append("\n");
     sb.append("    aObjBillingentityinternalproduct: ").append(toIndentedString(aObjBillingentityinternalproduct)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -143,9 +190,9 @@ public class BillingentityinternalResponseCompound extends Billingentityinternal
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objBillingentityinternalproduct");
     openapiRequiredFields.add("pkiBillingentityinternalID");
     openapiRequiredFields.add("objBillingentityinternalDescription");
+    openapiRequiredFields.add("a_objBillingentityinternalproduct");
   }
 
   /**
@@ -176,6 +223,8 @@ public class BillingentityinternalResponseCompound extends Billingentityinternal
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objBillingentityinternalDescription`
+      MultilingualBillingentityinternalDescription.validateJsonElement(jsonObj.get("objBillingentityinternalDescription"));
       // ensure the json data is an array
       if (!jsonObj.get("a_objBillingentityinternalproduct").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `a_objBillingentityinternalproduct` to be an array in the JSON string but got `%s`", jsonObj.get("a_objBillingentityinternalproduct").toString()));

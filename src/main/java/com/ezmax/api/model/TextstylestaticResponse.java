@@ -48,57 +48,48 @@ import eZmaxAPI.JSON;
 /**
  * A Textstylestatic Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TextstylestaticResponse {
   public static final String SERIALIZED_NAME_PKI_TEXTSTYLESTATIC_I_D = "pkiTextstylestaticID";
   @SerializedName(SERIALIZED_NAME_PKI_TEXTSTYLESTATIC_I_D)
-  @javax.annotation.Nullable
   private Integer pkiTextstylestaticID;
 
   public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
   @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFontID;
 
   public static final String SERIALIZED_NAME_S_FONT_NAME = "sFontName";
   @SerializedName(SERIALIZED_NAME_S_FONT_NAME)
-  @javax.annotation.Nonnull
   private String sFontName;
 
   public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_BOLD = "bTextstylestaticBold";
   @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_BOLD)
-  @javax.annotation.Nonnull
   private Boolean bTextstylestaticBold;
 
   public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_UNDERLINE = "bTextstylestaticUnderline";
   @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_UNDERLINE)
-  @javax.annotation.Nonnull
   private Boolean bTextstylestaticUnderline;
 
   public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_ITALIC = "bTextstylestaticItalic";
   @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_ITALIC)
-  @javax.annotation.Nonnull
   private Boolean bTextstylestaticItalic;
 
   public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_STRIKETHROUGH = "bTextstylestaticStrikethrough";
   @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_STRIKETHROUGH)
-  @javax.annotation.Nonnull
   private Boolean bTextstylestaticStrikethrough;
 
   public static final String SERIALIZED_NAME_I_TEXTSTYLESTATIC_FONTCOLOR = "iTextstylestaticFontcolor";
   @SerializedName(SERIALIZED_NAME_I_TEXTSTYLESTATIC_FONTCOLOR)
-  @javax.annotation.Nonnull
   private Integer iTextstylestaticFontcolor;
 
   public static final String SERIALIZED_NAME_I_TEXTSTYLESTATIC_SIZE = "iTextstylestaticSize";
   @SerializedName(SERIALIZED_NAME_I_TEXTSTYLESTATIC_SIZE)
-  @javax.annotation.Nonnull
   private Integer iTextstylestaticSize;
 
   public TextstylestaticResponse() {
   }
 
-  public TextstylestaticResponse pkiTextstylestaticID(@javax.annotation.Nullable Integer pkiTextstylestaticID) {
+  public TextstylestaticResponse pkiTextstylestaticID(Integer pkiTextstylestaticID) {
     this.pkiTextstylestaticID = pkiTextstylestaticID;
     return this;
   }
@@ -113,12 +104,12 @@ public class TextstylestaticResponse {
     return pkiTextstylestaticID;
   }
 
-  public void setPkiTextstylestaticID(@javax.annotation.Nullable Integer pkiTextstylestaticID) {
+  public void setPkiTextstylestaticID(Integer pkiTextstylestaticID) {
     this.pkiTextstylestaticID = pkiTextstylestaticID;
   }
 
 
-  public TextstylestaticResponse fkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
+  public TextstylestaticResponse fkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
     return this;
   }
@@ -133,12 +124,12 @@ public class TextstylestaticResponse {
     return fkiFontID;
   }
 
-  public void setFkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
+  public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
   }
 
 
-  public TextstylestaticResponse sFontName(@javax.annotation.Nonnull String sFontName) {
+  public TextstylestaticResponse sFontName(String sFontName) {
     this.sFontName = sFontName;
     return this;
   }
@@ -152,12 +143,12 @@ public class TextstylestaticResponse {
     return sFontName;
   }
 
-  public void setsFontName(@javax.annotation.Nonnull String sFontName) {
+  public void setsFontName(String sFontName) {
     this.sFontName = sFontName;
   }
 
 
-  public TextstylestaticResponse bTextstylestaticBold(@javax.annotation.Nonnull Boolean bTextstylestaticBold) {
+  public TextstylestaticResponse bTextstylestaticBold(Boolean bTextstylestaticBold) {
     this.bTextstylestaticBold = bTextstylestaticBold;
     return this;
   }
@@ -171,12 +162,12 @@ public class TextstylestaticResponse {
     return bTextstylestaticBold;
   }
 
-  public void setbTextstylestaticBold(@javax.annotation.Nonnull Boolean bTextstylestaticBold) {
+  public void setbTextstylestaticBold(Boolean bTextstylestaticBold) {
     this.bTextstylestaticBold = bTextstylestaticBold;
   }
 
 
-  public TextstylestaticResponse bTextstylestaticUnderline(@javax.annotation.Nonnull Boolean bTextstylestaticUnderline) {
+  public TextstylestaticResponse bTextstylestaticUnderline(Boolean bTextstylestaticUnderline) {
     this.bTextstylestaticUnderline = bTextstylestaticUnderline;
     return this;
   }
@@ -190,12 +181,12 @@ public class TextstylestaticResponse {
     return bTextstylestaticUnderline;
   }
 
-  public void setbTextstylestaticUnderline(@javax.annotation.Nonnull Boolean bTextstylestaticUnderline) {
+  public void setbTextstylestaticUnderline(Boolean bTextstylestaticUnderline) {
     this.bTextstylestaticUnderline = bTextstylestaticUnderline;
   }
 
 
-  public TextstylestaticResponse bTextstylestaticItalic(@javax.annotation.Nonnull Boolean bTextstylestaticItalic) {
+  public TextstylestaticResponse bTextstylestaticItalic(Boolean bTextstylestaticItalic) {
     this.bTextstylestaticItalic = bTextstylestaticItalic;
     return this;
   }
@@ -209,12 +200,12 @@ public class TextstylestaticResponse {
     return bTextstylestaticItalic;
   }
 
-  public void setbTextstylestaticItalic(@javax.annotation.Nonnull Boolean bTextstylestaticItalic) {
+  public void setbTextstylestaticItalic(Boolean bTextstylestaticItalic) {
     this.bTextstylestaticItalic = bTextstylestaticItalic;
   }
 
 
-  public TextstylestaticResponse bTextstylestaticStrikethrough(@javax.annotation.Nonnull Boolean bTextstylestaticStrikethrough) {
+  public TextstylestaticResponse bTextstylestaticStrikethrough(Boolean bTextstylestaticStrikethrough) {
     this.bTextstylestaticStrikethrough = bTextstylestaticStrikethrough;
     return this;
   }
@@ -228,12 +219,12 @@ public class TextstylestaticResponse {
     return bTextstylestaticStrikethrough;
   }
 
-  public void setbTextstylestaticStrikethrough(@javax.annotation.Nonnull Boolean bTextstylestaticStrikethrough) {
+  public void setbTextstylestaticStrikethrough(Boolean bTextstylestaticStrikethrough) {
     this.bTextstylestaticStrikethrough = bTextstylestaticStrikethrough;
   }
 
 
-  public TextstylestaticResponse iTextstylestaticFontcolor(@javax.annotation.Nonnull Integer iTextstylestaticFontcolor) {
+  public TextstylestaticResponse iTextstylestaticFontcolor(Integer iTextstylestaticFontcolor) {
     this.iTextstylestaticFontcolor = iTextstylestaticFontcolor;
     return this;
   }
@@ -249,12 +240,12 @@ public class TextstylestaticResponse {
     return iTextstylestaticFontcolor;
   }
 
-  public void setiTextstylestaticFontcolor(@javax.annotation.Nonnull Integer iTextstylestaticFontcolor) {
+  public void setiTextstylestaticFontcolor(Integer iTextstylestaticFontcolor) {
     this.iTextstylestaticFontcolor = iTextstylestaticFontcolor;
   }
 
 
-  public TextstylestaticResponse iTextstylestaticSize(@javax.annotation.Nonnull Integer iTextstylestaticSize) {
+  public TextstylestaticResponse iTextstylestaticSize(Integer iTextstylestaticSize) {
     this.iTextstylestaticSize = iTextstylestaticSize;
     return this;
   }
@@ -270,7 +261,7 @@ public class TextstylestaticResponse {
     return iTextstylestaticSize;
   }
 
-  public void setiTextstylestaticSize(@javax.annotation.Nonnull Integer iTextstylestaticSize) {
+  public void setiTextstylestaticSize(Integer iTextstylestaticSize) {
     this.iTextstylestaticSize = iTextstylestaticSize;
   }
 
@@ -370,12 +361,55 @@ public class TextstylestaticResponse {
           throw new IllegalArgumentException(String.format("The required field(s) %s in TextstylestaticResponse is not found in the empty JSON string", TextstylestaticResponse.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!TextstylestaticResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `TextstylestaticResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : TextstylestaticResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sFontName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sFontName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFontName").toString()));
       }
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!TextstylestaticResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'TextstylestaticResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<TextstylestaticResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(TextstylestaticResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<TextstylestaticResponse>() {
+           @Override
+           public void write(JsonWriter out, TextstylestaticResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public TextstylestaticResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of TextstylestaticResponse given an JSON string

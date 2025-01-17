@@ -50,42 +50,36 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PaymenttermRequest {
   public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
-  @javax.annotation.Nullable
   private Integer pkiPaymenttermID;
 
   public static final String SERIALIZED_NAME_S_PAYMENTTERM_CODE = "sPaymenttermCode";
   @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_CODE)
-  @javax.annotation.Nonnull
   private String sPaymenttermCode;
 
   public static final String SERIALIZED_NAME_E_PAYMENTTERM_TYPE = "ePaymenttermType";
   @SerializedName(SERIALIZED_NAME_E_PAYMENTTERM_TYPE)
-  @javax.annotation.Nonnull
   private FieldEPaymenttermType ePaymenttermType;
 
   public static final String SERIALIZED_NAME_I_PAYMENTTERM_DAY = "iPaymenttermDay";
   @SerializedName(SERIALIZED_NAME_I_PAYMENTTERM_DAY)
-  @javax.annotation.Nonnull
   private Integer iPaymenttermDay;
 
   public static final String SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION = "objPaymenttermDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualPaymenttermDescription objPaymenttermDescription;
 
   public static final String SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE = "bPaymenttermIsactive";
   @SerializedName(SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bPaymenttermIsactive;
 
   public PaymenttermRequest() {
   }
 
-  public PaymenttermRequest pkiPaymenttermID(@javax.annotation.Nullable Integer pkiPaymenttermID) {
+  public PaymenttermRequest pkiPaymenttermID(Integer pkiPaymenttermID) {
     this.pkiPaymenttermID = pkiPaymenttermID;
     return this;
   }
@@ -99,12 +93,12 @@ public class PaymenttermRequest {
     return pkiPaymenttermID;
   }
 
-  public void setPkiPaymenttermID(@javax.annotation.Nullable Integer pkiPaymenttermID) {
+  public void setPkiPaymenttermID(Integer pkiPaymenttermID) {
     this.pkiPaymenttermID = pkiPaymenttermID;
   }
 
 
-  public PaymenttermRequest sPaymenttermCode(@javax.annotation.Nonnull String sPaymenttermCode) {
+  public PaymenttermRequest sPaymenttermCode(String sPaymenttermCode) {
     this.sPaymenttermCode = sPaymenttermCode;
     return this;
   }
@@ -118,12 +112,12 @@ public class PaymenttermRequest {
     return sPaymenttermCode;
   }
 
-  public void setsPaymenttermCode(@javax.annotation.Nonnull String sPaymenttermCode) {
+  public void setsPaymenttermCode(String sPaymenttermCode) {
     this.sPaymenttermCode = sPaymenttermCode;
   }
 
 
-  public PaymenttermRequest ePaymenttermType(@javax.annotation.Nonnull FieldEPaymenttermType ePaymenttermType) {
+  public PaymenttermRequest ePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
     this.ePaymenttermType = ePaymenttermType;
     return this;
   }
@@ -137,12 +131,12 @@ public class PaymenttermRequest {
     return ePaymenttermType;
   }
 
-  public void setePaymenttermType(@javax.annotation.Nonnull FieldEPaymenttermType ePaymenttermType) {
+  public void setePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
     this.ePaymenttermType = ePaymenttermType;
   }
 
 
-  public PaymenttermRequest iPaymenttermDay(@javax.annotation.Nonnull Integer iPaymenttermDay) {
+  public PaymenttermRequest iPaymenttermDay(Integer iPaymenttermDay) {
     this.iPaymenttermDay = iPaymenttermDay;
     return this;
   }
@@ -158,12 +152,12 @@ public class PaymenttermRequest {
     return iPaymenttermDay;
   }
 
-  public void setiPaymenttermDay(@javax.annotation.Nonnull Integer iPaymenttermDay) {
+  public void setiPaymenttermDay(Integer iPaymenttermDay) {
     this.iPaymenttermDay = iPaymenttermDay;
   }
 
 
-  public PaymenttermRequest objPaymenttermDescription(@javax.annotation.Nonnull MultilingualPaymenttermDescription objPaymenttermDescription) {
+  public PaymenttermRequest objPaymenttermDescription(MultilingualPaymenttermDescription objPaymenttermDescription) {
     this.objPaymenttermDescription = objPaymenttermDescription;
     return this;
   }
@@ -177,12 +171,12 @@ public class PaymenttermRequest {
     return objPaymenttermDescription;
   }
 
-  public void setObjPaymenttermDescription(@javax.annotation.Nonnull MultilingualPaymenttermDescription objPaymenttermDescription) {
+  public void setObjPaymenttermDescription(MultilingualPaymenttermDescription objPaymenttermDescription) {
     this.objPaymenttermDescription = objPaymenttermDescription;
   }
 
 
-  public PaymenttermRequest bPaymenttermIsactive(@javax.annotation.Nonnull Boolean bPaymenttermIsactive) {
+  public PaymenttermRequest bPaymenttermIsactive(Boolean bPaymenttermIsactive) {
     this.bPaymenttermIsactive = bPaymenttermIsactive;
     return this;
   }
@@ -196,7 +190,7 @@ public class PaymenttermRequest {
     return bPaymenttermIsactive;
   }
 
-  public void setbPaymenttermIsactive(@javax.annotation.Nonnull Boolean bPaymenttermIsactive) {
+  public void setbPaymenttermIsactive(Boolean bPaymenttermIsactive) {
     this.bPaymenttermIsactive = bPaymenttermIsactive;
   }
 
@@ -284,6 +278,21 @@ public class PaymenttermRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in PaymenttermRequest is not found in the empty JSON string", PaymenttermRequest.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!PaymenttermRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PaymenttermRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : PaymenttermRequest.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sPaymenttermCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sPaymenttermCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPaymenttermCode").toString()));
@@ -294,6 +303,34 @@ public class PaymenttermRequest {
       MultilingualPaymenttermDescription.validateJsonElement(jsonObj.get("objPaymenttermDescription"));
   }
 
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!PaymenttermRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'PaymenttermRequest' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<PaymenttermRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(PaymenttermRequest.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<PaymenttermRequest>() {
+           @Override
+           public void write(JsonWriter out, PaymenttermRequest value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public PaymenttermRequest read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
 
   /**
    * Create an instance of PaymenttermRequest given an JSON string

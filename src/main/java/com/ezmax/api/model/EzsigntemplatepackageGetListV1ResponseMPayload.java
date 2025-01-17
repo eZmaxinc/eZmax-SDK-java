@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CommonGetListV1ResponseMPayload;
 import com.ezmax.api.model.EzsigntemplatepackageListElement;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigntemplatepackage/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class EzsigntemplatepackageGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EzsigntemplatepackageGetListV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
+  @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  private Integer iRowReturned;
+
+  public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
+  @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  private Integer iRowFiltered;
+
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE = "a_objEzsigntemplatepackage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE)
-  @javax.annotation.Nonnull
   private List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage = new ArrayList<>();
 
   public EzsigntemplatepackageGetListV1ResponseMPayload() {
   }
 
-  public EzsigntemplatepackageGetListV1ResponseMPayload aObjEzsigntemplatepackage(@javax.annotation.Nonnull List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage) {
+  public EzsigntemplatepackageGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+    return this;
+  }
+
+  /**
+   * The number of rows returned
+   * @return iRowReturned
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowReturned() {
+    return iRowReturned;
+  }
+
+  public void setiRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+  }
+
+
+  public EzsigntemplatepackageGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+    return this;
+  }
+
+  /**
+   * The number of rows matching your filters (if any) or the total number of rows
+   * @return iRowFiltered
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowFiltered() {
+    return iRowFiltered;
+  }
+
+  public void setiRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+  }
+
+
+  public EzsigntemplatepackageGetListV1ResponseMPayload aObjEzsigntemplatepackage(List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage) {
     this.aObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
     return this;
   }
@@ -84,7 +128,7 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload extends CommonGetLis
     return aObjEzsigntemplatepackage;
   }
 
-  public void setaObjEzsigntemplatepackage(@javax.annotation.Nonnull List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage) {
+  public void setaObjEzsigntemplatepackage(List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage) {
     this.aObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
   }
 
@@ -99,20 +143,22 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload extends CommonGetLis
       return false;
     }
     EzsigntemplatepackageGetListV1ResponseMPayload ezsigntemplatepackageGetListV1ResponseMPayload = (EzsigntemplatepackageGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjEzsigntemplatepackage, ezsigntemplatepackageGetListV1ResponseMPayload.aObjEzsigntemplatepackage) &&
-        super.equals(o);
+    return Objects.equals(this.iRowReturned, ezsigntemplatepackageGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, ezsigntemplatepackageGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjEzsigntemplatepackage, ezsigntemplatepackageGetListV1ResponseMPayload.aObjEzsigntemplatepackage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjEzsigntemplatepackage, super.hashCode());
+    return Objects.hash(iRowReturned, iRowFiltered, aObjEzsigntemplatepackage);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplatepackageGetListV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
+    sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
     sb.append("    aObjEzsigntemplatepackage: ").append(toIndentedString(aObjEzsigntemplatepackage)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -142,9 +188,9 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload extends CommonGetLis
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objEzsigntemplatepackage");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objEzsigntemplatepackage");
   }
 
   /**

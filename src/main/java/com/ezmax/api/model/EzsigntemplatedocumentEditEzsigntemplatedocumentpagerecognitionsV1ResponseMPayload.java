@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Response for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/EditEzsigntemplatedocumentpagerecognitions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_I_D = "a_pkiEzsigntemplatedocumentpagerecognitionID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsigntemplatedocumentpagerecognitionID = new ArrayList<>();
 
   public EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload() {
   }
 
-  public EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload aPkiEzsigntemplatedocumentpagerecognitionID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplatedocumentpagerecognitionID) {
+  public EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1ResponseMPayload aPkiEzsigntemplatedocumentpagerecognitionID(List<Integer> aPkiEzsigntemplatedocumentpagerecognitionID) {
     this.aPkiEzsigntemplatedocumentpagerecognitionID = aPkiEzsigntemplatedocumentpagerecognitionID;
     return this;
   }
@@ -82,7 +81,7 @@ public class EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1R
     return aPkiEzsigntemplatedocumentpagerecognitionID;
   }
 
-  public void setaPkiEzsigntemplatedocumentpagerecognitionID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplatedocumentpagerecognitionID) {
+  public void setaPkiEzsigntemplatedocumentpagerecognitionID(List<Integer> aPkiEzsigntemplatedocumentpagerecognitionID) {
     this.aPkiEzsigntemplatedocumentpagerecognitionID = aPkiEzsigntemplatedocumentpagerecognitionID;
   }
 

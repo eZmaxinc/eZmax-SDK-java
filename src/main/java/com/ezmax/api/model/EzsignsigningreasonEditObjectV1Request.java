@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsignsigningreason/{pkiEzsignsigningreasonID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsigningreasonEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNINGREASON = "objEzsignsigningreason";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNINGREASON)
-  @javax.annotation.Nonnull
   private EzsignsigningreasonRequestCompound objEzsignsigningreason;
 
   public EzsignsigningreasonEditObjectV1Request() {
   }
 
-  public EzsignsigningreasonEditObjectV1Request objEzsignsigningreason(@javax.annotation.Nonnull EzsignsigningreasonRequestCompound objEzsignsigningreason) {
+  public EzsignsigningreasonEditObjectV1Request objEzsignsigningreason(EzsignsigningreasonRequestCompound objEzsignsigningreason) {
     this.objEzsignsigningreason = objEzsignsigningreason;
     return this;
   }
@@ -73,7 +72,7 @@ public class EzsignsigningreasonEditObjectV1Request {
     return objEzsignsigningreason;
   }
 
-  public void setObjEzsignsigningreason(@javax.annotation.Nonnull EzsignsigningreasonRequestCompound objEzsignsigningreason) {
+  public void setObjEzsignsigningreason(EzsignsigningreasonRequestCompound objEzsignsigningreason) {
     this.objEzsignsigningreason = objEzsignsigningreason;
   }
 

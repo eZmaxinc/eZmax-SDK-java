@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.AuthenticationexternalListElement;
-import com.ezmax.api.model.CommonGetListV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,17 +51,62 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/authenticationexternal/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class AuthenticationexternalGetListV1ResponseMPayload extends CommonGetListV1ResponseMPayload {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class AuthenticationexternalGetListV1ResponseMPayload {
+  public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
+  @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  private Integer iRowReturned;
+
+  public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
+  @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  private Integer iRowFiltered;
+
   public static final String SERIALIZED_NAME_A_OBJ_AUTHENTICATIONEXTERNAL = "a_objAuthenticationexternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_AUTHENTICATIONEXTERNAL)
-  @javax.annotation.Nonnull
   private List<AuthenticationexternalListElement> aObjAuthenticationexternal = new ArrayList<>();
 
   public AuthenticationexternalGetListV1ResponseMPayload() {
   }
 
-  public AuthenticationexternalGetListV1ResponseMPayload aObjAuthenticationexternal(@javax.annotation.Nonnull List<AuthenticationexternalListElement> aObjAuthenticationexternal) {
+  public AuthenticationexternalGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+    return this;
+  }
+
+  /**
+   * The number of rows returned
+   * @return iRowReturned
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowReturned() {
+    return iRowReturned;
+  }
+
+  public void setiRowReturned(Integer iRowReturned) {
+    this.iRowReturned = iRowReturned;
+  }
+
+
+  public AuthenticationexternalGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+    return this;
+  }
+
+  /**
+   * The number of rows matching your filters (if any) or the total number of rows
+   * @return iRowFiltered
+   */
+  @javax.annotation.Nonnull
+  public Integer getiRowFiltered() {
+    return iRowFiltered;
+  }
+
+  public void setiRowFiltered(Integer iRowFiltered) {
+    this.iRowFiltered = iRowFiltered;
+  }
+
+
+  public AuthenticationexternalGetListV1ResponseMPayload aObjAuthenticationexternal(List<AuthenticationexternalListElement> aObjAuthenticationexternal) {
     this.aObjAuthenticationexternal = aObjAuthenticationexternal;
     return this;
   }
@@ -84,7 +128,7 @@ public class AuthenticationexternalGetListV1ResponseMPayload extends CommonGetLi
     return aObjAuthenticationexternal;
   }
 
-  public void setaObjAuthenticationexternal(@javax.annotation.Nonnull List<AuthenticationexternalListElement> aObjAuthenticationexternal) {
+  public void setaObjAuthenticationexternal(List<AuthenticationexternalListElement> aObjAuthenticationexternal) {
     this.aObjAuthenticationexternal = aObjAuthenticationexternal;
   }
 
@@ -99,20 +143,22 @@ public class AuthenticationexternalGetListV1ResponseMPayload extends CommonGetLi
       return false;
     }
     AuthenticationexternalGetListV1ResponseMPayload authenticationexternalGetListV1ResponseMPayload = (AuthenticationexternalGetListV1ResponseMPayload) o;
-    return Objects.equals(this.aObjAuthenticationexternal, authenticationexternalGetListV1ResponseMPayload.aObjAuthenticationexternal) &&
-        super.equals(o);
+    return Objects.equals(this.iRowReturned, authenticationexternalGetListV1ResponseMPayload.iRowReturned) &&
+        Objects.equals(this.iRowFiltered, authenticationexternalGetListV1ResponseMPayload.iRowFiltered) &&
+        Objects.equals(this.aObjAuthenticationexternal, authenticationexternalGetListV1ResponseMPayload.aObjAuthenticationexternal);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjAuthenticationexternal, super.hashCode());
+    return Objects.hash(iRowReturned, iRowFiltered, aObjAuthenticationexternal);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationexternalGetListV1ResponseMPayload {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    iRowReturned: ").append(toIndentedString(iRowReturned)).append("\n");
+    sb.append("    iRowFiltered: ").append(toIndentedString(iRowFiltered)).append("\n");
     sb.append("    aObjAuthenticationexternal: ").append(toIndentedString(aObjAuthenticationexternal)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -142,9 +188,9 @@ public class AuthenticationexternalGetListV1ResponseMPayload extends CommonGetLi
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("a_objAuthenticationexternal");
     openapiRequiredFields.add("iRowReturned");
     openapiRequiredFields.add("iRowFiltered");
+    openapiRequiredFields.add("a_objAuthenticationexternal");
   }
 
   /**

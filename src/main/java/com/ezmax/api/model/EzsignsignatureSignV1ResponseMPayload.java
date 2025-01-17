@@ -49,22 +49,20 @@ import eZmaxAPI.JSON;
 /**
  * Response for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignatureSignV1ResponseMPayload {
   public static final String SERIALIZED_NAME_DT_EZSIGNSIGNATURE_DATE_IN_FOLDER_TIMEZONE = "dtEzsignsignatureDateInFolderTimezone";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNSIGNATURE_DATE_IN_FOLDER_TIMEZONE)
-  @javax.annotation.Nonnull
   private String dtEzsignsignatureDateInFolderTimezone;
 
   public static final String SERIALIZED_NAME_OBJ_TIMEZONE = "objTimezone";
   @SerializedName(SERIALIZED_NAME_OBJ_TIMEZONE)
-  @javax.annotation.Nullable
   private CustomTimezoneWithCodeResponse objTimezone;
 
   public EzsignsignatureSignV1ResponseMPayload() {
   }
 
-  public EzsignsignatureSignV1ResponseMPayload dtEzsignsignatureDateInFolderTimezone(@javax.annotation.Nonnull String dtEzsignsignatureDateInFolderTimezone) {
+  public EzsignsignatureSignV1ResponseMPayload dtEzsignsignatureDateInFolderTimezone(String dtEzsignsignatureDateInFolderTimezone) {
     this.dtEzsignsignatureDateInFolderTimezone = dtEzsignsignatureDateInFolderTimezone;
     return this;
   }
@@ -78,12 +76,12 @@ public class EzsignsignatureSignV1ResponseMPayload {
     return dtEzsignsignatureDateInFolderTimezone;
   }
 
-  public void setDtEzsignsignatureDateInFolderTimezone(@javax.annotation.Nonnull String dtEzsignsignatureDateInFolderTimezone) {
+  public void setDtEzsignsignatureDateInFolderTimezone(String dtEzsignsignatureDateInFolderTimezone) {
     this.dtEzsignsignatureDateInFolderTimezone = dtEzsignsignatureDateInFolderTimezone;
   }
 
 
-  public EzsignsignatureSignV1ResponseMPayload objTimezone(@javax.annotation.Nullable CustomTimezoneWithCodeResponse objTimezone) {
+  public EzsignsignatureSignV1ResponseMPayload objTimezone(CustomTimezoneWithCodeResponse objTimezone) {
     this.objTimezone = objTimezone;
     return this;
   }
@@ -97,7 +95,7 @@ public class EzsignsignatureSignV1ResponseMPayload {
     return objTimezone;
   }
 
-  public void setObjTimezone(@javax.annotation.Nullable CustomTimezoneWithCodeResponse objTimezone) {
+  public void setObjTimezone(CustomTimezoneWithCodeResponse objTimezone) {
     this.objTimezone = objTimezone;
   }
 

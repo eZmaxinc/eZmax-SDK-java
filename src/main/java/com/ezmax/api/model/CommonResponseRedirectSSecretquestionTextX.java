@@ -48,17 +48,16 @@ import eZmaxAPI.JSON;
 /**
  * 352 Redirect Message containing secret question
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonResponseRedirectSSecretquestionTextX {
   public static final String SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X = "sSecretquestionTextX";
   @SerializedName(SERIALIZED_NAME_S_SECRETQUESTION_TEXT_X)
-  @javax.annotation.Nonnull
   private String sSecretquestionTextX;
 
   public CommonResponseRedirectSSecretquestionTextX() {
   }
 
-  public CommonResponseRedirectSSecretquestionTextX sSecretquestionTextX(@javax.annotation.Nonnull String sSecretquestionTextX) {
+  public CommonResponseRedirectSSecretquestionTextX sSecretquestionTextX(String sSecretquestionTextX) {
     this.sSecretquestionTextX = sSecretquestionTextX;
     return this;
   }
@@ -72,7 +71,7 @@ public class CommonResponseRedirectSSecretquestionTextX {
     return sSecretquestionTextX;
   }
 
-  public void setsSecretquestionTextX(@javax.annotation.Nonnull String sSecretquestionTextX) {
+  public void setsSecretquestionTextX(String sSecretquestionTextX) {
     this.sSecretquestionTextX = sSecretquestionTextX;
   }
 

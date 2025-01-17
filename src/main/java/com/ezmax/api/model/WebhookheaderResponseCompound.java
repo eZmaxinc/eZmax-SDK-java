@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.WebhookheaderResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,10 +48,102 @@ import eZmaxAPI.JSON;
 /**
  * A Webhookheader Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
-public class WebhookheaderResponseCompound extends WebhookheaderResponse {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class WebhookheaderResponseCompound {
+  public static final String SERIALIZED_NAME_PKI_WEBHOOKHEADER_I_D = "pkiWebhookheaderID";
+  @SerializedName(SERIALIZED_NAME_PKI_WEBHOOKHEADER_I_D)
+  private Integer pkiWebhookheaderID;
+
+  public static final String SERIALIZED_NAME_FKI_WEBHOOK_I_D = "fkiWebhookID";
+  @SerializedName(SERIALIZED_NAME_FKI_WEBHOOK_I_D)
+  private Integer fkiWebhookID;
+
+  public static final String SERIALIZED_NAME_S_WEBHOOKHEADER_NAME = "sWebhookheaderName";
+  @SerializedName(SERIALIZED_NAME_S_WEBHOOKHEADER_NAME)
+  private String sWebhookheaderName;
+
+  public static final String SERIALIZED_NAME_S_WEBHOOKHEADER_VALUE = "sWebhookheaderValue";
+  @SerializedName(SERIALIZED_NAME_S_WEBHOOKHEADER_VALUE)
+  private String sWebhookheaderValue;
+
   public WebhookheaderResponseCompound() {
   }
+
+  public WebhookheaderResponseCompound pkiWebhookheaderID(Integer pkiWebhookheaderID) {
+    this.pkiWebhookheaderID = pkiWebhookheaderID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Webhookheader
+   * @return pkiWebhookheaderID
+   */
+  @javax.annotation.Nonnull
+  public Integer getPkiWebhookheaderID() {
+    return pkiWebhookheaderID;
+  }
+
+  public void setPkiWebhookheaderID(Integer pkiWebhookheaderID) {
+    this.pkiWebhookheaderID = pkiWebhookheaderID;
+  }
+
+
+  public WebhookheaderResponseCompound fkiWebhookID(Integer fkiWebhookID) {
+    this.fkiWebhookID = fkiWebhookID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Webhook
+   * @return fkiWebhookID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiWebhookID() {
+    return fkiWebhookID;
+  }
+
+  public void setFkiWebhookID(Integer fkiWebhookID) {
+    this.fkiWebhookID = fkiWebhookID;
+  }
+
+
+  public WebhookheaderResponseCompound sWebhookheaderName(String sWebhookheaderName) {
+    this.sWebhookheaderName = sWebhookheaderName;
+    return this;
+  }
+
+  /**
+   * The Name of the Webhookheader
+   * @return sWebhookheaderName
+   */
+  @javax.annotation.Nonnull
+  public String getsWebhookheaderName() {
+    return sWebhookheaderName;
+  }
+
+  public void setsWebhookheaderName(String sWebhookheaderName) {
+    this.sWebhookheaderName = sWebhookheaderName;
+  }
+
+
+  public WebhookheaderResponseCompound sWebhookheaderValue(String sWebhookheaderValue) {
+    this.sWebhookheaderValue = sWebhookheaderValue;
+    return this;
+  }
+
+  /**
+   * The Value of the Webhookheader
+   * @return sWebhookheaderValue
+   */
+  @javax.annotation.Nonnull
+  public String getsWebhookheaderValue() {
+    return sWebhookheaderValue;
+  }
+
+  public void setsWebhookheaderValue(String sWebhookheaderValue) {
+    this.sWebhookheaderValue = sWebhookheaderValue;
+  }
+
 
 
   @Override
@@ -63,19 +154,26 @@ public class WebhookheaderResponseCompound extends WebhookheaderResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    WebhookheaderResponseCompound webhookheaderResponseCompound = (WebhookheaderResponseCompound) o;
+    return Objects.equals(this.pkiWebhookheaderID, webhookheaderResponseCompound.pkiWebhookheaderID) &&
+        Objects.equals(this.fkiWebhookID, webhookheaderResponseCompound.fkiWebhookID) &&
+        Objects.equals(this.sWebhookheaderName, webhookheaderResponseCompound.sWebhookheaderName) &&
+        Objects.equals(this.sWebhookheaderValue, webhookheaderResponseCompound.sWebhookheaderValue);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(pkiWebhookheaderID, fkiWebhookID, sWebhookheaderName, sWebhookheaderValue);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WebhookheaderResponseCompound {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    pkiWebhookheaderID: ").append(toIndentedString(pkiWebhookheaderID)).append("\n");
+    sb.append("    fkiWebhookID: ").append(toIndentedString(fkiWebhookID)).append("\n");
+    sb.append("    sWebhookheaderName: ").append(toIndentedString(sWebhookheaderName)).append("\n");
+    sb.append("    sWebhookheaderValue: ").append(toIndentedString(sWebhookheaderValue)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -137,6 +235,13 @@ public class WebhookheaderResponseCompound extends WebhookheaderResponse {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sWebhookheaderName").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sWebhookheaderName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookheaderName").toString()));
+      }
+      if (!jsonObj.get("sWebhookheaderValue").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sWebhookheaderValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookheaderValue").toString()));
       }
   }
 

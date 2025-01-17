@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/usergroup/{pkiUsergroupID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:03:32.455495633Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_USERGROUP = "objUsergroup";
   @SerializedName(SERIALIZED_NAME_OBJ_USERGROUP)
-  @javax.annotation.Nonnull
   private UsergroupResponseCompound objUsergroup;
 
   public UsergroupGetObjectV2ResponseMPayload() {
   }
 
-  public UsergroupGetObjectV2ResponseMPayload objUsergroup(@javax.annotation.Nonnull UsergroupResponseCompound objUsergroup) {
+  public UsergroupGetObjectV2ResponseMPayload objUsergroup(UsergroupResponseCompound objUsergroup) {
     this.objUsergroup = objUsergroup;
     return this;
   }
@@ -73,7 +72,7 @@ public class UsergroupGetObjectV2ResponseMPayload {
     return objUsergroup;
   }
 
-  public void setObjUsergroup(@javax.annotation.Nonnull UsergroupResponseCompound objUsergroup) {
+  public void setObjUsergroup(UsergroupResponseCompound objUsergroup) {
     this.objUsergroup = objUsergroup;
   }
 
