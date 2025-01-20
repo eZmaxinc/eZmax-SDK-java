@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezsignfoldertype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfoldertypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE = "a_objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTYPE)
+  @javax.annotation.Nonnull
   private List<EzsignfoldertypeAutocompleteElementResponse> aObjEzsignfoldertype = new ArrayList<>();
 
   public EzsignfoldertypeGetAutocompleteV2ResponseMPayload() {
   }
 
-  public EzsignfoldertypeGetAutocompleteV2ResponseMPayload aObjEzsignfoldertype(List<EzsignfoldertypeAutocompleteElementResponse> aObjEzsignfoldertype) {
+  public EzsignfoldertypeGetAutocompleteV2ResponseMPayload aObjEzsignfoldertype(@javax.annotation.Nonnull List<EzsignfoldertypeAutocompleteElementResponse> aObjEzsignfoldertype) {
     this.aObjEzsignfoldertype = aObjEzsignfoldertype;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzsignfoldertypeGetAutocompleteV2ResponseMPayload {
     return aObjEzsignfoldertype;
   }
 
-  public void setaObjEzsignfoldertype(List<EzsignfoldertypeAutocompleteElementResponse> aObjEzsignfoldertype) {
+  public void setaObjEzsignfoldertype(@javax.annotation.Nonnull List<EzsignfoldertypeAutocompleteElementResponse> aObjEzsignfoldertype) {
     this.aObjEzsignfoldertype = aObjEzsignfoldertype;
   }
 

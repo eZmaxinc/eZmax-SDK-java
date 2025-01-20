@@ -27,10 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplatepackagemembershipCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatepackagemembershipCreateObjectV1Response;
-import com.ezmax.api.model.EzsigntemplatepackagemembershipDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepackagemembershipGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -83,7 +83,8 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -152,7 +153,8 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * @return EzsigntemplatepackagemembershipCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -170,7 +172,8 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * @return ApiResponse&lt;EzsigntemplatepackagemembershipCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -190,7 +193,8 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -210,7 +214,8 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -276,17 +281,18 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * Delete an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID  (required)
-     * @return EzsigntemplatepackagemembershipDeleteObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsigntemplatepackagemembershipDeleteObjectV1Response ezsigntemplatepackagemembershipDeleteObjectV1(Integer pkiEzsigntemplatepackagemembershipID) throws ApiException {
-        ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response> localVarResp = ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID);
+    public CommonResponse ezsigntemplatepackagemembershipDeleteObjectV1(Integer pkiEzsigntemplatepackagemembershipID) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepackagemembershipID);
         return localVarResp.getData();
     }
 
@@ -294,18 +300,19 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * Delete an existing Ezsigntemplatepackagemembership
      * 
      * @param pkiEzsigntemplatepackagemembershipID  (required)
-     * @return ApiResponse&lt;EzsigntemplatepackagemembershipDeleteObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsigntemplatepackagemembershipDeleteObjectV1Response> ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(Integer pkiEzsigntemplatepackagemembershipID) throws ApiException {
+    public ApiResponse<CommonResponse> ezsigntemplatepackagemembershipDeleteObjectV1WithHttpInfo(Integer pkiEzsigntemplatepackagemembershipID) throws ApiException {
         okhttp3.Call localVarCall = ezsigntemplatepackagemembershipDeleteObjectV1ValidateBeforeCall(pkiEzsigntemplatepackagemembershipID, null);
-        Type localVarReturnType = new TypeToken<EzsigntemplatepackagemembershipDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -317,16 +324,17 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatepackagemembershipDeleteObjectV1Async(Integer pkiEzsigntemplatepackagemembershipID, final ApiCallback<EzsigntemplatepackagemembershipDeleteObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatepackagemembershipDeleteObjectV1Async(Integer pkiEzsigntemplatepackagemembershipID, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigntemplatepackagemembershipDeleteObjectV1ValidateBeforeCall(pkiEzsigntemplatepackagemembershipID, _callback);
-        Type localVarReturnType = new TypeToken<EzsigntemplatepackagemembershipDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -337,7 +345,8 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -406,7 +415,8 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * @return EzsigntemplatepackagemembershipGetObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -424,7 +434,8 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * @return ApiResponse&lt;EzsigntemplatepackagemembershipGetObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -444,7 +455,8 @@ public class ObjectEzsigntemplatepackagemembershipApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>

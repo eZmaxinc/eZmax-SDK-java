@@ -48,32 +48,37 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldersignerassociation-&gt;User Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfoldersignerassociationResponseCompoundUser {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
+  @javax.annotation.Nonnull
   private String sUserFirstname;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
+  @javax.annotation.Nonnull
   private String sUserLastname;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  @javax.annotation.Nonnull
   private String sEmailAddress;
 
   public EzsignfoldersignerassociationResponseCompoundUser() {
   }
 
-  public EzsignfoldersignerassociationResponseCompoundUser pkiUserID(Integer pkiUserID) {
+  public EzsignfoldersignerassociationResponseCompoundUser pkiUserID(@javax.annotation.Nonnull Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -88,12 +93,12 @@ public class EzsignfoldersignerassociationResponseCompoundUser {
     return pkiUserID;
   }
 
-  public void setPkiUserID(Integer pkiUserID) {
+  public void setPkiUserID(@javax.annotation.Nonnull Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 
 
-  public EzsignfoldersignerassociationResponseCompoundUser fkiLanguageID(Integer fkiLanguageID) {
+  public EzsignfoldersignerassociationResponseCompoundUser fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -109,12 +114,12 @@ public class EzsignfoldersignerassociationResponseCompoundUser {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(Integer fkiLanguageID) {
+  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public EzsignfoldersignerassociationResponseCompoundUser sUserFirstname(String sUserFirstname) {
+  public EzsignfoldersignerassociationResponseCompoundUser sUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -128,12 +133,12 @@ public class EzsignfoldersignerassociationResponseCompoundUser {
     return sUserFirstname;
   }
 
-  public void setsUserFirstname(String sUserFirstname) {
+  public void setsUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
-  public EzsignfoldersignerassociationResponseCompoundUser sUserLastname(String sUserLastname) {
+  public EzsignfoldersignerassociationResponseCompoundUser sUserLastname(@javax.annotation.Nonnull String sUserLastname) {
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -147,12 +152,12 @@ public class EzsignfoldersignerassociationResponseCompoundUser {
     return sUserLastname;
   }
 
-  public void setsUserLastname(String sUserLastname) {
+  public void setsUserLastname(@javax.annotation.Nonnull String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
-  public EzsignfoldersignerassociationResponseCompoundUser sEmailAddress(String sEmailAddress) {
+  public EzsignfoldersignerassociationResponseCompoundUser sEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -166,7 +171,7 @@ public class EzsignfoldersignerassociationResponseCompoundUser {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(String sEmailAddress) {
+  public void setsEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 

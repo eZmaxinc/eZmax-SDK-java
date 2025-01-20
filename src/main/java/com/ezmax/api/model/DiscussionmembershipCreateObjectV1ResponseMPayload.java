@@ -50,16 +50,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/discussionmembership
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DiscussionmembershipCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_DISCUSSIONMEMBERSHIP_I_D = "a_pkiDiscussionmembershipID";
   @SerializedName(SERIALIZED_NAME_A_PKI_DISCUSSIONMEMBERSHIP_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiDiscussionmembershipID = new ArrayList<>();
 
   public DiscussionmembershipCreateObjectV1ResponseMPayload() {
   }
 
-  public DiscussionmembershipCreateObjectV1ResponseMPayload aPkiDiscussionmembershipID(List<Integer> aPkiDiscussionmembershipID) {
+  public DiscussionmembershipCreateObjectV1ResponseMPayload aPkiDiscussionmembershipID(@javax.annotation.Nonnull List<Integer> aPkiDiscussionmembershipID) {
     this.aPkiDiscussionmembershipID = aPkiDiscussionmembershipID;
     return this;
   }
@@ -81,7 +82,7 @@ public class DiscussionmembershipCreateObjectV1ResponseMPayload {
     return aPkiDiscussionmembershipID;
   }
 
-  public void setaPkiDiscussionmembershipID(List<Integer> aPkiDiscussionmembershipID) {
+  public void setaPkiDiscussionmembershipID(@javax.annotation.Nonnull List<Integer> aPkiDiscussionmembershipID) {
     this.aPkiDiscussionmembershipID = aPkiDiscussionmembershipID;
   }
 

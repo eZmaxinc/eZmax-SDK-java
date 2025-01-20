@@ -50,16 +50,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/paymentterm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class PaymenttermCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_PAYMENTTERM_I_D = "a_pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_A_PKI_PAYMENTTERM_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiPaymenttermID = new ArrayList<>();
 
   public PaymenttermCreateObjectV1ResponseMPayload() {
   }
 
-  public PaymenttermCreateObjectV1ResponseMPayload aPkiPaymenttermID(List<Integer> aPkiPaymenttermID) {
+  public PaymenttermCreateObjectV1ResponseMPayload aPkiPaymenttermID(@javax.annotation.Nonnull List<Integer> aPkiPaymenttermID) {
     this.aPkiPaymenttermID = aPkiPaymenttermID;
     return this;
   }
@@ -81,7 +82,7 @@ public class PaymenttermCreateObjectV1ResponseMPayload {
     return aPkiPaymenttermID;
   }
 
-  public void setaPkiPaymenttermID(List<Integer> aPkiPaymenttermID) {
+  public void setaPkiPaymenttermID(@javax.annotation.Nonnull List<Integer> aPkiPaymenttermID) {
     this.aPkiPaymenttermID = aPkiPaymenttermID;
   }
 

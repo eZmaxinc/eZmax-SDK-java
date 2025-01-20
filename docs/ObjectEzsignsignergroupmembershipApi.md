@@ -80,7 +80,7 @@ public class Example {
 
 <a id="ezsignsignergroupmembershipDeleteObjectV1"></a>
 # **ezsignsignergroupmembershipDeleteObjectV1**
-> EzsignsignergroupmembershipDeleteObjectV1Response ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID)
+> CommonResponse ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID)
 
 Delete an existing Ezsignsignergroupmembership
 
@@ -110,7 +110,7 @@ public class Example {
     ObjectEzsignsignergroupmembershipApi apiInstance = new ObjectEzsignsignergroupmembershipApi(defaultClient);
     Integer pkiEzsignsignergroupmembershipID = 56; // Integer | The unique ID of the Ezsignsignergroupmembership
     try {
-      EzsignsignergroupmembershipDeleteObjectV1Response result = apiInstance.ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID);
+      CommonResponse result = apiInstance.ezsignsignergroupmembershipDeleteObjectV1(pkiEzsignsignergroupmembershipID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignsignergroupmembershipApi#ezsignsignergroupmembershipDeleteObjectV1");
@@ -131,7 +131,7 @@ public class Example {
 
 ### Return type
 
-[**EzsignsignergroupmembershipDeleteObjectV1Response**](EzsignsignergroupmembershipDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

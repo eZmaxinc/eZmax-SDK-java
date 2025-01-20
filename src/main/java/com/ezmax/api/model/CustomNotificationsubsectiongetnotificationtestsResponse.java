@@ -52,36 +52,42 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationsubsection Object in the context of getNotificationtests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomNotificationsubsectiongetnotificationtestsResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D = "pkiNotificationsubsectionID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONSUBSECTION_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiNotificationsubsectionID;
 
   public static final String SERIALIZED_NAME_FKI_NOTIFICATIONSECTION_I_D = "fkiNotificationsectionID";
   @SerializedName(SERIALIZED_NAME_FKI_NOTIFICATIONSECTION_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiNotificationsectionID;
 
   public static final String SERIALIZED_NAME_OBJ_NOTIFICATIONSUBSECTION_NAME = "objNotificationsubsectionName";
   @SerializedName(SERIALIZED_NAME_OBJ_NOTIFICATIONSUBSECTION_NAME)
+  @javax.annotation.Nullable
   private MultilingualNotificationsubsectionName objNotificationsubsectionName;
 
   public static final String SERIALIZED_NAME_S_NOTIFICATIONSECTION_NAME_X = "sNotificationsectionNameX";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONSECTION_NAME_X)
+  @javax.annotation.Nullable
   private String sNotificationsectionNameX;
 
   public static final String SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME_X = "sNotificationsubsectionNameX";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONSUBSECTION_NAME_X)
+  @javax.annotation.Nonnull
   private String sNotificationsubsectionNameX;
 
   public static final String SERIALIZED_NAME_A_OBJ_NOTIFICATIONTEST = "a_objNotificationtest";
   @SerializedName(SERIALIZED_NAME_A_OBJ_NOTIFICATIONTEST)
+  @javax.annotation.Nonnull
   private List<CustomNotificationtestgetnotificationtestsResponse> aObjNotificationtest = new ArrayList<>();
 
   public CustomNotificationsubsectiongetnotificationtestsResponse() {
   }
 
-  public CustomNotificationsubsectiongetnotificationtestsResponse pkiNotificationsubsectionID(Integer pkiNotificationsubsectionID) {
+  public CustomNotificationsubsectiongetnotificationtestsResponse pkiNotificationsubsectionID(@javax.annotation.Nonnull Integer pkiNotificationsubsectionID) {
     this.pkiNotificationsubsectionID = pkiNotificationsubsectionID;
     return this;
   }
@@ -96,12 +102,12 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
     return pkiNotificationsubsectionID;
   }
 
-  public void setPkiNotificationsubsectionID(Integer pkiNotificationsubsectionID) {
+  public void setPkiNotificationsubsectionID(@javax.annotation.Nonnull Integer pkiNotificationsubsectionID) {
     this.pkiNotificationsubsectionID = pkiNotificationsubsectionID;
   }
 
 
-  public CustomNotificationsubsectiongetnotificationtestsResponse fkiNotificationsectionID(Integer fkiNotificationsectionID) {
+  public CustomNotificationsubsectiongetnotificationtestsResponse fkiNotificationsectionID(@javax.annotation.Nonnull Integer fkiNotificationsectionID) {
     this.fkiNotificationsectionID = fkiNotificationsectionID;
     return this;
   }
@@ -116,12 +122,12 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
     return fkiNotificationsectionID;
   }
 
-  public void setFkiNotificationsectionID(Integer fkiNotificationsectionID) {
+  public void setFkiNotificationsectionID(@javax.annotation.Nonnull Integer fkiNotificationsectionID) {
     this.fkiNotificationsectionID = fkiNotificationsectionID;
   }
 
 
-  public CustomNotificationsubsectiongetnotificationtestsResponse objNotificationsubsectionName(MultilingualNotificationsubsectionName objNotificationsubsectionName) {
+  public CustomNotificationsubsectiongetnotificationtestsResponse objNotificationsubsectionName(@javax.annotation.Nullable MultilingualNotificationsubsectionName objNotificationsubsectionName) {
     this.objNotificationsubsectionName = objNotificationsubsectionName;
     return this;
   }
@@ -135,12 +141,12 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
     return objNotificationsubsectionName;
   }
 
-  public void setObjNotificationsubsectionName(MultilingualNotificationsubsectionName objNotificationsubsectionName) {
+  public void setObjNotificationsubsectionName(@javax.annotation.Nullable MultilingualNotificationsubsectionName objNotificationsubsectionName) {
     this.objNotificationsubsectionName = objNotificationsubsectionName;
   }
 
 
-  public CustomNotificationsubsectiongetnotificationtestsResponse sNotificationsectionNameX(String sNotificationsectionNameX) {
+  public CustomNotificationsubsectiongetnotificationtestsResponse sNotificationsectionNameX(@javax.annotation.Nullable String sNotificationsectionNameX) {
     this.sNotificationsectionNameX = sNotificationsectionNameX;
     return this;
   }
@@ -154,12 +160,12 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
     return sNotificationsectionNameX;
   }
 
-  public void setsNotificationsectionNameX(String sNotificationsectionNameX) {
+  public void setsNotificationsectionNameX(@javax.annotation.Nullable String sNotificationsectionNameX) {
     this.sNotificationsectionNameX = sNotificationsectionNameX;
   }
 
 
-  public CustomNotificationsubsectiongetnotificationtestsResponse sNotificationsubsectionNameX(String sNotificationsubsectionNameX) {
+  public CustomNotificationsubsectiongetnotificationtestsResponse sNotificationsubsectionNameX(@javax.annotation.Nonnull String sNotificationsubsectionNameX) {
     this.sNotificationsubsectionNameX = sNotificationsubsectionNameX;
     return this;
   }
@@ -173,12 +179,12 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
     return sNotificationsubsectionNameX;
   }
 
-  public void setsNotificationsubsectionNameX(String sNotificationsubsectionNameX) {
+  public void setsNotificationsubsectionNameX(@javax.annotation.Nonnull String sNotificationsubsectionNameX) {
     this.sNotificationsubsectionNameX = sNotificationsubsectionNameX;
   }
 
 
-  public CustomNotificationsubsectiongetnotificationtestsResponse aObjNotificationtest(List<CustomNotificationtestgetnotificationtestsResponse> aObjNotificationtest) {
+  public CustomNotificationsubsectiongetnotificationtestsResponse aObjNotificationtest(@javax.annotation.Nonnull List<CustomNotificationtestgetnotificationtestsResponse> aObjNotificationtest) {
     this.aObjNotificationtest = aObjNotificationtest;
     return this;
   }
@@ -200,7 +206,7 @@ public class CustomNotificationsubsectiongetnotificationtestsResponse {
     return aObjNotificationtest;
   }
 
-  public void setaObjNotificationtest(List<CustomNotificationtestgetnotificationtestsResponse> aObjNotificationtest) {
+  public void setaObjNotificationtest(@javax.annotation.Nonnull List<CustomNotificationtestgetnotificationtestsResponse> aObjNotificationtest) {
     this.aObjNotificationtest = aObjNotificationtest;
   }
 

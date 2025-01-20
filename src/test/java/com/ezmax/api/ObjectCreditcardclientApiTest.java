@@ -14,18 +14,16 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommonResponseErrorCreditcardValidation;
 import com.ezmax.api.model.CreditcardclientCreateObjectV1Request;
 import com.ezmax.api.model.CreditcardclientCreateObjectV1Response;
-import com.ezmax.api.model.CreditcardclientDeleteObjectV1Response;
 import com.ezmax.api.model.CreditcardclientEditObjectV1Request;
-import com.ezmax.api.model.CreditcardclientEditObjectV1Response;
 import com.ezmax.api.model.CreditcardclientGetAutocompleteV2Response;
 import com.ezmax.api.model.CreditcardclientGetListV1Response;
 import com.ezmax.api.model.CreditcardclientGetObjectV2Response;
 import com.ezmax.api.model.CreditcardclientPatchObjectV1Request;
-import com.ezmax.api.model.CreditcardclientPatchObjectV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
@@ -68,7 +66,7 @@ public class ObjectCreditcardclientApiTest {
     @Test
     public void creditcardclientDeleteObjectV1Test() throws ApiException {
         Integer pkiCreditcardclientID = null;
-        CreditcardclientDeleteObjectV1Response response = api.creditcardclientDeleteObjectV1(pkiCreditcardclientID);
+        CommonResponse response = api.creditcardclientDeleteObjectV1(pkiCreditcardclientID);
         // TODO: test validations
     }
 
@@ -83,7 +81,7 @@ public class ObjectCreditcardclientApiTest {
     public void creditcardclientEditObjectV1Test() throws ApiException {
         Integer pkiCreditcardclientID = null;
         CreditcardclientEditObjectV1Request creditcardclientEditObjectV1Request = null;
-        CreditcardclientEditObjectV1Response response = api.creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request);
+        CommonResponse response = api.creditcardclientEditObjectV1(pkiCreditcardclientID, creditcardclientEditObjectV1Request);
         // TODO: test validations
     }
 
@@ -147,7 +145,7 @@ public class ObjectCreditcardclientApiTest {
     public void creditcardclientPatchObjectV1Test() throws ApiException {
         Integer pkiCreditcardclientID = null;
         CreditcardclientPatchObjectV1Request creditcardclientPatchObjectV1Request = null;
-        CreditcardclientPatchObjectV1Response response = api.creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
+        CommonResponse response = api.creditcardclientPatchObjectV1(pkiCreditcardclientID, creditcardclientPatchObjectV1Request);
         // TODO: test validations
     }
 

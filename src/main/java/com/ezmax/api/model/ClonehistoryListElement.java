@@ -48,56 +48,67 @@ import eZmaxAPI.JSON;
 /**
  * A Clonehistory List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ClonehistoryListElement {
   public static final String SERIALIZED_NAME_PKI_CLONEHISTORY_I_D = "pkiClonehistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_CLONEHISTORY_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiClonehistoryID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D_CLONING = "fkiUserIDCloning";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_CLONING)
+  @javax.annotation.Nonnull
   private Integer fkiUserIDCloning;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D_CLONED = "fkiUserIDCloned";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_CLONED)
+  @javax.annotation.Nonnull
   private Integer fkiUserIDCloned;
 
   public static final String SERIALIZED_NAME_DT_CLONEHISTORY_FIRSTHIT = "dtClonehistoryFirsthit";
   @SerializedName(SERIALIZED_NAME_DT_CLONEHISTORY_FIRSTHIT)
+  @javax.annotation.Nonnull
   private String dtClonehistoryFirsthit;
 
   public static final String SERIALIZED_NAME_DT_CLONEHISTORY_LASTHIT = "dtClonehistoryLasthit";
   @SerializedName(SERIALIZED_NAME_DT_CLONEHISTORY_LASTHIT)
+  @javax.annotation.Nullable
   private String dtClonehistoryLasthit;
 
   public static final String SERIALIZED_NAME_S_USER_LOGINNAME_CLONING = "sUserLoginnameCloning";
   @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME_CLONING)
+  @javax.annotation.Nonnull
   private String sUserLoginnameCloning;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME_CLONING = "sUserFirstnameCloning";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME_CLONING)
+  @javax.annotation.Nonnull
   private String sUserFirstnameCloning;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME_CLONING = "sUserLastnameCloning";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME_CLONING)
+  @javax.annotation.Nonnull
   private String sUserLastnameCloning;
 
   public static final String SERIALIZED_NAME_S_USER_LOGINNAME_CLONED = "sUserLoginnameCloned";
   @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME_CLONED)
+  @javax.annotation.Nonnull
   private String sUserLoginnameCloned;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME_CLONED = "sUserFirstnameCloned";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME_CLONED)
+  @javax.annotation.Nonnull
   private String sUserFirstnameCloned;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME_CLONED = "sUserLastnameCloned";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME_CLONED)
+  @javax.annotation.Nonnull
   private String sUserLastnameCloned;
 
   public ClonehistoryListElement() {
   }
 
-  public ClonehistoryListElement pkiClonehistoryID(Integer pkiClonehistoryID) {
+  public ClonehistoryListElement pkiClonehistoryID(@javax.annotation.Nonnull Integer pkiClonehistoryID) {
     this.pkiClonehistoryID = pkiClonehistoryID;
     return this;
   }
@@ -113,12 +124,12 @@ public class ClonehistoryListElement {
     return pkiClonehistoryID;
   }
 
-  public void setPkiClonehistoryID(Integer pkiClonehistoryID) {
+  public void setPkiClonehistoryID(@javax.annotation.Nonnull Integer pkiClonehistoryID) {
     this.pkiClonehistoryID = pkiClonehistoryID;
   }
 
 
-  public ClonehistoryListElement fkiUserIDCloning(Integer fkiUserIDCloning) {
+  public ClonehistoryListElement fkiUserIDCloning(@javax.annotation.Nonnull Integer fkiUserIDCloning) {
     this.fkiUserIDCloning = fkiUserIDCloning;
     return this;
   }
@@ -133,12 +144,12 @@ public class ClonehistoryListElement {
     return fkiUserIDCloning;
   }
 
-  public void setFkiUserIDCloning(Integer fkiUserIDCloning) {
+  public void setFkiUserIDCloning(@javax.annotation.Nonnull Integer fkiUserIDCloning) {
     this.fkiUserIDCloning = fkiUserIDCloning;
   }
 
 
-  public ClonehistoryListElement fkiUserIDCloned(Integer fkiUserIDCloned) {
+  public ClonehistoryListElement fkiUserIDCloned(@javax.annotation.Nonnull Integer fkiUserIDCloned) {
     this.fkiUserIDCloned = fkiUserIDCloned;
     return this;
   }
@@ -153,12 +164,12 @@ public class ClonehistoryListElement {
     return fkiUserIDCloned;
   }
 
-  public void setFkiUserIDCloned(Integer fkiUserIDCloned) {
+  public void setFkiUserIDCloned(@javax.annotation.Nonnull Integer fkiUserIDCloned) {
     this.fkiUserIDCloned = fkiUserIDCloned;
   }
 
 
-  public ClonehistoryListElement dtClonehistoryFirsthit(String dtClonehistoryFirsthit) {
+  public ClonehistoryListElement dtClonehistoryFirsthit(@javax.annotation.Nonnull String dtClonehistoryFirsthit) {
     this.dtClonehistoryFirsthit = dtClonehistoryFirsthit;
     return this;
   }
@@ -172,12 +183,12 @@ public class ClonehistoryListElement {
     return dtClonehistoryFirsthit;
   }
 
-  public void setDtClonehistoryFirsthit(String dtClonehistoryFirsthit) {
+  public void setDtClonehistoryFirsthit(@javax.annotation.Nonnull String dtClonehistoryFirsthit) {
     this.dtClonehistoryFirsthit = dtClonehistoryFirsthit;
   }
 
 
-  public ClonehistoryListElement dtClonehistoryLasthit(String dtClonehistoryLasthit) {
+  public ClonehistoryListElement dtClonehistoryLasthit(@javax.annotation.Nullable String dtClonehistoryLasthit) {
     this.dtClonehistoryLasthit = dtClonehistoryLasthit;
     return this;
   }
@@ -191,12 +202,12 @@ public class ClonehistoryListElement {
     return dtClonehistoryLasthit;
   }
 
-  public void setDtClonehistoryLasthit(String dtClonehistoryLasthit) {
+  public void setDtClonehistoryLasthit(@javax.annotation.Nullable String dtClonehistoryLasthit) {
     this.dtClonehistoryLasthit = dtClonehistoryLasthit;
   }
 
 
-  public ClonehistoryListElement sUserLoginnameCloning(String sUserLoginnameCloning) {
+  public ClonehistoryListElement sUserLoginnameCloning(@javax.annotation.Nonnull String sUserLoginnameCloning) {
     this.sUserLoginnameCloning = sUserLoginnameCloning;
     return this;
   }
@@ -210,12 +221,12 @@ public class ClonehistoryListElement {
     return sUserLoginnameCloning;
   }
 
-  public void setsUserLoginnameCloning(String sUserLoginnameCloning) {
+  public void setsUserLoginnameCloning(@javax.annotation.Nonnull String sUserLoginnameCloning) {
     this.sUserLoginnameCloning = sUserLoginnameCloning;
   }
 
 
-  public ClonehistoryListElement sUserFirstnameCloning(String sUserFirstnameCloning) {
+  public ClonehistoryListElement sUserFirstnameCloning(@javax.annotation.Nonnull String sUserFirstnameCloning) {
     this.sUserFirstnameCloning = sUserFirstnameCloning;
     return this;
   }
@@ -229,12 +240,12 @@ public class ClonehistoryListElement {
     return sUserFirstnameCloning;
   }
 
-  public void setsUserFirstnameCloning(String sUserFirstnameCloning) {
+  public void setsUserFirstnameCloning(@javax.annotation.Nonnull String sUserFirstnameCloning) {
     this.sUserFirstnameCloning = sUserFirstnameCloning;
   }
 
 
-  public ClonehistoryListElement sUserLastnameCloning(String sUserLastnameCloning) {
+  public ClonehistoryListElement sUserLastnameCloning(@javax.annotation.Nonnull String sUserLastnameCloning) {
     this.sUserLastnameCloning = sUserLastnameCloning;
     return this;
   }
@@ -248,12 +259,12 @@ public class ClonehistoryListElement {
     return sUserLastnameCloning;
   }
 
-  public void setsUserLastnameCloning(String sUserLastnameCloning) {
+  public void setsUserLastnameCloning(@javax.annotation.Nonnull String sUserLastnameCloning) {
     this.sUserLastnameCloning = sUserLastnameCloning;
   }
 
 
-  public ClonehistoryListElement sUserLoginnameCloned(String sUserLoginnameCloned) {
+  public ClonehistoryListElement sUserLoginnameCloned(@javax.annotation.Nonnull String sUserLoginnameCloned) {
     this.sUserLoginnameCloned = sUserLoginnameCloned;
     return this;
   }
@@ -267,12 +278,12 @@ public class ClonehistoryListElement {
     return sUserLoginnameCloned;
   }
 
-  public void setsUserLoginnameCloned(String sUserLoginnameCloned) {
+  public void setsUserLoginnameCloned(@javax.annotation.Nonnull String sUserLoginnameCloned) {
     this.sUserLoginnameCloned = sUserLoginnameCloned;
   }
 
 
-  public ClonehistoryListElement sUserFirstnameCloned(String sUserFirstnameCloned) {
+  public ClonehistoryListElement sUserFirstnameCloned(@javax.annotation.Nonnull String sUserFirstnameCloned) {
     this.sUserFirstnameCloned = sUserFirstnameCloned;
     return this;
   }
@@ -286,12 +297,12 @@ public class ClonehistoryListElement {
     return sUserFirstnameCloned;
   }
 
-  public void setsUserFirstnameCloned(String sUserFirstnameCloned) {
+  public void setsUserFirstnameCloned(@javax.annotation.Nonnull String sUserFirstnameCloned) {
     this.sUserFirstnameCloned = sUserFirstnameCloned;
   }
 
 
-  public ClonehistoryListElement sUserLastnameCloned(String sUserLastnameCloned) {
+  public ClonehistoryListElement sUserLastnameCloned(@javax.annotation.Nonnull String sUserLastnameCloned) {
     this.sUserLastnameCloned = sUserLastnameCloned;
     return this;
   }
@@ -305,7 +316,7 @@ public class ClonehistoryListElement {
     return sUserLastnameCloned;
   }
 
-  public void setsUserLastnameCloned(String sUserLastnameCloned) {
+  public void setsUserLastnameCloned(@javax.annotation.Nonnull String sUserLastnameCloned) {
     this.sUserLastnameCloned = sUserLastnameCloned;
   }
 

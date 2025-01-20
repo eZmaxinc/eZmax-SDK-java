@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DiscussionUpdateDiscussionreadstatusV1Request {
   public static final String SERIALIZED_NAME_DT_DISCUSSIONREADSTATUS_DATE = "dtDiscussionreadstatusDate";
   @SerializedName(SERIALIZED_NAME_DT_DISCUSSIONREADSTATUS_DATE)
+  @javax.annotation.Nullable
   private String dtDiscussionreadstatusDate;
 
   public DiscussionUpdateDiscussionreadstatusV1Request() {
   }
 
-  public DiscussionUpdateDiscussionreadstatusV1Request dtDiscussionreadstatusDate(String dtDiscussionreadstatusDate) {
+  public DiscussionUpdateDiscussionreadstatusV1Request dtDiscussionreadstatusDate(@javax.annotation.Nullable String dtDiscussionreadstatusDate) {
     this.dtDiscussionreadstatusDate = dtDiscussionreadstatusDate;
     return this;
   }
@@ -71,7 +72,7 @@ public class DiscussionUpdateDiscussionreadstatusV1Request {
     return dtDiscussionreadstatusDate;
   }
 
-  public void setDtDiscussionreadstatusDate(String dtDiscussionreadstatusDate) {
+  public void setDtDiscussionreadstatusDate(@javax.annotation.Nullable String dtDiscussionreadstatusDate) {
     this.dtDiscussionreadstatusDate = dtDiscussionreadstatusDate;
   }
 

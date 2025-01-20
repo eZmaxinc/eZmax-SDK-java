@@ -14,12 +14,12 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplatepackagesignerCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatepackagesignerCreateObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepackagesignerDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepackagesignerEditObjectV1Request;
-import com.ezmax.api.model.EzsigntemplatepackagesignerEditObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepackagesignerGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -76,7 +76,7 @@ public class ObjectEzsigntemplatepackagesignerApiTest {
     public void ezsigntemplatepackagesignerEditObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplatepackagesignerID = null;
         EzsigntemplatepackagesignerEditObjectV1Request ezsigntemplatepackagesignerEditObjectV1Request = null;
-        EzsigntemplatepackagesignerEditObjectV1Response response = api.ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request);
+        CommonResponse response = api.ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request);
         // TODO: test validations
     }
 

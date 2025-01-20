@@ -52,68 +52,82 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackage Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepackageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D = "pkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplatepackageID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D = "fkiEzdoctemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzdoctemplatedocumentID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X = "sEzdoctemplatedocumentNameX";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X)
+  @javax.annotation.Nullable
   private String sEzdoctemplatedocumentNameX;
 
   public static final String SERIALIZED_NAME_S_LANGUAGE_NAME_X = "sLanguageNameX";
   @SerializedName(SERIALIZED_NAME_S_LANGUAGE_NAME_X)
+  @javax.annotation.Nonnull
   private String sLanguageNameX;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPACKAGE_DESCRIPTION = "sEzsigntemplatepackageDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPACKAGE_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sEzsigntemplatepackageDescription;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_ADMINONLY = "bEzsigntemplatepackageAdminonly";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_ADMINONLY)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatepackageAdminonly;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION = "bEzsigntemplatepackageNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatepackageNeedvalidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_ISACTIVE = "bEzsigntemplatepackageIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatepackageIsactive;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
+  @javax.annotation.Nonnull
   private String sEzsignfoldertypeNameX;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_EDITALLOWED = "bEzsigntemplatepackageEditallowed";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_EDITALLOWED)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatepackageEditallowed;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGESIGNER = "a_objEzsigntemplatepackagesigner";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGESIGNER)
+  @javax.annotation.Nonnull
   private List<EzsigntemplatepackagesignerResponseCompound> aObjEzsigntemplatepackagesigner = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGEMEMBERSHIP = "a_objEzsigntemplatepackagemembership";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGEMEMBERSHIP)
+  @javax.annotation.Nonnull
   private List<EzsigntemplatepackagemembershipResponseCompound> aObjEzsigntemplatepackagemembership = new ArrayList<>();
 
   public EzsigntemplatepackageResponseCompound() {
   }
 
-  public EzsigntemplatepackageResponseCompound pkiEzsigntemplatepackageID(Integer pkiEzsigntemplatepackageID) {
+  public EzsigntemplatepackageResponseCompound pkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer pkiEzsigntemplatepackageID) {
     this.pkiEzsigntemplatepackageID = pkiEzsigntemplatepackageID;
     return this;
   }
@@ -128,12 +142,12 @@ public class EzsigntemplatepackageResponseCompound {
     return pkiEzsigntemplatepackageID;
   }
 
-  public void setPkiEzsigntemplatepackageID(Integer pkiEzsigntemplatepackageID) {
+  public void setPkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer pkiEzsigntemplatepackageID) {
     this.pkiEzsigntemplatepackageID = pkiEzsigntemplatepackageID;
   }
 
 
-  public EzsigntemplatepackageResponseCompound fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public EzsigntemplatepackageResponseCompound fkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -149,12 +163,12 @@ public class EzsigntemplatepackageResponseCompound {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public EzsigntemplatepackageResponseCompound fkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+  public EzsigntemplatepackageResponseCompound fkiEzdoctemplatedocumentID(@javax.annotation.Nullable Integer fkiEzdoctemplatedocumentID) {
     this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
     return this;
   }
@@ -170,12 +184,12 @@ public class EzsigntemplatepackageResponseCompound {
     return fkiEzdoctemplatedocumentID;
   }
 
-  public void setFkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+  public void setFkiEzdoctemplatedocumentID(@javax.annotation.Nullable Integer fkiEzdoctemplatedocumentID) {
     this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
   }
 
 
-  public EzsigntemplatepackageResponseCompound fkiLanguageID(Integer fkiLanguageID) {
+  public EzsigntemplatepackageResponseCompound fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -191,12 +205,12 @@ public class EzsigntemplatepackageResponseCompound {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(Integer fkiLanguageID) {
+  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public EzsigntemplatepackageResponseCompound sEzdoctemplatedocumentNameX(String sEzdoctemplatedocumentNameX) {
+  public EzsigntemplatepackageResponseCompound sEzdoctemplatedocumentNameX(@javax.annotation.Nullable String sEzdoctemplatedocumentNameX) {
     this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
     return this;
   }
@@ -210,12 +224,12 @@ public class EzsigntemplatepackageResponseCompound {
     return sEzdoctemplatedocumentNameX;
   }
 
-  public void setsEzdoctemplatedocumentNameX(String sEzdoctemplatedocumentNameX) {
+  public void setsEzdoctemplatedocumentNameX(@javax.annotation.Nullable String sEzdoctemplatedocumentNameX) {
     this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
   }
 
 
-  public EzsigntemplatepackageResponseCompound sLanguageNameX(String sLanguageNameX) {
+  public EzsigntemplatepackageResponseCompound sLanguageNameX(@javax.annotation.Nonnull String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
     return this;
   }
@@ -229,12 +243,12 @@ public class EzsigntemplatepackageResponseCompound {
     return sLanguageNameX;
   }
 
-  public void setsLanguageNameX(String sLanguageNameX) {
+  public void setsLanguageNameX(@javax.annotation.Nonnull String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
   }
 
 
-  public EzsigntemplatepackageResponseCompound sEzsigntemplatepackageDescription(String sEzsigntemplatepackageDescription) {
+  public EzsigntemplatepackageResponseCompound sEzsigntemplatepackageDescription(@javax.annotation.Nonnull String sEzsigntemplatepackageDescription) {
     this.sEzsigntemplatepackageDescription = sEzsigntemplatepackageDescription;
     return this;
   }
@@ -248,12 +262,12 @@ public class EzsigntemplatepackageResponseCompound {
     return sEzsigntemplatepackageDescription;
   }
 
-  public void setsEzsigntemplatepackageDescription(String sEzsigntemplatepackageDescription) {
+  public void setsEzsigntemplatepackageDescription(@javax.annotation.Nonnull String sEzsigntemplatepackageDescription) {
     this.sEzsigntemplatepackageDescription = sEzsigntemplatepackageDescription;
   }
 
 
-  public EzsigntemplatepackageResponseCompound bEzsigntemplatepackageAdminonly(Boolean bEzsigntemplatepackageAdminonly) {
+  public EzsigntemplatepackageResponseCompound bEzsigntemplatepackageAdminonly(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageAdminonly) {
     this.bEzsigntemplatepackageAdminonly = bEzsigntemplatepackageAdminonly;
     return this;
   }
@@ -267,12 +281,12 @@ public class EzsigntemplatepackageResponseCompound {
     return bEzsigntemplatepackageAdminonly;
   }
 
-  public void setbEzsigntemplatepackageAdminonly(Boolean bEzsigntemplatepackageAdminonly) {
+  public void setbEzsigntemplatepackageAdminonly(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageAdminonly) {
     this.bEzsigntemplatepackageAdminonly = bEzsigntemplatepackageAdminonly;
   }
 
 
-  public EzsigntemplatepackageResponseCompound bEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
+  public EzsigntemplatepackageResponseCompound bEzsigntemplatepackageNeedvalidation(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageNeedvalidation) {
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
     return this;
   }
@@ -286,12 +300,12 @@ public class EzsigntemplatepackageResponseCompound {
     return bEzsigntemplatepackageNeedvalidation;
   }
 
-  public void setbEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
+  public void setbEzsigntemplatepackageNeedvalidation(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageNeedvalidation) {
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
   }
 
 
-  public EzsigntemplatepackageResponseCompound bEzsigntemplatepackageIsactive(Boolean bEzsigntemplatepackageIsactive) {
+  public EzsigntemplatepackageResponseCompound bEzsigntemplatepackageIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageIsactive) {
     this.bEzsigntemplatepackageIsactive = bEzsigntemplatepackageIsactive;
     return this;
   }
@@ -305,12 +319,12 @@ public class EzsigntemplatepackageResponseCompound {
     return bEzsigntemplatepackageIsactive;
   }
 
-  public void setbEzsigntemplatepackageIsactive(Boolean bEzsigntemplatepackageIsactive) {
+  public void setbEzsigntemplatepackageIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageIsactive) {
     this.bEzsigntemplatepackageIsactive = bEzsigntemplatepackageIsactive;
   }
 
 
-  public EzsigntemplatepackageResponseCompound sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public EzsigntemplatepackageResponseCompound sEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -324,12 +338,12 @@ public class EzsigntemplatepackageResponseCompound {
     return sEzsignfoldertypeNameX;
   }
 
-  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public void setsEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
-  public EzsigntemplatepackageResponseCompound bEzsigntemplatepackageEditallowed(Boolean bEzsigntemplatepackageEditallowed) {
+  public EzsigntemplatepackageResponseCompound bEzsigntemplatepackageEditallowed(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageEditallowed) {
     this.bEzsigntemplatepackageEditallowed = bEzsigntemplatepackageEditallowed;
     return this;
   }
@@ -343,12 +357,12 @@ public class EzsigntemplatepackageResponseCompound {
     return bEzsigntemplatepackageEditallowed;
   }
 
-  public void setbEzsigntemplatepackageEditallowed(Boolean bEzsigntemplatepackageEditallowed) {
+  public void setbEzsigntemplatepackageEditallowed(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageEditallowed) {
     this.bEzsigntemplatepackageEditallowed = bEzsigntemplatepackageEditallowed;
   }
 
 
-  public EzsigntemplatepackageResponseCompound aObjEzsigntemplatepackagesigner(List<EzsigntemplatepackagesignerResponseCompound> aObjEzsigntemplatepackagesigner) {
+  public EzsigntemplatepackageResponseCompound aObjEzsigntemplatepackagesigner(@javax.annotation.Nonnull List<EzsigntemplatepackagesignerResponseCompound> aObjEzsigntemplatepackagesigner) {
     this.aObjEzsigntemplatepackagesigner = aObjEzsigntemplatepackagesigner;
     return this;
   }
@@ -370,12 +384,12 @@ public class EzsigntemplatepackageResponseCompound {
     return aObjEzsigntemplatepackagesigner;
   }
 
-  public void setaObjEzsigntemplatepackagesigner(List<EzsigntemplatepackagesignerResponseCompound> aObjEzsigntemplatepackagesigner) {
+  public void setaObjEzsigntemplatepackagesigner(@javax.annotation.Nonnull List<EzsigntemplatepackagesignerResponseCompound> aObjEzsigntemplatepackagesigner) {
     this.aObjEzsigntemplatepackagesigner = aObjEzsigntemplatepackagesigner;
   }
 
 
-  public EzsigntemplatepackageResponseCompound aObjEzsigntemplatepackagemembership(List<EzsigntemplatepackagemembershipResponseCompound> aObjEzsigntemplatepackagemembership) {
+  public EzsigntemplatepackageResponseCompound aObjEzsigntemplatepackagemembership(@javax.annotation.Nonnull List<EzsigntemplatepackagemembershipResponseCompound> aObjEzsigntemplatepackagemembership) {
     this.aObjEzsigntemplatepackagemembership = aObjEzsigntemplatepackagemembership;
     return this;
   }
@@ -397,7 +411,7 @@ public class EzsigntemplatepackageResponseCompound {
     return aObjEzsigntemplatepackagemembership;
   }
 
-  public void setaObjEzsigntemplatepackagemembership(List<EzsigntemplatepackagemembershipResponseCompound> aObjEzsigntemplatepackagemembership) {
+  public void setaObjEzsigntemplatepackagemembership(@javax.annotation.Nonnull List<EzsigntemplatepackagemembershipResponseCompound> aObjEzsigntemplatepackagemembership) {
     this.aObjEzsigntemplatepackagemembership = aObjEzsigntemplatepackagemembership;
   }
 

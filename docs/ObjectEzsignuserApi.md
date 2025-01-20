@@ -10,7 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsignuserEditObjectV1"></a>
 # **ezsignuserEditObjectV1**
-> EzsignuserEditObjectV1Response ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request)
+> CommonResponse ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request)
 
 Edit an existing Ezsignuser
 
@@ -41,7 +41,7 @@ public class Example {
     Integer pkiEzsignuserID = 56; // Integer | The unique ID of the Ezsignuser
     EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request = new EzsignuserEditObjectV1Request(); // EzsignuserEditObjectV1Request | 
     try {
-      EzsignuserEditObjectV1Response result = apiInstance.ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request);
+      CommonResponse result = apiInstance.ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignuserApi#ezsignuserEditObjectV1");
@@ -63,7 +63,7 @@ public class Example {
 
 ### Return type
 
-[**EzsignuserEditObjectV1Response**](EzsignuserEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

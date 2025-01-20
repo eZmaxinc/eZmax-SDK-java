@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfoldersignerassociation/createEmbeddedUrl
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
   public static final String SERIALIZED_NAME_S_RETURN_URL = "sReturnUrl";
   @SerializedName(SERIALIZED_NAME_S_RETURN_URL)
+  @javax.annotation.Nullable
   private String sReturnUrl;
 
   public static final String SERIALIZED_NAME_S_IFRAMEDOMAIN = "sIframedomain";
   @SerializedName(SERIALIZED_NAME_S_IFRAMEDOMAIN)
+  @javax.annotation.Nullable
   private String sIframedomain;
 
   public static final String SERIALIZED_NAME_B_IS_IFRAME = "bIsIframe";
   @SerializedName(SERIALIZED_NAME_B_IS_IFRAME)
+  @javax.annotation.Nullable
   private Boolean bIsIframe;
 
   public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request() {
   }
 
-  public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request sReturnUrl(String sReturnUrl) {
+  public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request sReturnUrl(@javax.annotation.Nullable String sReturnUrl) {
     this.sReturnUrl = sReturnUrl;
     return this;
   }
@@ -79,12 +82,12 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     return sReturnUrl;
   }
 
-  public void setsReturnUrl(String sReturnUrl) {
+  public void setsReturnUrl(@javax.annotation.Nullable String sReturnUrl) {
     this.sReturnUrl = sReturnUrl;
   }
 
 
-  public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request sIframedomain(String sIframedomain) {
+  public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request sIframedomain(@javax.annotation.Nullable String sIframedomain) {
     this.sIframedomain = sIframedomain;
     return this;
   }
@@ -98,12 +101,12 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     return sIframedomain;
   }
 
-  public void setsIframedomain(String sIframedomain) {
+  public void setsIframedomain(@javax.annotation.Nullable String sIframedomain) {
     this.sIframedomain = sIframedomain;
   }
 
 
-  public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request bIsIframe(Boolean bIsIframe) {
+  public EzsignfoldersignerassociationCreateEmbeddedUrlV1Request bIsIframe(@javax.annotation.Nullable Boolean bIsIframe) {
     this.bIsIframe = bIsIframe;
     return this;
   }
@@ -117,7 +120,7 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1Request {
     return bIsIframe;
   }
 
-  public void setbIsIframe(Boolean bIsIframe) {
+  public void setbIsIframe(@javax.annotation.Nullable Boolean bIsIframe) {
     this.bIsIframe = bIsIframe;
   }
 

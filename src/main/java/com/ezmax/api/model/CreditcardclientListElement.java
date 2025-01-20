@@ -48,52 +48,62 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcardclient List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CreditcardclientListElement {
   public static final String SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D = "pkiCreditcardclientID";
   @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiCreditcardclientID;
 
   public static final String SERIALIZED_NAME_FKI_CREDITCARDDETAIL_I_D = "fkiCreditcarddetailID";
   @SerializedName(SERIALIZED_NAME_FKI_CREDITCARDDETAIL_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiCreditcarddetailID;
 
   public static final String SERIALIZED_NAME_FKI_CREDITCARDTYPE_I_D = "fkiCreditcardtypeID";
   @SerializedName(SERIALIZED_NAME_FKI_CREDITCARDTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiCreditcardtypeID;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENTRELATION_ISDEFAULT = "bCreditcardclientrelationIsdefault";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENTRELATION_ISDEFAULT)
+  @javax.annotation.Nonnull
   private Boolean bCreditcardclientrelationIsdefault;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION = "sCreditcardclientDescription";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sCreditcardclientDescription;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDCOMPANYPAYMENT = "bCreditcardclientAllowedcompanypayment";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDCOMPANYPAYMENT)
+  @javax.annotation.Nonnull
   private Boolean bCreditcardclientAllowedcompanypayment;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDTRANQUILLIT = "bCreditcardclientAllowedtranquillit";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDTRANQUILLIT)
+  @javax.annotation.Nonnull
   private Boolean bCreditcardclientAllowedtranquillit;
 
   public static final String SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONMONTH = "iCreditcarddetailExpirationmonth";
   @SerializedName(SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONMONTH)
+  @javax.annotation.Nonnull
   private Integer iCreditcarddetailExpirationmonth;
 
   public static final String SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONYEAR = "iCreditcarddetailExpirationyear";
   @SerializedName(SERIALIZED_NAME_I_CREDITCARDDETAIL_EXPIRATIONYEAR)
+  @javax.annotation.Nonnull
   private Integer iCreditcarddetailExpirationyear;
 
   public static final String SERIALIZED_NAME_I_CREDITCARDDETAIL_LASTDIGITS = "iCreditcarddetailLastdigits";
   @SerializedName(SERIALIZED_NAME_I_CREDITCARDDETAIL_LASTDIGITS)
+  @javax.annotation.Nonnull
   private Integer iCreditcarddetailLastdigits;
 
   public CreditcardclientListElement() {
   }
 
-  public CreditcardclientListElement pkiCreditcardclientID(Integer pkiCreditcardclientID) {
+  public CreditcardclientListElement pkiCreditcardclientID(@javax.annotation.Nonnull Integer pkiCreditcardclientID) {
     this.pkiCreditcardclientID = pkiCreditcardclientID;
     return this;
   }
@@ -109,12 +119,12 @@ public class CreditcardclientListElement {
     return pkiCreditcardclientID;
   }
 
-  public void setPkiCreditcardclientID(Integer pkiCreditcardclientID) {
+  public void setPkiCreditcardclientID(@javax.annotation.Nonnull Integer pkiCreditcardclientID) {
     this.pkiCreditcardclientID = pkiCreditcardclientID;
   }
 
 
-  public CreditcardclientListElement fkiCreditcarddetailID(Integer fkiCreditcarddetailID) {
+  public CreditcardclientListElement fkiCreditcarddetailID(@javax.annotation.Nonnull Integer fkiCreditcarddetailID) {
     this.fkiCreditcarddetailID = fkiCreditcarddetailID;
     return this;
   }
@@ -130,12 +140,12 @@ public class CreditcardclientListElement {
     return fkiCreditcarddetailID;
   }
 
-  public void setFkiCreditcarddetailID(Integer fkiCreditcarddetailID) {
+  public void setFkiCreditcarddetailID(@javax.annotation.Nonnull Integer fkiCreditcarddetailID) {
     this.fkiCreditcarddetailID = fkiCreditcarddetailID;
   }
 
 
-  public CreditcardclientListElement fkiCreditcardtypeID(Integer fkiCreditcardtypeID) {
+  public CreditcardclientListElement fkiCreditcardtypeID(@javax.annotation.Nonnull Integer fkiCreditcardtypeID) {
     this.fkiCreditcardtypeID = fkiCreditcardtypeID;
     return this;
   }
@@ -151,12 +161,12 @@ public class CreditcardclientListElement {
     return fkiCreditcardtypeID;
   }
 
-  public void setFkiCreditcardtypeID(Integer fkiCreditcardtypeID) {
+  public void setFkiCreditcardtypeID(@javax.annotation.Nonnull Integer fkiCreditcardtypeID) {
     this.fkiCreditcardtypeID = fkiCreditcardtypeID;
   }
 
 
-  public CreditcardclientListElement bCreditcardclientrelationIsdefault(Boolean bCreditcardclientrelationIsdefault) {
+  public CreditcardclientListElement bCreditcardclientrelationIsdefault(@javax.annotation.Nonnull Boolean bCreditcardclientrelationIsdefault) {
     this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
     return this;
   }
@@ -170,12 +180,12 @@ public class CreditcardclientListElement {
     return bCreditcardclientrelationIsdefault;
   }
 
-  public void setbCreditcardclientrelationIsdefault(Boolean bCreditcardclientrelationIsdefault) {
+  public void setbCreditcardclientrelationIsdefault(@javax.annotation.Nonnull Boolean bCreditcardclientrelationIsdefault) {
     this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
   }
 
 
-  public CreditcardclientListElement sCreditcardclientDescription(String sCreditcardclientDescription) {
+  public CreditcardclientListElement sCreditcardclientDescription(@javax.annotation.Nonnull String sCreditcardclientDescription) {
     this.sCreditcardclientDescription = sCreditcardclientDescription;
     return this;
   }
@@ -189,12 +199,12 @@ public class CreditcardclientListElement {
     return sCreditcardclientDescription;
   }
 
-  public void setsCreditcardclientDescription(String sCreditcardclientDescription) {
+  public void setsCreditcardclientDescription(@javax.annotation.Nonnull String sCreditcardclientDescription) {
     this.sCreditcardclientDescription = sCreditcardclientDescription;
   }
 
 
-  public CreditcardclientListElement bCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
+  public CreditcardclientListElement bCreditcardclientAllowedcompanypayment(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedcompanypayment) {
     this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
     return this;
   }
@@ -208,12 +218,12 @@ public class CreditcardclientListElement {
     return bCreditcardclientAllowedcompanypayment;
   }
 
-  public void setbCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
+  public void setbCreditcardclientAllowedcompanypayment(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedcompanypayment) {
     this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
   }
 
 
-  public CreditcardclientListElement bCreditcardclientAllowedtranquillit(Boolean bCreditcardclientAllowedtranquillit) {
+  public CreditcardclientListElement bCreditcardclientAllowedtranquillit(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedtranquillit) {
     this.bCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
     return this;
   }
@@ -227,12 +237,12 @@ public class CreditcardclientListElement {
     return bCreditcardclientAllowedtranquillit;
   }
 
-  public void setbCreditcardclientAllowedtranquillit(Boolean bCreditcardclientAllowedtranquillit) {
+  public void setbCreditcardclientAllowedtranquillit(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedtranquillit) {
     this.bCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
   }
 
 
-  public CreditcardclientListElement iCreditcarddetailExpirationmonth(Integer iCreditcarddetailExpirationmonth) {
+  public CreditcardclientListElement iCreditcarddetailExpirationmonth(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationmonth) {
     this.iCreditcarddetailExpirationmonth = iCreditcarddetailExpirationmonth;
     return this;
   }
@@ -248,12 +258,12 @@ public class CreditcardclientListElement {
     return iCreditcarddetailExpirationmonth;
   }
 
-  public void setiCreditcarddetailExpirationmonth(Integer iCreditcarddetailExpirationmonth) {
+  public void setiCreditcarddetailExpirationmonth(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationmonth) {
     this.iCreditcarddetailExpirationmonth = iCreditcarddetailExpirationmonth;
   }
 
 
-  public CreditcardclientListElement iCreditcarddetailExpirationyear(Integer iCreditcarddetailExpirationyear) {
+  public CreditcardclientListElement iCreditcarddetailExpirationyear(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationyear) {
     this.iCreditcarddetailExpirationyear = iCreditcarddetailExpirationyear;
     return this;
   }
@@ -269,12 +279,12 @@ public class CreditcardclientListElement {
     return iCreditcarddetailExpirationyear;
   }
 
-  public void setiCreditcarddetailExpirationyear(Integer iCreditcarddetailExpirationyear) {
+  public void setiCreditcarddetailExpirationyear(@javax.annotation.Nonnull Integer iCreditcarddetailExpirationyear) {
     this.iCreditcarddetailExpirationyear = iCreditcarddetailExpirationyear;
   }
 
 
-  public CreditcardclientListElement iCreditcarddetailLastdigits(Integer iCreditcarddetailLastdigits) {
+  public CreditcardclientListElement iCreditcarddetailLastdigits(@javax.annotation.Nonnull Integer iCreditcarddetailLastdigits) {
     this.iCreditcarddetailLastdigits = iCreditcarddetailLastdigits;
     return this;
   }
@@ -290,7 +300,7 @@ public class CreditcardclientListElement {
     return iCreditcarddetailLastdigits;
   }
 
-  public void setiCreditcarddetailLastdigits(Integer iCreditcarddetailLastdigits) {
+  public void setiCreditcarddetailLastdigits(@javax.annotation.Nonnull Integer iCreditcarddetailLastdigits) {
     this.iCreditcarddetailLastdigits = iCreditcarddetailLastdigits;
   }
 

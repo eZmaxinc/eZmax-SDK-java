@@ -48,32 +48,37 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class GlobalEzmaxcustomerGetConfigurationV1Response {
   public static final String SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE = "sInfrastructureregionCode";
   @SerializedName(SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE)
+  @javax.annotation.Nonnull
   private String sInfrastructureregionCode;
 
   public static final String SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE_WEB = "sInfrastructureregionCodeWeb";
   @SerializedName(SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE_WEB)
+  @javax.annotation.Nonnull
   private String sInfrastructureregionCodeWeb;
 
   public static final String SERIALIZED_NAME_S_INFRASTRUCTUREENVIRONMENTTYPE_DESCRIPTION = "sInfrastructureenvironmenttypeDescription";
   @SerializedName(SERIALIZED_NAME_S_INFRASTRUCTUREENVIRONMENTTYPE_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sInfrastructureenvironmenttypeDescription;
 
   public static final String SERIALIZED_NAME_S_COGNITO_CLIENT_I_D_EXTERNAL = "sCognitoClientIDExternal";
   @SerializedName(SERIALIZED_NAME_S_COGNITO_CLIENT_I_D_EXTERNAL)
+  @javax.annotation.Nullable
   private String sCognitoClientIDExternal;
 
   public static final String SERIALIZED_NAME_S_COGNITO_CLIENT_I_D_EZMAXPUBLIC = "sCognitoClientIDEzmaxpublic";
   @SerializedName(SERIALIZED_NAME_S_COGNITO_CLIENT_I_D_EZMAXPUBLIC)
+  @javax.annotation.Nonnull
   private String sCognitoClientIDEzmaxpublic;
 
   public GlobalEzmaxcustomerGetConfigurationV1Response() {
   }
 
-  public GlobalEzmaxcustomerGetConfigurationV1Response sInfrastructureregionCode(String sInfrastructureregionCode) {
+  public GlobalEzmaxcustomerGetConfigurationV1Response sInfrastructureregionCode(@javax.annotation.Nonnull String sInfrastructureregionCode) {
     this.sInfrastructureregionCode = sInfrastructureregionCode;
     return this;
   }
@@ -87,12 +92,12 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return sInfrastructureregionCode;
   }
 
-  public void setsInfrastructureregionCode(String sInfrastructureregionCode) {
+  public void setsInfrastructureregionCode(@javax.annotation.Nonnull String sInfrastructureregionCode) {
     this.sInfrastructureregionCode = sInfrastructureregionCode;
   }
 
 
-  public GlobalEzmaxcustomerGetConfigurationV1Response sInfrastructureregionCodeWeb(String sInfrastructureregionCodeWeb) {
+  public GlobalEzmaxcustomerGetConfigurationV1Response sInfrastructureregionCodeWeb(@javax.annotation.Nonnull String sInfrastructureregionCodeWeb) {
     this.sInfrastructureregionCodeWeb = sInfrastructureregionCodeWeb;
     return this;
   }
@@ -106,12 +111,12 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return sInfrastructureregionCodeWeb;
   }
 
-  public void setsInfrastructureregionCodeWeb(String sInfrastructureregionCodeWeb) {
+  public void setsInfrastructureregionCodeWeb(@javax.annotation.Nonnull String sInfrastructureregionCodeWeb) {
     this.sInfrastructureregionCodeWeb = sInfrastructureregionCodeWeb;
   }
 
 
-  public GlobalEzmaxcustomerGetConfigurationV1Response sInfrastructureenvironmenttypeDescription(String sInfrastructureenvironmenttypeDescription) {
+  public GlobalEzmaxcustomerGetConfigurationV1Response sInfrastructureenvironmenttypeDescription(@javax.annotation.Nonnull String sInfrastructureenvironmenttypeDescription) {
     this.sInfrastructureenvironmenttypeDescription = sInfrastructureenvironmenttypeDescription;
     return this;
   }
@@ -125,12 +130,12 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return sInfrastructureenvironmenttypeDescription;
   }
 
-  public void setsInfrastructureenvironmenttypeDescription(String sInfrastructureenvironmenttypeDescription) {
+  public void setsInfrastructureenvironmenttypeDescription(@javax.annotation.Nonnull String sInfrastructureenvironmenttypeDescription) {
     this.sInfrastructureenvironmenttypeDescription = sInfrastructureenvironmenttypeDescription;
   }
 
 
-  public GlobalEzmaxcustomerGetConfigurationV1Response sCognitoClientIDExternal(String sCognitoClientIDExternal) {
+  public GlobalEzmaxcustomerGetConfigurationV1Response sCognitoClientIDExternal(@javax.annotation.Nullable String sCognitoClientIDExternal) {
     this.sCognitoClientIDExternal = sCognitoClientIDExternal;
     return this;
   }
@@ -144,12 +149,12 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return sCognitoClientIDExternal;
   }
 
-  public void setsCognitoClientIDExternal(String sCognitoClientIDExternal) {
+  public void setsCognitoClientIDExternal(@javax.annotation.Nullable String sCognitoClientIDExternal) {
     this.sCognitoClientIDExternal = sCognitoClientIDExternal;
   }
 
 
-  public GlobalEzmaxcustomerGetConfigurationV1Response sCognitoClientIDEzmaxpublic(String sCognitoClientIDEzmaxpublic) {
+  public GlobalEzmaxcustomerGetConfigurationV1Response sCognitoClientIDEzmaxpublic(@javax.annotation.Nonnull String sCognitoClientIDEzmaxpublic) {
     this.sCognitoClientIDEzmaxpublic = sCognitoClientIDEzmaxpublic;
     return this;
   }
@@ -163,7 +168,7 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
     return sCognitoClientIDEzmaxpublic;
   }
 
-  public void setsCognitoClientIDEzmaxpublic(String sCognitoClientIDEzmaxpublic) {
+  public void setsCognitoClientIDEzmaxpublic(@javax.annotation.Nonnull String sCognitoClientIDEzmaxpublic) {
     this.sCognitoClientIDEzmaxpublic = sCognitoClientIDEzmaxpublic;
   }
 

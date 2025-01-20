@@ -49,52 +49,62 @@ import eZmaxAPI.JSON;
 /**
  * A Sessionhistory List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SessionhistoryListElement {
   public static final String SERIALIZED_NAME_PKI_SESSIONHISTORY_I_D = "pkiSessionhistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_SESSIONHISTORY_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiSessionhistoryID;
 
   public static final String SERIALIZED_NAME_FKI_COMPUTER_I_D = "fkiComputerID";
   @SerializedName(SERIALIZED_NAME_FKI_COMPUTER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiComputerID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_DT_SESSIONHISTORY_FIRSTHIT = "dtSessionhistoryFirsthit";
   @SerializedName(SERIALIZED_NAME_DT_SESSIONHISTORY_FIRSTHIT)
+  @javax.annotation.Nonnull
   private String dtSessionhistoryFirsthit;
 
   public static final String SERIALIZED_NAME_DT_SESSIONHISTORY_LASTHIT = "dtSessionhistoryLasthit";
   @SerializedName(SERIALIZED_NAME_DT_SESSIONHISTORY_LASTHIT)
+  @javax.annotation.Nonnull
   private String dtSessionhistoryLasthit;
 
   public static final String SERIALIZED_NAME_E_SESSIONHISTORY_ENDBY = "eSessionhistoryEndby";
   @SerializedName(SERIALIZED_NAME_E_SESSIONHISTORY_ENDBY)
+  @javax.annotation.Nonnull
   private FieldESessionhistoryEndby eSessionhistoryEndby;
 
   public static final String SERIALIZED_NAME_S_COMPUTER_DESCRIPTION = "sComputerDescription";
   @SerializedName(SERIALIZED_NAME_S_COMPUTER_DESCRIPTION)
+  @javax.annotation.Nullable
   private String sComputerDescription;
 
   public static final String SERIALIZED_NAME_S_SESSIONHISTORY_DURATION = "sSessionhistoryDuration";
   @SerializedName(SERIALIZED_NAME_S_SESSIONHISTORY_DURATION)
+  @javax.annotation.Nonnull
   private String sSessionhistoryDuration;
 
   public static final String SERIALIZED_NAME_S_SESSIONHISTORY_I_P = "sSessionhistoryIP";
   @SerializedName(SERIALIZED_NAME_S_SESSIONHISTORY_I_P)
+  @javax.annotation.Nonnull
   private String sSessionhistoryIP;
 
   public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
   @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
+  @javax.annotation.Nullable
   private String sUserLoginname;
 
   public SessionhistoryListElement() {
   }
 
-  public SessionhistoryListElement pkiSessionhistoryID(Integer pkiSessionhistoryID) {
+  public SessionhistoryListElement pkiSessionhistoryID(@javax.annotation.Nonnull Integer pkiSessionhistoryID) {
     this.pkiSessionhistoryID = pkiSessionhistoryID;
     return this;
   }
@@ -110,12 +120,12 @@ public class SessionhistoryListElement {
     return pkiSessionhistoryID;
   }
 
-  public void setPkiSessionhistoryID(Integer pkiSessionhistoryID) {
+  public void setPkiSessionhistoryID(@javax.annotation.Nonnull Integer pkiSessionhistoryID) {
     this.pkiSessionhistoryID = pkiSessionhistoryID;
   }
 
 
-  public SessionhistoryListElement fkiComputerID(Integer fkiComputerID) {
+  public SessionhistoryListElement fkiComputerID(@javax.annotation.Nullable Integer fkiComputerID) {
     this.fkiComputerID = fkiComputerID;
     return this;
   }
@@ -131,12 +141,12 @@ public class SessionhistoryListElement {
     return fkiComputerID;
   }
 
-  public void setFkiComputerID(Integer fkiComputerID) {
+  public void setFkiComputerID(@javax.annotation.Nullable Integer fkiComputerID) {
     this.fkiComputerID = fkiComputerID;
   }
 
 
-  public SessionhistoryListElement fkiUserID(Integer fkiUserID) {
+  public SessionhistoryListElement fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -151,12 +161,12 @@ public class SessionhistoryListElement {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public SessionhistoryListElement dtSessionhistoryFirsthit(String dtSessionhistoryFirsthit) {
+  public SessionhistoryListElement dtSessionhistoryFirsthit(@javax.annotation.Nonnull String dtSessionhistoryFirsthit) {
     this.dtSessionhistoryFirsthit = dtSessionhistoryFirsthit;
     return this;
   }
@@ -170,12 +180,12 @@ public class SessionhistoryListElement {
     return dtSessionhistoryFirsthit;
   }
 
-  public void setDtSessionhistoryFirsthit(String dtSessionhistoryFirsthit) {
+  public void setDtSessionhistoryFirsthit(@javax.annotation.Nonnull String dtSessionhistoryFirsthit) {
     this.dtSessionhistoryFirsthit = dtSessionhistoryFirsthit;
   }
 
 
-  public SessionhistoryListElement dtSessionhistoryLasthit(String dtSessionhistoryLasthit) {
+  public SessionhistoryListElement dtSessionhistoryLasthit(@javax.annotation.Nonnull String dtSessionhistoryLasthit) {
     this.dtSessionhistoryLasthit = dtSessionhistoryLasthit;
     return this;
   }
@@ -189,12 +199,12 @@ public class SessionhistoryListElement {
     return dtSessionhistoryLasthit;
   }
 
-  public void setDtSessionhistoryLasthit(String dtSessionhistoryLasthit) {
+  public void setDtSessionhistoryLasthit(@javax.annotation.Nonnull String dtSessionhistoryLasthit) {
     this.dtSessionhistoryLasthit = dtSessionhistoryLasthit;
   }
 
 
-  public SessionhistoryListElement eSessionhistoryEndby(FieldESessionhistoryEndby eSessionhistoryEndby) {
+  public SessionhistoryListElement eSessionhistoryEndby(@javax.annotation.Nonnull FieldESessionhistoryEndby eSessionhistoryEndby) {
     this.eSessionhistoryEndby = eSessionhistoryEndby;
     return this;
   }
@@ -208,12 +218,12 @@ public class SessionhistoryListElement {
     return eSessionhistoryEndby;
   }
 
-  public void seteSessionhistoryEndby(FieldESessionhistoryEndby eSessionhistoryEndby) {
+  public void seteSessionhistoryEndby(@javax.annotation.Nonnull FieldESessionhistoryEndby eSessionhistoryEndby) {
     this.eSessionhistoryEndby = eSessionhistoryEndby;
   }
 
 
-  public SessionhistoryListElement sComputerDescription(String sComputerDescription) {
+  public SessionhistoryListElement sComputerDescription(@javax.annotation.Nullable String sComputerDescription) {
     this.sComputerDescription = sComputerDescription;
     return this;
   }
@@ -227,12 +237,12 @@ public class SessionhistoryListElement {
     return sComputerDescription;
   }
 
-  public void setsComputerDescription(String sComputerDescription) {
+  public void setsComputerDescription(@javax.annotation.Nullable String sComputerDescription) {
     this.sComputerDescription = sComputerDescription;
   }
 
 
-  public SessionhistoryListElement sSessionhistoryDuration(String sSessionhistoryDuration) {
+  public SessionhistoryListElement sSessionhistoryDuration(@javax.annotation.Nonnull String sSessionhistoryDuration) {
     this.sSessionhistoryDuration = sSessionhistoryDuration;
     return this;
   }
@@ -246,12 +256,12 @@ public class SessionhistoryListElement {
     return sSessionhistoryDuration;
   }
 
-  public void setsSessionhistoryDuration(String sSessionhistoryDuration) {
+  public void setsSessionhistoryDuration(@javax.annotation.Nonnull String sSessionhistoryDuration) {
     this.sSessionhistoryDuration = sSessionhistoryDuration;
   }
 
 
-  public SessionhistoryListElement sSessionhistoryIP(String sSessionhistoryIP) {
+  public SessionhistoryListElement sSessionhistoryIP(@javax.annotation.Nonnull String sSessionhistoryIP) {
     this.sSessionhistoryIP = sSessionhistoryIP;
     return this;
   }
@@ -265,12 +275,12 @@ public class SessionhistoryListElement {
     return sSessionhistoryIP;
   }
 
-  public void setsSessionhistoryIP(String sSessionhistoryIP) {
+  public void setsSessionhistoryIP(@javax.annotation.Nonnull String sSessionhistoryIP) {
     this.sSessionhistoryIP = sSessionhistoryIP;
   }
 
 
-  public SessionhistoryListElement sUserLoginname(String sUserLoginname) {
+  public SessionhistoryListElement sUserLoginname(@javax.annotation.Nullable String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -284,7 +294,7 @@ public class SessionhistoryListElement {
     return sUserLoginname;
   }
 
-  public void setsUserLoginname(String sUserLoginname) {
+  public void setsUserLoginname(@javax.annotation.Nullable String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 

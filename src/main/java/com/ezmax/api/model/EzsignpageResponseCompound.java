@@ -48,40 +48,47 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignpage Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignpageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNPAGE_I_D = "pkiEzsignpageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNPAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsignpageID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNPAGE_WIDTHIMAGE = "iEzsignpageWidthimage";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_WIDTHIMAGE)
+  @javax.annotation.Nonnull
   private Integer iEzsignpageWidthimage;
 
   public static final String SERIALIZED_NAME_I_EZSIGNPAGE_HEIGHTIMAGE = "iEzsignpageHeightimage";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_HEIGHTIMAGE)
+  @javax.annotation.Nonnull
   private Integer iEzsignpageHeightimage;
 
   public static final String SERIALIZED_NAME_I_EZSIGNPAGE_WIDTHPDF = "iEzsignpageWidthpdf";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_WIDTHPDF)
+  @javax.annotation.Nonnull
   private Integer iEzsignpageWidthpdf;
 
   public static final String SERIALIZED_NAME_I_EZSIGNPAGE_HEIGHTPDF = "iEzsignpageHeightpdf";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_HEIGHTPDF)
+  @javax.annotation.Nonnull
   private Integer iEzsignpageHeightpdf;
 
   public static final String SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER = "iEzsignpagePagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER)
+  @javax.annotation.Nonnull
   private Integer iEzsignpagePagenumber;
 
   public static final String SERIALIZED_NAME_S_COMPUTED_IMAGEURL = "sComputedImageurl";
   @SerializedName(SERIALIZED_NAME_S_COMPUTED_IMAGEURL)
+  @javax.annotation.Nonnull
   private String sComputedImageurl;
 
   public EzsignpageResponseCompound() {
   }
 
-  public EzsignpageResponseCompound pkiEzsignpageID(Integer pkiEzsignpageID) {
+  public EzsignpageResponseCompound pkiEzsignpageID(@javax.annotation.Nonnull Integer pkiEzsignpageID) {
     this.pkiEzsignpageID = pkiEzsignpageID;
     return this;
   }
@@ -96,12 +103,12 @@ public class EzsignpageResponseCompound {
     return pkiEzsignpageID;
   }
 
-  public void setPkiEzsignpageID(Integer pkiEzsignpageID) {
+  public void setPkiEzsignpageID(@javax.annotation.Nonnull Integer pkiEzsignpageID) {
     this.pkiEzsignpageID = pkiEzsignpageID;
   }
 
 
-  public EzsignpageResponseCompound iEzsignpageWidthimage(Integer iEzsignpageWidthimage) {
+  public EzsignpageResponseCompound iEzsignpageWidthimage(@javax.annotation.Nonnull Integer iEzsignpageWidthimage) {
     this.iEzsignpageWidthimage = iEzsignpageWidthimage;
     return this;
   }
@@ -116,12 +123,12 @@ public class EzsignpageResponseCompound {
     return iEzsignpageWidthimage;
   }
 
-  public void setiEzsignpageWidthimage(Integer iEzsignpageWidthimage) {
+  public void setiEzsignpageWidthimage(@javax.annotation.Nonnull Integer iEzsignpageWidthimage) {
     this.iEzsignpageWidthimage = iEzsignpageWidthimage;
   }
 
 
-  public EzsignpageResponseCompound iEzsignpageHeightimage(Integer iEzsignpageHeightimage) {
+  public EzsignpageResponseCompound iEzsignpageHeightimage(@javax.annotation.Nonnull Integer iEzsignpageHeightimage) {
     this.iEzsignpageHeightimage = iEzsignpageHeightimage;
     return this;
   }
@@ -136,12 +143,12 @@ public class EzsignpageResponseCompound {
     return iEzsignpageHeightimage;
   }
 
-  public void setiEzsignpageHeightimage(Integer iEzsignpageHeightimage) {
+  public void setiEzsignpageHeightimage(@javax.annotation.Nonnull Integer iEzsignpageHeightimage) {
     this.iEzsignpageHeightimage = iEzsignpageHeightimage;
   }
 
 
-  public EzsignpageResponseCompound iEzsignpageWidthpdf(Integer iEzsignpageWidthpdf) {
+  public EzsignpageResponseCompound iEzsignpageWidthpdf(@javax.annotation.Nonnull Integer iEzsignpageWidthpdf) {
     this.iEzsignpageWidthpdf = iEzsignpageWidthpdf;
     return this;
   }
@@ -156,12 +163,12 @@ public class EzsignpageResponseCompound {
     return iEzsignpageWidthpdf;
   }
 
-  public void setiEzsignpageWidthpdf(Integer iEzsignpageWidthpdf) {
+  public void setiEzsignpageWidthpdf(@javax.annotation.Nonnull Integer iEzsignpageWidthpdf) {
     this.iEzsignpageWidthpdf = iEzsignpageWidthpdf;
   }
 
 
-  public EzsignpageResponseCompound iEzsignpageHeightpdf(Integer iEzsignpageHeightpdf) {
+  public EzsignpageResponseCompound iEzsignpageHeightpdf(@javax.annotation.Nonnull Integer iEzsignpageHeightpdf) {
     this.iEzsignpageHeightpdf = iEzsignpageHeightpdf;
     return this;
   }
@@ -176,12 +183,12 @@ public class EzsignpageResponseCompound {
     return iEzsignpageHeightpdf;
   }
 
-  public void setiEzsignpageHeightpdf(Integer iEzsignpageHeightpdf) {
+  public void setiEzsignpageHeightpdf(@javax.annotation.Nonnull Integer iEzsignpageHeightpdf) {
     this.iEzsignpageHeightpdf = iEzsignpageHeightpdf;
   }
 
 
-  public EzsignpageResponseCompound iEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
+  public EzsignpageResponseCompound iEzsignpagePagenumber(@javax.annotation.Nonnull Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
     return this;
   }
@@ -196,12 +203,12 @@ public class EzsignpageResponseCompound {
     return iEzsignpagePagenumber;
   }
 
-  public void setiEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
+  public void setiEzsignpagePagenumber(@javax.annotation.Nonnull Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
   }
 
 
-  public EzsignpageResponseCompound sComputedImageurl(String sComputedImageurl) {
+  public EzsignpageResponseCompound sComputedImageurl(@javax.annotation.Nonnull String sComputedImageurl) {
     this.sComputedImageurl = sComputedImageurl;
     return this;
   }
@@ -215,7 +222,7 @@ public class EzsignpageResponseCompound {
     return sComputedImageurl;
   }
 
-  public void setsComputedImageurl(String sComputedImageurl) {
+  public void setsComputedImageurl(@javax.annotation.Nonnull String sComputedImageurl) {
     this.sComputedImageurl = sComputedImageurl;
   }
 

@@ -48,40 +48,47 @@ import eZmaxAPI.JSON;
 /**
  * Gives informations about the user that created the object or the last user to have modified it.  If the object was never modified after creation, both Created and Modified informations will be the same. 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonAuditdetail {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_APIKEY_I_D = "fkiApikeyID";
   @SerializedName(SERIALIZED_NAME_FKI_APIKEY_I_D)
+  @javax.annotation.Nullable
   private Integer fkiApikeyID;
 
   public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
   @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
+  @javax.annotation.Nonnull
   private String sUserLoginname;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
+  @javax.annotation.Nonnull
   private String sUserLastname;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
+  @javax.annotation.Nonnull
   private String sUserFirstname;
 
   public static final String SERIALIZED_NAME_S_APIKEY_DESCRIPTION_X = "sApikeyDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_APIKEY_DESCRIPTION_X)
+  @javax.annotation.Nullable
   private String sApikeyDescriptionX;
 
   public static final String SERIALIZED_NAME_DT_AUDITDETAIL_DATE = "dtAuditdetailDate";
   @SerializedName(SERIALIZED_NAME_DT_AUDITDETAIL_DATE)
+  @javax.annotation.Nonnull
   private String dtAuditdetailDate;
 
   public CommonAuditdetail() {
   }
 
-  public CommonAuditdetail fkiUserID(Integer fkiUserID) {
+  public CommonAuditdetail fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -96,12 +103,12 @@ public class CommonAuditdetail {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public CommonAuditdetail fkiApikeyID(Integer fkiApikeyID) {
+  public CommonAuditdetail fkiApikeyID(@javax.annotation.Nullable Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
     return this;
   }
@@ -116,12 +123,12 @@ public class CommonAuditdetail {
     return fkiApikeyID;
   }
 
-  public void setFkiApikeyID(Integer fkiApikeyID) {
+  public void setFkiApikeyID(@javax.annotation.Nullable Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
   }
 
 
-  public CommonAuditdetail sUserLoginname(String sUserLoginname) {
+  public CommonAuditdetail sUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -135,12 +142,12 @@ public class CommonAuditdetail {
     return sUserLoginname;
   }
 
-  public void setsUserLoginname(String sUserLoginname) {
+  public void setsUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
-  public CommonAuditdetail sUserLastname(String sUserLastname) {
+  public CommonAuditdetail sUserLastname(@javax.annotation.Nonnull String sUserLastname) {
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -154,12 +161,12 @@ public class CommonAuditdetail {
     return sUserLastname;
   }
 
-  public void setsUserLastname(String sUserLastname) {
+  public void setsUserLastname(@javax.annotation.Nonnull String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
-  public CommonAuditdetail sUserFirstname(String sUserFirstname) {
+  public CommonAuditdetail sUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -173,12 +180,12 @@ public class CommonAuditdetail {
     return sUserFirstname;
   }
 
-  public void setsUserFirstname(String sUserFirstname) {
+  public void setsUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
-  public CommonAuditdetail sApikeyDescriptionX(String sApikeyDescriptionX) {
+  public CommonAuditdetail sApikeyDescriptionX(@javax.annotation.Nullable String sApikeyDescriptionX) {
     this.sApikeyDescriptionX = sApikeyDescriptionX;
     return this;
   }
@@ -192,12 +199,12 @@ public class CommonAuditdetail {
     return sApikeyDescriptionX;
   }
 
-  public void setsApikeyDescriptionX(String sApikeyDescriptionX) {
+  public void setsApikeyDescriptionX(@javax.annotation.Nullable String sApikeyDescriptionX) {
     this.sApikeyDescriptionX = sApikeyDescriptionX;
   }
 
 
-  public CommonAuditdetail dtAuditdetailDate(String dtAuditdetailDate) {
+  public CommonAuditdetail dtAuditdetailDate(@javax.annotation.Nonnull String dtAuditdetailDate) {
     this.dtAuditdetailDate = dtAuditdetailDate;
     return this;
   }
@@ -211,7 +218,7 @@ public class CommonAuditdetail {
     return dtAuditdetailDate;
   }
 
-  public void setDtAuditdetailDate(String dtAuditdetailDate) {
+  public void setDtAuditdetailDate(@javax.annotation.Nonnull String dtAuditdetailDate) {
     this.dtAuditdetailDate = dtAuditdetailDate;
   }
 

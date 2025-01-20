@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession-&gt;Apikey object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ActivesessionResponseCompoundApikey {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiApikeyID;
 
   public static final String SERIALIZED_NAME_S_APIKEY_DESCRIPTION_X = "sApikeyDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_APIKEY_DESCRIPTION_X)
+  @javax.annotation.Nonnull
   private String sApikeyDescriptionX;
 
   public ActivesessionResponseCompoundApikey() {
   }
 
-  public ActivesessionResponseCompoundApikey pkiApikeyID(Integer pkiApikeyID) {
+  public ActivesessionResponseCompoundApikey pkiApikeyID(@javax.annotation.Nonnull Integer pkiApikeyID) {
     this.pkiApikeyID = pkiApikeyID;
     return this;
   }
@@ -76,12 +78,12 @@ public class ActivesessionResponseCompoundApikey {
     return pkiApikeyID;
   }
 
-  public void setPkiApikeyID(Integer pkiApikeyID) {
+  public void setPkiApikeyID(@javax.annotation.Nonnull Integer pkiApikeyID) {
     this.pkiApikeyID = pkiApikeyID;
   }
 
 
-  public ActivesessionResponseCompoundApikey sApikeyDescriptionX(String sApikeyDescriptionX) {
+  public ActivesessionResponseCompoundApikey sApikeyDescriptionX(@javax.annotation.Nonnull String sApikeyDescriptionX) {
     this.sApikeyDescriptionX = sApikeyDescriptionX;
     return this;
   }
@@ -95,7 +97,7 @@ public class ActivesessionResponseCompoundApikey {
     return sApikeyDescriptionX;
   }
 
-  public void setsApikeyDescriptionX(String sApikeyDescriptionX) {
+  public void setsApikeyDescriptionX(@javax.annotation.Nonnull String sApikeyDescriptionX) {
     this.sApikeyDescriptionX = sApikeyDescriptionX;
   }
 

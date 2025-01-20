@@ -51,32 +51,37 @@ import eZmaxAPI.JSON;
 /**
  * A form Data Signer Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomFormDataSignerResponse {
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldersignerassociationID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
+  @javax.annotation.Nonnull
   private String sContactFirstname;
 
   public static final String SERIALIZED_NAME_S_CONTACT_LASTNAME = "sContactLastname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_LASTNAME)
+  @javax.annotation.Nonnull
   private String sContactLastname;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP = "a_objEzsignformfieldgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP)
+  @javax.annotation.Nonnull
   private List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup = new ArrayList<>();
 
   public CustomFormDataSignerResponse() {
   }
 
-  public CustomFormDataSignerResponse fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
+  public CustomFormDataSignerResponse fkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -91,12 +96,12 @@ public class CustomFormDataSignerResponse {
     return fkiEzsignfoldersignerassociationID;
   }
 
-  public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
+  public void setFkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
   }
 
 
-  public CustomFormDataSignerResponse fkiUserID(Integer fkiUserID) {
+  public CustomFormDataSignerResponse fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -111,12 +116,12 @@ public class CustomFormDataSignerResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public CustomFormDataSignerResponse sContactFirstname(String sContactFirstname) {
+  public CustomFormDataSignerResponse sContactFirstname(@javax.annotation.Nonnull String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -130,12 +135,12 @@ public class CustomFormDataSignerResponse {
     return sContactFirstname;
   }
 
-  public void setsContactFirstname(String sContactFirstname) {
+  public void setsContactFirstname(@javax.annotation.Nonnull String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
-  public CustomFormDataSignerResponse sContactLastname(String sContactLastname) {
+  public CustomFormDataSignerResponse sContactLastname(@javax.annotation.Nonnull String sContactLastname) {
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -149,12 +154,12 @@ public class CustomFormDataSignerResponse {
     return sContactLastname;
   }
 
-  public void setsContactLastname(String sContactLastname) {
+  public void setsContactLastname(@javax.annotation.Nonnull String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 
 
-  public CustomFormDataSignerResponse aObjEzsignformfieldgroup(List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup) {
+  public CustomFormDataSignerResponse aObjEzsignformfieldgroup(@javax.annotation.Nonnull List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup) {
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
     return this;
   }
@@ -176,7 +181,7 @@ public class CustomFormDataSignerResponse {
     return aObjEzsignformfieldgroup;
   }
 
-  public void setaObjEzsignformfieldgroup(List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup) {
+  public void setaObjEzsignformfieldgroup(@javax.annotation.Nonnull List<CustomFormDataEzsignformfieldgroupResponse> aObjEzsignformfieldgroup) {
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
   }
 

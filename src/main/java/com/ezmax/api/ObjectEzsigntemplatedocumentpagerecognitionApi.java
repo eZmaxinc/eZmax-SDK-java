@@ -27,12 +27,11 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionCreateObjectV1Response;
-import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionEditObjectV1Request;
-import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionEditObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -85,7 +84,8 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -153,7 +153,8 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return EzsigntemplatedocumentpagerecognitionCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -170,7 +171,8 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return ApiResponse&lt;EzsigntemplatedocumentpagerecognitionCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -189,7 +191,8 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -208,7 +211,8 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -274,17 +278,18 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * Delete an existing Ezsigntemplatedocumentpagerecognition
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition (required)
-     * @return EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response ezsigntemplatedocumentpagerecognitionDeleteObjectV1(Integer pkiEzsigntemplatedocumentpagerecognitionID) throws ApiException {
-        ApiResponse<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response> localVarResp = ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID);
+    public CommonResponse ezsigntemplatedocumentpagerecognitionDeleteObjectV1(Integer pkiEzsigntemplatedocumentpagerecognitionID) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID);
         return localVarResp.getData();
     }
 
@@ -292,18 +297,19 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * Delete an existing Ezsigntemplatedocumentpagerecognition
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition (required)
-     * @return ApiResponse&lt;EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response> ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(Integer pkiEzsigntemplatedocumentpagerecognitionID) throws ApiException {
+    public ApiResponse<CommonResponse> ezsigntemplatedocumentpagerecognitionDeleteObjectV1WithHttpInfo(Integer pkiEzsigntemplatedocumentpagerecognitionID) throws ApiException {
         okhttp3.Call localVarCall = ezsigntemplatedocumentpagerecognitionDeleteObjectV1ValidateBeforeCall(pkiEzsigntemplatedocumentpagerecognitionID, null);
-        Type localVarReturnType = new TypeToken<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -315,16 +321,17 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatedocumentpagerecognitionDeleteObjectV1Async(Integer pkiEzsigntemplatedocumentpagerecognitionID, final ApiCallback<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatedocumentpagerecognitionDeleteObjectV1Async(Integer pkiEzsigntemplatedocumentpagerecognitionID, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigntemplatedocumentpagerecognitionDeleteObjectV1ValidateBeforeCall(pkiEzsigntemplatedocumentpagerecognitionID, _callback);
-        Type localVarReturnType = new TypeToken<EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -336,7 +343,8 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -410,18 +418,19 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition (required)
      * @param ezsigntemplatedocumentpagerecognitionEditObjectV1Request  (required)
-     * @return EzsigntemplatedocumentpagerecognitionEditObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsigntemplatedocumentpagerecognitionEditObjectV1Response ezsigntemplatedocumentpagerecognitionEditObjectV1(Integer pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request) throws ApiException {
-        ApiResponse<EzsigntemplatedocumentpagerecognitionEditObjectV1Response> localVarResp = ezsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
+    public CommonResponse ezsigntemplatedocumentpagerecognitionEditObjectV1(Integer pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -430,19 +439,20 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * 
      * @param pkiEzsigntemplatedocumentpagerecognitionID The unique ID of the Ezsigntemplatedocumentpagerecognition (required)
      * @param ezsigntemplatedocumentpagerecognitionEditObjectV1Request  (required)
-     * @return ApiResponse&lt;EzsigntemplatedocumentpagerecognitionEditObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsigntemplatedocumentpagerecognitionEditObjectV1Response> ezsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(Integer pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request) throws ApiException {
+    public ApiResponse<CommonResponse> ezsigntemplatedocumentpagerecognitionEditObjectV1WithHttpInfo(Integer pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigntemplatedocumentpagerecognitionEditObjectV1ValidateBeforeCall(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsigntemplatedocumentpagerecognitionEditObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -455,17 +465,18 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatedocumentpagerecognitionEditObjectV1Async(Integer pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, final ApiCallback<EzsigntemplatedocumentpagerecognitionEditObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatedocumentpagerecognitionEditObjectV1Async(Integer pkiEzsigntemplatedocumentpagerecognitionID, EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigntemplatedocumentpagerecognitionEditObjectV1ValidateBeforeCall(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<EzsigntemplatedocumentpagerecognitionEditObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -476,7 +487,8 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -545,7 +557,8 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return EzsigntemplatedocumentpagerecognitionGetObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -563,7 +576,8 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return ApiResponse&lt;EzsigntemplatedocumentpagerecognitionGetObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -583,7 +597,8 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>

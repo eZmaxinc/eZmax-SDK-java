@@ -51,28 +51,32 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfolderSendV3Request {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE = "tEzsignfolderMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE)
+  @javax.annotation.Nullable
   private String tEzsignfolderMessage;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_MESSAGEORDER = "eEzsignfolderMessageorder";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_MESSAGEORDER)
+  @javax.annotation.Nullable
   private FieldEEzsignfolderMessageorder eEzsignfolderMessageorder = FieldEEzsignfolderMessageorder.GLOBAL_FIRST;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_DELAYEDSENDDATE = "dtEzsignfolderDelayedsenddate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_DELAYEDSENDDATE)
+  @javax.annotation.Nullable
   private String dtEzsignfolderDelayedsenddate;
 
   public static final String SERIALIZED_NAME_A_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "a_fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_A_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aFkiEzsignfoldersignerassociationID = new ArrayList<>();
 
   public EzsignfolderSendV3Request() {
   }
 
-  public EzsignfolderSendV3Request tEzsignfolderMessage(String tEzsignfolderMessage) {
+  public EzsignfolderSendV3Request tEzsignfolderMessage(@javax.annotation.Nullable String tEzsignfolderMessage) {
     this.tEzsignfolderMessage = tEzsignfolderMessage;
     return this;
   }
@@ -86,12 +90,12 @@ public class EzsignfolderSendV3Request {
     return tEzsignfolderMessage;
   }
 
-  public void settEzsignfolderMessage(String tEzsignfolderMessage) {
+  public void settEzsignfolderMessage(@javax.annotation.Nullable String tEzsignfolderMessage) {
     this.tEzsignfolderMessage = tEzsignfolderMessage;
   }
 
 
-  public EzsignfolderSendV3Request eEzsignfolderMessageorder(FieldEEzsignfolderMessageorder eEzsignfolderMessageorder) {
+  public EzsignfolderSendV3Request eEzsignfolderMessageorder(@javax.annotation.Nullable FieldEEzsignfolderMessageorder eEzsignfolderMessageorder) {
     this.eEzsignfolderMessageorder = eEzsignfolderMessageorder;
     return this;
   }
@@ -105,12 +109,12 @@ public class EzsignfolderSendV3Request {
     return eEzsignfolderMessageorder;
   }
 
-  public void seteEzsignfolderMessageorder(FieldEEzsignfolderMessageorder eEzsignfolderMessageorder) {
+  public void seteEzsignfolderMessageorder(@javax.annotation.Nullable FieldEEzsignfolderMessageorder eEzsignfolderMessageorder) {
     this.eEzsignfolderMessageorder = eEzsignfolderMessageorder;
   }
 
 
-  public EzsignfolderSendV3Request dtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
+  public EzsignfolderSendV3Request dtEzsignfolderDelayedsenddate(@javax.annotation.Nullable String dtEzsignfolderDelayedsenddate) {
     this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
     return this;
   }
@@ -124,12 +128,12 @@ public class EzsignfolderSendV3Request {
     return dtEzsignfolderDelayedsenddate;
   }
 
-  public void setDtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
+  public void setDtEzsignfolderDelayedsenddate(@javax.annotation.Nullable String dtEzsignfolderDelayedsenddate) {
     this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
   }
 
 
-  public EzsignfolderSendV3Request aFkiEzsignfoldersignerassociationID(List<Integer> aFkiEzsignfoldersignerassociationID) {
+  public EzsignfolderSendV3Request aFkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull List<Integer> aFkiEzsignfoldersignerassociationID) {
     this.aFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -151,7 +155,7 @@ public class EzsignfolderSendV3Request {
     return aFkiEzsignfoldersignerassociationID;
   }
 
-  public void setaFkiEzsignfoldersignerassociationID(List<Integer> aFkiEzsignfoldersignerassociationID) {
+  public void setaFkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull List<Integer> aFkiEzsignfoldersignerassociationID) {
     this.aFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
   }
 

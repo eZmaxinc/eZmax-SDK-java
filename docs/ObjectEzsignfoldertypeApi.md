@@ -83,7 +83,7 @@ public class Example {
 
 <a id="ezsignfoldertypeEditObjectV3"></a>
 # **ezsignfoldertypeEditObjectV3**
-> EzsignfoldertypeEditObjectV3Response ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request)
+> CommonResponse ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request)
 
 Edit an existing Ezsignfoldertype
 
@@ -114,7 +114,7 @@ public class Example {
     Integer pkiEzsignfoldertypeID = 56; // Integer | 
     EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request = new EzsignfoldertypeEditObjectV3Request(); // EzsignfoldertypeEditObjectV3Request | 
     try {
-      EzsignfoldertypeEditObjectV3Response result = apiInstance.ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request);
+      CommonResponse result = apiInstance.ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfoldertypeApi#ezsignfoldertypeEditObjectV3");
@@ -136,7 +136,7 @@ public class Example {
 
 ### Return type
 
-[**EzsignfoldertypeEditObjectV3Response**](EzsignfoldertypeEditObjectV3Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

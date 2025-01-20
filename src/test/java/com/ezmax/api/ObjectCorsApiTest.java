@@ -14,12 +14,11 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CorsCreateObjectV1Request;
 import com.ezmax.api.model.CorsCreateObjectV1Response;
-import com.ezmax.api.model.CorsDeleteObjectV1Response;
 import com.ezmax.api.model.CorsEditObjectV1Request;
-import com.ezmax.api.model.CorsEditObjectV1Response;
 import com.ezmax.api.model.CorsGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -61,7 +60,7 @@ public class ObjectCorsApiTest {
     @Test
     public void corsDeleteObjectV1Test() throws ApiException {
         Integer pkiCorsID = null;
-        CorsDeleteObjectV1Response response = api.corsDeleteObjectV1(pkiCorsID);
+        CommonResponse response = api.corsDeleteObjectV1(pkiCorsID);
         // TODO: test validations
     }
 
@@ -76,7 +75,7 @@ public class ObjectCorsApiTest {
     public void corsEditObjectV1Test() throws ApiException {
         Integer pkiCorsID = null;
         CorsEditObjectV1Request corsEditObjectV1Request = null;
-        CorsEditObjectV1Response response = api.corsEditObjectV1(pkiCorsID, corsEditObjectV1Request);
+        CommonResponse response = api.corsEditObjectV1(pkiCorsID, corsEditObjectV1Request);
         // TODO: test validations
     }
 

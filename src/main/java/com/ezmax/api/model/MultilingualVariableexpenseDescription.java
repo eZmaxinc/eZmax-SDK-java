@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * The description of the Variableexpense
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class MultilingualVariableexpenseDescription {
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION1 = "sVariableexpenseDescription1";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION1)
+  @javax.annotation.Nullable
   private String sVariableexpenseDescription1;
 
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION2 = "sVariableexpenseDescription2";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION2)
+  @javax.annotation.Nullable
   private String sVariableexpenseDescription2;
 
   public MultilingualVariableexpenseDescription() {
   }
 
-  public MultilingualVariableexpenseDescription sVariableexpenseDescription1(String sVariableexpenseDescription1) {
+  public MultilingualVariableexpenseDescription sVariableexpenseDescription1(@javax.annotation.Nullable String sVariableexpenseDescription1) {
     this.sVariableexpenseDescription1 = sVariableexpenseDescription1;
     return this;
   }
@@ -75,12 +77,12 @@ public class MultilingualVariableexpenseDescription {
     return sVariableexpenseDescription1;
   }
 
-  public void setsVariableexpenseDescription1(String sVariableexpenseDescription1) {
+  public void setsVariableexpenseDescription1(@javax.annotation.Nullable String sVariableexpenseDescription1) {
     this.sVariableexpenseDescription1 = sVariableexpenseDescription1;
   }
 
 
-  public MultilingualVariableexpenseDescription sVariableexpenseDescription2(String sVariableexpenseDescription2) {
+  public MultilingualVariableexpenseDescription sVariableexpenseDescription2(@javax.annotation.Nullable String sVariableexpenseDescription2) {
     this.sVariableexpenseDescription2 = sVariableexpenseDescription2;
     return this;
   }
@@ -94,7 +96,7 @@ public class MultilingualVariableexpenseDescription {
     return sVariableexpenseDescription2;
   }
 
-  public void setsVariableexpenseDescription2(String sVariableexpenseDescription2) {
+  public void setsVariableexpenseDescription2(@javax.annotation.Nullable String sVariableexpenseDescription2) {
     this.sVariableexpenseDescription2 = sVariableexpenseDescription2;
   }
 

@@ -48,60 +48,72 @@ import eZmaxAPI.JSON;
 /**
  * A Activesession List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ActivesessionListElement {
   public static final String SERIALIZED_NAME_PKI_ACTIVESESSION_I_D = "pkiActivesessionID";
   @SerializedName(SERIALIZED_NAME_PKI_ACTIVESESSION_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiActivesessionID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_COMPUTER_I_D = "fkiComputerID";
   @SerializedName(SERIALIZED_NAME_FKI_COMPUTER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiComputerID;
 
   public static final String SERIALIZED_NAME_FKI_COMPANY_I_D = "fkiCompanyID";
   @SerializedName(SERIALIZED_NAME_FKI_COMPANY_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiCompanyID;
 
   public static final String SERIALIZED_NAME_FKI_DEPARTMENT_I_D = "fkiDepartmentID";
   @SerializedName(SERIALIZED_NAME_FKI_DEPARTMENT_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiDepartmentID;
 
   public static final String SERIALIZED_NAME_S_COMPANY_NAME_X = "sCompanyNameX";
   @SerializedName(SERIALIZED_NAME_S_COMPANY_NAME_X)
+  @javax.annotation.Nonnull
   private String sCompanyNameX;
 
   public static final String SERIALIZED_NAME_S_DEPARTMENT_NAME_X = "sDepartmentNameX";
   @SerializedName(SERIALIZED_NAME_S_DEPARTMENT_NAME_X)
+  @javax.annotation.Nonnull
   private String sDepartmentNameX;
 
   public static final String SERIALIZED_NAME_S_ACTIVESESSION_LOGINNAME = "sActivesessionLoginname";
   @SerializedName(SERIALIZED_NAME_S_ACTIVESESSION_LOGINNAME)
+  @javax.annotation.Nonnull
   private String sActivesessionLoginname;
 
   public static final String SERIALIZED_NAME_S_COMPUTER_DESCRIPTION = "sComputerDescription";
   @SerializedName(SERIALIZED_NAME_S_COMPUTER_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sComputerDescription;
 
   public static final String SERIALIZED_NAME_DT_ACTIVESESSION_FIRSTHIT = "dtActivesessionFirsthit";
   @SerializedName(SERIALIZED_NAME_DT_ACTIVESESSION_FIRSTHIT)
+  @javax.annotation.Nonnull
   private String dtActivesessionFirsthit;
 
   public static final String SERIALIZED_NAME_DT_ACTIVESESSION_LASTHIT = "dtActivesessionLasthit";
   @SerializedName(SERIALIZED_NAME_DT_ACTIVESESSION_LASTHIT)
+  @javax.annotation.Nonnull
   private String dtActivesessionLasthit;
 
   public static final String SERIALIZED_NAME_S_ACTIVESESSION_I_P = "sActivesessionIP";
   @SerializedName(SERIALIZED_NAME_S_ACTIVESESSION_I_P)
+  @javax.annotation.Nonnull
   private String sActivesessionIP;
 
   public ActivesessionListElement() {
   }
 
-  public ActivesessionListElement pkiActivesessionID(Integer pkiActivesessionID) {
+  public ActivesessionListElement pkiActivesessionID(@javax.annotation.Nonnull Integer pkiActivesessionID) {
     this.pkiActivesessionID = pkiActivesessionID;
     return this;
   }
@@ -115,12 +127,12 @@ public class ActivesessionListElement {
     return pkiActivesessionID;
   }
 
-  public void setPkiActivesessionID(Integer pkiActivesessionID) {
+  public void setPkiActivesessionID(@javax.annotation.Nonnull Integer pkiActivesessionID) {
     this.pkiActivesessionID = pkiActivesessionID;
   }
 
 
-  public ActivesessionListElement fkiUserID(Integer fkiUserID) {
+  public ActivesessionListElement fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -135,12 +147,12 @@ public class ActivesessionListElement {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public ActivesessionListElement fkiComputerID(Integer fkiComputerID) {
+  public ActivesessionListElement fkiComputerID(@javax.annotation.Nonnull Integer fkiComputerID) {
     this.fkiComputerID = fkiComputerID;
     return this;
   }
@@ -156,12 +168,12 @@ public class ActivesessionListElement {
     return fkiComputerID;
   }
 
-  public void setFkiComputerID(Integer fkiComputerID) {
+  public void setFkiComputerID(@javax.annotation.Nonnull Integer fkiComputerID) {
     this.fkiComputerID = fkiComputerID;
   }
 
 
-  public ActivesessionListElement fkiCompanyID(Integer fkiCompanyID) {
+  public ActivesessionListElement fkiCompanyID(@javax.annotation.Nonnull Integer fkiCompanyID) {
     this.fkiCompanyID = fkiCompanyID;
     return this;
   }
@@ -177,12 +189,12 @@ public class ActivesessionListElement {
     return fkiCompanyID;
   }
 
-  public void setFkiCompanyID(Integer fkiCompanyID) {
+  public void setFkiCompanyID(@javax.annotation.Nonnull Integer fkiCompanyID) {
     this.fkiCompanyID = fkiCompanyID;
   }
 
 
-  public ActivesessionListElement fkiDepartmentID(Integer fkiDepartmentID) {
+  public ActivesessionListElement fkiDepartmentID(@javax.annotation.Nonnull Integer fkiDepartmentID) {
     this.fkiDepartmentID = fkiDepartmentID;
     return this;
   }
@@ -197,12 +209,12 @@ public class ActivesessionListElement {
     return fkiDepartmentID;
   }
 
-  public void setFkiDepartmentID(Integer fkiDepartmentID) {
+  public void setFkiDepartmentID(@javax.annotation.Nonnull Integer fkiDepartmentID) {
     this.fkiDepartmentID = fkiDepartmentID;
   }
 
 
-  public ActivesessionListElement sCompanyNameX(String sCompanyNameX) {
+  public ActivesessionListElement sCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -216,12 +228,12 @@ public class ActivesessionListElement {
     return sCompanyNameX;
   }
 
-  public void setsCompanyNameX(String sCompanyNameX) {
+  public void setsCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
   }
 
 
-  public ActivesessionListElement sDepartmentNameX(String sDepartmentNameX) {
+  public ActivesessionListElement sDepartmentNameX(@javax.annotation.Nonnull String sDepartmentNameX) {
     this.sDepartmentNameX = sDepartmentNameX;
     return this;
   }
@@ -235,12 +247,12 @@ public class ActivesessionListElement {
     return sDepartmentNameX;
   }
 
-  public void setsDepartmentNameX(String sDepartmentNameX) {
+  public void setsDepartmentNameX(@javax.annotation.Nonnull String sDepartmentNameX) {
     this.sDepartmentNameX = sDepartmentNameX;
   }
 
 
-  public ActivesessionListElement sActivesessionLoginname(String sActivesessionLoginname) {
+  public ActivesessionListElement sActivesessionLoginname(@javax.annotation.Nonnull String sActivesessionLoginname) {
     this.sActivesessionLoginname = sActivesessionLoginname;
     return this;
   }
@@ -254,12 +266,12 @@ public class ActivesessionListElement {
     return sActivesessionLoginname;
   }
 
-  public void setsActivesessionLoginname(String sActivesessionLoginname) {
+  public void setsActivesessionLoginname(@javax.annotation.Nonnull String sActivesessionLoginname) {
     this.sActivesessionLoginname = sActivesessionLoginname;
   }
 
 
-  public ActivesessionListElement sComputerDescription(String sComputerDescription) {
+  public ActivesessionListElement sComputerDescription(@javax.annotation.Nonnull String sComputerDescription) {
     this.sComputerDescription = sComputerDescription;
     return this;
   }
@@ -273,12 +285,12 @@ public class ActivesessionListElement {
     return sComputerDescription;
   }
 
-  public void setsComputerDescription(String sComputerDescription) {
+  public void setsComputerDescription(@javax.annotation.Nonnull String sComputerDescription) {
     this.sComputerDescription = sComputerDescription;
   }
 
 
-  public ActivesessionListElement dtActivesessionFirsthit(String dtActivesessionFirsthit) {
+  public ActivesessionListElement dtActivesessionFirsthit(@javax.annotation.Nonnull String dtActivesessionFirsthit) {
     this.dtActivesessionFirsthit = dtActivesessionFirsthit;
     return this;
   }
@@ -292,12 +304,12 @@ public class ActivesessionListElement {
     return dtActivesessionFirsthit;
   }
 
-  public void setDtActivesessionFirsthit(String dtActivesessionFirsthit) {
+  public void setDtActivesessionFirsthit(@javax.annotation.Nonnull String dtActivesessionFirsthit) {
     this.dtActivesessionFirsthit = dtActivesessionFirsthit;
   }
 
 
-  public ActivesessionListElement dtActivesessionLasthit(String dtActivesessionLasthit) {
+  public ActivesessionListElement dtActivesessionLasthit(@javax.annotation.Nonnull String dtActivesessionLasthit) {
     this.dtActivesessionLasthit = dtActivesessionLasthit;
     return this;
   }
@@ -311,12 +323,12 @@ public class ActivesessionListElement {
     return dtActivesessionLasthit;
   }
 
-  public void setDtActivesessionLasthit(String dtActivesessionLasthit) {
+  public void setDtActivesessionLasthit(@javax.annotation.Nonnull String dtActivesessionLasthit) {
     this.dtActivesessionLasthit = dtActivesessionLasthit;
   }
 
 
-  public ActivesessionListElement sActivesessionIP(String sActivesessionIP) {
+  public ActivesessionListElement sActivesessionIP(@javax.annotation.Nonnull String sActivesessionIP) {
     this.sActivesessionIP = sActivesessionIP;
     return this;
   }
@@ -330,7 +342,7 @@ public class ActivesessionListElement {
     return sActivesessionIP;
   }
 
-  public void setsActivesessionIP(String sActivesessionIP) {
+  public void setsActivesessionIP(@javax.annotation.Nonnull String sActivesessionIP) {
     this.sActivesessionIP = sActivesessionIP;
   }
 

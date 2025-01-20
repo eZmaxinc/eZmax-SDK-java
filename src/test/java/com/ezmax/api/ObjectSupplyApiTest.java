@@ -14,14 +14,13 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.SupplyCreateObjectV1Request;
 import com.ezmax.api.model.SupplyCreateObjectV1Response;
-import com.ezmax.api.model.SupplyDeleteObjectV1Response;
 import com.ezmax.api.model.SupplyEditObjectV1Request;
-import com.ezmax.api.model.SupplyEditObjectV1Response;
 import com.ezmax.api.model.SupplyGetAutocompleteV2Response;
 import com.ezmax.api.model.SupplyGetListV1Response;
 import com.ezmax.api.model.SupplyGetObjectV2Response;
@@ -65,7 +64,7 @@ public class ObjectSupplyApiTest {
     @Test
     public void supplyDeleteObjectV1Test() throws ApiException {
         Integer pkiSupplyID = null;
-        SupplyDeleteObjectV1Response response = api.supplyDeleteObjectV1(pkiSupplyID);
+        CommonResponse response = api.supplyDeleteObjectV1(pkiSupplyID);
         // TODO: test validations
     }
 
@@ -80,7 +79,7 @@ public class ObjectSupplyApiTest {
     public void supplyEditObjectV1Test() throws ApiException {
         Integer pkiSupplyID = null;
         SupplyEditObjectV1Request supplyEditObjectV1Request = null;
-        SupplyEditObjectV1Response response = api.supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request);
+        CommonResponse response = api.supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request);
         // TODO: test validations
     }
 

@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/user/{pkiUserID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
   @SerializedName(SERIALIZED_NAME_OBJ_USER)
+  @javax.annotation.Nonnull
   private UserRequestCompound objUser;
 
   public UserEditObjectV1Request() {
   }
 
-  public UserEditObjectV1Request objUser(UserRequestCompound objUser) {
+  public UserEditObjectV1Request objUser(@javax.annotation.Nonnull UserRequestCompound objUser) {
     this.objUser = objUser;
     return this;
   }
@@ -72,7 +73,7 @@ public class UserEditObjectV1Request {
     return objUser;
   }
 
-  public void setObjUser(UserRequestCompound objUser) {
+  public void setObjUser(@javax.annotation.Nonnull UserRequestCompound objUser) {
     this.objUser = objUser;
   }
 

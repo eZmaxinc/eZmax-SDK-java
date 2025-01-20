@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/usergroupdelegation/{pkiUsergroupdelegationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupdelegationEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_USERGROUPDELEGATION = "objUsergroupdelegation";
   @SerializedName(SERIALIZED_NAME_OBJ_USERGROUPDELEGATION)
+  @javax.annotation.Nonnull
   private UsergroupdelegationRequestCompound objUsergroupdelegation;
 
   public UsergroupdelegationEditObjectV1Request() {
   }
 
-  public UsergroupdelegationEditObjectV1Request objUsergroupdelegation(UsergroupdelegationRequestCompound objUsergroupdelegation) {
+  public UsergroupdelegationEditObjectV1Request objUsergroupdelegation(@javax.annotation.Nonnull UsergroupdelegationRequestCompound objUsergroupdelegation) {
     this.objUsergroupdelegation = objUsergroupdelegation;
     return this;
   }
@@ -72,7 +73,7 @@ public class UsergroupdelegationEditObjectV1Request {
     return objUsergroupdelegation;
   }
 
-  public void setObjUsergroupdelegation(UsergroupdelegationRequestCompound objUsergroupdelegation) {
+  public void setObjUsergroupdelegation(@javax.annotation.Nonnull UsergroupdelegationRequestCompound objUsergroupdelegation) {
     this.objUsergroupdelegation = objUsergroupdelegation;
   }
 

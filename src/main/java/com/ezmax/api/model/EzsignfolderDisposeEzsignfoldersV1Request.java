@@ -50,16 +50,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/disposeEzsignfolders
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfolderDisposeEzsignfoldersV1Request {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFOLDER_I_D = "a_pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFOLDER_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsignfolderID = new ArrayList<>();
 
   public EzsignfolderDisposeEzsignfoldersV1Request() {
   }
 
-  public EzsignfolderDisposeEzsignfoldersV1Request aPkiEzsignfolderID(List<Integer> aPkiEzsignfolderID) {
+  public EzsignfolderDisposeEzsignfoldersV1Request aPkiEzsignfolderID(@javax.annotation.Nonnull List<Integer> aPkiEzsignfolderID) {
     this.aPkiEzsignfolderID = aPkiEzsignfolderID;
     return this;
   }
@@ -81,7 +82,7 @@ public class EzsignfolderDisposeEzsignfoldersV1Request {
     return aPkiEzsignfolderID;
   }
 
-  public void setaPkiEzsignfolderID(List<Integer> aPkiEzsignfolderID) {
+  public void setaPkiEzsignfolderID(@javax.annotation.Nonnull List<Integer> aPkiEzsignfolderID) {
     this.aPkiEzsignfolderID = aPkiEzsignfolderID;
   }
 

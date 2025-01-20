@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /2/object/user/{pkiUserID}/editColleagues
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserEditColleaguesV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_COLLEAGUE = "a_objColleague";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COLLEAGUE)
+  @javax.annotation.Nonnull
   private List<ColleagueRequestCompoundV2> aObjColleague = new ArrayList<>();
 
   public UserEditColleaguesV2Request() {
   }
 
-  public UserEditColleaguesV2Request aObjColleague(List<ColleagueRequestCompoundV2> aObjColleague) {
+  public UserEditColleaguesV2Request aObjColleague(@javax.annotation.Nonnull List<ColleagueRequestCompoundV2> aObjColleague) {
     this.aObjColleague = aObjColleague;
     return this;
   }
@@ -82,7 +83,7 @@ public class UserEditColleaguesV2Request {
     return aObjColleague;
   }
 
-  public void setaObjColleague(List<ColleagueRequestCompoundV2> aObjColleague) {
+  public void setaObjColleague(@javax.annotation.Nonnull List<ColleagueRequestCompoundV2> aObjColleague) {
     this.aObjColleague = aObjColleague;
   }
 

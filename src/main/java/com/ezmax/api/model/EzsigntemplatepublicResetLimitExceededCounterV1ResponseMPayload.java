@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}/resetLimitExceededCounter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepublicResetLimitExceededCounterV1ResponseMPayload {
   public static final String SERIALIZED_NAME_DT_EZSIGNTEMPLATEPUBLIC_LIMITEXCEEDEDSINCE = "dtEzsigntemplatepublicLimitexceededsince";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNTEMPLATEPUBLIC_LIMITEXCEEDEDSINCE)
+  @javax.annotation.Nonnull
   private String dtEzsigntemplatepublicLimitexceededsince;
 
   public EzsigntemplatepublicResetLimitExceededCounterV1ResponseMPayload() {
   }
 
-  public EzsigntemplatepublicResetLimitExceededCounterV1ResponseMPayload dtEzsigntemplatepublicLimitexceededsince(String dtEzsigntemplatepublicLimitexceededsince) {
+  public EzsigntemplatepublicResetLimitExceededCounterV1ResponseMPayload dtEzsigntemplatepublicLimitexceededsince(@javax.annotation.Nonnull String dtEzsigntemplatepublicLimitexceededsince) {
     this.dtEzsigntemplatepublicLimitexceededsince = dtEzsigntemplatepublicLimitexceededsince;
     return this;
   }
@@ -71,7 +72,7 @@ public class EzsigntemplatepublicResetLimitExceededCounterV1ResponseMPayload {
     return dtEzsigntemplatepublicLimitexceededsince;
   }
 
-  public void setDtEzsigntemplatepublicLimitexceededsince(String dtEzsigntemplatepublicLimitexceededsince) {
+  public void setDtEzsigntemplatepublicLimitexceededsince(@javax.annotation.Nonnull String dtEzsigntemplatepublicLimitexceededsince) {
     this.dtEzsigntemplatepublicLimitexceededsince = dtEzsigntemplatepublicLimitexceededsince;
   }
 

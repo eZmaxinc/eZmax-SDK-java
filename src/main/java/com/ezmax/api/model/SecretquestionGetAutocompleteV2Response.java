@@ -51,24 +51,27 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /2/object/secretquestion/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SecretquestionGetAutocompleteV2Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayload objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  @javax.annotation.Nonnull
   private SecretquestionGetAutocompleteV2ResponseMPayload mPayload;
 
   public SecretquestionGetAutocompleteV2Response() {
   }
 
-  public SecretquestionGetAutocompleteV2Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public SecretquestionGetAutocompleteV2Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -82,12 +85,12 @@ public class SecretquestionGetAutocompleteV2Response {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public SecretquestionGetAutocompleteV2Response objDebug(CommonResponseObjDebug objDebug) {
+  public SecretquestionGetAutocompleteV2Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -101,12 +104,12 @@ public class SecretquestionGetAutocompleteV2Response {
     return objDebug;
   }
 
-  public void setObjDebug(CommonResponseObjDebug objDebug) {
+  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
-  public SecretquestionGetAutocompleteV2Response mPayload(SecretquestionGetAutocompleteV2ResponseMPayload mPayload) {
+  public SecretquestionGetAutocompleteV2Response mPayload(@javax.annotation.Nonnull SecretquestionGetAutocompleteV2ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
@@ -120,7 +123,7 @@ public class SecretquestionGetAutocompleteV2Response {
     return mPayload;
   }
 
-  public void setmPayload(SecretquestionGetAutocompleteV2ResponseMPayload mPayload) {
+  public void setmPayload(@javax.annotation.Nonnull SecretquestionGetAutocompleteV2ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 

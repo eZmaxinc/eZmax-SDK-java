@@ -52,76 +52,92 @@ import eZmaxAPI.JSON;
 /**
  * A Colleague Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ColleagueResponseCompoundV2 {
   public static final String SERIALIZED_NAME_PKI_COLLEAGUE_I_D = "pkiColleagueID";
   @SerializedName(SERIALIZED_NAME_PKI_COLLEAGUE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiColleagueID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D_COLLEAGUE = "fkiUserIDColleague";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_COLLEAGUE)
+  @javax.annotation.Nonnull
   private Integer fkiUserIDColleague;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_EZSIGNEMAIL = "bColleagueEzsignemail";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_EZSIGNEMAIL)
+  @javax.annotation.Nonnull
   private Boolean bColleagueEzsignemail;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_FINANCIAL = "bColleagueFinancial";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_FINANCIAL)
+  @javax.annotation.Nonnull
   private Boolean bColleagueFinancial;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_USECLONEEMAIL = "bColleagueUsecloneemail";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_USECLONEEMAIL)
+  @javax.annotation.Nonnull
   private Boolean bColleagueUsecloneemail;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_ATTACHMENT = "bColleagueAttachment";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_ATTACHMENT)
+  @javax.annotation.Nonnull
   private Boolean bColleagueAttachment;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_CANAFE = "bColleagueCanafe";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_CANAFE)
+  @javax.annotation.Nonnull
   private Boolean bColleagueCanafe;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_PERMISSION = "bColleaguePermission";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_PERMISSION)
+  @javax.annotation.Nonnull
   private Boolean bColleaguePermission;
 
   public static final String SERIALIZED_NAME_B_COLLEAGUE_REALESTATECOMPLETED = "bColleagueRealestatecompleted";
   @SerializedName(SERIALIZED_NAME_B_COLLEAGUE_REALESTATECOMPLETED)
+  @javax.annotation.Nonnull
   private Boolean bColleagueRealestatecompleted;
 
   public static final String SERIALIZED_NAME_DT_COLLEAGUE_FROM = "dtColleagueFrom";
   @SerializedName(SERIALIZED_NAME_DT_COLLEAGUE_FROM)
+  @javax.annotation.Nullable
   private String dtColleagueFrom;
 
   public static final String SERIALIZED_NAME_DT_COLLEAGUE_TO = "dtColleagueTo";
   @SerializedName(SERIALIZED_NAME_DT_COLLEAGUE_TO)
+  @javax.annotation.Nullable
   private String dtColleagueTo;
 
   public static final String SERIALIZED_NAME_E_COLLEAGUE_EZSIGN = "eColleagueEzsign";
   @SerializedName(SERIALIZED_NAME_E_COLLEAGUE_EZSIGN)
+  @javax.annotation.Nonnull
   private FieldEColleagueEzsign eColleagueEzsign;
 
   public static final String SERIALIZED_NAME_E_COLLEAGUE_REALESTATEINPROGRESS = "eColleagueRealestateinprogress";
   @SerializedName(SERIALIZED_NAME_E_COLLEAGUE_REALESTATEINPROGRESS)
+  @javax.annotation.Nonnull
   private FieldEColleagueRealestateinprogess eColleagueRealestateinprogress;
 
   public static final String SERIALIZED_NAME_OBJ_USER_NAME = "objUserName";
   @SerializedName(SERIALIZED_NAME_OBJ_USER_NAME)
+  @javax.annotation.Nonnull
   private CustomUserNameResponse objUserName;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  @javax.annotation.Nonnull
   private CommonAudit objAudit;
 
   public ColleagueResponseCompoundV2() {
   }
 
-  public ColleagueResponseCompoundV2 pkiColleagueID(Integer pkiColleagueID) {
+  public ColleagueResponseCompoundV2 pkiColleagueID(@javax.annotation.Nonnull Integer pkiColleagueID) {
     this.pkiColleagueID = pkiColleagueID;
     return this;
   }
@@ -137,12 +153,12 @@ public class ColleagueResponseCompoundV2 {
     return pkiColleagueID;
   }
 
-  public void setPkiColleagueID(Integer pkiColleagueID) {
+  public void setPkiColleagueID(@javax.annotation.Nonnull Integer pkiColleagueID) {
     this.pkiColleagueID = pkiColleagueID;
   }
 
 
-  public ColleagueResponseCompoundV2 fkiUserID(Integer fkiUserID) {
+  public ColleagueResponseCompoundV2 fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -157,12 +173,12 @@ public class ColleagueResponseCompoundV2 {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public ColleagueResponseCompoundV2 fkiUserIDColleague(Integer fkiUserIDColleague) {
+  public ColleagueResponseCompoundV2 fkiUserIDColleague(@javax.annotation.Nonnull Integer fkiUserIDColleague) {
     this.fkiUserIDColleague = fkiUserIDColleague;
     return this;
   }
@@ -177,12 +193,12 @@ public class ColleagueResponseCompoundV2 {
     return fkiUserIDColleague;
   }
 
-  public void setFkiUserIDColleague(Integer fkiUserIDColleague) {
+  public void setFkiUserIDColleague(@javax.annotation.Nonnull Integer fkiUserIDColleague) {
     this.fkiUserIDColleague = fkiUserIDColleague;
   }
 
 
-  public ColleagueResponseCompoundV2 bColleagueEzsignemail(Boolean bColleagueEzsignemail) {
+  public ColleagueResponseCompoundV2 bColleagueEzsignemail(@javax.annotation.Nonnull Boolean bColleagueEzsignemail) {
     this.bColleagueEzsignemail = bColleagueEzsignemail;
     return this;
   }
@@ -196,12 +212,12 @@ public class ColleagueResponseCompoundV2 {
     return bColleagueEzsignemail;
   }
 
-  public void setbColleagueEzsignemail(Boolean bColleagueEzsignemail) {
+  public void setbColleagueEzsignemail(@javax.annotation.Nonnull Boolean bColleagueEzsignemail) {
     this.bColleagueEzsignemail = bColleagueEzsignemail;
   }
 
 
-  public ColleagueResponseCompoundV2 bColleagueFinancial(Boolean bColleagueFinancial) {
+  public ColleagueResponseCompoundV2 bColleagueFinancial(@javax.annotation.Nonnull Boolean bColleagueFinancial) {
     this.bColleagueFinancial = bColleagueFinancial;
     return this;
   }
@@ -215,12 +231,12 @@ public class ColleagueResponseCompoundV2 {
     return bColleagueFinancial;
   }
 
-  public void setbColleagueFinancial(Boolean bColleagueFinancial) {
+  public void setbColleagueFinancial(@javax.annotation.Nonnull Boolean bColleagueFinancial) {
     this.bColleagueFinancial = bColleagueFinancial;
   }
 
 
-  public ColleagueResponseCompoundV2 bColleagueUsecloneemail(Boolean bColleagueUsecloneemail) {
+  public ColleagueResponseCompoundV2 bColleagueUsecloneemail(@javax.annotation.Nonnull Boolean bColleagueUsecloneemail) {
     this.bColleagueUsecloneemail = bColleagueUsecloneemail;
     return this;
   }
@@ -234,12 +250,12 @@ public class ColleagueResponseCompoundV2 {
     return bColleagueUsecloneemail;
   }
 
-  public void setbColleagueUsecloneemail(Boolean bColleagueUsecloneemail) {
+  public void setbColleagueUsecloneemail(@javax.annotation.Nonnull Boolean bColleagueUsecloneemail) {
     this.bColleagueUsecloneemail = bColleagueUsecloneemail;
   }
 
 
-  public ColleagueResponseCompoundV2 bColleagueAttachment(Boolean bColleagueAttachment) {
+  public ColleagueResponseCompoundV2 bColleagueAttachment(@javax.annotation.Nonnull Boolean bColleagueAttachment) {
     this.bColleagueAttachment = bColleagueAttachment;
     return this;
   }
@@ -253,12 +269,12 @@ public class ColleagueResponseCompoundV2 {
     return bColleagueAttachment;
   }
 
-  public void setbColleagueAttachment(Boolean bColleagueAttachment) {
+  public void setbColleagueAttachment(@javax.annotation.Nonnull Boolean bColleagueAttachment) {
     this.bColleagueAttachment = bColleagueAttachment;
   }
 
 
-  public ColleagueResponseCompoundV2 bColleagueCanafe(Boolean bColleagueCanafe) {
+  public ColleagueResponseCompoundV2 bColleagueCanafe(@javax.annotation.Nonnull Boolean bColleagueCanafe) {
     this.bColleagueCanafe = bColleagueCanafe;
     return this;
   }
@@ -272,12 +288,12 @@ public class ColleagueResponseCompoundV2 {
     return bColleagueCanafe;
   }
 
-  public void setbColleagueCanafe(Boolean bColleagueCanafe) {
+  public void setbColleagueCanafe(@javax.annotation.Nonnull Boolean bColleagueCanafe) {
     this.bColleagueCanafe = bColleagueCanafe;
   }
 
 
-  public ColleagueResponseCompoundV2 bColleaguePermission(Boolean bColleaguePermission) {
+  public ColleagueResponseCompoundV2 bColleaguePermission(@javax.annotation.Nonnull Boolean bColleaguePermission) {
     this.bColleaguePermission = bColleaguePermission;
     return this;
   }
@@ -291,12 +307,12 @@ public class ColleagueResponseCompoundV2 {
     return bColleaguePermission;
   }
 
-  public void setbColleaguePermission(Boolean bColleaguePermission) {
+  public void setbColleaguePermission(@javax.annotation.Nonnull Boolean bColleaguePermission) {
     this.bColleaguePermission = bColleaguePermission;
   }
 
 
-  public ColleagueResponseCompoundV2 bColleagueRealestatecompleted(Boolean bColleagueRealestatecompleted) {
+  public ColleagueResponseCompoundV2 bColleagueRealestatecompleted(@javax.annotation.Nonnull Boolean bColleagueRealestatecompleted) {
     this.bColleagueRealestatecompleted = bColleagueRealestatecompleted;
     return this;
   }
@@ -310,12 +326,12 @@ public class ColleagueResponseCompoundV2 {
     return bColleagueRealestatecompleted;
   }
 
-  public void setbColleagueRealestatecompleted(Boolean bColleagueRealestatecompleted) {
+  public void setbColleagueRealestatecompleted(@javax.annotation.Nonnull Boolean bColleagueRealestatecompleted) {
     this.bColleagueRealestatecompleted = bColleagueRealestatecompleted;
   }
 
 
-  public ColleagueResponseCompoundV2 dtColleagueFrom(String dtColleagueFrom) {
+  public ColleagueResponseCompoundV2 dtColleagueFrom(@javax.annotation.Nullable String dtColleagueFrom) {
     this.dtColleagueFrom = dtColleagueFrom;
     return this;
   }
@@ -329,12 +345,12 @@ public class ColleagueResponseCompoundV2 {
     return dtColleagueFrom;
   }
 
-  public void setDtColleagueFrom(String dtColleagueFrom) {
+  public void setDtColleagueFrom(@javax.annotation.Nullable String dtColleagueFrom) {
     this.dtColleagueFrom = dtColleagueFrom;
   }
 
 
-  public ColleagueResponseCompoundV2 dtColleagueTo(String dtColleagueTo) {
+  public ColleagueResponseCompoundV2 dtColleagueTo(@javax.annotation.Nullable String dtColleagueTo) {
     this.dtColleagueTo = dtColleagueTo;
     return this;
   }
@@ -348,12 +364,12 @@ public class ColleagueResponseCompoundV2 {
     return dtColleagueTo;
   }
 
-  public void setDtColleagueTo(String dtColleagueTo) {
+  public void setDtColleagueTo(@javax.annotation.Nullable String dtColleagueTo) {
     this.dtColleagueTo = dtColleagueTo;
   }
 
 
-  public ColleagueResponseCompoundV2 eColleagueEzsign(FieldEColleagueEzsign eColleagueEzsign) {
+  public ColleagueResponseCompoundV2 eColleagueEzsign(@javax.annotation.Nonnull FieldEColleagueEzsign eColleagueEzsign) {
     this.eColleagueEzsign = eColleagueEzsign;
     return this;
   }
@@ -367,12 +383,12 @@ public class ColleagueResponseCompoundV2 {
     return eColleagueEzsign;
   }
 
-  public void seteColleagueEzsign(FieldEColleagueEzsign eColleagueEzsign) {
+  public void seteColleagueEzsign(@javax.annotation.Nonnull FieldEColleagueEzsign eColleagueEzsign) {
     this.eColleagueEzsign = eColleagueEzsign;
   }
 
 
-  public ColleagueResponseCompoundV2 eColleagueRealestateinprogress(FieldEColleagueRealestateinprogess eColleagueRealestateinprogress) {
+  public ColleagueResponseCompoundV2 eColleagueRealestateinprogress(@javax.annotation.Nonnull FieldEColleagueRealestateinprogess eColleagueRealestateinprogress) {
     this.eColleagueRealestateinprogress = eColleagueRealestateinprogress;
     return this;
   }
@@ -386,12 +402,12 @@ public class ColleagueResponseCompoundV2 {
     return eColleagueRealestateinprogress;
   }
 
-  public void seteColleagueRealestateinprogress(FieldEColleagueRealestateinprogess eColleagueRealestateinprogress) {
+  public void seteColleagueRealestateinprogress(@javax.annotation.Nonnull FieldEColleagueRealestateinprogess eColleagueRealestateinprogress) {
     this.eColleagueRealestateinprogress = eColleagueRealestateinprogress;
   }
 
 
-  public ColleagueResponseCompoundV2 objUserName(CustomUserNameResponse objUserName) {
+  public ColleagueResponseCompoundV2 objUserName(@javax.annotation.Nonnull CustomUserNameResponse objUserName) {
     this.objUserName = objUserName;
     return this;
   }
@@ -405,12 +421,12 @@ public class ColleagueResponseCompoundV2 {
     return objUserName;
   }
 
-  public void setObjUserName(CustomUserNameResponse objUserName) {
+  public void setObjUserName(@javax.annotation.Nonnull CustomUserNameResponse objUserName) {
     this.objUserName = objUserName;
   }
 
 
-  public ColleagueResponseCompoundV2 objAudit(CommonAudit objAudit) {
+  public ColleagueResponseCompoundV2 objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -424,7 +440,7 @@ public class ColleagueResponseCompoundV2 {
     return objAudit;
   }
 
-  public void setObjAudit(CommonAudit objAudit) {
+  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 

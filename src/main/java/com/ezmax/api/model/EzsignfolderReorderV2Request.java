@@ -52,20 +52,22 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfolderReorderV2Request {
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_DOCUMENTDEPENDENCY = "eEzsignfolderDocumentdependency";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_DOCUMENTDEPENDENCY)
+  @javax.annotation.Nullable
   private FieldEEzsignfolderDocumentdependency eEzsignfolderDocumentdependency;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT = "a_objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDOCUMENT)
+  @javax.annotation.Nonnull
   private List<CustomEzsigndocumentRequest> aObjEzsigndocument = new ArrayList<>();
 
   public EzsignfolderReorderV2Request() {
   }
 
-  public EzsignfolderReorderV2Request eEzsignfolderDocumentdependency(FieldEEzsignfolderDocumentdependency eEzsignfolderDocumentdependency) {
+  public EzsignfolderReorderV2Request eEzsignfolderDocumentdependency(@javax.annotation.Nullable FieldEEzsignfolderDocumentdependency eEzsignfolderDocumentdependency) {
     this.eEzsignfolderDocumentdependency = eEzsignfolderDocumentdependency;
     return this;
   }
@@ -79,12 +81,12 @@ public class EzsignfolderReorderV2Request {
     return eEzsignfolderDocumentdependency;
   }
 
-  public void seteEzsignfolderDocumentdependency(FieldEEzsignfolderDocumentdependency eEzsignfolderDocumentdependency) {
+  public void seteEzsignfolderDocumentdependency(@javax.annotation.Nullable FieldEEzsignfolderDocumentdependency eEzsignfolderDocumentdependency) {
     this.eEzsignfolderDocumentdependency = eEzsignfolderDocumentdependency;
   }
 
 
-  public EzsignfolderReorderV2Request aObjEzsigndocument(List<CustomEzsigndocumentRequest> aObjEzsigndocument) {
+  public EzsignfolderReorderV2Request aObjEzsigndocument(@javax.annotation.Nonnull List<CustomEzsigndocumentRequest> aObjEzsigndocument) {
     this.aObjEzsigndocument = aObjEzsigndocument;
     return this;
   }
@@ -106,7 +108,7 @@ public class EzsignfolderReorderV2Request {
     return aObjEzsigndocument;
   }
 
-  public void setaObjEzsigndocument(List<CustomEzsigndocumentRequest> aObjEzsigndocument) {
+  public void setaObjEzsigndocument(@javax.annotation.Nonnull List<CustomEzsigndocumentRequest> aObjEzsigndocument) {
     this.aObjEzsigndocument = aObjEzsigndocument;
   }
 

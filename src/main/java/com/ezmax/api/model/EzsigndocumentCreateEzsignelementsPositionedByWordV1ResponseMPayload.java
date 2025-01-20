@@ -50,20 +50,22 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNSIGNATURE_I_D = "a_pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNSIGNATURE_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsignsignatureID = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFORMFIELDGROUP_I_D = "a_pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFORMFIELDGROUP_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsignformfieldgroupID = new ArrayList<>();
 
   public EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload() {
   }
 
-  public EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload aPkiEzsignsignatureID(List<Integer> aPkiEzsignsignatureID) {
+  public EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload aPkiEzsignsignatureID(@javax.annotation.Nonnull List<Integer> aPkiEzsignsignatureID) {
     this.aPkiEzsignsignatureID = aPkiEzsignsignatureID;
     return this;
   }
@@ -85,12 +87,12 @@ public class EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayloa
     return aPkiEzsignsignatureID;
   }
 
-  public void setaPkiEzsignsignatureID(List<Integer> aPkiEzsignsignatureID) {
+  public void setaPkiEzsignsignatureID(@javax.annotation.Nonnull List<Integer> aPkiEzsignsignatureID) {
     this.aPkiEzsignsignatureID = aPkiEzsignsignatureID;
   }
 
 
-  public EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload aPkiEzsignformfieldgroupID(List<Integer> aPkiEzsignformfieldgroupID) {
+  public EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayload aPkiEzsignformfieldgroupID(@javax.annotation.Nonnull List<Integer> aPkiEzsignformfieldgroupID) {
     this.aPkiEzsignformfieldgroupID = aPkiEzsignformfieldgroupID;
     return this;
   }
@@ -112,7 +114,7 @@ public class EzsigndocumentCreateEzsignelementsPositionedByWordV1ResponseMPayloa
     return aPkiEzsignformfieldgroupID;
   }
 
-  public void setaPkiEzsignformfieldgroupID(List<Integer> aPkiEzsignformfieldgroupID) {
+  public void setaPkiEzsignformfieldgroupID(@javax.annotation.Nonnull List<Integer> aPkiEzsignformfieldgroupID) {
     this.aPkiEzsignformfieldgroupID = aPkiEzsignformfieldgroupID;
   }
 

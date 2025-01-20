@@ -8,7 +8,7 @@ Request for PUT /1/object/apikey/{pkiApikeyID}/editPermissions
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**aObjPermission** | [**List&lt;PermissionRequestCompound&gt;**](PermissionRequestCompound.md) |  |  |
+|**aObjPermission** | [**List&lt;PermissionRequest&gt;**](PermissionRequest.md) |  |  |
 
 
 

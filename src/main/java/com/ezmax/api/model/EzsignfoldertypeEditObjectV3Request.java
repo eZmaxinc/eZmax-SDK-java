@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /3/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfoldertypeEditObjectV3Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE = "objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE)
+  @javax.annotation.Nonnull
   private EzsignfoldertypeRequestCompoundV3 objEzsignfoldertype;
 
   public EzsignfoldertypeEditObjectV3Request() {
   }
 
-  public EzsignfoldertypeEditObjectV3Request objEzsignfoldertype(EzsignfoldertypeRequestCompoundV3 objEzsignfoldertype) {
+  public EzsignfoldertypeEditObjectV3Request objEzsignfoldertype(@javax.annotation.Nonnull EzsignfoldertypeRequestCompoundV3 objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsignfoldertypeEditObjectV3Request {
     return objEzsignfoldertype;
   }
 
-  public void setObjEzsignfoldertype(EzsignfoldertypeRequestCompoundV3 objEzsignfoldertype) {
+  public void setObjEzsignfoldertype(@javax.annotation.Nonnull EzsignfoldertypeRequestCompoundV3 objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
   }
 

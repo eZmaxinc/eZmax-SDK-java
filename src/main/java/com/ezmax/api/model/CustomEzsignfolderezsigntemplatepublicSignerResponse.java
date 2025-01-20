@@ -48,32 +48,37 @@ import eZmaxAPI.JSON;
 /**
  * A form Signer Object in the context of an Ezsignfoldertransmissions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomEzsignfolderezsigntemplatepublicSignerResponse {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNERGROUP_I_D = "fkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNERGROUP_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsignsignergroupID;
 
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
+  @javax.annotation.Nullable
   private String sContactFirstname;
 
   public static final String SERIALIZED_NAME_S_CONTACT_LASTNAME = "sContactLastname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_LASTNAME)
+  @javax.annotation.Nullable
   private String sContactLastname;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION_X = "sEzsignsignergroupDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION_X)
+  @javax.annotation.Nullable
   private String sEzsignsignergroupDescriptionX;
 
   public CustomEzsignfolderezsigntemplatepublicSignerResponse() {
   }
 
-  public CustomEzsignfolderezsigntemplatepublicSignerResponse fkiUserID(Integer fkiUserID) {
+  public CustomEzsignfolderezsigntemplatepublicSignerResponse fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -88,12 +93,12 @@ public class CustomEzsignfolderezsigntemplatepublicSignerResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public CustomEzsignfolderezsigntemplatepublicSignerResponse fkiEzsignsignergroupID(Integer fkiEzsignsignergroupID) {
+  public CustomEzsignfolderezsigntemplatepublicSignerResponse fkiEzsignsignergroupID(@javax.annotation.Nullable Integer fkiEzsignsignergroupID) {
     this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
     return this;
   }
@@ -109,12 +114,12 @@ public class CustomEzsignfolderezsigntemplatepublicSignerResponse {
     return fkiEzsignsignergroupID;
   }
 
-  public void setFkiEzsignsignergroupID(Integer fkiEzsignsignergroupID) {
+  public void setFkiEzsignsignergroupID(@javax.annotation.Nullable Integer fkiEzsignsignergroupID) {
     this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
   }
 
 
-  public CustomEzsignfolderezsigntemplatepublicSignerResponse sContactFirstname(String sContactFirstname) {
+  public CustomEzsignfolderezsigntemplatepublicSignerResponse sContactFirstname(@javax.annotation.Nullable String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -128,12 +133,12 @@ public class CustomEzsignfolderezsigntemplatepublicSignerResponse {
     return sContactFirstname;
   }
 
-  public void setsContactFirstname(String sContactFirstname) {
+  public void setsContactFirstname(@javax.annotation.Nullable String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
-  public CustomEzsignfolderezsigntemplatepublicSignerResponse sContactLastname(String sContactLastname) {
+  public CustomEzsignfolderezsigntemplatepublicSignerResponse sContactLastname(@javax.annotation.Nullable String sContactLastname) {
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -147,12 +152,12 @@ public class CustomEzsignfolderezsigntemplatepublicSignerResponse {
     return sContactLastname;
   }
 
-  public void setsContactLastname(String sContactLastname) {
+  public void setsContactLastname(@javax.annotation.Nullable String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 
 
-  public CustomEzsignfolderezsigntemplatepublicSignerResponse sEzsignsignergroupDescriptionX(String sEzsignsignergroupDescriptionX) {
+  public CustomEzsignfolderezsigntemplatepublicSignerResponse sEzsignsignergroupDescriptionX(@javax.annotation.Nullable String sEzsignsignergroupDescriptionX) {
     this.sEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;
     return this;
   }
@@ -166,7 +171,7 @@ public class CustomEzsignfolderezsigntemplatepublicSignerResponse {
     return sEzsignsignergroupDescriptionX;
   }
 
-  public void setsEzsignsignergroupDescriptionX(String sEzsignsignergroupDescriptionX) {
+  public void setsEzsignsignergroupDescriptionX(@javax.annotation.Nullable String sEzsignsignergroupDescriptionX) {
     this.sEzsignsignergroupDescriptionX = sEzsignsignergroupDescriptionX;
   }
 

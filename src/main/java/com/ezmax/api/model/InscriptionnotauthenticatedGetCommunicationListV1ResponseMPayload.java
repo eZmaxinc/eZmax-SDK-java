@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/getCommunicationList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class InscriptionnotauthenticatedGetCommunicationListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATION = "a_objCommunication";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATION)
+  @javax.annotation.Nonnull
   private List<CustomCommunicationListElementResponse> aObjCommunication = new ArrayList<>();
 
   public InscriptionnotauthenticatedGetCommunicationListV1ResponseMPayload() {
   }
 
-  public InscriptionnotauthenticatedGetCommunicationListV1ResponseMPayload aObjCommunication(List<CustomCommunicationListElementResponse> aObjCommunication) {
+  public InscriptionnotauthenticatedGetCommunicationListV1ResponseMPayload aObjCommunication(@javax.annotation.Nonnull List<CustomCommunicationListElementResponse> aObjCommunication) {
     this.aObjCommunication = aObjCommunication;
     return this;
   }
@@ -82,7 +83,7 @@ public class InscriptionnotauthenticatedGetCommunicationListV1ResponseMPayload {
     return aObjCommunication;
   }
 
-  public void setaObjCommunication(List<CustomCommunicationListElementResponse> aObjCommunication) {
+  public void setaObjCommunication(@javax.annotation.Nonnull List<CustomCommunicationListElementResponse> aObjCommunication) {
     this.aObjCommunication = aObjCommunication;
   }
 

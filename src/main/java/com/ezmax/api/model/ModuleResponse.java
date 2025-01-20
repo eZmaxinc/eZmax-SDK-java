@@ -48,36 +48,42 @@ import eZmaxAPI.JSON;
 /**
  * A Module Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ModuleResponse {
   public static final String SERIALIZED_NAME_PKI_MODULE_I_D = "pkiModuleID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiModuleID;
 
   public static final String SERIALIZED_NAME_FKI_MODULEGROUP_I_D = "fkiModulegroupID";
   @SerializedName(SERIALIZED_NAME_FKI_MODULEGROUP_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiModulegroupID;
 
   public static final String SERIALIZED_NAME_E_MODULE_INTERNALNAME = "eModuleInternalname";
   @SerializedName(SERIALIZED_NAME_E_MODULE_INTERNALNAME)
+  @javax.annotation.Nonnull
   private String eModuleInternalname;
 
   public static final String SERIALIZED_NAME_S_MODULE_NAME_X = "sModuleNameX";
   @SerializedName(SERIALIZED_NAME_S_MODULE_NAME_X)
+  @javax.annotation.Nonnull
   private String sModuleNameX;
 
   public static final String SERIALIZED_NAME_B_MODULE_REGISTERED = "bModuleRegistered";
   @SerializedName(SERIALIZED_NAME_B_MODULE_REGISTERED)
+  @javax.annotation.Nonnull
   private Boolean bModuleRegistered;
 
   public static final String SERIALIZED_NAME_B_MODULE_REGISTEREDAPI = "bModuleRegisteredapi";
   @SerializedName(SERIALIZED_NAME_B_MODULE_REGISTEREDAPI)
+  @javax.annotation.Nonnull
   private Boolean bModuleRegisteredapi;
 
   public ModuleResponse() {
   }
 
-  public ModuleResponse pkiModuleID(Integer pkiModuleID) {
+  public ModuleResponse pkiModuleID(@javax.annotation.Nonnull Integer pkiModuleID) {
     this.pkiModuleID = pkiModuleID;
     return this;
   }
@@ -92,12 +98,12 @@ public class ModuleResponse {
     return pkiModuleID;
   }
 
-  public void setPkiModuleID(Integer pkiModuleID) {
+  public void setPkiModuleID(@javax.annotation.Nonnull Integer pkiModuleID) {
     this.pkiModuleID = pkiModuleID;
   }
 
 
-  public ModuleResponse fkiModulegroupID(Integer fkiModulegroupID) {
+  public ModuleResponse fkiModulegroupID(@javax.annotation.Nonnull Integer fkiModulegroupID) {
     this.fkiModulegroupID = fkiModulegroupID;
     return this;
   }
@@ -113,12 +119,12 @@ public class ModuleResponse {
     return fkiModulegroupID;
   }
 
-  public void setFkiModulegroupID(Integer fkiModulegroupID) {
+  public void setFkiModulegroupID(@javax.annotation.Nonnull Integer fkiModulegroupID) {
     this.fkiModulegroupID = fkiModulegroupID;
   }
 
 
-  public ModuleResponse eModuleInternalname(String eModuleInternalname) {
+  public ModuleResponse eModuleInternalname(@javax.annotation.Nonnull String eModuleInternalname) {
     this.eModuleInternalname = eModuleInternalname;
     return this;
   }
@@ -132,12 +138,12 @@ public class ModuleResponse {
     return eModuleInternalname;
   }
 
-  public void seteModuleInternalname(String eModuleInternalname) {
+  public void seteModuleInternalname(@javax.annotation.Nonnull String eModuleInternalname) {
     this.eModuleInternalname = eModuleInternalname;
   }
 
 
-  public ModuleResponse sModuleNameX(String sModuleNameX) {
+  public ModuleResponse sModuleNameX(@javax.annotation.Nonnull String sModuleNameX) {
     this.sModuleNameX = sModuleNameX;
     return this;
   }
@@ -151,12 +157,12 @@ public class ModuleResponse {
     return sModuleNameX;
   }
 
-  public void setsModuleNameX(String sModuleNameX) {
+  public void setsModuleNameX(@javax.annotation.Nonnull String sModuleNameX) {
     this.sModuleNameX = sModuleNameX;
   }
 
 
-  public ModuleResponse bModuleRegistered(Boolean bModuleRegistered) {
+  public ModuleResponse bModuleRegistered(@javax.annotation.Nonnull Boolean bModuleRegistered) {
     this.bModuleRegistered = bModuleRegistered;
     return this;
   }
@@ -170,12 +176,12 @@ public class ModuleResponse {
     return bModuleRegistered;
   }
 
-  public void setbModuleRegistered(Boolean bModuleRegistered) {
+  public void setbModuleRegistered(@javax.annotation.Nonnull Boolean bModuleRegistered) {
     this.bModuleRegistered = bModuleRegistered;
   }
 
 
-  public ModuleResponse bModuleRegisteredapi(Boolean bModuleRegisteredapi) {
+  public ModuleResponse bModuleRegisteredapi(@javax.annotation.Nonnull Boolean bModuleRegisteredapi) {
     this.bModuleRegisteredapi = bModuleRegisteredapi;
     return this;
   }
@@ -189,7 +195,7 @@ public class ModuleResponse {
     return bModuleRegisteredapi;
   }
 
-  public void setbModuleRegisteredapi(Boolean bModuleRegisteredapi) {
+  public void setbModuleRegisteredapi(@javax.annotation.Nonnull Boolean bModuleRegisteredapi) {
     this.bModuleRegisteredapi = bModuleRegisteredapi;
   }
 

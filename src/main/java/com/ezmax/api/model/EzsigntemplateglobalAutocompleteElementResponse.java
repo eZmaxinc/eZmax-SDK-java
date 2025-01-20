@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplateglobalAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D = "pkiEzsigntemplateglobalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplateglobalID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBAL_DESCRIPTION = "sEzsigntemplateglobalDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBAL_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sEzsigntemplateglobalDescription;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEGLOBAL_ISACTIVE = "bEzsigntemplateglobalIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEGLOBAL_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplateglobalIsactive;
 
   public EzsigntemplateglobalAutocompleteElementResponse() {
   }
 
-  public EzsigntemplateglobalAutocompleteElementResponse pkiEzsigntemplateglobalID(Integer pkiEzsigntemplateglobalID) {
+  public EzsigntemplateglobalAutocompleteElementResponse pkiEzsigntemplateglobalID(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobalID) {
     this.pkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
     return this;
   }
@@ -80,12 +83,12 @@ public class EzsigntemplateglobalAutocompleteElementResponse {
     return pkiEzsigntemplateglobalID;
   }
 
-  public void setPkiEzsigntemplateglobalID(Integer pkiEzsigntemplateglobalID) {
+  public void setPkiEzsigntemplateglobalID(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobalID) {
     this.pkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
   }
 
 
-  public EzsigntemplateglobalAutocompleteElementResponse sEzsigntemplateglobalDescription(String sEzsigntemplateglobalDescription) {
+  public EzsigntemplateglobalAutocompleteElementResponse sEzsigntemplateglobalDescription(@javax.annotation.Nonnull String sEzsigntemplateglobalDescription) {
     this.sEzsigntemplateglobalDescription = sEzsigntemplateglobalDescription;
     return this;
   }
@@ -99,12 +102,12 @@ public class EzsigntemplateglobalAutocompleteElementResponse {
     return sEzsigntemplateglobalDescription;
   }
 
-  public void setsEzsigntemplateglobalDescription(String sEzsigntemplateglobalDescription) {
+  public void setsEzsigntemplateglobalDescription(@javax.annotation.Nonnull String sEzsigntemplateglobalDescription) {
     this.sEzsigntemplateglobalDescription = sEzsigntemplateglobalDescription;
   }
 
 
-  public EzsigntemplateglobalAutocompleteElementResponse bEzsigntemplateglobalIsactive(Boolean bEzsigntemplateglobalIsactive) {
+  public EzsigntemplateglobalAutocompleteElementResponse bEzsigntemplateglobalIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplateglobalIsactive) {
     this.bEzsigntemplateglobalIsactive = bEzsigntemplateglobalIsactive;
     return this;
   }
@@ -118,7 +121,7 @@ public class EzsigntemplateglobalAutocompleteElementResponse {
     return bEzsigntemplateglobalIsactive;
   }
 
-  public void setbEzsigntemplateglobalIsactive(Boolean bEzsigntemplateglobalIsactive) {
+  public void setbEzsigntemplateglobalIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplateglobalIsactive) {
     this.bEzsigntemplateglobalIsactive = bEzsigntemplateglobalIsactive;
   }
 

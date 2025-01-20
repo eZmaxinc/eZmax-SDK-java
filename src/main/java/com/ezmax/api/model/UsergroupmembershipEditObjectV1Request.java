@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/usergroupmembership/{pkiUsergroupmembershipID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupmembershipEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_USERGROUPMEMBERSHIP = "objUsergroupmembership";
   @SerializedName(SERIALIZED_NAME_OBJ_USERGROUPMEMBERSHIP)
+  @javax.annotation.Nonnull
   private UsergroupmembershipRequestCompound objUsergroupmembership;
 
   public UsergroupmembershipEditObjectV1Request() {
   }
 
-  public UsergroupmembershipEditObjectV1Request objUsergroupmembership(UsergroupmembershipRequestCompound objUsergroupmembership) {
+  public UsergroupmembershipEditObjectV1Request objUsergroupmembership(@javax.annotation.Nonnull UsergroupmembershipRequestCompound objUsergroupmembership) {
     this.objUsergroupmembership = objUsergroupmembership;
     return this;
   }
@@ -72,7 +73,7 @@ public class UsergroupmembershipEditObjectV1Request {
     return objUsergroupmembership;
   }
 
-  public void setObjUsergroupmembership(UsergroupmembershipRequestCompound objUsergroupmembership) {
+  public void setObjUsergroupmembership(@javax.annotation.Nonnull UsergroupmembershipRequestCompound objUsergroupmembership) {
     this.objUsergroupmembership = objUsergroupmembership;
   }
 

@@ -48,28 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ContactinformationsRequest {
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
+  @javax.annotation.Nonnull
   private Integer iAddressDefault;
 
   public static final String SERIALIZED_NAME_I_PHONE_DEFAULT = "iPhoneDefault";
   @SerializedName(SERIALIZED_NAME_I_PHONE_DEFAULT)
+  @javax.annotation.Nonnull
   private Integer iPhoneDefault;
 
   public static final String SERIALIZED_NAME_I_EMAIL_DEFAULT = "iEmailDefault";
   @SerializedName(SERIALIZED_NAME_I_EMAIL_DEFAULT)
+  @javax.annotation.Nonnull
   private Integer iEmailDefault;
 
   public static final String SERIALIZED_NAME_I_WEBSITE_DEFAULT = "iWebsiteDefault";
   @SerializedName(SERIALIZED_NAME_I_WEBSITE_DEFAULT)
+  @javax.annotation.Nonnull
   private Integer iWebsiteDefault;
 
   public ContactinformationsRequest() {
   }
 
-  public ContactinformationsRequest iAddressDefault(Integer iAddressDefault) {
+  public ContactinformationsRequest iAddressDefault(@javax.annotation.Nonnull Integer iAddressDefault) {
     this.iAddressDefault = iAddressDefault;
     return this;
   }
@@ -83,12 +87,12 @@ public class ContactinformationsRequest {
     return iAddressDefault;
   }
 
-  public void setiAddressDefault(Integer iAddressDefault) {
+  public void setiAddressDefault(@javax.annotation.Nonnull Integer iAddressDefault) {
     this.iAddressDefault = iAddressDefault;
   }
 
 
-  public ContactinformationsRequest iPhoneDefault(Integer iPhoneDefault) {
+  public ContactinformationsRequest iPhoneDefault(@javax.annotation.Nonnull Integer iPhoneDefault) {
     this.iPhoneDefault = iPhoneDefault;
     return this;
   }
@@ -102,12 +106,12 @@ public class ContactinformationsRequest {
     return iPhoneDefault;
   }
 
-  public void setiPhoneDefault(Integer iPhoneDefault) {
+  public void setiPhoneDefault(@javax.annotation.Nonnull Integer iPhoneDefault) {
     this.iPhoneDefault = iPhoneDefault;
   }
 
 
-  public ContactinformationsRequest iEmailDefault(Integer iEmailDefault) {
+  public ContactinformationsRequest iEmailDefault(@javax.annotation.Nonnull Integer iEmailDefault) {
     this.iEmailDefault = iEmailDefault;
     return this;
   }
@@ -121,12 +125,12 @@ public class ContactinformationsRequest {
     return iEmailDefault;
   }
 
-  public void setiEmailDefault(Integer iEmailDefault) {
+  public void setiEmailDefault(@javax.annotation.Nonnull Integer iEmailDefault) {
     this.iEmailDefault = iEmailDefault;
   }
 
 
-  public ContactinformationsRequest iWebsiteDefault(Integer iWebsiteDefault) {
+  public ContactinformationsRequest iWebsiteDefault(@javax.annotation.Nonnull Integer iWebsiteDefault) {
     this.iWebsiteDefault = iWebsiteDefault;
     return this;
   }
@@ -140,7 +144,7 @@ public class ContactinformationsRequest {
     return iWebsiteDefault;
   }
 
-  public void setiWebsiteDefault(Integer iWebsiteDefault) {
+  public void setiWebsiteDefault(@javax.annotation.Nonnull Integer iWebsiteDefault) {
     this.iWebsiteDefault = iWebsiteDefault;
   }
 

@@ -52,20 +52,22 @@ import eZmaxAPI.JSON;
 /**
  * An Attachmentdocumenttype
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomAttachmentdocumenttypeResponse {
   public static final String SERIALIZED_NAME_E_ATTACHMENT_DOCUMENTTYPE = "eAttachmentDocumenttype";
   @SerializedName(SERIALIZED_NAME_E_ATTACHMENT_DOCUMENTTYPE)
+  @javax.annotation.Nonnull
   private FieldEAttachmentDocumenttype eAttachmentDocumenttype;
 
   public static final String SERIALIZED_NAME_A_OBJ_ATTACHMENT = "a_objAttachment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTACHMENT)
+  @javax.annotation.Nonnull
   private List<CustomAttachmentResponse> aObjAttachment = new ArrayList<>();
 
   public CustomAttachmentdocumenttypeResponse() {
   }
 
-  public CustomAttachmentdocumenttypeResponse eAttachmentDocumenttype(FieldEAttachmentDocumenttype eAttachmentDocumenttype) {
+  public CustomAttachmentdocumenttypeResponse eAttachmentDocumenttype(@javax.annotation.Nonnull FieldEAttachmentDocumenttype eAttachmentDocumenttype) {
     this.eAttachmentDocumenttype = eAttachmentDocumenttype;
     return this;
   }
@@ -79,12 +81,12 @@ public class CustomAttachmentdocumenttypeResponse {
     return eAttachmentDocumenttype;
   }
 
-  public void seteAttachmentDocumenttype(FieldEAttachmentDocumenttype eAttachmentDocumenttype) {
+  public void seteAttachmentDocumenttype(@javax.annotation.Nonnull FieldEAttachmentDocumenttype eAttachmentDocumenttype) {
     this.eAttachmentDocumenttype = eAttachmentDocumenttype;
   }
 
 
-  public CustomAttachmentdocumenttypeResponse aObjAttachment(List<CustomAttachmentResponse> aObjAttachment) {
+  public CustomAttachmentdocumenttypeResponse aObjAttachment(@javax.annotation.Nonnull List<CustomAttachmentResponse> aObjAttachment) {
     this.aObjAttachment = aObjAttachment;
     return this;
   }
@@ -106,7 +108,7 @@ public class CustomAttachmentdocumenttypeResponse {
     return aObjAttachment;
   }
 
-  public void setaObjAttachment(List<CustomAttachmentResponse> aObjAttachment) {
+  public void setaObjAttachment(@javax.annotation.Nonnull List<CustomAttachmentResponse> aObjAttachment) {
     this.aObjAttachment = aObjAttachment;
   }
 

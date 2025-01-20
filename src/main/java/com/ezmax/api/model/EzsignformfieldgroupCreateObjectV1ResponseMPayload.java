@@ -50,16 +50,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsignformfieldgroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignformfieldgroupCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFORMFIELDGROUP_I_D = "a_pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFORMFIELDGROUP_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsignformfieldgroupID = new ArrayList<>();
 
   public EzsignformfieldgroupCreateObjectV1ResponseMPayload() {
   }
 
-  public EzsignformfieldgroupCreateObjectV1ResponseMPayload aPkiEzsignformfieldgroupID(List<Integer> aPkiEzsignformfieldgroupID) {
+  public EzsignformfieldgroupCreateObjectV1ResponseMPayload aPkiEzsignformfieldgroupID(@javax.annotation.Nonnull List<Integer> aPkiEzsignformfieldgroupID) {
     this.aPkiEzsignformfieldgroupID = aPkiEzsignformfieldgroupID;
     return this;
   }
@@ -81,7 +82,7 @@ public class EzsignformfieldgroupCreateObjectV1ResponseMPayload {
     return aPkiEzsignformfieldgroupID;
   }
 
-  public void setaPkiEzsignformfieldgroupID(List<Integer> aPkiEzsignformfieldgroupID) {
+  public void setaPkiEzsignformfieldgroupID(@javax.annotation.Nonnull List<Integer> aPkiEzsignformfieldgroupID) {
     this.aPkiEzsignformfieldgroupID = aPkiEzsignformfieldgroupID;
   }
 

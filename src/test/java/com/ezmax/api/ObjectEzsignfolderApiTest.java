@@ -14,8 +14,8 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
-import com.ezmax.api.model.EzsignfolderArchiveV1Response;
 import com.ezmax.api.model.EzsignfolderBatchDownloadV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Response;
@@ -23,13 +23,8 @@ import com.ezmax.api.model.EzsignfolderCreateObjectV2Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV2Response;
 import com.ezmax.api.model.EzsignfolderCreateObjectV3Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV3Response;
-import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfolderDisposeEzsignfoldersV1Request;
-import com.ezmax.api.model.EzsignfolderDisposeEzsignfoldersV1Response;
-import com.ezmax.api.model.EzsignfolderDisposeV1Response;
 import com.ezmax.api.model.EzsignfolderEditObjectV3Request;
-import com.ezmax.api.model.EzsignfolderEditObjectV3Response;
-import com.ezmax.api.model.EzsignfolderEndPrematurelyV1Response;
 import com.ezmax.api.model.EzsignfolderGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsignfolderGetAttachmentCountV1Response;
 import com.ezmax.api.model.EzsignfolderGetAttachmentsV1Response;
@@ -50,14 +45,9 @@ import com.ezmax.api.model.EzsignfolderImportEzsignfoldersignerassociationsV1Res
 import com.ezmax.api.model.EzsignfolderImportEzsigntemplatepackageV1Request;
 import com.ezmax.api.model.EzsignfolderImportEzsigntemplatepackageV1Response;
 import com.ezmax.api.model.EzsignfolderReorderV1Request;
-import com.ezmax.api.model.EzsignfolderReorderV1Response;
 import com.ezmax.api.model.EzsignfolderReorderV2Request;
-import com.ezmax.api.model.EzsignfolderReorderV2Response;
 import com.ezmax.api.model.EzsignfolderSendV1Request;
-import com.ezmax.api.model.EzsignfolderSendV1Response;
 import com.ezmax.api.model.EzsignfolderSendV3Request;
-import com.ezmax.api.model.EzsignfolderSendV3Response;
-import com.ezmax.api.model.EzsignfolderUnsendV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
@@ -87,7 +77,7 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderArchiveV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         Object body = null;
-        EzsignfolderArchiveV1Response response = api.ezsignfolderArchiveV1(pkiEzsignfolderID, body);
+        CommonResponse response = api.ezsignfolderArchiveV1(pkiEzsignfolderID, body);
         // TODO: test validations
     }
 
@@ -154,7 +144,7 @@ public class ObjectEzsignfolderApiTest {
     @Test
     public void ezsignfolderDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
-        EzsignfolderDeleteObjectV1Response response = api.ezsignfolderDeleteObjectV1(pkiEzsignfolderID);
+        CommonResponse response = api.ezsignfolderDeleteObjectV1(pkiEzsignfolderID);
         // TODO: test validations
     }
 
@@ -168,7 +158,7 @@ public class ObjectEzsignfolderApiTest {
     @Test
     public void ezsignfolderDisposeEzsignfoldersV1Test() throws ApiException {
         EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request = null;
-        EzsignfolderDisposeEzsignfoldersV1Response response = api.ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request);
+        CommonResponse response = api.ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request);
         // TODO: test validations
     }
 
@@ -183,7 +173,7 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderDisposeV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         Object body = null;
-        EzsignfolderDisposeV1Response response = api.ezsignfolderDisposeV1(pkiEzsignfolderID, body);
+        CommonResponse response = api.ezsignfolderDisposeV1(pkiEzsignfolderID, body);
         // TODO: test validations
     }
 
@@ -198,7 +188,7 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderEditObjectV3Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request = null;
-        EzsignfolderEditObjectV3Response response = api.ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
+        CommonResponse response = api.ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
         // TODO: test validations
     }
 
@@ -213,7 +203,7 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderEndPrematurelyV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         Object body = null;
-        EzsignfolderEndPrematurelyV1Response response = api.ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body);
+        CommonResponse response = api.ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body);
         // TODO: test validations
     }
 
@@ -468,7 +458,7 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderReorderV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderReorderV1Request ezsignfolderReorderV1Request = null;
-        EzsignfolderReorderV1Response response = api.ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request);
+        CommonResponse response = api.ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request);
         // TODO: test validations
     }
 
@@ -481,7 +471,7 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderReorderV2Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderReorderV2Request ezsignfolderReorderV2Request = null;
-        EzsignfolderReorderV2Response response = api.ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request);
+        CommonResponse response = api.ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request);
         // TODO: test validations
     }
 
@@ -496,7 +486,7 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderSendV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderSendV1Request ezsignfolderSendV1Request = null;
-        EzsignfolderSendV1Response response = api.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
+        CommonResponse response = api.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
         // TODO: test validations
     }
 
@@ -511,7 +501,7 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderSendV3Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         EzsignfolderSendV3Request ezsignfolderSendV3Request = null;
-        EzsignfolderSendV3Response response = api.ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request);
+        CommonResponse response = api.ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request);
         // TODO: test validations
     }
 
@@ -526,7 +516,7 @@ public class ObjectEzsignfolderApiTest {
     public void ezsignfolderUnsendV1Test() throws ApiException {
         Integer pkiEzsignfolderID = null;
         Object body = null;
-        EzsignfolderUnsendV1Response response = api.ezsignfolderUnsendV1(pkiEzsignfolderID, body);
+        CommonResponse response = api.ezsignfolderUnsendV1(pkiEzsignfolderID, body);
         // TODO: test validations
     }
 

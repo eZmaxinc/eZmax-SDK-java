@@ -14,11 +14,11 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfoldertypeCreateObjectV3Request;
 import com.ezmax.api.model.EzsignfoldertypeCreateObjectV3Response;
 import com.ezmax.api.model.EzsignfoldertypeEditObjectV3Request;
-import com.ezmax.api.model.EzsignfoldertypeEditObjectV3Response;
 import com.ezmax.api.model.EzsignfoldertypeGetAutocompleteV2Response;
 import com.ezmax.api.model.EzsignfoldertypeGetListV1Response;
 import com.ezmax.api.model.EzsignfoldertypeGetObjectV2Response;
@@ -66,7 +66,7 @@ public class ObjectEzsignfoldertypeApiTest {
     public void ezsignfoldertypeEditObjectV3Test() throws ApiException {
         Integer pkiEzsignfoldertypeID = null;
         EzsignfoldertypeEditObjectV3Request ezsignfoldertypeEditObjectV3Request = null;
-        EzsignfoldertypeEditObjectV3Response response = api.ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request);
+        CommonResponse response = api.ezsignfoldertypeEditObjectV3(pkiEzsignfoldertypeID, ezsignfoldertypeEditObjectV3Request);
         // TODO: test validations
     }
 

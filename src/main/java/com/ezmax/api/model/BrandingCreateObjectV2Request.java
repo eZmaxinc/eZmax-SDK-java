@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/branding
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class BrandingCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_BRANDING = "a_objBranding";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BRANDING)
+  @javax.annotation.Nonnull
   private List<BrandingRequestCompoundV2> aObjBranding = new ArrayList<>();
 
   public BrandingCreateObjectV2Request() {
   }
 
-  public BrandingCreateObjectV2Request aObjBranding(List<BrandingRequestCompoundV2> aObjBranding) {
+  public BrandingCreateObjectV2Request aObjBranding(@javax.annotation.Nonnull List<BrandingRequestCompoundV2> aObjBranding) {
     this.aObjBranding = aObjBranding;
     return this;
   }
@@ -82,7 +83,7 @@ public class BrandingCreateObjectV2Request {
     return aObjBranding;
   }
 
-  public void setaObjBranding(List<BrandingRequestCompoundV2> aObjBranding) {
+  public void setaObjBranding(@javax.annotation.Nonnull List<BrandingRequestCompoundV2> aObjBranding) {
     this.aObjBranding = aObjBranding;
   }
 

@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndocumentRequestPatch {
   public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE = "dtEzsigndocumentDuedate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE)
+  @javax.annotation.Nullable
   private String dtEzsigndocumentDuedate;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME = "sEzsigndocumentName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME)
+  @javax.annotation.Nullable
   private String sEzsigndocumentName;
 
   public EzsigndocumentRequestPatch() {
   }
 
-  public EzsigndocumentRequestPatch dtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
+  public EzsigndocumentRequestPatch dtEzsigndocumentDuedate(@javax.annotation.Nullable String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
     return this;
   }
@@ -75,12 +77,12 @@ public class EzsigndocumentRequestPatch {
     return dtEzsigndocumentDuedate;
   }
 
-  public void setDtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
+  public void setDtEzsigndocumentDuedate(@javax.annotation.Nullable String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
   }
 
 
-  public EzsigndocumentRequestPatch sEzsigndocumentName(String sEzsigndocumentName) {
+  public EzsigndocumentRequestPatch sEzsigndocumentName(@javax.annotation.Nullable String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
     return this;
   }
@@ -94,7 +96,7 @@ public class EzsigndocumentRequestPatch {
     return sEzsigndocumentName;
   }
 
-  public void setsEzsigndocumentName(String sEzsigndocumentName) {
+  public void setsEzsigndocumentName(@javax.annotation.Nullable String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
   }
 

@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PATCH /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatedocumentPatchObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENT = "objEzsigntemplatedocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENT)
+  @javax.annotation.Nonnull
   private EzsigntemplatedocumentRequestPatch objEzsigntemplatedocument;
 
   public EzsigntemplatedocumentPatchObjectV1Request() {
   }
 
-  public EzsigntemplatedocumentPatchObjectV1Request objEzsigntemplatedocument(EzsigntemplatedocumentRequestPatch objEzsigntemplatedocument) {
+  public EzsigntemplatedocumentPatchObjectV1Request objEzsigntemplatedocument(@javax.annotation.Nonnull EzsigntemplatedocumentRequestPatch objEzsigntemplatedocument) {
     this.objEzsigntemplatedocument = objEzsigntemplatedocument;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsigntemplatedocumentPatchObjectV1Request {
     return objEzsigntemplatedocument;
   }
 
-  public void setObjEzsigntemplatedocument(EzsigntemplatedocumentRequestPatch objEzsigntemplatedocument) {
+  public void setObjEzsigntemplatedocument(@javax.annotation.Nonnull EzsigntemplatedocumentRequestPatch objEzsigntemplatedocument) {
     this.objEzsigntemplatedocument = objEzsigntemplatedocument;
   }
 

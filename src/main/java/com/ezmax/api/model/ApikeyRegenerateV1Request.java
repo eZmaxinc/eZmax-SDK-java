@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/apikey/{pkiApikeyID}/regenerate
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ApikeyRegenerateV1Request {
   public static final String SERIALIZED_NAME_B_APIKEY_ISSIGNED = "bApikeyIssigned";
   @SerializedName(SERIALIZED_NAME_B_APIKEY_ISSIGNED)
+  @javax.annotation.Nullable
   private Boolean bApikeyIssigned;
 
   public ApikeyRegenerateV1Request() {
   }
 
-  public ApikeyRegenerateV1Request bApikeyIssigned(Boolean bApikeyIssigned) {
+  public ApikeyRegenerateV1Request bApikeyIssigned(@javax.annotation.Nullable Boolean bApikeyIssigned) {
     this.bApikeyIssigned = bApikeyIssigned;
     return this;
   }
@@ -71,7 +72,7 @@ public class ApikeyRegenerateV1Request {
     return bApikeyIssigned;
   }
 
-  public void setbApikeyIssigned(Boolean bApikeyIssigned) {
+  public void setbApikeyIssigned(@javax.annotation.Nullable Boolean bApikeyIssigned) {
     this.bApikeyIssigned = bApikeyIssigned;
   }
 

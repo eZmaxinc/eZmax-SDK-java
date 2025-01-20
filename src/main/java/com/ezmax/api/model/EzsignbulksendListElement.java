@@ -48,56 +48,67 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksend List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignbulksendListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsignbulksendID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION = "sEzsignbulksendDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sEzsignbulksendDescription;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
+  @javax.annotation.Nonnull
   private String sEzsignfoldertypeNameX;
 
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION = "bEzsignbulksendNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION)
+  @javax.annotation.Nonnull
   private Boolean bEzsignbulksendNeedvalidation;
 
   public static final String SERIALIZED_NAME_I_EZSIGNBULKSENDTRANSMISSION = "iEzsignbulksendtransmission";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNBULKSENDTRANSMISSION)
+  @javax.annotation.Nonnull
   private Integer iEzsignbulksendtransmission;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFOLDER = "iEzsignfolder";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER)
+  @javax.annotation.Nonnull
   private Integer iEzsignfolder;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT = "iEzsigndocument";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT)
+  @javax.annotation.Nonnull
   private Integer iEzsigndocument;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURE = "iEzsignsignature";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURE)
+  @javax.annotation.Nonnull
   private Integer iEzsignsignature;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURE_SIGNED = "iEzsignsignatureSigned";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURE_SIGNED)
+  @javax.annotation.Nonnull
   private Integer iEzsignsignatureSigned;
 
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE = "bEzsignbulksendIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzsignbulksendIsactive;
 
   public EzsignbulksendListElement() {
   }
 
-  public EzsignbulksendListElement pkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
+  public EzsignbulksendListElement pkiEzsignbulksendID(@javax.annotation.Nonnull Integer pkiEzsignbulksendID) {
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
     return this;
   }
@@ -112,12 +123,12 @@ public class EzsignbulksendListElement {
     return pkiEzsignbulksendID;
   }
 
-  public void setPkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
+  public void setPkiEzsignbulksendID(@javax.annotation.Nonnull Integer pkiEzsignbulksendID) {
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
   }
 
 
-  public EzsignbulksendListElement fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public EzsignbulksendListElement fkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -133,12 +144,12 @@ public class EzsignbulksendListElement {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public EzsignbulksendListElement sEzsignbulksendDescription(String sEzsignbulksendDescription) {
+  public EzsignbulksendListElement sEzsignbulksendDescription(@javax.annotation.Nonnull String sEzsignbulksendDescription) {
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
     return this;
   }
@@ -152,12 +163,12 @@ public class EzsignbulksendListElement {
     return sEzsignbulksendDescription;
   }
 
-  public void setsEzsignbulksendDescription(String sEzsignbulksendDescription) {
+  public void setsEzsignbulksendDescription(@javax.annotation.Nonnull String sEzsignbulksendDescription) {
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
   }
 
 
-  public EzsignbulksendListElement sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public EzsignbulksendListElement sEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -171,12 +182,12 @@ public class EzsignbulksendListElement {
     return sEzsignfoldertypeNameX;
   }
 
-  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public void setsEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
-  public EzsignbulksendListElement bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
+  public EzsignbulksendListElement bEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
@@ -190,12 +201,12 @@ public class EzsignbulksendListElement {
     return bEzsignbulksendNeedvalidation;
   }
 
-  public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
+  public void setbEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 
 
-  public EzsignbulksendListElement iEzsignbulksendtransmission(Integer iEzsignbulksendtransmission) {
+  public EzsignbulksendListElement iEzsignbulksendtransmission(@javax.annotation.Nonnull Integer iEzsignbulksendtransmission) {
     this.iEzsignbulksendtransmission = iEzsignbulksendtransmission;
     return this;
   }
@@ -209,12 +220,12 @@ public class EzsignbulksendListElement {
     return iEzsignbulksendtransmission;
   }
 
-  public void setiEzsignbulksendtransmission(Integer iEzsignbulksendtransmission) {
+  public void setiEzsignbulksendtransmission(@javax.annotation.Nonnull Integer iEzsignbulksendtransmission) {
     this.iEzsignbulksendtransmission = iEzsignbulksendtransmission;
   }
 
 
-  public EzsignbulksendListElement iEzsignfolder(Integer iEzsignfolder) {
+  public EzsignbulksendListElement iEzsignfolder(@javax.annotation.Nonnull Integer iEzsignfolder) {
     this.iEzsignfolder = iEzsignfolder;
     return this;
   }
@@ -228,12 +239,12 @@ public class EzsignbulksendListElement {
     return iEzsignfolder;
   }
 
-  public void setiEzsignfolder(Integer iEzsignfolder) {
+  public void setiEzsignfolder(@javax.annotation.Nonnull Integer iEzsignfolder) {
     this.iEzsignfolder = iEzsignfolder;
   }
 
 
-  public EzsignbulksendListElement iEzsigndocument(Integer iEzsigndocument) {
+  public EzsignbulksendListElement iEzsigndocument(@javax.annotation.Nonnull Integer iEzsigndocument) {
     this.iEzsigndocument = iEzsigndocument;
     return this;
   }
@@ -247,12 +258,12 @@ public class EzsignbulksendListElement {
     return iEzsigndocument;
   }
 
-  public void setiEzsigndocument(Integer iEzsigndocument) {
+  public void setiEzsigndocument(@javax.annotation.Nonnull Integer iEzsigndocument) {
     this.iEzsigndocument = iEzsigndocument;
   }
 
 
-  public EzsignbulksendListElement iEzsignsignature(Integer iEzsignsignature) {
+  public EzsignbulksendListElement iEzsignsignature(@javax.annotation.Nonnull Integer iEzsignsignature) {
     this.iEzsignsignature = iEzsignsignature;
     return this;
   }
@@ -266,12 +277,12 @@ public class EzsignbulksendListElement {
     return iEzsignsignature;
   }
 
-  public void setiEzsignsignature(Integer iEzsignsignature) {
+  public void setiEzsignsignature(@javax.annotation.Nonnull Integer iEzsignsignature) {
     this.iEzsignsignature = iEzsignsignature;
   }
 
 
-  public EzsignbulksendListElement iEzsignsignatureSigned(Integer iEzsignsignatureSigned) {
+  public EzsignbulksendListElement iEzsignsignatureSigned(@javax.annotation.Nonnull Integer iEzsignsignatureSigned) {
     this.iEzsignsignatureSigned = iEzsignsignatureSigned;
     return this;
   }
@@ -285,12 +296,12 @@ public class EzsignbulksendListElement {
     return iEzsignsignatureSigned;
   }
 
-  public void setiEzsignsignatureSigned(Integer iEzsignsignatureSigned) {
+  public void setiEzsignsignatureSigned(@javax.annotation.Nonnull Integer iEzsignsignatureSigned) {
     this.iEzsignsignatureSigned = iEzsignsignatureSigned;
   }
 
 
-  public EzsignbulksendListElement bEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
+  public EzsignbulksendListElement bEzsignbulksendIsactive(@javax.annotation.Nonnull Boolean bEzsignbulksendIsactive) {
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
     return this;
   }
@@ -304,7 +315,7 @@ public class EzsignbulksendListElement {
     return bEzsignbulksendIsactive;
   }
 
-  public void setbEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
+  public void setbEzsignbulksendIsactive(@javax.annotation.Nonnull Boolean bEzsignbulksendIsactive) {
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
   }
 

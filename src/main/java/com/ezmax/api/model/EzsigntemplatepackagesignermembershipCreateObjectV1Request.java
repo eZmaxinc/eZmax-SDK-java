@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplatepackagesignermembership
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepackagesignermembershipCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP = "a_objEzsigntemplatepackagesignermembership";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP)
+  @javax.annotation.Nonnull
   private List<EzsigntemplatepackagesignermembershipRequestCompound> aObjEzsigntemplatepackagesignermembership = new ArrayList<>();
 
   public EzsigntemplatepackagesignermembershipCreateObjectV1Request() {
   }
 
-  public EzsigntemplatepackagesignermembershipCreateObjectV1Request aObjEzsigntemplatepackagesignermembership(List<EzsigntemplatepackagesignermembershipRequestCompound> aObjEzsigntemplatepackagesignermembership) {
+  public EzsigntemplatepackagesignermembershipCreateObjectV1Request aObjEzsigntemplatepackagesignermembership(@javax.annotation.Nonnull List<EzsigntemplatepackagesignermembershipRequestCompound> aObjEzsigntemplatepackagesignermembership) {
     this.aObjEzsigntemplatepackagesignermembership = aObjEzsigntemplatepackagesignermembership;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzsigntemplatepackagesignermembershipCreateObjectV1Request {
     return aObjEzsigntemplatepackagesignermembership;
   }
 
-  public void setaObjEzsigntemplatepackagesignermembership(List<EzsigntemplatepackagesignermembershipRequestCompound> aObjEzsigntemplatepackagesignermembership) {
+  public void setaObjEzsigntemplatepackagesignermembership(@javax.annotation.Nonnull List<EzsigntemplatepackagesignermembershipRequestCompound> aObjEzsigntemplatepackagesignermembership) {
     this.aObjEzsigntemplatepackagesignermembership = aObjEzsigntemplatepackagesignermembership;
   }
 

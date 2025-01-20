@@ -49,18 +49,21 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsigner Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignsignerRequestCompound {
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUserlogintypeID;
 
   public static final String SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D = "fkiTaxassignmentID";
   @SerializedName(SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiTaxassignmentID;
 
   public static final String SERIALIZED_NAME_FKI_SECRETQUESTION_I_D = "fkiSecretquestionID";
   @SerializedName(SERIALIZED_NAME_FKI_SECRETQUESTION_I_D)
+  @javax.annotation.Nullable
   private Integer fkiSecretquestionID;
 
   /**
@@ -124,20 +127,23 @@ public class EzsignsignerRequestCompound {
   public static final String SERIALIZED_NAME_E_EZSIGNSIGNER_LOGINTYPE = "eEzsignsignerLogintype";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNER_LOGINTYPE)
+  @javax.annotation.Nullable
   private EEzsignsignerLogintypeEnum eEzsignsignerLogintype;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNER_SECRETANSWER = "sEzsignsignerSecretanswer";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNER_SECRETANSWER)
+  @javax.annotation.Nullable
   private String sEzsignsignerSecretanswer;
 
   public static final String SERIALIZED_NAME_OBJ_CONTACT = "objContact";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT)
+  @javax.annotation.Nonnull
   private EzsignsignerRequestCompoundContact objContact;
 
   public EzsignsignerRequestCompound() {
   }
 
-  public EzsignsignerRequestCompound fkiUserlogintypeID(Integer fkiUserlogintypeID) {
+  public EzsignsignerRequestCompound fkiUserlogintypeID(@javax.annotation.Nullable Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
@@ -152,12 +158,12 @@ public class EzsignsignerRequestCompound {
     return fkiUserlogintypeID;
   }
 
-  public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
+  public void setFkiUserlogintypeID(@javax.annotation.Nullable Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
-  public EzsignsignerRequestCompound fkiTaxassignmentID(Integer fkiTaxassignmentID) {
+  public EzsignsignerRequestCompound fkiTaxassignmentID(@javax.annotation.Nonnull Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
     return this;
   }
@@ -173,12 +179,12 @@ public class EzsignsignerRequestCompound {
     return fkiTaxassignmentID;
   }
 
-  public void setFkiTaxassignmentID(Integer fkiTaxassignmentID) {
+  public void setFkiTaxassignmentID(@javax.annotation.Nonnull Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
   }
 
 
-  public EzsignsignerRequestCompound fkiSecretquestionID(Integer fkiSecretquestionID) {
+  public EzsignsignerRequestCompound fkiSecretquestionID(@javax.annotation.Nullable Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
     return this;
   }
@@ -193,13 +199,13 @@ public class EzsignsignerRequestCompound {
     return fkiSecretquestionID;
   }
 
-  public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
+  public void setFkiSecretquestionID(@javax.annotation.Nullable Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
   }
 
 
   @Deprecated
-  public EzsignsignerRequestCompound eEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
+  public EzsignsignerRequestCompound eEzsignsignerLogintype(@javax.annotation.Nullable EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
     this.eEzsignsignerLogintype = eEzsignsignerLogintype;
     return this;
   }
@@ -216,12 +222,12 @@ public class EzsignsignerRequestCompound {
   }
 
   @Deprecated
-  public void seteEzsignsignerLogintype(EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
+  public void seteEzsignsignerLogintype(@javax.annotation.Nullable EEzsignsignerLogintypeEnum eEzsignsignerLogintype) {
     this.eEzsignsignerLogintype = eEzsignsignerLogintype;
   }
 
 
-  public EzsignsignerRequestCompound sEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
+  public EzsignsignerRequestCompound sEzsignsignerSecretanswer(@javax.annotation.Nullable String sEzsignsignerSecretanswer) {
     this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
     return this;
   }
@@ -235,12 +241,12 @@ public class EzsignsignerRequestCompound {
     return sEzsignsignerSecretanswer;
   }
 
-  public void setsEzsignsignerSecretanswer(String sEzsignsignerSecretanswer) {
+  public void setsEzsignsignerSecretanswer(@javax.annotation.Nullable String sEzsignsignerSecretanswer) {
     this.sEzsignsignerSecretanswer = sEzsignsignerSecretanswer;
   }
 
 
-  public EzsignsignerRequestCompound objContact(EzsignsignerRequestCompoundContact objContact) {
+  public EzsignsignerRequestCompound objContact(@javax.annotation.Nonnull EzsignsignerRequestCompoundContact objContact) {
     this.objContact = objContact;
     return this;
   }
@@ -254,7 +260,7 @@ public class EzsignsignerRequestCompound {
     return objContact;
   }
 
-  public void setObjContact(EzsignsignerRequestCompoundContact objContact) {
+  public void setObjContact(@javax.annotation.Nonnull EzsignsignerRequestCompoundContact objContact) {
     this.objContact = objContact;
   }
 

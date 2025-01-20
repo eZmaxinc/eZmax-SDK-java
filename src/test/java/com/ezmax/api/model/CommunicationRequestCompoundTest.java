@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommunicationexternalrecipientRequestCompound;
 import com.ezmax.api.model.CommunicationrecipientRequestCompound;
-import com.ezmax.api.model.CommunicationreferenceRequestCompound;
+import com.ezmax.api.model.CommunicationreferenceRequest;
 import com.ezmax.api.model.CustomCommunicationattachmentRequest;
 import com.ezmax.api.model.CustomCommunicationsenderRequest;
 import com.ezmax.api.model.FieldECommunicationImportance;

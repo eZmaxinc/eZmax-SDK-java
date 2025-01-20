@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/variableexpense/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class VariableexpenseGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_VARIABLEEXPENSE = "a_objVariableexpense";
   @SerializedName(SERIALIZED_NAME_A_OBJ_VARIABLEEXPENSE)
+  @javax.annotation.Nonnull
   private List<VariableexpenseAutocompleteElementResponse> aObjVariableexpense = new ArrayList<>();
 
   public VariableexpenseGetAutocompleteV2ResponseMPayload() {
   }
 
-  public VariableexpenseGetAutocompleteV2ResponseMPayload aObjVariableexpense(List<VariableexpenseAutocompleteElementResponse> aObjVariableexpense) {
+  public VariableexpenseGetAutocompleteV2ResponseMPayload aObjVariableexpense(@javax.annotation.Nonnull List<VariableexpenseAutocompleteElementResponse> aObjVariableexpense) {
     this.aObjVariableexpense = aObjVariableexpense;
     return this;
   }
@@ -82,7 +83,7 @@ public class VariableexpenseGetAutocompleteV2ResponseMPayload {
     return aObjVariableexpense;
   }
 
-  public void setaObjVariableexpense(List<VariableexpenseAutocompleteElementResponse> aObjVariableexpense) {
+  public void setaObjVariableexpense(@javax.annotation.Nonnull List<VariableexpenseAutocompleteElementResponse> aObjVariableexpense) {
     this.aObjVariableexpense = aObjVariableexpense;
   }
 

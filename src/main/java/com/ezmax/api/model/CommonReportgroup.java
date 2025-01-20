@@ -52,20 +52,22 @@ import eZmaxAPI.JSON;
 /**
  * A group of reports  Each Reportgroup is for a specific recipient or for a specific context.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonReportgroup {
   public static final String SERIALIZED_NAME_A_OBJ_REPORT = "a_objReport";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORT)
+  @javax.annotation.Nonnull
   private List<CommonReport> aObjReport = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_REPORTCELLSTYLE_CUSTOM = "a_objReportcellstyleCustom";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTCELLSTYLE_CUSTOM)
+  @javax.annotation.Nonnull
   private List<CommonReportcellstyle> aObjReportcellstyleCustom = new ArrayList<>();
 
   public CommonReportgroup() {
   }
 
-  public CommonReportgroup aObjReport(List<CommonReport> aObjReport) {
+  public CommonReportgroup aObjReport(@javax.annotation.Nonnull List<CommonReport> aObjReport) {
     this.aObjReport = aObjReport;
     return this;
   }
@@ -87,12 +89,12 @@ public class CommonReportgroup {
     return aObjReport;
   }
 
-  public void setaObjReport(List<CommonReport> aObjReport) {
+  public void setaObjReport(@javax.annotation.Nonnull List<CommonReport> aObjReport) {
     this.aObjReport = aObjReport;
   }
 
 
-  public CommonReportgroup aObjReportcellstyleCustom(List<CommonReportcellstyle> aObjReportcellstyleCustom) {
+  public CommonReportgroup aObjReportcellstyleCustom(@javax.annotation.Nonnull List<CommonReportcellstyle> aObjReportcellstyleCustom) {
     this.aObjReportcellstyleCustom = aObjReportcellstyleCustom;
     return this;
   }
@@ -114,7 +116,7 @@ public class CommonReportgroup {
     return aObjReportcellstyleCustom;
   }
 
-  public void setaObjReportcellstyleCustom(List<CommonReportcellstyle> aObjReportcellstyleCustom) {
+  public void setaObjReportcellstyleCustom(@javax.annotation.Nonnull List<CommonReportcellstyle> aObjReportcellstyleCustom) {
     this.aObjReportcellstyleCustom = aObjReportcellstyleCustom;
   }
 

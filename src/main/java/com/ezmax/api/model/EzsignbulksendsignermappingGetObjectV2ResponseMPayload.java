@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsignbulksendsignermapping/{pkiEzsignbulksendsignermappingID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignbulksendsignermappingGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNBULKSENDSIGNERMAPPING = "objEzsignbulksendsignermapping";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNBULKSENDSIGNERMAPPING)
+  @javax.annotation.Nonnull
   private EzsignbulksendsignermappingResponseCompound objEzsignbulksendsignermapping;
 
   public EzsignbulksendsignermappingGetObjectV2ResponseMPayload() {
   }
 
-  public EzsignbulksendsignermappingGetObjectV2ResponseMPayload objEzsignbulksendsignermapping(EzsignbulksendsignermappingResponseCompound objEzsignbulksendsignermapping) {
+  public EzsignbulksendsignermappingGetObjectV2ResponseMPayload objEzsignbulksendsignermapping(@javax.annotation.Nonnull EzsignbulksendsignermappingResponseCompound objEzsignbulksendsignermapping) {
     this.objEzsignbulksendsignermapping = objEzsignbulksendsignermapping;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsignbulksendsignermappingGetObjectV2ResponseMPayload {
     return objEzsignbulksendsignermapping;
   }
 
-  public void setObjEzsignbulksendsignermapping(EzsignbulksendsignermappingResponseCompound objEzsignbulksendsignermapping) {
+  public void setObjEzsignbulksendsignermapping(@javax.annotation.Nonnull EzsignbulksendsignermappingResponseCompound objEzsignbulksendsignermapping) {
     this.objEzsignbulksendsignermapping = objEzsignbulksendsignermapping;
   }
 

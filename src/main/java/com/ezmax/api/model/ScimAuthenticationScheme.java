@@ -48,14 +48,16 @@ import eZmaxAPI.JSON;
 /**
  * ScimAuthenticationScheme
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ScimAuthenticationScheme {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String description;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private String name;
 
   /**
@@ -118,12 +120,13 @@ public class ScimAuthenticationScheme {
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nonnull
   private TypeEnum type;
 
   public ScimAuthenticationScheme() {
   }
 
-  public ScimAuthenticationScheme description(String description) {
+  public ScimAuthenticationScheme description(@javax.annotation.Nonnull String description) {
     this.description = description;
     return this;
   }
@@ -137,12 +140,12 @@ public class ScimAuthenticationScheme {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nonnull String description) {
     this.description = description;
   }
 
 
-  public ScimAuthenticationScheme name(String name) {
+  public ScimAuthenticationScheme name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
@@ -156,12 +159,12 @@ public class ScimAuthenticationScheme {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
 
-  public ScimAuthenticationScheme type(TypeEnum type) {
+  public ScimAuthenticationScheme type(@javax.annotation.Nonnull TypeEnum type) {
     this.type = type;
     return this;
   }
@@ -175,7 +178,7 @@ public class ScimAuthenticationScheme {
     return type;
   }
 
-  public void setType(TypeEnum type) {
+  public void setType(@javax.annotation.Nonnull TypeEnum type) {
     this.type = type;
   }
 

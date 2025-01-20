@@ -51,24 +51,27 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/domain/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DomainGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  @javax.annotation.Nonnull
   private Integer iRowReturned;
 
   public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  @javax.annotation.Nonnull
   private Integer iRowFiltered;
 
   public static final String SERIALIZED_NAME_A_OBJ_DOMAIN = "a_objDomain";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DOMAIN)
+  @javax.annotation.Nonnull
   private List<DomainListElement> aObjDomain = new ArrayList<>();
 
   public DomainGetListV1ResponseMPayload() {
   }
 
-  public DomainGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+  public DomainGetListV1ResponseMPayload iRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -82,12 +85,12 @@ public class DomainGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-  public void setiRowReturned(Integer iRowReturned) {
+  public void setiRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
-  public DomainGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+  public DomainGetListV1ResponseMPayload iRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -101,12 +104,12 @@ public class DomainGetListV1ResponseMPayload {
     return iRowFiltered;
   }
 
-  public void setiRowFiltered(Integer iRowFiltered) {
+  public void setiRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
   }
 
 
-  public DomainGetListV1ResponseMPayload aObjDomain(List<DomainListElement> aObjDomain) {
+  public DomainGetListV1ResponseMPayload aObjDomain(@javax.annotation.Nonnull List<DomainListElement> aObjDomain) {
     this.aObjDomain = aObjDomain;
     return this;
   }
@@ -128,7 +131,7 @@ public class DomainGetListV1ResponseMPayload {
     return aObjDomain;
   }
 
-  public void setaObjDomain(List<DomainListElement> aObjDomain) {
+  public void setaObjDomain(@javax.annotation.Nonnull List<DomainListElement> aObjDomain) {
     this.aObjDomain = aObjDomain;
   }
 

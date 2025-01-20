@@ -51,24 +51,27 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ActivesessionGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  @javax.annotation.Nonnull
   private Integer iRowReturned;
 
   public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  @javax.annotation.Nonnull
   private Integer iRowFiltered;
 
   public static final String SERIALIZED_NAME_A_OBJ_ACTIVESESSION = "a_objActivesession";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ACTIVESESSION)
+  @javax.annotation.Nonnull
   private List<ActivesessionListElement> aObjActivesession = new ArrayList<>();
 
   public ActivesessionGetListV1ResponseMPayload() {
   }
 
-  public ActivesessionGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+  public ActivesessionGetListV1ResponseMPayload iRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -82,12 +85,12 @@ public class ActivesessionGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-  public void setiRowReturned(Integer iRowReturned) {
+  public void setiRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
-  public ActivesessionGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+  public ActivesessionGetListV1ResponseMPayload iRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -101,12 +104,12 @@ public class ActivesessionGetListV1ResponseMPayload {
     return iRowFiltered;
   }
 
-  public void setiRowFiltered(Integer iRowFiltered) {
+  public void setiRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
   }
 
 
-  public ActivesessionGetListV1ResponseMPayload aObjActivesession(List<ActivesessionListElement> aObjActivesession) {
+  public ActivesessionGetListV1ResponseMPayload aObjActivesession(@javax.annotation.Nonnull List<ActivesessionListElement> aObjActivesession) {
     this.aObjActivesession = aObjActivesession;
     return this;
   }
@@ -128,7 +131,7 @@ public class ActivesessionGetListV1ResponseMPayload {
     return aObjActivesession;
   }
 
-  public void setaObjActivesession(List<ActivesessionListElement> aObjActivesession) {
+  public void setaObjActivesession(@javax.annotation.Nonnull List<ActivesessionListElement> aObjActivesession) {
     this.aObjActivesession = aObjActivesession;
   }
 

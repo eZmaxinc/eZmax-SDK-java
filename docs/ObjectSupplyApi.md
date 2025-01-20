@@ -83,7 +83,7 @@ public class Example {
 
 <a id="supplyDeleteObjectV1"></a>
 # **supplyDeleteObjectV1**
-> SupplyDeleteObjectV1Response supplyDeleteObjectV1(pkiSupplyID)
+> CommonResponse supplyDeleteObjectV1(pkiSupplyID)
 
 Delete an existing Supply
 
@@ -113,7 +113,7 @@ public class Example {
     ObjectSupplyApi apiInstance = new ObjectSupplyApi(defaultClient);
     Integer pkiSupplyID = 56; // Integer | The unique ID of the Supply
     try {
-      SupplyDeleteObjectV1Response result = apiInstance.supplyDeleteObjectV1(pkiSupplyID);
+      CommonResponse result = apiInstance.supplyDeleteObjectV1(pkiSupplyID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectSupplyApi#supplyDeleteObjectV1");
@@ -134,7 +134,7 @@ public class Example {
 
 ### Return type
 
-[**SupplyDeleteObjectV1Response**](SupplyDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ public class Example {
 
 <a id="supplyEditObjectV1"></a>
 # **supplyEditObjectV1**
-> SupplyEditObjectV1Response supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
+> CommonResponse supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request)
 
 Edit an existing Supply
 
@@ -184,7 +184,7 @@ public class Example {
     Integer pkiSupplyID = 56; // Integer | The unique ID of the Supply
     SupplyEditObjectV1Request supplyEditObjectV1Request = new SupplyEditObjectV1Request(); // SupplyEditObjectV1Request | 
     try {
-      SupplyEditObjectV1Response result = apiInstance.supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request);
+      CommonResponse result = apiInstance.supplyEditObjectV1(pkiSupplyID, supplyEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectSupplyApi#supplyEditObjectV1");
@@ -206,7 +206,7 @@ public class Example {
 
 ### Return type
 
-[**SupplyEditObjectV1Response**](SupplyEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

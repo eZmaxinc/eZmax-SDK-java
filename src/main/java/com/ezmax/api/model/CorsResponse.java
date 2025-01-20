@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Cors Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CorsResponse {
   public static final String SERIALIZED_NAME_PKI_CORS_I_D = "pkiCorsID";
   @SerializedName(SERIALIZED_NAME_PKI_CORS_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiCorsID;
 
   public static final String SERIALIZED_NAME_FKI_APIKEY_I_D = "fkiApikeyID";
   @SerializedName(SERIALIZED_NAME_FKI_APIKEY_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiApikeyID;
 
   public static final String SERIALIZED_NAME_S_CORS_ENTRYURL = "sCorsEntryurl";
   @SerializedName(SERIALIZED_NAME_S_CORS_ENTRYURL)
+  @javax.annotation.Nonnull
   private String sCorsEntryurl;
 
   public CorsResponse() {
   }
 
-  public CorsResponse pkiCorsID(Integer pkiCorsID) {
+  public CorsResponse pkiCorsID(@javax.annotation.Nonnull Integer pkiCorsID) {
     this.pkiCorsID = pkiCorsID;
     return this;
   }
@@ -81,12 +84,12 @@ public class CorsResponse {
     return pkiCorsID;
   }
 
-  public void setPkiCorsID(Integer pkiCorsID) {
+  public void setPkiCorsID(@javax.annotation.Nonnull Integer pkiCorsID) {
     this.pkiCorsID = pkiCorsID;
   }
 
 
-  public CorsResponse fkiApikeyID(Integer fkiApikeyID) {
+  public CorsResponse fkiApikeyID(@javax.annotation.Nonnull Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
     return this;
   }
@@ -101,12 +104,12 @@ public class CorsResponse {
     return fkiApikeyID;
   }
 
-  public void setFkiApikeyID(Integer fkiApikeyID) {
+  public void setFkiApikeyID(@javax.annotation.Nonnull Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
   }
 
 
-  public CorsResponse sCorsEntryurl(String sCorsEntryurl) {
+  public CorsResponse sCorsEntryurl(@javax.annotation.Nonnull String sCorsEntryurl) {
     this.sCorsEntryurl = sCorsEntryurl;
     return this;
   }
@@ -120,7 +123,7 @@ public class CorsResponse {
     return sCorsEntryurl;
   }
 
-  public void setsCorsEntryurl(String sCorsEntryurl) {
+  public void setsCorsEntryurl(@javax.annotation.Nonnull String sCorsEntryurl) {
     this.sCorsEntryurl = sCorsEntryurl;
   }
 

@@ -50,20 +50,22 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignsignature
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignsignatureCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE = "objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE)
+  @javax.annotation.Nullable
   private EzsignsignatureRequest objEzsignsignature;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE_COMPOUND = "objEzsignsignatureCompound";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNATURE_COMPOUND)
+  @javax.annotation.Nullable
   private EzsignsignatureRequestCompound objEzsignsignatureCompound;
 
   public EzsignsignatureCreateObjectV1Request() {
   }
 
-  public EzsignsignatureCreateObjectV1Request objEzsignsignature(EzsignsignatureRequest objEzsignsignature) {
+  public EzsignsignatureCreateObjectV1Request objEzsignsignature(@javax.annotation.Nullable EzsignsignatureRequest objEzsignsignature) {
     this.objEzsignsignature = objEzsignsignature;
     return this;
   }
@@ -77,12 +79,12 @@ public class EzsignsignatureCreateObjectV1Request {
     return objEzsignsignature;
   }
 
-  public void setObjEzsignsignature(EzsignsignatureRequest objEzsignsignature) {
+  public void setObjEzsignsignature(@javax.annotation.Nullable EzsignsignatureRequest objEzsignsignature) {
     this.objEzsignsignature = objEzsignsignature;
   }
 
 
-  public EzsignsignatureCreateObjectV1Request objEzsignsignatureCompound(EzsignsignatureRequestCompound objEzsignsignatureCompound) {
+  public EzsignsignatureCreateObjectV1Request objEzsignsignatureCompound(@javax.annotation.Nullable EzsignsignatureRequestCompound objEzsignsignatureCompound) {
     this.objEzsignsignatureCompound = objEzsignsignatureCompound;
     return this;
   }
@@ -96,7 +98,7 @@ public class EzsignsignatureCreateObjectV1Request {
     return objEzsignsignatureCompound;
   }
 
-  public void setObjEzsignsignatureCompound(EzsignsignatureRequestCompound objEzsignsignatureCompound) {
+  public void setObjEzsignsignatureCompound(@javax.annotation.Nullable EzsignsignatureRequestCompound objEzsignsignatureCompound) {
     this.objEzsignsignatureCompound = objEzsignsignatureCompound;
   }
 

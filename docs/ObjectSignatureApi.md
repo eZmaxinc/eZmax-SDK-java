@@ -84,7 +84,7 @@ public class Example {
 
 <a id="signatureDeleteObjectV1"></a>
 # **signatureDeleteObjectV1**
-> SignatureDeleteObjectV1Response signatureDeleteObjectV1(pkiSignatureID)
+> CommonResponse signatureDeleteObjectV1(pkiSignatureID)
 
 Delete an existing Signature
 
@@ -114,7 +114,7 @@ public class Example {
     ObjectSignatureApi apiInstance = new ObjectSignatureApi(defaultClient);
     Integer pkiSignatureID = 56; // Integer | The unique ID of the Signature
     try {
-      SignatureDeleteObjectV1Response result = apiInstance.signatureDeleteObjectV1(pkiSignatureID);
+      CommonResponse result = apiInstance.signatureDeleteObjectV1(pkiSignatureID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectSignatureApi#signatureDeleteObjectV1");
@@ -135,7 +135,7 @@ public class Example {
 
 ### Return type
 
-[**SignatureDeleteObjectV1Response**](SignatureDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ public class Example {
 
 <a id="signatureEditObjectV1"></a>
 # **signatureEditObjectV1**
-> SignatureEditObjectV1Response signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
+> CommonResponse signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request)
 
 Edit an existing Signature
 
@@ -185,7 +185,7 @@ public class Example {
     Integer pkiSignatureID = 56; // Integer | The unique ID of the Signature
     SignatureEditObjectV1Request signatureEditObjectV1Request = new SignatureEditObjectV1Request(); // SignatureEditObjectV1Request | 
     try {
-      SignatureEditObjectV1Response result = apiInstance.signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request);
+      CommonResponse result = apiInstance.signatureEditObjectV1(pkiSignatureID, signatureEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectSignatureApi#signatureEditObjectV1");
@@ -207,7 +207,7 @@ public class Example {
 
 ### Return type
 
-[**SignatureEditObjectV1Response**](SignatureEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

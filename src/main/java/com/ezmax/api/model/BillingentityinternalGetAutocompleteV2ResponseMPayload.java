@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/billingentityinternal/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class BillingentityinternalGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL = "a_objBillingentityinternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL)
+  @javax.annotation.Nonnull
   private List<BillingentityinternalAutocompleteElementResponse> aObjBillingentityinternal = new ArrayList<>();
 
   public BillingentityinternalGetAutocompleteV2ResponseMPayload() {
   }
 
-  public BillingentityinternalGetAutocompleteV2ResponseMPayload aObjBillingentityinternal(List<BillingentityinternalAutocompleteElementResponse> aObjBillingentityinternal) {
+  public BillingentityinternalGetAutocompleteV2ResponseMPayload aObjBillingentityinternal(@javax.annotation.Nonnull List<BillingentityinternalAutocompleteElementResponse> aObjBillingentityinternal) {
     this.aObjBillingentityinternal = aObjBillingentityinternal;
     return this;
   }
@@ -82,7 +83,7 @@ public class BillingentityinternalGetAutocompleteV2ResponseMPayload {
     return aObjBillingentityinternal;
   }
 
-  public void setaObjBillingentityinternal(List<BillingentityinternalAutocompleteElementResponse> aObjBillingentityinternal) {
+  public void setaObjBillingentityinternal(@javax.annotation.Nonnull List<BillingentityinternalAutocompleteElementResponse> aObjBillingentityinternal) {
     this.aObjBillingentityinternal = aObjBillingentityinternal;
   }
 

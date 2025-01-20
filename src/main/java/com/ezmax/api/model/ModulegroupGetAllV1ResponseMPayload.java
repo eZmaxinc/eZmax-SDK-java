@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/modulegroup/getAll
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ModulegroupGetAllV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_MODULEGROUP = "a_objModulegroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_MODULEGROUP)
+  @javax.annotation.Nonnull
   private List<ModulegroupResponseCompound> aObjModulegroup = new ArrayList<>();
 
   public ModulegroupGetAllV1ResponseMPayload() {
   }
 
-  public ModulegroupGetAllV1ResponseMPayload aObjModulegroup(List<ModulegroupResponseCompound> aObjModulegroup) {
+  public ModulegroupGetAllV1ResponseMPayload aObjModulegroup(@javax.annotation.Nonnull List<ModulegroupResponseCompound> aObjModulegroup) {
     this.aObjModulegroup = aObjModulegroup;
     return this;
   }
@@ -82,7 +83,7 @@ public class ModulegroupGetAllV1ResponseMPayload {
     return aObjModulegroup;
   }
 
-  public void setaObjModulegroup(List<ModulegroupResponseCompound> aObjModulegroup) {
+  public void setaObjModulegroup(@javax.annotation.Nonnull List<ModulegroupResponseCompound> aObjModulegroup) {
     this.aObjModulegroup = aObjModulegroup;
   }
 

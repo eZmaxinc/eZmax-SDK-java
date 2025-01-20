@@ -48,44 +48,52 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsigner-&gt;Contact Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignsignerResponseCompoundContact {
   public static final String SERIALIZED_NAME_PKI_CONTACT_I_D = "pkiContactID";
   @SerializedName(SERIALIZED_NAME_PKI_CONTACT_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiContactID;
 
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
+  @javax.annotation.Nonnull
   private String sContactFirstname;
 
   public static final String SERIALIZED_NAME_S_CONTACT_LASTNAME = "sContactLastname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_LASTNAME)
+  @javax.annotation.Nonnull
   private String sContactLastname;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  @javax.annotation.Nullable
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
   @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
+  @javax.annotation.Nullable
   private String sPhoneE164;
 
   public static final String SERIALIZED_NAME_S_PHONE_EXTENSION = "sPhoneExtension";
   @SerializedName(SERIALIZED_NAME_S_PHONE_EXTENSION)
+  @javax.annotation.Nullable
   private String sPhoneExtension;
 
   public static final String SERIALIZED_NAME_S_PHONE_E164_CELL = "sPhoneE164Cell";
   @SerializedName(SERIALIZED_NAME_S_PHONE_E164_CELL)
+  @javax.annotation.Nullable
   private String sPhoneE164Cell;
 
   public EzsignsignerResponseCompoundContact() {
   }
 
-  public EzsignsignerResponseCompoundContact pkiContactID(Integer pkiContactID) {
+  public EzsignsignerResponseCompoundContact pkiContactID(@javax.annotation.Nonnull Integer pkiContactID) {
     this.pkiContactID = pkiContactID;
     return this;
   }
@@ -100,12 +108,12 @@ public class EzsignsignerResponseCompoundContact {
     return pkiContactID;
   }
 
-  public void setPkiContactID(Integer pkiContactID) {
+  public void setPkiContactID(@javax.annotation.Nonnull Integer pkiContactID) {
     this.pkiContactID = pkiContactID;
   }
 
 
-  public EzsignsignerResponseCompoundContact sContactFirstname(String sContactFirstname) {
+  public EzsignsignerResponseCompoundContact sContactFirstname(@javax.annotation.Nonnull String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -119,12 +127,12 @@ public class EzsignsignerResponseCompoundContact {
     return sContactFirstname;
   }
 
-  public void setsContactFirstname(String sContactFirstname) {
+  public void setsContactFirstname(@javax.annotation.Nonnull String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
-  public EzsignsignerResponseCompoundContact sContactLastname(String sContactLastname) {
+  public EzsignsignerResponseCompoundContact sContactLastname(@javax.annotation.Nonnull String sContactLastname) {
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -138,12 +146,12 @@ public class EzsignsignerResponseCompoundContact {
     return sContactLastname;
   }
 
-  public void setsContactLastname(String sContactLastname) {
+  public void setsContactLastname(@javax.annotation.Nonnull String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 
 
-  public EzsignsignerResponseCompoundContact fkiLanguageID(Integer fkiLanguageID) {
+  public EzsignsignerResponseCompoundContact fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -159,12 +167,12 @@ public class EzsignsignerResponseCompoundContact {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(Integer fkiLanguageID) {
+  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public EzsignsignerResponseCompoundContact sEmailAddress(String sEmailAddress) {
+  public EzsignsignerResponseCompoundContact sEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -178,12 +186,12 @@ public class EzsignsignerResponseCompoundContact {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(String sEmailAddress) {
+  public void setsEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public EzsignsignerResponseCompoundContact sPhoneE164(String sPhoneE164) {
+  public EzsignsignerResponseCompoundContact sPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -197,12 +205,12 @@ public class EzsignsignerResponseCompoundContact {
     return sPhoneE164;
   }
 
-  public void setsPhoneE164(String sPhoneE164) {
+  public void setsPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 
 
-  public EzsignsignerResponseCompoundContact sPhoneExtension(String sPhoneExtension) {
+  public EzsignsignerResponseCompoundContact sPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -216,12 +224,12 @@ public class EzsignsignerResponseCompoundContact {
     return sPhoneExtension;
   }
 
-  public void setsPhoneExtension(String sPhoneExtension) {
+  public void setsPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
   }
 
 
-  public EzsignsignerResponseCompoundContact sPhoneE164Cell(String sPhoneE164Cell) {
+  public EzsignsignerResponseCompoundContact sPhoneE164Cell(@javax.annotation.Nullable String sPhoneE164Cell) {
     this.sPhoneE164Cell = sPhoneE164Cell;
     return this;
   }
@@ -235,7 +243,7 @@ public class EzsignsignerResponseCompoundContact {
     return sPhoneE164Cell;
   }
 
-  public void setsPhoneE164Cell(String sPhoneE164Cell) {
+  public void setsPhoneE164Cell(@javax.annotation.Nullable String sPhoneE164Cell) {
     this.sPhoneE164Cell = sPhoneE164Cell;
   }
 

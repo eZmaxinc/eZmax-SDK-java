@@ -55,91 +55,112 @@ import eZmaxAPI.JSON;
 /**
  * A custom Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomWebhookResponse {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiWebhookID;
 
   public static final String SERIALIZED_NAME_FKI_AUTHENTICATIONEXTERNAL_I_D = "fkiAuthenticationexternalID";
   @SerializedName(SERIALIZED_NAME_FKI_AUTHENTICATIONEXTERNAL_I_D)
+  @javax.annotation.Nullable
   private Integer fkiAuthenticationexternalID;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_DESCRIPTION = "sWebhookDescription";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sWebhookDescription;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
+  @javax.annotation.Nullable
   private String sEzsignfoldertypeNameX;
 
   public static final String SERIALIZED_NAME_E_WEBHOOK_MODULE = "eWebhookModule";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MODULE)
+  @javax.annotation.Nonnull
   private FieldEWebhookModule eWebhookModule;
 
   public static final String SERIALIZED_NAME_E_WEBHOOK_EZSIGNEVENT = "eWebhookEzsignevent";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_EZSIGNEVENT)
+  @javax.annotation.Nullable
   private FieldEWebhookEzsignevent eWebhookEzsignevent;
 
   public static final String SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT = "eWebhookManagementevent";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT)
+  @javax.annotation.Nullable
   private FieldEWebhookManagementevent eWebhookManagementevent;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_URL = "sWebhookUrl";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_URL)
+  @javax.annotation.Nonnull
   private String sWebhookUrl;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_EMAILFAILED = "sWebhookEmailfailed";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_EMAILFAILED)
+  @javax.annotation.Nonnull
   private String sWebhookEmailfailed;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_APIKEY = "sWebhookApikey";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_APIKEY)
+  @javax.annotation.Nullable
   private String sWebhookApikey;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_SECRET = "sWebhookSecret";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_SECRET)
+  @javax.annotation.Nullable
   private String sWebhookSecret;
 
   public static final String SERIALIZED_NAME_B_WEBHOOK_ISACTIVE = "bWebhookIsactive";
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bWebhookIsactive;
 
   public static final String SERIALIZED_NAME_B_WEBHOOK_ISSIGNED = "bWebhookIssigned";
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISSIGNED)
+  @javax.annotation.Nonnull
   private Boolean bWebhookIssigned;
 
   public static final String SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION = "bWebhookSkipsslvalidation";
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_SKIPSSLVALIDATION)
+  @javax.annotation.Nonnull
   private Boolean bWebhookSkipsslvalidation;
 
   public static final String SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION = "sAuthenticationexternalDescription";
   @SerializedName(SERIALIZED_NAME_S_AUTHENTICATIONEXTERNAL_DESCRIPTION)
+  @javax.annotation.Nullable
   private String sAuthenticationexternalDescription;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  @javax.annotation.Nonnull
   private CommonAudit objAudit;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_EVENT = "sWebhookEvent";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_EVENT)
+  @javax.annotation.Nullable
   private String sWebhookEvent;
 
   public static final String SERIALIZED_NAME_A_OBJ_WEBHOOKHEADER = "a_objWebhookheader";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WEBHOOKHEADER)
+  @javax.annotation.Nullable
   private List<WebhookheaderResponseCompound> aObjWebhookheader = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
+  @javax.annotation.Nonnull
   private String pksCustomerCode;
 
   public static final String SERIALIZED_NAME_B_WEBHOOK_TEST = "bWebhookTest";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_TEST)
+  @javax.annotation.Nonnull
   private Boolean bWebhookTest;
 
   /**
@@ -198,12 +219,13 @@ public class CustomWebhookResponse {
 
   public static final String SERIALIZED_NAME_E_WEBHOOK_EMITTYPE = "eWebhookEmittype";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_EMITTYPE)
+  @javax.annotation.Nullable
   private EWebhookEmittypeEnum eWebhookEmittype;
 
   public CustomWebhookResponse() {
   }
 
-  public CustomWebhookResponse pkiWebhookID(Integer pkiWebhookID) {
+  public CustomWebhookResponse pkiWebhookID(@javax.annotation.Nonnull Integer pkiWebhookID) {
     this.pkiWebhookID = pkiWebhookID;
     return this;
   }
@@ -217,12 +239,12 @@ public class CustomWebhookResponse {
     return pkiWebhookID;
   }
 
-  public void setPkiWebhookID(Integer pkiWebhookID) {
+  public void setPkiWebhookID(@javax.annotation.Nonnull Integer pkiWebhookID) {
     this.pkiWebhookID = pkiWebhookID;
   }
 
 
-  public CustomWebhookResponse fkiAuthenticationexternalID(Integer fkiAuthenticationexternalID) {
+  public CustomWebhookResponse fkiAuthenticationexternalID(@javax.annotation.Nullable Integer fkiAuthenticationexternalID) {
     this.fkiAuthenticationexternalID = fkiAuthenticationexternalID;
     return this;
   }
@@ -238,12 +260,12 @@ public class CustomWebhookResponse {
     return fkiAuthenticationexternalID;
   }
 
-  public void setFkiAuthenticationexternalID(Integer fkiAuthenticationexternalID) {
+  public void setFkiAuthenticationexternalID(@javax.annotation.Nullable Integer fkiAuthenticationexternalID) {
     this.fkiAuthenticationexternalID = fkiAuthenticationexternalID;
   }
 
 
-  public CustomWebhookResponse sWebhookDescription(String sWebhookDescription) {
+  public CustomWebhookResponse sWebhookDescription(@javax.annotation.Nonnull String sWebhookDescription) {
     this.sWebhookDescription = sWebhookDescription;
     return this;
   }
@@ -257,12 +279,12 @@ public class CustomWebhookResponse {
     return sWebhookDescription;
   }
 
-  public void setsWebhookDescription(String sWebhookDescription) {
+  public void setsWebhookDescription(@javax.annotation.Nonnull String sWebhookDescription) {
     this.sWebhookDescription = sWebhookDescription;
   }
 
 
-  public CustomWebhookResponse fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public CustomWebhookResponse fkiEzsignfoldertypeID(@javax.annotation.Nullable Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -278,12 +300,12 @@ public class CustomWebhookResponse {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(@javax.annotation.Nullable Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public CustomWebhookResponse sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public CustomWebhookResponse sEzsignfoldertypeNameX(@javax.annotation.Nullable String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -297,12 +319,12 @@ public class CustomWebhookResponse {
     return sEzsignfoldertypeNameX;
   }
 
-  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public void setsEzsignfoldertypeNameX(@javax.annotation.Nullable String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
-  public CustomWebhookResponse eWebhookModule(FieldEWebhookModule eWebhookModule) {
+  public CustomWebhookResponse eWebhookModule(@javax.annotation.Nonnull FieldEWebhookModule eWebhookModule) {
     this.eWebhookModule = eWebhookModule;
     return this;
   }
@@ -316,12 +338,12 @@ public class CustomWebhookResponse {
     return eWebhookModule;
   }
 
-  public void seteWebhookModule(FieldEWebhookModule eWebhookModule) {
+  public void seteWebhookModule(@javax.annotation.Nonnull FieldEWebhookModule eWebhookModule) {
     this.eWebhookModule = eWebhookModule;
   }
 
 
-  public CustomWebhookResponse eWebhookEzsignevent(FieldEWebhookEzsignevent eWebhookEzsignevent) {
+  public CustomWebhookResponse eWebhookEzsignevent(@javax.annotation.Nullable FieldEWebhookEzsignevent eWebhookEzsignevent) {
     this.eWebhookEzsignevent = eWebhookEzsignevent;
     return this;
   }
@@ -335,12 +357,12 @@ public class CustomWebhookResponse {
     return eWebhookEzsignevent;
   }
 
-  public void seteWebhookEzsignevent(FieldEWebhookEzsignevent eWebhookEzsignevent) {
+  public void seteWebhookEzsignevent(@javax.annotation.Nullable FieldEWebhookEzsignevent eWebhookEzsignevent) {
     this.eWebhookEzsignevent = eWebhookEzsignevent;
   }
 
 
-  public CustomWebhookResponse eWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
+  public CustomWebhookResponse eWebhookManagementevent(@javax.annotation.Nullable FieldEWebhookManagementevent eWebhookManagementevent) {
     this.eWebhookManagementevent = eWebhookManagementevent;
     return this;
   }
@@ -354,12 +376,12 @@ public class CustomWebhookResponse {
     return eWebhookManagementevent;
   }
 
-  public void seteWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
+  public void seteWebhookManagementevent(@javax.annotation.Nullable FieldEWebhookManagementevent eWebhookManagementevent) {
     this.eWebhookManagementevent = eWebhookManagementevent;
   }
 
 
-  public CustomWebhookResponse sWebhookUrl(String sWebhookUrl) {
+  public CustomWebhookResponse sWebhookUrl(@javax.annotation.Nonnull String sWebhookUrl) {
     this.sWebhookUrl = sWebhookUrl;
     return this;
   }
@@ -373,12 +395,12 @@ public class CustomWebhookResponse {
     return sWebhookUrl;
   }
 
-  public void setsWebhookUrl(String sWebhookUrl) {
+  public void setsWebhookUrl(@javax.annotation.Nonnull String sWebhookUrl) {
     this.sWebhookUrl = sWebhookUrl;
   }
 
 
-  public CustomWebhookResponse sWebhookEmailfailed(String sWebhookEmailfailed) {
+  public CustomWebhookResponse sWebhookEmailfailed(@javax.annotation.Nonnull String sWebhookEmailfailed) {
     this.sWebhookEmailfailed = sWebhookEmailfailed;
     return this;
   }
@@ -392,12 +414,12 @@ public class CustomWebhookResponse {
     return sWebhookEmailfailed;
   }
 
-  public void setsWebhookEmailfailed(String sWebhookEmailfailed) {
+  public void setsWebhookEmailfailed(@javax.annotation.Nonnull String sWebhookEmailfailed) {
     this.sWebhookEmailfailed = sWebhookEmailfailed;
   }
 
 
-  public CustomWebhookResponse sWebhookApikey(String sWebhookApikey) {
+  public CustomWebhookResponse sWebhookApikey(@javax.annotation.Nullable String sWebhookApikey) {
     this.sWebhookApikey = sWebhookApikey;
     return this;
   }
@@ -411,12 +433,12 @@ public class CustomWebhookResponse {
     return sWebhookApikey;
   }
 
-  public void setsWebhookApikey(String sWebhookApikey) {
+  public void setsWebhookApikey(@javax.annotation.Nullable String sWebhookApikey) {
     this.sWebhookApikey = sWebhookApikey;
   }
 
 
-  public CustomWebhookResponse sWebhookSecret(String sWebhookSecret) {
+  public CustomWebhookResponse sWebhookSecret(@javax.annotation.Nullable String sWebhookSecret) {
     this.sWebhookSecret = sWebhookSecret;
     return this;
   }
@@ -430,12 +452,12 @@ public class CustomWebhookResponse {
     return sWebhookSecret;
   }
 
-  public void setsWebhookSecret(String sWebhookSecret) {
+  public void setsWebhookSecret(@javax.annotation.Nullable String sWebhookSecret) {
     this.sWebhookSecret = sWebhookSecret;
   }
 
 
-  public CustomWebhookResponse bWebhookIsactive(Boolean bWebhookIsactive) {
+  public CustomWebhookResponse bWebhookIsactive(@javax.annotation.Nonnull Boolean bWebhookIsactive) {
     this.bWebhookIsactive = bWebhookIsactive;
     return this;
   }
@@ -449,12 +471,12 @@ public class CustomWebhookResponse {
     return bWebhookIsactive;
   }
 
-  public void setbWebhookIsactive(Boolean bWebhookIsactive) {
+  public void setbWebhookIsactive(@javax.annotation.Nonnull Boolean bWebhookIsactive) {
     this.bWebhookIsactive = bWebhookIsactive;
   }
 
 
-  public CustomWebhookResponse bWebhookIssigned(Boolean bWebhookIssigned) {
+  public CustomWebhookResponse bWebhookIssigned(@javax.annotation.Nonnull Boolean bWebhookIssigned) {
     this.bWebhookIssigned = bWebhookIssigned;
     return this;
   }
@@ -468,12 +490,12 @@ public class CustomWebhookResponse {
     return bWebhookIssigned;
   }
 
-  public void setbWebhookIssigned(Boolean bWebhookIssigned) {
+  public void setbWebhookIssigned(@javax.annotation.Nonnull Boolean bWebhookIssigned) {
     this.bWebhookIssigned = bWebhookIssigned;
   }
 
 
-  public CustomWebhookResponse bWebhookSkipsslvalidation(Boolean bWebhookSkipsslvalidation) {
+  public CustomWebhookResponse bWebhookSkipsslvalidation(@javax.annotation.Nonnull Boolean bWebhookSkipsslvalidation) {
     this.bWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
     return this;
   }
@@ -487,12 +509,12 @@ public class CustomWebhookResponse {
     return bWebhookSkipsslvalidation;
   }
 
-  public void setbWebhookSkipsslvalidation(Boolean bWebhookSkipsslvalidation) {
+  public void setbWebhookSkipsslvalidation(@javax.annotation.Nonnull Boolean bWebhookSkipsslvalidation) {
     this.bWebhookSkipsslvalidation = bWebhookSkipsslvalidation;
   }
 
 
-  public CustomWebhookResponse sAuthenticationexternalDescription(String sAuthenticationexternalDescription) {
+  public CustomWebhookResponse sAuthenticationexternalDescription(@javax.annotation.Nullable String sAuthenticationexternalDescription) {
     this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
     return this;
   }
@@ -506,12 +528,12 @@ public class CustomWebhookResponse {
     return sAuthenticationexternalDescription;
   }
 
-  public void setsAuthenticationexternalDescription(String sAuthenticationexternalDescription) {
+  public void setsAuthenticationexternalDescription(@javax.annotation.Nullable String sAuthenticationexternalDescription) {
     this.sAuthenticationexternalDescription = sAuthenticationexternalDescription;
   }
 
 
-  public CustomWebhookResponse objAudit(CommonAudit objAudit) {
+  public CustomWebhookResponse objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -525,12 +547,12 @@ public class CustomWebhookResponse {
     return objAudit;
   }
 
-  public void setObjAudit(CommonAudit objAudit) {
+  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
 
-  public CustomWebhookResponse sWebhookEvent(String sWebhookEvent) {
+  public CustomWebhookResponse sWebhookEvent(@javax.annotation.Nullable String sWebhookEvent) {
     this.sWebhookEvent = sWebhookEvent;
     return this;
   }
@@ -544,12 +566,12 @@ public class CustomWebhookResponse {
     return sWebhookEvent;
   }
 
-  public void setsWebhookEvent(String sWebhookEvent) {
+  public void setsWebhookEvent(@javax.annotation.Nullable String sWebhookEvent) {
     this.sWebhookEvent = sWebhookEvent;
   }
 
 
-  public CustomWebhookResponse aObjWebhookheader(List<WebhookheaderResponseCompound> aObjWebhookheader) {
+  public CustomWebhookResponse aObjWebhookheader(@javax.annotation.Nullable List<WebhookheaderResponseCompound> aObjWebhookheader) {
     this.aObjWebhookheader = aObjWebhookheader;
     return this;
   }
@@ -571,12 +593,12 @@ public class CustomWebhookResponse {
     return aObjWebhookheader;
   }
 
-  public void setaObjWebhookheader(List<WebhookheaderResponseCompound> aObjWebhookheader) {
+  public void setaObjWebhookheader(@javax.annotation.Nullable List<WebhookheaderResponseCompound> aObjWebhookheader) {
     this.aObjWebhookheader = aObjWebhookheader;
   }
 
 
-  public CustomWebhookResponse pksCustomerCode(String pksCustomerCode) {
+  public CustomWebhookResponse pksCustomerCode(@javax.annotation.Nonnull String pksCustomerCode) {
     this.pksCustomerCode = pksCustomerCode;
     return this;
   }
@@ -590,13 +612,13 @@ public class CustomWebhookResponse {
     return pksCustomerCode;
   }
 
-  public void setPksCustomerCode(String pksCustomerCode) {
+  public void setPksCustomerCode(@javax.annotation.Nonnull String pksCustomerCode) {
     this.pksCustomerCode = pksCustomerCode;
   }
 
 
   @Deprecated
-  public CustomWebhookResponse bWebhookTest(Boolean bWebhookTest) {
+  public CustomWebhookResponse bWebhookTest(@javax.annotation.Nonnull Boolean bWebhookTest) {
     this.bWebhookTest = bWebhookTest;
     return this;
   }
@@ -613,12 +635,12 @@ public class CustomWebhookResponse {
   }
 
   @Deprecated
-  public void setbWebhookTest(Boolean bWebhookTest) {
+  public void setbWebhookTest(@javax.annotation.Nonnull Boolean bWebhookTest) {
     this.bWebhookTest = bWebhookTest;
   }
 
 
-  public CustomWebhookResponse eWebhookEmittype(EWebhookEmittypeEnum eWebhookEmittype) {
+  public CustomWebhookResponse eWebhookEmittype(@javax.annotation.Nullable EWebhookEmittypeEnum eWebhookEmittype) {
     this.eWebhookEmittype = eWebhookEmittype;
     return this;
   }
@@ -632,7 +654,7 @@ public class CustomWebhookResponse {
     return eWebhookEmittype;
   }
 
-  public void seteWebhookEmittype(EWebhookEmittypeEnum eWebhookEmittype) {
+  public void seteWebhookEmittype(@javax.annotation.Nullable EWebhookEmittypeEnum eWebhookEmittype) {
     this.eWebhookEmittype = eWebhookEmittype;
   }
 

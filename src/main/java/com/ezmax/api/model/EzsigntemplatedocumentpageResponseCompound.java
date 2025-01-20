@@ -48,40 +48,47 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatedocumentpage Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatedocumentpageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D = "pkiEzsigntemplatedocumentpageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENTPAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplatedocumentpageID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_WIDTHIMAGE = "iEzsigntemplatedocumentpageWidthimage";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_WIDTHIMAGE)
+  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentpageWidthimage;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_HEIGHTIMAGE = "iEzsigntemplatedocumentpageHeightimage";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_HEIGHTIMAGE)
+  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentpageHeightimage;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_WIDTHPDF = "iEzsigntemplatedocumentpageWidthpdf";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_WIDTHPDF)
+  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentpageWidthpdf;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_HEIGHTPDF = "iEzsigntemplatedocumentpageHeightpdf";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_HEIGHTPDF)
+  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentpageHeightpdf;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_PAGENUMBER = "iEzsigntemplatedocumentpagePagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_PAGENUMBER)
+  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentpagePagenumber;
 
   public static final String SERIALIZED_NAME_S_COMPUTED_IMAGEURL = "sComputedImageurl";
   @SerializedName(SERIALIZED_NAME_S_COMPUTED_IMAGEURL)
+  @javax.annotation.Nonnull
   private String sComputedImageurl;
 
   public EzsigntemplatedocumentpageResponseCompound() {
   }
 
-  public EzsigntemplatedocumentpageResponseCompound pkiEzsigntemplatedocumentpageID(Integer pkiEzsigntemplatedocumentpageID) {
+  public EzsigntemplatedocumentpageResponseCompound pkiEzsigntemplatedocumentpageID(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentpageID) {
     this.pkiEzsigntemplatedocumentpageID = pkiEzsigntemplatedocumentpageID;
     return this;
   }
@@ -96,12 +103,12 @@ public class EzsigntemplatedocumentpageResponseCompound {
     return pkiEzsigntemplatedocumentpageID;
   }
 
-  public void setPkiEzsigntemplatedocumentpageID(Integer pkiEzsigntemplatedocumentpageID) {
+  public void setPkiEzsigntemplatedocumentpageID(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentpageID) {
     this.pkiEzsigntemplatedocumentpageID = pkiEzsigntemplatedocumentpageID;
   }
 
 
-  public EzsigntemplatedocumentpageResponseCompound iEzsigntemplatedocumentpageWidthimage(Integer iEzsigntemplatedocumentpageWidthimage) {
+  public EzsigntemplatedocumentpageResponseCompound iEzsigntemplatedocumentpageWidthimage(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageWidthimage) {
     this.iEzsigntemplatedocumentpageWidthimage = iEzsigntemplatedocumentpageWidthimage;
     return this;
   }
@@ -116,12 +123,12 @@ public class EzsigntemplatedocumentpageResponseCompound {
     return iEzsigntemplatedocumentpageWidthimage;
   }
 
-  public void setiEzsigntemplatedocumentpageWidthimage(Integer iEzsigntemplatedocumentpageWidthimage) {
+  public void setiEzsigntemplatedocumentpageWidthimage(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageWidthimage) {
     this.iEzsigntemplatedocumentpageWidthimage = iEzsigntemplatedocumentpageWidthimage;
   }
 
 
-  public EzsigntemplatedocumentpageResponseCompound iEzsigntemplatedocumentpageHeightimage(Integer iEzsigntemplatedocumentpageHeightimage) {
+  public EzsigntemplatedocumentpageResponseCompound iEzsigntemplatedocumentpageHeightimage(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageHeightimage) {
     this.iEzsigntemplatedocumentpageHeightimage = iEzsigntemplatedocumentpageHeightimage;
     return this;
   }
@@ -136,12 +143,12 @@ public class EzsigntemplatedocumentpageResponseCompound {
     return iEzsigntemplatedocumentpageHeightimage;
   }
 
-  public void setiEzsigntemplatedocumentpageHeightimage(Integer iEzsigntemplatedocumentpageHeightimage) {
+  public void setiEzsigntemplatedocumentpageHeightimage(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageHeightimage) {
     this.iEzsigntemplatedocumentpageHeightimage = iEzsigntemplatedocumentpageHeightimage;
   }
 
 
-  public EzsigntemplatedocumentpageResponseCompound iEzsigntemplatedocumentpageWidthpdf(Integer iEzsigntemplatedocumentpageWidthpdf) {
+  public EzsigntemplatedocumentpageResponseCompound iEzsigntemplatedocumentpageWidthpdf(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageWidthpdf) {
     this.iEzsigntemplatedocumentpageWidthpdf = iEzsigntemplatedocumentpageWidthpdf;
     return this;
   }
@@ -156,12 +163,12 @@ public class EzsigntemplatedocumentpageResponseCompound {
     return iEzsigntemplatedocumentpageWidthpdf;
   }
 
-  public void setiEzsigntemplatedocumentpageWidthpdf(Integer iEzsigntemplatedocumentpageWidthpdf) {
+  public void setiEzsigntemplatedocumentpageWidthpdf(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageWidthpdf) {
     this.iEzsigntemplatedocumentpageWidthpdf = iEzsigntemplatedocumentpageWidthpdf;
   }
 
 
-  public EzsigntemplatedocumentpageResponseCompound iEzsigntemplatedocumentpageHeightpdf(Integer iEzsigntemplatedocumentpageHeightpdf) {
+  public EzsigntemplatedocumentpageResponseCompound iEzsigntemplatedocumentpageHeightpdf(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageHeightpdf) {
     this.iEzsigntemplatedocumentpageHeightpdf = iEzsigntemplatedocumentpageHeightpdf;
     return this;
   }
@@ -176,12 +183,12 @@ public class EzsigntemplatedocumentpageResponseCompound {
     return iEzsigntemplatedocumentpageHeightpdf;
   }
 
-  public void setiEzsigntemplatedocumentpageHeightpdf(Integer iEzsigntemplatedocumentpageHeightpdf) {
+  public void setiEzsigntemplatedocumentpageHeightpdf(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpageHeightpdf) {
     this.iEzsigntemplatedocumentpageHeightpdf = iEzsigntemplatedocumentpageHeightpdf;
   }
 
 
-  public EzsigntemplatedocumentpageResponseCompound iEzsigntemplatedocumentpagePagenumber(Integer iEzsigntemplatedocumentpagePagenumber) {
+  public EzsigntemplatedocumentpageResponseCompound iEzsigntemplatedocumentpagePagenumber(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpagePagenumber) {
     this.iEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
     return this;
   }
@@ -196,12 +203,12 @@ public class EzsigntemplatedocumentpageResponseCompound {
     return iEzsigntemplatedocumentpagePagenumber;
   }
 
-  public void setiEzsigntemplatedocumentpagePagenumber(Integer iEzsigntemplatedocumentpagePagenumber) {
+  public void setiEzsigntemplatedocumentpagePagenumber(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpagePagenumber) {
     this.iEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
   }
 
 
-  public EzsigntemplatedocumentpageResponseCompound sComputedImageurl(String sComputedImageurl) {
+  public EzsigntemplatedocumentpageResponseCompound sComputedImageurl(@javax.annotation.Nonnull String sComputedImageurl) {
     this.sComputedImageurl = sComputedImageurl;
     return this;
   }
@@ -215,7 +222,7 @@ public class EzsigntemplatedocumentpageResponseCompound {
     return sComputedImageurl;
   }
 
-  public void setsComputedImageurl(String sComputedImageurl) {
+  public void setsComputedImageurl(@javax.annotation.Nonnull String sComputedImageurl) {
     this.sComputedImageurl = sComputedImageurl;
   }
 

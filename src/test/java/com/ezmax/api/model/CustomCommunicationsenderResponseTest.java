@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CustomContactNameResponse;
-import com.ezmax.api.model.EmailResponseCompound;
+import com.ezmax.api.model.EmailResponse;
 import com.ezmax.api.model.PhoneResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

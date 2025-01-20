@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezmaxinvoicing/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzmaxinvoicingGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICING = "a_objEzmaxinvoicing";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICING)
+  @javax.annotation.Nonnull
   private List<EzmaxinvoicingAutocompleteElementResponse> aObjEzmaxinvoicing = new ArrayList<>();
 
   public EzmaxinvoicingGetAutocompleteV2ResponseMPayload() {
   }
 
-  public EzmaxinvoicingGetAutocompleteV2ResponseMPayload aObjEzmaxinvoicing(List<EzmaxinvoicingAutocompleteElementResponse> aObjEzmaxinvoicing) {
+  public EzmaxinvoicingGetAutocompleteV2ResponseMPayload aObjEzmaxinvoicing(@javax.annotation.Nonnull List<EzmaxinvoicingAutocompleteElementResponse> aObjEzmaxinvoicing) {
     this.aObjEzmaxinvoicing = aObjEzmaxinvoicing;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzmaxinvoicingGetAutocompleteV2ResponseMPayload {
     return aObjEzmaxinvoicing;
   }
 
-  public void setaObjEzmaxinvoicing(List<EzmaxinvoicingAutocompleteElementResponse> aObjEzmaxinvoicing) {
+  public void setaObjEzmaxinvoicing(@javax.annotation.Nonnull List<EzmaxinvoicingAutocompleteElementResponse> aObjEzmaxinvoicing) {
     this.aObjEzmaxinvoicing = aObjEzmaxinvoicing;
   }
 

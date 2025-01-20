@@ -53,256 +53,317 @@ import eZmaxAPI.JSON;
 /**
  * A Attachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AttachmentResponseCompound {
   public static final String SERIALIZED_NAME_PKI_ATTACHMENT_I_D = "pkiAttachmentID";
   @SerializedName(SERIALIZED_NAME_PKI_ATTACHMENT_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiAttachmentID;
 
   public static final String SERIALIZED_NAME_FKI_COMPUTER_I_D = "fkiComputerID";
   @SerializedName(SERIALIZED_NAME_FKI_COMPUTER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiComputerID;
 
   public static final String SERIALIZED_NAME_FKI_ADJUSTMENT_I_D = "fkiAdjustmentID";
   @SerializedName(SERIALIZED_NAME_FKI_ADJUSTMENT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiAdjustmentID;
 
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiAgentID;
 
   public static final String SERIALIZED_NAME_FKI_BANKACCOUNT_I_D = "fkiBankaccountID";
   @SerializedName(SERIALIZED_NAME_FKI_BANKACCOUNT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiBankaccountID;
 
   public static final String SERIALIZED_NAME_FKI_BROKER_I_D = "fkiBrokerID";
   @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiBrokerID;
 
   public static final String SERIALIZED_NAME_FKI_COMMISSIONADVANCE_I_D = "fkiCommissionadvanceID";
   @SerializedName(SERIALIZED_NAME_FKI_COMMISSIONADVANCE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiCommissionadvanceID;
 
   public static final String SERIALIZED_NAME_FKI_COMMUNICATION_I_D = "fkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_FKI_COMMUNICATION_I_D)
+  @javax.annotation.Nullable
   private Integer fkiCommunicationID;
 
   public static final String SERIALIZED_NAME_FKI_CUSTOMER_I_D = "fkiCustomerID";
   @SerializedName(SERIALIZED_NAME_FKI_CUSTOMER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiCustomerID;
 
   public static final String SERIALIZED_NAME_FKI_CUSTOMERTEMPLATE_I_D = "fkiCustomertemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_CUSTOMERTEMPLATE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiCustomertemplateID;
 
   public static final String SERIALIZED_NAME_FKI_DEPOSIT_I_D = "fkiDepositID";
   @SerializedName(SERIALIZED_NAME_FKI_DEPOSIT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiDepositID;
 
   public static final String SERIALIZED_NAME_FKI_DEPOSITTRANSITCHEQUE_I_D = "fkiDeposittransitchequeID";
   @SerializedName(SERIALIZED_NAME_FKI_DEPOSITTRANSITCHEQUE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiDeposittransitchequeID;
 
   public static final String SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFER_I_D = "fkiElectronicfundstransferID";
   @SerializedName(SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiElectronicfundstransferID;
 
   public static final String SERIALIZED_NAME_FKI_EMPLOYEE_I_D = "fkiEmployeeID";
   @SerializedName(SERIALIZED_NAME_FKI_EMPLOYEE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEmployeeID;
 
   public static final String SERIALIZED_NAME_FKI_EXTERNALBROKER_I_D = "fkiExternalbrokerID";
   @SerializedName(SERIALIZED_NAME_FKI_EXTERNALBROKER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiExternalbrokerID;
 
   public static final String SERIALIZED_NAME_FKI_EZCOMADVANCESERVER_I_D = "fkiEzcomadvanceserverID";
   @SerializedName(SERIALIZED_NAME_FKI_EZCOMADVANCESERVER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzcomadvanceserverID;
 
   public static final String SERIALIZED_NAME_FKI_EZCOMCOMPANY_I_D = "fkiEzcomcompanyID";
   @SerializedName(SERIALIZED_NAME_FKI_EZCOMCOMPANY_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzcomcompanyID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_FKI_GHACQCONTRACT_I_D = "fkiGhacqcontractID";
   @SerializedName(SERIALIZED_NAME_FKI_GHACQCONTRACT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiGhacqcontractID;
 
   public static final String SERIALIZED_NAME_FKI_INSCRIPTION_I_D = "fkiInscriptionID";
   @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTION_I_D)
+  @javax.annotation.Nullable
   private Integer fkiInscriptionID;
 
   public static final String SERIALIZED_NAME_FKI_INSCRIPTIONTEMP_I_D = "fkiInscriptiontempID";
   @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTIONTEMP_I_D)
+  @javax.annotation.Nullable
   private Integer fkiInscriptiontempID;
 
   public static final String SERIALIZED_NAME_FKI_INSCRIPTIONNOTAUTHENTICATED_I_D = "fkiInscriptionnotauthenticatedID";
   @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTIONNOTAUTHENTICATED_I_D)
+  @javax.annotation.Nullable
   private Integer fkiInscriptionnotauthenticatedID;
 
   public static final String SERIALIZED_NAME_FKI_INVOICE_I_D = "fkiInvoiceID";
   @SerializedName(SERIALIZED_NAME_FKI_INVOICE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiInvoiceID;
 
   public static final String SERIALIZED_NAME_FKI_BUYERCONTRACT_I_D = "fkiBuyercontractID";
   @SerializedName(SERIALIZED_NAME_FKI_BUYERCONTRACT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiBuyercontractID;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D = "fkiFranchisebrokerID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiFranchisebrokerID;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEAGENCE_I_D = "fkiFranchiseagenceID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEAGENCE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiFranchiseagenceID;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D = "fkiFranchiseofficeID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiFranchiseofficeID;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEFRANCHISE_I_D = "fkiFranchisefranchiseID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEFRANCHISE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiFranchisefranchiseID;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISECOMPLAINT_I_D = "fkiFranchisecomplaintID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISECOMPLAINT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiFranchisecomplaintID;
 
   public static final String SERIALIZED_NAME_FKI_LEAD_I_D = "fkiLeadID";
   @SerializedName(SERIALIZED_NAME_FKI_LEAD_I_D)
+  @javax.annotation.Nullable
   private Integer fkiLeadID;
 
   public static final String SERIALIZED_NAME_FKI_MARKETINGPROGRAM_I_D = "fkiMarketingprogramID";
   @SerializedName(SERIALIZED_NAME_FKI_MARKETINGPROGRAM_I_D)
+  @javax.annotation.Nullable
   private Integer fkiMarketingprogramID;
 
   public static final String SERIALIZED_NAME_FKI_MARKETINGFOLLOW_I_D = "fkiMarketingfollowID";
   @SerializedName(SERIALIZED_NAME_FKI_MARKETINGFOLLOW_I_D)
+  @javax.annotation.Nullable
   private Integer fkiMarketingfollowID;
 
   public static final String SERIALIZED_NAME_FKI_NOTARY_I_D = "fkiNotaryID";
   @SerializedName(SERIALIZED_NAME_FKI_NOTARY_I_D)
+  @javax.annotation.Nullable
   private Integer fkiNotaryID;
 
   public static final String SERIALIZED_NAME_FKI_OFFICETAXREPORT_I_D = "fkiOfficetaxreportID";
   @SerializedName(SERIALIZED_NAME_FKI_OFFICETAXREPORT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiOfficetaxreportID;
 
   public static final String SERIALIZED_NAME_FKI_OTHERINCOME_I_D = "fkiOtherincomeID";
   @SerializedName(SERIALIZED_NAME_FKI_OTHERINCOME_I_D)
+  @javax.annotation.Nullable
   private Integer fkiOtherincomeID;
 
   public static final String SERIALIZED_NAME_FKI_PAYMENTPREPARATION_I_D = "fkiPaymentpreparationID";
   @SerializedName(SERIALIZED_NAME_FKI_PAYMENTPREPARATION_I_D)
+  @javax.annotation.Nullable
   private Integer fkiPaymentpreparationID;
 
   public static final String SERIALIZED_NAME_FKI_PURCHASE_I_D = "fkiPurchaseID";
   @SerializedName(SERIALIZED_NAME_FKI_PURCHASE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiPurchaseID;
 
   public static final String SERIALIZED_NAME_FKI_SALARY_I_D = "fkiSalaryID";
   @SerializedName(SERIALIZED_NAME_FKI_SALARY_I_D)
+  @javax.annotation.Nullable
   private Integer fkiSalaryID;
 
   public static final String SERIALIZED_NAME_FKI_SUPPLIER_I_D = "fkiSupplierID";
   @SerializedName(SERIALIZED_NAME_FKI_SUPPLIER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiSupplierID;
 
   public static final String SERIALIZED_NAME_FKI_TRANQCONTRACT_I_D = "fkiTranqcontractID";
   @SerializedName(SERIALIZED_NAME_FKI_TRANQCONTRACT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiTranqcontractID;
 
   public static final String SERIALIZED_NAME_FKI_TEMPLATE_I_D = "fkiTemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_TEMPLATE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiTemplateID;
 
   public static final String SERIALIZED_NAME_FKI_INSCRIPTIONCHECKLIST_I_D = "fkiInscriptionchecklistID";
   @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTIONCHECKLIST_I_D)
+  @javax.annotation.Nullable
   private Integer fkiInscriptionchecklistID;
 
   public static final String SERIALIZED_NAME_FKI_FOLDER_I_D = "fkiFolderID";
   @SerializedName(SERIALIZED_NAME_FKI_FOLDER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiFolderID;
 
   public static final String SERIALIZED_NAME_FKI_REJECTEDOFFERTOPURCHASE_I_D = "fkiRejectedoffertopurchaseID";
   @SerializedName(SERIALIZED_NAME_FKI_REJECTEDOFFERTOPURCHASE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiRejectedoffertopurchaseID;
 
   public static final String SERIALIZED_NAME_FKI_DISCLOSURE_I_D = "fkiDisclosureID";
   @SerializedName(SERIALIZED_NAME_FKI_DISCLOSURE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiDisclosureID;
 
   public static final String SERIALIZED_NAME_FKI_RECONCILIATION_I_D = "fkiReconciliationID";
   @SerializedName(SERIALIZED_NAME_FKI_RECONCILIATION_I_D)
+  @javax.annotation.Nullable
   private Integer fkiReconciliationID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D_REFERENCE = "fkiEzsigndocumentIDReference";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D_REFERENCE)
+  @javax.annotation.Nullable
   private Integer fkiEzsigndocumentIDReference;
 
   public static final String SERIALIZED_NAME_E_ATTACHMENT_DOCUMENTTYPE = "eAttachmentDocumenttype";
   @SerializedName(SERIALIZED_NAME_E_ATTACHMENT_DOCUMENTTYPE)
+  @javax.annotation.Nonnull
   private FieldEAttachmentDocumenttype eAttachmentDocumenttype;
 
   public static final String SERIALIZED_NAME_S_ATTACHMENT_NAME = "sAttachmentName";
   @SerializedName(SERIALIZED_NAME_S_ATTACHMENT_NAME)
+  @javax.annotation.Nonnull
   private String sAttachmentName;
 
   public static final String SERIALIZED_NAME_E_ATTACHMENT_PRIVACY = "eAttachmentPrivacy";
   @SerializedName(SERIALIZED_NAME_E_ATTACHMENT_PRIVACY)
+  @javax.annotation.Nonnull
   private FieldEAttachmentPrivacy eAttachmentPrivacy;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D_SPECIFIC = "fkiUserIDSpecific";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_SPECIFIC)
+  @javax.annotation.Nullable
   private Integer fkiUserIDSpecific;
 
   public static final String SERIALIZED_NAME_E_ATTACHMENT_TYPE = "eAttachmentType";
   @SerializedName(SERIALIZED_NAME_E_ATTACHMENT_TYPE)
+  @javax.annotation.Nonnull
   private FieldEAttachmentType eAttachmentType;
 
   public static final String SERIALIZED_NAME_I_ATTACHMENT_SIZE = "iAttachmentSize";
   @SerializedName(SERIALIZED_NAME_I_ATTACHMENT_SIZE)
+  @javax.annotation.Nonnull
   private Integer iAttachmentSize;
 
   public static final String SERIALIZED_NAME_I_ATTACHMENT_E_D_MMODULEFLAG = "iAttachmentEDMmoduleflag";
   @SerializedName(SERIALIZED_NAME_I_ATTACHMENT_E_D_MMODULEFLAG)
+  @javax.annotation.Nullable
   private Integer iAttachmentEDMmoduleflag;
 
   public static final String SERIALIZED_NAME_S_ATTACHMENT_M_D5 = "sAttachmentMD5";
   @SerializedName(SERIALIZED_NAME_S_ATTACHMENT_M_D5)
+  @javax.annotation.Nonnull
   private String sAttachmentMD5;
 
   public static final String SERIALIZED_NAME_B_ATTACHMENT_DELETED = "bAttachmentDeleted";
   @SerializedName(SERIALIZED_NAME_B_ATTACHMENT_DELETED)
+  @javax.annotation.Nonnull
   private Boolean bAttachmentDeleted;
 
   public static final String SERIALIZED_NAME_B_ATTACHMENT_VALID = "bAttachmentValid";
   @SerializedName(SERIALIZED_NAME_B_ATTACHMENT_VALID)
+  @javax.annotation.Nonnull
   private Boolean bAttachmentValid;
 
   public static final String SERIALIZED_NAME_E_ATTACHMENT_VERIFIED = "eAttachmentVerified";
   @SerializedName(SERIALIZED_NAME_E_ATTACHMENT_VERIFIED)
+  @javax.annotation.Nonnull
   private FieldEAttachmentVerified eAttachmentVerified;
 
   public static final String SERIALIZED_NAME_T_ATTACHMENT_REJECTIONCOMMENT = "tAttachmentRejectioncomment";
   @SerializedName(SERIALIZED_NAME_T_ATTACHMENT_REJECTIONCOMMENT)
+  @javax.annotation.Nullable
   private String tAttachmentRejectioncomment;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D_OWNER = "fkiUserIDOwner";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_OWNER)
+  @javax.annotation.Nullable
   private Integer fkiUserIDOwner;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  @javax.annotation.Nullable
   private CommonAudit objAudit;
 
   public AttachmentResponseCompound() {
   }
 
-  public AttachmentResponseCompound pkiAttachmentID(Integer pkiAttachmentID) {
+  public AttachmentResponseCompound pkiAttachmentID(@javax.annotation.Nonnull Integer pkiAttachmentID) {
     this.pkiAttachmentID = pkiAttachmentID;
     return this;
   }
@@ -317,12 +378,12 @@ public class AttachmentResponseCompound {
     return pkiAttachmentID;
   }
 
-  public void setPkiAttachmentID(Integer pkiAttachmentID) {
+  public void setPkiAttachmentID(@javax.annotation.Nonnull Integer pkiAttachmentID) {
     this.pkiAttachmentID = pkiAttachmentID;
   }
 
 
-  public AttachmentResponseCompound fkiComputerID(Integer fkiComputerID) {
+  public AttachmentResponseCompound fkiComputerID(@javax.annotation.Nullable Integer fkiComputerID) {
     this.fkiComputerID = fkiComputerID;
     return this;
   }
@@ -338,12 +399,12 @@ public class AttachmentResponseCompound {
     return fkiComputerID;
   }
 
-  public void setFkiComputerID(Integer fkiComputerID) {
+  public void setFkiComputerID(@javax.annotation.Nullable Integer fkiComputerID) {
     this.fkiComputerID = fkiComputerID;
   }
 
 
-  public AttachmentResponseCompound fkiAdjustmentID(Integer fkiAdjustmentID) {
+  public AttachmentResponseCompound fkiAdjustmentID(@javax.annotation.Nullable Integer fkiAdjustmentID) {
     this.fkiAdjustmentID = fkiAdjustmentID;
     return this;
   }
@@ -359,12 +420,12 @@ public class AttachmentResponseCompound {
     return fkiAdjustmentID;
   }
 
-  public void setFkiAdjustmentID(Integer fkiAdjustmentID) {
+  public void setFkiAdjustmentID(@javax.annotation.Nullable Integer fkiAdjustmentID) {
     this.fkiAdjustmentID = fkiAdjustmentID;
   }
 
 
-  public AttachmentResponseCompound fkiAgentID(Integer fkiAgentID) {
+  public AttachmentResponseCompound fkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
     return this;
   }
@@ -379,12 +440,12 @@ public class AttachmentResponseCompound {
     return fkiAgentID;
   }
 
-  public void setFkiAgentID(Integer fkiAgentID) {
+  public void setFkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
   }
 
 
-  public AttachmentResponseCompound fkiBankaccountID(Integer fkiBankaccountID) {
+  public AttachmentResponseCompound fkiBankaccountID(@javax.annotation.Nullable Integer fkiBankaccountID) {
     this.fkiBankaccountID = fkiBankaccountID;
     return this;
   }
@@ -400,12 +461,12 @@ public class AttachmentResponseCompound {
     return fkiBankaccountID;
   }
 
-  public void setFkiBankaccountID(Integer fkiBankaccountID) {
+  public void setFkiBankaccountID(@javax.annotation.Nullable Integer fkiBankaccountID) {
     this.fkiBankaccountID = fkiBankaccountID;
   }
 
 
-  public AttachmentResponseCompound fkiBrokerID(Integer fkiBrokerID) {
+  public AttachmentResponseCompound fkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
     return this;
   }
@@ -420,12 +481,12 @@ public class AttachmentResponseCompound {
     return fkiBrokerID;
   }
 
-  public void setFkiBrokerID(Integer fkiBrokerID) {
+  public void setFkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
   }
 
 
-  public AttachmentResponseCompound fkiCommissionadvanceID(Integer fkiCommissionadvanceID) {
+  public AttachmentResponseCompound fkiCommissionadvanceID(@javax.annotation.Nullable Integer fkiCommissionadvanceID) {
     this.fkiCommissionadvanceID = fkiCommissionadvanceID;
     return this;
   }
@@ -441,12 +502,12 @@ public class AttachmentResponseCompound {
     return fkiCommissionadvanceID;
   }
 
-  public void setFkiCommissionadvanceID(Integer fkiCommissionadvanceID) {
+  public void setFkiCommissionadvanceID(@javax.annotation.Nullable Integer fkiCommissionadvanceID) {
     this.fkiCommissionadvanceID = fkiCommissionadvanceID;
   }
 
 
-  public AttachmentResponseCompound fkiCommunicationID(Integer fkiCommunicationID) {
+  public AttachmentResponseCompound fkiCommunicationID(@javax.annotation.Nullable Integer fkiCommunicationID) {
     this.fkiCommunicationID = fkiCommunicationID;
     return this;
   }
@@ -461,12 +522,12 @@ public class AttachmentResponseCompound {
     return fkiCommunicationID;
   }
 
-  public void setFkiCommunicationID(Integer fkiCommunicationID) {
+  public void setFkiCommunicationID(@javax.annotation.Nullable Integer fkiCommunicationID) {
     this.fkiCommunicationID = fkiCommunicationID;
   }
 
 
-  public AttachmentResponseCompound fkiCustomerID(Integer fkiCustomerID) {
+  public AttachmentResponseCompound fkiCustomerID(@javax.annotation.Nullable Integer fkiCustomerID) {
     this.fkiCustomerID = fkiCustomerID;
     return this;
   }
@@ -481,12 +542,12 @@ public class AttachmentResponseCompound {
     return fkiCustomerID;
   }
 
-  public void setFkiCustomerID(Integer fkiCustomerID) {
+  public void setFkiCustomerID(@javax.annotation.Nullable Integer fkiCustomerID) {
     this.fkiCustomerID = fkiCustomerID;
   }
 
 
-  public AttachmentResponseCompound fkiCustomertemplateID(Integer fkiCustomertemplateID) {
+  public AttachmentResponseCompound fkiCustomertemplateID(@javax.annotation.Nullable Integer fkiCustomertemplateID) {
     this.fkiCustomertemplateID = fkiCustomertemplateID;
     return this;
   }
@@ -502,12 +563,12 @@ public class AttachmentResponseCompound {
     return fkiCustomertemplateID;
   }
 
-  public void setFkiCustomertemplateID(Integer fkiCustomertemplateID) {
+  public void setFkiCustomertemplateID(@javax.annotation.Nullable Integer fkiCustomertemplateID) {
     this.fkiCustomertemplateID = fkiCustomertemplateID;
   }
 
 
-  public AttachmentResponseCompound fkiDepositID(Integer fkiDepositID) {
+  public AttachmentResponseCompound fkiDepositID(@javax.annotation.Nullable Integer fkiDepositID) {
     this.fkiDepositID = fkiDepositID;
     return this;
   }
@@ -523,12 +584,12 @@ public class AttachmentResponseCompound {
     return fkiDepositID;
   }
 
-  public void setFkiDepositID(Integer fkiDepositID) {
+  public void setFkiDepositID(@javax.annotation.Nullable Integer fkiDepositID) {
     this.fkiDepositID = fkiDepositID;
   }
 
 
-  public AttachmentResponseCompound fkiDeposittransitchequeID(Integer fkiDeposittransitchequeID) {
+  public AttachmentResponseCompound fkiDeposittransitchequeID(@javax.annotation.Nullable Integer fkiDeposittransitchequeID) {
     this.fkiDeposittransitchequeID = fkiDeposittransitchequeID;
     return this;
   }
@@ -544,12 +605,12 @@ public class AttachmentResponseCompound {
     return fkiDeposittransitchequeID;
   }
 
-  public void setFkiDeposittransitchequeID(Integer fkiDeposittransitchequeID) {
+  public void setFkiDeposittransitchequeID(@javax.annotation.Nullable Integer fkiDeposittransitchequeID) {
     this.fkiDeposittransitchequeID = fkiDeposittransitchequeID;
   }
 
 
-  public AttachmentResponseCompound fkiElectronicfundstransferID(Integer fkiElectronicfundstransferID) {
+  public AttachmentResponseCompound fkiElectronicfundstransferID(@javax.annotation.Nullable Integer fkiElectronicfundstransferID) {
     this.fkiElectronicfundstransferID = fkiElectronicfundstransferID;
     return this;
   }
@@ -565,12 +626,12 @@ public class AttachmentResponseCompound {
     return fkiElectronicfundstransferID;
   }
 
-  public void setFkiElectronicfundstransferID(Integer fkiElectronicfundstransferID) {
+  public void setFkiElectronicfundstransferID(@javax.annotation.Nullable Integer fkiElectronicfundstransferID) {
     this.fkiElectronicfundstransferID = fkiElectronicfundstransferID;
   }
 
 
-  public AttachmentResponseCompound fkiEmployeeID(Integer fkiEmployeeID) {
+  public AttachmentResponseCompound fkiEmployeeID(@javax.annotation.Nullable Integer fkiEmployeeID) {
     this.fkiEmployeeID = fkiEmployeeID;
     return this;
   }
@@ -585,12 +646,12 @@ public class AttachmentResponseCompound {
     return fkiEmployeeID;
   }
 
-  public void setFkiEmployeeID(Integer fkiEmployeeID) {
+  public void setFkiEmployeeID(@javax.annotation.Nullable Integer fkiEmployeeID) {
     this.fkiEmployeeID = fkiEmployeeID;
   }
 
 
-  public AttachmentResponseCompound fkiExternalbrokerID(Integer fkiExternalbrokerID) {
+  public AttachmentResponseCompound fkiExternalbrokerID(@javax.annotation.Nullable Integer fkiExternalbrokerID) {
     this.fkiExternalbrokerID = fkiExternalbrokerID;
     return this;
   }
@@ -605,12 +666,12 @@ public class AttachmentResponseCompound {
     return fkiExternalbrokerID;
   }
 
-  public void setFkiExternalbrokerID(Integer fkiExternalbrokerID) {
+  public void setFkiExternalbrokerID(@javax.annotation.Nullable Integer fkiExternalbrokerID) {
     this.fkiExternalbrokerID = fkiExternalbrokerID;
   }
 
 
-  public AttachmentResponseCompound fkiEzcomadvanceserverID(Integer fkiEzcomadvanceserverID) {
+  public AttachmentResponseCompound fkiEzcomadvanceserverID(@javax.annotation.Nullable Integer fkiEzcomadvanceserverID) {
     this.fkiEzcomadvanceserverID = fkiEzcomadvanceserverID;
     return this;
   }
@@ -626,12 +687,12 @@ public class AttachmentResponseCompound {
     return fkiEzcomadvanceserverID;
   }
 
-  public void setFkiEzcomadvanceserverID(Integer fkiEzcomadvanceserverID) {
+  public void setFkiEzcomadvanceserverID(@javax.annotation.Nullable Integer fkiEzcomadvanceserverID) {
     this.fkiEzcomadvanceserverID = fkiEzcomadvanceserverID;
   }
 
 
-  public AttachmentResponseCompound fkiEzcomcompanyID(Integer fkiEzcomcompanyID) {
+  public AttachmentResponseCompound fkiEzcomcompanyID(@javax.annotation.Nullable Integer fkiEzcomcompanyID) {
     this.fkiEzcomcompanyID = fkiEzcomcompanyID;
     return this;
   }
@@ -647,12 +708,12 @@ public class AttachmentResponseCompound {
     return fkiEzcomcompanyID;
   }
 
-  public void setFkiEzcomcompanyID(Integer fkiEzcomcompanyID) {
+  public void setFkiEzcomcompanyID(@javax.annotation.Nullable Integer fkiEzcomcompanyID) {
     this.fkiEzcomcompanyID = fkiEzcomcompanyID;
   }
 
 
-  public AttachmentResponseCompound fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+  public AttachmentResponseCompound fkiEzsigndocumentID(@javax.annotation.Nullable Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
     return this;
   }
@@ -667,12 +728,12 @@ public class AttachmentResponseCompound {
     return fkiEzsigndocumentID;
   }
 
-  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+  public void setFkiEzsigndocumentID(@javax.annotation.Nullable Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
 
-  public AttachmentResponseCompound fkiGhacqcontractID(Integer fkiGhacqcontractID) {
+  public AttachmentResponseCompound fkiGhacqcontractID(@javax.annotation.Nullable Integer fkiGhacqcontractID) {
     this.fkiGhacqcontractID = fkiGhacqcontractID;
     return this;
   }
@@ -688,12 +749,12 @@ public class AttachmentResponseCompound {
     return fkiGhacqcontractID;
   }
 
-  public void setFkiGhacqcontractID(Integer fkiGhacqcontractID) {
+  public void setFkiGhacqcontractID(@javax.annotation.Nullable Integer fkiGhacqcontractID) {
     this.fkiGhacqcontractID = fkiGhacqcontractID;
   }
 
 
-  public AttachmentResponseCompound fkiInscriptionID(Integer fkiInscriptionID) {
+  public AttachmentResponseCompound fkiInscriptionID(@javax.annotation.Nullable Integer fkiInscriptionID) {
     this.fkiInscriptionID = fkiInscriptionID;
     return this;
   }
@@ -708,12 +769,12 @@ public class AttachmentResponseCompound {
     return fkiInscriptionID;
   }
 
-  public void setFkiInscriptionID(Integer fkiInscriptionID) {
+  public void setFkiInscriptionID(@javax.annotation.Nullable Integer fkiInscriptionID) {
     this.fkiInscriptionID = fkiInscriptionID;
   }
 
 
-  public AttachmentResponseCompound fkiInscriptiontempID(Integer fkiInscriptiontempID) {
+  public AttachmentResponseCompound fkiInscriptiontempID(@javax.annotation.Nullable Integer fkiInscriptiontempID) {
     this.fkiInscriptiontempID = fkiInscriptiontempID;
     return this;
   }
@@ -729,12 +790,12 @@ public class AttachmentResponseCompound {
     return fkiInscriptiontempID;
   }
 
-  public void setFkiInscriptiontempID(Integer fkiInscriptiontempID) {
+  public void setFkiInscriptiontempID(@javax.annotation.Nullable Integer fkiInscriptiontempID) {
     this.fkiInscriptiontempID = fkiInscriptiontempID;
   }
 
 
-  public AttachmentResponseCompound fkiInscriptionnotauthenticatedID(Integer fkiInscriptionnotauthenticatedID) {
+  public AttachmentResponseCompound fkiInscriptionnotauthenticatedID(@javax.annotation.Nullable Integer fkiInscriptionnotauthenticatedID) {
     this.fkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
     return this;
   }
@@ -749,12 +810,12 @@ public class AttachmentResponseCompound {
     return fkiInscriptionnotauthenticatedID;
   }
 
-  public void setFkiInscriptionnotauthenticatedID(Integer fkiInscriptionnotauthenticatedID) {
+  public void setFkiInscriptionnotauthenticatedID(@javax.annotation.Nullable Integer fkiInscriptionnotauthenticatedID) {
     this.fkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
   }
 
 
-  public AttachmentResponseCompound fkiInvoiceID(Integer fkiInvoiceID) {
+  public AttachmentResponseCompound fkiInvoiceID(@javax.annotation.Nullable Integer fkiInvoiceID) {
     this.fkiInvoiceID = fkiInvoiceID;
     return this;
   }
@@ -769,12 +830,12 @@ public class AttachmentResponseCompound {
     return fkiInvoiceID;
   }
 
-  public void setFkiInvoiceID(Integer fkiInvoiceID) {
+  public void setFkiInvoiceID(@javax.annotation.Nullable Integer fkiInvoiceID) {
     this.fkiInvoiceID = fkiInvoiceID;
   }
 
 
-  public AttachmentResponseCompound fkiBuyercontractID(Integer fkiBuyercontractID) {
+  public AttachmentResponseCompound fkiBuyercontractID(@javax.annotation.Nullable Integer fkiBuyercontractID) {
     this.fkiBuyercontractID = fkiBuyercontractID;
     return this;
   }
@@ -790,12 +851,12 @@ public class AttachmentResponseCompound {
     return fkiBuyercontractID;
   }
 
-  public void setFkiBuyercontractID(Integer fkiBuyercontractID) {
+  public void setFkiBuyercontractID(@javax.annotation.Nullable Integer fkiBuyercontractID) {
     this.fkiBuyercontractID = fkiBuyercontractID;
   }
 
 
-  public AttachmentResponseCompound fkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
+  public AttachmentResponseCompound fkiFranchisebrokerID(@javax.annotation.Nullable Integer fkiFranchisebrokerID) {
     this.fkiFranchisebrokerID = fkiFranchisebrokerID;
     return this;
   }
@@ -810,12 +871,12 @@ public class AttachmentResponseCompound {
     return fkiFranchisebrokerID;
   }
 
-  public void setFkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
+  public void setFkiFranchisebrokerID(@javax.annotation.Nullable Integer fkiFranchisebrokerID) {
     this.fkiFranchisebrokerID = fkiFranchisebrokerID;
   }
 
 
-  public AttachmentResponseCompound fkiFranchiseagenceID(Integer fkiFranchiseagenceID) {
+  public AttachmentResponseCompound fkiFranchiseagenceID(@javax.annotation.Nullable Integer fkiFranchiseagenceID) {
     this.fkiFranchiseagenceID = fkiFranchiseagenceID;
     return this;
   }
@@ -831,12 +892,12 @@ public class AttachmentResponseCompound {
     return fkiFranchiseagenceID;
   }
 
-  public void setFkiFranchiseagenceID(Integer fkiFranchiseagenceID) {
+  public void setFkiFranchiseagenceID(@javax.annotation.Nullable Integer fkiFranchiseagenceID) {
     this.fkiFranchiseagenceID = fkiFranchiseagenceID;
   }
 
 
-  public AttachmentResponseCompound fkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
+  public AttachmentResponseCompound fkiFranchiseofficeID(@javax.annotation.Nullable Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
     return this;
   }
@@ -851,12 +912,12 @@ public class AttachmentResponseCompound {
     return fkiFranchiseofficeID;
   }
 
-  public void setFkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
+  public void setFkiFranchiseofficeID(@javax.annotation.Nullable Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
   }
 
 
-  public AttachmentResponseCompound fkiFranchisefranchiseID(Integer fkiFranchisefranchiseID) {
+  public AttachmentResponseCompound fkiFranchisefranchiseID(@javax.annotation.Nullable Integer fkiFranchisefranchiseID) {
     this.fkiFranchisefranchiseID = fkiFranchisefranchiseID;
     return this;
   }
@@ -872,12 +933,12 @@ public class AttachmentResponseCompound {
     return fkiFranchisefranchiseID;
   }
 
-  public void setFkiFranchisefranchiseID(Integer fkiFranchisefranchiseID) {
+  public void setFkiFranchisefranchiseID(@javax.annotation.Nullable Integer fkiFranchisefranchiseID) {
     this.fkiFranchisefranchiseID = fkiFranchisefranchiseID;
   }
 
 
-  public AttachmentResponseCompound fkiFranchisecomplaintID(Integer fkiFranchisecomplaintID) {
+  public AttachmentResponseCompound fkiFranchisecomplaintID(@javax.annotation.Nullable Integer fkiFranchisecomplaintID) {
     this.fkiFranchisecomplaintID = fkiFranchisecomplaintID;
     return this;
   }
@@ -893,12 +954,12 @@ public class AttachmentResponseCompound {
     return fkiFranchisecomplaintID;
   }
 
-  public void setFkiFranchisecomplaintID(Integer fkiFranchisecomplaintID) {
+  public void setFkiFranchisecomplaintID(@javax.annotation.Nullable Integer fkiFranchisecomplaintID) {
     this.fkiFranchisecomplaintID = fkiFranchisecomplaintID;
   }
 
 
-  public AttachmentResponseCompound fkiLeadID(Integer fkiLeadID) {
+  public AttachmentResponseCompound fkiLeadID(@javax.annotation.Nullable Integer fkiLeadID) {
     this.fkiLeadID = fkiLeadID;
     return this;
   }
@@ -914,12 +975,12 @@ public class AttachmentResponseCompound {
     return fkiLeadID;
   }
 
-  public void setFkiLeadID(Integer fkiLeadID) {
+  public void setFkiLeadID(@javax.annotation.Nullable Integer fkiLeadID) {
     this.fkiLeadID = fkiLeadID;
   }
 
 
-  public AttachmentResponseCompound fkiMarketingprogramID(Integer fkiMarketingprogramID) {
+  public AttachmentResponseCompound fkiMarketingprogramID(@javax.annotation.Nullable Integer fkiMarketingprogramID) {
     this.fkiMarketingprogramID = fkiMarketingprogramID;
     return this;
   }
@@ -935,12 +996,12 @@ public class AttachmentResponseCompound {
     return fkiMarketingprogramID;
   }
 
-  public void setFkiMarketingprogramID(Integer fkiMarketingprogramID) {
+  public void setFkiMarketingprogramID(@javax.annotation.Nullable Integer fkiMarketingprogramID) {
     this.fkiMarketingprogramID = fkiMarketingprogramID;
   }
 
 
-  public AttachmentResponseCompound fkiMarketingfollowID(Integer fkiMarketingfollowID) {
+  public AttachmentResponseCompound fkiMarketingfollowID(@javax.annotation.Nullable Integer fkiMarketingfollowID) {
     this.fkiMarketingfollowID = fkiMarketingfollowID;
     return this;
   }
@@ -956,12 +1017,12 @@ public class AttachmentResponseCompound {
     return fkiMarketingfollowID;
   }
 
-  public void setFkiMarketingfollowID(Integer fkiMarketingfollowID) {
+  public void setFkiMarketingfollowID(@javax.annotation.Nullable Integer fkiMarketingfollowID) {
     this.fkiMarketingfollowID = fkiMarketingfollowID;
   }
 
 
-  public AttachmentResponseCompound fkiNotaryID(Integer fkiNotaryID) {
+  public AttachmentResponseCompound fkiNotaryID(@javax.annotation.Nullable Integer fkiNotaryID) {
     this.fkiNotaryID = fkiNotaryID;
     return this;
   }
@@ -976,12 +1037,12 @@ public class AttachmentResponseCompound {
     return fkiNotaryID;
   }
 
-  public void setFkiNotaryID(Integer fkiNotaryID) {
+  public void setFkiNotaryID(@javax.annotation.Nullable Integer fkiNotaryID) {
     this.fkiNotaryID = fkiNotaryID;
   }
 
 
-  public AttachmentResponseCompound fkiOfficetaxreportID(Integer fkiOfficetaxreportID) {
+  public AttachmentResponseCompound fkiOfficetaxreportID(@javax.annotation.Nullable Integer fkiOfficetaxreportID) {
     this.fkiOfficetaxreportID = fkiOfficetaxreportID;
     return this;
   }
@@ -997,12 +1058,12 @@ public class AttachmentResponseCompound {
     return fkiOfficetaxreportID;
   }
 
-  public void setFkiOfficetaxreportID(Integer fkiOfficetaxreportID) {
+  public void setFkiOfficetaxreportID(@javax.annotation.Nullable Integer fkiOfficetaxreportID) {
     this.fkiOfficetaxreportID = fkiOfficetaxreportID;
   }
 
 
-  public AttachmentResponseCompound fkiOtherincomeID(Integer fkiOtherincomeID) {
+  public AttachmentResponseCompound fkiOtherincomeID(@javax.annotation.Nullable Integer fkiOtherincomeID) {
     this.fkiOtherincomeID = fkiOtherincomeID;
     return this;
   }
@@ -1018,12 +1079,12 @@ public class AttachmentResponseCompound {
     return fkiOtherincomeID;
   }
 
-  public void setFkiOtherincomeID(Integer fkiOtherincomeID) {
+  public void setFkiOtherincomeID(@javax.annotation.Nullable Integer fkiOtherincomeID) {
     this.fkiOtherincomeID = fkiOtherincomeID;
   }
 
 
-  public AttachmentResponseCompound fkiPaymentpreparationID(Integer fkiPaymentpreparationID) {
+  public AttachmentResponseCompound fkiPaymentpreparationID(@javax.annotation.Nullable Integer fkiPaymentpreparationID) {
     this.fkiPaymentpreparationID = fkiPaymentpreparationID;
     return this;
   }
@@ -1039,12 +1100,12 @@ public class AttachmentResponseCompound {
     return fkiPaymentpreparationID;
   }
 
-  public void setFkiPaymentpreparationID(Integer fkiPaymentpreparationID) {
+  public void setFkiPaymentpreparationID(@javax.annotation.Nullable Integer fkiPaymentpreparationID) {
     this.fkiPaymentpreparationID = fkiPaymentpreparationID;
   }
 
 
-  public AttachmentResponseCompound fkiPurchaseID(Integer fkiPurchaseID) {
+  public AttachmentResponseCompound fkiPurchaseID(@javax.annotation.Nullable Integer fkiPurchaseID) {
     this.fkiPurchaseID = fkiPurchaseID;
     return this;
   }
@@ -1058,12 +1119,12 @@ public class AttachmentResponseCompound {
     return fkiPurchaseID;
   }
 
-  public void setFkiPurchaseID(Integer fkiPurchaseID) {
+  public void setFkiPurchaseID(@javax.annotation.Nullable Integer fkiPurchaseID) {
     this.fkiPurchaseID = fkiPurchaseID;
   }
 
 
-  public AttachmentResponseCompound fkiSalaryID(Integer fkiSalaryID) {
+  public AttachmentResponseCompound fkiSalaryID(@javax.annotation.Nullable Integer fkiSalaryID) {
     this.fkiSalaryID = fkiSalaryID;
     return this;
   }
@@ -1079,12 +1140,12 @@ public class AttachmentResponseCompound {
     return fkiSalaryID;
   }
 
-  public void setFkiSalaryID(Integer fkiSalaryID) {
+  public void setFkiSalaryID(@javax.annotation.Nullable Integer fkiSalaryID) {
     this.fkiSalaryID = fkiSalaryID;
   }
 
 
-  public AttachmentResponseCompound fkiSupplierID(Integer fkiSupplierID) {
+  public AttachmentResponseCompound fkiSupplierID(@javax.annotation.Nullable Integer fkiSupplierID) {
     this.fkiSupplierID = fkiSupplierID;
     return this;
   }
@@ -1099,12 +1160,12 @@ public class AttachmentResponseCompound {
     return fkiSupplierID;
   }
 
-  public void setFkiSupplierID(Integer fkiSupplierID) {
+  public void setFkiSupplierID(@javax.annotation.Nullable Integer fkiSupplierID) {
     this.fkiSupplierID = fkiSupplierID;
   }
 
 
-  public AttachmentResponseCompound fkiTranqcontractID(Integer fkiTranqcontractID) {
+  public AttachmentResponseCompound fkiTranqcontractID(@javax.annotation.Nullable Integer fkiTranqcontractID) {
     this.fkiTranqcontractID = fkiTranqcontractID;
     return this;
   }
@@ -1120,12 +1181,12 @@ public class AttachmentResponseCompound {
     return fkiTranqcontractID;
   }
 
-  public void setFkiTranqcontractID(Integer fkiTranqcontractID) {
+  public void setFkiTranqcontractID(@javax.annotation.Nullable Integer fkiTranqcontractID) {
     this.fkiTranqcontractID = fkiTranqcontractID;
   }
 
 
-  public AttachmentResponseCompound fkiTemplateID(Integer fkiTemplateID) {
+  public AttachmentResponseCompound fkiTemplateID(@javax.annotation.Nullable Integer fkiTemplateID) {
     this.fkiTemplateID = fkiTemplateID;
     return this;
   }
@@ -1141,12 +1202,12 @@ public class AttachmentResponseCompound {
     return fkiTemplateID;
   }
 
-  public void setFkiTemplateID(Integer fkiTemplateID) {
+  public void setFkiTemplateID(@javax.annotation.Nullable Integer fkiTemplateID) {
     this.fkiTemplateID = fkiTemplateID;
   }
 
 
-  public AttachmentResponseCompound fkiInscriptionchecklistID(Integer fkiInscriptionchecklistID) {
+  public AttachmentResponseCompound fkiInscriptionchecklistID(@javax.annotation.Nullable Integer fkiInscriptionchecklistID) {
     this.fkiInscriptionchecklistID = fkiInscriptionchecklistID;
     return this;
   }
@@ -1162,12 +1223,12 @@ public class AttachmentResponseCompound {
     return fkiInscriptionchecklistID;
   }
 
-  public void setFkiInscriptionchecklistID(Integer fkiInscriptionchecklistID) {
+  public void setFkiInscriptionchecklistID(@javax.annotation.Nullable Integer fkiInscriptionchecklistID) {
     this.fkiInscriptionchecklistID = fkiInscriptionchecklistID;
   }
 
 
-  public AttachmentResponseCompound fkiFolderID(Integer fkiFolderID) {
+  public AttachmentResponseCompound fkiFolderID(@javax.annotation.Nullable Integer fkiFolderID) {
     this.fkiFolderID = fkiFolderID;
     return this;
   }
@@ -1183,12 +1244,12 @@ public class AttachmentResponseCompound {
     return fkiFolderID;
   }
 
-  public void setFkiFolderID(Integer fkiFolderID) {
+  public void setFkiFolderID(@javax.annotation.Nullable Integer fkiFolderID) {
     this.fkiFolderID = fkiFolderID;
   }
 
 
-  public AttachmentResponseCompound fkiRejectedoffertopurchaseID(Integer fkiRejectedoffertopurchaseID) {
+  public AttachmentResponseCompound fkiRejectedoffertopurchaseID(@javax.annotation.Nullable Integer fkiRejectedoffertopurchaseID) {
     this.fkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
     return this;
   }
@@ -1204,12 +1265,12 @@ public class AttachmentResponseCompound {
     return fkiRejectedoffertopurchaseID;
   }
 
-  public void setFkiRejectedoffertopurchaseID(Integer fkiRejectedoffertopurchaseID) {
+  public void setFkiRejectedoffertopurchaseID(@javax.annotation.Nullable Integer fkiRejectedoffertopurchaseID) {
     this.fkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
   }
 
 
-  public AttachmentResponseCompound fkiDisclosureID(Integer fkiDisclosureID) {
+  public AttachmentResponseCompound fkiDisclosureID(@javax.annotation.Nullable Integer fkiDisclosureID) {
     this.fkiDisclosureID = fkiDisclosureID;
     return this;
   }
@@ -1225,12 +1286,12 @@ public class AttachmentResponseCompound {
     return fkiDisclosureID;
   }
 
-  public void setFkiDisclosureID(Integer fkiDisclosureID) {
+  public void setFkiDisclosureID(@javax.annotation.Nullable Integer fkiDisclosureID) {
     this.fkiDisclosureID = fkiDisclosureID;
   }
 
 
-  public AttachmentResponseCompound fkiReconciliationID(Integer fkiReconciliationID) {
+  public AttachmentResponseCompound fkiReconciliationID(@javax.annotation.Nullable Integer fkiReconciliationID) {
     this.fkiReconciliationID = fkiReconciliationID;
     return this;
   }
@@ -1246,12 +1307,12 @@ public class AttachmentResponseCompound {
     return fkiReconciliationID;
   }
 
-  public void setFkiReconciliationID(Integer fkiReconciliationID) {
+  public void setFkiReconciliationID(@javax.annotation.Nullable Integer fkiReconciliationID) {
     this.fkiReconciliationID = fkiReconciliationID;
   }
 
 
-  public AttachmentResponseCompound fkiEzsigndocumentIDReference(Integer fkiEzsigndocumentIDReference) {
+  public AttachmentResponseCompound fkiEzsigndocumentIDReference(@javax.annotation.Nullable Integer fkiEzsigndocumentIDReference) {
     this.fkiEzsigndocumentIDReference = fkiEzsigndocumentIDReference;
     return this;
   }
@@ -1266,12 +1327,12 @@ public class AttachmentResponseCompound {
     return fkiEzsigndocumentIDReference;
   }
 
-  public void setFkiEzsigndocumentIDReference(Integer fkiEzsigndocumentIDReference) {
+  public void setFkiEzsigndocumentIDReference(@javax.annotation.Nullable Integer fkiEzsigndocumentIDReference) {
     this.fkiEzsigndocumentIDReference = fkiEzsigndocumentIDReference;
   }
 
 
-  public AttachmentResponseCompound eAttachmentDocumenttype(FieldEAttachmentDocumenttype eAttachmentDocumenttype) {
+  public AttachmentResponseCompound eAttachmentDocumenttype(@javax.annotation.Nonnull FieldEAttachmentDocumenttype eAttachmentDocumenttype) {
     this.eAttachmentDocumenttype = eAttachmentDocumenttype;
     return this;
   }
@@ -1285,12 +1346,12 @@ public class AttachmentResponseCompound {
     return eAttachmentDocumenttype;
   }
 
-  public void seteAttachmentDocumenttype(FieldEAttachmentDocumenttype eAttachmentDocumenttype) {
+  public void seteAttachmentDocumenttype(@javax.annotation.Nonnull FieldEAttachmentDocumenttype eAttachmentDocumenttype) {
     this.eAttachmentDocumenttype = eAttachmentDocumenttype;
   }
 
 
-  public AttachmentResponseCompound sAttachmentName(String sAttachmentName) {
+  public AttachmentResponseCompound sAttachmentName(@javax.annotation.Nonnull String sAttachmentName) {
     this.sAttachmentName = sAttachmentName;
     return this;
   }
@@ -1304,12 +1365,12 @@ public class AttachmentResponseCompound {
     return sAttachmentName;
   }
 
-  public void setsAttachmentName(String sAttachmentName) {
+  public void setsAttachmentName(@javax.annotation.Nonnull String sAttachmentName) {
     this.sAttachmentName = sAttachmentName;
   }
 
 
-  public AttachmentResponseCompound eAttachmentPrivacy(FieldEAttachmentPrivacy eAttachmentPrivacy) {
+  public AttachmentResponseCompound eAttachmentPrivacy(@javax.annotation.Nonnull FieldEAttachmentPrivacy eAttachmentPrivacy) {
     this.eAttachmentPrivacy = eAttachmentPrivacy;
     return this;
   }
@@ -1323,12 +1384,12 @@ public class AttachmentResponseCompound {
     return eAttachmentPrivacy;
   }
 
-  public void seteAttachmentPrivacy(FieldEAttachmentPrivacy eAttachmentPrivacy) {
+  public void seteAttachmentPrivacy(@javax.annotation.Nonnull FieldEAttachmentPrivacy eAttachmentPrivacy) {
     this.eAttachmentPrivacy = eAttachmentPrivacy;
   }
 
 
-  public AttachmentResponseCompound fkiUserIDSpecific(Integer fkiUserIDSpecific) {
+  public AttachmentResponseCompound fkiUserIDSpecific(@javax.annotation.Nullable Integer fkiUserIDSpecific) {
     this.fkiUserIDSpecific = fkiUserIDSpecific;
     return this;
   }
@@ -1343,12 +1404,12 @@ public class AttachmentResponseCompound {
     return fkiUserIDSpecific;
   }
 
-  public void setFkiUserIDSpecific(Integer fkiUserIDSpecific) {
+  public void setFkiUserIDSpecific(@javax.annotation.Nullable Integer fkiUserIDSpecific) {
     this.fkiUserIDSpecific = fkiUserIDSpecific;
   }
 
 
-  public AttachmentResponseCompound eAttachmentType(FieldEAttachmentType eAttachmentType) {
+  public AttachmentResponseCompound eAttachmentType(@javax.annotation.Nonnull FieldEAttachmentType eAttachmentType) {
     this.eAttachmentType = eAttachmentType;
     return this;
   }
@@ -1362,12 +1423,12 @@ public class AttachmentResponseCompound {
     return eAttachmentType;
   }
 
-  public void seteAttachmentType(FieldEAttachmentType eAttachmentType) {
+  public void seteAttachmentType(@javax.annotation.Nonnull FieldEAttachmentType eAttachmentType) {
     this.eAttachmentType = eAttachmentType;
   }
 
 
-  public AttachmentResponseCompound iAttachmentSize(Integer iAttachmentSize) {
+  public AttachmentResponseCompound iAttachmentSize(@javax.annotation.Nonnull Integer iAttachmentSize) {
     this.iAttachmentSize = iAttachmentSize;
     return this;
   }
@@ -1383,12 +1444,12 @@ public class AttachmentResponseCompound {
     return iAttachmentSize;
   }
 
-  public void setiAttachmentSize(Integer iAttachmentSize) {
+  public void setiAttachmentSize(@javax.annotation.Nonnull Integer iAttachmentSize) {
     this.iAttachmentSize = iAttachmentSize;
   }
 
 
-  public AttachmentResponseCompound iAttachmentEDMmoduleflag(Integer iAttachmentEDMmoduleflag) {
+  public AttachmentResponseCompound iAttachmentEDMmoduleflag(@javax.annotation.Nullable Integer iAttachmentEDMmoduleflag) {
     this.iAttachmentEDMmoduleflag = iAttachmentEDMmoduleflag;
     return this;
   }
@@ -1404,12 +1465,12 @@ public class AttachmentResponseCompound {
     return iAttachmentEDMmoduleflag;
   }
 
-  public void setiAttachmentEDMmoduleflag(Integer iAttachmentEDMmoduleflag) {
+  public void setiAttachmentEDMmoduleflag(@javax.annotation.Nullable Integer iAttachmentEDMmoduleflag) {
     this.iAttachmentEDMmoduleflag = iAttachmentEDMmoduleflag;
   }
 
 
-  public AttachmentResponseCompound sAttachmentMD5(String sAttachmentMD5) {
+  public AttachmentResponseCompound sAttachmentMD5(@javax.annotation.Nonnull String sAttachmentMD5) {
     this.sAttachmentMD5 = sAttachmentMD5;
     return this;
   }
@@ -1423,12 +1484,12 @@ public class AttachmentResponseCompound {
     return sAttachmentMD5;
   }
 
-  public void setsAttachmentMD5(String sAttachmentMD5) {
+  public void setsAttachmentMD5(@javax.annotation.Nonnull String sAttachmentMD5) {
     this.sAttachmentMD5 = sAttachmentMD5;
   }
 
 
-  public AttachmentResponseCompound bAttachmentDeleted(Boolean bAttachmentDeleted) {
+  public AttachmentResponseCompound bAttachmentDeleted(@javax.annotation.Nonnull Boolean bAttachmentDeleted) {
     this.bAttachmentDeleted = bAttachmentDeleted;
     return this;
   }
@@ -1442,12 +1503,12 @@ public class AttachmentResponseCompound {
     return bAttachmentDeleted;
   }
 
-  public void setbAttachmentDeleted(Boolean bAttachmentDeleted) {
+  public void setbAttachmentDeleted(@javax.annotation.Nonnull Boolean bAttachmentDeleted) {
     this.bAttachmentDeleted = bAttachmentDeleted;
   }
 
 
-  public AttachmentResponseCompound bAttachmentValid(Boolean bAttachmentValid) {
+  public AttachmentResponseCompound bAttachmentValid(@javax.annotation.Nonnull Boolean bAttachmentValid) {
     this.bAttachmentValid = bAttachmentValid;
     return this;
   }
@@ -1461,12 +1522,12 @@ public class AttachmentResponseCompound {
     return bAttachmentValid;
   }
 
-  public void setbAttachmentValid(Boolean bAttachmentValid) {
+  public void setbAttachmentValid(@javax.annotation.Nonnull Boolean bAttachmentValid) {
     this.bAttachmentValid = bAttachmentValid;
   }
 
 
-  public AttachmentResponseCompound eAttachmentVerified(FieldEAttachmentVerified eAttachmentVerified) {
+  public AttachmentResponseCompound eAttachmentVerified(@javax.annotation.Nonnull FieldEAttachmentVerified eAttachmentVerified) {
     this.eAttachmentVerified = eAttachmentVerified;
     return this;
   }
@@ -1480,12 +1541,12 @@ public class AttachmentResponseCompound {
     return eAttachmentVerified;
   }
 
-  public void seteAttachmentVerified(FieldEAttachmentVerified eAttachmentVerified) {
+  public void seteAttachmentVerified(@javax.annotation.Nonnull FieldEAttachmentVerified eAttachmentVerified) {
     this.eAttachmentVerified = eAttachmentVerified;
   }
 
 
-  public AttachmentResponseCompound tAttachmentRejectioncomment(String tAttachmentRejectioncomment) {
+  public AttachmentResponseCompound tAttachmentRejectioncomment(@javax.annotation.Nullable String tAttachmentRejectioncomment) {
     this.tAttachmentRejectioncomment = tAttachmentRejectioncomment;
     return this;
   }
@@ -1499,12 +1560,12 @@ public class AttachmentResponseCompound {
     return tAttachmentRejectioncomment;
   }
 
-  public void settAttachmentRejectioncomment(String tAttachmentRejectioncomment) {
+  public void settAttachmentRejectioncomment(@javax.annotation.Nullable String tAttachmentRejectioncomment) {
     this.tAttachmentRejectioncomment = tAttachmentRejectioncomment;
   }
 
 
-  public AttachmentResponseCompound fkiUserIDOwner(Integer fkiUserIDOwner) {
+  public AttachmentResponseCompound fkiUserIDOwner(@javax.annotation.Nullable Integer fkiUserIDOwner) {
     this.fkiUserIDOwner = fkiUserIDOwner;
     return this;
   }
@@ -1519,12 +1580,12 @@ public class AttachmentResponseCompound {
     return fkiUserIDOwner;
   }
 
-  public void setFkiUserIDOwner(Integer fkiUserIDOwner) {
+  public void setFkiUserIDOwner(@javax.annotation.Nullable Integer fkiUserIDOwner) {
     this.fkiUserIDOwner = fkiUserIDOwner;
   }
 
 
-  public AttachmentResponseCompound objAudit(CommonAudit objAudit) {
+  public AttachmentResponseCompound objAudit(@javax.annotation.Nullable CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -1538,7 +1599,7 @@ public class AttachmentResponseCompound {
     return objAudit;
   }
 
-  public void setObjAudit(CommonAudit objAudit) {
+  public void setObjAudit(@javax.annotation.Nullable CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 

@@ -48,60 +48,72 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackage Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepackageResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D = "pkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplatepackageID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D = "fkiEzdoctemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATEDOCUMENT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzdoctemplatedocumentID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X = "sEzdoctemplatedocumentNameX";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_NAME_X)
+  @javax.annotation.Nullable
   private String sEzdoctemplatedocumentNameX;
 
   public static final String SERIALIZED_NAME_S_LANGUAGE_NAME_X = "sLanguageNameX";
   @SerializedName(SERIALIZED_NAME_S_LANGUAGE_NAME_X)
+  @javax.annotation.Nonnull
   private String sLanguageNameX;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPACKAGE_DESCRIPTION = "sEzsigntemplatepackageDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPACKAGE_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sEzsigntemplatepackageDescription;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_ADMINONLY = "bEzsigntemplatepackageAdminonly";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_ADMINONLY)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatepackageAdminonly;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION = "bEzsigntemplatepackageNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatepackageNeedvalidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_ISACTIVE = "bEzsigntemplatepackageIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatepackageIsactive;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
+  @javax.annotation.Nonnull
   private String sEzsignfoldertypeNameX;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_EDITALLOWED = "bEzsigntemplatepackageEditallowed";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_EDITALLOWED)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatepackageEditallowed;
 
   public EzsigntemplatepackageResponse() {
   }
 
-  public EzsigntemplatepackageResponse pkiEzsigntemplatepackageID(Integer pkiEzsigntemplatepackageID) {
+  public EzsigntemplatepackageResponse pkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer pkiEzsigntemplatepackageID) {
     this.pkiEzsigntemplatepackageID = pkiEzsigntemplatepackageID;
     return this;
   }
@@ -116,12 +128,12 @@ public class EzsigntemplatepackageResponse {
     return pkiEzsigntemplatepackageID;
   }
 
-  public void setPkiEzsigntemplatepackageID(Integer pkiEzsigntemplatepackageID) {
+  public void setPkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer pkiEzsigntemplatepackageID) {
     this.pkiEzsigntemplatepackageID = pkiEzsigntemplatepackageID;
   }
 
 
-  public EzsigntemplatepackageResponse fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public EzsigntemplatepackageResponse fkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -137,12 +149,12 @@ public class EzsigntemplatepackageResponse {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public EzsigntemplatepackageResponse fkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+  public EzsigntemplatepackageResponse fkiEzdoctemplatedocumentID(@javax.annotation.Nullable Integer fkiEzdoctemplatedocumentID) {
     this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
     return this;
   }
@@ -158,12 +170,12 @@ public class EzsigntemplatepackageResponse {
     return fkiEzdoctemplatedocumentID;
   }
 
-  public void setFkiEzdoctemplatedocumentID(Integer fkiEzdoctemplatedocumentID) {
+  public void setFkiEzdoctemplatedocumentID(@javax.annotation.Nullable Integer fkiEzdoctemplatedocumentID) {
     this.fkiEzdoctemplatedocumentID = fkiEzdoctemplatedocumentID;
   }
 
 
-  public EzsigntemplatepackageResponse fkiLanguageID(Integer fkiLanguageID) {
+  public EzsigntemplatepackageResponse fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -179,12 +191,12 @@ public class EzsigntemplatepackageResponse {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(Integer fkiLanguageID) {
+  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public EzsigntemplatepackageResponse sEzdoctemplatedocumentNameX(String sEzdoctemplatedocumentNameX) {
+  public EzsigntemplatepackageResponse sEzdoctemplatedocumentNameX(@javax.annotation.Nullable String sEzdoctemplatedocumentNameX) {
     this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
     return this;
   }
@@ -198,12 +210,12 @@ public class EzsigntemplatepackageResponse {
     return sEzdoctemplatedocumentNameX;
   }
 
-  public void setsEzdoctemplatedocumentNameX(String sEzdoctemplatedocumentNameX) {
+  public void setsEzdoctemplatedocumentNameX(@javax.annotation.Nullable String sEzdoctemplatedocumentNameX) {
     this.sEzdoctemplatedocumentNameX = sEzdoctemplatedocumentNameX;
   }
 
 
-  public EzsigntemplatepackageResponse sLanguageNameX(String sLanguageNameX) {
+  public EzsigntemplatepackageResponse sLanguageNameX(@javax.annotation.Nonnull String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
     return this;
   }
@@ -217,12 +229,12 @@ public class EzsigntemplatepackageResponse {
     return sLanguageNameX;
   }
 
-  public void setsLanguageNameX(String sLanguageNameX) {
+  public void setsLanguageNameX(@javax.annotation.Nonnull String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
   }
 
 
-  public EzsigntemplatepackageResponse sEzsigntemplatepackageDescription(String sEzsigntemplatepackageDescription) {
+  public EzsigntemplatepackageResponse sEzsigntemplatepackageDescription(@javax.annotation.Nonnull String sEzsigntemplatepackageDescription) {
     this.sEzsigntemplatepackageDescription = sEzsigntemplatepackageDescription;
     return this;
   }
@@ -236,12 +248,12 @@ public class EzsigntemplatepackageResponse {
     return sEzsigntemplatepackageDescription;
   }
 
-  public void setsEzsigntemplatepackageDescription(String sEzsigntemplatepackageDescription) {
+  public void setsEzsigntemplatepackageDescription(@javax.annotation.Nonnull String sEzsigntemplatepackageDescription) {
     this.sEzsigntemplatepackageDescription = sEzsigntemplatepackageDescription;
   }
 
 
-  public EzsigntemplatepackageResponse bEzsigntemplatepackageAdminonly(Boolean bEzsigntemplatepackageAdminonly) {
+  public EzsigntemplatepackageResponse bEzsigntemplatepackageAdminonly(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageAdminonly) {
     this.bEzsigntemplatepackageAdminonly = bEzsigntemplatepackageAdminonly;
     return this;
   }
@@ -255,12 +267,12 @@ public class EzsigntemplatepackageResponse {
     return bEzsigntemplatepackageAdminonly;
   }
 
-  public void setbEzsigntemplatepackageAdminonly(Boolean bEzsigntemplatepackageAdminonly) {
+  public void setbEzsigntemplatepackageAdminonly(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageAdminonly) {
     this.bEzsigntemplatepackageAdminonly = bEzsigntemplatepackageAdminonly;
   }
 
 
-  public EzsigntemplatepackageResponse bEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
+  public EzsigntemplatepackageResponse bEzsigntemplatepackageNeedvalidation(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageNeedvalidation) {
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
     return this;
   }
@@ -274,12 +286,12 @@ public class EzsigntemplatepackageResponse {
     return bEzsigntemplatepackageNeedvalidation;
   }
 
-  public void setbEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
+  public void setbEzsigntemplatepackageNeedvalidation(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageNeedvalidation) {
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
   }
 
 
-  public EzsigntemplatepackageResponse bEzsigntemplatepackageIsactive(Boolean bEzsigntemplatepackageIsactive) {
+  public EzsigntemplatepackageResponse bEzsigntemplatepackageIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageIsactive) {
     this.bEzsigntemplatepackageIsactive = bEzsigntemplatepackageIsactive;
     return this;
   }
@@ -293,12 +305,12 @@ public class EzsigntemplatepackageResponse {
     return bEzsigntemplatepackageIsactive;
   }
 
-  public void setbEzsigntemplatepackageIsactive(Boolean bEzsigntemplatepackageIsactive) {
+  public void setbEzsigntemplatepackageIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageIsactive) {
     this.bEzsigntemplatepackageIsactive = bEzsigntemplatepackageIsactive;
   }
 
 
-  public EzsigntemplatepackageResponse sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public EzsigntemplatepackageResponse sEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -312,12 +324,12 @@ public class EzsigntemplatepackageResponse {
     return sEzsignfoldertypeNameX;
   }
 
-  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public void setsEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
-  public EzsigntemplatepackageResponse bEzsigntemplatepackageEditallowed(Boolean bEzsigntemplatepackageEditallowed) {
+  public EzsigntemplatepackageResponse bEzsigntemplatepackageEditallowed(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageEditallowed) {
     this.bEzsigntemplatepackageEditallowed = bEzsigntemplatepackageEditallowed;
     return this;
   }
@@ -331,7 +343,7 @@ public class EzsigntemplatepackageResponse {
     return bEzsigntemplatepackageEditallowed;
   }
 
-  public void setbEzsigntemplatepackageEditallowed(Boolean bEzsigntemplatepackageEditallowed) {
+  public void setbEzsigntemplatepackageEditallowed(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageEditallowed) {
     this.bEzsigntemplatepackageEditallowed = bEzsigntemplatepackageEditallowed;
   }
 

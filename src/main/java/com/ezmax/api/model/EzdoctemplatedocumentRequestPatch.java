@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezdoctemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzdoctemplatedocumentRequestPatch {
   /**
    * Indicates the format of the template.  This field is Required when sEzdoctemplatedocumentBase64 is set.
@@ -106,20 +106,23 @@ public class EzdoctemplatedocumentRequestPatch {
 
   public static final String SERIALIZED_NAME_E_EZDOCTEMPLATEDOCUMENT_FORMAT = "eEzdoctemplatedocumentFormat";
   @SerializedName(SERIALIZED_NAME_E_EZDOCTEMPLATEDOCUMENT_FORMAT)
+  @javax.annotation.Nullable
   private EEzdoctemplatedocumentFormatEnum eEzdoctemplatedocumentFormat;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_FIELDS = "sEzdoctemplatedocumentFields";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_FIELDS)
+  @javax.annotation.Nullable
   private String sEzdoctemplatedocumentFields;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_BASE64 = "sEzdoctemplatedocumentBase64";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEDOCUMENT_BASE64)
+  @javax.annotation.Nullable
   private byte[] sEzdoctemplatedocumentBase64;
 
   public EzdoctemplatedocumentRequestPatch() {
   }
 
-  public EzdoctemplatedocumentRequestPatch eEzdoctemplatedocumentFormat(EEzdoctemplatedocumentFormatEnum eEzdoctemplatedocumentFormat) {
+  public EzdoctemplatedocumentRequestPatch eEzdoctemplatedocumentFormat(@javax.annotation.Nullable EEzdoctemplatedocumentFormatEnum eEzdoctemplatedocumentFormat) {
     this.eEzdoctemplatedocumentFormat = eEzdoctemplatedocumentFormat;
     return this;
   }
@@ -133,12 +136,12 @@ public class EzdoctemplatedocumentRequestPatch {
     return eEzdoctemplatedocumentFormat;
   }
 
-  public void seteEzdoctemplatedocumentFormat(EEzdoctemplatedocumentFormatEnum eEzdoctemplatedocumentFormat) {
+  public void seteEzdoctemplatedocumentFormat(@javax.annotation.Nullable EEzdoctemplatedocumentFormatEnum eEzdoctemplatedocumentFormat) {
     this.eEzdoctemplatedocumentFormat = eEzdoctemplatedocumentFormat;
   }
 
 
-  public EzdoctemplatedocumentRequestPatch sEzdoctemplatedocumentFields(String sEzdoctemplatedocumentFields) {
+  public EzdoctemplatedocumentRequestPatch sEzdoctemplatedocumentFields(@javax.annotation.Nullable String sEzdoctemplatedocumentFields) {
     this.sEzdoctemplatedocumentFields = sEzdoctemplatedocumentFields;
     return this;
   }
@@ -152,12 +155,12 @@ public class EzdoctemplatedocumentRequestPatch {
     return sEzdoctemplatedocumentFields;
   }
 
-  public void setsEzdoctemplatedocumentFields(String sEzdoctemplatedocumentFields) {
+  public void setsEzdoctemplatedocumentFields(@javax.annotation.Nullable String sEzdoctemplatedocumentFields) {
     this.sEzdoctemplatedocumentFields = sEzdoctemplatedocumentFields;
   }
 
 
-  public EzdoctemplatedocumentRequestPatch sEzdoctemplatedocumentBase64(byte[] sEzdoctemplatedocumentBase64) {
+  public EzdoctemplatedocumentRequestPatch sEzdoctemplatedocumentBase64(@javax.annotation.Nullable byte[] sEzdoctemplatedocumentBase64) {
     this.sEzdoctemplatedocumentBase64 = sEzdoctemplatedocumentBase64;
     return this;
   }
@@ -171,7 +174,7 @@ public class EzdoctemplatedocumentRequestPatch {
     return sEzdoctemplatedocumentBase64;
   }
 
-  public void setsEzdoctemplatedocumentBase64(byte[] sEzdoctemplatedocumentBase64) {
+  public void setsEzdoctemplatedocumentBase64(@javax.annotation.Nullable byte[] sEzdoctemplatedocumentBase64) {
     this.sEzdoctemplatedocumentBase64 = sEzdoctemplatedocumentBase64;
   }
 

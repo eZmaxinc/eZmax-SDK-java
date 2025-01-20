@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EnumHorizontalalignment;
-import com.ezmax.api.model.EzsignelementdependencyResponseCompound;
+import com.ezmax.api.model.EzsignelementdependencyResponse;
 import com.ezmax.api.model.FieldEEzsignformfieldDependencyrequirement;
 import com.ezmax.api.model.TextstylestaticResponseCompound;
 import com.google.gson.TypeAdapter;
@@ -54,72 +54,87 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfield Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignformfieldResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsignformfieldID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER = "iEzsignpagePagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER)
+  @javax.annotation.Nonnull
   private Integer iEzsignpagePagenumber;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL = "sEzsignformfieldLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_LABEL)
+  @javax.annotation.Nonnull
   private String sEzsignformfieldLabel;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_VALUE = "sEzsignformfieldValue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_VALUE)
+  @javax.annotation.Nullable
   private String sEzsignformfieldValue;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_X = "iEzsignformfieldX";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_X)
+  @javax.annotation.Nonnull
   private Integer iEzsignformfieldX;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_Y = "iEzsignformfieldY";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_Y)
+  @javax.annotation.Nonnull
   private Integer iEzsignformfieldY;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_WIDTH = "iEzsignformfieldWidth";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_WIDTH)
+  @javax.annotation.Nonnull
   private Integer iEzsignformfieldWidth;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELD_HEIGHT = "iEzsignformfieldHeight";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELD_HEIGHT)
+  @javax.annotation.Nonnull
   private Integer iEzsignformfieldHeight;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELD_AUTOCOMPLETE = "bEzsignformfieldAutocomplete";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELD_AUTOCOMPLETE)
+  @javax.annotation.Nullable
   private Boolean bEzsignformfieldAutocomplete;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFORMFIELD_SELECTED = "bEzsignformfieldSelected";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORMFIELD_SELECTED)
+  @javax.annotation.Nullable
   private Boolean bEzsignformfieldSelected;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE = "sEzsignformfieldEnteredvalue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELD_ENTEREDVALUE)
+  @javax.annotation.Nullable
   private String sEzsignformfieldEnteredvalue;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELD_DEPENDENCYREQUIREMENT = "eEzsignformfieldDependencyrequirement";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELD_DEPENDENCYREQUIREMENT)
+  @javax.annotation.Nullable
   private FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFORMFIELD_HORIZONTALALIGNMENT = "eEzsignformfieldHorizontalalignment";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFORMFIELD_HORIZONTALALIGNMENT)
+  @javax.annotation.Nullable
   private EnumHorizontalalignment eEzsignformfieldHorizontalalignment;
 
   public static final String SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC = "objTextstylestatic";
   @SerializedName(SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC)
+  @javax.annotation.Nullable
   private TextstylestaticResponseCompound objTextstylestatic;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNELEMENTDEPENDENCY = "a_objEzsignelementdependency";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNELEMENTDEPENDENCY)
+  @javax.annotation.Nullable
   private List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency = new ArrayList<>();
 
   public EzsignformfieldResponseCompound() {
   }
 
-  public EzsignformfieldResponseCompound pkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
+  public EzsignformfieldResponseCompound pkiEzsignformfieldID(@javax.annotation.Nonnull Integer pkiEzsignformfieldID) {
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
     return this;
   }
@@ -134,12 +149,12 @@ public class EzsignformfieldResponseCompound {
     return pkiEzsignformfieldID;
   }
 
-  public void setPkiEzsignformfieldID(Integer pkiEzsignformfieldID) {
+  public void setPkiEzsignformfieldID(@javax.annotation.Nonnull Integer pkiEzsignformfieldID) {
     this.pkiEzsignformfieldID = pkiEzsignformfieldID;
   }
 
 
-  public EzsignformfieldResponseCompound iEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
+  public EzsignformfieldResponseCompound iEzsignpagePagenumber(@javax.annotation.Nonnull Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
     return this;
   }
@@ -154,12 +169,12 @@ public class EzsignformfieldResponseCompound {
     return iEzsignpagePagenumber;
   }
 
-  public void setiEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
+  public void setiEzsignpagePagenumber(@javax.annotation.Nonnull Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
   }
 
 
-  public EzsignformfieldResponseCompound sEzsignformfieldLabel(String sEzsignformfieldLabel) {
+  public EzsignformfieldResponseCompound sEzsignformfieldLabel(@javax.annotation.Nonnull String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
     return this;
   }
@@ -173,12 +188,12 @@ public class EzsignformfieldResponseCompound {
     return sEzsignformfieldLabel;
   }
 
-  public void setsEzsignformfieldLabel(String sEzsignformfieldLabel) {
+  public void setsEzsignformfieldLabel(@javax.annotation.Nonnull String sEzsignformfieldLabel) {
     this.sEzsignformfieldLabel = sEzsignformfieldLabel;
   }
 
 
-  public EzsignformfieldResponseCompound sEzsignformfieldValue(String sEzsignformfieldValue) {
+  public EzsignformfieldResponseCompound sEzsignformfieldValue(@javax.annotation.Nullable String sEzsignformfieldValue) {
     this.sEzsignformfieldValue = sEzsignformfieldValue;
     return this;
   }
@@ -192,12 +207,12 @@ public class EzsignformfieldResponseCompound {
     return sEzsignformfieldValue;
   }
 
-  public void setsEzsignformfieldValue(String sEzsignformfieldValue) {
+  public void setsEzsignformfieldValue(@javax.annotation.Nullable String sEzsignformfieldValue) {
     this.sEzsignformfieldValue = sEzsignformfieldValue;
   }
 
 
-  public EzsignformfieldResponseCompound iEzsignformfieldX(Integer iEzsignformfieldX) {
+  public EzsignformfieldResponseCompound iEzsignformfieldX(@javax.annotation.Nonnull Integer iEzsignformfieldX) {
     this.iEzsignformfieldX = iEzsignformfieldX;
     return this;
   }
@@ -212,12 +227,12 @@ public class EzsignformfieldResponseCompound {
     return iEzsignformfieldX;
   }
 
-  public void setiEzsignformfieldX(Integer iEzsignformfieldX) {
+  public void setiEzsignformfieldX(@javax.annotation.Nonnull Integer iEzsignformfieldX) {
     this.iEzsignformfieldX = iEzsignformfieldX;
   }
 
 
-  public EzsignformfieldResponseCompound iEzsignformfieldY(Integer iEzsignformfieldY) {
+  public EzsignformfieldResponseCompound iEzsignformfieldY(@javax.annotation.Nonnull Integer iEzsignformfieldY) {
     this.iEzsignformfieldY = iEzsignformfieldY;
     return this;
   }
@@ -232,12 +247,12 @@ public class EzsignformfieldResponseCompound {
     return iEzsignformfieldY;
   }
 
-  public void setiEzsignformfieldY(Integer iEzsignformfieldY) {
+  public void setiEzsignformfieldY(@javax.annotation.Nonnull Integer iEzsignformfieldY) {
     this.iEzsignformfieldY = iEzsignformfieldY;
   }
 
 
-  public EzsignformfieldResponseCompound iEzsignformfieldWidth(Integer iEzsignformfieldWidth) {
+  public EzsignformfieldResponseCompound iEzsignformfieldWidth(@javax.annotation.Nonnull Integer iEzsignformfieldWidth) {
     this.iEzsignformfieldWidth = iEzsignformfieldWidth;
     return this;
   }
@@ -252,12 +267,12 @@ public class EzsignformfieldResponseCompound {
     return iEzsignformfieldWidth;
   }
 
-  public void setiEzsignformfieldWidth(Integer iEzsignformfieldWidth) {
+  public void setiEzsignformfieldWidth(@javax.annotation.Nonnull Integer iEzsignformfieldWidth) {
     this.iEzsignformfieldWidth = iEzsignformfieldWidth;
   }
 
 
-  public EzsignformfieldResponseCompound iEzsignformfieldHeight(Integer iEzsignformfieldHeight) {
+  public EzsignformfieldResponseCompound iEzsignformfieldHeight(@javax.annotation.Nonnull Integer iEzsignformfieldHeight) {
     this.iEzsignformfieldHeight = iEzsignformfieldHeight;
     return this;
   }
@@ -272,12 +287,12 @@ public class EzsignformfieldResponseCompound {
     return iEzsignformfieldHeight;
   }
 
-  public void setiEzsignformfieldHeight(Integer iEzsignformfieldHeight) {
+  public void setiEzsignformfieldHeight(@javax.annotation.Nonnull Integer iEzsignformfieldHeight) {
     this.iEzsignformfieldHeight = iEzsignformfieldHeight;
   }
 
 
-  public EzsignformfieldResponseCompound bEzsignformfieldAutocomplete(Boolean bEzsignformfieldAutocomplete) {
+  public EzsignformfieldResponseCompound bEzsignformfieldAutocomplete(@javax.annotation.Nullable Boolean bEzsignformfieldAutocomplete) {
     this.bEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
     return this;
   }
@@ -291,12 +306,12 @@ public class EzsignformfieldResponseCompound {
     return bEzsignformfieldAutocomplete;
   }
 
-  public void setbEzsignformfieldAutocomplete(Boolean bEzsignformfieldAutocomplete) {
+  public void setbEzsignformfieldAutocomplete(@javax.annotation.Nullable Boolean bEzsignformfieldAutocomplete) {
     this.bEzsignformfieldAutocomplete = bEzsignformfieldAutocomplete;
   }
 
 
-  public EzsignformfieldResponseCompound bEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
+  public EzsignformfieldResponseCompound bEzsignformfieldSelected(@javax.annotation.Nullable Boolean bEzsignformfieldSelected) {
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
     return this;
   }
@@ -310,12 +325,12 @@ public class EzsignformfieldResponseCompound {
     return bEzsignformfieldSelected;
   }
 
-  public void setbEzsignformfieldSelected(Boolean bEzsignformfieldSelected) {
+  public void setbEzsignformfieldSelected(@javax.annotation.Nullable Boolean bEzsignformfieldSelected) {
     this.bEzsignformfieldSelected = bEzsignformfieldSelected;
   }
 
 
-  public EzsignformfieldResponseCompound sEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
+  public EzsignformfieldResponseCompound sEzsignformfieldEnteredvalue(@javax.annotation.Nullable String sEzsignformfieldEnteredvalue) {
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
     return this;
   }
@@ -329,12 +344,12 @@ public class EzsignformfieldResponseCompound {
     return sEzsignformfieldEnteredvalue;
   }
 
-  public void setsEzsignformfieldEnteredvalue(String sEzsignformfieldEnteredvalue) {
+  public void setsEzsignformfieldEnteredvalue(@javax.annotation.Nullable String sEzsignformfieldEnteredvalue) {
     this.sEzsignformfieldEnteredvalue = sEzsignformfieldEnteredvalue;
   }
 
 
-  public EzsignformfieldResponseCompound eEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
+  public EzsignformfieldResponseCompound eEzsignformfieldDependencyrequirement(@javax.annotation.Nullable FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
     this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
     return this;
   }
@@ -348,12 +363,12 @@ public class EzsignformfieldResponseCompound {
     return eEzsignformfieldDependencyrequirement;
   }
 
-  public void seteEzsignformfieldDependencyrequirement(FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
+  public void seteEzsignformfieldDependencyrequirement(@javax.annotation.Nullable FieldEEzsignformfieldDependencyrequirement eEzsignformfieldDependencyrequirement) {
     this.eEzsignformfieldDependencyrequirement = eEzsignformfieldDependencyrequirement;
   }
 
 
-  public EzsignformfieldResponseCompound eEzsignformfieldHorizontalalignment(EnumHorizontalalignment eEzsignformfieldHorizontalalignment) {
+  public EzsignformfieldResponseCompound eEzsignformfieldHorizontalalignment(@javax.annotation.Nullable EnumHorizontalalignment eEzsignformfieldHorizontalalignment) {
     this.eEzsignformfieldHorizontalalignment = eEzsignformfieldHorizontalalignment;
     return this;
   }
@@ -367,12 +382,12 @@ public class EzsignformfieldResponseCompound {
     return eEzsignformfieldHorizontalalignment;
   }
 
-  public void seteEzsignformfieldHorizontalalignment(EnumHorizontalalignment eEzsignformfieldHorizontalalignment) {
+  public void seteEzsignformfieldHorizontalalignment(@javax.annotation.Nullable EnumHorizontalalignment eEzsignformfieldHorizontalalignment) {
     this.eEzsignformfieldHorizontalalignment = eEzsignformfieldHorizontalalignment;
   }
 
 
-  public EzsignformfieldResponseCompound objTextstylestatic(TextstylestaticResponseCompound objTextstylestatic) {
+  public EzsignformfieldResponseCompound objTextstylestatic(@javax.annotation.Nullable TextstylestaticResponseCompound objTextstylestatic) {
     this.objTextstylestatic = objTextstylestatic;
     return this;
   }
@@ -386,17 +401,17 @@ public class EzsignformfieldResponseCompound {
     return objTextstylestatic;
   }
 
-  public void setObjTextstylestatic(TextstylestaticResponseCompound objTextstylestatic) {
+  public void setObjTextstylestatic(@javax.annotation.Nullable TextstylestaticResponseCompound objTextstylestatic) {
     this.objTextstylestatic = objTextstylestatic;
   }
 
 
-  public EzsignformfieldResponseCompound aObjEzsignelementdependency(List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency) {
+  public EzsignformfieldResponseCompound aObjEzsignelementdependency(@javax.annotation.Nullable List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency) {
     this.aObjEzsignelementdependency = aObjEzsignelementdependency;
     return this;
   }
 
-  public EzsignformfieldResponseCompound addAObjEzsignelementdependencyItem(EzsignelementdependencyResponseCompound aObjEzsignelementdependencyItem) {
+  public EzsignformfieldResponseCompound addAObjEzsignelementdependencyItem(EzsignelementdependencyResponse aObjEzsignelementdependencyItem) {
     if (this.aObjEzsignelementdependency == null) {
       this.aObjEzsignelementdependency = new ArrayList<>();
     }
@@ -413,7 +428,7 @@ public class EzsignformfieldResponseCompound {
     return aObjEzsignelementdependency;
   }
 
-  public void setaObjEzsignelementdependency(List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency) {
+  public void setaObjEzsignelementdependency(@javax.annotation.Nullable List<EzsignelementdependencyResponseCompound> aObjEzsignelementdependency) {
     this.aObjEzsignelementdependency = aObjEzsignelementdependency;
   }
 
@@ -577,7 +592,7 @@ public class EzsignformfieldResponseCompound {
 
           // validate the optional field `a_objEzsignelementdependency` (array)
           for (int i = 0; i < jsonArrayaObjEzsignelementdependency.size(); i++) {
-            EzsignelementdependencyResponseCompound.validateJsonElement(jsonArrayaObjEzsignelementdependency.get(i));
+            EzsignelementdependencyResponse.validateJsonElement(jsonArrayaObjEzsignelementdependency.get(i));
           };
         }
       }

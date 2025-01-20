@@ -49,28 +49,32 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldertype List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfoldertypeListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL = "eEzsignfoldertypePrivacylevel";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL)
+  @javax.annotation.Nonnull
   private FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
+  @javax.annotation.Nonnull
   private String sEzsignfoldertypeNameX;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ISACTIVE = "bEzsignfoldertypeIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERTYPE_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzsignfoldertypeIsactive;
 
   public EzsignfoldertypeListElement() {
   }
 
-  public EzsignfoldertypeListElement pkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
+  public EzsignfoldertypeListElement pkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer pkiEzsignfoldertypeID) {
     this.pkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
     return this;
   }
@@ -86,12 +90,12 @@ public class EzsignfoldertypeListElement {
     return pkiEzsignfoldertypeID;
   }
 
-  public void setPkiEzsignfoldertypeID(Integer pkiEzsignfoldertypeID) {
+  public void setPkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer pkiEzsignfoldertypeID) {
     this.pkiEzsignfoldertypeID = pkiEzsignfoldertypeID;
   }
 
 
-  public EzsignfoldertypeListElement eEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+  public EzsignfoldertypeListElement eEzsignfoldertypePrivacylevel(@javax.annotation.Nonnull FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
     return this;
   }
@@ -105,12 +109,12 @@ public class EzsignfoldertypeListElement {
     return eEzsignfoldertypePrivacylevel;
   }
 
-  public void seteEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+  public void seteEzsignfoldertypePrivacylevel(@javax.annotation.Nonnull FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
   }
 
 
-  public EzsignfoldertypeListElement sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public EzsignfoldertypeListElement sEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -124,12 +128,12 @@ public class EzsignfoldertypeListElement {
     return sEzsignfoldertypeNameX;
   }
 
-  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public void setsEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
-  public EzsignfoldertypeListElement bEzsignfoldertypeIsactive(Boolean bEzsignfoldertypeIsactive) {
+  public EzsignfoldertypeListElement bEzsignfoldertypeIsactive(@javax.annotation.Nonnull Boolean bEzsignfoldertypeIsactive) {
     this.bEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
     return this;
   }
@@ -143,7 +147,7 @@ public class EzsignfoldertypeListElement {
     return bEzsignfoldertypeIsactive;
   }
 
-  public void setbEzsignfoldertypeIsactive(Boolean bEzsignfoldertypeIsactive) {
+  public void setbEzsignfoldertypeIsactive(@javax.annotation.Nonnull Boolean bEzsignfoldertypeIsactive) {
     this.bEzsignfoldertypeIsactive = bEzsignfoldertypeIsactive;
   }
 

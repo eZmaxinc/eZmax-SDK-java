@@ -49,32 +49,37 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationexternalrecipient Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommunicationexternalrecipientRequestCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALRECIPIENT_I_D = "pkiCommunicationexternalrecipientID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALRECIPIENT_I_D)
+  @javax.annotation.Nullable
   private Integer pkiCommunicationexternalrecipientID;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  @javax.annotation.Nullable
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
   @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
+  @javax.annotation.Nullable
   private String sPhoneE164;
 
   public static final String SERIALIZED_NAME_E_COMMUNICATIONEXTERNALRECIPIENT_TYPE = "eCommunicationexternalrecipientType";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATIONEXTERNALRECIPIENT_TYPE)
+  @javax.annotation.Nullable
   private FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType;
 
   public static final String SERIALIZED_NAME_S_COMMUNICATIONEXTERNALRECIPIENT_NAME = "sCommunicationexternalrecipientName";
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATIONEXTERNALRECIPIENT_NAME)
+  @javax.annotation.Nullable
   private String sCommunicationexternalrecipientName;
 
   public CommunicationexternalrecipientRequestCompound() {
   }
 
-  public CommunicationexternalrecipientRequestCompound pkiCommunicationexternalrecipientID(Integer pkiCommunicationexternalrecipientID) {
+  public CommunicationexternalrecipientRequestCompound pkiCommunicationexternalrecipientID(@javax.annotation.Nullable Integer pkiCommunicationexternalrecipientID) {
     this.pkiCommunicationexternalrecipientID = pkiCommunicationexternalrecipientID;
     return this;
   }
@@ -88,12 +93,12 @@ public class CommunicationexternalrecipientRequestCompound {
     return pkiCommunicationexternalrecipientID;
   }
 
-  public void setPkiCommunicationexternalrecipientID(Integer pkiCommunicationexternalrecipientID) {
+  public void setPkiCommunicationexternalrecipientID(@javax.annotation.Nullable Integer pkiCommunicationexternalrecipientID) {
     this.pkiCommunicationexternalrecipientID = pkiCommunicationexternalrecipientID;
   }
 
 
-  public CommunicationexternalrecipientRequestCompound sEmailAddress(String sEmailAddress) {
+  public CommunicationexternalrecipientRequestCompound sEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -107,12 +112,12 @@ public class CommunicationexternalrecipientRequestCompound {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(String sEmailAddress) {
+  public void setsEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public CommunicationexternalrecipientRequestCompound sPhoneE164(String sPhoneE164) {
+  public CommunicationexternalrecipientRequestCompound sPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -126,12 +131,12 @@ public class CommunicationexternalrecipientRequestCompound {
     return sPhoneE164;
   }
 
-  public void setsPhoneE164(String sPhoneE164) {
+  public void setsPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 
 
-  public CommunicationexternalrecipientRequestCompound eCommunicationexternalrecipientType(FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType) {
+  public CommunicationexternalrecipientRequestCompound eCommunicationexternalrecipientType(@javax.annotation.Nullable FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType) {
     this.eCommunicationexternalrecipientType = eCommunicationexternalrecipientType;
     return this;
   }
@@ -145,12 +150,12 @@ public class CommunicationexternalrecipientRequestCompound {
     return eCommunicationexternalrecipientType;
   }
 
-  public void seteCommunicationexternalrecipientType(FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType) {
+  public void seteCommunicationexternalrecipientType(@javax.annotation.Nullable FieldECommunicationexternalrecipientType eCommunicationexternalrecipientType) {
     this.eCommunicationexternalrecipientType = eCommunicationexternalrecipientType;
   }
 
 
-  public CommunicationexternalrecipientRequestCompound sCommunicationexternalrecipientName(String sCommunicationexternalrecipientName) {
+  public CommunicationexternalrecipientRequestCompound sCommunicationexternalrecipientName(@javax.annotation.Nullable String sCommunicationexternalrecipientName) {
     this.sCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
     return this;
   }
@@ -164,7 +169,7 @@ public class CommunicationexternalrecipientRequestCompound {
     return sCommunicationexternalrecipientName;
   }
 
-  public void setsCommunicationexternalrecipientName(String sCommunicationexternalrecipientName) {
+  public void setsCommunicationexternalrecipientName(@javax.annotation.Nullable String sCommunicationexternalrecipientName) {
     this.sCommunicationexternalrecipientName = sCommunicationexternalrecipientName;
   }
 

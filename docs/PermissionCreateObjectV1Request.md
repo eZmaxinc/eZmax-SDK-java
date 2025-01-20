@@ -8,7 +8,7 @@ Request for POST /1/object/permission
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**aObjPermission** | [**List&lt;PermissionRequestCompound&gt;**](PermissionRequestCompound.md) |  |  |
+|**aObjPermission** | [**List&lt;PermissionRequest&gt;**](PermissionRequest.md) |  |  |
 
 
 

@@ -14,13 +14,13 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplatepublicCreateEzsignfolderV1Request;
 import com.ezmax.api.model.EzsigntemplatepublicCreateEzsignfolderV1Response;
 import com.ezmax.api.model.EzsigntemplatepublicCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatepublicCreateObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepublicEditObjectV1Request;
-import com.ezmax.api.model.EzsigntemplatepublicEditObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request;
 import com.ezmax.api.model.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response;
 import com.ezmax.api.model.EzsigntemplatepublicGetFormsDataV1Response;
@@ -85,7 +85,7 @@ public class ObjectEzsigntemplatepublicApiTest {
     public void ezsigntemplatepublicEditObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplatepublicID = null;
         EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request = null;
-        EzsigntemplatepublicEditObjectV1Response response = api.ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
+        CommonResponse response = api.ezsigntemplatepublicEditObjectV1(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
         // TODO: test validations
     }
 

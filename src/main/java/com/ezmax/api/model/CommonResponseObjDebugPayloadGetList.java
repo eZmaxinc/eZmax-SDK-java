@@ -53,48 +53,57 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonResponseObjDebugPayloadGetList {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
+  @javax.annotation.Nonnull
   private Integer iVersionMin;
 
   public static final String SERIALIZED_NAME_I_VERSION_MAX = "iVersionMax";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MAX)
+  @javax.annotation.Nonnull
   private Integer iVersionMax;
 
   public static final String SERIALIZED_NAME_A_REQUIRED_PERMISSION = "a_RequiredPermission";
   @SerializedName(SERIALIZED_NAME_A_REQUIRED_PERMISSION)
+  @javax.annotation.Nonnull
   private List<Integer> aRequiredPermission = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_B_VERSION_DEPRECATED = "bVersionDeprecated";
   @SerializedName(SERIALIZED_NAME_B_VERSION_DEPRECATED)
+  @javax.annotation.Nonnull
   private Boolean bVersionDeprecated;
 
   public static final String SERIALIZED_NAME_DT_RESPONSE_DATE = "dtResponseDate";
   @SerializedName(SERIALIZED_NAME_DT_RESPONSE_DATE)
+  @javax.annotation.Nonnull
   private String dtResponseDate;
 
   public static final String SERIALIZED_NAME_A_FILTER = "a_Filter";
   @SerializedName(SERIALIZED_NAME_A_FILTER)
+  @javax.annotation.Nonnull
   private CommonResponseFilter aFilter;
 
   public static final String SERIALIZED_NAME_A_ORDER_BY = "a_OrderBy";
   @SerializedName(SERIALIZED_NAME_A_ORDER_BY)
+  @javax.annotation.Nonnull
   private Map<String, String> aOrderBy = new HashMap<>();
 
   public static final String SERIALIZED_NAME_I_ROW_MAX = "iRowMax";
   @SerializedName(SERIALIZED_NAME_I_ROW_MAX)
+  @javax.annotation.Nonnull
   private Integer iRowMax;
 
   public static final String SERIALIZED_NAME_I_ROW_OFFSET = "iRowOffset";
   @SerializedName(SERIALIZED_NAME_I_ROW_OFFSET)
+  @javax.annotation.Nonnull
   private Integer iRowOffset = 0;
 
   public CommonResponseObjDebugPayloadGetList() {
   }
 
-  public CommonResponseObjDebugPayloadGetList iVersionMin(Integer iVersionMin) {
+  public CommonResponseObjDebugPayloadGetList iVersionMin(@javax.annotation.Nonnull Integer iVersionMin) {
     this.iVersionMin = iVersionMin;
     return this;
   }
@@ -108,12 +117,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return iVersionMin;
   }
 
-  public void setiVersionMin(Integer iVersionMin) {
+  public void setiVersionMin(@javax.annotation.Nonnull Integer iVersionMin) {
     this.iVersionMin = iVersionMin;
   }
 
 
-  public CommonResponseObjDebugPayloadGetList iVersionMax(Integer iVersionMax) {
+  public CommonResponseObjDebugPayloadGetList iVersionMax(@javax.annotation.Nonnull Integer iVersionMax) {
     this.iVersionMax = iVersionMax;
     return this;
   }
@@ -127,12 +136,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return iVersionMax;
   }
 
-  public void setiVersionMax(Integer iVersionMax) {
+  public void setiVersionMax(@javax.annotation.Nonnull Integer iVersionMax) {
     this.iVersionMax = iVersionMax;
   }
 
 
-  public CommonResponseObjDebugPayloadGetList aRequiredPermission(List<Integer> aRequiredPermission) {
+  public CommonResponseObjDebugPayloadGetList aRequiredPermission(@javax.annotation.Nonnull List<Integer> aRequiredPermission) {
     this.aRequiredPermission = aRequiredPermission;
     return this;
   }
@@ -154,12 +163,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return aRequiredPermission;
   }
 
-  public void setaRequiredPermission(List<Integer> aRequiredPermission) {
+  public void setaRequiredPermission(@javax.annotation.Nonnull List<Integer> aRequiredPermission) {
     this.aRequiredPermission = aRequiredPermission;
   }
 
 
-  public CommonResponseObjDebugPayloadGetList bVersionDeprecated(Boolean bVersionDeprecated) {
+  public CommonResponseObjDebugPayloadGetList bVersionDeprecated(@javax.annotation.Nonnull Boolean bVersionDeprecated) {
     this.bVersionDeprecated = bVersionDeprecated;
     return this;
   }
@@ -173,12 +182,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return bVersionDeprecated;
   }
 
-  public void setbVersionDeprecated(Boolean bVersionDeprecated) {
+  public void setbVersionDeprecated(@javax.annotation.Nonnull Boolean bVersionDeprecated) {
     this.bVersionDeprecated = bVersionDeprecated;
   }
 
 
-  public CommonResponseObjDebugPayloadGetList dtResponseDate(String dtResponseDate) {
+  public CommonResponseObjDebugPayloadGetList dtResponseDate(@javax.annotation.Nonnull String dtResponseDate) {
     this.dtResponseDate = dtResponseDate;
     return this;
   }
@@ -192,12 +201,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return dtResponseDate;
   }
 
-  public void setDtResponseDate(String dtResponseDate) {
+  public void setDtResponseDate(@javax.annotation.Nonnull String dtResponseDate) {
     this.dtResponseDate = dtResponseDate;
   }
 
 
-  public CommonResponseObjDebugPayloadGetList aFilter(CommonResponseFilter aFilter) {
+  public CommonResponseObjDebugPayloadGetList aFilter(@javax.annotation.Nonnull CommonResponseFilter aFilter) {
     this.aFilter = aFilter;
     return this;
   }
@@ -211,12 +220,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return aFilter;
   }
 
-  public void setaFilter(CommonResponseFilter aFilter) {
+  public void setaFilter(@javax.annotation.Nonnull CommonResponseFilter aFilter) {
     this.aFilter = aFilter;
   }
 
 
-  public CommonResponseObjDebugPayloadGetList aOrderBy(Map<String, String> aOrderBy) {
+  public CommonResponseObjDebugPayloadGetList aOrderBy(@javax.annotation.Nonnull Map<String, String> aOrderBy) {
     this.aOrderBy = aOrderBy;
     return this;
   }
@@ -238,12 +247,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return aOrderBy;
   }
 
-  public void setaOrderBy(Map<String, String> aOrderBy) {
+  public void setaOrderBy(@javax.annotation.Nonnull Map<String, String> aOrderBy) {
     this.aOrderBy = aOrderBy;
   }
 
 
-  public CommonResponseObjDebugPayloadGetList iRowMax(Integer iRowMax) {
+  public CommonResponseObjDebugPayloadGetList iRowMax(@javax.annotation.Nonnull Integer iRowMax) {
     this.iRowMax = iRowMax;
     return this;
   }
@@ -259,12 +268,12 @@ public class CommonResponseObjDebugPayloadGetList {
     return iRowMax;
   }
 
-  public void setiRowMax(Integer iRowMax) {
+  public void setiRowMax(@javax.annotation.Nonnull Integer iRowMax) {
     this.iRowMax = iRowMax;
   }
 
 
-  public CommonResponseObjDebugPayloadGetList iRowOffset(Integer iRowOffset) {
+  public CommonResponseObjDebugPayloadGetList iRowOffset(@javax.annotation.Nonnull Integer iRowOffset) {
     this.iRowOffset = iRowOffset;
     return this;
   }
@@ -279,7 +288,7 @@ public class CommonResponseObjDebugPayloadGetList {
     return iRowOffset;
   }
 
-  public void setiRowOffset(Integer iRowOffset) {
+  public void setiRowOffset(@javax.annotation.Nonnull Integer iRowOffset) {
     this.iRowOffset = iRowOffset;
   }
 

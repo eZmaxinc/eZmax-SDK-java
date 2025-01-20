@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/country/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CountryGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COUNTRY = "a_objCountry";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COUNTRY)
+  @javax.annotation.Nonnull
   private List<CountryAutocompleteElementResponse> aObjCountry = new ArrayList<>();
 
   public CountryGetAutocompleteV2ResponseMPayload() {
   }
 
-  public CountryGetAutocompleteV2ResponseMPayload aObjCountry(List<CountryAutocompleteElementResponse> aObjCountry) {
+  public CountryGetAutocompleteV2ResponseMPayload aObjCountry(@javax.annotation.Nonnull List<CountryAutocompleteElementResponse> aObjCountry) {
     this.aObjCountry = aObjCountry;
     return this;
   }
@@ -82,7 +83,7 @@ public class CountryGetAutocompleteV2ResponseMPayload {
     return aObjCountry;
   }
 
-  public void setaObjCountry(List<CountryAutocompleteElementResponse> aObjCountry) {
+  public void setaObjCountry(@javax.annotation.Nonnull List<CountryAutocompleteElementResponse> aObjCountry) {
     this.aObjCountry = aObjCountry;
   }
 

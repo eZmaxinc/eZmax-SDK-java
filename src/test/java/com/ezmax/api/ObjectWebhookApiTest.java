@@ -14,23 +14,23 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommonResponseErrorTooManyRequests;
+import com.ezmax.api.model.CustomEWebhookEzsignevent;
+import com.ezmax.api.model.FieldEWebhookManagementevent;
+import com.ezmax.api.model.FieldEWebhookModule;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.WebhookCreateObjectV2Request;
 import com.ezmax.api.model.WebhookCreateObjectV2Response;
-import com.ezmax.api.model.WebhookDeleteObjectV1Response;
 import com.ezmax.api.model.WebhookEditObjectV1Request;
-import com.ezmax.api.model.WebhookEditObjectV1Response;
 import com.ezmax.api.model.WebhookGetHistoryV1Response;
 import com.ezmax.api.model.WebhookGetListV1Response;
 import com.ezmax.api.model.WebhookGetObjectV2Response;
 import com.ezmax.api.model.WebhookRegenerateApikeyV1Request;
 import com.ezmax.api.model.WebhookRegenerateApikeyV1Response;
 import com.ezmax.api.model.WebhookSendWebhookV1Request;
-import com.ezmax.api.model.WebhookSendWebhookV1Response;
-import com.ezmax.api.model.WebhookTestV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -71,7 +71,7 @@ public class ObjectWebhookApiTest {
     @Test
     public void webhookDeleteObjectV1Test() throws ApiException {
         Integer pkiWebhookID = null;
-        WebhookDeleteObjectV1Response response = api.webhookDeleteObjectV1(pkiWebhookID);
+        CommonResponse response = api.webhookDeleteObjectV1(pkiWebhookID);
         // TODO: test validations
     }
 
@@ -86,7 +86,7 @@ public class ObjectWebhookApiTest {
     public void webhookEditObjectV1Test() throws ApiException {
         Integer pkiWebhookID = null;
         WebhookEditObjectV1Request webhookEditObjectV1Request = null;
-        WebhookEditObjectV1Response response = api.webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request);
+        CommonResponse response = api.webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request);
         // TODO: test validations
     }
 
@@ -160,7 +160,7 @@ public class ObjectWebhookApiTest {
     @Test
     public void webhookSendWebhookV1Test() throws ApiException {
         WebhookSendWebhookV1Request webhookSendWebhookV1Request = null;
-        WebhookSendWebhookV1Response response = api.webhookSendWebhookV1(webhookSendWebhookV1Request);
+        CommonResponse response = api.webhookSendWebhookV1(webhookSendWebhookV1Request);
         // TODO: test validations
     }
 
@@ -175,7 +175,7 @@ public class ObjectWebhookApiTest {
     public void webhookTestV1Test() throws ApiException {
         Integer pkiWebhookID = null;
         Object body = null;
-        WebhookTestV1Response response = api.webhookTestV1(pkiWebhookID, body);
+        CommonResponse response = api.webhookTestV1(pkiWebhookID, body);
         // TODO: test validations
     }
 

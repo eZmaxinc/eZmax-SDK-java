@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/webhook/{pkiWebhookID}/regenerateApikey
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class WebhookRegenerateApikeyV1Request {
   public static final String SERIALIZED_NAME_B_WEBHOOK_ISSIGNED = "bWebhookIssigned";
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISSIGNED)
+  @javax.annotation.Nullable
   private Boolean bWebhookIssigned;
 
   public WebhookRegenerateApikeyV1Request() {
   }
 
-  public WebhookRegenerateApikeyV1Request bWebhookIssigned(Boolean bWebhookIssigned) {
+  public WebhookRegenerateApikeyV1Request bWebhookIssigned(@javax.annotation.Nullable Boolean bWebhookIssigned) {
     this.bWebhookIssigned = bWebhookIssigned;
     return this;
   }
@@ -71,7 +72,7 @@ public class WebhookRegenerateApikeyV1Request {
     return bWebhookIssigned;
   }
 
-  public void setbWebhookIssigned(Boolean bWebhookIssigned) {
+  public void setbWebhookIssigned(@javax.annotation.Nullable Boolean bWebhookIssigned) {
     this.bWebhookIssigned = bWebhookIssigned;
   }
 

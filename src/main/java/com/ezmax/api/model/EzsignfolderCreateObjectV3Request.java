@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsignfolderRequestCompoundV3;
+import com.ezmax.api.model.EzsignfolderRequestV3;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,21 +51,22 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /3/object/ezsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfolderCreateObjectV3Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER = "a_objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER)
+  @javax.annotation.Nonnull
   private List<EzsignfolderRequestCompoundV3> aObjEzsignfolder = new ArrayList<>();
 
   public EzsignfolderCreateObjectV3Request() {
   }
 
-  public EzsignfolderCreateObjectV3Request aObjEzsignfolder(List<EzsignfolderRequestCompoundV3> aObjEzsignfolder) {
+  public EzsignfolderCreateObjectV3Request aObjEzsignfolder(@javax.annotation.Nonnull List<EzsignfolderRequestCompoundV3> aObjEzsignfolder) {
     this.aObjEzsignfolder = aObjEzsignfolder;
     return this;
   }
 
-  public EzsignfolderCreateObjectV3Request addAObjEzsignfolderItem(EzsignfolderRequestCompoundV3 aObjEzsignfolderItem) {
+  public EzsignfolderCreateObjectV3Request addAObjEzsignfolderItem(EzsignfolderRequestV3 aObjEzsignfolderItem) {
     if (this.aObjEzsignfolder == null) {
       this.aObjEzsignfolder = new ArrayList<>();
     }
@@ -82,7 +83,7 @@ public class EzsignfolderCreateObjectV3Request {
     return aObjEzsignfolder;
   }
 
-  public void setaObjEzsignfolder(List<EzsignfolderRequestCompoundV3> aObjEzsignfolder) {
+  public void setaObjEzsignfolder(@javax.annotation.Nonnull List<EzsignfolderRequestCompoundV3> aObjEzsignfolder) {
     this.aObjEzsignfolder = aObjEzsignfolder;
   }
 
@@ -175,7 +176,7 @@ public class EzsignfolderCreateObjectV3Request {
       JsonArray jsonArrayaObjEzsignfolder = jsonObj.getAsJsonArray("a_objEzsignfolder");
       // validate the required field `a_objEzsignfolder` (array)
       for (int i = 0; i < jsonArrayaObjEzsignfolder.size(); i++) {
-        EzsignfolderRequestCompoundV3.validateJsonElement(jsonArrayaObjEzsignfolder.get(i));
+        EzsignfolderRequestV3.validateJsonElement(jsonArrayaObjEzsignfolder.get(i));
       };
   }
 

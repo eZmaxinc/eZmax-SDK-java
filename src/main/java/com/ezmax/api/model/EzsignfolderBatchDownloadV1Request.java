@@ -50,10 +50,11 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/batchDownload
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfolderBatchDownloadV1Request {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNDOCUMENT_I_D = "a_pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNDOCUMENT_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsigndocumentID = new ArrayList<>();
 
   /**
@@ -112,12 +113,13 @@ public class EzsignfolderBatchDownloadV1Request {
 
   public static final String SERIALIZED_NAME_A_E_DOCUMENT_TYPE = "a_eDocumentType";
   @SerializedName(SERIALIZED_NAME_A_E_DOCUMENT_TYPE)
+  @javax.annotation.Nonnull
   private List<AEDocumentTypeEnum> aEDocumentType = new ArrayList<>();
 
   public EzsignfolderBatchDownloadV1Request() {
   }
 
-  public EzsignfolderBatchDownloadV1Request aPkiEzsigndocumentID(List<Integer> aPkiEzsigndocumentID) {
+  public EzsignfolderBatchDownloadV1Request aPkiEzsigndocumentID(@javax.annotation.Nonnull List<Integer> aPkiEzsigndocumentID) {
     this.aPkiEzsigndocumentID = aPkiEzsigndocumentID;
     return this;
   }
@@ -139,12 +141,12 @@ public class EzsignfolderBatchDownloadV1Request {
     return aPkiEzsigndocumentID;
   }
 
-  public void setaPkiEzsigndocumentID(List<Integer> aPkiEzsigndocumentID) {
+  public void setaPkiEzsigndocumentID(@javax.annotation.Nonnull List<Integer> aPkiEzsigndocumentID) {
     this.aPkiEzsigndocumentID = aPkiEzsigndocumentID;
   }
 
 
-  public EzsignfolderBatchDownloadV1Request aEDocumentType(List<AEDocumentTypeEnum> aEDocumentType) {
+  public EzsignfolderBatchDownloadV1Request aEDocumentType(@javax.annotation.Nonnull List<AEDocumentTypeEnum> aEDocumentType) {
     this.aEDocumentType = aEDocumentType;
     return this;
   }
@@ -166,7 +168,7 @@ public class EzsignfolderBatchDownloadV1Request {
     return aEDocumentType;
   }
 
-  public void setaEDocumentType(List<AEDocumentTypeEnum> aEDocumentType) {
+  public void setaEDocumentType(@javax.annotation.Nonnull List<AEDocumentTypeEnum> aEDocumentType) {
     this.aEDocumentType = aEDocumentType;
   }
 

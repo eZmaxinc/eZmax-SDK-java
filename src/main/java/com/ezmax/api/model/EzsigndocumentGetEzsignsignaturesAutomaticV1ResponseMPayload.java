@@ -54,20 +54,22 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignaturesAutomatic
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_E_EZSIGNSIGNATURE_TYPE = "a_eEzsignsignatureType";
   @SerializedName(SERIALIZED_NAME_A_E_EZSIGNSIGNATURE_TYPE)
+  @javax.annotation.Nonnull
   private Set<FieldEEzsignsignatureType> aEEzsignsignatureType = new LinkedHashSet<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER = "a_objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDER)
+  @javax.annotation.Nonnull
   private List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> aObjEzsignfolder = new ArrayList<>();
 
   public EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload() {
   }
 
-  public EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload aEEzsignsignatureType(Set<FieldEEzsignsignatureType> aEEzsignsignatureType) {
+  public EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload aEEzsignsignatureType(@javax.annotation.Nonnull Set<FieldEEzsignsignatureType> aEEzsignsignatureType) {
     this.aEEzsignsignatureType = aEEzsignsignatureType;
     return this;
   }
@@ -89,12 +91,12 @@ public class EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload {
     return aEEzsignsignatureType;
   }
 
-  public void setaEEzsignsignatureType(Set<FieldEEzsignsignatureType> aEEzsignsignatureType) {
+  public void setaEEzsignsignatureType(@javax.annotation.Nonnull Set<FieldEEzsignsignatureType> aEEzsignsignatureType) {
     this.aEEzsignsignatureType = aEEzsignsignatureType;
   }
 
 
-  public EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload aObjEzsignfolder(List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> aObjEzsignfolder) {
+  public EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload aObjEzsignfolder(@javax.annotation.Nonnull List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> aObjEzsignfolder) {
     this.aObjEzsignfolder = aObjEzsignfolder;
     return this;
   }
@@ -116,7 +118,7 @@ public class EzsigndocumentGetEzsignsignaturesAutomaticV1ResponseMPayload {
     return aObjEzsignfolder;
   }
 
-  public void setaObjEzsignfolder(List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> aObjEzsignfolder) {
+  public void setaObjEzsignfolder(@javax.annotation.Nonnull List<CustomEzsignfolderEzsignsignaturesAutomaticResponse> aObjEzsignfolder) {
     this.aObjEzsignfolder = aObjEzsignfolder;
   }
 

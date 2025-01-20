@@ -14,6 +14,7 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Response;
@@ -21,17 +22,12 @@ import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Response;
-import com.ezmax.api.model.EzsignfoldersignerassociationDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationEditObjectV1Request;
-import com.ezmax.api.model.EzsignfoldersignerassociationEditObjectV1Response;
-import com.ezmax.api.model.EzsignfoldersignerassociationForceDisconnectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetInPersonLoginUrlV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV2Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationPatchObjectV1Request;
-import com.ezmax.api.model.EzsignfoldersignerassociationPatchObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationReassignV1Request;
-import com.ezmax.api.model.EzsignfoldersignerassociationReassignV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -101,7 +97,7 @@ public class ObjectEzsignfoldersignerassociationApiTest {
     @Test
     public void ezsignfoldersignerassociationDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignfoldersignerassociationID = null;
-        EzsignfoldersignerassociationDeleteObjectV1Response response = api.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
+        CommonResponse response = api.ezsignfoldersignerassociationDeleteObjectV1(pkiEzsignfoldersignerassociationID);
         // TODO: test validations
     }
 
@@ -116,7 +112,7 @@ public class ObjectEzsignfoldersignerassociationApiTest {
     public void ezsignfoldersignerassociationEditObjectV1Test() throws ApiException {
         Integer pkiEzsignfoldersignerassociationID = null;
         EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request = null;
-        EzsignfoldersignerassociationEditObjectV1Response response = api.ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
+        CommonResponse response = api.ezsignfoldersignerassociationEditObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
         // TODO: test validations
     }
 
@@ -131,7 +127,7 @@ public class ObjectEzsignfoldersignerassociationApiTest {
     public void ezsignfoldersignerassociationForceDisconnectV1Test() throws ApiException {
         Integer pkiEzsignfoldersignerassociationID = null;
         Object body = null;
-        EzsignfoldersignerassociationForceDisconnectV1Response response = api.ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body);
+        CommonResponse response = api.ezsignfoldersignerassociationForceDisconnectV1(pkiEzsignfoldersignerassociationID, body);
         // TODO: test validations
     }
 
@@ -186,7 +182,7 @@ public class ObjectEzsignfoldersignerassociationApiTest {
     public void ezsignfoldersignerassociationPatchObjectV1Test() throws ApiException {
         Integer pkiEzsignfoldersignerassociationID = null;
         EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request = null;
-        EzsignfoldersignerassociationPatchObjectV1Response response = api.ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
+        CommonResponse response = api.ezsignfoldersignerassociationPatchObjectV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
         // TODO: test validations
     }
 
@@ -201,7 +197,7 @@ public class ObjectEzsignfoldersignerassociationApiTest {
     public void ezsignfoldersignerassociationReassignV1Test() throws ApiException {
         Integer pkiEzsignfoldersignerassociationID = null;
         EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request = null;
-        EzsignfoldersignerassociationReassignV1Response response = api.ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
+        CommonResponse response = api.ezsignfoldersignerassociationReassignV1(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
         // TODO: test validations
     }
 

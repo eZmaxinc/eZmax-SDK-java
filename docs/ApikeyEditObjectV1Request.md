@@ -8,7 +8,7 @@ Request for PUT /1/object/apikey/{pkiApikeyID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objApikey** | [**ApikeyRequestCompound**](ApikeyRequestCompound.md) |  |  |
+|**objApikey** | [**ApikeyRequest**](ApikeyRequest.md) | An Apikey Object and children to create a complete structure |  |
 
 
 

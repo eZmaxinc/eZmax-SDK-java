@@ -50,48 +50,57 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignelementdependency Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignelementdependencyResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNELEMENTDEPENDENCY_I_D = "pkiEzsignelementdependencyID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNELEMENTDEPENDENCY_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsignelementdependencyID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFORMFIELD_I_D = "fkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFORMFIELD_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsignformfieldID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNATURE_I_D = "fkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNATURE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsignsignatureID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFORMFIELD_I_D_VALIDATION = "fkiEzsignformfieldIDValidation";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFORMFIELD_I_D_VALIDATION)
+  @javax.annotation.Nullable
   private Integer fkiEzsignformfieldIDValidation;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFORMFIELDGROUP_I_D_VALIDATION = "fkiEzsignformfieldgroupIDValidation";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFORMFIELDGROUP_I_D_VALIDATION)
+  @javax.annotation.Nullable
   private Integer fkiEzsignformfieldgroupIDValidation;
 
   public static final String SERIALIZED_NAME_E_EZSIGNELEMENTDEPENDENCY_VALIDATION = "eEzsignelementdependencyValidation";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNELEMENTDEPENDENCY_VALIDATION)
+  @javax.annotation.Nonnull
   private FieldEEzsignelementdependencyValidation eEzsignelementdependencyValidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNELEMENTDEPENDENCY_SELECTED = "bEzsignelementdependencySelected";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNELEMENTDEPENDENCY_SELECTED)
+  @javax.annotation.Nullable
   private Boolean bEzsignelementdependencySelected;
 
   public static final String SERIALIZED_NAME_E_EZSIGNELEMENTDEPENDENCY_OPERATOR = "eEzsignelementdependencyOperator";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNELEMENTDEPENDENCY_OPERATOR)
+  @javax.annotation.Nullable
   private FieldEEzsignelementdependencyOperator eEzsignelementdependencyOperator;
 
   public static final String SERIALIZED_NAME_S_EZSIGNELEMENTDEPENDENCY_VALUE = "sEzsignelementdependencyValue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNELEMENTDEPENDENCY_VALUE)
+  @javax.annotation.Nullable
   private String sEzsignelementdependencyValue;
 
   public EzsignelementdependencyResponse() {
   }
 
-  public EzsignelementdependencyResponse pkiEzsignelementdependencyID(Integer pkiEzsignelementdependencyID) {
+  public EzsignelementdependencyResponse pkiEzsignelementdependencyID(@javax.annotation.Nonnull Integer pkiEzsignelementdependencyID) {
     this.pkiEzsignelementdependencyID = pkiEzsignelementdependencyID;
     return this;
   }
@@ -107,12 +116,12 @@ public class EzsignelementdependencyResponse {
     return pkiEzsignelementdependencyID;
   }
 
-  public void setPkiEzsignelementdependencyID(Integer pkiEzsignelementdependencyID) {
+  public void setPkiEzsignelementdependencyID(@javax.annotation.Nonnull Integer pkiEzsignelementdependencyID) {
     this.pkiEzsignelementdependencyID = pkiEzsignelementdependencyID;
   }
 
 
-  public EzsignelementdependencyResponse fkiEzsignformfieldID(Integer fkiEzsignformfieldID) {
+  public EzsignelementdependencyResponse fkiEzsignformfieldID(@javax.annotation.Nullable Integer fkiEzsignformfieldID) {
     this.fkiEzsignformfieldID = fkiEzsignformfieldID;
     return this;
   }
@@ -127,12 +136,12 @@ public class EzsignelementdependencyResponse {
     return fkiEzsignformfieldID;
   }
 
-  public void setFkiEzsignformfieldID(Integer fkiEzsignformfieldID) {
+  public void setFkiEzsignformfieldID(@javax.annotation.Nullable Integer fkiEzsignformfieldID) {
     this.fkiEzsignformfieldID = fkiEzsignformfieldID;
   }
 
 
-  public EzsignelementdependencyResponse fkiEzsignsignatureID(Integer fkiEzsignsignatureID) {
+  public EzsignelementdependencyResponse fkiEzsignsignatureID(@javax.annotation.Nullable Integer fkiEzsignsignatureID) {
     this.fkiEzsignsignatureID = fkiEzsignsignatureID;
     return this;
   }
@@ -147,12 +156,12 @@ public class EzsignelementdependencyResponse {
     return fkiEzsignsignatureID;
   }
 
-  public void setFkiEzsignsignatureID(Integer fkiEzsignsignatureID) {
+  public void setFkiEzsignsignatureID(@javax.annotation.Nullable Integer fkiEzsignsignatureID) {
     this.fkiEzsignsignatureID = fkiEzsignsignatureID;
   }
 
 
-  public EzsignelementdependencyResponse fkiEzsignformfieldIDValidation(Integer fkiEzsignformfieldIDValidation) {
+  public EzsignelementdependencyResponse fkiEzsignformfieldIDValidation(@javax.annotation.Nullable Integer fkiEzsignformfieldIDValidation) {
     this.fkiEzsignformfieldIDValidation = fkiEzsignformfieldIDValidation;
     return this;
   }
@@ -167,12 +176,12 @@ public class EzsignelementdependencyResponse {
     return fkiEzsignformfieldIDValidation;
   }
 
-  public void setFkiEzsignformfieldIDValidation(Integer fkiEzsignformfieldIDValidation) {
+  public void setFkiEzsignformfieldIDValidation(@javax.annotation.Nullable Integer fkiEzsignformfieldIDValidation) {
     this.fkiEzsignformfieldIDValidation = fkiEzsignformfieldIDValidation;
   }
 
 
-  public EzsignelementdependencyResponse fkiEzsignformfieldgroupIDValidation(Integer fkiEzsignformfieldgroupIDValidation) {
+  public EzsignelementdependencyResponse fkiEzsignformfieldgroupIDValidation(@javax.annotation.Nullable Integer fkiEzsignformfieldgroupIDValidation) {
     this.fkiEzsignformfieldgroupIDValidation = fkiEzsignformfieldgroupIDValidation;
     return this;
   }
@@ -187,12 +196,12 @@ public class EzsignelementdependencyResponse {
     return fkiEzsignformfieldgroupIDValidation;
   }
 
-  public void setFkiEzsignformfieldgroupIDValidation(Integer fkiEzsignformfieldgroupIDValidation) {
+  public void setFkiEzsignformfieldgroupIDValidation(@javax.annotation.Nullable Integer fkiEzsignformfieldgroupIDValidation) {
     this.fkiEzsignformfieldgroupIDValidation = fkiEzsignformfieldgroupIDValidation;
   }
 
 
-  public EzsignelementdependencyResponse eEzsignelementdependencyValidation(FieldEEzsignelementdependencyValidation eEzsignelementdependencyValidation) {
+  public EzsignelementdependencyResponse eEzsignelementdependencyValidation(@javax.annotation.Nonnull FieldEEzsignelementdependencyValidation eEzsignelementdependencyValidation) {
     this.eEzsignelementdependencyValidation = eEzsignelementdependencyValidation;
     return this;
   }
@@ -206,12 +215,12 @@ public class EzsignelementdependencyResponse {
     return eEzsignelementdependencyValidation;
   }
 
-  public void seteEzsignelementdependencyValidation(FieldEEzsignelementdependencyValidation eEzsignelementdependencyValidation) {
+  public void seteEzsignelementdependencyValidation(@javax.annotation.Nonnull FieldEEzsignelementdependencyValidation eEzsignelementdependencyValidation) {
     this.eEzsignelementdependencyValidation = eEzsignelementdependencyValidation;
   }
 
 
-  public EzsignelementdependencyResponse bEzsignelementdependencySelected(Boolean bEzsignelementdependencySelected) {
+  public EzsignelementdependencyResponse bEzsignelementdependencySelected(@javax.annotation.Nullable Boolean bEzsignelementdependencySelected) {
     this.bEzsignelementdependencySelected = bEzsignelementdependencySelected;
     return this;
   }
@@ -225,12 +234,12 @@ public class EzsignelementdependencyResponse {
     return bEzsignelementdependencySelected;
   }
 
-  public void setbEzsignelementdependencySelected(Boolean bEzsignelementdependencySelected) {
+  public void setbEzsignelementdependencySelected(@javax.annotation.Nullable Boolean bEzsignelementdependencySelected) {
     this.bEzsignelementdependencySelected = bEzsignelementdependencySelected;
   }
 
 
-  public EzsignelementdependencyResponse eEzsignelementdependencyOperator(FieldEEzsignelementdependencyOperator eEzsignelementdependencyOperator) {
+  public EzsignelementdependencyResponse eEzsignelementdependencyOperator(@javax.annotation.Nullable FieldEEzsignelementdependencyOperator eEzsignelementdependencyOperator) {
     this.eEzsignelementdependencyOperator = eEzsignelementdependencyOperator;
     return this;
   }
@@ -244,12 +253,12 @@ public class EzsignelementdependencyResponse {
     return eEzsignelementdependencyOperator;
   }
 
-  public void seteEzsignelementdependencyOperator(FieldEEzsignelementdependencyOperator eEzsignelementdependencyOperator) {
+  public void seteEzsignelementdependencyOperator(@javax.annotation.Nullable FieldEEzsignelementdependencyOperator eEzsignelementdependencyOperator) {
     this.eEzsignelementdependencyOperator = eEzsignelementdependencyOperator;
   }
 
 
-  public EzsignelementdependencyResponse sEzsignelementdependencyValue(String sEzsignelementdependencyValue) {
+  public EzsignelementdependencyResponse sEzsignelementdependencyValue(@javax.annotation.Nullable String sEzsignelementdependencyValue) {
     this.sEzsignelementdependencyValue = sEzsignelementdependencyValue;
     return this;
   }
@@ -263,7 +272,7 @@ public class EzsignelementdependencyResponse {
     return sEzsignelementdependencyValue;
   }
 
-  public void setsEzsignelementdependencyValue(String sEzsignelementdependencyValue) {
+  public void setsEzsignelementdependencyValue(@javax.annotation.Nullable String sEzsignelementdependencyValue) {
     this.sEzsignelementdependencyValue = sEzsignelementdependencyValue;
   }
 

@@ -49,24 +49,27 @@ import eZmaxAPI.JSON;
 /**
  * A Subsection in a Reportsection. It contains 3 Reportsubsectionparts (Header, Body and Footer) 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonReportsubsection {
   public static final String SERIALIZED_NAME_OBJ_REPORTSUBSECTIONPART_HEADER = "objReportsubsectionpartHeader";
   @SerializedName(SERIALIZED_NAME_OBJ_REPORTSUBSECTIONPART_HEADER)
+  @javax.annotation.Nonnull
   private CommonReportsubsectionpart objReportsubsectionpartHeader;
 
   public static final String SERIALIZED_NAME_OBJ_REPORTSUBSECTIONPART_BODY = "objReportsubsectionpartBody";
   @SerializedName(SERIALIZED_NAME_OBJ_REPORTSUBSECTIONPART_BODY)
+  @javax.annotation.Nonnull
   private CommonReportsubsectionpart objReportsubsectionpartBody;
 
   public static final String SERIALIZED_NAME_OBJ_REPORTSUBSECTIONPART_FOOTER = "objReportsubsectionpartFooter";
   @SerializedName(SERIALIZED_NAME_OBJ_REPORTSUBSECTIONPART_FOOTER)
+  @javax.annotation.Nonnull
   private CommonReportsubsectionpart objReportsubsectionpartFooter;
 
   public CommonReportsubsection() {
   }
 
-  public CommonReportsubsection objReportsubsectionpartHeader(CommonReportsubsectionpart objReportsubsectionpartHeader) {
+  public CommonReportsubsection objReportsubsectionpartHeader(@javax.annotation.Nonnull CommonReportsubsectionpart objReportsubsectionpartHeader) {
     this.objReportsubsectionpartHeader = objReportsubsectionpartHeader;
     return this;
   }
@@ -80,12 +83,12 @@ public class CommonReportsubsection {
     return objReportsubsectionpartHeader;
   }
 
-  public void setObjReportsubsectionpartHeader(CommonReportsubsectionpart objReportsubsectionpartHeader) {
+  public void setObjReportsubsectionpartHeader(@javax.annotation.Nonnull CommonReportsubsectionpart objReportsubsectionpartHeader) {
     this.objReportsubsectionpartHeader = objReportsubsectionpartHeader;
   }
 
 
-  public CommonReportsubsection objReportsubsectionpartBody(CommonReportsubsectionpart objReportsubsectionpartBody) {
+  public CommonReportsubsection objReportsubsectionpartBody(@javax.annotation.Nonnull CommonReportsubsectionpart objReportsubsectionpartBody) {
     this.objReportsubsectionpartBody = objReportsubsectionpartBody;
     return this;
   }
@@ -99,12 +102,12 @@ public class CommonReportsubsection {
     return objReportsubsectionpartBody;
   }
 
-  public void setObjReportsubsectionpartBody(CommonReportsubsectionpart objReportsubsectionpartBody) {
+  public void setObjReportsubsectionpartBody(@javax.annotation.Nonnull CommonReportsubsectionpart objReportsubsectionpartBody) {
     this.objReportsubsectionpartBody = objReportsubsectionpartBody;
   }
 
 
-  public CommonReportsubsection objReportsubsectionpartFooter(CommonReportsubsectionpart objReportsubsectionpartFooter) {
+  public CommonReportsubsection objReportsubsectionpartFooter(@javax.annotation.Nonnull CommonReportsubsectionpart objReportsubsectionpartFooter) {
     this.objReportsubsectionpartFooter = objReportsubsectionpartFooter;
     return this;
   }
@@ -118,7 +121,7 @@ public class CommonReportsubsection {
     return objReportsubsectionpartFooter;
   }
 
-  public void setObjReportsubsectionpartFooter(CommonReportsubsectionpart objReportsubsectionpartFooter) {
+  public void setObjReportsubsectionpartFooter(@javax.annotation.Nonnull CommonReportsubsectionpart objReportsubsectionpartFooter) {
     this.objReportsubsectionpartFooter = objReportsubsectionpartFooter;
   }
 

@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AttemptResponseCompound;
+import com.ezmax.api.model.AttemptResponse;
 import com.ezmax.api.model.CustomWebhookResponse;
 import com.ezmax.api.model.EzsignfolderResponse;
 import com.ezmax.api.model.EzsignfoldersignerassociationResponseCompound;
@@ -54,28 +54,32 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class WebhookEzsignEzsignsignerConnect {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
+  @javax.annotation.Nonnull
   private CustomWebhookResponse objWebhook;
 
   public static final String SERIALIZED_NAME_A_OBJ_ATTEMPT = "a_objAttempt";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTEMPT)
+  @javax.annotation.Nonnull
   private List<AttemptResponseCompound> aObjAttempt = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)
+  @javax.annotation.Nullable
   private EzsignfolderResponse objEzsignfolder;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERSIGNERASSOCIATION = "objEzsignfoldersignerassociation";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERSIGNERASSOCIATION)
+  @javax.annotation.Nonnull
   private EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation;
 
   public WebhookEzsignEzsignsignerConnect() {
   }
 
-  public WebhookEzsignEzsignsignerConnect objWebhook(CustomWebhookResponse objWebhook) {
+  public WebhookEzsignEzsignsignerConnect objWebhook(@javax.annotation.Nonnull CustomWebhookResponse objWebhook) {
     this.objWebhook = objWebhook;
     return this;
   }
@@ -89,17 +93,17 @@ public class WebhookEzsignEzsignsignerConnect {
     return objWebhook;
   }
 
-  public void setObjWebhook(CustomWebhookResponse objWebhook) {
+  public void setObjWebhook(@javax.annotation.Nonnull CustomWebhookResponse objWebhook) {
     this.objWebhook = objWebhook;
   }
 
 
-  public WebhookEzsignEzsignsignerConnect aObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
+  public WebhookEzsignEzsignsignerConnect aObjAttempt(@javax.annotation.Nonnull List<AttemptResponseCompound> aObjAttempt) {
     this.aObjAttempt = aObjAttempt;
     return this;
   }
 
-  public WebhookEzsignEzsignsignerConnect addAObjAttemptItem(AttemptResponseCompound aObjAttemptItem) {
+  public WebhookEzsignEzsignsignerConnect addAObjAttemptItem(AttemptResponse aObjAttemptItem) {
     if (this.aObjAttempt == null) {
       this.aObjAttempt = new ArrayList<>();
     }
@@ -116,12 +120,12 @@ public class WebhookEzsignEzsignsignerConnect {
     return aObjAttempt;
   }
 
-  public void setaObjAttempt(List<AttemptResponseCompound> aObjAttempt) {
+  public void setaObjAttempt(@javax.annotation.Nonnull List<AttemptResponseCompound> aObjAttempt) {
     this.aObjAttempt = aObjAttempt;
   }
 
 
-  public WebhookEzsignEzsignsignerConnect objEzsignfolder(EzsignfolderResponse objEzsignfolder) {
+  public WebhookEzsignEzsignsignerConnect objEzsignfolder(@javax.annotation.Nullable EzsignfolderResponse objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
     return this;
   }
@@ -135,12 +139,12 @@ public class WebhookEzsignEzsignsignerConnect {
     return objEzsignfolder;
   }
 
-  public void setObjEzsignfolder(EzsignfolderResponse objEzsignfolder) {
+  public void setObjEzsignfolder(@javax.annotation.Nullable EzsignfolderResponse objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
   }
 
 
-  public WebhookEzsignEzsignsignerConnect objEzsignfoldersignerassociation(EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
+  public WebhookEzsignEzsignsignerConnect objEzsignfoldersignerassociation(@javax.annotation.Nonnull EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
     this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
     return this;
   }
@@ -154,7 +158,7 @@ public class WebhookEzsignEzsignsignerConnect {
     return objEzsignfoldersignerassociation;
   }
 
-  public void setObjEzsignfoldersignerassociation(EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
+  public void setObjEzsignfoldersignerassociation(@javax.annotation.Nonnull EzsignfoldersignerassociationResponseCompound objEzsignfoldersignerassociation) {
     this.objEzsignfoldersignerassociation = objEzsignfoldersignerassociation;
   }
 
@@ -260,7 +264,7 @@ public class WebhookEzsignEzsignsignerConnect {
       JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
       // validate the required field `a_objAttempt` (array)
       for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
-        AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
+        AttemptResponse.validateJsonElement(jsonArrayaObjAttempt.get(i));
       };
       // validate the optional field `objEzsignfolder`
       if (jsonObj.get("objEzsignfolder") != null && !jsonObj.get("objEzsignfolder").isJsonNull()) {

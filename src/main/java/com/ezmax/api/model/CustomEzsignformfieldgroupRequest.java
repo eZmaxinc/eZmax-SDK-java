@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CustomEzsignformfieldRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,24 +50,27 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignformfieldgroup Object to fill an Ezsignform using submitForm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomEzsignformfieldgroupRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzsignformfieldgroupID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_LABEL = "sEzsignformfieldgroupLabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDGROUP_LABEL)
+  @javax.annotation.Nullable
   private String sEzsignformfieldgroupLabel;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELD = "a_objEzsignformfield";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELD)
+  @javax.annotation.Nonnull
   private List<CustomEzsignformfieldRequest> aObjEzsignformfield = new ArrayList<>();
 
   public CustomEzsignformfieldgroupRequest() {
   }
 
-  public CustomEzsignformfieldgroupRequest pkiEzsignformfieldgroupID(Integer pkiEzsignformfieldgroupID) {
+  public CustomEzsignformfieldgroupRequest pkiEzsignformfieldgroupID(@javax.annotation.Nullable Integer pkiEzsignformfieldgroupID) {
     this.pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
     return this;
   }
@@ -83,12 +85,12 @@ public class CustomEzsignformfieldgroupRequest {
     return pkiEzsignformfieldgroupID;
   }
 
-  public void setPkiEzsignformfieldgroupID(Integer pkiEzsignformfieldgroupID) {
+  public void setPkiEzsignformfieldgroupID(@javax.annotation.Nullable Integer pkiEzsignformfieldgroupID) {
     this.pkiEzsignformfieldgroupID = pkiEzsignformfieldgroupID;
   }
 
 
-  public CustomEzsignformfieldgroupRequest sEzsignformfieldgroupLabel(String sEzsignformfieldgroupLabel) {
+  public CustomEzsignformfieldgroupRequest sEzsignformfieldgroupLabel(@javax.annotation.Nullable String sEzsignformfieldgroupLabel) {
     this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
     return this;
   }
@@ -102,17 +104,17 @@ public class CustomEzsignformfieldgroupRequest {
     return sEzsignformfieldgroupLabel;
   }
 
-  public void setsEzsignformfieldgroupLabel(String sEzsignformfieldgroupLabel) {
+  public void setsEzsignformfieldgroupLabel(@javax.annotation.Nullable String sEzsignformfieldgroupLabel) {
     this.sEzsignformfieldgroupLabel = sEzsignformfieldgroupLabel;
   }
 
 
-  public CustomEzsignformfieldgroupRequest aObjEzsignformfield(List<CustomEzsignformfieldRequest> aObjEzsignformfield) {
+  public CustomEzsignformfieldgroupRequest aObjEzsignformfield(@javax.annotation.Nonnull List<CustomEzsignformfieldRequest> aObjEzsignformfield) {
     this.aObjEzsignformfield = aObjEzsignformfield;
     return this;
   }
 
-  public CustomEzsignformfieldgroupRequest addAObjEzsignformfieldItem(CustomEzsignformfieldRequest aObjEzsignformfieldItem) {
+  public CustomEzsignformfieldgroupRequest addAObjEzsignformfieldItem(Object aObjEzsignformfieldItem) {
     if (this.aObjEzsignformfield == null) {
       this.aObjEzsignformfield = new ArrayList<>();
     }
@@ -129,7 +131,7 @@ public class CustomEzsignformfieldgroupRequest {
     return aObjEzsignformfield;
   }
 
-  public void setaObjEzsignformfield(List<CustomEzsignformfieldRequest> aObjEzsignformfield) {
+  public void setaObjEzsignformfield(@javax.annotation.Nonnull List<CustomEzsignformfieldRequest> aObjEzsignformfield) {
     this.aObjEzsignformfield = aObjEzsignformfield;
   }
 
@@ -231,7 +233,7 @@ public class CustomEzsignformfieldgroupRequest {
       JsonArray jsonArrayaObjEzsignformfield = jsonObj.getAsJsonArray("a_objEzsignformfield");
       // validate the required field `a_objEzsignformfield` (array)
       for (int i = 0; i < jsonArrayaObjEzsignformfield.size(); i++) {
-        CustomEzsignformfieldRequest.validateJsonElement(jsonArrayaObjEzsignformfield.get(i));
+        Object.validateJsonElement(jsonArrayaObjEzsignformfield.get(i));
       };
   }
 

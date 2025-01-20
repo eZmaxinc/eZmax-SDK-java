@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
-import com.ezmax.api.model.EzsignfolderGetObjectV1ResponseMPayload;
+import com.ezmax.api.model.EzsignfolderResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

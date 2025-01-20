@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * A cell in a Reportrow 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonReportcell {
   public static final String SERIALIZED_NAME_I_REPORTCELL_COLUMNSPAN = "iReportcellColumnspan";
   @SerializedName(SERIALIZED_NAME_I_REPORTCELL_COLUMNSPAN)
+  @javax.annotation.Nonnull
   private Integer iReportcellColumnspan;
 
   public static final String SERIALIZED_NAME_I_REPORTCELL_ROWSPAN = "iReportcellRowspan";
   @SerializedName(SERIALIZED_NAME_I_REPORTCELL_ROWSPAN)
+  @javax.annotation.Nonnull
   private Integer iReportcellRowspan;
 
   public CommonReportcell() {
   }
 
-  public CommonReportcell iReportcellColumnspan(Integer iReportcellColumnspan) {
+  public CommonReportcell iReportcellColumnspan(@javax.annotation.Nonnull Integer iReportcellColumnspan) {
     this.iReportcellColumnspan = iReportcellColumnspan;
     return this;
   }
@@ -75,12 +77,12 @@ public class CommonReportcell {
     return iReportcellColumnspan;
   }
 
-  public void setiReportcellColumnspan(Integer iReportcellColumnspan) {
+  public void setiReportcellColumnspan(@javax.annotation.Nonnull Integer iReportcellColumnspan) {
     this.iReportcellColumnspan = iReportcellColumnspan;
   }
 
 
-  public CommonReportcell iReportcellRowspan(Integer iReportcellRowspan) {
+  public CommonReportcell iReportcellRowspan(@javax.annotation.Nonnull Integer iReportcellRowspan) {
     this.iReportcellRowspan = iReportcellRowspan;
     return this;
   }
@@ -94,7 +96,7 @@ public class CommonReportcell {
     return iReportcellRowspan;
   }
 
-  public void setiReportcellRowspan(Integer iReportcellRowspan) {
+  public void setiReportcellRowspan(@javax.annotation.Nonnull Integer iReportcellRowspan) {
     this.iReportcellRowspan = iReportcellRowspan;
   }
 

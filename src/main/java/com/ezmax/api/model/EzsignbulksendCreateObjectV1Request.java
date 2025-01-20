@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignbulksend
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignbulksendCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND = "a_objEzsignbulksend";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSEND)
+  @javax.annotation.Nonnull
   private List<EzsignbulksendRequestCompound> aObjEzsignbulksend = new ArrayList<>();
 
   public EzsignbulksendCreateObjectV1Request() {
   }
 
-  public EzsignbulksendCreateObjectV1Request aObjEzsignbulksend(List<EzsignbulksendRequestCompound> aObjEzsignbulksend) {
+  public EzsignbulksendCreateObjectV1Request aObjEzsignbulksend(@javax.annotation.Nonnull List<EzsignbulksendRequestCompound> aObjEzsignbulksend) {
     this.aObjEzsignbulksend = aObjEzsignbulksend;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzsignbulksendCreateObjectV1Request {
     return aObjEzsignbulksend;
   }
 
-  public void setaObjEzsignbulksend(List<EzsignbulksendRequestCompound> aObjEzsignbulksend) {
+  public void setaObjEzsignbulksend(@javax.annotation.Nonnull List<EzsignbulksendRequestCompound> aObjEzsignbulksend) {
     this.aObjEzsignbulksend = aObjEzsignbulksend;
   }
 

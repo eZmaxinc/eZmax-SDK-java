@@ -8,7 +8,7 @@ Request for POST /2/object/apikey
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**aObjApikey** | [**List&lt;ApikeyRequestCompound&gt;**](ApikeyRequestCompound.md) |  |  |
+|**aObjApikey** | [**List&lt;ApikeyRequest&gt;**](ApikeyRequest.md) |  |  |
 
 
 

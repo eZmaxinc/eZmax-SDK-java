@@ -48,64 +48,77 @@ import eZmaxAPI.JSON;
 /**
  * An Address Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddressResponseCompound {
   public static final String SERIALIZED_NAME_PKI_ADDRESS_I_D = "pkiAddressID";
   @SerializedName(SERIALIZED_NAME_PKI_ADDRESS_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiAddressID;
 
   public static final String SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D = "fkiAddresstypeID";
   @SerializedName(SERIALIZED_NAME_FKI_ADDRESSTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiAddresstypeID;
 
   public static final String SERIALIZED_NAME_S_ADDRESS_CIVIC = "sAddressCivic";
   @SerializedName(SERIALIZED_NAME_S_ADDRESS_CIVIC)
+  @javax.annotation.Nonnull
   private String sAddressCivic;
 
   public static final String SERIALIZED_NAME_S_ADDRESS_STREET = "sAddressStreet";
   @SerializedName(SERIALIZED_NAME_S_ADDRESS_STREET)
+  @javax.annotation.Nonnull
   private String sAddressStreet;
 
   public static final String SERIALIZED_NAME_S_ADDRESS_SUITE = "sAddressSuite";
   @SerializedName(SERIALIZED_NAME_S_ADDRESS_SUITE)
+  @javax.annotation.Nullable
   private String sAddressSuite;
 
   public static final String SERIALIZED_NAME_S_ADDRESS_CITY = "sAddressCity";
   @SerializedName(SERIALIZED_NAME_S_ADDRESS_CITY)
+  @javax.annotation.Nonnull
   private String sAddressCity;
 
   public static final String SERIALIZED_NAME_FKI_PROVINCE_I_D = "fkiProvinceID";
   @SerializedName(SERIALIZED_NAME_FKI_PROVINCE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiProvinceID;
 
   public static final String SERIALIZED_NAME_S_PROVINCE_NAME_X = "sProvinceNameX";
   @SerializedName(SERIALIZED_NAME_S_PROVINCE_NAME_X)
+  @javax.annotation.Nonnull
   private String sProvinceNameX;
 
   public static final String SERIALIZED_NAME_FKI_COUNTRY_I_D = "fkiCountryID";
   @SerializedName(SERIALIZED_NAME_FKI_COUNTRY_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiCountryID;
 
   public static final String SERIALIZED_NAME_S_COUNTRY_NAME_X = "sCountryNameX";
   @SerializedName(SERIALIZED_NAME_S_COUNTRY_NAME_X)
+  @javax.annotation.Nonnull
   private String sCountryNameX;
 
   public static final String SERIALIZED_NAME_S_ADDRESS_ZIP = "sAddressZip";
   @SerializedName(SERIALIZED_NAME_S_ADDRESS_ZIP)
+  @javax.annotation.Nonnull
   private String sAddressZip;
 
   public static final String SERIALIZED_NAME_F_ADDRESS_LONGITUDE = "fAddressLongitude";
   @SerializedName(SERIALIZED_NAME_F_ADDRESS_LONGITUDE)
+  @javax.annotation.Nullable
   private String fAddressLongitude;
 
   public static final String SERIALIZED_NAME_F_ADDRESS_LATITUDE = "fAddressLatitude";
   @SerializedName(SERIALIZED_NAME_F_ADDRESS_LATITUDE)
+  @javax.annotation.Nullable
   private String fAddressLatitude;
 
   public AddressResponseCompound() {
   }
 
-  public AddressResponseCompound pkiAddressID(Integer pkiAddressID) {
+  public AddressResponseCompound pkiAddressID(@javax.annotation.Nonnull Integer pkiAddressID) {
     this.pkiAddressID = pkiAddressID;
     return this;
   }
@@ -120,12 +133,12 @@ public class AddressResponseCompound {
     return pkiAddressID;
   }
 
-  public void setPkiAddressID(Integer pkiAddressID) {
+  public void setPkiAddressID(@javax.annotation.Nonnull Integer pkiAddressID) {
     this.pkiAddressID = pkiAddressID;
   }
 
 
-  public AddressResponseCompound fkiAddresstypeID(Integer fkiAddresstypeID) {
+  public AddressResponseCompound fkiAddresstypeID(@javax.annotation.Nonnull Integer fkiAddresstypeID) {
     this.fkiAddresstypeID = fkiAddresstypeID;
     return this;
   }
@@ -140,12 +153,12 @@ public class AddressResponseCompound {
     return fkiAddresstypeID;
   }
 
-  public void setFkiAddresstypeID(Integer fkiAddresstypeID) {
+  public void setFkiAddresstypeID(@javax.annotation.Nonnull Integer fkiAddresstypeID) {
     this.fkiAddresstypeID = fkiAddresstypeID;
   }
 
 
-  public AddressResponseCompound sAddressCivic(String sAddressCivic) {
+  public AddressResponseCompound sAddressCivic(@javax.annotation.Nonnull String sAddressCivic) {
     this.sAddressCivic = sAddressCivic;
     return this;
   }
@@ -159,12 +172,12 @@ public class AddressResponseCompound {
     return sAddressCivic;
   }
 
-  public void setsAddressCivic(String sAddressCivic) {
+  public void setsAddressCivic(@javax.annotation.Nonnull String sAddressCivic) {
     this.sAddressCivic = sAddressCivic;
   }
 
 
-  public AddressResponseCompound sAddressStreet(String sAddressStreet) {
+  public AddressResponseCompound sAddressStreet(@javax.annotation.Nonnull String sAddressStreet) {
     this.sAddressStreet = sAddressStreet;
     return this;
   }
@@ -178,12 +191,12 @@ public class AddressResponseCompound {
     return sAddressStreet;
   }
 
-  public void setsAddressStreet(String sAddressStreet) {
+  public void setsAddressStreet(@javax.annotation.Nonnull String sAddressStreet) {
     this.sAddressStreet = sAddressStreet;
   }
 
 
-  public AddressResponseCompound sAddressSuite(String sAddressSuite) {
+  public AddressResponseCompound sAddressSuite(@javax.annotation.Nullable String sAddressSuite) {
     this.sAddressSuite = sAddressSuite;
     return this;
   }
@@ -197,12 +210,12 @@ public class AddressResponseCompound {
     return sAddressSuite;
   }
 
-  public void setsAddressSuite(String sAddressSuite) {
+  public void setsAddressSuite(@javax.annotation.Nullable String sAddressSuite) {
     this.sAddressSuite = sAddressSuite;
   }
 
 
-  public AddressResponseCompound sAddressCity(String sAddressCity) {
+  public AddressResponseCompound sAddressCity(@javax.annotation.Nonnull String sAddressCity) {
     this.sAddressCity = sAddressCity;
     return this;
   }
@@ -216,12 +229,12 @@ public class AddressResponseCompound {
     return sAddressCity;
   }
 
-  public void setsAddressCity(String sAddressCity) {
+  public void setsAddressCity(@javax.annotation.Nonnull String sAddressCity) {
     this.sAddressCity = sAddressCity;
   }
 
 
-  public AddressResponseCompound fkiProvinceID(Integer fkiProvinceID) {
+  public AddressResponseCompound fkiProvinceID(@javax.annotation.Nonnull Integer fkiProvinceID) {
     this.fkiProvinceID = fkiProvinceID;
     return this;
   }
@@ -236,12 +249,12 @@ public class AddressResponseCompound {
     return fkiProvinceID;
   }
 
-  public void setFkiProvinceID(Integer fkiProvinceID) {
+  public void setFkiProvinceID(@javax.annotation.Nonnull Integer fkiProvinceID) {
     this.fkiProvinceID = fkiProvinceID;
   }
 
 
-  public AddressResponseCompound sProvinceNameX(String sProvinceNameX) {
+  public AddressResponseCompound sProvinceNameX(@javax.annotation.Nonnull String sProvinceNameX) {
     this.sProvinceNameX = sProvinceNameX;
     return this;
   }
@@ -255,12 +268,12 @@ public class AddressResponseCompound {
     return sProvinceNameX;
   }
 
-  public void setsProvinceNameX(String sProvinceNameX) {
+  public void setsProvinceNameX(@javax.annotation.Nonnull String sProvinceNameX) {
     this.sProvinceNameX = sProvinceNameX;
   }
 
 
-  public AddressResponseCompound fkiCountryID(Integer fkiCountryID) {
+  public AddressResponseCompound fkiCountryID(@javax.annotation.Nonnull Integer fkiCountryID) {
     this.fkiCountryID = fkiCountryID;
     return this;
   }
@@ -275,12 +288,12 @@ public class AddressResponseCompound {
     return fkiCountryID;
   }
 
-  public void setFkiCountryID(Integer fkiCountryID) {
+  public void setFkiCountryID(@javax.annotation.Nonnull Integer fkiCountryID) {
     this.fkiCountryID = fkiCountryID;
   }
 
 
-  public AddressResponseCompound sCountryNameX(String sCountryNameX) {
+  public AddressResponseCompound sCountryNameX(@javax.annotation.Nonnull String sCountryNameX) {
     this.sCountryNameX = sCountryNameX;
     return this;
   }
@@ -294,12 +307,12 @@ public class AddressResponseCompound {
     return sCountryNameX;
   }
 
-  public void setsCountryNameX(String sCountryNameX) {
+  public void setsCountryNameX(@javax.annotation.Nonnull String sCountryNameX) {
     this.sCountryNameX = sCountryNameX;
   }
 
 
-  public AddressResponseCompound sAddressZip(String sAddressZip) {
+  public AddressResponseCompound sAddressZip(@javax.annotation.Nonnull String sAddressZip) {
     this.sAddressZip = sAddressZip;
     return this;
   }
@@ -313,12 +326,12 @@ public class AddressResponseCompound {
     return sAddressZip;
   }
 
-  public void setsAddressZip(String sAddressZip) {
+  public void setsAddressZip(@javax.annotation.Nonnull String sAddressZip) {
     this.sAddressZip = sAddressZip;
   }
 
 
-  public AddressResponseCompound fAddressLongitude(String fAddressLongitude) {
+  public AddressResponseCompound fAddressLongitude(@javax.annotation.Nullable String fAddressLongitude) {
     this.fAddressLongitude = fAddressLongitude;
     return this;
   }
@@ -332,12 +345,12 @@ public class AddressResponseCompound {
     return fAddressLongitude;
   }
 
-  public void setfAddressLongitude(String fAddressLongitude) {
+  public void setfAddressLongitude(@javax.annotation.Nullable String fAddressLongitude) {
     this.fAddressLongitude = fAddressLongitude;
   }
 
 
-  public AddressResponseCompound fAddressLatitude(String fAddressLatitude) {
+  public AddressResponseCompound fAddressLatitude(@javax.annotation.Nullable String fAddressLatitude) {
     this.fAddressLatitude = fAddressLatitude;
     return this;
   }
@@ -351,7 +364,7 @@ public class AddressResponseCompound {
     return fAddressLatitude;
   }
 
-  public void setfAddressLatitude(String fAddressLatitude) {
+  public void setfAddressLatitude(@javax.annotation.Nullable String fAddressLatitude) {
     this.fAddressLatitude = fAddressLatitude;
   }
 

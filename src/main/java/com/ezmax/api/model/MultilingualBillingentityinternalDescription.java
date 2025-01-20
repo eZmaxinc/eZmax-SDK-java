@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * The description of the Billingentityinternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class MultilingualBillingentityinternalDescription {
   public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION1 = "sBillingentityinternalDescription1";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION1)
+  @javax.annotation.Nullable
   private String sBillingentityinternalDescription1;
 
   public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION2 = "sBillingentityinternalDescription2";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION2)
+  @javax.annotation.Nullable
   private String sBillingentityinternalDescription2;
 
   public MultilingualBillingentityinternalDescription() {
   }
 
-  public MultilingualBillingentityinternalDescription sBillingentityinternalDescription1(String sBillingentityinternalDescription1) {
+  public MultilingualBillingentityinternalDescription sBillingentityinternalDescription1(@javax.annotation.Nullable String sBillingentityinternalDescription1) {
     this.sBillingentityinternalDescription1 = sBillingentityinternalDescription1;
     return this;
   }
@@ -75,12 +77,12 @@ public class MultilingualBillingentityinternalDescription {
     return sBillingentityinternalDescription1;
   }
 
-  public void setsBillingentityinternalDescription1(String sBillingentityinternalDescription1) {
+  public void setsBillingentityinternalDescription1(@javax.annotation.Nullable String sBillingentityinternalDescription1) {
     this.sBillingentityinternalDescription1 = sBillingentityinternalDescription1;
   }
 
 
-  public MultilingualBillingentityinternalDescription sBillingentityinternalDescription2(String sBillingentityinternalDescription2) {
+  public MultilingualBillingentityinternalDescription sBillingentityinternalDescription2(@javax.annotation.Nullable String sBillingentityinternalDescription2) {
     this.sBillingentityinternalDescription2 = sBillingentityinternalDescription2;
     return this;
   }
@@ -94,7 +96,7 @@ public class MultilingualBillingentityinternalDescription {
     return sBillingentityinternalDescription2;
   }
 
-  public void setsBillingentityinternalDescription2(String sBillingentityinternalDescription2) {
+  public void setsBillingentityinternalDescription2(@javax.annotation.Nullable String sBillingentityinternalDescription2) {
     this.sBillingentityinternalDescription2 = sBillingentityinternalDescription2;
   }
 

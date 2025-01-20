@@ -51,24 +51,27 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/webhook/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class WebhookGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  @javax.annotation.Nonnull
   private Integer iRowReturned;
 
   public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  @javax.annotation.Nonnull
   private Integer iRowFiltered;
 
   public static final String SERIALIZED_NAME_A_OBJ_WEBHOOK = "a_objWebhook";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WEBHOOK)
+  @javax.annotation.Nonnull
   private List<WebhookListElement> aObjWebhook = new ArrayList<>();
 
   public WebhookGetListV1ResponseMPayload() {
   }
 
-  public WebhookGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+  public WebhookGetListV1ResponseMPayload iRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -82,12 +85,12 @@ public class WebhookGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-  public void setiRowReturned(Integer iRowReturned) {
+  public void setiRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
-  public WebhookGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+  public WebhookGetListV1ResponseMPayload iRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -101,12 +104,12 @@ public class WebhookGetListV1ResponseMPayload {
     return iRowFiltered;
   }
 
-  public void setiRowFiltered(Integer iRowFiltered) {
+  public void setiRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
   }
 
 
-  public WebhookGetListV1ResponseMPayload aObjWebhook(List<WebhookListElement> aObjWebhook) {
+  public WebhookGetListV1ResponseMPayload aObjWebhook(@javax.annotation.Nonnull List<WebhookListElement> aObjWebhook) {
     this.aObjWebhook = aObjWebhook;
     return this;
   }
@@ -128,7 +131,7 @@ public class WebhookGetListV1ResponseMPayload {
     return aObjWebhook;
   }
 
-  public void setaObjWebhook(List<WebhookListElement> aObjWebhook) {
+  public void setaObjWebhook(@javax.annotation.Nonnull List<WebhookListElement> aObjWebhook) {
     this.aObjWebhook = aObjWebhook;
   }
 

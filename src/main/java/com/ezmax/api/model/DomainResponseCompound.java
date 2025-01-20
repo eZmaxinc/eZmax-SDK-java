@@ -15,7 +15,6 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
-import com.ezmax.api.model.CustomDnsrecordResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,40 +51,47 @@ import eZmaxAPI.JSON;
 /**
  * A Domain Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DomainResponseCompound {
   public static final String SERIALIZED_NAME_PKI_DOMAIN_I_D = "pkiDomainID";
   @SerializedName(SERIALIZED_NAME_PKI_DOMAIN_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiDomainID;
 
   public static final String SERIALIZED_NAME_S_DOMAIN_NAME = "sDomainName";
   @SerializedName(SERIALIZED_NAME_S_DOMAIN_NAME)
+  @javax.annotation.Nonnull
   private String sDomainName;
 
   public static final String SERIALIZED_NAME_B_DOMAIN_VALIDDKIM = "bDomainValiddkim";
   @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDDKIM)
+  @javax.annotation.Nonnull
   private Boolean bDomainValiddkim;
 
   public static final String SERIALIZED_NAME_B_DOMAIN_VALIDMAILFROM = "bDomainValidmailfrom";
   @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDMAILFROM)
+  @javax.annotation.Nonnull
   private Boolean bDomainValidmailfrom;
 
   public static final String SERIALIZED_NAME_B_DOMAIN_VALIDCUSTOMER = "bDomainValidcustomer";
   @SerializedName(SERIALIZED_NAME_B_DOMAIN_VALIDCUSTOMER)
+  @javax.annotation.Nonnull
   private Boolean bDomainValidcustomer;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  @javax.annotation.Nonnull
   private CommonAudit objAudit;
 
   public static final String SERIALIZED_NAME_A_OBJ_DNSRECORD = "a_objDnsrecord";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DNSRECORD)
+  @javax.annotation.Nonnull
   private List<CustomDnsrecordResponse> aObjDnsrecord = new ArrayList<>();
 
   public DomainResponseCompound() {
   }
 
-  public DomainResponseCompound pkiDomainID(Integer pkiDomainID) {
+  public DomainResponseCompound pkiDomainID(@javax.annotation.Nonnull Integer pkiDomainID) {
     this.pkiDomainID = pkiDomainID;
     return this;
   }
@@ -101,12 +107,12 @@ public class DomainResponseCompound {
     return pkiDomainID;
   }
 
-  public void setPkiDomainID(Integer pkiDomainID) {
+  public void setPkiDomainID(@javax.annotation.Nonnull Integer pkiDomainID) {
     this.pkiDomainID = pkiDomainID;
   }
 
 
-  public DomainResponseCompound sDomainName(String sDomainName) {
+  public DomainResponseCompound sDomainName(@javax.annotation.Nonnull String sDomainName) {
     this.sDomainName = sDomainName;
     return this;
   }
@@ -120,12 +126,12 @@ public class DomainResponseCompound {
     return sDomainName;
   }
 
-  public void setsDomainName(String sDomainName) {
+  public void setsDomainName(@javax.annotation.Nonnull String sDomainName) {
     this.sDomainName = sDomainName;
   }
 
 
-  public DomainResponseCompound bDomainValiddkim(Boolean bDomainValiddkim) {
+  public DomainResponseCompound bDomainValiddkim(@javax.annotation.Nonnull Boolean bDomainValiddkim) {
     this.bDomainValiddkim = bDomainValiddkim;
     return this;
   }
@@ -139,12 +145,12 @@ public class DomainResponseCompound {
     return bDomainValiddkim;
   }
 
-  public void setbDomainValiddkim(Boolean bDomainValiddkim) {
+  public void setbDomainValiddkim(@javax.annotation.Nonnull Boolean bDomainValiddkim) {
     this.bDomainValiddkim = bDomainValiddkim;
   }
 
 
-  public DomainResponseCompound bDomainValidmailfrom(Boolean bDomainValidmailfrom) {
+  public DomainResponseCompound bDomainValidmailfrom(@javax.annotation.Nonnull Boolean bDomainValidmailfrom) {
     this.bDomainValidmailfrom = bDomainValidmailfrom;
     return this;
   }
@@ -158,12 +164,12 @@ public class DomainResponseCompound {
     return bDomainValidmailfrom;
   }
 
-  public void setbDomainValidmailfrom(Boolean bDomainValidmailfrom) {
+  public void setbDomainValidmailfrom(@javax.annotation.Nonnull Boolean bDomainValidmailfrom) {
     this.bDomainValidmailfrom = bDomainValidmailfrom;
   }
 
 
-  public DomainResponseCompound bDomainValidcustomer(Boolean bDomainValidcustomer) {
+  public DomainResponseCompound bDomainValidcustomer(@javax.annotation.Nonnull Boolean bDomainValidcustomer) {
     this.bDomainValidcustomer = bDomainValidcustomer;
     return this;
   }
@@ -177,12 +183,12 @@ public class DomainResponseCompound {
     return bDomainValidcustomer;
   }
 
-  public void setbDomainValidcustomer(Boolean bDomainValidcustomer) {
+  public void setbDomainValidcustomer(@javax.annotation.Nonnull Boolean bDomainValidcustomer) {
     this.bDomainValidcustomer = bDomainValidcustomer;
   }
 
 
-  public DomainResponseCompound objAudit(CommonAudit objAudit) {
+  public DomainResponseCompound objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -196,17 +202,17 @@ public class DomainResponseCompound {
     return objAudit;
   }
 
-  public void setObjAudit(CommonAudit objAudit) {
+  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
 
-  public DomainResponseCompound aObjDnsrecord(List<CustomDnsrecordResponse> aObjDnsrecord) {
+  public DomainResponseCompound aObjDnsrecord(@javax.annotation.Nonnull List<CustomDnsrecordResponse> aObjDnsrecord) {
     this.aObjDnsrecord = aObjDnsrecord;
     return this;
   }
 
-  public DomainResponseCompound addAObjDnsrecordItem(CustomDnsrecordResponse aObjDnsrecordItem) {
+  public DomainResponseCompound addAObjDnsrecordItem(Object aObjDnsrecordItem) {
     if (this.aObjDnsrecord == null) {
       this.aObjDnsrecord = new ArrayList<>();
     }
@@ -223,7 +229,7 @@ public class DomainResponseCompound {
     return aObjDnsrecord;
   }
 
-  public void setaObjDnsrecord(List<CustomDnsrecordResponse> aObjDnsrecord) {
+  public void setaObjDnsrecord(@javax.annotation.Nonnull List<CustomDnsrecordResponse> aObjDnsrecord) {
     this.aObjDnsrecord = aObjDnsrecord;
   }
 
@@ -345,7 +351,7 @@ public class DomainResponseCompound {
       JsonArray jsonArrayaObjDnsrecord = jsonObj.getAsJsonArray("a_objDnsrecord");
       // validate the required field `a_objDnsrecord` (array)
       for (int i = 0; i < jsonArrayaObjDnsrecord.size(); i++) {
-        CustomDnsrecordResponse.validateJsonElement(jsonArrayaObjDnsrecord.get(i));
+        Object.validateJsonElement(jsonArrayaObjDnsrecord.get(i));
       };
   }
 

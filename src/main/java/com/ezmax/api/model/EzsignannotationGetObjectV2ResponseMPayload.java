@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsignannotation/{pkiEzsignannotationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignannotationGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNANNOTATION = "objEzsignannotation";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNANNOTATION)
+  @javax.annotation.Nonnull
   private EzsignannotationResponseCompound objEzsignannotation;
 
   public EzsignannotationGetObjectV2ResponseMPayload() {
   }
 
-  public EzsignannotationGetObjectV2ResponseMPayload objEzsignannotation(EzsignannotationResponseCompound objEzsignannotation) {
+  public EzsignannotationGetObjectV2ResponseMPayload objEzsignannotation(@javax.annotation.Nonnull EzsignannotationResponseCompound objEzsignannotation) {
     this.objEzsignannotation = objEzsignannotation;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsignannotationGetObjectV2ResponseMPayload {
     return objEzsignannotation;
   }
 
-  public void setObjEzsignannotation(EzsignannotationResponseCompound objEzsignannotation) {
+  public void setObjEzsignannotation(@javax.annotation.Nonnull EzsignannotationResponseCompound objEzsignannotation) {
     this.objEzsignannotation = objEzsignannotation;
   }
 

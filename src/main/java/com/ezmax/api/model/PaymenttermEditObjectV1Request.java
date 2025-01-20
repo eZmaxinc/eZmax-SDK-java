@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/paymentterm/{pkiPaymenttermID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class PaymenttermEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_PAYMENTTERM = "objPaymentterm";
   @SerializedName(SERIALIZED_NAME_OBJ_PAYMENTTERM)
+  @javax.annotation.Nonnull
   private PaymenttermRequestCompound objPaymentterm;
 
   public PaymenttermEditObjectV1Request() {
   }
 
-  public PaymenttermEditObjectV1Request objPaymentterm(PaymenttermRequestCompound objPaymentterm) {
+  public PaymenttermEditObjectV1Request objPaymentterm(@javax.annotation.Nonnull PaymenttermRequestCompound objPaymentterm) {
     this.objPaymentterm = objPaymentterm;
     return this;
   }
@@ -72,7 +73,7 @@ public class PaymenttermEditObjectV1Request {
     return objPaymentterm;
   }
 
-  public void setObjPaymentterm(PaymenttermRequestCompound objPaymentterm) {
+  public void setObjPaymentterm(@javax.annotation.Nonnull PaymenttermRequestCompound objPaymentterm) {
     this.objPaymentterm = objPaymentterm;
   }
 

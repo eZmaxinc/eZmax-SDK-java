@@ -49,76 +49,92 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepublic List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepublicListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPUBLIC_I_D = "pkiEzsigntemplatepublicID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPUBLIC_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplatepublicID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
+  @javax.annotation.Nonnull
   private String sEzsignfoldertypeNameX;
 
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUserlogintypeID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsigntemplateID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsigntemplatepackageID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_DESCRIPTION = "sEzsigntemplatepublicDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sEzsigntemplatepublicDescription;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPUBLIC_ISACTIVE = "bEzsigntemplatepublicIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPUBLIC_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatepublicIsactive;
 
   public static final String SERIALIZED_NAME_T_EZSIGNTEMPLATEPUBLIC_NOTE = "tEzsigntemplatepublicNote";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNTEMPLATEPUBLIC_NOTE)
+  @javax.annotation.Nonnull
   private String tEzsigntemplatepublicNote;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEPUBLIC_LIMITTYPE = "eEzsigntemplatepublicLimittype";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEPUBLIC_LIMITTYPE)
+  @javax.annotation.Nonnull
   private FieldEEzsigntemplatepublicLimittype eEzsigntemplatepublicLimittype;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEPUBLIC_LIMIT = "iEzsigntemplatepublicLimit";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEPUBLIC_LIMIT)
+  @javax.annotation.Nonnull
   private Integer iEzsigntemplatepublicLimit;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEPUBLIC_LIMITEXCEEDED = "iEzsigntemplatepublicLimitexceeded";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEPUBLIC_LIMITEXCEEDED)
+  @javax.annotation.Nonnull
   private Integer iEzsigntemplatepublicLimitexceeded;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNTEMPLATEPUBLIC_LIMITEXCEEDEDSINCE = "dtEzsigntemplatepublicLimitexceededsince";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNTEMPLATEPUBLIC_LIMITEXCEEDEDSINCE)
+  @javax.annotation.Nonnull
   private String dtEzsigntemplatepublicLimitexceededsince;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFOLDER = "iEzsignfolder";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER)
+  @javax.annotation.Nonnull
   private Integer iEzsignfolder;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT = "iEzsigndocument";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT)
+  @javax.annotation.Nonnull
   private Integer iEzsigndocument;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_EZSIGNTEMPLATEDESCRIPTION = "sEzsigntemplatepublicEzsigntemplatedescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_EZSIGNTEMPLATEDESCRIPTION)
+  @javax.annotation.Nonnull
   private String sEzsigntemplatepublicEzsigntemplatedescription;
 
   public EzsigntemplatepublicListElement() {
   }
 
-  public EzsigntemplatepublicListElement pkiEzsigntemplatepublicID(Integer pkiEzsigntemplatepublicID) {
+  public EzsigntemplatepublicListElement pkiEzsigntemplatepublicID(@javax.annotation.Nonnull Integer pkiEzsigntemplatepublicID) {
     this.pkiEzsigntemplatepublicID = pkiEzsigntemplatepublicID;
     return this;
   }
@@ -134,12 +150,12 @@ public class EzsigntemplatepublicListElement {
     return pkiEzsigntemplatepublicID;
   }
 
-  public void setPkiEzsigntemplatepublicID(Integer pkiEzsigntemplatepublicID) {
+  public void setPkiEzsigntemplatepublicID(@javax.annotation.Nonnull Integer pkiEzsigntemplatepublicID) {
     this.pkiEzsigntemplatepublicID = pkiEzsigntemplatepublicID;
   }
 
 
-  public EzsigntemplatepublicListElement fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public EzsigntemplatepublicListElement fkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -155,12 +171,12 @@ public class EzsigntemplatepublicListElement {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public EzsigntemplatepublicListElement sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public EzsigntemplatepublicListElement sEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -174,12 +190,12 @@ public class EzsigntemplatepublicListElement {
     return sEzsignfoldertypeNameX;
   }
 
-  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
+  public void setsEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
-  public EzsigntemplatepublicListElement fkiUserlogintypeID(Integer fkiUserlogintypeID) {
+  public EzsigntemplatepublicListElement fkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
@@ -194,12 +210,12 @@ public class EzsigntemplatepublicListElement {
     return fkiUserlogintypeID;
   }
 
-  public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
+  public void setFkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
-  public EzsigntemplatepublicListElement fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+  public EzsigntemplatepublicListElement fkiEzsigntemplateID(@javax.annotation.Nullable Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -214,12 +230,12 @@ public class EzsigntemplatepublicListElement {
     return fkiEzsigntemplateID;
   }
 
-  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+  public void setFkiEzsigntemplateID(@javax.annotation.Nullable Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
-  public EzsigntemplatepublicListElement fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
+  public EzsigntemplatepublicListElement fkiEzsigntemplatepackageID(@javax.annotation.Nullable Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -234,12 +250,12 @@ public class EzsigntemplatepublicListElement {
     return fkiEzsigntemplatepackageID;
   }
 
-  public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
+  public void setFkiEzsigntemplatepackageID(@javax.annotation.Nullable Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
-  public EzsigntemplatepublicListElement sEzsigntemplatepublicDescription(String sEzsigntemplatepublicDescription) {
+  public EzsigntemplatepublicListElement sEzsigntemplatepublicDescription(@javax.annotation.Nonnull String sEzsigntemplatepublicDescription) {
     this.sEzsigntemplatepublicDescription = sEzsigntemplatepublicDescription;
     return this;
   }
@@ -253,12 +269,12 @@ public class EzsigntemplatepublicListElement {
     return sEzsigntemplatepublicDescription;
   }
 
-  public void setsEzsigntemplatepublicDescription(String sEzsigntemplatepublicDescription) {
+  public void setsEzsigntemplatepublicDescription(@javax.annotation.Nonnull String sEzsigntemplatepublicDescription) {
     this.sEzsigntemplatepublicDescription = sEzsigntemplatepublicDescription;
   }
 
 
-  public EzsigntemplatepublicListElement bEzsigntemplatepublicIsactive(Boolean bEzsigntemplatepublicIsactive) {
+  public EzsigntemplatepublicListElement bEzsigntemplatepublicIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplatepublicIsactive) {
     this.bEzsigntemplatepublicIsactive = bEzsigntemplatepublicIsactive;
     return this;
   }
@@ -272,12 +288,12 @@ public class EzsigntemplatepublicListElement {
     return bEzsigntemplatepublicIsactive;
   }
 
-  public void setbEzsigntemplatepublicIsactive(Boolean bEzsigntemplatepublicIsactive) {
+  public void setbEzsigntemplatepublicIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplatepublicIsactive) {
     this.bEzsigntemplatepublicIsactive = bEzsigntemplatepublicIsactive;
   }
 
 
-  public EzsigntemplatepublicListElement tEzsigntemplatepublicNote(String tEzsigntemplatepublicNote) {
+  public EzsigntemplatepublicListElement tEzsigntemplatepublicNote(@javax.annotation.Nonnull String tEzsigntemplatepublicNote) {
     this.tEzsigntemplatepublicNote = tEzsigntemplatepublicNote;
     return this;
   }
@@ -291,12 +307,12 @@ public class EzsigntemplatepublicListElement {
     return tEzsigntemplatepublicNote;
   }
 
-  public void settEzsigntemplatepublicNote(String tEzsigntemplatepublicNote) {
+  public void settEzsigntemplatepublicNote(@javax.annotation.Nonnull String tEzsigntemplatepublicNote) {
     this.tEzsigntemplatepublicNote = tEzsigntemplatepublicNote;
   }
 
 
-  public EzsigntemplatepublicListElement eEzsigntemplatepublicLimittype(FieldEEzsigntemplatepublicLimittype eEzsigntemplatepublicLimittype) {
+  public EzsigntemplatepublicListElement eEzsigntemplatepublicLimittype(@javax.annotation.Nonnull FieldEEzsigntemplatepublicLimittype eEzsigntemplatepublicLimittype) {
     this.eEzsigntemplatepublicLimittype = eEzsigntemplatepublicLimittype;
     return this;
   }
@@ -310,12 +326,12 @@ public class EzsigntemplatepublicListElement {
     return eEzsigntemplatepublicLimittype;
   }
 
-  public void seteEzsigntemplatepublicLimittype(FieldEEzsigntemplatepublicLimittype eEzsigntemplatepublicLimittype) {
+  public void seteEzsigntemplatepublicLimittype(@javax.annotation.Nonnull FieldEEzsigntemplatepublicLimittype eEzsigntemplatepublicLimittype) {
     this.eEzsigntemplatepublicLimittype = eEzsigntemplatepublicLimittype;
   }
 
 
-  public EzsigntemplatepublicListElement iEzsigntemplatepublicLimit(Integer iEzsigntemplatepublicLimit) {
+  public EzsigntemplatepublicListElement iEzsigntemplatepublicLimit(@javax.annotation.Nonnull Integer iEzsigntemplatepublicLimit) {
     this.iEzsigntemplatepublicLimit = iEzsigntemplatepublicLimit;
     return this;
   }
@@ -331,12 +347,12 @@ public class EzsigntemplatepublicListElement {
     return iEzsigntemplatepublicLimit;
   }
 
-  public void setiEzsigntemplatepublicLimit(Integer iEzsigntemplatepublicLimit) {
+  public void setiEzsigntemplatepublicLimit(@javax.annotation.Nonnull Integer iEzsigntemplatepublicLimit) {
     this.iEzsigntemplatepublicLimit = iEzsigntemplatepublicLimit;
   }
 
 
-  public EzsigntemplatepublicListElement iEzsigntemplatepublicLimitexceeded(Integer iEzsigntemplatepublicLimitexceeded) {
+  public EzsigntemplatepublicListElement iEzsigntemplatepublicLimitexceeded(@javax.annotation.Nonnull Integer iEzsigntemplatepublicLimitexceeded) {
     this.iEzsigntemplatepublicLimitexceeded = iEzsigntemplatepublicLimitexceeded;
     return this;
   }
@@ -352,12 +368,12 @@ public class EzsigntemplatepublicListElement {
     return iEzsigntemplatepublicLimitexceeded;
   }
 
-  public void setiEzsigntemplatepublicLimitexceeded(Integer iEzsigntemplatepublicLimitexceeded) {
+  public void setiEzsigntemplatepublicLimitexceeded(@javax.annotation.Nonnull Integer iEzsigntemplatepublicLimitexceeded) {
     this.iEzsigntemplatepublicLimitexceeded = iEzsigntemplatepublicLimitexceeded;
   }
 
 
-  public EzsigntemplatepublicListElement dtEzsigntemplatepublicLimitexceededsince(String dtEzsigntemplatepublicLimitexceededsince) {
+  public EzsigntemplatepublicListElement dtEzsigntemplatepublicLimitexceededsince(@javax.annotation.Nonnull String dtEzsigntemplatepublicLimitexceededsince) {
     this.dtEzsigntemplatepublicLimitexceededsince = dtEzsigntemplatepublicLimitexceededsince;
     return this;
   }
@@ -371,12 +387,12 @@ public class EzsigntemplatepublicListElement {
     return dtEzsigntemplatepublicLimitexceededsince;
   }
 
-  public void setDtEzsigntemplatepublicLimitexceededsince(String dtEzsigntemplatepublicLimitexceededsince) {
+  public void setDtEzsigntemplatepublicLimitexceededsince(@javax.annotation.Nonnull String dtEzsigntemplatepublicLimitexceededsince) {
     this.dtEzsigntemplatepublicLimitexceededsince = dtEzsigntemplatepublicLimitexceededsince;
   }
 
 
-  public EzsigntemplatepublicListElement iEzsignfolder(Integer iEzsignfolder) {
+  public EzsigntemplatepublicListElement iEzsignfolder(@javax.annotation.Nonnull Integer iEzsignfolder) {
     this.iEzsignfolder = iEzsignfolder;
     return this;
   }
@@ -390,12 +406,12 @@ public class EzsigntemplatepublicListElement {
     return iEzsignfolder;
   }
 
-  public void setiEzsignfolder(Integer iEzsignfolder) {
+  public void setiEzsignfolder(@javax.annotation.Nonnull Integer iEzsignfolder) {
     this.iEzsignfolder = iEzsignfolder;
   }
 
 
-  public EzsigntemplatepublicListElement iEzsigndocument(Integer iEzsigndocument) {
+  public EzsigntemplatepublicListElement iEzsigndocument(@javax.annotation.Nonnull Integer iEzsigndocument) {
     this.iEzsigndocument = iEzsigndocument;
     return this;
   }
@@ -409,12 +425,12 @@ public class EzsigntemplatepublicListElement {
     return iEzsigndocument;
   }
 
-  public void setiEzsigndocument(Integer iEzsigndocument) {
+  public void setiEzsigndocument(@javax.annotation.Nonnull Integer iEzsigndocument) {
     this.iEzsigndocument = iEzsigndocument;
   }
 
 
-  public EzsigntemplatepublicListElement sEzsigntemplatepublicEzsigntemplatedescription(String sEzsigntemplatepublicEzsigntemplatedescription) {
+  public EzsigntemplatepublicListElement sEzsigntemplatepublicEzsigntemplatedescription(@javax.annotation.Nonnull String sEzsigntemplatepublicEzsigntemplatedescription) {
     this.sEzsigntemplatepublicEzsigntemplatedescription = sEzsigntemplatepublicEzsigntemplatedescription;
     return this;
   }
@@ -428,7 +444,7 @@ public class EzsigntemplatepublicListElement {
     return sEzsigntemplatepublicEzsigntemplatedescription;
   }
 
-  public void setsEzsigntemplatepublicEzsigntemplatedescription(String sEzsigntemplatepublicEzsigntemplatedescription) {
+  public void setsEzsigntemplatepublicEzsigntemplatedescription(@javax.annotation.Nonnull String sEzsigntemplatepublicEzsigntemplatedescription) {
     this.sEzsigntemplatepublicEzsigntemplatedescription = sEzsigntemplatepublicEzsigntemplatedescription;
   }
 

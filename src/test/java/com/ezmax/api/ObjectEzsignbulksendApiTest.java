@@ -14,21 +14,19 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Request;
 import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Response;
 import com.ezmax.api.model.EzsignbulksendCreateObjectV1Request;
 import com.ezmax.api.model.EzsignbulksendCreateObjectV1Response;
-import com.ezmax.api.model.EzsignbulksendDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendEditObjectV1Request;
-import com.ezmax.api.model.EzsignbulksendEditObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendGetEzsignbulksendtransmissionsV1Response;
 import com.ezmax.api.model.EzsignbulksendGetEzsignsignaturesAutomaticV1Response;
 import com.ezmax.api.model.EzsignbulksendGetFormsDataV1Response;
 import com.ezmax.api.model.EzsignbulksendGetListV1Response;
 import com.ezmax.api.model.EzsignbulksendGetObjectV2Response;
 import com.ezmax.api.model.EzsignbulksendReorderV1Request;
-import com.ezmax.api.model.EzsignbulksendReorderV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
@@ -84,7 +82,7 @@ public class ObjectEzsignbulksendApiTest {
     @Test
     public void ezsignbulksendDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignbulksendID = null;
-        EzsignbulksendDeleteObjectV1Response response = api.ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID);
+        CommonResponse response = api.ezsignbulksendDeleteObjectV1(pkiEzsignbulksendID);
         // TODO: test validations
     }
 
@@ -99,7 +97,7 @@ public class ObjectEzsignbulksendApiTest {
     public void ezsignbulksendEditObjectV1Test() throws ApiException {
         Integer pkiEzsignbulksendID = null;
         EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request = null;
-        EzsignbulksendEditObjectV1Response response = api.ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
+        CommonResponse response = api.ezsignbulksendEditObjectV1(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
         // TODO: test validations
     }
 
@@ -201,7 +199,7 @@ public class ObjectEzsignbulksendApiTest {
     public void ezsignbulksendReorderV1Test() throws ApiException {
         Integer pkiEzsignbulksendID = null;
         EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request = null;
-        EzsignbulksendReorderV1Response response = api.ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
+        CommonResponse response = api.ezsignbulksendReorderV1(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
         // TODO: test validations
     }
 

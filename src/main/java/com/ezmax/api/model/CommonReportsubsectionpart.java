@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A part in the Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonReportsubsectionpart {
   /**
    * The type of the Reportsubsectionpart
@@ -109,16 +109,18 @@ public class CommonReportsubsectionpart {
 
   public static final String SERIALIZED_NAME_E_REPORTSUBSECTIONPART_TYPE = "eReportsubsectionpartType";
   @SerializedName(SERIALIZED_NAME_E_REPORTSUBSECTIONPART_TYPE)
+  @javax.annotation.Nonnull
   private EReportsubsectionpartTypeEnum eReportsubsectionpartType;
 
   public static final String SERIALIZED_NAME_A_OBJ_REPORTROW = "a_objReportrow";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTROW)
+  @javax.annotation.Nonnull
   private List<CommonReportrow> aObjReportrow = new ArrayList<>();
 
   public CommonReportsubsectionpart() {
   }
 
-  public CommonReportsubsectionpart eReportsubsectionpartType(EReportsubsectionpartTypeEnum eReportsubsectionpartType) {
+  public CommonReportsubsectionpart eReportsubsectionpartType(@javax.annotation.Nonnull EReportsubsectionpartTypeEnum eReportsubsectionpartType) {
     this.eReportsubsectionpartType = eReportsubsectionpartType;
     return this;
   }
@@ -132,12 +134,12 @@ public class CommonReportsubsectionpart {
     return eReportsubsectionpartType;
   }
 
-  public void seteReportsubsectionpartType(EReportsubsectionpartTypeEnum eReportsubsectionpartType) {
+  public void seteReportsubsectionpartType(@javax.annotation.Nonnull EReportsubsectionpartTypeEnum eReportsubsectionpartType) {
     this.eReportsubsectionpartType = eReportsubsectionpartType;
   }
 
 
-  public CommonReportsubsectionpart aObjReportrow(List<CommonReportrow> aObjReportrow) {
+  public CommonReportsubsectionpart aObjReportrow(@javax.annotation.Nonnull List<CommonReportrow> aObjReportrow) {
     this.aObjReportrow = aObjReportrow;
     return this;
   }
@@ -159,7 +161,7 @@ public class CommonReportsubsectionpart {
     return aObjReportrow;
   }
 
-  public void setaObjReportrow(List<CommonReportrow> aObjReportrow) {
+  public void setaObjReportrow(@javax.annotation.Nonnull List<CommonReportrow> aObjReportrow) {
     this.aObjReportrow = aObjReportrow;
   }
 

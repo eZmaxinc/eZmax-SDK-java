@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/user
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_USER = "a_objUser";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USER)
+  @javax.annotation.Nonnull
   private List<UserRequestCompound> aObjUser = new ArrayList<>();
 
   public UserCreateObjectV1Request() {
   }
 
-  public UserCreateObjectV1Request aObjUser(List<UserRequestCompound> aObjUser) {
+  public UserCreateObjectV1Request aObjUser(@javax.annotation.Nonnull List<UserRequestCompound> aObjUser) {
     this.aObjUser = aObjUser;
     return this;
   }
@@ -82,7 +83,7 @@ public class UserCreateObjectV1Request {
     return aObjUser;
   }
 
-  public void setaObjUser(List<UserRequestCompound> aObjUser) {
+  public void setaObjUser(@javax.annotation.Nonnull List<UserRequestCompound> aObjUser) {
     this.aObjUser = aObjUser;
   }
 

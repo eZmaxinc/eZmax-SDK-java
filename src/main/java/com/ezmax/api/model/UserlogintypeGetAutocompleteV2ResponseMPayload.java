@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/userlogintype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserlogintypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_USERLOGINTYPE = "a_objUserlogintype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERLOGINTYPE)
+  @javax.annotation.Nonnull
   private List<UserlogintypeAutocompleteElementResponse> aObjUserlogintype = new ArrayList<>();
 
   public UserlogintypeGetAutocompleteV2ResponseMPayload() {
   }
 
-  public UserlogintypeGetAutocompleteV2ResponseMPayload aObjUserlogintype(List<UserlogintypeAutocompleteElementResponse> aObjUserlogintype) {
+  public UserlogintypeGetAutocompleteV2ResponseMPayload aObjUserlogintype(@javax.annotation.Nonnull List<UserlogintypeAutocompleteElementResponse> aObjUserlogintype) {
     this.aObjUserlogintype = aObjUserlogintype;
     return this;
   }
@@ -82,7 +83,7 @@ public class UserlogintypeGetAutocompleteV2ResponseMPayload {
     return aObjUserlogintype;
   }
 
-  public void setaObjUserlogintype(List<UserlogintypeAutocompleteElementResponse> aObjUserlogintype) {
+  public void setaObjUserlogintype(@javax.annotation.Nonnull List<UserlogintypeAutocompleteElementResponse> aObjUserlogintype) {
     this.aObjUserlogintype = aObjUserlogintype;
   }
 

@@ -50,16 +50,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsignfoldersignerassociations
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfolderImportEzsignfoldersignerassociationsV1Request {
   public static final String SERIALIZED_NAME_A_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "a_fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_A_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
+  @javax.annotation.Nonnull
   private Set<Integer> aFkiEzsignfoldersignerassociationID = new LinkedHashSet<>();
 
   public EzsignfolderImportEzsignfoldersignerassociationsV1Request() {
   }
 
-  public EzsignfolderImportEzsignfoldersignerassociationsV1Request aFkiEzsignfoldersignerassociationID(Set<Integer> aFkiEzsignfoldersignerassociationID) {
+  public EzsignfolderImportEzsignfoldersignerassociationsV1Request aFkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Set<Integer> aFkiEzsignfoldersignerassociationID) {
     this.aFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -81,7 +82,7 @@ public class EzsignfolderImportEzsignfoldersignerassociationsV1Request {
     return aFkiEzsignfoldersignerassociationID;
   }
 
-  public void setaFkiEzsignfoldersignerassociationID(Set<Integer> aFkiEzsignfoldersignerassociationID) {
+  public void setaFkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Set<Integer> aFkiEzsignfoldersignerassociationID) {
     this.aFkiEzsignfoldersignerassociationID = aFkiEzsignfoldersignerassociationID;
   }
 

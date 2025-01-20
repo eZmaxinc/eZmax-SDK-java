@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocumentdependency Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndocumentdependencyRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENTDEPENDENCY_I_D = "pkiEzsigndocumentdependencyID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENTDEPENDENCY_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzsigndocumentdependencyID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_DDEPENDENCY = "fkiEzsigndocumentIDdependency";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_DDEPENDENCY)
+  @javax.annotation.Nonnull
   private Integer fkiEzsigndocumentIDdependency;
 
   public EzsigndocumentdependencyRequest() {
   }
 
-  public EzsigndocumentdependencyRequest pkiEzsigndocumentdependencyID(Integer pkiEzsigndocumentdependencyID) {
+  public EzsigndocumentdependencyRequest pkiEzsigndocumentdependencyID(@javax.annotation.Nullable Integer pkiEzsigndocumentdependencyID) {
     this.pkiEzsigndocumentdependencyID = pkiEzsigndocumentdependencyID;
     return this;
   }
@@ -77,12 +79,12 @@ public class EzsigndocumentdependencyRequest {
     return pkiEzsigndocumentdependencyID;
   }
 
-  public void setPkiEzsigndocumentdependencyID(Integer pkiEzsigndocumentdependencyID) {
+  public void setPkiEzsigndocumentdependencyID(@javax.annotation.Nullable Integer pkiEzsigndocumentdependencyID) {
     this.pkiEzsigndocumentdependencyID = pkiEzsigndocumentdependencyID;
   }
 
 
-  public EzsigndocumentdependencyRequest fkiEzsigndocumentIDdependency(Integer fkiEzsigndocumentIDdependency) {
+  public EzsigndocumentdependencyRequest fkiEzsigndocumentIDdependency(@javax.annotation.Nonnull Integer fkiEzsigndocumentIDdependency) {
     this.fkiEzsigndocumentIDdependency = fkiEzsigndocumentIDdependency;
     return this;
   }
@@ -97,7 +99,7 @@ public class EzsigndocumentdependencyRequest {
     return fkiEzsigndocumentIDdependency;
   }
 
-  public void setFkiEzsigndocumentIDdependency(Integer fkiEzsigndocumentIDdependency) {
+  public void setFkiEzsigndocumentIDdependency(@javax.annotation.Nonnull Integer fkiEzsigndocumentIDdependency) {
     this.fkiEzsigndocumentIDdependency = fkiEzsigndocumentIDdependency;
   }
 

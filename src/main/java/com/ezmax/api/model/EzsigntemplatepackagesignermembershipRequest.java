@@ -48,32 +48,37 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagesignermembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-17T15:40:48.792680082Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepackagesignermembershipRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP_I_D = "pkiEzsigntemplatepackagesignermembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzsigntemplatepackagesignermembershipID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D = "fkiEzsigntemplatepackagemembershipID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplatepackagemembershipID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D = "fkiEzsigntemplatepackagesignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGESIGNER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplatepackagesignerID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATESIGNER_I_D = "fkiEzsigntemplatesignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATESIGNER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplatesignerID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP_COPY = "iEzsigntemplatepackagesignermembershipCopy";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEPACKAGESIGNERMEMBERSHIP_COPY)
+  @javax.annotation.Nullable
   private Integer iEzsigntemplatepackagesignermembershipCopy;
 
   public EzsigntemplatepackagesignermembershipRequest() {
   }
 
-  public EzsigntemplatepackagesignermembershipRequest pkiEzsigntemplatepackagesignermembershipID(Integer pkiEzsigntemplatepackagesignermembershipID) {
+  public EzsigntemplatepackagesignermembershipRequest pkiEzsigntemplatepackagesignermembershipID(@javax.annotation.Nullable Integer pkiEzsigntemplatepackagesignermembershipID) {
     this.pkiEzsigntemplatepackagesignermembershipID = pkiEzsigntemplatepackagesignermembershipID;
     return this;
   }
@@ -88,12 +93,12 @@ public class EzsigntemplatepackagesignermembershipRequest {
     return pkiEzsigntemplatepackagesignermembershipID;
   }
 
-  public void setPkiEzsigntemplatepackagesignermembershipID(Integer pkiEzsigntemplatepackagesignermembershipID) {
+  public void setPkiEzsigntemplatepackagesignermembershipID(@javax.annotation.Nullable Integer pkiEzsigntemplatepackagesignermembershipID) {
     this.pkiEzsigntemplatepackagesignermembershipID = pkiEzsigntemplatepackagesignermembershipID;
   }
 
 
-  public EzsigntemplatepackagesignermembershipRequest fkiEzsigntemplatepackagemembershipID(Integer fkiEzsigntemplatepackagemembershipID) {
+  public EzsigntemplatepackagesignermembershipRequest fkiEzsigntemplatepackagemembershipID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackagemembershipID) {
     this.fkiEzsigntemplatepackagemembershipID = fkiEzsigntemplatepackagemembershipID;
     return this;
   }
@@ -108,12 +113,12 @@ public class EzsigntemplatepackagesignermembershipRequest {
     return fkiEzsigntemplatepackagemembershipID;
   }
 
-  public void setFkiEzsigntemplatepackagemembershipID(Integer fkiEzsigntemplatepackagemembershipID) {
+  public void setFkiEzsigntemplatepackagemembershipID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackagemembershipID) {
     this.fkiEzsigntemplatepackagemembershipID = fkiEzsigntemplatepackagemembershipID;
   }
 
 
-  public EzsigntemplatepackagesignermembershipRequest fkiEzsigntemplatepackagesignerID(Integer fkiEzsigntemplatepackagesignerID) {
+  public EzsigntemplatepackagesignermembershipRequest fkiEzsigntemplatepackagesignerID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackagesignerID) {
     this.fkiEzsigntemplatepackagesignerID = fkiEzsigntemplatepackagesignerID;
     return this;
   }
@@ -128,12 +133,12 @@ public class EzsigntemplatepackagesignermembershipRequest {
     return fkiEzsigntemplatepackagesignerID;
   }
 
-  public void setFkiEzsigntemplatepackagesignerID(Integer fkiEzsigntemplatepackagesignerID) {
+  public void setFkiEzsigntemplatepackagesignerID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackagesignerID) {
     this.fkiEzsigntemplatepackagesignerID = fkiEzsigntemplatepackagesignerID;
   }
 
 
-  public EzsigntemplatepackagesignermembershipRequest fkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
+  public EzsigntemplatepackagesignermembershipRequest fkiEzsigntemplatesignerID(@javax.annotation.Nonnull Integer fkiEzsigntemplatesignerID) {
     this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
     return this;
   }
@@ -148,12 +153,12 @@ public class EzsigntemplatepackagesignermembershipRequest {
     return fkiEzsigntemplatesignerID;
   }
 
-  public void setFkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
+  public void setFkiEzsigntemplatesignerID(@javax.annotation.Nonnull Integer fkiEzsigntemplatesignerID) {
     this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
   }
 
 
-  public EzsigntemplatepackagesignermembershipRequest iEzsigntemplatepackagesignermembershipCopy(Integer iEzsigntemplatepackagesignermembershipCopy) {
+  public EzsigntemplatepackagesignermembershipRequest iEzsigntemplatepackagesignermembershipCopy(@javax.annotation.Nullable Integer iEzsigntemplatepackagesignermembershipCopy) {
     this.iEzsigntemplatepackagesignermembershipCopy = iEzsigntemplatepackagesignermembershipCopy;
     return this;
   }
@@ -168,7 +173,7 @@ public class EzsigntemplatepackagesignermembershipRequest {
     return iEzsigntemplatepackagesignermembershipCopy;
   }
 
-  public void setiEzsigntemplatepackagesignermembershipCopy(Integer iEzsigntemplatepackagesignermembershipCopy) {
+  public void setiEzsigntemplatepackagesignermembershipCopy(@javax.annotation.Nullable Integer iEzsigntemplatepackagesignermembershipCopy) {
     this.iEzsigntemplatepackagesignermembershipCopy = iEzsigntemplatepackagesignermembershipCopy;
   }
 
