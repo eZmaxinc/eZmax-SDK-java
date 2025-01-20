@@ -50,20 +50,22 @@ import eZmaxAPI.JSON;
 /**
  * Response for PUT /2/object/branding/{pkiBrandingID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class BrandingEditObjectV2Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayload objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public BrandingEditObjectV2Response() {
   }
 
-  public BrandingEditObjectV2Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public BrandingEditObjectV2Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -77,12 +79,12 @@ public class BrandingEditObjectV2Response {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public BrandingEditObjectV2Response objDebug(CommonResponseObjDebug objDebug) {
+  public BrandingEditObjectV2Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -96,7 +98,7 @@ public class BrandingEditObjectV2Response {
     return objDebug;
   }
 
-  public void setObjDebug(CommonResponseObjDebug objDebug) {
+  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 

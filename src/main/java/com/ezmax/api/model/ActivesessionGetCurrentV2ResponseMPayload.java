@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ActivesessionGetCurrentV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_ACTIVESESSION = "objActivesession";
   @SerializedName(SERIALIZED_NAME_OBJ_ACTIVESESSION)
+  @javax.annotation.Nonnull
   private ActivesessionResponseCompound objActivesession;
 
   public ActivesessionGetCurrentV2ResponseMPayload() {
   }
 
-  public ActivesessionGetCurrentV2ResponseMPayload objActivesession(ActivesessionResponseCompound objActivesession) {
+  public ActivesessionGetCurrentV2ResponseMPayload objActivesession(@javax.annotation.Nonnull ActivesessionResponseCompound objActivesession) {
     this.objActivesession = objActivesession;
     return this;
   }
@@ -72,7 +73,7 @@ public class ActivesessionGetCurrentV2ResponseMPayload {
     return objActivesession;
   }
 
-  public void setObjActivesession(ActivesessionResponseCompound objActivesession) {
+  public void setObjActivesession(@javax.annotation.Nonnull ActivesessionResponseCompound objActivesession) {
     this.objActivesession = objActivesession;
   }
 

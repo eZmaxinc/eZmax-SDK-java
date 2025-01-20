@@ -49,20 +49,22 @@ import eZmaxAPI.JSON;
 /**
  * A column in a Reportsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonReportcolumn {
   public static final String SERIALIZED_NAME_OBJ_REPORTCELLSTYLE_DEFAULT = "objReportcellstyleDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_REPORTCELLSTYLE_DEFAULT)
+  @javax.annotation.Nonnull
   private CommonReportcellstyle objReportcellstyleDefault;
 
   public static final String SERIALIZED_NAME_I_REPORTCOLUMN_WIDTH = "iReportcolumnWidth";
   @SerializedName(SERIALIZED_NAME_I_REPORTCOLUMN_WIDTH)
+  @javax.annotation.Nonnull
   private Integer iReportcolumnWidth;
 
   public CommonReportcolumn() {
   }
 
-  public CommonReportcolumn objReportcellstyleDefault(CommonReportcellstyle objReportcellstyleDefault) {
+  public CommonReportcolumn objReportcellstyleDefault(@javax.annotation.Nonnull CommonReportcellstyle objReportcellstyleDefault) {
     this.objReportcellstyleDefault = objReportcellstyleDefault;
     return this;
   }
@@ -76,12 +78,12 @@ public class CommonReportcolumn {
     return objReportcellstyleDefault;
   }
 
-  public void setObjReportcellstyleDefault(CommonReportcellstyle objReportcellstyleDefault) {
+  public void setObjReportcellstyleDefault(@javax.annotation.Nonnull CommonReportcellstyle objReportcellstyleDefault) {
     this.objReportcellstyleDefault = objReportcellstyleDefault;
   }
 
 
-  public CommonReportcolumn iReportcolumnWidth(Integer iReportcolumnWidth) {
+  public CommonReportcolumn iReportcolumnWidth(@javax.annotation.Nonnull Integer iReportcolumnWidth) {
     this.iReportcolumnWidth = iReportcolumnWidth;
     return this;
   }
@@ -95,7 +97,7 @@ public class CommonReportcolumn {
     return iReportcolumnWidth;
   }
 
-  public void setiReportcolumnWidth(Integer iReportcolumnWidth) {
+  public void setiReportcolumnWidth(@javax.annotation.Nonnull Integer iReportcolumnWidth) {
     this.iReportcolumnWidth = iReportcolumnWidth;
   }
 

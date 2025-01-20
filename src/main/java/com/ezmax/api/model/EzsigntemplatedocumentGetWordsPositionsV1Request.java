@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getWordsPositions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatedocumentGetWordsPositionsV1Request {
   /**
    * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.
@@ -106,20 +106,23 @@ public class EzsigntemplatedocumentGetWordsPositionsV1Request {
 
   public static final String SERIALIZED_NAME_E_GET = "eGet";
   @SerializedName(SERIALIZED_NAME_E_GET)
+  @javax.annotation.Nonnull
   private EGetEnum eGet;
 
   public static final String SERIALIZED_NAME_B_WORD_CASE_SENSITIVE = "bWordCaseSensitive";
   @SerializedName(SERIALIZED_NAME_B_WORD_CASE_SENSITIVE)
+  @javax.annotation.Nonnull
   private Boolean bWordCaseSensitive;
 
   public static final String SERIALIZED_NAME_A_S_WORD = "a_sWord";
   @SerializedName(SERIALIZED_NAME_A_S_WORD)
+  @javax.annotation.Nullable
   private List<String> aSWord = new ArrayList<>();
 
   public EzsigntemplatedocumentGetWordsPositionsV1Request() {
   }
 
-  public EzsigntemplatedocumentGetWordsPositionsV1Request eGet(EGetEnum eGet) {
+  public EzsigntemplatedocumentGetWordsPositionsV1Request eGet(@javax.annotation.Nonnull EGetEnum eGet) {
     this.eGet = eGet;
     return this;
   }
@@ -133,12 +136,12 @@ public class EzsigntemplatedocumentGetWordsPositionsV1Request {
     return eGet;
   }
 
-  public void seteGet(EGetEnum eGet) {
+  public void seteGet(@javax.annotation.Nonnull EGetEnum eGet) {
     this.eGet = eGet;
   }
 
 
-  public EzsigntemplatedocumentGetWordsPositionsV1Request bWordCaseSensitive(Boolean bWordCaseSensitive) {
+  public EzsigntemplatedocumentGetWordsPositionsV1Request bWordCaseSensitive(@javax.annotation.Nonnull Boolean bWordCaseSensitive) {
     this.bWordCaseSensitive = bWordCaseSensitive;
     return this;
   }
@@ -152,12 +155,12 @@ public class EzsigntemplatedocumentGetWordsPositionsV1Request {
     return bWordCaseSensitive;
   }
 
-  public void setbWordCaseSensitive(Boolean bWordCaseSensitive) {
+  public void setbWordCaseSensitive(@javax.annotation.Nonnull Boolean bWordCaseSensitive) {
     this.bWordCaseSensitive = bWordCaseSensitive;
   }
 
 
-  public EzsigntemplatedocumentGetWordsPositionsV1Request aSWord(List<String> aSWord) {
+  public EzsigntemplatedocumentGetWordsPositionsV1Request aSWord(@javax.annotation.Nullable List<String> aSWord) {
     this.aSWord = aSWord;
     return this;
   }
@@ -179,7 +182,7 @@ public class EzsigntemplatedocumentGetWordsPositionsV1Request {
     return aSWord;
   }
 
-  public void setaSWord(List<String> aSWord) {
+  public void setaSWord(@javax.annotation.Nullable List<String> aSWord) {
     this.aSWord = aSWord;
   }
 

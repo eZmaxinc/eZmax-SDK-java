@@ -50,24 +50,27 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/applyEzsigntemplateglobal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndocumentApplyEzsigntemplateglobalV1Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBAL_I_D = "fkiEzsigntemplateglobalID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBAL_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplateglobalID;
 
   public static final String SERIALIZED_NAME_A_S_EZSIGNTEMPLATEGLOBALSIGNER = "a_sEzsigntemplateglobalsigner";
   @SerializedName(SERIALIZED_NAME_A_S_EZSIGNTEMPLATEGLOBALSIGNER)
+  @javax.annotation.Nonnull
   private List<String> aSEzsigntemplateglobalsigner = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "a_pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsignfoldersignerassociationID = new ArrayList<>();
 
   public EzsigndocumentApplyEzsigntemplateglobalV1Request() {
   }
 
-  public EzsigndocumentApplyEzsigntemplateglobalV1Request fkiEzsigntemplateglobalID(Integer fkiEzsigntemplateglobalID) {
+  public EzsigndocumentApplyEzsigntemplateglobalV1Request fkiEzsigntemplateglobalID(@javax.annotation.Nonnull Integer fkiEzsigntemplateglobalID) {
     this.fkiEzsigntemplateglobalID = fkiEzsigntemplateglobalID;
     return this;
   }
@@ -82,12 +85,12 @@ public class EzsigndocumentApplyEzsigntemplateglobalV1Request {
     return fkiEzsigntemplateglobalID;
   }
 
-  public void setFkiEzsigntemplateglobalID(Integer fkiEzsigntemplateglobalID) {
+  public void setFkiEzsigntemplateglobalID(@javax.annotation.Nonnull Integer fkiEzsigntemplateglobalID) {
     this.fkiEzsigntemplateglobalID = fkiEzsigntemplateglobalID;
   }
 
 
-  public EzsigndocumentApplyEzsigntemplateglobalV1Request aSEzsigntemplateglobalsigner(List<String> aSEzsigntemplateglobalsigner) {
+  public EzsigndocumentApplyEzsigntemplateglobalV1Request aSEzsigntemplateglobalsigner(@javax.annotation.Nonnull List<String> aSEzsigntemplateglobalsigner) {
     this.aSEzsigntemplateglobalsigner = aSEzsigntemplateglobalsigner;
     return this;
   }
@@ -109,12 +112,12 @@ public class EzsigndocumentApplyEzsigntemplateglobalV1Request {
     return aSEzsigntemplateglobalsigner;
   }
 
-  public void setaSEzsigntemplateglobalsigner(List<String> aSEzsigntemplateglobalsigner) {
+  public void setaSEzsigntemplateglobalsigner(@javax.annotation.Nonnull List<String> aSEzsigntemplateglobalsigner) {
     this.aSEzsigntemplateglobalsigner = aSEzsigntemplateglobalsigner;
   }
 
 
-  public EzsigndocumentApplyEzsigntemplateglobalV1Request aPkiEzsignfoldersignerassociationID(List<Integer> aPkiEzsignfoldersignerassociationID) {
+  public EzsigndocumentApplyEzsigntemplateglobalV1Request aPkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull List<Integer> aPkiEzsignfoldersignerassociationID) {
     this.aPkiEzsignfoldersignerassociationID = aPkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -136,7 +139,7 @@ public class EzsigndocumentApplyEzsigntemplateglobalV1Request {
     return aPkiEzsignfoldersignerassociationID;
   }
 
-  public void setaPkiEzsignfoldersignerassociationID(List<Integer> aPkiEzsignfoldersignerassociationID) {
+  public void setaPkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull List<Integer> aPkiEzsignfoldersignerassociationID) {
     this.aPkiEzsignfoldersignerassociationID = aPkiEzsignfoldersignerassociationID;
   }
 

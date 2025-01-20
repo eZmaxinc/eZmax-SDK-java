@@ -48,40 +48,47 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksend Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignbulksendRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzsignbulksendID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION = "sEzsignbulksendDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sEzsignbulksendDescription;
 
   public static final String SERIALIZED_NAME_T_EZSIGNBULKSEND_NOTE = "tEzsignbulksendNote";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNBULKSEND_NOTE)
+  @javax.annotation.Nonnull
   private String tEzsignbulksendNote;
 
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION = "bEzsignbulksendNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION)
+  @javax.annotation.Nonnull
   private Boolean bEzsignbulksendNeedvalidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE = "bEzsignbulksendIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzsignbulksendIsactive;
 
   public EzsignbulksendRequestCompound() {
   }
 
-  public EzsignbulksendRequestCompound pkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
+  public EzsignbulksendRequestCompound pkiEzsignbulksendID(@javax.annotation.Nullable Integer pkiEzsignbulksendID) {
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
     return this;
   }
@@ -96,12 +103,12 @@ public class EzsignbulksendRequestCompound {
     return pkiEzsignbulksendID;
   }
 
-  public void setPkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
+  public void setPkiEzsignbulksendID(@javax.annotation.Nullable Integer pkiEzsignbulksendID) {
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
   }
 
 
-  public EzsignbulksendRequestCompound fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public EzsignbulksendRequestCompound fkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -117,12 +124,12 @@ public class EzsignbulksendRequestCompound {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public EzsignbulksendRequestCompound fkiLanguageID(Integer fkiLanguageID) {
+  public EzsignbulksendRequestCompound fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -138,12 +145,12 @@ public class EzsignbulksendRequestCompound {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(Integer fkiLanguageID) {
+  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public EzsignbulksendRequestCompound sEzsignbulksendDescription(String sEzsignbulksendDescription) {
+  public EzsignbulksendRequestCompound sEzsignbulksendDescription(@javax.annotation.Nonnull String sEzsignbulksendDescription) {
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
     return this;
   }
@@ -157,12 +164,12 @@ public class EzsignbulksendRequestCompound {
     return sEzsignbulksendDescription;
   }
 
-  public void setsEzsignbulksendDescription(String sEzsignbulksendDescription) {
+  public void setsEzsignbulksendDescription(@javax.annotation.Nonnull String sEzsignbulksendDescription) {
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
   }
 
 
-  public EzsignbulksendRequestCompound tEzsignbulksendNote(String tEzsignbulksendNote) {
+  public EzsignbulksendRequestCompound tEzsignbulksendNote(@javax.annotation.Nonnull String tEzsignbulksendNote) {
     this.tEzsignbulksendNote = tEzsignbulksendNote;
     return this;
   }
@@ -176,12 +183,12 @@ public class EzsignbulksendRequestCompound {
     return tEzsignbulksendNote;
   }
 
-  public void settEzsignbulksendNote(String tEzsignbulksendNote) {
+  public void settEzsignbulksendNote(@javax.annotation.Nonnull String tEzsignbulksendNote) {
     this.tEzsignbulksendNote = tEzsignbulksendNote;
   }
 
 
-  public EzsignbulksendRequestCompound bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
+  public EzsignbulksendRequestCompound bEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
@@ -195,12 +202,12 @@ public class EzsignbulksendRequestCompound {
     return bEzsignbulksendNeedvalidation;
   }
 
-  public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
+  public void setbEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 
 
-  public EzsignbulksendRequestCompound bEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
+  public EzsignbulksendRequestCompound bEzsignbulksendIsactive(@javax.annotation.Nonnull Boolean bEzsignbulksendIsactive) {
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
     return this;
   }
@@ -214,7 +221,7 @@ public class EzsignbulksendRequestCompound {
     return bEzsignbulksendIsactive;
   }
 
-  public void setbEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
+  public void setbEzsignbulksendIsactive(@javax.annotation.Nonnull Boolean bEzsignbulksendIsactive) {
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
   }
 

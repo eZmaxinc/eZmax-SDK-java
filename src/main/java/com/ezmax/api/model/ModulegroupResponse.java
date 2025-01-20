@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * A Modulegroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ModulegroupResponse {
   public static final String SERIALIZED_NAME_PKI_MODULEGROUP_I_D = "pkiModulegroupID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULEGROUP_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiModulegroupID;
 
   public static final String SERIALIZED_NAME_S_MODULEGROUP_NAME_X = "sModulegroupNameX";
   @SerializedName(SERIALIZED_NAME_S_MODULEGROUP_NAME_X)
+  @javax.annotation.Nonnull
   private String sModulegroupNameX;
 
   public ModulegroupResponse() {
   }
 
-  public ModulegroupResponse pkiModulegroupID(Integer pkiModulegroupID) {
+  public ModulegroupResponse pkiModulegroupID(@javax.annotation.Nonnull Integer pkiModulegroupID) {
     this.pkiModulegroupID = pkiModulegroupID;
     return this;
   }
@@ -77,12 +79,12 @@ public class ModulegroupResponse {
     return pkiModulegroupID;
   }
 
-  public void setPkiModulegroupID(Integer pkiModulegroupID) {
+  public void setPkiModulegroupID(@javax.annotation.Nonnull Integer pkiModulegroupID) {
     this.pkiModulegroupID = pkiModulegroupID;
   }
 
 
-  public ModulegroupResponse sModulegroupNameX(String sModulegroupNameX) {
+  public ModulegroupResponse sModulegroupNameX(@javax.annotation.Nonnull String sModulegroupNameX) {
     this.sModulegroupNameX = sModulegroupNameX;
     return this;
   }
@@ -96,7 +98,7 @@ public class ModulegroupResponse {
     return sModulegroupNameX;
   }
 
-  public void setsModulegroupNameX(String sModulegroupNameX) {
+  public void setsModulegroupNameX(@javax.annotation.Nonnull String sModulegroupNameX) {
     this.sModulegroupNameX = sModulegroupNameX;
   }
 

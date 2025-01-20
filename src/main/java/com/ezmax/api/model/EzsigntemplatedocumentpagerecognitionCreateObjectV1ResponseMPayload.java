@@ -50,16 +50,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplatedocumentpagerecognition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatedocumentpagerecognitionCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_I_D = "a_pkiEzsigntemplatedocumentpagerecognitionID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsigntemplatedocumentpagerecognitionID = new ArrayList<>();
 
   public EzsigntemplatedocumentpagerecognitionCreateObjectV1ResponseMPayload() {
   }
 
-  public EzsigntemplatedocumentpagerecognitionCreateObjectV1ResponseMPayload aPkiEzsigntemplatedocumentpagerecognitionID(List<Integer> aPkiEzsigntemplatedocumentpagerecognitionID) {
+  public EzsigntemplatedocumentpagerecognitionCreateObjectV1ResponseMPayload aPkiEzsigntemplatedocumentpagerecognitionID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplatedocumentpagerecognitionID) {
     this.aPkiEzsigntemplatedocumentpagerecognitionID = aPkiEzsigntemplatedocumentpagerecognitionID;
     return this;
   }
@@ -81,7 +82,7 @@ public class EzsigntemplatedocumentpagerecognitionCreateObjectV1ResponseMPayload
     return aPkiEzsigntemplatedocumentpagerecognitionID;
   }
 
-  public void setaPkiEzsigntemplatedocumentpagerecognitionID(List<Integer> aPkiEzsigntemplatedocumentpagerecognitionID) {
+  public void setaPkiEzsigntemplatedocumentpagerecognitionID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplatedocumentpagerecognitionID) {
     this.aPkiEzsigntemplatedocumentpagerecognitionID = aPkiEzsigntemplatedocumentpagerecognitionID;
   }
 

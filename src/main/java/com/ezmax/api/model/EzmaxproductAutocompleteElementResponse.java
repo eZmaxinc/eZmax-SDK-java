@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxproduct AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzmaxproductAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXPRODUCT_I_D = "pkiEzmaxproductID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXPRODUCT_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzmaxproductID;
 
   public static final String SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X = "sEzmaxproductDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X)
+  @javax.annotation.Nonnull
   private String sEzmaxproductDescriptionX;
 
   public static final String SERIALIZED_NAME_B_EZMAXPRODUCT_ISACTIVE = "bEzmaxproductIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZMAXPRODUCT_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzmaxproductIsactive;
 
   public EzmaxproductAutocompleteElementResponse() {
   }
 
-  public EzmaxproductAutocompleteElementResponse pkiEzmaxproductID(Integer pkiEzmaxproductID) {
+  public EzmaxproductAutocompleteElementResponse pkiEzmaxproductID(@javax.annotation.Nonnull Integer pkiEzmaxproductID) {
     this.pkiEzmaxproductID = pkiEzmaxproductID;
     return this;
   }
@@ -80,12 +83,12 @@ public class EzmaxproductAutocompleteElementResponse {
     return pkiEzmaxproductID;
   }
 
-  public void setPkiEzmaxproductID(Integer pkiEzmaxproductID) {
+  public void setPkiEzmaxproductID(@javax.annotation.Nonnull Integer pkiEzmaxproductID) {
     this.pkiEzmaxproductID = pkiEzmaxproductID;
   }
 
 
-  public EzmaxproductAutocompleteElementResponse sEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
+  public EzmaxproductAutocompleteElementResponse sEzmaxproductDescriptionX(@javax.annotation.Nonnull String sEzmaxproductDescriptionX) {
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
     return this;
   }
@@ -99,12 +102,12 @@ public class EzmaxproductAutocompleteElementResponse {
     return sEzmaxproductDescriptionX;
   }
 
-  public void setsEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
+  public void setsEzmaxproductDescriptionX(@javax.annotation.Nonnull String sEzmaxproductDescriptionX) {
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
   }
 
 
-  public EzmaxproductAutocompleteElementResponse bEzmaxproductIsactive(Boolean bEzmaxproductIsactive) {
+  public EzmaxproductAutocompleteElementResponse bEzmaxproductIsactive(@javax.annotation.Nonnull Boolean bEzmaxproductIsactive) {
     this.bEzmaxproductIsactive = bEzmaxproductIsactive;
     return this;
   }
@@ -118,7 +121,7 @@ public class EzmaxproductAutocompleteElementResponse {
     return bEzmaxproductIsactive;
   }
 
-  public void setbEzmaxproductIsactive(Boolean bEzmaxproductIsactive) {
+  public void setbEzmaxproductIsactive(@javax.annotation.Nonnull Boolean bEzmaxproductIsactive) {
     this.bEzmaxproductIsactive = bEzmaxproductIsactive;
   }
 

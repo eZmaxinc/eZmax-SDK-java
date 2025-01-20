@@ -51,24 +51,27 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/supply/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SupplyGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  @javax.annotation.Nonnull
   private Integer iRowReturned;
 
   public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  @javax.annotation.Nonnull
   private Integer iRowFiltered;
 
   public static final String SERIALIZED_NAME_A_OBJ_SUPPLY = "a_objSupply";
   @SerializedName(SERIALIZED_NAME_A_OBJ_SUPPLY)
+  @javax.annotation.Nonnull
   private List<SupplyListElement> aObjSupply = new ArrayList<>();
 
   public SupplyGetListV1ResponseMPayload() {
   }
 
-  public SupplyGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+  public SupplyGetListV1ResponseMPayload iRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -82,12 +85,12 @@ public class SupplyGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-  public void setiRowReturned(Integer iRowReturned) {
+  public void setiRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
-  public SupplyGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+  public SupplyGetListV1ResponseMPayload iRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -101,12 +104,12 @@ public class SupplyGetListV1ResponseMPayload {
     return iRowFiltered;
   }
 
-  public void setiRowFiltered(Integer iRowFiltered) {
+  public void setiRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
   }
 
 
-  public SupplyGetListV1ResponseMPayload aObjSupply(List<SupplyListElement> aObjSupply) {
+  public SupplyGetListV1ResponseMPayload aObjSupply(@javax.annotation.Nonnull List<SupplyListElement> aObjSupply) {
     this.aObjSupply = aObjSupply;
     return this;
   }
@@ -128,7 +131,7 @@ public class SupplyGetListV1ResponseMPayload {
     return aObjSupply;
   }
 
-  public void setaObjSupply(List<SupplyListElement> aObjSupply) {
+  public void setaObjSupply(@javax.annotation.Nonnull List<SupplyListElement> aObjSupply) {
     this.aObjSupply = aObjSupply;
   }
 

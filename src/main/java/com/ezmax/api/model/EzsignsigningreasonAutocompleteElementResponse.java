@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsigningreason AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignsigningreasonAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNINGREASON_I_D = "pkiEzsignsigningreasonID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNINGREASON_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsignsigningreasonID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION_X = "sEzsignsigningreasonDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION_X)
+  @javax.annotation.Nonnull
   private String sEzsignsigningreasonDescriptionX;
 
   public static final String SERIALIZED_NAME_B_EZSIGNSIGNINGREASON_ISACTIVE = "bEzsignsigningreasonIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNINGREASON_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzsignsigningreasonIsactive;
 
   public EzsignsigningreasonAutocompleteElementResponse() {
   }
 
-  public EzsignsigningreasonAutocompleteElementResponse pkiEzsignsigningreasonID(Integer pkiEzsignsigningreasonID) {
+  public EzsignsigningreasonAutocompleteElementResponse pkiEzsignsigningreasonID(@javax.annotation.Nonnull Integer pkiEzsignsigningreasonID) {
     this.pkiEzsignsigningreasonID = pkiEzsignsigningreasonID;
     return this;
   }
@@ -81,12 +84,12 @@ public class EzsignsigningreasonAutocompleteElementResponse {
     return pkiEzsignsigningreasonID;
   }
 
-  public void setPkiEzsignsigningreasonID(Integer pkiEzsignsigningreasonID) {
+  public void setPkiEzsignsigningreasonID(@javax.annotation.Nonnull Integer pkiEzsignsigningreasonID) {
     this.pkiEzsignsigningreasonID = pkiEzsignsigningreasonID;
   }
 
 
-  public EzsignsigningreasonAutocompleteElementResponse sEzsignsigningreasonDescriptionX(String sEzsignsigningreasonDescriptionX) {
+  public EzsignsigningreasonAutocompleteElementResponse sEzsignsigningreasonDescriptionX(@javax.annotation.Nonnull String sEzsignsigningreasonDescriptionX) {
     this.sEzsignsigningreasonDescriptionX = sEzsignsigningreasonDescriptionX;
     return this;
   }
@@ -100,12 +103,12 @@ public class EzsignsigningreasonAutocompleteElementResponse {
     return sEzsignsigningreasonDescriptionX;
   }
 
-  public void setsEzsignsigningreasonDescriptionX(String sEzsignsigningreasonDescriptionX) {
+  public void setsEzsignsigningreasonDescriptionX(@javax.annotation.Nonnull String sEzsignsigningreasonDescriptionX) {
     this.sEzsignsigningreasonDescriptionX = sEzsignsigningreasonDescriptionX;
   }
 
 
-  public EzsignsigningreasonAutocompleteElementResponse bEzsignsigningreasonIsactive(Boolean bEzsignsigningreasonIsactive) {
+  public EzsignsigningreasonAutocompleteElementResponse bEzsignsigningreasonIsactive(@javax.annotation.Nonnull Boolean bEzsignsigningreasonIsactive) {
     this.bEzsignsigningreasonIsactive = bEzsignsigningreasonIsactive;
     return this;
   }
@@ -119,7 +122,7 @@ public class EzsignsigningreasonAutocompleteElementResponse {
     return bEzsignsigningreasonIsactive;
   }
 
-  public void setbEzsignsigningreasonIsactive(Boolean bEzsignsigningreasonIsactive) {
+  public void setbEzsignsigningreasonIsactive(@javax.annotation.Nonnull Boolean bEzsignsigningreasonIsactive) {
     this.bEzsignsigningreasonIsactive = bEzsignsigningreasonIsactive;
   }
 

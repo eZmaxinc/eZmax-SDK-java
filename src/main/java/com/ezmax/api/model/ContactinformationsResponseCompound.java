@@ -14,11 +14,11 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AddressResponseCompound;
-import com.ezmax.api.model.EmailResponseCompound;
+import com.ezmax.api.model.AddressResponse;
+import com.ezmax.api.model.EmailResponse;
 import com.ezmax.api.model.FieldEContactinformationsType;
 import com.ezmax.api.model.PhoneResponseCompound;
-import com.ezmax.api.model.WebsiteResponseCompound;
+import com.ezmax.api.model.WebsiteResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -55,72 +55,87 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ContactinformationsResponseCompound {
   public static final String SERIALIZED_NAME_PKI_CONTACTINFORMATIONS_I_D = "pkiContactinformationsID";
   @SerializedName(SERIALIZED_NAME_PKI_CONTACTINFORMATIONS_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiContactinformationsID;
 
   public static final String SERIALIZED_NAME_FKI_ADDRESS_I_D_DEFAULT = "fkiAddressIDDefault";
   @SerializedName(SERIALIZED_NAME_FKI_ADDRESS_I_D_DEFAULT)
+  @javax.annotation.Nullable
   private Integer fkiAddressIDDefault;
 
   public static final String SERIALIZED_NAME_FKI_PHONE_I_D_DEFAULT = "fkiPhoneIDDefault";
   @SerializedName(SERIALIZED_NAME_FKI_PHONE_I_D_DEFAULT)
+  @javax.annotation.Nullable
   private Integer fkiPhoneIDDefault;
 
   public static final String SERIALIZED_NAME_FKI_EMAIL_I_D_DEFAULT = "fkiEmailIDDefault";
   @SerializedName(SERIALIZED_NAME_FKI_EMAIL_I_D_DEFAULT)
+  @javax.annotation.Nullable
   private Integer fkiEmailIDDefault;
 
   public static final String SERIALIZED_NAME_FKI_WEBSITE_I_D_DEFAULT = "fkiWebsiteIDDefault";
   @SerializedName(SERIALIZED_NAME_FKI_WEBSITE_I_D_DEFAULT)
+  @javax.annotation.Nullable
   private Integer fkiWebsiteIDDefault;
 
   public static final String SERIALIZED_NAME_E_CONTACTINFORMATIONS_TYPE = "eContactinformationsType";
   @SerializedName(SERIALIZED_NAME_E_CONTACTINFORMATIONS_TYPE)
+  @javax.annotation.Nonnull
   private FieldEContactinformationsType eContactinformationsType;
 
   public static final String SERIALIZED_NAME_S_CONTACTINFORMATIONS_URL = "sContactinformationsUrl";
   @SerializedName(SERIALIZED_NAME_S_CONTACTINFORMATIONS_URL)
+  @javax.annotation.Nullable
   private String sContactinformationsUrl;
 
   public static final String SERIALIZED_NAME_OBJ_ADDRESS_DEFAULT = "objAddressDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_ADDRESS_DEFAULT)
-  private AddressResponseCompound objAddressDefault;
+  @javax.annotation.Nullable
+  private AddressResponse objAddressDefault;
 
   public static final String SERIALIZED_NAME_OBJ_PHONE_DEFAULT = "objPhoneDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_PHONE_DEFAULT)
+  @javax.annotation.Nullable
   private PhoneResponseCompound objPhoneDefault;
 
   public static final String SERIALIZED_NAME_OBJ_EMAIL_DEFAULT = "objEmailDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_EMAIL_DEFAULT)
-  private EmailResponseCompound objEmailDefault;
+  @javax.annotation.Nullable
+  private EmailResponse objEmailDefault;
 
   public static final String SERIALIZED_NAME_OBJ_WEBSITE_DEFAULT = "objWebsiteDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBSITE_DEFAULT)
-  private WebsiteResponseCompound objWebsiteDefault;
+  @javax.annotation.Nullable
+  private WebsiteResponse objWebsiteDefault;
 
   public static final String SERIALIZED_NAME_A_OBJ_ADDRESS = "a_objAddress";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ADDRESS)
+  @javax.annotation.Nonnull
   private List<AddressResponseCompound> aObjAddress = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_PHONE = "a_objPhone";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PHONE)
+  @javax.annotation.Nonnull
   private List<PhoneResponseCompound> aObjPhone = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EMAIL = "a_objEmail";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EMAIL)
+  @javax.annotation.Nonnull
   private List<EmailResponseCompound> aObjEmail = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_WEBSITE = "a_objWebsite";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WEBSITE)
+  @javax.annotation.Nonnull
   private List<WebsiteResponseCompound> aObjWebsite = new ArrayList<>();
 
   public ContactinformationsResponseCompound() {
   }
 
-  public ContactinformationsResponseCompound pkiContactinformationsID(Integer pkiContactinformationsID) {
+  public ContactinformationsResponseCompound pkiContactinformationsID(@javax.annotation.Nonnull Integer pkiContactinformationsID) {
     this.pkiContactinformationsID = pkiContactinformationsID;
     return this;
   }
@@ -136,12 +151,12 @@ public class ContactinformationsResponseCompound {
     return pkiContactinformationsID;
   }
 
-  public void setPkiContactinformationsID(Integer pkiContactinformationsID) {
+  public void setPkiContactinformationsID(@javax.annotation.Nonnull Integer pkiContactinformationsID) {
     this.pkiContactinformationsID = pkiContactinformationsID;
   }
 
 
-  public ContactinformationsResponseCompound fkiAddressIDDefault(Integer fkiAddressIDDefault) {
+  public ContactinformationsResponseCompound fkiAddressIDDefault(@javax.annotation.Nullable Integer fkiAddressIDDefault) {
     this.fkiAddressIDDefault = fkiAddressIDDefault;
     return this;
   }
@@ -156,12 +171,12 @@ public class ContactinformationsResponseCompound {
     return fkiAddressIDDefault;
   }
 
-  public void setFkiAddressIDDefault(Integer fkiAddressIDDefault) {
+  public void setFkiAddressIDDefault(@javax.annotation.Nullable Integer fkiAddressIDDefault) {
     this.fkiAddressIDDefault = fkiAddressIDDefault;
   }
 
 
-  public ContactinformationsResponseCompound fkiPhoneIDDefault(Integer fkiPhoneIDDefault) {
+  public ContactinformationsResponseCompound fkiPhoneIDDefault(@javax.annotation.Nullable Integer fkiPhoneIDDefault) {
     this.fkiPhoneIDDefault = fkiPhoneIDDefault;
     return this;
   }
@@ -176,12 +191,12 @@ public class ContactinformationsResponseCompound {
     return fkiPhoneIDDefault;
   }
 
-  public void setFkiPhoneIDDefault(Integer fkiPhoneIDDefault) {
+  public void setFkiPhoneIDDefault(@javax.annotation.Nullable Integer fkiPhoneIDDefault) {
     this.fkiPhoneIDDefault = fkiPhoneIDDefault;
   }
 
 
-  public ContactinformationsResponseCompound fkiEmailIDDefault(Integer fkiEmailIDDefault) {
+  public ContactinformationsResponseCompound fkiEmailIDDefault(@javax.annotation.Nullable Integer fkiEmailIDDefault) {
     this.fkiEmailIDDefault = fkiEmailIDDefault;
     return this;
   }
@@ -197,12 +212,12 @@ public class ContactinformationsResponseCompound {
     return fkiEmailIDDefault;
   }
 
-  public void setFkiEmailIDDefault(Integer fkiEmailIDDefault) {
+  public void setFkiEmailIDDefault(@javax.annotation.Nullable Integer fkiEmailIDDefault) {
     this.fkiEmailIDDefault = fkiEmailIDDefault;
   }
 
 
-  public ContactinformationsResponseCompound fkiWebsiteIDDefault(Integer fkiWebsiteIDDefault) {
+  public ContactinformationsResponseCompound fkiWebsiteIDDefault(@javax.annotation.Nullable Integer fkiWebsiteIDDefault) {
     this.fkiWebsiteIDDefault = fkiWebsiteIDDefault;
     return this;
   }
@@ -218,12 +233,12 @@ public class ContactinformationsResponseCompound {
     return fkiWebsiteIDDefault;
   }
 
-  public void setFkiWebsiteIDDefault(Integer fkiWebsiteIDDefault) {
+  public void setFkiWebsiteIDDefault(@javax.annotation.Nullable Integer fkiWebsiteIDDefault) {
     this.fkiWebsiteIDDefault = fkiWebsiteIDDefault;
   }
 
 
-  public ContactinformationsResponseCompound eContactinformationsType(FieldEContactinformationsType eContactinformationsType) {
+  public ContactinformationsResponseCompound eContactinformationsType(@javax.annotation.Nonnull FieldEContactinformationsType eContactinformationsType) {
     this.eContactinformationsType = eContactinformationsType;
     return this;
   }
@@ -237,12 +252,12 @@ public class ContactinformationsResponseCompound {
     return eContactinformationsType;
   }
 
-  public void seteContactinformationsType(FieldEContactinformationsType eContactinformationsType) {
+  public void seteContactinformationsType(@javax.annotation.Nonnull FieldEContactinformationsType eContactinformationsType) {
     this.eContactinformationsType = eContactinformationsType;
   }
 
 
-  public ContactinformationsResponseCompound sContactinformationsUrl(String sContactinformationsUrl) {
+  public ContactinformationsResponseCompound sContactinformationsUrl(@javax.annotation.Nullable String sContactinformationsUrl) {
     this.sContactinformationsUrl = sContactinformationsUrl;
     return this;
   }
@@ -256,31 +271,31 @@ public class ContactinformationsResponseCompound {
     return sContactinformationsUrl;
   }
 
-  public void setsContactinformationsUrl(String sContactinformationsUrl) {
+  public void setsContactinformationsUrl(@javax.annotation.Nullable String sContactinformationsUrl) {
     this.sContactinformationsUrl = sContactinformationsUrl;
   }
 
 
-  public ContactinformationsResponseCompound objAddressDefault(AddressResponseCompound objAddressDefault) {
+  public ContactinformationsResponseCompound objAddressDefault(@javax.annotation.Nullable AddressResponse objAddressDefault) {
     this.objAddressDefault = objAddressDefault;
     return this;
   }
 
   /**
-   * Get objAddressDefault
+   * An Address Object and children to create a complete structure
    * @return objAddressDefault
    */
   @javax.annotation.Nullable
-  public AddressResponseCompound getObjAddressDefault() {
+  public AddressResponse getObjAddressDefault() {
     return objAddressDefault;
   }
 
-  public void setObjAddressDefault(AddressResponseCompound objAddressDefault) {
+  public void setObjAddressDefault(@javax.annotation.Nullable AddressResponse objAddressDefault) {
     this.objAddressDefault = objAddressDefault;
   }
 
 
-  public ContactinformationsResponseCompound objPhoneDefault(PhoneResponseCompound objPhoneDefault) {
+  public ContactinformationsResponseCompound objPhoneDefault(@javax.annotation.Nullable PhoneResponseCompound objPhoneDefault) {
     this.objPhoneDefault = objPhoneDefault;
     return this;
   }
@@ -294,55 +309,55 @@ public class ContactinformationsResponseCompound {
     return objPhoneDefault;
   }
 
-  public void setObjPhoneDefault(PhoneResponseCompound objPhoneDefault) {
+  public void setObjPhoneDefault(@javax.annotation.Nullable PhoneResponseCompound objPhoneDefault) {
     this.objPhoneDefault = objPhoneDefault;
   }
 
 
-  public ContactinformationsResponseCompound objEmailDefault(EmailResponseCompound objEmailDefault) {
+  public ContactinformationsResponseCompound objEmailDefault(@javax.annotation.Nullable EmailResponse objEmailDefault) {
     this.objEmailDefault = objEmailDefault;
     return this;
   }
 
   /**
-   * Get objEmailDefault
+   * An Email Object and children to create a complete structure
    * @return objEmailDefault
    */
   @javax.annotation.Nullable
-  public EmailResponseCompound getObjEmailDefault() {
+  public EmailResponse getObjEmailDefault() {
     return objEmailDefault;
   }
 
-  public void setObjEmailDefault(EmailResponseCompound objEmailDefault) {
+  public void setObjEmailDefault(@javax.annotation.Nullable EmailResponse objEmailDefault) {
     this.objEmailDefault = objEmailDefault;
   }
 
 
-  public ContactinformationsResponseCompound objWebsiteDefault(WebsiteResponseCompound objWebsiteDefault) {
+  public ContactinformationsResponseCompound objWebsiteDefault(@javax.annotation.Nullable WebsiteResponse objWebsiteDefault) {
     this.objWebsiteDefault = objWebsiteDefault;
     return this;
   }
 
   /**
-   * Get objWebsiteDefault
+   * A Website Object and children to create a complete structure
    * @return objWebsiteDefault
    */
   @javax.annotation.Nullable
-  public WebsiteResponseCompound getObjWebsiteDefault() {
+  public WebsiteResponse getObjWebsiteDefault() {
     return objWebsiteDefault;
   }
 
-  public void setObjWebsiteDefault(WebsiteResponseCompound objWebsiteDefault) {
+  public void setObjWebsiteDefault(@javax.annotation.Nullable WebsiteResponse objWebsiteDefault) {
     this.objWebsiteDefault = objWebsiteDefault;
   }
 
 
-  public ContactinformationsResponseCompound aObjAddress(List<AddressResponseCompound> aObjAddress) {
+  public ContactinformationsResponseCompound aObjAddress(@javax.annotation.Nonnull List<AddressResponseCompound> aObjAddress) {
     this.aObjAddress = aObjAddress;
     return this;
   }
 
-  public ContactinformationsResponseCompound addAObjAddressItem(AddressResponseCompound aObjAddressItem) {
+  public ContactinformationsResponseCompound addAObjAddressItem(AddressResponse aObjAddressItem) {
     if (this.aObjAddress == null) {
       this.aObjAddress = new ArrayList<>();
     }
@@ -359,12 +374,12 @@ public class ContactinformationsResponseCompound {
     return aObjAddress;
   }
 
-  public void setaObjAddress(List<AddressResponseCompound> aObjAddress) {
+  public void setaObjAddress(@javax.annotation.Nonnull List<AddressResponseCompound> aObjAddress) {
     this.aObjAddress = aObjAddress;
   }
 
 
-  public ContactinformationsResponseCompound aObjPhone(List<PhoneResponseCompound> aObjPhone) {
+  public ContactinformationsResponseCompound aObjPhone(@javax.annotation.Nonnull List<PhoneResponseCompound> aObjPhone) {
     this.aObjPhone = aObjPhone;
     return this;
   }
@@ -386,17 +401,17 @@ public class ContactinformationsResponseCompound {
     return aObjPhone;
   }
 
-  public void setaObjPhone(List<PhoneResponseCompound> aObjPhone) {
+  public void setaObjPhone(@javax.annotation.Nonnull List<PhoneResponseCompound> aObjPhone) {
     this.aObjPhone = aObjPhone;
   }
 
 
-  public ContactinformationsResponseCompound aObjEmail(List<EmailResponseCompound> aObjEmail) {
+  public ContactinformationsResponseCompound aObjEmail(@javax.annotation.Nonnull List<EmailResponseCompound> aObjEmail) {
     this.aObjEmail = aObjEmail;
     return this;
   }
 
-  public ContactinformationsResponseCompound addAObjEmailItem(EmailResponseCompound aObjEmailItem) {
+  public ContactinformationsResponseCompound addAObjEmailItem(EmailResponse aObjEmailItem) {
     if (this.aObjEmail == null) {
       this.aObjEmail = new ArrayList<>();
     }
@@ -413,17 +428,17 @@ public class ContactinformationsResponseCompound {
     return aObjEmail;
   }
 
-  public void setaObjEmail(List<EmailResponseCompound> aObjEmail) {
+  public void setaObjEmail(@javax.annotation.Nonnull List<EmailResponseCompound> aObjEmail) {
     this.aObjEmail = aObjEmail;
   }
 
 
-  public ContactinformationsResponseCompound aObjWebsite(List<WebsiteResponseCompound> aObjWebsite) {
+  public ContactinformationsResponseCompound aObjWebsite(@javax.annotation.Nonnull List<WebsiteResponseCompound> aObjWebsite) {
     this.aObjWebsite = aObjWebsite;
     return this;
   }
 
-  public ContactinformationsResponseCompound addAObjWebsiteItem(WebsiteResponseCompound aObjWebsiteItem) {
+  public ContactinformationsResponseCompound addAObjWebsiteItem(WebsiteResponse aObjWebsiteItem) {
     if (this.aObjWebsite == null) {
       this.aObjWebsite = new ArrayList<>();
     }
@@ -440,7 +455,7 @@ public class ContactinformationsResponseCompound {
     return aObjWebsite;
   }
 
-  public void setaObjWebsite(List<WebsiteResponseCompound> aObjWebsite) {
+  public void setaObjWebsite(@javax.annotation.Nonnull List<WebsiteResponseCompound> aObjWebsite) {
     this.aObjWebsite = aObjWebsite;
   }
 
@@ -579,7 +594,7 @@ public class ContactinformationsResponseCompound {
       }
       // validate the optional field `objAddressDefault`
       if (jsonObj.get("objAddressDefault") != null && !jsonObj.get("objAddressDefault").isJsonNull()) {
-        AddressResponseCompound.validateJsonElement(jsonObj.get("objAddressDefault"));
+        AddressResponse.validateJsonElement(jsonObj.get("objAddressDefault"));
       }
       // validate the optional field `objPhoneDefault`
       if (jsonObj.get("objPhoneDefault") != null && !jsonObj.get("objPhoneDefault").isJsonNull()) {
@@ -587,11 +602,11 @@ public class ContactinformationsResponseCompound {
       }
       // validate the optional field `objEmailDefault`
       if (jsonObj.get("objEmailDefault") != null && !jsonObj.get("objEmailDefault").isJsonNull()) {
-        EmailResponseCompound.validateJsonElement(jsonObj.get("objEmailDefault"));
+        EmailResponse.validateJsonElement(jsonObj.get("objEmailDefault"));
       }
       // validate the optional field `objWebsiteDefault`
       if (jsonObj.get("objWebsiteDefault") != null && !jsonObj.get("objWebsiteDefault").isJsonNull()) {
-        WebsiteResponseCompound.validateJsonElement(jsonObj.get("objWebsiteDefault"));
+        WebsiteResponse.validateJsonElement(jsonObj.get("objWebsiteDefault"));
       }
       // ensure the json data is an array
       if (!jsonObj.get("a_objAddress").isJsonArray()) {
@@ -601,7 +616,7 @@ public class ContactinformationsResponseCompound {
       JsonArray jsonArrayaObjAddress = jsonObj.getAsJsonArray("a_objAddress");
       // validate the required field `a_objAddress` (array)
       for (int i = 0; i < jsonArrayaObjAddress.size(); i++) {
-        AddressResponseCompound.validateJsonElement(jsonArrayaObjAddress.get(i));
+        AddressResponse.validateJsonElement(jsonArrayaObjAddress.get(i));
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objPhone").isJsonArray()) {
@@ -621,7 +636,7 @@ public class ContactinformationsResponseCompound {
       JsonArray jsonArrayaObjEmail = jsonObj.getAsJsonArray("a_objEmail");
       // validate the required field `a_objEmail` (array)
       for (int i = 0; i < jsonArrayaObjEmail.size(); i++) {
-        EmailResponseCompound.validateJsonElement(jsonArrayaObjEmail.get(i));
+        EmailResponse.validateJsonElement(jsonArrayaObjEmail.get(i));
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objWebsite").isJsonArray()) {
@@ -631,7 +646,7 @@ public class ContactinformationsResponseCompound {
       JsonArray jsonArrayaObjWebsite = jsonObj.getAsJsonArray("a_objWebsite");
       // validate the required field `a_objWebsite` (array)
       for (int i = 0; i < jsonArrayaObjWebsite.size(); i++) {
-        WebsiteResponseCompound.validateJsonElement(jsonArrayaObjWebsite.get(i));
+        WebsiteResponse.validateJsonElement(jsonArrayaObjWebsite.get(i));
       };
   }
 

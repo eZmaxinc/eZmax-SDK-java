@@ -48,28 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * ScimGroupMember
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ScimGroupMember {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private String value;
 
   public static final String SERIALIZED_NAME_DISPLAY = "display";
   @SerializedName(SERIALIZED_NAME_DISPLAY)
+  @javax.annotation.Nullable
   private String display;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private String type;
 
   public static final String SERIALIZED_NAME_$_REF = "$ref";
   @SerializedName(SERIALIZED_NAME_$_REF)
+  @javax.annotation.Nullable
   private String $ref;
 
   public ScimGroupMember() {
   }
 
-  public ScimGroupMember value(String value) {
+  public ScimGroupMember value(@javax.annotation.Nullable String value) {
     this.value = value;
     return this;
   }
@@ -83,12 +87,12 @@ public class ScimGroupMember {
     return value;
   }
 
-  public void setValue(String value) {
+  public void setValue(@javax.annotation.Nullable String value) {
     this.value = value;
   }
 
 
-  public ScimGroupMember display(String display) {
+  public ScimGroupMember display(@javax.annotation.Nullable String display) {
     this.display = display;
     return this;
   }
@@ -102,12 +106,12 @@ public class ScimGroupMember {
     return display;
   }
 
-  public void setDisplay(String display) {
+  public void setDisplay(@javax.annotation.Nullable String display) {
     this.display = display;
   }
 
 
-  public ScimGroupMember type(String type) {
+  public ScimGroupMember type(@javax.annotation.Nullable String type) {
     this.type = type;
     return this;
   }
@@ -121,12 +125,12 @@ public class ScimGroupMember {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nullable String type) {
     this.type = type;
   }
 
 
-  public ScimGroupMember $ref(String $ref) {
+  public ScimGroupMember $ref(@javax.annotation.Nullable String $ref) {
     this.$ref = $ref;
     return this;
   }
@@ -140,7 +144,7 @@ public class ScimGroupMember {
     return $ref;
   }
 
-  public void set$Ref(String $ref) {
+  public void set$Ref(@javax.annotation.Nullable String $ref) {
     this.$ref = $ref;
   }
 

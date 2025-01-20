@@ -14,10 +14,10 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.DiscussionmembershipCreateObjectV1Request;
 import com.ezmax.api.model.DiscussionmembershipCreateObjectV1Response;
-import com.ezmax.api.model.DiscussionmembershipDeleteObjectV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -58,7 +58,7 @@ public class ObjectDiscussionmembershipApiTest {
     @Test
     public void discussionmembershipDeleteObjectV1Test() throws ApiException {
         Integer pkiDiscussionmembershipID = null;
-        DiscussionmembershipDeleteObjectV1Response response = api.discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID);
+        CommonResponse response = api.discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID);
         // TODO: test validations
     }
 

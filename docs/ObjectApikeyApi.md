@@ -87,7 +87,7 @@ public class Example {
 
 <a id="apikeyEditObjectV1"></a>
 # **apikeyEditObjectV1**
-> ApikeyEditObjectV1Response apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
+> CommonResponse apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request)
 
 Edit an existing Apikey
 
@@ -118,7 +118,7 @@ public class Example {
     Integer pkiApikeyID = 56; // Integer | The unique ID of the Apikey
     ApikeyEditObjectV1Request apikeyEditObjectV1Request = new ApikeyEditObjectV1Request(); // ApikeyEditObjectV1Request | 
     try {
-      ApikeyEditObjectV1Response result = apiInstance.apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request);
+      CommonResponse result = apiInstance.apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectApikeyApi#apikeyEditObjectV1");
@@ -140,7 +140,7 @@ public class Example {
 
 ### Return type
 
-[**ApikeyEditObjectV1Response**](ApikeyEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

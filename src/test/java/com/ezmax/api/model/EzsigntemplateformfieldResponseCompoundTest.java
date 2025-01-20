@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.EnumHorizontalalignment;
-import com.ezmax.api.model.EzsigntemplateelementdependencyResponseCompound;
+import com.ezmax.api.model.EzsigntemplateelementdependencyResponse;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldPositioning;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldPositioningoccurence;

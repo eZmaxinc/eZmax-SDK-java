@@ -48,44 +48,52 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupdelegation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupdelegationResponseCompound {
   public static final String SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D = "pkiUsergroupdelegationID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiUsergroupdelegationID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUsergroupID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
+  @javax.annotation.Nonnull
   private String sUserFirstname;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
+  @javax.annotation.Nonnull
   private String sUserLastname;
 
   public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
   @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
+  @javax.annotation.Nonnull
   private String sUserLoginname;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  @javax.annotation.Nullable
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
+  @javax.annotation.Nonnull
   private String sUsergroupNameX;
 
   public UsergroupdelegationResponseCompound() {
   }
 
-  public UsergroupdelegationResponseCompound pkiUsergroupdelegationID(Integer pkiUsergroupdelegationID) {
+  public UsergroupdelegationResponseCompound pkiUsergroupdelegationID(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID) {
     this.pkiUsergroupdelegationID = pkiUsergroupdelegationID;
     return this;
   }
@@ -101,12 +109,12 @@ public class UsergroupdelegationResponseCompound {
     return pkiUsergroupdelegationID;
   }
 
-  public void setPkiUsergroupdelegationID(Integer pkiUsergroupdelegationID) {
+  public void setPkiUsergroupdelegationID(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID) {
     this.pkiUsergroupdelegationID = pkiUsergroupdelegationID;
   }
 
 
-  public UsergroupdelegationResponseCompound fkiUsergroupID(Integer fkiUsergroupID) {
+  public UsergroupdelegationResponseCompound fkiUsergroupID(@javax.annotation.Nonnull Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -122,12 +130,12 @@ public class UsergroupdelegationResponseCompound {
     return fkiUsergroupID;
   }
 
-  public void setFkiUsergroupID(Integer fkiUsergroupID) {
+  public void setFkiUsergroupID(@javax.annotation.Nonnull Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
-  public UsergroupdelegationResponseCompound fkiUserID(Integer fkiUserID) {
+  public UsergroupdelegationResponseCompound fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -142,12 +150,12 @@ public class UsergroupdelegationResponseCompound {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public UsergroupdelegationResponseCompound sUserFirstname(String sUserFirstname) {
+  public UsergroupdelegationResponseCompound sUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -161,12 +169,12 @@ public class UsergroupdelegationResponseCompound {
     return sUserFirstname;
   }
 
-  public void setsUserFirstname(String sUserFirstname) {
+  public void setsUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
-  public UsergroupdelegationResponseCompound sUserLastname(String sUserLastname) {
+  public UsergroupdelegationResponseCompound sUserLastname(@javax.annotation.Nonnull String sUserLastname) {
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -180,12 +188,12 @@ public class UsergroupdelegationResponseCompound {
     return sUserLastname;
   }
 
-  public void setsUserLastname(String sUserLastname) {
+  public void setsUserLastname(@javax.annotation.Nonnull String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
-  public UsergroupdelegationResponseCompound sUserLoginname(String sUserLoginname) {
+  public UsergroupdelegationResponseCompound sUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -199,12 +207,12 @@ public class UsergroupdelegationResponseCompound {
     return sUserLoginname;
   }
 
-  public void setsUserLoginname(String sUserLoginname) {
+  public void setsUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
-  public UsergroupdelegationResponseCompound sEmailAddress(String sEmailAddress) {
+  public UsergroupdelegationResponseCompound sEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -218,12 +226,12 @@ public class UsergroupdelegationResponseCompound {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(String sEmailAddress) {
+  public void setsEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public UsergroupdelegationResponseCompound sUsergroupNameX(String sUsergroupNameX) {
+  public UsergroupdelegationResponseCompound sUsergroupNameX(@javax.annotation.Nonnull String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
     return this;
   }
@@ -237,7 +245,7 @@ public class UsergroupdelegationResponseCompound {
     return sUsergroupNameX;
   }
 
-  public void setsUsergroupNameX(String sUsergroupNameX) {
+  public void setsUsergroupNameX(@javax.annotation.Nonnull String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
   }
 

@@ -48,28 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationattachment Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommunicationattachmentRequestCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONATTACHMENT_I_D = "pkiCommunicationattachmentID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONATTACHMENT_I_D)
+  @javax.annotation.Nullable
   private Integer pkiCommunicationattachmentID;
 
   public static final String SERIALIZED_NAME_FKI_ATTACHMENT_I_D = "fkiAttachmentID";
   @SerializedName(SERIALIZED_NAME_FKI_ATTACHMENT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiAttachmentID;
 
   public static final String SERIALIZED_NAME_FKI_INVOICE_I_D = "fkiInvoiceID";
   @SerializedName(SERIALIZED_NAME_FKI_INVOICE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiInvoiceID;
 
   public static final String SERIALIZED_NAME_FKI_SALARYPREPARATION_I_D = "fkiSalarypreparationID";
   @SerializedName(SERIALIZED_NAME_FKI_SALARYPREPARATION_I_D)
+  @javax.annotation.Nullable
   private Integer fkiSalarypreparationID;
 
   public CommunicationattachmentRequestCompound() {
   }
 
-  public CommunicationattachmentRequestCompound pkiCommunicationattachmentID(Integer pkiCommunicationattachmentID) {
+  public CommunicationattachmentRequestCompound pkiCommunicationattachmentID(@javax.annotation.Nullable Integer pkiCommunicationattachmentID) {
     this.pkiCommunicationattachmentID = pkiCommunicationattachmentID;
     return this;
   }
@@ -83,12 +87,12 @@ public class CommunicationattachmentRequestCompound {
     return pkiCommunicationattachmentID;
   }
 
-  public void setPkiCommunicationattachmentID(Integer pkiCommunicationattachmentID) {
+  public void setPkiCommunicationattachmentID(@javax.annotation.Nullable Integer pkiCommunicationattachmentID) {
     this.pkiCommunicationattachmentID = pkiCommunicationattachmentID;
   }
 
 
-  public CommunicationattachmentRequestCompound fkiAttachmentID(Integer fkiAttachmentID) {
+  public CommunicationattachmentRequestCompound fkiAttachmentID(@javax.annotation.Nullable Integer fkiAttachmentID) {
     this.fkiAttachmentID = fkiAttachmentID;
     return this;
   }
@@ -103,12 +107,12 @@ public class CommunicationattachmentRequestCompound {
     return fkiAttachmentID;
   }
 
-  public void setFkiAttachmentID(Integer fkiAttachmentID) {
+  public void setFkiAttachmentID(@javax.annotation.Nullable Integer fkiAttachmentID) {
     this.fkiAttachmentID = fkiAttachmentID;
   }
 
 
-  public CommunicationattachmentRequestCompound fkiInvoiceID(Integer fkiInvoiceID) {
+  public CommunicationattachmentRequestCompound fkiInvoiceID(@javax.annotation.Nullable Integer fkiInvoiceID) {
     this.fkiInvoiceID = fkiInvoiceID;
     return this;
   }
@@ -123,12 +127,12 @@ public class CommunicationattachmentRequestCompound {
     return fkiInvoiceID;
   }
 
-  public void setFkiInvoiceID(Integer fkiInvoiceID) {
+  public void setFkiInvoiceID(@javax.annotation.Nullable Integer fkiInvoiceID) {
     this.fkiInvoiceID = fkiInvoiceID;
   }
 
 
-  public CommunicationattachmentRequestCompound fkiSalarypreparationID(Integer fkiSalarypreparationID) {
+  public CommunicationattachmentRequestCompound fkiSalarypreparationID(@javax.annotation.Nullable Integer fkiSalarypreparationID) {
     this.fkiSalarypreparationID = fkiSalarypreparationID;
     return this;
   }
@@ -143,7 +147,7 @@ public class CommunicationattachmentRequestCompound {
     return fkiSalarypreparationID;
   }
 
-  public void setFkiSalarypreparationID(Integer fkiSalarypreparationID) {
+  public void setFkiSalarypreparationID(@javax.annotation.Nullable Integer fkiSalarypreparationID) {
     this.fkiSalarypreparationID = fkiSalarypreparationID;
   }
 

@@ -48,48 +48,57 @@ import eZmaxAPI.JSON;
 /**
  * A Branding List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class BrandingListElement {
   public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiBrandingID;
 
   public static final String SERIALIZED_NAME_S_BRANDING_DESCRIPTION_X = "sBrandingDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_DESCRIPTION_X)
+  @javax.annotation.Nonnull
   private String sBrandingDescriptionX;
 
   public static final String SERIALIZED_NAME_I_BRANDING_COLORTEXT = "iBrandingColortext";
   @SerializedName(SERIALIZED_NAME_I_BRANDING_COLORTEXT)
+  @javax.annotation.Nonnull
   private Integer iBrandingColortext;
 
   public static final String SERIALIZED_NAME_I_BRANDING_COLORTEXTLINKBOX = "iBrandingColortextlinkbox";
   @SerializedName(SERIALIZED_NAME_I_BRANDING_COLORTEXTLINKBOX)
+  @javax.annotation.Nonnull
   private Integer iBrandingColortextlinkbox;
 
   public static final String SERIALIZED_NAME_I_BRANDING_COLORTEXTBUTTON = "iBrandingColortextbutton";
   @SerializedName(SERIALIZED_NAME_I_BRANDING_COLORTEXTBUTTON)
+  @javax.annotation.Nonnull
   private Integer iBrandingColortextbutton;
 
   public static final String SERIALIZED_NAME_I_BRANDING_COLORBACKGROUND = "iBrandingColorbackground";
   @SerializedName(SERIALIZED_NAME_I_BRANDING_COLORBACKGROUND)
+  @javax.annotation.Nonnull
   private Integer iBrandingColorbackground;
 
   public static final String SERIALIZED_NAME_I_BRANDING_COLORBACKGROUNDBUTTON = "iBrandingColorbackgroundbutton";
   @SerializedName(SERIALIZED_NAME_I_BRANDING_COLORBACKGROUNDBUTTON)
+  @javax.annotation.Nonnull
   private Integer iBrandingColorbackgroundbutton;
 
   public static final String SERIALIZED_NAME_I_BRANDING_COLORBACKGROUNDSMALLBOX = "iBrandingColorbackgroundsmallbox";
   @SerializedName(SERIALIZED_NAME_I_BRANDING_COLORBACKGROUNDSMALLBOX)
+  @javax.annotation.Nonnull
   private Integer iBrandingColorbackgroundsmallbox;
 
   public static final String SERIALIZED_NAME_B_BRANDING_ISACTIVE = "bBrandingIsactive";
   @SerializedName(SERIALIZED_NAME_B_BRANDING_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bBrandingIsactive;
 
   public BrandingListElement() {
   }
 
-  public BrandingListElement pkiBrandingID(Integer pkiBrandingID) {
+  public BrandingListElement pkiBrandingID(@javax.annotation.Nonnull Integer pkiBrandingID) {
     this.pkiBrandingID = pkiBrandingID;
     return this;
   }
@@ -104,12 +113,12 @@ public class BrandingListElement {
     return pkiBrandingID;
   }
 
-  public void setPkiBrandingID(Integer pkiBrandingID) {
+  public void setPkiBrandingID(@javax.annotation.Nonnull Integer pkiBrandingID) {
     this.pkiBrandingID = pkiBrandingID;
   }
 
 
-  public BrandingListElement sBrandingDescriptionX(String sBrandingDescriptionX) {
+  public BrandingListElement sBrandingDescriptionX(@javax.annotation.Nonnull String sBrandingDescriptionX) {
     this.sBrandingDescriptionX = sBrandingDescriptionX;
     return this;
   }
@@ -123,12 +132,12 @@ public class BrandingListElement {
     return sBrandingDescriptionX;
   }
 
-  public void setsBrandingDescriptionX(String sBrandingDescriptionX) {
+  public void setsBrandingDescriptionX(@javax.annotation.Nonnull String sBrandingDescriptionX) {
     this.sBrandingDescriptionX = sBrandingDescriptionX;
   }
 
 
-  public BrandingListElement iBrandingColortext(Integer iBrandingColortext) {
+  public BrandingListElement iBrandingColortext(@javax.annotation.Nonnull Integer iBrandingColortext) {
     this.iBrandingColortext = iBrandingColortext;
     return this;
   }
@@ -144,12 +153,12 @@ public class BrandingListElement {
     return iBrandingColortext;
   }
 
-  public void setiBrandingColortext(Integer iBrandingColortext) {
+  public void setiBrandingColortext(@javax.annotation.Nonnull Integer iBrandingColortext) {
     this.iBrandingColortext = iBrandingColortext;
   }
 
 
-  public BrandingListElement iBrandingColortextlinkbox(Integer iBrandingColortextlinkbox) {
+  public BrandingListElement iBrandingColortextlinkbox(@javax.annotation.Nonnull Integer iBrandingColortextlinkbox) {
     this.iBrandingColortextlinkbox = iBrandingColortextlinkbox;
     return this;
   }
@@ -165,12 +174,12 @@ public class BrandingListElement {
     return iBrandingColortextlinkbox;
   }
 
-  public void setiBrandingColortextlinkbox(Integer iBrandingColortextlinkbox) {
+  public void setiBrandingColortextlinkbox(@javax.annotation.Nonnull Integer iBrandingColortextlinkbox) {
     this.iBrandingColortextlinkbox = iBrandingColortextlinkbox;
   }
 
 
-  public BrandingListElement iBrandingColortextbutton(Integer iBrandingColortextbutton) {
+  public BrandingListElement iBrandingColortextbutton(@javax.annotation.Nonnull Integer iBrandingColortextbutton) {
     this.iBrandingColortextbutton = iBrandingColortextbutton;
     return this;
   }
@@ -186,12 +195,12 @@ public class BrandingListElement {
     return iBrandingColortextbutton;
   }
 
-  public void setiBrandingColortextbutton(Integer iBrandingColortextbutton) {
+  public void setiBrandingColortextbutton(@javax.annotation.Nonnull Integer iBrandingColortextbutton) {
     this.iBrandingColortextbutton = iBrandingColortextbutton;
   }
 
 
-  public BrandingListElement iBrandingColorbackground(Integer iBrandingColorbackground) {
+  public BrandingListElement iBrandingColorbackground(@javax.annotation.Nonnull Integer iBrandingColorbackground) {
     this.iBrandingColorbackground = iBrandingColorbackground;
     return this;
   }
@@ -207,12 +216,12 @@ public class BrandingListElement {
     return iBrandingColorbackground;
   }
 
-  public void setiBrandingColorbackground(Integer iBrandingColorbackground) {
+  public void setiBrandingColorbackground(@javax.annotation.Nonnull Integer iBrandingColorbackground) {
     this.iBrandingColorbackground = iBrandingColorbackground;
   }
 
 
-  public BrandingListElement iBrandingColorbackgroundbutton(Integer iBrandingColorbackgroundbutton) {
+  public BrandingListElement iBrandingColorbackgroundbutton(@javax.annotation.Nonnull Integer iBrandingColorbackgroundbutton) {
     this.iBrandingColorbackgroundbutton = iBrandingColorbackgroundbutton;
     return this;
   }
@@ -228,12 +237,12 @@ public class BrandingListElement {
     return iBrandingColorbackgroundbutton;
   }
 
-  public void setiBrandingColorbackgroundbutton(Integer iBrandingColorbackgroundbutton) {
+  public void setiBrandingColorbackgroundbutton(@javax.annotation.Nonnull Integer iBrandingColorbackgroundbutton) {
     this.iBrandingColorbackgroundbutton = iBrandingColorbackgroundbutton;
   }
 
 
-  public BrandingListElement iBrandingColorbackgroundsmallbox(Integer iBrandingColorbackgroundsmallbox) {
+  public BrandingListElement iBrandingColorbackgroundsmallbox(@javax.annotation.Nonnull Integer iBrandingColorbackgroundsmallbox) {
     this.iBrandingColorbackgroundsmallbox = iBrandingColorbackgroundsmallbox;
     return this;
   }
@@ -249,12 +258,12 @@ public class BrandingListElement {
     return iBrandingColorbackgroundsmallbox;
   }
 
-  public void setiBrandingColorbackgroundsmallbox(Integer iBrandingColorbackgroundsmallbox) {
+  public void setiBrandingColorbackgroundsmallbox(@javax.annotation.Nonnull Integer iBrandingColorbackgroundsmallbox) {
     this.iBrandingColorbackgroundsmallbox = iBrandingColorbackgroundsmallbox;
   }
 
 
-  public BrandingListElement bBrandingIsactive(Boolean bBrandingIsactive) {
+  public BrandingListElement bBrandingIsactive(@javax.annotation.Nonnull Boolean bBrandingIsactive) {
     this.bBrandingIsactive = bBrandingIsactive;
     return this;
   }
@@ -268,7 +277,7 @@ public class BrandingListElement {
     return bBrandingIsactive;
   }
 
-  public void setbBrandingIsactive(Boolean bBrandingIsactive) {
+  public void setbBrandingIsactive(@javax.annotation.Nonnull Boolean bBrandingIsactive) {
     this.bBrandingIsactive = bBrandingIsactive;
   }
 

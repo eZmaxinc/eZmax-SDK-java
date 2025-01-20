@@ -52,28 +52,32 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonResponseErrorCreditcardValidation {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
+  @javax.annotation.Nonnull
   private String sErrorMessage;
 
   public static final String SERIALIZED_NAME_E_ERROR_CODE = "eErrorCode";
   @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
+  @javax.annotation.Nonnull
   private FieldEErrorCode eErrorCode;
 
   public static final String SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL = "a_sErrorMessagedetail";
   @SerializedName(SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL)
+  @javax.annotation.Nullable
   private List<String> aSErrorMessagedetail = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_OBJ_CREDITCARDTRANSACTIONRESPONSE = "objCreditcardtransactionresponse";
   @SerializedName(SERIALIZED_NAME_OBJ_CREDITCARDTRANSACTIONRESPONSE)
+  @javax.annotation.Nullable
   private CustomCreditcardtransactionresponseResponse objCreditcardtransactionresponse;
 
   public CommonResponseErrorCreditcardValidation() {
   }
 
-  public CommonResponseErrorCreditcardValidation sErrorMessage(String sErrorMessage) {
+  public CommonResponseErrorCreditcardValidation sErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
     return this;
   }
@@ -87,12 +91,12 @@ public class CommonResponseErrorCreditcardValidation {
     return sErrorMessage;
   }
 
-  public void setsErrorMessage(String sErrorMessage) {
+  public void setsErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
   }
 
 
-  public CommonResponseErrorCreditcardValidation eErrorCode(FieldEErrorCode eErrorCode) {
+  public CommonResponseErrorCreditcardValidation eErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
     return this;
   }
@@ -106,12 +110,12 @@ public class CommonResponseErrorCreditcardValidation {
     return eErrorCode;
   }
 
-  public void seteErrorCode(FieldEErrorCode eErrorCode) {
+  public void seteErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
   }
 
 
-  public CommonResponseErrorCreditcardValidation aSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+  public CommonResponseErrorCreditcardValidation aSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
     this.aSErrorMessagedetail = aSErrorMessagedetail;
     return this;
   }
@@ -133,12 +137,12 @@ public class CommonResponseErrorCreditcardValidation {
     return aSErrorMessagedetail;
   }
 
-  public void setaSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+  public void setaSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
     this.aSErrorMessagedetail = aSErrorMessagedetail;
   }
 
 
-  public CommonResponseErrorCreditcardValidation objCreditcardtransactionresponse(CustomCreditcardtransactionresponseResponse objCreditcardtransactionresponse) {
+  public CommonResponseErrorCreditcardValidation objCreditcardtransactionresponse(@javax.annotation.Nullable CustomCreditcardtransactionresponseResponse objCreditcardtransactionresponse) {
     this.objCreditcardtransactionresponse = objCreditcardtransactionresponse;
     return this;
   }
@@ -152,7 +156,7 @@ public class CommonResponseErrorCreditcardValidation {
     return objCreditcardtransactionresponse;
   }
 
-  public void setObjCreditcardtransactionresponse(CustomCreditcardtransactionresponseResponse objCreditcardtransactionresponse) {
+  public void setObjCreditcardtransactionresponse(@javax.annotation.Nullable CustomCreditcardtransactionresponseResponse objCreditcardtransactionresponse) {
     this.objCreditcardtransactionresponse = objCreditcardtransactionresponse;
   }
 

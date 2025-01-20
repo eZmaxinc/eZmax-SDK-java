@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/secretquestion/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SecretquestionGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_SECRETQUESTION = "a_objSecretquestion";
   @SerializedName(SERIALIZED_NAME_A_OBJ_SECRETQUESTION)
+  @javax.annotation.Nonnull
   private List<SecretquestionAutocompleteElementResponse> aObjSecretquestion = new ArrayList<>();
 
   public SecretquestionGetAutocompleteV2ResponseMPayload() {
   }
 
-  public SecretquestionGetAutocompleteV2ResponseMPayload aObjSecretquestion(List<SecretquestionAutocompleteElementResponse> aObjSecretquestion) {
+  public SecretquestionGetAutocompleteV2ResponseMPayload aObjSecretquestion(@javax.annotation.Nonnull List<SecretquestionAutocompleteElementResponse> aObjSecretquestion) {
     this.aObjSecretquestion = aObjSecretquestion;
     return this;
   }
@@ -82,7 +83,7 @@ public class SecretquestionGetAutocompleteV2ResponseMPayload {
     return aObjSecretquestion;
   }
 
-  public void setaObjSecretquestion(List<SecretquestionAutocompleteElementResponse> aObjSecretquestion) {
+  public void setaObjSecretquestion(@javax.annotation.Nonnull List<SecretquestionAutocompleteElementResponse> aObjSecretquestion) {
     this.aObjSecretquestion = aObjSecretquestion;
   }
 

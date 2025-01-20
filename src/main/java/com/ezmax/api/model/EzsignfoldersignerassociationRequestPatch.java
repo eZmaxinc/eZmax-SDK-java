@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldersignerassociation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfoldersignerassociationRequestPatch {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE = "tEzsignfoldersignerassociationMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE)
+  @javax.annotation.Nullable
   private String tEzsignfoldersignerassociationMessage;
 
   public EzsignfoldersignerassociationRequestPatch() {
   }
 
-  public EzsignfoldersignerassociationRequestPatch tEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
+  public EzsignfoldersignerassociationRequestPatch tEzsignfoldersignerassociationMessage(@javax.annotation.Nullable String tEzsignfoldersignerassociationMessage) {
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
     return this;
   }
@@ -71,7 +72,7 @@ public class EzsignfoldersignerassociationRequestPatch {
     return tEzsignfoldersignerassociationMessage;
   }
 
-  public void settEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
+  public void settEzsignfoldersignerassociationMessage(@javax.annotation.Nullable String tEzsignfoldersignerassociationMessage) {
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
   }
 

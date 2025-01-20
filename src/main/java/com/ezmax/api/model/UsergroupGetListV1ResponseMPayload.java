@@ -51,24 +51,27 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/usergroup/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
+  @javax.annotation.Nonnull
   private Integer iRowReturned;
 
   public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
+  @javax.annotation.Nonnull
   private Integer iRowFiltered;
 
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUP = "a_objUsergroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUP)
+  @javax.annotation.Nonnull
   private List<UsergroupListElement> aObjUsergroup = new ArrayList<>();
 
   public UsergroupGetListV1ResponseMPayload() {
   }
 
-  public UsergroupGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
+  public UsergroupGetListV1ResponseMPayload iRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -82,12 +85,12 @@ public class UsergroupGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-  public void setiRowReturned(Integer iRowReturned) {
+  public void setiRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
-  public UsergroupGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
+  public UsergroupGetListV1ResponseMPayload iRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -101,12 +104,12 @@ public class UsergroupGetListV1ResponseMPayload {
     return iRowFiltered;
   }
 
-  public void setiRowFiltered(Integer iRowFiltered) {
+  public void setiRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
   }
 
 
-  public UsergroupGetListV1ResponseMPayload aObjUsergroup(List<UsergroupListElement> aObjUsergroup) {
+  public UsergroupGetListV1ResponseMPayload aObjUsergroup(@javax.annotation.Nonnull List<UsergroupListElement> aObjUsergroup) {
     this.aObjUsergroup = aObjUsergroup;
     return this;
   }
@@ -128,7 +131,7 @@ public class UsergroupGetListV1ResponseMPayload {
     return aObjUsergroup;
   }
 
-  public void setaObjUsergroup(List<UsergroupListElement> aObjUsergroup) {
+  public void setaObjUsergroup(@javax.annotation.Nonnull List<UsergroupListElement> aObjUsergroup) {
     this.aObjUsergroup = aObjUsergroup;
   }
 

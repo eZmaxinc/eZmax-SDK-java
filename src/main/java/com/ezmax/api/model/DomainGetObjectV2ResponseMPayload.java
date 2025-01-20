@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/domain/{pkiDomainID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DomainGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_DOMAIN = "objDomain";
   @SerializedName(SERIALIZED_NAME_OBJ_DOMAIN)
+  @javax.annotation.Nonnull
   private DomainResponseCompound objDomain;
 
   public DomainGetObjectV2ResponseMPayload() {
   }
 
-  public DomainGetObjectV2ResponseMPayload objDomain(DomainResponseCompound objDomain) {
+  public DomainGetObjectV2ResponseMPayload objDomain(@javax.annotation.Nonnull DomainResponseCompound objDomain) {
     this.objDomain = objDomain;
     return this;
   }
@@ -72,7 +73,7 @@ public class DomainGetObjectV2ResponseMPayload {
     return objDomain;
   }
 
-  public void setObjDomain(DomainResponseCompound objDomain) {
+  public void setObjDomain(@javax.annotation.Nonnull DomainResponseCompound objDomain) {
     this.objDomain = objDomain;
   }
 

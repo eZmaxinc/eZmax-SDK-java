@@ -51,28 +51,32 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonResponseErrorSTemporaryFileUrl {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
+  @javax.annotation.Nonnull
   private String sErrorMessage;
 
   public static final String SERIALIZED_NAME_E_ERROR_CODE = "eErrorCode";
   @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
+  @javax.annotation.Nonnull
   private FieldEErrorCode eErrorCode;
 
   public static final String SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL = "a_sErrorMessagedetail";
   @SerializedName(SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL)
+  @javax.annotation.Nullable
   private List<String> aSErrorMessagedetail = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_S_TEMPORARY_FILE_URL = "sTemporaryFileUrl";
   @SerializedName(SERIALIZED_NAME_S_TEMPORARY_FILE_URL)
+  @javax.annotation.Nullable
   private String sTemporaryFileUrl;
 
   public CommonResponseErrorSTemporaryFileUrl() {
   }
 
-  public CommonResponseErrorSTemporaryFileUrl sErrorMessage(String sErrorMessage) {
+  public CommonResponseErrorSTemporaryFileUrl sErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
     return this;
   }
@@ -86,12 +90,12 @@ public class CommonResponseErrorSTemporaryFileUrl {
     return sErrorMessage;
   }
 
-  public void setsErrorMessage(String sErrorMessage) {
+  public void setsErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
   }
 
 
-  public CommonResponseErrorSTemporaryFileUrl eErrorCode(FieldEErrorCode eErrorCode) {
+  public CommonResponseErrorSTemporaryFileUrl eErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
     return this;
   }
@@ -105,12 +109,12 @@ public class CommonResponseErrorSTemporaryFileUrl {
     return eErrorCode;
   }
 
-  public void seteErrorCode(FieldEErrorCode eErrorCode) {
+  public void seteErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
   }
 
 
-  public CommonResponseErrorSTemporaryFileUrl aSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+  public CommonResponseErrorSTemporaryFileUrl aSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
     this.aSErrorMessagedetail = aSErrorMessagedetail;
     return this;
   }
@@ -132,12 +136,12 @@ public class CommonResponseErrorSTemporaryFileUrl {
     return aSErrorMessagedetail;
   }
 
-  public void setaSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+  public void setaSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
     this.aSErrorMessagedetail = aSErrorMessagedetail;
   }
 
 
-  public CommonResponseErrorSTemporaryFileUrl sTemporaryFileUrl(String sTemporaryFileUrl) {
+  public CommonResponseErrorSTemporaryFileUrl sTemporaryFileUrl(@javax.annotation.Nullable String sTemporaryFileUrl) {
     this.sTemporaryFileUrl = sTemporaryFileUrl;
     return this;
   }
@@ -151,7 +155,7 @@ public class CommonResponseErrorSTemporaryFileUrl {
     return sTemporaryFileUrl;
   }
 
-  public void setsTemporaryFileUrl(String sTemporaryFileUrl) {
+  public void setsTemporaryFileUrl(@javax.annotation.Nullable String sTemporaryFileUrl) {
     this.sTemporaryFileUrl = sTemporaryFileUrl;
   }
 

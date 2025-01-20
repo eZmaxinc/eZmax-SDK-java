@@ -49,52 +49,62 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession-&gt;User Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ActivesessionResponseCompoundUser {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_TIMEZONE_I_D = "fkiTimezoneID";
   @SerializedName(SERIALIZED_NAME_FKI_TIMEZONE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiTimezoneID;
 
   public static final String SERIALIZED_NAME_S_AVATAR_URL = "sAvatarUrl";
   @SerializedName(SERIALIZED_NAME_S_AVATAR_URL)
+  @javax.annotation.Nullable
   private String sAvatarUrl;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
+  @javax.annotation.Nonnull
   private String sUserFirstname;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
+  @javax.annotation.Nonnull
   private String sUserLastname;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  @javax.annotation.Nullable
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_E_USER_EZSIGNSENDREMINDERFREQUENCY = "eUserEzsignsendreminderfrequency";
   @SerializedName(SERIALIZED_NAME_E_USER_EZSIGNSENDREMINDERFREQUENCY)
+  @javax.annotation.Nonnull
   private FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency;
 
   public static final String SERIALIZED_NAME_I_USER_INTERFACECOLOR = "iUserInterfacecolor";
   @SerializedName(SERIALIZED_NAME_I_USER_INTERFACECOLOR)
+  @javax.annotation.Nonnull
   private Integer iUserInterfacecolor;
 
   public static final String SERIALIZED_NAME_B_USER_INTERFACEDARK = "bUserInterfacedark";
   @SerializedName(SERIALIZED_NAME_B_USER_INTERFACEDARK)
+  @javax.annotation.Nonnull
   private Boolean bUserInterfacedark;
 
   public static final String SERIALIZED_NAME_I_USER_LISTRESULT = "iUserListresult";
   @SerializedName(SERIALIZED_NAME_I_USER_LISTRESULT)
+  @javax.annotation.Nonnull
   private Integer iUserListresult;
 
   public ActivesessionResponseCompoundUser() {
   }
 
-  public ActivesessionResponseCompoundUser pkiUserID(Integer pkiUserID) {
+  public ActivesessionResponseCompoundUser pkiUserID(@javax.annotation.Nonnull Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -109,12 +119,12 @@ public class ActivesessionResponseCompoundUser {
     return pkiUserID;
   }
 
-  public void setPkiUserID(Integer pkiUserID) {
+  public void setPkiUserID(@javax.annotation.Nonnull Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 
 
-  public ActivesessionResponseCompoundUser fkiTimezoneID(Integer fkiTimezoneID) {
+  public ActivesessionResponseCompoundUser fkiTimezoneID(@javax.annotation.Nonnull Integer fkiTimezoneID) {
     this.fkiTimezoneID = fkiTimezoneID;
     return this;
   }
@@ -129,12 +139,12 @@ public class ActivesessionResponseCompoundUser {
     return fkiTimezoneID;
   }
 
-  public void setFkiTimezoneID(Integer fkiTimezoneID) {
+  public void setFkiTimezoneID(@javax.annotation.Nonnull Integer fkiTimezoneID) {
     this.fkiTimezoneID = fkiTimezoneID;
   }
 
 
-  public ActivesessionResponseCompoundUser sAvatarUrl(String sAvatarUrl) {
+  public ActivesessionResponseCompoundUser sAvatarUrl(@javax.annotation.Nullable String sAvatarUrl) {
     this.sAvatarUrl = sAvatarUrl;
     return this;
   }
@@ -148,12 +158,12 @@ public class ActivesessionResponseCompoundUser {
     return sAvatarUrl;
   }
 
-  public void setsAvatarUrl(String sAvatarUrl) {
+  public void setsAvatarUrl(@javax.annotation.Nullable String sAvatarUrl) {
     this.sAvatarUrl = sAvatarUrl;
   }
 
 
-  public ActivesessionResponseCompoundUser sUserFirstname(String sUserFirstname) {
+  public ActivesessionResponseCompoundUser sUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -167,12 +177,12 @@ public class ActivesessionResponseCompoundUser {
     return sUserFirstname;
   }
 
-  public void setsUserFirstname(String sUserFirstname) {
+  public void setsUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
-  public ActivesessionResponseCompoundUser sUserLastname(String sUserLastname) {
+  public ActivesessionResponseCompoundUser sUserLastname(@javax.annotation.Nonnull String sUserLastname) {
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -186,12 +196,12 @@ public class ActivesessionResponseCompoundUser {
     return sUserLastname;
   }
 
-  public void setsUserLastname(String sUserLastname) {
+  public void setsUserLastname(@javax.annotation.Nonnull String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
-  public ActivesessionResponseCompoundUser sEmailAddress(String sEmailAddress) {
+  public ActivesessionResponseCompoundUser sEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -205,12 +215,12 @@ public class ActivesessionResponseCompoundUser {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(String sEmailAddress) {
+  public void setsEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public ActivesessionResponseCompoundUser eUserEzsignsendreminderfrequency(FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency) {
+  public ActivesessionResponseCompoundUser eUserEzsignsendreminderfrequency(@javax.annotation.Nonnull FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency) {
     this.eUserEzsignsendreminderfrequency = eUserEzsignsendreminderfrequency;
     return this;
   }
@@ -224,12 +234,12 @@ public class ActivesessionResponseCompoundUser {
     return eUserEzsignsendreminderfrequency;
   }
 
-  public void seteUserEzsignsendreminderfrequency(FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency) {
+  public void seteUserEzsignsendreminderfrequency(@javax.annotation.Nonnull FieldEUserEzsignsendreminderfrequency eUserEzsignsendreminderfrequency) {
     this.eUserEzsignsendreminderfrequency = eUserEzsignsendreminderfrequency;
   }
 
 
-  public ActivesessionResponseCompoundUser iUserInterfacecolor(Integer iUserInterfacecolor) {
+  public ActivesessionResponseCompoundUser iUserInterfacecolor(@javax.annotation.Nonnull Integer iUserInterfacecolor) {
     this.iUserInterfacecolor = iUserInterfacecolor;
     return this;
   }
@@ -244,12 +254,12 @@ public class ActivesessionResponseCompoundUser {
     return iUserInterfacecolor;
   }
 
-  public void setiUserInterfacecolor(Integer iUserInterfacecolor) {
+  public void setiUserInterfacecolor(@javax.annotation.Nonnull Integer iUserInterfacecolor) {
     this.iUserInterfacecolor = iUserInterfacecolor;
   }
 
 
-  public ActivesessionResponseCompoundUser bUserInterfacedark(Boolean bUserInterfacedark) {
+  public ActivesessionResponseCompoundUser bUserInterfacedark(@javax.annotation.Nonnull Boolean bUserInterfacedark) {
     this.bUserInterfacedark = bUserInterfacedark;
     return this;
   }
@@ -263,12 +273,12 @@ public class ActivesessionResponseCompoundUser {
     return bUserInterfacedark;
   }
 
-  public void setbUserInterfacedark(Boolean bUserInterfacedark) {
+  public void setbUserInterfacedark(@javax.annotation.Nonnull Boolean bUserInterfacedark) {
     this.bUserInterfacedark = bUserInterfacedark;
   }
 
 
-  public ActivesessionResponseCompoundUser iUserListresult(Integer iUserListresult) {
+  public ActivesessionResponseCompoundUser iUserListresult(@javax.annotation.Nonnull Integer iUserListresult) {
     this.iUserListresult = iUserListresult;
     return this;
   }
@@ -284,7 +294,7 @@ public class ActivesessionResponseCompoundUser {
     return iUserListresult;
   }
 
-  public void setiUserListresult(Integer iUserListresult) {
+  public void setiUserListresult(@javax.annotation.Nonnull Integer iUserListresult) {
     this.iUserListresult = iUserListresult;
   }
 

@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplateformfieldgroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplateformfieldgroupCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELDGROUP = "a_objEzsigntemplateformfieldgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEFORMFIELDGROUP)
+  @javax.annotation.Nonnull
   private List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup = new ArrayList<>();
 
   public EzsigntemplateformfieldgroupCreateObjectV1Request() {
   }
 
-  public EzsigntemplateformfieldgroupCreateObjectV1Request aObjEzsigntemplateformfieldgroup(List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup) {
+  public EzsigntemplateformfieldgroupCreateObjectV1Request aObjEzsigntemplateformfieldgroup(@javax.annotation.Nonnull List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup) {
     this.aObjEzsigntemplateformfieldgroup = aObjEzsigntemplateformfieldgroup;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzsigntemplateformfieldgroupCreateObjectV1Request {
     return aObjEzsigntemplateformfieldgroup;
   }
 
-  public void setaObjEzsigntemplateformfieldgroup(List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup) {
+  public void setaObjEzsigntemplateformfieldgroup(@javax.annotation.Nonnull List<EzsigntemplateformfieldgroupRequestCompound> aObjEzsigntemplateformfieldgroup) {
     this.aObjEzsigntemplateformfieldgroup = aObjEzsigntemplateformfieldgroup;
   }
 

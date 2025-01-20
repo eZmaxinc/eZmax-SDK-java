@@ -49,40 +49,47 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfoldersignerassociation Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfoldersignerassociationRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "pkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzsignfoldersignerassociationID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNERGROUP_I_D = "fkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNERGROUP_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsignsignergroupID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_RECEIVECOPY = "bEzsignfoldersignerassociationReceivecopy";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDERSIGNERASSOCIATION_RECEIVECOPY)
+  @javax.annotation.Nullable
   private Boolean bEzsignfoldersignerassociationReceivecopy;
 
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE = "tEzsignfoldersignerassociationMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDERSIGNERASSOCIATION_MESSAGE)
+  @javax.annotation.Nullable
   private String tEzsignfoldersignerassociationMessage;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNER = "objEzsignsigner";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNER)
+  @javax.annotation.Nullable
   private EzsignsignerRequestCompound objEzsignsigner;
 
   public EzsignfoldersignerassociationRequestCompound() {
   }
 
-  public EzsignfoldersignerassociationRequestCompound pkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
+  public EzsignfoldersignerassociationRequestCompound pkiEzsignfoldersignerassociationID(@javax.annotation.Nullable Integer pkiEzsignfoldersignerassociationID) {
     this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -97,12 +104,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return pkiEzsignfoldersignerassociationID;
   }
 
-  public void setPkiEzsignfoldersignerassociationID(Integer pkiEzsignfoldersignerassociationID) {
+  public void setPkiEzsignfoldersignerassociationID(@javax.annotation.Nullable Integer pkiEzsignfoldersignerassociationID) {
     this.pkiEzsignfoldersignerassociationID = pkiEzsignfoldersignerassociationID;
   }
 
 
-  public EzsignfoldersignerassociationRequestCompound fkiUserID(Integer fkiUserID) {
+  public EzsignfoldersignerassociationRequestCompound fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -117,12 +124,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public EzsignfoldersignerassociationRequestCompound fkiEzsignsignergroupID(Integer fkiEzsignsignergroupID) {
+  public EzsignfoldersignerassociationRequestCompound fkiEzsignsignergroupID(@javax.annotation.Nullable Integer fkiEzsignsignergroupID) {
     this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
     return this;
   }
@@ -138,12 +145,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return fkiEzsignsignergroupID;
   }
 
-  public void setFkiEzsignsignergroupID(Integer fkiEzsignsignergroupID) {
+  public void setFkiEzsignsignergroupID(@javax.annotation.Nullable Integer fkiEzsignsignergroupID) {
     this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
   }
 
 
-  public EzsignfoldersignerassociationRequestCompound fkiEzsignfolderID(Integer fkiEzsignfolderID) {
+  public EzsignfoldersignerassociationRequestCompound fkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -158,12 +165,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return fkiEzsignfolderID;
   }
 
-  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
+  public void setFkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
-  public EzsignfoldersignerassociationRequestCompound bEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
+  public EzsignfoldersignerassociationRequestCompound bEzsignfoldersignerassociationReceivecopy(@javax.annotation.Nullable Boolean bEzsignfoldersignerassociationReceivecopy) {
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
     return this;
   }
@@ -177,12 +184,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return bEzsignfoldersignerassociationReceivecopy;
   }
 
-  public void setbEzsignfoldersignerassociationReceivecopy(Boolean bEzsignfoldersignerassociationReceivecopy) {
+  public void setbEzsignfoldersignerassociationReceivecopy(@javax.annotation.Nullable Boolean bEzsignfoldersignerassociationReceivecopy) {
     this.bEzsignfoldersignerassociationReceivecopy = bEzsignfoldersignerassociationReceivecopy;
   }
 
 
-  public EzsignfoldersignerassociationRequestCompound tEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
+  public EzsignfoldersignerassociationRequestCompound tEzsignfoldersignerassociationMessage(@javax.annotation.Nullable String tEzsignfoldersignerassociationMessage) {
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
     return this;
   }
@@ -196,12 +203,12 @@ public class EzsignfoldersignerassociationRequestCompound {
     return tEzsignfoldersignerassociationMessage;
   }
 
-  public void settEzsignfoldersignerassociationMessage(String tEzsignfoldersignerassociationMessage) {
+  public void settEzsignfoldersignerassociationMessage(@javax.annotation.Nullable String tEzsignfoldersignerassociationMessage) {
     this.tEzsignfoldersignerassociationMessage = tEzsignfoldersignerassociationMessage;
   }
 
 
-  public EzsignfoldersignerassociationRequestCompound objEzsignsigner(EzsignsignerRequestCompound objEzsignsigner) {
+  public EzsignfoldersignerassociationRequestCompound objEzsignsigner(@javax.annotation.Nullable EzsignsignerRequestCompound objEzsignsigner) {
     this.objEzsignsigner = objEzsignsigner;
     return this;
   }
@@ -215,7 +222,7 @@ public class EzsignfoldersignerassociationRequestCompound {
     return objEzsignsigner;
   }
 
-  public void setObjEzsignsigner(EzsignsignerRequestCompound objEzsignsigner) {
+  public void setObjEzsignsigner(@javax.annotation.Nullable EzsignsignerRequestCompound objEzsignsigner) {
     this.objEzsignsigner = objEzsignsigner;
   }
 

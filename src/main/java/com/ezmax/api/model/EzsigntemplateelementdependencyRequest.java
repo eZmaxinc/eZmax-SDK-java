@@ -50,48 +50,57 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateelementdependency Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplateelementdependencyRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEELEMENTDEPENDENCY_I_D = "pkiEzsigntemplateelementdependencyID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEELEMENTDEPENDENCY_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzsigntemplateelementdependencyID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEFORMFIELD_I_D_VALIDATION = "fkiEzsigntemplateformfieldIDValidation";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEFORMFIELD_I_D_VALIDATION)
+  @javax.annotation.Nullable
   private Integer fkiEzsigntemplateformfieldIDValidation;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D_VALIDATION = "fkiEzsigntemplateformfieldgroupIDValidation";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D_VALIDATION)
+  @javax.annotation.Nullable
   private Integer fkiEzsigntemplateformfieldgroupIDValidation;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEELEMENTDEPENDENCY_EZSIGNTEMPLATEFORMFIELDGROUPLABEL = "sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEELEMENTDEPENDENCY_EZSIGNTEMPLATEFORMFIELDGROUPLABEL)
+  @javax.annotation.Nullable
   private String sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEELEMENTDEPENDENCY_EZSIGNTEMPLATEFORMFIELDLABEL = "sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEELEMENTDEPENDENCY_EZSIGNTEMPLATEFORMFIELDLABEL)
+  @javax.annotation.Nullable
   private String sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEELEMENTDEPENDENCY_VALIDATION = "eEzsigntemplateelementdependencyValidation";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEELEMENTDEPENDENCY_VALIDATION)
+  @javax.annotation.Nonnull
   private FieldEEzsigntemplateelementdependencyValidation eEzsigntemplateelementdependencyValidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEELEMENTDEPENDENCY_SELECTED = "bEzsigntemplateelementdependencySelected";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEELEMENTDEPENDENCY_SELECTED)
+  @javax.annotation.Nullable
   private Boolean bEzsigntemplateelementdependencySelected;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEELEMENTDEPENDENCY_OPERATOR = "eEzsigntemplateelementdependencyOperator";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEELEMENTDEPENDENCY_OPERATOR)
+  @javax.annotation.Nullable
   private FieldEEzsigntemplateelementdependencyOperator eEzsigntemplateelementdependencyOperator;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEELEMENTDEPENDENCY_VALUE = "sEzsigntemplateelementdependencyValue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEELEMENTDEPENDENCY_VALUE)
+  @javax.annotation.Nullable
   private String sEzsigntemplateelementdependencyValue;
 
   public EzsigntemplateelementdependencyRequest() {
   }
 
-  public EzsigntemplateelementdependencyRequest pkiEzsigntemplateelementdependencyID(Integer pkiEzsigntemplateelementdependencyID) {
+  public EzsigntemplateelementdependencyRequest pkiEzsigntemplateelementdependencyID(@javax.annotation.Nullable Integer pkiEzsigntemplateelementdependencyID) {
     this.pkiEzsigntemplateelementdependencyID = pkiEzsigntemplateelementdependencyID;
     return this;
   }
@@ -107,12 +116,12 @@ public class EzsigntemplateelementdependencyRequest {
     return pkiEzsigntemplateelementdependencyID;
   }
 
-  public void setPkiEzsigntemplateelementdependencyID(Integer pkiEzsigntemplateelementdependencyID) {
+  public void setPkiEzsigntemplateelementdependencyID(@javax.annotation.Nullable Integer pkiEzsigntemplateelementdependencyID) {
     this.pkiEzsigntemplateelementdependencyID = pkiEzsigntemplateelementdependencyID;
   }
 
 
-  public EzsigntemplateelementdependencyRequest fkiEzsigntemplateformfieldIDValidation(Integer fkiEzsigntemplateformfieldIDValidation) {
+  public EzsigntemplateelementdependencyRequest fkiEzsigntemplateformfieldIDValidation(@javax.annotation.Nullable Integer fkiEzsigntemplateformfieldIDValidation) {
     this.fkiEzsigntemplateformfieldIDValidation = fkiEzsigntemplateformfieldIDValidation;
     return this;
   }
@@ -127,12 +136,12 @@ public class EzsigntemplateelementdependencyRequest {
     return fkiEzsigntemplateformfieldIDValidation;
   }
 
-  public void setFkiEzsigntemplateformfieldIDValidation(Integer fkiEzsigntemplateformfieldIDValidation) {
+  public void setFkiEzsigntemplateformfieldIDValidation(@javax.annotation.Nullable Integer fkiEzsigntemplateformfieldIDValidation) {
     this.fkiEzsigntemplateformfieldIDValidation = fkiEzsigntemplateformfieldIDValidation;
   }
 
 
-  public EzsigntemplateelementdependencyRequest fkiEzsigntemplateformfieldgroupIDValidation(Integer fkiEzsigntemplateformfieldgroupIDValidation) {
+  public EzsigntemplateelementdependencyRequest fkiEzsigntemplateformfieldgroupIDValidation(@javax.annotation.Nullable Integer fkiEzsigntemplateformfieldgroupIDValidation) {
     this.fkiEzsigntemplateformfieldgroupIDValidation = fkiEzsigntemplateformfieldgroupIDValidation;
     return this;
   }
@@ -147,12 +156,12 @@ public class EzsigntemplateelementdependencyRequest {
     return fkiEzsigntemplateformfieldgroupIDValidation;
   }
 
-  public void setFkiEzsigntemplateformfieldgroupIDValidation(Integer fkiEzsigntemplateformfieldgroupIDValidation) {
+  public void setFkiEzsigntemplateformfieldgroupIDValidation(@javax.annotation.Nullable Integer fkiEzsigntemplateformfieldgroupIDValidation) {
     this.fkiEzsigntemplateformfieldgroupIDValidation = fkiEzsigntemplateformfieldgroupIDValidation;
   }
 
 
-  public EzsigntemplateelementdependencyRequest sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel(String sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel) {
+  public EzsigntemplateelementdependencyRequest sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel(@javax.annotation.Nullable String sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel) {
     this.sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel = sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel;
     return this;
   }
@@ -166,12 +175,12 @@ public class EzsigntemplateelementdependencyRequest {
     return sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel;
   }
 
-  public void setsEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel(String sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel) {
+  public void setsEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel(@javax.annotation.Nullable String sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel) {
     this.sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel = sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel;
   }
 
 
-  public EzsigntemplateelementdependencyRequest sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel(String sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel) {
+  public EzsigntemplateelementdependencyRequest sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel(@javax.annotation.Nullable String sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel) {
     this.sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel = sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel;
     return this;
   }
@@ -185,12 +194,12 @@ public class EzsigntemplateelementdependencyRequest {
     return sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel;
   }
 
-  public void setsEzsigntemplateelementdependencyEzsigntemplateformfieldlabel(String sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel) {
+  public void setsEzsigntemplateelementdependencyEzsigntemplateformfieldlabel(@javax.annotation.Nullable String sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel) {
     this.sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel = sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel;
   }
 
 
-  public EzsigntemplateelementdependencyRequest eEzsigntemplateelementdependencyValidation(FieldEEzsigntemplateelementdependencyValidation eEzsigntemplateelementdependencyValidation) {
+  public EzsigntemplateelementdependencyRequest eEzsigntemplateelementdependencyValidation(@javax.annotation.Nonnull FieldEEzsigntemplateelementdependencyValidation eEzsigntemplateelementdependencyValidation) {
     this.eEzsigntemplateelementdependencyValidation = eEzsigntemplateelementdependencyValidation;
     return this;
   }
@@ -204,12 +213,12 @@ public class EzsigntemplateelementdependencyRequest {
     return eEzsigntemplateelementdependencyValidation;
   }
 
-  public void seteEzsigntemplateelementdependencyValidation(FieldEEzsigntemplateelementdependencyValidation eEzsigntemplateelementdependencyValidation) {
+  public void seteEzsigntemplateelementdependencyValidation(@javax.annotation.Nonnull FieldEEzsigntemplateelementdependencyValidation eEzsigntemplateelementdependencyValidation) {
     this.eEzsigntemplateelementdependencyValidation = eEzsigntemplateelementdependencyValidation;
   }
 
 
-  public EzsigntemplateelementdependencyRequest bEzsigntemplateelementdependencySelected(Boolean bEzsigntemplateelementdependencySelected) {
+  public EzsigntemplateelementdependencyRequest bEzsigntemplateelementdependencySelected(@javax.annotation.Nullable Boolean bEzsigntemplateelementdependencySelected) {
     this.bEzsigntemplateelementdependencySelected = bEzsigntemplateelementdependencySelected;
     return this;
   }
@@ -223,12 +232,12 @@ public class EzsigntemplateelementdependencyRequest {
     return bEzsigntemplateelementdependencySelected;
   }
 
-  public void setbEzsigntemplateelementdependencySelected(Boolean bEzsigntemplateelementdependencySelected) {
+  public void setbEzsigntemplateelementdependencySelected(@javax.annotation.Nullable Boolean bEzsigntemplateelementdependencySelected) {
     this.bEzsigntemplateelementdependencySelected = bEzsigntemplateelementdependencySelected;
   }
 
 
-  public EzsigntemplateelementdependencyRequest eEzsigntemplateelementdependencyOperator(FieldEEzsigntemplateelementdependencyOperator eEzsigntemplateelementdependencyOperator) {
+  public EzsigntemplateelementdependencyRequest eEzsigntemplateelementdependencyOperator(@javax.annotation.Nullable FieldEEzsigntemplateelementdependencyOperator eEzsigntemplateelementdependencyOperator) {
     this.eEzsigntemplateelementdependencyOperator = eEzsigntemplateelementdependencyOperator;
     return this;
   }
@@ -242,12 +251,12 @@ public class EzsigntemplateelementdependencyRequest {
     return eEzsigntemplateelementdependencyOperator;
   }
 
-  public void seteEzsigntemplateelementdependencyOperator(FieldEEzsigntemplateelementdependencyOperator eEzsigntemplateelementdependencyOperator) {
+  public void seteEzsigntemplateelementdependencyOperator(@javax.annotation.Nullable FieldEEzsigntemplateelementdependencyOperator eEzsigntemplateelementdependencyOperator) {
     this.eEzsigntemplateelementdependencyOperator = eEzsigntemplateelementdependencyOperator;
   }
 
 
-  public EzsigntemplateelementdependencyRequest sEzsigntemplateelementdependencyValue(String sEzsigntemplateelementdependencyValue) {
+  public EzsigntemplateelementdependencyRequest sEzsigntemplateelementdependencyValue(@javax.annotation.Nullable String sEzsigntemplateelementdependencyValue) {
     this.sEzsigntemplateelementdependencyValue = sEzsigntemplateelementdependencyValue;
     return this;
   }
@@ -261,7 +270,7 @@ public class EzsigntemplateelementdependencyRequest {
     return sEzsigntemplateelementdependencyValue;
   }
 
-  public void setsEzsigntemplateelementdependencyValue(String sEzsigntemplateelementdependencyValue) {
+  public void setsEzsigntemplateelementdependencyValue(@javax.annotation.Nullable String sEzsigntemplateelementdependencyValue) {
     this.sEzsigntemplateelementdependencyValue = sEzsigntemplateelementdependencyValue;
   }
 

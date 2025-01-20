@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CustomEzsignformfielderrorResponse;
 import com.ezmax.api.model.FieldEErrorCode;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -52,28 +51,32 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonResponseErrorEzsignformValidation {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
+  @javax.annotation.Nonnull
   private String sErrorMessage;
 
   public static final String SERIALIZED_NAME_E_ERROR_CODE = "eErrorCode";
   @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
+  @javax.annotation.Nonnull
   private FieldEErrorCode eErrorCode;
 
   public static final String SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL = "a_sErrorMessagedetail";
   @SerializedName(SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL)
+  @javax.annotation.Nullable
   private List<String> aSErrorMessagedetail = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDERROR = "a_objEzsignformfielderror";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDERROR)
+  @javax.annotation.Nonnull
   private List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror = new ArrayList<>();
 
   public CommonResponseErrorEzsignformValidation() {
   }
 
-  public CommonResponseErrorEzsignformValidation sErrorMessage(String sErrorMessage) {
+  public CommonResponseErrorEzsignformValidation sErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
     return this;
   }
@@ -87,12 +90,12 @@ public class CommonResponseErrorEzsignformValidation {
     return sErrorMessage;
   }
 
-  public void setsErrorMessage(String sErrorMessage) {
+  public void setsErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
   }
 
 
-  public CommonResponseErrorEzsignformValidation eErrorCode(FieldEErrorCode eErrorCode) {
+  public CommonResponseErrorEzsignformValidation eErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
     return this;
   }
@@ -106,12 +109,12 @@ public class CommonResponseErrorEzsignformValidation {
     return eErrorCode;
   }
 
-  public void seteErrorCode(FieldEErrorCode eErrorCode) {
+  public void seteErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
   }
 
 
-  public CommonResponseErrorEzsignformValidation aSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+  public CommonResponseErrorEzsignformValidation aSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
     this.aSErrorMessagedetail = aSErrorMessagedetail;
     return this;
   }
@@ -133,17 +136,17 @@ public class CommonResponseErrorEzsignformValidation {
     return aSErrorMessagedetail;
   }
 
-  public void setaSErrorMessagedetail(List<String> aSErrorMessagedetail) {
+  public void setaSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
     this.aSErrorMessagedetail = aSErrorMessagedetail;
   }
 
 
-  public CommonResponseErrorEzsignformValidation aObjEzsignformfielderror(List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror) {
+  public CommonResponseErrorEzsignformValidation aObjEzsignformfielderror(@javax.annotation.Nonnull List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror) {
     this.aObjEzsignformfielderror = aObjEzsignformfielderror;
     return this;
   }
 
-  public CommonResponseErrorEzsignformValidation addAObjEzsignformfielderrorItem(CustomEzsignformfielderrorResponse aObjEzsignformfielderrorItem) {
+  public CommonResponseErrorEzsignformValidation addAObjEzsignformfielderrorItem(Object aObjEzsignformfielderrorItem) {
     if (this.aObjEzsignformfielderror == null) {
       this.aObjEzsignformfielderror = new ArrayList<>();
     }
@@ -160,7 +163,7 @@ public class CommonResponseErrorEzsignformValidation {
     return aObjEzsignformfielderror;
   }
 
-  public void setaObjEzsignformfielderror(List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror) {
+  public void setaObjEzsignformfielderror(@javax.annotation.Nonnull List<CustomEzsignformfielderrorResponse> aObjEzsignformfielderror) {
     this.aObjEzsignformfielderror = aObjEzsignformfielderror;
   }
 
@@ -273,7 +276,7 @@ public class CommonResponseErrorEzsignformValidation {
       JsonArray jsonArrayaObjEzsignformfielderror = jsonObj.getAsJsonArray("a_objEzsignformfielderror");
       // validate the required field `a_objEzsignformfielderror` (array)
       for (int i = 0; i < jsonArrayaObjEzsignformfielderror.size(); i++) {
-        CustomEzsignformfielderrorResponse.validateJsonElement(jsonArrayaObjEzsignformfielderror.get(i));
+        Object.validateJsonElement(jsonArrayaObjEzsignformfielderror.get(i));
       };
   }
 

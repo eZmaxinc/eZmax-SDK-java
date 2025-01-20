@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getCommunicationrecipients
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ElectronicfundstransferGetCommunicationrecipientsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONRECIPIENTSGROUP = "a_objCommunicationrecipientsgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONRECIPIENTSGROUP)
+  @javax.annotation.Nonnull
   private List<CustomCommunicationrecipientsgroupResponse> aObjCommunicationrecipientsgroup = new ArrayList<>();
 
   public ElectronicfundstransferGetCommunicationrecipientsV1ResponseMPayload() {
   }
 
-  public ElectronicfundstransferGetCommunicationrecipientsV1ResponseMPayload aObjCommunicationrecipientsgroup(List<CustomCommunicationrecipientsgroupResponse> aObjCommunicationrecipientsgroup) {
+  public ElectronicfundstransferGetCommunicationrecipientsV1ResponseMPayload aObjCommunicationrecipientsgroup(@javax.annotation.Nonnull List<CustomCommunicationrecipientsgroupResponse> aObjCommunicationrecipientsgroup) {
     this.aObjCommunicationrecipientsgroup = aObjCommunicationrecipientsgroup;
     return this;
   }
@@ -82,7 +83,7 @@ public class ElectronicfundstransferGetCommunicationrecipientsV1ResponseMPayload
     return aObjCommunicationrecipientsgroup;
   }
 
-  public void setaObjCommunicationrecipientsgroup(List<CustomCommunicationrecipientsgroupResponse> aObjCommunicationrecipientsgroup) {
+  public void setaObjCommunicationrecipientsgroup(@javax.annotation.Nonnull List<CustomCommunicationrecipientsgroupResponse> aObjCommunicationrecipientsgroup) {
     this.aObjCommunicationrecipientsgroup = aObjCommunicationrecipientsgroup;
   }
 

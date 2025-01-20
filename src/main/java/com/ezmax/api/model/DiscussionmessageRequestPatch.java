@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * A Discussionmessage Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DiscussionmessageRequestPatch {
   public static final String SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D_ACTIONREQUIRED = "fkiDiscussionmembershipIDActionrequired";
   @SerializedName(SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D_ACTIONREQUIRED)
+  @javax.annotation.Nullable
   private Integer fkiDiscussionmembershipIDActionrequired;
 
   public static final String SERIALIZED_NAME_T_DISCUSSIONMESSAGE_CONTENT = "tDiscussionmessageContent";
   @SerializedName(SERIALIZED_NAME_T_DISCUSSIONMESSAGE_CONTENT)
+  @javax.annotation.Nullable
   private String tDiscussionmessageContent;
 
   public DiscussionmessageRequestPatch() {
   }
 
-  public DiscussionmessageRequestPatch fkiDiscussionmembershipIDActionrequired(Integer fkiDiscussionmembershipIDActionrequired) {
+  public DiscussionmessageRequestPatch fkiDiscussionmembershipIDActionrequired(@javax.annotation.Nullable Integer fkiDiscussionmembershipIDActionrequired) {
     this.fkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
     return this;
   }
@@ -77,12 +79,12 @@ public class DiscussionmessageRequestPatch {
     return fkiDiscussionmembershipIDActionrequired;
   }
 
-  public void setFkiDiscussionmembershipIDActionrequired(Integer fkiDiscussionmembershipIDActionrequired) {
+  public void setFkiDiscussionmembershipIDActionrequired(@javax.annotation.Nullable Integer fkiDiscussionmembershipIDActionrequired) {
     this.fkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
   }
 
 
-  public DiscussionmessageRequestPatch tDiscussionmessageContent(String tDiscussionmessageContent) {
+  public DiscussionmessageRequestPatch tDiscussionmessageContent(@javax.annotation.Nullable String tDiscussionmessageContent) {
     this.tDiscussionmessageContent = tDiscussionmessageContent;
     return this;
   }
@@ -96,7 +98,7 @@ public class DiscussionmessageRequestPatch {
     return tDiscussionmessageContent;
   }
 
-  public void settDiscussionmessageContent(String tDiscussionmessageContent) {
+  public void settDiscussionmessageContent(@javax.annotation.Nullable String tDiscussionmessageContent) {
     this.tDiscussionmessageContent = tDiscussionmessageContent;
   }
 

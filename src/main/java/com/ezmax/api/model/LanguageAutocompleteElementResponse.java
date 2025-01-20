@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Language AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class LanguageAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_LANGUAGE_I_D = "pkiLanguageID";
   @SerializedName(SERIALIZED_NAME_PKI_LANGUAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_LANGUAGE_NAME_X = "sLanguageNameX";
   @SerializedName(SERIALIZED_NAME_S_LANGUAGE_NAME_X)
+  @javax.annotation.Nonnull
   private String sLanguageNameX;
 
   public static final String SERIALIZED_NAME_B_LANGUAGE_ISACTIVE = "bLanguageIsactive";
   @SerializedName(SERIALIZED_NAME_B_LANGUAGE_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bLanguageIsactive;
 
   public LanguageAutocompleteElementResponse() {
   }
 
-  public LanguageAutocompleteElementResponse pkiLanguageID(Integer pkiLanguageID) {
+  public LanguageAutocompleteElementResponse pkiLanguageID(@javax.annotation.Nonnull Integer pkiLanguageID) {
     this.pkiLanguageID = pkiLanguageID;
     return this;
   }
@@ -81,12 +84,12 @@ public class LanguageAutocompleteElementResponse {
     return pkiLanguageID;
   }
 
-  public void setPkiLanguageID(Integer pkiLanguageID) {
+  public void setPkiLanguageID(@javax.annotation.Nonnull Integer pkiLanguageID) {
     this.pkiLanguageID = pkiLanguageID;
   }
 
 
-  public LanguageAutocompleteElementResponse sLanguageNameX(String sLanguageNameX) {
+  public LanguageAutocompleteElementResponse sLanguageNameX(@javax.annotation.Nonnull String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
     return this;
   }
@@ -100,12 +103,12 @@ public class LanguageAutocompleteElementResponse {
     return sLanguageNameX;
   }
 
-  public void setsLanguageNameX(String sLanguageNameX) {
+  public void setsLanguageNameX(@javax.annotation.Nonnull String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
   }
 
 
-  public LanguageAutocompleteElementResponse bLanguageIsactive(Boolean bLanguageIsactive) {
+  public LanguageAutocompleteElementResponse bLanguageIsactive(@javax.annotation.Nonnull Boolean bLanguageIsactive) {
     this.bLanguageIsactive = bLanguageIsactive;
     return this;
   }
@@ -119,7 +122,7 @@ public class LanguageAutocompleteElementResponse {
     return bLanguageIsactive;
   }
 
-  public void setbLanguageIsactive(Boolean bLanguageIsactive) {
+  public void setbLanguageIsactive(@javax.annotation.Nonnull Boolean bLanguageIsactive) {
     this.bLanguageIsactive = bLanguageIsactive;
   }
 

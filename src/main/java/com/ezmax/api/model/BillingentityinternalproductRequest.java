@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternalproduct Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class BillingentityinternalproductRequest {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNALPRODUCT_I_D = "pkiBillingentityinternalproductID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNALPRODUCT_I_D)
+  @javax.annotation.Nullable
   private Integer pkiBillingentityinternalproductID;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D = "fkiEzmaxproductID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzmaxproductID;
 
   public static final String SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D = "fkiBillingentityexternalID";
   @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiBillingentityexternalID;
 
   public BillingentityinternalproductRequest() {
   }
 
-  public BillingentityinternalproductRequest pkiBillingentityinternalproductID(Integer pkiBillingentityinternalproductID) {
+  public BillingentityinternalproductRequest pkiBillingentityinternalproductID(@javax.annotation.Nullable Integer pkiBillingentityinternalproductID) {
     this.pkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
     return this;
   }
@@ -81,12 +84,12 @@ public class BillingentityinternalproductRequest {
     return pkiBillingentityinternalproductID;
   }
 
-  public void setPkiBillingentityinternalproductID(Integer pkiBillingentityinternalproductID) {
+  public void setPkiBillingentityinternalproductID(@javax.annotation.Nullable Integer pkiBillingentityinternalproductID) {
     this.pkiBillingentityinternalproductID = pkiBillingentityinternalproductID;
   }
 
 
-  public BillingentityinternalproductRequest fkiEzmaxproductID(Integer fkiEzmaxproductID) {
+  public BillingentityinternalproductRequest fkiEzmaxproductID(@javax.annotation.Nonnull Integer fkiEzmaxproductID) {
     this.fkiEzmaxproductID = fkiEzmaxproductID;
     return this;
   }
@@ -101,12 +104,12 @@ public class BillingentityinternalproductRequest {
     return fkiEzmaxproductID;
   }
 
-  public void setFkiEzmaxproductID(Integer fkiEzmaxproductID) {
+  public void setFkiEzmaxproductID(@javax.annotation.Nonnull Integer fkiEzmaxproductID) {
     this.fkiEzmaxproductID = fkiEzmaxproductID;
   }
 
 
-  public BillingentityinternalproductRequest fkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
+  public BillingentityinternalproductRequest fkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
     this.fkiBillingentityexternalID = fkiBillingentityexternalID;
     return this;
   }
@@ -121,7 +124,7 @@ public class BillingentityinternalproductRequest {
     return fkiBillingentityexternalID;
   }
 
-  public void setFkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
+  public void setFkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
     this.fkiBillingentityexternalID = fkiBillingentityexternalID;
   }
 

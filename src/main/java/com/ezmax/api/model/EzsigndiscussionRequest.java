@@ -49,36 +49,42 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndiscussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndiscussionRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D = "pkiEzsigndiscussionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDISCUSSION_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzsigndiscussionID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_PAGENUMBER = "iEzsigndiscussionPagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_PAGENUMBER)
+  @javax.annotation.Nonnull
   private Integer iEzsigndiscussionPagenumber;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_X = "iEzsigndiscussionX";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_X)
+  @javax.annotation.Nonnull
   private Integer iEzsigndiscussionX;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDISCUSSION_Y = "iEzsigndiscussionY";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDISCUSSION_Y)
+  @javax.annotation.Nonnull
   private Integer iEzsigndiscussionY;
 
   public static final String SERIALIZED_NAME_OBJ_DISCUSSION = "objDiscussion";
   @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSION)
+  @javax.annotation.Nonnull
   private DiscussionRequest objDiscussion;
 
   public EzsigndiscussionRequest() {
   }
 
-  public EzsigndiscussionRequest pkiEzsigndiscussionID(Integer pkiEzsigndiscussionID) {
+  public EzsigndiscussionRequest pkiEzsigndiscussionID(@javax.annotation.Nullable Integer pkiEzsigndiscussionID) {
     this.pkiEzsigndiscussionID = pkiEzsigndiscussionID;
     return this;
   }
@@ -94,12 +100,12 @@ public class EzsigndiscussionRequest {
     return pkiEzsigndiscussionID;
   }
 
-  public void setPkiEzsigndiscussionID(Integer pkiEzsigndiscussionID) {
+  public void setPkiEzsigndiscussionID(@javax.annotation.Nullable Integer pkiEzsigndiscussionID) {
     this.pkiEzsigndiscussionID = pkiEzsigndiscussionID;
   }
 
 
-  public EzsigndiscussionRequest fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+  public EzsigndiscussionRequest fkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
     return this;
   }
@@ -114,12 +120,12 @@ public class EzsigndiscussionRequest {
     return fkiEzsigndocumentID;
   }
 
-  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+  public void setFkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
 
-  public EzsigndiscussionRequest iEzsigndiscussionPagenumber(Integer iEzsigndiscussionPagenumber) {
+  public EzsigndiscussionRequest iEzsigndiscussionPagenumber(@javax.annotation.Nonnull Integer iEzsigndiscussionPagenumber) {
     this.iEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
     return this;
   }
@@ -133,12 +139,12 @@ public class EzsigndiscussionRequest {
     return iEzsigndiscussionPagenumber;
   }
 
-  public void setiEzsigndiscussionPagenumber(Integer iEzsigndiscussionPagenumber) {
+  public void setiEzsigndiscussionPagenumber(@javax.annotation.Nonnull Integer iEzsigndiscussionPagenumber) {
     this.iEzsigndiscussionPagenumber = iEzsigndiscussionPagenumber;
   }
 
 
-  public EzsigndiscussionRequest iEzsigndiscussionX(Integer iEzsigndiscussionX) {
+  public EzsigndiscussionRequest iEzsigndiscussionX(@javax.annotation.Nonnull Integer iEzsigndiscussionX) {
     this.iEzsigndiscussionX = iEzsigndiscussionX;
     return this;
   }
@@ -154,12 +160,12 @@ public class EzsigndiscussionRequest {
     return iEzsigndiscussionX;
   }
 
-  public void setiEzsigndiscussionX(Integer iEzsigndiscussionX) {
+  public void setiEzsigndiscussionX(@javax.annotation.Nonnull Integer iEzsigndiscussionX) {
     this.iEzsigndiscussionX = iEzsigndiscussionX;
   }
 
 
-  public EzsigndiscussionRequest iEzsigndiscussionY(Integer iEzsigndiscussionY) {
+  public EzsigndiscussionRequest iEzsigndiscussionY(@javax.annotation.Nonnull Integer iEzsigndiscussionY) {
     this.iEzsigndiscussionY = iEzsigndiscussionY;
     return this;
   }
@@ -175,12 +181,12 @@ public class EzsigndiscussionRequest {
     return iEzsigndiscussionY;
   }
 
-  public void setiEzsigndiscussionY(Integer iEzsigndiscussionY) {
+  public void setiEzsigndiscussionY(@javax.annotation.Nonnull Integer iEzsigndiscussionY) {
     this.iEzsigndiscussionY = iEzsigndiscussionY;
   }
 
 
-  public EzsigndiscussionRequest objDiscussion(DiscussionRequest objDiscussion) {
+  public EzsigndiscussionRequest objDiscussion(@javax.annotation.Nonnull DiscussionRequest objDiscussion) {
     this.objDiscussion = objDiscussion;
     return this;
   }
@@ -194,7 +200,7 @@ public class EzsigndiscussionRequest {
     return objDiscussion;
   }
 
-  public void setObjDiscussion(DiscussionRequest objDiscussion) {
+  public void setObjDiscussion(@javax.annotation.Nonnull DiscussionRequest objDiscussion) {
     this.objDiscussion = objDiscussion;
   }
 

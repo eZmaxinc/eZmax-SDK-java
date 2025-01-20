@@ -49,28 +49,32 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplateAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL = "eEzsignfoldertypePrivacylevel";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL)
+  @javax.annotation.Nonnull
   private FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATE_DESCRIPTION = "sEzsigntemplateDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATE_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sEzsigntemplateDescription;
 
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplateID;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATE_ISACTIVE = "bEzsigntemplateIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATE_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bEzsigntemplateIsactive;
 
   public EzsigntemplateAutocompleteElementResponse() {
   }
 
-  public EzsigntemplateAutocompleteElementResponse eEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+  public EzsigntemplateAutocompleteElementResponse eEzsignfoldertypePrivacylevel(@javax.annotation.Nonnull FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
     return this;
   }
@@ -84,12 +88,12 @@ public class EzsigntemplateAutocompleteElementResponse {
     return eEzsignfoldertypePrivacylevel;
   }
 
-  public void seteEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+  public void seteEzsignfoldertypePrivacylevel(@javax.annotation.Nonnull FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
   }
 
 
-  public EzsigntemplateAutocompleteElementResponse sEzsigntemplateDescription(String sEzsigntemplateDescription) {
+  public EzsigntemplateAutocompleteElementResponse sEzsigntemplateDescription(@javax.annotation.Nonnull String sEzsigntemplateDescription) {
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
     return this;
   }
@@ -103,12 +107,12 @@ public class EzsigntemplateAutocompleteElementResponse {
     return sEzsigntemplateDescription;
   }
 
-  public void setsEzsigntemplateDescription(String sEzsigntemplateDescription) {
+  public void setsEzsigntemplateDescription(@javax.annotation.Nonnull String sEzsigntemplateDescription) {
     this.sEzsigntemplateDescription = sEzsigntemplateDescription;
   }
 
 
-  public EzsigntemplateAutocompleteElementResponse pkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
+  public EzsigntemplateAutocompleteElementResponse pkiEzsigntemplateID(@javax.annotation.Nonnull Integer pkiEzsigntemplateID) {
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
     return this;
   }
@@ -123,12 +127,12 @@ public class EzsigntemplateAutocompleteElementResponse {
     return pkiEzsigntemplateID;
   }
 
-  public void setPkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
+  public void setPkiEzsigntemplateID(@javax.annotation.Nonnull Integer pkiEzsigntemplateID) {
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
   }
 
 
-  public EzsigntemplateAutocompleteElementResponse bEzsigntemplateIsactive(Boolean bEzsigntemplateIsactive) {
+  public EzsigntemplateAutocompleteElementResponse bEzsigntemplateIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplateIsactive) {
     this.bEzsigntemplateIsactive = bEzsigntemplateIsactive;
     return this;
   }
@@ -142,7 +146,7 @@ public class EzsigntemplateAutocompleteElementResponse {
     return bEzsigntemplateIsactive;
   }
 
-  public void setbEzsigntemplateIsactive(Boolean bEzsigntemplateIsactive) {
+  public void setbEzsigntemplateIsactive(@javax.annotation.Nonnull Boolean bEzsigntemplateIsactive) {
     this.bEzsigntemplateIsactive = bEzsigntemplateIsactive;
   }
 

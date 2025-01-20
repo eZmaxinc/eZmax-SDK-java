@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.PermissionResponseCompound;
+import com.ezmax.api.model.PermissionResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,32 +51,37 @@ import eZmaxAPI.JSON;
 /**
  * A Modulesection Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ModulesectionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_MODULESECTION_I_D = "pkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULESECTION_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiModulesectionID;
 
   public static final String SERIALIZED_NAME_FKI_MODULE_I_D = "fkiModuleID";
   @SerializedName(SERIALIZED_NAME_FKI_MODULE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiModuleID;
 
   public static final String SERIALIZED_NAME_S_MODULESECTION_INTERNALNAME = "sModulesectionInternalname";
   @SerializedName(SERIALIZED_NAME_S_MODULESECTION_INTERNALNAME)
+  @javax.annotation.Nonnull
   private String sModulesectionInternalname;
 
   public static final String SERIALIZED_NAME_S_MODULESECTION_NAME_X = "sModulesectionNameX";
   @SerializedName(SERIALIZED_NAME_S_MODULESECTION_NAME_X)
+  @javax.annotation.Nonnull
   private String sModulesectionNameX;
 
   public static final String SERIALIZED_NAME_A_OBJ_PERMISSION = "a_objPermission";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PERMISSION)
+  @javax.annotation.Nullable
   private List<PermissionResponseCompound> aObjPermission = new ArrayList<>();
 
   public ModulesectionResponseCompound() {
   }
 
-  public ModulesectionResponseCompound pkiModulesectionID(Integer pkiModulesectionID) {
+  public ModulesectionResponseCompound pkiModulesectionID(@javax.annotation.Nonnull Integer pkiModulesectionID) {
     this.pkiModulesectionID = pkiModulesectionID;
     return this;
   }
@@ -91,12 +96,12 @@ public class ModulesectionResponseCompound {
     return pkiModulesectionID;
   }
 
-  public void setPkiModulesectionID(Integer pkiModulesectionID) {
+  public void setPkiModulesectionID(@javax.annotation.Nonnull Integer pkiModulesectionID) {
     this.pkiModulesectionID = pkiModulesectionID;
   }
 
 
-  public ModulesectionResponseCompound fkiModuleID(Integer fkiModuleID) {
+  public ModulesectionResponseCompound fkiModuleID(@javax.annotation.Nonnull Integer fkiModuleID) {
     this.fkiModuleID = fkiModuleID;
     return this;
   }
@@ -111,12 +116,12 @@ public class ModulesectionResponseCompound {
     return fkiModuleID;
   }
 
-  public void setFkiModuleID(Integer fkiModuleID) {
+  public void setFkiModuleID(@javax.annotation.Nonnull Integer fkiModuleID) {
     this.fkiModuleID = fkiModuleID;
   }
 
 
-  public ModulesectionResponseCompound sModulesectionInternalname(String sModulesectionInternalname) {
+  public ModulesectionResponseCompound sModulesectionInternalname(@javax.annotation.Nonnull String sModulesectionInternalname) {
     this.sModulesectionInternalname = sModulesectionInternalname;
     return this;
   }
@@ -130,12 +135,12 @@ public class ModulesectionResponseCompound {
     return sModulesectionInternalname;
   }
 
-  public void setsModulesectionInternalname(String sModulesectionInternalname) {
+  public void setsModulesectionInternalname(@javax.annotation.Nonnull String sModulesectionInternalname) {
     this.sModulesectionInternalname = sModulesectionInternalname;
   }
 
 
-  public ModulesectionResponseCompound sModulesectionNameX(String sModulesectionNameX) {
+  public ModulesectionResponseCompound sModulesectionNameX(@javax.annotation.Nonnull String sModulesectionNameX) {
     this.sModulesectionNameX = sModulesectionNameX;
     return this;
   }
@@ -149,17 +154,17 @@ public class ModulesectionResponseCompound {
     return sModulesectionNameX;
   }
 
-  public void setsModulesectionNameX(String sModulesectionNameX) {
+  public void setsModulesectionNameX(@javax.annotation.Nonnull String sModulesectionNameX) {
     this.sModulesectionNameX = sModulesectionNameX;
   }
 
 
-  public ModulesectionResponseCompound aObjPermission(List<PermissionResponseCompound> aObjPermission) {
+  public ModulesectionResponseCompound aObjPermission(@javax.annotation.Nullable List<PermissionResponseCompound> aObjPermission) {
     this.aObjPermission = aObjPermission;
     return this;
   }
 
-  public ModulesectionResponseCompound addAObjPermissionItem(PermissionResponseCompound aObjPermissionItem) {
+  public ModulesectionResponseCompound addAObjPermissionItem(PermissionResponse aObjPermissionItem) {
     if (this.aObjPermission == null) {
       this.aObjPermission = new ArrayList<>();
     }
@@ -176,7 +181,7 @@ public class ModulesectionResponseCompound {
     return aObjPermission;
   }
 
-  public void setaObjPermission(List<PermissionResponseCompound> aObjPermission) {
+  public void setaObjPermission(@javax.annotation.Nullable List<PermissionResponseCompound> aObjPermission) {
     this.aObjPermission = aObjPermission;
   }
 
@@ -292,7 +297,7 @@ public class ModulesectionResponseCompound {
 
           // validate the optional field `a_objPermission` (array)
           for (int i = 0; i < jsonArrayaObjPermission.size(); i++) {
-            PermissionResponseCompound.validateJsonElement(jsonArrayaObjPermission.get(i));
+            PermissionResponse.validateJsonElement(jsonArrayaObjPermission.get(i));
           };
         }
       }

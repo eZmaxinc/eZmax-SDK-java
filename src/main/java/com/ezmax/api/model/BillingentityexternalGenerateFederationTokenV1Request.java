@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class BillingentityexternalGenerateFederationTokenV1Request {
   public static final String SERIALIZED_NAME_FKS_EZMAXCUSTOMER_CODE = "fksEzmaxcustomerCode";
   @SerializedName(SERIALIZED_NAME_FKS_EZMAXCUSTOMER_CODE)
+  @javax.annotation.Nonnull
   private String fksEzmaxcustomerCode;
 
   public BillingentityexternalGenerateFederationTokenV1Request() {
   }
 
-  public BillingentityexternalGenerateFederationTokenV1Request fksEzmaxcustomerCode(String fksEzmaxcustomerCode) {
+  public BillingentityexternalGenerateFederationTokenV1Request fksEzmaxcustomerCode(@javax.annotation.Nonnull String fksEzmaxcustomerCode) {
     this.fksEzmaxcustomerCode = fksEzmaxcustomerCode;
     return this;
   }
@@ -71,7 +72,7 @@ public class BillingentityexternalGenerateFederationTokenV1Request {
     return fksEzmaxcustomerCode;
   }
 
-  public void setFksEzmaxcustomerCode(String fksEzmaxcustomerCode) {
+  public void setFksEzmaxcustomerCode(@javax.annotation.Nonnull String fksEzmaxcustomerCode) {
     this.fksEzmaxcustomerCode = fksEzmaxcustomerCode;
   }
 

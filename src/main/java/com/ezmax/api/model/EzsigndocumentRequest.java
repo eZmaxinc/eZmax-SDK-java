@@ -48,26 +48,31 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndocumentRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsigntemplateID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D = "fkiEzsignfoldersignerassociationID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsignfoldersignerassociationID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   /**
@@ -126,6 +131,7 @@ public class EzsigndocumentRequest {
 
   public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_SOURCE = "eEzsigndocumentSource";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENT_SOURCE)
+  @javax.annotation.Nonnull
   private EEzsigndocumentSourceEnum eEzsigndocumentSource;
 
   /**
@@ -192,22 +198,27 @@ public class EzsigndocumentRequest {
 
   public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_FORMAT = "eEzsigndocumentFormat";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENT_FORMAT)
+  @javax.annotation.Nullable
   private EEzsigndocumentFormatEnum eEzsigndocumentFormat;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_BASE64 = "sEzsigndocumentBase64";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_BASE64)
+  @javax.annotation.Nullable
   private byte[] sEzsigndocumentBase64;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_URL = "sEzsigndocumentUrl";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_URL)
+  @javax.annotation.Nullable
   private String sEzsigndocumentUrl;
 
   public static final String SERIALIZED_NAME_B_EZSIGNDOCUMENT_FORCEREPAIR = "bEzsigndocumentForcerepair";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNDOCUMENT_FORCEREPAIR)
+  @javax.annotation.Nullable
   private Boolean bEzsigndocumentForcerepair = true;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_PASSWORD = "sEzsigndocumentPassword";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_PASSWORD)
+  @javax.annotation.Nullable
   private String sEzsigndocumentPassword;
 
   /**
@@ -268,24 +279,28 @@ public class EzsigndocumentRequest {
 
   public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENT_FORM = "eEzsigndocumentForm";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENT_FORM)
+  @javax.annotation.Nullable
   private EEzsigndocumentFormEnum eEzsigndocumentForm;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE = "dtEzsigndocumentDuedate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE)
+  @javax.annotation.Nonnull
   private String dtEzsigndocumentDuedate;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME = "sEzsigndocumentName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME)
+  @javax.annotation.Nonnull
   private String sEzsigndocumentName;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_EXTERNALID = "sEzsigndocumentExternalid";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_EXTERNALID)
+  @javax.annotation.Nullable
   private String sEzsigndocumentExternalid;
 
   public EzsigndocumentRequest() {
   }
 
-  public EzsigndocumentRequest pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
+  public EzsigndocumentRequest pkiEzsigndocumentID(@javax.annotation.Nullable Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
     return this;
   }
@@ -300,12 +315,12 @@ public class EzsigndocumentRequest {
     return pkiEzsigndocumentID;
   }
 
-  public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
+  public void setPkiEzsigndocumentID(@javax.annotation.Nullable Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
   }
 
 
-  public EzsigndocumentRequest fkiEzsignfolderID(Integer fkiEzsignfolderID) {
+  public EzsigndocumentRequest fkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -320,12 +335,12 @@ public class EzsigndocumentRequest {
     return fkiEzsignfolderID;
   }
 
-  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
+  public void setFkiEzsignfolderID(@javax.annotation.Nonnull Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
-  public EzsigndocumentRequest fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+  public EzsigndocumentRequest fkiEzsigntemplateID(@javax.annotation.Nullable Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -340,12 +355,12 @@ public class EzsigndocumentRequest {
     return fkiEzsigntemplateID;
   }
 
-  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+  public void setFkiEzsigntemplateID(@javax.annotation.Nullable Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
-  public EzsigndocumentRequest fkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
+  public EzsigndocumentRequest fkiEzsignfoldersignerassociationID(@javax.annotation.Nullable Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
     return this;
   }
@@ -360,12 +375,12 @@ public class EzsigndocumentRequest {
     return fkiEzsignfoldersignerassociationID;
   }
 
-  public void setFkiEzsignfoldersignerassociationID(Integer fkiEzsignfoldersignerassociationID) {
+  public void setFkiEzsignfoldersignerassociationID(@javax.annotation.Nullable Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
   }
 
 
-  public EzsigndocumentRequest fkiLanguageID(Integer fkiLanguageID) {
+  public EzsigndocumentRequest fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -381,12 +396,12 @@ public class EzsigndocumentRequest {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(Integer fkiLanguageID) {
+  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public EzsigndocumentRequest eEzsigndocumentSource(EEzsigndocumentSourceEnum eEzsigndocumentSource) {
+  public EzsigndocumentRequest eEzsigndocumentSource(@javax.annotation.Nonnull EEzsigndocumentSourceEnum eEzsigndocumentSource) {
     this.eEzsigndocumentSource = eEzsigndocumentSource;
     return this;
   }
@@ -400,12 +415,12 @@ public class EzsigndocumentRequest {
     return eEzsigndocumentSource;
   }
 
-  public void seteEzsigndocumentSource(EEzsigndocumentSourceEnum eEzsigndocumentSource) {
+  public void seteEzsigndocumentSource(@javax.annotation.Nonnull EEzsigndocumentSourceEnum eEzsigndocumentSource) {
     this.eEzsigndocumentSource = eEzsigndocumentSource;
   }
 
 
-  public EzsigndocumentRequest eEzsigndocumentFormat(EEzsigndocumentFormatEnum eEzsigndocumentFormat) {
+  public EzsigndocumentRequest eEzsigndocumentFormat(@javax.annotation.Nullable EEzsigndocumentFormatEnum eEzsigndocumentFormat) {
     this.eEzsigndocumentFormat = eEzsigndocumentFormat;
     return this;
   }
@@ -419,12 +434,12 @@ public class EzsigndocumentRequest {
     return eEzsigndocumentFormat;
   }
 
-  public void seteEzsigndocumentFormat(EEzsigndocumentFormatEnum eEzsigndocumentFormat) {
+  public void seteEzsigndocumentFormat(@javax.annotation.Nullable EEzsigndocumentFormatEnum eEzsigndocumentFormat) {
     this.eEzsigndocumentFormat = eEzsigndocumentFormat;
   }
 
 
-  public EzsigndocumentRequest sEzsigndocumentBase64(byte[] sEzsigndocumentBase64) {
+  public EzsigndocumentRequest sEzsigndocumentBase64(@javax.annotation.Nullable byte[] sEzsigndocumentBase64) {
     this.sEzsigndocumentBase64 = sEzsigndocumentBase64;
     return this;
   }
@@ -438,12 +453,12 @@ public class EzsigndocumentRequest {
     return sEzsigndocumentBase64;
   }
 
-  public void setsEzsigndocumentBase64(byte[] sEzsigndocumentBase64) {
+  public void setsEzsigndocumentBase64(@javax.annotation.Nullable byte[] sEzsigndocumentBase64) {
     this.sEzsigndocumentBase64 = sEzsigndocumentBase64;
   }
 
 
-  public EzsigndocumentRequest sEzsigndocumentUrl(String sEzsigndocumentUrl) {
+  public EzsigndocumentRequest sEzsigndocumentUrl(@javax.annotation.Nullable String sEzsigndocumentUrl) {
     this.sEzsigndocumentUrl = sEzsigndocumentUrl;
     return this;
   }
@@ -457,12 +472,12 @@ public class EzsigndocumentRequest {
     return sEzsigndocumentUrl;
   }
 
-  public void setsEzsigndocumentUrl(String sEzsigndocumentUrl) {
+  public void setsEzsigndocumentUrl(@javax.annotation.Nullable String sEzsigndocumentUrl) {
     this.sEzsigndocumentUrl = sEzsigndocumentUrl;
   }
 
 
-  public EzsigndocumentRequest bEzsigndocumentForcerepair(Boolean bEzsigndocumentForcerepair) {
+  public EzsigndocumentRequest bEzsigndocumentForcerepair(@javax.annotation.Nullable Boolean bEzsigndocumentForcerepair) {
     this.bEzsigndocumentForcerepair = bEzsigndocumentForcerepair;
     return this;
   }
@@ -476,12 +491,12 @@ public class EzsigndocumentRequest {
     return bEzsigndocumentForcerepair;
   }
 
-  public void setbEzsigndocumentForcerepair(Boolean bEzsigndocumentForcerepair) {
+  public void setbEzsigndocumentForcerepair(@javax.annotation.Nullable Boolean bEzsigndocumentForcerepair) {
     this.bEzsigndocumentForcerepair = bEzsigndocumentForcerepair;
   }
 
 
-  public EzsigndocumentRequest sEzsigndocumentPassword(String sEzsigndocumentPassword) {
+  public EzsigndocumentRequest sEzsigndocumentPassword(@javax.annotation.Nullable String sEzsigndocumentPassword) {
     this.sEzsigndocumentPassword = sEzsigndocumentPassword;
     return this;
   }
@@ -495,12 +510,12 @@ public class EzsigndocumentRequest {
     return sEzsigndocumentPassword;
   }
 
-  public void setsEzsigndocumentPassword(String sEzsigndocumentPassword) {
+  public void setsEzsigndocumentPassword(@javax.annotation.Nullable String sEzsigndocumentPassword) {
     this.sEzsigndocumentPassword = sEzsigndocumentPassword;
   }
 
 
-  public EzsigndocumentRequest eEzsigndocumentForm(EEzsigndocumentFormEnum eEzsigndocumentForm) {
+  public EzsigndocumentRequest eEzsigndocumentForm(@javax.annotation.Nullable EEzsigndocumentFormEnum eEzsigndocumentForm) {
     this.eEzsigndocumentForm = eEzsigndocumentForm;
     return this;
   }
@@ -514,12 +529,12 @@ public class EzsigndocumentRequest {
     return eEzsigndocumentForm;
   }
 
-  public void seteEzsigndocumentForm(EEzsigndocumentFormEnum eEzsigndocumentForm) {
+  public void seteEzsigndocumentForm(@javax.annotation.Nullable EEzsigndocumentFormEnum eEzsigndocumentForm) {
     this.eEzsigndocumentForm = eEzsigndocumentForm;
   }
 
 
-  public EzsigndocumentRequest dtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
+  public EzsigndocumentRequest dtEzsigndocumentDuedate(@javax.annotation.Nonnull String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
     return this;
   }
@@ -533,12 +548,12 @@ public class EzsigndocumentRequest {
     return dtEzsigndocumentDuedate;
   }
 
-  public void setDtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
+  public void setDtEzsigndocumentDuedate(@javax.annotation.Nonnull String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
   }
 
 
-  public EzsigndocumentRequest sEzsigndocumentName(String sEzsigndocumentName) {
+  public EzsigndocumentRequest sEzsigndocumentName(@javax.annotation.Nonnull String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
     return this;
   }
@@ -552,12 +567,12 @@ public class EzsigndocumentRequest {
     return sEzsigndocumentName;
   }
 
-  public void setsEzsigndocumentName(String sEzsigndocumentName) {
+  public void setsEzsigndocumentName(@javax.annotation.Nonnull String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
   }
 
 
-  public EzsigndocumentRequest sEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
+  public EzsigndocumentRequest sEzsigndocumentExternalid(@javax.annotation.Nullable String sEzsigndocumentExternalid) {
     this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
     return this;
   }
@@ -571,7 +586,7 @@ public class EzsigndocumentRequest {
     return sEzsigndocumentExternalid;
   }
 
-  public void setsEzsigndocumentExternalid(String sEzsigndocumentExternalid) {
+  public void setsEzsigndocumentExternalid(@javax.annotation.Nullable String sEzsigndocumentExternalid) {
     this.sEzsigndocumentExternalid = sEzsigndocumentExternalid;
   }
 

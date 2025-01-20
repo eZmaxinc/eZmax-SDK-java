@@ -51,20 +51,22 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigndocument createObject Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndocumentCreateElementV3Response {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_A_OBJ_MATCHINGTEMPLATE = "a_objMatchingtemplate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_MATCHINGTEMPLATE)
+  @javax.annotation.Nonnull
   private List<EzsigndocumentMatchingtemplateV3Response> aObjMatchingtemplate = new ArrayList<>();
 
   public EzsigndocumentCreateElementV3Response() {
   }
 
-  public EzsigndocumentCreateElementV3Response pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
+  public EzsigndocumentCreateElementV3Response pkiEzsigndocumentID(@javax.annotation.Nonnull Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
     return this;
   }
@@ -79,12 +81,12 @@ public class EzsigndocumentCreateElementV3Response {
     return pkiEzsigndocumentID;
   }
 
-  public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
+  public void setPkiEzsigndocumentID(@javax.annotation.Nonnull Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
   }
 
 
-  public EzsigndocumentCreateElementV3Response aObjMatchingtemplate(List<EzsigndocumentMatchingtemplateV3Response> aObjMatchingtemplate) {
+  public EzsigndocumentCreateElementV3Response aObjMatchingtemplate(@javax.annotation.Nonnull List<EzsigndocumentMatchingtemplateV3Response> aObjMatchingtemplate) {
     this.aObjMatchingtemplate = aObjMatchingtemplate;
     return this;
   }
@@ -106,7 +108,7 @@ public class EzsigndocumentCreateElementV3Response {
     return aObjMatchingtemplate;
   }
 
-  public void setaObjMatchingtemplate(List<EzsigndocumentMatchingtemplateV3Response> aObjMatchingtemplate) {
+  public void setaObjMatchingtemplate(@javax.annotation.Nonnull List<EzsigndocumentMatchingtemplateV3Response> aObjMatchingtemplate) {
     this.aObjMatchingtemplate = aObjMatchingtemplate;
   }
 

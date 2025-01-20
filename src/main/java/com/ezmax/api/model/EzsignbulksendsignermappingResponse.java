@@ -48,28 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignbulksendsignermapping Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignbulksendsignermappingResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D = "pkiEzsignbulksendsignermappingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDSIGNERMAPPING_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsignbulksendsignermappingID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D = "fkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsignbulksendID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNBULKSENDSIGNERMAPPING_DESCRIPTION = "sEzsignbulksendsignermappingDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSENDSIGNERMAPPING_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sEzsignbulksendsignermappingDescription;
 
   public EzsignbulksendsignermappingResponse() {
   }
 
-  public EzsignbulksendsignermappingResponse pkiEzsignbulksendsignermappingID(Integer pkiEzsignbulksendsignermappingID) {
+  public EzsignbulksendsignermappingResponse pkiEzsignbulksendsignermappingID(@javax.annotation.Nonnull Integer pkiEzsignbulksendsignermappingID) {
     this.pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID;
     return this;
   }
@@ -84,12 +88,12 @@ public class EzsignbulksendsignermappingResponse {
     return pkiEzsignbulksendsignermappingID;
   }
 
-  public void setPkiEzsignbulksendsignermappingID(Integer pkiEzsignbulksendsignermappingID) {
+  public void setPkiEzsignbulksendsignermappingID(@javax.annotation.Nonnull Integer pkiEzsignbulksendsignermappingID) {
     this.pkiEzsignbulksendsignermappingID = pkiEzsignbulksendsignermappingID;
   }
 
 
-  public EzsignbulksendsignermappingResponse fkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
+  public EzsignbulksendsignermappingResponse fkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
     return this;
   }
@@ -104,12 +108,12 @@ public class EzsignbulksendsignermappingResponse {
     return fkiEzsignbulksendID;
   }
 
-  public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
+  public void setFkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
   }
 
 
-  public EzsignbulksendsignermappingResponse fkiUserID(Integer fkiUserID) {
+  public EzsignbulksendsignermappingResponse fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -124,12 +128,12 @@ public class EzsignbulksendsignermappingResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public EzsignbulksendsignermappingResponse sEzsignbulksendsignermappingDescription(String sEzsignbulksendsignermappingDescription) {
+  public EzsignbulksendsignermappingResponse sEzsignbulksendsignermappingDescription(@javax.annotation.Nonnull String sEzsignbulksendsignermappingDescription) {
     this.sEzsignbulksendsignermappingDescription = sEzsignbulksendsignermappingDescription;
     return this;
   }
@@ -143,7 +147,7 @@ public class EzsignbulksendsignermappingResponse {
     return sEzsignbulksendsignermappingDescription;
   }
 
-  public void setsEzsignbulksendsignermappingDescription(String sEzsignbulksendsignermappingDescription) {
+  public void setsEzsignbulksendsignermappingDescription(@javax.annotation.Nonnull String sEzsignbulksendsignermappingDescription) {
     this.sEzsignbulksendsignermappingDescription = sEzsignbulksendsignermappingDescription;
   }
 

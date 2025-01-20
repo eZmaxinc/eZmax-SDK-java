@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndiscussion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndiscussionCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDISCUSSION = "a_objEzsigndiscussion";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDISCUSSION)
+  @javax.annotation.Nonnull
   private List<EzsigndiscussionRequestCompound> aObjEzsigndiscussion = new ArrayList<>();
 
   public EzsigndiscussionCreateObjectV1Request() {
   }
 
-  public EzsigndiscussionCreateObjectV1Request aObjEzsigndiscussion(List<EzsigndiscussionRequestCompound> aObjEzsigndiscussion) {
+  public EzsigndiscussionCreateObjectV1Request aObjEzsigndiscussion(@javax.annotation.Nonnull List<EzsigndiscussionRequestCompound> aObjEzsigndiscussion) {
     this.aObjEzsigndiscussion = aObjEzsigndiscussion;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzsigndiscussionCreateObjectV1Request {
     return aObjEzsigndiscussion;
   }
 
-  public void setaObjEzsigndiscussion(List<EzsigndiscussionRequestCompound> aObjEzsigndiscussion) {
+  public void setaObjEzsigndiscussion(@javax.annotation.Nonnull List<EzsigndiscussionRequestCompound> aObjEzsigndiscussion) {
     this.aObjEzsigndiscussion = aObjEzsigndiscussion;
   }
 

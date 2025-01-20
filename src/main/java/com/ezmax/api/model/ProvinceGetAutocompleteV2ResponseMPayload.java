@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/province/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ProvinceGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_PROVINCE = "a_objProvince";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PROVINCE)
+  @javax.annotation.Nonnull
   private List<ProvinceAutocompleteElementResponse> aObjProvince = new ArrayList<>();
 
   public ProvinceGetAutocompleteV2ResponseMPayload() {
   }
 
-  public ProvinceGetAutocompleteV2ResponseMPayload aObjProvince(List<ProvinceAutocompleteElementResponse> aObjProvince) {
+  public ProvinceGetAutocompleteV2ResponseMPayload aObjProvince(@javax.annotation.Nonnull List<ProvinceAutocompleteElementResponse> aObjProvince) {
     this.aObjProvince = aObjProvince;
     return this;
   }
@@ -82,7 +83,7 @@ public class ProvinceGetAutocompleteV2ResponseMPayload {
     return aObjProvince;
   }
 
-  public void setaObjProvince(List<ProvinceAutocompleteElementResponse> aObjProvince) {
+  public void setaObjProvince(@javax.annotation.Nonnull List<ProvinceAutocompleteElementResponse> aObjProvince) {
     this.aObjProvince = aObjProvince;
   }
 

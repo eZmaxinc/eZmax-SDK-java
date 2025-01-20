@@ -49,40 +49,47 @@ import eZmaxAPI.JSON;
 /**
  * A Discussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DiscussionResponse {
   public static final String SERIALIZED_NAME_PKI_DISCUSSION_I_D = "pkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSION_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiDiscussionID;
 
   public static final String SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION = "sDiscussionDescription";
   @SerializedName(SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sDiscussionDescription;
 
   public static final String SERIALIZED_NAME_B_DISCUSSION_CLOSED = "bDiscussionClosed";
   @SerializedName(SERIALIZED_NAME_B_DISCUSSION_CLOSED)
+  @javax.annotation.Nonnull
   private Boolean bDiscussionClosed;
 
   public static final String SERIALIZED_NAME_DT_DISCUSSION_LASTREAD = "dtDiscussionLastread";
   @SerializedName(SERIALIZED_NAME_DT_DISCUSSION_LASTREAD)
+  @javax.annotation.Nullable
   private String dtDiscussionLastread;
 
   public static final String SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNT = "iDiscussionmessageCount";
   @SerializedName(SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNT)
+  @javax.annotation.Nonnull
   private Integer iDiscussionmessageCount;
 
   public static final String SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNTUNREAD = "iDiscussionmessageCountunread";
   @SerializedName(SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNTUNREAD)
+  @javax.annotation.Nonnull
   private Integer iDiscussionmessageCountunread;
 
   public static final String SERIALIZED_NAME_OBJ_DISCUSSIONCONFIGURATION = "objDiscussionconfiguration";
   @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSIONCONFIGURATION)
+  @javax.annotation.Nullable
   private CustomDiscussionconfigurationResponse objDiscussionconfiguration;
 
   public DiscussionResponse() {
   }
 
-  public DiscussionResponse pkiDiscussionID(Integer pkiDiscussionID) {
+  public DiscussionResponse pkiDiscussionID(@javax.annotation.Nonnull Integer pkiDiscussionID) {
     this.pkiDiscussionID = pkiDiscussionID;
     return this;
   }
@@ -98,12 +105,12 @@ public class DiscussionResponse {
     return pkiDiscussionID;
   }
 
-  public void setPkiDiscussionID(Integer pkiDiscussionID) {
+  public void setPkiDiscussionID(@javax.annotation.Nonnull Integer pkiDiscussionID) {
     this.pkiDiscussionID = pkiDiscussionID;
   }
 
 
-  public DiscussionResponse sDiscussionDescription(String sDiscussionDescription) {
+  public DiscussionResponse sDiscussionDescription(@javax.annotation.Nonnull String sDiscussionDescription) {
     this.sDiscussionDescription = sDiscussionDescription;
     return this;
   }
@@ -117,12 +124,12 @@ public class DiscussionResponse {
     return sDiscussionDescription;
   }
 
-  public void setsDiscussionDescription(String sDiscussionDescription) {
+  public void setsDiscussionDescription(@javax.annotation.Nonnull String sDiscussionDescription) {
     this.sDiscussionDescription = sDiscussionDescription;
   }
 
 
-  public DiscussionResponse bDiscussionClosed(Boolean bDiscussionClosed) {
+  public DiscussionResponse bDiscussionClosed(@javax.annotation.Nonnull Boolean bDiscussionClosed) {
     this.bDiscussionClosed = bDiscussionClosed;
     return this;
   }
@@ -136,12 +143,12 @@ public class DiscussionResponse {
     return bDiscussionClosed;
   }
 
-  public void setbDiscussionClosed(Boolean bDiscussionClosed) {
+  public void setbDiscussionClosed(@javax.annotation.Nonnull Boolean bDiscussionClosed) {
     this.bDiscussionClosed = bDiscussionClosed;
   }
 
 
-  public DiscussionResponse dtDiscussionLastread(String dtDiscussionLastread) {
+  public DiscussionResponse dtDiscussionLastread(@javax.annotation.Nullable String dtDiscussionLastread) {
     this.dtDiscussionLastread = dtDiscussionLastread;
     return this;
   }
@@ -155,12 +162,12 @@ public class DiscussionResponse {
     return dtDiscussionLastread;
   }
 
-  public void setDtDiscussionLastread(String dtDiscussionLastread) {
+  public void setDtDiscussionLastread(@javax.annotation.Nullable String dtDiscussionLastread) {
     this.dtDiscussionLastread = dtDiscussionLastread;
   }
 
 
-  public DiscussionResponse iDiscussionmessageCount(Integer iDiscussionmessageCount) {
+  public DiscussionResponse iDiscussionmessageCount(@javax.annotation.Nonnull Integer iDiscussionmessageCount) {
     this.iDiscussionmessageCount = iDiscussionmessageCount;
     return this;
   }
@@ -174,12 +181,12 @@ public class DiscussionResponse {
     return iDiscussionmessageCount;
   }
 
-  public void setiDiscussionmessageCount(Integer iDiscussionmessageCount) {
+  public void setiDiscussionmessageCount(@javax.annotation.Nonnull Integer iDiscussionmessageCount) {
     this.iDiscussionmessageCount = iDiscussionmessageCount;
   }
 
 
-  public DiscussionResponse iDiscussionmessageCountunread(Integer iDiscussionmessageCountunread) {
+  public DiscussionResponse iDiscussionmessageCountunread(@javax.annotation.Nonnull Integer iDiscussionmessageCountunread) {
     this.iDiscussionmessageCountunread = iDiscussionmessageCountunread;
     return this;
   }
@@ -193,12 +200,12 @@ public class DiscussionResponse {
     return iDiscussionmessageCountunread;
   }
 
-  public void setiDiscussionmessageCountunread(Integer iDiscussionmessageCountunread) {
+  public void setiDiscussionmessageCountunread(@javax.annotation.Nonnull Integer iDiscussionmessageCountunread) {
     this.iDiscussionmessageCountunread = iDiscussionmessageCountunread;
   }
 
 
-  public DiscussionResponse objDiscussionconfiguration(CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
+  public DiscussionResponse objDiscussionconfiguration(@javax.annotation.Nullable CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
     this.objDiscussionconfiguration = objDiscussionconfiguration;
     return this;
   }
@@ -212,7 +219,7 @@ public class DiscussionResponse {
     return objDiscussionconfiguration;
   }
 
-  public void setObjDiscussionconfiguration(CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
+  public void setObjDiscussionconfiguration(@javax.annotation.Nullable CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
     this.objDiscussionconfiguration = objDiscussionconfiguration;
   }
 

@@ -86,7 +86,7 @@ public class Example {
 
 <a id="webhookDeleteObjectV1"></a>
 # **webhookDeleteObjectV1**
-> WebhookDeleteObjectV1Response webhookDeleteObjectV1(pkiWebhookID)
+> CommonResponse webhookDeleteObjectV1(pkiWebhookID)
 
 Delete an existing Webhook
 
@@ -116,7 +116,7 @@ public class Example {
     ObjectWebhookApi apiInstance = new ObjectWebhookApi(defaultClient);
     Integer pkiWebhookID = 56; // Integer | 
     try {
-      WebhookDeleteObjectV1Response result = apiInstance.webhookDeleteObjectV1(pkiWebhookID);
+      CommonResponse result = apiInstance.webhookDeleteObjectV1(pkiWebhookID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectWebhookApi#webhookDeleteObjectV1");
@@ -137,7 +137,7 @@ public class Example {
 
 ### Return type
 
-[**WebhookDeleteObjectV1Response**](WebhookDeleteObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ public class Example {
 
 <a id="webhookEditObjectV1"></a>
 # **webhookEditObjectV1**
-> WebhookEditObjectV1Response webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request)
+> CommonResponse webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request)
 
 Edit an existing Webhook
 
@@ -187,7 +187,7 @@ public class Example {
     Integer pkiWebhookID = 56; // Integer | 
     WebhookEditObjectV1Request webhookEditObjectV1Request = new WebhookEditObjectV1Request(); // WebhookEditObjectV1Request | 
     try {
-      WebhookEditObjectV1Response result = apiInstance.webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request);
+      CommonResponse result = apiInstance.webhookEditObjectV1(pkiWebhookID, webhookEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectWebhookApi#webhookEditObjectV1");
@@ -209,7 +209,7 @@ public class Example {
 
 ### Return type
 
-[**WebhookEditObjectV1Response**](WebhookEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ public class Example {
 
 <a id="webhookSendWebhookV1"></a>
 # **webhookSendWebhookV1**
-> WebhookSendWebhookV1Response webhookSendWebhookV1(webhookSendWebhookV1Request)
+> CommonResponse webhookSendWebhookV1(webhookSendWebhookV1Request)
 
 Emit a Webhook event
 
@@ -549,7 +549,7 @@ public class Example {
     ObjectWebhookApi apiInstance = new ObjectWebhookApi(defaultClient);
     WebhookSendWebhookV1Request webhookSendWebhookV1Request = new WebhookSendWebhookV1Request(); // WebhookSendWebhookV1Request | 
     try {
-      WebhookSendWebhookV1Response result = apiInstance.webhookSendWebhookV1(webhookSendWebhookV1Request);
+      CommonResponse result = apiInstance.webhookSendWebhookV1(webhookSendWebhookV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectWebhookApi#webhookSendWebhookV1");
@@ -570,7 +570,7 @@ public class Example {
 
 ### Return type
 
-[**WebhookSendWebhookV1Response**](WebhookSendWebhookV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -589,7 +589,7 @@ public class Example {
 
 <a id="webhookTestV1"></a>
 # **webhookTestV1**
-> WebhookTestV1Response webhookTestV1(pkiWebhookID, body)
+> CommonResponse webhookTestV1(pkiWebhookID, body)
 
 Test the Webhook by calling the Url
 
@@ -620,7 +620,7 @@ public class Example {
     Integer pkiWebhookID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      WebhookTestV1Response result = apiInstance.webhookTestV1(pkiWebhookID, body);
+      CommonResponse result = apiInstance.webhookTestV1(pkiWebhookID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectWebhookApi#webhookTestV1");
@@ -642,7 +642,7 @@ public class Example {
 
 ### Return type
 
-[**WebhookTestV1Response**](WebhookTestV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

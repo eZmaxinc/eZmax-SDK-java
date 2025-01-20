@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * A complex type that specifies ETag configuration options.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ScimServiceProviderConfigEtag {
   public static final String SERIALIZED_NAME_SUPPORTED = "supported";
   @SerializedName(SERIALIZED_NAME_SUPPORTED)
+  @javax.annotation.Nonnull
   private Boolean supported;
 
   public ScimServiceProviderConfigEtag() {
   }
 
-  public ScimServiceProviderConfigEtag supported(Boolean supported) {
+  public ScimServiceProviderConfigEtag supported(@javax.annotation.Nonnull Boolean supported) {
     this.supported = supported;
     return this;
   }
@@ -71,7 +72,7 @@ public class ScimServiceProviderConfigEtag {
     return supported;
   }
 
-  public void setSupported(Boolean supported) {
+  public void setSupported(@javax.annotation.Nonnull Boolean supported) {
     this.supported = supported;
   }
 

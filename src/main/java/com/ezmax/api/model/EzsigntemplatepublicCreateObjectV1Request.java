@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplatepublic
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepublicCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPUBLIC = "a_objEzsigntemplatepublic";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPUBLIC)
+  @javax.annotation.Nonnull
   private List<EzsigntemplatepublicRequestCompound> aObjEzsigntemplatepublic = new ArrayList<>();
 
   public EzsigntemplatepublicCreateObjectV1Request() {
   }
 
-  public EzsigntemplatepublicCreateObjectV1Request aObjEzsigntemplatepublic(List<EzsigntemplatepublicRequestCompound> aObjEzsigntemplatepublic) {
+  public EzsigntemplatepublicCreateObjectV1Request aObjEzsigntemplatepublic(@javax.annotation.Nonnull List<EzsigntemplatepublicRequestCompound> aObjEzsigntemplatepublic) {
     this.aObjEzsigntemplatepublic = aObjEzsigntemplatepublic;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzsigntemplatepublicCreateObjectV1Request {
     return aObjEzsigntemplatepublic;
   }
 
-  public void setaObjEzsigntemplatepublic(List<EzsigntemplatepublicRequestCompound> aObjEzsigntemplatepublic) {
+  public void setaObjEzsigntemplatepublic(@javax.annotation.Nonnull List<EzsigntemplatepublicRequestCompound> aObjEzsigntemplatepublic) {
     this.aObjEzsigntemplatepublic = aObjEzsigntemplatepublic;
   }
 

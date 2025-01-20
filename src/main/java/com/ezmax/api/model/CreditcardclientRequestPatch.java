@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcardclient Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CreditcardclientRequestPatch {
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENTRELATION_ISDEFAULT = "bCreditcardclientrelationIsdefault";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENTRELATION_ISDEFAULT)
+  @javax.annotation.Nullable
   private Boolean bCreditcardclientrelationIsdefault;
 
   public CreditcardclientRequestPatch() {
   }
 
-  public CreditcardclientRequestPatch bCreditcardclientrelationIsdefault(Boolean bCreditcardclientrelationIsdefault) {
+  public CreditcardclientRequestPatch bCreditcardclientrelationIsdefault(@javax.annotation.Nullable Boolean bCreditcardclientrelationIsdefault) {
     this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
     return this;
   }
@@ -71,7 +72,7 @@ public class CreditcardclientRequestPatch {
     return bCreditcardclientrelationIsdefault;
   }
 
-  public void setbCreditcardclientrelationIsdefault(Boolean bCreditcardclientrelationIsdefault) {
+  public void setbCreditcardclientrelationIsdefault(@javax.annotation.Nullable Boolean bCreditcardclientrelationIsdefault) {
     this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
   }
 

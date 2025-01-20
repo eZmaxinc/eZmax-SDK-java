@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatepackagemembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatepackagemembershipRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D = "pkiEzsigntemplatepackagemembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEzsigntemplatepackagemembershipID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplatepackageID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplateID;
 
   public EzsigntemplatepackagemembershipRequest() {
   }
 
-  public EzsigntemplatepackagemembershipRequest pkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
+  public EzsigntemplatepackagemembershipRequest pkiEzsigntemplatepackagemembershipID(@javax.annotation.Nullable Integer pkiEzsigntemplatepackagemembershipID) {
     this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
     return this;
   }
@@ -80,12 +83,12 @@ public class EzsigntemplatepackagemembershipRequest {
     return pkiEzsigntemplatepackagemembershipID;
   }
 
-  public void setPkiEzsigntemplatepackagemembershipID(Integer pkiEzsigntemplatepackagemembershipID) {
+  public void setPkiEzsigntemplatepackagemembershipID(@javax.annotation.Nullable Integer pkiEzsigntemplatepackagemembershipID) {
     this.pkiEzsigntemplatepackagemembershipID = pkiEzsigntemplatepackagemembershipID;
   }
 
 
-  public EzsigntemplatepackagemembershipRequest fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
+  public EzsigntemplatepackagemembershipRequest fkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -100,12 +103,12 @@ public class EzsigntemplatepackagemembershipRequest {
     return fkiEzsigntemplatepackageID;
   }
 
-  public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
+  public void setFkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
-  public EzsigntemplatepackagemembershipRequest fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+  public EzsigntemplatepackagemembershipRequest fkiEzsigntemplateID(@javax.annotation.Nonnull Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -120,7 +123,7 @@ public class EzsigntemplatepackagemembershipRequest {
     return fkiEzsigntemplateID;
   }
 
-  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
+  public void setFkiEzsigntemplateID(@javax.annotation.Nonnull Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 

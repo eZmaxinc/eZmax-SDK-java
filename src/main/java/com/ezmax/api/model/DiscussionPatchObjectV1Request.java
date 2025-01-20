@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PATCH /1/object/discussion/{pkiDiscussionID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DiscussionPatchObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_DISCUSSION = "objDiscussion";
   @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSION)
+  @javax.annotation.Nonnull
   private DiscussionRequestPatch objDiscussion;
 
   public DiscussionPatchObjectV1Request() {
   }
 
-  public DiscussionPatchObjectV1Request objDiscussion(DiscussionRequestPatch objDiscussion) {
+  public DiscussionPatchObjectV1Request objDiscussion(@javax.annotation.Nonnull DiscussionRequestPatch objDiscussion) {
     this.objDiscussion = objDiscussion;
     return this;
   }
@@ -72,7 +73,7 @@ public class DiscussionPatchObjectV1Request {
     return objDiscussion;
   }
 
-  public void setObjDiscussion(DiscussionRequestPatch objDiscussion) {
+  public void setObjDiscussion(@javax.annotation.Nonnull DiscussionRequestPatch objDiscussion) {
     this.objDiscussion = objDiscussion;
   }
 

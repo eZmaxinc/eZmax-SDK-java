@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATESIGNATURE = "a_objEzsigntemplatesignature";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATESIGNATURE)
+  @javax.annotation.Nonnull
   private List<EzsigntemplatesignatureRequestCompound> aObjEzsigntemplatesignature = new ArrayList<>();
 
   public EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request() {
   }
 
-  public EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request aObjEzsigntemplatesignature(List<EzsigntemplatesignatureRequestCompound> aObjEzsigntemplatesignature) {
+  public EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request aObjEzsigntemplatesignature(@javax.annotation.Nonnull List<EzsigntemplatesignatureRequestCompound> aObjEzsigntemplatesignature) {
     this.aObjEzsigntemplatesignature = aObjEzsigntemplatesignature;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzsigntemplatedocumentEditEzsigntemplatesignaturesV1Request {
     return aObjEzsigntemplatesignature;
   }
 
-  public void setaObjEzsigntemplatesignature(List<EzsigntemplatesignatureRequestCompound> aObjEzsigntemplatesignature) {
+  public void setaObjEzsigntemplatesignature(@javax.annotation.Nonnull List<EzsigntemplatesignatureRequestCompound> aObjEzsigntemplatesignature) {
     this.aObjEzsigntemplatesignature = aObjEzsigntemplatesignature;
   }
 

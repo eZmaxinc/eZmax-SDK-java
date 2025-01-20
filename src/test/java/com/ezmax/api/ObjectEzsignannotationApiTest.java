@@ -14,12 +14,11 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignannotationCreateObjectV1Request;
 import com.ezmax.api.model.EzsignannotationCreateObjectV1Response;
-import com.ezmax.api.model.EzsignannotationDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignannotationEditObjectV1Request;
-import com.ezmax.api.model.EzsignannotationEditObjectV1Response;
 import com.ezmax.api.model.EzsignannotationGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -61,7 +60,7 @@ public class ObjectEzsignannotationApiTest {
     @Test
     public void ezsignannotationDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignannotationID = null;
-        EzsignannotationDeleteObjectV1Response response = api.ezsignannotationDeleteObjectV1(pkiEzsignannotationID);
+        CommonResponse response = api.ezsignannotationDeleteObjectV1(pkiEzsignannotationID);
         // TODO: test validations
     }
 
@@ -76,7 +75,7 @@ public class ObjectEzsignannotationApiTest {
     public void ezsignannotationEditObjectV1Test() throws ApiException {
         Integer pkiEzsignannotationID = null;
         EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request = null;
-        EzsignannotationEditObjectV1Response response = api.ezsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
+        CommonResponse response = api.ezsignannotationEditObjectV1(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
         // TODO: test validations
     }
 

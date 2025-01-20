@@ -48,32 +48,37 @@ import eZmaxAPI.JSON;
 /**
  * A Province AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ProvinceAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_PROVINCE_I_D = "pkiProvinceID";
   @SerializedName(SERIALIZED_NAME_PKI_PROVINCE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiProvinceID;
 
   public static final String SERIALIZED_NAME_FKI_COUNTRY_I_D = "fkiCountryID";
   @SerializedName(SERIALIZED_NAME_FKI_COUNTRY_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiCountryID;
 
   public static final String SERIALIZED_NAME_S_PROVINCE_NAME_X = "sProvinceNameX";
   @SerializedName(SERIALIZED_NAME_S_PROVINCE_NAME_X)
+  @javax.annotation.Nonnull
   private String sProvinceNameX;
 
   public static final String SERIALIZED_NAME_S_PROVINCE_SHORTNAME = "sProvinceShortname";
   @SerializedName(SERIALIZED_NAME_S_PROVINCE_SHORTNAME)
+  @javax.annotation.Nonnull
   private String sProvinceShortname;
 
   public static final String SERIALIZED_NAME_B_PROVINCE_ISACTIVE = "bProvinceIsactive";
   @SerializedName(SERIALIZED_NAME_B_PROVINCE_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bProvinceIsactive;
 
   public ProvinceAutocompleteElementResponse() {
   }
 
-  public ProvinceAutocompleteElementResponse pkiProvinceID(Integer pkiProvinceID) {
+  public ProvinceAutocompleteElementResponse pkiProvinceID(@javax.annotation.Nonnull Integer pkiProvinceID) {
     this.pkiProvinceID = pkiProvinceID;
     return this;
   }
@@ -88,12 +93,12 @@ public class ProvinceAutocompleteElementResponse {
     return pkiProvinceID;
   }
 
-  public void setPkiProvinceID(Integer pkiProvinceID) {
+  public void setPkiProvinceID(@javax.annotation.Nonnull Integer pkiProvinceID) {
     this.pkiProvinceID = pkiProvinceID;
   }
 
 
-  public ProvinceAutocompleteElementResponse fkiCountryID(Integer fkiCountryID) {
+  public ProvinceAutocompleteElementResponse fkiCountryID(@javax.annotation.Nonnull Integer fkiCountryID) {
     this.fkiCountryID = fkiCountryID;
     return this;
   }
@@ -108,12 +113,12 @@ public class ProvinceAutocompleteElementResponse {
     return fkiCountryID;
   }
 
-  public void setFkiCountryID(Integer fkiCountryID) {
+  public void setFkiCountryID(@javax.annotation.Nonnull Integer fkiCountryID) {
     this.fkiCountryID = fkiCountryID;
   }
 
 
-  public ProvinceAutocompleteElementResponse sProvinceNameX(String sProvinceNameX) {
+  public ProvinceAutocompleteElementResponse sProvinceNameX(@javax.annotation.Nonnull String sProvinceNameX) {
     this.sProvinceNameX = sProvinceNameX;
     return this;
   }
@@ -127,12 +132,12 @@ public class ProvinceAutocompleteElementResponse {
     return sProvinceNameX;
   }
 
-  public void setsProvinceNameX(String sProvinceNameX) {
+  public void setsProvinceNameX(@javax.annotation.Nonnull String sProvinceNameX) {
     this.sProvinceNameX = sProvinceNameX;
   }
 
 
-  public ProvinceAutocompleteElementResponse sProvinceShortname(String sProvinceShortname) {
+  public ProvinceAutocompleteElementResponse sProvinceShortname(@javax.annotation.Nonnull String sProvinceShortname) {
     this.sProvinceShortname = sProvinceShortname;
     return this;
   }
@@ -146,12 +151,12 @@ public class ProvinceAutocompleteElementResponse {
     return sProvinceShortname;
   }
 
-  public void setsProvinceShortname(String sProvinceShortname) {
+  public void setsProvinceShortname(@javax.annotation.Nonnull String sProvinceShortname) {
     this.sProvinceShortname = sProvinceShortname;
   }
 
 
-  public ProvinceAutocompleteElementResponse bProvinceIsactive(Boolean bProvinceIsactive) {
+  public ProvinceAutocompleteElementResponse bProvinceIsactive(@javax.annotation.Nonnull Boolean bProvinceIsactive) {
     this.bProvinceIsactive = bProvinceIsactive;
     return this;
   }
@@ -165,7 +170,7 @@ public class ProvinceAutocompleteElementResponse {
     return bProvinceIsactive;
   }
 
-  public void setbProvinceIsactive(Boolean bProvinceIsactive) {
+  public void setbProvinceIsactive(@javax.annotation.Nonnull Boolean bProvinceIsactive) {
     this.bProvinceIsactive = bProvinceIsactive;
   }
 

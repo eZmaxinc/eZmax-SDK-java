@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/timezone/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class TimezoneGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_TIMEZONE = "a_objTimezone";
   @SerializedName(SERIALIZED_NAME_A_OBJ_TIMEZONE)
+  @javax.annotation.Nonnull
   private List<TimezoneAutocompleteElementResponse> aObjTimezone = new ArrayList<>();
 
   public TimezoneGetAutocompleteV2ResponseMPayload() {
   }
 
-  public TimezoneGetAutocompleteV2ResponseMPayload aObjTimezone(List<TimezoneAutocompleteElementResponse> aObjTimezone) {
+  public TimezoneGetAutocompleteV2ResponseMPayload aObjTimezone(@javax.annotation.Nonnull List<TimezoneAutocompleteElementResponse> aObjTimezone) {
     this.aObjTimezone = aObjTimezone;
     return this;
   }
@@ -82,7 +83,7 @@ public class TimezoneGetAutocompleteV2ResponseMPayload {
     return aObjTimezone;
   }
 
-  public void setaObjTimezone(List<TimezoneAutocompleteElementResponse> aObjTimezone) {
+  public void setaObjTimezone(@javax.annotation.Nonnull List<TimezoneAutocompleteElementResponse> aObjTimezone) {
     this.aObjTimezone = aObjTimezone;
   }
 

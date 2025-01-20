@@ -48,40 +48,47 @@ import eZmaxAPI.JSON;
 /**
  * A Permission Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class PermissionResponse {
   public static final String SERIALIZED_NAME_PKI_PERMISSION_I_D = "pkiPermissionID";
   @SerializedName(SERIALIZED_NAME_PKI_PERMISSION_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiPermissionID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_APIKEY_I_D = "fkiApikeyID";
   @SerializedName(SERIALIZED_NAME_FKI_APIKEY_I_D)
+  @javax.annotation.Nullable
   private Integer fkiApikeyID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUsergroupID;
 
   public static final String SERIALIZED_NAME_FKI_COMPANY_I_D = "fkiCompanyID";
   @SerializedName(SERIALIZED_NAME_FKI_COMPANY_I_D)
+  @javax.annotation.Nullable
   private Integer fkiCompanyID;
 
   public static final String SERIALIZED_NAME_FKI_MODULESECTION_I_D = "fkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_FKI_MODULESECTION_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiModulesectionID;
 
   public static final String SERIALIZED_NAME_S_COMPANY_NAME_X = "sCompanyNameX";
   @SerializedName(SERIALIZED_NAME_S_COMPANY_NAME_X)
+  @javax.annotation.Nullable
   private String sCompanyNameX;
 
   public PermissionResponse() {
   }
 
-  public PermissionResponse pkiPermissionID(Integer pkiPermissionID) {
+  public PermissionResponse pkiPermissionID(@javax.annotation.Nonnull Integer pkiPermissionID) {
     this.pkiPermissionID = pkiPermissionID;
     return this;
   }
@@ -97,12 +104,12 @@ public class PermissionResponse {
     return pkiPermissionID;
   }
 
-  public void setPkiPermissionID(Integer pkiPermissionID) {
+  public void setPkiPermissionID(@javax.annotation.Nonnull Integer pkiPermissionID) {
     this.pkiPermissionID = pkiPermissionID;
   }
 
 
-  public PermissionResponse fkiUserID(Integer fkiUserID) {
+  public PermissionResponse fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -117,12 +124,12 @@ public class PermissionResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public PermissionResponse fkiApikeyID(Integer fkiApikeyID) {
+  public PermissionResponse fkiApikeyID(@javax.annotation.Nullable Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
     return this;
   }
@@ -137,12 +144,12 @@ public class PermissionResponse {
     return fkiApikeyID;
   }
 
-  public void setFkiApikeyID(Integer fkiApikeyID) {
+  public void setFkiApikeyID(@javax.annotation.Nullable Integer fkiApikeyID) {
     this.fkiApikeyID = fkiApikeyID;
   }
 
 
-  public PermissionResponse fkiUsergroupID(Integer fkiUsergroupID) {
+  public PermissionResponse fkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -158,12 +165,12 @@ public class PermissionResponse {
     return fkiUsergroupID;
   }
 
-  public void setFkiUsergroupID(Integer fkiUsergroupID) {
+  public void setFkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
-  public PermissionResponse fkiCompanyID(Integer fkiCompanyID) {
+  public PermissionResponse fkiCompanyID(@javax.annotation.Nullable Integer fkiCompanyID) {
     this.fkiCompanyID = fkiCompanyID;
     return this;
   }
@@ -179,12 +186,12 @@ public class PermissionResponse {
     return fkiCompanyID;
   }
 
-  public void setFkiCompanyID(Integer fkiCompanyID) {
+  public void setFkiCompanyID(@javax.annotation.Nullable Integer fkiCompanyID) {
     this.fkiCompanyID = fkiCompanyID;
   }
 
 
-  public PermissionResponse fkiModulesectionID(Integer fkiModulesectionID) {
+  public PermissionResponse fkiModulesectionID(@javax.annotation.Nonnull Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
     return this;
   }
@@ -199,12 +206,12 @@ public class PermissionResponse {
     return fkiModulesectionID;
   }
 
-  public void setFkiModulesectionID(Integer fkiModulesectionID) {
+  public void setFkiModulesectionID(@javax.annotation.Nonnull Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
   }
 
 
-  public PermissionResponse sCompanyNameX(String sCompanyNameX) {
+  public PermissionResponse sCompanyNameX(@javax.annotation.Nullable String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -218,7 +225,7 @@ public class PermissionResponse {
     return sCompanyNameX;
   }
 
-  public void setsCompanyNameX(String sCompanyNameX) {
+  public void setsCompanyNameX(@javax.annotation.Nullable String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
   }
 

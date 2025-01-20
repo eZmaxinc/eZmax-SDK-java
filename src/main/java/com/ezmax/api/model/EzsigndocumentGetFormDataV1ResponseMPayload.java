@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getFormData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndocumentGetFormDataV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_FORM_DATA_DOCUMENT = "objFormDataDocument";
   @SerializedName(SERIALIZED_NAME_OBJ_FORM_DATA_DOCUMENT)
+  @javax.annotation.Nonnull
   private CustomFormDataDocumentResponse objFormDataDocument;
 
   public EzsigndocumentGetFormDataV1ResponseMPayload() {
   }
 
-  public EzsigndocumentGetFormDataV1ResponseMPayload objFormDataDocument(CustomFormDataDocumentResponse objFormDataDocument) {
+  public EzsigndocumentGetFormDataV1ResponseMPayload objFormDataDocument(@javax.annotation.Nonnull CustomFormDataDocumentResponse objFormDataDocument) {
     this.objFormDataDocument = objFormDataDocument;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsigndocumentGetFormDataV1ResponseMPayload {
     return objFormDataDocument;
   }
 
-  public void setObjFormDataDocument(CustomFormDataDocumentResponse objFormDataDocument) {
+  public void setObjFormDataDocument(@javax.annotation.Nonnull CustomFormDataDocumentResponse objFormDataDocument) {
     this.objFormDataDocument = objFormDataDocument;
   }
 

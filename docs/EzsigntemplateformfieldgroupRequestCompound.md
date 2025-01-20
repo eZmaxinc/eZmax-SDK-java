@@ -25,8 +25,8 @@ A Ezsigntemplateformfieldgroup Object and children
 |**eEzsigntemplateformfieldgroupTextvalidation** | **EnumTextvalidation** |  |  [optional] |
 |**tEzsigntemplateformfieldgroupTooltip** | **String** | A tooltip that will be presented to Ezsigntemplatesigner about the Ezsigntemplateformfieldgroup |  [optional] |
 |**eEzsigntemplateformfieldgroupTooltipposition** | **FieldEEzsigntemplateformfieldgroupTooltipposition** |  |  [optional] |
-|**aObjEzsigntemplateformfieldgroupsigner** | [**List&lt;EzsigntemplateformfieldgroupsignerRequestCompound&gt;**](EzsigntemplateformfieldgroupsignerRequestCompound.md) |  |  |
-|**aObjDropdownElement** | [**List&lt;CustomDropdownElementRequestCompound&gt;**](CustomDropdownElementRequestCompound.md) |  |  [optional] |
+|**aObjEzsigntemplateformfieldgroupsigner** | [**List&lt;EzsigntemplateformfieldgroupsignerRequest&gt;**](EzsigntemplateformfieldgroupsignerRequest.md) |  |  |
+|**aObjDropdownElement** | [**List&lt;CustomDropdownElementRequest&gt;**](CustomDropdownElementRequest.md) |  |  [optional] |
 |**aObjEzsigntemplateformfield** | [**List&lt;EzsigntemplateformfieldRequestCompound&gt;**](EzsigntemplateformfieldRequestCompound.md) |  |  |
 
 

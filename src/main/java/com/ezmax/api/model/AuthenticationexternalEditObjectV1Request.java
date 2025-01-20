@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/authenticationexternal/{pkiAuthenticationexternalID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AuthenticationexternalEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_AUTHENTICATIONEXTERNAL = "objAuthenticationexternal";
   @SerializedName(SERIALIZED_NAME_OBJ_AUTHENTICATIONEXTERNAL)
+  @javax.annotation.Nonnull
   private AuthenticationexternalRequestCompound objAuthenticationexternal;
 
   public AuthenticationexternalEditObjectV1Request() {
   }
 
-  public AuthenticationexternalEditObjectV1Request objAuthenticationexternal(AuthenticationexternalRequestCompound objAuthenticationexternal) {
+  public AuthenticationexternalEditObjectV1Request objAuthenticationexternal(@javax.annotation.Nonnull AuthenticationexternalRequestCompound objAuthenticationexternal) {
     this.objAuthenticationexternal = objAuthenticationexternal;
     return this;
   }
@@ -72,7 +73,7 @@ public class AuthenticationexternalEditObjectV1Request {
     return objAuthenticationexternal;
   }
 
-  public void setObjAuthenticationexternal(AuthenticationexternalRequestCompound objAuthenticationexternal) {
+  public void setObjAuthenticationexternal(@javax.annotation.Nonnull AuthenticationexternalRequestCompound objAuthenticationexternal) {
     this.objAuthenticationexternal = objAuthenticationexternal;
   }
 

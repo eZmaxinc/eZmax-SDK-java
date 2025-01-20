@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * An Email Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EmailRequest {
   public static final String SERIALIZED_NAME_PKI_EMAIL_I_D = "pkiEmailID";
   @SerializedName(SERIALIZED_NAME_PKI_EMAIL_I_D)
+  @javax.annotation.Nullable
   private Integer pkiEmailID;
 
   public static final String SERIALIZED_NAME_FKI_EMAILTYPE_I_D = "fkiEmailtypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EMAILTYPE_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiEmailtypeID;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
+  @javax.annotation.Nonnull
   private String sEmailAddress;
 
   public EmailRequest() {
   }
 
-  public EmailRequest pkiEmailID(Integer pkiEmailID) {
+  public EmailRequest pkiEmailID(@javax.annotation.Nullable Integer pkiEmailID) {
     this.pkiEmailID = pkiEmailID;
     return this;
   }
@@ -81,12 +84,12 @@ public class EmailRequest {
     return pkiEmailID;
   }
 
-  public void setPkiEmailID(Integer pkiEmailID) {
+  public void setPkiEmailID(@javax.annotation.Nullable Integer pkiEmailID) {
     this.pkiEmailID = pkiEmailID;
   }
 
 
-  public EmailRequest fkiEmailtypeID(Integer fkiEmailtypeID) {
+  public EmailRequest fkiEmailtypeID(@javax.annotation.Nonnull Integer fkiEmailtypeID) {
     this.fkiEmailtypeID = fkiEmailtypeID;
     return this;
   }
@@ -101,12 +104,12 @@ public class EmailRequest {
     return fkiEmailtypeID;
   }
 
-  public void setFkiEmailtypeID(Integer fkiEmailtypeID) {
+  public void setFkiEmailtypeID(@javax.annotation.Nonnull Integer fkiEmailtypeID) {
     this.fkiEmailtypeID = fkiEmailtypeID;
   }
 
 
-  public EmailRequest sEmailAddress(String sEmailAddress) {
+  public EmailRequest sEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -120,7 +123,7 @@ public class EmailRequest {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(String sEmailAddress) {
+  public void setsEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 

@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupGetUsergroupdelegationsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUPDELEGATION = "a_objUsergroupdelegation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUPDELEGATION)
+  @javax.annotation.Nonnull
   private List<UsergroupdelegationResponseCompound> aObjUsergroupdelegation = new ArrayList<>();
 
   public UsergroupGetUsergroupdelegationsV1ResponseMPayload() {
   }
 
-  public UsergroupGetUsergroupdelegationsV1ResponseMPayload aObjUsergroupdelegation(List<UsergroupdelegationResponseCompound> aObjUsergroupdelegation) {
+  public UsergroupGetUsergroupdelegationsV1ResponseMPayload aObjUsergroupdelegation(@javax.annotation.Nonnull List<UsergroupdelegationResponseCompound> aObjUsergroupdelegation) {
     this.aObjUsergroupdelegation = aObjUsergroupdelegation;
     return this;
   }
@@ -82,7 +83,7 @@ public class UsergroupGetUsergroupdelegationsV1ResponseMPayload {
     return aObjUsergroupdelegation;
   }
 
-  public void setaObjUsergroupdelegation(List<UsergroupdelegationResponseCompound> aObjUsergroupdelegation) {
+  public void setaObjUsergroupdelegation(@javax.annotation.Nonnull List<UsergroupdelegationResponseCompound> aObjUsergroupdelegation) {
     this.aObjUsergroupdelegation = aObjUsergroupdelegation;
   }
 

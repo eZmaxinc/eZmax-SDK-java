@@ -8,7 +8,7 @@ Payload for GET /2/object/apikey/{pkiApikeyID}
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objApikey** | [**ApikeyResponseCompound**](ApikeyResponseCompound.md) |  |  |
+|**objApikey** | [**ApikeyResponse**](ApikeyResponse.md) | An Apikey Object and children to create a complete structure |  |
 
 
 

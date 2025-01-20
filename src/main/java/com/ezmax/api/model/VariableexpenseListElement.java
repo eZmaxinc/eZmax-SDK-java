@@ -49,32 +49,37 @@ import eZmaxAPI.JSON;
 /**
  * A Variableexpense List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class VariableexpenseListElement {
   public static final String SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D = "pkiVariableexpenseID";
   @SerializedName(SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiVariableexpenseID;
 
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_CODE = "sVariableexpenseCode";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_CODE)
+  @javax.annotation.Nullable
   private String sVariableexpenseCode;
 
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION_X = "sVariableexpenseDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_DESCRIPTION_X)
+  @javax.annotation.Nullable
   private String sVariableexpenseDescriptionX;
 
   public static final String SERIALIZED_NAME_E_VARIABLEEXPENSE_TAXABLE = "eVariableexpenseTaxable";
   @SerializedName(SERIALIZED_NAME_E_VARIABLEEXPENSE_TAXABLE)
+  @javax.annotation.Nullable
   private FieldEVariableexpenseTaxable eVariableexpenseTaxable;
 
   public static final String SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE = "bVariableexpenseIsactive";
   @SerializedName(SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE)
+  @javax.annotation.Nullable
   private Boolean bVariableexpenseIsactive;
 
   public VariableexpenseListElement() {
   }
 
-  public VariableexpenseListElement pkiVariableexpenseID(Integer pkiVariableexpenseID) {
+  public VariableexpenseListElement pkiVariableexpenseID(@javax.annotation.Nonnull Integer pkiVariableexpenseID) {
     this.pkiVariableexpenseID = pkiVariableexpenseID;
     return this;
   }
@@ -90,12 +95,12 @@ public class VariableexpenseListElement {
     return pkiVariableexpenseID;
   }
 
-  public void setPkiVariableexpenseID(Integer pkiVariableexpenseID) {
+  public void setPkiVariableexpenseID(@javax.annotation.Nonnull Integer pkiVariableexpenseID) {
     this.pkiVariableexpenseID = pkiVariableexpenseID;
   }
 
 
-  public VariableexpenseListElement sVariableexpenseCode(String sVariableexpenseCode) {
+  public VariableexpenseListElement sVariableexpenseCode(@javax.annotation.Nullable String sVariableexpenseCode) {
     this.sVariableexpenseCode = sVariableexpenseCode;
     return this;
   }
@@ -109,12 +114,12 @@ public class VariableexpenseListElement {
     return sVariableexpenseCode;
   }
 
-  public void setsVariableexpenseCode(String sVariableexpenseCode) {
+  public void setsVariableexpenseCode(@javax.annotation.Nullable String sVariableexpenseCode) {
     this.sVariableexpenseCode = sVariableexpenseCode;
   }
 
 
-  public VariableexpenseListElement sVariableexpenseDescriptionX(String sVariableexpenseDescriptionX) {
+  public VariableexpenseListElement sVariableexpenseDescriptionX(@javax.annotation.Nullable String sVariableexpenseDescriptionX) {
     this.sVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
     return this;
   }
@@ -128,12 +133,12 @@ public class VariableexpenseListElement {
     return sVariableexpenseDescriptionX;
   }
 
-  public void setsVariableexpenseDescriptionX(String sVariableexpenseDescriptionX) {
+  public void setsVariableexpenseDescriptionX(@javax.annotation.Nullable String sVariableexpenseDescriptionX) {
     this.sVariableexpenseDescriptionX = sVariableexpenseDescriptionX;
   }
 
 
-  public VariableexpenseListElement eVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
+  public VariableexpenseListElement eVariableexpenseTaxable(@javax.annotation.Nullable FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
     this.eVariableexpenseTaxable = eVariableexpenseTaxable;
     return this;
   }
@@ -147,12 +152,12 @@ public class VariableexpenseListElement {
     return eVariableexpenseTaxable;
   }
 
-  public void seteVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
+  public void seteVariableexpenseTaxable(@javax.annotation.Nullable FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
     this.eVariableexpenseTaxable = eVariableexpenseTaxable;
   }
 
 
-  public VariableexpenseListElement bVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
+  public VariableexpenseListElement bVariableexpenseIsactive(@javax.annotation.Nullable Boolean bVariableexpenseIsactive) {
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
     return this;
   }
@@ -166,7 +171,7 @@ public class VariableexpenseListElement {
     return bVariableexpenseIsactive;
   }
 
-  public void setbVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
+  public void setbVariableexpenseIsactive(@javax.annotation.Nullable Boolean bVariableexpenseIsactive) {
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
   }
 

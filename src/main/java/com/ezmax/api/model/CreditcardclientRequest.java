@@ -49,48 +49,57 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcardclient Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CreditcardclientRequest {
   public static final String SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D = "pkiCreditcardclientID";
   @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D)
+  @javax.annotation.Nullable
   private Integer pkiCreditcardclientID;
 
   public static final String SERIALIZED_NAME_FKS_CREDITCARDTOKEN_I_D = "fksCreditcardtokenID";
   @SerializedName(SERIALIZED_NAME_FKS_CREDITCARDTOKEN_I_D)
+  @javax.annotation.Nullable
   private String fksCreditcardtokenID;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENTRELATION_ISDEFAULT = "bCreditcardclientrelationIsdefault";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENTRELATION_ISDEFAULT)
+  @javax.annotation.Nonnull
   private Boolean bCreditcardclientrelationIsdefault;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION = "sCreditcardclientDescription";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sCreditcardclientDescription;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDCOMPANYPAYMENT = "bCreditcardclientAllowedcompanypayment";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDCOMPANYPAYMENT)
+  @javax.annotation.Nonnull
   private Boolean bCreditcardclientAllowedcompanypayment;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDEZSIGN = "bCreditcardclientAllowedezsign";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDEZSIGN)
+  @javax.annotation.Nonnull
   private Boolean bCreditcardclientAllowedezsign;
 
   public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDTRANQUILLIT = "bCreditcardclientAllowedtranquillit";
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_ALLOWEDTRANQUILLIT)
+  @javax.annotation.Nonnull
   private Boolean bCreditcardclientAllowedtranquillit;
 
   public static final String SERIALIZED_NAME_OBJ_CREDITCARDDETAIL = "objCreditcarddetail";
   @SerializedName(SERIALIZED_NAME_OBJ_CREDITCARDDETAIL)
+  @javax.annotation.Nonnull
   private CreditcarddetailRequest objCreditcarddetail;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDCLIENT_C_V_V = "sCreditcardclientCVV";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDCLIENT_C_V_V)
+  @javax.annotation.Nonnull
   private String sCreditcardclientCVV;
 
   public CreditcardclientRequest() {
   }
 
-  public CreditcardclientRequest pkiCreditcardclientID(Integer pkiCreditcardclientID) {
+  public CreditcardclientRequest pkiCreditcardclientID(@javax.annotation.Nullable Integer pkiCreditcardclientID) {
     this.pkiCreditcardclientID = pkiCreditcardclientID;
     return this;
   }
@@ -106,12 +115,12 @@ public class CreditcardclientRequest {
     return pkiCreditcardclientID;
   }
 
-  public void setPkiCreditcardclientID(Integer pkiCreditcardclientID) {
+  public void setPkiCreditcardclientID(@javax.annotation.Nullable Integer pkiCreditcardclientID) {
     this.pkiCreditcardclientID = pkiCreditcardclientID;
   }
 
 
-  public CreditcardclientRequest fksCreditcardtokenID(String fksCreditcardtokenID) {
+  public CreditcardclientRequest fksCreditcardtokenID(@javax.annotation.Nullable String fksCreditcardtokenID) {
     this.fksCreditcardtokenID = fksCreditcardtokenID;
     return this;
   }
@@ -125,12 +134,12 @@ public class CreditcardclientRequest {
     return fksCreditcardtokenID;
   }
 
-  public void setFksCreditcardtokenID(String fksCreditcardtokenID) {
+  public void setFksCreditcardtokenID(@javax.annotation.Nullable String fksCreditcardtokenID) {
     this.fksCreditcardtokenID = fksCreditcardtokenID;
   }
 
 
-  public CreditcardclientRequest bCreditcardclientrelationIsdefault(Boolean bCreditcardclientrelationIsdefault) {
+  public CreditcardclientRequest bCreditcardclientrelationIsdefault(@javax.annotation.Nonnull Boolean bCreditcardclientrelationIsdefault) {
     this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
     return this;
   }
@@ -144,12 +153,12 @@ public class CreditcardclientRequest {
     return bCreditcardclientrelationIsdefault;
   }
 
-  public void setbCreditcardclientrelationIsdefault(Boolean bCreditcardclientrelationIsdefault) {
+  public void setbCreditcardclientrelationIsdefault(@javax.annotation.Nonnull Boolean bCreditcardclientrelationIsdefault) {
     this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
   }
 
 
-  public CreditcardclientRequest sCreditcardclientDescription(String sCreditcardclientDescription) {
+  public CreditcardclientRequest sCreditcardclientDescription(@javax.annotation.Nonnull String sCreditcardclientDescription) {
     this.sCreditcardclientDescription = sCreditcardclientDescription;
     return this;
   }
@@ -163,12 +172,12 @@ public class CreditcardclientRequest {
     return sCreditcardclientDescription;
   }
 
-  public void setsCreditcardclientDescription(String sCreditcardclientDescription) {
+  public void setsCreditcardclientDescription(@javax.annotation.Nonnull String sCreditcardclientDescription) {
     this.sCreditcardclientDescription = sCreditcardclientDescription;
   }
 
 
-  public CreditcardclientRequest bCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
+  public CreditcardclientRequest bCreditcardclientAllowedcompanypayment(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedcompanypayment) {
     this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
     return this;
   }
@@ -182,12 +191,12 @@ public class CreditcardclientRequest {
     return bCreditcardclientAllowedcompanypayment;
   }
 
-  public void setbCreditcardclientAllowedcompanypayment(Boolean bCreditcardclientAllowedcompanypayment) {
+  public void setbCreditcardclientAllowedcompanypayment(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedcompanypayment) {
     this.bCreditcardclientAllowedcompanypayment = bCreditcardclientAllowedcompanypayment;
   }
 
 
-  public CreditcardclientRequest bCreditcardclientAllowedezsign(Boolean bCreditcardclientAllowedezsign) {
+  public CreditcardclientRequest bCreditcardclientAllowedezsign(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedezsign) {
     this.bCreditcardclientAllowedezsign = bCreditcardclientAllowedezsign;
     return this;
   }
@@ -201,12 +210,12 @@ public class CreditcardclientRequest {
     return bCreditcardclientAllowedezsign;
   }
 
-  public void setbCreditcardclientAllowedezsign(Boolean bCreditcardclientAllowedezsign) {
+  public void setbCreditcardclientAllowedezsign(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedezsign) {
     this.bCreditcardclientAllowedezsign = bCreditcardclientAllowedezsign;
   }
 
 
-  public CreditcardclientRequest bCreditcardclientAllowedtranquillit(Boolean bCreditcardclientAllowedtranquillit) {
+  public CreditcardclientRequest bCreditcardclientAllowedtranquillit(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedtranquillit) {
     this.bCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
     return this;
   }
@@ -220,12 +229,12 @@ public class CreditcardclientRequest {
     return bCreditcardclientAllowedtranquillit;
   }
 
-  public void setbCreditcardclientAllowedtranquillit(Boolean bCreditcardclientAllowedtranquillit) {
+  public void setbCreditcardclientAllowedtranquillit(@javax.annotation.Nonnull Boolean bCreditcardclientAllowedtranquillit) {
     this.bCreditcardclientAllowedtranquillit = bCreditcardclientAllowedtranquillit;
   }
 
 
-  public CreditcardclientRequest objCreditcarddetail(CreditcarddetailRequest objCreditcarddetail) {
+  public CreditcardclientRequest objCreditcarddetail(@javax.annotation.Nonnull CreditcarddetailRequest objCreditcarddetail) {
     this.objCreditcarddetail = objCreditcarddetail;
     return this;
   }
@@ -239,12 +248,12 @@ public class CreditcardclientRequest {
     return objCreditcarddetail;
   }
 
-  public void setObjCreditcarddetail(CreditcarddetailRequest objCreditcarddetail) {
+  public void setObjCreditcarddetail(@javax.annotation.Nonnull CreditcarddetailRequest objCreditcarddetail) {
     this.objCreditcarddetail = objCreditcarddetail;
   }
 
 
-  public CreditcardclientRequest sCreditcardclientCVV(String sCreditcardclientCVV) {
+  public CreditcardclientRequest sCreditcardclientCVV(@javax.annotation.Nonnull String sCreditcardclientCVV) {
     this.sCreditcardclientCVV = sCreditcardclientCVV;
     return this;
   }
@@ -258,7 +267,7 @@ public class CreditcardclientRequest {
     return sCreditcardclientCVV;
   }
 
-  public void setsCreditcardclientCVV(String sCreditcardclientCVV) {
+  public void setsCreditcardclientCVV(@javax.annotation.Nonnull String sCreditcardclientCVV) {
     this.sCreditcardclientCVV = sCreditcardclientCVV;
   }
 

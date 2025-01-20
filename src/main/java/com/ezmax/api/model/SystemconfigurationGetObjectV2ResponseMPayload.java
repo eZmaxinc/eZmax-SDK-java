@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/systemconfiguration/{pkiSystemconfigurationID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SystemconfigurationGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_SYSTEMCONFIGURATION = "objSystemconfiguration";
   @SerializedName(SERIALIZED_NAME_OBJ_SYSTEMCONFIGURATION)
+  @javax.annotation.Nonnull
   private SystemconfigurationResponseCompound objSystemconfiguration;
 
   public SystemconfigurationGetObjectV2ResponseMPayload() {
   }
 
-  public SystemconfigurationGetObjectV2ResponseMPayload objSystemconfiguration(SystemconfigurationResponseCompound objSystemconfiguration) {
+  public SystemconfigurationGetObjectV2ResponseMPayload objSystemconfiguration(@javax.annotation.Nonnull SystemconfigurationResponseCompound objSystemconfiguration) {
     this.objSystemconfiguration = objSystemconfiguration;
     return this;
   }
@@ -72,7 +73,7 @@ public class SystemconfigurationGetObjectV2ResponseMPayload {
     return objSystemconfiguration;
   }
 
-  public void setObjSystemconfiguration(SystemconfigurationResponseCompound objSystemconfiguration) {
+  public void setObjSystemconfiguration(@javax.annotation.Nonnull SystemconfigurationResponseCompound objSystemconfiguration) {
     this.objSystemconfiguration = objSystemconfiguration;
   }
 

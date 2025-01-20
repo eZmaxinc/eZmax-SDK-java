@@ -458,7 +458,7 @@ public class Example {
 
 <a id="ezsigntemplatedocumentFlattenV1"></a>
 # **ezsigntemplatedocumentFlattenV1**
-> EzsigntemplatedocumentFlattenV1Response ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
+> CommonResponse ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body)
 
 Flatten
 
@@ -489,7 +489,7 @@ public class Example {
     Integer pkiEzsigntemplatedocumentID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      EzsigntemplatedocumentFlattenV1Response result = apiInstance.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body);
+      CommonResponse result = apiInstance.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentFlattenV1");
@@ -511,7 +511,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigntemplatedocumentFlattenV1Response**](EzsigntemplatedocumentFlattenV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 
@@ -956,7 +956,7 @@ public class Example {
 
 <a id="ezsigntemplatedocumentPatchObjectV1"></a>
 # **ezsigntemplatedocumentPatchObjectV1**
-> EzsigntemplatedocumentPatchObjectV1Response ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request)
+> CommonResponse ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request)
 
 Patch an existing Ezsigntemplatedocument
 
@@ -987,7 +987,7 @@ public class Example {
     Integer pkiEzsigntemplatedocumentID = 56; // Integer | 
     EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request = new EzsigntemplatedocumentPatchObjectV1Request(); // EzsigntemplatedocumentPatchObjectV1Request | 
     try {
-      EzsigntemplatedocumentPatchObjectV1Response result = apiInstance.ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request);
+      CommonResponse result = apiInstance.ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigntemplatedocumentApi#ezsigntemplatedocumentPatchObjectV1");
@@ -1009,7 +1009,7 @@ public class Example {
 
 ### Return type
 
-[**EzsigntemplatedocumentPatchObjectV1Response**](EzsigntemplatedocumentPatchObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

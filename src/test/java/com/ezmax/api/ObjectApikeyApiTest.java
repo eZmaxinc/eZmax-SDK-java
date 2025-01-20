@@ -17,7 +17,6 @@ import eZmaxAPI.ApiException;
 import com.ezmax.api.model.ApikeyCreateObjectV2Request;
 import com.ezmax.api.model.ApikeyCreateObjectV2Response;
 import com.ezmax.api.model.ApikeyEditObjectV1Request;
-import com.ezmax.api.model.ApikeyEditObjectV1Response;
 import com.ezmax.api.model.ApikeyEditPermissionsV1Request;
 import com.ezmax.api.model.ApikeyEditPermissionsV1Response;
 import com.ezmax.api.model.ApikeyGenerateDelegatedCredentialsV1Request;
@@ -29,6 +28,7 @@ import com.ezmax.api.model.ApikeyGetPermissionsV1Response;
 import com.ezmax.api.model.ApikeyGetSubnetsV1Response;
 import com.ezmax.api.model.ApikeyRegenerateV1Request;
 import com.ezmax.api.model.ApikeyRegenerateV1Response;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -73,7 +73,7 @@ public class ObjectApikeyApiTest {
     public void apikeyEditObjectV1Test() throws ApiException {
         Integer pkiApikeyID = null;
         ApikeyEditObjectV1Request apikeyEditObjectV1Request = null;
-        ApikeyEditObjectV1Response response = api.apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request);
+        CommonResponse response = api.apikeyEditObjectV1(pkiApikeyID, apikeyEditObjectV1Request);
         // TODO: test validations
     }
 

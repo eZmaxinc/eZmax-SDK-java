@@ -51,24 +51,27 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/usergroup/{pkiUsergroupID}/getUsergroupdelegations
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupGetUsergroupdelegationsV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayload objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
+  @javax.annotation.Nonnull
   private UsergroupGetUsergroupdelegationsV1ResponseMPayload mPayload;
 
   public UsergroupGetUsergroupdelegationsV1Response() {
   }
 
-  public UsergroupGetUsergroupdelegationsV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public UsergroupGetUsergroupdelegationsV1Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -82,12 +85,12 @@ public class UsergroupGetUsergroupdelegationsV1Response {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public UsergroupGetUsergroupdelegationsV1Response objDebug(CommonResponseObjDebug objDebug) {
+  public UsergroupGetUsergroupdelegationsV1Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -101,12 +104,12 @@ public class UsergroupGetUsergroupdelegationsV1Response {
     return objDebug;
   }
 
-  public void setObjDebug(CommonResponseObjDebug objDebug) {
+  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
-  public UsergroupGetUsergroupdelegationsV1Response mPayload(UsergroupGetUsergroupdelegationsV1ResponseMPayload mPayload) {
+  public UsergroupGetUsergroupdelegationsV1Response mPayload(@javax.annotation.Nonnull UsergroupGetUsergroupdelegationsV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
@@ -120,7 +123,7 @@ public class UsergroupGetUsergroupdelegationsV1Response {
     return mPayload;
   }
 
-  public void setmPayload(UsergroupGetUsergroupdelegationsV1ResponseMPayload mPayload) {
+  public void setmPayload(@javax.annotation.Nonnull UsergroupGetUsergroupdelegationsV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 

@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsignfoldersignerassociation/createEmbeddedUrl
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_EMBEDDED_URL = "sEmbeddedUrl";
   @SerializedName(SERIALIZED_NAME_S_EMBEDDED_URL)
+  @javax.annotation.Nonnull
   private String sEmbeddedUrl;
 
   public EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload() {
   }
 
-  public EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload sEmbeddedUrl(String sEmbeddedUrl) {
+  public EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload sEmbeddedUrl(@javax.annotation.Nonnull String sEmbeddedUrl) {
     this.sEmbeddedUrl = sEmbeddedUrl;
     return this;
   }
@@ -71,7 +72,7 @@ public class EzsignfoldersignerassociationCreateEmbeddedUrlV1ResponseMPayload {
     return sEmbeddedUrl;
   }
 
-  public void setsEmbeddedUrl(String sEmbeddedUrl) {
+  public void setsEmbeddedUrl(@javax.annotation.Nonnull String sEmbeddedUrl) {
     this.sEmbeddedUrl = sEmbeddedUrl;
   }
 

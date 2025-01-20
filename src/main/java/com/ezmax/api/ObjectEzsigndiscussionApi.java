@@ -27,10 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigndiscussionCreateObjectV1Request;
 import com.ezmax.api.model.EzsigndiscussionCreateObjectV1Response;
-import com.ezmax.api.model.EzsigndiscussionDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigndiscussionGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -83,7 +83,8 @@ public class ObjectEzsigndiscussionApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -151,7 +152,8 @@ public class ObjectEzsigndiscussionApi {
      * @return EzsigndiscussionCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -168,7 +170,8 @@ public class ObjectEzsigndiscussionApi {
      * @return ApiResponse&lt;EzsigndiscussionCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -187,7 +190,8 @@ public class ObjectEzsigndiscussionApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -206,7 +210,8 @@ public class ObjectEzsigndiscussionApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -272,17 +277,18 @@ public class ObjectEzsigndiscussionApi {
      * Delete an existing Ezsigndiscussion
      * 
      * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion (required)
-     * @return EzsigndiscussionDeleteObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsigndiscussionDeleteObjectV1Response ezsigndiscussionDeleteObjectV1(Integer pkiEzsigndiscussionID) throws ApiException {
-        ApiResponse<EzsigndiscussionDeleteObjectV1Response> localVarResp = ezsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID);
+    public CommonResponse ezsigndiscussionDeleteObjectV1(Integer pkiEzsigndiscussionID) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID);
         return localVarResp.getData();
     }
 
@@ -290,18 +296,19 @@ public class ObjectEzsigndiscussionApi {
      * Delete an existing Ezsigndiscussion
      * 
      * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion (required)
-     * @return ApiResponse&lt;EzsigndiscussionDeleteObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsigndiscussionDeleteObjectV1Response> ezsigndiscussionDeleteObjectV1WithHttpInfo(Integer pkiEzsigndiscussionID) throws ApiException {
+    public ApiResponse<CommonResponse> ezsigndiscussionDeleteObjectV1WithHttpInfo(Integer pkiEzsigndiscussionID) throws ApiException {
         okhttp3.Call localVarCall = ezsigndiscussionDeleteObjectV1ValidateBeforeCall(pkiEzsigndiscussionID, null);
-        Type localVarReturnType = new TypeToken<EzsigndiscussionDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -313,16 +320,17 @@ public class ObjectEzsigndiscussionApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigndiscussionDeleteObjectV1Async(Integer pkiEzsigndiscussionID, final ApiCallback<EzsigndiscussionDeleteObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsigndiscussionDeleteObjectV1Async(Integer pkiEzsigndiscussionID, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigndiscussionDeleteObjectV1ValidateBeforeCall(pkiEzsigndiscussionID, _callback);
-        Type localVarReturnType = new TypeToken<EzsigndiscussionDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -333,7 +341,8 @@ public class ObjectEzsigndiscussionApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -402,7 +411,8 @@ public class ObjectEzsigndiscussionApi {
      * @return EzsigndiscussionGetObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -420,7 +430,8 @@ public class ObjectEzsigndiscussionApi {
      * @return ApiResponse&lt;EzsigndiscussionGetObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -440,7 +451,8 @@ public class ObjectEzsigndiscussionApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>

@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/period/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class PeriodGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_PERIOD = "a_objPeriod";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PERIOD)
+  @javax.annotation.Nonnull
   private List<PeriodAutocompleteElementResponse> aObjPeriod = new ArrayList<>();
 
   public PeriodGetAutocompleteV2ResponseMPayload() {
   }
 
-  public PeriodGetAutocompleteV2ResponseMPayload aObjPeriod(List<PeriodAutocompleteElementResponse> aObjPeriod) {
+  public PeriodGetAutocompleteV2ResponseMPayload aObjPeriod(@javax.annotation.Nonnull List<PeriodAutocompleteElementResponse> aObjPeriod) {
     this.aObjPeriod = aObjPeriod;
     return this;
   }
@@ -82,7 +83,7 @@ public class PeriodGetAutocompleteV2ResponseMPayload {
     return aObjPeriod;
   }
 
-  public void setaObjPeriod(List<PeriodAutocompleteElementResponse> aObjPeriod) {
+  public void setaObjPeriod(@javax.annotation.Nonnull List<PeriodAutocompleteElementResponse> aObjPeriod) {
     this.aObjPeriod = aObjPeriod;
   }
 

@@ -51,44 +51,52 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/webhook/sendWebhook
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class WebhookSendWebhookV1Request {
   public static final String SERIALIZED_NAME_E_WEBHOOK_MODULE = "eWebhookModule";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MODULE)
+  @javax.annotation.Nonnull
   private FieldEWebhookModule eWebhookModule;
 
   public static final String SERIALIZED_NAME_E_WEBHOOK_EZSIGNEVENT = "eWebhookEzsignevent";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_EZSIGNEVENT)
+  @javax.annotation.Nullable
   private CustomEWebhookEzsignevent eWebhookEzsignevent;
 
   public static final String SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT = "eWebhookManagementevent";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT)
+  @javax.annotation.Nullable
   private FieldEWebhookManagementevent eWebhookManagementevent;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D = "fkiEzsignsignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsignsignerID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_USERSTAGED_I_D = "fkiUserstagedID";
   @SerializedName(SERIALIZED_NAME_FKI_USERSTAGED_I_D)
+  @javax.annotation.Nullable
   private Integer fkiUserstagedID;
 
   public WebhookSendWebhookV1Request() {
   }
 
-  public WebhookSendWebhookV1Request eWebhookModule(FieldEWebhookModule eWebhookModule) {
+  public WebhookSendWebhookV1Request eWebhookModule(@javax.annotation.Nonnull FieldEWebhookModule eWebhookModule) {
     this.eWebhookModule = eWebhookModule;
     return this;
   }
@@ -102,12 +110,12 @@ public class WebhookSendWebhookV1Request {
     return eWebhookModule;
   }
 
-  public void seteWebhookModule(FieldEWebhookModule eWebhookModule) {
+  public void seteWebhookModule(@javax.annotation.Nonnull FieldEWebhookModule eWebhookModule) {
     this.eWebhookModule = eWebhookModule;
   }
 
 
-  public WebhookSendWebhookV1Request eWebhookEzsignevent(CustomEWebhookEzsignevent eWebhookEzsignevent) {
+  public WebhookSendWebhookV1Request eWebhookEzsignevent(@javax.annotation.Nullable CustomEWebhookEzsignevent eWebhookEzsignevent) {
     this.eWebhookEzsignevent = eWebhookEzsignevent;
     return this;
   }
@@ -121,12 +129,12 @@ public class WebhookSendWebhookV1Request {
     return eWebhookEzsignevent;
   }
 
-  public void seteWebhookEzsignevent(CustomEWebhookEzsignevent eWebhookEzsignevent) {
+  public void seteWebhookEzsignevent(@javax.annotation.Nullable CustomEWebhookEzsignevent eWebhookEzsignevent) {
     this.eWebhookEzsignevent = eWebhookEzsignevent;
   }
 
 
-  public WebhookSendWebhookV1Request eWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
+  public WebhookSendWebhookV1Request eWebhookManagementevent(@javax.annotation.Nullable FieldEWebhookManagementevent eWebhookManagementevent) {
     this.eWebhookManagementevent = eWebhookManagementevent;
     return this;
   }
@@ -140,12 +148,12 @@ public class WebhookSendWebhookV1Request {
     return eWebhookManagementevent;
   }
 
-  public void seteWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
+  public void seteWebhookManagementevent(@javax.annotation.Nullable FieldEWebhookManagementevent eWebhookManagementevent) {
     this.eWebhookManagementevent = eWebhookManagementevent;
   }
 
 
-  public WebhookSendWebhookV1Request fkiEzsignfolderID(Integer fkiEzsignfolderID) {
+  public WebhookSendWebhookV1Request fkiEzsignfolderID(@javax.annotation.Nullable Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -160,12 +168,12 @@ public class WebhookSendWebhookV1Request {
     return fkiEzsignfolderID;
   }
 
-  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
+  public void setFkiEzsignfolderID(@javax.annotation.Nullable Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
-  public WebhookSendWebhookV1Request fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+  public WebhookSendWebhookV1Request fkiEzsigndocumentID(@javax.annotation.Nullable Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
     return this;
   }
@@ -180,12 +188,12 @@ public class WebhookSendWebhookV1Request {
     return fkiEzsigndocumentID;
   }
 
-  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
+  public void setFkiEzsigndocumentID(@javax.annotation.Nullable Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
 
-  public WebhookSendWebhookV1Request fkiEzsignsignerID(Integer fkiEzsignsignerID) {
+  public WebhookSendWebhookV1Request fkiEzsignsignerID(@javax.annotation.Nullable Integer fkiEzsignsignerID) {
     this.fkiEzsignsignerID = fkiEzsignsignerID;
     return this;
   }
@@ -200,12 +208,12 @@ public class WebhookSendWebhookV1Request {
     return fkiEzsignsignerID;
   }
 
-  public void setFkiEzsignsignerID(Integer fkiEzsignsignerID) {
+  public void setFkiEzsignsignerID(@javax.annotation.Nullable Integer fkiEzsignsignerID) {
     this.fkiEzsignsignerID = fkiEzsignsignerID;
   }
 
 
-  public WebhookSendWebhookV1Request fkiUserID(Integer fkiUserID) {
+  public WebhookSendWebhookV1Request fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -220,12 +228,12 @@ public class WebhookSendWebhookV1Request {
     return fkiUserID;
   }
 
-  public void setFkiUserID(Integer fkiUserID) {
+  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public WebhookSendWebhookV1Request fkiUserstagedID(Integer fkiUserstagedID) {
+  public WebhookSendWebhookV1Request fkiUserstagedID(@javax.annotation.Nullable Integer fkiUserstagedID) {
     this.fkiUserstagedID = fkiUserstagedID;
     return this;
   }
@@ -241,7 +249,7 @@ public class WebhookSendWebhookV1Request {
     return fkiUserstagedID;
   }
 
-  public void setFkiUserstagedID(Integer fkiUserstagedID) {
+  public void setFkiUserstagedID(@javax.annotation.Nullable Integer fkiUserstagedID) {
     this.fkiUserstagedID = fkiUserstagedID;
   }
 

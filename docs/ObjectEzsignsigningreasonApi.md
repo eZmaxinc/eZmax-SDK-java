@@ -82,7 +82,7 @@ public class Example {
 
 <a id="ezsignsigningreasonEditObjectV1"></a>
 # **ezsignsigningreasonEditObjectV1**
-> EzsignsigningreasonEditObjectV1Response ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request)
+> CommonResponse ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request)
 
 Edit an existing Ezsignsigningreason
 
@@ -113,7 +113,7 @@ public class Example {
     Integer pkiEzsignsigningreasonID = 56; // Integer | The unique ID of the Ezsignsigningreason
     EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request = new EzsignsigningreasonEditObjectV1Request(); // EzsignsigningreasonEditObjectV1Request | 
     try {
-      EzsignsigningreasonEditObjectV1Response result = apiInstance.ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
+      CommonResponse result = apiInstance.ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignsigningreasonApi#ezsignsigningreasonEditObjectV1");
@@ -135,7 +135,7 @@ public class Example {
 
 ### Return type
 
-[**EzsignsigningreasonEditObjectV1Response**](EzsignsigningreasonEditObjectV1Response.md)
+[**CommonResponse**](CommonResponse.md)
 
 ### Authorization
 

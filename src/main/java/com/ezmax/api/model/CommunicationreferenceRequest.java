@@ -48,48 +48,57 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationreference Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommunicationreferenceRequest {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONREFERENCE_I_D = "pkiCommunicationreferenceID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONREFERENCE_I_D)
+  @javax.annotation.Nullable
   private Integer pkiCommunicationreferenceID;
 
   public static final String SERIALIZED_NAME_FKI_BUYERCONTRACT_I_D = "fkiBuyercontractID";
   @SerializedName(SERIALIZED_NAME_FKI_BUYERCONTRACT_I_D)
+  @javax.annotation.Nullable
   private Integer fkiBuyercontractID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D = "fkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_FKI_INSCRIPTION_I_D = "fkiInscriptionID";
   @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTION_I_D)
+  @javax.annotation.Nullable
   private Integer fkiInscriptionID;
 
   public static final String SERIALIZED_NAME_FKI_INSCRIPTIONTEMP_I_D = "fkiInscriptiontempID";
   @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTIONTEMP_I_D)
+  @javax.annotation.Nullable
   private Integer fkiInscriptiontempID;
 
   public static final String SERIALIZED_NAME_FKI_INVOICE_I_D = "fkiInvoiceID";
   @SerializedName(SERIALIZED_NAME_FKI_INVOICE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiInvoiceID;
 
   public static final String SERIALIZED_NAME_FKI_OTHERINCOME_I_D = "fkiOtherincomeID";
   @SerializedName(SERIALIZED_NAME_FKI_OTHERINCOME_I_D)
+  @javax.annotation.Nullable
   private Integer fkiOtherincomeID;
 
   public static final String SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFER_I_D = "fkiElectronicfundstransferID";
   @SerializedName(SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFER_I_D)
+  @javax.annotation.Nullable
   private Integer fkiElectronicfundstransferID;
 
   public static final String SERIALIZED_NAME_FKI_REJECTEDOFFERTOPURCHASE_I_D = "fkiRejectedoffertopurchaseID";
   @SerializedName(SERIALIZED_NAME_FKI_REJECTEDOFFERTOPURCHASE_I_D)
+  @javax.annotation.Nullable
   private Integer fkiRejectedoffertopurchaseID;
 
   public CommunicationreferenceRequest() {
   }
 
-  public CommunicationreferenceRequest pkiCommunicationreferenceID(Integer pkiCommunicationreferenceID) {
+  public CommunicationreferenceRequest pkiCommunicationreferenceID(@javax.annotation.Nullable Integer pkiCommunicationreferenceID) {
     this.pkiCommunicationreferenceID = pkiCommunicationreferenceID;
     return this;
   }
@@ -105,12 +114,12 @@ public class CommunicationreferenceRequest {
     return pkiCommunicationreferenceID;
   }
 
-  public void setPkiCommunicationreferenceID(Integer pkiCommunicationreferenceID) {
+  public void setPkiCommunicationreferenceID(@javax.annotation.Nullable Integer pkiCommunicationreferenceID) {
     this.pkiCommunicationreferenceID = pkiCommunicationreferenceID;
   }
 
 
-  public CommunicationreferenceRequest fkiBuyercontractID(Integer fkiBuyercontractID) {
+  public CommunicationreferenceRequest fkiBuyercontractID(@javax.annotation.Nullable Integer fkiBuyercontractID) {
     this.fkiBuyercontractID = fkiBuyercontractID;
     return this;
   }
@@ -126,12 +135,12 @@ public class CommunicationreferenceRequest {
     return fkiBuyercontractID;
   }
 
-  public void setFkiBuyercontractID(Integer fkiBuyercontractID) {
+  public void setFkiBuyercontractID(@javax.annotation.Nullable Integer fkiBuyercontractID) {
     this.fkiBuyercontractID = fkiBuyercontractID;
   }
 
 
-  public CommunicationreferenceRequest fkiEzsignfolderID(Integer fkiEzsignfolderID) {
+  public CommunicationreferenceRequest fkiEzsignfolderID(@javax.annotation.Nullable Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
     return this;
   }
@@ -146,12 +155,12 @@ public class CommunicationreferenceRequest {
     return fkiEzsignfolderID;
   }
 
-  public void setFkiEzsignfolderID(Integer fkiEzsignfolderID) {
+  public void setFkiEzsignfolderID(@javax.annotation.Nullable Integer fkiEzsignfolderID) {
     this.fkiEzsignfolderID = fkiEzsignfolderID;
   }
 
 
-  public CommunicationreferenceRequest fkiInscriptionID(Integer fkiInscriptionID) {
+  public CommunicationreferenceRequest fkiInscriptionID(@javax.annotation.Nullable Integer fkiInscriptionID) {
     this.fkiInscriptionID = fkiInscriptionID;
     return this;
   }
@@ -166,12 +175,12 @@ public class CommunicationreferenceRequest {
     return fkiInscriptionID;
   }
 
-  public void setFkiInscriptionID(Integer fkiInscriptionID) {
+  public void setFkiInscriptionID(@javax.annotation.Nullable Integer fkiInscriptionID) {
     this.fkiInscriptionID = fkiInscriptionID;
   }
 
 
-  public CommunicationreferenceRequest fkiInscriptiontempID(Integer fkiInscriptiontempID) {
+  public CommunicationreferenceRequest fkiInscriptiontempID(@javax.annotation.Nullable Integer fkiInscriptiontempID) {
     this.fkiInscriptiontempID = fkiInscriptiontempID;
     return this;
   }
@@ -187,12 +196,12 @@ public class CommunicationreferenceRequest {
     return fkiInscriptiontempID;
   }
 
-  public void setFkiInscriptiontempID(Integer fkiInscriptiontempID) {
+  public void setFkiInscriptiontempID(@javax.annotation.Nullable Integer fkiInscriptiontempID) {
     this.fkiInscriptiontempID = fkiInscriptiontempID;
   }
 
 
-  public CommunicationreferenceRequest fkiInvoiceID(Integer fkiInvoiceID) {
+  public CommunicationreferenceRequest fkiInvoiceID(@javax.annotation.Nullable Integer fkiInvoiceID) {
     this.fkiInvoiceID = fkiInvoiceID;
     return this;
   }
@@ -207,12 +216,12 @@ public class CommunicationreferenceRequest {
     return fkiInvoiceID;
   }
 
-  public void setFkiInvoiceID(Integer fkiInvoiceID) {
+  public void setFkiInvoiceID(@javax.annotation.Nullable Integer fkiInvoiceID) {
     this.fkiInvoiceID = fkiInvoiceID;
   }
 
 
-  public CommunicationreferenceRequest fkiOtherincomeID(Integer fkiOtherincomeID) {
+  public CommunicationreferenceRequest fkiOtherincomeID(@javax.annotation.Nullable Integer fkiOtherincomeID) {
     this.fkiOtherincomeID = fkiOtherincomeID;
     return this;
   }
@@ -228,12 +237,12 @@ public class CommunicationreferenceRequest {
     return fkiOtherincomeID;
   }
 
-  public void setFkiOtherincomeID(Integer fkiOtherincomeID) {
+  public void setFkiOtherincomeID(@javax.annotation.Nullable Integer fkiOtherincomeID) {
     this.fkiOtherincomeID = fkiOtherincomeID;
   }
 
 
-  public CommunicationreferenceRequest fkiElectronicfundstransferID(Integer fkiElectronicfundstransferID) {
+  public CommunicationreferenceRequest fkiElectronicfundstransferID(@javax.annotation.Nullable Integer fkiElectronicfundstransferID) {
     this.fkiElectronicfundstransferID = fkiElectronicfundstransferID;
     return this;
   }
@@ -249,12 +258,12 @@ public class CommunicationreferenceRequest {
     return fkiElectronicfundstransferID;
   }
 
-  public void setFkiElectronicfundstransferID(Integer fkiElectronicfundstransferID) {
+  public void setFkiElectronicfundstransferID(@javax.annotation.Nullable Integer fkiElectronicfundstransferID) {
     this.fkiElectronicfundstransferID = fkiElectronicfundstransferID;
   }
 
 
-  public CommunicationreferenceRequest fkiRejectedoffertopurchaseID(Integer fkiRejectedoffertopurchaseID) {
+  public CommunicationreferenceRequest fkiRejectedoffertopurchaseID(@javax.annotation.Nullable Integer fkiRejectedoffertopurchaseID) {
     this.fkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
     return this;
   }
@@ -270,7 +279,7 @@ public class CommunicationreferenceRequest {
     return fkiRejectedoffertopurchaseID;
   }
 
-  public void setFkiRejectedoffertopurchaseID(Integer fkiRejectedoffertopurchaseID) {
+  public void setFkiRejectedoffertopurchaseID(@javax.annotation.Nullable Integer fkiRejectedoffertopurchaseID) {
     this.fkiRejectedoffertopurchaseID = fkiRejectedoffertopurchaseID;
   }
 

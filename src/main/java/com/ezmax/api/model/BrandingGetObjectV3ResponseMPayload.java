@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /3/object/branding/{pkiBrandingID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class BrandingGetObjectV3ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_BRANDING = "objBranding";
   @SerializedName(SERIALIZED_NAME_OBJ_BRANDING)
+  @javax.annotation.Nonnull
   private BrandingResponseCompoundV3 objBranding;
 
   public BrandingGetObjectV3ResponseMPayload() {
   }
 
-  public BrandingGetObjectV3ResponseMPayload objBranding(BrandingResponseCompoundV3 objBranding) {
+  public BrandingGetObjectV3ResponseMPayload objBranding(@javax.annotation.Nonnull BrandingResponseCompoundV3 objBranding) {
     this.objBranding = objBranding;
     return this;
   }
@@ -72,7 +73,7 @@ public class BrandingGetObjectV3ResponseMPayload {
     return objBranding;
   }
 
-  public void setObjBranding(BrandingResponseCompoundV3 objBranding) {
+  public void setObjBranding(@javax.annotation.Nonnull BrandingResponseCompoundV3 objBranding) {
     this.objBranding = objBranding;
   }
 

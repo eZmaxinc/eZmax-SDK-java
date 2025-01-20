@@ -27,9 +27,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.SystemconfigurationEditObjectV1Request;
-import com.ezmax.api.model.SystemconfigurationEditObjectV1Response;
 import com.ezmax.api.model.SystemconfigurationGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -83,7 +83,8 @@ public class ObjectSystemconfigurationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -157,18 +158,19 @@ public class ObjectSystemconfigurationApi {
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration (required)
      * @param systemconfigurationEditObjectV1Request  (required)
-     * @return SystemconfigurationEditObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public SystemconfigurationEditObjectV1Response systemconfigurationEditObjectV1(Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request) throws ApiException {
-        ApiResponse<SystemconfigurationEditObjectV1Response> localVarResp = systemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+    public CommonResponse systemconfigurationEditObjectV1(Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = systemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -177,19 +179,20 @@ public class ObjectSystemconfigurationApi {
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration (required)
      * @param systemconfigurationEditObjectV1Request  (required)
-     * @return ApiResponse&lt;SystemconfigurationEditObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SystemconfigurationEditObjectV1Response> systemconfigurationEditObjectV1WithHttpInfo(Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request) throws ApiException {
+    public ApiResponse<CommonResponse> systemconfigurationEditObjectV1WithHttpInfo(Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = systemconfigurationEditObjectV1ValidateBeforeCall(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<SystemconfigurationEditObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -202,17 +205,18 @@ public class ObjectSystemconfigurationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call systemconfigurationEditObjectV1Async(Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, final ApiCallback<SystemconfigurationEditObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call systemconfigurationEditObjectV1Async(Integer pkiSystemconfigurationID, SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = systemconfigurationEditObjectV1ValidateBeforeCall(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<SystemconfigurationEditObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -223,7 +227,8 @@ public class ObjectSystemconfigurationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -292,7 +297,8 @@ public class ObjectSystemconfigurationApi {
      * @return SystemconfigurationGetObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -310,7 +316,8 @@ public class ObjectSystemconfigurationApi {
      * @return ApiResponse&lt;SystemconfigurationGetObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -330,7 +337,8 @@ public class ObjectSystemconfigurationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>

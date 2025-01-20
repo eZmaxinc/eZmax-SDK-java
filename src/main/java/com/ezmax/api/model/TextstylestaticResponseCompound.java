@@ -48,48 +48,57 @@ import eZmaxAPI.JSON;
 /**
  * A Textstylestatic Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class TextstylestaticResponseCompound {
   public static final String SERIALIZED_NAME_PKI_TEXTSTYLESTATIC_I_D = "pkiTextstylestaticID";
   @SerializedName(SERIALIZED_NAME_PKI_TEXTSTYLESTATIC_I_D)
+  @javax.annotation.Nullable
   private Integer pkiTextstylestaticID;
 
   public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
   @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiFontID;
 
   public static final String SERIALIZED_NAME_S_FONT_NAME = "sFontName";
   @SerializedName(SERIALIZED_NAME_S_FONT_NAME)
+  @javax.annotation.Nonnull
   private String sFontName;
 
   public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_BOLD = "bTextstylestaticBold";
   @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_BOLD)
+  @javax.annotation.Nonnull
   private Boolean bTextstylestaticBold;
 
   public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_UNDERLINE = "bTextstylestaticUnderline";
   @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_UNDERLINE)
+  @javax.annotation.Nonnull
   private Boolean bTextstylestaticUnderline;
 
   public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_ITALIC = "bTextstylestaticItalic";
   @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_ITALIC)
+  @javax.annotation.Nonnull
   private Boolean bTextstylestaticItalic;
 
   public static final String SERIALIZED_NAME_B_TEXTSTYLESTATIC_STRIKETHROUGH = "bTextstylestaticStrikethrough";
   @SerializedName(SERIALIZED_NAME_B_TEXTSTYLESTATIC_STRIKETHROUGH)
+  @javax.annotation.Nonnull
   private Boolean bTextstylestaticStrikethrough;
 
   public static final String SERIALIZED_NAME_I_TEXTSTYLESTATIC_FONTCOLOR = "iTextstylestaticFontcolor";
   @SerializedName(SERIALIZED_NAME_I_TEXTSTYLESTATIC_FONTCOLOR)
+  @javax.annotation.Nonnull
   private Integer iTextstylestaticFontcolor;
 
   public static final String SERIALIZED_NAME_I_TEXTSTYLESTATIC_SIZE = "iTextstylestaticSize";
   @SerializedName(SERIALIZED_NAME_I_TEXTSTYLESTATIC_SIZE)
+  @javax.annotation.Nonnull
   private Integer iTextstylestaticSize;
 
   public TextstylestaticResponseCompound() {
   }
 
-  public TextstylestaticResponseCompound pkiTextstylestaticID(Integer pkiTextstylestaticID) {
+  public TextstylestaticResponseCompound pkiTextstylestaticID(@javax.annotation.Nullable Integer pkiTextstylestaticID) {
     this.pkiTextstylestaticID = pkiTextstylestaticID;
     return this;
   }
@@ -104,12 +113,12 @@ public class TextstylestaticResponseCompound {
     return pkiTextstylestaticID;
   }
 
-  public void setPkiTextstylestaticID(Integer pkiTextstylestaticID) {
+  public void setPkiTextstylestaticID(@javax.annotation.Nullable Integer pkiTextstylestaticID) {
     this.pkiTextstylestaticID = pkiTextstylestaticID;
   }
 
 
-  public TextstylestaticResponseCompound fkiFontID(Integer fkiFontID) {
+  public TextstylestaticResponseCompound fkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
     return this;
   }
@@ -124,12 +133,12 @@ public class TextstylestaticResponseCompound {
     return fkiFontID;
   }
 
-  public void setFkiFontID(Integer fkiFontID) {
+  public void setFkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
   }
 
 
-  public TextstylestaticResponseCompound sFontName(String sFontName) {
+  public TextstylestaticResponseCompound sFontName(@javax.annotation.Nonnull String sFontName) {
     this.sFontName = sFontName;
     return this;
   }
@@ -143,12 +152,12 @@ public class TextstylestaticResponseCompound {
     return sFontName;
   }
 
-  public void setsFontName(String sFontName) {
+  public void setsFontName(@javax.annotation.Nonnull String sFontName) {
     this.sFontName = sFontName;
   }
 
 
-  public TextstylestaticResponseCompound bTextstylestaticBold(Boolean bTextstylestaticBold) {
+  public TextstylestaticResponseCompound bTextstylestaticBold(@javax.annotation.Nonnull Boolean bTextstylestaticBold) {
     this.bTextstylestaticBold = bTextstylestaticBold;
     return this;
   }
@@ -162,12 +171,12 @@ public class TextstylestaticResponseCompound {
     return bTextstylestaticBold;
   }
 
-  public void setbTextstylestaticBold(Boolean bTextstylestaticBold) {
+  public void setbTextstylestaticBold(@javax.annotation.Nonnull Boolean bTextstylestaticBold) {
     this.bTextstylestaticBold = bTextstylestaticBold;
   }
 
 
-  public TextstylestaticResponseCompound bTextstylestaticUnderline(Boolean bTextstylestaticUnderline) {
+  public TextstylestaticResponseCompound bTextstylestaticUnderline(@javax.annotation.Nonnull Boolean bTextstylestaticUnderline) {
     this.bTextstylestaticUnderline = bTextstylestaticUnderline;
     return this;
   }
@@ -181,12 +190,12 @@ public class TextstylestaticResponseCompound {
     return bTextstylestaticUnderline;
   }
 
-  public void setbTextstylestaticUnderline(Boolean bTextstylestaticUnderline) {
+  public void setbTextstylestaticUnderline(@javax.annotation.Nonnull Boolean bTextstylestaticUnderline) {
     this.bTextstylestaticUnderline = bTextstylestaticUnderline;
   }
 
 
-  public TextstylestaticResponseCompound bTextstylestaticItalic(Boolean bTextstylestaticItalic) {
+  public TextstylestaticResponseCompound bTextstylestaticItalic(@javax.annotation.Nonnull Boolean bTextstylestaticItalic) {
     this.bTextstylestaticItalic = bTextstylestaticItalic;
     return this;
   }
@@ -200,12 +209,12 @@ public class TextstylestaticResponseCompound {
     return bTextstylestaticItalic;
   }
 
-  public void setbTextstylestaticItalic(Boolean bTextstylestaticItalic) {
+  public void setbTextstylestaticItalic(@javax.annotation.Nonnull Boolean bTextstylestaticItalic) {
     this.bTextstylestaticItalic = bTextstylestaticItalic;
   }
 
 
-  public TextstylestaticResponseCompound bTextstylestaticStrikethrough(Boolean bTextstylestaticStrikethrough) {
+  public TextstylestaticResponseCompound bTextstylestaticStrikethrough(@javax.annotation.Nonnull Boolean bTextstylestaticStrikethrough) {
     this.bTextstylestaticStrikethrough = bTextstylestaticStrikethrough;
     return this;
   }
@@ -219,12 +228,12 @@ public class TextstylestaticResponseCompound {
     return bTextstylestaticStrikethrough;
   }
 
-  public void setbTextstylestaticStrikethrough(Boolean bTextstylestaticStrikethrough) {
+  public void setbTextstylestaticStrikethrough(@javax.annotation.Nonnull Boolean bTextstylestaticStrikethrough) {
     this.bTextstylestaticStrikethrough = bTextstylestaticStrikethrough;
   }
 
 
-  public TextstylestaticResponseCompound iTextstylestaticFontcolor(Integer iTextstylestaticFontcolor) {
+  public TextstylestaticResponseCompound iTextstylestaticFontcolor(@javax.annotation.Nonnull Integer iTextstylestaticFontcolor) {
     this.iTextstylestaticFontcolor = iTextstylestaticFontcolor;
     return this;
   }
@@ -240,12 +249,12 @@ public class TextstylestaticResponseCompound {
     return iTextstylestaticFontcolor;
   }
 
-  public void setiTextstylestaticFontcolor(Integer iTextstylestaticFontcolor) {
+  public void setiTextstylestaticFontcolor(@javax.annotation.Nonnull Integer iTextstylestaticFontcolor) {
     this.iTextstylestaticFontcolor = iTextstylestaticFontcolor;
   }
 
 
-  public TextstylestaticResponseCompound iTextstylestaticSize(Integer iTextstylestaticSize) {
+  public TextstylestaticResponseCompound iTextstylestaticSize(@javax.annotation.Nonnull Integer iTextstylestaticSize) {
     this.iTextstylestaticSize = iTextstylestaticSize;
     return this;
   }
@@ -261,7 +270,7 @@ public class TextstylestaticResponseCompound {
     return iTextstylestaticSize;
   }
 
-  public void setiTextstylestaticSize(Integer iTextstylestaticSize) {
+  public void setiTextstylestaticSize(@javax.annotation.Nonnull Integer iTextstylestaticSize) {
     this.iTextstylestaticSize = iTextstylestaticSize;
   }
 

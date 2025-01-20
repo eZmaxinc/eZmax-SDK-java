@@ -48,20 +48,22 @@ import eZmaxAPI.JSON;
 /**
  * The description1 of the Supply
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class MultilingualSupplyDescription {
   public static final String SERIALIZED_NAME_S_SUPPLY_DESCRIPTION1 = "sSupplyDescription1";
   @SerializedName(SERIALIZED_NAME_S_SUPPLY_DESCRIPTION1)
+  @javax.annotation.Nullable
   private String sSupplyDescription1;
 
   public static final String SERIALIZED_NAME_S_SUPPLY_DESCRIPTION2 = "sSupplyDescription2";
   @SerializedName(SERIALIZED_NAME_S_SUPPLY_DESCRIPTION2)
+  @javax.annotation.Nullable
   private String sSupplyDescription2;
 
   public MultilingualSupplyDescription() {
   }
 
-  public MultilingualSupplyDescription sSupplyDescription1(String sSupplyDescription1) {
+  public MultilingualSupplyDescription sSupplyDescription1(@javax.annotation.Nullable String sSupplyDescription1) {
     this.sSupplyDescription1 = sSupplyDescription1;
     return this;
   }
@@ -75,12 +77,12 @@ public class MultilingualSupplyDescription {
     return sSupplyDescription1;
   }
 
-  public void setsSupplyDescription1(String sSupplyDescription1) {
+  public void setsSupplyDescription1(@javax.annotation.Nullable String sSupplyDescription1) {
     this.sSupplyDescription1 = sSupplyDescription1;
   }
 
 
-  public MultilingualSupplyDescription sSupplyDescription2(String sSupplyDescription2) {
+  public MultilingualSupplyDescription sSupplyDescription2(@javax.annotation.Nullable String sSupplyDescription2) {
     this.sSupplyDescription2 = sSupplyDescription2;
     return this;
   }
@@ -94,7 +96,7 @@ public class MultilingualSupplyDescription {
     return sSupplyDescription2;
   }
 
-  public void setsSupplyDescription2(String sSupplyDescription2) {
+  public void setsSupplyDescription2(@javax.annotation.Nullable String sSupplyDescription2) {
     this.sSupplyDescription2 = sSupplyDescription2;
   }
 

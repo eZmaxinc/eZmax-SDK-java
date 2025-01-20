@@ -27,10 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.DiscussionmembershipCreateObjectV1Request;
 import com.ezmax.api.model.DiscussionmembershipCreateObjectV1Response;
-import com.ezmax.api.model.DiscussionmembershipDeleteObjectV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -82,7 +82,8 @@ public class ObjectDiscussionmembershipApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -150,7 +151,8 @@ public class ObjectDiscussionmembershipApi {
      * @return DiscussionmembershipCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -167,7 +169,8 @@ public class ObjectDiscussionmembershipApi {
      * @return ApiResponse&lt;DiscussionmembershipCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -186,7 +189,8 @@ public class ObjectDiscussionmembershipApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -205,7 +209,8 @@ public class ObjectDiscussionmembershipApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -271,17 +276,18 @@ public class ObjectDiscussionmembershipApi {
      * Delete an existing Discussionmembership
      * 
      * @param pkiDiscussionmembershipID The unique ID of the Discussionmembership (required)
-     * @return DiscussionmembershipDeleteObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public DiscussionmembershipDeleteObjectV1Response discussionmembershipDeleteObjectV1(Integer pkiDiscussionmembershipID) throws ApiException {
-        ApiResponse<DiscussionmembershipDeleteObjectV1Response> localVarResp = discussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID);
+    public CommonResponse discussionmembershipDeleteObjectV1(Integer pkiDiscussionmembershipID) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = discussionmembershipDeleteObjectV1WithHttpInfo(pkiDiscussionmembershipID);
         return localVarResp.getData();
     }
 
@@ -289,18 +295,19 @@ public class ObjectDiscussionmembershipApi {
      * Delete an existing Discussionmembership
      * 
      * @param pkiDiscussionmembershipID The unique ID of the Discussionmembership (required)
-     * @return ApiResponse&lt;DiscussionmembershipDeleteObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DiscussionmembershipDeleteObjectV1Response> discussionmembershipDeleteObjectV1WithHttpInfo(Integer pkiDiscussionmembershipID) throws ApiException {
+    public ApiResponse<CommonResponse> discussionmembershipDeleteObjectV1WithHttpInfo(Integer pkiDiscussionmembershipID) throws ApiException {
         okhttp3.Call localVarCall = discussionmembershipDeleteObjectV1ValidateBeforeCall(pkiDiscussionmembershipID, null);
-        Type localVarReturnType = new TypeToken<DiscussionmembershipDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -312,16 +319,17 @@ public class ObjectDiscussionmembershipApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call discussionmembershipDeleteObjectV1Async(Integer pkiDiscussionmembershipID, final ApiCallback<DiscussionmembershipDeleteObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call discussionmembershipDeleteObjectV1Async(Integer pkiDiscussionmembershipID, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = discussionmembershipDeleteObjectV1ValidateBeforeCall(pkiDiscussionmembershipID, _callback);
-        Type localVarReturnType = new TypeToken<DiscussionmembershipDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/discussion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DiscussionCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_DISCUSSION = "a_objDiscussion";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DISCUSSION)
+  @javax.annotation.Nonnull
   private List<DiscussionRequestCompound> aObjDiscussion = new ArrayList<>();
 
   public DiscussionCreateObjectV1Request() {
   }
 
-  public DiscussionCreateObjectV1Request aObjDiscussion(List<DiscussionRequestCompound> aObjDiscussion) {
+  public DiscussionCreateObjectV1Request aObjDiscussion(@javax.annotation.Nonnull List<DiscussionRequestCompound> aObjDiscussion) {
     this.aObjDiscussion = aObjDiscussion;
     return this;
   }
@@ -82,7 +83,7 @@ public class DiscussionCreateObjectV1Request {
     return aObjDiscussion;
   }
 
-  public void setaObjDiscussion(List<DiscussionRequestCompound> aObjDiscussion) {
+  public void setaObjDiscussion(@javax.annotation.Nonnull List<DiscussionRequestCompound> aObjDiscussion) {
     this.aObjDiscussion = aObjDiscussion;
   }
 

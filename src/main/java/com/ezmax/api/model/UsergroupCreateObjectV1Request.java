@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/usergroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UsergroupCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUP = "a_objUsergroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUP)
+  @javax.annotation.Nonnull
   private List<UsergroupRequestCompound> aObjUsergroup = new ArrayList<>();
 
   public UsergroupCreateObjectV1Request() {
   }
 
-  public UsergroupCreateObjectV1Request aObjUsergroup(List<UsergroupRequestCompound> aObjUsergroup) {
+  public UsergroupCreateObjectV1Request aObjUsergroup(@javax.annotation.Nonnull List<UsergroupRequestCompound> aObjUsergroup) {
     this.aObjUsergroup = aObjUsergroup;
     return this;
   }
@@ -82,7 +83,7 @@ public class UsergroupCreateObjectV1Request {
     return aObjUsergroup;
   }
 
-  public void setaObjUsergroup(List<UsergroupRequestCompound> aObjUsergroup) {
+  public void setaObjUsergroup(@javax.annotation.Nonnull List<UsergroupRequestCompound> aObjUsergroup) {
     this.aObjUsergroup = aObjUsergroup;
   }
 

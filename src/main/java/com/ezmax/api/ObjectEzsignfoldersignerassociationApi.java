@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateEmbeddedUrlV1Response;
@@ -34,17 +35,12 @@ import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Request;
 import com.ezmax.api.model.EzsignfoldersignerassociationCreateObjectV2Response;
-import com.ezmax.api.model.EzsignfoldersignerassociationDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationEditObjectV1Request;
-import com.ezmax.api.model.EzsignfoldersignerassociationEditObjectV1Response;
-import com.ezmax.api.model.EzsignfoldersignerassociationForceDisconnectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetInPersonLoginUrlV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationGetObjectV2Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationPatchObjectV1Request;
-import com.ezmax.api.model.EzsignfoldersignerassociationPatchObjectV1Response;
 import com.ezmax.api.model.EzsignfoldersignerassociationReassignV1Request;
-import com.ezmax.api.model.EzsignfoldersignerassociationReassignV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -97,7 +93,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -174,7 +171,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return EzsignfoldersignerassociationCreateEmbeddedUrlV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -194,7 +192,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return ApiResponse&lt;EzsignfoldersignerassociationCreateEmbeddedUrlV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -216,7 +215,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -237,7 +237,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -308,7 +309,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return EzsignfoldersignerassociationCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -327,7 +329,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return ApiResponse&lt;EzsignfoldersignerassociationCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -348,7 +351,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -369,7 +373,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -437,7 +442,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return EzsignfoldersignerassociationCreateObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -454,7 +460,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return ApiResponse&lt;EzsignfoldersignerassociationCreateObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -473,7 +480,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -492,7 +500,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -559,18 +568,19 @@ public class ObjectEzsignfoldersignerassociationApi {
      * Delete an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID  (required)
-     * @return EzsignfoldersignerassociationDeleteObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignfoldersignerassociationDeleteObjectV1Response ezsignfoldersignerassociationDeleteObjectV1(Integer pkiEzsignfoldersignerassociationID) throws ApiException {
-        ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response> localVarResp = ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID);
+    public CommonResponse ezsignfoldersignerassociationDeleteObjectV1(Integer pkiEzsignfoldersignerassociationID) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID);
         return localVarResp.getData();
     }
 
@@ -578,19 +588,20 @@ public class ObjectEzsignfoldersignerassociationApi {
      * Delete an existing Ezsignfoldersignerassociation
      * 
      * @param pkiEzsignfoldersignerassociationID  (required)
-     * @return ApiResponse&lt;EzsignfoldersignerassociationDeleteObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignfoldersignerassociationDeleteObjectV1Response> ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID) throws ApiException {
+    public ApiResponse<CommonResponse> ezsignfoldersignerassociationDeleteObjectV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldersignerassociationDeleteObjectV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, null);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -602,17 +613,18 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfoldersignerassociationDeleteObjectV1Async(Integer pkiEzsignfoldersignerassociationID, final ApiCallback<EzsignfoldersignerassociationDeleteObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignfoldersignerassociationDeleteObjectV1Async(Integer pkiEzsignfoldersignerassociationID, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfoldersignerassociationDeleteObjectV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, _callback);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationDeleteObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -624,7 +636,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -698,18 +711,19 @@ public class ObjectEzsignfoldersignerassociationApi {
      * 
      * @param pkiEzsignfoldersignerassociationID  (required)
      * @param ezsignfoldersignerassociationEditObjectV1Request  (required)
-     * @return EzsignfoldersignerassociationEditObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignfoldersignerassociationEditObjectV1Response ezsignfoldersignerassociationEditObjectV1(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request) throws ApiException {
-        ApiResponse<EzsignfoldersignerassociationEditObjectV1Response> localVarResp = ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
+    public CommonResponse ezsignfoldersignerassociationEditObjectV1(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsignfoldersignerassociationEditObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -718,19 +732,20 @@ public class ObjectEzsignfoldersignerassociationApi {
      * 
      * @param pkiEzsignfoldersignerassociationID  (required)
      * @param ezsignfoldersignerassociationEditObjectV1Request  (required)
-     * @return ApiResponse&lt;EzsignfoldersignerassociationEditObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignfoldersignerassociationEditObjectV1Response> ezsignfoldersignerassociationEditObjectV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request) throws ApiException {
+    public ApiResponse<CommonResponse> ezsignfoldersignerassociationEditObjectV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldersignerassociationEditObjectV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationEditObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -743,17 +758,18 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfoldersignerassociationEditObjectV1Async(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, final ApiCallback<EzsignfoldersignerassociationEditObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignfoldersignerassociationEditObjectV1Async(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationEditObjectV1Request ezsignfoldersignerassociationEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfoldersignerassociationEditObjectV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationEditObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -765,7 +781,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -839,18 +856,19 @@ public class ObjectEzsignfoldersignerassociationApi {
      * 
      * @param pkiEzsignfoldersignerassociationID  (required)
      * @param body  (required)
-     * @return EzsignfoldersignerassociationForceDisconnectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignfoldersignerassociationForceDisconnectV1Response ezsignfoldersignerassociationForceDisconnectV1(Integer pkiEzsignfoldersignerassociationID, Object body) throws ApiException {
-        ApiResponse<EzsignfoldersignerassociationForceDisconnectV1Response> localVarResp = ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, body);
+    public CommonResponse ezsignfoldersignerassociationForceDisconnectV1(Integer pkiEzsignfoldersignerassociationID, Object body) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, body);
         return localVarResp.getData();
     }
 
@@ -859,19 +877,20 @@ public class ObjectEzsignfoldersignerassociationApi {
      * 
      * @param pkiEzsignfoldersignerassociationID  (required)
      * @param body  (required)
-     * @return ApiResponse&lt;EzsignfoldersignerassociationForceDisconnectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignfoldersignerassociationForceDisconnectV1Response> ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID, Object body) throws ApiException {
+    public ApiResponse<CommonResponse> ezsignfoldersignerassociationForceDisconnectV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID, Object body) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldersignerassociationForceDisconnectV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, body, null);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationForceDisconnectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -884,17 +903,18 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfoldersignerassociationForceDisconnectV1Async(Integer pkiEzsignfoldersignerassociationID, Object body, final ApiCallback<EzsignfoldersignerassociationForceDisconnectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignfoldersignerassociationForceDisconnectV1Async(Integer pkiEzsignfoldersignerassociationID, Object body, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfoldersignerassociationForceDisconnectV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, body, _callback);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationForceDisconnectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -905,7 +925,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -975,7 +996,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return EzsignfoldersignerassociationGetInPersonLoginUrlV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -994,7 +1016,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return ApiResponse&lt;EzsignfoldersignerassociationGetInPersonLoginUrlV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1015,7 +1038,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1036,7 +1060,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1108,7 +1133,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return EzsignfoldersignerassociationGetObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1128,7 +1154,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return ApiResponse&lt;EzsignfoldersignerassociationGetObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1150,7 +1177,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1172,7 +1200,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1241,7 +1270,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return EzsignfoldersignerassociationGetObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1259,7 +1289,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return ApiResponse&lt;EzsignfoldersignerassociationGetObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1279,7 +1310,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1300,7 +1332,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1374,18 +1407,19 @@ public class ObjectEzsignfoldersignerassociationApi {
      * 
      * @param pkiEzsignfoldersignerassociationID  (required)
      * @param ezsignfoldersignerassociationPatchObjectV1Request  (required)
-     * @return EzsignfoldersignerassociationPatchObjectV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignfoldersignerassociationPatchObjectV1Response ezsignfoldersignerassociationPatchObjectV1(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request) throws ApiException {
-        ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response> localVarResp = ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
+    public CommonResponse ezsignfoldersignerassociationPatchObjectV1(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -1394,19 +1428,20 @@ public class ObjectEzsignfoldersignerassociationApi {
      * 
      * @param pkiEzsignfoldersignerassociationID  (required)
      * @param ezsignfoldersignerassociationPatchObjectV1Request  (required)
-     * @return ApiResponse&lt;EzsignfoldersignerassociationPatchObjectV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignfoldersignerassociationPatchObjectV1Response> ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request) throws ApiException {
+    public ApiResponse<CommonResponse> ezsignfoldersignerassociationPatchObjectV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldersignerassociationPatchObjectV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationPatchObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1419,17 +1454,18 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfoldersignerassociationPatchObjectV1Async(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, final ApiCallback<EzsignfoldersignerassociationPatchObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignfoldersignerassociationPatchObjectV1Async(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationPatchObjectV1Request ezsignfoldersignerassociationPatchObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfoldersignerassociationPatchObjectV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationPatchObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationPatchObjectV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1441,7 +1477,8 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -1515,18 +1552,19 @@ public class ObjectEzsignfoldersignerassociationApi {
      * Reassign remaining unsigned signatures and forms
      * @param pkiEzsignfoldersignerassociationID  (required)
      * @param ezsignfoldersignerassociationReassignV1Request  (required)
-     * @return EzsignfoldersignerassociationReassignV1Response
+     * @return CommonResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public EzsignfoldersignerassociationReassignV1Response ezsignfoldersignerassociationReassignV1(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) throws ApiException {
-        ApiResponse<EzsignfoldersignerassociationReassignV1Response> localVarResp = ezsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
+    public CommonResponse ezsignfoldersignerassociationReassignV1(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) throws ApiException {
+        ApiResponse<CommonResponse> localVarResp = ezsignfoldersignerassociationReassignV1WithHttpInfo(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request);
         return localVarResp.getData();
     }
 
@@ -1535,19 +1573,20 @@ public class ObjectEzsignfoldersignerassociationApi {
      * Reassign remaining unsigned signatures and forms
      * @param pkiEzsignfoldersignerassociationID  (required)
      * @param ezsignfoldersignerassociationReassignV1Request  (required)
-     * @return ApiResponse&lt;EzsignfoldersignerassociationReassignV1Response&gt;
+     * @return ApiResponse&lt;CommonResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<EzsignfoldersignerassociationReassignV1Response> ezsignfoldersignerassociationReassignV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) throws ApiException {
+    public ApiResponse<CommonResponse> ezsignfoldersignerassociationReassignV1WithHttpInfo(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfoldersignerassociationReassignV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request, null);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationReassignV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1560,17 +1599,18 @@ public class ObjectEzsignfoldersignerassociationApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
+     <table border="1">
+       <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfoldersignerassociationReassignV1Async(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, final ApiCallback<EzsignfoldersignerassociationReassignV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezsignfoldersignerassociationReassignV1Async(Integer pkiEzsignfoldersignerassociationID, EzsignfoldersignerassociationReassignV1Request ezsignfoldersignerassociationReassignV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfoldersignerassociationReassignV1ValidateBeforeCall(pkiEzsignfoldersignerassociationID, ezsignfoldersignerassociationReassignV1Request, _callback);
-        Type localVarReturnType = new TypeToken<EzsignfoldersignerassociationReassignV1Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

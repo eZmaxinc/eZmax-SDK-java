@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/inscription/{pkiInscriptionID}/getCommunicationsenders
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class InscriptionGetCommunicationsendersV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COMMUNICATIONSENDERS = "a_objCommunicationsenders";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COMMUNICATIONSENDERS)
+  @javax.annotation.Nonnull
   private List<CustomCommunicationsenderResponse> aObjCommunicationsenders = new ArrayList<>();
 
   public InscriptionGetCommunicationsendersV1ResponseMPayload() {
   }
 
-  public InscriptionGetCommunicationsendersV1ResponseMPayload aObjCommunicationsenders(List<CustomCommunicationsenderResponse> aObjCommunicationsenders) {
+  public InscriptionGetCommunicationsendersV1ResponseMPayload aObjCommunicationsenders(@javax.annotation.Nonnull List<CustomCommunicationsenderResponse> aObjCommunicationsenders) {
     this.aObjCommunicationsenders = aObjCommunicationsenders;
     return this;
   }
@@ -82,7 +83,7 @@ public class InscriptionGetCommunicationsendersV1ResponseMPayload {
     return aObjCommunicationsenders;
   }
 
-  public void setaObjCommunicationsenders(List<CustomCommunicationsenderResponse> aObjCommunicationsenders) {
+  public void setaObjCommunicationsenders(@javax.annotation.Nonnull List<CustomCommunicationsenderResponse> aObjCommunicationsenders) {
     this.aObjCommunicationsenders = aObjCommunicationsenders;
   }
 

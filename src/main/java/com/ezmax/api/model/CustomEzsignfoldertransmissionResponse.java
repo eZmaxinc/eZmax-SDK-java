@@ -52,40 +52,47 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object in the context of an Ezsignbulksendtransmission
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CustomEzsignfoldertransmissionResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION = "sEzsignfolderDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sEzsignfolderDescription;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_STEP = "eEzsignfolderStep";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_STEP)
+  @javax.annotation.Nonnull
   private FieldEEzsignfolderStep eEzsignfolderStep;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFOLDER_SIGNATURETOTAL = "iEzsignfolderSignaturetotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER_SIGNATURETOTAL)
+  @javax.annotation.Nonnull
   private Integer iEzsignfolderSignaturetotal;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFOLDER_FORMFIELDTOTAL = "iEzsignfolderFormfieldtotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER_FORMFIELDTOTAL)
+  @javax.annotation.Nonnull
   private Integer iEzsignfolderFormfieldtotal;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFOLDER_SIGNATURESIGNED = "iEzsignfolderSignaturesigned";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER_SIGNATURESIGNED)
+  @javax.annotation.Nonnull
   private Integer iEzsignfolderSignaturesigned;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTRANSMISSION_SIGNER = "a_objEzsignfoldertransmissionSigner";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTRANSMISSION_SIGNER)
+  @javax.annotation.Nonnull
   private List<CustomEzsignfoldertransmissionSignerResponse> aObjEzsignfoldertransmissionSigner = new ArrayList<>();
 
   public CustomEzsignfoldertransmissionResponse() {
   }
 
-  public CustomEzsignfoldertransmissionResponse pkiEzsignfolderID(Integer pkiEzsignfolderID) {
+  public CustomEzsignfoldertransmissionResponse pkiEzsignfolderID(@javax.annotation.Nonnull Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
     return this;
   }
@@ -100,12 +107,12 @@ public class CustomEzsignfoldertransmissionResponse {
     return pkiEzsignfolderID;
   }
 
-  public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
+  public void setPkiEzsignfolderID(@javax.annotation.Nonnull Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
   }
 
 
-  public CustomEzsignfoldertransmissionResponse sEzsignfolderDescription(String sEzsignfolderDescription) {
+  public CustomEzsignfoldertransmissionResponse sEzsignfolderDescription(@javax.annotation.Nonnull String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -119,12 +126,12 @@ public class CustomEzsignfoldertransmissionResponse {
     return sEzsignfolderDescription;
   }
 
-  public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
+  public void setsEzsignfolderDescription(@javax.annotation.Nonnull String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
-  public CustomEzsignfoldertransmissionResponse eEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
+  public CustomEzsignfoldertransmissionResponse eEzsignfolderStep(@javax.annotation.Nonnull FieldEEzsignfolderStep eEzsignfolderStep) {
     this.eEzsignfolderStep = eEzsignfolderStep;
     return this;
   }
@@ -138,12 +145,12 @@ public class CustomEzsignfoldertransmissionResponse {
     return eEzsignfolderStep;
   }
 
-  public void seteEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
+  public void seteEzsignfolderStep(@javax.annotation.Nonnull FieldEEzsignfolderStep eEzsignfolderStep) {
     this.eEzsignfolderStep = eEzsignfolderStep;
   }
 
 
-  public CustomEzsignfoldertransmissionResponse iEzsignfolderSignaturetotal(Integer iEzsignfolderSignaturetotal) {
+  public CustomEzsignfoldertransmissionResponse iEzsignfolderSignaturetotal(@javax.annotation.Nonnull Integer iEzsignfolderSignaturetotal) {
     this.iEzsignfolderSignaturetotal = iEzsignfolderSignaturetotal;
     return this;
   }
@@ -157,12 +164,12 @@ public class CustomEzsignfoldertransmissionResponse {
     return iEzsignfolderSignaturetotal;
   }
 
-  public void setiEzsignfolderSignaturetotal(Integer iEzsignfolderSignaturetotal) {
+  public void setiEzsignfolderSignaturetotal(@javax.annotation.Nonnull Integer iEzsignfolderSignaturetotal) {
     this.iEzsignfolderSignaturetotal = iEzsignfolderSignaturetotal;
   }
 
 
-  public CustomEzsignfoldertransmissionResponse iEzsignfolderFormfieldtotal(Integer iEzsignfolderFormfieldtotal) {
+  public CustomEzsignfoldertransmissionResponse iEzsignfolderFormfieldtotal(@javax.annotation.Nonnull Integer iEzsignfolderFormfieldtotal) {
     this.iEzsignfolderFormfieldtotal = iEzsignfolderFormfieldtotal;
     return this;
   }
@@ -176,12 +183,12 @@ public class CustomEzsignfoldertransmissionResponse {
     return iEzsignfolderFormfieldtotal;
   }
 
-  public void setiEzsignfolderFormfieldtotal(Integer iEzsignfolderFormfieldtotal) {
+  public void setiEzsignfolderFormfieldtotal(@javax.annotation.Nonnull Integer iEzsignfolderFormfieldtotal) {
     this.iEzsignfolderFormfieldtotal = iEzsignfolderFormfieldtotal;
   }
 
 
-  public CustomEzsignfoldertransmissionResponse iEzsignfolderSignaturesigned(Integer iEzsignfolderSignaturesigned) {
+  public CustomEzsignfoldertransmissionResponse iEzsignfolderSignaturesigned(@javax.annotation.Nonnull Integer iEzsignfolderSignaturesigned) {
     this.iEzsignfolderSignaturesigned = iEzsignfolderSignaturesigned;
     return this;
   }
@@ -195,12 +202,12 @@ public class CustomEzsignfoldertransmissionResponse {
     return iEzsignfolderSignaturesigned;
   }
 
-  public void setiEzsignfolderSignaturesigned(Integer iEzsignfolderSignaturesigned) {
+  public void setiEzsignfolderSignaturesigned(@javax.annotation.Nonnull Integer iEzsignfolderSignaturesigned) {
     this.iEzsignfolderSignaturesigned = iEzsignfolderSignaturesigned;
   }
 
 
-  public CustomEzsignfoldertransmissionResponse aObjEzsignfoldertransmissionSigner(List<CustomEzsignfoldertransmissionSignerResponse> aObjEzsignfoldertransmissionSigner) {
+  public CustomEzsignfoldertransmissionResponse aObjEzsignfoldertransmissionSigner(@javax.annotation.Nonnull List<CustomEzsignfoldertransmissionSignerResponse> aObjEzsignfoldertransmissionSigner) {
     this.aObjEzsignfoldertransmissionSigner = aObjEzsignfoldertransmissionSigner;
     return this;
   }
@@ -222,7 +229,7 @@ public class CustomEzsignfoldertransmissionResponse {
     return aObjEzsignfoldertransmissionSigner;
   }
 
-  public void setaObjEzsignfoldertransmissionSigner(List<CustomEzsignfoldertransmissionSignerResponse> aObjEzsignfoldertransmissionSigner) {
+  public void setaObjEzsignfoldertransmissionSigner(@javax.annotation.Nonnull List<CustomEzsignfoldertransmissionSignerResponse> aObjEzsignfoldertransmissionSigner) {
     this.aObjEzsignfoldertransmissionSigner = aObjEzsignfoldertransmissionSigner;
   }
 

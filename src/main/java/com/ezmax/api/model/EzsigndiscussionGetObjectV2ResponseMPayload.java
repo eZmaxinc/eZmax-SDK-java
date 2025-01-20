@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsigndiscussion/{pkiEzsigndiscussionID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigndiscussionGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDISCUSSION = "objEzsigndiscussion";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDISCUSSION)
+  @javax.annotation.Nonnull
   private EzsigndiscussionResponseCompound objEzsigndiscussion;
 
   public EzsigndiscussionGetObjectV2ResponseMPayload() {
   }
 
-  public EzsigndiscussionGetObjectV2ResponseMPayload objEzsigndiscussion(EzsigndiscussionResponseCompound objEzsigndiscussion) {
+  public EzsigndiscussionGetObjectV2ResponseMPayload objEzsigndiscussion(@javax.annotation.Nonnull EzsigndiscussionResponseCompound objEzsigndiscussion) {
     this.objEzsigndiscussion = objEzsigndiscussion;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsigndiscussionGetObjectV2ResponseMPayload {
     return objEzsigndiscussion;
   }
 
-  public void setObjEzsigndiscussion(EzsigndiscussionResponseCompound objEzsigndiscussion) {
+  public void setObjEzsigndiscussion(@javax.annotation.Nonnull EzsigndiscussionResponseCompound objEzsigndiscussion) {
     this.objEzsigndiscussion = objEzsigndiscussion;
   }
 

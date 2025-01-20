@@ -50,16 +50,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezsigntemplatesignature
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatesignatureCreateObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATESIGNATURE_I_D = "a_pkiEzsigntemplatesignatureID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATESIGNATURE_I_D)
+  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsigntemplatesignatureID = new ArrayList<>();
 
   public EzsigntemplatesignatureCreateObjectV2ResponseMPayload() {
   }
 
-  public EzsigntemplatesignatureCreateObjectV2ResponseMPayload aPkiEzsigntemplatesignatureID(List<Integer> aPkiEzsigntemplatesignatureID) {
+  public EzsigntemplatesignatureCreateObjectV2ResponseMPayload aPkiEzsigntemplatesignatureID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplatesignatureID) {
     this.aPkiEzsigntemplatesignatureID = aPkiEzsigntemplatesignatureID;
     return this;
   }
@@ -81,7 +82,7 @@ public class EzsigntemplatesignatureCreateObjectV2ResponseMPayload {
     return aPkiEzsigntemplatesignatureID;
   }
 
-  public void setaPkiEzsigntemplatesignatureID(List<Integer> aPkiEzsigntemplatesignatureID) {
+  public void setaPkiEzsigntemplatesignatureID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplatesignatureID) {
     this.aPkiEzsigntemplatesignatureID = aPkiEzsigntemplatesignatureID;
   }
 

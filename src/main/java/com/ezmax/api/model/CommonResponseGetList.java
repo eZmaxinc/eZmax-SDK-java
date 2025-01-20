@@ -50,20 +50,22 @@ import eZmaxAPI.JSON;
 /**
  * All API response will inherit this based Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonResponseGetList {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
+  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayloadGetList objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
+  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public CommonResponseGetList() {
   }
 
-  public CommonResponseGetList objDebugPayload(CommonResponseObjDebugPayloadGetList objDebugPayload) {
+  public CommonResponseGetList objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayloadGetList objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -77,12 +79,12 @@ public class CommonResponseGetList {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(CommonResponseObjDebugPayloadGetList objDebugPayload) {
+  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayloadGetList objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public CommonResponseGetList objDebug(CommonResponseObjDebug objDebug) {
+  public CommonResponseGetList objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -96,7 +98,7 @@ public class CommonResponseGetList {
     return objDebug;
   }
 
-  public void setObjDebug(CommonResponseObjDebug objDebug) {
+  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 

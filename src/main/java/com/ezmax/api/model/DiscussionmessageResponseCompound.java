@@ -50,48 +50,57 @@ import eZmaxAPI.JSON;
 /**
  * A Discussionmessage Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DiscussionmessageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D = "pkiDiscussionmessageID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiDiscussionmessageID;
 
   public static final String SERIALIZED_NAME_FKI_DISCUSSION_I_D = "fkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_FKI_DISCUSSION_I_D)
+  @javax.annotation.Nonnull
   private Integer fkiDiscussionID;
 
   public static final String SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D = "fkiDiscussionmembershipID";
   @SerializedName(SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D)
+  @javax.annotation.Nullable
   private Integer fkiDiscussionmembershipID;
 
   public static final String SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D_ACTIONREQUIRED = "fkiDiscussionmembershipIDActionrequired";
   @SerializedName(SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D_ACTIONREQUIRED)
+  @javax.annotation.Nullable
   private Integer fkiDiscussionmembershipIDActionrequired;
 
   public static final String SERIALIZED_NAME_E_DISCUSSIONMESSAGE_STATUS = "eDiscussionmessageStatus";
   @SerializedName(SERIALIZED_NAME_E_DISCUSSIONMESSAGE_STATUS)
+  @javax.annotation.Nonnull
   private FieldEDiscussionmessageStatus eDiscussionmessageStatus;
 
   public static final String SERIALIZED_NAME_T_DISCUSSIONMESSAGE_CONTENT = "tDiscussionmessageContent";
   @SerializedName(SERIALIZED_NAME_T_DISCUSSIONMESSAGE_CONTENT)
+  @javax.annotation.Nonnull
   private String tDiscussionmessageContent;
 
   public static final String SERIALIZED_NAME_S_DISCUSSIONMESSAGE_CREATORNAME = "sDiscussionmessageCreatorname";
   @SerializedName(SERIALIZED_NAME_S_DISCUSSIONMESSAGE_CREATORNAME)
+  @javax.annotation.Nonnull
   private String sDiscussionmessageCreatorname;
 
   public static final String SERIALIZED_NAME_S_DISCUSSIONMESSAGE_ACTIONREQUIREDNAME = "sDiscussionmessageActionrequiredname";
   @SerializedName(SERIALIZED_NAME_S_DISCUSSIONMESSAGE_ACTIONREQUIREDNAME)
+  @javax.annotation.Nullable
   private String sDiscussionmessageActionrequiredname;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
+  @javax.annotation.Nonnull
   private CommonAudit objAudit;
 
   public DiscussionmessageResponseCompound() {
   }
 
-  public DiscussionmessageResponseCompound pkiDiscussionmessageID(Integer pkiDiscussionmessageID) {
+  public DiscussionmessageResponseCompound pkiDiscussionmessageID(@javax.annotation.Nonnull Integer pkiDiscussionmessageID) {
     this.pkiDiscussionmessageID = pkiDiscussionmessageID;
     return this;
   }
@@ -107,12 +116,12 @@ public class DiscussionmessageResponseCompound {
     return pkiDiscussionmessageID;
   }
 
-  public void setPkiDiscussionmessageID(Integer pkiDiscussionmessageID) {
+  public void setPkiDiscussionmessageID(@javax.annotation.Nonnull Integer pkiDiscussionmessageID) {
     this.pkiDiscussionmessageID = pkiDiscussionmessageID;
   }
 
 
-  public DiscussionmessageResponseCompound fkiDiscussionID(Integer fkiDiscussionID) {
+  public DiscussionmessageResponseCompound fkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
     return this;
   }
@@ -128,12 +137,12 @@ public class DiscussionmessageResponseCompound {
     return fkiDiscussionID;
   }
 
-  public void setFkiDiscussionID(Integer fkiDiscussionID) {
+  public void setFkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
   }
 
 
-  public DiscussionmessageResponseCompound fkiDiscussionmembershipID(Integer fkiDiscussionmembershipID) {
+  public DiscussionmessageResponseCompound fkiDiscussionmembershipID(@javax.annotation.Nullable Integer fkiDiscussionmembershipID) {
     this.fkiDiscussionmembershipID = fkiDiscussionmembershipID;
     return this;
   }
@@ -149,12 +158,12 @@ public class DiscussionmessageResponseCompound {
     return fkiDiscussionmembershipID;
   }
 
-  public void setFkiDiscussionmembershipID(Integer fkiDiscussionmembershipID) {
+  public void setFkiDiscussionmembershipID(@javax.annotation.Nullable Integer fkiDiscussionmembershipID) {
     this.fkiDiscussionmembershipID = fkiDiscussionmembershipID;
   }
 
 
-  public DiscussionmessageResponseCompound fkiDiscussionmembershipIDActionrequired(Integer fkiDiscussionmembershipIDActionrequired) {
+  public DiscussionmessageResponseCompound fkiDiscussionmembershipIDActionrequired(@javax.annotation.Nullable Integer fkiDiscussionmembershipIDActionrequired) {
     this.fkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
     return this;
   }
@@ -170,12 +179,12 @@ public class DiscussionmessageResponseCompound {
     return fkiDiscussionmembershipIDActionrequired;
   }
 
-  public void setFkiDiscussionmembershipIDActionrequired(Integer fkiDiscussionmembershipIDActionrequired) {
+  public void setFkiDiscussionmembershipIDActionrequired(@javax.annotation.Nullable Integer fkiDiscussionmembershipIDActionrequired) {
     this.fkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
   }
 
 
-  public DiscussionmessageResponseCompound eDiscussionmessageStatus(FieldEDiscussionmessageStatus eDiscussionmessageStatus) {
+  public DiscussionmessageResponseCompound eDiscussionmessageStatus(@javax.annotation.Nonnull FieldEDiscussionmessageStatus eDiscussionmessageStatus) {
     this.eDiscussionmessageStatus = eDiscussionmessageStatus;
     return this;
   }
@@ -189,12 +198,12 @@ public class DiscussionmessageResponseCompound {
     return eDiscussionmessageStatus;
   }
 
-  public void seteDiscussionmessageStatus(FieldEDiscussionmessageStatus eDiscussionmessageStatus) {
+  public void seteDiscussionmessageStatus(@javax.annotation.Nonnull FieldEDiscussionmessageStatus eDiscussionmessageStatus) {
     this.eDiscussionmessageStatus = eDiscussionmessageStatus;
   }
 
 
-  public DiscussionmessageResponseCompound tDiscussionmessageContent(String tDiscussionmessageContent) {
+  public DiscussionmessageResponseCompound tDiscussionmessageContent(@javax.annotation.Nonnull String tDiscussionmessageContent) {
     this.tDiscussionmessageContent = tDiscussionmessageContent;
     return this;
   }
@@ -208,12 +217,12 @@ public class DiscussionmessageResponseCompound {
     return tDiscussionmessageContent;
   }
 
-  public void settDiscussionmessageContent(String tDiscussionmessageContent) {
+  public void settDiscussionmessageContent(@javax.annotation.Nonnull String tDiscussionmessageContent) {
     this.tDiscussionmessageContent = tDiscussionmessageContent;
   }
 
 
-  public DiscussionmessageResponseCompound sDiscussionmessageCreatorname(String sDiscussionmessageCreatorname) {
+  public DiscussionmessageResponseCompound sDiscussionmessageCreatorname(@javax.annotation.Nonnull String sDiscussionmessageCreatorname) {
     this.sDiscussionmessageCreatorname = sDiscussionmessageCreatorname;
     return this;
   }
@@ -227,12 +236,12 @@ public class DiscussionmessageResponseCompound {
     return sDiscussionmessageCreatorname;
   }
 
-  public void setsDiscussionmessageCreatorname(String sDiscussionmessageCreatorname) {
+  public void setsDiscussionmessageCreatorname(@javax.annotation.Nonnull String sDiscussionmessageCreatorname) {
     this.sDiscussionmessageCreatorname = sDiscussionmessageCreatorname;
   }
 
 
-  public DiscussionmessageResponseCompound sDiscussionmessageActionrequiredname(String sDiscussionmessageActionrequiredname) {
+  public DiscussionmessageResponseCompound sDiscussionmessageActionrequiredname(@javax.annotation.Nullable String sDiscussionmessageActionrequiredname) {
     this.sDiscussionmessageActionrequiredname = sDiscussionmessageActionrequiredname;
     return this;
   }
@@ -246,12 +255,12 @@ public class DiscussionmessageResponseCompound {
     return sDiscussionmessageActionrequiredname;
   }
 
-  public void setsDiscussionmessageActionrequiredname(String sDiscussionmessageActionrequiredname) {
+  public void setsDiscussionmessageActionrequiredname(@javax.annotation.Nullable String sDiscussionmessageActionrequiredname) {
     this.sDiscussionmessageActionrequiredname = sDiscussionmessageActionrequiredname;
   }
 
 
-  public DiscussionmessageResponseCompound objAudit(CommonAudit objAudit) {
+  public DiscussionmessageResponseCompound objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -265,7 +274,7 @@ public class DiscussionmessageResponseCompound {
     return objAudit;
   }
 
-  public void setObjAudit(CommonAudit objAudit) {
+  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 

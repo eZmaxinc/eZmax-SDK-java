@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezdoctemplatedocument/{pkiEzdoctemplatedocumentID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzdoctemplatedocumentEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZDOCTEMPLATEDOCUMENT = "objEzdoctemplatedocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZDOCTEMPLATEDOCUMENT)
+  @javax.annotation.Nonnull
   private EzdoctemplatedocumentRequestCompound objEzdoctemplatedocument;
 
   public EzdoctemplatedocumentEditObjectV1Request() {
   }
 
-  public EzdoctemplatedocumentEditObjectV1Request objEzdoctemplatedocument(EzdoctemplatedocumentRequestCompound objEzdoctemplatedocument) {
+  public EzdoctemplatedocumentEditObjectV1Request objEzdoctemplatedocument(@javax.annotation.Nonnull EzdoctemplatedocumentRequestCompound objEzdoctemplatedocument) {
     this.objEzdoctemplatedocument = objEzdoctemplatedocument;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzdoctemplatedocumentEditObjectV1Request {
     return objEzdoctemplatedocument;
   }
 
-  public void setObjEzdoctemplatedocument(EzdoctemplatedocumentRequestCompound objEzdoctemplatedocument) {
+  public void setObjEzdoctemplatedocument(@javax.annotation.Nonnull EzdoctemplatedocumentRequestCompound objEzdoctemplatedocument) {
     this.objEzdoctemplatedocument = objEzdoctemplatedocument;
   }
 

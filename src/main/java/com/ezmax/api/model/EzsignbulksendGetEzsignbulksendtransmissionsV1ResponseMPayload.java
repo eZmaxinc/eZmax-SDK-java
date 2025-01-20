@@ -51,16 +51,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignbulksend/{pkiEzsignbulksend}/getEzsignbulksendtransmissions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDTRANSMISSION = "a_objEzsignbulksendtransmission";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDTRANSMISSION)
+  @javax.annotation.Nonnull
   private List<EzsignbulksendtransmissionResponseCompound> aObjEzsignbulksendtransmission = new ArrayList<>();
 
   public EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload() {
   }
 
-  public EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload aObjEzsignbulksendtransmission(List<EzsignbulksendtransmissionResponseCompound> aObjEzsignbulksendtransmission) {
+  public EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload aObjEzsignbulksendtransmission(@javax.annotation.Nonnull List<EzsignbulksendtransmissionResponseCompound> aObjEzsignbulksendtransmission) {
     this.aObjEzsignbulksendtransmission = aObjEzsignbulksendtransmission;
     return this;
   }
@@ -82,7 +83,7 @@ public class EzsignbulksendGetEzsignbulksendtransmissionsV1ResponseMPayload {
     return aObjEzsignbulksendtransmission;
   }
 
-  public void setaObjEzsignbulksendtransmission(List<EzsignbulksendtransmissionResponseCompound> aObjEzsignbulksendtransmission) {
+  public void setaObjEzsignbulksendtransmission(@javax.annotation.Nonnull List<EzsignbulksendtransmissionResponseCompound> aObjEzsignbulksendtransmission) {
     this.aObjEzsignbulksendtransmission = aObjEzsignbulksendtransmission;
   }
 

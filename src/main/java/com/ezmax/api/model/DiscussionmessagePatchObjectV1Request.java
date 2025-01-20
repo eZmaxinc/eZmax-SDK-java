@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PATCH /1/object/discussionmessage/{pkiDiscussionmessageID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class DiscussionmessagePatchObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_DISCUSSIONMESSAGE = "objDiscussionmessage";
   @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSIONMESSAGE)
+  @javax.annotation.Nonnull
   private DiscussionmessageRequestPatch objDiscussionmessage;
 
   public DiscussionmessagePatchObjectV1Request() {
   }
 
-  public DiscussionmessagePatchObjectV1Request objDiscussionmessage(DiscussionmessageRequestPatch objDiscussionmessage) {
+  public DiscussionmessagePatchObjectV1Request objDiscussionmessage(@javax.annotation.Nonnull DiscussionmessageRequestPatch objDiscussionmessage) {
     this.objDiscussionmessage = objDiscussionmessage;
     return this;
   }
@@ -72,7 +73,7 @@ public class DiscussionmessagePatchObjectV1Request {
     return objDiscussionmessage;
   }
 
-  public void setObjDiscussionmessage(DiscussionmessageRequestPatch objDiscussionmessage) {
+  public void setObjDiscussionmessage(@javax.annotation.Nonnull DiscussionmessageRequestPatch objDiscussionmessage) {
     this.objDiscussionmessage = objDiscussionmessage;
   }
 

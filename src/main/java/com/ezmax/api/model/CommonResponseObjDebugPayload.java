@@ -50,32 +50,37 @@ import eZmaxAPI.JSON;
 /**
  * This is a debug object containing debugging information on the actual function
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class CommonResponseObjDebugPayload {
   public static final String SERIALIZED_NAME_I_VERSION_MIN = "iVersionMin";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MIN)
+  @javax.annotation.Nonnull
   private Integer iVersionMin;
 
   public static final String SERIALIZED_NAME_I_VERSION_MAX = "iVersionMax";
   @SerializedName(SERIALIZED_NAME_I_VERSION_MAX)
+  @javax.annotation.Nonnull
   private Integer iVersionMax;
 
   public static final String SERIALIZED_NAME_A_REQUIRED_PERMISSION = "a_RequiredPermission";
   @SerializedName(SERIALIZED_NAME_A_REQUIRED_PERMISSION)
+  @javax.annotation.Nonnull
   private List<Integer> aRequiredPermission = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_B_VERSION_DEPRECATED = "bVersionDeprecated";
   @SerializedName(SERIALIZED_NAME_B_VERSION_DEPRECATED)
+  @javax.annotation.Nonnull
   private Boolean bVersionDeprecated;
 
   public static final String SERIALIZED_NAME_DT_RESPONSE_DATE = "dtResponseDate";
   @SerializedName(SERIALIZED_NAME_DT_RESPONSE_DATE)
+  @javax.annotation.Nonnull
   private String dtResponseDate;
 
   public CommonResponseObjDebugPayload() {
   }
 
-  public CommonResponseObjDebugPayload iVersionMin(Integer iVersionMin) {
+  public CommonResponseObjDebugPayload iVersionMin(@javax.annotation.Nonnull Integer iVersionMin) {
     this.iVersionMin = iVersionMin;
     return this;
   }
@@ -89,12 +94,12 @@ public class CommonResponseObjDebugPayload {
     return iVersionMin;
   }
 
-  public void setiVersionMin(Integer iVersionMin) {
+  public void setiVersionMin(@javax.annotation.Nonnull Integer iVersionMin) {
     this.iVersionMin = iVersionMin;
   }
 
 
-  public CommonResponseObjDebugPayload iVersionMax(Integer iVersionMax) {
+  public CommonResponseObjDebugPayload iVersionMax(@javax.annotation.Nonnull Integer iVersionMax) {
     this.iVersionMax = iVersionMax;
     return this;
   }
@@ -108,12 +113,12 @@ public class CommonResponseObjDebugPayload {
     return iVersionMax;
   }
 
-  public void setiVersionMax(Integer iVersionMax) {
+  public void setiVersionMax(@javax.annotation.Nonnull Integer iVersionMax) {
     this.iVersionMax = iVersionMax;
   }
 
 
-  public CommonResponseObjDebugPayload aRequiredPermission(List<Integer> aRequiredPermission) {
+  public CommonResponseObjDebugPayload aRequiredPermission(@javax.annotation.Nonnull List<Integer> aRequiredPermission) {
     this.aRequiredPermission = aRequiredPermission;
     return this;
   }
@@ -135,12 +140,12 @@ public class CommonResponseObjDebugPayload {
     return aRequiredPermission;
   }
 
-  public void setaRequiredPermission(List<Integer> aRequiredPermission) {
+  public void setaRequiredPermission(@javax.annotation.Nonnull List<Integer> aRequiredPermission) {
     this.aRequiredPermission = aRequiredPermission;
   }
 
 
-  public CommonResponseObjDebugPayload bVersionDeprecated(Boolean bVersionDeprecated) {
+  public CommonResponseObjDebugPayload bVersionDeprecated(@javax.annotation.Nonnull Boolean bVersionDeprecated) {
     this.bVersionDeprecated = bVersionDeprecated;
     return this;
   }
@@ -154,12 +159,12 @@ public class CommonResponseObjDebugPayload {
     return bVersionDeprecated;
   }
 
-  public void setbVersionDeprecated(Boolean bVersionDeprecated) {
+  public void setbVersionDeprecated(@javax.annotation.Nonnull Boolean bVersionDeprecated) {
     this.bVersionDeprecated = bVersionDeprecated;
   }
 
 
-  public CommonResponseObjDebugPayload dtResponseDate(String dtResponseDate) {
+  public CommonResponseObjDebugPayload dtResponseDate(@javax.annotation.Nonnull String dtResponseDate) {
     this.dtResponseDate = dtResponseDate;
     return this;
   }
@@ -173,7 +178,7 @@ public class CommonResponseObjDebugPayload {
     return dtResponseDate;
   }
 
-  public void setDtResponseDate(String dtResponseDate) {
+  public void setDtResponseDate(@javax.annotation.Nonnull String dtResponseDate) {
     this.dtResponseDate = dtResponseDate;
   }
 

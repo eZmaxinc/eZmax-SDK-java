@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Franchiseoffice AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class FranchiseofficeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_FRANCHISEOFFICE_DESCRIPTION = "sFranchiseofficeDescription";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEOFFICE_DESCRIPTION)
+  @javax.annotation.Nonnull
   private String sFranchiseofficeDescription;
 
   public static final String SERIALIZED_NAME_PKI_FRANCHISEOFFICE_I_D = "pkiFranchiseofficeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEOFFICE_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiFranchiseofficeID;
 
   public static final String SERIALIZED_NAME_B_FRANCHISEOFFICE_ISACTIVE = "bFranchiseofficeIsactive";
   @SerializedName(SERIALIZED_NAME_B_FRANCHISEOFFICE_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bFranchiseofficeIsactive;
 
   public FranchiseofficeAutocompleteElementResponse() {
   }
 
-  public FranchiseofficeAutocompleteElementResponse sFranchiseofficeDescription(String sFranchiseofficeDescription) {
+  public FranchiseofficeAutocompleteElementResponse sFranchiseofficeDescription(@javax.annotation.Nonnull String sFranchiseofficeDescription) {
     this.sFranchiseofficeDescription = sFranchiseofficeDescription;
     return this;
   }
@@ -79,12 +82,12 @@ public class FranchiseofficeAutocompleteElementResponse {
     return sFranchiseofficeDescription;
   }
 
-  public void setsFranchiseofficeDescription(String sFranchiseofficeDescription) {
+  public void setsFranchiseofficeDescription(@javax.annotation.Nonnull String sFranchiseofficeDescription) {
     this.sFranchiseofficeDescription = sFranchiseofficeDescription;
   }
 
 
-  public FranchiseofficeAutocompleteElementResponse pkiFranchiseofficeID(Integer pkiFranchiseofficeID) {
+  public FranchiseofficeAutocompleteElementResponse pkiFranchiseofficeID(@javax.annotation.Nonnull Integer pkiFranchiseofficeID) {
     this.pkiFranchiseofficeID = pkiFranchiseofficeID;
     return this;
   }
@@ -99,12 +102,12 @@ public class FranchiseofficeAutocompleteElementResponse {
     return pkiFranchiseofficeID;
   }
 
-  public void setPkiFranchiseofficeID(Integer pkiFranchiseofficeID) {
+  public void setPkiFranchiseofficeID(@javax.annotation.Nonnull Integer pkiFranchiseofficeID) {
     this.pkiFranchiseofficeID = pkiFranchiseofficeID;
   }
 
 
-  public FranchiseofficeAutocompleteElementResponse bFranchiseofficeIsactive(Boolean bFranchiseofficeIsactive) {
+  public FranchiseofficeAutocompleteElementResponse bFranchiseofficeIsactive(@javax.annotation.Nonnull Boolean bFranchiseofficeIsactive) {
     this.bFranchiseofficeIsactive = bFranchiseofficeIsactive;
     return this;
   }
@@ -118,7 +121,7 @@ public class FranchiseofficeAutocompleteElementResponse {
     return bFranchiseofficeIsactive;
   }
 
-  public void setbFranchiseofficeIsactive(Boolean bFranchiseofficeIsactive) {
+  public void setbFranchiseofficeIsactive(@javax.annotation.Nonnull Boolean bFranchiseofficeIsactive) {
     this.bFranchiseofficeIsactive = bFranchiseofficeIsactive;
   }
 

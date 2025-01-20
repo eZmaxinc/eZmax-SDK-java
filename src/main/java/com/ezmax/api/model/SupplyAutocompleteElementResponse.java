@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Supply AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class SupplyAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_SUPPLY_I_D = "pkiSupplyID";
   @SerializedName(SERIALIZED_NAME_PKI_SUPPLY_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiSupplyID;
 
   public static final String SERIALIZED_NAME_S_SUPPLY_DESCRIPTION_X = "sSupplyDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_SUPPLY_DESCRIPTION_X)
+  @javax.annotation.Nonnull
   private String sSupplyDescriptionX;
 
   public static final String SERIALIZED_NAME_B_SUPPLY_ISACTIVE = "bSupplyIsactive";
   @SerializedName(SERIALIZED_NAME_B_SUPPLY_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bSupplyIsactive;
 
   public SupplyAutocompleteElementResponse() {
   }
 
-  public SupplyAutocompleteElementResponse pkiSupplyID(Integer pkiSupplyID) {
+  public SupplyAutocompleteElementResponse pkiSupplyID(@javax.annotation.Nonnull Integer pkiSupplyID) {
     this.pkiSupplyID = pkiSupplyID;
     return this;
   }
@@ -81,12 +84,12 @@ public class SupplyAutocompleteElementResponse {
     return pkiSupplyID;
   }
 
-  public void setPkiSupplyID(Integer pkiSupplyID) {
+  public void setPkiSupplyID(@javax.annotation.Nonnull Integer pkiSupplyID) {
     this.pkiSupplyID = pkiSupplyID;
   }
 
 
-  public SupplyAutocompleteElementResponse sSupplyDescriptionX(String sSupplyDescriptionX) {
+  public SupplyAutocompleteElementResponse sSupplyDescriptionX(@javax.annotation.Nonnull String sSupplyDescriptionX) {
     this.sSupplyDescriptionX = sSupplyDescriptionX;
     return this;
   }
@@ -100,12 +103,12 @@ public class SupplyAutocompleteElementResponse {
     return sSupplyDescriptionX;
   }
 
-  public void setsSupplyDescriptionX(String sSupplyDescriptionX) {
+  public void setsSupplyDescriptionX(@javax.annotation.Nonnull String sSupplyDescriptionX) {
     this.sSupplyDescriptionX = sSupplyDescriptionX;
   }
 
 
-  public SupplyAutocompleteElementResponse bSupplyIsactive(Boolean bSupplyIsactive) {
+  public SupplyAutocompleteElementResponse bSupplyIsactive(@javax.annotation.Nonnull Boolean bSupplyIsactive) {
     this.bSupplyIsactive = bSupplyIsactive;
     return this;
   }
@@ -119,7 +122,7 @@ public class SupplyAutocompleteElementResponse {
     return bSupplyIsactive;
   }
 
-  public void setbSupplyIsactive(Boolean bSupplyIsactive) {
+  public void setbSupplyIsactive(@javax.annotation.Nonnull Boolean bSupplyIsactive) {
     this.bSupplyIsactive = bSupplyIsactive;
   }
 

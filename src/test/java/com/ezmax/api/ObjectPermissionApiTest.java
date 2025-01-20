@@ -14,12 +14,11 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.PermissionCreateObjectV1Request;
 import com.ezmax.api.model.PermissionCreateObjectV1Response;
-import com.ezmax.api.model.PermissionDeleteObjectV1Response;
 import com.ezmax.api.model.PermissionEditObjectV1Request;
-import com.ezmax.api.model.PermissionEditObjectV1Response;
 import com.ezmax.api.model.PermissionGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -61,7 +60,7 @@ public class ObjectPermissionApiTest {
     @Test
     public void permissionDeleteObjectV1Test() throws ApiException {
         Integer pkiPermissionID = null;
-        PermissionDeleteObjectV1Response response = api.permissionDeleteObjectV1(pkiPermissionID);
+        CommonResponse response = api.permissionDeleteObjectV1(pkiPermissionID);
         // TODO: test validations
     }
 
@@ -76,7 +75,7 @@ public class ObjectPermissionApiTest {
     public void permissionEditObjectV1Test() throws ApiException {
         Integer pkiPermissionID = null;
         PermissionEditObjectV1Request permissionEditObjectV1Request = null;
-        PermissionEditObjectV1Response response = api.permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request);
+        CommonResponse response = api.permissionEditObjectV1(pkiPermissionID, permissionEditObjectV1Request);
         // TODO: test validations
     }
 

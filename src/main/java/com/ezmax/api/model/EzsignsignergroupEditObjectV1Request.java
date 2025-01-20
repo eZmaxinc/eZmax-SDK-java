@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsignsignergroup/{pkiEzsignsignergroupID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignsignergroupEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP = "objEzsignsignergroup";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNSIGNERGROUP)
+  @javax.annotation.Nonnull
   private EzsignsignergroupRequestCompound objEzsignsignergroup;
 
   public EzsignsignergroupEditObjectV1Request() {
   }
 
-  public EzsignsignergroupEditObjectV1Request objEzsignsignergroup(EzsignsignergroupRequestCompound objEzsignsignergroup) {
+  public EzsignsignergroupEditObjectV1Request objEzsignsignergroup(@javax.annotation.Nonnull EzsignsignergroupRequestCompound objEzsignsignergroup) {
     this.objEzsignsignergroup = objEzsignsignergroup;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsignsignergroupEditObjectV1Request {
     return objEzsignsignergroup;
   }
 
-  public void setObjEzsignsignergroup(EzsignsignergroupRequestCompound objEzsignsignergroup) {
+  public void setObjEzsignsignergroup(@javax.annotation.Nonnull EzsignsignergroupRequestCompound objEzsignsignergroup) {
     this.objEzsignsignergroup = objEzsignsignergroup;
   }
 

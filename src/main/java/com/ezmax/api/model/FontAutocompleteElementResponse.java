@@ -48,24 +48,27 @@ import eZmaxAPI.JSON;
 /**
  * A Font AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class FontAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_FONT_NAME = "sFontName";
   @SerializedName(SERIALIZED_NAME_S_FONT_NAME)
+  @javax.annotation.Nonnull
   private String sFontName;
 
   public static final String SERIALIZED_NAME_PKI_FONT_I_D = "pkiFontID";
   @SerializedName(SERIALIZED_NAME_PKI_FONT_I_D)
+  @javax.annotation.Nonnull
   private Integer pkiFontID;
 
   public static final String SERIALIZED_NAME_B_FONT_ISACTIVE = "bFontIsactive";
   @SerializedName(SERIALIZED_NAME_B_FONT_ISACTIVE)
+  @javax.annotation.Nonnull
   private Boolean bFontIsactive;
 
   public FontAutocompleteElementResponse() {
   }
 
-  public FontAutocompleteElementResponse sFontName(String sFontName) {
+  public FontAutocompleteElementResponse sFontName(@javax.annotation.Nonnull String sFontName) {
     this.sFontName = sFontName;
     return this;
   }
@@ -79,12 +82,12 @@ public class FontAutocompleteElementResponse {
     return sFontName;
   }
 
-  public void setsFontName(String sFontName) {
+  public void setsFontName(@javax.annotation.Nonnull String sFontName) {
     this.sFontName = sFontName;
   }
 
 
-  public FontAutocompleteElementResponse pkiFontID(Integer pkiFontID) {
+  public FontAutocompleteElementResponse pkiFontID(@javax.annotation.Nonnull Integer pkiFontID) {
     this.pkiFontID = pkiFontID;
     return this;
   }
@@ -99,12 +102,12 @@ public class FontAutocompleteElementResponse {
     return pkiFontID;
   }
 
-  public void setPkiFontID(Integer pkiFontID) {
+  public void setPkiFontID(@javax.annotation.Nonnull Integer pkiFontID) {
     this.pkiFontID = pkiFontID;
   }
 
 
-  public FontAutocompleteElementResponse bFontIsactive(Boolean bFontIsactive) {
+  public FontAutocompleteElementResponse bFontIsactive(@javax.annotation.Nonnull Boolean bFontIsactive) {
     this.bFontIsactive = bFontIsactive;
     return this;
   }
@@ -118,7 +121,7 @@ public class FontAutocompleteElementResponse {
     return bFontIsactive;
   }
 
-  public void setbFontIsactive(Boolean bFontIsactive) {
+  public void setbFontIsactive(@javax.annotation.Nonnull Boolean bFontIsactive) {
     this.bFontIsactive = bFontIsactive;
   }
 

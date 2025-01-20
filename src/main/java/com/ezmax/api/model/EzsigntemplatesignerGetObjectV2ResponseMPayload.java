@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatesignerGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATESIGNER = "objEzsigntemplatesigner";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATESIGNER)
+  @javax.annotation.Nonnull
   private EzsigntemplatesignerResponseCompound objEzsigntemplatesigner;
 
   public EzsigntemplatesignerGetObjectV2ResponseMPayload() {
   }
 
-  public EzsigntemplatesignerGetObjectV2ResponseMPayload objEzsigntemplatesigner(EzsigntemplatesignerResponseCompound objEzsigntemplatesigner) {
+  public EzsigntemplatesignerGetObjectV2ResponseMPayload objEzsigntemplatesigner(@javax.annotation.Nonnull EzsigntemplatesignerResponseCompound objEzsigntemplatesigner) {
     this.objEzsigntemplatesigner = objEzsigntemplatesigner;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsigntemplatesignerGetObjectV2ResponseMPayload {
     return objEzsigntemplatesigner;
   }
 
-  public void setObjEzsigntemplatesigner(EzsigntemplatesignerResponseCompound objEzsigntemplatesigner) {
+  public void setObjEzsigntemplatesigner(@javax.annotation.Nonnull EzsigntemplatesignerResponseCompound objEzsigntemplatesigner) {
     this.objEzsigntemplatesigner = objEzsigntemplatesigner;
   }
 

@@ -48,16 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfoldersignerassociation/getInPersonLoginUrl
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_LOGIN_URL = "sLoginUrl";
   @SerializedName(SERIALIZED_NAME_S_LOGIN_URL)
+  @javax.annotation.Nonnull
   private String sLoginUrl;
 
   public EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload() {
   }
 
-  public EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload sLoginUrl(String sLoginUrl) {
+  public EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload sLoginUrl(@javax.annotation.Nonnull String sLoginUrl) {
     this.sLoginUrl = sLoginUrl;
     return this;
   }
@@ -71,7 +72,7 @@ public class EzsignfoldersignerassociationGetInPersonLoginUrlV1ResponseMPayload 
     return sLoginUrl;
   }
 
-  public void setsLoginUrl(String sLoginUrl) {
+  public void setsLoginUrl(@javax.annotation.Nonnull String sLoginUrl) {
     this.sLoginUrl = sLoginUrl;
   }
 

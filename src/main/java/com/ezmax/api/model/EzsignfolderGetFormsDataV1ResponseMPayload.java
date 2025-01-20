@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignfolder/{pkiEzsigndocument}/getFormsData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsignfolderGetFormsDataV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_FORMS_DATA_FOLDER = "objFormsDataFolder";
   @SerializedName(SERIALIZED_NAME_OBJ_FORMS_DATA_FOLDER)
+  @javax.annotation.Nonnull
   private CustomFormsDataFolderResponse objFormsDataFolder;
 
   public EzsignfolderGetFormsDataV1ResponseMPayload() {
   }
 
-  public EzsignfolderGetFormsDataV1ResponseMPayload objFormsDataFolder(CustomFormsDataFolderResponse objFormsDataFolder) {
+  public EzsignfolderGetFormsDataV1ResponseMPayload objFormsDataFolder(@javax.annotation.Nonnull CustomFormsDataFolderResponse objFormsDataFolder) {
     this.objFormsDataFolder = objFormsDataFolder;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsignfolderGetFormsDataV1ResponseMPayload {
     return objFormsDataFolder;
   }
 
-  public void setObjFormsDataFolder(CustomFormsDataFolderResponse objFormsDataFolder) {
+  public void setObjFormsDataFolder(@javax.annotation.Nonnull CustomFormsDataFolderResponse objFormsDataFolder) {
     this.objFormsDataFolder = objFormsDataFolder;
   }
 

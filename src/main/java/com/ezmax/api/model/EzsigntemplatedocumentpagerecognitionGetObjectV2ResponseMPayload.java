@@ -49,16 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezsigntemplatedocumentpagerecognition/{pkiEzsigntemplatedocumentpagerecognitionID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class EzsigntemplatedocumentpagerecognitionGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION = "objEzsigntemplatedocumentpagerecognition";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNTEMPLATEDOCUMENTPAGERECOGNITION)
+  @javax.annotation.Nonnull
   private EzsigntemplatedocumentpagerecognitionResponseCompound objEzsigntemplatedocumentpagerecognition;
 
   public EzsigntemplatedocumentpagerecognitionGetObjectV2ResponseMPayload() {
   }
 
-  public EzsigntemplatedocumentpagerecognitionGetObjectV2ResponseMPayload objEzsigntemplatedocumentpagerecognition(EzsigntemplatedocumentpagerecognitionResponseCompound objEzsigntemplatedocumentpagerecognition) {
+  public EzsigntemplatedocumentpagerecognitionGetObjectV2ResponseMPayload objEzsigntemplatedocumentpagerecognition(@javax.annotation.Nonnull EzsigntemplatedocumentpagerecognitionResponseCompound objEzsigntemplatedocumentpagerecognition) {
     this.objEzsigntemplatedocumentpagerecognition = objEzsigntemplatedocumentpagerecognition;
     return this;
   }
@@ -72,7 +73,7 @@ public class EzsigntemplatedocumentpagerecognitionGetObjectV2ResponseMPayload {
     return objEzsigntemplatedocumentpagerecognition;
   }
 
-  public void setObjEzsigntemplatedocumentpagerecognition(EzsigntemplatedocumentpagerecognitionResponseCompound objEzsigntemplatedocumentpagerecognition) {
+  public void setObjEzsigntemplatedocumentpagerecognition(@javax.annotation.Nonnull EzsigntemplatedocumentpagerecognitionResponseCompound objEzsigntemplatedocumentpagerecognition) {
     this.objEzsigntemplatedocumentpagerecognition = objEzsigntemplatedocumentpagerecognition;
   }
 

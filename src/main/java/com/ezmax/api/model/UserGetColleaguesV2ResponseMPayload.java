@@ -51,20 +51,22 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /2/object/user/{pkiUserID}/getColleagues
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UserGetColleaguesV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COLLEAGUE = "a_objColleague";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COLLEAGUE)
+  @javax.annotation.Nonnull
   private List<ColleagueResponseCompoundV2> aObjColleague = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_COLLEAGUE_CLONABLE = "a_objColleagueClonable";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COLLEAGUE_CLONABLE)
+  @javax.annotation.Nonnull
   private List<ColleagueResponseCompoundV2> aObjColleagueClonable = new ArrayList<>();
 
   public UserGetColleaguesV2ResponseMPayload() {
   }
 
-  public UserGetColleaguesV2ResponseMPayload aObjColleague(List<ColleagueResponseCompoundV2> aObjColleague) {
+  public UserGetColleaguesV2ResponseMPayload aObjColleague(@javax.annotation.Nonnull List<ColleagueResponseCompoundV2> aObjColleague) {
     this.aObjColleague = aObjColleague;
     return this;
   }
@@ -86,12 +88,12 @@ public class UserGetColleaguesV2ResponseMPayload {
     return aObjColleague;
   }
 
-  public void setaObjColleague(List<ColleagueResponseCompoundV2> aObjColleague) {
+  public void setaObjColleague(@javax.annotation.Nonnull List<ColleagueResponseCompoundV2> aObjColleague) {
     this.aObjColleague = aObjColleague;
   }
 
 
-  public UserGetColleaguesV2ResponseMPayload aObjColleagueClonable(List<ColleagueResponseCompoundV2> aObjColleagueClonable) {
+  public UserGetColleaguesV2ResponseMPayload aObjColleagueClonable(@javax.annotation.Nonnull List<ColleagueResponseCompoundV2> aObjColleagueClonable) {
     this.aObjColleagueClonable = aObjColleagueClonable;
     return this;
   }
@@ -113,7 +115,7 @@ public class UserGetColleaguesV2ResponseMPayload {
     return aObjColleagueClonable;
   }
 
-  public void setaObjColleagueClonable(List<ColleagueResponseCompoundV2> aObjColleagueClonable) {
+  public void setaObjColleagueClonable(@javax.annotation.Nonnull List<ColleagueResponseCompoundV2> aObjColleagueClonable) {
     this.aObjColleagueClonable = aObjColleagueClonable;
   }
 

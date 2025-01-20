@@ -14,13 +14,13 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
+import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.UsergroupCreateObjectV1Request;
 import com.ezmax.api.model.UsergroupCreateObjectV1Response;
 import com.ezmax.api.model.UsergroupEditObjectV1Request;
-import com.ezmax.api.model.UsergroupEditObjectV1Response;
 import com.ezmax.api.model.UsergroupEditPermissionsV1Request;
 import com.ezmax.api.model.UsergroupEditPermissionsV1Response;
 import com.ezmax.api.model.UsergroupEditUsergroupdelegationsV1Request;
@@ -74,7 +74,7 @@ public class ObjectUsergroupApiTest {
     public void usergroupEditObjectV1Test() throws ApiException {
         Integer pkiUsergroupID = null;
         UsergroupEditObjectV1Request usergroupEditObjectV1Request = null;
-        UsergroupEditObjectV1Response response = api.usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request);
+        CommonResponse response = api.usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request);
         // TODO: test validations
     }
 
