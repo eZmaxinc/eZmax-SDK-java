@@ -50,117 +50,96 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignfolderID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL = "eEzsignfoldertypePrivacylevel";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL)
-  @javax.annotation.Nonnull
   private FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
-  @javax.annotation.Nonnull
   private String sEzsignfoldertypeNameX;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION = "sEzsignfolderDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDER_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsignfolderDescription;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_STEP = "eEzsignfolderStep";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_STEP)
-  @javax.annotation.Nonnull
   private FieldEEzsignfolderStep eEzsignfolderStep;
 
   public static final String SERIALIZED_NAME_DT_CREATED_DATE = "dtCreatedDate";
   @SerializedName(SERIALIZED_NAME_DT_CREATED_DATE)
-  @javax.annotation.Nonnull
   private String dtCreatedDate;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_DELAYEDSENDDATE = "dtEzsignfolderDelayedsenddate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_DELAYEDSENDDATE)
-  @javax.annotation.Nullable
   private String dtEzsignfolderDelayedsenddate;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_SENTDATE = "dtEzsignfolderSentdate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_SENTDATE)
-  @javax.annotation.Nullable
   private String dtEzsignfolderSentdate;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_DUEDATE = "dtEzsignfolderDuedate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_DUEDATE)
-  @javax.annotation.Nullable
   private String dtEzsignfolderDuedate;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT = "iEzsigndocument";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT)
-  @javax.annotation.Nonnull
   private Integer iEzsigndocument;
 
   public static final String SERIALIZED_NAME_I_EZSIGNDOCUMENT_EDM = "iEzsigndocumentEdm";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNDOCUMENT_EDM)
-  @javax.annotation.Nonnull
   private Integer iEzsigndocumentEdm;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURE = "iEzsignsignature";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURE)
-  @javax.annotation.Nonnull
   private Integer iEzsignsignature;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURE_SIGNED = "iEzsignsignatureSigned";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURE_SIGNED)
-  @javax.annotation.Nonnull
   private Integer iEzsignsignatureSigned;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP = "iEzsignformfieldgroup";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP)
-  @javax.annotation.Nonnull
   private Integer iEzsignformfieldgroup;
 
   public static final String SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_COMPLETED = "iEzsignformfieldgroupCompleted";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNFORMFIELDGROUP_COMPLETED)
-  @javax.annotation.Nonnull
   private Integer iEzsignformfieldgroupCompleted;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFORM_HASDEPENDENCIES = "bEzsignformHasdependencies";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORM_HASDEPENDENCIES)
-  @javax.annotation.Nullable
   private Boolean bEzsignformHasdependencies;
 
   public static final String SERIALIZED_NAME_D_EZSIGNFOLDER_COMPLETEDPERCENTAGE = "dEzsignfolderCompletedpercentage";
   @SerializedName(SERIALIZED_NAME_D_EZSIGNFOLDER_COMPLETEDPERCENTAGE)
-  @javax.annotation.Nonnull
   private String dEzsignfolderCompletedpercentage;
 
   public static final String SERIALIZED_NAME_D_EZSIGNFOLDER_FORMCOMPLETEDPERCENTAGE = "dEzsignfolderFormcompletedpercentage";
   @SerializedName(SERIALIZED_NAME_D_EZSIGNFOLDER_FORMCOMPLETEDPERCENTAGE)
-  @javax.annotation.Nonnull
   private String dEzsignfolderFormcompletedpercentage;
 
   public static final String SERIALIZED_NAME_D_EZSIGNFOLDER_SIGNATURECOMPLETEDPERCENTAGE = "dEzsignfolderSignaturecompletedpercentage";
   @SerializedName(SERIALIZED_NAME_D_EZSIGNFOLDER_SIGNATURECOMPLETEDPERCENTAGE)
-  @javax.annotation.Nonnull
   private String dEzsignfolderSignaturecompletedpercentage;
 
   public static final String SERIALIZED_NAME_B_EZSIGNFOLDER_SIGNER = "bEzsignfolderSigner";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDER_SIGNER)
-  @javax.annotation.Nullable
   private Boolean bEzsignfolderSigner;
 
   public EzsignfolderListElement() {
   }
 
-  public EzsignfolderListElement pkiEzsignfolderID(@javax.annotation.Nonnull Integer pkiEzsignfolderID) {
+  public EzsignfolderListElement pkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
     return this;
   }
@@ -175,12 +154,12 @@ public class EzsignfolderListElement {
     return pkiEzsignfolderID;
   }
 
-  public void setPkiEzsignfolderID(@javax.annotation.Nonnull Integer pkiEzsignfolderID) {
+  public void setPkiEzsignfolderID(Integer pkiEzsignfolderID) {
     this.pkiEzsignfolderID = pkiEzsignfolderID;
   }
 
 
-  public EzsignfolderListElement fkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
+  public EzsignfolderListElement fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -196,12 +175,12 @@ public class EzsignfolderListElement {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public EzsignfolderListElement eEzsignfoldertypePrivacylevel(@javax.annotation.Nonnull FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+  public EzsignfolderListElement eEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
     return this;
   }
@@ -215,12 +194,12 @@ public class EzsignfolderListElement {
     return eEzsignfoldertypePrivacylevel;
   }
 
-  public void seteEzsignfoldertypePrivacylevel(@javax.annotation.Nonnull FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+  public void seteEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
   }
 
 
-  public EzsignfolderListElement sEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
+  public EzsignfolderListElement sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -234,12 +213,12 @@ public class EzsignfolderListElement {
     return sEzsignfoldertypeNameX;
   }
 
-  public void setsEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
+  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
-  public EzsignfolderListElement sEzsignfolderDescription(@javax.annotation.Nonnull String sEzsignfolderDescription) {
+  public EzsignfolderListElement sEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
     return this;
   }
@@ -253,12 +232,12 @@ public class EzsignfolderListElement {
     return sEzsignfolderDescription;
   }
 
-  public void setsEzsignfolderDescription(@javax.annotation.Nonnull String sEzsignfolderDescription) {
+  public void setsEzsignfolderDescription(String sEzsignfolderDescription) {
     this.sEzsignfolderDescription = sEzsignfolderDescription;
   }
 
 
-  public EzsignfolderListElement eEzsignfolderStep(@javax.annotation.Nonnull FieldEEzsignfolderStep eEzsignfolderStep) {
+  public EzsignfolderListElement eEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
     this.eEzsignfolderStep = eEzsignfolderStep;
     return this;
   }
@@ -272,12 +251,12 @@ public class EzsignfolderListElement {
     return eEzsignfolderStep;
   }
 
-  public void seteEzsignfolderStep(@javax.annotation.Nonnull FieldEEzsignfolderStep eEzsignfolderStep) {
+  public void seteEzsignfolderStep(FieldEEzsignfolderStep eEzsignfolderStep) {
     this.eEzsignfolderStep = eEzsignfolderStep;
   }
 
 
-  public EzsignfolderListElement dtCreatedDate(@javax.annotation.Nonnull String dtCreatedDate) {
+  public EzsignfolderListElement dtCreatedDate(String dtCreatedDate) {
     this.dtCreatedDate = dtCreatedDate;
     return this;
   }
@@ -291,12 +270,12 @@ public class EzsignfolderListElement {
     return dtCreatedDate;
   }
 
-  public void setDtCreatedDate(@javax.annotation.Nonnull String dtCreatedDate) {
+  public void setDtCreatedDate(String dtCreatedDate) {
     this.dtCreatedDate = dtCreatedDate;
   }
 
 
-  public EzsignfolderListElement dtEzsignfolderDelayedsenddate(@javax.annotation.Nullable String dtEzsignfolderDelayedsenddate) {
+  public EzsignfolderListElement dtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
     this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
     return this;
   }
@@ -310,12 +289,12 @@ public class EzsignfolderListElement {
     return dtEzsignfolderDelayedsenddate;
   }
 
-  public void setDtEzsignfolderDelayedsenddate(@javax.annotation.Nullable String dtEzsignfolderDelayedsenddate) {
+  public void setDtEzsignfolderDelayedsenddate(String dtEzsignfolderDelayedsenddate) {
     this.dtEzsignfolderDelayedsenddate = dtEzsignfolderDelayedsenddate;
   }
 
 
-  public EzsignfolderListElement dtEzsignfolderSentdate(@javax.annotation.Nullable String dtEzsignfolderSentdate) {
+  public EzsignfolderListElement dtEzsignfolderSentdate(String dtEzsignfolderSentdate) {
     this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
     return this;
   }
@@ -329,12 +308,12 @@ public class EzsignfolderListElement {
     return dtEzsignfolderSentdate;
   }
 
-  public void setDtEzsignfolderSentdate(@javax.annotation.Nullable String dtEzsignfolderSentdate) {
+  public void setDtEzsignfolderSentdate(String dtEzsignfolderSentdate) {
     this.dtEzsignfolderSentdate = dtEzsignfolderSentdate;
   }
 
 
-  public EzsignfolderListElement dtEzsignfolderDuedate(@javax.annotation.Nullable String dtEzsignfolderDuedate) {
+  public EzsignfolderListElement dtEzsignfolderDuedate(String dtEzsignfolderDuedate) {
     this.dtEzsignfolderDuedate = dtEzsignfolderDuedate;
     return this;
   }
@@ -348,12 +327,12 @@ public class EzsignfolderListElement {
     return dtEzsignfolderDuedate;
   }
 
-  public void setDtEzsignfolderDuedate(@javax.annotation.Nullable String dtEzsignfolderDuedate) {
+  public void setDtEzsignfolderDuedate(String dtEzsignfolderDuedate) {
     this.dtEzsignfolderDuedate = dtEzsignfolderDuedate;
   }
 
 
-  public EzsignfolderListElement iEzsigndocument(@javax.annotation.Nonnull Integer iEzsigndocument) {
+  public EzsignfolderListElement iEzsigndocument(Integer iEzsigndocument) {
     this.iEzsigndocument = iEzsigndocument;
     return this;
   }
@@ -367,12 +346,12 @@ public class EzsignfolderListElement {
     return iEzsigndocument;
   }
 
-  public void setiEzsigndocument(@javax.annotation.Nonnull Integer iEzsigndocument) {
+  public void setiEzsigndocument(Integer iEzsigndocument) {
     this.iEzsigndocument = iEzsigndocument;
   }
 
 
-  public EzsignfolderListElement iEzsigndocumentEdm(@javax.annotation.Nonnull Integer iEzsigndocumentEdm) {
+  public EzsignfolderListElement iEzsigndocumentEdm(Integer iEzsigndocumentEdm) {
     this.iEzsigndocumentEdm = iEzsigndocumentEdm;
     return this;
   }
@@ -386,12 +365,12 @@ public class EzsignfolderListElement {
     return iEzsigndocumentEdm;
   }
 
-  public void setiEzsigndocumentEdm(@javax.annotation.Nonnull Integer iEzsigndocumentEdm) {
+  public void setiEzsigndocumentEdm(Integer iEzsigndocumentEdm) {
     this.iEzsigndocumentEdm = iEzsigndocumentEdm;
   }
 
 
-  public EzsignfolderListElement iEzsignsignature(@javax.annotation.Nonnull Integer iEzsignsignature) {
+  public EzsignfolderListElement iEzsignsignature(Integer iEzsignsignature) {
     this.iEzsignsignature = iEzsignsignature;
     return this;
   }
@@ -405,12 +384,12 @@ public class EzsignfolderListElement {
     return iEzsignsignature;
   }
 
-  public void setiEzsignsignature(@javax.annotation.Nonnull Integer iEzsignsignature) {
+  public void setiEzsignsignature(Integer iEzsignsignature) {
     this.iEzsignsignature = iEzsignsignature;
   }
 
 
-  public EzsignfolderListElement iEzsignsignatureSigned(@javax.annotation.Nonnull Integer iEzsignsignatureSigned) {
+  public EzsignfolderListElement iEzsignsignatureSigned(Integer iEzsignsignatureSigned) {
     this.iEzsignsignatureSigned = iEzsignsignatureSigned;
     return this;
   }
@@ -424,12 +403,12 @@ public class EzsignfolderListElement {
     return iEzsignsignatureSigned;
   }
 
-  public void setiEzsignsignatureSigned(@javax.annotation.Nonnull Integer iEzsignsignatureSigned) {
+  public void setiEzsignsignatureSigned(Integer iEzsignsignatureSigned) {
     this.iEzsignsignatureSigned = iEzsignsignatureSigned;
   }
 
 
-  public EzsignfolderListElement iEzsignformfieldgroup(@javax.annotation.Nonnull Integer iEzsignformfieldgroup) {
+  public EzsignfolderListElement iEzsignformfieldgroup(Integer iEzsignformfieldgroup) {
     this.iEzsignformfieldgroup = iEzsignformfieldgroup;
     return this;
   }
@@ -443,12 +422,12 @@ public class EzsignfolderListElement {
     return iEzsignformfieldgroup;
   }
 
-  public void setiEzsignformfieldgroup(@javax.annotation.Nonnull Integer iEzsignformfieldgroup) {
+  public void setiEzsignformfieldgroup(Integer iEzsignformfieldgroup) {
     this.iEzsignformfieldgroup = iEzsignformfieldgroup;
   }
 
 
-  public EzsignfolderListElement iEzsignformfieldgroupCompleted(@javax.annotation.Nonnull Integer iEzsignformfieldgroupCompleted) {
+  public EzsignfolderListElement iEzsignformfieldgroupCompleted(Integer iEzsignformfieldgroupCompleted) {
     this.iEzsignformfieldgroupCompleted = iEzsignformfieldgroupCompleted;
     return this;
   }
@@ -462,12 +441,12 @@ public class EzsignfolderListElement {
     return iEzsignformfieldgroupCompleted;
   }
 
-  public void setiEzsignformfieldgroupCompleted(@javax.annotation.Nonnull Integer iEzsignformfieldgroupCompleted) {
+  public void setiEzsignformfieldgroupCompleted(Integer iEzsignformfieldgroupCompleted) {
     this.iEzsignformfieldgroupCompleted = iEzsignformfieldgroupCompleted;
   }
 
 
-  public EzsignfolderListElement bEzsignformHasdependencies(@javax.annotation.Nullable Boolean bEzsignformHasdependencies) {
+  public EzsignfolderListElement bEzsignformHasdependencies(Boolean bEzsignformHasdependencies) {
     this.bEzsignformHasdependencies = bEzsignformHasdependencies;
     return this;
   }
@@ -481,12 +460,12 @@ public class EzsignfolderListElement {
     return bEzsignformHasdependencies;
   }
 
-  public void setbEzsignformHasdependencies(@javax.annotation.Nullable Boolean bEzsignformHasdependencies) {
+  public void setbEzsignformHasdependencies(Boolean bEzsignformHasdependencies) {
     this.bEzsignformHasdependencies = bEzsignformHasdependencies;
   }
 
 
-  public EzsignfolderListElement dEzsignfolderCompletedpercentage(@javax.annotation.Nonnull String dEzsignfolderCompletedpercentage) {
+  public EzsignfolderListElement dEzsignfolderCompletedpercentage(String dEzsignfolderCompletedpercentage) {
     this.dEzsignfolderCompletedpercentage = dEzsignfolderCompletedpercentage;
     return this;
   }
@@ -500,12 +479,12 @@ public class EzsignfolderListElement {
     return dEzsignfolderCompletedpercentage;
   }
 
-  public void setdEzsignfolderCompletedpercentage(@javax.annotation.Nonnull String dEzsignfolderCompletedpercentage) {
+  public void setdEzsignfolderCompletedpercentage(String dEzsignfolderCompletedpercentage) {
     this.dEzsignfolderCompletedpercentage = dEzsignfolderCompletedpercentage;
   }
 
 
-  public EzsignfolderListElement dEzsignfolderFormcompletedpercentage(@javax.annotation.Nonnull String dEzsignfolderFormcompletedpercentage) {
+  public EzsignfolderListElement dEzsignfolderFormcompletedpercentage(String dEzsignfolderFormcompletedpercentage) {
     this.dEzsignfolderFormcompletedpercentage = dEzsignfolderFormcompletedpercentage;
     return this;
   }
@@ -519,12 +498,12 @@ public class EzsignfolderListElement {
     return dEzsignfolderFormcompletedpercentage;
   }
 
-  public void setdEzsignfolderFormcompletedpercentage(@javax.annotation.Nonnull String dEzsignfolderFormcompletedpercentage) {
+  public void setdEzsignfolderFormcompletedpercentage(String dEzsignfolderFormcompletedpercentage) {
     this.dEzsignfolderFormcompletedpercentage = dEzsignfolderFormcompletedpercentage;
   }
 
 
-  public EzsignfolderListElement dEzsignfolderSignaturecompletedpercentage(@javax.annotation.Nonnull String dEzsignfolderSignaturecompletedpercentage) {
+  public EzsignfolderListElement dEzsignfolderSignaturecompletedpercentage(String dEzsignfolderSignaturecompletedpercentage) {
     this.dEzsignfolderSignaturecompletedpercentage = dEzsignfolderSignaturecompletedpercentage;
     return this;
   }
@@ -538,12 +517,12 @@ public class EzsignfolderListElement {
     return dEzsignfolderSignaturecompletedpercentage;
   }
 
-  public void setdEzsignfolderSignaturecompletedpercentage(@javax.annotation.Nonnull String dEzsignfolderSignaturecompletedpercentage) {
+  public void setdEzsignfolderSignaturecompletedpercentage(String dEzsignfolderSignaturecompletedpercentage) {
     this.dEzsignfolderSignaturecompletedpercentage = dEzsignfolderSignaturecompletedpercentage;
   }
 
 
-  public EzsignfolderListElement bEzsignfolderSigner(@javax.annotation.Nullable Boolean bEzsignfolderSigner) {
+  public EzsignfolderListElement bEzsignfolderSigner(Boolean bEzsignfolderSigner) {
     this.bEzsignfolderSigner = bEzsignfolderSigner;
     return this;
   }
@@ -557,7 +536,7 @@ public class EzsignfolderListElement {
     return bEzsignfolderSigner;
   }
 
-  public void setbEzsignfolderSigner(@javax.annotation.Nullable Boolean bEzsignfolderSigner) {
+  public void setbEzsignfolderSigner(Boolean bEzsignfolderSigner) {
     this.bEzsignfolderSigner = bEzsignfolderSigner;
   }
 

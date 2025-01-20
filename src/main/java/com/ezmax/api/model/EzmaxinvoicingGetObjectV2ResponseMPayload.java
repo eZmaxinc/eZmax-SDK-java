@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/ezmaxinvoicing/{pkiEzmaxinvoicingID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZMAXINVOICING = "objEzmaxinvoicing";
   @SerializedName(SERIALIZED_NAME_OBJ_EZMAXINVOICING)
-  @javax.annotation.Nonnull
   private EzmaxinvoicingResponseCompound objEzmaxinvoicing;
 
   public EzmaxinvoicingGetObjectV2ResponseMPayload() {
   }
 
-  public EzmaxinvoicingGetObjectV2ResponseMPayload objEzmaxinvoicing(@javax.annotation.Nonnull EzmaxinvoicingResponseCompound objEzmaxinvoicing) {
+  public EzmaxinvoicingGetObjectV2ResponseMPayload objEzmaxinvoicing(EzmaxinvoicingResponseCompound objEzmaxinvoicing) {
     this.objEzmaxinvoicing = objEzmaxinvoicing;
     return this;
   }
@@ -73,7 +72,7 @@ public class EzmaxinvoicingGetObjectV2ResponseMPayload {
     return objEzmaxinvoicing;
   }
 
-  public void setObjEzmaxinvoicing(@javax.annotation.Nonnull EzmaxinvoicingResponseCompound objEzmaxinvoicing) {
+  public void setObjEzmaxinvoicing(EzmaxinvoicingResponseCompound objEzmaxinvoicing) {
     this.objEzmaxinvoicing = objEzmaxinvoicing;
   }
 

@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Userlogintype AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserlogintypeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_USERLOGINTYPE_I_D = "pkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_PKI_USERLOGINTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiUserlogintypeID;
 
   public static final String SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION_X = "sUserlogintypeDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sUserlogintypeDescriptionX;
 
   public static final String SERIALIZED_NAME_B_USERLOGINTYPE_ISACTIVE = "bUserlogintypeIsactive";
   @SerializedName(SERIALIZED_NAME_B_USERLOGINTYPE_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bUserlogintypeIsactive;
 
   public UserlogintypeAutocompleteElementResponse() {
   }
 
-  public UserlogintypeAutocompleteElementResponse pkiUserlogintypeID(@javax.annotation.Nonnull Integer pkiUserlogintypeID) {
+  public UserlogintypeAutocompleteElementResponse pkiUserlogintypeID(Integer pkiUserlogintypeID) {
     this.pkiUserlogintypeID = pkiUserlogintypeID;
     return this;
   }
@@ -83,12 +80,12 @@ public class UserlogintypeAutocompleteElementResponse {
     return pkiUserlogintypeID;
   }
 
-  public void setPkiUserlogintypeID(@javax.annotation.Nonnull Integer pkiUserlogintypeID) {
+  public void setPkiUserlogintypeID(Integer pkiUserlogintypeID) {
     this.pkiUserlogintypeID = pkiUserlogintypeID;
   }
 
 
-  public UserlogintypeAutocompleteElementResponse sUserlogintypeDescriptionX(@javax.annotation.Nonnull String sUserlogintypeDescriptionX) {
+  public UserlogintypeAutocompleteElementResponse sUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
     return this;
   }
@@ -102,12 +99,12 @@ public class UserlogintypeAutocompleteElementResponse {
     return sUserlogintypeDescriptionX;
   }
 
-  public void setsUserlogintypeDescriptionX(@javax.annotation.Nonnull String sUserlogintypeDescriptionX) {
+  public void setsUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
   }
 
 
-  public UserlogintypeAutocompleteElementResponse bUserlogintypeIsactive(@javax.annotation.Nonnull Boolean bUserlogintypeIsactive) {
+  public UserlogintypeAutocompleteElementResponse bUserlogintypeIsactive(Boolean bUserlogintypeIsactive) {
     this.bUserlogintypeIsactive = bUserlogintypeIsactive;
     return this;
   }
@@ -121,7 +118,7 @@ public class UserlogintypeAutocompleteElementResponse {
     return bUserlogintypeIsactive;
   }
 
-  public void setbUserlogintypeIsactive(@javax.annotation.Nonnull Boolean bUserlogintypeIsactive) {
+  public void setbUserlogintypeIsactive(Boolean bUserlogintypeIsactive) {
     this.bUserlogintypeIsactive = bUserlogintypeIsactive;
   }
 

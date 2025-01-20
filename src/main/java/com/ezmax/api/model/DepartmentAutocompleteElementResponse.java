@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Department AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DepartmentAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_COMPANY_NAME_X = "sCompanyNameX";
   @SerializedName(SERIALIZED_NAME_S_COMPANY_NAME_X)
-  @javax.annotation.Nonnull
   private String sCompanyNameX;
 
   public static final String SERIALIZED_NAME_S_DEPARTMENT_NAME_X = "sDepartmentNameX";
   @SerializedName(SERIALIZED_NAME_S_DEPARTMENT_NAME_X)
-  @javax.annotation.Nonnull
   private String sDepartmentNameX;
 
   public static final String SERIALIZED_NAME_PKI_DEPARTMENT_I_D = "pkiDepartmentID";
   @SerializedName(SERIALIZED_NAME_PKI_DEPARTMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiDepartmentID;
 
   public static final String SERIALIZED_NAME_B_DEPARTMENT_ISACTIVE = "bDepartmentIsactive";
   @SerializedName(SERIALIZED_NAME_B_DEPARTMENT_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bDepartmentIsactive;
 
   public DepartmentAutocompleteElementResponse() {
   }
 
-  public DepartmentAutocompleteElementResponse sCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
+  public DepartmentAutocompleteElementResponse sCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -87,12 +83,12 @@ public class DepartmentAutocompleteElementResponse {
     return sCompanyNameX;
   }
 
-  public void setsCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
+  public void setsCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
   }
 
 
-  public DepartmentAutocompleteElementResponse sDepartmentNameX(@javax.annotation.Nonnull String sDepartmentNameX) {
+  public DepartmentAutocompleteElementResponse sDepartmentNameX(String sDepartmentNameX) {
     this.sDepartmentNameX = sDepartmentNameX;
     return this;
   }
@@ -106,12 +102,12 @@ public class DepartmentAutocompleteElementResponse {
     return sDepartmentNameX;
   }
 
-  public void setsDepartmentNameX(@javax.annotation.Nonnull String sDepartmentNameX) {
+  public void setsDepartmentNameX(String sDepartmentNameX) {
     this.sDepartmentNameX = sDepartmentNameX;
   }
 
 
-  public DepartmentAutocompleteElementResponse pkiDepartmentID(@javax.annotation.Nonnull Integer pkiDepartmentID) {
+  public DepartmentAutocompleteElementResponse pkiDepartmentID(Integer pkiDepartmentID) {
     this.pkiDepartmentID = pkiDepartmentID;
     return this;
   }
@@ -126,12 +122,12 @@ public class DepartmentAutocompleteElementResponse {
     return pkiDepartmentID;
   }
 
-  public void setPkiDepartmentID(@javax.annotation.Nonnull Integer pkiDepartmentID) {
+  public void setPkiDepartmentID(Integer pkiDepartmentID) {
     this.pkiDepartmentID = pkiDepartmentID;
   }
 
 
-  public DepartmentAutocompleteElementResponse bDepartmentIsactive(@javax.annotation.Nonnull Boolean bDepartmentIsactive) {
+  public DepartmentAutocompleteElementResponse bDepartmentIsactive(Boolean bDepartmentIsactive) {
     this.bDepartmentIsactive = bDepartmentIsactive;
     return this;
   }
@@ -145,7 +141,7 @@ public class DepartmentAutocompleteElementResponse {
     return bDepartmentIsactive;
   }
 
-  public void setbDepartmentIsactive(@javax.annotation.Nonnull Boolean bDepartmentIsactive) {
+  public void setbDepartmentIsactive(Boolean bDepartmentIsactive) {
     this.bDepartmentIsactive = bDepartmentIsactive;
   }
 

@@ -51,22 +51,20 @@ import eZmaxAPI.JSON;
 /**
  * A Word Position Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomWordPositionWordResponse {
   public static final String SERIALIZED_NAME_S_WORD = "sWord";
   @SerializedName(SERIALIZED_NAME_S_WORD)
-  @javax.annotation.Nonnull
   private String sWord;
 
   public static final String SERIALIZED_NAME_A_OBJ_WORD_POSITION_OCCURENCE = "a_objWordPositionOccurence";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WORD_POSITION_OCCURENCE)
-  @javax.annotation.Nonnull
   private List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence = new ArrayList<>();
 
   public CustomWordPositionWordResponse() {
   }
 
-  public CustomWordPositionWordResponse sWord(@javax.annotation.Nonnull String sWord) {
+  public CustomWordPositionWordResponse sWord(String sWord) {
     this.sWord = sWord;
     return this;
   }
@@ -80,12 +78,12 @@ public class CustomWordPositionWordResponse {
     return sWord;
   }
 
-  public void setsWord(@javax.annotation.Nonnull String sWord) {
+  public void setsWord(String sWord) {
     this.sWord = sWord;
   }
 
 
-  public CustomWordPositionWordResponse aObjWordPositionOccurence(@javax.annotation.Nonnull List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence) {
+  public CustomWordPositionWordResponse aObjWordPositionOccurence(List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence) {
     this.aObjWordPositionOccurence = aObjWordPositionOccurence;
     return this;
   }
@@ -107,7 +105,7 @@ public class CustomWordPositionWordResponse {
     return aObjWordPositionOccurence;
   }
 
-  public void setaObjWordPositionOccurence(@javax.annotation.Nonnull List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence) {
+  public void setaObjWordPositionOccurence(List<CustomWordPositionOccurenceResponse> aObjWordPositionOccurence) {
     this.aObjWordPositionOccurence = aObjWordPositionOccurence;
   }
 

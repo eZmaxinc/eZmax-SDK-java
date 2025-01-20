@@ -54,77 +54,64 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksend Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignbulksendResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignbulksendID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D = "fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignfoldertypeID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_LANGUAGE_NAME_X = "sLanguageNameX";
   @SerializedName(SERIALIZED_NAME_S_LANGUAGE_NAME_X)
-  @javax.annotation.Nonnull
   private String sLanguageNameX;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL = "eEzsignfoldertypePrivacylevel";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL)
-  @javax.annotation.Nonnull
   private FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X = "sEzsignfoldertypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFOLDERTYPE_NAME_X)
-  @javax.annotation.Nonnull
   private String sEzsignfoldertypeNameX;
 
   public static final String SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION = "sEzsignbulksendDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsignbulksendDescription;
 
   public static final String SERIALIZED_NAME_T_EZSIGNBULKSEND_NOTE = "tEzsignbulksendNote";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNBULKSEND_NOTE)
-  @javax.annotation.Nonnull
   private String tEzsignbulksendNote;
 
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION = "bEzsignbulksendNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION)
-  @javax.annotation.Nonnull
   private Boolean bEzsignbulksendNeedvalidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE = "bEzsignbulksendIsactive";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bEzsignbulksendIsactive;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nonnull
   private CommonAudit objAudit;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDDOCUMENTMAPPING = "a_objEzsignbulksenddocumentmapping";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDDOCUMENTMAPPING)
-  @javax.annotation.Nonnull
   private List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDSIGNERMAPPING = "a_objEzsignbulksendsignermapping";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNBULKSENDSIGNERMAPPING)
-  @javax.annotation.Nonnull
   private List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping = new ArrayList<>();
 
   public EzsignbulksendResponseCompound() {
   }
 
-  public EzsignbulksendResponseCompound pkiEzsignbulksendID(@javax.annotation.Nonnull Integer pkiEzsignbulksendID) {
+  public EzsignbulksendResponseCompound pkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
     return this;
   }
@@ -139,12 +126,12 @@ public class EzsignbulksendResponseCompound {
     return pkiEzsignbulksendID;
   }
 
-  public void setPkiEzsignbulksendID(@javax.annotation.Nonnull Integer pkiEzsignbulksendID) {
+  public void setPkiEzsignbulksendID(Integer pkiEzsignbulksendID) {
     this.pkiEzsignbulksendID = pkiEzsignbulksendID;
   }
 
 
-  public EzsignbulksendResponseCompound fkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
+  public EzsignbulksendResponseCompound fkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
     return this;
   }
@@ -160,12 +147,12 @@ public class EzsignbulksendResponseCompound {
     return fkiEzsignfoldertypeID;
   }
 
-  public void setFkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
+  public void setFkiEzsignfoldertypeID(Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
   }
 
 
-  public EzsignbulksendResponseCompound fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public EzsignbulksendResponseCompound fkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -181,12 +168,12 @@ public class EzsignbulksendResponseCompound {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public EzsignbulksendResponseCompound sLanguageNameX(@javax.annotation.Nonnull String sLanguageNameX) {
+  public EzsignbulksendResponseCompound sLanguageNameX(String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
     return this;
   }
@@ -200,12 +187,12 @@ public class EzsignbulksendResponseCompound {
     return sLanguageNameX;
   }
 
-  public void setsLanguageNameX(@javax.annotation.Nonnull String sLanguageNameX) {
+  public void setsLanguageNameX(String sLanguageNameX) {
     this.sLanguageNameX = sLanguageNameX;
   }
 
 
-  public EzsignbulksendResponseCompound eEzsignfoldertypePrivacylevel(@javax.annotation.Nonnull FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+  public EzsignbulksendResponseCompound eEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
     return this;
   }
@@ -219,12 +206,12 @@ public class EzsignbulksendResponseCompound {
     return eEzsignfoldertypePrivacylevel;
   }
 
-  public void seteEzsignfoldertypePrivacylevel(@javax.annotation.Nonnull FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
+  public void seteEzsignfoldertypePrivacylevel(FieldEEzsignfoldertypePrivacylevel eEzsignfoldertypePrivacylevel) {
     this.eEzsignfoldertypePrivacylevel = eEzsignfoldertypePrivacylevel;
   }
 
 
-  public EzsignbulksendResponseCompound sEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
+  public EzsignbulksendResponseCompound sEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
     return this;
   }
@@ -238,12 +225,12 @@ public class EzsignbulksendResponseCompound {
     return sEzsignfoldertypeNameX;
   }
 
-  public void setsEzsignfoldertypeNameX(@javax.annotation.Nonnull String sEzsignfoldertypeNameX) {
+  public void setsEzsignfoldertypeNameX(String sEzsignfoldertypeNameX) {
     this.sEzsignfoldertypeNameX = sEzsignfoldertypeNameX;
   }
 
 
-  public EzsignbulksendResponseCompound sEzsignbulksendDescription(@javax.annotation.Nonnull String sEzsignbulksendDescription) {
+  public EzsignbulksendResponseCompound sEzsignbulksendDescription(String sEzsignbulksendDescription) {
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
     return this;
   }
@@ -257,12 +244,12 @@ public class EzsignbulksendResponseCompound {
     return sEzsignbulksendDescription;
   }
 
-  public void setsEzsignbulksendDescription(@javax.annotation.Nonnull String sEzsignbulksendDescription) {
+  public void setsEzsignbulksendDescription(String sEzsignbulksendDescription) {
     this.sEzsignbulksendDescription = sEzsignbulksendDescription;
   }
 
 
-  public EzsignbulksendResponseCompound tEzsignbulksendNote(@javax.annotation.Nonnull String tEzsignbulksendNote) {
+  public EzsignbulksendResponseCompound tEzsignbulksendNote(String tEzsignbulksendNote) {
     this.tEzsignbulksendNote = tEzsignbulksendNote;
     return this;
   }
@@ -276,12 +263,12 @@ public class EzsignbulksendResponseCompound {
     return tEzsignbulksendNote;
   }
 
-  public void settEzsignbulksendNote(@javax.annotation.Nonnull String tEzsignbulksendNote) {
+  public void settEzsignbulksendNote(String tEzsignbulksendNote) {
     this.tEzsignbulksendNote = tEzsignbulksendNote;
   }
 
 
-  public EzsignbulksendResponseCompound bEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
+  public EzsignbulksendResponseCompound bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
@@ -295,12 +282,12 @@ public class EzsignbulksendResponseCompound {
     return bEzsignbulksendNeedvalidation;
   }
 
-  public void setbEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
+  public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 
 
-  public EzsignbulksendResponseCompound bEzsignbulksendIsactive(@javax.annotation.Nonnull Boolean bEzsignbulksendIsactive) {
+  public EzsignbulksendResponseCompound bEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
     return this;
   }
@@ -314,12 +301,12 @@ public class EzsignbulksendResponseCompound {
     return bEzsignbulksendIsactive;
   }
 
-  public void setbEzsignbulksendIsactive(@javax.annotation.Nonnull Boolean bEzsignbulksendIsactive) {
+  public void setbEzsignbulksendIsactive(Boolean bEzsignbulksendIsactive) {
     this.bEzsignbulksendIsactive = bEzsignbulksendIsactive;
   }
 
 
-  public EzsignbulksendResponseCompound objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public EzsignbulksendResponseCompound objAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -333,12 +320,12 @@ public class EzsignbulksendResponseCompound {
     return objAudit;
   }
 
-  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
 
-  public EzsignbulksendResponseCompound aObjEzsignbulksenddocumentmapping(@javax.annotation.Nonnull List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping) {
+  public EzsignbulksendResponseCompound aObjEzsignbulksenddocumentmapping(List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping) {
     this.aObjEzsignbulksenddocumentmapping = aObjEzsignbulksenddocumentmapping;
     return this;
   }
@@ -360,12 +347,12 @@ public class EzsignbulksendResponseCompound {
     return aObjEzsignbulksenddocumentmapping;
   }
 
-  public void setaObjEzsignbulksenddocumentmapping(@javax.annotation.Nonnull List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping) {
+  public void setaObjEzsignbulksenddocumentmapping(List<EzsignbulksenddocumentmappingResponseCompound> aObjEzsignbulksenddocumentmapping) {
     this.aObjEzsignbulksenddocumentmapping = aObjEzsignbulksenddocumentmapping;
   }
 
 
-  public EzsignbulksendResponseCompound aObjEzsignbulksendsignermapping(@javax.annotation.Nonnull List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping) {
+  public EzsignbulksendResponseCompound aObjEzsignbulksendsignermapping(List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping) {
     this.aObjEzsignbulksendsignermapping = aObjEzsignbulksendsignermapping;
     return this;
   }
@@ -387,7 +374,7 @@ public class EzsignbulksendResponseCompound {
     return aObjEzsignbulksendsignermapping;
   }
 
-  public void setaObjEzsignbulksendsignermapping(@javax.annotation.Nonnull List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping) {
+  public void setaObjEzsignbulksendsignermapping(List<EzsignbulksendsignermappingResponse> aObjEzsignbulksendsignermapping) {
     this.aObjEzsignbulksendsignermapping = aObjEzsignbulksendsignermapping;
   }
 

@@ -14,13 +14,14 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplateCopyV1Request;
 import com.ezmax.api.model.EzsigntemplateCopyV1Response;
 import com.ezmax.api.model.EzsigntemplateCreateObjectV3Request;
 import com.ezmax.api.model.EzsigntemplateCreateObjectV3Response;
+import com.ezmax.api.model.EzsigntemplateDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplateEditObjectV3Request;
+import com.ezmax.api.model.EzsigntemplateEditObjectV3Response;
 import com.ezmax.api.model.EzsigntemplateGetAutocompleteV2Response;
 import com.ezmax.api.model.EzsigntemplateGetListV1Response;
 import com.ezmax.api.model.EzsigntemplateGetObjectV3Response;
@@ -81,7 +82,7 @@ public class ObjectEzsigntemplateApiTest {
     @Test
     public void ezsigntemplateDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplateID = null;
-        CommonResponse response = api.ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID);
+        EzsigntemplateDeleteObjectV1Response response = api.ezsigntemplateDeleteObjectV1(pkiEzsigntemplateID);
         // TODO: test validations
     }
 
@@ -96,7 +97,7 @@ public class ObjectEzsigntemplateApiTest {
     public void ezsigntemplateEditObjectV3Test() throws ApiException {
         Integer pkiEzsigntemplateID = null;
         EzsigntemplateEditObjectV3Request ezsigntemplateEditObjectV3Request = null;
-        CommonResponse response = api.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
+        EzsigntemplateEditObjectV3Response response = api.ezsigntemplateEditObjectV3(pkiEzsigntemplateID, ezsigntemplateEditObjectV3Request);
         // TODO: test validations
     }
 

@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Franchisebroker AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FranchisebrokerAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_FRANCHISEBROKER_NAME = "sFranchisebrokerName";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEBROKER_NAME)
-  @javax.annotation.Nonnull
   private String sFranchisebrokerName;
 
   public static final String SERIALIZED_NAME_PKI_FRANCHISEBROKER_I_D = "pkiFranchisebrokerID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEBROKER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiFranchisebrokerID;
 
   public static final String SERIALIZED_NAME_B_FRANCHISEBROKER_ISACTIVE = "bFranchisebrokerIsactive";
   @SerializedName(SERIALIZED_NAME_B_FRANCHISEBROKER_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bFranchisebrokerIsactive;
 
   public FranchisebrokerAutocompleteElementResponse() {
   }
 
-  public FranchisebrokerAutocompleteElementResponse sFranchisebrokerName(@javax.annotation.Nonnull String sFranchisebrokerName) {
+  public FranchisebrokerAutocompleteElementResponse sFranchisebrokerName(String sFranchisebrokerName) {
     this.sFranchisebrokerName = sFranchisebrokerName;
     return this;
   }
@@ -82,12 +79,12 @@ public class FranchisebrokerAutocompleteElementResponse {
     return sFranchisebrokerName;
   }
 
-  public void setsFranchisebrokerName(@javax.annotation.Nonnull String sFranchisebrokerName) {
+  public void setsFranchisebrokerName(String sFranchisebrokerName) {
     this.sFranchisebrokerName = sFranchisebrokerName;
   }
 
 
-  public FranchisebrokerAutocompleteElementResponse pkiFranchisebrokerID(@javax.annotation.Nonnull Integer pkiFranchisebrokerID) {
+  public FranchisebrokerAutocompleteElementResponse pkiFranchisebrokerID(Integer pkiFranchisebrokerID) {
     this.pkiFranchisebrokerID = pkiFranchisebrokerID;
     return this;
   }
@@ -102,12 +99,12 @@ public class FranchisebrokerAutocompleteElementResponse {
     return pkiFranchisebrokerID;
   }
 
-  public void setPkiFranchisebrokerID(@javax.annotation.Nonnull Integer pkiFranchisebrokerID) {
+  public void setPkiFranchisebrokerID(Integer pkiFranchisebrokerID) {
     this.pkiFranchisebrokerID = pkiFranchisebrokerID;
   }
 
 
-  public FranchisebrokerAutocompleteElementResponse bFranchisebrokerIsactive(@javax.annotation.Nonnull Boolean bFranchisebrokerIsactive) {
+  public FranchisebrokerAutocompleteElementResponse bFranchisebrokerIsactive(Boolean bFranchisebrokerIsactive) {
     this.bFranchisebrokerIsactive = bFranchisebrokerIsactive;
     return this;
   }
@@ -121,7 +118,7 @@ public class FranchisebrokerAutocompleteElementResponse {
     return bFranchisebrokerIsactive;
   }
 
-  public void setbFranchisebrokerIsactive(@javax.annotation.Nonnull Boolean bFranchisebrokerIsactive) {
+  public void setbFranchisebrokerIsactive(Boolean bFranchisebrokerIsactive) {
     this.bFranchisebrokerIsactive = bFranchisebrokerIsactive;
   }
 

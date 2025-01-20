@@ -51,27 +51,24 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonResponseErrorTooManyRequests {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
-  @javax.annotation.Nonnull
   private String sErrorMessage;
 
   public static final String SERIALIZED_NAME_E_ERROR_CODE = "eErrorCode";
   @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
-  @javax.annotation.Nonnull
   private FieldEErrorCode eErrorCode;
 
   public static final String SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL = "a_sErrorMessagedetail";
   @SerializedName(SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL)
-  @javax.annotation.Nullable
   private List<String> aSErrorMessagedetail = new ArrayList<>();
 
   public CommonResponseErrorTooManyRequests() {
   }
 
-  public CommonResponseErrorTooManyRequests sErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
+  public CommonResponseErrorTooManyRequests sErrorMessage(String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
     return this;
   }
@@ -85,12 +82,12 @@ public class CommonResponseErrorTooManyRequests {
     return sErrorMessage;
   }
 
-  public void setsErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
+  public void setsErrorMessage(String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
   }
 
 
-  public CommonResponseErrorTooManyRequests eErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
+  public CommonResponseErrorTooManyRequests eErrorCode(FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
     return this;
   }
@@ -104,12 +101,12 @@ public class CommonResponseErrorTooManyRequests {
     return eErrorCode;
   }
 
-  public void seteErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
+  public void seteErrorCode(FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
   }
 
 
-  public CommonResponseErrorTooManyRequests aSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
+  public CommonResponseErrorTooManyRequests aSErrorMessagedetail(List<String> aSErrorMessagedetail) {
     this.aSErrorMessagedetail = aSErrorMessagedetail;
     return this;
   }
@@ -131,7 +128,7 @@ public class CommonResponseErrorTooManyRequests {
     return aSErrorMessagedetail;
   }
 
-  public void setaSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
+  public void setaSErrorMessagedetail(List<String> aSErrorMessagedetail) {
     this.aSErrorMessagedetail = aSErrorMessagedetail;
   }
 

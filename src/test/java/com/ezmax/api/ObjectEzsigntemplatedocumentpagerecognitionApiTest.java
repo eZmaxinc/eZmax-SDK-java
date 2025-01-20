@@ -14,11 +14,12 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionCreateObjectV1Response;
+import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionEditObjectV1Request;
+import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionEditObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentpagerecognitionGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -60,7 +61,7 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApiTest {
     @Test
     public void ezsigntemplatedocumentpagerecognitionDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplatedocumentpagerecognitionID = null;
-        CommonResponse response = api.ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID);
+        EzsigntemplatedocumentpagerecognitionDeleteObjectV1Response response = api.ezsigntemplatedocumentpagerecognitionDeleteObjectV1(pkiEzsigntemplatedocumentpagerecognitionID);
         // TODO: test validations
     }
 
@@ -75,7 +76,7 @@ public class ObjectEzsigntemplatedocumentpagerecognitionApiTest {
     public void ezsigntemplatedocumentpagerecognitionEditObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplatedocumentpagerecognitionID = null;
         EzsigntemplatedocumentpagerecognitionEditObjectV1Request ezsigntemplatedocumentpagerecognitionEditObjectV1Request = null;
-        CommonResponse response = api.ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
+        EzsigntemplatedocumentpagerecognitionEditObjectV1Response response = api.ezsigntemplatedocumentpagerecognitionEditObjectV1(pkiEzsigntemplatedocumentpagerecognitionID, ezsigntemplatedocumentpagerecognitionEditObjectV1Request);
         // TODO: test validations
     }
 

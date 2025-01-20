@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Signature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SignatureResponse {
   public static final String SERIALIZED_NAME_PKI_SIGNATURE_I_D = "pkiSignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_SIGNATURE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiSignatureID;
 
   public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
   @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiFontID;
 
   public static final String SERIALIZED_NAME_S_SIGNATURE_URL = "sSignatureUrl";
   @SerializedName(SERIALIZED_NAME_S_SIGNATURE_URL)
-  @javax.annotation.Nullable
   private String sSignatureUrl;
 
   public static final String SERIALIZED_NAME_S_SIGNATURE_URLINITIALS = "sSignatureUrlinitials";
   @SerializedName(SERIALIZED_NAME_S_SIGNATURE_URLINITIALS)
-  @javax.annotation.Nullable
   private String sSignatureUrlinitials;
 
   public SignatureResponse() {
   }
 
-  public SignatureResponse pkiSignatureID(@javax.annotation.Nonnull Integer pkiSignatureID) {
+  public SignatureResponse pkiSignatureID(Integer pkiSignatureID) {
     this.pkiSignatureID = pkiSignatureID;
     return this;
   }
@@ -89,12 +85,12 @@ public class SignatureResponse {
     return pkiSignatureID;
   }
 
-  public void setPkiSignatureID(@javax.annotation.Nonnull Integer pkiSignatureID) {
+  public void setPkiSignatureID(Integer pkiSignatureID) {
     this.pkiSignatureID = pkiSignatureID;
   }
 
 
-  public SignatureResponse fkiFontID(@javax.annotation.Nullable Integer fkiFontID) {
+  public SignatureResponse fkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
     return this;
   }
@@ -109,12 +105,12 @@ public class SignatureResponse {
     return fkiFontID;
   }
 
-  public void setFkiFontID(@javax.annotation.Nullable Integer fkiFontID) {
+  public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
   }
 
 
-  public SignatureResponse sSignatureUrl(@javax.annotation.Nullable String sSignatureUrl) {
+  public SignatureResponse sSignatureUrl(String sSignatureUrl) {
     this.sSignatureUrl = sSignatureUrl;
     return this;
   }
@@ -128,12 +124,12 @@ public class SignatureResponse {
     return sSignatureUrl;
   }
 
-  public void setsSignatureUrl(@javax.annotation.Nullable String sSignatureUrl) {
+  public void setsSignatureUrl(String sSignatureUrl) {
     this.sSignatureUrl = sSignatureUrl;
   }
 
 
-  public SignatureResponse sSignatureUrlinitials(@javax.annotation.Nullable String sSignatureUrlinitials) {
+  public SignatureResponse sSignatureUrlinitials(String sSignatureUrlinitials) {
     this.sSignatureUrlinitials = sSignatureUrlinitials;
     return this;
   }
@@ -147,7 +143,7 @@ public class SignatureResponse {
     return sSignatureUrlinitials;
   }
 
-  public void setsSignatureUrlinitials(@javax.annotation.Nullable String sSignatureUrlinitials) {
+  public void setsSignatureUrlinitials(String sSignatureUrlinitials) {
     this.sSignatureUrlinitials = sSignatureUrlinitials;
   }
 

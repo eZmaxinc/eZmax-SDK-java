@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/billingentityexternal/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BillingentityexternalGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYEXTERNAL = "a_objBillingentityexternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYEXTERNAL)
-  @javax.annotation.Nonnull
   private List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal = new ArrayList<>();
 
   public BillingentityexternalGetAutocompleteV2ResponseMPayload() {
   }
 
-  public BillingentityexternalGetAutocompleteV2ResponseMPayload aObjBillingentityexternal(@javax.annotation.Nonnull List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal) {
+  public BillingentityexternalGetAutocompleteV2ResponseMPayload aObjBillingentityexternal(List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal) {
     this.aObjBillingentityexternal = aObjBillingentityexternal;
     return this;
   }
@@ -83,7 +82,7 @@ public class BillingentityexternalGetAutocompleteV2ResponseMPayload {
     return aObjBillingentityexternal;
   }
 
-  public void setaObjBillingentityexternal(@javax.annotation.Nonnull List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal) {
+  public void setaObjBillingentityexternal(List<BillingentityexternalAutocompleteElementResponse> aObjBillingentityexternal) {
     this.aObjBillingentityexternal = aObjBillingentityexternal;
   }
 

@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * Definition of objSQLQuery Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonResponseObjSQLQuery {
   public static final String SERIALIZED_NAME_S_QUERY = "sQuery";
   @SerializedName(SERIALIZED_NAME_S_QUERY)
-  @javax.annotation.Nonnull
   private String sQuery;
 
   public static final String SERIALIZED_NAME_F_DURATION = "fDuration";
   @SerializedName(SERIALIZED_NAME_F_DURATION)
-  @javax.annotation.Nonnull
   private Float fDuration;
 
   public CommonResponseObjSQLQuery() {
   }
 
-  public CommonResponseObjSQLQuery sQuery(@javax.annotation.Nonnull String sQuery) {
+  public CommonResponseObjSQLQuery sQuery(String sQuery) {
     this.sQuery = sQuery;
     return this;
   }
@@ -77,12 +75,12 @@ public class CommonResponseObjSQLQuery {
     return sQuery;
   }
 
-  public void setsQuery(@javax.annotation.Nonnull String sQuery) {
+  public void setsQuery(String sQuery) {
     this.sQuery = sQuery;
   }
 
 
-  public CommonResponseObjSQLQuery fDuration(@javax.annotation.Nonnull Float fDuration) {
+  public CommonResponseObjSQLQuery fDuration(Float fDuration) {
     this.fDuration = fDuration;
     return this;
   }
@@ -96,7 +94,7 @@ public class CommonResponseObjSQLQuery {
     return fDuration;
   }
 
-  public void setfDuration(@javax.annotation.Nonnull Float fDuration) {
+  public void setfDuration(Float fDuration) {
     this.fDuration = fDuration;
   }
 

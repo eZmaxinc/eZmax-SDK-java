@@ -52,82 +52,68 @@ import eZmaxAPI.JSON;
 /**
  * A Franchisereferalincome Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FranchisereferalincomeRequestCompound {
   public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
-  @javax.annotation.Nullable
   private Integer pkiFranchisereferalincomeID;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D = "fkiFranchisebrokerID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEBROKER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFranchisebrokerID;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEREFERALINCOMEPROGRAM_I_D = "fkiFranchisereferalincomeprogramID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEREFERALINCOMEPROGRAM_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFranchisereferalincomeprogramID;
 
   public static final String SERIALIZED_NAME_FKI_PERIOD_I_D = "fkiPeriodID";
   @SerializedName(SERIALIZED_NAME_FKI_PERIOD_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiPeriodID;
 
   public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_LOAN = "dFranchisereferalincomeLoan";
   @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_LOAN)
-  @javax.annotation.Nonnull
   private String dFranchisereferalincomeLoan;
 
   public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISEAMOUNT = "dFranchisereferalincomeFranchiseamount";
   @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISEAMOUNT)
-  @javax.annotation.Nonnull
   private String dFranchisereferalincomeFranchiseamount;
 
   public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISORAMOUNT = "dFranchisereferalincomeFranchisoramount";
   @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_FRANCHISORAMOUNT)
-  @javax.annotation.Nonnull
   private String dFranchisereferalincomeFranchisoramount;
 
   public static final String SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_AGENTAMOUNT = "dFranchisereferalincomeAgentamount";
   @SerializedName(SERIALIZED_NAME_D_FRANCHISEREFERALINCOME_AGENTAMOUNT)
-  @javax.annotation.Nonnull
   private String dFranchisereferalincomeAgentamount;
 
   public static final String SERIALIZED_NAME_DT_FRANCHISEREFERALINCOME_DISBURSED = "dtFranchisereferalincomeDisbursed";
   @SerializedName(SERIALIZED_NAME_DT_FRANCHISEREFERALINCOME_DISBURSED)
-  @javax.annotation.Nonnull
   private String dtFranchisereferalincomeDisbursed;
 
   public static final String SERIALIZED_NAME_T_FRANCHISEREFERALINCOME_COMMENT = "tFranchisereferalincomeComment";
   @SerializedName(SERIALIZED_NAME_T_FRANCHISEREFERALINCOME_COMMENT)
-  @javax.annotation.Nonnull
   private String tFranchisereferalincomeComment;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D = "fkiFranchiseofficeID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFranchiseofficeID;
 
   public static final String SERIALIZED_NAME_S_FRANCHISEREFERALINCOME_REMOTEID = "sFranchisereferalincomeRemoteid";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEREFERALINCOME_REMOTEID)
-  @javax.annotation.Nonnull
   private String sFranchisereferalincomeRemoteid;
 
   public static final String SERIALIZED_NAME_OBJ_ADDRESS = "objAddress";
   @SerializedName(SERIALIZED_NAME_OBJ_ADDRESS)
-  @javax.annotation.Nullable
   private AddressRequest objAddress;
 
   public static final String SERIALIZED_NAME_A_OBJ_CONTACT = "a_objContact";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CONTACT)
-  @javax.annotation.Nonnull
   private List<ContactRequestCompound> aObjContact = new ArrayList<>();
 
   public FranchisereferalincomeRequestCompound() {
   }
 
-  public FranchisereferalincomeRequestCompound pkiFranchisereferalincomeID(@javax.annotation.Nullable Integer pkiFranchisereferalincomeID) {
+  public FranchisereferalincomeRequestCompound pkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
     this.pkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
     return this;
   }
@@ -142,12 +128,12 @@ public class FranchisereferalincomeRequestCompound {
     return pkiFranchisereferalincomeID;
   }
 
-  public void setPkiFranchisereferalincomeID(@javax.annotation.Nullable Integer pkiFranchisereferalincomeID) {
+  public void setPkiFranchisereferalincomeID(Integer pkiFranchisereferalincomeID) {
     this.pkiFranchisereferalincomeID = pkiFranchisereferalincomeID;
   }
 
 
-  public FranchisereferalincomeRequestCompound fkiFranchisebrokerID(@javax.annotation.Nonnull Integer fkiFranchisebrokerID) {
+  public FranchisereferalincomeRequestCompound fkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
     this.fkiFranchisebrokerID = fkiFranchisebrokerID;
     return this;
   }
@@ -162,12 +148,12 @@ public class FranchisereferalincomeRequestCompound {
     return fkiFranchisebrokerID;
   }
 
-  public void setFkiFranchisebrokerID(@javax.annotation.Nonnull Integer fkiFranchisebrokerID) {
+  public void setFkiFranchisebrokerID(Integer fkiFranchisebrokerID) {
     this.fkiFranchisebrokerID = fkiFranchisebrokerID;
   }
 
 
-  public FranchisereferalincomeRequestCompound fkiFranchisereferalincomeprogramID(@javax.annotation.Nonnull Integer fkiFranchisereferalincomeprogramID) {
+  public FranchisereferalincomeRequestCompound fkiFranchisereferalincomeprogramID(Integer fkiFranchisereferalincomeprogramID) {
     this.fkiFranchisereferalincomeprogramID = fkiFranchisereferalincomeprogramID;
     return this;
   }
@@ -182,12 +168,12 @@ public class FranchisereferalincomeRequestCompound {
     return fkiFranchisereferalincomeprogramID;
   }
 
-  public void setFkiFranchisereferalincomeprogramID(@javax.annotation.Nonnull Integer fkiFranchisereferalincomeprogramID) {
+  public void setFkiFranchisereferalincomeprogramID(Integer fkiFranchisereferalincomeprogramID) {
     this.fkiFranchisereferalincomeprogramID = fkiFranchisereferalincomeprogramID;
   }
 
 
-  public FranchisereferalincomeRequestCompound fkiPeriodID(@javax.annotation.Nonnull Integer fkiPeriodID) {
+  public FranchisereferalincomeRequestCompound fkiPeriodID(Integer fkiPeriodID) {
     this.fkiPeriodID = fkiPeriodID;
     return this;
   }
@@ -202,12 +188,12 @@ public class FranchisereferalincomeRequestCompound {
     return fkiPeriodID;
   }
 
-  public void setFkiPeriodID(@javax.annotation.Nonnull Integer fkiPeriodID) {
+  public void setFkiPeriodID(Integer fkiPeriodID) {
     this.fkiPeriodID = fkiPeriodID;
   }
 
 
-  public FranchisereferalincomeRequestCompound dFranchisereferalincomeLoan(@javax.annotation.Nonnull String dFranchisereferalincomeLoan) {
+  public FranchisereferalincomeRequestCompound dFranchisereferalincomeLoan(String dFranchisereferalincomeLoan) {
     this.dFranchisereferalincomeLoan = dFranchisereferalincomeLoan;
     return this;
   }
@@ -221,12 +207,12 @@ public class FranchisereferalincomeRequestCompound {
     return dFranchisereferalincomeLoan;
   }
 
-  public void setdFranchisereferalincomeLoan(@javax.annotation.Nonnull String dFranchisereferalincomeLoan) {
+  public void setdFranchisereferalincomeLoan(String dFranchisereferalincomeLoan) {
     this.dFranchisereferalincomeLoan = dFranchisereferalincomeLoan;
   }
 
 
-  public FranchisereferalincomeRequestCompound dFranchisereferalincomeFranchiseamount(@javax.annotation.Nonnull String dFranchisereferalincomeFranchiseamount) {
+  public FranchisereferalincomeRequestCompound dFranchisereferalincomeFranchiseamount(String dFranchisereferalincomeFranchiseamount) {
     this.dFranchisereferalincomeFranchiseamount = dFranchisereferalincomeFranchiseamount;
     return this;
   }
@@ -240,12 +226,12 @@ public class FranchisereferalincomeRequestCompound {
     return dFranchisereferalincomeFranchiseamount;
   }
 
-  public void setdFranchisereferalincomeFranchiseamount(@javax.annotation.Nonnull String dFranchisereferalincomeFranchiseamount) {
+  public void setdFranchisereferalincomeFranchiseamount(String dFranchisereferalincomeFranchiseamount) {
     this.dFranchisereferalincomeFranchiseamount = dFranchisereferalincomeFranchiseamount;
   }
 
 
-  public FranchisereferalincomeRequestCompound dFranchisereferalincomeFranchisoramount(@javax.annotation.Nonnull String dFranchisereferalincomeFranchisoramount) {
+  public FranchisereferalincomeRequestCompound dFranchisereferalincomeFranchisoramount(String dFranchisereferalincomeFranchisoramount) {
     this.dFranchisereferalincomeFranchisoramount = dFranchisereferalincomeFranchisoramount;
     return this;
   }
@@ -259,12 +245,12 @@ public class FranchisereferalincomeRequestCompound {
     return dFranchisereferalincomeFranchisoramount;
   }
 
-  public void setdFranchisereferalincomeFranchisoramount(@javax.annotation.Nonnull String dFranchisereferalincomeFranchisoramount) {
+  public void setdFranchisereferalincomeFranchisoramount(String dFranchisereferalincomeFranchisoramount) {
     this.dFranchisereferalincomeFranchisoramount = dFranchisereferalincomeFranchisoramount;
   }
 
 
-  public FranchisereferalincomeRequestCompound dFranchisereferalincomeAgentamount(@javax.annotation.Nonnull String dFranchisereferalincomeAgentamount) {
+  public FranchisereferalincomeRequestCompound dFranchisereferalincomeAgentamount(String dFranchisereferalincomeAgentamount) {
     this.dFranchisereferalincomeAgentamount = dFranchisereferalincomeAgentamount;
     return this;
   }
@@ -278,12 +264,12 @@ public class FranchisereferalincomeRequestCompound {
     return dFranchisereferalincomeAgentamount;
   }
 
-  public void setdFranchisereferalincomeAgentamount(@javax.annotation.Nonnull String dFranchisereferalincomeAgentamount) {
+  public void setdFranchisereferalincomeAgentamount(String dFranchisereferalincomeAgentamount) {
     this.dFranchisereferalincomeAgentamount = dFranchisereferalincomeAgentamount;
   }
 
 
-  public FranchisereferalincomeRequestCompound dtFranchisereferalincomeDisbursed(@javax.annotation.Nonnull String dtFranchisereferalincomeDisbursed) {
+  public FranchisereferalincomeRequestCompound dtFranchisereferalincomeDisbursed(String dtFranchisereferalincomeDisbursed) {
     this.dtFranchisereferalincomeDisbursed = dtFranchisereferalincomeDisbursed;
     return this;
   }
@@ -297,12 +283,12 @@ public class FranchisereferalincomeRequestCompound {
     return dtFranchisereferalincomeDisbursed;
   }
 
-  public void setDtFranchisereferalincomeDisbursed(@javax.annotation.Nonnull String dtFranchisereferalincomeDisbursed) {
+  public void setDtFranchisereferalincomeDisbursed(String dtFranchisereferalincomeDisbursed) {
     this.dtFranchisereferalincomeDisbursed = dtFranchisereferalincomeDisbursed;
   }
 
 
-  public FranchisereferalincomeRequestCompound tFranchisereferalincomeComment(@javax.annotation.Nonnull String tFranchisereferalincomeComment) {
+  public FranchisereferalincomeRequestCompound tFranchisereferalincomeComment(String tFranchisereferalincomeComment) {
     this.tFranchisereferalincomeComment = tFranchisereferalincomeComment;
     return this;
   }
@@ -316,12 +302,12 @@ public class FranchisereferalincomeRequestCompound {
     return tFranchisereferalincomeComment;
   }
 
-  public void settFranchisereferalincomeComment(@javax.annotation.Nonnull String tFranchisereferalincomeComment) {
+  public void settFranchisereferalincomeComment(String tFranchisereferalincomeComment) {
     this.tFranchisereferalincomeComment = tFranchisereferalincomeComment;
   }
 
 
-  public FranchisereferalincomeRequestCompound fkiFranchiseofficeID(@javax.annotation.Nonnull Integer fkiFranchiseofficeID) {
+  public FranchisereferalincomeRequestCompound fkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
     return this;
   }
@@ -336,12 +322,12 @@ public class FranchisereferalincomeRequestCompound {
     return fkiFranchiseofficeID;
   }
 
-  public void setFkiFranchiseofficeID(@javax.annotation.Nonnull Integer fkiFranchiseofficeID) {
+  public void setFkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
   }
 
 
-  public FranchisereferalincomeRequestCompound sFranchisereferalincomeRemoteid(@javax.annotation.Nonnull String sFranchisereferalincomeRemoteid) {
+  public FranchisereferalincomeRequestCompound sFranchisereferalincomeRemoteid(String sFranchisereferalincomeRemoteid) {
     this.sFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
     return this;
   }
@@ -355,12 +341,12 @@ public class FranchisereferalincomeRequestCompound {
     return sFranchisereferalincomeRemoteid;
   }
 
-  public void setsFranchisereferalincomeRemoteid(@javax.annotation.Nonnull String sFranchisereferalincomeRemoteid) {
+  public void setsFranchisereferalincomeRemoteid(String sFranchisereferalincomeRemoteid) {
     this.sFranchisereferalincomeRemoteid = sFranchisereferalincomeRemoteid;
   }
 
 
-  public FranchisereferalincomeRequestCompound objAddress(@javax.annotation.Nullable AddressRequest objAddress) {
+  public FranchisereferalincomeRequestCompound objAddress(AddressRequest objAddress) {
     this.objAddress = objAddress;
     return this;
   }
@@ -374,12 +360,12 @@ public class FranchisereferalincomeRequestCompound {
     return objAddress;
   }
 
-  public void setObjAddress(@javax.annotation.Nullable AddressRequest objAddress) {
+  public void setObjAddress(AddressRequest objAddress) {
     this.objAddress = objAddress;
   }
 
 
-  public FranchisereferalincomeRequestCompound aObjContact(@javax.annotation.Nonnull List<ContactRequestCompound> aObjContact) {
+  public FranchisereferalincomeRequestCompound aObjContact(List<ContactRequestCompound> aObjContact) {
     this.aObjContact = aObjContact;
     return this;
   }
@@ -401,7 +387,7 @@ public class FranchisereferalincomeRequestCompound {
     return aObjContact;
   }
 
-  public void setaObjContact(@javax.annotation.Nonnull List<ContactRequestCompound> aObjContact) {
+  public void setaObjContact(List<ContactRequestCompound> aObjContact) {
     this.aObjContact = aObjContact;
   }
 

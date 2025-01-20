@@ -48,37 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsignergroupmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignergroupmembershipResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUPMEMBERSHIP_I_D = "pkiEzsignsignergroupmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUPMEMBERSHIP_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignsignergroupmembershipID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNERGROUP_I_D = "fkiEzsignsignergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNERGROUP_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignsignergroupID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D = "fkiEzsignsignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsignsignerID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUsergroupID;
 
   public EzsignsignergroupmembershipResponseCompound() {
   }
 
-  public EzsignsignergroupmembershipResponseCompound pkiEzsignsignergroupmembershipID(@javax.annotation.Nonnull Integer pkiEzsignsignergroupmembershipID) {
+  public EzsignsignergroupmembershipResponseCompound pkiEzsignsignergroupmembershipID(Integer pkiEzsignsignergroupmembershipID) {
     this.pkiEzsignsignergroupmembershipID = pkiEzsignsignergroupmembershipID;
     return this;
   }
@@ -94,12 +89,12 @@ public class EzsignsignergroupmembershipResponseCompound {
     return pkiEzsignsignergroupmembershipID;
   }
 
-  public void setPkiEzsignsignergroupmembershipID(@javax.annotation.Nonnull Integer pkiEzsignsignergroupmembershipID) {
+  public void setPkiEzsignsignergroupmembershipID(Integer pkiEzsignsignergroupmembershipID) {
     this.pkiEzsignsignergroupmembershipID = pkiEzsignsignergroupmembershipID;
   }
 
 
-  public EzsignsignergroupmembershipResponseCompound fkiEzsignsignergroupID(@javax.annotation.Nonnull Integer fkiEzsignsignergroupID) {
+  public EzsignsignergroupmembershipResponseCompound fkiEzsignsignergroupID(Integer fkiEzsignsignergroupID) {
     this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
     return this;
   }
@@ -115,12 +110,12 @@ public class EzsignsignergroupmembershipResponseCompound {
     return fkiEzsignsignergroupID;
   }
 
-  public void setFkiEzsignsignergroupID(@javax.annotation.Nonnull Integer fkiEzsignsignergroupID) {
+  public void setFkiEzsignsignergroupID(Integer fkiEzsignsignergroupID) {
     this.fkiEzsignsignergroupID = fkiEzsignsignergroupID;
   }
 
 
-  public EzsignsignergroupmembershipResponseCompound fkiEzsignsignerID(@javax.annotation.Nullable Integer fkiEzsignsignerID) {
+  public EzsignsignergroupmembershipResponseCompound fkiEzsignsignerID(Integer fkiEzsignsignerID) {
     this.fkiEzsignsignerID = fkiEzsignsignerID;
     return this;
   }
@@ -135,12 +130,12 @@ public class EzsignsignergroupmembershipResponseCompound {
     return fkiEzsignsignerID;
   }
 
-  public void setFkiEzsignsignerID(@javax.annotation.Nullable Integer fkiEzsignsignerID) {
+  public void setFkiEzsignsignerID(Integer fkiEzsignsignerID) {
     this.fkiEzsignsignerID = fkiEzsignsignerID;
   }
 
 
-  public EzsignsignergroupmembershipResponseCompound fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public EzsignsignergroupmembershipResponseCompound fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -155,12 +150,12 @@ public class EzsignsignergroupmembershipResponseCompound {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public EzsignsignergroupmembershipResponseCompound fkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
+  public EzsignsignergroupmembershipResponseCompound fkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -176,7 +171,7 @@ public class EzsignsignergroupmembershipResponseCompound {
     return fkiUsergroupID;
   }
 
-  public void setFkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
+  public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 

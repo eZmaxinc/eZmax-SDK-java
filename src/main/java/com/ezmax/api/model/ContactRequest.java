@@ -48,42 +48,36 @@ import eZmaxAPI.JSON;
 /**
  * A Contact Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ContactRequest {
   public static final String SERIALIZED_NAME_FKI_CONTACTTITLE_I_D = "fkiContacttitleID";
   @SerializedName(SERIALIZED_NAME_FKI_CONTACTTITLE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiContacttitleID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_CONTACT_FIRSTNAME = "sContactFirstname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_FIRSTNAME)
-  @javax.annotation.Nonnull
   private String sContactFirstname;
 
   public static final String SERIALIZED_NAME_S_CONTACT_LASTNAME = "sContactLastname";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_LASTNAME)
-  @javax.annotation.Nonnull
   private String sContactLastname;
 
   public static final String SERIALIZED_NAME_S_CONTACT_COMPANY = "sContactCompany";
   @SerializedName(SERIALIZED_NAME_S_CONTACT_COMPANY)
-  @javax.annotation.Nonnull
   private String sContactCompany;
 
   public static final String SERIALIZED_NAME_DT_CONTACT_BIRTHDATE = "dtContactBirthdate";
   @SerializedName(SERIALIZED_NAME_DT_CONTACT_BIRTHDATE)
-  @javax.annotation.Nullable
   private String dtContactBirthdate;
 
   public ContactRequest() {
   }
 
-  public ContactRequest fkiContacttitleID(@javax.annotation.Nonnull Integer fkiContacttitleID) {
+  public ContactRequest fkiContacttitleID(Integer fkiContacttitleID) {
     this.fkiContacttitleID = fkiContacttitleID;
     return this;
   }
@@ -98,12 +92,12 @@ public class ContactRequest {
     return fkiContacttitleID;
   }
 
-  public void setFkiContacttitleID(@javax.annotation.Nonnull Integer fkiContacttitleID) {
+  public void setFkiContacttitleID(Integer fkiContacttitleID) {
     this.fkiContacttitleID = fkiContacttitleID;
   }
 
 
-  public ContactRequest fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public ContactRequest fkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -119,12 +113,12 @@ public class ContactRequest {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public ContactRequest sContactFirstname(@javax.annotation.Nonnull String sContactFirstname) {
+  public ContactRequest sContactFirstname(String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
     return this;
   }
@@ -138,12 +132,12 @@ public class ContactRequest {
     return sContactFirstname;
   }
 
-  public void setsContactFirstname(@javax.annotation.Nonnull String sContactFirstname) {
+  public void setsContactFirstname(String sContactFirstname) {
     this.sContactFirstname = sContactFirstname;
   }
 
 
-  public ContactRequest sContactLastname(@javax.annotation.Nonnull String sContactLastname) {
+  public ContactRequest sContactLastname(String sContactLastname) {
     this.sContactLastname = sContactLastname;
     return this;
   }
@@ -157,12 +151,12 @@ public class ContactRequest {
     return sContactLastname;
   }
 
-  public void setsContactLastname(@javax.annotation.Nonnull String sContactLastname) {
+  public void setsContactLastname(String sContactLastname) {
     this.sContactLastname = sContactLastname;
   }
 
 
-  public ContactRequest sContactCompany(@javax.annotation.Nonnull String sContactCompany) {
+  public ContactRequest sContactCompany(String sContactCompany) {
     this.sContactCompany = sContactCompany;
     return this;
   }
@@ -176,12 +170,12 @@ public class ContactRequest {
     return sContactCompany;
   }
 
-  public void setsContactCompany(@javax.annotation.Nonnull String sContactCompany) {
+  public void setsContactCompany(String sContactCompany) {
     this.sContactCompany = sContactCompany;
   }
 
 
-  public ContactRequest dtContactBirthdate(@javax.annotation.Nullable String dtContactBirthdate) {
+  public ContactRequest dtContactBirthdate(String dtContactBirthdate) {
     this.dtContactBirthdate = dtContactBirthdate;
     return this;
   }
@@ -195,7 +189,7 @@ public class ContactRequest {
     return dtContactBirthdate;
   }
 
-  public void setDtContactBirthdate(@javax.annotation.Nullable String dtContactBirthdate) {
+  public void setDtContactBirthdate(String dtContactBirthdate) {
     this.dtContactBirthdate = dtContactBirthdate;
   }
 

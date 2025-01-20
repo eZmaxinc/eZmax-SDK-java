@@ -48,17 +48,16 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}/getCommunicationCount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderGetCommunicationCountV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_COMMUNICATION_COUNT = "iCommunicationCount";
   @SerializedName(SERIALIZED_NAME_I_COMMUNICATION_COUNT)
-  @javax.annotation.Nonnull
   private Integer iCommunicationCount;
 
   public EzsignfolderGetCommunicationCountV1ResponseMPayload() {
   }
 
-  public EzsignfolderGetCommunicationCountV1ResponseMPayload iCommunicationCount(@javax.annotation.Nonnull Integer iCommunicationCount) {
+  public EzsignfolderGetCommunicationCountV1ResponseMPayload iCommunicationCount(Integer iCommunicationCount) {
     this.iCommunicationCount = iCommunicationCount;
     return this;
   }
@@ -72,7 +71,7 @@ public class EzsignfolderGetCommunicationCountV1ResponseMPayload {
     return iCommunicationCount;
   }
 
-  public void setiCommunicationCount(@javax.annotation.Nonnull Integer iCommunicationCount) {
+  public void setiCommunicationCount(Integer iCommunicationCount) {
     this.iCommunicationCount = iCommunicationCount;
   }
 

@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * Generic Warning Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonResponseWarning {
   public static final String SERIALIZED_NAME_S_WARNING_MESSAGE = "sWarningMessage";
   @SerializedName(SERIALIZED_NAME_S_WARNING_MESSAGE)
-  @javax.annotation.Nonnull
   private String sWarningMessage;
 
   public static final String SERIALIZED_NAME_E_WARNING_CODE = "eWarningCode";
   @SerializedName(SERIALIZED_NAME_E_WARNING_CODE)
-  @javax.annotation.Nonnull
   private String eWarningCode;
 
   public CommonResponseWarning() {
   }
 
-  public CommonResponseWarning sWarningMessage(@javax.annotation.Nonnull String sWarningMessage) {
+  public CommonResponseWarning sWarningMessage(String sWarningMessage) {
     this.sWarningMessage = sWarningMessage;
     return this;
   }
@@ -77,12 +75,12 @@ public class CommonResponseWarning {
     return sWarningMessage;
   }
 
-  public void setsWarningMessage(@javax.annotation.Nonnull String sWarningMessage) {
+  public void setsWarningMessage(String sWarningMessage) {
     this.sWarningMessage = sWarningMessage;
   }
 
 
-  public CommonResponseWarning eWarningCode(@javax.annotation.Nonnull String eWarningCode) {
+  public CommonResponseWarning eWarningCode(String eWarningCode) {
     this.eWarningCode = eWarningCode;
     return this;
   }
@@ -96,7 +94,7 @@ public class CommonResponseWarning {
     return eWarningCode;
   }
 
-  public void seteWarningCode(@javax.annotation.Nonnull String eWarningCode) {
+  public void seteWarningCode(String eWarningCode) {
     this.eWarningCode = eWarningCode;
   }
 

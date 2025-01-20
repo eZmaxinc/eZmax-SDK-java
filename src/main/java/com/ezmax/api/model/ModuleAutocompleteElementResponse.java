@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Module AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ModuleAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_MODULE_I_D = "pkiModuleID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiModuleID;
 
   public static final String SERIALIZED_NAME_S_MODULE_NAME_X = "sModuleNameX";
   @SerializedName(SERIALIZED_NAME_S_MODULE_NAME_X)
-  @javax.annotation.Nonnull
   private String sModuleNameX;
 
   public static final String SERIALIZED_NAME_B_MODULE_ISACTIVE = "bModuleIsactive";
   @SerializedName(SERIALIZED_NAME_B_MODULE_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bModuleIsactive;
 
   public ModuleAutocompleteElementResponse() {
   }
 
-  public ModuleAutocompleteElementResponse pkiModuleID(@javax.annotation.Nonnull Integer pkiModuleID) {
+  public ModuleAutocompleteElementResponse pkiModuleID(Integer pkiModuleID) {
     this.pkiModuleID = pkiModuleID;
     return this;
   }
@@ -83,12 +80,12 @@ public class ModuleAutocompleteElementResponse {
     return pkiModuleID;
   }
 
-  public void setPkiModuleID(@javax.annotation.Nonnull Integer pkiModuleID) {
+  public void setPkiModuleID(Integer pkiModuleID) {
     this.pkiModuleID = pkiModuleID;
   }
 
 
-  public ModuleAutocompleteElementResponse sModuleNameX(@javax.annotation.Nonnull String sModuleNameX) {
+  public ModuleAutocompleteElementResponse sModuleNameX(String sModuleNameX) {
     this.sModuleNameX = sModuleNameX;
     return this;
   }
@@ -102,12 +99,12 @@ public class ModuleAutocompleteElementResponse {
     return sModuleNameX;
   }
 
-  public void setsModuleNameX(@javax.annotation.Nonnull String sModuleNameX) {
+  public void setsModuleNameX(String sModuleNameX) {
     this.sModuleNameX = sModuleNameX;
   }
 
 
-  public ModuleAutocompleteElementResponse bModuleIsactive(@javax.annotation.Nonnull Boolean bModuleIsactive) {
+  public ModuleAutocompleteElementResponse bModuleIsactive(Boolean bModuleIsactive) {
     this.bModuleIsactive = bModuleIsactive;
     return this;
   }
@@ -121,7 +118,7 @@ public class ModuleAutocompleteElementResponse {
     return bModuleIsactive;
   }
 
-  public void setbModuleIsactive(@javax.annotation.Nonnull Boolean bModuleIsactive) {
+  public void setbModuleIsactive(Boolean bModuleIsactive) {
     this.bModuleIsactive = bModuleIsactive;
   }
 

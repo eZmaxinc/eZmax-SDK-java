@@ -26,8 +26,8 @@ An Ezsignformfieldgroup Object and children to create a complete structure
 |**tEzsignformfieldgroupTooltip** | **String** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup |  [optional] |
 |**eEzsignformfieldgroupTooltipposition** | **FieldEEzsignformfieldgroupTooltipposition** |  |  [optional] |
 |**aObjEzsignformfield** | [**List&lt;EzsignformfieldResponseCompound&gt;**](EzsignformfieldResponseCompound.md) |  |  |
-|**aObjDropdownElement** | [**List&lt;CustomDropdownElementResponse&gt;**](CustomDropdownElementResponse.md) |  |  [optional] |
-|**aObjEzsignformfieldgroupsigner** | [**List&lt;EzsignformfieldgroupsignerResponse&gt;**](EzsignformfieldgroupsignerResponse.md) |  |  |
+|**aObjDropdownElement** | [**List&lt;CustomDropdownElementResponseCompound&gt;**](CustomDropdownElementResponseCompound.md) |  |  [optional] |
+|**aObjEzsignformfieldgroupsigner** | [**List&lt;EzsignformfieldgroupsignerResponseCompound&gt;**](EzsignformfieldgroupsignerResponseCompound.md) |  |  |
 
 
 

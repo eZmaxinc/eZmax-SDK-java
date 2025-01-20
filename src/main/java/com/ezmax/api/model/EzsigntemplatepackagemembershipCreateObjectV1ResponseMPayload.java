@@ -50,27 +50,24 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplatepackagemembership
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D = "a_pkiEzsigntemplatepackagemembershipID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEPACKAGEMEMBERSHIP_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsigntemplatepackagemembershipID = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION = "bEzsigntemplatepackageNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEPACKAGE_NEEDVALIDATION)
-  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatepackageNeedvalidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION = "bEzsignbulksendNeedvalidation";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNBULKSEND_NEEDVALIDATION)
-  @javax.annotation.Nonnull
   private Boolean bEzsignbulksendNeedvalidation;
 
   public EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload() {
   }
 
-  public EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload aPkiEzsigntemplatepackagemembershipID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplatepackagemembershipID) {
+  public EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload aPkiEzsigntemplatepackagemembershipID(List<Integer> aPkiEzsigntemplatepackagemembershipID) {
     this.aPkiEzsigntemplatepackagemembershipID = aPkiEzsigntemplatepackagemembershipID;
     return this;
   }
@@ -92,12 +89,12 @@ public class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload {
     return aPkiEzsigntemplatepackagemembershipID;
   }
 
-  public void setaPkiEzsigntemplatepackagemembershipID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplatepackagemembershipID) {
+  public void setaPkiEzsigntemplatepackagemembershipID(List<Integer> aPkiEzsigntemplatepackagemembershipID) {
     this.aPkiEzsigntemplatepackagemembershipID = aPkiEzsigntemplatepackagemembershipID;
   }
 
 
-  public EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload bEzsigntemplatepackageNeedvalidation(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageNeedvalidation) {
+  public EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload bEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
     return this;
   }
@@ -111,12 +108,12 @@ public class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload {
     return bEzsigntemplatepackageNeedvalidation;
   }
 
-  public void setbEzsigntemplatepackageNeedvalidation(@javax.annotation.Nonnull Boolean bEzsigntemplatepackageNeedvalidation) {
+  public void setbEzsigntemplatepackageNeedvalidation(Boolean bEzsigntemplatepackageNeedvalidation) {
     this.bEzsigntemplatepackageNeedvalidation = bEzsigntemplatepackageNeedvalidation;
   }
 
 
-  public EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload bEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
+  public EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload bEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
     return this;
   }
@@ -130,7 +127,7 @@ public class EzsigntemplatepackagemembershipCreateObjectV1ResponseMPayload {
     return bEzsignbulksendNeedvalidation;
   }
 
-  public void setbEzsignbulksendNeedvalidation(@javax.annotation.Nonnull Boolean bEzsignbulksendNeedvalidation) {
+  public void setbEzsignbulksendNeedvalidation(Boolean bEzsignbulksendNeedvalidation) {
     this.bEzsignbulksendNeedvalidation = bEzsignbulksendNeedvalidation;
   }
 

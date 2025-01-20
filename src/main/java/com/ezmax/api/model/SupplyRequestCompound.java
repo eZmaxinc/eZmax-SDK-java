@@ -49,57 +49,48 @@ import eZmaxAPI.JSON;
 /**
  * A Supply Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SupplyRequestCompound {
   public static final String SERIALIZED_NAME_PKI_SUPPLY_I_D = "pkiSupplyID";
   @SerializedName(SERIALIZED_NAME_PKI_SUPPLY_I_D)
-  @javax.annotation.Nullable
   private Integer pkiSupplyID;
 
   public static final String SERIALIZED_NAME_FKI_GLACCOUNT_I_D = "fkiGlaccountID";
   @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiGlaccountID;
 
   public static final String SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D = "fkiGlaccountcontainerID";
   @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiGlaccountcontainerID;
 
   public static final String SERIALIZED_NAME_FKI_VARIABLEEXPENSE_I_D = "fkiVariableexpenseID";
   @SerializedName(SERIALIZED_NAME_FKI_VARIABLEEXPENSE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiVariableexpenseID;
 
   public static final String SERIALIZED_NAME_S_SUPPLY_CODE = "sSupplyCode";
   @SerializedName(SERIALIZED_NAME_S_SUPPLY_CODE)
-  @javax.annotation.Nonnull
   private String sSupplyCode;
 
   public static final String SERIALIZED_NAME_OBJ_SUPPLY_DESCRIPTION = "objSupplyDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_SUPPLY_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualSupplyDescription objSupplyDescription;
 
   public static final String SERIALIZED_NAME_D_SUPPLY_UNITPRICE = "dSupplyUnitprice";
   @SerializedName(SERIALIZED_NAME_D_SUPPLY_UNITPRICE)
-  @javax.annotation.Nonnull
   private String dSupplyUnitprice;
 
   public static final String SERIALIZED_NAME_B_SUPPLY_ISACTIVE = "bSupplyIsactive";
   @SerializedName(SERIALIZED_NAME_B_SUPPLY_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bSupplyIsactive;
 
   public static final String SERIALIZED_NAME_B_SUPPLY_VARIABLEPRICE = "bSupplyVariableprice";
   @SerializedName(SERIALIZED_NAME_B_SUPPLY_VARIABLEPRICE)
-  @javax.annotation.Nonnull
   private Boolean bSupplyVariableprice;
 
   public SupplyRequestCompound() {
   }
 
-  public SupplyRequestCompound pkiSupplyID(@javax.annotation.Nullable Integer pkiSupplyID) {
+  public SupplyRequestCompound pkiSupplyID(Integer pkiSupplyID) {
     this.pkiSupplyID = pkiSupplyID;
     return this;
   }
@@ -115,12 +106,12 @@ public class SupplyRequestCompound {
     return pkiSupplyID;
   }
 
-  public void setPkiSupplyID(@javax.annotation.Nullable Integer pkiSupplyID) {
+  public void setPkiSupplyID(Integer pkiSupplyID) {
     this.pkiSupplyID = pkiSupplyID;
   }
 
 
-  public SupplyRequestCompound fkiGlaccountID(@javax.annotation.Nullable Integer fkiGlaccountID) {
+  public SupplyRequestCompound fkiGlaccountID(Integer fkiGlaccountID) {
     this.fkiGlaccountID = fkiGlaccountID;
     return this;
   }
@@ -135,12 +126,12 @@ public class SupplyRequestCompound {
     return fkiGlaccountID;
   }
 
-  public void setFkiGlaccountID(@javax.annotation.Nullable Integer fkiGlaccountID) {
+  public void setFkiGlaccountID(Integer fkiGlaccountID) {
     this.fkiGlaccountID = fkiGlaccountID;
   }
 
 
-  public SupplyRequestCompound fkiGlaccountcontainerID(@javax.annotation.Nullable Integer fkiGlaccountcontainerID) {
+  public SupplyRequestCompound fkiGlaccountcontainerID(Integer fkiGlaccountcontainerID) {
     this.fkiGlaccountcontainerID = fkiGlaccountcontainerID;
     return this;
   }
@@ -155,12 +146,12 @@ public class SupplyRequestCompound {
     return fkiGlaccountcontainerID;
   }
 
-  public void setFkiGlaccountcontainerID(@javax.annotation.Nullable Integer fkiGlaccountcontainerID) {
+  public void setFkiGlaccountcontainerID(Integer fkiGlaccountcontainerID) {
     this.fkiGlaccountcontainerID = fkiGlaccountcontainerID;
   }
 
 
-  public SupplyRequestCompound fkiVariableexpenseID(@javax.annotation.Nonnull Integer fkiVariableexpenseID) {
+  public SupplyRequestCompound fkiVariableexpenseID(Integer fkiVariableexpenseID) {
     this.fkiVariableexpenseID = fkiVariableexpenseID;
     return this;
   }
@@ -176,12 +167,12 @@ public class SupplyRequestCompound {
     return fkiVariableexpenseID;
   }
 
-  public void setFkiVariableexpenseID(@javax.annotation.Nonnull Integer fkiVariableexpenseID) {
+  public void setFkiVariableexpenseID(Integer fkiVariableexpenseID) {
     this.fkiVariableexpenseID = fkiVariableexpenseID;
   }
 
 
-  public SupplyRequestCompound sSupplyCode(@javax.annotation.Nonnull String sSupplyCode) {
+  public SupplyRequestCompound sSupplyCode(String sSupplyCode) {
     this.sSupplyCode = sSupplyCode;
     return this;
   }
@@ -195,12 +186,12 @@ public class SupplyRequestCompound {
     return sSupplyCode;
   }
 
-  public void setsSupplyCode(@javax.annotation.Nonnull String sSupplyCode) {
+  public void setsSupplyCode(String sSupplyCode) {
     this.sSupplyCode = sSupplyCode;
   }
 
 
-  public SupplyRequestCompound objSupplyDescription(@javax.annotation.Nonnull MultilingualSupplyDescription objSupplyDescription) {
+  public SupplyRequestCompound objSupplyDescription(MultilingualSupplyDescription objSupplyDescription) {
     this.objSupplyDescription = objSupplyDescription;
     return this;
   }
@@ -214,12 +205,12 @@ public class SupplyRequestCompound {
     return objSupplyDescription;
   }
 
-  public void setObjSupplyDescription(@javax.annotation.Nonnull MultilingualSupplyDescription objSupplyDescription) {
+  public void setObjSupplyDescription(MultilingualSupplyDescription objSupplyDescription) {
     this.objSupplyDescription = objSupplyDescription;
   }
 
 
-  public SupplyRequestCompound dSupplyUnitprice(@javax.annotation.Nonnull String dSupplyUnitprice) {
+  public SupplyRequestCompound dSupplyUnitprice(String dSupplyUnitprice) {
     this.dSupplyUnitprice = dSupplyUnitprice;
     return this;
   }
@@ -233,12 +224,12 @@ public class SupplyRequestCompound {
     return dSupplyUnitprice;
   }
 
-  public void setdSupplyUnitprice(@javax.annotation.Nonnull String dSupplyUnitprice) {
+  public void setdSupplyUnitprice(String dSupplyUnitprice) {
     this.dSupplyUnitprice = dSupplyUnitprice;
   }
 
 
-  public SupplyRequestCompound bSupplyIsactive(@javax.annotation.Nonnull Boolean bSupplyIsactive) {
+  public SupplyRequestCompound bSupplyIsactive(Boolean bSupplyIsactive) {
     this.bSupplyIsactive = bSupplyIsactive;
     return this;
   }
@@ -252,12 +243,12 @@ public class SupplyRequestCompound {
     return bSupplyIsactive;
   }
 
-  public void setbSupplyIsactive(@javax.annotation.Nonnull Boolean bSupplyIsactive) {
+  public void setbSupplyIsactive(Boolean bSupplyIsactive) {
     this.bSupplyIsactive = bSupplyIsactive;
   }
 
 
-  public SupplyRequestCompound bSupplyVariableprice(@javax.annotation.Nonnull Boolean bSupplyVariableprice) {
+  public SupplyRequestCompound bSupplyVariableprice(Boolean bSupplyVariableprice) {
     this.bSupplyVariableprice = bSupplyVariableprice;
     return this;
   }
@@ -271,7 +262,7 @@ public class SupplyRequestCompound {
     return bSupplyVariableprice;
   }
 
-  public void setbSupplyVariableprice(@javax.annotation.Nonnull Boolean bSupplyVariableprice) {
+  public void setbSupplyVariableprice(Boolean bSupplyVariableprice) {
     this.bSupplyVariableprice = bSupplyVariableprice;
   }
 

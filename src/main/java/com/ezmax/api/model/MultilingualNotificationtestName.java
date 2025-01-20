@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * Name of the Notificationtest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualNotificationtestName {
   public static final String SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME1 = "sNotificationtestName1";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME1)
-  @javax.annotation.Nullable
   private String sNotificationtestName1;
 
   public static final String SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME2 = "sNotificationtestName2";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME2)
-  @javax.annotation.Nullable
   private String sNotificationtestName2;
 
   public MultilingualNotificationtestName() {
   }
 
-  public MultilingualNotificationtestName sNotificationtestName1(@javax.annotation.Nullable String sNotificationtestName1) {
+  public MultilingualNotificationtestName sNotificationtestName1(String sNotificationtestName1) {
     this.sNotificationtestName1 = sNotificationtestName1;
     return this;
   }
@@ -77,12 +75,12 @@ public class MultilingualNotificationtestName {
     return sNotificationtestName1;
   }
 
-  public void setsNotificationtestName1(@javax.annotation.Nullable String sNotificationtestName1) {
+  public void setsNotificationtestName1(String sNotificationtestName1) {
     this.sNotificationtestName1 = sNotificationtestName1;
   }
 
 
-  public MultilingualNotificationtestName sNotificationtestName2(@javax.annotation.Nullable String sNotificationtestName2) {
+  public MultilingualNotificationtestName sNotificationtestName2(String sNotificationtestName2) {
     this.sNotificationtestName2 = sNotificationtestName2;
     return this;
   }
@@ -96,7 +94,7 @@ public class MultilingualNotificationtestName {
     return sNotificationtestName2;
   }
 
-  public void setsNotificationtestName2(@javax.annotation.Nullable String sNotificationtestName2) {
+  public void setsNotificationtestName2(String sNotificationtestName2) {
     this.sNotificationtestName2 = sNotificationtestName2;
   }
 

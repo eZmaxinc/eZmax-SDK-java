@@ -53,37 +53,32 @@ import eZmaxAPI.JSON;
 /**
  * A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonReportsection {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION = "a_objReportsubsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION)
-  @javax.annotation.Nonnull
   private List<CommonReportsubsection> aObjReportsubsection = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_REPORTCOLUMN = "a_objReportcolumn";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTCOLUMN)
-  @javax.annotation.Nonnull
   private List<CommonReportcolumn> aObjReportcolumn = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_E_REPORTSECTION_HORIZONTALALIGNMENT = "eReportsectionHorizontalalignment";
   @SerializedName(SERIALIZED_NAME_E_REPORTSECTION_HORIZONTALALIGNMENT)
-  @javax.annotation.Nonnull
   private EnumHorizontalalignment eReportsectionHorizontalalignment;
 
   public static final String SERIALIZED_NAME_I_REPORTSECTION_COLUMNCOUNT = "iReportsectionColumncount";
   @SerializedName(SERIALIZED_NAME_I_REPORTSECTION_COLUMNCOUNT)
-  @javax.annotation.Nonnull
   private Integer iReportsectionColumncount;
 
   public static final String SERIALIZED_NAME_I_REPORTSECTION_WIDTH = "iReportsectionWidth";
   @SerializedName(SERIALIZED_NAME_I_REPORTSECTION_WIDTH)
-  @javax.annotation.Nonnull
   private Integer iReportsectionWidth;
 
   public CommonReportsection() {
   }
 
-  public CommonReportsection aObjReportsubsection(@javax.annotation.Nonnull List<CommonReportsubsection> aObjReportsubsection) {
+  public CommonReportsection aObjReportsubsection(List<CommonReportsubsection> aObjReportsubsection) {
     this.aObjReportsubsection = aObjReportsubsection;
     return this;
   }
@@ -105,12 +100,12 @@ public class CommonReportsection {
     return aObjReportsubsection;
   }
 
-  public void setaObjReportsubsection(@javax.annotation.Nonnull List<CommonReportsubsection> aObjReportsubsection) {
+  public void setaObjReportsubsection(List<CommonReportsubsection> aObjReportsubsection) {
     this.aObjReportsubsection = aObjReportsubsection;
   }
 
 
-  public CommonReportsection aObjReportcolumn(@javax.annotation.Nonnull List<CommonReportcolumn> aObjReportcolumn) {
+  public CommonReportsection aObjReportcolumn(List<CommonReportcolumn> aObjReportcolumn) {
     this.aObjReportcolumn = aObjReportcolumn;
     return this;
   }
@@ -132,12 +127,12 @@ public class CommonReportsection {
     return aObjReportcolumn;
   }
 
-  public void setaObjReportcolumn(@javax.annotation.Nonnull List<CommonReportcolumn> aObjReportcolumn) {
+  public void setaObjReportcolumn(List<CommonReportcolumn> aObjReportcolumn) {
     this.aObjReportcolumn = aObjReportcolumn;
   }
 
 
-  public CommonReportsection eReportsectionHorizontalalignment(@javax.annotation.Nonnull EnumHorizontalalignment eReportsectionHorizontalalignment) {
+  public CommonReportsection eReportsectionHorizontalalignment(EnumHorizontalalignment eReportsectionHorizontalalignment) {
     this.eReportsectionHorizontalalignment = eReportsectionHorizontalalignment;
     return this;
   }
@@ -151,12 +146,12 @@ public class CommonReportsection {
     return eReportsectionHorizontalalignment;
   }
 
-  public void seteReportsectionHorizontalalignment(@javax.annotation.Nonnull EnumHorizontalalignment eReportsectionHorizontalalignment) {
+  public void seteReportsectionHorizontalalignment(EnumHorizontalalignment eReportsectionHorizontalalignment) {
     this.eReportsectionHorizontalalignment = eReportsectionHorizontalalignment;
   }
 
 
-  public CommonReportsection iReportsectionColumncount(@javax.annotation.Nonnull Integer iReportsectionColumncount) {
+  public CommonReportsection iReportsectionColumncount(Integer iReportsectionColumncount) {
     this.iReportsectionColumncount = iReportsectionColumncount;
     return this;
   }
@@ -170,12 +165,12 @@ public class CommonReportsection {
     return iReportsectionColumncount;
   }
 
-  public void setiReportsectionColumncount(@javax.annotation.Nonnull Integer iReportsectionColumncount) {
+  public void setiReportsectionColumncount(Integer iReportsectionColumncount) {
     this.iReportsectionColumncount = iReportsectionColumncount;
   }
 
 
-  public CommonReportsection iReportsectionWidth(@javax.annotation.Nonnull Integer iReportsectionWidth) {
+  public CommonReportsection iReportsectionWidth(Integer iReportsectionWidth) {
     this.iReportsectionWidth = iReportsectionWidth;
     return this;
   }
@@ -189,7 +184,7 @@ public class CommonReportsection {
     return iReportsectionWidth;
   }
 
-  public void setiReportsectionWidth(@javax.annotation.Nonnull Integer iReportsectionWidth) {
+  public void setiReportsectionWidth(Integer iReportsectionWidth) {
     this.iReportsectionWidth = iReportsectionWidth;
   }
 

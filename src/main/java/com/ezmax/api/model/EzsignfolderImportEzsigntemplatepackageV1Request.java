@@ -51,27 +51,24 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderImportEzsigntemplatepackageV1Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplatepackageID;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE = "dtEzsigndocumentDuedate";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENT_DUEDATE)
-  @javax.annotation.Nonnull
   private String dtEzsigndocumentDuedate;
 
   public static final String SERIALIZED_NAME_A_OBJ_IMPORT_EZSIGNTEMPLATEPACKAGE_RELATION = "a_objImportEzsigntemplatepackageRelation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_IMPORT_EZSIGNTEMPLATEPACKAGE_RELATION)
-  @javax.annotation.Nonnull
   private List<CustomImportEzsigntemplatepackageRelationRequest> aObjImportEzsigntemplatepackageRelation = new ArrayList<>();
 
   public EzsignfolderImportEzsigntemplatepackageV1Request() {
   }
 
-  public EzsignfolderImportEzsigntemplatepackageV1Request fkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackageID) {
+  public EzsignfolderImportEzsigntemplatepackageV1Request fkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
     return this;
   }
@@ -86,12 +83,12 @@ public class EzsignfolderImportEzsigntemplatepackageV1Request {
     return fkiEzsigntemplatepackageID;
   }
 
-  public void setFkiEzsigntemplatepackageID(@javax.annotation.Nonnull Integer fkiEzsigntemplatepackageID) {
+  public void setFkiEzsigntemplatepackageID(Integer fkiEzsigntemplatepackageID) {
     this.fkiEzsigntemplatepackageID = fkiEzsigntemplatepackageID;
   }
 
 
-  public EzsignfolderImportEzsigntemplatepackageV1Request dtEzsigndocumentDuedate(@javax.annotation.Nonnull String dtEzsigndocumentDuedate) {
+  public EzsignfolderImportEzsigntemplatepackageV1Request dtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
     return this;
   }
@@ -105,12 +102,12 @@ public class EzsignfolderImportEzsigntemplatepackageV1Request {
     return dtEzsigndocumentDuedate;
   }
 
-  public void setDtEzsigndocumentDuedate(@javax.annotation.Nonnull String dtEzsigndocumentDuedate) {
+  public void setDtEzsigndocumentDuedate(String dtEzsigndocumentDuedate) {
     this.dtEzsigndocumentDuedate = dtEzsigndocumentDuedate;
   }
 
 
-  public EzsignfolderImportEzsigntemplatepackageV1Request aObjImportEzsigntemplatepackageRelation(@javax.annotation.Nonnull List<CustomImportEzsigntemplatepackageRelationRequest> aObjImportEzsigntemplatepackageRelation) {
+  public EzsignfolderImportEzsigntemplatepackageV1Request aObjImportEzsigntemplatepackageRelation(List<CustomImportEzsigntemplatepackageRelationRequest> aObjImportEzsigntemplatepackageRelation) {
     this.aObjImportEzsigntemplatepackageRelation = aObjImportEzsigntemplatepackageRelation;
     return this;
   }
@@ -132,7 +129,7 @@ public class EzsignfolderImportEzsigntemplatepackageV1Request {
     return aObjImportEzsigntemplatepackageRelation;
   }
 
-  public void setaObjImportEzsigntemplatepackageRelation(@javax.annotation.Nonnull List<CustomImportEzsigntemplatepackageRelationRequest> aObjImportEzsigntemplatepackageRelation) {
+  public void setaObjImportEzsigntemplatepackageRelation(List<CustomImportEzsigntemplatepackageRelationRequest> aObjImportEzsigntemplatepackageRelation) {
     this.aObjImportEzsigntemplatepackageRelation = aObjImportEzsigntemplatepackageRelation;
   }
 

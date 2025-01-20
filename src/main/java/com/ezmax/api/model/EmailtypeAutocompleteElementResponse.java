@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Emailtype AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EmailtypeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_EMAILTYPE_I_D = "pkiEmailtypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EMAILTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEmailtypeID;
 
   public static final String SERIALIZED_NAME_S_EMAILTYPE_NAME_X = "sEmailtypeNameX";
   @SerializedName(SERIALIZED_NAME_S_EMAILTYPE_NAME_X)
-  @javax.annotation.Nonnull
   private String sEmailtypeNameX;
 
   public static final String SERIALIZED_NAME_B_EMAILTYPE_ISACTIVE = "bEmailtypeIsactive";
   @SerializedName(SERIALIZED_NAME_B_EMAILTYPE_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bEmailtypeIsactive;
 
   public EmailtypeAutocompleteElementResponse() {
   }
 
-  public EmailtypeAutocompleteElementResponse pkiEmailtypeID(@javax.annotation.Nonnull Integer pkiEmailtypeID) {
+  public EmailtypeAutocompleteElementResponse pkiEmailtypeID(Integer pkiEmailtypeID) {
     this.pkiEmailtypeID = pkiEmailtypeID;
     return this;
   }
@@ -83,12 +80,12 @@ public class EmailtypeAutocompleteElementResponse {
     return pkiEmailtypeID;
   }
 
-  public void setPkiEmailtypeID(@javax.annotation.Nonnull Integer pkiEmailtypeID) {
+  public void setPkiEmailtypeID(Integer pkiEmailtypeID) {
     this.pkiEmailtypeID = pkiEmailtypeID;
   }
 
 
-  public EmailtypeAutocompleteElementResponse sEmailtypeNameX(@javax.annotation.Nonnull String sEmailtypeNameX) {
+  public EmailtypeAutocompleteElementResponse sEmailtypeNameX(String sEmailtypeNameX) {
     this.sEmailtypeNameX = sEmailtypeNameX;
     return this;
   }
@@ -102,12 +99,12 @@ public class EmailtypeAutocompleteElementResponse {
     return sEmailtypeNameX;
   }
 
-  public void setsEmailtypeNameX(@javax.annotation.Nonnull String sEmailtypeNameX) {
+  public void setsEmailtypeNameX(String sEmailtypeNameX) {
     this.sEmailtypeNameX = sEmailtypeNameX;
   }
 
 
-  public EmailtypeAutocompleteElementResponse bEmailtypeIsactive(@javax.annotation.Nonnull Boolean bEmailtypeIsactive) {
+  public EmailtypeAutocompleteElementResponse bEmailtypeIsactive(Boolean bEmailtypeIsactive) {
     this.bEmailtypeIsactive = bEmailtypeIsactive;
     return this;
   }
@@ -121,7 +118,7 @@ public class EmailtypeAutocompleteElementResponse {
     return bEmailtypeIsactive;
   }
 
-  public void setbEmailtypeIsactive(@javax.annotation.Nonnull Boolean bEmailtypeIsactive) {
+  public void setbEmailtypeIsactive(Boolean bEmailtypeIsactive) {
     this.bEmailtypeIsactive = bEmailtypeIsactive;
   }
 

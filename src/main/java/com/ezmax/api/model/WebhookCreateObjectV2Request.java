@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/webhook
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebhookCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_WEBHOOK = "a_objWebhook";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WEBHOOK)
-  @javax.annotation.Nonnull
   private List<WebhookRequestCompound> aObjWebhook = new ArrayList<>();
 
   public WebhookCreateObjectV2Request() {
   }
 
-  public WebhookCreateObjectV2Request aObjWebhook(@javax.annotation.Nonnull List<WebhookRequestCompound> aObjWebhook) {
+  public WebhookCreateObjectV2Request aObjWebhook(List<WebhookRequestCompound> aObjWebhook) {
     this.aObjWebhook = aObjWebhook;
     return this;
   }
@@ -83,7 +82,7 @@ public class WebhookCreateObjectV2Request {
     return aObjWebhook;
   }
 
-  public void setaObjWebhook(@javax.annotation.Nonnull List<WebhookRequestCompound> aObjWebhook) {
+  public void setaObjWebhook(List<WebhookRequestCompound> aObjWebhook) {
     this.aObjWebhook = aObjWebhook;
   }
 

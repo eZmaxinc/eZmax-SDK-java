@@ -49,42 +49,36 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsigner Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignerResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D = "pkiEzsignsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignsignerID;
 
   public static final String SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D = "fkiTaxassignmentID";
   @SerializedName(SERIALIZED_NAME_FKI_TAXASSIGNMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiTaxassignmentID;
 
   public static final String SERIALIZED_NAME_FKI_SECRETQUESTION_I_D = "fkiSecretquestionID";
   @SerializedName(SERIALIZED_NAME_FKI_SECRETQUESTION_I_D)
-  @javax.annotation.Nullable
   private Integer fkiSecretquestionID;
 
   public static final String SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D = "fkiUserlogintypeID";
   @SerializedName(SERIALIZED_NAME_FKI_USERLOGINTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiUserlogintypeID;
 
   public static final String SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION_X = "sUserlogintypeDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sUserlogintypeDescriptionX;
 
   public static final String SERIALIZED_NAME_OBJ_CONTACT = "objContact";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT)
-  @javax.annotation.Nonnull
   private EzsignsignerResponseCompoundContact objContact;
 
   public EzsignsignerResponseCompound() {
   }
 
-  public EzsignsignerResponseCompound pkiEzsignsignerID(@javax.annotation.Nonnull Integer pkiEzsignsignerID) {
+  public EzsignsignerResponseCompound pkiEzsignsignerID(Integer pkiEzsignsignerID) {
     this.pkiEzsignsignerID = pkiEzsignsignerID;
     return this;
   }
@@ -99,12 +93,12 @@ public class EzsignsignerResponseCompound {
     return pkiEzsignsignerID;
   }
 
-  public void setPkiEzsignsignerID(@javax.annotation.Nonnull Integer pkiEzsignsignerID) {
+  public void setPkiEzsignsignerID(Integer pkiEzsignsignerID) {
     this.pkiEzsignsignerID = pkiEzsignsignerID;
   }
 
 
-  public EzsignsignerResponseCompound fkiTaxassignmentID(@javax.annotation.Nonnull Integer fkiTaxassignmentID) {
+  public EzsignsignerResponseCompound fkiTaxassignmentID(Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
     return this;
   }
@@ -120,12 +114,12 @@ public class EzsignsignerResponseCompound {
     return fkiTaxassignmentID;
   }
 
-  public void setFkiTaxassignmentID(@javax.annotation.Nonnull Integer fkiTaxassignmentID) {
+  public void setFkiTaxassignmentID(Integer fkiTaxassignmentID) {
     this.fkiTaxassignmentID = fkiTaxassignmentID;
   }
 
 
-  public EzsignsignerResponseCompound fkiSecretquestionID(@javax.annotation.Nullable Integer fkiSecretquestionID) {
+  public EzsignsignerResponseCompound fkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
     return this;
   }
@@ -140,12 +134,12 @@ public class EzsignsignerResponseCompound {
     return fkiSecretquestionID;
   }
 
-  public void setFkiSecretquestionID(@javax.annotation.Nullable Integer fkiSecretquestionID) {
+  public void setFkiSecretquestionID(Integer fkiSecretquestionID) {
     this.fkiSecretquestionID = fkiSecretquestionID;
   }
 
 
-  public EzsignsignerResponseCompound fkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
+  public EzsignsignerResponseCompound fkiUserlogintypeID(Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
     return this;
   }
@@ -160,12 +154,12 @@ public class EzsignsignerResponseCompound {
     return fkiUserlogintypeID;
   }
 
-  public void setFkiUserlogintypeID(@javax.annotation.Nonnull Integer fkiUserlogintypeID) {
+  public void setFkiUserlogintypeID(Integer fkiUserlogintypeID) {
     this.fkiUserlogintypeID = fkiUserlogintypeID;
   }
 
 
-  public EzsignsignerResponseCompound sUserlogintypeDescriptionX(@javax.annotation.Nonnull String sUserlogintypeDescriptionX) {
+  public EzsignsignerResponseCompound sUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
     return this;
   }
@@ -179,12 +173,12 @@ public class EzsignsignerResponseCompound {
     return sUserlogintypeDescriptionX;
   }
 
-  public void setsUserlogintypeDescriptionX(@javax.annotation.Nonnull String sUserlogintypeDescriptionX) {
+  public void setsUserlogintypeDescriptionX(String sUserlogintypeDescriptionX) {
     this.sUserlogintypeDescriptionX = sUserlogintypeDescriptionX;
   }
 
 
-  public EzsignsignerResponseCompound objContact(@javax.annotation.Nonnull EzsignsignerResponseCompoundContact objContact) {
+  public EzsignsignerResponseCompound objContact(EzsignsignerResponseCompoundContact objContact) {
     this.objContact = objContact;
     return this;
   }
@@ -198,7 +192,7 @@ public class EzsignsignerResponseCompound {
     return objContact;
   }
 
-  public void setObjContact(@javax.annotation.Nonnull EzsignsignerResponseCompoundContact objContact) {
+  public void setObjContact(EzsignsignerResponseCompoundContact objContact) {
     this.objContact = objContact;
   }
 

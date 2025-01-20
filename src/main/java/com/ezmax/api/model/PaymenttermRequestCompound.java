@@ -50,42 +50,36 @@ import eZmaxAPI.JSON;
 /**
  * A Paymentterm Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PaymenttermRequestCompound {
   public static final String SERIALIZED_NAME_PKI_PAYMENTTERM_I_D = "pkiPaymenttermID";
   @SerializedName(SERIALIZED_NAME_PKI_PAYMENTTERM_I_D)
-  @javax.annotation.Nullable
   private Integer pkiPaymenttermID;
 
   public static final String SERIALIZED_NAME_S_PAYMENTTERM_CODE = "sPaymenttermCode";
   @SerializedName(SERIALIZED_NAME_S_PAYMENTTERM_CODE)
-  @javax.annotation.Nonnull
   private String sPaymenttermCode;
 
   public static final String SERIALIZED_NAME_E_PAYMENTTERM_TYPE = "ePaymenttermType";
   @SerializedName(SERIALIZED_NAME_E_PAYMENTTERM_TYPE)
-  @javax.annotation.Nonnull
   private FieldEPaymenttermType ePaymenttermType;
 
   public static final String SERIALIZED_NAME_I_PAYMENTTERM_DAY = "iPaymenttermDay";
   @SerializedName(SERIALIZED_NAME_I_PAYMENTTERM_DAY)
-  @javax.annotation.Nonnull
   private Integer iPaymenttermDay;
 
   public static final String SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION = "objPaymenttermDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_PAYMENTTERM_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualPaymenttermDescription objPaymenttermDescription;
 
   public static final String SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE = "bPaymenttermIsactive";
   @SerializedName(SERIALIZED_NAME_B_PAYMENTTERM_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bPaymenttermIsactive;
 
   public PaymenttermRequestCompound() {
   }
 
-  public PaymenttermRequestCompound pkiPaymenttermID(@javax.annotation.Nullable Integer pkiPaymenttermID) {
+  public PaymenttermRequestCompound pkiPaymenttermID(Integer pkiPaymenttermID) {
     this.pkiPaymenttermID = pkiPaymenttermID;
     return this;
   }
@@ -99,12 +93,12 @@ public class PaymenttermRequestCompound {
     return pkiPaymenttermID;
   }
 
-  public void setPkiPaymenttermID(@javax.annotation.Nullable Integer pkiPaymenttermID) {
+  public void setPkiPaymenttermID(Integer pkiPaymenttermID) {
     this.pkiPaymenttermID = pkiPaymenttermID;
   }
 
 
-  public PaymenttermRequestCompound sPaymenttermCode(@javax.annotation.Nonnull String sPaymenttermCode) {
+  public PaymenttermRequestCompound sPaymenttermCode(String sPaymenttermCode) {
     this.sPaymenttermCode = sPaymenttermCode;
     return this;
   }
@@ -118,12 +112,12 @@ public class PaymenttermRequestCompound {
     return sPaymenttermCode;
   }
 
-  public void setsPaymenttermCode(@javax.annotation.Nonnull String sPaymenttermCode) {
+  public void setsPaymenttermCode(String sPaymenttermCode) {
     this.sPaymenttermCode = sPaymenttermCode;
   }
 
 
-  public PaymenttermRequestCompound ePaymenttermType(@javax.annotation.Nonnull FieldEPaymenttermType ePaymenttermType) {
+  public PaymenttermRequestCompound ePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
     this.ePaymenttermType = ePaymenttermType;
     return this;
   }
@@ -137,12 +131,12 @@ public class PaymenttermRequestCompound {
     return ePaymenttermType;
   }
 
-  public void setePaymenttermType(@javax.annotation.Nonnull FieldEPaymenttermType ePaymenttermType) {
+  public void setePaymenttermType(FieldEPaymenttermType ePaymenttermType) {
     this.ePaymenttermType = ePaymenttermType;
   }
 
 
-  public PaymenttermRequestCompound iPaymenttermDay(@javax.annotation.Nonnull Integer iPaymenttermDay) {
+  public PaymenttermRequestCompound iPaymenttermDay(Integer iPaymenttermDay) {
     this.iPaymenttermDay = iPaymenttermDay;
     return this;
   }
@@ -158,12 +152,12 @@ public class PaymenttermRequestCompound {
     return iPaymenttermDay;
   }
 
-  public void setiPaymenttermDay(@javax.annotation.Nonnull Integer iPaymenttermDay) {
+  public void setiPaymenttermDay(Integer iPaymenttermDay) {
     this.iPaymenttermDay = iPaymenttermDay;
   }
 
 
-  public PaymenttermRequestCompound objPaymenttermDescription(@javax.annotation.Nonnull MultilingualPaymenttermDescription objPaymenttermDescription) {
+  public PaymenttermRequestCompound objPaymenttermDescription(MultilingualPaymenttermDescription objPaymenttermDescription) {
     this.objPaymenttermDescription = objPaymenttermDescription;
     return this;
   }
@@ -177,12 +171,12 @@ public class PaymenttermRequestCompound {
     return objPaymenttermDescription;
   }
 
-  public void setObjPaymenttermDescription(@javax.annotation.Nonnull MultilingualPaymenttermDescription objPaymenttermDescription) {
+  public void setObjPaymenttermDescription(MultilingualPaymenttermDescription objPaymenttermDescription) {
     this.objPaymenttermDescription = objPaymenttermDescription;
   }
 
 
-  public PaymenttermRequestCompound bPaymenttermIsactive(@javax.annotation.Nonnull Boolean bPaymenttermIsactive) {
+  public PaymenttermRequestCompound bPaymenttermIsactive(Boolean bPaymenttermIsactive) {
     this.bPaymenttermIsactive = bPaymenttermIsactive;
     return this;
   }
@@ -196,7 +190,7 @@ public class PaymenttermRequestCompound {
     return bPaymenttermIsactive;
   }
 
-  public void setbPaymenttermIsactive(@javax.annotation.Nonnull Boolean bPaymenttermIsactive) {
+  public void setbPaymenttermIsactive(Boolean bPaymenttermIsactive) {
     this.bPaymenttermIsactive = bPaymenttermIsactive;
   }
 

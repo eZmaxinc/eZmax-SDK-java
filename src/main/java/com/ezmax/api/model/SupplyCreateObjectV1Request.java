@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/supply
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SupplyCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_SUPPLY = "a_objSupply";
   @SerializedName(SERIALIZED_NAME_A_OBJ_SUPPLY)
-  @javax.annotation.Nonnull
   private List<SupplyRequestCompound> aObjSupply = new ArrayList<>();
 
   public SupplyCreateObjectV1Request() {
   }
 
-  public SupplyCreateObjectV1Request aObjSupply(@javax.annotation.Nonnull List<SupplyRequestCompound> aObjSupply) {
+  public SupplyCreateObjectV1Request aObjSupply(List<SupplyRequestCompound> aObjSupply) {
     this.aObjSupply = aObjSupply;
     return this;
   }
@@ -83,7 +82,7 @@ public class SupplyCreateObjectV1Request {
     return aObjSupply;
   }
 
-  public void setaObjSupply(@javax.annotation.Nonnull List<SupplyRequestCompound> aObjSupply) {
+  public void setaObjSupply(List<SupplyRequestCompound> aObjSupply) {
     this.aObjSupply = aObjSupply;
   }
 

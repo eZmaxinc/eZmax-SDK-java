@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/taxassignment/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TaxassignmentGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_TAXASSIGNMENT = "a_objTaxassignment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_TAXASSIGNMENT)
-  @javax.annotation.Nonnull
   private List<TaxassignmentAutocompleteElementResponse> aObjTaxassignment = new ArrayList<>();
 
   public TaxassignmentGetAutocompleteV2ResponseMPayload() {
   }
 
-  public TaxassignmentGetAutocompleteV2ResponseMPayload aObjTaxassignment(@javax.annotation.Nonnull List<TaxassignmentAutocompleteElementResponse> aObjTaxassignment) {
+  public TaxassignmentGetAutocompleteV2ResponseMPayload aObjTaxassignment(List<TaxassignmentAutocompleteElementResponse> aObjTaxassignment) {
     this.aObjTaxassignment = aObjTaxassignment;
     return this;
   }
@@ -83,7 +82,7 @@ public class TaxassignmentGetAutocompleteV2ResponseMPayload {
     return aObjTaxassignment;
   }
 
-  public void setaObjTaxassignment(@javax.annotation.Nonnull List<TaxassignmentAutocompleteElementResponse> aObjTaxassignment) {
+  public void setaObjTaxassignment(List<TaxassignmentAutocompleteElementResponse> aObjTaxassignment) {
     this.aObjTaxassignment = aObjTaxassignment;
   }
 

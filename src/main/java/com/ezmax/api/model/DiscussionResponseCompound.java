@@ -53,57 +53,48 @@ import eZmaxAPI.JSON;
 /**
  * A Discussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DiscussionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_DISCUSSION_I_D = "pkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSION_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiDiscussionID;
 
   public static final String SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION = "sDiscussionDescription";
   @SerializedName(SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sDiscussionDescription;
 
   public static final String SERIALIZED_NAME_B_DISCUSSION_CLOSED = "bDiscussionClosed";
   @SerializedName(SERIALIZED_NAME_B_DISCUSSION_CLOSED)
-  @javax.annotation.Nonnull
   private Boolean bDiscussionClosed;
 
   public static final String SERIALIZED_NAME_DT_DISCUSSION_LASTREAD = "dtDiscussionLastread";
   @SerializedName(SERIALIZED_NAME_DT_DISCUSSION_LASTREAD)
-  @javax.annotation.Nullable
   private String dtDiscussionLastread;
 
   public static final String SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNT = "iDiscussionmessageCount";
   @SerializedName(SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNT)
-  @javax.annotation.Nonnull
   private Integer iDiscussionmessageCount;
 
   public static final String SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNTUNREAD = "iDiscussionmessageCountunread";
   @SerializedName(SERIALIZED_NAME_I_DISCUSSIONMESSAGE_COUNTUNREAD)
-  @javax.annotation.Nonnull
   private Integer iDiscussionmessageCountunread;
 
   public static final String SERIALIZED_NAME_OBJ_DISCUSSIONCONFIGURATION = "objDiscussionconfiguration";
   @SerializedName(SERIALIZED_NAME_OBJ_DISCUSSIONCONFIGURATION)
-  @javax.annotation.Nullable
   private CustomDiscussionconfigurationResponse objDiscussionconfiguration;
 
   public static final String SERIALIZED_NAME_A_OBJ_DISCUSSIONMEMBERSHIP = "a_objDiscussionmembership";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DISCUSSIONMEMBERSHIP)
-  @javax.annotation.Nonnull
   private List<DiscussionmembershipResponseCompound> aObjDiscussionmembership = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_DISCUSSIONMESSAGE = "a_objDiscussionmessage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DISCUSSIONMESSAGE)
-  @javax.annotation.Nonnull
   private List<DiscussionmessageResponseCompound> aObjDiscussionmessage = new ArrayList<>();
 
   public DiscussionResponseCompound() {
   }
 
-  public DiscussionResponseCompound pkiDiscussionID(@javax.annotation.Nonnull Integer pkiDiscussionID) {
+  public DiscussionResponseCompound pkiDiscussionID(Integer pkiDiscussionID) {
     this.pkiDiscussionID = pkiDiscussionID;
     return this;
   }
@@ -119,12 +110,12 @@ public class DiscussionResponseCompound {
     return pkiDiscussionID;
   }
 
-  public void setPkiDiscussionID(@javax.annotation.Nonnull Integer pkiDiscussionID) {
+  public void setPkiDiscussionID(Integer pkiDiscussionID) {
     this.pkiDiscussionID = pkiDiscussionID;
   }
 
 
-  public DiscussionResponseCompound sDiscussionDescription(@javax.annotation.Nonnull String sDiscussionDescription) {
+  public DiscussionResponseCompound sDiscussionDescription(String sDiscussionDescription) {
     this.sDiscussionDescription = sDiscussionDescription;
     return this;
   }
@@ -138,12 +129,12 @@ public class DiscussionResponseCompound {
     return sDiscussionDescription;
   }
 
-  public void setsDiscussionDescription(@javax.annotation.Nonnull String sDiscussionDescription) {
+  public void setsDiscussionDescription(String sDiscussionDescription) {
     this.sDiscussionDescription = sDiscussionDescription;
   }
 
 
-  public DiscussionResponseCompound bDiscussionClosed(@javax.annotation.Nonnull Boolean bDiscussionClosed) {
+  public DiscussionResponseCompound bDiscussionClosed(Boolean bDiscussionClosed) {
     this.bDiscussionClosed = bDiscussionClosed;
     return this;
   }
@@ -157,12 +148,12 @@ public class DiscussionResponseCompound {
     return bDiscussionClosed;
   }
 
-  public void setbDiscussionClosed(@javax.annotation.Nonnull Boolean bDiscussionClosed) {
+  public void setbDiscussionClosed(Boolean bDiscussionClosed) {
     this.bDiscussionClosed = bDiscussionClosed;
   }
 
 
-  public DiscussionResponseCompound dtDiscussionLastread(@javax.annotation.Nullable String dtDiscussionLastread) {
+  public DiscussionResponseCompound dtDiscussionLastread(String dtDiscussionLastread) {
     this.dtDiscussionLastread = dtDiscussionLastread;
     return this;
   }
@@ -176,12 +167,12 @@ public class DiscussionResponseCompound {
     return dtDiscussionLastread;
   }
 
-  public void setDtDiscussionLastread(@javax.annotation.Nullable String dtDiscussionLastread) {
+  public void setDtDiscussionLastread(String dtDiscussionLastread) {
     this.dtDiscussionLastread = dtDiscussionLastread;
   }
 
 
-  public DiscussionResponseCompound iDiscussionmessageCount(@javax.annotation.Nonnull Integer iDiscussionmessageCount) {
+  public DiscussionResponseCompound iDiscussionmessageCount(Integer iDiscussionmessageCount) {
     this.iDiscussionmessageCount = iDiscussionmessageCount;
     return this;
   }
@@ -195,12 +186,12 @@ public class DiscussionResponseCompound {
     return iDiscussionmessageCount;
   }
 
-  public void setiDiscussionmessageCount(@javax.annotation.Nonnull Integer iDiscussionmessageCount) {
+  public void setiDiscussionmessageCount(Integer iDiscussionmessageCount) {
     this.iDiscussionmessageCount = iDiscussionmessageCount;
   }
 
 
-  public DiscussionResponseCompound iDiscussionmessageCountunread(@javax.annotation.Nonnull Integer iDiscussionmessageCountunread) {
+  public DiscussionResponseCompound iDiscussionmessageCountunread(Integer iDiscussionmessageCountunread) {
     this.iDiscussionmessageCountunread = iDiscussionmessageCountunread;
     return this;
   }
@@ -214,12 +205,12 @@ public class DiscussionResponseCompound {
     return iDiscussionmessageCountunread;
   }
 
-  public void setiDiscussionmessageCountunread(@javax.annotation.Nonnull Integer iDiscussionmessageCountunread) {
+  public void setiDiscussionmessageCountunread(Integer iDiscussionmessageCountunread) {
     this.iDiscussionmessageCountunread = iDiscussionmessageCountunread;
   }
 
 
-  public DiscussionResponseCompound objDiscussionconfiguration(@javax.annotation.Nullable CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
+  public DiscussionResponseCompound objDiscussionconfiguration(CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
     this.objDiscussionconfiguration = objDiscussionconfiguration;
     return this;
   }
@@ -233,12 +224,12 @@ public class DiscussionResponseCompound {
     return objDiscussionconfiguration;
   }
 
-  public void setObjDiscussionconfiguration(@javax.annotation.Nullable CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
+  public void setObjDiscussionconfiguration(CustomDiscussionconfigurationResponse objDiscussionconfiguration) {
     this.objDiscussionconfiguration = objDiscussionconfiguration;
   }
 
 
-  public DiscussionResponseCompound aObjDiscussionmembership(@javax.annotation.Nonnull List<DiscussionmembershipResponseCompound> aObjDiscussionmembership) {
+  public DiscussionResponseCompound aObjDiscussionmembership(List<DiscussionmembershipResponseCompound> aObjDiscussionmembership) {
     this.aObjDiscussionmembership = aObjDiscussionmembership;
     return this;
   }
@@ -260,12 +251,12 @@ public class DiscussionResponseCompound {
     return aObjDiscussionmembership;
   }
 
-  public void setaObjDiscussionmembership(@javax.annotation.Nonnull List<DiscussionmembershipResponseCompound> aObjDiscussionmembership) {
+  public void setaObjDiscussionmembership(List<DiscussionmembershipResponseCompound> aObjDiscussionmembership) {
     this.aObjDiscussionmembership = aObjDiscussionmembership;
   }
 
 
-  public DiscussionResponseCompound aObjDiscussionmessage(@javax.annotation.Nonnull List<DiscussionmessageResponseCompound> aObjDiscussionmessage) {
+  public DiscussionResponseCompound aObjDiscussionmessage(List<DiscussionmessageResponseCompound> aObjDiscussionmessage) {
     this.aObjDiscussionmessage = aObjDiscussionmessage;
     return this;
   }
@@ -287,7 +278,7 @@ public class DiscussionResponseCompound {
     return aObjDiscussionmessage;
   }
 
-  public void setaObjDiscussionmessage(@javax.annotation.Nonnull List<DiscussionmessageResponseCompound> aObjDiscussionmessage) {
+  public void setaObjDiscussionmessage(List<DiscussionmessageResponseCompound> aObjDiscussionmessage) {
     this.aObjDiscussionmessage = aObjDiscussionmessage;
   }
 

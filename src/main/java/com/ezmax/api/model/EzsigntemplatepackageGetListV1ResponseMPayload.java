@@ -51,27 +51,24 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigntemplatepackage/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackageGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
-  @javax.annotation.Nonnull
   private Integer iRowReturned;
 
   public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
-  @javax.annotation.Nonnull
   private Integer iRowFiltered;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE = "a_objEzsigntemplatepackage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGE)
-  @javax.annotation.Nonnull
   private List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage = new ArrayList<>();
 
   public EzsigntemplatepackageGetListV1ResponseMPayload() {
   }
 
-  public EzsigntemplatepackageGetListV1ResponseMPayload iRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
+  public EzsigntemplatepackageGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -85,12 +82,12 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-  public void setiRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
+  public void setiRowReturned(Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
-  public EzsigntemplatepackageGetListV1ResponseMPayload iRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
+  public EzsigntemplatepackageGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -104,12 +101,12 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
     return iRowFiltered;
   }
 
-  public void setiRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
+  public void setiRowFiltered(Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
   }
 
 
-  public EzsigntemplatepackageGetListV1ResponseMPayload aObjEzsigntemplatepackage(@javax.annotation.Nonnull List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage) {
+  public EzsigntemplatepackageGetListV1ResponseMPayload aObjEzsigntemplatepackage(List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage) {
     this.aObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
     return this;
   }
@@ -131,7 +128,7 @@ public class EzsigntemplatepackageGetListV1ResponseMPayload {
     return aObjEzsigntemplatepackage;
   }
 
-  public void setaObjEzsigntemplatepackage(@javax.annotation.Nonnull List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage) {
+  public void setaObjEzsigntemplatepackage(List<EzsigntemplatepackageListElement> aObjEzsigntemplatepackage) {
     this.aObjEzsigntemplatepackage = aObjEzsigntemplatepackage;
   }
 

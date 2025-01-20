@@ -49,37 +49,32 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ContactinformationsRequestV2 {
   public static final String SERIALIZED_NAME_E_CONTACTINFORMATIONS_TYPE = "eContactinformationsType";
   @SerializedName(SERIALIZED_NAME_E_CONTACTINFORMATIONS_TYPE)
-  @javax.annotation.Nonnull
   private FieldEContactinformationsType eContactinformationsType;
 
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
-  @javax.annotation.Nonnull
   private Integer iAddressDefault;
 
   public static final String SERIALIZED_NAME_I_PHONE_DEFAULT = "iPhoneDefault";
   @SerializedName(SERIALIZED_NAME_I_PHONE_DEFAULT)
-  @javax.annotation.Nonnull
   private Integer iPhoneDefault;
 
   public static final String SERIALIZED_NAME_I_EMAIL_DEFAULT = "iEmailDefault";
   @SerializedName(SERIALIZED_NAME_I_EMAIL_DEFAULT)
-  @javax.annotation.Nonnull
   private Integer iEmailDefault;
 
   public static final String SERIALIZED_NAME_I_WEBSITE_DEFAULT = "iWebsiteDefault";
   @SerializedName(SERIALIZED_NAME_I_WEBSITE_DEFAULT)
-  @javax.annotation.Nonnull
   private Integer iWebsiteDefault;
 
   public ContactinformationsRequestV2() {
   }
 
-  public ContactinformationsRequestV2 eContactinformationsType(@javax.annotation.Nonnull FieldEContactinformationsType eContactinformationsType) {
+  public ContactinformationsRequestV2 eContactinformationsType(FieldEContactinformationsType eContactinformationsType) {
     this.eContactinformationsType = eContactinformationsType;
     return this;
   }
@@ -93,12 +88,12 @@ public class ContactinformationsRequestV2 {
     return eContactinformationsType;
   }
 
-  public void seteContactinformationsType(@javax.annotation.Nonnull FieldEContactinformationsType eContactinformationsType) {
+  public void seteContactinformationsType(FieldEContactinformationsType eContactinformationsType) {
     this.eContactinformationsType = eContactinformationsType;
   }
 
 
-  public ContactinformationsRequestV2 iAddressDefault(@javax.annotation.Nonnull Integer iAddressDefault) {
+  public ContactinformationsRequestV2 iAddressDefault(Integer iAddressDefault) {
     this.iAddressDefault = iAddressDefault;
     return this;
   }
@@ -112,12 +107,12 @@ public class ContactinformationsRequestV2 {
     return iAddressDefault;
   }
 
-  public void setiAddressDefault(@javax.annotation.Nonnull Integer iAddressDefault) {
+  public void setiAddressDefault(Integer iAddressDefault) {
     this.iAddressDefault = iAddressDefault;
   }
 
 
-  public ContactinformationsRequestV2 iPhoneDefault(@javax.annotation.Nonnull Integer iPhoneDefault) {
+  public ContactinformationsRequestV2 iPhoneDefault(Integer iPhoneDefault) {
     this.iPhoneDefault = iPhoneDefault;
     return this;
   }
@@ -131,12 +126,12 @@ public class ContactinformationsRequestV2 {
     return iPhoneDefault;
   }
 
-  public void setiPhoneDefault(@javax.annotation.Nonnull Integer iPhoneDefault) {
+  public void setiPhoneDefault(Integer iPhoneDefault) {
     this.iPhoneDefault = iPhoneDefault;
   }
 
 
-  public ContactinformationsRequestV2 iEmailDefault(@javax.annotation.Nonnull Integer iEmailDefault) {
+  public ContactinformationsRequestV2 iEmailDefault(Integer iEmailDefault) {
     this.iEmailDefault = iEmailDefault;
     return this;
   }
@@ -150,12 +145,12 @@ public class ContactinformationsRequestV2 {
     return iEmailDefault;
   }
 
-  public void setiEmailDefault(@javax.annotation.Nonnull Integer iEmailDefault) {
+  public void setiEmailDefault(Integer iEmailDefault) {
     this.iEmailDefault = iEmailDefault;
   }
 
 
-  public ContactinformationsRequestV2 iWebsiteDefault(@javax.annotation.Nonnull Integer iWebsiteDefault) {
+  public ContactinformationsRequestV2 iWebsiteDefault(Integer iWebsiteDefault) {
     this.iWebsiteDefault = iWebsiteDefault;
     return this;
   }
@@ -169,7 +164,7 @@ public class ContactinformationsRequestV2 {
     return iWebsiteDefault;
   }
 
-  public void setiWebsiteDefault(@javax.annotation.Nonnull Integer iWebsiteDefault) {
+  public void setiWebsiteDefault(Integer iWebsiteDefault) {
     this.iWebsiteDefault = iWebsiteDefault;
   }
 

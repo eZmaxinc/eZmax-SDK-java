@@ -14,13 +14,13 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.PaymenttermCreateObjectV1Request;
 import com.ezmax.api.model.PaymenttermCreateObjectV1Response;
 import com.ezmax.api.model.PaymenttermEditObjectV1Request;
+import com.ezmax.api.model.PaymenttermEditObjectV1Response;
 import com.ezmax.api.model.PaymenttermGetAutocompleteV2Response;
 import com.ezmax.api.model.PaymenttermGetListV1Response;
 import com.ezmax.api.model.PaymenttermGetObjectV2Response;
@@ -65,7 +65,7 @@ public class ObjectPaymenttermApiTest {
     public void paymenttermEditObjectV1Test() throws ApiException {
         Integer pkiPaymenttermID = null;
         PaymenttermEditObjectV1Request paymenttermEditObjectV1Request = null;
-        CommonResponse response = api.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request);
+        PaymenttermEditObjectV1Response response = api.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request);
         // TODO: test validations
     }
 

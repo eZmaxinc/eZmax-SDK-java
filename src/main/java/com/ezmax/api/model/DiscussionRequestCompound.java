@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Discussion Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DiscussionRequestCompound {
   public static final String SERIALIZED_NAME_PKI_DISCUSSION_I_D = "pkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSION_I_D)
-  @javax.annotation.Nullable
   private Integer pkiDiscussionID;
 
   public static final String SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION = "sDiscussionDescription";
   @SerializedName(SERIALIZED_NAME_S_DISCUSSION_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sDiscussionDescription;
 
   public static final String SERIALIZED_NAME_B_DISCUSSION_CLOSED = "bDiscussionClosed";
   @SerializedName(SERIALIZED_NAME_B_DISCUSSION_CLOSED)
-  @javax.annotation.Nullable
   private Boolean bDiscussionClosed;
 
   public DiscussionRequestCompound() {
   }
 
-  public DiscussionRequestCompound pkiDiscussionID(@javax.annotation.Nullable Integer pkiDiscussionID) {
+  public DiscussionRequestCompound pkiDiscussionID(Integer pkiDiscussionID) {
     this.pkiDiscussionID = pkiDiscussionID;
     return this;
   }
@@ -84,12 +81,12 @@ public class DiscussionRequestCompound {
     return pkiDiscussionID;
   }
 
-  public void setPkiDiscussionID(@javax.annotation.Nullable Integer pkiDiscussionID) {
+  public void setPkiDiscussionID(Integer pkiDiscussionID) {
     this.pkiDiscussionID = pkiDiscussionID;
   }
 
 
-  public DiscussionRequestCompound sDiscussionDescription(@javax.annotation.Nonnull String sDiscussionDescription) {
+  public DiscussionRequestCompound sDiscussionDescription(String sDiscussionDescription) {
     this.sDiscussionDescription = sDiscussionDescription;
     return this;
   }
@@ -103,12 +100,12 @@ public class DiscussionRequestCompound {
     return sDiscussionDescription;
   }
 
-  public void setsDiscussionDescription(@javax.annotation.Nonnull String sDiscussionDescription) {
+  public void setsDiscussionDescription(String sDiscussionDescription) {
     this.sDiscussionDescription = sDiscussionDescription;
   }
 
 
-  public DiscussionRequestCompound bDiscussionClosed(@javax.annotation.Nullable Boolean bDiscussionClosed) {
+  public DiscussionRequestCompound bDiscussionClosed(Boolean bDiscussionClosed) {
     this.bDiscussionClosed = bDiscussionClosed;
     return this;
   }
@@ -122,7 +119,7 @@ public class DiscussionRequestCompound {
     return bDiscussionClosed;
   }
 
-  public void setbDiscussionClosed(@javax.annotation.Nullable Boolean bDiscussionClosed) {
+  public void setbDiscussionClosed(Boolean bDiscussionClosed) {
     this.bDiscussionClosed = bDiscussionClosed;
   }
 

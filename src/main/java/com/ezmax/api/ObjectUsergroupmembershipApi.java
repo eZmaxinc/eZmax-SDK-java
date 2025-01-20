@@ -27,11 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.UsergroupmembershipCreateObjectV1Request;
 import com.ezmax.api.model.UsergroupmembershipCreateObjectV1Response;
+import com.ezmax.api.model.UsergroupmembershipDeleteObjectV1Response;
 import com.ezmax.api.model.UsergroupmembershipEditObjectV1Request;
+import com.ezmax.api.model.UsergroupmembershipEditObjectV1Response;
 import com.ezmax.api.model.UsergroupmembershipGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -84,8 +85,7 @@ public class ObjectUsergroupmembershipApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -153,8 +153,7 @@ public class ObjectUsergroupmembershipApi {
      * @return UsergroupmembershipCreateObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -171,8 +170,7 @@ public class ObjectUsergroupmembershipApi {
      * @return ApiResponse&lt;UsergroupmembershipCreateObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -191,8 +189,7 @@ public class ObjectUsergroupmembershipApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
@@ -211,8 +208,7 @@ public class ObjectUsergroupmembershipApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -278,18 +274,17 @@ public class ObjectUsergroupmembershipApi {
      * Delete an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID  (required)
-     * @return CommonResponse
+     * @return UsergroupmembershipDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse usergroupmembershipDeleteObjectV1(Integer pkiUsergroupmembershipID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = usergroupmembershipDeleteObjectV1WithHttpInfo(pkiUsergroupmembershipID);
+    public UsergroupmembershipDeleteObjectV1Response usergroupmembershipDeleteObjectV1(Integer pkiUsergroupmembershipID) throws ApiException {
+        ApiResponse<UsergroupmembershipDeleteObjectV1Response> localVarResp = usergroupmembershipDeleteObjectV1WithHttpInfo(pkiUsergroupmembershipID);
         return localVarResp.getData();
     }
 
@@ -297,19 +292,18 @@ public class ObjectUsergroupmembershipApi {
      * Delete an existing Usergroupmembership
      * 
      * @param pkiUsergroupmembershipID  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;UsergroupmembershipDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> usergroupmembershipDeleteObjectV1WithHttpInfo(Integer pkiUsergroupmembershipID) throws ApiException {
+    public ApiResponse<UsergroupmembershipDeleteObjectV1Response> usergroupmembershipDeleteObjectV1WithHttpInfo(Integer pkiUsergroupmembershipID) throws ApiException {
         okhttp3.Call localVarCall = usergroupmembershipDeleteObjectV1ValidateBeforeCall(pkiUsergroupmembershipID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UsergroupmembershipDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -321,17 +315,16 @@ public class ObjectUsergroupmembershipApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call usergroupmembershipDeleteObjectV1Async(Integer pkiUsergroupmembershipID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call usergroupmembershipDeleteObjectV1Async(Integer pkiUsergroupmembershipID, final ApiCallback<UsergroupmembershipDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = usergroupmembershipDeleteObjectV1ValidateBeforeCall(pkiUsergroupmembershipID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UsergroupmembershipDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -343,8 +336,7 @@ public class ObjectUsergroupmembershipApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -418,19 +410,18 @@ public class ObjectUsergroupmembershipApi {
      * 
      * @param pkiUsergroupmembershipID  (required)
      * @param usergroupmembershipEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return UsergroupmembershipEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse usergroupmembershipEditObjectV1(Integer pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = usergroupmembershipEditObjectV1WithHttpInfo(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request);
+    public UsergroupmembershipEditObjectV1Response usergroupmembershipEditObjectV1(Integer pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request) throws ApiException {
+        ApiResponse<UsergroupmembershipEditObjectV1Response> localVarResp = usergroupmembershipEditObjectV1WithHttpInfo(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -439,20 +430,19 @@ public class ObjectUsergroupmembershipApi {
      * 
      * @param pkiUsergroupmembershipID  (required)
      * @param usergroupmembershipEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;UsergroupmembershipEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> usergroupmembershipEditObjectV1WithHttpInfo(Integer pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request) throws ApiException {
+    public ApiResponse<UsergroupmembershipEditObjectV1Response> usergroupmembershipEditObjectV1WithHttpInfo(Integer pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = usergroupmembershipEditObjectV1ValidateBeforeCall(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UsergroupmembershipEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -465,18 +455,17 @@ public class ObjectUsergroupmembershipApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call usergroupmembershipEditObjectV1Async(Integer pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call usergroupmembershipEditObjectV1Async(Integer pkiUsergroupmembershipID, UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request, final ApiCallback<UsergroupmembershipEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = usergroupmembershipEditObjectV1ValidateBeforeCall(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UsergroupmembershipEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -487,8 +476,7 @@ public class ObjectUsergroupmembershipApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -557,8 +545,7 @@ public class ObjectUsergroupmembershipApi {
      * @return UsergroupmembershipGetObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -576,8 +563,7 @@ public class ObjectUsergroupmembershipApi {
      * @return ApiResponse&lt;UsergroupmembershipGetObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
@@ -597,8 +583,7 @@ public class ObjectUsergroupmembershipApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
+     <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>

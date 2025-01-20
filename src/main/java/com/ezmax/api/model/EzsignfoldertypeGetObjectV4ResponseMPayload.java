@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfoldertypeGetObjectV4ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE = "objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE)
-  @javax.annotation.Nonnull
   private EzsignfoldertypeResponseCompoundV4 objEzsignfoldertype;
 
   public EzsignfoldertypeGetObjectV4ResponseMPayload() {
   }
 
-  public EzsignfoldertypeGetObjectV4ResponseMPayload objEzsignfoldertype(@javax.annotation.Nonnull EzsignfoldertypeResponseCompoundV4 objEzsignfoldertype) {
+  public EzsignfoldertypeGetObjectV4ResponseMPayload objEzsignfoldertype(EzsignfoldertypeResponseCompoundV4 objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
     return this;
   }
@@ -73,7 +72,7 @@ public class EzsignfoldertypeGetObjectV4ResponseMPayload {
     return objEzsignfoldertype;
   }
 
-  public void setObjEzsignfoldertype(@javax.annotation.Nonnull EzsignfoldertypeResponseCompoundV4 objEzsignfoldertype) {
+  public void setObjEzsignfoldertype(EzsignfoldertypeResponseCompoundV4 objEzsignfoldertype) {
     this.objEzsignfoldertype = objEzsignfoldertype;
   }
 

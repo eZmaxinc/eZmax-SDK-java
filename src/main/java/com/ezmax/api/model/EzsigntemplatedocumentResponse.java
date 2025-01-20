@@ -48,47 +48,40 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatedocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D = "pkiEzsigntemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEDOCUMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplatedocumentID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D = "fkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplateID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_NAME = "sEzsigntemplatedocumentName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_NAME)
-  @javax.annotation.Nonnull
   private String sEzsigntemplatedocumentName;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_PAGETOTAL = "iEzsigntemplatedocumentPagetotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_PAGETOTAL)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentPagetotal;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_SIGNATURETOTAL = "iEzsigntemplatedocumentSignaturetotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_SIGNATURETOTAL)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentSignaturetotal;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_FORMFIELDTOTAL = "iEzsigntemplatedocumentFormfieldtotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENT_FORMFIELDTOTAL)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentFormfieldtotal;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATEDOCUMENT_HASSIGNEDSIGNATURES = "bEzsigntemplatedocumentHassignedsignatures";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATEDOCUMENT_HASSIGNEDSIGNATURES)
-  @javax.annotation.Nonnull
   private Boolean bEzsigntemplatedocumentHassignedsignatures;
 
   public EzsigntemplatedocumentResponse() {
   }
 
-  public EzsigntemplatedocumentResponse pkiEzsigntemplatedocumentID(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) {
+  public EzsigntemplatedocumentResponse pkiEzsigntemplatedocumentID(Integer pkiEzsigntemplatedocumentID) {
     this.pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID;
     return this;
   }
@@ -103,12 +96,12 @@ public class EzsigntemplatedocumentResponse {
     return pkiEzsigntemplatedocumentID;
   }
 
-  public void setPkiEzsigntemplatedocumentID(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) {
+  public void setPkiEzsigntemplatedocumentID(Integer pkiEzsigntemplatedocumentID) {
     this.pkiEzsigntemplatedocumentID = pkiEzsigntemplatedocumentID;
   }
 
 
-  public EzsigntemplatedocumentResponse fkiEzsigntemplateID(@javax.annotation.Nonnull Integer fkiEzsigntemplateID) {
+  public EzsigntemplatedocumentResponse fkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
     return this;
   }
@@ -123,12 +116,12 @@ public class EzsigntemplatedocumentResponse {
     return fkiEzsigntemplateID;
   }
 
-  public void setFkiEzsigntemplateID(@javax.annotation.Nonnull Integer fkiEzsigntemplateID) {
+  public void setFkiEzsigntemplateID(Integer fkiEzsigntemplateID) {
     this.fkiEzsigntemplateID = fkiEzsigntemplateID;
   }
 
 
-  public EzsigntemplatedocumentResponse sEzsigntemplatedocumentName(@javax.annotation.Nonnull String sEzsigntemplatedocumentName) {
+  public EzsigntemplatedocumentResponse sEzsigntemplatedocumentName(String sEzsigntemplatedocumentName) {
     this.sEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
     return this;
   }
@@ -142,12 +135,12 @@ public class EzsigntemplatedocumentResponse {
     return sEzsigntemplatedocumentName;
   }
 
-  public void setsEzsigntemplatedocumentName(@javax.annotation.Nonnull String sEzsigntemplatedocumentName) {
+  public void setsEzsigntemplatedocumentName(String sEzsigntemplatedocumentName) {
     this.sEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
   }
 
 
-  public EzsigntemplatedocumentResponse iEzsigntemplatedocumentPagetotal(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentPagetotal) {
+  public EzsigntemplatedocumentResponse iEzsigntemplatedocumentPagetotal(Integer iEzsigntemplatedocumentPagetotal) {
     this.iEzsigntemplatedocumentPagetotal = iEzsigntemplatedocumentPagetotal;
     return this;
   }
@@ -162,12 +155,12 @@ public class EzsigntemplatedocumentResponse {
     return iEzsigntemplatedocumentPagetotal;
   }
 
-  public void setiEzsigntemplatedocumentPagetotal(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentPagetotal) {
+  public void setiEzsigntemplatedocumentPagetotal(Integer iEzsigntemplatedocumentPagetotal) {
     this.iEzsigntemplatedocumentPagetotal = iEzsigntemplatedocumentPagetotal;
   }
 
 
-  public EzsigntemplatedocumentResponse iEzsigntemplatedocumentSignaturetotal(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentSignaturetotal) {
+  public EzsigntemplatedocumentResponse iEzsigntemplatedocumentSignaturetotal(Integer iEzsigntemplatedocumentSignaturetotal) {
     this.iEzsigntemplatedocumentSignaturetotal = iEzsigntemplatedocumentSignaturetotal;
     return this;
   }
@@ -181,12 +174,12 @@ public class EzsigntemplatedocumentResponse {
     return iEzsigntemplatedocumentSignaturetotal;
   }
 
-  public void setiEzsigntemplatedocumentSignaturetotal(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentSignaturetotal) {
+  public void setiEzsigntemplatedocumentSignaturetotal(Integer iEzsigntemplatedocumentSignaturetotal) {
     this.iEzsigntemplatedocumentSignaturetotal = iEzsigntemplatedocumentSignaturetotal;
   }
 
 
-  public EzsigntemplatedocumentResponse iEzsigntemplatedocumentFormfieldtotal(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentFormfieldtotal) {
+  public EzsigntemplatedocumentResponse iEzsigntemplatedocumentFormfieldtotal(Integer iEzsigntemplatedocumentFormfieldtotal) {
     this.iEzsigntemplatedocumentFormfieldtotal = iEzsigntemplatedocumentFormfieldtotal;
     return this;
   }
@@ -200,12 +193,12 @@ public class EzsigntemplatedocumentResponse {
     return iEzsigntemplatedocumentFormfieldtotal;
   }
 
-  public void setiEzsigntemplatedocumentFormfieldtotal(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentFormfieldtotal) {
+  public void setiEzsigntemplatedocumentFormfieldtotal(Integer iEzsigntemplatedocumentFormfieldtotal) {
     this.iEzsigntemplatedocumentFormfieldtotal = iEzsigntemplatedocumentFormfieldtotal;
   }
 
 
-  public EzsigntemplatedocumentResponse bEzsigntemplatedocumentHassignedsignatures(@javax.annotation.Nonnull Boolean bEzsigntemplatedocumentHassignedsignatures) {
+  public EzsigntemplatedocumentResponse bEzsigntemplatedocumentHassignedsignatures(Boolean bEzsigntemplatedocumentHassignedsignatures) {
     this.bEzsigntemplatedocumentHassignedsignatures = bEzsigntemplatedocumentHassignedsignatures;
     return this;
   }
@@ -219,7 +212,7 @@ public class EzsigntemplatedocumentResponse {
     return bEzsigntemplatedocumentHassignedsignatures;
   }
 
-  public void setbEzsigntemplatedocumentHassignedsignatures(@javax.annotation.Nonnull Boolean bEzsigntemplatedocumentHassignedsignatures) {
+  public void setbEzsigntemplatedocumentHassignedsignatures(Boolean bEzsigntemplatedocumentHassignedsignatures) {
     this.bEzsigntemplatedocumentHassignedsignatures = bEzsigntemplatedocumentHassignedsignatures;
   }
 

@@ -49,37 +49,32 @@ import eZmaxAPI.JSON;
 /**
  * A Notificationtest Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class NotificationtestResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiNotificationtestID;
 
   public static final String SERIALIZED_NAME_OBJ_NOTIFICATIONTEST_NAME = "objNotificationtestName";
   @SerializedName(SERIALIZED_NAME_OBJ_NOTIFICATIONTEST_NAME)
-  @javax.annotation.Nonnull
   private MultilingualNotificationtestName objNotificationtestName;
 
   public static final String SERIALIZED_NAME_FKI_NOTIFICATIONSUBSECTION_I_D = "fkiNotificationsubsectionID";
   @SerializedName(SERIALIZED_NAME_FKI_NOTIFICATIONSUBSECTION_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiNotificationsubsectionID;
 
   public static final String SERIALIZED_NAME_S_NOTIFICATIONTEST_FUNCTION = "sNotificationtestFunction";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONTEST_FUNCTION)
-  @javax.annotation.Nonnull
   private String sNotificationtestFunction;
 
   public static final String SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME_X = "sNotificationtestNameX";
   @SerializedName(SERIALIZED_NAME_S_NOTIFICATIONTEST_NAME_X)
-  @javax.annotation.Nonnull
   private String sNotificationtestNameX;
 
   public NotificationtestResponse() {
   }
 
-  public NotificationtestResponse pkiNotificationtestID(@javax.annotation.Nonnull Integer pkiNotificationtestID) {
+  public NotificationtestResponse pkiNotificationtestID(Integer pkiNotificationtestID) {
     this.pkiNotificationtestID = pkiNotificationtestID;
     return this;
   }
@@ -94,12 +89,12 @@ public class NotificationtestResponse {
     return pkiNotificationtestID;
   }
 
-  public void setPkiNotificationtestID(@javax.annotation.Nonnull Integer pkiNotificationtestID) {
+  public void setPkiNotificationtestID(Integer pkiNotificationtestID) {
     this.pkiNotificationtestID = pkiNotificationtestID;
   }
 
 
-  public NotificationtestResponse objNotificationtestName(@javax.annotation.Nonnull MultilingualNotificationtestName objNotificationtestName) {
+  public NotificationtestResponse objNotificationtestName(MultilingualNotificationtestName objNotificationtestName) {
     this.objNotificationtestName = objNotificationtestName;
     return this;
   }
@@ -113,12 +108,12 @@ public class NotificationtestResponse {
     return objNotificationtestName;
   }
 
-  public void setObjNotificationtestName(@javax.annotation.Nonnull MultilingualNotificationtestName objNotificationtestName) {
+  public void setObjNotificationtestName(MultilingualNotificationtestName objNotificationtestName) {
     this.objNotificationtestName = objNotificationtestName;
   }
 
 
-  public NotificationtestResponse fkiNotificationsubsectionID(@javax.annotation.Nonnull Integer fkiNotificationsubsectionID) {
+  public NotificationtestResponse fkiNotificationsubsectionID(Integer fkiNotificationsubsectionID) {
     this.fkiNotificationsubsectionID = fkiNotificationsubsectionID;
     return this;
   }
@@ -133,12 +128,12 @@ public class NotificationtestResponse {
     return fkiNotificationsubsectionID;
   }
 
-  public void setFkiNotificationsubsectionID(@javax.annotation.Nonnull Integer fkiNotificationsubsectionID) {
+  public void setFkiNotificationsubsectionID(Integer fkiNotificationsubsectionID) {
     this.fkiNotificationsubsectionID = fkiNotificationsubsectionID;
   }
 
 
-  public NotificationtestResponse sNotificationtestFunction(@javax.annotation.Nonnull String sNotificationtestFunction) {
+  public NotificationtestResponse sNotificationtestFunction(String sNotificationtestFunction) {
     this.sNotificationtestFunction = sNotificationtestFunction;
     return this;
   }
@@ -152,12 +147,12 @@ public class NotificationtestResponse {
     return sNotificationtestFunction;
   }
 
-  public void setsNotificationtestFunction(@javax.annotation.Nonnull String sNotificationtestFunction) {
+  public void setsNotificationtestFunction(String sNotificationtestFunction) {
     this.sNotificationtestFunction = sNotificationtestFunction;
   }
 
 
-  public NotificationtestResponse sNotificationtestNameX(@javax.annotation.Nonnull String sNotificationtestNameX) {
+  public NotificationtestResponse sNotificationtestNameX(String sNotificationtestNameX) {
     this.sNotificationtestNameX = sNotificationtestNameX;
     return this;
   }
@@ -171,7 +166,7 @@ public class NotificationtestResponse {
     return sNotificationtestNameX;
   }
 
-  public void setsNotificationtestNameX(@javax.annotation.Nonnull String sNotificationtestNameX) {
+  public void setsNotificationtestNameX(String sNotificationtestNameX) {
     this.sNotificationtestNameX = sNotificationtestNameX;
   }
 

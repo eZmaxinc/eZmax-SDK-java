@@ -49,32 +49,28 @@ import eZmaxAPI.JSON;
 /**
  * A User AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_E_USER_TYPE = "eUserType";
   @SerializedName(SERIALIZED_NAME_E_USER_TYPE)
-  @javax.annotation.Nonnull
   private FieldEUserType eUserType;
 
   public static final String SERIALIZED_NAME_S_USER_NAME = "sUserName";
   @SerializedName(SERIALIZED_NAME_S_USER_NAME)
-  @javax.annotation.Nonnull
   private String sUserName;
 
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiUserID;
 
   public static final String SERIALIZED_NAME_B_USER_ISACTIVE = "bUserIsactive";
   @SerializedName(SERIALIZED_NAME_B_USER_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bUserIsactive;
 
   public UserAutocompleteElementResponse() {
   }
 
-  public UserAutocompleteElementResponse eUserType(@javax.annotation.Nonnull FieldEUserType eUserType) {
+  public UserAutocompleteElementResponse eUserType(FieldEUserType eUserType) {
     this.eUserType = eUserType;
     return this;
   }
@@ -88,12 +84,12 @@ public class UserAutocompleteElementResponse {
     return eUserType;
   }
 
-  public void seteUserType(@javax.annotation.Nonnull FieldEUserType eUserType) {
+  public void seteUserType(FieldEUserType eUserType) {
     this.eUserType = eUserType;
   }
 
 
-  public UserAutocompleteElementResponse sUserName(@javax.annotation.Nonnull String sUserName) {
+  public UserAutocompleteElementResponse sUserName(String sUserName) {
     this.sUserName = sUserName;
     return this;
   }
@@ -107,12 +103,12 @@ public class UserAutocompleteElementResponse {
     return sUserName;
   }
 
-  public void setsUserName(@javax.annotation.Nonnull String sUserName) {
+  public void setsUserName(String sUserName) {
     this.sUserName = sUserName;
   }
 
 
-  public UserAutocompleteElementResponse pkiUserID(@javax.annotation.Nonnull Integer pkiUserID) {
+  public UserAutocompleteElementResponse pkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
     return this;
   }
@@ -127,12 +123,12 @@ public class UserAutocompleteElementResponse {
     return pkiUserID;
   }
 
-  public void setPkiUserID(@javax.annotation.Nonnull Integer pkiUserID) {
+  public void setPkiUserID(Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
   }
 
 
-  public UserAutocompleteElementResponse bUserIsactive(@javax.annotation.Nonnull Boolean bUserIsactive) {
+  public UserAutocompleteElementResponse bUserIsactive(Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
     return this;
   }
@@ -146,7 +142,7 @@ public class UserAutocompleteElementResponse {
     return bUserIsactive;
   }
 
-  public void setbUserIsactive(@javax.annotation.Nonnull Boolean bUserIsactive) {
+  public void setbUserIsactive(Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
   }
 

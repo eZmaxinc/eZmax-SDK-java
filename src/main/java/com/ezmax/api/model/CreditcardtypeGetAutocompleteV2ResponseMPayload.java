@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/creditcardtype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreditcardtypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_CREDITCARDTYPE = "a_objCreditcardtype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CREDITCARDTYPE)
-  @javax.annotation.Nonnull
   private List<CreditcardtypeAutocompleteElementResponse> aObjCreditcardtype = new ArrayList<>();
 
   public CreditcardtypeGetAutocompleteV2ResponseMPayload() {
   }
 
-  public CreditcardtypeGetAutocompleteV2ResponseMPayload aObjCreditcardtype(@javax.annotation.Nonnull List<CreditcardtypeAutocompleteElementResponse> aObjCreditcardtype) {
+  public CreditcardtypeGetAutocompleteV2ResponseMPayload aObjCreditcardtype(List<CreditcardtypeAutocompleteElementResponse> aObjCreditcardtype) {
     this.aObjCreditcardtype = aObjCreditcardtype;
     return this;
   }
@@ -83,7 +82,7 @@ public class CreditcardtypeGetAutocompleteV2ResponseMPayload {
     return aObjCreditcardtype;
   }
 
-  public void setaObjCreditcardtype(@javax.annotation.Nonnull List<CreditcardtypeAutocompleteElementResponse> aObjCreditcardtype) {
+  public void setaObjCreditcardtype(List<CreditcardtypeAutocompleteElementResponse> aObjCreditcardtype) {
     this.aObjCreditcardtype = aObjCreditcardtype;
   }
 

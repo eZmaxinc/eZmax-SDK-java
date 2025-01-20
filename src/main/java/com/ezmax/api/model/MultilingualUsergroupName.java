@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * The name of the Usergroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualUsergroupName {
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME1 = "sUsergroupName1";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME1)
-  @javax.annotation.Nullable
   private String sUsergroupName1;
 
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME2 = "sUsergroupName2";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME2)
-  @javax.annotation.Nullable
   private String sUsergroupName2;
 
   public MultilingualUsergroupName() {
   }
 
-  public MultilingualUsergroupName sUsergroupName1(@javax.annotation.Nullable String sUsergroupName1) {
+  public MultilingualUsergroupName sUsergroupName1(String sUsergroupName1) {
     this.sUsergroupName1 = sUsergroupName1;
     return this;
   }
@@ -77,12 +75,12 @@ public class MultilingualUsergroupName {
     return sUsergroupName1;
   }
 
-  public void setsUsergroupName1(@javax.annotation.Nullable String sUsergroupName1) {
+  public void setsUsergroupName1(String sUsergroupName1) {
     this.sUsergroupName1 = sUsergroupName1;
   }
 
 
-  public MultilingualUsergroupName sUsergroupName2(@javax.annotation.Nullable String sUsergroupName2) {
+  public MultilingualUsergroupName sUsergroupName2(String sUsergroupName2) {
     this.sUsergroupName2 = sUsergroupName2;
     return this;
   }
@@ -96,7 +94,7 @@ public class MultilingualUsergroupName {
     return sUsergroupName2;
   }
 
-  public void setsUsergroupName2(@javax.annotation.Nullable String sUsergroupName2) {
+  public void setsUsergroupName2(String sUsergroupName2) {
     this.sUsergroupName2 = sUsergroupName2;
   }
 

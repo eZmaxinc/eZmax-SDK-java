@@ -51,27 +51,24 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /4/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfoldertypeGetObjectV4Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
-  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayload objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
-  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  @javax.annotation.Nonnull
   private EzsignfoldertypeGetObjectV4ResponseMPayload mPayload;
 
   public EzsignfoldertypeGetObjectV4Response() {
   }
 
-  public EzsignfoldertypeGetObjectV4Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
+  public EzsignfoldertypeGetObjectV4Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -85,12 +82,12 @@ public class EzsignfoldertypeGetObjectV4Response {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public EzsignfoldertypeGetObjectV4Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
+  public EzsignfoldertypeGetObjectV4Response objDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -104,12 +101,12 @@ public class EzsignfoldertypeGetObjectV4Response {
     return objDebug;
   }
 
-  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
+  public void setObjDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
-  public EzsignfoldertypeGetObjectV4Response mPayload(@javax.annotation.Nonnull EzsignfoldertypeGetObjectV4ResponseMPayload mPayload) {
+  public EzsignfoldertypeGetObjectV4Response mPayload(EzsignfoldertypeGetObjectV4ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
@@ -123,7 +120,7 @@ public class EzsignfoldertypeGetObjectV4Response {
     return mPayload;
   }
 
-  public void setmPayload(@javax.annotation.Nonnull EzsignfoldertypeGetObjectV4ResponseMPayload mPayload) {
+  public void setmPayload(EzsignfoldertypeGetObjectV4ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 

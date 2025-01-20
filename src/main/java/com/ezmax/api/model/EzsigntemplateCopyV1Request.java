@@ -50,27 +50,24 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplate/{pkiEzsigntemplateID}/copy
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateCopyV1Request {
   public static final String SERIALIZED_NAME_A_FKI_EZSIGNFOLDERTYPE_I_D = "a_fkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_A_FKI_EZSIGNFOLDERTYPE_I_D)
-  @javax.annotation.Nullable
   private List<Integer> aFkiEzsignfoldertypeID = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_B_COPY_COMPANY = "bCopyCompany";
   @SerializedName(SERIALIZED_NAME_B_COPY_COMPANY)
-  @javax.annotation.Nullable
   private Boolean bCopyCompany;
 
   public static final String SERIALIZED_NAME_B_COPY_USER = "bCopyUser";
   @SerializedName(SERIALIZED_NAME_B_COPY_USER)
-  @javax.annotation.Nullable
   private Boolean bCopyUser;
 
   public EzsigntemplateCopyV1Request() {
   }
 
-  public EzsigntemplateCopyV1Request aFkiEzsignfoldertypeID(@javax.annotation.Nullable List<Integer> aFkiEzsignfoldertypeID) {
+  public EzsigntemplateCopyV1Request aFkiEzsignfoldertypeID(List<Integer> aFkiEzsignfoldertypeID) {
     this.aFkiEzsignfoldertypeID = aFkiEzsignfoldertypeID;
     return this;
   }
@@ -92,12 +89,12 @@ public class EzsigntemplateCopyV1Request {
     return aFkiEzsignfoldertypeID;
   }
 
-  public void setaFkiEzsignfoldertypeID(@javax.annotation.Nullable List<Integer> aFkiEzsignfoldertypeID) {
+  public void setaFkiEzsignfoldertypeID(List<Integer> aFkiEzsignfoldertypeID) {
     this.aFkiEzsignfoldertypeID = aFkiEzsignfoldertypeID;
   }
 
 
-  public EzsigntemplateCopyV1Request bCopyCompany(@javax.annotation.Nullable Boolean bCopyCompany) {
+  public EzsigntemplateCopyV1Request bCopyCompany(Boolean bCopyCompany) {
     this.bCopyCompany = bCopyCompany;
     return this;
   }
@@ -111,12 +108,12 @@ public class EzsigntemplateCopyV1Request {
     return bCopyCompany;
   }
 
-  public void setbCopyCompany(@javax.annotation.Nullable Boolean bCopyCompany) {
+  public void setbCopyCompany(Boolean bCopyCompany) {
     this.bCopyCompany = bCopyCompany;
   }
 
 
-  public EzsigntemplateCopyV1Request bCopyUser(@javax.annotation.Nullable Boolean bCopyUser) {
+  public EzsigntemplateCopyV1Request bCopyUser(Boolean bCopyUser) {
     this.bCopyUser = bCopyUser;
     return this;
   }
@@ -130,7 +127,7 @@ public class EzsigntemplateCopyV1Request {
     return bCopyUser;
   }
 
-  public void setbCopyUser(@javax.annotation.Nullable Boolean bCopyUser) {
+  public void setbCopyUser(Boolean bCopyUser) {
     this.bCopyUser = bCopyUser;
   }
 

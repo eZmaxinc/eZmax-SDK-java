@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupdelegation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupdelegationRequest {
   public static final String SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D = "pkiUsergroupdelegationID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D)
-  @javax.annotation.Nullable
   private Integer pkiUsergroupdelegationID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiUsergroupID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public UsergroupdelegationRequest() {
   }
 
-  public UsergroupdelegationRequest pkiUsergroupdelegationID(@javax.annotation.Nullable Integer pkiUsergroupdelegationID) {
+  public UsergroupdelegationRequest pkiUsergroupdelegationID(Integer pkiUsergroupdelegationID) {
     this.pkiUsergroupdelegationID = pkiUsergroupdelegationID;
     return this;
   }
@@ -84,12 +81,12 @@ public class UsergroupdelegationRequest {
     return pkiUsergroupdelegationID;
   }
 
-  public void setPkiUsergroupdelegationID(@javax.annotation.Nullable Integer pkiUsergroupdelegationID) {
+  public void setPkiUsergroupdelegationID(Integer pkiUsergroupdelegationID) {
     this.pkiUsergroupdelegationID = pkiUsergroupdelegationID;
   }
 
 
-  public UsergroupdelegationRequest fkiUsergroupID(@javax.annotation.Nonnull Integer fkiUsergroupID) {
+  public UsergroupdelegationRequest fkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -105,12 +102,12 @@ public class UsergroupdelegationRequest {
     return fkiUsergroupID;
   }
 
-  public void setFkiUsergroupID(@javax.annotation.Nonnull Integer fkiUsergroupID) {
+  public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
-  public UsergroupdelegationRequest fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
+  public UsergroupdelegationRequest fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -125,7 +122,7 @@ public class UsergroupdelegationRequest {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 

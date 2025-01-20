@@ -48,21 +48,18 @@ import eZmaxAPI.JSON;
 /**
  * Object representing a file used in a request or response context 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonFile {
   public static final String SERIALIZED_NAME_S_FILE_NAME = "sFileName";
   @SerializedName(SERIALIZED_NAME_S_FILE_NAME)
-  @javax.annotation.Nonnull
   private String sFileName;
 
   public static final String SERIALIZED_NAME_S_FILE_URL = "sFileUrl";
   @SerializedName(SERIALIZED_NAME_S_FILE_URL)
-  @javax.annotation.Nullable
   private String sFileUrl;
 
   public static final String SERIALIZED_NAME_S_FILE_BASE64 = "sFileBase64";
   @SerializedName(SERIALIZED_NAME_S_FILE_BASE64)
-  @javax.annotation.Nullable
   private byte[] sFileBase64;
 
   /**
@@ -119,13 +116,12 @@ public class CommonFile {
 
   public static final String SERIALIZED_NAME_E_FILE_SOURCE = "eFileSource";
   @SerializedName(SERIALIZED_NAME_E_FILE_SOURCE)
-  @javax.annotation.Nonnull
   private EFileSourceEnum eFileSource;
 
   public CommonFile() {
   }
 
-  public CommonFile sFileName(@javax.annotation.Nonnull String sFileName) {
+  public CommonFile sFileName(String sFileName) {
     this.sFileName = sFileName;
     return this;
   }
@@ -139,12 +135,12 @@ public class CommonFile {
     return sFileName;
   }
 
-  public void setsFileName(@javax.annotation.Nonnull String sFileName) {
+  public void setsFileName(String sFileName) {
     this.sFileName = sFileName;
   }
 
 
-  public CommonFile sFileUrl(@javax.annotation.Nullable String sFileUrl) {
+  public CommonFile sFileUrl(String sFileUrl) {
     this.sFileUrl = sFileUrl;
     return this;
   }
@@ -158,12 +154,12 @@ public class CommonFile {
     return sFileUrl;
   }
 
-  public void setsFileUrl(@javax.annotation.Nullable String sFileUrl) {
+  public void setsFileUrl(String sFileUrl) {
     this.sFileUrl = sFileUrl;
   }
 
 
-  public CommonFile sFileBase64(@javax.annotation.Nullable byte[] sFileBase64) {
+  public CommonFile sFileBase64(byte[] sFileBase64) {
     this.sFileBase64 = sFileBase64;
     return this;
   }
@@ -177,12 +173,12 @@ public class CommonFile {
     return sFileBase64;
   }
 
-  public void setsFileBase64(@javax.annotation.Nullable byte[] sFileBase64) {
+  public void setsFileBase64(byte[] sFileBase64) {
     this.sFileBase64 = sFileBase64;
   }
 
 
-  public CommonFile eFileSource(@javax.annotation.Nonnull EFileSourceEnum eFileSource) {
+  public CommonFile eFileSource(EFileSourceEnum eFileSource) {
     this.eFileSource = eFileSource;
     return this;
   }
@@ -196,7 +192,7 @@ public class CommonFile {
     return eFileSource;
   }
 
-  public void seteFileSource(@javax.annotation.Nonnull EFileSourceEnum eFileSource) {
+  public void seteFileSource(EFileSourceEnum eFileSource) {
     this.eFileSource = eFileSource;
   }
 

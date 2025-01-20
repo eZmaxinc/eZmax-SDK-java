@@ -15,6 +15,8 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.CustomEzmaxinvoicingEzsigndocumentResponse;
+import com.ezmax.api.model.CustomEzmaxinvoicingEzsignfolderResponse;
 import com.ezmax.api.model.CustomEzmaxpricingResponse;
 import com.ezmax.api.model.EzmaxinvoicingagentResponseCompound;
 import com.ezmax.api.model.EzmaxinvoicingcontractResponseCompound;
@@ -59,122 +61,100 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicing Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D = "pkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzmaxinvoicingID;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXINVOICINGCONTRACT_I_D = "fkiEzmaxinvoicingcontractID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICINGCONTRACT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzmaxinvoicingcontractID;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXPRICING_I_D = "fkiEzmaxpricingID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXPRICING_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzmaxpricingID;
 
   public static final String SERIALIZED_NAME_FKI_SYSTEMCONFIGURATIONTYPE_I_D = "fkiSystemconfigurationtypeID";
   @SerializedName(SERIALIZED_NAME_FKI_SYSTEMCONFIGURATIONTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiSystemconfigurationtypeID;
 
   public static final String SERIALIZED_NAME_S_SYSTEMCONFIGURATIONTYPE_DESCRIPTION_X = "sSystemconfigurationtypeDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_SYSTEMCONFIGURATIONTYPE_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sSystemconfigurationtypeDescriptionX;
 
   public static final String SERIALIZED_NAME_YYYYMM_EZMAXINVOICING = "yyyymmEzmaxinvoicing";
   @SerializedName(SERIALIZED_NAME_YYYYMM_EZMAXINVOICING)
-  @javax.annotation.Nonnull
   private String yyyymmEzmaxinvoicing;
 
   public static final String SERIALIZED_NAME_I_EZMAXINVOICING_DAYS = "iEzmaxinvoicingDays";
   @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICING_DAYS)
-  @javax.annotation.Nonnull
   private Integer iEzmaxinvoicingDays;
 
   public static final String SERIALIZED_NAME_E_EZMAXINVOICING_PAYMENTTYPE = "eEzmaxinvoicingPaymenttype";
   @SerializedName(SERIALIZED_NAME_E_EZMAXINVOICING_PAYMENTTYPE)
-  @javax.annotation.Nonnull
   private FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype;
 
   public static final String SERIALIZED_NAME_D_EZMAXINVOICING_REBATEPAYMENTTYPE = "dEzmaxinvoicingRebatepaymenttype";
   @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICING_REBATEPAYMENTTYPE)
-  @javax.annotation.Nonnull
   private String dEzmaxinvoicingRebatepaymenttype;
 
   public static final String SERIALIZED_NAME_I_EZMAXINVOICING_CONTRACTLENGTH = "iEzmaxinvoicingContractlength";
   @SerializedName(SERIALIZED_NAME_I_EZMAXINVOICING_CONTRACTLENGTH)
-  @javax.annotation.Nonnull
   private Integer iEzmaxinvoicingContractlength;
 
   public static final String SERIALIZED_NAME_D_EZMAXINVOICING_REBATECONTRACTLENGTH = "dEzmaxinvoicingRebatecontractlength";
   @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICING_REBATECONTRACTLENGTH)
-  @javax.annotation.Nonnull
   private String dEzmaxinvoicingRebatecontractlength;
 
   public static final String SERIALIZED_NAME_B_EZMAXINVOICING_REBATE_EZSIGNALLAGENTS = "bEzmaxinvoicingRebateEzsignallagents";
   @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICING_REBATE_EZSIGNALLAGENTS)
-  @javax.annotation.Nonnull
   private Boolean bEzmaxinvoicingRebateEzsignallagents;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nullable
   private CommonAudit objAudit;
 
   public static final String SERIALIZED_NAME_OBJ_EZMAXINVOICINGCONTRACT = "objEzmaxinvoicingcontract";
   @SerializedName(SERIALIZED_NAME_OBJ_EZMAXINVOICINGCONTRACT)
-  @javax.annotation.Nonnull
   private EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract;
 
   public static final String SERIALIZED_NAME_OBJ_EZMAXPRICING = "objEzmaxpricing";
   @SerializedName(SERIALIZED_NAME_OBJ_EZMAXPRICING)
-  @javax.annotation.Nonnull
   private CustomEzmaxpricingResponse objEzmaxpricing;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYGLOBAL = "a_objEzmaxinvoicingsummaryglobal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYGLOBAL)
-  @javax.annotation.Nonnull
   private List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYEXTERNAL = "a_objEzmaxinvoicingsummaryexternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYEXTERNAL)
-  @javax.annotation.Nonnull
   private List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYINTERNAL = "a_objEzmaxinvoicingsummaryinternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGSUMMARYINTERNAL)
-  @javax.annotation.Nonnull
   private List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGAGENT = "a_objEzmaxinvoicingagent";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGAGENT)
-  @javax.annotation.Nonnull
   private List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGUSER = "a_objEzmaxinvoicinguser";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGUSER)
-  @javax.annotation.Nonnull
   private List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGEZSIGNFOLDER = "a_objEzmaxinvoicingezsignfolder";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGEZSIGNFOLDER)
-  @javax.annotation.Nonnull
   private List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGEZSIGNDOCUMENT = "a_objEzmaxinvoicingezsigndocument";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICINGEZSIGNDOCUMENT)
-  @javax.annotation.Nonnull
   private List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument = new ArrayList<>();
 
   public EzmaxinvoicingResponseCompound() {
   }
 
-  public EzmaxinvoicingResponseCompound pkiEzmaxinvoicingID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingID) {
+  public EzmaxinvoicingResponseCompound pkiEzmaxinvoicingID(Integer pkiEzmaxinvoicingID) {
     this.pkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
     return this;
   }
@@ -189,12 +169,12 @@ public class EzmaxinvoicingResponseCompound {
     return pkiEzmaxinvoicingID;
   }
 
-  public void setPkiEzmaxinvoicingID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingID) {
+  public void setPkiEzmaxinvoicingID(Integer pkiEzmaxinvoicingID) {
     this.pkiEzmaxinvoicingID = pkiEzmaxinvoicingID;
   }
 
 
-  public EzmaxinvoicingResponseCompound fkiEzmaxinvoicingcontractID(@javax.annotation.Nonnull Integer fkiEzmaxinvoicingcontractID) {
+  public EzmaxinvoicingResponseCompound fkiEzmaxinvoicingcontractID(Integer fkiEzmaxinvoicingcontractID) {
     this.fkiEzmaxinvoicingcontractID = fkiEzmaxinvoicingcontractID;
     return this;
   }
@@ -209,12 +189,12 @@ public class EzmaxinvoicingResponseCompound {
     return fkiEzmaxinvoicingcontractID;
   }
 
-  public void setFkiEzmaxinvoicingcontractID(@javax.annotation.Nonnull Integer fkiEzmaxinvoicingcontractID) {
+  public void setFkiEzmaxinvoicingcontractID(Integer fkiEzmaxinvoicingcontractID) {
     this.fkiEzmaxinvoicingcontractID = fkiEzmaxinvoicingcontractID;
   }
 
 
-  public EzmaxinvoicingResponseCompound fkiEzmaxpricingID(@javax.annotation.Nonnull Integer fkiEzmaxpricingID) {
+  public EzmaxinvoicingResponseCompound fkiEzmaxpricingID(Integer fkiEzmaxpricingID) {
     this.fkiEzmaxpricingID = fkiEzmaxpricingID;
     return this;
   }
@@ -229,12 +209,12 @@ public class EzmaxinvoicingResponseCompound {
     return fkiEzmaxpricingID;
   }
 
-  public void setFkiEzmaxpricingID(@javax.annotation.Nonnull Integer fkiEzmaxpricingID) {
+  public void setFkiEzmaxpricingID(Integer fkiEzmaxpricingID) {
     this.fkiEzmaxpricingID = fkiEzmaxpricingID;
   }
 
 
-  public EzmaxinvoicingResponseCompound fkiSystemconfigurationtypeID(@javax.annotation.Nonnull Integer fkiSystemconfigurationtypeID) {
+  public EzmaxinvoicingResponseCompound fkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
     return this;
   }
@@ -249,12 +229,12 @@ public class EzmaxinvoicingResponseCompound {
     return fkiSystemconfigurationtypeID;
   }
 
-  public void setFkiSystemconfigurationtypeID(@javax.annotation.Nonnull Integer fkiSystemconfigurationtypeID) {
+  public void setFkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
   }
 
 
-  public EzmaxinvoicingResponseCompound sSystemconfigurationtypeDescriptionX(@javax.annotation.Nonnull String sSystemconfigurationtypeDescriptionX) {
+  public EzmaxinvoicingResponseCompound sSystemconfigurationtypeDescriptionX(String sSystemconfigurationtypeDescriptionX) {
     this.sSystemconfigurationtypeDescriptionX = sSystemconfigurationtypeDescriptionX;
     return this;
   }
@@ -268,12 +248,12 @@ public class EzmaxinvoicingResponseCompound {
     return sSystemconfigurationtypeDescriptionX;
   }
 
-  public void setsSystemconfigurationtypeDescriptionX(@javax.annotation.Nonnull String sSystemconfigurationtypeDescriptionX) {
+  public void setsSystemconfigurationtypeDescriptionX(String sSystemconfigurationtypeDescriptionX) {
     this.sSystemconfigurationtypeDescriptionX = sSystemconfigurationtypeDescriptionX;
   }
 
 
-  public EzmaxinvoicingResponseCompound yyyymmEzmaxinvoicing(@javax.annotation.Nonnull String yyyymmEzmaxinvoicing) {
+  public EzmaxinvoicingResponseCompound yyyymmEzmaxinvoicing(String yyyymmEzmaxinvoicing) {
     this.yyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
     return this;
   }
@@ -287,12 +267,12 @@ public class EzmaxinvoicingResponseCompound {
     return yyyymmEzmaxinvoicing;
   }
 
-  public void setYyyymmEzmaxinvoicing(@javax.annotation.Nonnull String yyyymmEzmaxinvoicing) {
+  public void setYyyymmEzmaxinvoicing(String yyyymmEzmaxinvoicing) {
     this.yyyymmEzmaxinvoicing = yyyymmEzmaxinvoicing;
   }
 
 
-  public EzmaxinvoicingResponseCompound iEzmaxinvoicingDays(@javax.annotation.Nonnull Integer iEzmaxinvoicingDays) {
+  public EzmaxinvoicingResponseCompound iEzmaxinvoicingDays(Integer iEzmaxinvoicingDays) {
     this.iEzmaxinvoicingDays = iEzmaxinvoicingDays;
     return this;
   }
@@ -307,12 +287,12 @@ public class EzmaxinvoicingResponseCompound {
     return iEzmaxinvoicingDays;
   }
 
-  public void setiEzmaxinvoicingDays(@javax.annotation.Nonnull Integer iEzmaxinvoicingDays) {
+  public void setiEzmaxinvoicingDays(Integer iEzmaxinvoicingDays) {
     this.iEzmaxinvoicingDays = iEzmaxinvoicingDays;
   }
 
 
-  public EzmaxinvoicingResponseCompound eEzmaxinvoicingPaymenttype(@javax.annotation.Nonnull FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype) {
+  public EzmaxinvoicingResponseCompound eEzmaxinvoicingPaymenttype(FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype) {
     this.eEzmaxinvoicingPaymenttype = eEzmaxinvoicingPaymenttype;
     return this;
   }
@@ -326,12 +306,12 @@ public class EzmaxinvoicingResponseCompound {
     return eEzmaxinvoicingPaymenttype;
   }
 
-  public void seteEzmaxinvoicingPaymenttype(@javax.annotation.Nonnull FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype) {
+  public void seteEzmaxinvoicingPaymenttype(FieldEEzmaxinvoicingPaymenttype eEzmaxinvoicingPaymenttype) {
     this.eEzmaxinvoicingPaymenttype = eEzmaxinvoicingPaymenttype;
   }
 
 
-  public EzmaxinvoicingResponseCompound dEzmaxinvoicingRebatepaymenttype(@javax.annotation.Nonnull String dEzmaxinvoicingRebatepaymenttype) {
+  public EzmaxinvoicingResponseCompound dEzmaxinvoicingRebatepaymenttype(String dEzmaxinvoicingRebatepaymenttype) {
     this.dEzmaxinvoicingRebatepaymenttype = dEzmaxinvoicingRebatepaymenttype;
     return this;
   }
@@ -345,12 +325,12 @@ public class EzmaxinvoicingResponseCompound {
     return dEzmaxinvoicingRebatepaymenttype;
   }
 
-  public void setdEzmaxinvoicingRebatepaymenttype(@javax.annotation.Nonnull String dEzmaxinvoicingRebatepaymenttype) {
+  public void setdEzmaxinvoicingRebatepaymenttype(String dEzmaxinvoicingRebatepaymenttype) {
     this.dEzmaxinvoicingRebatepaymenttype = dEzmaxinvoicingRebatepaymenttype;
   }
 
 
-  public EzmaxinvoicingResponseCompound iEzmaxinvoicingContractlength(@javax.annotation.Nonnull Integer iEzmaxinvoicingContractlength) {
+  public EzmaxinvoicingResponseCompound iEzmaxinvoicingContractlength(Integer iEzmaxinvoicingContractlength) {
     this.iEzmaxinvoicingContractlength = iEzmaxinvoicingContractlength;
     return this;
   }
@@ -365,12 +345,12 @@ public class EzmaxinvoicingResponseCompound {
     return iEzmaxinvoicingContractlength;
   }
 
-  public void setiEzmaxinvoicingContractlength(@javax.annotation.Nonnull Integer iEzmaxinvoicingContractlength) {
+  public void setiEzmaxinvoicingContractlength(Integer iEzmaxinvoicingContractlength) {
     this.iEzmaxinvoicingContractlength = iEzmaxinvoicingContractlength;
   }
 
 
-  public EzmaxinvoicingResponseCompound dEzmaxinvoicingRebatecontractlength(@javax.annotation.Nonnull String dEzmaxinvoicingRebatecontractlength) {
+  public EzmaxinvoicingResponseCompound dEzmaxinvoicingRebatecontractlength(String dEzmaxinvoicingRebatecontractlength) {
     this.dEzmaxinvoicingRebatecontractlength = dEzmaxinvoicingRebatecontractlength;
     return this;
   }
@@ -384,12 +364,12 @@ public class EzmaxinvoicingResponseCompound {
     return dEzmaxinvoicingRebatecontractlength;
   }
 
-  public void setdEzmaxinvoicingRebatecontractlength(@javax.annotation.Nonnull String dEzmaxinvoicingRebatecontractlength) {
+  public void setdEzmaxinvoicingRebatecontractlength(String dEzmaxinvoicingRebatecontractlength) {
     this.dEzmaxinvoicingRebatecontractlength = dEzmaxinvoicingRebatecontractlength;
   }
 
 
-  public EzmaxinvoicingResponseCompound bEzmaxinvoicingRebateEzsignallagents(@javax.annotation.Nonnull Boolean bEzmaxinvoicingRebateEzsignallagents) {
+  public EzmaxinvoicingResponseCompound bEzmaxinvoicingRebateEzsignallagents(Boolean bEzmaxinvoicingRebateEzsignallagents) {
     this.bEzmaxinvoicingRebateEzsignallagents = bEzmaxinvoicingRebateEzsignallagents;
     return this;
   }
@@ -403,12 +383,12 @@ public class EzmaxinvoicingResponseCompound {
     return bEzmaxinvoicingRebateEzsignallagents;
   }
 
-  public void setbEzmaxinvoicingRebateEzsignallagents(@javax.annotation.Nonnull Boolean bEzmaxinvoicingRebateEzsignallagents) {
+  public void setbEzmaxinvoicingRebateEzsignallagents(Boolean bEzmaxinvoicingRebateEzsignallagents) {
     this.bEzmaxinvoicingRebateEzsignallagents = bEzmaxinvoicingRebateEzsignallagents;
   }
 
 
-  public EzmaxinvoicingResponseCompound objAudit(@javax.annotation.Nullable CommonAudit objAudit) {
+  public EzmaxinvoicingResponseCompound objAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -422,12 +402,12 @@ public class EzmaxinvoicingResponseCompound {
     return objAudit;
   }
 
-  public void setObjAudit(@javax.annotation.Nullable CommonAudit objAudit) {
+  public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
 
-  public EzmaxinvoicingResponseCompound objEzmaxinvoicingcontract(@javax.annotation.Nonnull EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract) {
+  public EzmaxinvoicingResponseCompound objEzmaxinvoicingcontract(EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract) {
     this.objEzmaxinvoicingcontract = objEzmaxinvoicingcontract;
     return this;
   }
@@ -441,12 +421,12 @@ public class EzmaxinvoicingResponseCompound {
     return objEzmaxinvoicingcontract;
   }
 
-  public void setObjEzmaxinvoicingcontract(@javax.annotation.Nonnull EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract) {
+  public void setObjEzmaxinvoicingcontract(EzmaxinvoicingcontractResponseCompound objEzmaxinvoicingcontract) {
     this.objEzmaxinvoicingcontract = objEzmaxinvoicingcontract;
   }
 
 
-  public EzmaxinvoicingResponseCompound objEzmaxpricing(@javax.annotation.Nonnull CustomEzmaxpricingResponse objEzmaxpricing) {
+  public EzmaxinvoicingResponseCompound objEzmaxpricing(CustomEzmaxpricingResponse objEzmaxpricing) {
     this.objEzmaxpricing = objEzmaxpricing;
     return this;
   }
@@ -460,12 +440,12 @@ public class EzmaxinvoicingResponseCompound {
     return objEzmaxpricing;
   }
 
-  public void setObjEzmaxpricing(@javax.annotation.Nonnull CustomEzmaxpricingResponse objEzmaxpricing) {
+  public void setObjEzmaxpricing(CustomEzmaxpricingResponse objEzmaxpricing) {
     this.objEzmaxpricing = objEzmaxpricing;
   }
 
 
-  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingsummaryglobal(@javax.annotation.Nonnull List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal) {
+  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingsummaryglobal(List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal) {
     this.aObjEzmaxinvoicingsummaryglobal = aObjEzmaxinvoicingsummaryglobal;
     return this;
   }
@@ -487,12 +467,12 @@ public class EzmaxinvoicingResponseCompound {
     return aObjEzmaxinvoicingsummaryglobal;
   }
 
-  public void setaObjEzmaxinvoicingsummaryglobal(@javax.annotation.Nonnull List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal) {
+  public void setaObjEzmaxinvoicingsummaryglobal(List<EzmaxinvoicingsummaryglobalResponseCompound> aObjEzmaxinvoicingsummaryglobal) {
     this.aObjEzmaxinvoicingsummaryglobal = aObjEzmaxinvoicingsummaryglobal;
   }
 
 
-  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingsummaryexternal(@javax.annotation.Nonnull List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal) {
+  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingsummaryexternal(List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal) {
     this.aObjEzmaxinvoicingsummaryexternal = aObjEzmaxinvoicingsummaryexternal;
     return this;
   }
@@ -514,12 +494,12 @@ public class EzmaxinvoicingResponseCompound {
     return aObjEzmaxinvoicingsummaryexternal;
   }
 
-  public void setaObjEzmaxinvoicingsummaryexternal(@javax.annotation.Nonnull List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal) {
+  public void setaObjEzmaxinvoicingsummaryexternal(List<EzmaxinvoicingsummaryexternalResponseCompound> aObjEzmaxinvoicingsummaryexternal) {
     this.aObjEzmaxinvoicingsummaryexternal = aObjEzmaxinvoicingsummaryexternal;
   }
 
 
-  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingsummaryinternal(@javax.annotation.Nonnull List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal) {
+  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingsummaryinternal(List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal) {
     this.aObjEzmaxinvoicingsummaryinternal = aObjEzmaxinvoicingsummaryinternal;
     return this;
   }
@@ -541,12 +521,12 @@ public class EzmaxinvoicingResponseCompound {
     return aObjEzmaxinvoicingsummaryinternal;
   }
 
-  public void setaObjEzmaxinvoicingsummaryinternal(@javax.annotation.Nonnull List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal) {
+  public void setaObjEzmaxinvoicingsummaryinternal(List<EzmaxinvoicingsummaryinternalResponseCompound> aObjEzmaxinvoicingsummaryinternal) {
     this.aObjEzmaxinvoicingsummaryinternal = aObjEzmaxinvoicingsummaryinternal;
   }
 
 
-  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingagent(@javax.annotation.Nonnull List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent) {
+  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingagent(List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent) {
     this.aObjEzmaxinvoicingagent = aObjEzmaxinvoicingagent;
     return this;
   }
@@ -568,12 +548,12 @@ public class EzmaxinvoicingResponseCompound {
     return aObjEzmaxinvoicingagent;
   }
 
-  public void setaObjEzmaxinvoicingagent(@javax.annotation.Nonnull List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent) {
+  public void setaObjEzmaxinvoicingagent(List<EzmaxinvoicingagentResponseCompound> aObjEzmaxinvoicingagent) {
     this.aObjEzmaxinvoicingagent = aObjEzmaxinvoicingagent;
   }
 
 
-  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicinguser(@javax.annotation.Nonnull List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser) {
+  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicinguser(List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser) {
     this.aObjEzmaxinvoicinguser = aObjEzmaxinvoicinguser;
     return this;
   }
@@ -595,17 +575,17 @@ public class EzmaxinvoicingResponseCompound {
     return aObjEzmaxinvoicinguser;
   }
 
-  public void setaObjEzmaxinvoicinguser(@javax.annotation.Nonnull List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser) {
+  public void setaObjEzmaxinvoicinguser(List<EzmaxinvoicinguserResponseCompound> aObjEzmaxinvoicinguser) {
     this.aObjEzmaxinvoicinguser = aObjEzmaxinvoicinguser;
   }
 
 
-  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingezsignfolder(@javax.annotation.Nonnull List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder) {
+  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingezsignfolder(List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder) {
     this.aObjEzmaxinvoicingezsignfolder = aObjEzmaxinvoicingezsignfolder;
     return this;
   }
 
-  public EzmaxinvoicingResponseCompound addAObjEzmaxinvoicingezsignfolderItem(Object aObjEzmaxinvoicingezsignfolderItem) {
+  public EzmaxinvoicingResponseCompound addAObjEzmaxinvoicingezsignfolderItem(CustomEzmaxinvoicingEzsignfolderResponse aObjEzmaxinvoicingezsignfolderItem) {
     if (this.aObjEzmaxinvoicingezsignfolder == null) {
       this.aObjEzmaxinvoicingezsignfolder = new ArrayList<>();
     }
@@ -622,17 +602,17 @@ public class EzmaxinvoicingResponseCompound {
     return aObjEzmaxinvoicingezsignfolder;
   }
 
-  public void setaObjEzmaxinvoicingezsignfolder(@javax.annotation.Nonnull List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder) {
+  public void setaObjEzmaxinvoicingezsignfolder(List<CustomEzmaxinvoicingEzsignfolderResponse> aObjEzmaxinvoicingezsignfolder) {
     this.aObjEzmaxinvoicingezsignfolder = aObjEzmaxinvoicingezsignfolder;
   }
 
 
-  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingezsigndocument(@javax.annotation.Nonnull List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument) {
+  public EzmaxinvoicingResponseCompound aObjEzmaxinvoicingezsigndocument(List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument) {
     this.aObjEzmaxinvoicingezsigndocument = aObjEzmaxinvoicingezsigndocument;
     return this;
   }
 
-  public EzmaxinvoicingResponseCompound addAObjEzmaxinvoicingezsigndocumentItem(Object aObjEzmaxinvoicingezsigndocumentItem) {
+  public EzmaxinvoicingResponseCompound addAObjEzmaxinvoicingezsigndocumentItem(CustomEzmaxinvoicingEzsigndocumentResponse aObjEzmaxinvoicingezsigndocumentItem) {
     if (this.aObjEzmaxinvoicingezsigndocument == null) {
       this.aObjEzmaxinvoicingezsigndocument = new ArrayList<>();
     }
@@ -649,7 +629,7 @@ public class EzmaxinvoicingResponseCompound {
     return aObjEzmaxinvoicingezsigndocument;
   }
 
-  public void setaObjEzmaxinvoicingezsigndocument(@javax.annotation.Nonnull List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument) {
+  public void setaObjEzmaxinvoicingezsigndocument(List<CustomEzmaxinvoicingEzsigndocumentResponse> aObjEzmaxinvoicingezsigndocument) {
     this.aObjEzmaxinvoicingezsigndocument = aObjEzmaxinvoicingezsigndocument;
   }
 
@@ -896,7 +876,7 @@ public class EzmaxinvoicingResponseCompound {
       JsonArray jsonArrayaObjEzmaxinvoicingezsignfolder = jsonObj.getAsJsonArray("a_objEzmaxinvoicingezsignfolder");
       // validate the required field `a_objEzmaxinvoicingezsignfolder` (array)
       for (int i = 0; i < jsonArrayaObjEzmaxinvoicingezsignfolder.size(); i++) {
-        Object.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsignfolder.get(i));
+        CustomEzmaxinvoicingEzsignfolderResponse.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsignfolder.get(i));
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzmaxinvoicingezsigndocument").isJsonArray()) {
@@ -906,7 +886,7 @@ public class EzmaxinvoicingResponseCompound {
       JsonArray jsonArrayaObjEzmaxinvoicingezsigndocument = jsonObj.getAsJsonArray("a_objEzmaxinvoicingezsigndocument");
       // validate the required field `a_objEzmaxinvoicingezsigndocument` (array)
       for (int i = 0; i < jsonArrayaObjEzmaxinvoicingezsigndocument.size(); i++) {
-        Object.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsigndocument.get(i));
+        CustomEzmaxinvoicingEzsigndocumentResponse.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsigndocument.get(i));
       };
   }
 

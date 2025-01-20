@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CustomContactNameResponse;
-import com.ezmax.api.model.EmailResponse;
+import com.ezmax.api.model.EmailResponseCompound;
 import com.ezmax.api.model.PhoneResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -51,81 +51,66 @@ import eZmaxAPI.JSON;
 /**
  * Generic AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomCommunicationrecipientsrecipientResponse {
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiAgentID;
 
   public static final String SERIALIZED_NAME_FKI_BROKER_I_D = "fkiBrokerID";
   @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiBrokerID;
 
   public static final String SERIALIZED_NAME_FKI_CONTACT_I_D = "fkiContactID";
   @SerializedName(SERIALIZED_NAME_FKI_CONTACT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiContactID;
 
   public static final String SERIALIZED_NAME_FKI_CUSTOMER_I_D = "fkiCustomerID";
   @SerializedName(SERIALIZED_NAME_FKI_CUSTOMER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiCustomerID;
 
   public static final String SERIALIZED_NAME_FKI_EMPLOYEE_I_D = "fkiEmployeeID";
   @SerializedName(SERIALIZED_NAME_FKI_EMPLOYEE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEmployeeID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D = "fkiEzsignsignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsignsignerID;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D = "fkiFranchiseofficeID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiFranchiseofficeID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_AGENTINCORPORATION_I_D = "fkiAgentincorporationID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENTINCORPORATION_I_D)
-  @javax.annotation.Nullable
   private Integer fkiAgentincorporationID;
 
   public static final String SERIALIZED_NAME_FKI_ASSISTANT_I_D = "fkiAssistantID";
   @SerializedName(SERIALIZED_NAME_FKI_ASSISTANT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiAssistantID;
 
   public static final String SERIALIZED_NAME_FKI_EXTERNALBROKER_I_D = "fkiExternalbrokerID";
   @SerializedName(SERIALIZED_NAME_FKI_EXTERNALBROKER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiExternalbrokerID;
 
   public static final String SERIALIZED_NAME_FKI_EZCOMAGENT_I_D = "fkiEzcomagentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZCOMAGENT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzcomagentID;
 
   public static final String SERIALIZED_NAME_FKI_NOTARY_I_D = "fkiNotaryID";
   @SerializedName(SERIALIZED_NAME_FKI_NOTARY_I_D)
-  @javax.annotation.Nullable
   private Integer fkiNotaryID;
 
   public static final String SERIALIZED_NAME_FKI_REWARDMEMBER_I_D = "fkiRewardmemberID";
   @SerializedName(SERIALIZED_NAME_FKI_REWARDMEMBER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiRewardmemberID;
 
   public static final String SERIALIZED_NAME_FKI_SUPPLIER_I_D = "fkiSupplierID";
   @SerializedName(SERIALIZED_NAME_FKI_SUPPLIER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiSupplierID;
 
   /**
@@ -210,33 +195,28 @@ public class CustomCommunicationrecipientsrecipientResponse {
 
   public static final String SERIALIZED_NAME_E_COMMUNICATIONRECIPIENTSRECIPIENT_OBJECTTYPE = "eCommunicationrecipientsrecipientObjecttype";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATIONRECIPIENTSRECIPIENT_OBJECTTYPE)
-  @javax.annotation.Nonnull
   private ECommunicationrecipientsrecipientObjecttypeEnum eCommunicationrecipientsrecipientObjecttype;
 
   public static final String SERIALIZED_NAME_OBJ_CONTACT_NAME = "objContactName";
   @SerializedName(SERIALIZED_NAME_OBJ_CONTACT_NAME)
-  @javax.annotation.Nonnull
   private CustomContactNameResponse objContactName;
 
   public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
   @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
-  @javax.annotation.Nullable
-  private EmailResponse objEmail;
+  private EmailResponseCompound objEmail;
 
   public static final String SERIALIZED_NAME_OBJ_PHONE_FAX = "objPhoneFax";
   @SerializedName(SERIALIZED_NAME_OBJ_PHONE_FAX)
-  @javax.annotation.Nullable
   private PhoneResponseCompound objPhoneFax;
 
   public static final String SERIALIZED_NAME_OBJ_PHONE_S_M_S = "objPhoneSMS";
   @SerializedName(SERIALIZED_NAME_OBJ_PHONE_S_M_S)
-  @javax.annotation.Nullable
   private PhoneResponseCompound objPhoneSMS;
 
   public CustomCommunicationrecipientsrecipientResponse() {
   }
 
-  public CustomCommunicationrecipientsrecipientResponse fkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
     return this;
   }
@@ -251,12 +231,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiAgentID;
   }
 
-  public void setFkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
+  public void setFkiAgentID(Integer fkiAgentID) {
     this.fkiAgentID = fkiAgentID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
     return this;
   }
@@ -271,12 +251,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiBrokerID;
   }
 
-  public void setFkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
+  public void setFkiBrokerID(Integer fkiBrokerID) {
     this.fkiBrokerID = fkiBrokerID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiContactID(@javax.annotation.Nullable Integer fkiContactID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiContactID(Integer fkiContactID) {
     this.fkiContactID = fkiContactID;
     return this;
   }
@@ -291,12 +271,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiContactID;
   }
 
-  public void setFkiContactID(@javax.annotation.Nullable Integer fkiContactID) {
+  public void setFkiContactID(Integer fkiContactID) {
     this.fkiContactID = fkiContactID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiCustomerID(@javax.annotation.Nullable Integer fkiCustomerID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiCustomerID(Integer fkiCustomerID) {
     this.fkiCustomerID = fkiCustomerID;
     return this;
   }
@@ -311,12 +291,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiCustomerID;
   }
 
-  public void setFkiCustomerID(@javax.annotation.Nullable Integer fkiCustomerID) {
+  public void setFkiCustomerID(Integer fkiCustomerID) {
     this.fkiCustomerID = fkiCustomerID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiEmployeeID(@javax.annotation.Nullable Integer fkiEmployeeID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiEmployeeID(Integer fkiEmployeeID) {
     this.fkiEmployeeID = fkiEmployeeID;
     return this;
   }
@@ -331,12 +311,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiEmployeeID;
   }
 
-  public void setFkiEmployeeID(@javax.annotation.Nullable Integer fkiEmployeeID) {
+  public void setFkiEmployeeID(Integer fkiEmployeeID) {
     this.fkiEmployeeID = fkiEmployeeID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiEzsignsignerID(@javax.annotation.Nullable Integer fkiEzsignsignerID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiEzsignsignerID(Integer fkiEzsignsignerID) {
     this.fkiEzsignsignerID = fkiEzsignsignerID;
     return this;
   }
@@ -351,12 +331,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiEzsignsignerID;
   }
 
-  public void setFkiEzsignsignerID(@javax.annotation.Nullable Integer fkiEzsignsignerID) {
+  public void setFkiEzsignsignerID(Integer fkiEzsignsignerID) {
     this.fkiEzsignsignerID = fkiEzsignsignerID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiFranchiseofficeID(@javax.annotation.Nullable Integer fkiFranchiseofficeID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
     return this;
   }
@@ -371,12 +351,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiFranchiseofficeID;
   }
 
-  public void setFkiFranchiseofficeID(@javax.annotation.Nullable Integer fkiFranchiseofficeID) {
+  public void setFkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -391,12 +371,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiAgentincorporationID(@javax.annotation.Nullable Integer fkiAgentincorporationID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiAgentincorporationID(Integer fkiAgentincorporationID) {
     this.fkiAgentincorporationID = fkiAgentincorporationID;
     return this;
   }
@@ -411,12 +391,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiAgentincorporationID;
   }
 
-  public void setFkiAgentincorporationID(@javax.annotation.Nullable Integer fkiAgentincorporationID) {
+  public void setFkiAgentincorporationID(Integer fkiAgentincorporationID) {
     this.fkiAgentincorporationID = fkiAgentincorporationID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiAssistantID(@javax.annotation.Nullable Integer fkiAssistantID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiAssistantID(Integer fkiAssistantID) {
     this.fkiAssistantID = fkiAssistantID;
     return this;
   }
@@ -431,12 +411,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiAssistantID;
   }
 
-  public void setFkiAssistantID(@javax.annotation.Nullable Integer fkiAssistantID) {
+  public void setFkiAssistantID(Integer fkiAssistantID) {
     this.fkiAssistantID = fkiAssistantID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiExternalbrokerID(@javax.annotation.Nullable Integer fkiExternalbrokerID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiExternalbrokerID(Integer fkiExternalbrokerID) {
     this.fkiExternalbrokerID = fkiExternalbrokerID;
     return this;
   }
@@ -451,12 +431,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiExternalbrokerID;
   }
 
-  public void setFkiExternalbrokerID(@javax.annotation.Nullable Integer fkiExternalbrokerID) {
+  public void setFkiExternalbrokerID(Integer fkiExternalbrokerID) {
     this.fkiExternalbrokerID = fkiExternalbrokerID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiEzcomagentID(@javax.annotation.Nullable Integer fkiEzcomagentID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiEzcomagentID(Integer fkiEzcomagentID) {
     this.fkiEzcomagentID = fkiEzcomagentID;
     return this;
   }
@@ -471,12 +451,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiEzcomagentID;
   }
 
-  public void setFkiEzcomagentID(@javax.annotation.Nullable Integer fkiEzcomagentID) {
+  public void setFkiEzcomagentID(Integer fkiEzcomagentID) {
     this.fkiEzcomagentID = fkiEzcomagentID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiNotaryID(@javax.annotation.Nullable Integer fkiNotaryID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiNotaryID(Integer fkiNotaryID) {
     this.fkiNotaryID = fkiNotaryID;
     return this;
   }
@@ -491,12 +471,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiNotaryID;
   }
 
-  public void setFkiNotaryID(@javax.annotation.Nullable Integer fkiNotaryID) {
+  public void setFkiNotaryID(Integer fkiNotaryID) {
     this.fkiNotaryID = fkiNotaryID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiRewardmemberID(@javax.annotation.Nullable Integer fkiRewardmemberID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiRewardmemberID(Integer fkiRewardmemberID) {
     this.fkiRewardmemberID = fkiRewardmemberID;
     return this;
   }
@@ -511,12 +491,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiRewardmemberID;
   }
 
-  public void setFkiRewardmemberID(@javax.annotation.Nullable Integer fkiRewardmemberID) {
+  public void setFkiRewardmemberID(Integer fkiRewardmemberID) {
     this.fkiRewardmemberID = fkiRewardmemberID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse fkiSupplierID(@javax.annotation.Nullable Integer fkiSupplierID) {
+  public CustomCommunicationrecipientsrecipientResponse fkiSupplierID(Integer fkiSupplierID) {
     this.fkiSupplierID = fkiSupplierID;
     return this;
   }
@@ -531,12 +511,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return fkiSupplierID;
   }
 
-  public void setFkiSupplierID(@javax.annotation.Nullable Integer fkiSupplierID) {
+  public void setFkiSupplierID(Integer fkiSupplierID) {
     this.fkiSupplierID = fkiSupplierID;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse eCommunicationrecipientsrecipientObjecttype(@javax.annotation.Nonnull ECommunicationrecipientsrecipientObjecttypeEnum eCommunicationrecipientsrecipientObjecttype) {
+  public CustomCommunicationrecipientsrecipientResponse eCommunicationrecipientsrecipientObjecttype(ECommunicationrecipientsrecipientObjecttypeEnum eCommunicationrecipientsrecipientObjecttype) {
     this.eCommunicationrecipientsrecipientObjecttype = eCommunicationrecipientsrecipientObjecttype;
     return this;
   }
@@ -550,12 +530,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return eCommunicationrecipientsrecipientObjecttype;
   }
 
-  public void seteCommunicationrecipientsrecipientObjecttype(@javax.annotation.Nonnull ECommunicationrecipientsrecipientObjecttypeEnum eCommunicationrecipientsrecipientObjecttype) {
+  public void seteCommunicationrecipientsrecipientObjecttype(ECommunicationrecipientsrecipientObjecttypeEnum eCommunicationrecipientsrecipientObjecttype) {
     this.eCommunicationrecipientsrecipientObjecttype = eCommunicationrecipientsrecipientObjecttype;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse objContactName(@javax.annotation.Nonnull CustomContactNameResponse objContactName) {
+  public CustomCommunicationrecipientsrecipientResponse objContactName(CustomContactNameResponse objContactName) {
     this.objContactName = objContactName;
     return this;
   }
@@ -569,31 +549,31 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return objContactName;
   }
 
-  public void setObjContactName(@javax.annotation.Nonnull CustomContactNameResponse objContactName) {
+  public void setObjContactName(CustomContactNameResponse objContactName) {
     this.objContactName = objContactName;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse objEmail(@javax.annotation.Nullable EmailResponse objEmail) {
+  public CustomCommunicationrecipientsrecipientResponse objEmail(EmailResponseCompound objEmail) {
     this.objEmail = objEmail;
     return this;
   }
 
   /**
-   * An Email Object and children to create a complete structure
+   * Get objEmail
    * @return objEmail
    */
   @javax.annotation.Nullable
-  public EmailResponse getObjEmail() {
+  public EmailResponseCompound getObjEmail() {
     return objEmail;
   }
 
-  public void setObjEmail(@javax.annotation.Nullable EmailResponse objEmail) {
+  public void setObjEmail(EmailResponseCompound objEmail) {
     this.objEmail = objEmail;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse objPhoneFax(@javax.annotation.Nullable PhoneResponseCompound objPhoneFax) {
+  public CustomCommunicationrecipientsrecipientResponse objPhoneFax(PhoneResponseCompound objPhoneFax) {
     this.objPhoneFax = objPhoneFax;
     return this;
   }
@@ -607,12 +587,12 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return objPhoneFax;
   }
 
-  public void setObjPhoneFax(@javax.annotation.Nullable PhoneResponseCompound objPhoneFax) {
+  public void setObjPhoneFax(PhoneResponseCompound objPhoneFax) {
     this.objPhoneFax = objPhoneFax;
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse objPhoneSMS(@javax.annotation.Nullable PhoneResponseCompound objPhoneSMS) {
+  public CustomCommunicationrecipientsrecipientResponse objPhoneSMS(PhoneResponseCompound objPhoneSMS) {
     this.objPhoneSMS = objPhoneSMS;
     return this;
   }
@@ -626,7 +606,7 @@ public class CustomCommunicationrecipientsrecipientResponse {
     return objPhoneSMS;
   }
 
-  public void setObjPhoneSMS(@javax.annotation.Nullable PhoneResponseCompound objPhoneSMS) {
+  public void setObjPhoneSMS(PhoneResponseCompound objPhoneSMS) {
     this.objPhoneSMS = objPhoneSMS;
   }
 
@@ -778,7 +758,7 @@ public class CustomCommunicationrecipientsrecipientResponse {
       CustomContactNameResponse.validateJsonElement(jsonObj.get("objContactName"));
       // validate the optional field `objEmail`
       if (jsonObj.get("objEmail") != null && !jsonObj.get("objEmail").isJsonNull()) {
-        EmailResponse.validateJsonElement(jsonObj.get("objEmail"));
+        EmailResponseCompound.validateJsonElement(jsonObj.get("objEmail"));
       }
       // validate the optional field `objPhoneFax`
       if (jsonObj.get("objPhoneFax") != null && !jsonObj.get("objPhoneFax").isJsonNull()) {

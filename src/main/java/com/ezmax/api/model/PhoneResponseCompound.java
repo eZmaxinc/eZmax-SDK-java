@@ -49,43 +49,37 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PhoneResponseCompound {
   public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiPhoneID;
 
   public static final String SERIALIZED_NAME_FKI_PHONETYPE_I_D = "fkiPhonetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_PHONETYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiPhonetypeID;
 
   public static final String SERIALIZED_NAME_E_PHONE_TYPE = "ePhoneType";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_E_PHONE_TYPE)
-  @javax.annotation.Nullable
   private FieldEPhoneType ePhoneType;
 
   public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
   @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
-  @javax.annotation.Nullable
   private String sPhoneE164;
 
   public static final String SERIALIZED_NAME_S_PHONE_EXTENSION = "sPhoneExtension";
   @SerializedName(SERIALIZED_NAME_S_PHONE_EXTENSION)
-  @javax.annotation.Nullable
   private String sPhoneExtension;
 
   public static final String SERIALIZED_NAME_B_PHONE_INTERNATIONAL = "bPhoneInternational";
   @SerializedName(SERIALIZED_NAME_B_PHONE_INTERNATIONAL)
-  @javax.annotation.Nullable
   private Boolean bPhoneInternational;
 
   public PhoneResponseCompound() {
   }
 
-  public PhoneResponseCompound pkiPhoneID(@javax.annotation.Nonnull Integer pkiPhoneID) {
+  public PhoneResponseCompound pkiPhoneID(Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
     return this;
   }
@@ -100,12 +94,12 @@ public class PhoneResponseCompound {
     return pkiPhoneID;
   }
 
-  public void setPkiPhoneID(@javax.annotation.Nonnull Integer pkiPhoneID) {
+  public void setPkiPhoneID(Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
   }
 
 
-  public PhoneResponseCompound fkiPhonetypeID(@javax.annotation.Nonnull Integer fkiPhonetypeID) {
+  public PhoneResponseCompound fkiPhonetypeID(Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
     return this;
   }
@@ -120,13 +114,13 @@ public class PhoneResponseCompound {
     return fkiPhonetypeID;
   }
 
-  public void setFkiPhonetypeID(@javax.annotation.Nonnull Integer fkiPhonetypeID) {
+  public void setFkiPhonetypeID(Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
   }
 
 
   @Deprecated
-  public PhoneResponseCompound ePhoneType(@javax.annotation.Nullable FieldEPhoneType ePhoneType) {
+  public PhoneResponseCompound ePhoneType(FieldEPhoneType ePhoneType) {
     this.ePhoneType = ePhoneType;
     return this;
   }
@@ -143,12 +137,12 @@ public class PhoneResponseCompound {
   }
 
   @Deprecated
-  public void setePhoneType(@javax.annotation.Nullable FieldEPhoneType ePhoneType) {
+  public void setePhoneType(FieldEPhoneType ePhoneType) {
     this.ePhoneType = ePhoneType;
   }
 
 
-  public PhoneResponseCompound sPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
+  public PhoneResponseCompound sPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -162,12 +156,12 @@ public class PhoneResponseCompound {
     return sPhoneE164;
   }
 
-  public void setsPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
+  public void setsPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 
 
-  public PhoneResponseCompound sPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
+  public PhoneResponseCompound sPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -181,12 +175,12 @@ public class PhoneResponseCompound {
     return sPhoneExtension;
   }
 
-  public void setsPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
+  public void setsPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
   }
 
 
-  public PhoneResponseCompound bPhoneInternational(@javax.annotation.Nullable Boolean bPhoneInternational) {
+  public PhoneResponseCompound bPhoneInternational(Boolean bPhoneInternational) {
     this.bPhoneInternational = bPhoneInternational;
     return this;
   }
@@ -200,7 +194,7 @@ public class PhoneResponseCompound {
     return bPhoneInternational;
   }
 
-  public void setbPhoneInternational(@javax.annotation.Nullable Boolean bPhoneInternational) {
+  public void setbPhoneInternational(Boolean bPhoneInternational) {
     this.bPhoneInternational = bPhoneInternational;
   }
 

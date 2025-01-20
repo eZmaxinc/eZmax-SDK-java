@@ -51,21 +51,18 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignatureSignV1Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D = "fkiEzsignsigningreasonID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsignsigningreasonID;
 
   public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
   @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
-  @javax.annotation.Nullable
   private Integer fkiFontID;
 
   public static final String SERIALIZED_NAME_S_VALUE = "sValue";
   @SerializedName(SERIALIZED_NAME_S_VALUE)
-  @javax.annotation.Nullable
   private String sValue;
 
   /**
@@ -122,33 +119,28 @@ public class EzsignsignatureSignV1Request {
 
   public static final String SERIALIZED_NAME_E_ATTACHMENTS_CONFIRMATION_DECISION = "eAttachmentsConfirmationDecision";
   @SerializedName(SERIALIZED_NAME_E_ATTACHMENTS_CONFIRMATION_DECISION)
-  @javax.annotation.Nullable
   private EAttachmentsConfirmationDecisionEnum eAttachmentsConfirmationDecision;
 
   public static final String SERIALIZED_NAME_S_ATTACHMENTS_REFUSAL_REASON = "sAttachmentsRefusalReason";
   @SerializedName(SERIALIZED_NAME_S_ATTACHMENTS_REFUSAL_REASON)
-  @javax.annotation.Nullable
   private String sAttachmentsRefusalReason;
 
   public static final String SERIALIZED_NAME_S_SVG = "sSvg";
   @SerializedName(SERIALIZED_NAME_S_SVG)
-  @javax.annotation.Nullable
   private String sSvg;
 
   public static final String SERIALIZED_NAME_A_OBJ_FILE = "a_objFile";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FILE)
-  @javax.annotation.Nullable
   private List<CommonFile> aObjFile = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_B_IS_AUTOMATIC = "bIsAutomatic";
   @SerializedName(SERIALIZED_NAME_B_IS_AUTOMATIC)
-  @javax.annotation.Nonnull
   private Boolean bIsAutomatic;
 
   public EzsignsignatureSignV1Request() {
   }
 
-  public EzsignsignatureSignV1Request fkiEzsignsigningreasonID(@javax.annotation.Nullable Integer fkiEzsignsigningreasonID) {
+  public EzsignsignatureSignV1Request fkiEzsignsigningreasonID(Integer fkiEzsignsigningreasonID) {
     this.fkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
     return this;
   }
@@ -164,12 +156,12 @@ public class EzsignsignatureSignV1Request {
     return fkiEzsignsigningreasonID;
   }
 
-  public void setFkiEzsignsigningreasonID(@javax.annotation.Nullable Integer fkiEzsignsigningreasonID) {
+  public void setFkiEzsignsigningreasonID(Integer fkiEzsignsigningreasonID) {
     this.fkiEzsignsigningreasonID = fkiEzsignsigningreasonID;
   }
 
 
-  public EzsignsignatureSignV1Request fkiFontID(@javax.annotation.Nullable Integer fkiFontID) {
+  public EzsignsignatureSignV1Request fkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
     return this;
   }
@@ -184,12 +176,12 @@ public class EzsignsignatureSignV1Request {
     return fkiFontID;
   }
 
-  public void setFkiFontID(@javax.annotation.Nullable Integer fkiFontID) {
+  public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
   }
 
 
-  public EzsignsignatureSignV1Request sValue(@javax.annotation.Nullable String sValue) {
+  public EzsignsignatureSignV1Request sValue(String sValue) {
     this.sValue = sValue;
     return this;
   }
@@ -203,12 +195,12 @@ public class EzsignsignatureSignV1Request {
     return sValue;
   }
 
-  public void setsValue(@javax.annotation.Nullable String sValue) {
+  public void setsValue(String sValue) {
     this.sValue = sValue;
   }
 
 
-  public EzsignsignatureSignV1Request eAttachmentsConfirmationDecision(@javax.annotation.Nullable EAttachmentsConfirmationDecisionEnum eAttachmentsConfirmationDecision) {
+  public EzsignsignatureSignV1Request eAttachmentsConfirmationDecision(EAttachmentsConfirmationDecisionEnum eAttachmentsConfirmationDecision) {
     this.eAttachmentsConfirmationDecision = eAttachmentsConfirmationDecision;
     return this;
   }
@@ -222,12 +214,12 @@ public class EzsignsignatureSignV1Request {
     return eAttachmentsConfirmationDecision;
   }
 
-  public void seteAttachmentsConfirmationDecision(@javax.annotation.Nullable EAttachmentsConfirmationDecisionEnum eAttachmentsConfirmationDecision) {
+  public void seteAttachmentsConfirmationDecision(EAttachmentsConfirmationDecisionEnum eAttachmentsConfirmationDecision) {
     this.eAttachmentsConfirmationDecision = eAttachmentsConfirmationDecision;
   }
 
 
-  public EzsignsignatureSignV1Request sAttachmentsRefusalReason(@javax.annotation.Nullable String sAttachmentsRefusalReason) {
+  public EzsignsignatureSignV1Request sAttachmentsRefusalReason(String sAttachmentsRefusalReason) {
     this.sAttachmentsRefusalReason = sAttachmentsRefusalReason;
     return this;
   }
@@ -241,12 +233,12 @@ public class EzsignsignatureSignV1Request {
     return sAttachmentsRefusalReason;
   }
 
-  public void setsAttachmentsRefusalReason(@javax.annotation.Nullable String sAttachmentsRefusalReason) {
+  public void setsAttachmentsRefusalReason(String sAttachmentsRefusalReason) {
     this.sAttachmentsRefusalReason = sAttachmentsRefusalReason;
   }
 
 
-  public EzsignsignatureSignV1Request sSvg(@javax.annotation.Nullable String sSvg) {
+  public EzsignsignatureSignV1Request sSvg(String sSvg) {
     this.sSvg = sSvg;
     return this;
   }
@@ -260,12 +252,12 @@ public class EzsignsignatureSignV1Request {
     return sSvg;
   }
 
-  public void setsSvg(@javax.annotation.Nullable String sSvg) {
+  public void setsSvg(String sSvg) {
     this.sSvg = sSvg;
   }
 
 
-  public EzsignsignatureSignV1Request aObjFile(@javax.annotation.Nullable List<CommonFile> aObjFile) {
+  public EzsignsignatureSignV1Request aObjFile(List<CommonFile> aObjFile) {
     this.aObjFile = aObjFile;
     return this;
   }
@@ -287,12 +279,12 @@ public class EzsignsignatureSignV1Request {
     return aObjFile;
   }
 
-  public void setaObjFile(@javax.annotation.Nullable List<CommonFile> aObjFile) {
+  public void setaObjFile(List<CommonFile> aObjFile) {
     this.aObjFile = aObjFile;
   }
 
 
-  public EzsignsignatureSignV1Request bIsAutomatic(@javax.annotation.Nonnull Boolean bIsAutomatic) {
+  public EzsignsignatureSignV1Request bIsAutomatic(Boolean bIsAutomatic) {
     this.bIsAutomatic = bIsAutomatic;
     return this;
   }
@@ -306,7 +298,7 @@ public class EzsignsignatureSignV1Request {
     return bIsAutomatic;
   }
 
-  public void setbIsAutomatic(@javax.annotation.Nonnull Boolean bIsAutomatic) {
+  public void setbIsAutomatic(Boolean bIsAutomatic) {
     this.bIsAutomatic = bIsAutomatic;
   }
 

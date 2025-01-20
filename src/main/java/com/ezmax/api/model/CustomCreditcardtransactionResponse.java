@@ -49,32 +49,28 @@ import eZmaxAPI.JSON;
 /**
  * A custom Creditcardtransaction Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomCreditcardtransactionResponse {
   public static final String SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME = "eCreditcardtypeCodename";
   @SerializedName(SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME)
-  @javax.annotation.Nonnull
   private FieldECreditcardtypeCodename eCreditcardtypeCodename;
 
   public static final String SERIALIZED_NAME_D_CREDITCARDTRANSACTION_AMOUNT = "dCreditcardtransactionAmount";
   @SerializedName(SERIALIZED_NAME_D_CREDITCARDTRANSACTION_AMOUNT)
-  @javax.annotation.Nonnull
   private String dCreditcardtransactionAmount;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDTRANSACTION_PARTIALLYDECRYPTEDNUMBER = "sCreditcardtransactionPartiallydecryptednumber";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDTRANSACTION_PARTIALLYDECRYPTEDNUMBER)
-  @javax.annotation.Nonnull
   private String sCreditcardtransactionPartiallydecryptednumber;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDTRANSACTION_REFERENCENUMBER = "sCreditcardtransactionReferencenumber";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDTRANSACTION_REFERENCENUMBER)
-  @javax.annotation.Nonnull
   private String sCreditcardtransactionReferencenumber;
 
   public CustomCreditcardtransactionResponse() {
   }
 
-  public CustomCreditcardtransactionResponse eCreditcardtypeCodename(@javax.annotation.Nonnull FieldECreditcardtypeCodename eCreditcardtypeCodename) {
+  public CustomCreditcardtransactionResponse eCreditcardtypeCodename(FieldECreditcardtypeCodename eCreditcardtypeCodename) {
     this.eCreditcardtypeCodename = eCreditcardtypeCodename;
     return this;
   }
@@ -88,12 +84,12 @@ public class CustomCreditcardtransactionResponse {
     return eCreditcardtypeCodename;
   }
 
-  public void seteCreditcardtypeCodename(@javax.annotation.Nonnull FieldECreditcardtypeCodename eCreditcardtypeCodename) {
+  public void seteCreditcardtypeCodename(FieldECreditcardtypeCodename eCreditcardtypeCodename) {
     this.eCreditcardtypeCodename = eCreditcardtypeCodename;
   }
 
 
-  public CustomCreditcardtransactionResponse dCreditcardtransactionAmount(@javax.annotation.Nonnull String dCreditcardtransactionAmount) {
+  public CustomCreditcardtransactionResponse dCreditcardtransactionAmount(String dCreditcardtransactionAmount) {
     this.dCreditcardtransactionAmount = dCreditcardtransactionAmount;
     return this;
   }
@@ -107,12 +103,12 @@ public class CustomCreditcardtransactionResponse {
     return dCreditcardtransactionAmount;
   }
 
-  public void setdCreditcardtransactionAmount(@javax.annotation.Nonnull String dCreditcardtransactionAmount) {
+  public void setdCreditcardtransactionAmount(String dCreditcardtransactionAmount) {
     this.dCreditcardtransactionAmount = dCreditcardtransactionAmount;
   }
 
 
-  public CustomCreditcardtransactionResponse sCreditcardtransactionPartiallydecryptednumber(@javax.annotation.Nonnull String sCreditcardtransactionPartiallydecryptednumber) {
+  public CustomCreditcardtransactionResponse sCreditcardtransactionPartiallydecryptednumber(String sCreditcardtransactionPartiallydecryptednumber) {
     this.sCreditcardtransactionPartiallydecryptednumber = sCreditcardtransactionPartiallydecryptednumber;
     return this;
   }
@@ -126,12 +122,12 @@ public class CustomCreditcardtransactionResponse {
     return sCreditcardtransactionPartiallydecryptednumber;
   }
 
-  public void setsCreditcardtransactionPartiallydecryptednumber(@javax.annotation.Nonnull String sCreditcardtransactionPartiallydecryptednumber) {
+  public void setsCreditcardtransactionPartiallydecryptednumber(String sCreditcardtransactionPartiallydecryptednumber) {
     this.sCreditcardtransactionPartiallydecryptednumber = sCreditcardtransactionPartiallydecryptednumber;
   }
 
 
-  public CustomCreditcardtransactionResponse sCreditcardtransactionReferencenumber(@javax.annotation.Nonnull String sCreditcardtransactionReferencenumber) {
+  public CustomCreditcardtransactionResponse sCreditcardtransactionReferencenumber(String sCreditcardtransactionReferencenumber) {
     this.sCreditcardtransactionReferencenumber = sCreditcardtransactionReferencenumber;
     return this;
   }
@@ -145,7 +141,7 @@ public class CustomCreditcardtransactionResponse {
     return sCreditcardtransactionReferencenumber;
   }
 
-  public void setsCreditcardtransactionReferencenumber(@javax.annotation.Nonnull String sCreditcardtransactionReferencenumber) {
+  public void setsCreditcardtransactionReferencenumber(String sCreditcardtransactionReferencenumber) {
     this.sCreditcardtransactionReferencenumber = sCreditcardtransactionReferencenumber;
   }
 

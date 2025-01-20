@@ -52,42 +52,36 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksendtransmission Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignbulksendtransmissionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D = "pkiEzsignbulksendtransmissionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignbulksendtransmissionID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D = "fkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignbulksendID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNBULKSENDTRANSMISSION_DESCRIPTION = "sEzsignbulksendtransmissionDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSENDTRANSMISSION_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsignbulksendtransmissionDescription;
 
   public static final String SERIALIZED_NAME_I_EZSIGNBULKSENDTRANSMISSION_ERRORS = "iEzsignbulksendtransmissionErrors";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNBULKSENDTRANSMISSION_ERRORS)
-  @javax.annotation.Nonnull
   private Integer iEzsignbulksendtransmissionErrors;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nonnull
   private CommonAudit objAudit;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTRANSMISSION = "a_objEzsignfoldertransmission";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFOLDERTRANSMISSION)
-  @javax.annotation.Nonnull
   private List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission = new ArrayList<>();
 
   public EzsignbulksendtransmissionResponseCompound() {
   }
 
-  public EzsignbulksendtransmissionResponseCompound pkiEzsignbulksendtransmissionID(@javax.annotation.Nonnull Integer pkiEzsignbulksendtransmissionID) {
+  public EzsignbulksendtransmissionResponseCompound pkiEzsignbulksendtransmissionID(Integer pkiEzsignbulksendtransmissionID) {
     this.pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID;
     return this;
   }
@@ -102,12 +96,12 @@ public class EzsignbulksendtransmissionResponseCompound {
     return pkiEzsignbulksendtransmissionID;
   }
 
-  public void setPkiEzsignbulksendtransmissionID(@javax.annotation.Nonnull Integer pkiEzsignbulksendtransmissionID) {
+  public void setPkiEzsignbulksendtransmissionID(Integer pkiEzsignbulksendtransmissionID) {
     this.pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID;
   }
 
 
-  public EzsignbulksendtransmissionResponseCompound fkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
+  public EzsignbulksendtransmissionResponseCompound fkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
     return this;
   }
@@ -122,12 +116,12 @@ public class EzsignbulksendtransmissionResponseCompound {
     return fkiEzsignbulksendID;
   }
 
-  public void setFkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
+  public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
   }
 
 
-  public EzsignbulksendtransmissionResponseCompound sEzsignbulksendtransmissionDescription(@javax.annotation.Nonnull String sEzsignbulksendtransmissionDescription) {
+  public EzsignbulksendtransmissionResponseCompound sEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
     this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
     return this;
   }
@@ -141,12 +135,12 @@ public class EzsignbulksendtransmissionResponseCompound {
     return sEzsignbulksendtransmissionDescription;
   }
 
-  public void setsEzsignbulksendtransmissionDescription(@javax.annotation.Nonnull String sEzsignbulksendtransmissionDescription) {
+  public void setsEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
     this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
   }
 
 
-  public EzsignbulksendtransmissionResponseCompound iEzsignbulksendtransmissionErrors(@javax.annotation.Nonnull Integer iEzsignbulksendtransmissionErrors) {
+  public EzsignbulksendtransmissionResponseCompound iEzsignbulksendtransmissionErrors(Integer iEzsignbulksendtransmissionErrors) {
     this.iEzsignbulksendtransmissionErrors = iEzsignbulksendtransmissionErrors;
     return this;
   }
@@ -161,12 +155,12 @@ public class EzsignbulksendtransmissionResponseCompound {
     return iEzsignbulksendtransmissionErrors;
   }
 
-  public void setiEzsignbulksendtransmissionErrors(@javax.annotation.Nonnull Integer iEzsignbulksendtransmissionErrors) {
+  public void setiEzsignbulksendtransmissionErrors(Integer iEzsignbulksendtransmissionErrors) {
     this.iEzsignbulksendtransmissionErrors = iEzsignbulksendtransmissionErrors;
   }
 
 
-  public EzsignbulksendtransmissionResponseCompound objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public EzsignbulksendtransmissionResponseCompound objAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -180,12 +174,12 @@ public class EzsignbulksendtransmissionResponseCompound {
     return objAudit;
   }
 
-  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
 
-  public EzsignbulksendtransmissionResponseCompound aObjEzsignfoldertransmission(@javax.annotation.Nonnull List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission) {
+  public EzsignbulksendtransmissionResponseCompound aObjEzsignfoldertransmission(List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission) {
     this.aObjEzsignfoldertransmission = aObjEzsignfoldertransmission;
     return this;
   }
@@ -207,7 +201,7 @@ public class EzsignbulksendtransmissionResponseCompound {
     return aObjEzsignfoldertransmission;
   }
 
-  public void setaObjEzsignfoldertransmission(@javax.annotation.Nonnull List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission) {
+  public void setaObjEzsignfoldertransmission(List<CustomEzsignfoldertransmissionResponse> aObjEzsignfoldertransmission) {
     this.aObjEzsignfoldertransmission = aObjEzsignfoldertransmission;
   }
 

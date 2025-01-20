@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezmaxpricing Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzmaxpricingResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXPRICING_I_D = "pkiEzmaxpricingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXPRICING_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzmaxpricingID;
 
   public static final String SERIALIZED_NAME_D_EZMAXPRICING_REBATEEZSIGNALLAGENTS = "dEzmaxpricingRebateezsignallagents";
   @SerializedName(SERIALIZED_NAME_D_EZMAXPRICING_REBATEEZSIGNALLAGENTS)
-  @javax.annotation.Nonnull
   private String dEzmaxpricingRebateezsignallagents;
 
   public static final String SERIALIZED_NAME_DT_EZMAXPRICING_START = "dtEzmaxpricingStart";
   @SerializedName(SERIALIZED_NAME_DT_EZMAXPRICING_START)
-  @javax.annotation.Nonnull
   private String dtEzmaxpricingStart;
 
   public static final String SERIALIZED_NAME_DT_EZMAXPRICING_END = "dtEzmaxpricingEnd";
   @SerializedName(SERIALIZED_NAME_DT_EZMAXPRICING_END)
-  @javax.annotation.Nullable
   private String dtEzmaxpricingEnd;
 
   public CustomEzmaxpricingResponse() {
   }
 
-  public CustomEzmaxpricingResponse pkiEzmaxpricingID(@javax.annotation.Nonnull Integer pkiEzmaxpricingID) {
+  public CustomEzmaxpricingResponse pkiEzmaxpricingID(Integer pkiEzmaxpricingID) {
     this.pkiEzmaxpricingID = pkiEzmaxpricingID;
     return this;
   }
@@ -88,12 +84,12 @@ public class CustomEzmaxpricingResponse {
     return pkiEzmaxpricingID;
   }
 
-  public void setPkiEzmaxpricingID(@javax.annotation.Nonnull Integer pkiEzmaxpricingID) {
+  public void setPkiEzmaxpricingID(Integer pkiEzmaxpricingID) {
     this.pkiEzmaxpricingID = pkiEzmaxpricingID;
   }
 
 
-  public CustomEzmaxpricingResponse dEzmaxpricingRebateezsignallagents(@javax.annotation.Nonnull String dEzmaxpricingRebateezsignallagents) {
+  public CustomEzmaxpricingResponse dEzmaxpricingRebateezsignallagents(String dEzmaxpricingRebateezsignallagents) {
     this.dEzmaxpricingRebateezsignallagents = dEzmaxpricingRebateezsignallagents;
     return this;
   }
@@ -107,12 +103,12 @@ public class CustomEzmaxpricingResponse {
     return dEzmaxpricingRebateezsignallagents;
   }
 
-  public void setdEzmaxpricingRebateezsignallagents(@javax.annotation.Nonnull String dEzmaxpricingRebateezsignallagents) {
+  public void setdEzmaxpricingRebateezsignallagents(String dEzmaxpricingRebateezsignallagents) {
     this.dEzmaxpricingRebateezsignallagents = dEzmaxpricingRebateezsignallagents;
   }
 
 
-  public CustomEzmaxpricingResponse dtEzmaxpricingStart(@javax.annotation.Nonnull String dtEzmaxpricingStart) {
+  public CustomEzmaxpricingResponse dtEzmaxpricingStart(String dtEzmaxpricingStart) {
     this.dtEzmaxpricingStart = dtEzmaxpricingStart;
     return this;
   }
@@ -126,12 +122,12 @@ public class CustomEzmaxpricingResponse {
     return dtEzmaxpricingStart;
   }
 
-  public void setDtEzmaxpricingStart(@javax.annotation.Nonnull String dtEzmaxpricingStart) {
+  public void setDtEzmaxpricingStart(String dtEzmaxpricingStart) {
     this.dtEzmaxpricingStart = dtEzmaxpricingStart;
   }
 
 
-  public CustomEzmaxpricingResponse dtEzmaxpricingEnd(@javax.annotation.Nullable String dtEzmaxpricingEnd) {
+  public CustomEzmaxpricingResponse dtEzmaxpricingEnd(String dtEzmaxpricingEnd) {
     this.dtEzmaxpricingEnd = dtEzmaxpricingEnd;
     return this;
   }
@@ -145,7 +141,7 @@ public class CustomEzmaxpricingResponse {
     return dtEzmaxpricingEnd;
   }
 
-  public void setDtEzmaxpricingEnd(@javax.annotation.Nullable String dtEzmaxpricingEnd) {
+  public void setDtEzmaxpricingEnd(String dtEzmaxpricingEnd) {
     this.dtEzmaxpricingEnd = dtEzmaxpricingEnd;
   }
 

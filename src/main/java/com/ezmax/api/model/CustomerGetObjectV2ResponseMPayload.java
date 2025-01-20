@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/customer/{pkiCustomerID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomerGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_CUSTOMER = "objCustomer";
   @SerializedName(SERIALIZED_NAME_OBJ_CUSTOMER)
-  @javax.annotation.Nonnull
   private CustomerResponseCompound objCustomer;
 
   public CustomerGetObjectV2ResponseMPayload() {
   }
 
-  public CustomerGetObjectV2ResponseMPayload objCustomer(@javax.annotation.Nonnull CustomerResponseCompound objCustomer) {
+  public CustomerGetObjectV2ResponseMPayload objCustomer(CustomerResponseCompound objCustomer) {
     this.objCustomer = objCustomer;
     return this;
   }
@@ -73,7 +72,7 @@ public class CustomerGetObjectV2ResponseMPayload {
     return objCustomer;
   }
 
-  public void setObjCustomer(@javax.annotation.Nonnull CustomerResponseCompound objCustomer) {
+  public void setObjCustomer(CustomerResponseCompound objCustomer) {
     this.objCustomer = objCustomer;
   }
 

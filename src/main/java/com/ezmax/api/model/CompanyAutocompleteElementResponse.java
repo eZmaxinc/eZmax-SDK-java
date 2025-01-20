@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Company AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CompanyAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_COMPANY_I_D = "pkiCompanyID";
   @SerializedName(SERIALIZED_NAME_PKI_COMPANY_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiCompanyID;
 
   public static final String SERIALIZED_NAME_S_COMPANY_NAME_X = "sCompanyNameX";
   @SerializedName(SERIALIZED_NAME_S_COMPANY_NAME_X)
-  @javax.annotation.Nonnull
   private String sCompanyNameX;
 
   public static final String SERIALIZED_NAME_B_COMPANY_ISACTIVE = "bCompanyIsactive";
   @SerializedName(SERIALIZED_NAME_B_COMPANY_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bCompanyIsactive;
 
   public CompanyAutocompleteElementResponse() {
   }
 
-  public CompanyAutocompleteElementResponse pkiCompanyID(@javax.annotation.Nonnull Integer pkiCompanyID) {
+  public CompanyAutocompleteElementResponse pkiCompanyID(Integer pkiCompanyID) {
     this.pkiCompanyID = pkiCompanyID;
     return this;
   }
@@ -84,12 +81,12 @@ public class CompanyAutocompleteElementResponse {
     return pkiCompanyID;
   }
 
-  public void setPkiCompanyID(@javax.annotation.Nonnull Integer pkiCompanyID) {
+  public void setPkiCompanyID(Integer pkiCompanyID) {
     this.pkiCompanyID = pkiCompanyID;
   }
 
 
-  public CompanyAutocompleteElementResponse sCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
+  public CompanyAutocompleteElementResponse sCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -103,12 +100,12 @@ public class CompanyAutocompleteElementResponse {
     return sCompanyNameX;
   }
 
-  public void setsCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
+  public void setsCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
   }
 
 
-  public CompanyAutocompleteElementResponse bCompanyIsactive(@javax.annotation.Nonnull Boolean bCompanyIsactive) {
+  public CompanyAutocompleteElementResponse bCompanyIsactive(Boolean bCompanyIsactive) {
     this.bCompanyIsactive = bCompanyIsactive;
     return this;
   }
@@ -122,7 +119,7 @@ public class CompanyAutocompleteElementResponse {
     return bCompanyIsactive;
   }
 
-  public void setbCompanyIsactive(@javax.annotation.Nonnull Boolean bCompanyIsactive) {
+  public void setbCompanyIsactive(Boolean bCompanyIsactive) {
     this.bCompanyIsactive = bCompanyIsactive;
   }
 

@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcardclient AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreditcardclientAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D = "pkiCreditcardclientID";
   @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiCreditcardclientID;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION = "sCreditcardclientDescription";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sCreditcardclientDescription;
 
   public CreditcardclientAutocompleteElementResponse() {
   }
 
-  public CreditcardclientAutocompleteElementResponse pkiCreditcardclientID(@javax.annotation.Nonnull Integer pkiCreditcardclientID) {
+  public CreditcardclientAutocompleteElementResponse pkiCreditcardclientID(Integer pkiCreditcardclientID) {
     this.pkiCreditcardclientID = pkiCreditcardclientID;
     return this;
   }
@@ -79,12 +77,12 @@ public class CreditcardclientAutocompleteElementResponse {
     return pkiCreditcardclientID;
   }
 
-  public void setPkiCreditcardclientID(@javax.annotation.Nonnull Integer pkiCreditcardclientID) {
+  public void setPkiCreditcardclientID(Integer pkiCreditcardclientID) {
     this.pkiCreditcardclientID = pkiCreditcardclientID;
   }
 
 
-  public CreditcardclientAutocompleteElementResponse sCreditcardclientDescription(@javax.annotation.Nonnull String sCreditcardclientDescription) {
+  public CreditcardclientAutocompleteElementResponse sCreditcardclientDescription(String sCreditcardclientDescription) {
     this.sCreditcardclientDescription = sCreditcardclientDescription;
     return this;
   }
@@ -98,7 +96,7 @@ public class CreditcardclientAutocompleteElementResponse {
     return sCreditcardclientDescription;
   }
 
-  public void setsCreditcardclientDescription(@javax.annotation.Nonnull String sCreditcardclientDescription) {
+  public void setsCreditcardclientDescription(String sCreditcardclientDescription) {
     this.sCreditcardclientDescription = sCreditcardclientDescription;
   }
 

@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/user/{pkiUserID}/getSubnets
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserGetSubnetsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_SUBNET = "a_objSubnet";
   @SerializedName(SERIALIZED_NAME_A_OBJ_SUBNET)
-  @javax.annotation.Nonnull
   private List<SubnetResponseCompound> aObjSubnet = new ArrayList<>();
 
   public UserGetSubnetsV1ResponseMPayload() {
   }
 
-  public UserGetSubnetsV1ResponseMPayload aObjSubnet(@javax.annotation.Nonnull List<SubnetResponseCompound> aObjSubnet) {
+  public UserGetSubnetsV1ResponseMPayload aObjSubnet(List<SubnetResponseCompound> aObjSubnet) {
     this.aObjSubnet = aObjSubnet;
     return this;
   }
@@ -83,7 +82,7 @@ public class UserGetSubnetsV1ResponseMPayload {
     return aObjSubnet;
   }
 
-  public void setaObjSubnet(@javax.annotation.Nonnull List<SubnetResponseCompound> aObjSubnet) {
+  public void setaObjSubnet(List<SubnetResponseCompound> aObjSubnet) {
     this.aObjSubnet = aObjSubnet;
   }
 

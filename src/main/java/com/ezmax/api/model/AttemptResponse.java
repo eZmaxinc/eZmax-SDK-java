@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * An Attempt object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AttemptResponse {
   public static final String SERIALIZED_NAME_DT_ATTEMPT_START = "dtAttemptStart";
   @SerializedName(SERIALIZED_NAME_DT_ATTEMPT_START)
-  @javax.annotation.Nonnull
   private String dtAttemptStart;
 
   public static final String SERIALIZED_NAME_S_ATTEMPT_RESULT = "sAttemptResult";
   @SerializedName(SERIALIZED_NAME_S_ATTEMPT_RESULT)
-  @javax.annotation.Nonnull
   private String sAttemptResult;
 
   public static final String SERIALIZED_NAME_I_ATTEMPT_DURATION = "iAttemptDuration";
   @SerializedName(SERIALIZED_NAME_I_ATTEMPT_DURATION)
-  @javax.annotation.Nonnull
   private Integer iAttemptDuration;
 
   public AttemptResponse() {
   }
 
-  public AttemptResponse dtAttemptStart(@javax.annotation.Nonnull String dtAttemptStart) {
+  public AttemptResponse dtAttemptStart(String dtAttemptStart) {
     this.dtAttemptStart = dtAttemptStart;
     return this;
   }
@@ -82,12 +79,12 @@ public class AttemptResponse {
     return dtAttemptStart;
   }
 
-  public void setDtAttemptStart(@javax.annotation.Nonnull String dtAttemptStart) {
+  public void setDtAttemptStart(String dtAttemptStart) {
     this.dtAttemptStart = dtAttemptStart;
   }
 
 
-  public AttemptResponse sAttemptResult(@javax.annotation.Nonnull String sAttemptResult) {
+  public AttemptResponse sAttemptResult(String sAttemptResult) {
     this.sAttemptResult = sAttemptResult;
     return this;
   }
@@ -101,12 +98,12 @@ public class AttemptResponse {
     return sAttemptResult;
   }
 
-  public void setsAttemptResult(@javax.annotation.Nonnull String sAttemptResult) {
+  public void setsAttemptResult(String sAttemptResult) {
     this.sAttemptResult = sAttemptResult;
   }
 
 
-  public AttemptResponse iAttemptDuration(@javax.annotation.Nonnull Integer iAttemptDuration) {
+  public AttemptResponse iAttemptDuration(Integer iAttemptDuration) {
     this.iAttemptDuration = iAttemptDuration;
     return this;
   }
@@ -120,7 +117,7 @@ public class AttemptResponse {
     return iAttemptDuration;
   }
 
-  public void setiAttemptDuration(@javax.annotation.Nonnull Integer iAttemptDuration) {
+  public void setiAttemptDuration(Integer iAttemptDuration) {
     this.iAttemptDuration = iAttemptDuration;
   }
 

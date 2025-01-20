@@ -81,7 +81,7 @@ public class Example {
 
 <a id="usergroupmembershipDeleteObjectV1"></a>
 # **usergroupmembershipDeleteObjectV1**
-> CommonResponse usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
+> UsergroupmembershipDeleteObjectV1Response usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID)
 
 Delete an existing Usergroupmembership
 
@@ -111,7 +111,7 @@ public class Example {
     ObjectUsergroupmembershipApi apiInstance = new ObjectUsergroupmembershipApi(defaultClient);
     Integer pkiUsergroupmembershipID = 56; // Integer | 
     try {
-      CommonResponse result = apiInstance.usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID);
+      UsergroupmembershipDeleteObjectV1Response result = apiInstance.usergroupmembershipDeleteObjectV1(pkiUsergroupmembershipID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectUsergroupmembershipApi#usergroupmembershipDeleteObjectV1");
@@ -132,7 +132,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UsergroupmembershipDeleteObjectV1Response**](UsergroupmembershipDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ public class Example {
 
 <a id="usergroupmembershipEditObjectV1"></a>
 # **usergroupmembershipEditObjectV1**
-> CommonResponse usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request)
+> UsergroupmembershipEditObjectV1Response usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request)
 
 Edit an existing Usergroupmembership
 
@@ -182,7 +182,7 @@ public class Example {
     Integer pkiUsergroupmembershipID = 56; // Integer | 
     UsergroupmembershipEditObjectV1Request usergroupmembershipEditObjectV1Request = new UsergroupmembershipEditObjectV1Request(); // UsergroupmembershipEditObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request);
+      UsergroupmembershipEditObjectV1Response result = apiInstance.usergroupmembershipEditObjectV1(pkiUsergroupmembershipID, usergroupmembershipEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectUsergroupmembershipApi#usergroupmembershipEditObjectV1");
@@ -204,7 +204,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UsergroupmembershipEditObjectV1Response**](UsergroupmembershipEditObjectV1Response.md)
 
 ### Authorization
 

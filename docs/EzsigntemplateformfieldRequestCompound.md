@@ -26,7 +26,7 @@ An Ezsigntemplateformfield Object and children to create a complete structure
 |**eEzsigntemplateformfieldPositioningoccurence** | **FieldEEzsigntemplateformfieldPositioningoccurence** |  |  [optional] |
 |**eEzsigntemplateformfieldHorizontalalignment** | **EnumHorizontalalignment** |  |  [optional] |
 |**objTextstylestatic** | [**TextstylestaticRequestCompound**](TextstylestaticRequestCompound.md) |  |  [optional] |
-|**aObjEzsigntemplateelementdependency** | [**List&lt;EzsigntemplateelementdependencyRequest&gt;**](EzsigntemplateelementdependencyRequest.md) |  |  [optional] |
+|**aObjEzsigntemplateelementdependency** | [**List&lt;EzsigntemplateelementdependencyRequestCompound&gt;**](EzsigntemplateelementdependencyRequestCompound.md) |  |  [optional] |
 
 
 

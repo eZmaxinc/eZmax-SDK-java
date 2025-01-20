@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PhoneRequestCompoundV2 {
   public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
-  @javax.annotation.Nullable
   private Integer pkiPhoneID;
 
   public static final String SERIALIZED_NAME_FKI_PHONETYPE_I_D = "fkiPhonetypeID";
   @SerializedName(SERIALIZED_NAME_FKI_PHONETYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiPhonetypeID;
 
   public static final String SERIALIZED_NAME_S_PHONE_EXTENSION = "sPhoneExtension";
   @SerializedName(SERIALIZED_NAME_S_PHONE_EXTENSION)
-  @javax.annotation.Nullable
   private String sPhoneExtension;
 
   public static final String SERIALIZED_NAME_S_PHONE_E164 = "sPhoneE164";
   @SerializedName(SERIALIZED_NAME_S_PHONE_E164)
-  @javax.annotation.Nullable
   private String sPhoneE164;
 
   public PhoneRequestCompoundV2() {
   }
 
-  public PhoneRequestCompoundV2 pkiPhoneID(@javax.annotation.Nullable Integer pkiPhoneID) {
+  public PhoneRequestCompoundV2 pkiPhoneID(Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
     return this;
   }
@@ -88,12 +84,12 @@ public class PhoneRequestCompoundV2 {
     return pkiPhoneID;
   }
 
-  public void setPkiPhoneID(@javax.annotation.Nullable Integer pkiPhoneID) {
+  public void setPkiPhoneID(Integer pkiPhoneID) {
     this.pkiPhoneID = pkiPhoneID;
   }
 
 
-  public PhoneRequestCompoundV2 fkiPhonetypeID(@javax.annotation.Nonnull Integer fkiPhonetypeID) {
+  public PhoneRequestCompoundV2 fkiPhonetypeID(Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
     return this;
   }
@@ -108,12 +104,12 @@ public class PhoneRequestCompoundV2 {
     return fkiPhonetypeID;
   }
 
-  public void setFkiPhonetypeID(@javax.annotation.Nonnull Integer fkiPhonetypeID) {
+  public void setFkiPhonetypeID(Integer fkiPhonetypeID) {
     this.fkiPhonetypeID = fkiPhonetypeID;
   }
 
 
-  public PhoneRequestCompoundV2 sPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
+  public PhoneRequestCompoundV2 sPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
     return this;
   }
@@ -127,12 +123,12 @@ public class PhoneRequestCompoundV2 {
     return sPhoneExtension;
   }
 
-  public void setsPhoneExtension(@javax.annotation.Nullable String sPhoneExtension) {
+  public void setsPhoneExtension(String sPhoneExtension) {
     this.sPhoneExtension = sPhoneExtension;
   }
 
 
-  public PhoneRequestCompoundV2 sPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
+  public PhoneRequestCompoundV2 sPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
     return this;
   }
@@ -146,7 +142,7 @@ public class PhoneRequestCompoundV2 {
     return sPhoneE164;
   }
 
-  public void setsPhoneE164(@javax.annotation.Nullable String sPhoneE164) {
+  public void setsPhoneE164(String sPhoneE164) {
     this.sPhoneE164 = sPhoneE164;
   }
 

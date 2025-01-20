@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_FORMS_DATA_FOLDER = "a_objFormsDataFolder";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FORMS_DATA_FOLDER)
-  @javax.annotation.Nonnull
   private List<CustomFormsDataFolderResponse> aObjFormsDataFolder = new ArrayList<>();
 
   public EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload() {
   }
 
-  public EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload aObjFormsDataFolder(@javax.annotation.Nonnull List<CustomFormsDataFolderResponse> aObjFormsDataFolder) {
+  public EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload aObjFormsDataFolder(List<CustomFormsDataFolderResponse> aObjFormsDataFolder) {
     this.aObjFormsDataFolder = aObjFormsDataFolder;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsignbulksendtransmissionGetFormsDataV1ResponseMPayload {
     return aObjFormsDataFolder;
   }
 
-  public void setaObjFormsDataFolder(@javax.annotation.Nonnull List<CustomFormsDataFolderResponse> aObjFormsDataFolder) {
+  public void setaObjFormsDataFolder(List<CustomFormsDataFolderResponse> aObjFormsDataFolder) {
     this.aObjFormsDataFolder = aObjFormsDataFolder;
   }
 

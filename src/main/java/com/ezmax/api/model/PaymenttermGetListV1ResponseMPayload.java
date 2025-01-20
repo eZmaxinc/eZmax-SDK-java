@@ -51,27 +51,24 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/paymentterm/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PaymenttermGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
-  @javax.annotation.Nonnull
   private Integer iRowReturned;
 
   public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
-  @javax.annotation.Nonnull
   private Integer iRowFiltered;
 
   public static final String SERIALIZED_NAME_A_OBJ_PAYMENTTERM = "a_objPaymentterm";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PAYMENTTERM)
-  @javax.annotation.Nonnull
   private List<PaymenttermListElement> aObjPaymentterm = new ArrayList<>();
 
   public PaymenttermGetListV1ResponseMPayload() {
   }
 
-  public PaymenttermGetListV1ResponseMPayload iRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
+  public PaymenttermGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -85,12 +82,12 @@ public class PaymenttermGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-  public void setiRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
+  public void setiRowReturned(Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
-  public PaymenttermGetListV1ResponseMPayload iRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
+  public PaymenttermGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -104,12 +101,12 @@ public class PaymenttermGetListV1ResponseMPayload {
     return iRowFiltered;
   }
 
-  public void setiRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
+  public void setiRowFiltered(Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
   }
 
 
-  public PaymenttermGetListV1ResponseMPayload aObjPaymentterm(@javax.annotation.Nonnull List<PaymenttermListElement> aObjPaymentterm) {
+  public PaymenttermGetListV1ResponseMPayload aObjPaymentterm(List<PaymenttermListElement> aObjPaymentterm) {
     this.aObjPaymentterm = aObjPaymentterm;
     return this;
   }
@@ -131,7 +128,7 @@ public class PaymenttermGetListV1ResponseMPayload {
     return aObjPaymentterm;
   }
 
-  public void setaObjPaymentterm(@javax.annotation.Nonnull List<PaymenttermListElement> aObjPaymentterm) {
+  public void setaObjPaymentterm(List<PaymenttermListElement> aObjPaymentterm) {
     this.aObjPaymentterm = aObjPaymentterm;
   }
 

@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.ActivesessionResponseCompound;
+import com.ezmax.api.model.ActivesessionGetCurrentV1ResponseMPayload;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
 import com.google.gson.TypeAdapter;
@@ -51,27 +51,24 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/activesession/getCurrent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ActivesessionGetCurrentV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
-  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayload objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
-  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  @javax.annotation.Nonnull
-  private ActivesessionResponseCompound mPayload;
+  private ActivesessionGetCurrentV1ResponseMPayload mPayload;
 
   public ActivesessionGetCurrentV1Response() {
   }
 
-  public ActivesessionGetCurrentV1Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
+  public ActivesessionGetCurrentV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -85,12 +82,12 @@ public class ActivesessionGetCurrentV1Response {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public ActivesessionGetCurrentV1Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
+  public ActivesessionGetCurrentV1Response objDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -104,26 +101,26 @@ public class ActivesessionGetCurrentV1Response {
     return objDebug;
   }
 
-  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
+  public void setObjDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
-  public ActivesessionGetCurrentV1Response mPayload(@javax.annotation.Nonnull ActivesessionResponseCompound mPayload) {
+  public ActivesessionGetCurrentV1Response mPayload(ActivesessionGetCurrentV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
 
   /**
-   * Payload for GET /1/object/activesession/getCurrent
+   * Get mPayload
    * @return mPayload
    */
   @javax.annotation.Nonnull
-  public ActivesessionResponseCompound getmPayload() {
+  public ActivesessionGetCurrentV1ResponseMPayload getmPayload() {
     return mPayload;
   }
 
-  public void setmPayload(@javax.annotation.Nonnull ActivesessionResponseCompound mPayload) {
+  public void setmPayload(ActivesessionGetCurrentV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -222,7 +219,7 @@ public class ActivesessionGetCurrentV1Response {
         CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
       }
       // validate the required field `mPayload`
-      ActivesessionResponseCompound.validateJsonElement(jsonObj.get("mPayload"));
+      ActivesessionGetCurrentV1ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

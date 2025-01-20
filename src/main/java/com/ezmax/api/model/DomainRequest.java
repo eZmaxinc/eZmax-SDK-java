@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * A Domain Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DomainRequest {
   public static final String SERIALIZED_NAME_PKI_DOMAIN_I_D = "pkiDomainID";
   @SerializedName(SERIALIZED_NAME_PKI_DOMAIN_I_D)
-  @javax.annotation.Nullable
   private Integer pkiDomainID;
 
   public static final String SERIALIZED_NAME_S_DOMAIN_NAME = "sDomainName";
   @SerializedName(SERIALIZED_NAME_S_DOMAIN_NAME)
-  @javax.annotation.Nonnull
   private String sDomainName;
 
   public DomainRequest() {
   }
 
-  public DomainRequest pkiDomainID(@javax.annotation.Nullable Integer pkiDomainID) {
+  public DomainRequest pkiDomainID(Integer pkiDomainID) {
     this.pkiDomainID = pkiDomainID;
     return this;
   }
@@ -79,12 +77,12 @@ public class DomainRequest {
     return pkiDomainID;
   }
 
-  public void setPkiDomainID(@javax.annotation.Nullable Integer pkiDomainID) {
+  public void setPkiDomainID(Integer pkiDomainID) {
     this.pkiDomainID = pkiDomainID;
   }
 
 
-  public DomainRequest sDomainName(@javax.annotation.Nonnull String sDomainName) {
+  public DomainRequest sDomainName(String sDomainName) {
     this.sDomainName = sDomainName;
     return this;
   }
@@ -98,7 +96,7 @@ public class DomainRequest {
     return sDomainName;
   }
 
-  public void setsDomainName(@javax.annotation.Nonnull String sDomainName) {
+  public void setsDomainName(String sDomainName) {
     this.sDomainName = sDomainName;
   }
 

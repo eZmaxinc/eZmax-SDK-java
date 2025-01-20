@@ -83,7 +83,7 @@ public class Example {
 
 <a id="ezsignsignergroupDeleteObjectV1"></a>
 # **ezsignsignergroupDeleteObjectV1**
-> CommonResponse ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
+> EzsignsignergroupDeleteObjectV1Response ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID)
 
 Delete an existing Ezsignsignergroup
 
@@ -113,7 +113,7 @@ public class Example {
     ObjectEzsignsignergroupApi apiInstance = new ObjectEzsignsignergroupApi(defaultClient);
     Integer pkiEzsignsignergroupID = 56; // Integer | The unique ID of the Ezsignsignergroup
     try {
-      CommonResponse result = apiInstance.ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID);
+      EzsignsignergroupDeleteObjectV1Response result = apiInstance.ezsignsignergroupDeleteObjectV1(pkiEzsignsignergroupID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignsignergroupApi#ezsignsignergroupDeleteObjectV1");
@@ -134,7 +134,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignsignergroupDeleteObjectV1Response**](EzsignsignergroupDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ public class Example {
 
 <a id="ezsignsignergroupEditObjectV1"></a>
 # **ezsignsignergroupEditObjectV1**
-> CommonResponse ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request)
+> EzsignsignergroupEditObjectV1Response ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request)
 
 Edit an existing Ezsignsignergroup
 
@@ -257,7 +257,7 @@ public class Example {
     Integer pkiEzsignsignergroupID = 56; // Integer | The unique ID of the Ezsignsignergroup
     EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request = new EzsignsignergroupEditObjectV1Request(); // EzsignsignergroupEditObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
+      EzsignsignergroupEditObjectV1Response result = apiInstance.ezsignsignergroupEditObjectV1(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignsignergroupApi#ezsignsignergroupEditObjectV1");
@@ -279,7 +279,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignsignergroupEditObjectV1Response**](EzsignsignergroupEditObjectV1Response.md)
 
 ### Authorization
 

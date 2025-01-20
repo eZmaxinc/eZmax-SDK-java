@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Branding Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomBrandingResponse {
   public static final String SERIALIZED_NAME_I_BRANDING_COLOR = "iBrandingColor";
   @SerializedName(SERIALIZED_NAME_I_BRANDING_COLOR)
-  @javax.annotation.Nonnull
   private Integer iBrandingColor;
 
   public static final String SERIALIZED_NAME_S_BRANDING_LOGOINTERFACEURL = "sBrandingLogointerfaceurl";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_LOGOINTERFACEURL)
-  @javax.annotation.Nonnull
   private String sBrandingLogointerfaceurl;
 
   public CustomBrandingResponse() {
   }
 
-  public CustomBrandingResponse iBrandingColor(@javax.annotation.Nonnull Integer iBrandingColor) {
+  public CustomBrandingResponse iBrandingColor(Integer iBrandingColor) {
     this.iBrandingColor = iBrandingColor;
     return this;
   }
@@ -79,12 +77,12 @@ public class CustomBrandingResponse {
     return iBrandingColor;
   }
 
-  public void setiBrandingColor(@javax.annotation.Nonnull Integer iBrandingColor) {
+  public void setiBrandingColor(Integer iBrandingColor) {
     this.iBrandingColor = iBrandingColor;
   }
 
 
-  public CustomBrandingResponse sBrandingLogointerfaceurl(@javax.annotation.Nonnull String sBrandingLogointerfaceurl) {
+  public CustomBrandingResponse sBrandingLogointerfaceurl(String sBrandingLogointerfaceurl) {
     this.sBrandingLogointerfaceurl = sBrandingLogointerfaceurl;
     return this;
   }
@@ -98,7 +96,7 @@ public class CustomBrandingResponse {
     return sBrandingLogointerfaceurl;
   }
 
-  public void setsBrandingLogointerfaceurl(@javax.annotation.Nonnull String sBrandingLogointerfaceurl) {
+  public void setsBrandingLogointerfaceurl(String sBrandingLogointerfaceurl) {
     this.sBrandingLogointerfaceurl = sBrandingLogointerfaceurl;
   }
 

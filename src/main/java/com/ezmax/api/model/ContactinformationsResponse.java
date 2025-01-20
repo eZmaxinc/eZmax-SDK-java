@@ -14,11 +14,11 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AddressResponse;
-import com.ezmax.api.model.EmailResponse;
+import com.ezmax.api.model.AddressResponseCompound;
+import com.ezmax.api.model.EmailResponseCompound;
 import com.ezmax.api.model.FieldEContactinformationsType;
 import com.ezmax.api.model.PhoneResponseCompound;
-import com.ezmax.api.model.WebsiteResponse;
+import com.ezmax.api.model.WebsiteResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,67 +53,56 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ContactinformationsResponse {
   public static final String SERIALIZED_NAME_PKI_CONTACTINFORMATIONS_I_D = "pkiContactinformationsID";
   @SerializedName(SERIALIZED_NAME_PKI_CONTACTINFORMATIONS_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiContactinformationsID;
 
   public static final String SERIALIZED_NAME_FKI_ADDRESS_I_D_DEFAULT = "fkiAddressIDDefault";
   @SerializedName(SERIALIZED_NAME_FKI_ADDRESS_I_D_DEFAULT)
-  @javax.annotation.Nullable
   private Integer fkiAddressIDDefault;
 
   public static final String SERIALIZED_NAME_FKI_PHONE_I_D_DEFAULT = "fkiPhoneIDDefault";
   @SerializedName(SERIALIZED_NAME_FKI_PHONE_I_D_DEFAULT)
-  @javax.annotation.Nullable
   private Integer fkiPhoneIDDefault;
 
   public static final String SERIALIZED_NAME_FKI_EMAIL_I_D_DEFAULT = "fkiEmailIDDefault";
   @SerializedName(SERIALIZED_NAME_FKI_EMAIL_I_D_DEFAULT)
-  @javax.annotation.Nullable
   private Integer fkiEmailIDDefault;
 
   public static final String SERIALIZED_NAME_FKI_WEBSITE_I_D_DEFAULT = "fkiWebsiteIDDefault";
   @SerializedName(SERIALIZED_NAME_FKI_WEBSITE_I_D_DEFAULT)
-  @javax.annotation.Nullable
   private Integer fkiWebsiteIDDefault;
 
   public static final String SERIALIZED_NAME_E_CONTACTINFORMATIONS_TYPE = "eContactinformationsType";
   @SerializedName(SERIALIZED_NAME_E_CONTACTINFORMATIONS_TYPE)
-  @javax.annotation.Nonnull
   private FieldEContactinformationsType eContactinformationsType;
 
   public static final String SERIALIZED_NAME_S_CONTACTINFORMATIONS_URL = "sContactinformationsUrl";
   @SerializedName(SERIALIZED_NAME_S_CONTACTINFORMATIONS_URL)
-  @javax.annotation.Nullable
   private String sContactinformationsUrl;
 
   public static final String SERIALIZED_NAME_OBJ_ADDRESS_DEFAULT = "objAddressDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_ADDRESS_DEFAULT)
-  @javax.annotation.Nullable
-  private AddressResponse objAddressDefault;
+  private AddressResponseCompound objAddressDefault;
 
   public static final String SERIALIZED_NAME_OBJ_PHONE_DEFAULT = "objPhoneDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_PHONE_DEFAULT)
-  @javax.annotation.Nullable
   private PhoneResponseCompound objPhoneDefault;
 
   public static final String SERIALIZED_NAME_OBJ_EMAIL_DEFAULT = "objEmailDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_EMAIL_DEFAULT)
-  @javax.annotation.Nullable
-  private EmailResponse objEmailDefault;
+  private EmailResponseCompound objEmailDefault;
 
   public static final String SERIALIZED_NAME_OBJ_WEBSITE_DEFAULT = "objWebsiteDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBSITE_DEFAULT)
-  @javax.annotation.Nullable
-  private WebsiteResponse objWebsiteDefault;
+  private WebsiteResponseCompound objWebsiteDefault;
 
   public ContactinformationsResponse() {
   }
 
-  public ContactinformationsResponse pkiContactinformationsID(@javax.annotation.Nonnull Integer pkiContactinformationsID) {
+  public ContactinformationsResponse pkiContactinformationsID(Integer pkiContactinformationsID) {
     this.pkiContactinformationsID = pkiContactinformationsID;
     return this;
   }
@@ -129,12 +118,12 @@ public class ContactinformationsResponse {
     return pkiContactinformationsID;
   }
 
-  public void setPkiContactinformationsID(@javax.annotation.Nonnull Integer pkiContactinformationsID) {
+  public void setPkiContactinformationsID(Integer pkiContactinformationsID) {
     this.pkiContactinformationsID = pkiContactinformationsID;
   }
 
 
-  public ContactinformationsResponse fkiAddressIDDefault(@javax.annotation.Nullable Integer fkiAddressIDDefault) {
+  public ContactinformationsResponse fkiAddressIDDefault(Integer fkiAddressIDDefault) {
     this.fkiAddressIDDefault = fkiAddressIDDefault;
     return this;
   }
@@ -149,12 +138,12 @@ public class ContactinformationsResponse {
     return fkiAddressIDDefault;
   }
 
-  public void setFkiAddressIDDefault(@javax.annotation.Nullable Integer fkiAddressIDDefault) {
+  public void setFkiAddressIDDefault(Integer fkiAddressIDDefault) {
     this.fkiAddressIDDefault = fkiAddressIDDefault;
   }
 
 
-  public ContactinformationsResponse fkiPhoneIDDefault(@javax.annotation.Nullable Integer fkiPhoneIDDefault) {
+  public ContactinformationsResponse fkiPhoneIDDefault(Integer fkiPhoneIDDefault) {
     this.fkiPhoneIDDefault = fkiPhoneIDDefault;
     return this;
   }
@@ -169,12 +158,12 @@ public class ContactinformationsResponse {
     return fkiPhoneIDDefault;
   }
 
-  public void setFkiPhoneIDDefault(@javax.annotation.Nullable Integer fkiPhoneIDDefault) {
+  public void setFkiPhoneIDDefault(Integer fkiPhoneIDDefault) {
     this.fkiPhoneIDDefault = fkiPhoneIDDefault;
   }
 
 
-  public ContactinformationsResponse fkiEmailIDDefault(@javax.annotation.Nullable Integer fkiEmailIDDefault) {
+  public ContactinformationsResponse fkiEmailIDDefault(Integer fkiEmailIDDefault) {
     this.fkiEmailIDDefault = fkiEmailIDDefault;
     return this;
   }
@@ -190,12 +179,12 @@ public class ContactinformationsResponse {
     return fkiEmailIDDefault;
   }
 
-  public void setFkiEmailIDDefault(@javax.annotation.Nullable Integer fkiEmailIDDefault) {
+  public void setFkiEmailIDDefault(Integer fkiEmailIDDefault) {
     this.fkiEmailIDDefault = fkiEmailIDDefault;
   }
 
 
-  public ContactinformationsResponse fkiWebsiteIDDefault(@javax.annotation.Nullable Integer fkiWebsiteIDDefault) {
+  public ContactinformationsResponse fkiWebsiteIDDefault(Integer fkiWebsiteIDDefault) {
     this.fkiWebsiteIDDefault = fkiWebsiteIDDefault;
     return this;
   }
@@ -211,12 +200,12 @@ public class ContactinformationsResponse {
     return fkiWebsiteIDDefault;
   }
 
-  public void setFkiWebsiteIDDefault(@javax.annotation.Nullable Integer fkiWebsiteIDDefault) {
+  public void setFkiWebsiteIDDefault(Integer fkiWebsiteIDDefault) {
     this.fkiWebsiteIDDefault = fkiWebsiteIDDefault;
   }
 
 
-  public ContactinformationsResponse eContactinformationsType(@javax.annotation.Nonnull FieldEContactinformationsType eContactinformationsType) {
+  public ContactinformationsResponse eContactinformationsType(FieldEContactinformationsType eContactinformationsType) {
     this.eContactinformationsType = eContactinformationsType;
     return this;
   }
@@ -230,12 +219,12 @@ public class ContactinformationsResponse {
     return eContactinformationsType;
   }
 
-  public void seteContactinformationsType(@javax.annotation.Nonnull FieldEContactinformationsType eContactinformationsType) {
+  public void seteContactinformationsType(FieldEContactinformationsType eContactinformationsType) {
     this.eContactinformationsType = eContactinformationsType;
   }
 
 
-  public ContactinformationsResponse sContactinformationsUrl(@javax.annotation.Nullable String sContactinformationsUrl) {
+  public ContactinformationsResponse sContactinformationsUrl(String sContactinformationsUrl) {
     this.sContactinformationsUrl = sContactinformationsUrl;
     return this;
   }
@@ -249,31 +238,31 @@ public class ContactinformationsResponse {
     return sContactinformationsUrl;
   }
 
-  public void setsContactinformationsUrl(@javax.annotation.Nullable String sContactinformationsUrl) {
+  public void setsContactinformationsUrl(String sContactinformationsUrl) {
     this.sContactinformationsUrl = sContactinformationsUrl;
   }
 
 
-  public ContactinformationsResponse objAddressDefault(@javax.annotation.Nullable AddressResponse objAddressDefault) {
+  public ContactinformationsResponse objAddressDefault(AddressResponseCompound objAddressDefault) {
     this.objAddressDefault = objAddressDefault;
     return this;
   }
 
   /**
-   * An Address Object and children to create a complete structure
+   * Get objAddressDefault
    * @return objAddressDefault
    */
   @javax.annotation.Nullable
-  public AddressResponse getObjAddressDefault() {
+  public AddressResponseCompound getObjAddressDefault() {
     return objAddressDefault;
   }
 
-  public void setObjAddressDefault(@javax.annotation.Nullable AddressResponse objAddressDefault) {
+  public void setObjAddressDefault(AddressResponseCompound objAddressDefault) {
     this.objAddressDefault = objAddressDefault;
   }
 
 
-  public ContactinformationsResponse objPhoneDefault(@javax.annotation.Nullable PhoneResponseCompound objPhoneDefault) {
+  public ContactinformationsResponse objPhoneDefault(PhoneResponseCompound objPhoneDefault) {
     this.objPhoneDefault = objPhoneDefault;
     return this;
   }
@@ -287,45 +276,45 @@ public class ContactinformationsResponse {
     return objPhoneDefault;
   }
 
-  public void setObjPhoneDefault(@javax.annotation.Nullable PhoneResponseCompound objPhoneDefault) {
+  public void setObjPhoneDefault(PhoneResponseCompound objPhoneDefault) {
     this.objPhoneDefault = objPhoneDefault;
   }
 
 
-  public ContactinformationsResponse objEmailDefault(@javax.annotation.Nullable EmailResponse objEmailDefault) {
+  public ContactinformationsResponse objEmailDefault(EmailResponseCompound objEmailDefault) {
     this.objEmailDefault = objEmailDefault;
     return this;
   }
 
   /**
-   * An Email Object and children to create a complete structure
+   * Get objEmailDefault
    * @return objEmailDefault
    */
   @javax.annotation.Nullable
-  public EmailResponse getObjEmailDefault() {
+  public EmailResponseCompound getObjEmailDefault() {
     return objEmailDefault;
   }
 
-  public void setObjEmailDefault(@javax.annotation.Nullable EmailResponse objEmailDefault) {
+  public void setObjEmailDefault(EmailResponseCompound objEmailDefault) {
     this.objEmailDefault = objEmailDefault;
   }
 
 
-  public ContactinformationsResponse objWebsiteDefault(@javax.annotation.Nullable WebsiteResponse objWebsiteDefault) {
+  public ContactinformationsResponse objWebsiteDefault(WebsiteResponseCompound objWebsiteDefault) {
     this.objWebsiteDefault = objWebsiteDefault;
     return this;
   }
 
   /**
-   * A Website Object and children to create a complete structure
+   * Get objWebsiteDefault
    * @return objWebsiteDefault
    */
   @javax.annotation.Nullable
-  public WebsiteResponse getObjWebsiteDefault() {
+  public WebsiteResponseCompound getObjWebsiteDefault() {
     return objWebsiteDefault;
   }
 
-  public void setObjWebsiteDefault(@javax.annotation.Nullable WebsiteResponse objWebsiteDefault) {
+  public void setObjWebsiteDefault(WebsiteResponseCompound objWebsiteDefault) {
     this.objWebsiteDefault = objWebsiteDefault;
   }
 
@@ -448,7 +437,7 @@ public class ContactinformationsResponse {
       }
       // validate the optional field `objAddressDefault`
       if (jsonObj.get("objAddressDefault") != null && !jsonObj.get("objAddressDefault").isJsonNull()) {
-        AddressResponse.validateJsonElement(jsonObj.get("objAddressDefault"));
+        AddressResponseCompound.validateJsonElement(jsonObj.get("objAddressDefault"));
       }
       // validate the optional field `objPhoneDefault`
       if (jsonObj.get("objPhoneDefault") != null && !jsonObj.get("objPhoneDefault").isJsonNull()) {
@@ -456,11 +445,11 @@ public class ContactinformationsResponse {
       }
       // validate the optional field `objEmailDefault`
       if (jsonObj.get("objEmailDefault") != null && !jsonObj.get("objEmailDefault").isJsonNull()) {
-        EmailResponse.validateJsonElement(jsonObj.get("objEmailDefault"));
+        EmailResponseCompound.validateJsonElement(jsonObj.get("objEmailDefault"));
       }
       // validate the optional field `objWebsiteDefault`
       if (jsonObj.get("objWebsiteDefault") != null && !jsonObj.get("objWebsiteDefault").isJsonNull()) {
-        WebsiteResponse.validateJsonElement(jsonObj.get("objWebsiteDefault"));
+        WebsiteResponseCompound.validateJsonElement(jsonObj.get("objWebsiteDefault"));
       }
   }
 

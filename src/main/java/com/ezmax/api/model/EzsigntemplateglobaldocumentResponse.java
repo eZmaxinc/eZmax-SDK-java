@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateglobaldocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateglobaldocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALDOCUMENT_I_D = "pkiEzsigntemplateglobaldocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALDOCUMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplateglobaldocumentID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBALDOCUMENT_NAME = "sEzsigntemplateglobaldocumentName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBALDOCUMENT_NAME)
-  @javax.annotation.Nonnull
   private String sEzsigntemplateglobaldocumentName;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEGLOBALDOCUMENT_PAGETOTAL = "iEzsigntemplateglobaldocumentPagetotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEGLOBALDOCUMENT_PAGETOTAL)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplateglobaldocumentPagetotal;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEGLOBALDOCUMENT_SIGNATURETOTAL = "iEzsigntemplateglobaldocumentSignaturetotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEGLOBALDOCUMENT_SIGNATURETOTAL)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplateglobaldocumentSignaturetotal;
 
   public EzsigntemplateglobaldocumentResponse() {
   }
 
-  public EzsigntemplateglobaldocumentResponse pkiEzsigntemplateglobaldocumentID(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobaldocumentID) {
+  public EzsigntemplateglobaldocumentResponse pkiEzsigntemplateglobaldocumentID(Integer pkiEzsigntemplateglobaldocumentID) {
     this.pkiEzsigntemplateglobaldocumentID = pkiEzsigntemplateglobaldocumentID;
     return this;
   }
@@ -88,12 +84,12 @@ public class EzsigntemplateglobaldocumentResponse {
     return pkiEzsigntemplateglobaldocumentID;
   }
 
-  public void setPkiEzsigntemplateglobaldocumentID(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobaldocumentID) {
+  public void setPkiEzsigntemplateglobaldocumentID(Integer pkiEzsigntemplateglobaldocumentID) {
     this.pkiEzsigntemplateglobaldocumentID = pkiEzsigntemplateglobaldocumentID;
   }
 
 
-  public EzsigntemplateglobaldocumentResponse sEzsigntemplateglobaldocumentName(@javax.annotation.Nonnull String sEzsigntemplateglobaldocumentName) {
+  public EzsigntemplateglobaldocumentResponse sEzsigntemplateglobaldocumentName(String sEzsigntemplateglobaldocumentName) {
     this.sEzsigntemplateglobaldocumentName = sEzsigntemplateglobaldocumentName;
     return this;
   }
@@ -107,12 +103,12 @@ public class EzsigntemplateglobaldocumentResponse {
     return sEzsigntemplateglobaldocumentName;
   }
 
-  public void setsEzsigntemplateglobaldocumentName(@javax.annotation.Nonnull String sEzsigntemplateglobaldocumentName) {
+  public void setsEzsigntemplateglobaldocumentName(String sEzsigntemplateglobaldocumentName) {
     this.sEzsigntemplateglobaldocumentName = sEzsigntemplateglobaldocumentName;
   }
 
 
-  public EzsigntemplateglobaldocumentResponse iEzsigntemplateglobaldocumentPagetotal(@javax.annotation.Nonnull Integer iEzsigntemplateglobaldocumentPagetotal) {
+  public EzsigntemplateglobaldocumentResponse iEzsigntemplateglobaldocumentPagetotal(Integer iEzsigntemplateglobaldocumentPagetotal) {
     this.iEzsigntemplateglobaldocumentPagetotal = iEzsigntemplateglobaldocumentPagetotal;
     return this;
   }
@@ -127,12 +123,12 @@ public class EzsigntemplateglobaldocumentResponse {
     return iEzsigntemplateglobaldocumentPagetotal;
   }
 
-  public void setiEzsigntemplateglobaldocumentPagetotal(@javax.annotation.Nonnull Integer iEzsigntemplateglobaldocumentPagetotal) {
+  public void setiEzsigntemplateglobaldocumentPagetotal(Integer iEzsigntemplateglobaldocumentPagetotal) {
     this.iEzsigntemplateglobaldocumentPagetotal = iEzsigntemplateglobaldocumentPagetotal;
   }
 
 
-  public EzsigntemplateglobaldocumentResponse iEzsigntemplateglobaldocumentSignaturetotal(@javax.annotation.Nonnull Integer iEzsigntemplateglobaldocumentSignaturetotal) {
+  public EzsigntemplateglobaldocumentResponse iEzsigntemplateglobaldocumentSignaturetotal(Integer iEzsigntemplateglobaldocumentSignaturetotal) {
     this.iEzsigntemplateglobaldocumentSignaturetotal = iEzsigntemplateglobaldocumentSignaturetotal;
     return this;
   }
@@ -146,7 +142,7 @@ public class EzsigntemplateglobaldocumentResponse {
     return iEzsigntemplateglobaldocumentSignaturetotal;
   }
 
-  public void setiEzsigntemplateglobaldocumentSignaturetotal(@javax.annotation.Nonnull Integer iEzsigntemplateglobaldocumentSignaturetotal) {
+  public void setiEzsigntemplateglobaldocumentSignaturetotal(Integer iEzsigntemplateglobaldocumentSignaturetotal) {
     this.iEzsigntemplateglobaldocumentSignaturetotal = iEzsigntemplateglobaldocumentSignaturetotal;
   }
 

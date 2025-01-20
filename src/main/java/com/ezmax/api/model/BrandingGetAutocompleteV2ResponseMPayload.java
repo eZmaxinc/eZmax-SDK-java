@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/branding/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BrandingGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_BRANDING = "a_objBranding";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BRANDING)
-  @javax.annotation.Nonnull
   private List<BrandingAutocompleteElementResponse> aObjBranding = new ArrayList<>();
 
   public BrandingGetAutocompleteV2ResponseMPayload() {
   }
 
-  public BrandingGetAutocompleteV2ResponseMPayload aObjBranding(@javax.annotation.Nonnull List<BrandingAutocompleteElementResponse> aObjBranding) {
+  public BrandingGetAutocompleteV2ResponseMPayload aObjBranding(List<BrandingAutocompleteElementResponse> aObjBranding) {
     this.aObjBranding = aObjBranding;
     return this;
   }
@@ -83,7 +82,7 @@ public class BrandingGetAutocompleteV2ResponseMPayload {
     return aObjBranding;
   }
 
-  public void setaObjBranding(@javax.annotation.Nonnull List<BrandingAutocompleteElementResponse> aObjBranding) {
+  public void setaObjBranding(List<BrandingAutocompleteElementResponse> aObjBranding) {
     this.aObjBranding = aObjBranding;
   }
 

@@ -51,62 +51,52 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebhookListElement {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiWebhookID;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_DESCRIPTION = "sWebhookDescription";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sWebhookDescription;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_URL = "sWebhookUrl";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_URL)
-  @javax.annotation.Nonnull
   private String sWebhookUrl;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_EVENT = "sWebhookEvent";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_EVENT)
-  @javax.annotation.Nonnull
   private String sWebhookEvent;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_EMAILFAILED = "sWebhookEmailfailed";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_EMAILFAILED)
-  @javax.annotation.Nonnull
   private String sWebhookEmailfailed;
 
   public static final String SERIALIZED_NAME_E_WEBHOOK_MODULE = "eWebhookModule";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MODULE)
-  @javax.annotation.Nonnull
   private FieldEWebhookModule eWebhookModule;
 
   public static final String SERIALIZED_NAME_E_WEBHOOK_EZSIGNEVENT = "eWebhookEzsignevent";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_EZSIGNEVENT)
-  @javax.annotation.Nullable
   private FieldEWebhookEzsignevent eWebhookEzsignevent;
 
   public static final String SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT = "eWebhookManagementevent";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT)
-  @javax.annotation.Nullable
   private FieldEWebhookManagementevent eWebhookManagementevent;
 
   public static final String SERIALIZED_NAME_B_WEBHOOK_ISACTIVE = "bWebhookIsactive";
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bWebhookIsactive;
 
   public static final String SERIALIZED_NAME_B_WEBHOOK_ISSIGNED = "bWebhookIssigned";
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISSIGNED)
-  @javax.annotation.Nonnull
   private Boolean bWebhookIssigned;
 
   public WebhookListElement() {
   }
 
-  public WebhookListElement pkiWebhookID(@javax.annotation.Nonnull Integer pkiWebhookID) {
+  public WebhookListElement pkiWebhookID(Integer pkiWebhookID) {
     this.pkiWebhookID = pkiWebhookID;
     return this;
   }
@@ -120,12 +110,12 @@ public class WebhookListElement {
     return pkiWebhookID;
   }
 
-  public void setPkiWebhookID(@javax.annotation.Nonnull Integer pkiWebhookID) {
+  public void setPkiWebhookID(Integer pkiWebhookID) {
     this.pkiWebhookID = pkiWebhookID;
   }
 
 
-  public WebhookListElement sWebhookDescription(@javax.annotation.Nonnull String sWebhookDescription) {
+  public WebhookListElement sWebhookDescription(String sWebhookDescription) {
     this.sWebhookDescription = sWebhookDescription;
     return this;
   }
@@ -139,12 +129,12 @@ public class WebhookListElement {
     return sWebhookDescription;
   }
 
-  public void setsWebhookDescription(@javax.annotation.Nonnull String sWebhookDescription) {
+  public void setsWebhookDescription(String sWebhookDescription) {
     this.sWebhookDescription = sWebhookDescription;
   }
 
 
-  public WebhookListElement sWebhookUrl(@javax.annotation.Nonnull String sWebhookUrl) {
+  public WebhookListElement sWebhookUrl(String sWebhookUrl) {
     this.sWebhookUrl = sWebhookUrl;
     return this;
   }
@@ -158,12 +148,12 @@ public class WebhookListElement {
     return sWebhookUrl;
   }
 
-  public void setsWebhookUrl(@javax.annotation.Nonnull String sWebhookUrl) {
+  public void setsWebhookUrl(String sWebhookUrl) {
     this.sWebhookUrl = sWebhookUrl;
   }
 
 
-  public WebhookListElement sWebhookEvent(@javax.annotation.Nonnull String sWebhookEvent) {
+  public WebhookListElement sWebhookEvent(String sWebhookEvent) {
     this.sWebhookEvent = sWebhookEvent;
     return this;
   }
@@ -177,12 +167,12 @@ public class WebhookListElement {
     return sWebhookEvent;
   }
 
-  public void setsWebhookEvent(@javax.annotation.Nonnull String sWebhookEvent) {
+  public void setsWebhookEvent(String sWebhookEvent) {
     this.sWebhookEvent = sWebhookEvent;
   }
 
 
-  public WebhookListElement sWebhookEmailfailed(@javax.annotation.Nonnull String sWebhookEmailfailed) {
+  public WebhookListElement sWebhookEmailfailed(String sWebhookEmailfailed) {
     this.sWebhookEmailfailed = sWebhookEmailfailed;
     return this;
   }
@@ -196,12 +186,12 @@ public class WebhookListElement {
     return sWebhookEmailfailed;
   }
 
-  public void setsWebhookEmailfailed(@javax.annotation.Nonnull String sWebhookEmailfailed) {
+  public void setsWebhookEmailfailed(String sWebhookEmailfailed) {
     this.sWebhookEmailfailed = sWebhookEmailfailed;
   }
 
 
-  public WebhookListElement eWebhookModule(@javax.annotation.Nonnull FieldEWebhookModule eWebhookModule) {
+  public WebhookListElement eWebhookModule(FieldEWebhookModule eWebhookModule) {
     this.eWebhookModule = eWebhookModule;
     return this;
   }
@@ -215,12 +205,12 @@ public class WebhookListElement {
     return eWebhookModule;
   }
 
-  public void seteWebhookModule(@javax.annotation.Nonnull FieldEWebhookModule eWebhookModule) {
+  public void seteWebhookModule(FieldEWebhookModule eWebhookModule) {
     this.eWebhookModule = eWebhookModule;
   }
 
 
-  public WebhookListElement eWebhookEzsignevent(@javax.annotation.Nullable FieldEWebhookEzsignevent eWebhookEzsignevent) {
+  public WebhookListElement eWebhookEzsignevent(FieldEWebhookEzsignevent eWebhookEzsignevent) {
     this.eWebhookEzsignevent = eWebhookEzsignevent;
     return this;
   }
@@ -234,12 +224,12 @@ public class WebhookListElement {
     return eWebhookEzsignevent;
   }
 
-  public void seteWebhookEzsignevent(@javax.annotation.Nullable FieldEWebhookEzsignevent eWebhookEzsignevent) {
+  public void seteWebhookEzsignevent(FieldEWebhookEzsignevent eWebhookEzsignevent) {
     this.eWebhookEzsignevent = eWebhookEzsignevent;
   }
 
 
-  public WebhookListElement eWebhookManagementevent(@javax.annotation.Nullable FieldEWebhookManagementevent eWebhookManagementevent) {
+  public WebhookListElement eWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
     this.eWebhookManagementevent = eWebhookManagementevent;
     return this;
   }
@@ -253,12 +243,12 @@ public class WebhookListElement {
     return eWebhookManagementevent;
   }
 
-  public void seteWebhookManagementevent(@javax.annotation.Nullable FieldEWebhookManagementevent eWebhookManagementevent) {
+  public void seteWebhookManagementevent(FieldEWebhookManagementevent eWebhookManagementevent) {
     this.eWebhookManagementevent = eWebhookManagementevent;
   }
 
 
-  public WebhookListElement bWebhookIsactive(@javax.annotation.Nonnull Boolean bWebhookIsactive) {
+  public WebhookListElement bWebhookIsactive(Boolean bWebhookIsactive) {
     this.bWebhookIsactive = bWebhookIsactive;
     return this;
   }
@@ -272,12 +262,12 @@ public class WebhookListElement {
     return bWebhookIsactive;
   }
 
-  public void setbWebhookIsactive(@javax.annotation.Nonnull Boolean bWebhookIsactive) {
+  public void setbWebhookIsactive(Boolean bWebhookIsactive) {
     this.bWebhookIsactive = bWebhookIsactive;
   }
 
 
-  public WebhookListElement bWebhookIssigned(@javax.annotation.Nonnull Boolean bWebhookIssigned) {
+  public WebhookListElement bWebhookIssigned(Boolean bWebhookIssigned) {
     this.bWebhookIssigned = bWebhookIssigned;
     return this;
   }
@@ -291,7 +281,7 @@ public class WebhookListElement {
     return bWebhookIssigned;
   }
 
-  public void setbWebhookIssigned(@javax.annotation.Nonnull Boolean bWebhookIssigned) {
+  public void setbWebhookIssigned(Boolean bWebhookIssigned) {
     this.bWebhookIssigned = bWebhookIssigned;
   }
 

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for Websocket Error V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebsocketResponseErrorV1 {
   /**
    * The Type of message
@@ -103,23 +103,20 @@ public class WebsocketResponseErrorV1 {
 
   public static final String SERIALIZED_NAME_E_WEBSOCKET_MESSAGETYPE = "eWebsocketMessagetype";
   @SerializedName(SERIALIZED_NAME_E_WEBSOCKET_MESSAGETYPE)
-  @javax.annotation.Nonnull
   private EWebsocketMessagetypeEnum eWebsocketMessagetype;
 
   public static final String SERIALIZED_NAME_S_WEBSOCKET_CHANNEL = "sWebsocketChannel";
   @SerializedName(SERIALIZED_NAME_S_WEBSOCKET_CHANNEL)
-  @javax.annotation.Nonnull
   private String sWebsocketChannel;
 
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
-  @javax.annotation.Nonnull
   private WebsocketResponseErrorV1MPayload mPayload;
 
   public WebsocketResponseErrorV1() {
   }
 
-  public WebsocketResponseErrorV1 eWebsocketMessagetype(@javax.annotation.Nonnull EWebsocketMessagetypeEnum eWebsocketMessagetype) {
+  public WebsocketResponseErrorV1 eWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
     this.eWebsocketMessagetype = eWebsocketMessagetype;
     return this;
   }
@@ -133,12 +130,12 @@ public class WebsocketResponseErrorV1 {
     return eWebsocketMessagetype;
   }
 
-  public void seteWebsocketMessagetype(@javax.annotation.Nonnull EWebsocketMessagetypeEnum eWebsocketMessagetype) {
+  public void seteWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
     this.eWebsocketMessagetype = eWebsocketMessagetype;
   }
 
 
-  public WebsocketResponseErrorV1 sWebsocketChannel(@javax.annotation.Nonnull String sWebsocketChannel) {
+  public WebsocketResponseErrorV1 sWebsocketChannel(String sWebsocketChannel) {
     this.sWebsocketChannel = sWebsocketChannel;
     return this;
   }
@@ -152,12 +149,12 @@ public class WebsocketResponseErrorV1 {
     return sWebsocketChannel;
   }
 
-  public void setsWebsocketChannel(@javax.annotation.Nonnull String sWebsocketChannel) {
+  public void setsWebsocketChannel(String sWebsocketChannel) {
     this.sWebsocketChannel = sWebsocketChannel;
   }
 
 
-  public WebsocketResponseErrorV1 mPayload(@javax.annotation.Nonnull WebsocketResponseErrorV1MPayload mPayload) {
+  public WebsocketResponseErrorV1 mPayload(WebsocketResponseErrorV1MPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
@@ -171,7 +168,7 @@ public class WebsocketResponseErrorV1 {
     return mPayload;
   }
 
-  public void setmPayload(@javax.annotation.Nonnull WebsocketResponseErrorV1MPayload mPayload) {
+  public void setmPayload(WebsocketResponseErrorV1MPayload mPayload) {
     this.mPayload = mPayload;
   }
 

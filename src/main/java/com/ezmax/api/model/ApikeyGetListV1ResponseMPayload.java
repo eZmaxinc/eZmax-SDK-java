@@ -51,27 +51,24 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/apikey/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ApikeyGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
-  @javax.annotation.Nonnull
   private Integer iRowReturned;
 
   public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
-  @javax.annotation.Nonnull
   private Integer iRowFiltered;
 
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)
-  @javax.annotation.Nonnull
   private List<ApikeyListElement> aObjApikey = new ArrayList<>();
 
   public ApikeyGetListV1ResponseMPayload() {
   }
 
-  public ApikeyGetListV1ResponseMPayload iRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
+  public ApikeyGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -85,12 +82,12 @@ public class ApikeyGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-  public void setiRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
+  public void setiRowReturned(Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
-  public ApikeyGetListV1ResponseMPayload iRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
+  public ApikeyGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -104,12 +101,12 @@ public class ApikeyGetListV1ResponseMPayload {
     return iRowFiltered;
   }
 
-  public void setiRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
+  public void setiRowFiltered(Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
   }
 
 
-  public ApikeyGetListV1ResponseMPayload aObjApikey(@javax.annotation.Nonnull List<ApikeyListElement> aObjApikey) {
+  public ApikeyGetListV1ResponseMPayload aObjApikey(List<ApikeyListElement> aObjApikey) {
     this.aObjApikey = aObjApikey;
     return this;
   }
@@ -131,7 +128,7 @@ public class ApikeyGetListV1ResponseMPayload {
     return aObjApikey;
   }
 
-  public void setaObjApikey(@javax.annotation.Nonnull List<ApikeyListElement> aObjApikey) {
+  public void setaObjApikey(List<ApikeyListElement> aObjApikey) {
     this.aObjApikey = aObjApikey;
   }
 

@@ -14,11 +14,12 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.DiscussionmessageCreateObjectV1Request;
 import com.ezmax.api.model.DiscussionmessageCreateObjectV1Response;
+import com.ezmax.api.model.DiscussionmessageDeleteObjectV1Response;
 import com.ezmax.api.model.DiscussionmessagePatchObjectV1Request;
+import com.ezmax.api.model.DiscussionmessagePatchObjectV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -59,7 +60,7 @@ public class ObjectDiscussionmessageApiTest {
     @Test
     public void discussionmessageDeleteObjectV1Test() throws ApiException {
         Integer pkiDiscussionmessageID = null;
-        CommonResponse response = api.discussionmessageDeleteObjectV1(pkiDiscussionmessageID);
+        DiscussionmessageDeleteObjectV1Response response = api.discussionmessageDeleteObjectV1(pkiDiscussionmessageID);
         // TODO: test validations
     }
 
@@ -74,7 +75,7 @@ public class ObjectDiscussionmessageApiTest {
     public void discussionmessagePatchObjectV1Test() throws ApiException {
         Integer pkiDiscussionmessageID = null;
         DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request = null;
-        CommonResponse response = api.discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request);
+        DiscussionmessagePatchObjectV1Response response = api.discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request);
         // TODO: test validations
     }
 

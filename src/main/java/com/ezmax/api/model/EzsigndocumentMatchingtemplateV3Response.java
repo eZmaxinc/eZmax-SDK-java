@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigndocument createObject Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentMatchingtemplateV3Response {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzsigntemplateID;
 
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D = "pkiEzsigntemplateglobalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzsigntemplateglobalID;
 
   public EzsigndocumentMatchingtemplateV3Response() {
   }
 
-  public EzsigndocumentMatchingtemplateV3Response pkiEzsigntemplateID(@javax.annotation.Nullable Integer pkiEzsigntemplateID) {
+  public EzsigndocumentMatchingtemplateV3Response pkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
     return this;
   }
@@ -78,12 +76,12 @@ public class EzsigndocumentMatchingtemplateV3Response {
     return pkiEzsigntemplateID;
   }
 
-  public void setPkiEzsigntemplateID(@javax.annotation.Nullable Integer pkiEzsigntemplateID) {
+  public void setPkiEzsigntemplateID(Integer pkiEzsigntemplateID) {
     this.pkiEzsigntemplateID = pkiEzsigntemplateID;
   }
 
 
-  public EzsigndocumentMatchingtemplateV3Response pkiEzsigntemplateglobalID(@javax.annotation.Nullable Integer pkiEzsigntemplateglobalID) {
+  public EzsigndocumentMatchingtemplateV3Response pkiEzsigntemplateglobalID(Integer pkiEzsigntemplateglobalID) {
     this.pkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
     return this;
   }
@@ -98,7 +96,7 @@ public class EzsigndocumentMatchingtemplateV3Response {
     return pkiEzsigntemplateglobalID;
   }
 
-  public void setPkiEzsigntemplateglobalID(@javax.annotation.Nullable Integer pkiEzsigntemplateglobalID) {
+  public void setPkiEzsigntemplateglobalID(Integer pkiEzsigntemplateglobalID) {
     this.pkiEzsigntemplateglobalID = pkiEzsigntemplateglobalID;
   }
 

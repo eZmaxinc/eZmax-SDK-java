@@ -52,27 +52,24 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BillingentityinternalRequestCompound {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)
-  @javax.annotation.Nullable
   private Integer pkiBillingentityinternalID;
 
   public static final String SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL_DESCRIPTION = "objBillingentityinternalDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualBillingentityinternalDescription objBillingentityinternalDescription;
 
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNALPRODUCT = "a_objBillingentityinternalproduct";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNALPRODUCT)
-  @javax.annotation.Nonnull
   private List<BillingentityinternalproductRequestCompound> aObjBillingentityinternalproduct = new ArrayList<>();
 
   public BillingentityinternalRequestCompound() {
   }
 
-  public BillingentityinternalRequestCompound pkiBillingentityinternalID(@javax.annotation.Nullable Integer pkiBillingentityinternalID) {
+  public BillingentityinternalRequestCompound pkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
     return this;
   }
@@ -87,12 +84,12 @@ public class BillingentityinternalRequestCompound {
     return pkiBillingentityinternalID;
   }
 
-  public void setPkiBillingentityinternalID(@javax.annotation.Nullable Integer pkiBillingentityinternalID) {
+  public void setPkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
   }
 
 
-  public BillingentityinternalRequestCompound objBillingentityinternalDescription(@javax.annotation.Nonnull MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
+  public BillingentityinternalRequestCompound objBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
     this.objBillingentityinternalDescription = objBillingentityinternalDescription;
     return this;
   }
@@ -106,12 +103,12 @@ public class BillingentityinternalRequestCompound {
     return objBillingentityinternalDescription;
   }
 
-  public void setObjBillingentityinternalDescription(@javax.annotation.Nonnull MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
+  public void setObjBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
     this.objBillingentityinternalDescription = objBillingentityinternalDescription;
   }
 
 
-  public BillingentityinternalRequestCompound aObjBillingentityinternalproduct(@javax.annotation.Nonnull List<BillingentityinternalproductRequestCompound> aObjBillingentityinternalproduct) {
+  public BillingentityinternalRequestCompound aObjBillingentityinternalproduct(List<BillingentityinternalproductRequestCompound> aObjBillingentityinternalproduct) {
     this.aObjBillingentityinternalproduct = aObjBillingentityinternalproduct;
     return this;
   }
@@ -133,7 +130,7 @@ public class BillingentityinternalRequestCompound {
     return aObjBillingentityinternalproduct;
   }
 
-  public void setaObjBillingentityinternalproduct(@javax.annotation.Nonnull List<BillingentityinternalproductRequestCompound> aObjBillingentityinternalproduct) {
+  public void setaObjBillingentityinternalproduct(List<BillingentityinternalproductRequestCompound> aObjBillingentityinternalproduct) {
     this.aObjBillingentityinternalproduct = aObjBillingentityinternalproduct;
   }
 

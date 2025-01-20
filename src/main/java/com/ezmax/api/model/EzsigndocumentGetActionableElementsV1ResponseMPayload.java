@@ -52,22 +52,20 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentGetActionableElementsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE = "a_objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE)
-  @javax.annotation.Nonnull
   private List<EzsignsignatureResponseCompound> aObjEzsignsignature = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP = "a_objEzsignformfieldgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP)
-  @javax.annotation.Nonnull
   private List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroup = new ArrayList<>();
 
   public EzsigndocumentGetActionableElementsV1ResponseMPayload() {
   }
 
-  public EzsigndocumentGetActionableElementsV1ResponseMPayload aObjEzsignsignature(@javax.annotation.Nonnull List<EzsignsignatureResponseCompound> aObjEzsignsignature) {
+  public EzsigndocumentGetActionableElementsV1ResponseMPayload aObjEzsignsignature(List<EzsignsignatureResponseCompound> aObjEzsignsignature) {
     this.aObjEzsignsignature = aObjEzsignsignature;
     return this;
   }
@@ -89,12 +87,12 @@ public class EzsigndocumentGetActionableElementsV1ResponseMPayload {
     return aObjEzsignsignature;
   }
 
-  public void setaObjEzsignsignature(@javax.annotation.Nonnull List<EzsignsignatureResponseCompound> aObjEzsignsignature) {
+  public void setaObjEzsignsignature(List<EzsignsignatureResponseCompound> aObjEzsignsignature) {
     this.aObjEzsignsignature = aObjEzsignsignature;
   }
 
 
-  public EzsigndocumentGetActionableElementsV1ResponseMPayload aObjEzsignformfieldgroup(@javax.annotation.Nonnull List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroup) {
+  public EzsigndocumentGetActionableElementsV1ResponseMPayload aObjEzsignformfieldgroup(List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroup) {
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
     return this;
   }
@@ -116,7 +114,7 @@ public class EzsigndocumentGetActionableElementsV1ResponseMPayload {
     return aObjEzsignformfieldgroup;
   }
 
-  public void setaObjEzsignformfieldgroup(@javax.annotation.Nonnull List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroup) {
+  public void setaObjEzsignformfieldgroup(List<EzsignformfieldgroupResponseCompound> aObjEzsignformfieldgroup) {
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
   }
 

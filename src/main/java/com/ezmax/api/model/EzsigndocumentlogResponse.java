@@ -49,52 +49,44 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocumentlog Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentlogResponse {
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D = "fkiEzsignsignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsignsignerID;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNDOCUMENTLOG_DATETIME = "dtEzsigndocumentlogDatetime";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNDOCUMENTLOG_DATETIME)
-  @javax.annotation.Nonnull
   private String dtEzsigndocumentlogDatetime;
 
   public static final String SERIALIZED_NAME_E_EZSIGNDOCUMENTLOG_TYPE = "eEzsigndocumentlogType";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNDOCUMENTLOG_TYPE)
-  @javax.annotation.Nonnull
   private FieldEEzsigndocumentlogType eEzsigndocumentlogType;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENTLOG_DETAIL = "sEzsigndocumentlogDetail";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENTLOG_DETAIL)
-  @javax.annotation.Nonnull
   private String sEzsigndocumentlogDetail;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENTLOG_LASTNAME = "sEzsigndocumentlogLastname";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENTLOG_LASTNAME)
-  @javax.annotation.Nonnull
   private String sEzsigndocumentlogLastname;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENTLOG_FIRSTNAME = "sEzsigndocumentlogFirstname";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENTLOG_FIRSTNAME)
-  @javax.annotation.Nonnull
   private String sEzsigndocumentlogFirstname;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENTLOG_I_P = "sEzsigndocumentlogIP";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENTLOG_I_P)
-  @javax.annotation.Nonnull
   private String sEzsigndocumentlogIP;
 
   public EzsigndocumentlogResponse() {
   }
 
-  public EzsigndocumentlogResponse fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public EzsigndocumentlogResponse fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -109,12 +101,12 @@ public class EzsigndocumentlogResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public EzsigndocumentlogResponse fkiEzsignsignerID(@javax.annotation.Nullable Integer fkiEzsignsignerID) {
+  public EzsigndocumentlogResponse fkiEzsignsignerID(Integer fkiEzsignsignerID) {
     this.fkiEzsignsignerID = fkiEzsignsignerID;
     return this;
   }
@@ -129,12 +121,12 @@ public class EzsigndocumentlogResponse {
     return fkiEzsignsignerID;
   }
 
-  public void setFkiEzsignsignerID(@javax.annotation.Nullable Integer fkiEzsignsignerID) {
+  public void setFkiEzsignsignerID(Integer fkiEzsignsignerID) {
     this.fkiEzsignsignerID = fkiEzsignsignerID;
   }
 
 
-  public EzsigndocumentlogResponse dtEzsigndocumentlogDatetime(@javax.annotation.Nonnull String dtEzsigndocumentlogDatetime) {
+  public EzsigndocumentlogResponse dtEzsigndocumentlogDatetime(String dtEzsigndocumentlogDatetime) {
     this.dtEzsigndocumentlogDatetime = dtEzsigndocumentlogDatetime;
     return this;
   }
@@ -148,12 +140,12 @@ public class EzsigndocumentlogResponse {
     return dtEzsigndocumentlogDatetime;
   }
 
-  public void setDtEzsigndocumentlogDatetime(@javax.annotation.Nonnull String dtEzsigndocumentlogDatetime) {
+  public void setDtEzsigndocumentlogDatetime(String dtEzsigndocumentlogDatetime) {
     this.dtEzsigndocumentlogDatetime = dtEzsigndocumentlogDatetime;
   }
 
 
-  public EzsigndocumentlogResponse eEzsigndocumentlogType(@javax.annotation.Nonnull FieldEEzsigndocumentlogType eEzsigndocumentlogType) {
+  public EzsigndocumentlogResponse eEzsigndocumentlogType(FieldEEzsigndocumentlogType eEzsigndocumentlogType) {
     this.eEzsigndocumentlogType = eEzsigndocumentlogType;
     return this;
   }
@@ -167,12 +159,12 @@ public class EzsigndocumentlogResponse {
     return eEzsigndocumentlogType;
   }
 
-  public void seteEzsigndocumentlogType(@javax.annotation.Nonnull FieldEEzsigndocumentlogType eEzsigndocumentlogType) {
+  public void seteEzsigndocumentlogType(FieldEEzsigndocumentlogType eEzsigndocumentlogType) {
     this.eEzsigndocumentlogType = eEzsigndocumentlogType;
   }
 
 
-  public EzsigndocumentlogResponse sEzsigndocumentlogDetail(@javax.annotation.Nonnull String sEzsigndocumentlogDetail) {
+  public EzsigndocumentlogResponse sEzsigndocumentlogDetail(String sEzsigndocumentlogDetail) {
     this.sEzsigndocumentlogDetail = sEzsigndocumentlogDetail;
     return this;
   }
@@ -186,12 +178,12 @@ public class EzsigndocumentlogResponse {
     return sEzsigndocumentlogDetail;
   }
 
-  public void setsEzsigndocumentlogDetail(@javax.annotation.Nonnull String sEzsigndocumentlogDetail) {
+  public void setsEzsigndocumentlogDetail(String sEzsigndocumentlogDetail) {
     this.sEzsigndocumentlogDetail = sEzsigndocumentlogDetail;
   }
 
 
-  public EzsigndocumentlogResponse sEzsigndocumentlogLastname(@javax.annotation.Nonnull String sEzsigndocumentlogLastname) {
+  public EzsigndocumentlogResponse sEzsigndocumentlogLastname(String sEzsigndocumentlogLastname) {
     this.sEzsigndocumentlogLastname = sEzsigndocumentlogLastname;
     return this;
   }
@@ -205,12 +197,12 @@ public class EzsigndocumentlogResponse {
     return sEzsigndocumentlogLastname;
   }
 
-  public void setsEzsigndocumentlogLastname(@javax.annotation.Nonnull String sEzsigndocumentlogLastname) {
+  public void setsEzsigndocumentlogLastname(String sEzsigndocumentlogLastname) {
     this.sEzsigndocumentlogLastname = sEzsigndocumentlogLastname;
   }
 
 
-  public EzsigndocumentlogResponse sEzsigndocumentlogFirstname(@javax.annotation.Nonnull String sEzsigndocumentlogFirstname) {
+  public EzsigndocumentlogResponse sEzsigndocumentlogFirstname(String sEzsigndocumentlogFirstname) {
     this.sEzsigndocumentlogFirstname = sEzsigndocumentlogFirstname;
     return this;
   }
@@ -224,12 +216,12 @@ public class EzsigndocumentlogResponse {
     return sEzsigndocumentlogFirstname;
   }
 
-  public void setsEzsigndocumentlogFirstname(@javax.annotation.Nonnull String sEzsigndocumentlogFirstname) {
+  public void setsEzsigndocumentlogFirstname(String sEzsigndocumentlogFirstname) {
     this.sEzsigndocumentlogFirstname = sEzsigndocumentlogFirstname;
   }
 
 
-  public EzsigndocumentlogResponse sEzsigndocumentlogIP(@javax.annotation.Nonnull String sEzsigndocumentlogIP) {
+  public EzsigndocumentlogResponse sEzsigndocumentlogIP(String sEzsigndocumentlogIP) {
     this.sEzsigndocumentlogIP = sEzsigndocumentlogIP;
     return this;
   }
@@ -243,7 +235,7 @@ public class EzsigndocumentlogResponse {
     return sEzsigndocumentlogIP;
   }
 
-  public void setsEzsigndocumentlogIP(@javax.annotation.Nonnull String sEzsigndocumentlogIP) {
+  public void setsEzsigndocumentlogIP(String sEzsigndocumentlogIP) {
     this.sEzsigndocumentlogIP = sEzsigndocumentlogIP;
   }
 

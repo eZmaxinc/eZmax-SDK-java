@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/authenticationexternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AuthenticationexternalCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_AUTHENTICATIONEXTERNAL = "a_objAuthenticationexternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_AUTHENTICATIONEXTERNAL)
-  @javax.annotation.Nonnull
   private List<AuthenticationexternalRequestCompound> aObjAuthenticationexternal = new ArrayList<>();
 
   public AuthenticationexternalCreateObjectV1Request() {
   }
 
-  public AuthenticationexternalCreateObjectV1Request aObjAuthenticationexternal(@javax.annotation.Nonnull List<AuthenticationexternalRequestCompound> aObjAuthenticationexternal) {
+  public AuthenticationexternalCreateObjectV1Request aObjAuthenticationexternal(List<AuthenticationexternalRequestCompound> aObjAuthenticationexternal) {
     this.aObjAuthenticationexternal = aObjAuthenticationexternal;
     return this;
   }
@@ -83,7 +82,7 @@ public class AuthenticationexternalCreateObjectV1Request {
     return aObjAuthenticationexternal;
   }
 
-  public void setaObjAuthenticationexternal(@javax.annotation.Nonnull List<AuthenticationexternalRequestCompound> aObjAuthenticationexternal) {
+  public void setaObjAuthenticationexternal(List<AuthenticationexternalRequestCompound> aObjAuthenticationexternal) {
     this.aObjAuthenticationexternal = aObjAuthenticationexternal;
   }
 

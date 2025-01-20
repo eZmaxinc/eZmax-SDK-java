@@ -48,17 +48,16 @@ import eZmaxAPI.JSON;
 /**
  * Response for POST /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/ExtractText
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatedocumentExtractTextV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_TEXT = "sText";
   @SerializedName(SERIALIZED_NAME_S_TEXT)
-  @javax.annotation.Nonnull
   private String sText;
 
   public EzsigntemplatedocumentExtractTextV1ResponseMPayload() {
   }
 
-  public EzsigntemplatedocumentExtractTextV1ResponseMPayload sText(@javax.annotation.Nonnull String sText) {
+  public EzsigntemplatedocumentExtractTextV1ResponseMPayload sText(String sText) {
     this.sText = sText;
     return this;
   }
@@ -72,7 +71,7 @@ public class EzsigntemplatedocumentExtractTextV1ResponseMPayload {
     return sText;
   }
 
-  public void setsText(@javax.annotation.Nonnull String sText) {
+  public void setsText(String sText) {
     this.sText = sText;
   }
 

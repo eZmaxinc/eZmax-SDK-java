@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/apikey/generateDelegatedCredentials
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ApikeyGenerateDelegatedCredentialsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_APIKEY = "objApikey";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEY)
-  @javax.annotation.Nonnull
   private CustomApikey objApikey;
 
   public ApikeyGenerateDelegatedCredentialsV1ResponseMPayload() {
   }
 
-  public ApikeyGenerateDelegatedCredentialsV1ResponseMPayload objApikey(@javax.annotation.Nonnull CustomApikey objApikey) {
+  public ApikeyGenerateDelegatedCredentialsV1ResponseMPayload objApikey(CustomApikey objApikey) {
     this.objApikey = objApikey;
     return this;
   }
@@ -73,7 +72,7 @@ public class ApikeyGenerateDelegatedCredentialsV1ResponseMPayload {
     return objApikey;
   }
 
-  public void setObjApikey(@javax.annotation.Nonnull CustomApikey objApikey) {
+  public void setObjApikey(CustomApikey objApikey) {
     this.objApikey = objApikey;
   }
 

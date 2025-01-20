@@ -51,27 +51,24 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsignsigningreason/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsigningreasonGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)
-  @javax.annotation.Nonnull
   private Integer iRowReturned;
 
   public static final String SERIALIZED_NAME_I_ROW_FILTERED = "iRowFiltered";
   @SerializedName(SERIALIZED_NAME_I_ROW_FILTERED)
-  @javax.annotation.Nonnull
   private Integer iRowFiltered;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNINGREASON = "a_objEzsignsigningreason";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNINGREASON)
-  @javax.annotation.Nonnull
   private List<EzsignsigningreasonListElement> aObjEzsignsigningreason = new ArrayList<>();
 
   public EzsignsigningreasonGetListV1ResponseMPayload() {
   }
 
-  public EzsignsigningreasonGetListV1ResponseMPayload iRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
+  public EzsignsigningreasonGetListV1ResponseMPayload iRowReturned(Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
     return this;
   }
@@ -85,12 +82,12 @@ public class EzsignsigningreasonGetListV1ResponseMPayload {
     return iRowReturned;
   }
 
-  public void setiRowReturned(@javax.annotation.Nonnull Integer iRowReturned) {
+  public void setiRowReturned(Integer iRowReturned) {
     this.iRowReturned = iRowReturned;
   }
 
 
-  public EzsignsigningreasonGetListV1ResponseMPayload iRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
+  public EzsignsigningreasonGetListV1ResponseMPayload iRowFiltered(Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
     return this;
   }
@@ -104,12 +101,12 @@ public class EzsignsigningreasonGetListV1ResponseMPayload {
     return iRowFiltered;
   }
 
-  public void setiRowFiltered(@javax.annotation.Nonnull Integer iRowFiltered) {
+  public void setiRowFiltered(Integer iRowFiltered) {
     this.iRowFiltered = iRowFiltered;
   }
 
 
-  public EzsignsigningreasonGetListV1ResponseMPayload aObjEzsignsigningreason(@javax.annotation.Nonnull List<EzsignsigningreasonListElement> aObjEzsignsigningreason) {
+  public EzsignsigningreasonGetListV1ResponseMPayload aObjEzsignsigningreason(List<EzsignsigningreasonListElement> aObjEzsignsigningreason) {
     this.aObjEzsignsigningreason = aObjEzsignsigningreason;
     return this;
   }
@@ -131,7 +128,7 @@ public class EzsignsigningreasonGetListV1ResponseMPayload {
     return aObjEzsignsigningreason;
   }
 
-  public void setaObjEzsignsigningreason(@javax.annotation.Nonnull List<EzsignsigningreasonListElement> aObjEzsignsigningreason) {
+  public void setaObjEzsignsigningreason(List<EzsignsigningreasonListElement> aObjEzsignsigningreason) {
     this.aObjEzsignsigningreason = aObjEzsignsigningreason;
   }
 

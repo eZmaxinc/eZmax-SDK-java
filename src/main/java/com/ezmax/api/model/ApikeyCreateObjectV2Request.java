@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.ApikeyRequest;
+import com.ezmax.api.model.ApikeyRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,22 +51,21 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/apikey
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ApikeyCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)
-  @javax.annotation.Nonnull
   private List<ApikeyRequestCompound> aObjApikey = new ArrayList<>();
 
   public ApikeyCreateObjectV2Request() {
   }
 
-  public ApikeyCreateObjectV2Request aObjApikey(@javax.annotation.Nonnull List<ApikeyRequestCompound> aObjApikey) {
+  public ApikeyCreateObjectV2Request aObjApikey(List<ApikeyRequestCompound> aObjApikey) {
     this.aObjApikey = aObjApikey;
     return this;
   }
 
-  public ApikeyCreateObjectV2Request addAObjApikeyItem(ApikeyRequest aObjApikeyItem) {
+  public ApikeyCreateObjectV2Request addAObjApikeyItem(ApikeyRequestCompound aObjApikeyItem) {
     if (this.aObjApikey == null) {
       this.aObjApikey = new ArrayList<>();
     }
@@ -83,7 +82,7 @@ public class ApikeyCreateObjectV2Request {
     return aObjApikey;
   }
 
-  public void setaObjApikey(@javax.annotation.Nonnull List<ApikeyRequestCompound> aObjApikey) {
+  public void setaObjApikey(List<ApikeyRequestCompound> aObjApikey) {
     this.aObjApikey = aObjApikey;
   }
 
@@ -176,7 +175,7 @@ public class ApikeyCreateObjectV2Request {
       JsonArray jsonArrayaObjApikey = jsonObj.getAsJsonArray("a_objApikey");
       // validate the required field `a_objApikey` (array)
       for (int i = 0; i < jsonArrayaObjApikey.size(); i++) {
-        ApikeyRequest.validateJsonElement(jsonArrayaObjApikey.get(i));
+        ApikeyRequestCompound.validateJsonElement(jsonArrayaObjApikey.get(i));
       };
   }
 

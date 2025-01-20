@@ -51,27 +51,24 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object in the context of an EzsignsignaturesAutomatic path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsigndocumentEzsignsignaturesAutomaticResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME = "sEzsigndocumentName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNDOCUMENT_NAME)
-  @javax.annotation.Nonnull
   private String sEzsigndocumentName;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE = "a_objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE)
-  @javax.annotation.Nonnull
   private List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse> aObjEzsignsignature = new ArrayList<>();
 
   public CustomEzsigndocumentEzsignsignaturesAutomaticResponse() {
   }
 
-  public CustomEzsigndocumentEzsignsignaturesAutomaticResponse pkiEzsigndocumentID(@javax.annotation.Nonnull Integer pkiEzsigndocumentID) {
+  public CustomEzsigndocumentEzsignsignaturesAutomaticResponse pkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
     return this;
   }
@@ -86,12 +83,12 @@ public class CustomEzsigndocumentEzsignsignaturesAutomaticResponse {
     return pkiEzsigndocumentID;
   }
 
-  public void setPkiEzsigndocumentID(@javax.annotation.Nonnull Integer pkiEzsigndocumentID) {
+  public void setPkiEzsigndocumentID(Integer pkiEzsigndocumentID) {
     this.pkiEzsigndocumentID = pkiEzsigndocumentID;
   }
 
 
-  public CustomEzsigndocumentEzsignsignaturesAutomaticResponse sEzsigndocumentName(@javax.annotation.Nonnull String sEzsigndocumentName) {
+  public CustomEzsigndocumentEzsignsignaturesAutomaticResponse sEzsigndocumentName(String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
     return this;
   }
@@ -105,12 +102,12 @@ public class CustomEzsigndocumentEzsignsignaturesAutomaticResponse {
     return sEzsigndocumentName;
   }
 
-  public void setsEzsigndocumentName(@javax.annotation.Nonnull String sEzsigndocumentName) {
+  public void setsEzsigndocumentName(String sEzsigndocumentName) {
     this.sEzsigndocumentName = sEzsigndocumentName;
   }
 
 
-  public CustomEzsigndocumentEzsignsignaturesAutomaticResponse aObjEzsignsignature(@javax.annotation.Nonnull List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse> aObjEzsignsignature) {
+  public CustomEzsigndocumentEzsignsignaturesAutomaticResponse aObjEzsignsignature(List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse> aObjEzsignsignature) {
     this.aObjEzsignsignature = aObjEzsignsignature;
     return this;
   }
@@ -132,7 +129,7 @@ public class CustomEzsigndocumentEzsignsignaturesAutomaticResponse {
     return aObjEzsignsignature;
   }
 
-  public void setaObjEzsignsignature(@javax.annotation.Nonnull List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse> aObjEzsignsignature) {
+  public void setaObjEzsignsignature(List<CustomEzsignsignatureEzsignsignaturesAutomaticResponse> aObjEzsignsignature) {
     this.aObjEzsignsignature = aObjEzsignsignature;
   }
 

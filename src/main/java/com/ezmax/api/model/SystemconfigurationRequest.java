@@ -53,73 +53,61 @@ import eZmaxAPI.JSON;
 /**
  * A Systemconfiguration Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SystemconfigurationRequest {
   public static final String SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D = "pkiSystemconfigurationID";
   @SerializedName(SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D)
-  @javax.annotation.Nullable
   private Integer pkiSystemconfigurationID;
 
   public static final String SERIALIZED_NAME_FKI_BRANDING_I_D = "fkiBrandingID";
   @SerializedName(SERIALIZED_NAME_FKI_BRANDING_I_D)
-  @javax.annotation.Nullable
   private Integer fkiBrandingID;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_NEWEXTERNALUSERACTION = "eSystemconfigurationNewexternaluseraction";
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_NEWEXTERNALUSERACTION)
-  @javax.annotation.Nonnull
   private FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE1 = "eSystemconfigurationLanguage1";
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE1)
-  @javax.annotation.Nonnull
   private FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE2 = "eSystemconfigurationLanguage2";
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_LANGUAGE2)
-  @javax.annotation.Nonnull
   private FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGN = "eSystemconfigurationEzsign";
   @Deprecated
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGN)
-  @javax.annotation.Nullable
   private FieldESystemconfigurationEzsign eSystemconfigurationEzsign;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN = "eSystemconfigurationEzsignofficeplan";
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN)
-  @javax.annotation.Nullable
   private FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE = "bSystemconfigurationEzsignpaidbyoffice";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE)
-  @javax.annotation.Nullable
   private Boolean bSystemconfigurationEzsignpaidbyoffice;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPERSONNAL = "bSystemconfigurationEzsignpersonnal";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPERSONNAL)
-  @javax.annotation.Nonnull
   private Boolean bSystemconfigurationEzsignpersonnal;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_SSPR = "bSystemconfigurationSspr";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_SSPR)
-  @javax.annotation.Nonnull
   private Boolean bSystemconfigurationSspr;
 
   public static final String SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONSTART = "dtSystemconfigurationReadonlyexpirationstart";
   @SerializedName(SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONSTART)
-  @javax.annotation.Nullable
   private String dtSystemconfigurationReadonlyexpirationstart;
 
   public static final String SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONEND = "dtSystemconfigurationReadonlyexpirationend";
   @SerializedName(SERIALIZED_NAME_DT_SYSTEMCONFIGURATION_READONLYEXPIRATIONEND)
-  @javax.annotation.Nullable
   private String dtSystemconfigurationReadonlyexpirationend;
 
   public SystemconfigurationRequest() {
   }
 
-  public SystemconfigurationRequest pkiSystemconfigurationID(@javax.annotation.Nullable Integer pkiSystemconfigurationID) {
+  public SystemconfigurationRequest pkiSystemconfigurationID(Integer pkiSystemconfigurationID) {
     this.pkiSystemconfigurationID = pkiSystemconfigurationID;
     return this;
   }
@@ -135,12 +123,12 @@ public class SystemconfigurationRequest {
     return pkiSystemconfigurationID;
   }
 
-  public void setPkiSystemconfigurationID(@javax.annotation.Nullable Integer pkiSystemconfigurationID) {
+  public void setPkiSystemconfigurationID(Integer pkiSystemconfigurationID) {
     this.pkiSystemconfigurationID = pkiSystemconfigurationID;
   }
 
 
-  public SystemconfigurationRequest fkiBrandingID(@javax.annotation.Nullable Integer fkiBrandingID) {
+  public SystemconfigurationRequest fkiBrandingID(Integer fkiBrandingID) {
     this.fkiBrandingID = fkiBrandingID;
     return this;
   }
@@ -155,12 +143,12 @@ public class SystemconfigurationRequest {
     return fkiBrandingID;
   }
 
-  public void setFkiBrandingID(@javax.annotation.Nullable Integer fkiBrandingID) {
+  public void setFkiBrandingID(Integer fkiBrandingID) {
     this.fkiBrandingID = fkiBrandingID;
   }
 
 
-  public SystemconfigurationRequest eSystemconfigurationNewexternaluseraction(@javax.annotation.Nonnull FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
+  public SystemconfigurationRequest eSystemconfigurationNewexternaluseraction(FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
     this.eSystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
     return this;
   }
@@ -174,12 +162,12 @@ public class SystemconfigurationRequest {
     return eSystemconfigurationNewexternaluseraction;
   }
 
-  public void seteSystemconfigurationNewexternaluseraction(@javax.annotation.Nonnull FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
+  public void seteSystemconfigurationNewexternaluseraction(FieldESystemconfigurationNewexternaluseraction eSystemconfigurationNewexternaluseraction) {
     this.eSystemconfigurationNewexternaluseraction = eSystemconfigurationNewexternaluseraction;
   }
 
 
-  public SystemconfigurationRequest eSystemconfigurationLanguage1(@javax.annotation.Nonnull FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
+  public SystemconfigurationRequest eSystemconfigurationLanguage1(FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
     this.eSystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
     return this;
   }
@@ -193,12 +181,12 @@ public class SystemconfigurationRequest {
     return eSystemconfigurationLanguage1;
   }
 
-  public void seteSystemconfigurationLanguage1(@javax.annotation.Nonnull FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
+  public void seteSystemconfigurationLanguage1(FieldESystemconfigurationLanguage1 eSystemconfigurationLanguage1) {
     this.eSystemconfigurationLanguage1 = eSystemconfigurationLanguage1;
   }
 
 
-  public SystemconfigurationRequest eSystemconfigurationLanguage2(@javax.annotation.Nonnull FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
+  public SystemconfigurationRequest eSystemconfigurationLanguage2(FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
     this.eSystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
     return this;
   }
@@ -212,13 +200,13 @@ public class SystemconfigurationRequest {
     return eSystemconfigurationLanguage2;
   }
 
-  public void seteSystemconfigurationLanguage2(@javax.annotation.Nonnull FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
+  public void seteSystemconfigurationLanguage2(FieldESystemconfigurationLanguage2 eSystemconfigurationLanguage2) {
     this.eSystemconfigurationLanguage2 = eSystemconfigurationLanguage2;
   }
 
 
   @Deprecated
-  public SystemconfigurationRequest eSystemconfigurationEzsign(@javax.annotation.Nullable FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
+  public SystemconfigurationRequest eSystemconfigurationEzsign(FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
     this.eSystemconfigurationEzsign = eSystemconfigurationEzsign;
     return this;
   }
@@ -235,12 +223,12 @@ public class SystemconfigurationRequest {
   }
 
   @Deprecated
-  public void seteSystemconfigurationEzsign(@javax.annotation.Nullable FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
+  public void seteSystemconfigurationEzsign(FieldESystemconfigurationEzsign eSystemconfigurationEzsign) {
     this.eSystemconfigurationEzsign = eSystemconfigurationEzsign;
   }
 
 
-  public SystemconfigurationRequest eSystemconfigurationEzsignofficeplan(@javax.annotation.Nullable FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+  public SystemconfigurationRequest eSystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
     this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
     return this;
   }
@@ -254,12 +242,12 @@ public class SystemconfigurationRequest {
     return eSystemconfigurationEzsignofficeplan;
   }
 
-  public void seteSystemconfigurationEzsignofficeplan(@javax.annotation.Nullable FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+  public void seteSystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
     this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
   }
 
 
-  public SystemconfigurationRequest bSystemconfigurationEzsignpaidbyoffice(@javax.annotation.Nullable Boolean bSystemconfigurationEzsignpaidbyoffice) {
+  public SystemconfigurationRequest bSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
     this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
     return this;
   }
@@ -273,12 +261,12 @@ public class SystemconfigurationRequest {
     return bSystemconfigurationEzsignpaidbyoffice;
   }
 
-  public void setbSystemconfigurationEzsignpaidbyoffice(@javax.annotation.Nullable Boolean bSystemconfigurationEzsignpaidbyoffice) {
+  public void setbSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
     this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
   }
 
 
-  public SystemconfigurationRequest bSystemconfigurationEzsignpersonnal(@javax.annotation.Nonnull Boolean bSystemconfigurationEzsignpersonnal) {
+  public SystemconfigurationRequest bSystemconfigurationEzsignpersonnal(Boolean bSystemconfigurationEzsignpersonnal) {
     this.bSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
     return this;
   }
@@ -292,12 +280,12 @@ public class SystemconfigurationRequest {
     return bSystemconfigurationEzsignpersonnal;
   }
 
-  public void setbSystemconfigurationEzsignpersonnal(@javax.annotation.Nonnull Boolean bSystemconfigurationEzsignpersonnal) {
+  public void setbSystemconfigurationEzsignpersonnal(Boolean bSystemconfigurationEzsignpersonnal) {
     this.bSystemconfigurationEzsignpersonnal = bSystemconfigurationEzsignpersonnal;
   }
 
 
-  public SystemconfigurationRequest bSystemconfigurationSspr(@javax.annotation.Nonnull Boolean bSystemconfigurationSspr) {
+  public SystemconfigurationRequest bSystemconfigurationSspr(Boolean bSystemconfigurationSspr) {
     this.bSystemconfigurationSspr = bSystemconfigurationSspr;
     return this;
   }
@@ -311,12 +299,12 @@ public class SystemconfigurationRequest {
     return bSystemconfigurationSspr;
   }
 
-  public void setbSystemconfigurationSspr(@javax.annotation.Nonnull Boolean bSystemconfigurationSspr) {
+  public void setbSystemconfigurationSspr(Boolean bSystemconfigurationSspr) {
     this.bSystemconfigurationSspr = bSystemconfigurationSspr;
   }
 
 
-  public SystemconfigurationRequest dtSystemconfigurationReadonlyexpirationstart(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationstart) {
+  public SystemconfigurationRequest dtSystemconfigurationReadonlyexpirationstart(String dtSystemconfigurationReadonlyexpirationstart) {
     this.dtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
     return this;
   }
@@ -330,12 +318,12 @@ public class SystemconfigurationRequest {
     return dtSystemconfigurationReadonlyexpirationstart;
   }
 
-  public void setDtSystemconfigurationReadonlyexpirationstart(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationstart) {
+  public void setDtSystemconfigurationReadonlyexpirationstart(String dtSystemconfigurationReadonlyexpirationstart) {
     this.dtSystemconfigurationReadonlyexpirationstart = dtSystemconfigurationReadonlyexpirationstart;
   }
 
 
-  public SystemconfigurationRequest dtSystemconfigurationReadonlyexpirationend(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationend) {
+  public SystemconfigurationRequest dtSystemconfigurationReadonlyexpirationend(String dtSystemconfigurationReadonlyexpirationend) {
     this.dtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
     return this;
   }
@@ -349,7 +337,7 @@ public class SystemconfigurationRequest {
     return dtSystemconfigurationReadonlyexpirationend;
   }
 
-  public void setDtSystemconfigurationReadonlyexpirationend(@javax.annotation.Nullable String dtSystemconfigurationReadonlyexpirationend) {
+  public void setDtSystemconfigurationReadonlyexpirationend(String dtSystemconfigurationReadonlyexpirationend) {
     this.dtSystemconfigurationReadonlyexpirationend = dtSystemconfigurationReadonlyexpirationend;
   }
 

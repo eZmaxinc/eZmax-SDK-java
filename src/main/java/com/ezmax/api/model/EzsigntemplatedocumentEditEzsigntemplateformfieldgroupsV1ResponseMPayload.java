@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for PUT /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplateformfieldgroups
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D = "a_pkiEzsigntemplateformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiEzsigntemplateformfieldgroupID = new ArrayList<>();
 
   public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload() {
   }
 
-  public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload aPkiEzsigntemplateformfieldgroupID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplateformfieldgroupID) {
+  public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMPayload aPkiEzsigntemplateformfieldgroupID(List<Integer> aPkiEzsigntemplateformfieldgroupID) {
     this.aPkiEzsigntemplateformfieldgroupID = aPkiEzsigntemplateformfieldgroupID;
     return this;
   }
@@ -82,7 +81,7 @@ public class EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1ResponseMP
     return aPkiEzsigntemplateformfieldgroupID;
   }
 
-  public void setaPkiEzsigntemplateformfieldgroupID(@javax.annotation.Nonnull List<Integer> aPkiEzsigntemplateformfieldgroupID) {
+  public void setaPkiEzsigntemplateformfieldgroupID(List<Integer> aPkiEzsigntemplateformfieldgroupID) {
     this.aPkiEzsigntemplateformfieldgroupID = aPkiEzsigntemplateformfieldgroupID;
   }
 

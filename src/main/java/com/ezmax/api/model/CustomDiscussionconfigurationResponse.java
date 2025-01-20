@@ -48,37 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Discussionconfiguration Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomDiscussionconfigurationResponse {
   public static final String SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_COMPLETEHISTORYWHENADDED = "bDiscussionconfigurationCompletehistorywhenadded";
   @SerializedName(SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_COMPLETEHISTORYWHENADDED)
-  @javax.annotation.Nonnull
   private Boolean bDiscussionconfigurationCompletehistorywhenadded;
 
   public static final String SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_CREATEALLOWED = "bDiscussionconfigurationCreateallowed";
   @SerializedName(SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_CREATEALLOWED)
-  @javax.annotation.Nonnull
   private Boolean bDiscussionconfigurationCreateallowed;
 
   public static final String SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_DELETEALLOWED = "bDiscussionconfigurationDeleteallowed";
   @SerializedName(SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_DELETEALLOWED)
-  @javax.annotation.Nonnull
   private Boolean bDiscussionconfigurationDeleteallowed;
 
   public static final String SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_DELETEDISCUSSIONMESSAGEALLOWED = "bDiscussionconfigurationDeletediscussionmessageallowed";
   @SerializedName(SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_DELETEDISCUSSIONMESSAGEALLOWED)
-  @javax.annotation.Nonnull
   private Boolean bDiscussionconfigurationDeletediscussionmessageallowed;
 
   public static final String SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_EDITDISCUSSIONMESSAGEALLOWED = "bDiscussionconfigurationEditdiscussionmessageallowed";
   @SerializedName(SERIALIZED_NAME_B_DISCUSSIONCONFIGURATION_EDITDISCUSSIONMESSAGEALLOWED)
-  @javax.annotation.Nonnull
   private Boolean bDiscussionconfigurationEditdiscussionmessageallowed;
 
   public CustomDiscussionconfigurationResponse() {
   }
 
-  public CustomDiscussionconfigurationResponse bDiscussionconfigurationCompletehistorywhenadded(@javax.annotation.Nonnull Boolean bDiscussionconfigurationCompletehistorywhenadded) {
+  public CustomDiscussionconfigurationResponse bDiscussionconfigurationCompletehistorywhenadded(Boolean bDiscussionconfigurationCompletehistorywhenadded) {
     this.bDiscussionconfigurationCompletehistorywhenadded = bDiscussionconfigurationCompletehistorywhenadded;
     return this;
   }
@@ -92,12 +87,12 @@ public class CustomDiscussionconfigurationResponse {
     return bDiscussionconfigurationCompletehistorywhenadded;
   }
 
-  public void setbDiscussionconfigurationCompletehistorywhenadded(@javax.annotation.Nonnull Boolean bDiscussionconfigurationCompletehistorywhenadded) {
+  public void setbDiscussionconfigurationCompletehistorywhenadded(Boolean bDiscussionconfigurationCompletehistorywhenadded) {
     this.bDiscussionconfigurationCompletehistorywhenadded = bDiscussionconfigurationCompletehistorywhenadded;
   }
 
 
-  public CustomDiscussionconfigurationResponse bDiscussionconfigurationCreateallowed(@javax.annotation.Nonnull Boolean bDiscussionconfigurationCreateallowed) {
+  public CustomDiscussionconfigurationResponse bDiscussionconfigurationCreateallowed(Boolean bDiscussionconfigurationCreateallowed) {
     this.bDiscussionconfigurationCreateallowed = bDiscussionconfigurationCreateallowed;
     return this;
   }
@@ -111,12 +106,12 @@ public class CustomDiscussionconfigurationResponse {
     return bDiscussionconfigurationCreateallowed;
   }
 
-  public void setbDiscussionconfigurationCreateallowed(@javax.annotation.Nonnull Boolean bDiscussionconfigurationCreateallowed) {
+  public void setbDiscussionconfigurationCreateallowed(Boolean bDiscussionconfigurationCreateallowed) {
     this.bDiscussionconfigurationCreateallowed = bDiscussionconfigurationCreateallowed;
   }
 
 
-  public CustomDiscussionconfigurationResponse bDiscussionconfigurationDeleteallowed(@javax.annotation.Nonnull Boolean bDiscussionconfigurationDeleteallowed) {
+  public CustomDiscussionconfigurationResponse bDiscussionconfigurationDeleteallowed(Boolean bDiscussionconfigurationDeleteallowed) {
     this.bDiscussionconfigurationDeleteallowed = bDiscussionconfigurationDeleteallowed;
     return this;
   }
@@ -130,12 +125,12 @@ public class CustomDiscussionconfigurationResponse {
     return bDiscussionconfigurationDeleteallowed;
   }
 
-  public void setbDiscussionconfigurationDeleteallowed(@javax.annotation.Nonnull Boolean bDiscussionconfigurationDeleteallowed) {
+  public void setbDiscussionconfigurationDeleteallowed(Boolean bDiscussionconfigurationDeleteallowed) {
     this.bDiscussionconfigurationDeleteallowed = bDiscussionconfigurationDeleteallowed;
   }
 
 
-  public CustomDiscussionconfigurationResponse bDiscussionconfigurationDeletediscussionmessageallowed(@javax.annotation.Nonnull Boolean bDiscussionconfigurationDeletediscussionmessageallowed) {
+  public CustomDiscussionconfigurationResponse bDiscussionconfigurationDeletediscussionmessageallowed(Boolean bDiscussionconfigurationDeletediscussionmessageallowed) {
     this.bDiscussionconfigurationDeletediscussionmessageallowed = bDiscussionconfigurationDeletediscussionmessageallowed;
     return this;
   }
@@ -149,12 +144,12 @@ public class CustomDiscussionconfigurationResponse {
     return bDiscussionconfigurationDeletediscussionmessageallowed;
   }
 
-  public void setbDiscussionconfigurationDeletediscussionmessageallowed(@javax.annotation.Nonnull Boolean bDiscussionconfigurationDeletediscussionmessageallowed) {
+  public void setbDiscussionconfigurationDeletediscussionmessageallowed(Boolean bDiscussionconfigurationDeletediscussionmessageallowed) {
     this.bDiscussionconfigurationDeletediscussionmessageallowed = bDiscussionconfigurationDeletediscussionmessageallowed;
   }
 
 
-  public CustomDiscussionconfigurationResponse bDiscussionconfigurationEditdiscussionmessageallowed(@javax.annotation.Nonnull Boolean bDiscussionconfigurationEditdiscussionmessageallowed) {
+  public CustomDiscussionconfigurationResponse bDiscussionconfigurationEditdiscussionmessageallowed(Boolean bDiscussionconfigurationEditdiscussionmessageallowed) {
     this.bDiscussionconfigurationEditdiscussionmessageallowed = bDiscussionconfigurationEditdiscussionmessageallowed;
     return this;
   }
@@ -168,7 +163,7 @@ public class CustomDiscussionconfigurationResponse {
     return bDiscussionconfigurationEditdiscussionmessageallowed;
   }
 
-  public void setbDiscussionconfigurationEditdiscussionmessageallowed(@javax.annotation.Nonnull Boolean bDiscussionconfigurationEditdiscussionmessageallowed) {
+  public void setbDiscussionconfigurationEditdiscussionmessageallowed(Boolean bDiscussionconfigurationEditdiscussionmessageallowed) {
     this.bDiscussionconfigurationEditdiscussionmessageallowed = bDiscussionconfigurationEditdiscussionmessageallowed;
   }
 

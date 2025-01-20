@@ -48,21 +48,18 @@ import eZmaxAPI.JSON;
 /**
  * A CreateEzsignelementsPositionedByWord object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomCreateEzsignelementsPositionedByWordRequest {
   public static final String SERIALIZED_NAME_S_CREATEEZSIGNELEMENTSPOSITIONEDBYWORD_PATTERN = "sCreateezsignelementspositionedbywordPattern";
   @SerializedName(SERIALIZED_NAME_S_CREATEEZSIGNELEMENTSPOSITIONEDBYWORD_PATTERN)
-  @javax.annotation.Nonnull
   private String sCreateezsignelementspositionedbywordPattern;
 
   public static final String SERIALIZED_NAME_I_CREATEEZSIGNELEMENTSPOSITIONEDBYWORD_OFFSETX = "iCreateezsignelementspositionedbywordOffsetx";
   @SerializedName(SERIALIZED_NAME_I_CREATEEZSIGNELEMENTSPOSITIONEDBYWORD_OFFSETX)
-  @javax.annotation.Nonnull
   private Integer iCreateezsignelementspositionedbywordOffsetx;
 
   public static final String SERIALIZED_NAME_I_CREATEEZSIGNELEMENTSPOSITIONEDBYWORD_OFFSETY = "iCreateezsignelementspositionedbywordOffsety";
   @SerializedName(SERIALIZED_NAME_I_CREATEEZSIGNELEMENTSPOSITIONEDBYWORD_OFFSETY)
-  @javax.annotation.Nonnull
   private Integer iCreateezsignelementspositionedbywordOffsety;
 
   /**
@@ -121,13 +118,12 @@ public class CustomCreateEzsignelementsPositionedByWordRequest {
 
   public static final String SERIALIZED_NAME_E_CREATEEZSIGNELEMENTSPOSITIONEDBYWORD_OCCURANCE = "eCreateezsignelementspositionedbywordOccurance";
   @SerializedName(SERIALIZED_NAME_E_CREATEEZSIGNELEMENTSPOSITIONEDBYWORD_OCCURANCE)
-  @javax.annotation.Nonnull
   private ECreateezsignelementspositionedbywordOccuranceEnum eCreateezsignelementspositionedbywordOccurance;
 
   public CustomCreateEzsignelementsPositionedByWordRequest() {
   }
 
-  public CustomCreateEzsignelementsPositionedByWordRequest sCreateezsignelementspositionedbywordPattern(@javax.annotation.Nonnull String sCreateezsignelementspositionedbywordPattern) {
+  public CustomCreateEzsignelementsPositionedByWordRequest sCreateezsignelementspositionedbywordPattern(String sCreateezsignelementspositionedbywordPattern) {
     this.sCreateezsignelementspositionedbywordPattern = sCreateezsignelementspositionedbywordPattern;
     return this;
   }
@@ -141,12 +137,12 @@ public class CustomCreateEzsignelementsPositionedByWordRequest {
     return sCreateezsignelementspositionedbywordPattern;
   }
 
-  public void setsCreateezsignelementspositionedbywordPattern(@javax.annotation.Nonnull String sCreateezsignelementspositionedbywordPattern) {
+  public void setsCreateezsignelementspositionedbywordPattern(String sCreateezsignelementspositionedbywordPattern) {
     this.sCreateezsignelementspositionedbywordPattern = sCreateezsignelementspositionedbywordPattern;
   }
 
 
-  public CustomCreateEzsignelementsPositionedByWordRequest iCreateezsignelementspositionedbywordOffsetx(@javax.annotation.Nonnull Integer iCreateezsignelementspositionedbywordOffsetx) {
+  public CustomCreateEzsignelementsPositionedByWordRequest iCreateezsignelementspositionedbywordOffsetx(Integer iCreateezsignelementspositionedbywordOffsetx) {
     this.iCreateezsignelementspositionedbywordOffsetx = iCreateezsignelementspositionedbywordOffsetx;
     return this;
   }
@@ -160,12 +156,12 @@ public class CustomCreateEzsignelementsPositionedByWordRequest {
     return iCreateezsignelementspositionedbywordOffsetx;
   }
 
-  public void setiCreateezsignelementspositionedbywordOffsetx(@javax.annotation.Nonnull Integer iCreateezsignelementspositionedbywordOffsetx) {
+  public void setiCreateezsignelementspositionedbywordOffsetx(Integer iCreateezsignelementspositionedbywordOffsetx) {
     this.iCreateezsignelementspositionedbywordOffsetx = iCreateezsignelementspositionedbywordOffsetx;
   }
 
 
-  public CustomCreateEzsignelementsPositionedByWordRequest iCreateezsignelementspositionedbywordOffsety(@javax.annotation.Nonnull Integer iCreateezsignelementspositionedbywordOffsety) {
+  public CustomCreateEzsignelementsPositionedByWordRequest iCreateezsignelementspositionedbywordOffsety(Integer iCreateezsignelementspositionedbywordOffsety) {
     this.iCreateezsignelementspositionedbywordOffsety = iCreateezsignelementspositionedbywordOffsety;
     return this;
   }
@@ -179,12 +175,12 @@ public class CustomCreateEzsignelementsPositionedByWordRequest {
     return iCreateezsignelementspositionedbywordOffsety;
   }
 
-  public void setiCreateezsignelementspositionedbywordOffsety(@javax.annotation.Nonnull Integer iCreateezsignelementspositionedbywordOffsety) {
+  public void setiCreateezsignelementspositionedbywordOffsety(Integer iCreateezsignelementspositionedbywordOffsety) {
     this.iCreateezsignelementspositionedbywordOffsety = iCreateezsignelementspositionedbywordOffsety;
   }
 
 
-  public CustomCreateEzsignelementsPositionedByWordRequest eCreateezsignelementspositionedbywordOccurance(@javax.annotation.Nonnull ECreateezsignelementspositionedbywordOccuranceEnum eCreateezsignelementspositionedbywordOccurance) {
+  public CustomCreateEzsignelementsPositionedByWordRequest eCreateezsignelementspositionedbywordOccurance(ECreateezsignelementspositionedbywordOccuranceEnum eCreateezsignelementspositionedbywordOccurance) {
     this.eCreateezsignelementspositionedbywordOccurance = eCreateezsignelementspositionedbywordOccurance;
     return this;
   }
@@ -198,7 +194,7 @@ public class CustomCreateEzsignelementsPositionedByWordRequest {
     return eCreateezsignelementspositionedbywordOccurance;
   }
 
-  public void seteCreateezsignelementspositionedbywordOccurance(@javax.annotation.Nonnull ECreateezsignelementspositionedbywordOccuranceEnum eCreateezsignelementspositionedbywordOccurance) {
+  public void seteCreateezsignelementspositionedbywordOccurance(ECreateezsignelementspositionedbywordOccuranceEnum eCreateezsignelementspositionedbywordOccurance) {
     this.eCreateezsignelementspositionedbywordOccurance = eCreateezsignelementspositionedbywordOccurance;
   }
 

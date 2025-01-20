@@ -51,27 +51,24 @@ import eZmaxAPI.JSON;
 /**
  * ScimGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ScimGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
-  @javax.annotation.Nullable
   private String id;
 
   public static final String SERIALIZED_NAME_DISPLAY_NAME = "displayName";
   @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
-  @javax.annotation.Nonnull
   private String displayName;
 
   public static final String SERIALIZED_NAME_MEMBERS = "members";
   @SerializedName(SERIALIZED_NAME_MEMBERS)
-  @javax.annotation.Nullable
   private List<ScimGroupMember> members = new ArrayList<>();
 
   public ScimGroup() {
   }
 
-  public ScimGroup id(@javax.annotation.Nullable String id) {
+  public ScimGroup id(String id) {
     this.id = id;
     return this;
   }
@@ -85,12 +82,12 @@ public class ScimGroup {
     return id;
   }
 
-  public void setId(@javax.annotation.Nullable String id) {
+  public void setId(String id) {
     this.id = id;
   }
 
 
-  public ScimGroup displayName(@javax.annotation.Nonnull String displayName) {
+  public ScimGroup displayName(String displayName) {
     this.displayName = displayName;
     return this;
   }
@@ -104,12 +101,12 @@ public class ScimGroup {
     return displayName;
   }
 
-  public void setDisplayName(@javax.annotation.Nonnull String displayName) {
+  public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
 
 
-  public ScimGroup members(@javax.annotation.Nullable List<ScimGroupMember> members) {
+  public ScimGroup members(List<ScimGroupMember> members) {
     this.members = members;
     return this;
   }
@@ -131,7 +128,7 @@ public class ScimGroup {
     return members;
   }
 
-  public void setMembers(@javax.annotation.Nullable List<ScimGroupMember> members) {
+  public void setMembers(List<ScimGroupMember> members) {
     this.members = members;
   }
 

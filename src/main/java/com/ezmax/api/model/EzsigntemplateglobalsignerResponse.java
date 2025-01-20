@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateglobalsigner Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplateglobalsignerResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALSIGNER_I_D = "pkiEzsigntemplateglobalsignerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALSIGNER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsigntemplateglobalsignerID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBAL_I_D = "fkiEzsigntemplateglobalID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBAL_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplateglobalID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBALSIGNER_DESCRIPTION = "sEzsigntemplateglobalsignerDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBALSIGNER_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsigntemplateglobalsignerDescription;
 
   public EzsigntemplateglobalsignerResponse() {
   }
 
-  public EzsigntemplateglobalsignerResponse pkiEzsigntemplateglobalsignerID(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobalsignerID) {
+  public EzsigntemplateglobalsignerResponse pkiEzsigntemplateglobalsignerID(Integer pkiEzsigntemplateglobalsignerID) {
     this.pkiEzsigntemplateglobalsignerID = pkiEzsigntemplateglobalsignerID;
     return this;
   }
@@ -83,12 +80,12 @@ public class EzsigntemplateglobalsignerResponse {
     return pkiEzsigntemplateglobalsignerID;
   }
 
-  public void setPkiEzsigntemplateglobalsignerID(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobalsignerID) {
+  public void setPkiEzsigntemplateglobalsignerID(Integer pkiEzsigntemplateglobalsignerID) {
     this.pkiEzsigntemplateglobalsignerID = pkiEzsigntemplateglobalsignerID;
   }
 
 
-  public EzsigntemplateglobalsignerResponse fkiEzsigntemplateglobalID(@javax.annotation.Nonnull Integer fkiEzsigntemplateglobalID) {
+  public EzsigntemplateglobalsignerResponse fkiEzsigntemplateglobalID(Integer fkiEzsigntemplateglobalID) {
     this.fkiEzsigntemplateglobalID = fkiEzsigntemplateglobalID;
     return this;
   }
@@ -103,12 +100,12 @@ public class EzsigntemplateglobalsignerResponse {
     return fkiEzsigntemplateglobalID;
   }
 
-  public void setFkiEzsigntemplateglobalID(@javax.annotation.Nonnull Integer fkiEzsigntemplateglobalID) {
+  public void setFkiEzsigntemplateglobalID(Integer fkiEzsigntemplateglobalID) {
     this.fkiEzsigntemplateglobalID = fkiEzsigntemplateglobalID;
   }
 
 
-  public EzsigntemplateglobalsignerResponse sEzsigntemplateglobalsignerDescription(@javax.annotation.Nonnull String sEzsigntemplateglobalsignerDescription) {
+  public EzsigntemplateglobalsignerResponse sEzsigntemplateglobalsignerDescription(String sEzsigntemplateglobalsignerDescription) {
     this.sEzsigntemplateglobalsignerDescription = sEzsigntemplateglobalsignerDescription;
     return this;
   }
@@ -122,7 +119,7 @@ public class EzsigntemplateglobalsignerResponse {
     return sEzsigntemplateglobalsignerDescription;
   }
 
-  public void setsEzsigntemplateglobalsignerDescription(@javax.annotation.Nonnull String sEzsigntemplateglobalsignerDescription) {
+  public void setsEzsigntemplateglobalsignerDescription(String sEzsigntemplateglobalsignerDescription) {
     this.sEzsigntemplateglobalsignerDescription = sEzsigntemplateglobalsignerDescription;
   }
 

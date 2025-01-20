@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Taxassignment AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TaxassignmentAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_TAXASSIGNMENT_DESCRIPTION_X = "sTaxassignmentDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_TAXASSIGNMENT_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sTaxassignmentDescriptionX;
 
   public static final String SERIALIZED_NAME_PKI_TAXASSIGNMENT_I_D = "pkiTaxassignmentID";
   @SerializedName(SERIALIZED_NAME_PKI_TAXASSIGNMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiTaxassignmentID;
 
   public static final String SERIALIZED_NAME_B_TAXASSIGNMENT_ISACTIVE = "bTaxassignmentIsactive";
   @SerializedName(SERIALIZED_NAME_B_TAXASSIGNMENT_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bTaxassignmentIsactive;
 
   public TaxassignmentAutocompleteElementResponse() {
   }
 
-  public TaxassignmentAutocompleteElementResponse sTaxassignmentDescriptionX(@javax.annotation.Nonnull String sTaxassignmentDescriptionX) {
+  public TaxassignmentAutocompleteElementResponse sTaxassignmentDescriptionX(String sTaxassignmentDescriptionX) {
     this.sTaxassignmentDescriptionX = sTaxassignmentDescriptionX;
     return this;
   }
@@ -82,12 +79,12 @@ public class TaxassignmentAutocompleteElementResponse {
     return sTaxassignmentDescriptionX;
   }
 
-  public void setsTaxassignmentDescriptionX(@javax.annotation.Nonnull String sTaxassignmentDescriptionX) {
+  public void setsTaxassignmentDescriptionX(String sTaxassignmentDescriptionX) {
     this.sTaxassignmentDescriptionX = sTaxassignmentDescriptionX;
   }
 
 
-  public TaxassignmentAutocompleteElementResponse pkiTaxassignmentID(@javax.annotation.Nonnull Integer pkiTaxassignmentID) {
+  public TaxassignmentAutocompleteElementResponse pkiTaxassignmentID(Integer pkiTaxassignmentID) {
     this.pkiTaxassignmentID = pkiTaxassignmentID;
     return this;
   }
@@ -103,12 +100,12 @@ public class TaxassignmentAutocompleteElementResponse {
     return pkiTaxassignmentID;
   }
 
-  public void setPkiTaxassignmentID(@javax.annotation.Nonnull Integer pkiTaxassignmentID) {
+  public void setPkiTaxassignmentID(Integer pkiTaxassignmentID) {
     this.pkiTaxassignmentID = pkiTaxassignmentID;
   }
 
 
-  public TaxassignmentAutocompleteElementResponse bTaxassignmentIsactive(@javax.annotation.Nonnull Boolean bTaxassignmentIsactive) {
+  public TaxassignmentAutocompleteElementResponse bTaxassignmentIsactive(Boolean bTaxassignmentIsactive) {
     this.bTaxassignmentIsactive = bTaxassignmentIsactive;
     return this;
   }
@@ -122,7 +119,7 @@ public class TaxassignmentAutocompleteElementResponse {
     return bTaxassignmentIsactive;
   }
 
-  public void setbTaxassignmentIsactive(@javax.annotation.Nonnull Boolean bTaxassignmentIsactive) {
+  public void setbTaxassignmentIsactive(Boolean bTaxassignmentIsactive) {
     this.bTaxassignmentIsactive = bTaxassignmentIsactive;
   }
 

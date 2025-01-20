@@ -48,17 +48,16 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatedocumentRequestPatch {
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_NAME = "sEzsigntemplatedocumentName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEDOCUMENT_NAME)
-  @javax.annotation.Nullable
   private String sEzsigntemplatedocumentName;
 
   public EzsigntemplatedocumentRequestPatch() {
   }
 
-  public EzsigntemplatedocumentRequestPatch sEzsigntemplatedocumentName(@javax.annotation.Nullable String sEzsigntemplatedocumentName) {
+  public EzsigntemplatedocumentRequestPatch sEzsigntemplatedocumentName(String sEzsigntemplatedocumentName) {
     this.sEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
     return this;
   }
@@ -72,7 +71,7 @@ public class EzsigntemplatedocumentRequestPatch {
     return sEzsigntemplatedocumentName;
   }
 
-  public void setsEzsigntemplatedocumentName(@javax.annotation.Nullable String sEzsigntemplatedocumentName) {
+  public void setsEzsigntemplatedocumentName(String sEzsigntemplatedocumentName) {
     this.sEzsigntemplatedocumentName = sEzsigntemplatedocumentName;
   }
 

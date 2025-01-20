@@ -14,11 +14,12 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV2Request;
 import com.ezmax.api.model.EzsigntemplatesignatureCreateObjectV2Response;
+import com.ezmax.api.model.EzsigntemplatesignatureDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV2Request;
+import com.ezmax.api.model.EzsigntemplatesignatureEditObjectV2Response;
 import com.ezmax.api.model.EzsigntemplatesignatureGetObjectV3Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -60,7 +61,7 @@ public class ObjectEzsigntemplatesignatureApiTest {
     @Test
     public void ezsigntemplatesignatureDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplatesignatureID = null;
-        CommonResponse response = api.ezsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID);
+        EzsigntemplatesignatureDeleteObjectV1Response response = api.ezsigntemplatesignatureDeleteObjectV1(pkiEzsigntemplatesignatureID);
         // TODO: test validations
     }
 
@@ -75,7 +76,7 @@ public class ObjectEzsigntemplatesignatureApiTest {
     public void ezsigntemplatesignatureEditObjectV2Test() throws ApiException {
         Integer pkiEzsigntemplatesignatureID = null;
         EzsigntemplatesignatureEditObjectV2Request ezsigntemplatesignatureEditObjectV2Request = null;
-        CommonResponse response = api.ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request);
+        EzsigntemplatesignatureEditObjectV2Response response = api.ezsigntemplatesignatureEditObjectV2(pkiEzsigntemplatesignatureID, ezsigntemplatesignatureEditObjectV2Request);
         // TODO: test validations
     }
 

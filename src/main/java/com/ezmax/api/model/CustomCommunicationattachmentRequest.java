@@ -50,22 +50,20 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Communicationattachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomCommunicationattachmentRequest {
   public static final String SERIALIZED_NAME_OBJ_COMMUNICATIONATTACHMENT = "objCommunicationattachment";
   @SerializedName(SERIALIZED_NAME_OBJ_COMMUNICATIONATTACHMENT)
-  @javax.annotation.Nullable
   private CommunicationattachmentRequestCompound objCommunicationattachment;
 
   public static final String SERIALIZED_NAME_OBJ_COMMUNICATIONEXTERNALATTACHMENT = "objCommunicationexternalattachment";
   @SerializedName(SERIALIZED_NAME_OBJ_COMMUNICATIONEXTERNALATTACHMENT)
-  @javax.annotation.Nullable
   private CommonFile objCommunicationexternalattachment;
 
   public CustomCommunicationattachmentRequest() {
   }
 
-  public CustomCommunicationattachmentRequest objCommunicationattachment(@javax.annotation.Nullable CommunicationattachmentRequestCompound objCommunicationattachment) {
+  public CustomCommunicationattachmentRequest objCommunicationattachment(CommunicationattachmentRequestCompound objCommunicationattachment) {
     this.objCommunicationattachment = objCommunicationattachment;
     return this;
   }
@@ -79,12 +77,12 @@ public class CustomCommunicationattachmentRequest {
     return objCommunicationattachment;
   }
 
-  public void setObjCommunicationattachment(@javax.annotation.Nullable CommunicationattachmentRequestCompound objCommunicationattachment) {
+  public void setObjCommunicationattachment(CommunicationattachmentRequestCompound objCommunicationattachment) {
     this.objCommunicationattachment = objCommunicationattachment;
   }
 
 
-  public CustomCommunicationattachmentRequest objCommunicationexternalattachment(@javax.annotation.Nullable CommonFile objCommunicationexternalattachment) {
+  public CustomCommunicationattachmentRequest objCommunicationexternalattachment(CommonFile objCommunicationexternalattachment) {
     this.objCommunicationexternalattachment = objCommunicationexternalattachment;
     return this;
   }
@@ -98,7 +96,7 @@ public class CustomCommunicationattachmentRequest {
     return objCommunicationexternalattachment;
   }
 
-  public void setObjCommunicationexternalattachment(@javax.annotation.Nullable CommonFile objCommunicationexternalattachment) {
+  public void setObjCommunicationexternalattachment(CommonFile objCommunicationexternalattachment) {
     this.objCommunicationexternalattachment = objCommunicationexternalattachment;
   }
 

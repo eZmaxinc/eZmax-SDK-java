@@ -50,37 +50,32 @@ import eZmaxAPI.JSON;
 /**
  * A Variableexpense Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VariableexpenseResponseCompound {
   public static final String SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D = "pkiVariableexpenseID";
   @SerializedName(SERIALIZED_NAME_PKI_VARIABLEEXPENSE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiVariableexpenseID;
 
   public static final String SERIALIZED_NAME_S_VARIABLEEXPENSE_CODE = "sVariableexpenseCode";
   @SerializedName(SERIALIZED_NAME_S_VARIABLEEXPENSE_CODE)
-  @javax.annotation.Nullable
   private String sVariableexpenseCode;
 
   public static final String SERIALIZED_NAME_OBJ_VARIABLEEXPENSE_DESCRIPTION = "objVariableexpenseDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_VARIABLEEXPENSE_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualVariableexpenseDescription objVariableexpenseDescription;
 
   public static final String SERIALIZED_NAME_E_VARIABLEEXPENSE_TAXABLE = "eVariableexpenseTaxable";
   @SerializedName(SERIALIZED_NAME_E_VARIABLEEXPENSE_TAXABLE)
-  @javax.annotation.Nullable
   private FieldEVariableexpenseTaxable eVariableexpenseTaxable;
 
   public static final String SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE = "bVariableexpenseIsactive";
   @SerializedName(SERIALIZED_NAME_B_VARIABLEEXPENSE_ISACTIVE)
-  @javax.annotation.Nullable
   private Boolean bVariableexpenseIsactive;
 
   public VariableexpenseResponseCompound() {
   }
 
-  public VariableexpenseResponseCompound pkiVariableexpenseID(@javax.annotation.Nonnull Integer pkiVariableexpenseID) {
+  public VariableexpenseResponseCompound pkiVariableexpenseID(Integer pkiVariableexpenseID) {
     this.pkiVariableexpenseID = pkiVariableexpenseID;
     return this;
   }
@@ -96,12 +91,12 @@ public class VariableexpenseResponseCompound {
     return pkiVariableexpenseID;
   }
 
-  public void setPkiVariableexpenseID(@javax.annotation.Nonnull Integer pkiVariableexpenseID) {
+  public void setPkiVariableexpenseID(Integer pkiVariableexpenseID) {
     this.pkiVariableexpenseID = pkiVariableexpenseID;
   }
 
 
-  public VariableexpenseResponseCompound sVariableexpenseCode(@javax.annotation.Nullable String sVariableexpenseCode) {
+  public VariableexpenseResponseCompound sVariableexpenseCode(String sVariableexpenseCode) {
     this.sVariableexpenseCode = sVariableexpenseCode;
     return this;
   }
@@ -115,12 +110,12 @@ public class VariableexpenseResponseCompound {
     return sVariableexpenseCode;
   }
 
-  public void setsVariableexpenseCode(@javax.annotation.Nullable String sVariableexpenseCode) {
+  public void setsVariableexpenseCode(String sVariableexpenseCode) {
     this.sVariableexpenseCode = sVariableexpenseCode;
   }
 
 
-  public VariableexpenseResponseCompound objVariableexpenseDescription(@javax.annotation.Nonnull MultilingualVariableexpenseDescription objVariableexpenseDescription) {
+  public VariableexpenseResponseCompound objVariableexpenseDescription(MultilingualVariableexpenseDescription objVariableexpenseDescription) {
     this.objVariableexpenseDescription = objVariableexpenseDescription;
     return this;
   }
@@ -134,12 +129,12 @@ public class VariableexpenseResponseCompound {
     return objVariableexpenseDescription;
   }
 
-  public void setObjVariableexpenseDescription(@javax.annotation.Nonnull MultilingualVariableexpenseDescription objVariableexpenseDescription) {
+  public void setObjVariableexpenseDescription(MultilingualVariableexpenseDescription objVariableexpenseDescription) {
     this.objVariableexpenseDescription = objVariableexpenseDescription;
   }
 
 
-  public VariableexpenseResponseCompound eVariableexpenseTaxable(@javax.annotation.Nullable FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
+  public VariableexpenseResponseCompound eVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
     this.eVariableexpenseTaxable = eVariableexpenseTaxable;
     return this;
   }
@@ -153,12 +148,12 @@ public class VariableexpenseResponseCompound {
     return eVariableexpenseTaxable;
   }
 
-  public void seteVariableexpenseTaxable(@javax.annotation.Nullable FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
+  public void seteVariableexpenseTaxable(FieldEVariableexpenseTaxable eVariableexpenseTaxable) {
     this.eVariableexpenseTaxable = eVariableexpenseTaxable;
   }
 
 
-  public VariableexpenseResponseCompound bVariableexpenseIsactive(@javax.annotation.Nullable Boolean bVariableexpenseIsactive) {
+  public VariableexpenseResponseCompound bVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
     return this;
   }
@@ -172,7 +167,7 @@ public class VariableexpenseResponseCompound {
     return bVariableexpenseIsactive;
   }
 
-  public void setbVariableexpenseIsactive(@javax.annotation.Nullable Boolean bVariableexpenseIsactive) {
+  public void setbVariableexpenseIsactive(Boolean bVariableexpenseIsactive) {
     this.bVariableexpenseIsactive = bVariableexpenseIsactive;
   }
 

@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * A Generic DropdownElement Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomDropdownElementRequestCompound {
   public static final String SERIALIZED_NAME_S_LABEL = "sLabel";
   @SerializedName(SERIALIZED_NAME_S_LABEL)
-  @javax.annotation.Nonnull
   private String sLabel;
 
   public static final String SERIALIZED_NAME_S_VALUE = "sValue";
   @SerializedName(SERIALIZED_NAME_S_VALUE)
-  @javax.annotation.Nonnull
   private String sValue;
 
   public CustomDropdownElementRequestCompound() {
   }
 
-  public CustomDropdownElementRequestCompound sLabel(@javax.annotation.Nonnull String sLabel) {
+  public CustomDropdownElementRequestCompound sLabel(String sLabel) {
     this.sLabel = sLabel;
     return this;
   }
@@ -77,12 +75,12 @@ public class CustomDropdownElementRequestCompound {
     return sLabel;
   }
 
-  public void setsLabel(@javax.annotation.Nonnull String sLabel) {
+  public void setsLabel(String sLabel) {
     this.sLabel = sLabel;
   }
 
 
-  public CustomDropdownElementRequestCompound sValue(@javax.annotation.Nonnull String sValue) {
+  public CustomDropdownElementRequestCompound sValue(String sValue) {
     this.sValue = sValue;
     return this;
   }
@@ -96,7 +94,7 @@ public class CustomDropdownElementRequestCompound {
     return sValue;
   }
 
-  public void setsValue(@javax.annotation.Nonnull String sValue) {
+  public void setsValue(String sValue) {
     this.sValue = sValue;
   }
 

@@ -14,7 +14,6 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommonResponseErrorSTemporaryFileUrl;
 import com.ezmax.api.model.EzsigntemplatedocumentCreateObjectV1Request;
@@ -29,6 +28,7 @@ import com.ezmax.api.model.EzsigntemplatedocumentEditObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatedocumentEditObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentExtractTextV1Request;
 import com.ezmax.api.model.EzsigntemplatedocumentExtractTextV1Response;
+import com.ezmax.api.model.EzsigntemplatedocumentFlattenV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response;
@@ -37,6 +37,7 @@ import com.ezmax.api.model.EzsigntemplatedocumentGetObjectV2Response;
 import com.ezmax.api.model.EzsigntemplatedocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigntemplatedocumentGetWordsPositionsV1Response;
 import com.ezmax.api.model.EzsigntemplatedocumentPatchObjectV1Request;
+import com.ezmax.api.model.EzsigntemplatedocumentPatchObjectV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -153,7 +154,7 @@ public class ObjectEzsigntemplatedocumentApiTest {
     public void ezsigntemplatedocumentFlattenV1Test() throws ApiException {
         Integer pkiEzsigntemplatedocumentID = null;
         Object body = null;
-        CommonResponse response = api.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body);
+        EzsigntemplatedocumentFlattenV1Response response = api.ezsigntemplatedocumentFlattenV1(pkiEzsigntemplatedocumentID, body);
         // TODO: test validations
     }
 
@@ -253,7 +254,7 @@ public class ObjectEzsigntemplatedocumentApiTest {
     public void ezsigntemplatedocumentPatchObjectV1Test() throws ApiException {
         Integer pkiEzsigntemplatedocumentID = null;
         EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request = null;
-        CommonResponse response = api.ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request);
+        EzsigntemplatedocumentPatchObjectV1Response response = api.ezsigntemplatedocumentPatchObjectV1(pkiEzsigntemplatedocumentID, ezsigntemplatedocumentPatchObjectV1Request);
         // TODO: test validations
     }
 

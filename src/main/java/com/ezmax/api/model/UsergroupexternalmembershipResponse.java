@@ -48,52 +48,44 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroupexternalmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupexternalmembershipResponse {
   public static final String SERIALIZED_NAME_PKI_USERGROUPEXTERNALMEMBERSHIP_I_D = "pkiUsergroupexternalmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPEXTERNALMEMBERSHIP_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiUsergroupexternalmembershipID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D = "fkiUsergroupexternalID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUPEXTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiUsergroupexternalID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
-  @javax.annotation.Nonnull
   private String sUserFirstname;
 
   public static final String SERIALIZED_NAME_S_USER_LASTNAME = "sUserLastname";
   @SerializedName(SERIALIZED_NAME_S_USER_LASTNAME)
-  @javax.annotation.Nonnull
   private String sUserLastname;
 
   public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
   @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
-  @javax.annotation.Nonnull
   private String sUserLoginname;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  @javax.annotation.Nonnull
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME = "sUsergroupexternalName";
   @SerializedName(SERIALIZED_NAME_S_USERGROUPEXTERNAL_NAME)
-  @javax.annotation.Nonnull
   private String sUsergroupexternalName;
 
   public UsergroupexternalmembershipResponse() {
   }
 
-  public UsergroupexternalmembershipResponse pkiUsergroupexternalmembershipID(@javax.annotation.Nonnull Integer pkiUsergroupexternalmembershipID) {
+  public UsergroupexternalmembershipResponse pkiUsergroupexternalmembershipID(Integer pkiUsergroupexternalmembershipID) {
     this.pkiUsergroupexternalmembershipID = pkiUsergroupexternalmembershipID;
     return this;
   }
@@ -109,12 +101,12 @@ public class UsergroupexternalmembershipResponse {
     return pkiUsergroupexternalmembershipID;
   }
 
-  public void setPkiUsergroupexternalmembershipID(@javax.annotation.Nonnull Integer pkiUsergroupexternalmembershipID) {
+  public void setPkiUsergroupexternalmembershipID(Integer pkiUsergroupexternalmembershipID) {
     this.pkiUsergroupexternalmembershipID = pkiUsergroupexternalmembershipID;
   }
 
 
-  public UsergroupexternalmembershipResponse fkiUsergroupexternalID(@javax.annotation.Nonnull Integer fkiUsergroupexternalID) {
+  public UsergroupexternalmembershipResponse fkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
     this.fkiUsergroupexternalID = fkiUsergroupexternalID;
     return this;
   }
@@ -130,12 +122,12 @@ public class UsergroupexternalmembershipResponse {
     return fkiUsergroupexternalID;
   }
 
-  public void setFkiUsergroupexternalID(@javax.annotation.Nonnull Integer fkiUsergroupexternalID) {
+  public void setFkiUsergroupexternalID(Integer fkiUsergroupexternalID) {
     this.fkiUsergroupexternalID = fkiUsergroupexternalID;
   }
 
 
-  public UsergroupexternalmembershipResponse fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
+  public UsergroupexternalmembershipResponse fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -150,12 +142,12 @@ public class UsergroupexternalmembershipResponse {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public UsergroupexternalmembershipResponse sUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
+  public UsergroupexternalmembershipResponse sUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
     return this;
   }
@@ -169,12 +161,12 @@ public class UsergroupexternalmembershipResponse {
     return sUserFirstname;
   }
 
-  public void setsUserFirstname(@javax.annotation.Nonnull String sUserFirstname) {
+  public void setsUserFirstname(String sUserFirstname) {
     this.sUserFirstname = sUserFirstname;
   }
 
 
-  public UsergroupexternalmembershipResponse sUserLastname(@javax.annotation.Nonnull String sUserLastname) {
+  public UsergroupexternalmembershipResponse sUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
     return this;
   }
@@ -188,12 +180,12 @@ public class UsergroupexternalmembershipResponse {
     return sUserLastname;
   }
 
-  public void setsUserLastname(@javax.annotation.Nonnull String sUserLastname) {
+  public void setsUserLastname(String sUserLastname) {
     this.sUserLastname = sUserLastname;
   }
 
 
-  public UsergroupexternalmembershipResponse sUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
+  public UsergroupexternalmembershipResponse sUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
     return this;
   }
@@ -207,12 +199,12 @@ public class UsergroupexternalmembershipResponse {
     return sUserLoginname;
   }
 
-  public void setsUserLoginname(@javax.annotation.Nonnull String sUserLoginname) {
+  public void setsUserLoginname(String sUserLoginname) {
     this.sUserLoginname = sUserLoginname;
   }
 
 
-  public UsergroupexternalmembershipResponse sEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
+  public UsergroupexternalmembershipResponse sEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -226,12 +218,12 @@ public class UsergroupexternalmembershipResponse {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
+  public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public UsergroupexternalmembershipResponse sUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
+  public UsergroupexternalmembershipResponse sUsergroupexternalName(String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
     return this;
   }
@@ -245,7 +237,7 @@ public class UsergroupexternalmembershipResponse {
     return sUsergroupexternalName;
   }
 
-  public void setsUsergroupexternalName(@javax.annotation.Nonnull String sUsergroupexternalName) {
+  public void setsUsergroupexternalName(String sUsergroupexternalName) {
     this.sUsergroupexternalName = sUsergroupexternalName;
   }
 

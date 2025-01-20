@@ -48,62 +48,52 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryexternaldetail Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_I_D = "pkiEzmaxinvoicingsummaryexternaldetailID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzmaxinvoicingsummaryexternaldetailID;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXINVOICINGSUMMARYEXTERNAL_I_D = "fkiEzmaxinvoicingsummaryexternalID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICINGSUMMARYEXTERNAL_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzmaxinvoicingsummaryexternalID;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D = "fkiEzmaxproductID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXPRODUCT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzmaxproductID;
 
   public static final String SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X = "sEzmaxproductDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZMAXPRODUCT_DESCRIPTION_X)
-  @javax.annotation.Nonnull
   private String sEzmaxproductDescriptionX;
 
   public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_COUNTREAL = "dEzmaxinvoicingsummaryexternaldetailCountreal";
   @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_COUNTREAL)
-  @javax.annotation.Nonnull
   private String dEzmaxinvoicingsummaryexternaldetailCountreal;
 
   public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_SUBTOTAL = "dEzmaxinvoicingsummaryexternaldetailSubtotal";
   @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_SUBTOTAL)
-  @javax.annotation.Nonnull
   private String dEzmaxinvoicingsummaryexternaldetailSubtotal;
 
   public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_REBATE = "dEzmaxinvoicingsummaryexternaldetailRebate";
   @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_REBATE)
-  @javax.annotation.Nonnull
   private String dEzmaxinvoicingsummaryexternaldetailRebate;
 
   public static final String SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_TOTAL = "dEzmaxinvoicingsummaryexternaldetailTotal";
   @SerializedName(SERIALIZED_NAME_D_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_TOTAL)
-  @javax.annotation.Nonnull
   private String dEzmaxinvoicingsummaryexternaldetailTotal;
 
   public static final String SERIALIZED_NAME_B_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_ADJUSTMENT = "bEzmaxinvoicingsummaryexternaldetailAdjustment";
   @SerializedName(SERIALIZED_NAME_B_EZMAXINVOICINGSUMMARYEXTERNALDETAIL_ADJUSTMENT)
-  @javax.annotation.Nonnull
   private Boolean bEzmaxinvoicingsummaryexternaldetailAdjustment;
 
   public static final String SERIALIZED_NAME_T_EZMAXPRODUCT_HELP_X = "tEzmaxproductHelpX";
   @SerializedName(SERIALIZED_NAME_T_EZMAXPRODUCT_HELP_X)
-  @javax.annotation.Nonnull
   private String tEzmaxproductHelpX;
 
   public EzmaxinvoicingsummaryexternaldetailResponseCompound() {
   }
 
-  public EzmaxinvoicingsummaryexternaldetailResponseCompound pkiEzmaxinvoicingsummaryexternaldetailID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryexternaldetailID) {
+  public EzmaxinvoicingsummaryexternaldetailResponseCompound pkiEzmaxinvoicingsummaryexternaldetailID(Integer pkiEzmaxinvoicingsummaryexternaldetailID) {
     this.pkiEzmaxinvoicingsummaryexternaldetailID = pkiEzmaxinvoicingsummaryexternaldetailID;
     return this;
   }
@@ -118,12 +108,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     return pkiEzmaxinvoicingsummaryexternaldetailID;
   }
 
-  public void setPkiEzmaxinvoicingsummaryexternaldetailID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryexternaldetailID) {
+  public void setPkiEzmaxinvoicingsummaryexternaldetailID(Integer pkiEzmaxinvoicingsummaryexternaldetailID) {
     this.pkiEzmaxinvoicingsummaryexternaldetailID = pkiEzmaxinvoicingsummaryexternaldetailID;
   }
 
 
-  public EzmaxinvoicingsummaryexternaldetailResponseCompound fkiEzmaxinvoicingsummaryexternalID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingsummaryexternalID) {
+  public EzmaxinvoicingsummaryexternaldetailResponseCompound fkiEzmaxinvoicingsummaryexternalID(Integer fkiEzmaxinvoicingsummaryexternalID) {
     this.fkiEzmaxinvoicingsummaryexternalID = fkiEzmaxinvoicingsummaryexternalID;
     return this;
   }
@@ -138,12 +128,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     return fkiEzmaxinvoicingsummaryexternalID;
   }
 
-  public void setFkiEzmaxinvoicingsummaryexternalID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingsummaryexternalID) {
+  public void setFkiEzmaxinvoicingsummaryexternalID(Integer fkiEzmaxinvoicingsummaryexternalID) {
     this.fkiEzmaxinvoicingsummaryexternalID = fkiEzmaxinvoicingsummaryexternalID;
   }
 
 
-  public EzmaxinvoicingsummaryexternaldetailResponseCompound fkiEzmaxproductID(@javax.annotation.Nonnull Integer fkiEzmaxproductID) {
+  public EzmaxinvoicingsummaryexternaldetailResponseCompound fkiEzmaxproductID(Integer fkiEzmaxproductID) {
     this.fkiEzmaxproductID = fkiEzmaxproductID;
     return this;
   }
@@ -158,12 +148,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     return fkiEzmaxproductID;
   }
 
-  public void setFkiEzmaxproductID(@javax.annotation.Nonnull Integer fkiEzmaxproductID) {
+  public void setFkiEzmaxproductID(Integer fkiEzmaxproductID) {
     this.fkiEzmaxproductID = fkiEzmaxproductID;
   }
 
 
-  public EzmaxinvoicingsummaryexternaldetailResponseCompound sEzmaxproductDescriptionX(@javax.annotation.Nonnull String sEzmaxproductDescriptionX) {
+  public EzmaxinvoicingsummaryexternaldetailResponseCompound sEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
     return this;
   }
@@ -177,12 +167,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     return sEzmaxproductDescriptionX;
   }
 
-  public void setsEzmaxproductDescriptionX(@javax.annotation.Nonnull String sEzmaxproductDescriptionX) {
+  public void setsEzmaxproductDescriptionX(String sEzmaxproductDescriptionX) {
     this.sEzmaxproductDescriptionX = sEzmaxproductDescriptionX;
   }
 
 
-  public EzmaxinvoicingsummaryexternaldetailResponseCompound dEzmaxinvoicingsummaryexternaldetailCountreal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryexternaldetailCountreal) {
+  public EzmaxinvoicingsummaryexternaldetailResponseCompound dEzmaxinvoicingsummaryexternaldetailCountreal(String dEzmaxinvoicingsummaryexternaldetailCountreal) {
     this.dEzmaxinvoicingsummaryexternaldetailCountreal = dEzmaxinvoicingsummaryexternaldetailCountreal;
     return this;
   }
@@ -196,12 +186,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     return dEzmaxinvoicingsummaryexternaldetailCountreal;
   }
 
-  public void setdEzmaxinvoicingsummaryexternaldetailCountreal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryexternaldetailCountreal) {
+  public void setdEzmaxinvoicingsummaryexternaldetailCountreal(String dEzmaxinvoicingsummaryexternaldetailCountreal) {
     this.dEzmaxinvoicingsummaryexternaldetailCountreal = dEzmaxinvoicingsummaryexternaldetailCountreal;
   }
 
 
-  public EzmaxinvoicingsummaryexternaldetailResponseCompound dEzmaxinvoicingsummaryexternaldetailSubtotal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryexternaldetailSubtotal) {
+  public EzmaxinvoicingsummaryexternaldetailResponseCompound dEzmaxinvoicingsummaryexternaldetailSubtotal(String dEzmaxinvoicingsummaryexternaldetailSubtotal) {
     this.dEzmaxinvoicingsummaryexternaldetailSubtotal = dEzmaxinvoicingsummaryexternaldetailSubtotal;
     return this;
   }
@@ -215,12 +205,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     return dEzmaxinvoicingsummaryexternaldetailSubtotal;
   }
 
-  public void setdEzmaxinvoicingsummaryexternaldetailSubtotal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryexternaldetailSubtotal) {
+  public void setdEzmaxinvoicingsummaryexternaldetailSubtotal(String dEzmaxinvoicingsummaryexternaldetailSubtotal) {
     this.dEzmaxinvoicingsummaryexternaldetailSubtotal = dEzmaxinvoicingsummaryexternaldetailSubtotal;
   }
 
 
-  public EzmaxinvoicingsummaryexternaldetailResponseCompound dEzmaxinvoicingsummaryexternaldetailRebate(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryexternaldetailRebate) {
+  public EzmaxinvoicingsummaryexternaldetailResponseCompound dEzmaxinvoicingsummaryexternaldetailRebate(String dEzmaxinvoicingsummaryexternaldetailRebate) {
     this.dEzmaxinvoicingsummaryexternaldetailRebate = dEzmaxinvoicingsummaryexternaldetailRebate;
     return this;
   }
@@ -234,12 +224,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     return dEzmaxinvoicingsummaryexternaldetailRebate;
   }
 
-  public void setdEzmaxinvoicingsummaryexternaldetailRebate(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryexternaldetailRebate) {
+  public void setdEzmaxinvoicingsummaryexternaldetailRebate(String dEzmaxinvoicingsummaryexternaldetailRebate) {
     this.dEzmaxinvoicingsummaryexternaldetailRebate = dEzmaxinvoicingsummaryexternaldetailRebate;
   }
 
 
-  public EzmaxinvoicingsummaryexternaldetailResponseCompound dEzmaxinvoicingsummaryexternaldetailTotal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryexternaldetailTotal) {
+  public EzmaxinvoicingsummaryexternaldetailResponseCompound dEzmaxinvoicingsummaryexternaldetailTotal(String dEzmaxinvoicingsummaryexternaldetailTotal) {
     this.dEzmaxinvoicingsummaryexternaldetailTotal = dEzmaxinvoicingsummaryexternaldetailTotal;
     return this;
   }
@@ -253,12 +243,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     return dEzmaxinvoicingsummaryexternaldetailTotal;
   }
 
-  public void setdEzmaxinvoicingsummaryexternaldetailTotal(@javax.annotation.Nonnull String dEzmaxinvoicingsummaryexternaldetailTotal) {
+  public void setdEzmaxinvoicingsummaryexternaldetailTotal(String dEzmaxinvoicingsummaryexternaldetailTotal) {
     this.dEzmaxinvoicingsummaryexternaldetailTotal = dEzmaxinvoicingsummaryexternaldetailTotal;
   }
 
 
-  public EzmaxinvoicingsummaryexternaldetailResponseCompound bEzmaxinvoicingsummaryexternaldetailAdjustment(@javax.annotation.Nonnull Boolean bEzmaxinvoicingsummaryexternaldetailAdjustment) {
+  public EzmaxinvoicingsummaryexternaldetailResponseCompound bEzmaxinvoicingsummaryexternaldetailAdjustment(Boolean bEzmaxinvoicingsummaryexternaldetailAdjustment) {
     this.bEzmaxinvoicingsummaryexternaldetailAdjustment = bEzmaxinvoicingsummaryexternaldetailAdjustment;
     return this;
   }
@@ -272,12 +262,12 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     return bEzmaxinvoicingsummaryexternaldetailAdjustment;
   }
 
-  public void setbEzmaxinvoicingsummaryexternaldetailAdjustment(@javax.annotation.Nonnull Boolean bEzmaxinvoicingsummaryexternaldetailAdjustment) {
+  public void setbEzmaxinvoicingsummaryexternaldetailAdjustment(Boolean bEzmaxinvoicingsummaryexternaldetailAdjustment) {
     this.bEzmaxinvoicingsummaryexternaldetailAdjustment = bEzmaxinvoicingsummaryexternaldetailAdjustment;
   }
 
 
-  public EzmaxinvoicingsummaryexternaldetailResponseCompound tEzmaxproductHelpX(@javax.annotation.Nonnull String tEzmaxproductHelpX) {
+  public EzmaxinvoicingsummaryexternaldetailResponseCompound tEzmaxproductHelpX(String tEzmaxproductHelpX) {
     this.tEzmaxproductHelpX = tEzmaxproductHelpX;
     return this;
   }
@@ -291,7 +281,7 @@ public class EzmaxinvoicingsummaryexternaldetailResponseCompound {
     return tEzmaxproductHelpX;
   }
 
-  public void settEzmaxproductHelpX(@javax.annotation.Nonnull String tEzmaxproductHelpX) {
+  public void settEzmaxproductHelpX(String tEzmaxproductHelpX) {
     this.tEzmaxproductHelpX = tEzmaxproductHelpX;
   }
 

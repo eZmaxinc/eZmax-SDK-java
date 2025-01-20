@@ -49,37 +49,32 @@ import eZmaxAPI.JSON;
 /**
  * A Signature Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SignatureRequestCompound {
   public static final String SERIALIZED_NAME_PKI_SIGNATURE_I_D = "pkiSignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_SIGNATURE_I_D)
-  @javax.annotation.Nullable
   private Integer pkiSignatureID;
 
   public static final String SERIALIZED_NAME_FKI_FONT_I_D = "fkiFontID";
   @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFontID;
 
   public static final String SERIALIZED_NAME_E_SIGNATURE_PREFERENCE = "eSignaturePreference";
   @SerializedName(SERIALIZED_NAME_E_SIGNATURE_PREFERENCE)
-  @javax.annotation.Nonnull
   private FieldESignaturePreference eSignaturePreference;
 
   public static final String SERIALIZED_NAME_T_SIGNATURE_SVG = "tSignatureSvg";
   @SerializedName(SERIALIZED_NAME_T_SIGNATURE_SVG)
-  @javax.annotation.Nullable
   private String tSignatureSvg;
 
   public static final String SERIALIZED_NAME_T_SIGNATURE_SVGINITIALS = "tSignatureSvginitials";
   @SerializedName(SERIALIZED_NAME_T_SIGNATURE_SVGINITIALS)
-  @javax.annotation.Nullable
   private String tSignatureSvginitials;
 
   public SignatureRequestCompound() {
   }
 
-  public SignatureRequestCompound pkiSignatureID(@javax.annotation.Nullable Integer pkiSignatureID) {
+  public SignatureRequestCompound pkiSignatureID(Integer pkiSignatureID) {
     this.pkiSignatureID = pkiSignatureID;
     return this;
   }
@@ -95,12 +90,12 @@ public class SignatureRequestCompound {
     return pkiSignatureID;
   }
 
-  public void setPkiSignatureID(@javax.annotation.Nullable Integer pkiSignatureID) {
+  public void setPkiSignatureID(Integer pkiSignatureID) {
     this.pkiSignatureID = pkiSignatureID;
   }
 
 
-  public SignatureRequestCompound fkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
+  public SignatureRequestCompound fkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
     return this;
   }
@@ -115,12 +110,12 @@ public class SignatureRequestCompound {
     return fkiFontID;
   }
 
-  public void setFkiFontID(@javax.annotation.Nonnull Integer fkiFontID) {
+  public void setFkiFontID(Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
   }
 
 
-  public SignatureRequestCompound eSignaturePreference(@javax.annotation.Nonnull FieldESignaturePreference eSignaturePreference) {
+  public SignatureRequestCompound eSignaturePreference(FieldESignaturePreference eSignaturePreference) {
     this.eSignaturePreference = eSignaturePreference;
     return this;
   }
@@ -134,12 +129,12 @@ public class SignatureRequestCompound {
     return eSignaturePreference;
   }
 
-  public void seteSignaturePreference(@javax.annotation.Nonnull FieldESignaturePreference eSignaturePreference) {
+  public void seteSignaturePreference(FieldESignaturePreference eSignaturePreference) {
     this.eSignaturePreference = eSignaturePreference;
   }
 
 
-  public SignatureRequestCompound tSignatureSvg(@javax.annotation.Nullable String tSignatureSvg) {
+  public SignatureRequestCompound tSignatureSvg(String tSignatureSvg) {
     this.tSignatureSvg = tSignatureSvg;
     return this;
   }
@@ -153,12 +148,12 @@ public class SignatureRequestCompound {
     return tSignatureSvg;
   }
 
-  public void settSignatureSvg(@javax.annotation.Nullable String tSignatureSvg) {
+  public void settSignatureSvg(String tSignatureSvg) {
     this.tSignatureSvg = tSignatureSvg;
   }
 
 
-  public SignatureRequestCompound tSignatureSvginitials(@javax.annotation.Nullable String tSignatureSvginitials) {
+  public SignatureRequestCompound tSignatureSvginitials(String tSignatureSvginitials) {
     this.tSignatureSvginitials = tSignatureSvginitials;
     return this;
   }
@@ -172,7 +167,7 @@ public class SignatureRequestCompound {
     return tSignatureSvginitials;
   }
 
-  public void settSignatureSvginitials(@javax.annotation.Nullable String tSignatureSvginitials) {
+  public void settSignatureSvginitials(String tSignatureSvginitials) {
     this.tSignatureSvginitials = tSignatureSvginitials;
   }
 

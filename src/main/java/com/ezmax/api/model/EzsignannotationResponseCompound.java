@@ -52,72 +52,60 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignannotation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignannotationResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D = "pkiEzsignannotationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNANNOTATION_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignannotationID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D = "fkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNDOCUMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigndocumentID;
 
   public static final String SERIALIZED_NAME_E_EZSIGNANNOTATION_HORIZONTALALIGNMENT = "eEzsignannotationHorizontalalignment";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNANNOTATION_HORIZONTALALIGNMENT)
-  @javax.annotation.Nullable
   private EnumHorizontalalignment eEzsignannotationHorizontalalignment;
 
   public static final String SERIALIZED_NAME_E_EZSIGNANNOTATION_VERTICALALIGNMENT = "eEzsignannotationVerticalalignment";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNANNOTATION_VERTICALALIGNMENT)
-  @javax.annotation.Nullable
   private EnumVerticalalignment eEzsignannotationVerticalalignment;
 
   public static final String SERIALIZED_NAME_E_EZSIGNANNOTATION_TYPE = "eEzsignannotationType";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNANNOTATION_TYPE)
-  @javax.annotation.Nonnull
   private FieldEEzsignannotationType eEzsignannotationType;
 
   public static final String SERIALIZED_NAME_I_EZSIGNANNOTATION_X = "iEzsignannotationX";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNANNOTATION_X)
-  @javax.annotation.Nonnull
   private Integer iEzsignannotationX;
 
   public static final String SERIALIZED_NAME_I_EZSIGNANNOTATION_Y = "iEzsignannotationY";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNANNOTATION_Y)
-  @javax.annotation.Nonnull
   private Integer iEzsignannotationY;
 
   public static final String SERIALIZED_NAME_I_EZSIGNANNOTATION_WIDTH = "iEzsignannotationWidth";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNANNOTATION_WIDTH)
-  @javax.annotation.Nullable
   private Integer iEzsignannotationWidth;
 
   public static final String SERIALIZED_NAME_I_EZSIGNANNOTATION_HEIGHT = "iEzsignannotationHeight";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNANNOTATION_HEIGHT)
-  @javax.annotation.Nullable
   private Integer iEzsignannotationHeight;
 
   public static final String SERIALIZED_NAME_S_EZSIGNANNOTATION_TEXT = "sEzsignannotationText";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNANNOTATION_TEXT)
-  @javax.annotation.Nullable
   private String sEzsignannotationText;
 
   public static final String SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER = "iEzsignpagePagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER)
-  @javax.annotation.Nonnull
   private Integer iEzsignpagePagenumber;
 
   public static final String SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC = "objTextstylestatic";
   @SerializedName(SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC)
-  @javax.annotation.Nullable
   private TextstylestaticResponseCompound objTextstylestatic;
 
   public EzsignannotationResponseCompound() {
   }
 
-  public EzsignannotationResponseCompound pkiEzsignannotationID(@javax.annotation.Nonnull Integer pkiEzsignannotationID) {
+  public EzsignannotationResponseCompound pkiEzsignannotationID(Integer pkiEzsignannotationID) {
     this.pkiEzsignannotationID = pkiEzsignannotationID;
     return this;
   }
@@ -131,12 +119,12 @@ public class EzsignannotationResponseCompound {
     return pkiEzsignannotationID;
   }
 
-  public void setPkiEzsignannotationID(@javax.annotation.Nonnull Integer pkiEzsignannotationID) {
+  public void setPkiEzsignannotationID(Integer pkiEzsignannotationID) {
     this.pkiEzsignannotationID = pkiEzsignannotationID;
   }
 
 
-  public EzsignannotationResponseCompound fkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
+  public EzsignannotationResponseCompound fkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
     return this;
   }
@@ -151,12 +139,12 @@ public class EzsignannotationResponseCompound {
     return fkiEzsigndocumentID;
   }
 
-  public void setFkiEzsigndocumentID(@javax.annotation.Nonnull Integer fkiEzsigndocumentID) {
+  public void setFkiEzsigndocumentID(Integer fkiEzsigndocumentID) {
     this.fkiEzsigndocumentID = fkiEzsigndocumentID;
   }
 
 
-  public EzsignannotationResponseCompound eEzsignannotationHorizontalalignment(@javax.annotation.Nullable EnumHorizontalalignment eEzsignannotationHorizontalalignment) {
+  public EzsignannotationResponseCompound eEzsignannotationHorizontalalignment(EnumHorizontalalignment eEzsignannotationHorizontalalignment) {
     this.eEzsignannotationHorizontalalignment = eEzsignannotationHorizontalalignment;
     return this;
   }
@@ -170,12 +158,12 @@ public class EzsignannotationResponseCompound {
     return eEzsignannotationHorizontalalignment;
   }
 
-  public void seteEzsignannotationHorizontalalignment(@javax.annotation.Nullable EnumHorizontalalignment eEzsignannotationHorizontalalignment) {
+  public void seteEzsignannotationHorizontalalignment(EnumHorizontalalignment eEzsignannotationHorizontalalignment) {
     this.eEzsignannotationHorizontalalignment = eEzsignannotationHorizontalalignment;
   }
 
 
-  public EzsignannotationResponseCompound eEzsignannotationVerticalalignment(@javax.annotation.Nullable EnumVerticalalignment eEzsignannotationVerticalalignment) {
+  public EzsignannotationResponseCompound eEzsignannotationVerticalalignment(EnumVerticalalignment eEzsignannotationVerticalalignment) {
     this.eEzsignannotationVerticalalignment = eEzsignannotationVerticalalignment;
     return this;
   }
@@ -189,12 +177,12 @@ public class EzsignannotationResponseCompound {
     return eEzsignannotationVerticalalignment;
   }
 
-  public void seteEzsignannotationVerticalalignment(@javax.annotation.Nullable EnumVerticalalignment eEzsignannotationVerticalalignment) {
+  public void seteEzsignannotationVerticalalignment(EnumVerticalalignment eEzsignannotationVerticalalignment) {
     this.eEzsignannotationVerticalalignment = eEzsignannotationVerticalalignment;
   }
 
 
-  public EzsignannotationResponseCompound eEzsignannotationType(@javax.annotation.Nonnull FieldEEzsignannotationType eEzsignannotationType) {
+  public EzsignannotationResponseCompound eEzsignannotationType(FieldEEzsignannotationType eEzsignannotationType) {
     this.eEzsignannotationType = eEzsignannotationType;
     return this;
   }
@@ -208,12 +196,12 @@ public class EzsignannotationResponseCompound {
     return eEzsignannotationType;
   }
 
-  public void seteEzsignannotationType(@javax.annotation.Nonnull FieldEEzsignannotationType eEzsignannotationType) {
+  public void seteEzsignannotationType(FieldEEzsignannotationType eEzsignannotationType) {
     this.eEzsignannotationType = eEzsignannotationType;
   }
 
 
-  public EzsignannotationResponseCompound iEzsignannotationX(@javax.annotation.Nonnull Integer iEzsignannotationX) {
+  public EzsignannotationResponseCompound iEzsignannotationX(Integer iEzsignannotationX) {
     this.iEzsignannotationX = iEzsignannotationX;
     return this;
   }
@@ -228,12 +216,12 @@ public class EzsignannotationResponseCompound {
     return iEzsignannotationX;
   }
 
-  public void setiEzsignannotationX(@javax.annotation.Nonnull Integer iEzsignannotationX) {
+  public void setiEzsignannotationX(Integer iEzsignannotationX) {
     this.iEzsignannotationX = iEzsignannotationX;
   }
 
 
-  public EzsignannotationResponseCompound iEzsignannotationY(@javax.annotation.Nonnull Integer iEzsignannotationY) {
+  public EzsignannotationResponseCompound iEzsignannotationY(Integer iEzsignannotationY) {
     this.iEzsignannotationY = iEzsignannotationY;
     return this;
   }
@@ -248,12 +236,12 @@ public class EzsignannotationResponseCompound {
     return iEzsignannotationY;
   }
 
-  public void setiEzsignannotationY(@javax.annotation.Nonnull Integer iEzsignannotationY) {
+  public void setiEzsignannotationY(Integer iEzsignannotationY) {
     this.iEzsignannotationY = iEzsignannotationY;
   }
 
 
-  public EzsignannotationResponseCompound iEzsignannotationWidth(@javax.annotation.Nullable Integer iEzsignannotationWidth) {
+  public EzsignannotationResponseCompound iEzsignannotationWidth(Integer iEzsignannotationWidth) {
     this.iEzsignannotationWidth = iEzsignannotationWidth;
     return this;
   }
@@ -268,12 +256,12 @@ public class EzsignannotationResponseCompound {
     return iEzsignannotationWidth;
   }
 
-  public void setiEzsignannotationWidth(@javax.annotation.Nullable Integer iEzsignannotationWidth) {
+  public void setiEzsignannotationWidth(Integer iEzsignannotationWidth) {
     this.iEzsignannotationWidth = iEzsignannotationWidth;
   }
 
 
-  public EzsignannotationResponseCompound iEzsignannotationHeight(@javax.annotation.Nullable Integer iEzsignannotationHeight) {
+  public EzsignannotationResponseCompound iEzsignannotationHeight(Integer iEzsignannotationHeight) {
     this.iEzsignannotationHeight = iEzsignannotationHeight;
     return this;
   }
@@ -288,12 +276,12 @@ public class EzsignannotationResponseCompound {
     return iEzsignannotationHeight;
   }
 
-  public void setiEzsignannotationHeight(@javax.annotation.Nullable Integer iEzsignannotationHeight) {
+  public void setiEzsignannotationHeight(Integer iEzsignannotationHeight) {
     this.iEzsignannotationHeight = iEzsignannotationHeight;
   }
 
 
-  public EzsignannotationResponseCompound sEzsignannotationText(@javax.annotation.Nullable String sEzsignannotationText) {
+  public EzsignannotationResponseCompound sEzsignannotationText(String sEzsignannotationText) {
     this.sEzsignannotationText = sEzsignannotationText;
     return this;
   }
@@ -307,12 +295,12 @@ public class EzsignannotationResponseCompound {
     return sEzsignannotationText;
   }
 
-  public void setsEzsignannotationText(@javax.annotation.Nullable String sEzsignannotationText) {
+  public void setsEzsignannotationText(String sEzsignannotationText) {
     this.sEzsignannotationText = sEzsignannotationText;
   }
 
 
-  public EzsignannotationResponseCompound iEzsignpagePagenumber(@javax.annotation.Nonnull Integer iEzsignpagePagenumber) {
+  public EzsignannotationResponseCompound iEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
     return this;
   }
@@ -327,12 +315,12 @@ public class EzsignannotationResponseCompound {
     return iEzsignpagePagenumber;
   }
 
-  public void setiEzsignpagePagenumber(@javax.annotation.Nonnull Integer iEzsignpagePagenumber) {
+  public void setiEzsignpagePagenumber(Integer iEzsignpagePagenumber) {
     this.iEzsignpagePagenumber = iEzsignpagePagenumber;
   }
 
 
-  public EzsignannotationResponseCompound objTextstylestatic(@javax.annotation.Nullable TextstylestaticResponseCompound objTextstylestatic) {
+  public EzsignannotationResponseCompound objTextstylestatic(TextstylestaticResponseCompound objTextstylestatic) {
     this.objTextstylestatic = objTextstylestatic;
     return this;
   }
@@ -346,7 +334,7 @@ public class EzsignannotationResponseCompound {
     return objTextstylestatic;
   }
 
-  public void setObjTextstylestatic(@javax.annotation.Nullable TextstylestaticResponseCompound objTextstylestatic) {
+  public void setObjTextstylestatic(TextstylestaticResponseCompound objTextstylestatic) {
     this.objTextstylestatic = objTextstylestatic;
   }
 

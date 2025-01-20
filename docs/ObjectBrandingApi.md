@@ -82,7 +82,7 @@ public class Example {
 
 <a id="brandingEditObjectV2"></a>
 # **brandingEditObjectV2**
-> CommonResponse brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
+> BrandingEditObjectV2Response brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request)
 
 Edit an existing Branding
 
@@ -113,7 +113,7 @@ public class Example {
     Integer pkiBrandingID = 56; // Integer | 
     BrandingEditObjectV2Request brandingEditObjectV2Request = new BrandingEditObjectV2Request(); // BrandingEditObjectV2Request | 
     try {
-      CommonResponse result = apiInstance.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
+      BrandingEditObjectV2Response result = apiInstance.brandingEditObjectV2(pkiBrandingID, brandingEditObjectV2Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectBrandingApi#brandingEditObjectV2");
@@ -135,7 +135,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**BrandingEditObjectV2Response**](BrandingEditObjectV2Response.md)
 
 ### Authorization
 

@@ -15,8 +15,8 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EnumTextvalidation;
-import com.ezmax.api.model.EzsigntemplateelementdependencyRequest;
-import com.ezmax.api.model.EzsigntemplatesignaturecustomdateRequest;
+import com.ezmax.api.model.EzsigntemplateelementdependencyRequestCompound;
+import com.ezmax.api.model.EzsigntemplatesignaturecustomdateRequestCompound;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureDependencyrequirement;
@@ -61,187 +61,152 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatesignature Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatesignatureRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D = "pkiEzsigntemplatesignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzsigntemplatesignatureID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEDOCUMENT_I_D = "fkiEzsigntemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEDOCUMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplatedocumentID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATESIGNER_I_D = "fkiEzsigntemplatesignerID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATESIGNER_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsigntemplatesignerID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATESIGNER_I_D_VALIDATION = "fkiEzsigntemplatesignerIDValidation";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATESIGNER_I_D_VALIDATION)
-  @javax.annotation.Nullable
   private Integer fkiEzsigntemplatesignerIDValidation;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_HANDWRITTEN = "bEzsigntemplatesignatureHandwritten";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_HANDWRITTEN)
-  @javax.annotation.Nullable
   private Boolean bEzsigntemplatesignatureHandwritten;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_REASON = "bEzsigntemplatesignatureReason";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_REASON)
-  @javax.annotation.Nullable
   private Boolean bEzsigntemplatesignatureReason;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_POSITIONING = "eEzsigntemplatesignaturePositioning";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_POSITIONING)
-  @javax.annotation.Nullable
   private FieldEEzsigntemplatesignaturePositioning eEzsigntemplatesignaturePositioning;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_PAGENUMBER = "iEzsigntemplatedocumentpagePagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEDOCUMENTPAGE_PAGENUMBER)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplatedocumentpagePagenumber;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_X = "iEzsigntemplatesignatureX";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_X)
-  @javax.annotation.Nullable
   private Integer iEzsigntemplatesignatureX;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_Y = "iEzsigntemplatesignatureY";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_Y)
-  @javax.annotation.Nullable
   private Integer iEzsigntemplatesignatureY;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_WIDTH = "iEzsigntemplatesignatureWidth";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_WIDTH)
-  @javax.annotation.Nullable
   private Integer iEzsigntemplatesignatureWidth;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_HEIGHT = "iEzsigntemplatesignatureHeight";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_HEIGHT)
-  @javax.annotation.Nullable
   private Integer iEzsigntemplatesignatureHeight;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_STEP = "iEzsigntemplatesignatureStep";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_STEP)
-  @javax.annotation.Nonnull
   private Integer iEzsigntemplatesignatureStep;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_TYPE = "eEzsigntemplatesignatureType";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_TYPE)
-  @javax.annotation.Nonnull
   private FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_CONSULTATIONTRIGGER = "eEzsigntemplatesignatureConsultationtrigger";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_CONSULTATIONTRIGGER)
-  @javax.annotation.Nullable
   private FieldEEzsigntemplatesignatureConsultationtrigger eEzsigntemplatesignatureConsultationtrigger;
 
   public static final String SERIALIZED_NAME_T_EZSIGNTEMPLATESIGNATURE_TOOLTIP = "tEzsigntemplatesignatureTooltip";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNTEMPLATESIGNATURE_TOOLTIP)
-  @javax.annotation.Nullable
   private String tEzsigntemplatesignatureTooltip;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_TOOLTIPPOSITION = "eEzsigntemplatesignatureTooltipposition";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_TOOLTIPPOSITION)
-  @javax.annotation.Nullable
   private FieldEEzsigntemplatesignatureTooltipposition eEzsigntemplatesignatureTooltipposition;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_FONT = "eEzsigntemplatesignatureFont";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_FONT)
-  @javax.annotation.Nullable
   private FieldEEzsigntemplatesignatureFont eEzsigntemplatesignatureFont;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_REQUIRED = "bEzsigntemplatesignatureRequired";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_REQUIRED)
-  @javax.annotation.Nullable
   private Boolean bEzsigntemplatesignatureRequired;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_ATTACHMENTNAMESOURCE = "eEzsigntemplatesignatureAttachmentnamesource";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_ATTACHMENTNAMESOURCE)
-  @javax.annotation.Nullable
   private FieldEEzsigntemplatesignatureAttachmentnamesource eEzsigntemplatesignatureAttachmentnamesource;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_ATTACHMENTDESCRIPTION = "sEzsigntemplatesignatureAttachmentdescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_ATTACHMENTDESCRIPTION)
-  @javax.annotation.Nullable
   private String sEzsigntemplatesignatureAttachmentdescription;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_VALIDATIONSTEP = "iEzsigntemplatesignatureValidationstep";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_VALIDATIONSTEP)
-  @javax.annotation.Nullable
   private Integer iEzsigntemplatesignatureValidationstep;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_MAXLENGTH = "iEzsigntemplatesignatureMaxlength";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_MAXLENGTH)
-  @javax.annotation.Nullable
   private Integer iEzsigntemplatesignatureMaxlength;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_DEFAULTVALUE = "sEzsigntemplatesignatureDefaultvalue";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_DEFAULTVALUE)
-  @javax.annotation.Nullable
   private String sEzsigntemplatesignatureDefaultvalue;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_REGEXP = "sEzsigntemplatesignatureRegexp";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_REGEXP)
-  @javax.annotation.Nullable
   private String sEzsigntemplatesignatureRegexp;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_TEXTVALIDATION = "eEzsigntemplatesignatureTextvalidation";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_TEXTVALIDATION)
-  @javax.annotation.Nullable
   private EnumTextvalidation eEzsigntemplatesignatureTextvalidation;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_TEXTVALIDATIONCUSTOMMESSAGE = "sEzsigntemplatesignatureTextvalidationcustommessage";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_TEXTVALIDATIONCUSTOMMESSAGE)
-  @javax.annotation.Nullable
   private String sEzsigntemplatesignatureTextvalidationcustommessage;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_DEPENDENCYREQUIREMENT = "eEzsigntemplatesignatureDependencyrequirement";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_DEPENDENCYREQUIREMENT)
-  @javax.annotation.Nullable
   private FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_POSITIONINGPATTERN = "sEzsigntemplatesignaturePositioningpattern";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATESIGNATURE_POSITIONINGPATTERN)
-  @javax.annotation.Nullable
   private String sEzsigntemplatesignaturePositioningpattern;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_POSITIONINGOFFSETX = "iEzsigntemplatesignaturePositioningoffsetx";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_POSITIONINGOFFSETX)
-  @javax.annotation.Nullable
   private Integer iEzsigntemplatesignaturePositioningoffsetx;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_POSITIONINGOFFSETY = "iEzsigntemplatesignaturePositioningoffsety";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATESIGNATURE_POSITIONINGOFFSETY)
-  @javax.annotation.Nullable
   private Integer iEzsigntemplatesignaturePositioningoffsety;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_POSITIONINGOCCURENCE = "eEzsigntemplatesignaturePositioningoccurence";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_POSITIONINGOCCURENCE)
-  @javax.annotation.Nullable
   private FieldEEzsigntemplatesignaturePositioningoccurence eEzsigntemplatesignaturePositioningoccurence;
 
   public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_CUSTOMDATE = "bEzsigntemplatesignatureCustomdate";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_CUSTOMDATE)
-  @javax.annotation.Nullable
   private Boolean bEzsigntemplatesignatureCustomdate;
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATESIGNATURECUSTOMDATE = "a_objEzsigntemplatesignaturecustomdate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATESIGNATURECUSTOMDATE)
-  @javax.annotation.Nullable
   private List<EzsigntemplatesignaturecustomdateRequestCompound> aObjEzsigntemplatesignaturecustomdate = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEELEMENTDEPENDENCY = "a_objEzsigntemplateelementdependency";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEELEMENTDEPENDENCY)
-  @javax.annotation.Nullable
   private List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency = new ArrayList<>();
 
   public EzsigntemplatesignatureRequestCompound() {
   }
 
-  public EzsigntemplatesignatureRequestCompound pkiEzsigntemplatesignatureID(@javax.annotation.Nullable Integer pkiEzsigntemplatesignatureID) {
+  public EzsigntemplatesignatureRequestCompound pkiEzsigntemplatesignatureID(Integer pkiEzsigntemplatesignatureID) {
     this.pkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID;
     return this;
   }
@@ -256,12 +221,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return pkiEzsigntemplatesignatureID;
   }
 
-  public void setPkiEzsigntemplatesignatureID(@javax.annotation.Nullable Integer pkiEzsigntemplatesignatureID) {
+  public void setPkiEzsigntemplatesignatureID(Integer pkiEzsigntemplatesignatureID) {
     this.pkiEzsigntemplatesignatureID = pkiEzsigntemplatesignatureID;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound fkiEzsigntemplatedocumentID(@javax.annotation.Nonnull Integer fkiEzsigntemplatedocumentID) {
+  public EzsigntemplatesignatureRequestCompound fkiEzsigntemplatedocumentID(Integer fkiEzsigntemplatedocumentID) {
     this.fkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
     return this;
   }
@@ -276,12 +241,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return fkiEzsigntemplatedocumentID;
   }
 
-  public void setFkiEzsigntemplatedocumentID(@javax.annotation.Nonnull Integer fkiEzsigntemplatedocumentID) {
+  public void setFkiEzsigntemplatedocumentID(Integer fkiEzsigntemplatedocumentID) {
     this.fkiEzsigntemplatedocumentID = fkiEzsigntemplatedocumentID;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound fkiEzsigntemplatesignerID(@javax.annotation.Nonnull Integer fkiEzsigntemplatesignerID) {
+  public EzsigntemplatesignatureRequestCompound fkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
     this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
     return this;
   }
@@ -296,12 +261,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return fkiEzsigntemplatesignerID;
   }
 
-  public void setFkiEzsigntemplatesignerID(@javax.annotation.Nonnull Integer fkiEzsigntemplatesignerID) {
+  public void setFkiEzsigntemplatesignerID(Integer fkiEzsigntemplatesignerID) {
     this.fkiEzsigntemplatesignerID = fkiEzsigntemplatesignerID;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound fkiEzsigntemplatesignerIDValidation(@javax.annotation.Nullable Integer fkiEzsigntemplatesignerIDValidation) {
+  public EzsigntemplatesignatureRequestCompound fkiEzsigntemplatesignerIDValidation(Integer fkiEzsigntemplatesignerIDValidation) {
     this.fkiEzsigntemplatesignerIDValidation = fkiEzsigntemplatesignerIDValidation;
     return this;
   }
@@ -316,12 +281,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return fkiEzsigntemplatesignerIDValidation;
   }
 
-  public void setFkiEzsigntemplatesignerIDValidation(@javax.annotation.Nullable Integer fkiEzsigntemplatesignerIDValidation) {
+  public void setFkiEzsigntemplatesignerIDValidation(Integer fkiEzsigntemplatesignerIDValidation) {
     this.fkiEzsigntemplatesignerIDValidation = fkiEzsigntemplatesignerIDValidation;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound bEzsigntemplatesignatureHandwritten(@javax.annotation.Nullable Boolean bEzsigntemplatesignatureHandwritten) {
+  public EzsigntemplatesignatureRequestCompound bEzsigntemplatesignatureHandwritten(Boolean bEzsigntemplatesignatureHandwritten) {
     this.bEzsigntemplatesignatureHandwritten = bEzsigntemplatesignatureHandwritten;
     return this;
   }
@@ -335,12 +300,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return bEzsigntemplatesignatureHandwritten;
   }
 
-  public void setbEzsigntemplatesignatureHandwritten(@javax.annotation.Nullable Boolean bEzsigntemplatesignatureHandwritten) {
+  public void setbEzsigntemplatesignatureHandwritten(Boolean bEzsigntemplatesignatureHandwritten) {
     this.bEzsigntemplatesignatureHandwritten = bEzsigntemplatesignatureHandwritten;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound bEzsigntemplatesignatureReason(@javax.annotation.Nullable Boolean bEzsigntemplatesignatureReason) {
+  public EzsigntemplatesignatureRequestCompound bEzsigntemplatesignatureReason(Boolean bEzsigntemplatesignatureReason) {
     this.bEzsigntemplatesignatureReason = bEzsigntemplatesignatureReason;
     return this;
   }
@@ -354,12 +319,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return bEzsigntemplatesignatureReason;
   }
 
-  public void setbEzsigntemplatesignatureReason(@javax.annotation.Nullable Boolean bEzsigntemplatesignatureReason) {
+  public void setbEzsigntemplatesignatureReason(Boolean bEzsigntemplatesignatureReason) {
     this.bEzsigntemplatesignatureReason = bEzsigntemplatesignatureReason;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignaturePositioning(@javax.annotation.Nullable FieldEEzsigntemplatesignaturePositioning eEzsigntemplatesignaturePositioning) {
+  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignaturePositioning(FieldEEzsigntemplatesignaturePositioning eEzsigntemplatesignaturePositioning) {
     this.eEzsigntemplatesignaturePositioning = eEzsigntemplatesignaturePositioning;
     return this;
   }
@@ -373,12 +338,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return eEzsigntemplatesignaturePositioning;
   }
 
-  public void seteEzsigntemplatesignaturePositioning(@javax.annotation.Nullable FieldEEzsigntemplatesignaturePositioning eEzsigntemplatesignaturePositioning) {
+  public void seteEzsigntemplatesignaturePositioning(FieldEEzsigntemplatesignaturePositioning eEzsigntemplatesignaturePositioning) {
     this.eEzsigntemplatesignaturePositioning = eEzsigntemplatesignaturePositioning;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound iEzsigntemplatedocumentpagePagenumber(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpagePagenumber) {
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatedocumentpagePagenumber(Integer iEzsigntemplatedocumentpagePagenumber) {
     this.iEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
     return this;
   }
@@ -393,12 +358,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return iEzsigntemplatedocumentpagePagenumber;
   }
 
-  public void setiEzsigntemplatedocumentpagePagenumber(@javax.annotation.Nonnull Integer iEzsigntemplatedocumentpagePagenumber) {
+  public void setiEzsigntemplatedocumentpagePagenumber(Integer iEzsigntemplatedocumentpagePagenumber) {
     this.iEzsigntemplatedocumentpagePagenumber = iEzsigntemplatedocumentpagePagenumber;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureX(@javax.annotation.Nullable Integer iEzsigntemplatesignatureX) {
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureX(Integer iEzsigntemplatesignatureX) {
     this.iEzsigntemplatesignatureX = iEzsigntemplatesignatureX;
     return this;
   }
@@ -413,12 +378,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return iEzsigntemplatesignatureX;
   }
 
-  public void setiEzsigntemplatesignatureX(@javax.annotation.Nullable Integer iEzsigntemplatesignatureX) {
+  public void setiEzsigntemplatesignatureX(Integer iEzsigntemplatesignatureX) {
     this.iEzsigntemplatesignatureX = iEzsigntemplatesignatureX;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureY(@javax.annotation.Nullable Integer iEzsigntemplatesignatureY) {
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureY(Integer iEzsigntemplatesignatureY) {
     this.iEzsigntemplatesignatureY = iEzsigntemplatesignatureY;
     return this;
   }
@@ -433,12 +398,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return iEzsigntemplatesignatureY;
   }
 
-  public void setiEzsigntemplatesignatureY(@javax.annotation.Nullable Integer iEzsigntemplatesignatureY) {
+  public void setiEzsigntemplatesignatureY(Integer iEzsigntemplatesignatureY) {
     this.iEzsigntemplatesignatureY = iEzsigntemplatesignatureY;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureWidth(@javax.annotation.Nullable Integer iEzsigntemplatesignatureWidth) {
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureWidth(Integer iEzsigntemplatesignatureWidth) {
     this.iEzsigntemplatesignatureWidth = iEzsigntemplatesignatureWidth;
     return this;
   }
@@ -453,12 +418,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return iEzsigntemplatesignatureWidth;
   }
 
-  public void setiEzsigntemplatesignatureWidth(@javax.annotation.Nullable Integer iEzsigntemplatesignatureWidth) {
+  public void setiEzsigntemplatesignatureWidth(Integer iEzsigntemplatesignatureWidth) {
     this.iEzsigntemplatesignatureWidth = iEzsigntemplatesignatureWidth;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureHeight(@javax.annotation.Nullable Integer iEzsigntemplatesignatureHeight) {
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureHeight(Integer iEzsigntemplatesignatureHeight) {
     this.iEzsigntemplatesignatureHeight = iEzsigntemplatesignatureHeight;
     return this;
   }
@@ -473,12 +438,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return iEzsigntemplatesignatureHeight;
   }
 
-  public void setiEzsigntemplatesignatureHeight(@javax.annotation.Nullable Integer iEzsigntemplatesignatureHeight) {
+  public void setiEzsigntemplatesignatureHeight(Integer iEzsigntemplatesignatureHeight) {
     this.iEzsigntemplatesignatureHeight = iEzsigntemplatesignatureHeight;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureStep(@javax.annotation.Nonnull Integer iEzsigntemplatesignatureStep) {
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureStep(Integer iEzsigntemplatesignatureStep) {
     this.iEzsigntemplatesignatureStep = iEzsigntemplatesignatureStep;
     return this;
   }
@@ -493,12 +458,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return iEzsigntemplatesignatureStep;
   }
 
-  public void setiEzsigntemplatesignatureStep(@javax.annotation.Nonnull Integer iEzsigntemplatesignatureStep) {
+  public void setiEzsigntemplatesignatureStep(Integer iEzsigntemplatesignatureStep) {
     this.iEzsigntemplatesignatureStep = iEzsigntemplatesignatureStep;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureType(@javax.annotation.Nonnull FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType) {
+  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureType(FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType) {
     this.eEzsigntemplatesignatureType = eEzsigntemplatesignatureType;
     return this;
   }
@@ -512,12 +477,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return eEzsigntemplatesignatureType;
   }
 
-  public void seteEzsigntemplatesignatureType(@javax.annotation.Nonnull FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType) {
+  public void seteEzsigntemplatesignatureType(FieldEEzsigntemplatesignatureType eEzsigntemplatesignatureType) {
     this.eEzsigntemplatesignatureType = eEzsigntemplatesignatureType;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureConsultationtrigger(@javax.annotation.Nullable FieldEEzsigntemplatesignatureConsultationtrigger eEzsigntemplatesignatureConsultationtrigger) {
+  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureConsultationtrigger(FieldEEzsigntemplatesignatureConsultationtrigger eEzsigntemplatesignatureConsultationtrigger) {
     this.eEzsigntemplatesignatureConsultationtrigger = eEzsigntemplatesignatureConsultationtrigger;
     return this;
   }
@@ -531,12 +496,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return eEzsigntemplatesignatureConsultationtrigger;
   }
 
-  public void seteEzsigntemplatesignatureConsultationtrigger(@javax.annotation.Nullable FieldEEzsigntemplatesignatureConsultationtrigger eEzsigntemplatesignatureConsultationtrigger) {
+  public void seteEzsigntemplatesignatureConsultationtrigger(FieldEEzsigntemplatesignatureConsultationtrigger eEzsigntemplatesignatureConsultationtrigger) {
     this.eEzsigntemplatesignatureConsultationtrigger = eEzsigntemplatesignatureConsultationtrigger;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound tEzsigntemplatesignatureTooltip(@javax.annotation.Nullable String tEzsigntemplatesignatureTooltip) {
+  public EzsigntemplatesignatureRequestCompound tEzsigntemplatesignatureTooltip(String tEzsigntemplatesignatureTooltip) {
     this.tEzsigntemplatesignatureTooltip = tEzsigntemplatesignatureTooltip;
     return this;
   }
@@ -550,12 +515,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return tEzsigntemplatesignatureTooltip;
   }
 
-  public void settEzsigntemplatesignatureTooltip(@javax.annotation.Nullable String tEzsigntemplatesignatureTooltip) {
+  public void settEzsigntemplatesignatureTooltip(String tEzsigntemplatesignatureTooltip) {
     this.tEzsigntemplatesignatureTooltip = tEzsigntemplatesignatureTooltip;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureTooltipposition(@javax.annotation.Nullable FieldEEzsigntemplatesignatureTooltipposition eEzsigntemplatesignatureTooltipposition) {
+  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureTooltipposition(FieldEEzsigntemplatesignatureTooltipposition eEzsigntemplatesignatureTooltipposition) {
     this.eEzsigntemplatesignatureTooltipposition = eEzsigntemplatesignatureTooltipposition;
     return this;
   }
@@ -569,12 +534,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return eEzsigntemplatesignatureTooltipposition;
   }
 
-  public void seteEzsigntemplatesignatureTooltipposition(@javax.annotation.Nullable FieldEEzsigntemplatesignatureTooltipposition eEzsigntemplatesignatureTooltipposition) {
+  public void seteEzsigntemplatesignatureTooltipposition(FieldEEzsigntemplatesignatureTooltipposition eEzsigntemplatesignatureTooltipposition) {
     this.eEzsigntemplatesignatureTooltipposition = eEzsigntemplatesignatureTooltipposition;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureFont(@javax.annotation.Nullable FieldEEzsigntemplatesignatureFont eEzsigntemplatesignatureFont) {
+  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureFont(FieldEEzsigntemplatesignatureFont eEzsigntemplatesignatureFont) {
     this.eEzsigntemplatesignatureFont = eEzsigntemplatesignatureFont;
     return this;
   }
@@ -588,12 +553,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return eEzsigntemplatesignatureFont;
   }
 
-  public void seteEzsigntemplatesignatureFont(@javax.annotation.Nullable FieldEEzsigntemplatesignatureFont eEzsigntemplatesignatureFont) {
+  public void seteEzsigntemplatesignatureFont(FieldEEzsigntemplatesignatureFont eEzsigntemplatesignatureFont) {
     this.eEzsigntemplatesignatureFont = eEzsigntemplatesignatureFont;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound bEzsigntemplatesignatureRequired(@javax.annotation.Nullable Boolean bEzsigntemplatesignatureRequired) {
+  public EzsigntemplatesignatureRequestCompound bEzsigntemplatesignatureRequired(Boolean bEzsigntemplatesignatureRequired) {
     this.bEzsigntemplatesignatureRequired = bEzsigntemplatesignatureRequired;
     return this;
   }
@@ -607,12 +572,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return bEzsigntemplatesignatureRequired;
   }
 
-  public void setbEzsigntemplatesignatureRequired(@javax.annotation.Nullable Boolean bEzsigntemplatesignatureRequired) {
+  public void setbEzsigntemplatesignatureRequired(Boolean bEzsigntemplatesignatureRequired) {
     this.bEzsigntemplatesignatureRequired = bEzsigntemplatesignatureRequired;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureAttachmentnamesource(@javax.annotation.Nullable FieldEEzsigntemplatesignatureAttachmentnamesource eEzsigntemplatesignatureAttachmentnamesource) {
+  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureAttachmentnamesource(FieldEEzsigntemplatesignatureAttachmentnamesource eEzsigntemplatesignatureAttachmentnamesource) {
     this.eEzsigntemplatesignatureAttachmentnamesource = eEzsigntemplatesignatureAttachmentnamesource;
     return this;
   }
@@ -626,12 +591,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return eEzsigntemplatesignatureAttachmentnamesource;
   }
 
-  public void seteEzsigntemplatesignatureAttachmentnamesource(@javax.annotation.Nullable FieldEEzsigntemplatesignatureAttachmentnamesource eEzsigntemplatesignatureAttachmentnamesource) {
+  public void seteEzsigntemplatesignatureAttachmentnamesource(FieldEEzsigntemplatesignatureAttachmentnamesource eEzsigntemplatesignatureAttachmentnamesource) {
     this.eEzsigntemplatesignatureAttachmentnamesource = eEzsigntemplatesignatureAttachmentnamesource;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound sEzsigntemplatesignatureAttachmentdescription(@javax.annotation.Nullable String sEzsigntemplatesignatureAttachmentdescription) {
+  public EzsigntemplatesignatureRequestCompound sEzsigntemplatesignatureAttachmentdescription(String sEzsigntemplatesignatureAttachmentdescription) {
     this.sEzsigntemplatesignatureAttachmentdescription = sEzsigntemplatesignatureAttachmentdescription;
     return this;
   }
@@ -645,12 +610,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return sEzsigntemplatesignatureAttachmentdescription;
   }
 
-  public void setsEzsigntemplatesignatureAttachmentdescription(@javax.annotation.Nullable String sEzsigntemplatesignatureAttachmentdescription) {
+  public void setsEzsigntemplatesignatureAttachmentdescription(String sEzsigntemplatesignatureAttachmentdescription) {
     this.sEzsigntemplatesignatureAttachmentdescription = sEzsigntemplatesignatureAttachmentdescription;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureValidationstep(@javax.annotation.Nullable Integer iEzsigntemplatesignatureValidationstep) {
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureValidationstep(Integer iEzsigntemplatesignatureValidationstep) {
     this.iEzsigntemplatesignatureValidationstep = iEzsigntemplatesignatureValidationstep;
     return this;
   }
@@ -664,12 +629,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return iEzsigntemplatesignatureValidationstep;
   }
 
-  public void setiEzsigntemplatesignatureValidationstep(@javax.annotation.Nullable Integer iEzsigntemplatesignatureValidationstep) {
+  public void setiEzsigntemplatesignatureValidationstep(Integer iEzsigntemplatesignatureValidationstep) {
     this.iEzsigntemplatesignatureValidationstep = iEzsigntemplatesignatureValidationstep;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureMaxlength(@javax.annotation.Nullable Integer iEzsigntemplatesignatureMaxlength) {
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignatureMaxlength(Integer iEzsigntemplatesignatureMaxlength) {
     this.iEzsigntemplatesignatureMaxlength = iEzsigntemplatesignatureMaxlength;
     return this;
   }
@@ -685,12 +650,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return iEzsigntemplatesignatureMaxlength;
   }
 
-  public void setiEzsigntemplatesignatureMaxlength(@javax.annotation.Nullable Integer iEzsigntemplatesignatureMaxlength) {
+  public void setiEzsigntemplatesignatureMaxlength(Integer iEzsigntemplatesignatureMaxlength) {
     this.iEzsigntemplatesignatureMaxlength = iEzsigntemplatesignatureMaxlength;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound sEzsigntemplatesignatureDefaultvalue(@javax.annotation.Nullable String sEzsigntemplatesignatureDefaultvalue) {
+  public EzsigntemplatesignatureRequestCompound sEzsigntemplatesignatureDefaultvalue(String sEzsigntemplatesignatureDefaultvalue) {
     this.sEzsigntemplatesignatureDefaultvalue = sEzsigntemplatesignatureDefaultvalue;
     return this;
   }
@@ -704,12 +669,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return sEzsigntemplatesignatureDefaultvalue;
   }
 
-  public void setsEzsigntemplatesignatureDefaultvalue(@javax.annotation.Nullable String sEzsigntemplatesignatureDefaultvalue) {
+  public void setsEzsigntemplatesignatureDefaultvalue(String sEzsigntemplatesignatureDefaultvalue) {
     this.sEzsigntemplatesignatureDefaultvalue = sEzsigntemplatesignatureDefaultvalue;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound sEzsigntemplatesignatureRegexp(@javax.annotation.Nullable String sEzsigntemplatesignatureRegexp) {
+  public EzsigntemplatesignatureRequestCompound sEzsigntemplatesignatureRegexp(String sEzsigntemplatesignatureRegexp) {
     this.sEzsigntemplatesignatureRegexp = sEzsigntemplatesignatureRegexp;
     return this;
   }
@@ -723,12 +688,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return sEzsigntemplatesignatureRegexp;
   }
 
-  public void setsEzsigntemplatesignatureRegexp(@javax.annotation.Nullable String sEzsigntemplatesignatureRegexp) {
+  public void setsEzsigntemplatesignatureRegexp(String sEzsigntemplatesignatureRegexp) {
     this.sEzsigntemplatesignatureRegexp = sEzsigntemplatesignatureRegexp;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureTextvalidation(@javax.annotation.Nullable EnumTextvalidation eEzsigntemplatesignatureTextvalidation) {
+  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureTextvalidation(EnumTextvalidation eEzsigntemplatesignatureTextvalidation) {
     this.eEzsigntemplatesignatureTextvalidation = eEzsigntemplatesignatureTextvalidation;
     return this;
   }
@@ -742,12 +707,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return eEzsigntemplatesignatureTextvalidation;
   }
 
-  public void seteEzsigntemplatesignatureTextvalidation(@javax.annotation.Nullable EnumTextvalidation eEzsigntemplatesignatureTextvalidation) {
+  public void seteEzsigntemplatesignatureTextvalidation(EnumTextvalidation eEzsigntemplatesignatureTextvalidation) {
     this.eEzsigntemplatesignatureTextvalidation = eEzsigntemplatesignatureTextvalidation;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound sEzsigntemplatesignatureTextvalidationcustommessage(@javax.annotation.Nullable String sEzsigntemplatesignatureTextvalidationcustommessage) {
+  public EzsigntemplatesignatureRequestCompound sEzsigntemplatesignatureTextvalidationcustommessage(String sEzsigntemplatesignatureTextvalidationcustommessage) {
     this.sEzsigntemplatesignatureTextvalidationcustommessage = sEzsigntemplatesignatureTextvalidationcustommessage;
     return this;
   }
@@ -761,12 +726,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return sEzsigntemplatesignatureTextvalidationcustommessage;
   }
 
-  public void setsEzsigntemplatesignatureTextvalidationcustommessage(@javax.annotation.Nullable String sEzsigntemplatesignatureTextvalidationcustommessage) {
+  public void setsEzsigntemplatesignatureTextvalidationcustommessage(String sEzsigntemplatesignatureTextvalidationcustommessage) {
     this.sEzsigntemplatesignatureTextvalidationcustommessage = sEzsigntemplatesignatureTextvalidationcustommessage;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureDependencyrequirement(@javax.annotation.Nullable FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement) {
+  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignatureDependencyrequirement(FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement) {
     this.eEzsigntemplatesignatureDependencyrequirement = eEzsigntemplatesignatureDependencyrequirement;
     return this;
   }
@@ -780,12 +745,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return eEzsigntemplatesignatureDependencyrequirement;
   }
 
-  public void seteEzsigntemplatesignatureDependencyrequirement(@javax.annotation.Nullable FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement) {
+  public void seteEzsigntemplatesignatureDependencyrequirement(FieldEEzsigntemplatesignatureDependencyrequirement eEzsigntemplatesignatureDependencyrequirement) {
     this.eEzsigntemplatesignatureDependencyrequirement = eEzsigntemplatesignatureDependencyrequirement;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound sEzsigntemplatesignaturePositioningpattern(@javax.annotation.Nullable String sEzsigntemplatesignaturePositioningpattern) {
+  public EzsigntemplatesignatureRequestCompound sEzsigntemplatesignaturePositioningpattern(String sEzsigntemplatesignaturePositioningpattern) {
     this.sEzsigntemplatesignaturePositioningpattern = sEzsigntemplatesignaturePositioningpattern;
     return this;
   }
@@ -799,12 +764,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return sEzsigntemplatesignaturePositioningpattern;
   }
 
-  public void setsEzsigntemplatesignaturePositioningpattern(@javax.annotation.Nullable String sEzsigntemplatesignaturePositioningpattern) {
+  public void setsEzsigntemplatesignaturePositioningpattern(String sEzsigntemplatesignaturePositioningpattern) {
     this.sEzsigntemplatesignaturePositioningpattern = sEzsigntemplatesignaturePositioningpattern;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignaturePositioningoffsetx(@javax.annotation.Nullable Integer iEzsigntemplatesignaturePositioningoffsetx) {
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignaturePositioningoffsetx(Integer iEzsigntemplatesignaturePositioningoffsetx) {
     this.iEzsigntemplatesignaturePositioningoffsetx = iEzsigntemplatesignaturePositioningoffsetx;
     return this;
   }
@@ -818,12 +783,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return iEzsigntemplatesignaturePositioningoffsetx;
   }
 
-  public void setiEzsigntemplatesignaturePositioningoffsetx(@javax.annotation.Nullable Integer iEzsigntemplatesignaturePositioningoffsetx) {
+  public void setiEzsigntemplatesignaturePositioningoffsetx(Integer iEzsigntemplatesignaturePositioningoffsetx) {
     this.iEzsigntemplatesignaturePositioningoffsetx = iEzsigntemplatesignaturePositioningoffsetx;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignaturePositioningoffsety(@javax.annotation.Nullable Integer iEzsigntemplatesignaturePositioningoffsety) {
+  public EzsigntemplatesignatureRequestCompound iEzsigntemplatesignaturePositioningoffsety(Integer iEzsigntemplatesignaturePositioningoffsety) {
     this.iEzsigntemplatesignaturePositioningoffsety = iEzsigntemplatesignaturePositioningoffsety;
     return this;
   }
@@ -837,12 +802,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return iEzsigntemplatesignaturePositioningoffsety;
   }
 
-  public void setiEzsigntemplatesignaturePositioningoffsety(@javax.annotation.Nullable Integer iEzsigntemplatesignaturePositioningoffsety) {
+  public void setiEzsigntemplatesignaturePositioningoffsety(Integer iEzsigntemplatesignaturePositioningoffsety) {
     this.iEzsigntemplatesignaturePositioningoffsety = iEzsigntemplatesignaturePositioningoffsety;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignaturePositioningoccurence(@javax.annotation.Nullable FieldEEzsigntemplatesignaturePositioningoccurence eEzsigntemplatesignaturePositioningoccurence) {
+  public EzsigntemplatesignatureRequestCompound eEzsigntemplatesignaturePositioningoccurence(FieldEEzsigntemplatesignaturePositioningoccurence eEzsigntemplatesignaturePositioningoccurence) {
     this.eEzsigntemplatesignaturePositioningoccurence = eEzsigntemplatesignaturePositioningoccurence;
     return this;
   }
@@ -856,12 +821,12 @@ public class EzsigntemplatesignatureRequestCompound {
     return eEzsigntemplatesignaturePositioningoccurence;
   }
 
-  public void seteEzsigntemplatesignaturePositioningoccurence(@javax.annotation.Nullable FieldEEzsigntemplatesignaturePositioningoccurence eEzsigntemplatesignaturePositioningoccurence) {
+  public void seteEzsigntemplatesignaturePositioningoccurence(FieldEEzsigntemplatesignaturePositioningoccurence eEzsigntemplatesignaturePositioningoccurence) {
     this.eEzsigntemplatesignaturePositioningoccurence = eEzsigntemplatesignaturePositioningoccurence;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound bEzsigntemplatesignatureCustomdate(@javax.annotation.Nullable Boolean bEzsigntemplatesignatureCustomdate) {
+  public EzsigntemplatesignatureRequestCompound bEzsigntemplatesignatureCustomdate(Boolean bEzsigntemplatesignatureCustomdate) {
     this.bEzsigntemplatesignatureCustomdate = bEzsigntemplatesignatureCustomdate;
     return this;
   }
@@ -875,17 +840,17 @@ public class EzsigntemplatesignatureRequestCompound {
     return bEzsigntemplatesignatureCustomdate;
   }
 
-  public void setbEzsigntemplatesignatureCustomdate(@javax.annotation.Nullable Boolean bEzsigntemplatesignatureCustomdate) {
+  public void setbEzsigntemplatesignatureCustomdate(Boolean bEzsigntemplatesignatureCustomdate) {
     this.bEzsigntemplatesignatureCustomdate = bEzsigntemplatesignatureCustomdate;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound aObjEzsigntemplatesignaturecustomdate(@javax.annotation.Nullable List<EzsigntemplatesignaturecustomdateRequestCompound> aObjEzsigntemplatesignaturecustomdate) {
+  public EzsigntemplatesignatureRequestCompound aObjEzsigntemplatesignaturecustomdate(List<EzsigntemplatesignaturecustomdateRequestCompound> aObjEzsigntemplatesignaturecustomdate) {
     this.aObjEzsigntemplatesignaturecustomdate = aObjEzsigntemplatesignaturecustomdate;
     return this;
   }
 
-  public EzsigntemplatesignatureRequestCompound addAObjEzsigntemplatesignaturecustomdateItem(EzsigntemplatesignaturecustomdateRequest aObjEzsigntemplatesignaturecustomdateItem) {
+  public EzsigntemplatesignatureRequestCompound addAObjEzsigntemplatesignaturecustomdateItem(EzsigntemplatesignaturecustomdateRequestCompound aObjEzsigntemplatesignaturecustomdateItem) {
     if (this.aObjEzsigntemplatesignaturecustomdate == null) {
       this.aObjEzsigntemplatesignaturecustomdate = new ArrayList<>();
     }
@@ -902,17 +867,17 @@ public class EzsigntemplatesignatureRequestCompound {
     return aObjEzsigntemplatesignaturecustomdate;
   }
 
-  public void setaObjEzsigntemplatesignaturecustomdate(@javax.annotation.Nullable List<EzsigntemplatesignaturecustomdateRequestCompound> aObjEzsigntemplatesignaturecustomdate) {
+  public void setaObjEzsigntemplatesignaturecustomdate(List<EzsigntemplatesignaturecustomdateRequestCompound> aObjEzsigntemplatesignaturecustomdate) {
     this.aObjEzsigntemplatesignaturecustomdate = aObjEzsigntemplatesignaturecustomdate;
   }
 
 
-  public EzsigntemplatesignatureRequestCompound aObjEzsigntemplateelementdependency(@javax.annotation.Nullable List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency) {
+  public EzsigntemplatesignatureRequestCompound aObjEzsigntemplateelementdependency(List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency) {
     this.aObjEzsigntemplateelementdependency = aObjEzsigntemplateelementdependency;
     return this;
   }
 
-  public EzsigntemplatesignatureRequestCompound addAObjEzsigntemplateelementdependencyItem(EzsigntemplateelementdependencyRequest aObjEzsigntemplateelementdependencyItem) {
+  public EzsigntemplatesignatureRequestCompound addAObjEzsigntemplateelementdependencyItem(EzsigntemplateelementdependencyRequestCompound aObjEzsigntemplateelementdependencyItem) {
     if (this.aObjEzsigntemplateelementdependency == null) {
       this.aObjEzsigntemplateelementdependency = new ArrayList<>();
     }
@@ -929,7 +894,7 @@ public class EzsigntemplatesignatureRequestCompound {
     return aObjEzsigntemplateelementdependency;
   }
 
-  public void setaObjEzsigntemplateelementdependency(@javax.annotation.Nullable List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency) {
+  public void setaObjEzsigntemplateelementdependency(List<EzsigntemplateelementdependencyRequestCompound> aObjEzsigntemplateelementdependency) {
     this.aObjEzsigntemplateelementdependency = aObjEzsigntemplateelementdependency;
   }
 
@@ -1182,7 +1147,7 @@ public class EzsigntemplatesignatureRequestCompound {
 
           // validate the optional field `a_objEzsigntemplatesignaturecustomdate` (array)
           for (int i = 0; i < jsonArrayaObjEzsigntemplatesignaturecustomdate.size(); i++) {
-            EzsigntemplatesignaturecustomdateRequest.validateJsonElement(jsonArrayaObjEzsigntemplatesignaturecustomdate.get(i));
+            EzsigntemplatesignaturecustomdateRequestCompound.validateJsonElement(jsonArrayaObjEzsigntemplatesignaturecustomdate.get(i));
           };
         }
       }
@@ -1196,7 +1161,7 @@ public class EzsigntemplatesignatureRequestCompound {
 
           // validate the optional field `a_objEzsigntemplateelementdependency` (array)
           for (int i = 0; i < jsonArrayaObjEzsigntemplateelementdependency.size(); i++) {
-            EzsigntemplateelementdependencyRequest.validateJsonElement(jsonArrayaObjEzsigntemplateelementdependency.get(i));
+            EzsigntemplateelementdependencyRequestCompound.validateJsonElement(jsonArrayaObjEzsigntemplateelementdependency.get(i));
           };
         }
       }

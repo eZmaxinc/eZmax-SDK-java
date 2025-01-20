@@ -51,47 +51,40 @@ import eZmaxAPI.JSON;
 /**
  * Error Message when a Franchisebroker is not in this Franchiseoffice.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonResponseErrorWrongFranchiseoffice {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
-  @javax.annotation.Nonnull
   private String sErrorMessage;
 
   public static final String SERIALIZED_NAME_E_ERROR_CODE = "eErrorCode";
   @SerializedName(SERIALIZED_NAME_E_ERROR_CODE)
-  @javax.annotation.Nonnull
   private FieldEErrorCode eErrorCode;
 
   public static final String SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL = "a_sErrorMessagedetail";
   @SerializedName(SERIALIZED_NAME_A_S_ERROR_MESSAGEDETAIL)
-  @javax.annotation.Nullable
   private List<String> aSErrorMessagedetail = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEAGENCE_I_D = "fkiFranchiseagenceID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEAGENCE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFranchiseagenceID;
 
   public static final String SERIALIZED_NAME_S_FRANCHISEAGENCE_NAME = "sFranchiseagenceName";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEAGENCE_NAME)
-  @javax.annotation.Nonnull
   private String sFranchiseagenceName;
 
   public static final String SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D = "fkiFranchiseofficeID";
   @SerializedName(SERIALIZED_NAME_FKI_FRANCHISEOFFICE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiFranchiseofficeID;
 
   public static final String SERIALIZED_NAME_I_FRANCHISEOFFICE_CODE = "iFranchiseofficeCode";
   @SerializedName(SERIALIZED_NAME_I_FRANCHISEOFFICE_CODE)
-  @javax.annotation.Nonnull
   private String iFranchiseofficeCode;
 
   public CommonResponseErrorWrongFranchiseoffice() {
   }
 
-  public CommonResponseErrorWrongFranchiseoffice sErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
+  public CommonResponseErrorWrongFranchiseoffice sErrorMessage(String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
     return this;
   }
@@ -105,12 +98,12 @@ public class CommonResponseErrorWrongFranchiseoffice {
     return sErrorMessage;
   }
 
-  public void setsErrorMessage(@javax.annotation.Nonnull String sErrorMessage) {
+  public void setsErrorMessage(String sErrorMessage) {
     this.sErrorMessage = sErrorMessage;
   }
 
 
-  public CommonResponseErrorWrongFranchiseoffice eErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
+  public CommonResponseErrorWrongFranchiseoffice eErrorCode(FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
     return this;
   }
@@ -124,12 +117,12 @@ public class CommonResponseErrorWrongFranchiseoffice {
     return eErrorCode;
   }
 
-  public void seteErrorCode(@javax.annotation.Nonnull FieldEErrorCode eErrorCode) {
+  public void seteErrorCode(FieldEErrorCode eErrorCode) {
     this.eErrorCode = eErrorCode;
   }
 
 
-  public CommonResponseErrorWrongFranchiseoffice aSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
+  public CommonResponseErrorWrongFranchiseoffice aSErrorMessagedetail(List<String> aSErrorMessagedetail) {
     this.aSErrorMessagedetail = aSErrorMessagedetail;
     return this;
   }
@@ -151,12 +144,12 @@ public class CommonResponseErrorWrongFranchiseoffice {
     return aSErrorMessagedetail;
   }
 
-  public void setaSErrorMessagedetail(@javax.annotation.Nullable List<String> aSErrorMessagedetail) {
+  public void setaSErrorMessagedetail(List<String> aSErrorMessagedetail) {
     this.aSErrorMessagedetail = aSErrorMessagedetail;
   }
 
 
-  public CommonResponseErrorWrongFranchiseoffice fkiFranchiseagenceID(@javax.annotation.Nonnull Integer fkiFranchiseagenceID) {
+  public CommonResponseErrorWrongFranchiseoffice fkiFranchiseagenceID(Integer fkiFranchiseagenceID) {
     this.fkiFranchiseagenceID = fkiFranchiseagenceID;
     return this;
   }
@@ -172,12 +165,12 @@ public class CommonResponseErrorWrongFranchiseoffice {
     return fkiFranchiseagenceID;
   }
 
-  public void setFkiFranchiseagenceID(@javax.annotation.Nonnull Integer fkiFranchiseagenceID) {
+  public void setFkiFranchiseagenceID(Integer fkiFranchiseagenceID) {
     this.fkiFranchiseagenceID = fkiFranchiseagenceID;
   }
 
 
-  public CommonResponseErrorWrongFranchiseoffice sFranchiseagenceName(@javax.annotation.Nonnull String sFranchiseagenceName) {
+  public CommonResponseErrorWrongFranchiseoffice sFranchiseagenceName(String sFranchiseagenceName) {
     this.sFranchiseagenceName = sFranchiseagenceName;
     return this;
   }
@@ -191,12 +184,12 @@ public class CommonResponseErrorWrongFranchiseoffice {
     return sFranchiseagenceName;
   }
 
-  public void setsFranchiseagenceName(@javax.annotation.Nonnull String sFranchiseagenceName) {
+  public void setsFranchiseagenceName(String sFranchiseagenceName) {
     this.sFranchiseagenceName = sFranchiseagenceName;
   }
 
 
-  public CommonResponseErrorWrongFranchiseoffice fkiFranchiseofficeID(@javax.annotation.Nonnull Integer fkiFranchiseofficeID) {
+  public CommonResponseErrorWrongFranchiseoffice fkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
     return this;
   }
@@ -211,12 +204,12 @@ public class CommonResponseErrorWrongFranchiseoffice {
     return fkiFranchiseofficeID;
   }
 
-  public void setFkiFranchiseofficeID(@javax.annotation.Nonnull Integer fkiFranchiseofficeID) {
+  public void setFkiFranchiseofficeID(Integer fkiFranchiseofficeID) {
     this.fkiFranchiseofficeID = fkiFranchiseofficeID;
   }
 
 
-  public CommonResponseErrorWrongFranchiseoffice iFranchiseofficeCode(@javax.annotation.Nonnull String iFranchiseofficeCode) {
+  public CommonResponseErrorWrongFranchiseoffice iFranchiseofficeCode(String iFranchiseofficeCode) {
     this.iFranchiseofficeCode = iFranchiseofficeCode;
     return this;
   }
@@ -230,7 +223,7 @@ public class CommonResponseErrorWrongFranchiseoffice {
     return iFranchiseofficeCode;
   }
 
-  public void setiFranchiseofficeCode(@javax.annotation.Nonnull String iFranchiseofficeCode) {
+  public void setiFranchiseofficeCode(String iFranchiseofficeCode) {
     this.iFranchiseofficeCode = iFranchiseofficeCode;
   }
 

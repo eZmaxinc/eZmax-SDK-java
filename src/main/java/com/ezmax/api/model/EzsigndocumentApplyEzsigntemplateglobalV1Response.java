@@ -53,27 +53,24 @@ import eZmaxAPI.JSON;
 /**
  * Response for POST /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentApplyEzsigntemplateglobalV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
-  @javax.annotation.Nonnull
   private CommonResponseObjDebugPayload objDebugPayload;
 
   public static final String SERIALIZED_NAME_OBJ_DEBUG = "objDebug";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG)
-  @javax.annotation.Nullable
   private CommonResponseObjDebug objDebug;
 
   public static final String SERIALIZED_NAME_A_OBJ_WARNING = "a_objWarning";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WARNING)
-  @javax.annotation.Nullable
   private List<CommonResponseWarning> aObjWarning = new ArrayList<>();
 
   public EzsigndocumentApplyEzsigntemplateglobalV1Response() {
   }
 
-  public EzsigndocumentApplyEzsigntemplateglobalV1Response objDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
+  public EzsigndocumentApplyEzsigntemplateglobalV1Response objDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
     return this;
   }
@@ -87,12 +84,12 @@ public class EzsigndocumentApplyEzsigntemplateglobalV1Response {
     return objDebugPayload;
   }
 
-  public void setObjDebugPayload(@javax.annotation.Nonnull CommonResponseObjDebugPayload objDebugPayload) {
+  public void setObjDebugPayload(CommonResponseObjDebugPayload objDebugPayload) {
     this.objDebugPayload = objDebugPayload;
   }
 
 
-  public EzsigndocumentApplyEzsigntemplateglobalV1Response objDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
+  public EzsigndocumentApplyEzsigntemplateglobalV1Response objDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
     return this;
   }
@@ -106,12 +103,12 @@ public class EzsigndocumentApplyEzsigntemplateglobalV1Response {
     return objDebug;
   }
 
-  public void setObjDebug(@javax.annotation.Nullable CommonResponseObjDebug objDebug) {
+  public void setObjDebug(CommonResponseObjDebug objDebug) {
     this.objDebug = objDebug;
   }
 
 
-  public EzsigndocumentApplyEzsigntemplateglobalV1Response aObjWarning(@javax.annotation.Nullable List<CommonResponseWarning> aObjWarning) {
+  public EzsigndocumentApplyEzsigntemplateglobalV1Response aObjWarning(List<CommonResponseWarning> aObjWarning) {
     this.aObjWarning = aObjWarning;
     return this;
   }
@@ -133,7 +130,7 @@ public class EzsigndocumentApplyEzsigntemplateglobalV1Response {
     return aObjWarning;
   }
 
-  public void setaObjWarning(@javax.annotation.Nullable List<CommonResponseWarning> aObjWarning) {
+  public void setaObjWarning(List<CommonResponseWarning> aObjWarning) {
     this.aObjWarning = aObjWarning;
   }
 

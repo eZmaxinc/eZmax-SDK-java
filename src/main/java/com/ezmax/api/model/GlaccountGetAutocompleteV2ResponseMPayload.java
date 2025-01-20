@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/glaccount/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GlaccountGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_GLACCOUNT = "a_objGlaccount";
   @SerializedName(SERIALIZED_NAME_A_OBJ_GLACCOUNT)
-  @javax.annotation.Nonnull
   private List<GlaccountAutocompleteElementResponse> aObjGlaccount = new ArrayList<>();
 
   public GlaccountGetAutocompleteV2ResponseMPayload() {
   }
 
-  public GlaccountGetAutocompleteV2ResponseMPayload aObjGlaccount(@javax.annotation.Nonnull List<GlaccountAutocompleteElementResponse> aObjGlaccount) {
+  public GlaccountGetAutocompleteV2ResponseMPayload aObjGlaccount(List<GlaccountAutocompleteElementResponse> aObjGlaccount) {
     this.aObjGlaccount = aObjGlaccount;
     return this;
   }
@@ -83,7 +82,7 @@ public class GlaccountGetAutocompleteV2ResponseMPayload {
     return aObjGlaccount;
   }
 
-  public void setaObjGlaccount(@javax.annotation.Nonnull List<GlaccountAutocompleteElementResponse> aObjGlaccount) {
+  public void setaObjGlaccount(List<GlaccountAutocompleteElementResponse> aObjGlaccount) {
     this.aObjGlaccount = aObjGlaccount;
   }
 

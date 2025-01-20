@@ -49,22 +49,20 @@ import eZmaxAPI.JSON;
 /**
  * A Billingentityinternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BillingentityinternalResponse {
   public static final String SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D = "pkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_BILLINGENTITYINTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiBillingentityinternalID;
 
   public static final String SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL_DESCRIPTION = "objBillingentityinternalDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_BILLINGENTITYINTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualBillingentityinternalDescription objBillingentityinternalDescription;
 
   public BillingentityinternalResponse() {
   }
 
-  public BillingentityinternalResponse pkiBillingentityinternalID(@javax.annotation.Nonnull Integer pkiBillingentityinternalID) {
+  public BillingentityinternalResponse pkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
     return this;
   }
@@ -79,12 +77,12 @@ public class BillingentityinternalResponse {
     return pkiBillingentityinternalID;
   }
 
-  public void setPkiBillingentityinternalID(@javax.annotation.Nonnull Integer pkiBillingentityinternalID) {
+  public void setPkiBillingentityinternalID(Integer pkiBillingentityinternalID) {
     this.pkiBillingentityinternalID = pkiBillingentityinternalID;
   }
 
 
-  public BillingentityinternalResponse objBillingentityinternalDescription(@javax.annotation.Nonnull MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
+  public BillingentityinternalResponse objBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
     this.objBillingentityinternalDescription = objBillingentityinternalDescription;
     return this;
   }
@@ -98,7 +96,7 @@ public class BillingentityinternalResponse {
     return objBillingentityinternalDescription;
   }
 
-  public void setObjBillingentityinternalDescription(@javax.annotation.Nonnull MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
+  public void setObjBillingentityinternalDescription(MultilingualBillingentityinternalDescription objBillingentityinternalDescription) {
     this.objBillingentityinternalDescription = objBillingentityinternalDescription;
   }
 

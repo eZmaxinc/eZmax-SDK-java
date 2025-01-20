@@ -14,11 +14,12 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.SubnetCreateObjectV1Request;
 import com.ezmax.api.model.SubnetCreateObjectV1Response;
+import com.ezmax.api.model.SubnetDeleteObjectV1Response;
 import com.ezmax.api.model.SubnetEditObjectV1Request;
+import com.ezmax.api.model.SubnetEditObjectV1Response;
 import com.ezmax.api.model.SubnetGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -60,7 +61,7 @@ public class ObjectSubnetApiTest {
     @Test
     public void subnetDeleteObjectV1Test() throws ApiException {
         Integer pkiSubnetID = null;
-        CommonResponse response = api.subnetDeleteObjectV1(pkiSubnetID);
+        SubnetDeleteObjectV1Response response = api.subnetDeleteObjectV1(pkiSubnetID);
         // TODO: test validations
     }
 
@@ -75,7 +76,7 @@ public class ObjectSubnetApiTest {
     public void subnetEditObjectV1Test() throws ApiException {
         Integer pkiSubnetID = null;
         SubnetEditObjectV1Request subnetEditObjectV1Request = null;
-        CommonResponse response = api.subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request);
+        SubnetEditObjectV1Response response = api.subnetEditObjectV1(pkiSubnetID, subnetEditObjectV1Request);
         // TODO: test validations
     }
 

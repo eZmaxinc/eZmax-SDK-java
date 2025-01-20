@@ -52,22 +52,20 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/createEzsignelementsPositionedByWord
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentCreateEzsignelementsPositionedByWordV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP = "a_objEzsignformfieldgroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNFORMFIELDGROUP)
-  @javax.annotation.Nonnull
   private List<CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest> aObjEzsignformfieldgroup = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE = "a_objEzsignsignature";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATURE)
-  @javax.annotation.Nonnull
   private List<CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest> aObjEzsignsignature = new ArrayList<>();
 
   public EzsigndocumentCreateEzsignelementsPositionedByWordV1Request() {
   }
 
-  public EzsigndocumentCreateEzsignelementsPositionedByWordV1Request aObjEzsignformfieldgroup(@javax.annotation.Nonnull List<CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest> aObjEzsignformfieldgroup) {
+  public EzsigndocumentCreateEzsignelementsPositionedByWordV1Request aObjEzsignformfieldgroup(List<CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest> aObjEzsignformfieldgroup) {
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
     return this;
   }
@@ -89,12 +87,12 @@ public class EzsigndocumentCreateEzsignelementsPositionedByWordV1Request {
     return aObjEzsignformfieldgroup;
   }
 
-  public void setaObjEzsignformfieldgroup(@javax.annotation.Nonnull List<CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest> aObjEzsignformfieldgroup) {
+  public void setaObjEzsignformfieldgroup(List<CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest> aObjEzsignformfieldgroup) {
     this.aObjEzsignformfieldgroup = aObjEzsignformfieldgroup;
   }
 
 
-  public EzsigndocumentCreateEzsignelementsPositionedByWordV1Request aObjEzsignsignature(@javax.annotation.Nonnull List<CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest> aObjEzsignsignature) {
+  public EzsigndocumentCreateEzsignelementsPositionedByWordV1Request aObjEzsignsignature(List<CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest> aObjEzsignsignature) {
     this.aObjEzsignsignature = aObjEzsignsignature;
     return this;
   }
@@ -116,7 +114,7 @@ public class EzsigndocumentCreateEzsignelementsPositionedByWordV1Request {
     return aObjEzsignsignature;
   }
 
-  public void setaObjEzsignsignature(@javax.annotation.Nonnull List<CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest> aObjEzsignsignature) {
+  public void setaObjEzsignsignature(List<CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest> aObjEzsignsignature) {
     this.aObjEzsignsignature = aObjEzsignsignature;
   }
 

@@ -51,57 +51,48 @@ import eZmaxAPI.JSON;
 /**
  * A Branding Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BrandingRequestCompoundV2 {
   public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
-  @javax.annotation.Nullable
   private Integer pkiBrandingID;
 
   public static final String SERIALIZED_NAME_OBJ_BRANDING_DESCRIPTION = "objBrandingDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_BRANDING_DESCRIPTION)
-  @javax.annotation.Nonnull
   private MultilingualBrandingDescription objBrandingDescription;
 
   public static final String SERIALIZED_NAME_E_BRANDING_LOGO = "eBrandingLogo";
   @SerializedName(SERIALIZED_NAME_E_BRANDING_LOGO)
-  @javax.annotation.Nonnull
   private FieldEBrandingLogo eBrandingLogo;
 
   public static final String SERIALIZED_NAME_E_BRANDING_ALIGNLOGO = "eBrandingAlignlogo";
   @SerializedName(SERIALIZED_NAME_E_BRANDING_ALIGNLOGO)
-  @javax.annotation.Nullable
   private FieldEBrandingAlignlogo eBrandingAlignlogo;
 
   public static final String SERIALIZED_NAME_S_BRANDING_BASE64 = "sBrandingBase64";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_BASE64)
-  @javax.annotation.Nullable
   private byte[] sBrandingBase64;
 
   public static final String SERIALIZED_NAME_I_BRANDING_COLOR = "iBrandingColor";
   @SerializedName(SERIALIZED_NAME_I_BRANDING_COLOR)
-  @javax.annotation.Nonnull
   private Integer iBrandingColor;
 
   public static final String SERIALIZED_NAME_S_BRANDING_NAME = "sBrandingName";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_NAME)
-  @javax.annotation.Nullable
   private String sBrandingName;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  @javax.annotation.Nullable
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_B_BRANDING_ISACTIVE = "bBrandingIsactive";
   @SerializedName(SERIALIZED_NAME_B_BRANDING_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bBrandingIsactive;
 
   public BrandingRequestCompoundV2() {
   }
 
-  public BrandingRequestCompoundV2 pkiBrandingID(@javax.annotation.Nullable Integer pkiBrandingID) {
+  public BrandingRequestCompoundV2 pkiBrandingID(Integer pkiBrandingID) {
     this.pkiBrandingID = pkiBrandingID;
     return this;
   }
@@ -116,12 +107,12 @@ public class BrandingRequestCompoundV2 {
     return pkiBrandingID;
   }
 
-  public void setPkiBrandingID(@javax.annotation.Nullable Integer pkiBrandingID) {
+  public void setPkiBrandingID(Integer pkiBrandingID) {
     this.pkiBrandingID = pkiBrandingID;
   }
 
 
-  public BrandingRequestCompoundV2 objBrandingDescription(@javax.annotation.Nonnull MultilingualBrandingDescription objBrandingDescription) {
+  public BrandingRequestCompoundV2 objBrandingDescription(MultilingualBrandingDescription objBrandingDescription) {
     this.objBrandingDescription = objBrandingDescription;
     return this;
   }
@@ -135,12 +126,12 @@ public class BrandingRequestCompoundV2 {
     return objBrandingDescription;
   }
 
-  public void setObjBrandingDescription(@javax.annotation.Nonnull MultilingualBrandingDescription objBrandingDescription) {
+  public void setObjBrandingDescription(MultilingualBrandingDescription objBrandingDescription) {
     this.objBrandingDescription = objBrandingDescription;
   }
 
 
-  public BrandingRequestCompoundV2 eBrandingLogo(@javax.annotation.Nonnull FieldEBrandingLogo eBrandingLogo) {
+  public BrandingRequestCompoundV2 eBrandingLogo(FieldEBrandingLogo eBrandingLogo) {
     this.eBrandingLogo = eBrandingLogo;
     return this;
   }
@@ -154,12 +145,12 @@ public class BrandingRequestCompoundV2 {
     return eBrandingLogo;
   }
 
-  public void seteBrandingLogo(@javax.annotation.Nonnull FieldEBrandingLogo eBrandingLogo) {
+  public void seteBrandingLogo(FieldEBrandingLogo eBrandingLogo) {
     this.eBrandingLogo = eBrandingLogo;
   }
 
 
-  public BrandingRequestCompoundV2 eBrandingAlignlogo(@javax.annotation.Nullable FieldEBrandingAlignlogo eBrandingAlignlogo) {
+  public BrandingRequestCompoundV2 eBrandingAlignlogo(FieldEBrandingAlignlogo eBrandingAlignlogo) {
     this.eBrandingAlignlogo = eBrandingAlignlogo;
     return this;
   }
@@ -173,12 +164,12 @@ public class BrandingRequestCompoundV2 {
     return eBrandingAlignlogo;
   }
 
-  public void seteBrandingAlignlogo(@javax.annotation.Nullable FieldEBrandingAlignlogo eBrandingAlignlogo) {
+  public void seteBrandingAlignlogo(FieldEBrandingAlignlogo eBrandingAlignlogo) {
     this.eBrandingAlignlogo = eBrandingAlignlogo;
   }
 
 
-  public BrandingRequestCompoundV2 sBrandingBase64(@javax.annotation.Nullable byte[] sBrandingBase64) {
+  public BrandingRequestCompoundV2 sBrandingBase64(byte[] sBrandingBase64) {
     this.sBrandingBase64 = sBrandingBase64;
     return this;
   }
@@ -192,12 +183,12 @@ public class BrandingRequestCompoundV2 {
     return sBrandingBase64;
   }
 
-  public void setsBrandingBase64(@javax.annotation.Nullable byte[] sBrandingBase64) {
+  public void setsBrandingBase64(byte[] sBrandingBase64) {
     this.sBrandingBase64 = sBrandingBase64;
   }
 
 
-  public BrandingRequestCompoundV2 iBrandingColor(@javax.annotation.Nonnull Integer iBrandingColor) {
+  public BrandingRequestCompoundV2 iBrandingColor(Integer iBrandingColor) {
     this.iBrandingColor = iBrandingColor;
     return this;
   }
@@ -213,12 +204,12 @@ public class BrandingRequestCompoundV2 {
     return iBrandingColor;
   }
 
-  public void setiBrandingColor(@javax.annotation.Nonnull Integer iBrandingColor) {
+  public void setiBrandingColor(Integer iBrandingColor) {
     this.iBrandingColor = iBrandingColor;
   }
 
 
-  public BrandingRequestCompoundV2 sBrandingName(@javax.annotation.Nullable String sBrandingName) {
+  public BrandingRequestCompoundV2 sBrandingName(String sBrandingName) {
     this.sBrandingName = sBrandingName;
     return this;
   }
@@ -232,12 +223,12 @@ public class BrandingRequestCompoundV2 {
     return sBrandingName;
   }
 
-  public void setsBrandingName(@javax.annotation.Nullable String sBrandingName) {
+  public void setsBrandingName(String sBrandingName) {
     this.sBrandingName = sBrandingName;
   }
 
 
-  public BrandingRequestCompoundV2 sEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
+  public BrandingRequestCompoundV2 sEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -251,12 +242,12 @@ public class BrandingRequestCompoundV2 {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(@javax.annotation.Nullable String sEmailAddress) {
+  public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public BrandingRequestCompoundV2 bBrandingIsactive(@javax.annotation.Nonnull Boolean bBrandingIsactive) {
+  public BrandingRequestCompoundV2 bBrandingIsactive(Boolean bBrandingIsactive) {
     this.bBrandingIsactive = bBrandingIsactive;
     return this;
   }
@@ -270,7 +261,7 @@ public class BrandingRequestCompoundV2 {
     return bBrandingIsactive;
   }
 
-  public void setbBrandingIsactive(@javax.annotation.Nonnull Boolean bBrandingIsactive) {
+  public void setbBrandingIsactive(Boolean bBrandingIsactive) {
     this.bBrandingIsactive = bBrandingIsactive;
   }
 

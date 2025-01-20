@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATUREATTACHMENT = "a_objEzsignsignatureattachment";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATUREATTACHMENT)
-  @javax.annotation.Nonnull
   private List<EzsignsignatureattachmentResponse> aObjEzsignsignatureattachment = new ArrayList<>();
 
   public EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload() {
   }
 
-  public EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload aObjEzsignsignatureattachment(@javax.annotation.Nonnull List<EzsignsignatureattachmentResponse> aObjEzsignsignatureattachment) {
+  public EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload aObjEzsignsignatureattachment(List<EzsignsignatureattachmentResponse> aObjEzsignsignatureattachment) {
     this.aObjEzsignsignatureattachment = aObjEzsignsignatureattachment;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsignsignatureGetEzsignsignatureattachmentV1ResponseMPayload {
     return aObjEzsignsignatureattachment;
   }
 
-  public void setaObjEzsignsignatureattachment(@javax.annotation.Nonnull List<EzsignsignatureattachmentResponse> aObjEzsignsignatureattachment) {
+  public void setaObjEzsignsignatureattachment(List<EzsignsignatureattachmentResponse> aObjEzsignsignatureattachment) {
     this.aObjEzsignsignatureattachment = aObjEzsignsignatureattachment;
   }
 

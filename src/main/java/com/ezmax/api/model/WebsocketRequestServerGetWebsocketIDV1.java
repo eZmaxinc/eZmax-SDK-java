@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for Websocket GetWebsocketID V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebsocketRequestServerGetWebsocketIDV1 {
   /**
    * The Type of message
@@ -102,13 +102,12 @@ public class WebsocketRequestServerGetWebsocketIDV1 {
 
   public static final String SERIALIZED_NAME_E_WEBSOCKET_MESSAGETYPE = "eWebsocketMessagetype";
   @SerializedName(SERIALIZED_NAME_E_WEBSOCKET_MESSAGETYPE)
-  @javax.annotation.Nonnull
   private EWebsocketMessagetypeEnum eWebsocketMessagetype;
 
   public WebsocketRequestServerGetWebsocketIDV1() {
   }
 
-  public WebsocketRequestServerGetWebsocketIDV1 eWebsocketMessagetype(@javax.annotation.Nonnull EWebsocketMessagetypeEnum eWebsocketMessagetype) {
+  public WebsocketRequestServerGetWebsocketIDV1 eWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
     this.eWebsocketMessagetype = eWebsocketMessagetype;
     return this;
   }
@@ -122,7 +121,7 @@ public class WebsocketRequestServerGetWebsocketIDV1 {
     return eWebsocketMessagetype;
   }
 
-  public void seteWebsocketMessagetype(@javax.annotation.Nonnull EWebsocketMessagetypeEnum eWebsocketMessagetype) {
+  public void seteWebsocketMessagetype(EWebsocketMessagetypeEnum eWebsocketMessagetype) {
     this.eWebsocketMessagetype = eWebsocketMessagetype;
   }
 

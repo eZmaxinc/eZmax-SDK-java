@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Pdfalevel AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PdfalevelAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_PDFALEVEL_I_D = "pkiPdfalevelID";
   @SerializedName(SERIALIZED_NAME_PKI_PDFALEVEL_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiPdfalevelID;
 
   public static final String SERIALIZED_NAME_S_PDFALEVEL_NAME = "sPdfalevelName";
   @SerializedName(SERIALIZED_NAME_S_PDFALEVEL_NAME)
-  @javax.annotation.Nonnull
   private String sPdfalevelName;
 
   public static final String SERIALIZED_NAME_B_PDFALEVEL_ISACTIVE = "bPdfalevelIsactive";
   @SerializedName(SERIALIZED_NAME_B_PDFALEVEL_ISACTIVE)
-  @javax.annotation.Nonnull
   private Boolean bPdfalevelIsactive;
 
   public PdfalevelAutocompleteElementResponse() {
   }
 
-  public PdfalevelAutocompleteElementResponse pkiPdfalevelID(@javax.annotation.Nonnull Integer pkiPdfalevelID) {
+  public PdfalevelAutocompleteElementResponse pkiPdfalevelID(Integer pkiPdfalevelID) {
     this.pkiPdfalevelID = pkiPdfalevelID;
     return this;
   }
@@ -84,12 +81,12 @@ public class PdfalevelAutocompleteElementResponse {
     return pkiPdfalevelID;
   }
 
-  public void setPkiPdfalevelID(@javax.annotation.Nonnull Integer pkiPdfalevelID) {
+  public void setPkiPdfalevelID(Integer pkiPdfalevelID) {
     this.pkiPdfalevelID = pkiPdfalevelID;
   }
 
 
-  public PdfalevelAutocompleteElementResponse sPdfalevelName(@javax.annotation.Nonnull String sPdfalevelName) {
+  public PdfalevelAutocompleteElementResponse sPdfalevelName(String sPdfalevelName) {
     this.sPdfalevelName = sPdfalevelName;
     return this;
   }
@@ -103,12 +100,12 @@ public class PdfalevelAutocompleteElementResponse {
     return sPdfalevelName;
   }
 
-  public void setsPdfalevelName(@javax.annotation.Nonnull String sPdfalevelName) {
+  public void setsPdfalevelName(String sPdfalevelName) {
     this.sPdfalevelName = sPdfalevelName;
   }
 
 
-  public PdfalevelAutocompleteElementResponse bPdfalevelIsactive(@javax.annotation.Nonnull Boolean bPdfalevelIsactive) {
+  public PdfalevelAutocompleteElementResponse bPdfalevelIsactive(Boolean bPdfalevelIsactive) {
     this.bPdfalevelIsactive = bPdfalevelIsactive;
     return this;
   }
@@ -122,7 +119,7 @@ public class PdfalevelAutocompleteElementResponse {
     return bPdfalevelIsactive;
   }
 
-  public void setbPdfalevelIsactive(@javax.annotation.Nonnull Boolean bPdfalevelIsactive) {
+  public void setbPdfalevelIsactive(Boolean bPdfalevelIsactive) {
     this.bPdfalevelIsactive = bPdfalevelIsactive;
   }
 

@@ -48,42 +48,36 @@ import eZmaxAPI.JSON;
 /**
  * A Discussionmembership Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DiscussionmembershipRequestCompound {
   public static final String SERIALIZED_NAME_PKI_DISCUSSIONMEMBERSHIP_I_D = "pkiDiscussionmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSIONMEMBERSHIP_I_D)
-  @javax.annotation.Nullable
   private Integer pkiDiscussionmembershipID;
 
   public static final String SERIALIZED_NAME_FKI_DISCUSSION_I_D = "fkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_FKI_DISCUSSION_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiDiscussionID;
 
   public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUserID;
 
   public static final String SERIALIZED_NAME_FKI_USERGROUP_I_D = "fkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_USERGROUP_I_D)
-  @javax.annotation.Nullable
   private Integer fkiUsergroupID;
 
   public static final String SERIALIZED_NAME_FKI_MODULESECTION_I_D = "fkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_FKI_MODULESECTION_I_D)
-  @javax.annotation.Nullable
   private Integer fkiModulesectionID;
 
   public static final String SERIALIZED_NAME_DT_DISCUSSIONMEMBERSHIP_JOINED = "dtDiscussionmembershipJoined";
   @SerializedName(SERIALIZED_NAME_DT_DISCUSSIONMEMBERSHIP_JOINED)
-  @javax.annotation.Nonnull
   private String dtDiscussionmembershipJoined;
 
   public DiscussionmembershipRequestCompound() {
   }
 
-  public DiscussionmembershipRequestCompound pkiDiscussionmembershipID(@javax.annotation.Nullable Integer pkiDiscussionmembershipID) {
+  public DiscussionmembershipRequestCompound pkiDiscussionmembershipID(Integer pkiDiscussionmembershipID) {
     this.pkiDiscussionmembershipID = pkiDiscussionmembershipID;
     return this;
   }
@@ -99,12 +93,12 @@ public class DiscussionmembershipRequestCompound {
     return pkiDiscussionmembershipID;
   }
 
-  public void setPkiDiscussionmembershipID(@javax.annotation.Nullable Integer pkiDiscussionmembershipID) {
+  public void setPkiDiscussionmembershipID(Integer pkiDiscussionmembershipID) {
     this.pkiDiscussionmembershipID = pkiDiscussionmembershipID;
   }
 
 
-  public DiscussionmembershipRequestCompound fkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
+  public DiscussionmembershipRequestCompound fkiDiscussionID(Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
     return this;
   }
@@ -120,12 +114,12 @@ public class DiscussionmembershipRequestCompound {
     return fkiDiscussionID;
   }
 
-  public void setFkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
+  public void setFkiDiscussionID(Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
   }
 
 
-  public DiscussionmembershipRequestCompound fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public DiscussionmembershipRequestCompound fkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -140,12 +134,12 @@ public class DiscussionmembershipRequestCompound {
     return fkiUserID;
   }
 
-  public void setFkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public void setFkiUserID(Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
   }
 
 
-  public DiscussionmembershipRequestCompound fkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
+  public DiscussionmembershipRequestCompound fkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
     return this;
   }
@@ -161,12 +155,12 @@ public class DiscussionmembershipRequestCompound {
     return fkiUsergroupID;
   }
 
-  public void setFkiUsergroupID(@javax.annotation.Nullable Integer fkiUsergroupID) {
+  public void setFkiUsergroupID(Integer fkiUsergroupID) {
     this.fkiUsergroupID = fkiUsergroupID;
   }
 
 
-  public DiscussionmembershipRequestCompound fkiModulesectionID(@javax.annotation.Nullable Integer fkiModulesectionID) {
+  public DiscussionmembershipRequestCompound fkiModulesectionID(Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
     return this;
   }
@@ -181,12 +175,12 @@ public class DiscussionmembershipRequestCompound {
     return fkiModulesectionID;
   }
 
-  public void setFkiModulesectionID(@javax.annotation.Nullable Integer fkiModulesectionID) {
+  public void setFkiModulesectionID(Integer fkiModulesectionID) {
     this.fkiModulesectionID = fkiModulesectionID;
   }
 
 
-  public DiscussionmembershipRequestCompound dtDiscussionmembershipJoined(@javax.annotation.Nonnull String dtDiscussionmembershipJoined) {
+  public DiscussionmembershipRequestCompound dtDiscussionmembershipJoined(String dtDiscussionmembershipJoined) {
     this.dtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
     return this;
   }
@@ -200,7 +194,7 @@ public class DiscussionmembershipRequestCompound {
     return dtDiscussionmembershipJoined;
   }
 
-  public void setDtDiscussionmembershipJoined(@javax.annotation.Nonnull String dtDiscussionmembershipJoined) {
+  public void setDtDiscussionmembershipJoined(String dtDiscussionmembershipJoined) {
     this.dtDiscussionmembershipJoined = dtDiscussionmembershipJoined;
   }
 

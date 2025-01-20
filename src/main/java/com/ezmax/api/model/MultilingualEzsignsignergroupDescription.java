@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Ezsignsignergroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultilingualEzsignsignergroupDescription {
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION1 = "sEzsignsignergroupDescription1";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION1)
-  @javax.annotation.Nullable
   private String sEzsignsignergroupDescription1;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION2 = "sEzsignsignergroupDescription2";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNERGROUP_DESCRIPTION2)
-  @javax.annotation.Nullable
   private String sEzsignsignergroupDescription2;
 
   public MultilingualEzsignsignergroupDescription() {
   }
 
-  public MultilingualEzsignsignergroupDescription sEzsignsignergroupDescription1(@javax.annotation.Nullable String sEzsignsignergroupDescription1) {
+  public MultilingualEzsignsignergroupDescription sEzsignsignergroupDescription1(String sEzsignsignergroupDescription1) {
     this.sEzsignsignergroupDescription1 = sEzsignsignergroupDescription1;
     return this;
   }
@@ -77,12 +75,12 @@ public class MultilingualEzsignsignergroupDescription {
     return sEzsignsignergroupDescription1;
   }
 
-  public void setsEzsignsignergroupDescription1(@javax.annotation.Nullable String sEzsignsignergroupDescription1) {
+  public void setsEzsignsignergroupDescription1(String sEzsignsignergroupDescription1) {
     this.sEzsignsignergroupDescription1 = sEzsignsignergroupDescription1;
   }
 
 
-  public MultilingualEzsignsignergroupDescription sEzsignsignergroupDescription2(@javax.annotation.Nullable String sEzsignsignergroupDescription2) {
+  public MultilingualEzsignsignergroupDescription sEzsignsignergroupDescription2(String sEzsignsignergroupDescription2) {
     this.sEzsignsignergroupDescription2 = sEzsignsignergroupDescription2;
     return this;
   }
@@ -96,7 +94,7 @@ public class MultilingualEzsignsignergroupDescription {
     return sEzsignsignergroupDescription2;
   }
 
-  public void setsEzsignsignergroupDescription2(@javax.annotation.Nullable String sEzsignsignergroupDescription2) {
+  public void setsEzsignsignergroupDescription2(String sEzsignsignergroupDescription2) {
     this.sEzsignsignergroupDescription2 = sEzsignsignergroupDescription2;
   }
 

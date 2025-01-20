@@ -14,15 +14,16 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzdoctemplatedocumentCreateObjectV1Request;
 import com.ezmax.api.model.EzdoctemplatedocumentCreateObjectV1Response;
 import com.ezmax.api.model.EzdoctemplatedocumentEditObjectV1Request;
+import com.ezmax.api.model.EzdoctemplatedocumentEditObjectV1Response;
 import com.ezmax.api.model.EzdoctemplatedocumentGetAutocompleteV2Response;
 import com.ezmax.api.model.EzdoctemplatedocumentGetListV1Response;
 import com.ezmax.api.model.EzdoctemplatedocumentGetObjectV2Response;
 import com.ezmax.api.model.EzdoctemplatedocumentPatchObjectV1Request;
+import com.ezmax.api.model.EzdoctemplatedocumentPatchObjectV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import org.junit.jupiter.api.Disabled;
@@ -80,7 +81,7 @@ public class ObjectEzdoctemplatedocumentApiTest {
     public void ezdoctemplatedocumentEditObjectV1Test() throws ApiException {
         Integer pkiEzdoctemplatedocumentID = null;
         EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request = null;
-        CommonResponse response = api.ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request);
+        EzdoctemplatedocumentEditObjectV1Response response = api.ezdoctemplatedocumentEditObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentEditObjectV1Request);
         // TODO: test validations
     }
 
@@ -146,7 +147,7 @@ public class ObjectEzdoctemplatedocumentApiTest {
     public void ezdoctemplatedocumentPatchObjectV1Test() throws ApiException {
         Integer pkiEzdoctemplatedocumentID = null;
         EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request = null;
-        CommonResponse response = api.ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request);
+        EzdoctemplatedocumentPatchObjectV1Response response = api.ezdoctemplatedocumentPatchObjectV1(pkiEzdoctemplatedocumentID, ezdoctemplatedocumentPatchObjectV1Request);
         // TODO: test validations
     }
 

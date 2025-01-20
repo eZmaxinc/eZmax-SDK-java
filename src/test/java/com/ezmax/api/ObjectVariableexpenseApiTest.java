@@ -14,13 +14,13 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.VariableexpenseCreateObjectV1Request;
 import com.ezmax.api.model.VariableexpenseCreateObjectV1Response;
 import com.ezmax.api.model.VariableexpenseEditObjectV1Request;
+import com.ezmax.api.model.VariableexpenseEditObjectV1Response;
 import com.ezmax.api.model.VariableexpenseGetAutocompleteV2Response;
 import com.ezmax.api.model.VariableexpenseGetListV1Response;
 import com.ezmax.api.model.VariableexpenseGetObjectV2Response;
@@ -65,7 +65,7 @@ public class ObjectVariableexpenseApiTest {
     public void variableexpenseEditObjectV1Test() throws ApiException {
         Integer pkiVariableexpenseID = null;
         VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request = null;
-        CommonResponse response = api.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
+        VariableexpenseEditObjectV1Response response = api.variableexpenseEditObjectV1(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
         // TODO: test validations
     }
 

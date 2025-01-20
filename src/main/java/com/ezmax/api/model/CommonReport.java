@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * A Report containing Reportsections 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommonReport {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTSECTION = "a_objReportsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTSECTION)
-  @javax.annotation.Nonnull
   private List<CommonReportsection> aObjReportsection = new ArrayList<>();
 
   public CommonReport() {
   }
 
-  public CommonReport aObjReportsection(@javax.annotation.Nonnull List<CommonReportsection> aObjReportsection) {
+  public CommonReport aObjReportsection(List<CommonReportsection> aObjReportsection) {
     this.aObjReportsection = aObjReportsection;
     return this;
   }
@@ -83,7 +82,7 @@ public class CommonReport {
     return aObjReportsection;
   }
 
-  public void setaObjReportsection(@javax.annotation.Nonnull List<CommonReportsection> aObjReportsection) {
+  public void setaObjReportsection(List<CommonReportsection> aObjReportsection) {
     this.aObjReportsection = aObjReportsection;
   }
 

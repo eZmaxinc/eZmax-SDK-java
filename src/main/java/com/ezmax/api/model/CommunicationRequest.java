@@ -51,41 +51,34 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/communication
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CommunicationRequest {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
-  @javax.annotation.Nullable
   private Integer pkiCommunicationID;
 
   public static final String SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE = "eCommunicationImportance";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_IMPORTANCE)
-  @javax.annotation.Nullable
   private FieldECommunicationImportance eCommunicationImportance;
 
   public static final String SERIALIZED_NAME_E_COMMUNICATION_TYPE = "eCommunicationType";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_TYPE)
-  @javax.annotation.Nonnull
   private FieldECommunicationType eCommunicationType;
 
   public static final String SERIALIZED_NAME_OBJ_COMMUNICATIONSENDER = "objCommunicationsender";
   @SerializedName(SERIALIZED_NAME_OBJ_COMMUNICATIONSENDER)
-  @javax.annotation.Nullable
   private CustomCommunicationsenderRequest objCommunicationsender;
 
   public static final String SERIALIZED_NAME_S_COMMUNICATION_SUBJECT = "sCommunicationSubject";
   @SerializedName(SERIALIZED_NAME_S_COMMUNICATION_SUBJECT)
-  @javax.annotation.Nullable
   private String sCommunicationSubject;
 
   public static final String SERIALIZED_NAME_T_COMMUNICATION_BODY = "tCommunicationBody";
   @SerializedName(SERIALIZED_NAME_T_COMMUNICATION_BODY)
-  @javax.annotation.Nonnull
   private String tCommunicationBody;
 
   public static final String SERIALIZED_NAME_B_COMMUNICATION_PRIVATE = "bCommunicationPrivate";
   @SerializedName(SERIALIZED_NAME_B_COMMUNICATION_PRIVATE)
-  @javax.annotation.Nonnull
   private Boolean bCommunicationPrivate;
 
   /**
@@ -142,23 +135,20 @@ public class CommunicationRequest {
 
   public static final String SERIALIZED_NAME_E_COMMUNICATION_ATTACHMENTTYPE = "eCommunicationAttachmenttype";
   @SerializedName(SERIALIZED_NAME_E_COMMUNICATION_ATTACHMENTTYPE)
-  @javax.annotation.Nullable
   private ECommunicationAttachmenttypeEnum eCommunicationAttachmenttype;
 
   public static final String SERIALIZED_NAME_I_COMMUNICATION_ATTACHMENTLINKEXPIRATION = "iCommunicationAttachmentlinkexpiration";
   @SerializedName(SERIALIZED_NAME_I_COMMUNICATION_ATTACHMENTLINKEXPIRATION)
-  @javax.annotation.Nullable
   private Integer iCommunicationAttachmentlinkexpiration;
 
   public static final String SERIALIZED_NAME_B_COMMUNICATION_READRECEIPT = "bCommunicationReadreceipt";
   @SerializedName(SERIALIZED_NAME_B_COMMUNICATION_READRECEIPT)
-  @javax.annotation.Nullable
   private Boolean bCommunicationReadreceipt;
 
   public CommunicationRequest() {
   }
 
-  public CommunicationRequest pkiCommunicationID(@javax.annotation.Nullable Integer pkiCommunicationID) {
+  public CommunicationRequest pkiCommunicationID(Integer pkiCommunicationID) {
     this.pkiCommunicationID = pkiCommunicationID;
     return this;
   }
@@ -173,12 +163,12 @@ public class CommunicationRequest {
     return pkiCommunicationID;
   }
 
-  public void setPkiCommunicationID(@javax.annotation.Nullable Integer pkiCommunicationID) {
+  public void setPkiCommunicationID(Integer pkiCommunicationID) {
     this.pkiCommunicationID = pkiCommunicationID;
   }
 
 
-  public CommunicationRequest eCommunicationImportance(@javax.annotation.Nullable FieldECommunicationImportance eCommunicationImportance) {
+  public CommunicationRequest eCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
     this.eCommunicationImportance = eCommunicationImportance;
     return this;
   }
@@ -192,12 +182,12 @@ public class CommunicationRequest {
     return eCommunicationImportance;
   }
 
-  public void seteCommunicationImportance(@javax.annotation.Nullable FieldECommunicationImportance eCommunicationImportance) {
+  public void seteCommunicationImportance(FieldECommunicationImportance eCommunicationImportance) {
     this.eCommunicationImportance = eCommunicationImportance;
   }
 
 
-  public CommunicationRequest eCommunicationType(@javax.annotation.Nonnull FieldECommunicationType eCommunicationType) {
+  public CommunicationRequest eCommunicationType(FieldECommunicationType eCommunicationType) {
     this.eCommunicationType = eCommunicationType;
     return this;
   }
@@ -211,12 +201,12 @@ public class CommunicationRequest {
     return eCommunicationType;
   }
 
-  public void seteCommunicationType(@javax.annotation.Nonnull FieldECommunicationType eCommunicationType) {
+  public void seteCommunicationType(FieldECommunicationType eCommunicationType) {
     this.eCommunicationType = eCommunicationType;
   }
 
 
-  public CommunicationRequest objCommunicationsender(@javax.annotation.Nullable CustomCommunicationsenderRequest objCommunicationsender) {
+  public CommunicationRequest objCommunicationsender(CustomCommunicationsenderRequest objCommunicationsender) {
     this.objCommunicationsender = objCommunicationsender;
     return this;
   }
@@ -230,12 +220,12 @@ public class CommunicationRequest {
     return objCommunicationsender;
   }
 
-  public void setObjCommunicationsender(@javax.annotation.Nullable CustomCommunicationsenderRequest objCommunicationsender) {
+  public void setObjCommunicationsender(CustomCommunicationsenderRequest objCommunicationsender) {
     this.objCommunicationsender = objCommunicationsender;
   }
 
 
-  public CommunicationRequest sCommunicationSubject(@javax.annotation.Nullable String sCommunicationSubject) {
+  public CommunicationRequest sCommunicationSubject(String sCommunicationSubject) {
     this.sCommunicationSubject = sCommunicationSubject;
     return this;
   }
@@ -249,12 +239,12 @@ public class CommunicationRequest {
     return sCommunicationSubject;
   }
 
-  public void setsCommunicationSubject(@javax.annotation.Nullable String sCommunicationSubject) {
+  public void setsCommunicationSubject(String sCommunicationSubject) {
     this.sCommunicationSubject = sCommunicationSubject;
   }
 
 
-  public CommunicationRequest tCommunicationBody(@javax.annotation.Nonnull String tCommunicationBody) {
+  public CommunicationRequest tCommunicationBody(String tCommunicationBody) {
     this.tCommunicationBody = tCommunicationBody;
     return this;
   }
@@ -268,12 +258,12 @@ public class CommunicationRequest {
     return tCommunicationBody;
   }
 
-  public void settCommunicationBody(@javax.annotation.Nonnull String tCommunicationBody) {
+  public void settCommunicationBody(String tCommunicationBody) {
     this.tCommunicationBody = tCommunicationBody;
   }
 
 
-  public CommunicationRequest bCommunicationPrivate(@javax.annotation.Nonnull Boolean bCommunicationPrivate) {
+  public CommunicationRequest bCommunicationPrivate(Boolean bCommunicationPrivate) {
     this.bCommunicationPrivate = bCommunicationPrivate;
     return this;
   }
@@ -287,12 +277,12 @@ public class CommunicationRequest {
     return bCommunicationPrivate;
   }
 
-  public void setbCommunicationPrivate(@javax.annotation.Nonnull Boolean bCommunicationPrivate) {
+  public void setbCommunicationPrivate(Boolean bCommunicationPrivate) {
     this.bCommunicationPrivate = bCommunicationPrivate;
   }
 
 
-  public CommunicationRequest eCommunicationAttachmenttype(@javax.annotation.Nullable ECommunicationAttachmenttypeEnum eCommunicationAttachmenttype) {
+  public CommunicationRequest eCommunicationAttachmenttype(ECommunicationAttachmenttypeEnum eCommunicationAttachmenttype) {
     this.eCommunicationAttachmenttype = eCommunicationAttachmenttype;
     return this;
   }
@@ -306,12 +296,12 @@ public class CommunicationRequest {
     return eCommunicationAttachmenttype;
   }
 
-  public void seteCommunicationAttachmenttype(@javax.annotation.Nullable ECommunicationAttachmenttypeEnum eCommunicationAttachmenttype) {
+  public void seteCommunicationAttachmenttype(ECommunicationAttachmenttypeEnum eCommunicationAttachmenttype) {
     this.eCommunicationAttachmenttype = eCommunicationAttachmenttype;
   }
 
 
-  public CommunicationRequest iCommunicationAttachmentlinkexpiration(@javax.annotation.Nullable Integer iCommunicationAttachmentlinkexpiration) {
+  public CommunicationRequest iCommunicationAttachmentlinkexpiration(Integer iCommunicationAttachmentlinkexpiration) {
     this.iCommunicationAttachmentlinkexpiration = iCommunicationAttachmentlinkexpiration;
     return this;
   }
@@ -327,12 +317,12 @@ public class CommunicationRequest {
     return iCommunicationAttachmentlinkexpiration;
   }
 
-  public void setiCommunicationAttachmentlinkexpiration(@javax.annotation.Nullable Integer iCommunicationAttachmentlinkexpiration) {
+  public void setiCommunicationAttachmentlinkexpiration(Integer iCommunicationAttachmentlinkexpiration) {
     this.iCommunicationAttachmentlinkexpiration = iCommunicationAttachmentlinkexpiration;
   }
 
 
-  public CommunicationRequest bCommunicationReadreceipt(@javax.annotation.Nullable Boolean bCommunicationReadreceipt) {
+  public CommunicationRequest bCommunicationReadreceipt(Boolean bCommunicationReadreceipt) {
     this.bCommunicationReadreceipt = bCommunicationReadreceipt;
     return this;
   }
@@ -346,7 +336,7 @@ public class CommunicationRequest {
     return bCommunicationReadreceipt;
   }
 
-  public void setbCommunicationReadreceipt(@javax.annotation.Nullable Boolean bCommunicationReadreceipt) {
+  public void setbCommunicationReadreceipt(Boolean bCommunicationReadreceipt) {
     this.bCommunicationReadreceipt = bCommunicationReadreceipt;
   }
 

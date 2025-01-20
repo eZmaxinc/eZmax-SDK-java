@@ -14,14 +14,15 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.UserstagedCreateUserV1Response;
+import com.ezmax.api.model.UserstagedDeleteObjectV1Response;
 import com.ezmax.api.model.UserstagedGetListV1Response;
 import com.ezmax.api.model.UserstagedGetObjectV2Response;
 import com.ezmax.api.model.UserstagedMapV1Request;
+import com.ezmax.api.model.UserstagedMapV1Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -63,7 +64,7 @@ public class ObjectUserstagedApiTest {
     @Test
     public void userstagedDeleteObjectV1Test() throws ApiException {
         Integer pkiUserstagedID = null;
-        CommonResponse response = api.userstagedDeleteObjectV1(pkiUserstagedID);
+        UserstagedDeleteObjectV1Response response = api.userstagedDeleteObjectV1(pkiUserstagedID);
         // TODO: test validations
     }
 
@@ -110,7 +111,7 @@ public class ObjectUserstagedApiTest {
     public void userstagedMapV1Test() throws ApiException {
         Integer pkiUserstagedID = null;
         UserstagedMapV1Request userstagedMapV1Request = null;
-        CommonResponse response = api.userstagedMapV1(pkiUserstagedID, userstagedMapV1Request);
+        UserstagedMapV1Response response = api.userstagedMapV1(pkiUserstagedID, userstagedMapV1Request);
         // TODO: test validations
     }
 

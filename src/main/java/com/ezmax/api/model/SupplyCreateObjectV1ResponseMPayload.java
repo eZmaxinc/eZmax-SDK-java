@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/supply
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SupplyCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_SUPPLY_I_D = "a_pkiSupplyID";
   @SerializedName(SERIALIZED_NAME_A_PKI_SUPPLY_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiSupplyID = new ArrayList<>();
 
   public SupplyCreateObjectV1ResponseMPayload() {
   }
 
-  public SupplyCreateObjectV1ResponseMPayload aPkiSupplyID(@javax.annotation.Nonnull List<Integer> aPkiSupplyID) {
+  public SupplyCreateObjectV1ResponseMPayload aPkiSupplyID(List<Integer> aPkiSupplyID) {
     this.aPkiSupplyID = aPkiSupplyID;
     return this;
   }
@@ -82,7 +81,7 @@ public class SupplyCreateObjectV1ResponseMPayload {
     return aPkiSupplyID;
   }
 
-  public void setaPkiSupplyID(@javax.annotation.Nonnull List<Integer> aPkiSupplyID) {
+  public void setaPkiSupplyID(List<Integer> aPkiSupplyID) {
     this.aPkiSupplyID = aPkiSupplyID;
   }
 

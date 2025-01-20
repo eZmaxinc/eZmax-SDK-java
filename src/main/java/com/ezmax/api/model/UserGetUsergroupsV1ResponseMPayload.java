@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/user/{pkiUserID}/getUsergroups
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserGetUsergroupsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUP = "a_objUsergroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUP)
-  @javax.annotation.Nonnull
   private List<UsergroupResponseCompound> aObjUsergroup = new ArrayList<>();
 
   public UserGetUsergroupsV1ResponseMPayload() {
   }
 
-  public UserGetUsergroupsV1ResponseMPayload aObjUsergroup(@javax.annotation.Nonnull List<UsergroupResponseCompound> aObjUsergroup) {
+  public UserGetUsergroupsV1ResponseMPayload aObjUsergroup(List<UsergroupResponseCompound> aObjUsergroup) {
     this.aObjUsergroup = aObjUsergroup;
     return this;
   }
@@ -83,7 +82,7 @@ public class UserGetUsergroupsV1ResponseMPayload {
     return aObjUsergroup;
   }
 
-  public void setaObjUsergroup(@javax.annotation.Nonnull List<UsergroupResponseCompound> aObjUsergroup) {
+  public void setaObjUsergroup(List<UsergroupResponseCompound> aObjUsergroup) {
     this.aObjUsergroup = aObjUsergroup;
   }
 

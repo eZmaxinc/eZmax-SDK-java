@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EzsignfolderRequest;
+import com.ezmax.api.model.EzsignfolderRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,22 +50,20 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)
-  @javax.annotation.Nullable
   private EzsignfolderRequest objEzsignfolder;
 
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER_COMPOUND = "objEzsignfolderCompound";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER_COMPOUND)
-  @javax.annotation.Nullable
-  private EzsignfolderRequest objEzsignfolderCompound;
+  private EzsignfolderRequestCompound objEzsignfolderCompound;
 
   public EzsignfolderCreateObjectV1Request() {
   }
 
-  public EzsignfolderCreateObjectV1Request objEzsignfolder(@javax.annotation.Nullable EzsignfolderRequest objEzsignfolder) {
+  public EzsignfolderCreateObjectV1Request objEzsignfolder(EzsignfolderRequest objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
     return this;
   }
@@ -78,26 +77,26 @@ public class EzsignfolderCreateObjectV1Request {
     return objEzsignfolder;
   }
 
-  public void setObjEzsignfolder(@javax.annotation.Nullable EzsignfolderRequest objEzsignfolder) {
+  public void setObjEzsignfolder(EzsignfolderRequest objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
   }
 
 
-  public EzsignfolderCreateObjectV1Request objEzsignfolderCompound(@javax.annotation.Nullable EzsignfolderRequest objEzsignfolderCompound) {
+  public EzsignfolderCreateObjectV1Request objEzsignfolderCompound(EzsignfolderRequestCompound objEzsignfolderCompound) {
     this.objEzsignfolderCompound = objEzsignfolderCompound;
     return this;
   }
 
   /**
-   * An Ezsignfolder Object and children to create a complete structure
+   * Get objEzsignfolderCompound
    * @return objEzsignfolderCompound
    */
   @javax.annotation.Nullable
-  public EzsignfolderRequest getObjEzsignfolderCompound() {
+  public EzsignfolderRequestCompound getObjEzsignfolderCompound() {
     return objEzsignfolderCompound;
   }
 
-  public void setObjEzsignfolderCompound(@javax.annotation.Nullable EzsignfolderRequest objEzsignfolderCompound) {
+  public void setObjEzsignfolderCompound(EzsignfolderRequestCompound objEzsignfolderCompound) {
     this.objEzsignfolderCompound = objEzsignfolderCompound;
   }
 
@@ -183,7 +182,7 @@ public class EzsignfolderCreateObjectV1Request {
       }
       // validate the optional field `objEzsignfolderCompound`
       if (jsonObj.get("objEzsignfolderCompound") != null && !jsonObj.get("objEzsignfolderCompound").isJsonNull()) {
-        EzsignfolderRequest.validateJsonElement(jsonObj.get("objEzsignfolderCompound"));
+        EzsignfolderRequestCompound.validateJsonElement(jsonObj.get("objEzsignfolderCompound"));
       }
   }
 

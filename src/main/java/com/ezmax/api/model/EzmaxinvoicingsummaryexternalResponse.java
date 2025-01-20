@@ -48,37 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryexternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzmaxinvoicingsummaryexternalResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNAL_I_D = "pkiEzmaxinvoicingsummaryexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNAL_I_D)
-  @javax.annotation.Nullable
   private Integer pkiEzmaxinvoicingsummaryexternalID;
 
   public static final String SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D = "fkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_FKI_EZMAXINVOICING_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzmaxinvoicingID;
 
   public static final String SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D = "fkiBillingentityexternalID";
   @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYEXTERNAL_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiBillingentityexternalID;
 
   public static final String SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION = "sBillingentityexternalDescription";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYEXTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sBillingentityexternalDescription;
 
   public static final String SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYEXTERNAL_DESCRIPTION = "sEzmaxinvoicingsummaryexternalDescription";
   @SerializedName(SERIALIZED_NAME_S_EZMAXINVOICINGSUMMARYEXTERNAL_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzmaxinvoicingsummaryexternalDescription;
 
   public EzmaxinvoicingsummaryexternalResponse() {
   }
 
-  public EzmaxinvoicingsummaryexternalResponse pkiEzmaxinvoicingsummaryexternalID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryexternalID) {
+  public EzmaxinvoicingsummaryexternalResponse pkiEzmaxinvoicingsummaryexternalID(Integer pkiEzmaxinvoicingsummaryexternalID) {
     this.pkiEzmaxinvoicingsummaryexternalID = pkiEzmaxinvoicingsummaryexternalID;
     return this;
   }
@@ -93,12 +88,12 @@ public class EzmaxinvoicingsummaryexternalResponse {
     return pkiEzmaxinvoicingsummaryexternalID;
   }
 
-  public void setPkiEzmaxinvoicingsummaryexternalID(@javax.annotation.Nullable Integer pkiEzmaxinvoicingsummaryexternalID) {
+  public void setPkiEzmaxinvoicingsummaryexternalID(Integer pkiEzmaxinvoicingsummaryexternalID) {
     this.pkiEzmaxinvoicingsummaryexternalID = pkiEzmaxinvoicingsummaryexternalID;
   }
 
 
-  public EzmaxinvoicingsummaryexternalResponse fkiEzmaxinvoicingID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingID) {
+  public EzmaxinvoicingsummaryexternalResponse fkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
     return this;
   }
@@ -113,12 +108,12 @@ public class EzmaxinvoicingsummaryexternalResponse {
     return fkiEzmaxinvoicingID;
   }
 
-  public void setFkiEzmaxinvoicingID(@javax.annotation.Nullable Integer fkiEzmaxinvoicingID) {
+  public void setFkiEzmaxinvoicingID(Integer fkiEzmaxinvoicingID) {
     this.fkiEzmaxinvoicingID = fkiEzmaxinvoicingID;
   }
 
 
-  public EzmaxinvoicingsummaryexternalResponse fkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
+  public EzmaxinvoicingsummaryexternalResponse fkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
     this.fkiBillingentityexternalID = fkiBillingentityexternalID;
     return this;
   }
@@ -133,12 +128,12 @@ public class EzmaxinvoicingsummaryexternalResponse {
     return fkiBillingentityexternalID;
   }
 
-  public void setFkiBillingentityexternalID(@javax.annotation.Nonnull Integer fkiBillingentityexternalID) {
+  public void setFkiBillingentityexternalID(Integer fkiBillingentityexternalID) {
     this.fkiBillingentityexternalID = fkiBillingentityexternalID;
   }
 
 
-  public EzmaxinvoicingsummaryexternalResponse sBillingentityexternalDescription(@javax.annotation.Nonnull String sBillingentityexternalDescription) {
+  public EzmaxinvoicingsummaryexternalResponse sBillingentityexternalDescription(String sBillingentityexternalDescription) {
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;
     return this;
   }
@@ -152,12 +147,12 @@ public class EzmaxinvoicingsummaryexternalResponse {
     return sBillingentityexternalDescription;
   }
 
-  public void setsBillingentityexternalDescription(@javax.annotation.Nonnull String sBillingentityexternalDescription) {
+  public void setsBillingentityexternalDescription(String sBillingentityexternalDescription) {
     this.sBillingentityexternalDescription = sBillingentityexternalDescription;
   }
 
 
-  public EzmaxinvoicingsummaryexternalResponse sEzmaxinvoicingsummaryexternalDescription(@javax.annotation.Nonnull String sEzmaxinvoicingsummaryexternalDescription) {
+  public EzmaxinvoicingsummaryexternalResponse sEzmaxinvoicingsummaryexternalDescription(String sEzmaxinvoicingsummaryexternalDescription) {
     this.sEzmaxinvoicingsummaryexternalDescription = sEzmaxinvoicingsummaryexternalDescription;
     return this;
   }
@@ -171,7 +166,7 @@ public class EzmaxinvoicingsummaryexternalResponse {
     return sEzmaxinvoicingsummaryexternalDescription;
   }
 
-  public void setsEzmaxinvoicingsummaryexternalDescription(@javax.annotation.Nonnull String sEzmaxinvoicingsummaryexternalDescription) {
+  public void setsEzmaxinvoicingsummaryexternalDescription(String sEzmaxinvoicingsummaryexternalDescription) {
     this.sEzmaxinvoicingsummaryexternalDescription = sEzmaxinvoicingsummaryexternalDescription;
   }
 

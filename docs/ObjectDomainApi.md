@@ -81,7 +81,7 @@ public class Example {
 
 <a id="domainDeleteObjectV1"></a>
 # **domainDeleteObjectV1**
-> CommonResponse domainDeleteObjectV1(pkiDomainID)
+> DomainDeleteObjectV1Response domainDeleteObjectV1(pkiDomainID)
 
 Delete an existing Domain
 
@@ -111,7 +111,7 @@ public class Example {
     ObjectDomainApi apiInstance = new ObjectDomainApi(defaultClient);
     Integer pkiDomainID = 56; // Integer | The unique ID of the Domain
     try {
-      CommonResponse result = apiInstance.domainDeleteObjectV1(pkiDomainID);
+      DomainDeleteObjectV1Response result = apiInstance.domainDeleteObjectV1(pkiDomainID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectDomainApi#domainDeleteObjectV1");
@@ -132,7 +132,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DomainDeleteObjectV1Response**](DomainDeleteObjectV1Response.md)
 
 ### Authorization
 

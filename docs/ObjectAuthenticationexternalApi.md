@@ -84,7 +84,7 @@ public class Example {
 
 <a id="authenticationexternalDeleteObjectV1"></a>
 # **authenticationexternalDeleteObjectV1**
-> CommonResponse authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
+> AuthenticationexternalDeleteObjectV1Response authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID)
 
 Delete an existing Authenticationexternal
 
@@ -114,7 +114,7 @@ public class Example {
     ObjectAuthenticationexternalApi apiInstance = new ObjectAuthenticationexternalApi(defaultClient);
     Integer pkiAuthenticationexternalID = 56; // Integer | The unique ID of the Authenticationexternal
     try {
-      CommonResponse result = apiInstance.authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID);
+      AuthenticationexternalDeleteObjectV1Response result = apiInstance.authenticationexternalDeleteObjectV1(pkiAuthenticationexternalID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectAuthenticationexternalApi#authenticationexternalDeleteObjectV1");
@@ -135,7 +135,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalDeleteObjectV1Response**](AuthenticationexternalDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ public class Example {
 
 <a id="authenticationexternalEditObjectV1"></a>
 # **authenticationexternalEditObjectV1**
-> CommonResponse authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
+> AuthenticationexternalEditObjectV1Response authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request)
 
 Edit an existing Authenticationexternal
 
@@ -185,7 +185,7 @@ public class Example {
     Integer pkiAuthenticationexternalID = 56; // Integer | The unique ID of the Authenticationexternal
     AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request = new AuthenticationexternalEditObjectV1Request(); // AuthenticationexternalEditObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
+      AuthenticationexternalEditObjectV1Response result = apiInstance.authenticationexternalEditObjectV1(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectAuthenticationexternalApi#authenticationexternalEditObjectV1");
@@ -207,7 +207,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalEditObjectV1Response**](AuthenticationexternalEditObjectV1Response.md)
 
 ### Authorization
 
@@ -450,7 +450,7 @@ public class Example {
 
 <a id="authenticationexternalResetAuthorizationV1"></a>
 # **authenticationexternalResetAuthorizationV1**
-> CommonResponse authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
+> AuthenticationexternalResetAuthorizationV1Response authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body)
 
 Reset the Authenticationexternal authorization
 
@@ -481,7 +481,7 @@ public class Example {
     Integer pkiAuthenticationexternalID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      CommonResponse result = apiInstance.authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body);
+      AuthenticationexternalResetAuthorizationV1Response result = apiInstance.authenticationexternalResetAuthorizationV1(pkiAuthenticationexternalID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectAuthenticationexternalApi#authenticationexternalResetAuthorizationV1");
@@ -503,7 +503,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**AuthenticationexternalResetAuthorizationV1Response**](AuthenticationexternalResetAuthorizationV1Response.md)
 
 ### Authorization
 

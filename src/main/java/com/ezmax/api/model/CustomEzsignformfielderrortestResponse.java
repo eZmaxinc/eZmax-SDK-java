@@ -48,22 +48,20 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignformfielderrortest Object to contain the detail of the test error
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomEzsignformfielderrortestResponse {
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDERRORTEST_NAME = "sEzsignformfielderrortestName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDERRORTEST_NAME)
-  @javax.annotation.Nonnull
   private String sEzsignformfielderrortestName;
 
   public static final String SERIALIZED_NAME_S_EZSIGNFORMFIELDERRORTEST_DETAIL = "sEzsignformfielderrortestDetail";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNFORMFIELDERRORTEST_DETAIL)
-  @javax.annotation.Nonnull
   private String sEzsignformfielderrortestDetail;
 
   public CustomEzsignformfielderrortestResponse() {
   }
 
-  public CustomEzsignformfielderrortestResponse sEzsignformfielderrortestName(@javax.annotation.Nonnull String sEzsignformfielderrortestName) {
+  public CustomEzsignformfielderrortestResponse sEzsignformfielderrortestName(String sEzsignformfielderrortestName) {
     this.sEzsignformfielderrortestName = sEzsignformfielderrortestName;
     return this;
   }
@@ -77,12 +75,12 @@ public class CustomEzsignformfielderrortestResponse {
     return sEzsignformfielderrortestName;
   }
 
-  public void setsEzsignformfielderrortestName(@javax.annotation.Nonnull String sEzsignformfielderrortestName) {
+  public void setsEzsignformfielderrortestName(String sEzsignformfielderrortestName) {
     this.sEzsignformfielderrortestName = sEzsignformfielderrortestName;
   }
 
 
-  public CustomEzsignformfielderrortestResponse sEzsignformfielderrortestDetail(@javax.annotation.Nonnull String sEzsignformfielderrortestDetail) {
+  public CustomEzsignformfielderrortestResponse sEzsignformfielderrortestDetail(String sEzsignformfielderrortestDetail) {
     this.sEzsignformfielderrortestDetail = sEzsignformfielderrortestDetail;
     return this;
   }
@@ -96,7 +94,7 @@ public class CustomEzsignformfielderrortestResponse {
     return sEzsignformfielderrortestDetail;
   }
 
-  public void setsEzsignformfielderrortestDetail(@javax.annotation.Nonnull String sEzsignformfielderrortestDetail) {
+  public void setsEzsignformfielderrortestDetail(String sEzsignformfielderrortestDetail) {
     this.sEzsignformfielderrortestDetail = sEzsignformfielderrortestDetail;
   }
 

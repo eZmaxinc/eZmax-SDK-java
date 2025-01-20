@@ -48,42 +48,36 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignaturecustomdate Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignaturecustomdateResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURECUSTOMDATE_I_D = "pkiEzsignsignaturecustomdateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURECUSTOMDATE_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignsignaturecustomdateID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_X = "iEzsignsignaturecustomdateX";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_X)
-  @javax.annotation.Nullable
   private Integer iEzsignsignaturecustomdateX;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_Y = "iEzsignsignaturecustomdateY";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_Y)
-  @javax.annotation.Nullable
   private Integer iEzsignsignaturecustomdateY;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_OFFSETX = "iEzsignsignaturecustomdateOffsetx";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_OFFSETX)
-  @javax.annotation.Nullable
   private Integer iEzsignsignaturecustomdateOffsetx;
 
   public static final String SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_OFFSETY = "iEzsignsignaturecustomdateOffsety";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNSIGNATURECUSTOMDATE_OFFSETY)
-  @javax.annotation.Nullable
   private Integer iEzsignsignaturecustomdateOffsety;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNATURECUSTOMDATE_FORMAT = "sEzsignsignaturecustomdateFormat";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNATURECUSTOMDATE_FORMAT)
-  @javax.annotation.Nonnull
   private String sEzsignsignaturecustomdateFormat;
 
   public EzsignsignaturecustomdateResponse() {
   }
 
-  public EzsignsignaturecustomdateResponse pkiEzsignsignaturecustomdateID(@javax.annotation.Nonnull Integer pkiEzsignsignaturecustomdateID) {
+  public EzsignsignaturecustomdateResponse pkiEzsignsignaturecustomdateID(Integer pkiEzsignsignaturecustomdateID) {
     this.pkiEzsignsignaturecustomdateID = pkiEzsignsignaturecustomdateID;
     return this;
   }
@@ -98,12 +92,12 @@ public class EzsignsignaturecustomdateResponse {
     return pkiEzsignsignaturecustomdateID;
   }
 
-  public void setPkiEzsignsignaturecustomdateID(@javax.annotation.Nonnull Integer pkiEzsignsignaturecustomdateID) {
+  public void setPkiEzsignsignaturecustomdateID(Integer pkiEzsignsignaturecustomdateID) {
     this.pkiEzsignsignaturecustomdateID = pkiEzsignsignaturecustomdateID;
   }
 
 
-  public EzsignsignaturecustomdateResponse iEzsignsignaturecustomdateX(@javax.annotation.Nullable Integer iEzsignsignaturecustomdateX) {
+  public EzsignsignaturecustomdateResponse iEzsignsignaturecustomdateX(Integer iEzsignsignaturecustomdateX) {
     this.iEzsignsignaturecustomdateX = iEzsignsignaturecustomdateX;
     return this;
   }
@@ -118,12 +112,12 @@ public class EzsignsignaturecustomdateResponse {
     return iEzsignsignaturecustomdateX;
   }
 
-  public void setiEzsignsignaturecustomdateX(@javax.annotation.Nullable Integer iEzsignsignaturecustomdateX) {
+  public void setiEzsignsignaturecustomdateX(Integer iEzsignsignaturecustomdateX) {
     this.iEzsignsignaturecustomdateX = iEzsignsignaturecustomdateX;
   }
 
 
-  public EzsignsignaturecustomdateResponse iEzsignsignaturecustomdateY(@javax.annotation.Nullable Integer iEzsignsignaturecustomdateY) {
+  public EzsignsignaturecustomdateResponse iEzsignsignaturecustomdateY(Integer iEzsignsignaturecustomdateY) {
     this.iEzsignsignaturecustomdateY = iEzsignsignaturecustomdateY;
     return this;
   }
@@ -138,12 +132,12 @@ public class EzsignsignaturecustomdateResponse {
     return iEzsignsignaturecustomdateY;
   }
 
-  public void setiEzsignsignaturecustomdateY(@javax.annotation.Nullable Integer iEzsignsignaturecustomdateY) {
+  public void setiEzsignsignaturecustomdateY(Integer iEzsignsignaturecustomdateY) {
     this.iEzsignsignaturecustomdateY = iEzsignsignaturecustomdateY;
   }
 
 
-  public EzsignsignaturecustomdateResponse iEzsignsignaturecustomdateOffsetx(@javax.annotation.Nullable Integer iEzsignsignaturecustomdateOffsetx) {
+  public EzsignsignaturecustomdateResponse iEzsignsignaturecustomdateOffsetx(Integer iEzsignsignaturecustomdateOffsetx) {
     this.iEzsignsignaturecustomdateOffsetx = iEzsignsignaturecustomdateOffsetx;
     return this;
   }
@@ -157,12 +151,12 @@ public class EzsignsignaturecustomdateResponse {
     return iEzsignsignaturecustomdateOffsetx;
   }
 
-  public void setiEzsignsignaturecustomdateOffsetx(@javax.annotation.Nullable Integer iEzsignsignaturecustomdateOffsetx) {
+  public void setiEzsignsignaturecustomdateOffsetx(Integer iEzsignsignaturecustomdateOffsetx) {
     this.iEzsignsignaturecustomdateOffsetx = iEzsignsignaturecustomdateOffsetx;
   }
 
 
-  public EzsignsignaturecustomdateResponse iEzsignsignaturecustomdateOffsety(@javax.annotation.Nullable Integer iEzsignsignaturecustomdateOffsety) {
+  public EzsignsignaturecustomdateResponse iEzsignsignaturecustomdateOffsety(Integer iEzsignsignaturecustomdateOffsety) {
     this.iEzsignsignaturecustomdateOffsety = iEzsignsignaturecustomdateOffsety;
     return this;
   }
@@ -176,12 +170,12 @@ public class EzsignsignaturecustomdateResponse {
     return iEzsignsignaturecustomdateOffsety;
   }
 
-  public void setiEzsignsignaturecustomdateOffsety(@javax.annotation.Nullable Integer iEzsignsignaturecustomdateOffsety) {
+  public void setiEzsignsignaturecustomdateOffsety(Integer iEzsignsignaturecustomdateOffsety) {
     this.iEzsignsignaturecustomdateOffsety = iEzsignsignaturecustomdateOffsety;
   }
 
 
-  public EzsignsignaturecustomdateResponse sEzsignsignaturecustomdateFormat(@javax.annotation.Nonnull String sEzsignsignaturecustomdateFormat) {
+  public EzsignsignaturecustomdateResponse sEzsignsignaturecustomdateFormat(String sEzsignsignaturecustomdateFormat) {
     this.sEzsignsignaturecustomdateFormat = sEzsignsignaturecustomdateFormat;
     return this;
   }
@@ -195,7 +189,7 @@ public class EzsignsignaturecustomdateResponse {
     return sEzsignsignaturecustomdateFormat;
   }
 
-  public void setsEzsignsignaturecustomdateFormat(@javax.annotation.Nonnull String sEzsignsignaturecustomdateFormat) {
+  public void setsEzsignsignaturecustomdateFormat(String sEzsignsignaturecustomdateFormat) {
     this.sEzsignsignaturecustomdateFormat = sEzsignsignaturecustomdateFormat;
   }
 

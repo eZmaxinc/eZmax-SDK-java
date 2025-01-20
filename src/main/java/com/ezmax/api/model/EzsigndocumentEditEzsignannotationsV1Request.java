@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigndocumentEditEzsignannotationsV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNANNOTATION = "a_objEzsignannotation";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNANNOTATION)
-  @javax.annotation.Nonnull
   private List<EzsignannotationRequestCompound> aObjEzsignannotation = new ArrayList<>();
 
   public EzsigndocumentEditEzsignannotationsV1Request() {
   }
 
-  public EzsigndocumentEditEzsignannotationsV1Request aObjEzsignannotation(@javax.annotation.Nonnull List<EzsignannotationRequestCompound> aObjEzsignannotation) {
+  public EzsigndocumentEditEzsignannotationsV1Request aObjEzsignannotation(List<EzsignannotationRequestCompound> aObjEzsignannotation) {
     this.aObjEzsignannotation = aObjEzsignannotation;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsigndocumentEditEzsignannotationsV1Request {
     return aObjEzsignannotation;
   }
 
-  public void setaObjEzsignannotation(@javax.annotation.Nonnull List<EzsignannotationRequestCompound> aObjEzsignannotation) {
+  public void setaObjEzsignannotation(List<EzsignannotationRequestCompound> aObjEzsignannotation) {
     this.aObjEzsignannotation = aObjEzsignannotation;
   }
 

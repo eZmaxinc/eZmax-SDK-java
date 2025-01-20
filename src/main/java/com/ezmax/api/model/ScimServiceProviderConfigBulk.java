@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A complex type that specifies bulk configuration options.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ScimServiceProviderConfigBulk {
   public static final String SERIALIZED_NAME_SUPPORTED = "supported";
   @SerializedName(SERIALIZED_NAME_SUPPORTED)
-  @javax.annotation.Nonnull
   private Boolean supported;
 
   public static final String SERIALIZED_NAME_MAX_OPERATIONS = "maxOperations";
   @SerializedName(SERIALIZED_NAME_MAX_OPERATIONS)
-  @javax.annotation.Nonnull
   private Integer maxOperations;
 
   public static final String SERIALIZED_NAME_MAX_PAYLOAD_SIZE = "maxPayloadSize";
   @SerializedName(SERIALIZED_NAME_MAX_PAYLOAD_SIZE)
-  @javax.annotation.Nonnull
   private Integer maxPayloadSize;
 
   public ScimServiceProviderConfigBulk() {
   }
 
-  public ScimServiceProviderConfigBulk supported(@javax.annotation.Nonnull Boolean supported) {
+  public ScimServiceProviderConfigBulk supported(Boolean supported) {
     this.supported = supported;
     return this;
   }
@@ -82,12 +79,12 @@ public class ScimServiceProviderConfigBulk {
     return supported;
   }
 
-  public void setSupported(@javax.annotation.Nonnull Boolean supported) {
+  public void setSupported(Boolean supported) {
     this.supported = supported;
   }
 
 
-  public ScimServiceProviderConfigBulk maxOperations(@javax.annotation.Nonnull Integer maxOperations) {
+  public ScimServiceProviderConfigBulk maxOperations(Integer maxOperations) {
     this.maxOperations = maxOperations;
     return this;
   }
@@ -101,12 +98,12 @@ public class ScimServiceProviderConfigBulk {
     return maxOperations;
   }
 
-  public void setMaxOperations(@javax.annotation.Nonnull Integer maxOperations) {
+  public void setMaxOperations(Integer maxOperations) {
     this.maxOperations = maxOperations;
   }
 
 
-  public ScimServiceProviderConfigBulk maxPayloadSize(@javax.annotation.Nonnull Integer maxPayloadSize) {
+  public ScimServiceProviderConfigBulk maxPayloadSize(Integer maxPayloadSize) {
     this.maxPayloadSize = maxPayloadSize;
     return this;
   }
@@ -120,7 +117,7 @@ public class ScimServiceProviderConfigBulk {
     return maxPayloadSize;
   }
 
-  public void setMaxPayloadSize(@javax.annotation.Nonnull Integer maxPayloadSize) {
+  public void setMaxPayloadSize(Integer maxPayloadSize) {
     this.maxPayloadSize = maxPayloadSize;
   }
 

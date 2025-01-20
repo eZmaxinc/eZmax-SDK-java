@@ -50,17 +50,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for PUT /2/object/user/{pkiUserID}/editColleagues
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserEditColleaguesV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_COLLEAGUE_I_D = "a_pkiColleagueID";
   @SerializedName(SERIALIZED_NAME_A_PKI_COLLEAGUE_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiColleagueID = new ArrayList<>();
 
   public UserEditColleaguesV2ResponseMPayload() {
   }
 
-  public UserEditColleaguesV2ResponseMPayload aPkiColleagueID(@javax.annotation.Nonnull List<Integer> aPkiColleagueID) {
+  public UserEditColleaguesV2ResponseMPayload aPkiColleagueID(List<Integer> aPkiColleagueID) {
     this.aPkiColleagueID = aPkiColleagueID;
     return this;
   }
@@ -82,7 +81,7 @@ public class UserEditColleaguesV2ResponseMPayload {
     return aPkiColleagueID;
   }
 
-  public void setaPkiColleagueID(@javax.annotation.Nonnull List<Integer> aPkiColleagueID) {
+  public void setaPkiColleagueID(List<Integer> aPkiColleagueID) {
     this.aPkiColleagueID = aPkiColleagueID;
   }
 

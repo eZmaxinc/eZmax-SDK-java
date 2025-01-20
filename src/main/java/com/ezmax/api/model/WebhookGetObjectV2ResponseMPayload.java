@@ -49,17 +49,16 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/webhook/{pkiWebhookID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebhookGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
-  @javax.annotation.Nonnull
   private WebhookResponseCompound objWebhook;
 
   public WebhookGetObjectV2ResponseMPayload() {
   }
 
-  public WebhookGetObjectV2ResponseMPayload objWebhook(@javax.annotation.Nonnull WebhookResponseCompound objWebhook) {
+  public WebhookGetObjectV2ResponseMPayload objWebhook(WebhookResponseCompound objWebhook) {
     this.objWebhook = objWebhook;
     return this;
   }
@@ -73,7 +72,7 @@ public class WebhookGetObjectV2ResponseMPayload {
     return objWebhook;
   }
 
-  public void setObjWebhook(@javax.annotation.Nonnull WebhookResponseCompound objWebhook) {
+  public void setObjWebhook(WebhookResponseCompound objWebhook) {
     this.objWebhook = objWebhook;
   }
 

@@ -14,8 +14,8 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.EnumTextvalidation;
-import com.ezmax.api.model.EzsigntemplateelementdependencyRequest;
-import com.ezmax.api.model.EzsigntemplatesignaturecustomdateRequestV2;
+import com.ezmax.api.model.EzsigntemplateelementdependencyRequestCompound;
+import com.ezmax.api.model.EzsigntemplatesignaturecustomdateRequestCompoundV2;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureDependencyrequirement;

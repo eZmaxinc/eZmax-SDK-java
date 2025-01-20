@@ -48,27 +48,24 @@ import eZmaxAPI.JSON;
 /**
  * A Usergroup List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UsergroupListElement {
   public static final String SERIALIZED_NAME_PKI_USERGROUP_I_D = "pkiUsergroupID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUP_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiUsergroupID;
 
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
-  @javax.annotation.Nonnull
   private String sUsergroupNameX;
 
   public static final String SERIALIZED_NAME_I_COUNT_USER = "iCountUser";
   @SerializedName(SERIALIZED_NAME_I_COUNT_USER)
-  @javax.annotation.Nonnull
   private Integer iCountUser;
 
   public UsergroupListElement() {
   }
 
-  public UsergroupListElement pkiUsergroupID(@javax.annotation.Nonnull Integer pkiUsergroupID) {
+  public UsergroupListElement pkiUsergroupID(Integer pkiUsergroupID) {
     this.pkiUsergroupID = pkiUsergroupID;
     return this;
   }
@@ -84,12 +81,12 @@ public class UsergroupListElement {
     return pkiUsergroupID;
   }
 
-  public void setPkiUsergroupID(@javax.annotation.Nonnull Integer pkiUsergroupID) {
+  public void setPkiUsergroupID(Integer pkiUsergroupID) {
     this.pkiUsergroupID = pkiUsergroupID;
   }
 
 
-  public UsergroupListElement sUsergroupNameX(@javax.annotation.Nonnull String sUsergroupNameX) {
+  public UsergroupListElement sUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
     return this;
   }
@@ -103,12 +100,12 @@ public class UsergroupListElement {
     return sUsergroupNameX;
   }
 
-  public void setsUsergroupNameX(@javax.annotation.Nonnull String sUsergroupNameX) {
+  public void setsUsergroupNameX(String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
   }
 
 
-  public UsergroupListElement iCountUser(@javax.annotation.Nonnull Integer iCountUser) {
+  public UsergroupListElement iCountUser(Integer iCountUser) {
     this.iCountUser = iCountUser;
     return this;
   }
@@ -124,7 +121,7 @@ public class UsergroupListElement {
     return iCountUser;
   }
 
-  public void setiCountUser(@javax.annotation.Nonnull Integer iCountUser) {
+  public void setiCountUser(Integer iCountUser) {
     this.iCountUser = iCountUser;
   }
 

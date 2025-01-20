@@ -50,37 +50,32 @@ import eZmaxAPI.JSON;
 /**
  * A custom Creditcardtransactionresponse Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CustomCreditcardtransactionresponseResponse {
   public static final String SERIALIZED_NAME_S_CREDITCARDTRANSACTION_I_S_OCODE = "sCreditcardtransactionISOcode";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDTRANSACTION_I_S_OCODE)
-  @javax.annotation.Nonnull
   private String sCreditcardtransactionISOcode;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDTRANSACTION_RESPONSECODE = "sCreditcardtransactionResponsecode";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDTRANSACTION_RESPONSECODE)
-  @javax.annotation.Nonnull
   private String sCreditcardtransactionResponsecode;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDTRANSACTION_RESPONSETERMINALMESSAGE = "sCreditcardtransactionResponseterminalmessage";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDTRANSACTION_RESPONSETERMINALMESSAGE)
-  @javax.annotation.Nonnull
   private String sCreditcardtransactionResponseterminalmessage;
 
   public static final String SERIALIZED_NAME_E_CREDITCARDTRANSACTION_AVSRESULT = "eCreditcardtransactionAvsresult";
   @SerializedName(SERIALIZED_NAME_E_CREDITCARDTRANSACTION_AVSRESULT)
-  @javax.annotation.Nullable
   private FieldECreditcardtransactionAvsresult eCreditcardtransactionAvsresult;
 
   public static final String SERIALIZED_NAME_E_CREDITCARDTRANSACTION_CVDRESULT = "eCreditcardtransactionCvdresult";
   @SerializedName(SERIALIZED_NAME_E_CREDITCARDTRANSACTION_CVDRESULT)
-  @javax.annotation.Nullable
   private FieldECreditcardtransactionCvdresult eCreditcardtransactionCvdresult;
 
   public CustomCreditcardtransactionresponseResponse() {
   }
 
-  public CustomCreditcardtransactionresponseResponse sCreditcardtransactionISOcode(@javax.annotation.Nonnull String sCreditcardtransactionISOcode) {
+  public CustomCreditcardtransactionresponseResponse sCreditcardtransactionISOcode(String sCreditcardtransactionISOcode) {
     this.sCreditcardtransactionISOcode = sCreditcardtransactionISOcode;
     return this;
   }
@@ -94,12 +89,12 @@ public class CustomCreditcardtransactionresponseResponse {
     return sCreditcardtransactionISOcode;
   }
 
-  public void setsCreditcardtransactionISOcode(@javax.annotation.Nonnull String sCreditcardtransactionISOcode) {
+  public void setsCreditcardtransactionISOcode(String sCreditcardtransactionISOcode) {
     this.sCreditcardtransactionISOcode = sCreditcardtransactionISOcode;
   }
 
 
-  public CustomCreditcardtransactionresponseResponse sCreditcardtransactionResponsecode(@javax.annotation.Nonnull String sCreditcardtransactionResponsecode) {
+  public CustomCreditcardtransactionresponseResponse sCreditcardtransactionResponsecode(String sCreditcardtransactionResponsecode) {
     this.sCreditcardtransactionResponsecode = sCreditcardtransactionResponsecode;
     return this;
   }
@@ -113,12 +108,12 @@ public class CustomCreditcardtransactionresponseResponse {
     return sCreditcardtransactionResponsecode;
   }
 
-  public void setsCreditcardtransactionResponsecode(@javax.annotation.Nonnull String sCreditcardtransactionResponsecode) {
+  public void setsCreditcardtransactionResponsecode(String sCreditcardtransactionResponsecode) {
     this.sCreditcardtransactionResponsecode = sCreditcardtransactionResponsecode;
   }
 
 
-  public CustomCreditcardtransactionresponseResponse sCreditcardtransactionResponseterminalmessage(@javax.annotation.Nonnull String sCreditcardtransactionResponseterminalmessage) {
+  public CustomCreditcardtransactionresponseResponse sCreditcardtransactionResponseterminalmessage(String sCreditcardtransactionResponseterminalmessage) {
     this.sCreditcardtransactionResponseterminalmessage = sCreditcardtransactionResponseterminalmessage;
     return this;
   }
@@ -132,12 +127,12 @@ public class CustomCreditcardtransactionresponseResponse {
     return sCreditcardtransactionResponseterminalmessage;
   }
 
-  public void setsCreditcardtransactionResponseterminalmessage(@javax.annotation.Nonnull String sCreditcardtransactionResponseterminalmessage) {
+  public void setsCreditcardtransactionResponseterminalmessage(String sCreditcardtransactionResponseterminalmessage) {
     this.sCreditcardtransactionResponseterminalmessage = sCreditcardtransactionResponseterminalmessage;
   }
 
 
-  public CustomCreditcardtransactionresponseResponse eCreditcardtransactionAvsresult(@javax.annotation.Nullable FieldECreditcardtransactionAvsresult eCreditcardtransactionAvsresult) {
+  public CustomCreditcardtransactionresponseResponse eCreditcardtransactionAvsresult(FieldECreditcardtransactionAvsresult eCreditcardtransactionAvsresult) {
     this.eCreditcardtransactionAvsresult = eCreditcardtransactionAvsresult;
     return this;
   }
@@ -151,12 +146,12 @@ public class CustomCreditcardtransactionresponseResponse {
     return eCreditcardtransactionAvsresult;
   }
 
-  public void seteCreditcardtransactionAvsresult(@javax.annotation.Nullable FieldECreditcardtransactionAvsresult eCreditcardtransactionAvsresult) {
+  public void seteCreditcardtransactionAvsresult(FieldECreditcardtransactionAvsresult eCreditcardtransactionAvsresult) {
     this.eCreditcardtransactionAvsresult = eCreditcardtransactionAvsresult;
   }
 
 
-  public CustomCreditcardtransactionresponseResponse eCreditcardtransactionCvdresult(@javax.annotation.Nullable FieldECreditcardtransactionCvdresult eCreditcardtransactionCvdresult) {
+  public CustomCreditcardtransactionresponseResponse eCreditcardtransactionCvdresult(FieldECreditcardtransactionCvdresult eCreditcardtransactionCvdresult) {
     this.eCreditcardtransactionCvdresult = eCreditcardtransactionCvdresult;
     return this;
   }
@@ -170,7 +165,7 @@ public class CustomCreditcardtransactionresponseResponse {
     return eCreditcardtransactionCvdresult;
   }
 
-  public void seteCreditcardtransactionCvdresult(@javax.annotation.Nullable FieldECreditcardtransactionCvdresult eCreditcardtransactionCvdresult) {
+  public void seteCreditcardtransactionCvdresult(FieldECreditcardtransactionCvdresult eCreditcardtransactionCvdresult) {
     this.eCreditcardtransactionCvdresult = eCreditcardtransactionCvdresult;
   }
 

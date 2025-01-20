@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A Discussionmessage Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DiscussionmessageRequest {
   public static final String SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D = "pkiDiscussionmessageID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D)
-  @javax.annotation.Nullable
   private Integer pkiDiscussionmessageID;
 
   public static final String SERIALIZED_NAME_FKI_DISCUSSION_I_D = "fkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_FKI_DISCUSSION_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiDiscussionID;
 
   public static final String SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D_ACTIONREQUIRED = "fkiDiscussionmembershipIDActionrequired";
   @SerializedName(SERIALIZED_NAME_FKI_DISCUSSIONMEMBERSHIP_I_D_ACTIONREQUIRED)
-  @javax.annotation.Nullable
   private Integer fkiDiscussionmembershipIDActionrequired;
 
   public static final String SERIALIZED_NAME_T_DISCUSSIONMESSAGE_CONTENT = "tDiscussionmessageContent";
   @SerializedName(SERIALIZED_NAME_T_DISCUSSIONMESSAGE_CONTENT)
-  @javax.annotation.Nonnull
   private String tDiscussionmessageContent;
 
   public DiscussionmessageRequest() {
   }
 
-  public DiscussionmessageRequest pkiDiscussionmessageID(@javax.annotation.Nullable Integer pkiDiscussionmessageID) {
+  public DiscussionmessageRequest pkiDiscussionmessageID(Integer pkiDiscussionmessageID) {
     this.pkiDiscussionmessageID = pkiDiscussionmessageID;
     return this;
   }
@@ -89,12 +85,12 @@ public class DiscussionmessageRequest {
     return pkiDiscussionmessageID;
   }
 
-  public void setPkiDiscussionmessageID(@javax.annotation.Nullable Integer pkiDiscussionmessageID) {
+  public void setPkiDiscussionmessageID(Integer pkiDiscussionmessageID) {
     this.pkiDiscussionmessageID = pkiDiscussionmessageID;
   }
 
 
-  public DiscussionmessageRequest fkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
+  public DiscussionmessageRequest fkiDiscussionID(Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
     return this;
   }
@@ -110,12 +106,12 @@ public class DiscussionmessageRequest {
     return fkiDiscussionID;
   }
 
-  public void setFkiDiscussionID(@javax.annotation.Nonnull Integer fkiDiscussionID) {
+  public void setFkiDiscussionID(Integer fkiDiscussionID) {
     this.fkiDiscussionID = fkiDiscussionID;
   }
 
 
-  public DiscussionmessageRequest fkiDiscussionmembershipIDActionrequired(@javax.annotation.Nullable Integer fkiDiscussionmembershipIDActionrequired) {
+  public DiscussionmessageRequest fkiDiscussionmembershipIDActionrequired(Integer fkiDiscussionmembershipIDActionrequired) {
     this.fkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
     return this;
   }
@@ -131,12 +127,12 @@ public class DiscussionmessageRequest {
     return fkiDiscussionmembershipIDActionrequired;
   }
 
-  public void setFkiDiscussionmembershipIDActionrequired(@javax.annotation.Nullable Integer fkiDiscussionmembershipIDActionrequired) {
+  public void setFkiDiscussionmembershipIDActionrequired(Integer fkiDiscussionmembershipIDActionrequired) {
     this.fkiDiscussionmembershipIDActionrequired = fkiDiscussionmembershipIDActionrequired;
   }
 
 
-  public DiscussionmessageRequest tDiscussionmessageContent(@javax.annotation.Nonnull String tDiscussionmessageContent) {
+  public DiscussionmessageRequest tDiscussionmessageContent(String tDiscussionmessageContent) {
     this.tDiscussionmessageContent = tDiscussionmessageContent;
     return this;
   }
@@ -150,7 +146,7 @@ public class DiscussionmessageRequest {
     return tDiscussionmessageContent;
   }
 
-  public void settDiscussionmessageContent(@javax.annotation.Nonnull String tDiscussionmessageContent) {
+  public void settDiscussionmessageContent(String tDiscussionmessageContent) {
     this.tDiscussionmessageContent = tDiscussionmessageContent;
   }
 

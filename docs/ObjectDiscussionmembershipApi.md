@@ -79,7 +79,7 @@ public class Example {
 
 <a id="discussionmembershipDeleteObjectV1"></a>
 # **discussionmembershipDeleteObjectV1**
-> CommonResponse discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID)
+> DiscussionmembershipDeleteObjectV1Response discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID)
 
 Delete an existing Discussionmembership
 
@@ -109,7 +109,7 @@ public class Example {
     ObjectDiscussionmembershipApi apiInstance = new ObjectDiscussionmembershipApi(defaultClient);
     Integer pkiDiscussionmembershipID = 56; // Integer | The unique ID of the Discussionmembership
     try {
-      CommonResponse result = apiInstance.discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID);
+      DiscussionmembershipDeleteObjectV1Response result = apiInstance.discussionmembershipDeleteObjectV1(pkiDiscussionmembershipID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectDiscussionmembershipApi#discussionmembershipDeleteObjectV1");
@@ -130,7 +130,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionmembershipDeleteObjectV1Response**](DiscussionmembershipDeleteObjectV1Response.md)
 
 ### Authorization
 

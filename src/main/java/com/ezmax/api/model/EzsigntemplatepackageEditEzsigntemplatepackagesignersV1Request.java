@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGESIGNER = "a_objEzsigntemplatepackagesigner";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGESIGNER)
-  @javax.annotation.Nonnull
   private List<EzsigntemplatepackagesignerRequestCompound> aObjEzsigntemplatepackagesigner = new ArrayList<>();
 
   public EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request() {
   }
 
-  public EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request aObjEzsigntemplatepackagesigner(@javax.annotation.Nonnull List<EzsigntemplatepackagesignerRequestCompound> aObjEzsigntemplatepackagesigner) {
+  public EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request aObjEzsigntemplatepackagesigner(List<EzsigntemplatepackagesignerRequestCompound> aObjEzsigntemplatepackagesigner) {
     this.aObjEzsigntemplatepackagesigner = aObjEzsigntemplatepackagesigner;
     return this;
   }
@@ -83,7 +82,7 @@ public class EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Request {
     return aObjEzsigntemplatepackagesigner;
   }
 
-  public void setaObjEzsigntemplatepackagesigner(@javax.annotation.Nonnull List<EzsigntemplatepackagesignerRequestCompound> aObjEzsigntemplatepackagesigner) {
+  public void setaObjEzsigntemplatepackagesigner(List<EzsigntemplatepackagesignerRequestCompound> aObjEzsigntemplatepackagesigner) {
     this.aObjEzsigntemplatepackagesigner = aObjEzsigntemplatepackagesigner;
   }
 

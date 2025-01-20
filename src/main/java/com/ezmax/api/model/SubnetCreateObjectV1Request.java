@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/subnet
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SubnetCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_SUBNET = "a_objSubnet";
   @SerializedName(SERIALIZED_NAME_A_OBJ_SUBNET)
-  @javax.annotation.Nonnull
   private List<SubnetRequestCompound> aObjSubnet = new ArrayList<>();
 
   public SubnetCreateObjectV1Request() {
   }
 
-  public SubnetCreateObjectV1Request aObjSubnet(@javax.annotation.Nonnull List<SubnetRequestCompound> aObjSubnet) {
+  public SubnetCreateObjectV1Request aObjSubnet(List<SubnetRequestCompound> aObjSubnet) {
     this.aObjSubnet = aObjSubnet;
     return this;
   }
@@ -83,7 +82,7 @@ public class SubnetCreateObjectV1Request {
     return aObjSubnet;
   }
 
-  public void setaObjSubnet(@javax.annotation.Nonnull List<SubnetRequestCompound> aObjSubnet) {
+  public void setaObjSubnet(List<SubnetRequestCompound> aObjSubnet) {
     this.aObjSubnet = aObjSubnet;
   }
 

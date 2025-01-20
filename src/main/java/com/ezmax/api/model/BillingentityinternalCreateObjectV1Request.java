@@ -51,17 +51,16 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/billingentityinternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BillingentityinternalCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL = "a_objBillingentityinternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_BILLINGENTITYINTERNAL)
-  @javax.annotation.Nonnull
   private List<BillingentityinternalRequestCompound> aObjBillingentityinternal = new ArrayList<>();
 
   public BillingentityinternalCreateObjectV1Request() {
   }
 
-  public BillingentityinternalCreateObjectV1Request aObjBillingentityinternal(@javax.annotation.Nonnull List<BillingentityinternalRequestCompound> aObjBillingentityinternal) {
+  public BillingentityinternalCreateObjectV1Request aObjBillingentityinternal(List<BillingentityinternalRequestCompound> aObjBillingentityinternal) {
     this.aObjBillingentityinternal = aObjBillingentityinternal;
     return this;
   }
@@ -83,7 +82,7 @@ public class BillingentityinternalCreateObjectV1Request {
     return aObjBillingentityinternal;
   }
 
-  public void setaObjBillingentityinternal(@javax.annotation.Nonnull List<BillingentityinternalRequestCompound> aObjBillingentityinternal) {
+  public void setaObjBillingentityinternal(List<BillingentityinternalRequestCompound> aObjBillingentityinternal) {
     this.aObjBillingentityinternal = aObjBillingentityinternal;
   }
 

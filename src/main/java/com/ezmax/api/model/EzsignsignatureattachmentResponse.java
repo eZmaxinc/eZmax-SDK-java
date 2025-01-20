@@ -48,37 +48,32 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignatureattachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignsignatureattachmentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATUREATTACHMENT_I_D = "pkiEzsignsignatureattachmentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATUREATTACHMENT_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignsignatureattachmentID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNATURE_I_D = "fkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNATURE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignsignatureID;
 
   public static final String SERIALIZED_NAME_BIN_EZSIGNSIGNATUREATTACHMENT_M_D5 = "binEzsignsignatureattachmentMD5";
   @SerializedName(SERIALIZED_NAME_BIN_EZSIGNSIGNATUREATTACHMENT_M_D5)
-  @javax.annotation.Nonnull
   private String binEzsignsignatureattachmentMD5;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNATUREATTACHMENT_NAME = "sEzsignsignatureattachmentName";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNATUREATTACHMENT_NAME)
-  @javax.annotation.Nonnull
   private String sEzsignsignatureattachmentName;
 
   public static final String SERIALIZED_NAME_S_DOWNLOAD_URL = "sDownloadUrl";
   @SerializedName(SERIALIZED_NAME_S_DOWNLOAD_URL)
-  @javax.annotation.Nonnull
   private String sDownloadUrl;
 
   public EzsignsignatureattachmentResponse() {
   }
 
-  public EzsignsignatureattachmentResponse pkiEzsignsignatureattachmentID(@javax.annotation.Nonnull Integer pkiEzsignsignatureattachmentID) {
+  public EzsignsignatureattachmentResponse pkiEzsignsignatureattachmentID(Integer pkiEzsignsignatureattachmentID) {
     this.pkiEzsignsignatureattachmentID = pkiEzsignsignatureattachmentID;
     return this;
   }
@@ -94,12 +89,12 @@ public class EzsignsignatureattachmentResponse {
     return pkiEzsignsignatureattachmentID;
   }
 
-  public void setPkiEzsignsignatureattachmentID(@javax.annotation.Nonnull Integer pkiEzsignsignatureattachmentID) {
+  public void setPkiEzsignsignatureattachmentID(Integer pkiEzsignsignatureattachmentID) {
     this.pkiEzsignsignatureattachmentID = pkiEzsignsignatureattachmentID;
   }
 
 
-  public EzsignsignatureattachmentResponse fkiEzsignsignatureID(@javax.annotation.Nonnull Integer fkiEzsignsignatureID) {
+  public EzsignsignatureattachmentResponse fkiEzsignsignatureID(Integer fkiEzsignsignatureID) {
     this.fkiEzsignsignatureID = fkiEzsignsignatureID;
     return this;
   }
@@ -114,12 +109,12 @@ public class EzsignsignatureattachmentResponse {
     return fkiEzsignsignatureID;
   }
 
-  public void setFkiEzsignsignatureID(@javax.annotation.Nonnull Integer fkiEzsignsignatureID) {
+  public void setFkiEzsignsignatureID(Integer fkiEzsignsignatureID) {
     this.fkiEzsignsignatureID = fkiEzsignsignatureID;
   }
 
 
-  public EzsignsignatureattachmentResponse binEzsignsignatureattachmentMD5(@javax.annotation.Nonnull String binEzsignsignatureattachmentMD5) {
+  public EzsignsignatureattachmentResponse binEzsignsignatureattachmentMD5(String binEzsignsignatureattachmentMD5) {
     this.binEzsignsignatureattachmentMD5 = binEzsignsignatureattachmentMD5;
     return this;
   }
@@ -133,12 +128,12 @@ public class EzsignsignatureattachmentResponse {
     return binEzsignsignatureattachmentMD5;
   }
 
-  public void setBinEzsignsignatureattachmentMD5(@javax.annotation.Nonnull String binEzsignsignatureattachmentMD5) {
+  public void setBinEzsignsignatureattachmentMD5(String binEzsignsignatureattachmentMD5) {
     this.binEzsignsignatureattachmentMD5 = binEzsignsignatureattachmentMD5;
   }
 
 
-  public EzsignsignatureattachmentResponse sEzsignsignatureattachmentName(@javax.annotation.Nonnull String sEzsignsignatureattachmentName) {
+  public EzsignsignatureattachmentResponse sEzsignsignatureattachmentName(String sEzsignsignatureattachmentName) {
     this.sEzsignsignatureattachmentName = sEzsignsignatureattachmentName;
     return this;
   }
@@ -152,12 +147,12 @@ public class EzsignsignatureattachmentResponse {
     return sEzsignsignatureattachmentName;
   }
 
-  public void setsEzsignsignatureattachmentName(@javax.annotation.Nonnull String sEzsignsignatureattachmentName) {
+  public void setsEzsignsignatureattachmentName(String sEzsignsignatureattachmentName) {
     this.sEzsignsignatureattachmentName = sEzsignsignatureattachmentName;
   }
 
 
-  public EzsignsignatureattachmentResponse sDownloadUrl(@javax.annotation.Nonnull String sDownloadUrl) {
+  public EzsignsignatureattachmentResponse sDownloadUrl(String sDownloadUrl) {
     this.sDownloadUrl = sDownloadUrl;
     return this;
   }
@@ -171,7 +166,7 @@ public class EzsignsignatureattachmentResponse {
     return sDownloadUrl;
   }
 
-  public void setsDownloadUrl(@javax.annotation.Nonnull String sDownloadUrl) {
+  public void setsDownloadUrl(String sDownloadUrl) {
     this.sDownloadUrl = sDownloadUrl;
   }
 

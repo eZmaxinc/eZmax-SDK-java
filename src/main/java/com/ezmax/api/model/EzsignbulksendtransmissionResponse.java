@@ -49,37 +49,32 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksendtransmission Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignbulksendtransmissionResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D = "pkiEzsignbulksendtransmissionID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSENDTRANSMISSION_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiEzsignbulksendtransmissionID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D = "fkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEzsignbulksendID;
 
   public static final String SERIALIZED_NAME_S_EZSIGNBULKSENDTRANSMISSION_DESCRIPTION = "sEzsignbulksendtransmissionDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSENDTRANSMISSION_DESCRIPTION)
-  @javax.annotation.Nonnull
   private String sEzsignbulksendtransmissionDescription;
 
   public static final String SERIALIZED_NAME_I_EZSIGNBULKSENDTRANSMISSION_ERRORS = "iEzsignbulksendtransmissionErrors";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNBULKSENDTRANSMISSION_ERRORS)
-  @javax.annotation.Nonnull
   private Integer iEzsignbulksendtransmissionErrors;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nonnull
   private CommonAudit objAudit;
 
   public EzsignbulksendtransmissionResponse() {
   }
 
-  public EzsignbulksendtransmissionResponse pkiEzsignbulksendtransmissionID(@javax.annotation.Nonnull Integer pkiEzsignbulksendtransmissionID) {
+  public EzsignbulksendtransmissionResponse pkiEzsignbulksendtransmissionID(Integer pkiEzsignbulksendtransmissionID) {
     this.pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID;
     return this;
   }
@@ -94,12 +89,12 @@ public class EzsignbulksendtransmissionResponse {
     return pkiEzsignbulksendtransmissionID;
   }
 
-  public void setPkiEzsignbulksendtransmissionID(@javax.annotation.Nonnull Integer pkiEzsignbulksendtransmissionID) {
+  public void setPkiEzsignbulksendtransmissionID(Integer pkiEzsignbulksendtransmissionID) {
     this.pkiEzsignbulksendtransmissionID = pkiEzsignbulksendtransmissionID;
   }
 
 
-  public EzsignbulksendtransmissionResponse fkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
+  public EzsignbulksendtransmissionResponse fkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
     return this;
   }
@@ -114,12 +109,12 @@ public class EzsignbulksendtransmissionResponse {
     return fkiEzsignbulksendID;
   }
 
-  public void setFkiEzsignbulksendID(@javax.annotation.Nonnull Integer fkiEzsignbulksendID) {
+  public void setFkiEzsignbulksendID(Integer fkiEzsignbulksendID) {
     this.fkiEzsignbulksendID = fkiEzsignbulksendID;
   }
 
 
-  public EzsignbulksendtransmissionResponse sEzsignbulksendtransmissionDescription(@javax.annotation.Nonnull String sEzsignbulksendtransmissionDescription) {
+  public EzsignbulksendtransmissionResponse sEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
     this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
     return this;
   }
@@ -133,12 +128,12 @@ public class EzsignbulksendtransmissionResponse {
     return sEzsignbulksendtransmissionDescription;
   }
 
-  public void setsEzsignbulksendtransmissionDescription(@javax.annotation.Nonnull String sEzsignbulksendtransmissionDescription) {
+  public void setsEzsignbulksendtransmissionDescription(String sEzsignbulksendtransmissionDescription) {
     this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
   }
 
 
-  public EzsignbulksendtransmissionResponse iEzsignbulksendtransmissionErrors(@javax.annotation.Nonnull Integer iEzsignbulksendtransmissionErrors) {
+  public EzsignbulksendtransmissionResponse iEzsignbulksendtransmissionErrors(Integer iEzsignbulksendtransmissionErrors) {
     this.iEzsignbulksendtransmissionErrors = iEzsignbulksendtransmissionErrors;
     return this;
   }
@@ -153,12 +148,12 @@ public class EzsignbulksendtransmissionResponse {
     return iEzsignbulksendtransmissionErrors;
   }
 
-  public void setiEzsignbulksendtransmissionErrors(@javax.annotation.Nonnull Integer iEzsignbulksendtransmissionErrors) {
+  public void setiEzsignbulksendtransmissionErrors(Integer iEzsignbulksendtransmissionErrors) {
     this.iEzsignbulksendtransmissionErrors = iEzsignbulksendtransmissionErrors;
   }
 
 
-  public EzsignbulksendtransmissionResponse objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public EzsignbulksendtransmissionResponse objAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -172,7 +167,7 @@ public class EzsignbulksendtransmissionResponse {
     return objAudit;
   }
 
-  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public void setObjAudit(CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 

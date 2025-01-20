@@ -62,167 +62,136 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ActivesessionResponseCompound {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
-  @javax.annotation.Nonnull
   private FieldEActivesessionUsertype eActivesessionUsertype;
 
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_ORIGIN = "eActivesessionOrigin";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_ORIGIN)
-  @javax.annotation.Nonnull
   private FieldEActivesessionOrigin eActivesessionOrigin;
 
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART = "eActivesessionWeekdaystart";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_WEEKDAYSTART)
-  @javax.annotation.Nonnull
   private FieldEActivesessionWeekdaystart eActivesessionWeekdaystart;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
   public static final String SERIALIZED_NAME_S_COMPANY_NAME_X = "sCompanyNameX";
   @SerializedName(SERIALIZED_NAME_S_COMPANY_NAME_X)
-  @javax.annotation.Nonnull
   private String sCompanyNameX;
 
   public static final String SERIALIZED_NAME_S_DEPARTMENT_NAME_X = "sDepartmentNameX";
   @SerializedName(SERIALIZED_NAME_S_DEPARTMENT_NAME_X)
-  @javax.annotation.Nonnull
   private String sDepartmentNameX;
 
   public static final String SERIALIZED_NAME_B_ACTIVESESSION_DEBUG = "bActivesessionDebug";
   @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_DEBUG)
-  @javax.annotation.Nonnull
   private Boolean bActivesessionDebug;
 
   public static final String SERIALIZED_NAME_B_ACTIVESESSION_ISSUPERADMIN = "bActivesessionIssuperadmin";
   @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_ISSUPERADMIN)
-  @javax.annotation.Nonnull
   private Boolean bActivesessionIssuperadmin;
 
   public static final String SERIALIZED_NAME_B_ACTIVESESSION_ATTACHMENT = "bActivesessionAttachment";
   @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_ATTACHMENT)
-  @javax.annotation.Nullable
   private Boolean bActivesessionAttachment;
 
   public static final String SERIALIZED_NAME_B_ACTIVESESSION_CANAFE = "bActivesessionCanafe";
   @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_CANAFE)
-  @javax.annotation.Nullable
   private Boolean bActivesessionCanafe;
 
   public static final String SERIALIZED_NAME_B_ACTIVESESSION_FINANCIAL = "bActivesessionFinancial";
   @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_FINANCIAL)
-  @javax.annotation.Nullable
   private Boolean bActivesessionFinancial;
 
   public static final String SERIALIZED_NAME_B_ACTIVESESSION_REALESTATECOMPLETED = "bActivesessionRealestatecompleted";
   @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_REALESTATECOMPLETED)
-  @javax.annotation.Nullable
   private Boolean bActivesessionRealestatecompleted;
 
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGN = "eActivesessionEzsign";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGN)
-  @javax.annotation.Nullable
   private FieldEActivesessionEzsign eActivesessionEzsign;
 
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNACCESS = "eActivesessionEzsignaccess";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNACCESS)
-  @javax.annotation.Nonnull
   private FieldEActivesessionEzsignaccess eActivesessionEzsignaccess;
 
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNPREPAID = "eActivesessionEzsignprepaid";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_EZSIGNPREPAID)
-  @javax.annotation.Nullable
   private FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid;
 
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_REALESTATEINPROGRESS = "eActivesessionRealestateinprogress";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_REALESTATEINPROGRESS)
-  @javax.annotation.Nullable
   private FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress;
 
   public static final String SERIALIZED_NAME_PKS_CUSTOMER_CODE = "pksCustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_CUSTOMER_CODE)
-  @javax.annotation.Nonnull
   private String pksCustomerCode;
 
   public static final String SERIALIZED_NAME_FKI_SYSTEMCONFIGURATIONTYPE_I_D = "fkiSystemconfigurationtypeID";
   @SerializedName(SERIALIZED_NAME_FKI_SYSTEMCONFIGURATIONTYPE_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiSystemconfigurationtypeID;
 
   public static final String SERIALIZED_NAME_FKI_SIGNATURE_I_D = "fkiSignatureID";
   @SerializedName(SERIALIZED_NAME_FKI_SIGNATURE_I_D)
-  @javax.annotation.Nullable
   private Integer fkiSignatureID;
 
   public static final String SERIALIZED_NAME_FKI_EZSIGNUSER_I_D = "fkiEzsignuserID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNUSER_I_D)
-  @javax.annotation.Nullable
   private Integer fkiEzsignuserID;
 
   public static final String SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE = "bSystemconfigurationEzsignpaidbyoffice";
   @SerializedName(SERIALIZED_NAME_B_SYSTEMCONFIGURATION_EZSIGNPAIDBYOFFICE)
-  @javax.annotation.Nullable
   private Boolean bSystemconfigurationEzsignpaidbyoffice;
 
   public static final String SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN = "eSystemconfigurationEzsignofficeplan";
   @SerializedName(SERIALIZED_NAME_E_SYSTEMCONFIGURATION_EZSIGNOFFICEPLAN)
-  @javax.annotation.Nullable
   private FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan;
 
   public static final String SERIALIZED_NAME_E_USER_EZSIGNACCESS = "eUserEzsignaccess";
   @SerializedName(SERIALIZED_NAME_E_USER_EZSIGNACCESS)
-  @javax.annotation.Nonnull
   private FieldEUserEzsignaccess eUserEzsignaccess;
 
   public static final String SERIALIZED_NAME_E_USER_EZSIGNPREPAID = "eUserEzsignprepaid";
   @SerializedName(SERIALIZED_NAME_E_USER_EZSIGNPREPAID)
-  @javax.annotation.Nullable
   private FieldEUserEzsignprepaid eUserEzsignprepaid;
 
   public static final String SERIALIZED_NAME_B_USER_EZSIGNTRIAL = "bUserEzsigntrial";
   @SerializedName(SERIALIZED_NAME_B_USER_EZSIGNTRIAL)
-  @javax.annotation.Nullable
   private Boolean bUserEzsigntrial;
 
   public static final String SERIALIZED_NAME_DT_USER_EZSIGNPREPAIDEXPIRATION = "dtUserEzsignprepaidexpiration";
   @SerializedName(SERIALIZED_NAME_DT_USER_EZSIGNPREPAIDEXPIRATION)
-  @javax.annotation.Nullable
   private String dtUserEzsignprepaidexpiration;
 
   public static final String SERIALIZED_NAME_A_PKI_PERMISSION_I_D = "a_pkiPermissionID";
   @SerializedName(SERIALIZED_NAME_A_PKI_PERMISSION_I_D)
-  @javax.annotation.Nonnull
   private List<Integer> aPkiPermissionID = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_OBJ_USER_REAL = "objUserReal";
   @SerializedName(SERIALIZED_NAME_OBJ_USER_REAL)
-  @javax.annotation.Nonnull
   private ActivesessionResponseCompoundUser objUserReal;
 
   public static final String SERIALIZED_NAME_OBJ_USER_CLONED = "objUserCloned";
   @SerializedName(SERIALIZED_NAME_OBJ_USER_CLONED)
-  @javax.annotation.Nullable
   private ActivesessionResponseCompoundUser objUserCloned;
 
   public static final String SERIALIZED_NAME_OBJ_APIKEY = "objApikey";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEY)
-  @javax.annotation.Nullable
   private ActivesessionResponseCompoundApikey objApikey;
 
   public static final String SERIALIZED_NAME_A_E_MODULE_INTERNALNAME = "a_eModuleInternalname";
   @SerializedName(SERIALIZED_NAME_A_E_MODULE_INTERNALNAME)
-  @javax.annotation.Nonnull
   private List<String> aEModuleInternalname = new ArrayList<>();
 
   public ActivesessionResponseCompound() {
   }
 
-  public ActivesessionResponseCompound eActivesessionUsertype(@javax.annotation.Nonnull FieldEActivesessionUsertype eActivesessionUsertype) {
+  public ActivesessionResponseCompound eActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
     this.eActivesessionUsertype = eActivesessionUsertype;
     return this;
   }
@@ -236,12 +205,12 @@ public class ActivesessionResponseCompound {
     return eActivesessionUsertype;
   }
 
-  public void seteActivesessionUsertype(@javax.annotation.Nonnull FieldEActivesessionUsertype eActivesessionUsertype) {
+  public void seteActivesessionUsertype(FieldEActivesessionUsertype eActivesessionUsertype) {
     this.eActivesessionUsertype = eActivesessionUsertype;
   }
 
 
-  public ActivesessionResponseCompound eActivesessionOrigin(@javax.annotation.Nonnull FieldEActivesessionOrigin eActivesessionOrigin) {
+  public ActivesessionResponseCompound eActivesessionOrigin(FieldEActivesessionOrigin eActivesessionOrigin) {
     this.eActivesessionOrigin = eActivesessionOrigin;
     return this;
   }
@@ -255,12 +224,12 @@ public class ActivesessionResponseCompound {
     return eActivesessionOrigin;
   }
 
-  public void seteActivesessionOrigin(@javax.annotation.Nonnull FieldEActivesessionOrigin eActivesessionOrigin) {
+  public void seteActivesessionOrigin(FieldEActivesessionOrigin eActivesessionOrigin) {
     this.eActivesessionOrigin = eActivesessionOrigin;
   }
 
 
-  public ActivesessionResponseCompound eActivesessionWeekdaystart(@javax.annotation.Nonnull FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
+  public ActivesessionResponseCompound eActivesessionWeekdaystart(FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
     this.eActivesessionWeekdaystart = eActivesessionWeekdaystart;
     return this;
   }
@@ -274,12 +243,12 @@ public class ActivesessionResponseCompound {
     return eActivesessionWeekdaystart;
   }
 
-  public void seteActivesessionWeekdaystart(@javax.annotation.Nonnull FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
+  public void seteActivesessionWeekdaystart(FieldEActivesessionWeekdaystart eActivesessionWeekdaystart) {
     this.eActivesessionWeekdaystart = eActivesessionWeekdaystart;
   }
 
 
-  public ActivesessionResponseCompound fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public ActivesessionResponseCompound fkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -295,12 +264,12 @@ public class ActivesessionResponseCompound {
     return fkiLanguageID;
   }
 
-  public void setFkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
+  public void setFkiLanguageID(Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
   }
 
 
-  public ActivesessionResponseCompound sCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
+  public ActivesessionResponseCompound sCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
     return this;
   }
@@ -314,12 +283,12 @@ public class ActivesessionResponseCompound {
     return sCompanyNameX;
   }
 
-  public void setsCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
+  public void setsCompanyNameX(String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
   }
 
 
-  public ActivesessionResponseCompound sDepartmentNameX(@javax.annotation.Nonnull String sDepartmentNameX) {
+  public ActivesessionResponseCompound sDepartmentNameX(String sDepartmentNameX) {
     this.sDepartmentNameX = sDepartmentNameX;
     return this;
   }
@@ -333,12 +302,12 @@ public class ActivesessionResponseCompound {
     return sDepartmentNameX;
   }
 
-  public void setsDepartmentNameX(@javax.annotation.Nonnull String sDepartmentNameX) {
+  public void setsDepartmentNameX(String sDepartmentNameX) {
     this.sDepartmentNameX = sDepartmentNameX;
   }
 
 
-  public ActivesessionResponseCompound bActivesessionDebug(@javax.annotation.Nonnull Boolean bActivesessionDebug) {
+  public ActivesessionResponseCompound bActivesessionDebug(Boolean bActivesessionDebug) {
     this.bActivesessionDebug = bActivesessionDebug;
     return this;
   }
@@ -352,12 +321,12 @@ public class ActivesessionResponseCompound {
     return bActivesessionDebug;
   }
 
-  public void setbActivesessionDebug(@javax.annotation.Nonnull Boolean bActivesessionDebug) {
+  public void setbActivesessionDebug(Boolean bActivesessionDebug) {
     this.bActivesessionDebug = bActivesessionDebug;
   }
 
 
-  public ActivesessionResponseCompound bActivesessionIssuperadmin(@javax.annotation.Nonnull Boolean bActivesessionIssuperadmin) {
+  public ActivesessionResponseCompound bActivesessionIssuperadmin(Boolean bActivesessionIssuperadmin) {
     this.bActivesessionIssuperadmin = bActivesessionIssuperadmin;
     return this;
   }
@@ -371,12 +340,12 @@ public class ActivesessionResponseCompound {
     return bActivesessionIssuperadmin;
   }
 
-  public void setbActivesessionIssuperadmin(@javax.annotation.Nonnull Boolean bActivesessionIssuperadmin) {
+  public void setbActivesessionIssuperadmin(Boolean bActivesessionIssuperadmin) {
     this.bActivesessionIssuperadmin = bActivesessionIssuperadmin;
   }
 
 
-  public ActivesessionResponseCompound bActivesessionAttachment(@javax.annotation.Nullable Boolean bActivesessionAttachment) {
+  public ActivesessionResponseCompound bActivesessionAttachment(Boolean bActivesessionAttachment) {
     this.bActivesessionAttachment = bActivesessionAttachment;
     return this;
   }
@@ -390,12 +359,12 @@ public class ActivesessionResponseCompound {
     return bActivesessionAttachment;
   }
 
-  public void setbActivesessionAttachment(@javax.annotation.Nullable Boolean bActivesessionAttachment) {
+  public void setbActivesessionAttachment(Boolean bActivesessionAttachment) {
     this.bActivesessionAttachment = bActivesessionAttachment;
   }
 
 
-  public ActivesessionResponseCompound bActivesessionCanafe(@javax.annotation.Nullable Boolean bActivesessionCanafe) {
+  public ActivesessionResponseCompound bActivesessionCanafe(Boolean bActivesessionCanafe) {
     this.bActivesessionCanafe = bActivesessionCanafe;
     return this;
   }
@@ -409,12 +378,12 @@ public class ActivesessionResponseCompound {
     return bActivesessionCanafe;
   }
 
-  public void setbActivesessionCanafe(@javax.annotation.Nullable Boolean bActivesessionCanafe) {
+  public void setbActivesessionCanafe(Boolean bActivesessionCanafe) {
     this.bActivesessionCanafe = bActivesessionCanafe;
   }
 
 
-  public ActivesessionResponseCompound bActivesessionFinancial(@javax.annotation.Nullable Boolean bActivesessionFinancial) {
+  public ActivesessionResponseCompound bActivesessionFinancial(Boolean bActivesessionFinancial) {
     this.bActivesessionFinancial = bActivesessionFinancial;
     return this;
   }
@@ -428,12 +397,12 @@ public class ActivesessionResponseCompound {
     return bActivesessionFinancial;
   }
 
-  public void setbActivesessionFinancial(@javax.annotation.Nullable Boolean bActivesessionFinancial) {
+  public void setbActivesessionFinancial(Boolean bActivesessionFinancial) {
     this.bActivesessionFinancial = bActivesessionFinancial;
   }
 
 
-  public ActivesessionResponseCompound bActivesessionRealestatecompleted(@javax.annotation.Nullable Boolean bActivesessionRealestatecompleted) {
+  public ActivesessionResponseCompound bActivesessionRealestatecompleted(Boolean bActivesessionRealestatecompleted) {
     this.bActivesessionRealestatecompleted = bActivesessionRealestatecompleted;
     return this;
   }
@@ -447,12 +416,12 @@ public class ActivesessionResponseCompound {
     return bActivesessionRealestatecompleted;
   }
 
-  public void setbActivesessionRealestatecompleted(@javax.annotation.Nullable Boolean bActivesessionRealestatecompleted) {
+  public void setbActivesessionRealestatecompleted(Boolean bActivesessionRealestatecompleted) {
     this.bActivesessionRealestatecompleted = bActivesessionRealestatecompleted;
   }
 
 
-  public ActivesessionResponseCompound eActivesessionEzsign(@javax.annotation.Nullable FieldEActivesessionEzsign eActivesessionEzsign) {
+  public ActivesessionResponseCompound eActivesessionEzsign(FieldEActivesessionEzsign eActivesessionEzsign) {
     this.eActivesessionEzsign = eActivesessionEzsign;
     return this;
   }
@@ -466,12 +435,12 @@ public class ActivesessionResponseCompound {
     return eActivesessionEzsign;
   }
 
-  public void seteActivesessionEzsign(@javax.annotation.Nullable FieldEActivesessionEzsign eActivesessionEzsign) {
+  public void seteActivesessionEzsign(FieldEActivesessionEzsign eActivesessionEzsign) {
     this.eActivesessionEzsign = eActivesessionEzsign;
   }
 
 
-  public ActivesessionResponseCompound eActivesessionEzsignaccess(@javax.annotation.Nonnull FieldEActivesessionEzsignaccess eActivesessionEzsignaccess) {
+  public ActivesessionResponseCompound eActivesessionEzsignaccess(FieldEActivesessionEzsignaccess eActivesessionEzsignaccess) {
     this.eActivesessionEzsignaccess = eActivesessionEzsignaccess;
     return this;
   }
@@ -485,12 +454,12 @@ public class ActivesessionResponseCompound {
     return eActivesessionEzsignaccess;
   }
 
-  public void seteActivesessionEzsignaccess(@javax.annotation.Nonnull FieldEActivesessionEzsignaccess eActivesessionEzsignaccess) {
+  public void seteActivesessionEzsignaccess(FieldEActivesessionEzsignaccess eActivesessionEzsignaccess) {
     this.eActivesessionEzsignaccess = eActivesessionEzsignaccess;
   }
 
 
-  public ActivesessionResponseCompound eActivesessionEzsignprepaid(@javax.annotation.Nullable FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid) {
+  public ActivesessionResponseCompound eActivesessionEzsignprepaid(FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid) {
     this.eActivesessionEzsignprepaid = eActivesessionEzsignprepaid;
     return this;
   }
@@ -504,12 +473,12 @@ public class ActivesessionResponseCompound {
     return eActivesessionEzsignprepaid;
   }
 
-  public void seteActivesessionEzsignprepaid(@javax.annotation.Nullable FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid) {
+  public void seteActivesessionEzsignprepaid(FieldEActivesessionEzsignprepaid eActivesessionEzsignprepaid) {
     this.eActivesessionEzsignprepaid = eActivesessionEzsignprepaid;
   }
 
 
-  public ActivesessionResponseCompound eActivesessionRealestateinprogress(@javax.annotation.Nullable FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress) {
+  public ActivesessionResponseCompound eActivesessionRealestateinprogress(FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress) {
     this.eActivesessionRealestateinprogress = eActivesessionRealestateinprogress;
     return this;
   }
@@ -523,12 +492,12 @@ public class ActivesessionResponseCompound {
     return eActivesessionRealestateinprogress;
   }
 
-  public void seteActivesessionRealestateinprogress(@javax.annotation.Nullable FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress) {
+  public void seteActivesessionRealestateinprogress(FieldEActivesessionRealestateinprogress eActivesessionRealestateinprogress) {
     this.eActivesessionRealestateinprogress = eActivesessionRealestateinprogress;
   }
 
 
-  public ActivesessionResponseCompound pksCustomerCode(@javax.annotation.Nonnull String pksCustomerCode) {
+  public ActivesessionResponseCompound pksCustomerCode(String pksCustomerCode) {
     this.pksCustomerCode = pksCustomerCode;
     return this;
   }
@@ -542,12 +511,12 @@ public class ActivesessionResponseCompound {
     return pksCustomerCode;
   }
 
-  public void setPksCustomerCode(@javax.annotation.Nonnull String pksCustomerCode) {
+  public void setPksCustomerCode(String pksCustomerCode) {
     this.pksCustomerCode = pksCustomerCode;
   }
 
 
-  public ActivesessionResponseCompound fkiSystemconfigurationtypeID(@javax.annotation.Nonnull Integer fkiSystemconfigurationtypeID) {
+  public ActivesessionResponseCompound fkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
     return this;
   }
@@ -562,12 +531,12 @@ public class ActivesessionResponseCompound {
     return fkiSystemconfigurationtypeID;
   }
 
-  public void setFkiSystemconfigurationtypeID(@javax.annotation.Nonnull Integer fkiSystemconfigurationtypeID) {
+  public void setFkiSystemconfigurationtypeID(Integer fkiSystemconfigurationtypeID) {
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
   }
 
 
-  public ActivesessionResponseCompound fkiSignatureID(@javax.annotation.Nullable Integer fkiSignatureID) {
+  public ActivesessionResponseCompound fkiSignatureID(Integer fkiSignatureID) {
     this.fkiSignatureID = fkiSignatureID;
     return this;
   }
@@ -583,12 +552,12 @@ public class ActivesessionResponseCompound {
     return fkiSignatureID;
   }
 
-  public void setFkiSignatureID(@javax.annotation.Nullable Integer fkiSignatureID) {
+  public void setFkiSignatureID(Integer fkiSignatureID) {
     this.fkiSignatureID = fkiSignatureID;
   }
 
 
-  public ActivesessionResponseCompound fkiEzsignuserID(@javax.annotation.Nullable Integer fkiEzsignuserID) {
+  public ActivesessionResponseCompound fkiEzsignuserID(Integer fkiEzsignuserID) {
     this.fkiEzsignuserID = fkiEzsignuserID;
     return this;
   }
@@ -604,12 +573,12 @@ public class ActivesessionResponseCompound {
     return fkiEzsignuserID;
   }
 
-  public void setFkiEzsignuserID(@javax.annotation.Nullable Integer fkiEzsignuserID) {
+  public void setFkiEzsignuserID(Integer fkiEzsignuserID) {
     this.fkiEzsignuserID = fkiEzsignuserID;
   }
 
 
-  public ActivesessionResponseCompound bSystemconfigurationEzsignpaidbyoffice(@javax.annotation.Nullable Boolean bSystemconfigurationEzsignpaidbyoffice) {
+  public ActivesessionResponseCompound bSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
     this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
     return this;
   }
@@ -623,12 +592,12 @@ public class ActivesessionResponseCompound {
     return bSystemconfigurationEzsignpaidbyoffice;
   }
 
-  public void setbSystemconfigurationEzsignpaidbyoffice(@javax.annotation.Nullable Boolean bSystemconfigurationEzsignpaidbyoffice) {
+  public void setbSystemconfigurationEzsignpaidbyoffice(Boolean bSystemconfigurationEzsignpaidbyoffice) {
     this.bSystemconfigurationEzsignpaidbyoffice = bSystemconfigurationEzsignpaidbyoffice;
   }
 
 
-  public ActivesessionResponseCompound eSystemconfigurationEzsignofficeplan(@javax.annotation.Nullable FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+  public ActivesessionResponseCompound eSystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
     this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
     return this;
   }
@@ -642,12 +611,12 @@ public class ActivesessionResponseCompound {
     return eSystemconfigurationEzsignofficeplan;
   }
 
-  public void seteSystemconfigurationEzsignofficeplan(@javax.annotation.Nullable FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
+  public void seteSystemconfigurationEzsignofficeplan(FieldESystemconfigurationEzsignofficeplan eSystemconfigurationEzsignofficeplan) {
     this.eSystemconfigurationEzsignofficeplan = eSystemconfigurationEzsignofficeplan;
   }
 
 
-  public ActivesessionResponseCompound eUserEzsignaccess(@javax.annotation.Nonnull FieldEUserEzsignaccess eUserEzsignaccess) {
+  public ActivesessionResponseCompound eUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
     this.eUserEzsignaccess = eUserEzsignaccess;
     return this;
   }
@@ -661,12 +630,12 @@ public class ActivesessionResponseCompound {
     return eUserEzsignaccess;
   }
 
-  public void seteUserEzsignaccess(@javax.annotation.Nonnull FieldEUserEzsignaccess eUserEzsignaccess) {
+  public void seteUserEzsignaccess(FieldEUserEzsignaccess eUserEzsignaccess) {
     this.eUserEzsignaccess = eUserEzsignaccess;
   }
 
 
-  public ActivesessionResponseCompound eUserEzsignprepaid(@javax.annotation.Nullable FieldEUserEzsignprepaid eUserEzsignprepaid) {
+  public ActivesessionResponseCompound eUserEzsignprepaid(FieldEUserEzsignprepaid eUserEzsignprepaid) {
     this.eUserEzsignprepaid = eUserEzsignprepaid;
     return this;
   }
@@ -680,12 +649,12 @@ public class ActivesessionResponseCompound {
     return eUserEzsignprepaid;
   }
 
-  public void seteUserEzsignprepaid(@javax.annotation.Nullable FieldEUserEzsignprepaid eUserEzsignprepaid) {
+  public void seteUserEzsignprepaid(FieldEUserEzsignprepaid eUserEzsignprepaid) {
     this.eUserEzsignprepaid = eUserEzsignprepaid;
   }
 
 
-  public ActivesessionResponseCompound bUserEzsigntrial(@javax.annotation.Nullable Boolean bUserEzsigntrial) {
+  public ActivesessionResponseCompound bUserEzsigntrial(Boolean bUserEzsigntrial) {
     this.bUserEzsigntrial = bUserEzsigntrial;
     return this;
   }
@@ -699,12 +668,12 @@ public class ActivesessionResponseCompound {
     return bUserEzsigntrial;
   }
 
-  public void setbUserEzsigntrial(@javax.annotation.Nullable Boolean bUserEzsigntrial) {
+  public void setbUserEzsigntrial(Boolean bUserEzsigntrial) {
     this.bUserEzsigntrial = bUserEzsigntrial;
   }
 
 
-  public ActivesessionResponseCompound dtUserEzsignprepaidexpiration(@javax.annotation.Nullable String dtUserEzsignprepaidexpiration) {
+  public ActivesessionResponseCompound dtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
     this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
     return this;
   }
@@ -718,12 +687,12 @@ public class ActivesessionResponseCompound {
     return dtUserEzsignprepaidexpiration;
   }
 
-  public void setDtUserEzsignprepaidexpiration(@javax.annotation.Nullable String dtUserEzsignprepaidexpiration) {
+  public void setDtUserEzsignprepaidexpiration(String dtUserEzsignprepaidexpiration) {
     this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
   }
 
 
-  public ActivesessionResponseCompound aPkiPermissionID(@javax.annotation.Nonnull List<Integer> aPkiPermissionID) {
+  public ActivesessionResponseCompound aPkiPermissionID(List<Integer> aPkiPermissionID) {
     this.aPkiPermissionID = aPkiPermissionID;
     return this;
   }
@@ -745,12 +714,12 @@ public class ActivesessionResponseCompound {
     return aPkiPermissionID;
   }
 
-  public void setaPkiPermissionID(@javax.annotation.Nonnull List<Integer> aPkiPermissionID) {
+  public void setaPkiPermissionID(List<Integer> aPkiPermissionID) {
     this.aPkiPermissionID = aPkiPermissionID;
   }
 
 
-  public ActivesessionResponseCompound objUserReal(@javax.annotation.Nonnull ActivesessionResponseCompoundUser objUserReal) {
+  public ActivesessionResponseCompound objUserReal(ActivesessionResponseCompoundUser objUserReal) {
     this.objUserReal = objUserReal;
     return this;
   }
@@ -764,12 +733,12 @@ public class ActivesessionResponseCompound {
     return objUserReal;
   }
 
-  public void setObjUserReal(@javax.annotation.Nonnull ActivesessionResponseCompoundUser objUserReal) {
+  public void setObjUserReal(ActivesessionResponseCompoundUser objUserReal) {
     this.objUserReal = objUserReal;
   }
 
 
-  public ActivesessionResponseCompound objUserCloned(@javax.annotation.Nullable ActivesessionResponseCompoundUser objUserCloned) {
+  public ActivesessionResponseCompound objUserCloned(ActivesessionResponseCompoundUser objUserCloned) {
     this.objUserCloned = objUserCloned;
     return this;
   }
@@ -783,12 +752,12 @@ public class ActivesessionResponseCompound {
     return objUserCloned;
   }
 
-  public void setObjUserCloned(@javax.annotation.Nullable ActivesessionResponseCompoundUser objUserCloned) {
+  public void setObjUserCloned(ActivesessionResponseCompoundUser objUserCloned) {
     this.objUserCloned = objUserCloned;
   }
 
 
-  public ActivesessionResponseCompound objApikey(@javax.annotation.Nullable ActivesessionResponseCompoundApikey objApikey) {
+  public ActivesessionResponseCompound objApikey(ActivesessionResponseCompoundApikey objApikey) {
     this.objApikey = objApikey;
     return this;
   }
@@ -802,12 +771,12 @@ public class ActivesessionResponseCompound {
     return objApikey;
   }
 
-  public void setObjApikey(@javax.annotation.Nullable ActivesessionResponseCompoundApikey objApikey) {
+  public void setObjApikey(ActivesessionResponseCompoundApikey objApikey) {
     this.objApikey = objApikey;
   }
 
 
-  public ActivesessionResponseCompound aEModuleInternalname(@javax.annotation.Nonnull List<String> aEModuleInternalname) {
+  public ActivesessionResponseCompound aEModuleInternalname(List<String> aEModuleInternalname) {
     this.aEModuleInternalname = aEModuleInternalname;
     return this;
   }
@@ -829,7 +798,7 @@ public class ActivesessionResponseCompound {
     return aEModuleInternalname;
   }
 
-  public void setaEModuleInternalname(@javax.annotation.Nonnull List<String> aEModuleInternalname) {
+  public void setaEModuleInternalname(List<String> aEModuleInternalname) {
     this.aEModuleInternalname = aEModuleInternalname;
   }
 

@@ -48,32 +48,28 @@ import eZmaxAPI.JSON;
 /**
  * A webhookheader object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebhookheaderResponse {
   public static final String SERIALIZED_NAME_PKI_WEBHOOKHEADER_I_D = "pkiWebhookheaderID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOKHEADER_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiWebhookheaderID;
 
   public static final String SERIALIZED_NAME_FKI_WEBHOOK_I_D = "fkiWebhookID";
   @SerializedName(SERIALIZED_NAME_FKI_WEBHOOK_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiWebhookID;
 
   public static final String SERIALIZED_NAME_S_WEBHOOKHEADER_NAME = "sWebhookheaderName";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOKHEADER_NAME)
-  @javax.annotation.Nonnull
   private String sWebhookheaderName;
 
   public static final String SERIALIZED_NAME_S_WEBHOOKHEADER_VALUE = "sWebhookheaderValue";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOKHEADER_VALUE)
-  @javax.annotation.Nonnull
   private String sWebhookheaderValue;
 
   public WebhookheaderResponse() {
   }
 
-  public WebhookheaderResponse pkiWebhookheaderID(@javax.annotation.Nonnull Integer pkiWebhookheaderID) {
+  public WebhookheaderResponse pkiWebhookheaderID(Integer pkiWebhookheaderID) {
     this.pkiWebhookheaderID = pkiWebhookheaderID;
     return this;
   }
@@ -87,12 +83,12 @@ public class WebhookheaderResponse {
     return pkiWebhookheaderID;
   }
 
-  public void setPkiWebhookheaderID(@javax.annotation.Nonnull Integer pkiWebhookheaderID) {
+  public void setPkiWebhookheaderID(Integer pkiWebhookheaderID) {
     this.pkiWebhookheaderID = pkiWebhookheaderID;
   }
 
 
-  public WebhookheaderResponse fkiWebhookID(@javax.annotation.Nonnull Integer fkiWebhookID) {
+  public WebhookheaderResponse fkiWebhookID(Integer fkiWebhookID) {
     this.fkiWebhookID = fkiWebhookID;
     return this;
   }
@@ -106,12 +102,12 @@ public class WebhookheaderResponse {
     return fkiWebhookID;
   }
 
-  public void setFkiWebhookID(@javax.annotation.Nonnull Integer fkiWebhookID) {
+  public void setFkiWebhookID(Integer fkiWebhookID) {
     this.fkiWebhookID = fkiWebhookID;
   }
 
 
-  public WebhookheaderResponse sWebhookheaderName(@javax.annotation.Nonnull String sWebhookheaderName) {
+  public WebhookheaderResponse sWebhookheaderName(String sWebhookheaderName) {
     this.sWebhookheaderName = sWebhookheaderName;
     return this;
   }
@@ -125,12 +121,12 @@ public class WebhookheaderResponse {
     return sWebhookheaderName;
   }
 
-  public void setsWebhookheaderName(@javax.annotation.Nonnull String sWebhookheaderName) {
+  public void setsWebhookheaderName(String sWebhookheaderName) {
     this.sWebhookheaderName = sWebhookheaderName;
   }
 
 
-  public WebhookheaderResponse sWebhookheaderValue(@javax.annotation.Nonnull String sWebhookheaderValue) {
+  public WebhookheaderResponse sWebhookheaderValue(String sWebhookheaderValue) {
     this.sWebhookheaderValue = sWebhookheaderValue;
     return this;
   }
@@ -144,7 +140,7 @@ public class WebhookheaderResponse {
     return sWebhookheaderValue;
   }
 
-  public void setsWebhookheaderValue(@javax.annotation.Nonnull String sWebhookheaderValue) {
+  public void setsWebhookheaderValue(String sWebhookheaderValue) {
     this.sWebhookheaderValue = sWebhookheaderValue;
   }
 

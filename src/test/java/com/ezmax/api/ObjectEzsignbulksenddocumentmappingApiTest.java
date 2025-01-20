@@ -14,10 +14,10 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignbulksenddocumentmappingCreateObjectV1Request;
 import com.ezmax.api.model.EzsignbulksenddocumentmappingCreateObjectV1Response;
+import com.ezmax.api.model.EzsignbulksenddocumentmappingDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignbulksenddocumentmappingGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -59,7 +59,7 @@ public class ObjectEzsignbulksenddocumentmappingApiTest {
     @Test
     public void ezsignbulksenddocumentmappingDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignbulksenddocumentmappingID = null;
-        CommonResponse response = api.ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID);
+        EzsignbulksenddocumentmappingDeleteObjectV1Response response = api.ezsignbulksenddocumentmappingDeleteObjectV1(pkiEzsignbulksenddocumentmappingID);
         // TODO: test validations
     }
 

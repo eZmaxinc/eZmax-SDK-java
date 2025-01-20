@@ -48,42 +48,36 @@ import eZmaxAPI.JSON;
 /**
  * A Userstaged Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserstagedResponseCompound {
   public static final String SERIALIZED_NAME_PKI_USERSTAGED_I_D = "pkiUserstagedID";
   @SerializedName(SERIALIZED_NAME_PKI_USERSTAGED_I_D)
-  @javax.annotation.Nonnull
   private Integer pkiUserstagedID;
 
   public static final String SERIALIZED_NAME_FKI_EMAIL_I_D = "fkiEmailID";
   @SerializedName(SERIALIZED_NAME_FKI_EMAIL_I_D)
-  @javax.annotation.Nonnull
   private Integer fkiEmailID;
 
   public static final String SERIALIZED_NAME_S_EMAIL_ADDRESS = "sEmailAddress";
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
-  @javax.annotation.Nonnull
   private String sEmailAddress;
 
   public static final String SERIALIZED_NAME_S_USERSTAGED_FIRSTNAME = "sUserstagedFirstname";
   @SerializedName(SERIALIZED_NAME_S_USERSTAGED_FIRSTNAME)
-  @javax.annotation.Nonnull
   private String sUserstagedFirstname;
 
   public static final String SERIALIZED_NAME_S_USERSTAGED_LASTNAME = "sUserstagedLastname";
   @SerializedName(SERIALIZED_NAME_S_USERSTAGED_LASTNAME)
-  @javax.annotation.Nonnull
   private String sUserstagedLastname;
 
   public static final String SERIALIZED_NAME_S_USERSTAGED_EXTERNALID = "sUserstagedExternalid";
   @SerializedName(SERIALIZED_NAME_S_USERSTAGED_EXTERNALID)
-  @javax.annotation.Nonnull
   private String sUserstagedExternalid;
 
   public UserstagedResponseCompound() {
   }
 
-  public UserstagedResponseCompound pkiUserstagedID(@javax.annotation.Nonnull Integer pkiUserstagedID) {
+  public UserstagedResponseCompound pkiUserstagedID(Integer pkiUserstagedID) {
     this.pkiUserstagedID = pkiUserstagedID;
     return this;
   }
@@ -99,12 +93,12 @@ public class UserstagedResponseCompound {
     return pkiUserstagedID;
   }
 
-  public void setPkiUserstagedID(@javax.annotation.Nonnull Integer pkiUserstagedID) {
+  public void setPkiUserstagedID(Integer pkiUserstagedID) {
     this.pkiUserstagedID = pkiUserstagedID;
   }
 
 
-  public UserstagedResponseCompound fkiEmailID(@javax.annotation.Nonnull Integer fkiEmailID) {
+  public UserstagedResponseCompound fkiEmailID(Integer fkiEmailID) {
     this.fkiEmailID = fkiEmailID;
     return this;
   }
@@ -120,12 +114,12 @@ public class UserstagedResponseCompound {
     return fkiEmailID;
   }
 
-  public void setFkiEmailID(@javax.annotation.Nonnull Integer fkiEmailID) {
+  public void setFkiEmailID(Integer fkiEmailID) {
     this.fkiEmailID = fkiEmailID;
   }
 
 
-  public UserstagedResponseCompound sEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
+  public UserstagedResponseCompound sEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
     return this;
   }
@@ -139,12 +133,12 @@ public class UserstagedResponseCompound {
     return sEmailAddress;
   }
 
-  public void setsEmailAddress(@javax.annotation.Nonnull String sEmailAddress) {
+  public void setsEmailAddress(String sEmailAddress) {
     this.sEmailAddress = sEmailAddress;
   }
 
 
-  public UserstagedResponseCompound sUserstagedFirstname(@javax.annotation.Nonnull String sUserstagedFirstname) {
+  public UserstagedResponseCompound sUserstagedFirstname(String sUserstagedFirstname) {
     this.sUserstagedFirstname = sUserstagedFirstname;
     return this;
   }
@@ -158,12 +152,12 @@ public class UserstagedResponseCompound {
     return sUserstagedFirstname;
   }
 
-  public void setsUserstagedFirstname(@javax.annotation.Nonnull String sUserstagedFirstname) {
+  public void setsUserstagedFirstname(String sUserstagedFirstname) {
     this.sUserstagedFirstname = sUserstagedFirstname;
   }
 
 
-  public UserstagedResponseCompound sUserstagedLastname(@javax.annotation.Nonnull String sUserstagedLastname) {
+  public UserstagedResponseCompound sUserstagedLastname(String sUserstagedLastname) {
     this.sUserstagedLastname = sUserstagedLastname;
     return this;
   }
@@ -177,12 +171,12 @@ public class UserstagedResponseCompound {
     return sUserstagedLastname;
   }
 
-  public void setsUserstagedLastname(@javax.annotation.Nonnull String sUserstagedLastname) {
+  public void setsUserstagedLastname(String sUserstagedLastname) {
     this.sUserstagedLastname = sUserstagedLastname;
   }
 
 
-  public UserstagedResponseCompound sUserstagedExternalid(@javax.annotation.Nonnull String sUserstagedExternalid) {
+  public UserstagedResponseCompound sUserstagedExternalid(String sUserstagedExternalid) {
     this.sUserstagedExternalid = sUserstagedExternalid;
     return this;
   }
@@ -196,7 +190,7 @@ public class UserstagedResponseCompound {
     return sUserstagedExternalid;
   }
 
-  public void setsUserstagedExternalid(@javax.annotation.Nonnull String sUserstagedExternalid) {
+  public void setsUserstagedExternalid(String sUserstagedExternalid) {
     this.sUserstagedExternalid = sUserstagedExternalid;
   }
 

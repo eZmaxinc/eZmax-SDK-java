@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsignfolderRequestV3;
+import com.ezmax.api.model.EzsignfolderRequestCompoundV3;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,31 +49,30 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /3/object/ezsignfolder/{pkiEzsignfolderID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T18:49:43.941195549Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T19:31:15.190691479Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EzsignfolderEditObjectV3Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDER = "objEzsignfolder";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDER)
-  @javax.annotation.Nonnull
-  private EzsignfolderRequestV3 objEzsignfolder;
+  private EzsignfolderRequestCompoundV3 objEzsignfolder;
 
   public EzsignfolderEditObjectV3Request() {
   }
 
-  public EzsignfolderEditObjectV3Request objEzsignfolder(@javax.annotation.Nonnull EzsignfolderRequestV3 objEzsignfolder) {
+  public EzsignfolderEditObjectV3Request objEzsignfolder(EzsignfolderRequestCompoundV3 objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
     return this;
   }
 
   /**
-   * An Ezsignfolder Object and children to create a complete structure
+   * Get objEzsignfolder
    * @return objEzsignfolder
    */
   @javax.annotation.Nonnull
-  public EzsignfolderRequestV3 getObjEzsignfolder() {
+  public EzsignfolderRequestCompoundV3 getObjEzsignfolder() {
     return objEzsignfolder;
   }
 
-  public void setObjEzsignfolder(@javax.annotation.Nonnull EzsignfolderRequestV3 objEzsignfolder) {
+  public void setObjEzsignfolder(EzsignfolderRequestCompoundV3 objEzsignfolder) {
     this.objEzsignfolder = objEzsignfolder;
   }
 
@@ -159,7 +158,7 @@ public class EzsignfolderEditObjectV3Request {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objEzsignfolder`
-      EzsignfolderRequestV3.validateJsonElement(jsonObj.get("objEzsignfolder"));
+      EzsignfolderRequestCompoundV3.validateJsonElement(jsonObj.get("objEzsignfolder"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
