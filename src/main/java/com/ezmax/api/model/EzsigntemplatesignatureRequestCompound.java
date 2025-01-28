@@ -15,8 +15,8 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EnumTextvalidation;
-import com.ezmax.api.model.EzsigntemplateelementdependencyRequest;
-import com.ezmax.api.model.EzsigntemplatesignaturecustomdateRequest;
+import com.ezmax.api.model.EzsigntemplateelementdependencyRequestCompound;
+import com.ezmax.api.model.EzsigntemplatesignaturecustomdateRequestCompound;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsigntemplatesignatureDependencyrequirement;
@@ -61,7 +61,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatesignature Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsigntemplatesignatureRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D = "pkiEzsigntemplatesignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D)
@@ -885,7 +885,7 @@ public class EzsigntemplatesignatureRequestCompound {
     return this;
   }
 
-  public EzsigntemplatesignatureRequestCompound addAObjEzsigntemplatesignaturecustomdateItem(EzsigntemplatesignaturecustomdateRequest aObjEzsigntemplatesignaturecustomdateItem) {
+  public EzsigntemplatesignatureRequestCompound addAObjEzsigntemplatesignaturecustomdateItem(EzsigntemplatesignaturecustomdateRequestCompound aObjEzsigntemplatesignaturecustomdateItem) {
     if (this.aObjEzsigntemplatesignaturecustomdate == null) {
       this.aObjEzsigntemplatesignaturecustomdate = new ArrayList<>();
     }
@@ -912,7 +912,7 @@ public class EzsigntemplatesignatureRequestCompound {
     return this;
   }
 
-  public EzsigntemplatesignatureRequestCompound addAObjEzsigntemplateelementdependencyItem(EzsigntemplateelementdependencyRequest aObjEzsigntemplateelementdependencyItem) {
+  public EzsigntemplatesignatureRequestCompound addAObjEzsigntemplateelementdependencyItem(EzsigntemplateelementdependencyRequestCompound aObjEzsigntemplateelementdependencyItem) {
     if (this.aObjEzsigntemplateelementdependency == null) {
       this.aObjEzsigntemplateelementdependency = new ArrayList<>();
     }
@@ -1182,7 +1182,7 @@ public class EzsigntemplatesignatureRequestCompound {
 
           // validate the optional field `a_objEzsigntemplatesignaturecustomdate` (array)
           for (int i = 0; i < jsonArrayaObjEzsigntemplatesignaturecustomdate.size(); i++) {
-            EzsigntemplatesignaturecustomdateRequest.validateJsonElement(jsonArrayaObjEzsigntemplatesignaturecustomdate.get(i));
+            EzsigntemplatesignaturecustomdateRequestCompound.validateJsonElement(jsonArrayaObjEzsigntemplatesignaturecustomdate.get(i));
           };
         }
       }
@@ -1196,7 +1196,7 @@ public class EzsigntemplatesignatureRequestCompound {
 
           // validate the optional field `a_objEzsigntemplateelementdependency` (array)
           for (int i = 0; i < jsonArrayaObjEzsigntemplateelementdependency.size(); i++) {
-            EzsigntemplateelementdependencyRequest.validateJsonElement(jsonArrayaObjEzsigntemplateelementdependency.get(i));
+            EzsigntemplateelementdependencyRequestCompound.validateJsonElement(jsonArrayaObjEzsigntemplateelementdependency.get(i));
           };
         }
       }

@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CustomEzsignformfieldgroupRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsigndocumentSubmitEzsignformV1Request {
   public static final String SERIALIZED_NAME_B_EZSIGNFORM_ISDRAFT = "bEzsignformIsdraft";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORM_ISDRAFT)
@@ -89,7 +90,7 @@ public class EzsigndocumentSubmitEzsignformV1Request {
     return this;
   }
 
-  public EzsigndocumentSubmitEzsignformV1Request addAObjEzsignformfieldgroupItem(Object aObjEzsignformfieldgroupItem) {
+  public EzsigndocumentSubmitEzsignformV1Request addAObjEzsignformfieldgroupItem(CustomEzsignformfieldgroupRequest aObjEzsignformfieldgroupItem) {
     if (this.aObjEzsignformfieldgroup == null) {
       this.aObjEzsignformfieldgroup = new ArrayList<>();
     }
@@ -203,7 +204,7 @@ public class EzsigndocumentSubmitEzsignformV1Request {
       JsonArray jsonArrayaObjEzsignformfieldgroup = jsonObj.getAsJsonArray("a_objEzsignformfieldgroup");
       // validate the required field `a_objEzsignformfieldgroup` (array)
       for (int i = 0; i < jsonArrayaObjEzsignformfieldgroup.size(); i++) {
-        Object.validateJsonElement(jsonArrayaObjEzsignformfieldgroup.get(i));
+        CustomEzsignformfieldgroupRequest.validateJsonElement(jsonArrayaObjEzsignformfieldgroup.get(i));
       };
   }
 

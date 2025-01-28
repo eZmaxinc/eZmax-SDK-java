@@ -27,10 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignbulksendsignermappingCreateObjectV1Request;
 import com.ezmax.api.model.EzsignbulksendsignermappingCreateObjectV1Response;
+import com.ezmax.api.model.EzsignbulksendsignermappingDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendsignermappingGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -277,7 +277,7 @@ public class ObjectEzsignbulksendsignermappingApi {
      * Delete an existing Ezsignbulksendsignermapping
      * 
      * @param pkiEzsignbulksendsignermappingID  (required)
-     * @return CommonResponse
+     * @return EzsignbulksendsignermappingDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -287,8 +287,8 @@ public class ObjectEzsignbulksendsignermappingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignbulksendsignermappingDeleteObjectV1(Integer pkiEzsignbulksendsignermappingID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignbulksendsignermappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksendsignermappingID);
+    public EzsignbulksendsignermappingDeleteObjectV1Response ezsignbulksendsignermappingDeleteObjectV1(Integer pkiEzsignbulksendsignermappingID) throws ApiException {
+        ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response> localVarResp = ezsignbulksendsignermappingDeleteObjectV1WithHttpInfo(pkiEzsignbulksendsignermappingID);
         return localVarResp.getData();
     }
 
@@ -296,7 +296,7 @@ public class ObjectEzsignbulksendsignermappingApi {
      * Delete an existing Ezsignbulksendsignermapping
      * 
      * @param pkiEzsignbulksendsignermappingID  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignbulksendsignermappingDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -306,9 +306,9 @@ public class ObjectEzsignbulksendsignermappingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignbulksendsignermappingDeleteObjectV1WithHttpInfo(Integer pkiEzsignbulksendsignermappingID) throws ApiException {
+    public ApiResponse<EzsignbulksendsignermappingDeleteObjectV1Response> ezsignbulksendsignermappingDeleteObjectV1WithHttpInfo(Integer pkiEzsignbulksendsignermappingID) throws ApiException {
         okhttp3.Call localVarCall = ezsignbulksendsignermappingDeleteObjectV1ValidateBeforeCall(pkiEzsignbulksendsignermappingID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignbulksendsignermappingDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -327,10 +327,10 @@ public class ObjectEzsignbulksendsignermappingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignbulksendsignermappingDeleteObjectV1Async(Integer pkiEzsignbulksendsignermappingID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignbulksendsignermappingDeleteObjectV1Async(Integer pkiEzsignbulksendsignermappingID, final ApiCallback<EzsignbulksendsignermappingDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignbulksendsignermappingDeleteObjectV1ValidateBeforeCall(pkiEzsignbulksendsignermappingID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignbulksendsignermappingDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
-import com.ezmax.api.model.EmailResponse;
+import com.ezmax.api.model.EmailResponseCompound;
 import com.ezmax.api.model.FieldEUserEzsignaccess;
 import com.ezmax.api.model.FieldEUserLogintype;
 import com.ezmax.api.model.FieldEUserOrigin;
@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class UserResponse {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -125,7 +125,7 @@ public class UserResponse {
   public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
   @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
   @javax.annotation.Nonnull
-  private EmailResponse objEmail;
+  private EmailResponseCompound objEmail;
 
   public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
@@ -508,21 +508,21 @@ public class UserResponse {
   }
 
 
-  public UserResponse objEmail(@javax.annotation.Nonnull EmailResponse objEmail) {
+  public UserResponse objEmail(@javax.annotation.Nonnull EmailResponseCompound objEmail) {
     this.objEmail = objEmail;
     return this;
   }
 
   /**
-   * An Email Object and children to create a complete structure
+   * Get objEmail
    * @return objEmail
    */
   @javax.annotation.Nonnull
-  public EmailResponse getObjEmail() {
+  public EmailResponseCompound getObjEmail() {
     return objEmail;
   }
 
-  public void setObjEmail(@javax.annotation.Nonnull EmailResponse objEmail) {
+  public void setObjEmail(@javax.annotation.Nonnull EmailResponseCompound objEmail) {
     this.objEmail = objEmail;
   }
 
@@ -1211,7 +1211,7 @@ public class UserResponse {
         throw new IllegalArgumentException(String.format("Expected the field `sLanguageNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sLanguageNameX").toString()));
       }
       // validate the required field `objEmail`
-      EmailResponse.validateJsonElement(jsonObj.get("objEmail"));
+      EmailResponseCompound.validateJsonElement(jsonObj.get("objEmail"));
       if (!jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
       }

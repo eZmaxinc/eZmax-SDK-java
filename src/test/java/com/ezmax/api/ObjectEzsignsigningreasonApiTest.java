@@ -14,11 +14,11 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignsigningreasonCreateObjectV1Request;
 import com.ezmax.api.model.EzsignsigningreasonCreateObjectV1Response;
 import com.ezmax.api.model.EzsignsigningreasonEditObjectV1Request;
+import com.ezmax.api.model.EzsignsigningreasonEditObjectV1Response;
 import com.ezmax.api.model.EzsignsigningreasonGetAutocompleteV2Response;
 import com.ezmax.api.model.EzsignsigningreasonGetListV1Response;
 import com.ezmax.api.model.EzsignsigningreasonGetObjectV2Response;
@@ -65,7 +65,7 @@ public class ObjectEzsignsigningreasonApiTest {
     public void ezsignsigningreasonEditObjectV1Test() throws ApiException {
         Integer pkiEzsignsigningreasonID = null;
         EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request = null;
-        CommonResponse response = api.ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
+        EzsignsigningreasonEditObjectV1Response response = api.ezsignsigningreasonEditObjectV1(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
         // TODO: test validations
     }
 

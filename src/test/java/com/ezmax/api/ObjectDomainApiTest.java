@@ -14,10 +14,10 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.DomainCreateObjectV1Request;
 import com.ezmax.api.model.DomainCreateObjectV1Response;
+import com.ezmax.api.model.DomainDeleteObjectV1Response;
 import com.ezmax.api.model.DomainGetListV1Response;
 import com.ezmax.api.model.DomainGetObjectV2Response;
 import java.io.File;
@@ -62,7 +62,7 @@ public class ObjectDomainApiTest {
     @Test
     public void domainDeleteObjectV1Test() throws ApiException {
         Integer pkiDomainID = null;
-        CommonResponse response = api.domainDeleteObjectV1(pkiDomainID);
+        DomainDeleteObjectV1Response response = api.domainDeleteObjectV1(pkiDomainID);
         // TODO: test validations
     }
 

@@ -27,8 +27,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsignpageConsultV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -156,7 +156,7 @@ public class ObjectEzsignpageApi {
      * 
      * @param pkiEzsignpageID  (required)
      * @param body  (required)
-     * @return CommonResponse
+     * @return EzsignpageConsultV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -167,8 +167,8 @@ public class ObjectEzsignpageApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignpageConsultV1(Integer pkiEzsignpageID, Object body) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignpageConsultV1WithHttpInfo(pkiEzsignpageID, body);
+    public EzsignpageConsultV1Response ezsignpageConsultV1(Integer pkiEzsignpageID, Object body) throws ApiException {
+        ApiResponse<EzsignpageConsultV1Response> localVarResp = ezsignpageConsultV1WithHttpInfo(pkiEzsignpageID, body);
         return localVarResp.getData();
     }
 
@@ -177,7 +177,7 @@ public class ObjectEzsignpageApi {
      * 
      * @param pkiEzsignpageID  (required)
      * @param body  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignpageConsultV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -188,9 +188,9 @@ public class ObjectEzsignpageApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignpageConsultV1WithHttpInfo(Integer pkiEzsignpageID, Object body) throws ApiException {
+    public ApiResponse<EzsignpageConsultV1Response> ezsignpageConsultV1WithHttpInfo(Integer pkiEzsignpageID, Object body) throws ApiException {
         okhttp3.Call localVarCall = ezsignpageConsultV1ValidateBeforeCall(pkiEzsignpageID, body, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignpageConsultV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -211,10 +211,10 @@ public class ObjectEzsignpageApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignpageConsultV1Async(Integer pkiEzsignpageID, Object body, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignpageConsultV1Async(Integer pkiEzsignpageID, Object body, final ApiCallback<EzsignpageConsultV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignpageConsultV1ValidateBeforeCall(pkiEzsignpageID, body, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignpageConsultV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

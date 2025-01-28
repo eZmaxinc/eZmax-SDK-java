@@ -27,7 +27,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV1Request;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV1Response;
@@ -35,7 +34,9 @@ import com.ezmax.api.model.EzsignsignatureCreateObjectV2Request;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV2Response;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV3Request;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV3Response;
+import com.ezmax.api.model.EzsignsignatureDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignsignatureEditObjectV2Request;
+import com.ezmax.api.model.EzsignsignatureEditObjectV2Response;
 import com.ezmax.api.model.EzsignsignatureGetEzsignsignatureattachmentV1Response;
 import com.ezmax.api.model.EzsignsignatureGetEzsignsignaturesAutomaticV1Response;
 import com.ezmax.api.model.EzsignsignatureGetObjectV3Response;
@@ -559,7 +560,7 @@ public class ObjectEzsignsignatureApi {
      * Delete an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID  (required)
-     * @return CommonResponse
+     * @return EzsignsignatureDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -570,8 +571,8 @@ public class ObjectEzsignsignatureApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignsignatureDeleteObjectV1(Integer pkiEzsignsignatureID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignsignatureDeleteObjectV1WithHttpInfo(pkiEzsignsignatureID);
+    public EzsignsignatureDeleteObjectV1Response ezsignsignatureDeleteObjectV1(Integer pkiEzsignsignatureID) throws ApiException {
+        ApiResponse<EzsignsignatureDeleteObjectV1Response> localVarResp = ezsignsignatureDeleteObjectV1WithHttpInfo(pkiEzsignsignatureID);
         return localVarResp.getData();
     }
 
@@ -579,7 +580,7 @@ public class ObjectEzsignsignatureApi {
      * Delete an existing Ezsignsignature
      * 
      * @param pkiEzsignsignatureID  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignsignatureDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -590,9 +591,9 @@ public class ObjectEzsignsignatureApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignsignatureDeleteObjectV1WithHttpInfo(Integer pkiEzsignsignatureID) throws ApiException {
+    public ApiResponse<EzsignsignatureDeleteObjectV1Response> ezsignsignatureDeleteObjectV1WithHttpInfo(Integer pkiEzsignsignatureID) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignatureDeleteObjectV1ValidateBeforeCall(pkiEzsignsignatureID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignsignatureDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -612,10 +613,10 @@ public class ObjectEzsignsignatureApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignsignatureDeleteObjectV1Async(Integer pkiEzsignsignatureID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignsignatureDeleteObjectV1Async(Integer pkiEzsignsignatureID, final ApiCallback<EzsignsignatureDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignsignatureDeleteObjectV1ValidateBeforeCall(pkiEzsignsignatureID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignsignatureDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -702,7 +703,7 @@ public class ObjectEzsignsignatureApi {
      * 
      * @param pkiEzsignsignatureID  (required)
      * @param ezsignsignatureEditObjectV2Request  (required)
-     * @return CommonResponse
+     * @return EzsignsignatureEditObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -713,8 +714,8 @@ public class ObjectEzsignsignatureApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignsignatureEditObjectV2(Integer pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignsignatureEditObjectV2WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
+    public EzsignsignatureEditObjectV2Response ezsignsignatureEditObjectV2(Integer pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request) throws ApiException {
+        ApiResponse<EzsignsignatureEditObjectV2Response> localVarResp = ezsignsignatureEditObjectV2WithHttpInfo(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
         return localVarResp.getData();
     }
 
@@ -723,7 +724,7 @@ public class ObjectEzsignsignatureApi {
      * 
      * @param pkiEzsignsignatureID  (required)
      * @param ezsignsignatureEditObjectV2Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignsignatureEditObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -734,9 +735,9 @@ public class ObjectEzsignsignatureApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignsignatureEditObjectV2WithHttpInfo(Integer pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request) throws ApiException {
+    public ApiResponse<EzsignsignatureEditObjectV2Response> ezsignsignatureEditObjectV2WithHttpInfo(Integer pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignatureEditObjectV2ValidateBeforeCall(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignsignatureEditObjectV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -757,10 +758,10 @@ public class ObjectEzsignsignatureApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignsignatureEditObjectV2Async(Integer pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignsignatureEditObjectV2Async(Integer pkiEzsignsignatureID, EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request, final ApiCallback<EzsignsignatureEditObjectV2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignsignatureEditObjectV2ValidateBeforeCall(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignsignatureEditObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

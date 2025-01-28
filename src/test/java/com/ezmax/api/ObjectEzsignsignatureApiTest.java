@@ -14,7 +14,6 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV1Request;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV1Response;
@@ -22,7 +21,9 @@ import com.ezmax.api.model.EzsignsignatureCreateObjectV2Request;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV2Response;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV3Request;
 import com.ezmax.api.model.EzsignsignatureCreateObjectV3Response;
+import com.ezmax.api.model.EzsignsignatureDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignsignatureEditObjectV2Request;
+import com.ezmax.api.model.EzsignsignatureEditObjectV2Response;
 import com.ezmax.api.model.EzsignsignatureGetEzsignsignatureattachmentV1Response;
 import com.ezmax.api.model.EzsignsignatureGetEzsignsignaturesAutomaticV1Response;
 import com.ezmax.api.model.EzsignsignatureGetObjectV3Response;
@@ -96,7 +97,7 @@ public class ObjectEzsignsignatureApiTest {
     @Test
     public void ezsignsignatureDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsignsignatureID = null;
-        CommonResponse response = api.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID);
+        EzsignsignatureDeleteObjectV1Response response = api.ezsignsignatureDeleteObjectV1(pkiEzsignsignatureID);
         // TODO: test validations
     }
 
@@ -111,7 +112,7 @@ public class ObjectEzsignsignatureApiTest {
     public void ezsignsignatureEditObjectV2Test() throws ApiException {
         Integer pkiEzsignsignatureID = null;
         EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request = null;
-        CommonResponse response = api.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
+        EzsignsignatureEditObjectV2Response response = api.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
         // TODO: test validations
     }
 

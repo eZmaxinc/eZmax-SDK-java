@@ -27,11 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.UsergroupdelegationCreateObjectV1Request;
 import com.ezmax.api.model.UsergroupdelegationCreateObjectV1Response;
+import com.ezmax.api.model.UsergroupdelegationDeleteObjectV1Response;
 import com.ezmax.api.model.UsergroupdelegationEditObjectV1Request;
+import com.ezmax.api.model.UsergroupdelegationEditObjectV1Response;
 import com.ezmax.api.model.UsergroupdelegationGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -278,7 +279,7 @@ public class ObjectUsergroupdelegationApi {
      * Delete an existing Usergroupdelegation
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation (required)
-     * @return CommonResponse
+     * @return UsergroupdelegationDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -288,8 +289,8 @@ public class ObjectUsergroupdelegationApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse usergroupdelegationDeleteObjectV1(Integer pkiUsergroupdelegationID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = usergroupdelegationDeleteObjectV1WithHttpInfo(pkiUsergroupdelegationID);
+    public UsergroupdelegationDeleteObjectV1Response usergroupdelegationDeleteObjectV1(Integer pkiUsergroupdelegationID) throws ApiException {
+        ApiResponse<UsergroupdelegationDeleteObjectV1Response> localVarResp = usergroupdelegationDeleteObjectV1WithHttpInfo(pkiUsergroupdelegationID);
         return localVarResp.getData();
     }
 
@@ -297,7 +298,7 @@ public class ObjectUsergroupdelegationApi {
      * Delete an existing Usergroupdelegation
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;UsergroupdelegationDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -307,9 +308,9 @@ public class ObjectUsergroupdelegationApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> usergroupdelegationDeleteObjectV1WithHttpInfo(Integer pkiUsergroupdelegationID) throws ApiException {
+    public ApiResponse<UsergroupdelegationDeleteObjectV1Response> usergroupdelegationDeleteObjectV1WithHttpInfo(Integer pkiUsergroupdelegationID) throws ApiException {
         okhttp3.Call localVarCall = usergroupdelegationDeleteObjectV1ValidateBeforeCall(pkiUsergroupdelegationID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UsergroupdelegationDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -328,10 +329,10 @@ public class ObjectUsergroupdelegationApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call usergroupdelegationDeleteObjectV1Async(Integer pkiUsergroupdelegationID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call usergroupdelegationDeleteObjectV1Async(Integer pkiUsergroupdelegationID, final ApiCallback<UsergroupdelegationDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = usergroupdelegationDeleteObjectV1ValidateBeforeCall(pkiUsergroupdelegationID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UsergroupdelegationDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -418,7 +419,7 @@ public class ObjectUsergroupdelegationApi {
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation (required)
      * @param usergroupdelegationEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return UsergroupdelegationEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -429,8 +430,8 @@ public class ObjectUsergroupdelegationApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse usergroupdelegationEditObjectV1(Integer pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = usergroupdelegationEditObjectV1WithHttpInfo(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
+    public UsergroupdelegationEditObjectV1Response usergroupdelegationEditObjectV1(Integer pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request) throws ApiException {
+        ApiResponse<UsergroupdelegationEditObjectV1Response> localVarResp = usergroupdelegationEditObjectV1WithHttpInfo(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -439,7 +440,7 @@ public class ObjectUsergroupdelegationApi {
      * 
      * @param pkiUsergroupdelegationID The unique ID of the Usergroupdelegation (required)
      * @param usergroupdelegationEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;UsergroupdelegationEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -450,9 +451,9 @@ public class ObjectUsergroupdelegationApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> usergroupdelegationEditObjectV1WithHttpInfo(Integer pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request) throws ApiException {
+    public ApiResponse<UsergroupdelegationEditObjectV1Response> usergroupdelegationEditObjectV1WithHttpInfo(Integer pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = usergroupdelegationEditObjectV1ValidateBeforeCall(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UsergroupdelegationEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -473,10 +474,10 @@ public class ObjectUsergroupdelegationApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call usergroupdelegationEditObjectV1Async(Integer pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call usergroupdelegationEditObjectV1Async(Integer pkiUsergroupdelegationID, UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, final ApiCallback<UsergroupdelegationEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = usergroupdelegationEditObjectV1ValidateBeforeCall(pkiUsergroupdelegationID, usergroupdelegationEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UsergroupdelegationEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

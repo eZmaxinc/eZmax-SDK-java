@@ -27,11 +27,11 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignsigningreasonCreateObjectV1Request;
 import com.ezmax.api.model.EzsignsigningreasonCreateObjectV1Response;
 import com.ezmax.api.model.EzsignsigningreasonEditObjectV1Request;
+import com.ezmax.api.model.EzsignsigningreasonEditObjectV1Response;
 import com.ezmax.api.model.EzsignsigningreasonGetAutocompleteV2Response;
 import com.ezmax.api.model.EzsignsigningreasonGetListV1Response;
 import com.ezmax.api.model.EzsignsigningreasonGetObjectV2Response;
@@ -291,7 +291,7 @@ public class ObjectEzsignsigningreasonApi {
      * 
      * @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason (required)
      * @param ezsignsigningreasonEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return EzsignsigningreasonEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -302,8 +302,8 @@ public class ObjectEzsignsigningreasonApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignsigningreasonEditObjectV1(Integer pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
+    public EzsignsigningreasonEditObjectV1Response ezsignsigningreasonEditObjectV1(Integer pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request) throws ApiException {
+        ApiResponse<EzsignsigningreasonEditObjectV1Response> localVarResp = ezsignsigningreasonEditObjectV1WithHttpInfo(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -312,7 +312,7 @@ public class ObjectEzsignsigningreasonApi {
      * 
      * @param pkiEzsignsigningreasonID The unique ID of the Ezsignsigningreason (required)
      * @param ezsignsigningreasonEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignsigningreasonEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -323,9 +323,9 @@ public class ObjectEzsignsigningreasonApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignsigningreasonEditObjectV1WithHttpInfo(Integer pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request) throws ApiException {
+    public ApiResponse<EzsignsigningreasonEditObjectV1Response> ezsignsigningreasonEditObjectV1WithHttpInfo(Integer pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignsigningreasonEditObjectV1ValidateBeforeCall(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignsigningreasonEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -346,10 +346,10 @@ public class ObjectEzsignsigningreasonApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignsigningreasonEditObjectV1Async(Integer pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignsigningreasonEditObjectV1Async(Integer pkiEzsignsigningreasonID, EzsignsigningreasonEditObjectV1Request ezsignsigningreasonEditObjectV1Request, final ApiCallback<EzsignsigningreasonEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignsigningreasonEditObjectV1ValidateBeforeCall(pkiEzsignsigningreasonID, ezsignsigningreasonEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignsigningreasonEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

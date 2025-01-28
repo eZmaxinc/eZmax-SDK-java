@@ -14,9 +14,9 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AttemptResponse;
+import com.ezmax.api.model.AttemptResponseCompound;
 import com.ezmax.api.model.CustomWebhookResponse;
-import com.ezmax.api.model.UserResponse;
+import com.ezmax.api.model.UserResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class WebhookUserUserCreated {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
@@ -68,7 +68,7 @@ public class WebhookUserUserCreated {
   public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
   @SerializedName(SERIALIZED_NAME_OBJ_USER)
   @javax.annotation.Nonnull
-  private UserResponse objUser;
+  private UserResponseCompound objUser;
 
   public WebhookUserUserCreated() {
   }
@@ -97,7 +97,7 @@ public class WebhookUserUserCreated {
     return this;
   }
 
-  public WebhookUserUserCreated addAObjAttemptItem(AttemptResponse aObjAttemptItem) {
+  public WebhookUserUserCreated addAObjAttemptItem(AttemptResponseCompound aObjAttemptItem) {
     if (this.aObjAttempt == null) {
       this.aObjAttempt = new ArrayList<>();
     }
@@ -119,21 +119,21 @@ public class WebhookUserUserCreated {
   }
 
 
-  public WebhookUserUserCreated objUser(@javax.annotation.Nonnull UserResponse objUser) {
+  public WebhookUserUserCreated objUser(@javax.annotation.Nonnull UserResponseCompound objUser) {
     this.objUser = objUser;
     return this;
   }
 
   /**
-   * A User Object and children to create a complete structure
+   * Get objUser
    * @return objUser
    */
   @javax.annotation.Nonnull
-  public UserResponse getObjUser() {
+  public UserResponseCompound getObjUser() {
     return objUser;
   }
 
-  public void setObjUser(@javax.annotation.Nonnull UserResponse objUser) {
+  public void setObjUser(@javax.annotation.Nonnull UserResponseCompound objUser) {
     this.objUser = objUser;
   }
 
@@ -236,10 +236,10 @@ public class WebhookUserUserCreated {
       JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
       // validate the required field `a_objAttempt` (array)
       for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
-        AttemptResponse.validateJsonElement(jsonArrayaObjAttempt.get(i));
+        AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
       };
       // validate the required field `objUser`
-      UserResponse.validateJsonElement(jsonObj.get("objUser"));
+      UserResponseCompound.validateJsonElement(jsonObj.get("objUser"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

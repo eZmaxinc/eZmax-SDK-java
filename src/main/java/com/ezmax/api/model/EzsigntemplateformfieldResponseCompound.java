@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EnumHorizontalalignment;
-import com.ezmax.api.model.EzsigntemplateelementdependencyResponse;
+import com.ezmax.api.model.EzsigntemplateelementdependencyResponseCompound;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldPositioning;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldPositioningoccurence;
@@ -56,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateformfield Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsigntemplateformfieldResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D = "pkiEzsigntemplateformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELD_I_D)
@@ -509,7 +509,7 @@ public class EzsigntemplateformfieldResponseCompound {
     return this;
   }
 
-  public EzsigntemplateformfieldResponseCompound addAObjEzsigntemplateelementdependencyItem(EzsigntemplateelementdependencyResponse aObjEzsigntemplateelementdependencyItem) {
+  public EzsigntemplateformfieldResponseCompound addAObjEzsigntemplateelementdependencyItem(EzsigntemplateelementdependencyResponseCompound aObjEzsigntemplateelementdependencyItem) {
     if (this.aObjEzsigntemplateelementdependency == null) {
       this.aObjEzsigntemplateelementdependency = new ArrayList<>();
     }
@@ -708,7 +708,7 @@ public class EzsigntemplateformfieldResponseCompound {
 
           // validate the optional field `a_objEzsigntemplateelementdependency` (array)
           for (int i = 0; i < jsonArrayaObjEzsigntemplateelementdependency.size(); i++) {
-            EzsigntemplateelementdependencyResponse.validateJsonElement(jsonArrayaObjEzsigntemplateelementdependency.get(i));
+            EzsigntemplateelementdependencyResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplateelementdependency.get(i));
           };
         }
       }

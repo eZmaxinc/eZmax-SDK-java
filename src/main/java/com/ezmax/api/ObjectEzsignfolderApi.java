@@ -27,8 +27,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.EzsignfolderArchiveV1Response;
 import com.ezmax.api.model.EzsignfolderBatchDownloadV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV1Response;
@@ -36,8 +36,13 @@ import com.ezmax.api.model.EzsignfolderCreateObjectV2Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV2Response;
 import com.ezmax.api.model.EzsignfolderCreateObjectV3Request;
 import com.ezmax.api.model.EzsignfolderCreateObjectV3Response;
+import com.ezmax.api.model.EzsignfolderDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignfolderDisposeEzsignfoldersV1Request;
+import com.ezmax.api.model.EzsignfolderDisposeEzsignfoldersV1Response;
+import com.ezmax.api.model.EzsignfolderDisposeV1Response;
 import com.ezmax.api.model.EzsignfolderEditObjectV3Request;
+import com.ezmax.api.model.EzsignfolderEditObjectV3Response;
+import com.ezmax.api.model.EzsignfolderEndPrematurelyV1Response;
 import com.ezmax.api.model.EzsignfolderGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsignfolderGetAttachmentCountV1Response;
 import com.ezmax.api.model.EzsignfolderGetAttachmentsV1Response;
@@ -58,9 +63,14 @@ import com.ezmax.api.model.EzsignfolderImportEzsignfoldersignerassociationsV1Res
 import com.ezmax.api.model.EzsignfolderImportEzsigntemplatepackageV1Request;
 import com.ezmax.api.model.EzsignfolderImportEzsigntemplatepackageV1Response;
 import com.ezmax.api.model.EzsignfolderReorderV1Request;
+import com.ezmax.api.model.EzsignfolderReorderV1Response;
 import com.ezmax.api.model.EzsignfolderReorderV2Request;
+import com.ezmax.api.model.EzsignfolderReorderV2Response;
 import com.ezmax.api.model.EzsignfolderSendV1Request;
+import com.ezmax.api.model.EzsignfolderSendV1Response;
 import com.ezmax.api.model.EzsignfolderSendV3Request;
+import com.ezmax.api.model.EzsignfolderSendV3Response;
+import com.ezmax.api.model.EzsignfolderUnsendV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 
@@ -190,7 +200,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param body  (required)
-     * @return CommonResponse
+     * @return EzsignfolderArchiveV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -201,8 +211,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignfolderArchiveV1(Integer pkiEzsignfolderID, Object body) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignfolderArchiveV1WithHttpInfo(pkiEzsignfolderID, body);
+    public EzsignfolderArchiveV1Response ezsignfolderArchiveV1(Integer pkiEzsignfolderID, Object body) throws ApiException {
+        ApiResponse<EzsignfolderArchiveV1Response> localVarResp = ezsignfolderArchiveV1WithHttpInfo(pkiEzsignfolderID, body);
         return localVarResp.getData();
     }
 
@@ -211,7 +221,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param body  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignfolderArchiveV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -222,9 +232,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignfolderArchiveV1WithHttpInfo(Integer pkiEzsignfolderID, Object body) throws ApiException {
+    public ApiResponse<EzsignfolderArchiveV1Response> ezsignfolderArchiveV1WithHttpInfo(Integer pkiEzsignfolderID, Object body) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderArchiveV1ValidateBeforeCall(pkiEzsignfolderID, body, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderArchiveV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -245,10 +255,10 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderArchiveV1Async(Integer pkiEzsignfolderID, Object body, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderArchiveV1Async(Integer pkiEzsignfolderID, Object body, final ApiCallback<EzsignfolderArchiveV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderArchiveV1ValidateBeforeCall(pkiEzsignfolderID, body, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderArchiveV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -876,7 +886,7 @@ public class ObjectEzsignfolderApi {
      * Delete an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID  (required)
-     * @return CommonResponse
+     * @return EzsignfolderDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -887,8 +897,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignfolderDeleteObjectV1(Integer pkiEzsignfolderID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignfolderDeleteObjectV1WithHttpInfo(pkiEzsignfolderID);
+    public EzsignfolderDeleteObjectV1Response ezsignfolderDeleteObjectV1(Integer pkiEzsignfolderID) throws ApiException {
+        ApiResponse<EzsignfolderDeleteObjectV1Response> localVarResp = ezsignfolderDeleteObjectV1WithHttpInfo(pkiEzsignfolderID);
         return localVarResp.getData();
     }
 
@@ -896,7 +906,7 @@ public class ObjectEzsignfolderApi {
      * Delete an existing Ezsignfolder
      * 
      * @param pkiEzsignfolderID  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignfolderDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -907,9 +917,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignfolderDeleteObjectV1WithHttpInfo(Integer pkiEzsignfolderID) throws ApiException {
+    public ApiResponse<EzsignfolderDeleteObjectV1Response> ezsignfolderDeleteObjectV1WithHttpInfo(Integer pkiEzsignfolderID) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderDeleteObjectV1ValidateBeforeCall(pkiEzsignfolderID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -929,10 +939,10 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderDeleteObjectV1Async(Integer pkiEzsignfolderID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderDeleteObjectV1Async(Integer pkiEzsignfolderID, final ApiCallback<EzsignfolderDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderDeleteObjectV1ValidateBeforeCall(pkiEzsignfolderID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1011,7 +1021,7 @@ public class ObjectEzsignfolderApi {
      * Dispose Ezsignfolders
      * 
      * @param ezsignfolderDisposeEzsignfoldersV1Request  (required)
-     * @return CommonResponse
+     * @return EzsignfolderDisposeEzsignfoldersV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1022,8 +1032,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignfolderDisposeEzsignfoldersV1(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(ezsignfolderDisposeEzsignfoldersV1Request);
+    public EzsignfolderDisposeEzsignfoldersV1Response ezsignfolderDisposeEzsignfoldersV1(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request) throws ApiException {
+        ApiResponse<EzsignfolderDisposeEzsignfoldersV1Response> localVarResp = ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(ezsignfolderDisposeEzsignfoldersV1Request);
         return localVarResp.getData();
     }
 
@@ -1031,7 +1041,7 @@ public class ObjectEzsignfolderApi {
      * Dispose Ezsignfolders
      * 
      * @param ezsignfolderDisposeEzsignfoldersV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignfolderDisposeEzsignfoldersV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1042,9 +1052,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request) throws ApiException {
+    public ApiResponse<EzsignfolderDisposeEzsignfoldersV1Response> ezsignfolderDisposeEzsignfoldersV1WithHttpInfo(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderDisposeEzsignfoldersV1ValidateBeforeCall(ezsignfolderDisposeEzsignfoldersV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderDisposeEzsignfoldersV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1064,10 +1074,10 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderDisposeEzsignfoldersV1Async(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderDisposeEzsignfoldersV1Async(EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request, final ApiCallback<EzsignfolderDisposeEzsignfoldersV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderDisposeEzsignfoldersV1ValidateBeforeCall(ezsignfolderDisposeEzsignfoldersV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderDisposeEzsignfoldersV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1154,7 +1164,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param body  (required)
-     * @return CommonResponse
+     * @return EzsignfolderDisposeV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1165,8 +1175,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignfolderDisposeV1(Integer pkiEzsignfolderID, Object body) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignfolderDisposeV1WithHttpInfo(pkiEzsignfolderID, body);
+    public EzsignfolderDisposeV1Response ezsignfolderDisposeV1(Integer pkiEzsignfolderID, Object body) throws ApiException {
+        ApiResponse<EzsignfolderDisposeV1Response> localVarResp = ezsignfolderDisposeV1WithHttpInfo(pkiEzsignfolderID, body);
         return localVarResp.getData();
     }
 
@@ -1175,7 +1185,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param body  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignfolderDisposeV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1186,9 +1196,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignfolderDisposeV1WithHttpInfo(Integer pkiEzsignfolderID, Object body) throws ApiException {
+    public ApiResponse<EzsignfolderDisposeV1Response> ezsignfolderDisposeV1WithHttpInfo(Integer pkiEzsignfolderID, Object body) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderDisposeV1ValidateBeforeCall(pkiEzsignfolderID, body, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderDisposeV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1209,10 +1219,10 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderDisposeV1Async(Integer pkiEzsignfolderID, Object body, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderDisposeV1Async(Integer pkiEzsignfolderID, Object body, final ApiCallback<EzsignfolderDisposeV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderDisposeV1ValidateBeforeCall(pkiEzsignfolderID, body, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderDisposeV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1299,7 +1309,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderEditObjectV3Request  (required)
-     * @return CommonResponse
+     * @return EzsignfolderEditObjectV3Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1310,8 +1320,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignfolderEditObjectV3(Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignfolderEditObjectV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
+    public EzsignfolderEditObjectV3Response ezsignfolderEditObjectV3(Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request) throws ApiException {
+        ApiResponse<EzsignfolderEditObjectV3Response> localVarResp = ezsignfolderEditObjectV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
         return localVarResp.getData();
     }
 
@@ -1320,7 +1330,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderEditObjectV3Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignfolderEditObjectV3Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1331,9 +1341,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignfolderEditObjectV3WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request) throws ApiException {
+    public ApiResponse<EzsignfolderEditObjectV3Response> ezsignfolderEditObjectV3WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderEditObjectV3ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderEditObjectV3Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderEditObjectV3Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1354,10 +1364,10 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderEditObjectV3Async(Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderEditObjectV3Async(Integer pkiEzsignfolderID, EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request, final ApiCallback<EzsignfolderEditObjectV3Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderEditObjectV3ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderEditObjectV3Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderEditObjectV3Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1444,7 +1454,7 @@ public class ObjectEzsignfolderApi {
      * End prematurely all Ezsigndocument of Ezsignfolder when some signatures are still required
      * @param pkiEzsignfolderID  (required)
      * @param body  (required)
-     * @return CommonResponse
+     * @return EzsignfolderEndPrematurelyV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1455,8 +1465,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignfolderEndPrematurelyV1(Integer pkiEzsignfolderID, Object body) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignfolderEndPrematurelyV1WithHttpInfo(pkiEzsignfolderID, body);
+    public EzsignfolderEndPrematurelyV1Response ezsignfolderEndPrematurelyV1(Integer pkiEzsignfolderID, Object body) throws ApiException {
+        ApiResponse<EzsignfolderEndPrematurelyV1Response> localVarResp = ezsignfolderEndPrematurelyV1WithHttpInfo(pkiEzsignfolderID, body);
         return localVarResp.getData();
     }
 
@@ -1465,7 +1475,7 @@ public class ObjectEzsignfolderApi {
      * End prematurely all Ezsigndocument of Ezsignfolder when some signatures are still required
      * @param pkiEzsignfolderID  (required)
      * @param body  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignfolderEndPrematurelyV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1476,9 +1486,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignfolderEndPrematurelyV1WithHttpInfo(Integer pkiEzsignfolderID, Object body) throws ApiException {
+    public ApiResponse<EzsignfolderEndPrematurelyV1Response> ezsignfolderEndPrematurelyV1WithHttpInfo(Integer pkiEzsignfolderID, Object body) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderEndPrematurelyV1ValidateBeforeCall(pkiEzsignfolderID, body, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderEndPrematurelyV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1499,10 +1509,10 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderEndPrematurelyV1Async(Integer pkiEzsignfolderID, Object body, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderEndPrematurelyV1Async(Integer pkiEzsignfolderID, Object body, final ApiCallback<EzsignfolderEndPrematurelyV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderEndPrematurelyV1ValidateBeforeCall(pkiEzsignfolderID, body, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderEndPrematurelyV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -3914,7 +3924,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderReorderV1Request  (required)
-     * @return CommonResponse
+     * @return EzsignfolderReorderV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -3927,8 +3937,8 @@ public class ObjectEzsignfolderApi {
      * @deprecated
      */
     @Deprecated
-    public CommonResponse ezsignfolderReorderV1(Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignfolderReorderV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV1Request);
+    public EzsignfolderReorderV1Response ezsignfolderReorderV1(Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request) throws ApiException {
+        ApiResponse<EzsignfolderReorderV1Response> localVarResp = ezsignfolderReorderV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV1Request);
         return localVarResp.getData();
     }
 
@@ -3937,7 +3947,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderReorderV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignfolderReorderV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -3950,9 +3960,9 @@ public class ObjectEzsignfolderApi {
      * @deprecated
      */
     @Deprecated
-    public ApiResponse<CommonResponse> ezsignfolderReorderV1WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request) throws ApiException {
+    public ApiResponse<EzsignfolderReorderV1Response> ezsignfolderReorderV1WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderReorderV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderReorderV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderReorderV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -3975,10 +3985,10 @@ public class ObjectEzsignfolderApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call ezsignfolderReorderV1Async(Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderReorderV1Async(Integer pkiEzsignfolderID, EzsignfolderReorderV1Request ezsignfolderReorderV1Request, final ApiCallback<EzsignfolderReorderV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderReorderV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderReorderV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderReorderV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4065,7 +4075,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderReorderV2Request  (required)
-     * @return CommonResponse
+     * @return EzsignfolderReorderV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4076,8 +4086,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignfolderReorderV2(Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignfolderReorderV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV2Request);
+    public EzsignfolderReorderV2Response ezsignfolderReorderV2(Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request) throws ApiException {
+        ApiResponse<EzsignfolderReorderV2Response> localVarResp = ezsignfolderReorderV2WithHttpInfo(pkiEzsignfolderID, ezsignfolderReorderV2Request);
         return localVarResp.getData();
     }
 
@@ -4086,7 +4096,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderReorderV2Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignfolderReorderV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4097,9 +4107,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignfolderReorderV2WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request) throws ApiException {
+    public ApiResponse<EzsignfolderReorderV2Response> ezsignfolderReorderV2WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderReorderV2ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderReorderV2Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderReorderV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -4120,10 +4130,10 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderReorderV2Async(Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderReorderV2Async(Integer pkiEzsignfolderID, EzsignfolderReorderV2Request ezsignfolderReorderV2Request, final ApiCallback<EzsignfolderReorderV2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderReorderV2ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderReorderV2Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderReorderV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4213,7 +4223,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderSendV1Request  (required)
-     * @return CommonResponse
+     * @return EzsignfolderSendV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4226,8 +4236,8 @@ public class ObjectEzsignfolderApi {
      * @deprecated
      */
     @Deprecated
-    public CommonResponse ezsignfolderSendV1(Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignfolderSendV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV1Request);
+    public EzsignfolderSendV1Response ezsignfolderSendV1(Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request) throws ApiException {
+        ApiResponse<EzsignfolderSendV1Response> localVarResp = ezsignfolderSendV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV1Request);
         return localVarResp.getData();
     }
 
@@ -4236,7 +4246,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderSendV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignfolderSendV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4249,9 +4259,9 @@ public class ObjectEzsignfolderApi {
      * @deprecated
      */
     @Deprecated
-    public ApiResponse<CommonResponse> ezsignfolderSendV1WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request) throws ApiException {
+    public ApiResponse<EzsignfolderSendV1Response> ezsignfolderSendV1WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderSendV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderSendV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderSendV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -4274,10 +4284,10 @@ public class ObjectEzsignfolderApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call ezsignfolderSendV1Async(Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderSendV1Async(Integer pkiEzsignfolderID, EzsignfolderSendV1Request ezsignfolderSendV1Request, final ApiCallback<EzsignfolderSendV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderSendV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderSendV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderSendV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4364,7 +4374,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderSendV3Request  (required)
-     * @return CommonResponse
+     * @return EzsignfolderSendV3Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4375,8 +4385,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignfolderSendV3(Integer pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignfolderSendV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV3Request);
+    public EzsignfolderSendV3Response ezsignfolderSendV3(Integer pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request) throws ApiException {
+        ApiResponse<EzsignfolderSendV3Response> localVarResp = ezsignfolderSendV3WithHttpInfo(pkiEzsignfolderID, ezsignfolderSendV3Request);
         return localVarResp.getData();
     }
 
@@ -4385,7 +4395,7 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderSendV3Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignfolderSendV3Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4396,9 +4406,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignfolderSendV3WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request) throws ApiException {
+    public ApiResponse<EzsignfolderSendV3Response> ezsignfolderSendV3WithHttpInfo(Integer pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderSendV3ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderSendV3Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderSendV3Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -4419,10 +4429,10 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderSendV3Async(Integer pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderSendV3Async(Integer pkiEzsignfolderID, EzsignfolderSendV3Request ezsignfolderSendV3Request, final ApiCallback<EzsignfolderSendV3Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderSendV3ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderSendV3Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderSendV3Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4509,7 +4519,7 @@ public class ObjectEzsignfolderApi {
      * Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
      * @param pkiEzsignfolderID  (required)
      * @param body  (required)
-     * @return CommonResponse
+     * @return EzsignfolderUnsendV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4520,8 +4530,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignfolderUnsendV1(Integer pkiEzsignfolderID, Object body) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID, body);
+    public EzsignfolderUnsendV1Response ezsignfolderUnsendV1(Integer pkiEzsignfolderID, Object body) throws ApiException {
+        ApiResponse<EzsignfolderUnsendV1Response> localVarResp = ezsignfolderUnsendV1WithHttpInfo(pkiEzsignfolderID, body);
         return localVarResp.getData();
     }
 
@@ -4530,7 +4540,7 @@ public class ObjectEzsignfolderApi {
      * Once an Ezsignfolder has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsignfolder and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on \&quot;Non-completed\&quot; Ezsigndocuments will be lost.
      * @param pkiEzsignfolderID  (required)
      * @param body  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignfolderUnsendV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4541,9 +4551,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignfolderUnsendV1WithHttpInfo(Integer pkiEzsignfolderID, Object body) throws ApiException {
+    public ApiResponse<EzsignfolderUnsendV1Response> ezsignfolderUnsendV1WithHttpInfo(Integer pkiEzsignfolderID, Object body) throws ApiException {
         okhttp3.Call localVarCall = ezsignfolderUnsendV1ValidateBeforeCall(pkiEzsignfolderID, body, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderUnsendV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -4564,10 +4574,10 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderUnsendV1Async(Integer pkiEzsignfolderID, Object body, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderUnsendV1Async(Integer pkiEzsignfolderID, Object body, final ApiCallback<EzsignfolderUnsendV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignfolderUnsendV1ValidateBeforeCall(pkiEzsignfolderID, body, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignfolderUnsendV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

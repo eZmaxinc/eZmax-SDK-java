@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.PermissionResponse;
+import com.ezmax.api.model.PermissionResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Modulesection Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class ModulesectionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_MODULESECTION_I_D = "pkiModulesectionID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULESECTION_I_D)
@@ -164,7 +164,7 @@ public class ModulesectionResponseCompound {
     return this;
   }
 
-  public ModulesectionResponseCompound addAObjPermissionItem(PermissionResponse aObjPermissionItem) {
+  public ModulesectionResponseCompound addAObjPermissionItem(PermissionResponseCompound aObjPermissionItem) {
     if (this.aObjPermission == null) {
       this.aObjPermission = new ArrayList<>();
     }
@@ -297,7 +297,7 @@ public class ModulesectionResponseCompound {
 
           // validate the optional field `a_objPermission` (array)
           for (int i = 0; i < jsonArrayaObjPermission.size(); i++) {
-            PermissionResponse.validateJsonElement(jsonArrayaObjPermission.get(i));
+            PermissionResponseCompound.validateJsonElement(jsonArrayaObjPermission.get(i));
           };
         }
       }

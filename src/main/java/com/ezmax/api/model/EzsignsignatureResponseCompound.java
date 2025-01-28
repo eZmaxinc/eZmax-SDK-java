@@ -18,8 +18,8 @@ import com.ezmax.api.model.CustomContactNameResponse;
 import com.ezmax.api.model.CustomCreditcardtransactionResponse;
 import com.ezmax.api.model.CustomTimezoneWithCodeResponse;
 import com.ezmax.api.model.EnumTextvalidation;
-import com.ezmax.api.model.EzsignelementdependencyResponse;
-import com.ezmax.api.model.EzsignsignaturecustomdateResponse;
+import com.ezmax.api.model.EzsignelementdependencyResponseCompound;
+import com.ezmax.api.model.EzsignsignaturecustomdateResponseCompound;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsignsignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
@@ -63,7 +63,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsignsignatureResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -1043,7 +1043,7 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-  public EzsignsignatureResponseCompound addAObjEzsignsignaturecustomdateItem(EzsignsignaturecustomdateResponse aObjEzsignsignaturecustomdateItem) {
+  public EzsignsignatureResponseCompound addAObjEzsignsignaturecustomdateItem(EzsignsignaturecustomdateResponseCompound aObjEzsignsignaturecustomdateItem) {
     if (this.aObjEzsignsignaturecustomdate == null) {
       this.aObjEzsignsignaturecustomdate = new ArrayList<>();
     }
@@ -1089,7 +1089,7 @@ public class EzsignsignatureResponseCompound {
     return this;
   }
 
-  public EzsignsignatureResponseCompound addAObjEzsignelementdependencyItem(EzsignelementdependencyResponse aObjEzsignelementdependencyItem) {
+  public EzsignsignatureResponseCompound addAObjEzsignelementdependencyItem(EzsignelementdependencyResponseCompound aObjEzsignelementdependencyItem) {
     if (this.aObjEzsignelementdependency == null) {
       this.aObjEzsignelementdependency = new ArrayList<>();
     }
@@ -1417,7 +1417,7 @@ public class EzsignsignatureResponseCompound {
 
           // validate the optional field `a_objEzsignsignaturecustomdate` (array)
           for (int i = 0; i < jsonArrayaObjEzsignsignaturecustomdate.size(); i++) {
-            EzsignsignaturecustomdateResponse.validateJsonElement(jsonArrayaObjEzsignsignaturecustomdate.get(i));
+            EzsignsignaturecustomdateResponseCompound.validateJsonElement(jsonArrayaObjEzsignsignaturecustomdate.get(i));
           };
         }
       }
@@ -1435,7 +1435,7 @@ public class EzsignsignatureResponseCompound {
 
           // validate the optional field `a_objEzsignelementdependency` (array)
           for (int i = 0; i < jsonArrayaObjEzsignelementdependency.size(); i++) {
-            EzsignelementdependencyResponse.validateJsonElement(jsonArrayaObjEzsignelementdependency.get(i));
+            EzsignelementdependencyResponseCompound.validateJsonElement(jsonArrayaObjEzsignelementdependency.get(i));
           };
         }
       }

@@ -27,11 +27,12 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignannotationCreateObjectV1Request;
 import com.ezmax.api.model.EzsignannotationCreateObjectV1Response;
+import com.ezmax.api.model.EzsignannotationDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignannotationEditObjectV1Request;
+import com.ezmax.api.model.EzsignannotationEditObjectV1Response;
 import com.ezmax.api.model.EzsignannotationGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -278,7 +279,7 @@ public class ObjectEzsignannotationApi {
      * Delete an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID  (required)
-     * @return CommonResponse
+     * @return EzsignannotationDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -288,8 +289,8 @@ public class ObjectEzsignannotationApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignannotationDeleteObjectV1(Integer pkiEzsignannotationID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID);
+    public EzsignannotationDeleteObjectV1Response ezsignannotationDeleteObjectV1(Integer pkiEzsignannotationID) throws ApiException {
+        ApiResponse<EzsignannotationDeleteObjectV1Response> localVarResp = ezsignannotationDeleteObjectV1WithHttpInfo(pkiEzsignannotationID);
         return localVarResp.getData();
     }
 
@@ -297,7 +298,7 @@ public class ObjectEzsignannotationApi {
      * Delete an existing Ezsignannotation
      * 
      * @param pkiEzsignannotationID  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignannotationDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -307,9 +308,9 @@ public class ObjectEzsignannotationApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignannotationDeleteObjectV1WithHttpInfo(Integer pkiEzsignannotationID) throws ApiException {
+    public ApiResponse<EzsignannotationDeleteObjectV1Response> ezsignannotationDeleteObjectV1WithHttpInfo(Integer pkiEzsignannotationID) throws ApiException {
         okhttp3.Call localVarCall = ezsignannotationDeleteObjectV1ValidateBeforeCall(pkiEzsignannotationID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignannotationDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -328,10 +329,10 @@ public class ObjectEzsignannotationApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignannotationDeleteObjectV1Async(Integer pkiEzsignannotationID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignannotationDeleteObjectV1Async(Integer pkiEzsignannotationID, final ApiCallback<EzsignannotationDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignannotationDeleteObjectV1ValidateBeforeCall(pkiEzsignannotationID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignannotationDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -418,7 +419,7 @@ public class ObjectEzsignannotationApi {
      * 
      * @param pkiEzsignannotationID  (required)
      * @param ezsignannotationEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return EzsignannotationEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -429,8 +430,8 @@ public class ObjectEzsignannotationApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignannotationEditObjectV1(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
+    public EzsignannotationEditObjectV1Response ezsignannotationEditObjectV1(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request) throws ApiException {
+        ApiResponse<EzsignannotationEditObjectV1Response> localVarResp = ezsignannotationEditObjectV1WithHttpInfo(pkiEzsignannotationID, ezsignannotationEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -439,7 +440,7 @@ public class ObjectEzsignannotationApi {
      * 
      * @param pkiEzsignannotationID  (required)
      * @param ezsignannotationEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignannotationEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -450,9 +451,9 @@ public class ObjectEzsignannotationApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignannotationEditObjectV1WithHttpInfo(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request) throws ApiException {
+    public ApiResponse<EzsignannotationEditObjectV1Response> ezsignannotationEditObjectV1WithHttpInfo(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignannotationEditObjectV1ValidateBeforeCall(pkiEzsignannotationID, ezsignannotationEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignannotationEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -473,10 +474,10 @@ public class ObjectEzsignannotationApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignannotationEditObjectV1Async(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignannotationEditObjectV1Async(Integer pkiEzsignannotationID, EzsignannotationEditObjectV1Request ezsignannotationEditObjectV1Request, final ApiCallback<EzsignannotationEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignannotationEditObjectV1ValidateBeforeCall(pkiEzsignannotationID, ezsignannotationEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignannotationEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

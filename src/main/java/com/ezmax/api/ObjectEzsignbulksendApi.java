@@ -27,19 +27,21 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Request;
 import com.ezmax.api.model.EzsignbulksendCreateEzsignbulksendtransmissionV2Response;
 import com.ezmax.api.model.EzsignbulksendCreateObjectV1Request;
 import com.ezmax.api.model.EzsignbulksendCreateObjectV1Response;
+import com.ezmax.api.model.EzsignbulksendDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendEditObjectV1Request;
+import com.ezmax.api.model.EzsignbulksendEditObjectV1Response;
 import com.ezmax.api.model.EzsignbulksendGetEzsignbulksendtransmissionsV1Response;
 import com.ezmax.api.model.EzsignbulksendGetEzsignsignaturesAutomaticV1Response;
 import com.ezmax.api.model.EzsignbulksendGetFormsDataV1Response;
 import com.ezmax.api.model.EzsignbulksendGetListV1Response;
 import com.ezmax.api.model.EzsignbulksendGetObjectV2Response;
 import com.ezmax.api.model.EzsignbulksendReorderV1Request;
+import com.ezmax.api.model.EzsignbulksendReorderV1Response;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 
@@ -433,7 +435,7 @@ public class ObjectEzsignbulksendApi {
      * Delete an existing Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID  (required)
-     * @return CommonResponse
+     * @return EzsignbulksendDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -444,8 +446,8 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignbulksendDeleteObjectV1(Integer pkiEzsignbulksendID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID);
+    public EzsignbulksendDeleteObjectV1Response ezsignbulksendDeleteObjectV1(Integer pkiEzsignbulksendID) throws ApiException {
+        ApiResponse<EzsignbulksendDeleteObjectV1Response> localVarResp = ezsignbulksendDeleteObjectV1WithHttpInfo(pkiEzsignbulksendID);
         return localVarResp.getData();
     }
 
@@ -453,7 +455,7 @@ public class ObjectEzsignbulksendApi {
      * Delete an existing Ezsignbulksend
      * 
      * @param pkiEzsignbulksendID  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignbulksendDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -464,9 +466,9 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignbulksendDeleteObjectV1WithHttpInfo(Integer pkiEzsignbulksendID) throws ApiException {
+    public ApiResponse<EzsignbulksendDeleteObjectV1Response> ezsignbulksendDeleteObjectV1WithHttpInfo(Integer pkiEzsignbulksendID) throws ApiException {
         okhttp3.Call localVarCall = ezsignbulksendDeleteObjectV1ValidateBeforeCall(pkiEzsignbulksendID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignbulksendDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -486,10 +488,10 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignbulksendDeleteObjectV1Async(Integer pkiEzsignbulksendID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignbulksendDeleteObjectV1Async(Integer pkiEzsignbulksendID, final ApiCallback<EzsignbulksendDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignbulksendDeleteObjectV1ValidateBeforeCall(pkiEzsignbulksendID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignbulksendDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -576,7 +578,7 @@ public class ObjectEzsignbulksendApi {
      * 
      * @param pkiEzsignbulksendID  (required)
      * @param ezsignbulksendEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return EzsignbulksendEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -587,8 +589,8 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignbulksendEditObjectV1(Integer pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
+    public EzsignbulksendEditObjectV1Response ezsignbulksendEditObjectV1(Integer pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request) throws ApiException {
+        ApiResponse<EzsignbulksendEditObjectV1Response> localVarResp = ezsignbulksendEditObjectV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -597,7 +599,7 @@ public class ObjectEzsignbulksendApi {
      * 
      * @param pkiEzsignbulksendID  (required)
      * @param ezsignbulksendEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignbulksendEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -608,9 +610,9 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignbulksendEditObjectV1WithHttpInfo(Integer pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request) throws ApiException {
+    public ApiResponse<EzsignbulksendEditObjectV1Response> ezsignbulksendEditObjectV1WithHttpInfo(Integer pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignbulksendEditObjectV1ValidateBeforeCall(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignbulksendEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -631,10 +633,10 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignbulksendEditObjectV1Async(Integer pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignbulksendEditObjectV1Async(Integer pkiEzsignbulksendID, EzsignbulksendEditObjectV1Request ezsignbulksendEditObjectV1Request, final ApiCallback<EzsignbulksendEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignbulksendEditObjectV1ValidateBeforeCall(pkiEzsignbulksendID, ezsignbulksendEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignbulksendEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1570,7 +1572,7 @@ public class ObjectEzsignbulksendApi {
      * 
      * @param pkiEzsignbulksendID  (required)
      * @param ezsignbulksendReorderV1Request  (required)
-     * @return CommonResponse
+     * @return EzsignbulksendReorderV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1581,8 +1583,8 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignbulksendReorderV1(Integer pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
+    public EzsignbulksendReorderV1Response ezsignbulksendReorderV1(Integer pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request) throws ApiException {
+        ApiResponse<EzsignbulksendReorderV1Response> localVarResp = ezsignbulksendReorderV1WithHttpInfo(pkiEzsignbulksendID, ezsignbulksendReorderV1Request);
         return localVarResp.getData();
     }
 
@@ -1591,7 +1593,7 @@ public class ObjectEzsignbulksendApi {
      * 
      * @param pkiEzsignbulksendID  (required)
      * @param ezsignbulksendReorderV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignbulksendReorderV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1602,9 +1604,9 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignbulksendReorderV1WithHttpInfo(Integer pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request) throws ApiException {
+    public ApiResponse<EzsignbulksendReorderV1Response> ezsignbulksendReorderV1WithHttpInfo(Integer pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignbulksendReorderV1ValidateBeforeCall(pkiEzsignbulksendID, ezsignbulksendReorderV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignbulksendReorderV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1625,10 +1627,10 @@ public class ObjectEzsignbulksendApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignbulksendReorderV1Async(Integer pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignbulksendReorderV1Async(Integer pkiEzsignbulksendID, EzsignbulksendReorderV1Request ezsignbulksendReorderV1Request, final ApiCallback<EzsignbulksendReorderV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignbulksendReorderV1ValidateBeforeCall(pkiEzsignbulksendID, ezsignbulksendReorderV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignbulksendReorderV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

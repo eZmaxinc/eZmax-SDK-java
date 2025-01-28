@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.UserstagedResponse;
+import com.ezmax.api.model.UserstagedResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,31 +49,31 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/userstaged/{pkiUserstagedID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class UserstagedGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_USERSTAGED = "objUserstaged";
   @SerializedName(SERIALIZED_NAME_OBJ_USERSTAGED)
   @javax.annotation.Nonnull
-  private UserstagedResponse objUserstaged;
+  private UserstagedResponseCompound objUserstaged;
 
   public UserstagedGetObjectV2ResponseMPayload() {
   }
 
-  public UserstagedGetObjectV2ResponseMPayload objUserstaged(@javax.annotation.Nonnull UserstagedResponse objUserstaged) {
+  public UserstagedGetObjectV2ResponseMPayload objUserstaged(@javax.annotation.Nonnull UserstagedResponseCompound objUserstaged) {
     this.objUserstaged = objUserstaged;
     return this;
   }
 
   /**
-   * A Userstaged Object
+   * Get objUserstaged
    * @return objUserstaged
    */
   @javax.annotation.Nonnull
-  public UserstagedResponse getObjUserstaged() {
+  public UserstagedResponseCompound getObjUserstaged() {
     return objUserstaged;
   }
 
-  public void setObjUserstaged(@javax.annotation.Nonnull UserstagedResponse objUserstaged) {
+  public void setObjUserstaged(@javax.annotation.Nonnull UserstagedResponseCompound objUserstaged) {
     this.objUserstaged = objUserstaged;
   }
 
@@ -159,7 +159,7 @@ public class UserstagedGetObjectV2ResponseMPayload {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objUserstaged`
-      UserstagedResponse.validateJsonElement(jsonObj.get("objUserstaged"));
+      UserstagedResponseCompound.validateJsonElement(jsonObj.get("objUserstaged"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

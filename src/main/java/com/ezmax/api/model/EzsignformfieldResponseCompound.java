@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EnumHorizontalalignment;
-import com.ezmax.api.model.EzsignelementdependencyResponse;
+import com.ezmax.api.model.EzsignelementdependencyResponseCompound;
 import com.ezmax.api.model.FieldEEzsignformfieldDependencyrequirement;
 import com.ezmax.api.model.TextstylestaticResponseCompound;
 import com.google.gson.TypeAdapter;
@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfield Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsignformfieldResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D = "pkiEzsignformfieldID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELD_I_D)
@@ -411,7 +411,7 @@ public class EzsignformfieldResponseCompound {
     return this;
   }
 
-  public EzsignformfieldResponseCompound addAObjEzsignelementdependencyItem(EzsignelementdependencyResponse aObjEzsignelementdependencyItem) {
+  public EzsignformfieldResponseCompound addAObjEzsignelementdependencyItem(EzsignelementdependencyResponseCompound aObjEzsignelementdependencyItem) {
     if (this.aObjEzsignelementdependency == null) {
       this.aObjEzsignelementdependency = new ArrayList<>();
     }
@@ -592,7 +592,7 @@ public class EzsignformfieldResponseCompound {
 
           // validate the optional field `a_objEzsignelementdependency` (array)
           for (int i = 0; i < jsonArrayaObjEzsignelementdependency.size(); i++) {
-            EzsignelementdependencyResponse.validateJsonElement(jsonArrayaObjEzsignelementdependency.get(i));
+            EzsignelementdependencyResponseCompound.validateJsonElement(jsonArrayaObjEzsignelementdependency.get(i));
           };
         }
       }

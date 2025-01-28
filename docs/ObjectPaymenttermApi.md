@@ -83,7 +83,7 @@ public class Example {
 
 <a id="paymenttermEditObjectV1"></a>
 # **paymenttermEditObjectV1**
-> CommonResponse paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
+> PaymenttermEditObjectV1Response paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request)
 
 Edit an existing Paymentterm
 
@@ -114,7 +114,7 @@ public class Example {
     Integer pkiPaymenttermID = 56; // Integer | 
     PaymenttermEditObjectV1Request paymenttermEditObjectV1Request = new PaymenttermEditObjectV1Request(); // PaymenttermEditObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request);
+      PaymenttermEditObjectV1Response result = apiInstance.paymenttermEditObjectV1(pkiPaymenttermID, paymenttermEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectPaymenttermApi#paymenttermEditObjectV1");
@@ -136,7 +136,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**PaymenttermEditObjectV1Response**](PaymenttermEditObjectV1Response.md)
 
 ### Authorization
 

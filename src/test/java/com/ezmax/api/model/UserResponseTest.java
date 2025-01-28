@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import com.ezmax.api.model.CommonAudit;
-import com.ezmax.api.model.EmailResponse;
+import com.ezmax.api.model.EmailResponseCompound;
 import com.ezmax.api.model.FieldEUserEzsignaccess;
 import com.ezmax.api.model.FieldEUserLogintype;
 import com.ezmax.api.model.FieldEUserOrigin;

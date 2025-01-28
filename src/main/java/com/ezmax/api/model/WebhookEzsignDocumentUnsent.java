@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AttemptResponse;
+import com.ezmax.api.model.AttemptResponseCompound;
 import com.ezmax.api.model.CustomWebhookResponse;
 import com.ezmax.api.model.EzsigndocumentResponse;
 import com.google.gson.TypeAdapter;
@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class WebhookEzsignDocumentUnsent {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
@@ -97,7 +97,7 @@ public class WebhookEzsignDocumentUnsent {
     return this;
   }
 
-  public WebhookEzsignDocumentUnsent addAObjAttemptItem(AttemptResponse aObjAttemptItem) {
+  public WebhookEzsignDocumentUnsent addAObjAttemptItem(AttemptResponseCompound aObjAttemptItem) {
     if (this.aObjAttempt == null) {
       this.aObjAttempt = new ArrayList<>();
     }
@@ -236,7 +236,7 @@ public class WebhookEzsignDocumentUnsent {
       JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
       // validate the required field `a_objAttempt` (array)
       for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
-        AttemptResponse.validateJsonElement(jsonArrayaObjAttempt.get(i));
+        AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
       };
       // validate the required field `objEzsigndocument`
       EzsigndocumentResponse.validateJsonElement(jsonObj.get("objEzsigndocument"));

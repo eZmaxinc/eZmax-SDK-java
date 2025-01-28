@@ -20,7 +20,7 @@ Request for POST /1/object/communication
 |**bCommunicationReadreceipt** | **Boolean** | Whether we ask for a read receipt or not. |  [optional] |
 |**aObjCommunicationattachment** | [**List&lt;CustomCommunicationattachmentRequest&gt;**](CustomCommunicationattachmentRequest.md) |  |  |
 |**aObjCommunicationrecipient** | [**List&lt;CommunicationrecipientRequestCompound&gt;**](CommunicationrecipientRequestCompound.md) |  |  |
-|**aObjCommunicationreference** | [**List&lt;CommunicationreferenceRequest&gt;**](CommunicationreferenceRequest.md) |  |  |
+|**aObjCommunicationreference** | [**List&lt;CommunicationreferenceRequestCompound&gt;**](CommunicationreferenceRequestCompound.md) |  |  |
 |**aObjCommunicationexternalrecipient** | [**List&lt;CommunicationexternalrecipientRequestCompound&gt;**](CommunicationexternalrecipientRequestCompound.md) |  |  |
 
 

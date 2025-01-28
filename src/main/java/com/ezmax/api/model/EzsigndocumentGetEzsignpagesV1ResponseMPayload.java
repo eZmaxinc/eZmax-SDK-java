@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsignpageResponse;
+import com.ezmax.api.model.EzsignpageResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNPAGE = "a_objEzsignpage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNPAGE)
@@ -66,7 +66,7 @@ public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
     return this;
   }
 
-  public EzsigndocumentGetEzsignpagesV1ResponseMPayload addAObjEzsignpageItem(EzsignpageResponse aObjEzsignpageItem) {
+  public EzsigndocumentGetEzsignpagesV1ResponseMPayload addAObjEzsignpageItem(EzsignpageResponseCompound aObjEzsignpageItem) {
     if (this.aObjEzsignpage == null) {
       this.aObjEzsignpage = new ArrayList<>();
     }
@@ -176,7 +176,7 @@ public class EzsigndocumentGetEzsignpagesV1ResponseMPayload {
       JsonArray jsonArrayaObjEzsignpage = jsonObj.getAsJsonArray("a_objEzsignpage");
       // validate the required field `a_objEzsignpage` (array)
       for (int i = 0; i < jsonArrayaObjEzsignpage.size(); i++) {
-        EzsignpageResponse.validateJsonElement(jsonArrayaObjEzsignpage.get(i));
+        EzsignpageResponseCompound.validateJsonElement(jsonArrayaObjEzsignpage.get(i));
       };
   }
 

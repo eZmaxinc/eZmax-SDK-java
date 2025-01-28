@@ -27,10 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigndiscussionCreateObjectV1Request;
 import com.ezmax.api.model.EzsigndiscussionCreateObjectV1Response;
+import com.ezmax.api.model.EzsigndiscussionDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigndiscussionGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -277,7 +277,7 @@ public class ObjectEzsigndiscussionApi {
      * Delete an existing Ezsigndiscussion
      * 
      * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion (required)
-     * @return CommonResponse
+     * @return EzsigndiscussionDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -287,8 +287,8 @@ public class ObjectEzsigndiscussionApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsigndiscussionDeleteObjectV1(Integer pkiEzsigndiscussionID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID);
+    public EzsigndiscussionDeleteObjectV1Response ezsigndiscussionDeleteObjectV1(Integer pkiEzsigndiscussionID) throws ApiException {
+        ApiResponse<EzsigndiscussionDeleteObjectV1Response> localVarResp = ezsigndiscussionDeleteObjectV1WithHttpInfo(pkiEzsigndiscussionID);
         return localVarResp.getData();
     }
 
@@ -296,7 +296,7 @@ public class ObjectEzsigndiscussionApi {
      * Delete an existing Ezsigndiscussion
      * 
      * @param pkiEzsigndiscussionID The unique ID of the Ezsigndiscussion (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigndiscussionDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -306,9 +306,9 @@ public class ObjectEzsigndiscussionApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsigndiscussionDeleteObjectV1WithHttpInfo(Integer pkiEzsigndiscussionID) throws ApiException {
+    public ApiResponse<EzsigndiscussionDeleteObjectV1Response> ezsigndiscussionDeleteObjectV1WithHttpInfo(Integer pkiEzsigndiscussionID) throws ApiException {
         okhttp3.Call localVarCall = ezsigndiscussionDeleteObjectV1ValidateBeforeCall(pkiEzsigndiscussionID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndiscussionDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -327,10 +327,10 @@ public class ObjectEzsigndiscussionApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigndiscussionDeleteObjectV1Async(Integer pkiEzsigndiscussionID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigndiscussionDeleteObjectV1Async(Integer pkiEzsigndiscussionID, final ApiCallback<EzsigndiscussionDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigndiscussionDeleteObjectV1ValidateBeforeCall(pkiEzsigndiscussionID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndiscussionDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

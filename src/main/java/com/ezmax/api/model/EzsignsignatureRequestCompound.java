@@ -15,8 +15,8 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EnumTextvalidation;
-import com.ezmax.api.model.EzsignelementdependencyRequest;
-import com.ezmax.api.model.EzsignsignaturecustomdateRequest;
+import com.ezmax.api.model.EzsignelementdependencyRequestCompound;
+import com.ezmax.api.model.EzsignsignaturecustomdateRequestCompound;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsignsignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
@@ -59,7 +59,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsignsignatureRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -762,7 +762,7 @@ public class EzsignsignatureRequestCompound {
     return this;
   }
 
-  public EzsignsignatureRequestCompound addAObjEzsignsignaturecustomdateItem(EzsignsignaturecustomdateRequest aObjEzsignsignaturecustomdateItem) {
+  public EzsignsignatureRequestCompound addAObjEzsignsignaturecustomdateItem(EzsignsignaturecustomdateRequestCompound aObjEzsignsignaturecustomdateItem) {
     if (this.aObjEzsignsignaturecustomdate == null) {
       this.aObjEzsignsignaturecustomdate = new ArrayList<>();
     }
@@ -789,7 +789,7 @@ public class EzsignsignatureRequestCompound {
     return this;
   }
 
-  public EzsignsignatureRequestCompound addAObjEzsignelementdependencyItem(EzsignelementdependencyRequest aObjEzsignelementdependencyItem) {
+  public EzsignsignatureRequestCompound addAObjEzsignelementdependencyItem(EzsignelementdependencyRequestCompound aObjEzsignelementdependencyItem) {
     if (this.aObjEzsignelementdependency == null) {
       this.aObjEzsignelementdependency = new ArrayList<>();
     }
@@ -1035,7 +1035,7 @@ public class EzsignsignatureRequestCompound {
 
           // validate the optional field `a_objEzsignsignaturecustomdate` (array)
           for (int i = 0; i < jsonArrayaObjEzsignsignaturecustomdate.size(); i++) {
-            EzsignsignaturecustomdateRequest.validateJsonElement(jsonArrayaObjEzsignsignaturecustomdate.get(i));
+            EzsignsignaturecustomdateRequestCompound.validateJsonElement(jsonArrayaObjEzsignsignaturecustomdate.get(i));
           };
         }
       }
@@ -1049,7 +1049,7 @@ public class EzsignsignatureRequestCompound {
 
           // validate the optional field `a_objEzsignelementdependency` (array)
           for (int i = 0; i < jsonArrayaObjEzsignelementdependency.size(); i++) {
-            EzsignelementdependencyRequest.validateJsonElement(jsonArrayaObjEzsignelementdependency.get(i));
+            EzsignelementdependencyRequestCompound.validateJsonElement(jsonArrayaObjEzsignelementdependency.get(i));
           };
         }
       }

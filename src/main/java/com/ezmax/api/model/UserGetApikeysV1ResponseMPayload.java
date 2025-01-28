@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.ApikeyResponse;
+import com.ezmax.api.model.ApikeyResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/user/{pkiUserID}/getApikeys
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class UserGetApikeysV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_APIKEY = "a_objApikey";
   @SerializedName(SERIALIZED_NAME_A_OBJ_APIKEY)
@@ -66,7 +66,7 @@ public class UserGetApikeysV1ResponseMPayload {
     return this;
   }
 
-  public UserGetApikeysV1ResponseMPayload addAObjApikeyItem(ApikeyResponse aObjApikeyItem) {
+  public UserGetApikeysV1ResponseMPayload addAObjApikeyItem(ApikeyResponseCompound aObjApikeyItem) {
     if (this.aObjApikey == null) {
       this.aObjApikey = new ArrayList<>();
     }
@@ -176,7 +176,7 @@ public class UserGetApikeysV1ResponseMPayload {
       JsonArray jsonArrayaObjApikey = jsonObj.getAsJsonArray("a_objApikey");
       // validate the required field `a_objApikey` (array)
       for (int i = 0; i < jsonArrayaObjApikey.size(); i++) {
-        ApikeyResponse.validateJsonElement(jsonArrayaObjApikey.get(i));
+        ApikeyResponseCompound.validateJsonElement(jsonArrayaObjApikey.get(i));
       };
   }
 

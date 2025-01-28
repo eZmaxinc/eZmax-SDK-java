@@ -22,7 +22,7 @@ An Ezsignformfield Object and children to create a complete structure
 |**eEzsignformfieldDependencyrequirement** | **FieldEEzsignformfieldDependencyrequirement** |  |  [optional] |
 |**eEzsignformfieldHorizontalalignment** | **EnumHorizontalalignment** |  |  [optional] |
 |**objTextstylestatic** | [**TextstylestaticResponseCompound**](TextstylestaticResponseCompound.md) |  |  [optional] |
-|**aObjEzsignelementdependency** | [**List&lt;EzsignelementdependencyResponse&gt;**](EzsignelementdependencyResponse.md) |  |  [optional] |
+|**aObjEzsignelementdependency** | [**List&lt;EzsignelementdependencyResponseCompound&gt;**](EzsignelementdependencyResponseCompound.md) |  |  [optional] |
 
 
 

@@ -14,10 +14,10 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CustomDropdownElementResponse;
+import com.ezmax.api.model.CustomDropdownElementResponseCompound;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsigntemplateformfieldResponseCompound;
-import com.ezmax.api.model.EzsigntemplateformfieldgroupsignerResponse;
+import com.ezmax.api.model.EzsigntemplateformfieldgroupsignerResponseCompound;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldgroupSignerrequirement;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldgroupTooltipposition;
 import com.ezmax.api.model.FieldEEzsigntemplateformfieldgroupType;
@@ -57,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateformfieldgroup Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsigntemplateformfieldgroupResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D = "pkiEzsigntemplateformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEFORMFIELDGROUP_I_D)
@@ -502,7 +502,7 @@ public class EzsigntemplateformfieldgroupResponseCompound {
     return this;
   }
 
-  public EzsigntemplateformfieldgroupResponseCompound addAObjEzsigntemplateformfieldgroupsignerItem(EzsigntemplateformfieldgroupsignerResponse aObjEzsigntemplateformfieldgroupsignerItem) {
+  public EzsigntemplateformfieldgroupResponseCompound addAObjEzsigntemplateformfieldgroupsignerItem(EzsigntemplateformfieldgroupsignerResponseCompound aObjEzsigntemplateformfieldgroupsignerItem) {
     if (this.aObjEzsigntemplateformfieldgroupsigner == null) {
       this.aObjEzsigntemplateformfieldgroupsigner = new ArrayList<>();
     }
@@ -529,7 +529,7 @@ public class EzsigntemplateformfieldgroupResponseCompound {
     return this;
   }
 
-  public EzsigntemplateformfieldgroupResponseCompound addAObjDropdownElementItem(CustomDropdownElementResponse aObjDropdownElementItem) {
+  public EzsigntemplateformfieldgroupResponseCompound addAObjDropdownElementItem(CustomDropdownElementResponseCompound aObjDropdownElementItem) {
     if (this.aObjDropdownElement == null) {
       this.aObjDropdownElement = new ArrayList<>();
     }
@@ -761,7 +761,7 @@ public class EzsigntemplateformfieldgroupResponseCompound {
       JsonArray jsonArrayaObjEzsigntemplateformfieldgroupsigner = jsonObj.getAsJsonArray("a_objEzsigntemplateformfieldgroupsigner");
       // validate the required field `a_objEzsigntemplateformfieldgroupsigner` (array)
       for (int i = 0; i < jsonArrayaObjEzsigntemplateformfieldgroupsigner.size(); i++) {
-        EzsigntemplateformfieldgroupsignerResponse.validateJsonElement(jsonArrayaObjEzsigntemplateformfieldgroupsigner.get(i));
+        EzsigntemplateformfieldgroupsignerResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplateformfieldgroupsigner.get(i));
       };
       if (jsonObj.get("a_objDropdownElement") != null && !jsonObj.get("a_objDropdownElement").isJsonNull()) {
         JsonArray jsonArrayaObjDropdownElement = jsonObj.getAsJsonArray("a_objDropdownElement");
@@ -773,7 +773,7 @@ public class EzsigntemplateformfieldgroupResponseCompound {
 
           // validate the optional field `a_objDropdownElement` (array)
           for (int i = 0; i < jsonArrayaObjDropdownElement.size(); i++) {
-            CustomDropdownElementResponse.validateJsonElement(jsonArrayaObjDropdownElement.get(i));
+            CustomDropdownElementResponseCompound.validateJsonElement(jsonArrayaObjDropdownElement.get(i));
           };
         }
       }

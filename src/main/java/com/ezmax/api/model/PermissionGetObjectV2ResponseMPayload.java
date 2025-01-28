@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.PermissionResponse;
+import com.ezmax.api.model.PermissionResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,31 +49,31 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/permission/{pkiPermissionID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class PermissionGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_PERMISSION = "objPermission";
   @SerializedName(SERIALIZED_NAME_OBJ_PERMISSION)
   @javax.annotation.Nonnull
-  private PermissionResponse objPermission;
+  private PermissionResponseCompound objPermission;
 
   public PermissionGetObjectV2ResponseMPayload() {
   }
 
-  public PermissionGetObjectV2ResponseMPayload objPermission(@javax.annotation.Nonnull PermissionResponse objPermission) {
+  public PermissionGetObjectV2ResponseMPayload objPermission(@javax.annotation.Nonnull PermissionResponseCompound objPermission) {
     this.objPermission = objPermission;
     return this;
   }
 
   /**
-   * A Permission Object and children to create a complete structure
+   * Get objPermission
    * @return objPermission
    */
   @javax.annotation.Nonnull
-  public PermissionResponse getObjPermission() {
+  public PermissionResponseCompound getObjPermission() {
     return objPermission;
   }
 
-  public void setObjPermission(@javax.annotation.Nonnull PermissionResponse objPermission) {
+  public void setObjPermission(@javax.annotation.Nonnull PermissionResponseCompound objPermission) {
     this.objPermission = objPermission;
   }
 
@@ -159,7 +159,7 @@ public class PermissionGetObjectV2ResponseMPayload {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objPermission`
-      PermissionResponse.validateJsonElement(jsonObj.get("objPermission"));
+      PermissionResponseCompound.validateJsonElement(jsonObj.get("objPermission"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

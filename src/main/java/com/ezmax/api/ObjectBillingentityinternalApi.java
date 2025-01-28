@@ -30,10 +30,10 @@ import java.io.IOException;
 import com.ezmax.api.model.BillingentityinternalCreateObjectV1Request;
 import com.ezmax.api.model.BillingentityinternalCreateObjectV1Response;
 import com.ezmax.api.model.BillingentityinternalEditObjectV1Request;
+import com.ezmax.api.model.BillingentityinternalEditObjectV1Response;
 import com.ezmax.api.model.BillingentityinternalGetAutocompleteV2Response;
 import com.ezmax.api.model.BillingentityinternalGetListV1Response;
 import com.ezmax.api.model.BillingentityinternalGetObjectV2Response;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -291,7 +291,7 @@ public class ObjectBillingentityinternalApi {
      * 
      * @param pkiBillingentityinternalID  (required)
      * @param billingentityinternalEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return BillingentityinternalEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -302,8 +302,8 @@ public class ObjectBillingentityinternalApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse billingentityinternalEditObjectV1(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
+    public BillingentityinternalEditObjectV1Response billingentityinternalEditObjectV1(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
+        ApiResponse<BillingentityinternalEditObjectV1Response> localVarResp = billingentityinternalEditObjectV1WithHttpInfo(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -312,7 +312,7 @@ public class ObjectBillingentityinternalApi {
      * 
      * @param pkiBillingentityinternalID  (required)
      * @param billingentityinternalEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;BillingentityinternalEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -323,9 +323,9 @@ public class ObjectBillingentityinternalApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> billingentityinternalEditObjectV1WithHttpInfo(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
+    public ApiResponse<BillingentityinternalEditObjectV1Response> billingentityinternalEditObjectV1WithHttpInfo(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = billingentityinternalEditObjectV1ValidateBeforeCall(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<BillingentityinternalEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -346,10 +346,10 @@ public class ObjectBillingentityinternalApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call billingentityinternalEditObjectV1Async(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call billingentityinternalEditObjectV1Async(Integer pkiBillingentityinternalID, BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final ApiCallback<BillingentityinternalEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = billingentityinternalEditObjectV1ValidateBeforeCall(pkiBillingentityinternalID, billingentityinternalEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<BillingentityinternalEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

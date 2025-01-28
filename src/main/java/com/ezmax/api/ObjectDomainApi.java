@@ -27,10 +27,10 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.DomainCreateObjectV1Request;
 import com.ezmax.api.model.DomainCreateObjectV1Response;
+import com.ezmax.api.model.DomainDeleteObjectV1Response;
 import com.ezmax.api.model.DomainGetListV1Response;
 import com.ezmax.api.model.DomainGetObjectV2Response;
 import java.io.File;
@@ -280,7 +280,7 @@ public class ObjectDomainApi {
      * Delete an existing Domain
      * 
      * @param pkiDomainID The unique ID of the Domain (required)
-     * @return CommonResponse
+     * @return DomainDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -290,8 +290,8 @@ public class ObjectDomainApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse domainDeleteObjectV1(Integer pkiDomainID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = domainDeleteObjectV1WithHttpInfo(pkiDomainID);
+    public DomainDeleteObjectV1Response domainDeleteObjectV1(Integer pkiDomainID) throws ApiException {
+        ApiResponse<DomainDeleteObjectV1Response> localVarResp = domainDeleteObjectV1WithHttpInfo(pkiDomainID);
         return localVarResp.getData();
     }
 
@@ -299,7 +299,7 @@ public class ObjectDomainApi {
      * Delete an existing Domain
      * 
      * @param pkiDomainID The unique ID of the Domain (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;DomainDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -309,9 +309,9 @@ public class ObjectDomainApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> domainDeleteObjectV1WithHttpInfo(Integer pkiDomainID) throws ApiException {
+    public ApiResponse<DomainDeleteObjectV1Response> domainDeleteObjectV1WithHttpInfo(Integer pkiDomainID) throws ApiException {
         okhttp3.Call localVarCall = domainDeleteObjectV1ValidateBeforeCall(pkiDomainID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<DomainDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -330,10 +330,10 @@ public class ObjectDomainApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call domainDeleteObjectV1Async(Integer pkiDomainID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call domainDeleteObjectV1Async(Integer pkiDomainID, final ApiCallback<DomainDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = domainDeleteObjectV1ValidateBeforeCall(pkiDomainID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<DomainDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -14,9 +14,9 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AttemptResponse;
+import com.ezmax.api.model.AttemptResponseCompound;
 import com.ezmax.api.model.CustomWebhookResponse;
-import com.ezmax.api.model.UserstagedResponse;
+import com.ezmax.api.model.UserstagedResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class WebhookUserstagedUserstagedCreated {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
@@ -68,7 +68,7 @@ public class WebhookUserstagedUserstagedCreated {
   public static final String SERIALIZED_NAME_OBJ_USERSTAGED = "objUserstaged";
   @SerializedName(SERIALIZED_NAME_OBJ_USERSTAGED)
   @javax.annotation.Nonnull
-  private UserstagedResponse objUserstaged;
+  private UserstagedResponseCompound objUserstaged;
 
   public WebhookUserstagedUserstagedCreated() {
   }
@@ -97,7 +97,7 @@ public class WebhookUserstagedUserstagedCreated {
     return this;
   }
 
-  public WebhookUserstagedUserstagedCreated addAObjAttemptItem(AttemptResponse aObjAttemptItem) {
+  public WebhookUserstagedUserstagedCreated addAObjAttemptItem(AttemptResponseCompound aObjAttemptItem) {
     if (this.aObjAttempt == null) {
       this.aObjAttempt = new ArrayList<>();
     }
@@ -119,21 +119,21 @@ public class WebhookUserstagedUserstagedCreated {
   }
 
 
-  public WebhookUserstagedUserstagedCreated objUserstaged(@javax.annotation.Nonnull UserstagedResponse objUserstaged) {
+  public WebhookUserstagedUserstagedCreated objUserstaged(@javax.annotation.Nonnull UserstagedResponseCompound objUserstaged) {
     this.objUserstaged = objUserstaged;
     return this;
   }
 
   /**
-   * A Userstaged Object
+   * Get objUserstaged
    * @return objUserstaged
    */
   @javax.annotation.Nonnull
-  public UserstagedResponse getObjUserstaged() {
+  public UserstagedResponseCompound getObjUserstaged() {
     return objUserstaged;
   }
 
-  public void setObjUserstaged(@javax.annotation.Nonnull UserstagedResponse objUserstaged) {
+  public void setObjUserstaged(@javax.annotation.Nonnull UserstagedResponseCompound objUserstaged) {
     this.objUserstaged = objUserstaged;
   }
 
@@ -236,10 +236,10 @@ public class WebhookUserstagedUserstagedCreated {
       JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
       // validate the required field `a_objAttempt` (array)
       for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
-        AttemptResponse.validateJsonElement(jsonArrayaObjAttempt.get(i));
+        AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
       };
       // validate the required field `objUserstaged`
-      UserstagedResponse.validateJsonElement(jsonObj.get("objUserstaged"));
+      UserstagedResponseCompound.validateJsonElement(jsonObj.get("objUserstaged"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

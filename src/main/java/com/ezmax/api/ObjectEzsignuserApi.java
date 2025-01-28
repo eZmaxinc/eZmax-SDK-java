@@ -27,9 +27,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignuserEditObjectV1Request;
+import com.ezmax.api.model.EzsignuserEditObjectV1Response;
 import com.ezmax.api.model.EzsignuserGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -158,7 +158,7 @@ public class ObjectEzsignuserApi {
      * 
      * @param pkiEzsignuserID The unique ID of the Ezsignuser (required)
      * @param ezsignuserEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return EzsignuserEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -169,8 +169,8 @@ public class ObjectEzsignuserApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignuserEditObjectV1(Integer pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignuserEditObjectV1WithHttpInfo(pkiEzsignuserID, ezsignuserEditObjectV1Request);
+    public EzsignuserEditObjectV1Response ezsignuserEditObjectV1(Integer pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request) throws ApiException {
+        ApiResponse<EzsignuserEditObjectV1Response> localVarResp = ezsignuserEditObjectV1WithHttpInfo(pkiEzsignuserID, ezsignuserEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -179,7 +179,7 @@ public class ObjectEzsignuserApi {
      * 
      * @param pkiEzsignuserID The unique ID of the Ezsignuser (required)
      * @param ezsignuserEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignuserEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -190,9 +190,9 @@ public class ObjectEzsignuserApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignuserEditObjectV1WithHttpInfo(Integer pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request) throws ApiException {
+    public ApiResponse<EzsignuserEditObjectV1Response> ezsignuserEditObjectV1WithHttpInfo(Integer pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignuserEditObjectV1ValidateBeforeCall(pkiEzsignuserID, ezsignuserEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignuserEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -213,10 +213,10 @@ public class ObjectEzsignuserApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignuserEditObjectV1Async(Integer pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignuserEditObjectV1Async(Integer pkiEzsignuserID, EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request, final ApiCallback<EzsignuserEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignuserEditObjectV1ValidateBeforeCall(pkiEzsignuserID, ezsignuserEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignuserEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

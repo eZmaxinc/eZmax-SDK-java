@@ -14,9 +14,9 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.SystemconfigurationEditObjectV1Request;
+import com.ezmax.api.model.SystemconfigurationEditObjectV1Response;
 import com.ezmax.api.model.SystemconfigurationGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -45,7 +45,7 @@ public class ObjectSystemconfigurationApiTest {
     public void systemconfigurationEditObjectV1Test() throws ApiException {
         Integer pkiSystemconfigurationID = null;
         SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request = null;
-        CommonResponse response = api.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+        SystemconfigurationEditObjectV1Response response = api.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
         // TODO: test validations
     }
 

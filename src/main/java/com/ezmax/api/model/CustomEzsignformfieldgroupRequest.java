@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CustomEzsignformfieldRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -50,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezsignformfieldgroup Object to fill an Ezsignform using submitForm
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class CustomEzsignformfieldgroupRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -114,7 +115,7 @@ public class CustomEzsignformfieldgroupRequest {
     return this;
   }
 
-  public CustomEzsignformfieldgroupRequest addAObjEzsignformfieldItem(Object aObjEzsignformfieldItem) {
+  public CustomEzsignformfieldgroupRequest addAObjEzsignformfieldItem(CustomEzsignformfieldRequest aObjEzsignformfieldItem) {
     if (this.aObjEzsignformfield == null) {
       this.aObjEzsignformfield = new ArrayList<>();
     }
@@ -233,7 +234,7 @@ public class CustomEzsignformfieldgroupRequest {
       JsonArray jsonArrayaObjEzsignformfield = jsonObj.getAsJsonArray("a_objEzsignformfield");
       // validate the required field `a_objEzsignformfield` (array)
       for (int i = 0; i < jsonArrayaObjEzsignformfield.size(); i++) {
-        Object.validateJsonElement(jsonArrayaObjEzsignformfield.get(i));
+        CustomEzsignformfieldRequest.validateJsonElement(jsonArrayaObjEzsignformfield.get(i));
       };
   }
 

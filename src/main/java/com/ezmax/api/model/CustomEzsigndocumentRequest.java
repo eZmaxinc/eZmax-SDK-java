@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsigndocumentdependencyRequest;
+import com.ezmax.api.model.EzsigndocumentdependencyRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/ezsignfolder/{pkiEzsignfolderID}/reorder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class CustomEzsigndocumentRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -91,7 +91,7 @@ public class CustomEzsigndocumentRequest {
     return this;
   }
 
-  public CustomEzsigndocumentRequest addAObjEzsigndocumentdependencyItem(EzsigndocumentdependencyRequest aObjEzsigndocumentdependencyItem) {
+  public CustomEzsigndocumentRequest addAObjEzsigndocumentdependencyItem(EzsigndocumentdependencyRequestCompound aObjEzsigndocumentdependencyItem) {
     if (this.aObjEzsigndocumentdependency == null) {
       this.aObjEzsigndocumentdependency = new ArrayList<>();
     }
@@ -205,7 +205,7 @@ public class CustomEzsigndocumentRequest {
       JsonArray jsonArrayaObjEzsigndocumentdependency = jsonObj.getAsJsonArray("a_objEzsigndocumentdependency");
       // validate the required field `a_objEzsigndocumentdependency` (array)
       for (int i = 0; i < jsonArrayaObjEzsigndocumentdependency.size(); i++) {
-        EzsigndocumentdependencyRequest.validateJsonElement(jsonArrayaObjEzsigndocumentdependency.get(i));
+        EzsigndocumentdependencyRequestCompound.validateJsonElement(jsonArrayaObjEzsigndocumentdependency.get(i));
       };
   }
 

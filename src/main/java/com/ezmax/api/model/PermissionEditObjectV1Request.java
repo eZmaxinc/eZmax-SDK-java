@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.PermissionRequest;
+import com.ezmax.api.model.PermissionRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,31 +49,31 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /1/object/permission/{pkiPermissionID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class PermissionEditObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_PERMISSION = "objPermission";
   @SerializedName(SERIALIZED_NAME_OBJ_PERMISSION)
   @javax.annotation.Nonnull
-  private PermissionRequest objPermission;
+  private PermissionRequestCompound objPermission;
 
   public PermissionEditObjectV1Request() {
   }
 
-  public PermissionEditObjectV1Request objPermission(@javax.annotation.Nonnull PermissionRequest objPermission) {
+  public PermissionEditObjectV1Request objPermission(@javax.annotation.Nonnull PermissionRequestCompound objPermission) {
     this.objPermission = objPermission;
     return this;
   }
 
   /**
-   * A Permission Object and children to create a complete structure
+   * Get objPermission
    * @return objPermission
    */
   @javax.annotation.Nonnull
-  public PermissionRequest getObjPermission() {
+  public PermissionRequestCompound getObjPermission() {
     return objPermission;
   }
 
-  public void setObjPermission(@javax.annotation.Nonnull PermissionRequest objPermission) {
+  public void setObjPermission(@javax.annotation.Nonnull PermissionRequestCompound objPermission) {
     this.objPermission = objPermission;
   }
 
@@ -159,7 +159,7 @@ public class PermissionEditObjectV1Request {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objPermission`
-      PermissionRequest.validateJsonElement(jsonObj.get("objPermission"));
+      PermissionRequestCompound.validateJsonElement(jsonObj.get("objPermission"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

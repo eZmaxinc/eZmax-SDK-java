@@ -15,6 +15,8 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.CustomEzmaxinvoicingEzsigndocumentResponse;
+import com.ezmax.api.model.CustomEzmaxinvoicingEzsignfolderResponse;
 import com.ezmax.api.model.CustomEzmaxpricingResponse;
 import com.ezmax.api.model.EzmaxinvoicingagentResponseCompound;
 import com.ezmax.api.model.EzmaxinvoicingcontractResponseCompound;
@@ -59,7 +61,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezmaxinvoicing/getProvisional
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D = "pkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D)
@@ -605,7 +607,7 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-  public EzmaxinvoicingGetProvisionalV1ResponseMPayload addAObjEzmaxinvoicingezsignfolderItem(Object aObjEzmaxinvoicingezsignfolderItem) {
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload addAObjEzmaxinvoicingezsignfolderItem(CustomEzmaxinvoicingEzsignfolderResponse aObjEzmaxinvoicingezsignfolderItem) {
     if (this.aObjEzmaxinvoicingezsignfolder == null) {
       this.aObjEzmaxinvoicingezsignfolder = new ArrayList<>();
     }
@@ -632,7 +634,7 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
     return this;
   }
 
-  public EzmaxinvoicingGetProvisionalV1ResponseMPayload addAObjEzmaxinvoicingezsigndocumentItem(Object aObjEzmaxinvoicingezsigndocumentItem) {
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload addAObjEzmaxinvoicingezsigndocumentItem(CustomEzmaxinvoicingEzsigndocumentResponse aObjEzmaxinvoicingezsigndocumentItem) {
     if (this.aObjEzmaxinvoicingezsigndocument == null) {
       this.aObjEzmaxinvoicingezsigndocument = new ArrayList<>();
     }
@@ -896,7 +898,7 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
       JsonArray jsonArrayaObjEzmaxinvoicingezsignfolder = jsonObj.getAsJsonArray("a_objEzmaxinvoicingezsignfolder");
       // validate the required field `a_objEzmaxinvoicingezsignfolder` (array)
       for (int i = 0; i < jsonArrayaObjEzmaxinvoicingezsignfolder.size(); i++) {
-        Object.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsignfolder.get(i));
+        CustomEzmaxinvoicingEzsignfolderResponse.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsignfolder.get(i));
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzmaxinvoicingezsigndocument").isJsonArray()) {
@@ -906,7 +908,7 @@ public class EzmaxinvoicingGetProvisionalV1ResponseMPayload {
       JsonArray jsonArrayaObjEzmaxinvoicingezsigndocument = jsonObj.getAsJsonArray("a_objEzmaxinvoicingezsigndocument");
       // validate the required field `a_objEzmaxinvoicingezsigndocument` (array)
       for (int i = 0; i < jsonArrayaObjEzmaxinvoicingezsigndocument.size(); i++) {
-        Object.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsigndocument.get(i));
+        CustomEzmaxinvoicingEzsigndocumentResponse.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsigndocument.get(i));
       };
   }
 

@@ -40,7 +40,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="ezsignfolderArchiveV1"></a>
 # **ezsignfolderArchiveV1**
-> CommonResponse ezsignfolderArchiveV1(pkiEzsignfolderID, body)
+> EzsignfolderArchiveV1Response ezsignfolderArchiveV1(pkiEzsignfolderID, body)
 
 Archive the Ezsignfolder
 
@@ -71,7 +71,7 @@ public class Example {
     Integer pkiEzsignfolderID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      CommonResponse result = apiInstance.ezsignfolderArchiveV1(pkiEzsignfolderID, body);
+      EzsignfolderArchiveV1Response result = apiInstance.ezsignfolderArchiveV1(pkiEzsignfolderID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderArchiveV1");
@@ -93,7 +93,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfolderArchiveV1Response**](EzsignfolderArchiveV1Response.md)
 
 ### Authorization
 
@@ -392,7 +392,7 @@ public class Example {
 
 <a id="ezsignfolderDeleteObjectV1"></a>
 # **ezsignfolderDeleteObjectV1**
-> CommonResponse ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
+> EzsignfolderDeleteObjectV1Response ezsignfolderDeleteObjectV1(pkiEzsignfolderID)
 
 Delete an existing Ezsignfolder
 
@@ -420,7 +420,7 @@ public class Example {
     ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi(defaultClient);
     Integer pkiEzsignfolderID = 56; // Integer | 
     try {
-      CommonResponse result = apiInstance.ezsignfolderDeleteObjectV1(pkiEzsignfolderID);
+      EzsignfolderDeleteObjectV1Response result = apiInstance.ezsignfolderDeleteObjectV1(pkiEzsignfolderID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderDeleteObjectV1");
@@ -441,7 +441,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfolderDeleteObjectV1Response**](EzsignfolderDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ public class Example {
 
 <a id="ezsignfolderDisposeEzsignfoldersV1"></a>
 # **ezsignfolderDisposeEzsignfoldersV1**
-> CommonResponse ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request)
+> EzsignfolderDisposeEzsignfoldersV1Response ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request)
 
 Dispose Ezsignfolders
 
@@ -491,7 +491,7 @@ public class Example {
     ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi(defaultClient);
     EzsignfolderDisposeEzsignfoldersV1Request ezsignfolderDisposeEzsignfoldersV1Request = new EzsignfolderDisposeEzsignfoldersV1Request(); // EzsignfolderDisposeEzsignfoldersV1Request | 
     try {
-      CommonResponse result = apiInstance.ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request);
+      EzsignfolderDisposeEzsignfoldersV1Response result = apiInstance.ezsignfolderDisposeEzsignfoldersV1(ezsignfolderDisposeEzsignfoldersV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderDisposeEzsignfoldersV1");
@@ -512,7 +512,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfolderDisposeEzsignfoldersV1Response**](EzsignfolderDisposeEzsignfoldersV1Response.md)
 
 ### Authorization
 
@@ -532,7 +532,7 @@ public class Example {
 
 <a id="ezsignfolderDisposeV1"></a>
 # **ezsignfolderDisposeV1**
-> CommonResponse ezsignfolderDisposeV1(pkiEzsignfolderID, body)
+> EzsignfolderDisposeV1Response ezsignfolderDisposeV1(pkiEzsignfolderID, body)
 
 Dispose the Ezsignfolder
 
@@ -563,7 +563,7 @@ public class Example {
     Integer pkiEzsignfolderID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      CommonResponse result = apiInstance.ezsignfolderDisposeV1(pkiEzsignfolderID, body);
+      EzsignfolderDisposeV1Response result = apiInstance.ezsignfolderDisposeV1(pkiEzsignfolderID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderDisposeV1");
@@ -585,7 +585,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfolderDisposeV1Response**](EzsignfolderDisposeV1Response.md)
 
 ### Authorization
 
@@ -605,7 +605,7 @@ public class Example {
 
 <a id="ezsignfolderEditObjectV3"></a>
 # **ezsignfolderEditObjectV3**
-> CommonResponse ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request)
+> EzsignfolderEditObjectV3Response ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request)
 
 Edit an existing Ezsignfolder
 
@@ -636,7 +636,7 @@ public class Example {
     Integer pkiEzsignfolderID = 56; // Integer | 
     EzsignfolderEditObjectV3Request ezsignfolderEditObjectV3Request = new EzsignfolderEditObjectV3Request(); // EzsignfolderEditObjectV3Request | 
     try {
-      CommonResponse result = apiInstance.ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
+      EzsignfolderEditObjectV3Response result = apiInstance.ezsignfolderEditObjectV3(pkiEzsignfolderID, ezsignfolderEditObjectV3Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderEditObjectV3");
@@ -658,7 +658,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfolderEditObjectV3Response**](EzsignfolderEditObjectV3Response.md)
 
 ### Authorization
 
@@ -678,7 +678,7 @@ public class Example {
 
 <a id="ezsignfolderEndPrematurelyV1"></a>
 # **ezsignfolderEndPrematurelyV1**
-> CommonResponse ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body)
+> EzsignfolderEndPrematurelyV1Response ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body)
 
 End prematurely
 
@@ -709,7 +709,7 @@ public class Example {
     Integer pkiEzsignfolderID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      CommonResponse result = apiInstance.ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body);
+      EzsignfolderEndPrematurelyV1Response result = apiInstance.ezsignfolderEndPrematurelyV1(pkiEzsignfolderID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderEndPrematurelyV1");
@@ -731,7 +731,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfolderEndPrematurelyV1Response**](EzsignfolderEndPrematurelyV1Response.md)
 
 ### Authorization
 
@@ -1957,7 +1957,7 @@ public class Example {
 
 <a id="ezsignfolderReorderV1"></a>
 # **ezsignfolderReorderV1**
-> CommonResponse ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request)
+> EzsignfolderReorderV1Response ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request)
 
 Reorder Ezsigndocuments in the Ezsignfolder
 
@@ -1986,7 +1986,7 @@ public class Example {
     Integer pkiEzsignfolderID = 56; // Integer | 
     EzsignfolderReorderV1Request ezsignfolderReorderV1Request = new EzsignfolderReorderV1Request(); // EzsignfolderReorderV1Request | 
     try {
-      CommonResponse result = apiInstance.ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request);
+      EzsignfolderReorderV1Response result = apiInstance.ezsignfolderReorderV1(pkiEzsignfolderID, ezsignfolderReorderV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderReorderV1");
@@ -2008,7 +2008,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfolderReorderV1Response**](EzsignfolderReorderV1Response.md)
 
 ### Authorization
 
@@ -2028,7 +2028,7 @@ public class Example {
 
 <a id="ezsignfolderReorderV2"></a>
 # **ezsignfolderReorderV2**
-> CommonResponse ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request)
+> EzsignfolderReorderV2Response ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request)
 
 Reorder Ezsigndocuments in the Ezsignfolder
 
@@ -2057,7 +2057,7 @@ public class Example {
     Integer pkiEzsignfolderID = 56; // Integer | 
     EzsignfolderReorderV2Request ezsignfolderReorderV2Request = new EzsignfolderReorderV2Request(); // EzsignfolderReorderV2Request | 
     try {
-      CommonResponse result = apiInstance.ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request);
+      EzsignfolderReorderV2Response result = apiInstance.ezsignfolderReorderV2(pkiEzsignfolderID, ezsignfolderReorderV2Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderReorderV2");
@@ -2079,7 +2079,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfolderReorderV2Response**](EzsignfolderReorderV2Response.md)
 
 ### Authorization
 
@@ -2099,7 +2099,7 @@ public class Example {
 
 <a id="ezsignfolderSendV1"></a>
 # **ezsignfolderSendV1**
-> CommonResponse ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request)
+> EzsignfolderSendV1Response ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request)
 
 Send the Ezsignfolder to the signatories for signature
 
@@ -2130,7 +2130,7 @@ public class Example {
     Integer pkiEzsignfolderID = 56; // Integer | 
     EzsignfolderSendV1Request ezsignfolderSendV1Request = new EzsignfolderSendV1Request(); // EzsignfolderSendV1Request | 
     try {
-      CommonResponse result = apiInstance.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
+      EzsignfolderSendV1Response result = apiInstance.ezsignfolderSendV1(pkiEzsignfolderID, ezsignfolderSendV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderSendV1");
@@ -2152,7 +2152,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfolderSendV1Response**](EzsignfolderSendV1Response.md)
 
 ### Authorization
 
@@ -2172,7 +2172,7 @@ public class Example {
 
 <a id="ezsignfolderSendV3"></a>
 # **ezsignfolderSendV3**
-> CommonResponse ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request)
+> EzsignfolderSendV3Response ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request)
 
 Send the Ezsignfolder to the signatories for signature
 
@@ -2203,7 +2203,7 @@ public class Example {
     Integer pkiEzsignfolderID = 56; // Integer | 
     EzsignfolderSendV3Request ezsignfolderSendV3Request = new EzsignfolderSendV3Request(); // EzsignfolderSendV3Request | 
     try {
-      CommonResponse result = apiInstance.ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request);
+      EzsignfolderSendV3Response result = apiInstance.ezsignfolderSendV3(pkiEzsignfolderID, ezsignfolderSendV3Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderSendV3");
@@ -2225,7 +2225,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfolderSendV3Response**](EzsignfolderSendV3Response.md)
 
 ### Authorization
 
@@ -2245,7 +2245,7 @@ public class Example {
 
 <a id="ezsignfolderUnsendV1"></a>
 # **ezsignfolderUnsendV1**
-> CommonResponse ezsignfolderUnsendV1(pkiEzsignfolderID, body)
+> EzsignfolderUnsendV1Response ezsignfolderUnsendV1(pkiEzsignfolderID, body)
 
 Unsend the Ezsignfolder
 
@@ -2276,7 +2276,7 @@ public class Example {
     Integer pkiEzsignfolderID = 56; // Integer | 
     Object body = null; // Object | 
     try {
-      CommonResponse result = apiInstance.ezsignfolderUnsendV1(pkiEzsignfolderID, body);
+      EzsignfolderUnsendV1Response result = apiInstance.ezsignfolderUnsendV1(pkiEzsignfolderID, body);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderUnsendV1");
@@ -2298,7 +2298,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsignfolderUnsendV1Response**](EzsignfolderUnsendV1Response.md)
 
 ### Authorization
 

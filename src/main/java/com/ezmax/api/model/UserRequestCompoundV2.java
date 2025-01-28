@@ -14,11 +14,11 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EmailRequest;
+import com.ezmax.api.model.EmailRequestCompound;
 import com.ezmax.api.model.FieldEUserEzsignaccess;
 import com.ezmax.api.model.FieldEUserLogintype;
 import com.ezmax.api.model.FieldEUserType;
-import com.ezmax.api.model.PhoneRequestV2;
+import com.ezmax.api.model.PhoneRequestCompoundV2;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class UserRequestCompoundV2 {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -103,7 +103,7 @@ public class UserRequestCompoundV2 {
   public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
   @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
   @javax.annotation.Nonnull
-  private EmailRequest objEmail;
+  private EmailRequestCompound objEmail;
 
   public static final String SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D = "fkiBillingentityinternalID";
   @SerializedName(SERIALIZED_NAME_FKI_BILLINGENTITYINTERNAL_I_D)
@@ -113,12 +113,12 @@ public class UserRequestCompoundV2 {
   public static final String SERIALIZED_NAME_OBJ_PHONE_HOME = "objPhoneHome";
   @SerializedName(SERIALIZED_NAME_OBJ_PHONE_HOME)
   @javax.annotation.Nullable
-  private PhoneRequestV2 objPhoneHome;
+  private PhoneRequestCompoundV2 objPhoneHome;
 
   public static final String SERIALIZED_NAME_OBJ_PHONE_S_M_S = "objPhoneSMS";
   @SerializedName(SERIALIZED_NAME_OBJ_PHONE_S_M_S)
   @javax.annotation.Nullable
-  private PhoneRequestV2 objPhoneSMS;
+  private PhoneRequestCompoundV2 objPhoneSMS;
 
   public static final String SERIALIZED_NAME_FKI_SECRETQUESTION_I_D = "fkiSecretquestionID";
   @SerializedName(SERIALIZED_NAME_FKI_SECRETQUESTION_I_D)
@@ -380,21 +380,21 @@ public class UserRequestCompoundV2 {
   }
 
 
-  public UserRequestCompoundV2 objEmail(@javax.annotation.Nonnull EmailRequest objEmail) {
+  public UserRequestCompoundV2 objEmail(@javax.annotation.Nonnull EmailRequestCompound objEmail) {
     this.objEmail = objEmail;
     return this;
   }
 
   /**
-   * An Email Object and children to create a complete structure
+   * Get objEmail
    * @return objEmail
    */
   @javax.annotation.Nonnull
-  public EmailRequest getObjEmail() {
+  public EmailRequestCompound getObjEmail() {
     return objEmail;
   }
 
-  public void setObjEmail(@javax.annotation.Nonnull EmailRequest objEmail) {
+  public void setObjEmail(@javax.annotation.Nonnull EmailRequestCompound objEmail) {
     this.objEmail = objEmail;
   }
 
@@ -419,40 +419,40 @@ public class UserRequestCompoundV2 {
   }
 
 
-  public UserRequestCompoundV2 objPhoneHome(@javax.annotation.Nullable PhoneRequestV2 objPhoneHome) {
+  public UserRequestCompoundV2 objPhoneHome(@javax.annotation.Nullable PhoneRequestCompoundV2 objPhoneHome) {
     this.objPhoneHome = objPhoneHome;
     return this;
   }
 
   /**
-   * A Phone Object and children to create a complete structure
+   * Get objPhoneHome
    * @return objPhoneHome
    */
   @javax.annotation.Nullable
-  public PhoneRequestV2 getObjPhoneHome() {
+  public PhoneRequestCompoundV2 getObjPhoneHome() {
     return objPhoneHome;
   }
 
-  public void setObjPhoneHome(@javax.annotation.Nullable PhoneRequestV2 objPhoneHome) {
+  public void setObjPhoneHome(@javax.annotation.Nullable PhoneRequestCompoundV2 objPhoneHome) {
     this.objPhoneHome = objPhoneHome;
   }
 
 
-  public UserRequestCompoundV2 objPhoneSMS(@javax.annotation.Nullable PhoneRequestV2 objPhoneSMS) {
+  public UserRequestCompoundV2 objPhoneSMS(@javax.annotation.Nullable PhoneRequestCompoundV2 objPhoneSMS) {
     this.objPhoneSMS = objPhoneSMS;
     return this;
   }
 
   /**
-   * A Phone Object and children to create a complete structure
+   * Get objPhoneSMS
    * @return objPhoneSMS
    */
   @javax.annotation.Nullable
-  public PhoneRequestV2 getObjPhoneSMS() {
+  public PhoneRequestCompoundV2 getObjPhoneSMS() {
     return objPhoneSMS;
   }
 
-  public void setObjPhoneSMS(@javax.annotation.Nullable PhoneRequestV2 objPhoneSMS) {
+  public void setObjPhoneSMS(@javax.annotation.Nullable PhoneRequestCompoundV2 objPhoneSMS) {
     this.objPhoneSMS = objPhoneSMS;
   }
 
@@ -918,14 +918,14 @@ public class UserRequestCompoundV2 {
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objEmail`
-      EmailRequest.validateJsonElement(jsonObj.get("objEmail"));
+      EmailRequestCompound.validateJsonElement(jsonObj.get("objEmail"));
       // validate the optional field `objPhoneHome`
       if (jsonObj.get("objPhoneHome") != null && !jsonObj.get("objPhoneHome").isJsonNull()) {
-        PhoneRequestV2.validateJsonElement(jsonObj.get("objPhoneHome"));
+        PhoneRequestCompoundV2.validateJsonElement(jsonObj.get("objPhoneHome"));
       }
       // validate the optional field `objPhoneSMS`
       if (jsonObj.get("objPhoneSMS") != null && !jsonObj.get("objPhoneSMS").isJsonNull()) {
-        PhoneRequestV2.validateJsonElement(jsonObj.get("objPhoneSMS"));
+        PhoneRequestCompoundV2.validateJsonElement(jsonObj.get("objPhoneSMS"));
       }
       if ((jsonObj.get("sUserSecretresponse") != null && !jsonObj.get("sUserSecretresponse").isJsonNull()) && !jsonObj.get("sUserSecretresponse").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sUserSecretresponse` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserSecretresponse").toString()));

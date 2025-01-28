@@ -14,10 +14,10 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AddressRequest;
-import com.ezmax.api.model.EmailRequest;
-import com.ezmax.api.model.PhoneRequest;
-import com.ezmax.api.model.WebsiteRequest;
+import com.ezmax.api.model.AddressRequestCompound;
+import com.ezmax.api.model.EmailRequestCompound;
+import com.ezmax.api.model.PhoneRequestCompound;
+import com.ezmax.api.model.WebsiteRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class ContactinformationsRequestCompound {
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
@@ -180,7 +180,7 @@ public class ContactinformationsRequestCompound {
     return this;
   }
 
-  public ContactinformationsRequestCompound addAObjAddressItem(AddressRequest aObjAddressItem) {
+  public ContactinformationsRequestCompound addAObjAddressItem(AddressRequestCompound aObjAddressItem) {
     if (this.aObjAddress == null) {
       this.aObjAddress = new ArrayList<>();
     }
@@ -207,7 +207,7 @@ public class ContactinformationsRequestCompound {
     return this;
   }
 
-  public ContactinformationsRequestCompound addAObjPhoneItem(PhoneRequest aObjPhoneItem) {
+  public ContactinformationsRequestCompound addAObjPhoneItem(PhoneRequestCompound aObjPhoneItem) {
     if (this.aObjPhone == null) {
       this.aObjPhone = new ArrayList<>();
     }
@@ -234,7 +234,7 @@ public class ContactinformationsRequestCompound {
     return this;
   }
 
-  public ContactinformationsRequestCompound addAObjEmailItem(EmailRequest aObjEmailItem) {
+  public ContactinformationsRequestCompound addAObjEmailItem(EmailRequestCompound aObjEmailItem) {
     if (this.aObjEmail == null) {
       this.aObjEmail = new ArrayList<>();
     }
@@ -261,7 +261,7 @@ public class ContactinformationsRequestCompound {
     return this;
   }
 
-  public ContactinformationsRequestCompound addAObjWebsiteItem(WebsiteRequest aObjWebsiteItem) {
+  public ContactinformationsRequestCompound addAObjWebsiteItem(WebsiteRequestCompound aObjWebsiteItem) {
     if (this.aObjWebsite == null) {
       this.aObjWebsite = new ArrayList<>();
     }
@@ -399,7 +399,7 @@ public class ContactinformationsRequestCompound {
       JsonArray jsonArrayaObjAddress = jsonObj.getAsJsonArray("a_objAddress");
       // validate the required field `a_objAddress` (array)
       for (int i = 0; i < jsonArrayaObjAddress.size(); i++) {
-        AddressRequest.validateJsonElement(jsonArrayaObjAddress.get(i));
+        AddressRequestCompound.validateJsonElement(jsonArrayaObjAddress.get(i));
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objPhone").isJsonArray()) {
@@ -409,7 +409,7 @@ public class ContactinformationsRequestCompound {
       JsonArray jsonArrayaObjPhone = jsonObj.getAsJsonArray("a_objPhone");
       // validate the required field `a_objPhone` (array)
       for (int i = 0; i < jsonArrayaObjPhone.size(); i++) {
-        PhoneRequest.validateJsonElement(jsonArrayaObjPhone.get(i));
+        PhoneRequestCompound.validateJsonElement(jsonArrayaObjPhone.get(i));
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objEmail").isJsonArray()) {
@@ -419,7 +419,7 @@ public class ContactinformationsRequestCompound {
       JsonArray jsonArrayaObjEmail = jsonObj.getAsJsonArray("a_objEmail");
       // validate the required field `a_objEmail` (array)
       for (int i = 0; i < jsonArrayaObjEmail.size(); i++) {
-        EmailRequest.validateJsonElement(jsonArrayaObjEmail.get(i));
+        EmailRequestCompound.validateJsonElement(jsonArrayaObjEmail.get(i));
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objWebsite").isJsonArray()) {
@@ -429,7 +429,7 @@ public class ContactinformationsRequestCompound {
       JsonArray jsonArrayaObjWebsite = jsonObj.getAsJsonArray("a_objWebsite");
       // validate the required field `a_objWebsite` (array)
       for (int i = 0; i < jsonArrayaObjWebsite.size(); i++) {
-        WebsiteRequest.validateJsonElement(jsonArrayaObjWebsite.get(i));
+        WebsiteRequestCompound.validateJsonElement(jsonArrayaObjWebsite.get(i));
       };
   }
 

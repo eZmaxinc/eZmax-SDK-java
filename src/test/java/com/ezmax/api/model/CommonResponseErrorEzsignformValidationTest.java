@@ -13,6 +13,7 @@
 
 package com.ezmax.api.model;
 
+import com.ezmax.api.model.CustomEzsignformfielderrorResponse;
 import com.ezmax.api.model.FieldEErrorCode;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;

@@ -15,7 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CustomContactNameResponse;
-import com.ezmax.api.model.EmailResponse;
+import com.ezmax.api.model.EmailResponseCompound;
 import com.ezmax.api.model.PhoneResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class CustomCommunicationrecipientsrecipientResponse {
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
@@ -221,7 +221,7 @@ public class CustomCommunicationrecipientsrecipientResponse {
   public static final String SERIALIZED_NAME_OBJ_EMAIL = "objEmail";
   @SerializedName(SERIALIZED_NAME_OBJ_EMAIL)
   @javax.annotation.Nullable
-  private EmailResponse objEmail;
+  private EmailResponseCompound objEmail;
 
   public static final String SERIALIZED_NAME_OBJ_PHONE_FAX = "objPhoneFax";
   @SerializedName(SERIALIZED_NAME_OBJ_PHONE_FAX)
@@ -574,21 +574,21 @@ public class CustomCommunicationrecipientsrecipientResponse {
   }
 
 
-  public CustomCommunicationrecipientsrecipientResponse objEmail(@javax.annotation.Nullable EmailResponse objEmail) {
+  public CustomCommunicationrecipientsrecipientResponse objEmail(@javax.annotation.Nullable EmailResponseCompound objEmail) {
     this.objEmail = objEmail;
     return this;
   }
 
   /**
-   * An Email Object and children to create a complete structure
+   * Get objEmail
    * @return objEmail
    */
   @javax.annotation.Nullable
-  public EmailResponse getObjEmail() {
+  public EmailResponseCompound getObjEmail() {
     return objEmail;
   }
 
-  public void setObjEmail(@javax.annotation.Nullable EmailResponse objEmail) {
+  public void setObjEmail(@javax.annotation.Nullable EmailResponseCompound objEmail) {
     this.objEmail = objEmail;
   }
 
@@ -778,7 +778,7 @@ public class CustomCommunicationrecipientsrecipientResponse {
       CustomContactNameResponse.validateJsonElement(jsonObj.get("objContactName"));
       // validate the optional field `objEmail`
       if (jsonObj.get("objEmail") != null && !jsonObj.get("objEmail").isJsonNull()) {
-        EmailResponse.validateJsonElement(jsonObj.get("objEmail"));
+        EmailResponseCompound.validateJsonElement(jsonObj.get("objEmail"));
       }
       // validate the optional field `objPhoneFax`
       if (jsonObj.get("objPhoneFax") != null && !jsonObj.get("objPhoneFax").isJsonNull()) {

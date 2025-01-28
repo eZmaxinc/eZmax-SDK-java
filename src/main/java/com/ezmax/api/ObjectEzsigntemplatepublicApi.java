@@ -27,13 +27,13 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsigntemplatepublicCreateEzsignfolderV1Request;
 import com.ezmax.api.model.EzsigntemplatepublicCreateEzsignfolderV1Response;
 import com.ezmax.api.model.EzsigntemplatepublicCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatepublicCreateObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepublicEditObjectV1Request;
+import com.ezmax.api.model.EzsigntemplatepublicEditObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request;
 import com.ezmax.api.model.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Response;
 import com.ezmax.api.model.EzsigntemplatepublicGetFormsDataV1Response;
@@ -428,7 +428,7 @@ public class ObjectEzsigntemplatepublicApi {
      * 
      * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic (required)
      * @param ezsigntemplatepublicEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return EzsigntemplatepublicEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -439,8 +439,8 @@ public class ObjectEzsigntemplatepublicApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsigntemplatepublicEditObjectV1(Integer pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigntemplatepublicEditObjectV1WithHttpInfo(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
+    public EzsigntemplatepublicEditObjectV1Response ezsigntemplatepublicEditObjectV1(Integer pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request) throws ApiException {
+        ApiResponse<EzsigntemplatepublicEditObjectV1Response> localVarResp = ezsigntemplatepublicEditObjectV1WithHttpInfo(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -449,7 +449,7 @@ public class ObjectEzsigntemplatepublicApi {
      * 
      * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic (required)
      * @param ezsigntemplatepublicEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigntemplatepublicEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -460,9 +460,9 @@ public class ObjectEzsigntemplatepublicApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsigntemplatepublicEditObjectV1WithHttpInfo(Integer pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request) throws ApiException {
+    public ApiResponse<EzsigntemplatepublicEditObjectV1Response> ezsigntemplatepublicEditObjectV1WithHttpInfo(Integer pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigntemplatepublicEditObjectV1ValidateBeforeCall(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigntemplatepublicEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -483,10 +483,10 @@ public class ObjectEzsigntemplatepublicApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigntemplatepublicEditObjectV1Async(Integer pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigntemplatepublicEditObjectV1Async(Integer pkiEzsigntemplatepublicID, EzsigntemplatepublicEditObjectV1Request ezsigntemplatepublicEditObjectV1Request, final ApiCallback<EzsigntemplatepublicEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigntemplatepublicEditObjectV1ValidateBeforeCall(pkiEzsigntemplatepublicID, ezsigntemplatepublicEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigntemplatepublicEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

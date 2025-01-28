@@ -27,13 +27,14 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignsignergroupCreateObjectV1Request;
 import com.ezmax.api.model.EzsignsignergroupCreateObjectV1Response;
+import com.ezmax.api.model.EzsignsignergroupDeleteObjectV1Response;
 import com.ezmax.api.model.EzsignsignergroupEditEzsignsignergroupmembershipsV1Request;
 import com.ezmax.api.model.EzsignsignergroupEditEzsignsignergroupmembershipsV1Response;
 import com.ezmax.api.model.EzsignsignergroupEditObjectV1Request;
+import com.ezmax.api.model.EzsignsignergroupEditObjectV1Response;
 import com.ezmax.api.model.EzsignsignergroupGetEzsignsignergroupmembershipsV1Response;
 import com.ezmax.api.model.EzsignsignergroupGetObjectV2Response;
 
@@ -281,7 +282,7 @@ public class ObjectEzsignsignergroupApi {
      * Delete an existing Ezsignsignergroup
      * 
      * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup (required)
-     * @return CommonResponse
+     * @return EzsignsignergroupDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -291,8 +292,8 @@ public class ObjectEzsignsignergroupApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignsignergroupDeleteObjectV1(Integer pkiEzsignsignergroupID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignsignergroupDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupID);
+    public EzsignsignergroupDeleteObjectV1Response ezsignsignergroupDeleteObjectV1(Integer pkiEzsignsignergroupID) throws ApiException {
+        ApiResponse<EzsignsignergroupDeleteObjectV1Response> localVarResp = ezsignsignergroupDeleteObjectV1WithHttpInfo(pkiEzsignsignergroupID);
         return localVarResp.getData();
     }
 
@@ -300,7 +301,7 @@ public class ObjectEzsignsignergroupApi {
      * Delete an existing Ezsignsignergroup
      * 
      * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignsignergroupDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -310,9 +311,9 @@ public class ObjectEzsignsignergroupApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignsignergroupDeleteObjectV1WithHttpInfo(Integer pkiEzsignsignergroupID) throws ApiException {
+    public ApiResponse<EzsignsignergroupDeleteObjectV1Response> ezsignsignergroupDeleteObjectV1WithHttpInfo(Integer pkiEzsignsignergroupID) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignergroupDeleteObjectV1ValidateBeforeCall(pkiEzsignsignergroupID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignsignergroupDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -331,10 +332,10 @@ public class ObjectEzsignsignergroupApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignsignergroupDeleteObjectV1Async(Integer pkiEzsignsignergroupID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignsignergroupDeleteObjectV1Async(Integer pkiEzsignsignergroupID, final ApiCallback<EzsignsignergroupDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignsignergroupDeleteObjectV1ValidateBeforeCall(pkiEzsignsignergroupID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignsignergroupDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -565,7 +566,7 @@ public class ObjectEzsignsignergroupApi {
      * 
      * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup (required)
      * @param ezsignsignergroupEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return EzsignsignergroupEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -575,8 +576,8 @@ public class ObjectEzsignsignergroupApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsignsignergroupEditObjectV1(Integer pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsignsignergroupEditObjectV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
+    public EzsignsignergroupEditObjectV1Response ezsignsignergroupEditObjectV1(Integer pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request) throws ApiException {
+        ApiResponse<EzsignsignergroupEditObjectV1Response> localVarResp = ezsignsignergroupEditObjectV1WithHttpInfo(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -585,7 +586,7 @@ public class ObjectEzsignsignergroupApi {
      * 
      * @param pkiEzsignsignergroupID The unique ID of the Ezsignsignergroup (required)
      * @param ezsignsignergroupEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsignsignergroupEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -595,9 +596,9 @@ public class ObjectEzsignsignergroupApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsignsignergroupEditObjectV1WithHttpInfo(Integer pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request) throws ApiException {
+    public ApiResponse<EzsignsignergroupEditObjectV1Response> ezsignsignergroupEditObjectV1WithHttpInfo(Integer pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsignsignergroupEditObjectV1ValidateBeforeCall(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignsignergroupEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -617,10 +618,10 @@ public class ObjectEzsignsignergroupApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignsignergroupEditObjectV1Async(Integer pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsignsignergroupEditObjectV1Async(Integer pkiEzsignsignergroupID, EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, final ApiCallback<EzsignsignergroupEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsignsignergroupEditObjectV1ValidateBeforeCall(pkiEzsignsignergroupID, ezsignsignergroupEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsignsignergroupEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

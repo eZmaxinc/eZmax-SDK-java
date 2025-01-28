@@ -28,8 +28,8 @@ A Ezmaxinvoicing Object
 |**aObjEzmaxinvoicingsummaryinternal** | [**List&lt;EzmaxinvoicingsummaryinternalResponseCompound&gt;**](EzmaxinvoicingsummaryinternalResponseCompound.md) |  |  |
 |**aObjEzmaxinvoicingagent** | [**List&lt;EzmaxinvoicingagentResponseCompound&gt;**](EzmaxinvoicingagentResponseCompound.md) |  |  |
 |**aObjEzmaxinvoicinguser** | [**List&lt;EzmaxinvoicinguserResponseCompound&gt;**](EzmaxinvoicinguserResponseCompound.md) |  |  |
-|**aObjEzmaxinvoicingezsignfolder** | [**List&lt;Object&gt;**](Object.md) |  |  |
-|**aObjEzmaxinvoicingezsigndocument** | [**List&lt;Object&gt;**](Object.md) |  |  |
+|**aObjEzmaxinvoicingezsignfolder** | [**List&lt;CustomEzmaxinvoicingEzsignfolderResponse&gt;**](CustomEzmaxinvoicingEzsignfolderResponse.md) |  |  |
+|**aObjEzmaxinvoicingezsigndocument** | [**List&lt;CustomEzmaxinvoicingEzsigndocumentResponse&gt;**](CustomEzmaxinvoicingEzsigndocumentResponse.md) |  |  |
 
 
 

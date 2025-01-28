@@ -27,11 +27,11 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommonResponseErrorEzsignformValidation;
 import com.ezmax.api.model.CommonResponseErrorSTemporaryFileUrl;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Request;
+import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Response;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Request;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Response;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateglobalV1Request;
@@ -45,6 +45,8 @@ import com.ezmax.api.model.EzsigndocumentCreateObjectV2Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV3Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV3Response;
 import com.ezmax.api.model.EzsigndocumentDeclineToSignV1Request;
+import com.ezmax.api.model.EzsigndocumentDeclineToSignV1Response;
+import com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignannotationsV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignannotationsV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignformfieldgroupsV1Request;
@@ -53,8 +55,10 @@ import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentEditObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentEditObjectV1Response;
+import com.ezmax.api.model.EzsigndocumentEndPrematurelyV1Response;
 import com.ezmax.api.model.EzsigndocumentExtractTextV1Request;
 import com.ezmax.api.model.EzsigndocumentExtractTextV1Response;
+import com.ezmax.api.model.EzsigndocumentFlattenV1Response;
 import com.ezmax.api.model.EzsigndocumentGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetAttachmentsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetCompletedElementsV1Response;
@@ -72,7 +76,10 @@ import com.ezmax.api.model.EzsigndocumentGetTemporaryProofV1Response;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response;
 import com.ezmax.api.model.EzsigndocumentPatchObjectV1Request;
+import com.ezmax.api.model.EzsigndocumentPatchObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentSubmitEzsignformV1Request;
+import com.ezmax.api.model.EzsigndocumentSubmitEzsignformV1Response;
+import com.ezmax.api.model.EzsigndocumentUnsendV1Response;
 import java.io.File;
 
 import java.lang.reflect.Type;
@@ -204,7 +211,7 @@ public class ObjectEzsigndocumentApi {
      * This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID  (required)
      * @param ezsigndocumentApplyEzsigntemplateV1Request  (required)
-     * @return CommonResponse
+     * @return EzsigndocumentApplyEzsigntemplateV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -217,8 +224,8 @@ public class ObjectEzsigndocumentApi {
      * @deprecated
      */
     @Deprecated
-    public CommonResponse ezsigndocumentApplyEzsigntemplateV1(Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigndocumentApplyEzsigntemplateV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
+    public EzsigndocumentApplyEzsigntemplateV1Response ezsigndocumentApplyEzsigntemplateV1(Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request) throws ApiException {
+        ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response> localVarResp = ezsigndocumentApplyEzsigntemplateV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
         return localVarResp.getData();
     }
 
@@ -227,7 +234,7 @@ public class ObjectEzsigndocumentApi {
      * This function is deprecated. Please use *applyEzsigntemplate* instead which is doing the same thing but with a capital \&quot;E\&quot; to normalize the nomenclature.  This endpoint applies a predefined template to the ezsign document. This allows to automatically apply all the form and signature fields on a document in a single step.  The document must not already have fields otherwise an error will be returned.
      * @param pkiEzsigndocumentID  (required)
      * @param ezsigndocumentApplyEzsigntemplateV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigndocumentApplyEzsigntemplateV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -240,9 +247,9 @@ public class ObjectEzsigndocumentApi {
      * @deprecated
      */
     @Deprecated
-    public ApiResponse<CommonResponse> ezsigndocumentApplyEzsigntemplateV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request) throws ApiException {
+    public ApiResponse<EzsigndocumentApplyEzsigntemplateV1Response> ezsigndocumentApplyEzsigntemplateV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentApplyEzsigntemplateV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentApplyEzsigntemplateV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -265,10 +272,10 @@ public class ObjectEzsigndocumentApi {
      * @deprecated
      */
     @Deprecated
-    public okhttp3.Call ezsigndocumentApplyEzsigntemplateV1Async(Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigndocumentApplyEzsigntemplateV1Async(Integer pkiEzsigndocumentID, EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request, final ApiCallback<EzsigndocumentApplyEzsigntemplateV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigndocumentApplyEzsigntemplateV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentApplyEzsigntemplateV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1205,7 +1212,7 @@ public class ObjectEzsigndocumentApi {
      * Decline to sign
      * @param pkiEzsigndocumentID  (required)
      * @param ezsigndocumentDeclineToSignV1Request  (required)
-     * @return CommonResponse
+     * @return EzsigndocumentDeclineToSignV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1216,8 +1223,8 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsigndocumentDeclineToSignV1(Integer pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigndocumentDeclineToSignV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
+    public EzsigndocumentDeclineToSignV1Response ezsigndocumentDeclineToSignV1(Integer pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request) throws ApiException {
+        ApiResponse<EzsigndocumentDeclineToSignV1Response> localVarResp = ezsigndocumentDeclineToSignV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
         return localVarResp.getData();
     }
 
@@ -1226,7 +1233,7 @@ public class ObjectEzsigndocumentApi {
      * Decline to sign
      * @param pkiEzsigndocumentID  (required)
      * @param ezsigndocumentDeclineToSignV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigndocumentDeclineToSignV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1237,9 +1244,9 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsigndocumentDeclineToSignV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request) throws ApiException {
+    public ApiResponse<EzsigndocumentDeclineToSignV1Response> ezsigndocumentDeclineToSignV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentDeclineToSignV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentDeclineToSignV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1260,10 +1267,10 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigndocumentDeclineToSignV1Async(Integer pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigndocumentDeclineToSignV1Async(Integer pkiEzsigndocumentID, EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request, final ApiCallback<EzsigndocumentDeclineToSignV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigndocumentDeclineToSignV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentDeclineToSignV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1342,7 +1349,7 @@ public class ObjectEzsigndocumentApi {
      * Delete an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID  (required)
-     * @return CommonResponse
+     * @return EzsigndocumentDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1353,8 +1360,8 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsigndocumentDeleteObjectV1(Integer pkiEzsigndocumentID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigndocumentDeleteObjectV1WithHttpInfo(pkiEzsigndocumentID);
+    public EzsigndocumentDeleteObjectV1Response ezsigndocumentDeleteObjectV1(Integer pkiEzsigndocumentID) throws ApiException {
+        ApiResponse<EzsigndocumentDeleteObjectV1Response> localVarResp = ezsigndocumentDeleteObjectV1WithHttpInfo(pkiEzsigndocumentID);
         return localVarResp.getData();
     }
 
@@ -1362,7 +1369,7 @@ public class ObjectEzsigndocumentApi {
      * Delete an existing Ezsigndocument
      * 
      * @param pkiEzsigndocumentID  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigndocumentDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1373,9 +1380,9 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsigndocumentDeleteObjectV1WithHttpInfo(Integer pkiEzsigndocumentID) throws ApiException {
+    public ApiResponse<EzsigndocumentDeleteObjectV1Response> ezsigndocumentDeleteObjectV1WithHttpInfo(Integer pkiEzsigndocumentID) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentDeleteObjectV1ValidateBeforeCall(pkiEzsigndocumentID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1395,10 +1402,10 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigndocumentDeleteObjectV1Async(Integer pkiEzsigndocumentID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigndocumentDeleteObjectV1Async(Integer pkiEzsigndocumentID, final ApiCallback<EzsigndocumentDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigndocumentDeleteObjectV1ValidateBeforeCall(pkiEzsigndocumentID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2065,7 +2072,7 @@ public class ObjectEzsigndocumentApi {
      * End prematurely an Ezsigndocument when some signatures are still required
      * @param pkiEzsigndocumentID  (required)
      * @param body  (required)
-     * @return CommonResponse
+     * @return EzsigndocumentEndPrematurelyV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -2076,8 +2083,8 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsigndocumentEndPrematurelyV1(Integer pkiEzsigndocumentID, Object body) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigndocumentEndPrematurelyV1WithHttpInfo(pkiEzsigndocumentID, body);
+    public EzsigndocumentEndPrematurelyV1Response ezsigndocumentEndPrematurelyV1(Integer pkiEzsigndocumentID, Object body) throws ApiException {
+        ApiResponse<EzsigndocumentEndPrematurelyV1Response> localVarResp = ezsigndocumentEndPrematurelyV1WithHttpInfo(pkiEzsigndocumentID, body);
         return localVarResp.getData();
     }
 
@@ -2086,7 +2093,7 @@ public class ObjectEzsigndocumentApi {
      * End prematurely an Ezsigndocument when some signatures are still required
      * @param pkiEzsigndocumentID  (required)
      * @param body  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigndocumentEndPrematurelyV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -2097,9 +2104,9 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsigndocumentEndPrematurelyV1WithHttpInfo(Integer pkiEzsigndocumentID, Object body) throws ApiException {
+    public ApiResponse<EzsigndocumentEndPrematurelyV1Response> ezsigndocumentEndPrematurelyV1WithHttpInfo(Integer pkiEzsigndocumentID, Object body) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentEndPrematurelyV1ValidateBeforeCall(pkiEzsigndocumentID, body, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentEndPrematurelyV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2120,10 +2127,10 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigndocumentEndPrematurelyV1Async(Integer pkiEzsigndocumentID, Object body, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigndocumentEndPrematurelyV1Async(Integer pkiEzsigndocumentID, Object body, final ApiCallback<EzsigndocumentEndPrematurelyV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigndocumentEndPrematurelyV1ValidateBeforeCall(pkiEzsigndocumentID, body, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentEndPrematurelyV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2355,7 +2362,7 @@ public class ObjectEzsigndocumentApi {
      * Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
      * @param pkiEzsigndocumentID  (required)
      * @param body  (required)
-     * @return CommonResponse
+     * @return EzsigndocumentFlattenV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -2366,8 +2373,8 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsigndocumentFlattenV1(Integer pkiEzsigndocumentID, Object body) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigndocumentFlattenV1WithHttpInfo(pkiEzsigndocumentID, body);
+    public EzsigndocumentFlattenV1Response ezsigndocumentFlattenV1(Integer pkiEzsigndocumentID, Object body) throws ApiException {
+        ApiResponse<EzsigndocumentFlattenV1Response> localVarResp = ezsigndocumentFlattenV1WithHttpInfo(pkiEzsigndocumentID, body);
         return localVarResp.getData();
     }
 
@@ -2376,7 +2383,7 @@ public class ObjectEzsigndocumentApi {
      * Flatten an Ezsigndocument signatures, forms and annotations. This process finalizes the PDF so that the forms and annotations become part of the document content and cannot be edited.
      * @param pkiEzsigndocumentID  (required)
      * @param body  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigndocumentFlattenV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -2387,9 +2394,9 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsigndocumentFlattenV1WithHttpInfo(Integer pkiEzsigndocumentID, Object body) throws ApiException {
+    public ApiResponse<EzsigndocumentFlattenV1Response> ezsigndocumentFlattenV1WithHttpInfo(Integer pkiEzsigndocumentID, Object body) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentFlattenV1ValidateBeforeCall(pkiEzsigndocumentID, body, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentFlattenV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2410,10 +2417,10 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigndocumentFlattenV1Async(Integer pkiEzsigndocumentID, Object body, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigndocumentFlattenV1Async(Integer pkiEzsigndocumentID, Object body, final ApiCallback<EzsigndocumentFlattenV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigndocumentFlattenV1ValidateBeforeCall(pkiEzsigndocumentID, body, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentFlattenV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4544,7 +4551,7 @@ public class ObjectEzsigndocumentApi {
      * 
      * @param pkiEzsigndocumentID  (required)
      * @param ezsigndocumentPatchObjectV1Request  (required)
-     * @return CommonResponse
+     * @return EzsigndocumentPatchObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4555,8 +4562,8 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsigndocumentPatchObjectV1(Integer pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
+    public EzsigndocumentPatchObjectV1Response ezsigndocumentPatchObjectV1(Integer pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request) throws ApiException {
+        ApiResponse<EzsigndocumentPatchObjectV1Response> localVarResp = ezsigndocumentPatchObjectV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -4565,7 +4572,7 @@ public class ObjectEzsigndocumentApi {
      * 
      * @param pkiEzsigndocumentID  (required)
      * @param ezsigndocumentPatchObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigndocumentPatchObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4576,9 +4583,9 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsigndocumentPatchObjectV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request) throws ApiException {
+    public ApiResponse<EzsigndocumentPatchObjectV1Response> ezsigndocumentPatchObjectV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentPatchObjectV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentPatchObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -4599,10 +4606,10 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigndocumentPatchObjectV1Async(Integer pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigndocumentPatchObjectV1Async(Integer pkiEzsigndocumentID, EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request, final ApiCallback<EzsigndocumentPatchObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigndocumentPatchObjectV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentPatchObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4689,7 +4696,7 @@ public class ObjectEzsigndocumentApi {
      * 
      * @param pkiEzsigndocumentID  (required)
      * @param ezsigndocumentSubmitEzsignformV1Request  (required)
-     * @return CommonResponse
+     * @return EzsigndocumentSubmitEzsignformV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4700,8 +4707,8 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsigndocumentSubmitEzsignformV1(Integer pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigndocumentSubmitEzsignformV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
+    public EzsigndocumentSubmitEzsignformV1Response ezsigndocumentSubmitEzsignformV1(Integer pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request) throws ApiException {
+        ApiResponse<EzsigndocumentSubmitEzsignformV1Response> localVarResp = ezsigndocumentSubmitEzsignformV1WithHttpInfo(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
         return localVarResp.getData();
     }
 
@@ -4710,7 +4717,7 @@ public class ObjectEzsigndocumentApi {
      * 
      * @param pkiEzsigndocumentID  (required)
      * @param ezsigndocumentSubmitEzsignformV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigndocumentSubmitEzsignformV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4721,9 +4728,9 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsigndocumentSubmitEzsignformV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request) throws ApiException {
+    public ApiResponse<EzsigndocumentSubmitEzsignformV1Response> ezsigndocumentSubmitEzsignformV1WithHttpInfo(Integer pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentSubmitEzsignformV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentSubmitEzsignformV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -4744,10 +4751,10 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigndocumentSubmitEzsignformV1Async(Integer pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigndocumentSubmitEzsignformV1Async(Integer pkiEzsigndocumentID, EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request, final ApiCallback<EzsigndocumentSubmitEzsignformV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigndocumentSubmitEzsignformV1ValidateBeforeCall(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentSubmitEzsignformV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -4834,7 +4841,7 @@ public class ObjectEzsigndocumentApi {
      * Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
      * @param pkiEzsigndocumentID  (required)
      * @param body  (required)
-     * @return CommonResponse
+     * @return EzsigndocumentUnsendV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4845,8 +4852,8 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse ezsigndocumentUnsendV1(Integer pkiEzsigndocumentID, Object body) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = ezsigndocumentUnsendV1WithHttpInfo(pkiEzsigndocumentID, body);
+    public EzsigndocumentUnsendV1Response ezsigndocumentUnsendV1(Integer pkiEzsigndocumentID, Object body) throws ApiException {
+        ApiResponse<EzsigndocumentUnsendV1Response> localVarResp = ezsigndocumentUnsendV1WithHttpInfo(pkiEzsigndocumentID, body);
         return localVarResp.getData();
     }
 
@@ -4855,7 +4862,7 @@ public class ObjectEzsigndocumentApi {
      * Once an Ezsigndocument has been sent to signatories, it cannot be modified.  Using this endpoint, you can unsend the Ezsigndocument and make it modifiable again.  Signatories will receive an email informing them the signature process was aborted and they might receive a new invitation to sign.  ⚠️ Warning: Any signature previously made by signatories on this Ezsigndocumentswill be lost.
      * @param pkiEzsigndocumentID  (required)
      * @param body  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;EzsigndocumentUnsendV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -4866,9 +4873,9 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> ezsigndocumentUnsendV1WithHttpInfo(Integer pkiEzsigndocumentID, Object body) throws ApiException {
+    public ApiResponse<EzsigndocumentUnsendV1Response> ezsigndocumentUnsendV1WithHttpInfo(Integer pkiEzsigndocumentID, Object body) throws ApiException {
         okhttp3.Call localVarCall = ezsigndocumentUnsendV1ValidateBeforeCall(pkiEzsigndocumentID, body, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentUnsendV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -4889,10 +4896,10 @@ public class ObjectEzsigndocumentApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsigndocumentUnsendV1Async(Integer pkiEzsigndocumentID, Object body, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call ezsigndocumentUnsendV1Async(Integer pkiEzsigndocumentID, Object body, final ApiCallback<EzsigndocumentUnsendV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = ezsigndocumentUnsendV1ValidateBeforeCall(pkiEzsigndocumentID, body, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<EzsigndocumentUnsendV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

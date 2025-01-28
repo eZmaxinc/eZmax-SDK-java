@@ -10,7 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 <a id="systemconfigurationEditObjectV1"></a>
 # **systemconfigurationEditObjectV1**
-> CommonResponse systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
+> SystemconfigurationEditObjectV1Response systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
 
 Edit an existing Systemconfiguration
 
@@ -41,7 +41,7 @@ public class Example {
     Integer pkiSystemconfigurationID = 56; // Integer | The unique ID of the Systemconfiguration
     SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request = new SystemconfigurationEditObjectV1Request(); // SystemconfigurationEditObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+      SystemconfigurationEditObjectV1Response result = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectSystemconfigurationApi#systemconfigurationEditObjectV1");
@@ -63,7 +63,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**SystemconfigurationEditObjectV1Response**](SystemconfigurationEditObjectV1Response.md)
 
 ### Authorization
 

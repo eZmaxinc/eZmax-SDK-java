@@ -16,7 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
-import com.ezmax.api.model.EzsignfolderResponseCompound;
+import com.ezmax.api.model.EzsignfolderGetObjectV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsignfolderGetObjectV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -66,7 +66,7 @@ public class EzsignfolderGetObjectV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
   @javax.annotation.Nonnull
-  private EzsignfolderResponseCompound mPayload;
+  private EzsignfolderGetObjectV1ResponseMPayload mPayload;
 
   public EzsignfolderGetObjectV1Response() {
   }
@@ -109,21 +109,21 @@ public class EzsignfolderGetObjectV1Response {
   }
 
 
-  public EzsignfolderGetObjectV1Response mPayload(@javax.annotation.Nonnull EzsignfolderResponseCompound mPayload) {
+  public EzsignfolderGetObjectV1Response mPayload(@javax.annotation.Nonnull EzsignfolderGetObjectV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
 
   /**
-   * Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
+   * Get mPayload
    * @return mPayload
    */
   @javax.annotation.Nonnull
-  public EzsignfolderResponseCompound getmPayload() {
+  public EzsignfolderGetObjectV1ResponseMPayload getmPayload() {
     return mPayload;
   }
 
-  public void setmPayload(@javax.annotation.Nonnull EzsignfolderResponseCompound mPayload) {
+  public void setmPayload(@javax.annotation.Nonnull EzsignfolderGetObjectV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -222,7 +222,7 @@ public class EzsignfolderGetObjectV1Response {
         CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
       }
       // validate the required field `mPayload`
-      EzsignfolderResponseCompound.validateJsonElement(jsonObj.get("mPayload"));
+      EzsignfolderGetObjectV1ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

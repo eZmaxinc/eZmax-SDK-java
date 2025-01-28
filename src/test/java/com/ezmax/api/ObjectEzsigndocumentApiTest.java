@@ -14,11 +14,11 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.CommonResponseErrorEzsignformValidation;
 import com.ezmax.api.model.CommonResponseErrorSTemporaryFileUrl;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Request;
+import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV1Response;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Request;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateV2Response;
 import com.ezmax.api.model.EzsigndocumentApplyEzsigntemplateglobalV1Request;
@@ -32,6 +32,8 @@ import com.ezmax.api.model.EzsigndocumentCreateObjectV2Response;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV3Request;
 import com.ezmax.api.model.EzsigndocumentCreateObjectV3Response;
 import com.ezmax.api.model.EzsigndocumentDeclineToSignV1Request;
+import com.ezmax.api.model.EzsigndocumentDeclineToSignV1Response;
+import com.ezmax.api.model.EzsigndocumentDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignannotationsV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignannotationsV1Response;
 import com.ezmax.api.model.EzsigndocumentEditEzsignformfieldgroupsV1Request;
@@ -40,8 +42,10 @@ import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Request;
 import com.ezmax.api.model.EzsigndocumentEditEzsignsignaturesV1Response;
 import com.ezmax.api.model.EzsigndocumentEditObjectV1Request;
 import com.ezmax.api.model.EzsigndocumentEditObjectV1Response;
+import com.ezmax.api.model.EzsigndocumentEndPrematurelyV1Response;
 import com.ezmax.api.model.EzsigndocumentExtractTextV1Request;
 import com.ezmax.api.model.EzsigndocumentExtractTextV1Response;
+import com.ezmax.api.model.EzsigndocumentFlattenV1Response;
 import com.ezmax.api.model.EzsigndocumentGetActionableElementsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetAttachmentsV1Response;
 import com.ezmax.api.model.EzsigndocumentGetCompletedElementsV1Response;
@@ -59,7 +63,10 @@ import com.ezmax.api.model.EzsigndocumentGetTemporaryProofV1Response;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Request;
 import com.ezmax.api.model.EzsigndocumentGetWordsPositionsV1Response;
 import com.ezmax.api.model.EzsigndocumentPatchObjectV1Request;
+import com.ezmax.api.model.EzsigndocumentPatchObjectV1Response;
 import com.ezmax.api.model.EzsigndocumentSubmitEzsignformV1Request;
+import com.ezmax.api.model.EzsigndocumentSubmitEzsignformV1Response;
+import com.ezmax.api.model.EzsigndocumentUnsendV1Response;
 import java.io.File;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -88,7 +95,7 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentApplyEzsigntemplateV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentApplyEzsigntemplateV1Request ezsigndocumentApplyEzsigntemplateV1Request = null;
-        CommonResponse response = api.ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
+        EzsigndocumentApplyEzsigntemplateV1Response response = api.ezsigndocumentApplyEzsigntemplateV1(pkiEzsigndocumentID, ezsigndocumentApplyEzsigntemplateV1Request);
         // TODO: test validations
     }
 
@@ -190,7 +197,7 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentDeclineToSignV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentDeclineToSignV1Request ezsigndocumentDeclineToSignV1Request = null;
-        CommonResponse response = api.ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
+        EzsigndocumentDeclineToSignV1Response response = api.ezsigndocumentDeclineToSignV1(pkiEzsigndocumentID, ezsigndocumentDeclineToSignV1Request);
         // TODO: test validations
     }
 
@@ -204,7 +211,7 @@ public class ObjectEzsigndocumentApiTest {
     @Test
     public void ezsigndocumentDeleteObjectV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
-        CommonResponse response = api.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
+        EzsigndocumentDeleteObjectV1Response response = api.ezsigndocumentDeleteObjectV1(pkiEzsigndocumentID);
         // TODO: test validations
     }
 
@@ -279,7 +286,7 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentEndPrematurelyV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         Object body = null;
-        CommonResponse response = api.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
+        EzsigndocumentEndPrematurelyV1Response response = api.ezsigndocumentEndPrematurelyV1(pkiEzsigndocumentID, body);
         // TODO: test validations
     }
 
@@ -309,7 +316,7 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentFlattenV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         Object body = null;
-        CommonResponse response = api.ezsigndocumentFlattenV1(pkiEzsigndocumentID, body);
+        EzsigndocumentFlattenV1Response response = api.ezsigndocumentFlattenV1(pkiEzsigndocumentID, body);
         // TODO: test validations
     }
 
@@ -534,7 +541,7 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentPatchObjectV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentPatchObjectV1Request ezsigndocumentPatchObjectV1Request = null;
-        CommonResponse response = api.ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
+        EzsigndocumentPatchObjectV1Response response = api.ezsigndocumentPatchObjectV1(pkiEzsigndocumentID, ezsigndocumentPatchObjectV1Request);
         // TODO: test validations
     }
 
@@ -549,7 +556,7 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentSubmitEzsignformV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         EzsigndocumentSubmitEzsignformV1Request ezsigndocumentSubmitEzsignformV1Request = null;
-        CommonResponse response = api.ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
+        EzsigndocumentSubmitEzsignformV1Response response = api.ezsigndocumentSubmitEzsignformV1(pkiEzsigndocumentID, ezsigndocumentSubmitEzsignformV1Request);
         // TODO: test validations
     }
 
@@ -564,7 +571,7 @@ public class ObjectEzsigndocumentApiTest {
     public void ezsigndocumentUnsendV1Test() throws ApiException {
         Integer pkiEzsigndocumentID = null;
         Object body = null;
-        CommonResponse response = api.ezsigndocumentUnsendV1(pkiEzsigndocumentID, body);
+        EzsigndocumentUnsendV1Response response = api.ezsigndocumentUnsendV1(pkiEzsigndocumentID, body);
         // TODO: test validations
     }
 

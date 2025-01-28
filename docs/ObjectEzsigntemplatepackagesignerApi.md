@@ -151,7 +151,7 @@ public class Example {
 
 <a id="ezsigntemplatepackagesignerEditObjectV1"></a>
 # **ezsigntemplatepackagesignerEditObjectV1**
-> CommonResponse ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request)
+> EzsigntemplatepackagesignerEditObjectV1Response ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request)
 
 Edit an existing Ezsigntemplatepackagesigner
 
@@ -182,7 +182,7 @@ public class Example {
     Integer pkiEzsigntemplatepackagesignerID = 56; // Integer | 
     EzsigntemplatepackagesignerEditObjectV1Request ezsigntemplatepackagesignerEditObjectV1Request = new EzsigntemplatepackagesignerEditObjectV1Request(); // EzsigntemplatepackagesignerEditObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request);
+      EzsigntemplatepackagesignerEditObjectV1Response result = apiInstance.ezsigntemplatepackagesignerEditObjectV1(pkiEzsigntemplatepackagesignerID, ezsigntemplatepackagesignerEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigntemplatepackagesignerApi#ezsigntemplatepackagesignerEditObjectV1");
@@ -204,7 +204,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigntemplatepackagesignerEditObjectV1Response**](EzsigntemplatepackagesignerEditObjectV1Response.md)
 
 ### Authorization
 

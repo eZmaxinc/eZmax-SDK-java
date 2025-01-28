@@ -29,11 +29,13 @@ import java.io.IOException;
 
 import com.ezmax.api.model.AuthenticationexternalCreateObjectV1Request;
 import com.ezmax.api.model.AuthenticationexternalCreateObjectV1Response;
+import com.ezmax.api.model.AuthenticationexternalDeleteObjectV1Response;
 import com.ezmax.api.model.AuthenticationexternalEditObjectV1Request;
+import com.ezmax.api.model.AuthenticationexternalEditObjectV1Response;
 import com.ezmax.api.model.AuthenticationexternalGetAutocompleteV2Response;
 import com.ezmax.api.model.AuthenticationexternalGetListV1Response;
 import com.ezmax.api.model.AuthenticationexternalGetObjectV2Response;
-import com.ezmax.api.model.CommonResponse;
+import com.ezmax.api.model.AuthenticationexternalResetAuthorizationV1Response;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -282,7 +284,7 @@ public class ObjectAuthenticationexternalApi {
      * Delete an existing Authenticationexternal
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal (required)
-     * @return CommonResponse
+     * @return AuthenticationexternalDeleteObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -292,8 +294,8 @@ public class ObjectAuthenticationexternalApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse authenticationexternalDeleteObjectV1(Integer pkiAuthenticationexternalID) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = authenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID);
+    public AuthenticationexternalDeleteObjectV1Response authenticationexternalDeleteObjectV1(Integer pkiAuthenticationexternalID) throws ApiException {
+        ApiResponse<AuthenticationexternalDeleteObjectV1Response> localVarResp = authenticationexternalDeleteObjectV1WithHttpInfo(pkiAuthenticationexternalID);
         return localVarResp.getData();
     }
 
@@ -301,7 +303,7 @@ public class ObjectAuthenticationexternalApi {
      * Delete an existing Authenticationexternal
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;AuthenticationexternalDeleteObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -311,9 +313,9 @@ public class ObjectAuthenticationexternalApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> authenticationexternalDeleteObjectV1WithHttpInfo(Integer pkiAuthenticationexternalID) throws ApiException {
+    public ApiResponse<AuthenticationexternalDeleteObjectV1Response> authenticationexternalDeleteObjectV1WithHttpInfo(Integer pkiAuthenticationexternalID) throws ApiException {
         okhttp3.Call localVarCall = authenticationexternalDeleteObjectV1ValidateBeforeCall(pkiAuthenticationexternalID, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<AuthenticationexternalDeleteObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -332,10 +334,10 @@ public class ObjectAuthenticationexternalApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call authenticationexternalDeleteObjectV1Async(Integer pkiAuthenticationexternalID, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call authenticationexternalDeleteObjectV1Async(Integer pkiAuthenticationexternalID, final ApiCallback<AuthenticationexternalDeleteObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = authenticationexternalDeleteObjectV1ValidateBeforeCall(pkiAuthenticationexternalID, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<AuthenticationexternalDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -422,7 +424,7 @@ public class ObjectAuthenticationexternalApi {
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal (required)
      * @param authenticationexternalEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return AuthenticationexternalEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -433,8 +435,8 @@ public class ObjectAuthenticationexternalApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse authenticationexternalEditObjectV1(Integer pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = authenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
+    public AuthenticationexternalEditObjectV1Response authenticationexternalEditObjectV1(Integer pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request) throws ApiException {
+        ApiResponse<AuthenticationexternalEditObjectV1Response> localVarResp = authenticationexternalEditObjectV1WithHttpInfo(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -443,7 +445,7 @@ public class ObjectAuthenticationexternalApi {
      * 
      * @param pkiAuthenticationexternalID The unique ID of the Authenticationexternal (required)
      * @param authenticationexternalEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;AuthenticationexternalEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -454,9 +456,9 @@ public class ObjectAuthenticationexternalApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> authenticationexternalEditObjectV1WithHttpInfo(Integer pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request) throws ApiException {
+    public ApiResponse<AuthenticationexternalEditObjectV1Response> authenticationexternalEditObjectV1WithHttpInfo(Integer pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = authenticationexternalEditObjectV1ValidateBeforeCall(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<AuthenticationexternalEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -477,10 +479,10 @@ public class ObjectAuthenticationexternalApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call authenticationexternalEditObjectV1Async(Integer pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call authenticationexternalEditObjectV1Async(Integer pkiAuthenticationexternalID, AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, final ApiCallback<AuthenticationexternalEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = authenticationexternalEditObjectV1ValidateBeforeCall(pkiAuthenticationexternalID, authenticationexternalEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<AuthenticationexternalEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1012,7 +1014,7 @@ public class ObjectAuthenticationexternalApi {
      * 
      * @param pkiAuthenticationexternalID  (required)
      * @param body  (required)
-     * @return CommonResponse
+     * @return AuthenticationexternalResetAuthorizationV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1022,8 +1024,8 @@ public class ObjectAuthenticationexternalApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse authenticationexternalResetAuthorizationV1(Integer pkiAuthenticationexternalID, Object body) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = authenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID, body);
+    public AuthenticationexternalResetAuthorizationV1Response authenticationexternalResetAuthorizationV1(Integer pkiAuthenticationexternalID, Object body) throws ApiException {
+        ApiResponse<AuthenticationexternalResetAuthorizationV1Response> localVarResp = authenticationexternalResetAuthorizationV1WithHttpInfo(pkiAuthenticationexternalID, body);
         return localVarResp.getData();
     }
 
@@ -1032,7 +1034,7 @@ public class ObjectAuthenticationexternalApi {
      * 
      * @param pkiAuthenticationexternalID  (required)
      * @param body  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;AuthenticationexternalResetAuthorizationV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -1042,9 +1044,9 @@ public class ObjectAuthenticationexternalApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> authenticationexternalResetAuthorizationV1WithHttpInfo(Integer pkiAuthenticationexternalID, Object body) throws ApiException {
+    public ApiResponse<AuthenticationexternalResetAuthorizationV1Response> authenticationexternalResetAuthorizationV1WithHttpInfo(Integer pkiAuthenticationexternalID, Object body) throws ApiException {
         okhttp3.Call localVarCall = authenticationexternalResetAuthorizationV1ValidateBeforeCall(pkiAuthenticationexternalID, body, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<AuthenticationexternalResetAuthorizationV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1064,10 +1066,10 @@ public class ObjectAuthenticationexternalApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call authenticationexternalResetAuthorizationV1Async(Integer pkiAuthenticationexternalID, Object body, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call authenticationexternalResetAuthorizationV1Async(Integer pkiAuthenticationexternalID, Object body, final ApiCallback<AuthenticationexternalResetAuthorizationV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = authenticationexternalResetAuthorizationV1ValidateBeforeCall(pkiAuthenticationexternalID, body, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<AuthenticationexternalResetAuthorizationV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

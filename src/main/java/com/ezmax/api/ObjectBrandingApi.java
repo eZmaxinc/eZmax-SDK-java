@@ -30,10 +30,10 @@ import java.io.IOException;
 import com.ezmax.api.model.BrandingCreateObjectV2Request;
 import com.ezmax.api.model.BrandingCreateObjectV2Response;
 import com.ezmax.api.model.BrandingEditObjectV2Request;
+import com.ezmax.api.model.BrandingEditObjectV2Response;
 import com.ezmax.api.model.BrandingGetAutocompleteV2Response;
 import com.ezmax.api.model.BrandingGetListV1Response;
 import com.ezmax.api.model.BrandingGetObjectV3Response;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -290,7 +290,7 @@ public class ObjectBrandingApi {
      * 
      * @param pkiBrandingID  (required)
      * @param brandingEditObjectV2Request  (required)
-     * @return CommonResponse
+     * @return BrandingEditObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -300,8 +300,8 @@ public class ObjectBrandingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse brandingEditObjectV2(Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = brandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request);
+    public BrandingEditObjectV2Response brandingEditObjectV2(Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request) throws ApiException {
+        ApiResponse<BrandingEditObjectV2Response> localVarResp = brandingEditObjectV2WithHttpInfo(pkiBrandingID, brandingEditObjectV2Request);
         return localVarResp.getData();
     }
 
@@ -310,7 +310,7 @@ public class ObjectBrandingApi {
      * 
      * @param pkiBrandingID  (required)
      * @param brandingEditObjectV2Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;BrandingEditObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -320,9 +320,9 @@ public class ObjectBrandingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> brandingEditObjectV2WithHttpInfo(Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request) throws ApiException {
+    public ApiResponse<BrandingEditObjectV2Response> brandingEditObjectV2WithHttpInfo(Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request) throws ApiException {
         okhttp3.Call localVarCall = brandingEditObjectV2ValidateBeforeCall(pkiBrandingID, brandingEditObjectV2Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<BrandingEditObjectV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -342,10 +342,10 @@ public class ObjectBrandingApi {
         <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call brandingEditObjectV2Async(Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call brandingEditObjectV2Async(Integer pkiBrandingID, BrandingEditObjectV2Request brandingEditObjectV2Request, final ApiCallback<BrandingEditObjectV2Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = brandingEditObjectV2ValidateBeforeCall(pkiBrandingID, brandingEditObjectV2Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<BrandingEditObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

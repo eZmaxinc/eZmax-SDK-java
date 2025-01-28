@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.PermissionRequest;
+import com.ezmax.api.model.PermissionRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/permission
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class PermissionCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_PERMISSION = "a_objPermission";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PERMISSION)
@@ -66,7 +66,7 @@ public class PermissionCreateObjectV1Request {
     return this;
   }
 
-  public PermissionCreateObjectV1Request addAObjPermissionItem(PermissionRequest aObjPermissionItem) {
+  public PermissionCreateObjectV1Request addAObjPermissionItem(PermissionRequestCompound aObjPermissionItem) {
     if (this.aObjPermission == null) {
       this.aObjPermission = new ArrayList<>();
     }
@@ -176,7 +176,7 @@ public class PermissionCreateObjectV1Request {
       JsonArray jsonArrayaObjPermission = jsonObj.getAsJsonArray("a_objPermission");
       // validate the required field `a_objPermission` (array)
       for (int i = 0; i < jsonArrayaObjPermission.size(); i++) {
-        PermissionRequest.validateJsonElement(jsonArrayaObjPermission.get(i));
+        PermissionRequestCompound.validateJsonElement(jsonArrayaObjPermission.get(i));
       };
   }
 

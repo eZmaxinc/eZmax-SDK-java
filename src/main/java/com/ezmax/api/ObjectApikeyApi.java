@@ -30,6 +30,7 @@ import java.io.IOException;
 import com.ezmax.api.model.ApikeyCreateObjectV2Request;
 import com.ezmax.api.model.ApikeyCreateObjectV2Response;
 import com.ezmax.api.model.ApikeyEditObjectV1Request;
+import com.ezmax.api.model.ApikeyEditObjectV1Response;
 import com.ezmax.api.model.ApikeyEditPermissionsV1Request;
 import com.ezmax.api.model.ApikeyEditPermissionsV1Response;
 import com.ezmax.api.model.ApikeyGenerateDelegatedCredentialsV1Request;
@@ -41,7 +42,6 @@ import com.ezmax.api.model.ApikeyGetPermissionsV1Response;
 import com.ezmax.api.model.ApikeyGetSubnetsV1Response;
 import com.ezmax.api.model.ApikeyRegenerateV1Request;
 import com.ezmax.api.model.ApikeyRegenerateV1Response;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -299,7 +299,7 @@ public class ObjectApikeyApi {
      * 
      * @param pkiApikeyID The unique ID of the Apikey (required)
      * @param apikeyEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return ApikeyEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -310,8 +310,8 @@ public class ObjectApikeyApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse apikeyEditObjectV1(Integer pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = apikeyEditObjectV1WithHttpInfo(pkiApikeyID, apikeyEditObjectV1Request);
+    public ApikeyEditObjectV1Response apikeyEditObjectV1(Integer pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request) throws ApiException {
+        ApiResponse<ApikeyEditObjectV1Response> localVarResp = apikeyEditObjectV1WithHttpInfo(pkiApikeyID, apikeyEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -320,7 +320,7 @@ public class ObjectApikeyApi {
      * 
      * @param pkiApikeyID The unique ID of the Apikey (required)
      * @param apikeyEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;ApikeyEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -331,9 +331,9 @@ public class ObjectApikeyApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> apikeyEditObjectV1WithHttpInfo(Integer pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request) throws ApiException {
+    public ApiResponse<ApikeyEditObjectV1Response> apikeyEditObjectV1WithHttpInfo(Integer pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = apikeyEditObjectV1ValidateBeforeCall(pkiApikeyID, apikeyEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<ApikeyEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -354,10 +354,10 @@ public class ObjectApikeyApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call apikeyEditObjectV1Async(Integer pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call apikeyEditObjectV1Async(Integer pkiApikeyID, ApikeyEditObjectV1Request apikeyEditObjectV1Request, final ApiCallback<ApikeyEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = apikeyEditObjectV1ValidateBeforeCall(pkiApikeyID, apikeyEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<ApikeyEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

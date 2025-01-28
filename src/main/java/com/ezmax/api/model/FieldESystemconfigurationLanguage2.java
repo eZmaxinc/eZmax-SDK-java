@@ -29,11 +29,11 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldESystemconfigurationLanguage2.Adapter.class)
 public enum FieldESystemconfigurationLanguage2 {
   
-  CA("en_CA"),
+  EN_CA("en_CA"),
   
-  QC("en_QC"),
+  EN_QC("en_QC"),
   
-  US("en_US");
+  EN_US("en_US");
 
   private String value;
 

@@ -14,7 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.EzsigntemplatedocumentpageResponse;
+import com.ezmax.api.model.EzsigntemplatedocumentpageResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/getEzsigntemplatedocumentpages
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEDOCUMENTPAGE = "a_objEzsigntemplatedocumentpage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEDOCUMENTPAGE)
@@ -66,7 +66,7 @@ public class EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayl
     return this;
   }
 
-  public EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload addAObjEzsigntemplatedocumentpageItem(EzsigntemplatedocumentpageResponse aObjEzsigntemplatedocumentpageItem) {
+  public EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayload addAObjEzsigntemplatedocumentpageItem(EzsigntemplatedocumentpageResponseCompound aObjEzsigntemplatedocumentpageItem) {
     if (this.aObjEzsigntemplatedocumentpage == null) {
       this.aObjEzsigntemplatedocumentpage = new ArrayList<>();
     }
@@ -176,7 +176,7 @@ public class EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1ResponseMPayl
       JsonArray jsonArrayaObjEzsigntemplatedocumentpage = jsonObj.getAsJsonArray("a_objEzsigntemplatedocumentpage");
       // validate the required field `a_objEzsigntemplatedocumentpage` (array)
       for (int i = 0; i < jsonArrayaObjEzsigntemplatedocumentpage.size(); i++) {
-        EzsigntemplatedocumentpageResponse.validateJsonElement(jsonArrayaObjEzsigntemplatedocumentpage.get(i));
+        EzsigntemplatedocumentpageResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplatedocumentpage.get(i));
       };
   }
 

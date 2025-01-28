@@ -80,7 +80,7 @@ public class Example {
 
 <a id="ezsigndiscussionDeleteObjectV1"></a>
 # **ezsigndiscussionDeleteObjectV1**
-> CommonResponse ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID)
+> EzsigndiscussionDeleteObjectV1Response ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID)
 
 Delete an existing Ezsigndiscussion
 
@@ -110,7 +110,7 @@ public class Example {
     ObjectEzsigndiscussionApi apiInstance = new ObjectEzsigndiscussionApi(defaultClient);
     Integer pkiEzsigndiscussionID = 56; // Integer | The unique ID of the Ezsigndiscussion
     try {
-      CommonResponse result = apiInstance.ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID);
+      EzsigndiscussionDeleteObjectV1Response result = apiInstance.ezsigndiscussionDeleteObjectV1(pkiEzsigndiscussionID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsigndiscussionApi#ezsigndiscussionDeleteObjectV1");
@@ -131,7 +131,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**EzsigndiscussionDeleteObjectV1Response**](EzsigndiscussionDeleteObjectV1Response.md)
 
 ### Authorization
 

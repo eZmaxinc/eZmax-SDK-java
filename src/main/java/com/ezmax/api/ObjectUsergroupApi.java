@@ -27,13 +27,13 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.UsergroupCreateObjectV1Request;
 import com.ezmax.api.model.UsergroupCreateObjectV1Response;
 import com.ezmax.api.model.UsergroupEditObjectV1Request;
+import com.ezmax.api.model.UsergroupEditObjectV1Response;
 import com.ezmax.api.model.UsergroupEditPermissionsV1Request;
 import com.ezmax.api.model.UsergroupEditPermissionsV1Response;
 import com.ezmax.api.model.UsergroupEditUsergroupdelegationsV1Request;
@@ -300,7 +300,7 @@ public class ObjectUsergroupApi {
      * 
      * @param pkiUsergroupID  (required)
      * @param usergroupEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return UsergroupEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -311,8 +311,8 @@ public class ObjectUsergroupApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse usergroupEditObjectV1(Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = usergroupEditObjectV1WithHttpInfo(pkiUsergroupID, usergroupEditObjectV1Request);
+    public UsergroupEditObjectV1Response usergroupEditObjectV1(Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request) throws ApiException {
+        ApiResponse<UsergroupEditObjectV1Response> localVarResp = usergroupEditObjectV1WithHttpInfo(pkiUsergroupID, usergroupEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -321,7 +321,7 @@ public class ObjectUsergroupApi {
      * 
      * @param pkiUsergroupID  (required)
      * @param usergroupEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;UsergroupEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -332,9 +332,9 @@ public class ObjectUsergroupApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> usergroupEditObjectV1WithHttpInfo(Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request) throws ApiException {
+    public ApiResponse<UsergroupEditObjectV1Response> usergroupEditObjectV1WithHttpInfo(Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = usergroupEditObjectV1ValidateBeforeCall(pkiUsergroupID, usergroupEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UsergroupEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -355,10 +355,10 @@ public class ObjectUsergroupApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call usergroupEditObjectV1Async(Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call usergroupEditObjectV1Async(Integer pkiUsergroupID, UsergroupEditObjectV1Request usergroupEditObjectV1Request, final ApiCallback<UsergroupEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = usergroupEditObjectV1ValidateBeforeCall(pkiUsergroupID, usergroupEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UsergroupEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

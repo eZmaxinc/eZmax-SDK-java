@@ -15,10 +15,10 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CustomCreateEzsignelementsPositionedByWordRequest;
-import com.ezmax.api.model.CustomDropdownElementRequest;
+import com.ezmax.api.model.CustomDropdownElementRequestCompound;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsignformfieldRequestCompound;
-import com.ezmax.api.model.EzsignformfieldgroupsignerRequest;
+import com.ezmax.api.model.EzsignformfieldgroupsignerRequestCompound;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupSignerrequirement;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupTooltipposition;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupType;
@@ -58,7 +58,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfieldgroup Object in the context of a createEzsignelementsPositionedByWord path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -508,7 +508,7 @@ public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordReque
     return this;
   }
 
-  public CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest addAObjEzsignformfieldgroupsignerItem(EzsignformfieldgroupsignerRequest aObjEzsignformfieldgroupsignerItem) {
+  public CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest addAObjEzsignformfieldgroupsignerItem(EzsignformfieldgroupsignerRequestCompound aObjEzsignformfieldgroupsignerItem) {
     if (this.aObjEzsignformfieldgroupsigner == null) {
       this.aObjEzsignformfieldgroupsigner = new ArrayList<>();
     }
@@ -535,7 +535,7 @@ public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordReque
     return this;
   }
 
-  public CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest addAObjDropdownElementItem(CustomDropdownElementRequest aObjDropdownElementItem) {
+  public CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordRequest addAObjDropdownElementItem(CustomDropdownElementRequestCompound aObjDropdownElementItem) {
     if (this.aObjDropdownElement == null) {
       this.aObjDropdownElement = new ArrayList<>();
     }
@@ -789,7 +789,7 @@ public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordReque
       JsonArray jsonArrayaObjEzsignformfieldgroupsigner = jsonObj.getAsJsonArray("a_objEzsignformfieldgroupsigner");
       // validate the required field `a_objEzsignformfieldgroupsigner` (array)
       for (int i = 0; i < jsonArrayaObjEzsignformfieldgroupsigner.size(); i++) {
-        EzsignformfieldgroupsignerRequest.validateJsonElement(jsonArrayaObjEzsignformfieldgroupsigner.get(i));
+        EzsignformfieldgroupsignerRequestCompound.validateJsonElement(jsonArrayaObjEzsignformfieldgroupsigner.get(i));
       };
       if (jsonObj.get("a_objDropdownElement") != null && !jsonObj.get("a_objDropdownElement").isJsonNull()) {
         JsonArray jsonArrayaObjDropdownElement = jsonObj.getAsJsonArray("a_objDropdownElement");
@@ -801,7 +801,7 @@ public class CustomEzsignformfieldgroupCreateEzsignelementsPositionedByWordReque
 
           // validate the optional field `a_objDropdownElement` (array)
           for (int i = 0; i < jsonArrayaObjDropdownElement.size(); i++) {
-            CustomDropdownElementRequest.validateJsonElement(jsonArrayaObjDropdownElement.get(i));
+            CustomDropdownElementRequestCompound.validateJsonElement(jsonArrayaObjDropdownElement.get(i));
           };
         }
       }

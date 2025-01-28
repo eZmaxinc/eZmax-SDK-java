@@ -14,10 +14,10 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.CustomDropdownElementResponse;
+import com.ezmax.api.model.CustomDropdownElementResponseCompound;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsignformfieldResponseCompound;
-import com.ezmax.api.model.EzsignformfieldgroupsignerResponse;
+import com.ezmax.api.model.EzsignformfieldgroupsignerResponseCompound;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupSignerrequirement;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupTooltipposition;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupType;
@@ -57,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfieldgroup Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsignformfieldgroupResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -529,7 +529,7 @@ public class EzsignformfieldgroupResponseCompound {
     return this;
   }
 
-  public EzsignformfieldgroupResponseCompound addAObjDropdownElementItem(CustomDropdownElementResponse aObjDropdownElementItem) {
+  public EzsignformfieldgroupResponseCompound addAObjDropdownElementItem(CustomDropdownElementResponseCompound aObjDropdownElementItem) {
     if (this.aObjDropdownElement == null) {
       this.aObjDropdownElement = new ArrayList<>();
     }
@@ -556,7 +556,7 @@ public class EzsignformfieldgroupResponseCompound {
     return this;
   }
 
-  public EzsignformfieldgroupResponseCompound addAObjEzsignformfieldgroupsignerItem(EzsignformfieldgroupsignerResponse aObjEzsignformfieldgroupsignerItem) {
+  public EzsignformfieldgroupResponseCompound addAObjEzsignformfieldgroupsignerItem(EzsignformfieldgroupsignerResponseCompound aObjEzsignformfieldgroupsignerItem) {
     if (this.aObjEzsignformfieldgroupsigner == null) {
       this.aObjEzsignformfieldgroupsigner = new ArrayList<>();
     }
@@ -773,7 +773,7 @@ public class EzsignformfieldgroupResponseCompound {
 
           // validate the optional field `a_objDropdownElement` (array)
           for (int i = 0; i < jsonArrayaObjDropdownElement.size(); i++) {
-            CustomDropdownElementResponse.validateJsonElement(jsonArrayaObjDropdownElement.get(i));
+            CustomDropdownElementResponseCompound.validateJsonElement(jsonArrayaObjDropdownElement.get(i));
           };
         }
       }
@@ -785,7 +785,7 @@ public class EzsignformfieldgroupResponseCompound {
       JsonArray jsonArrayaObjEzsignformfieldgroupsigner = jsonObj.getAsJsonArray("a_objEzsignformfieldgroupsigner");
       // validate the required field `a_objEzsignformfieldgroupsigner` (array)
       for (int i = 0; i < jsonArrayaObjEzsignformfieldgroupsigner.size(); i++) {
-        EzsignformfieldgroupsignerResponse.validateJsonElement(jsonArrayaObjEzsignformfieldgroupsigner.get(i));
+        EzsignformfieldgroupsignerResponseCompound.validateJsonElement(jsonArrayaObjEzsignformfieldgroupsigner.get(i));
       };
   }
 

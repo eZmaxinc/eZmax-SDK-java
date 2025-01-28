@@ -27,7 +27,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
@@ -38,6 +37,7 @@ import com.ezmax.api.model.UserCreateObjectV2Response;
 import com.ezmax.api.model.UserEditColleaguesV2Request;
 import com.ezmax.api.model.UserEditColleaguesV2Response;
 import com.ezmax.api.model.UserEditObjectV1Request;
+import com.ezmax.api.model.UserEditObjectV1Response;
 import com.ezmax.api.model.UserEditPermissionsV1Request;
 import com.ezmax.api.model.UserEditPermissionsV1Response;
 import com.ezmax.api.model.UserGetApikeysV1Response;
@@ -50,6 +50,7 @@ import com.ezmax.api.model.UserGetPermissionsV1Response;
 import com.ezmax.api.model.UserGetSubnetsV1Response;
 import com.ezmax.api.model.UserGetUsergroupexternalsV1Response;
 import com.ezmax.api.model.UserGetUsergroupsV1Response;
+import com.ezmax.api.model.UserSendPasswordResetV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -576,7 +577,7 @@ public class ObjectUserApi {
      * 
      * @param pkiUserID The unique ID of the User (required)
      * @param userEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return UserEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -587,8 +588,8 @@ public class ObjectUserApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse userEditObjectV1(Integer pkiUserID, UserEditObjectV1Request userEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = userEditObjectV1WithHttpInfo(pkiUserID, userEditObjectV1Request);
+    public UserEditObjectV1Response userEditObjectV1(Integer pkiUserID, UserEditObjectV1Request userEditObjectV1Request) throws ApiException {
+        ApiResponse<UserEditObjectV1Response> localVarResp = userEditObjectV1WithHttpInfo(pkiUserID, userEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -597,7 +598,7 @@ public class ObjectUserApi {
      * 
      * @param pkiUserID The unique ID of the User (required)
      * @param userEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;UserEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -608,9 +609,9 @@ public class ObjectUserApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> userEditObjectV1WithHttpInfo(Integer pkiUserID, UserEditObjectV1Request userEditObjectV1Request) throws ApiException {
+    public ApiResponse<UserEditObjectV1Response> userEditObjectV1WithHttpInfo(Integer pkiUserID, UserEditObjectV1Request userEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = userEditObjectV1ValidateBeforeCall(pkiUserID, userEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UserEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -631,10 +632,10 @@ public class ObjectUserApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call userEditObjectV1Async(Integer pkiUserID, UserEditObjectV1Request userEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call userEditObjectV1Async(Integer pkiUserID, UserEditObjectV1Request userEditObjectV1Request, final ApiCallback<UserEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = userEditObjectV1ValidateBeforeCall(pkiUserID, userEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UserEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2229,7 +2230,7 @@ public class ObjectUserApi {
      * Send the password reset email
      * @param pkiUserID  (required)
      * @param body  (required)
-     * @return CommonResponse
+     * @return UserSendPasswordResetV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -2240,8 +2241,8 @@ public class ObjectUserApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse userSendPasswordResetV1(Integer pkiUserID, Object body) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = userSendPasswordResetV1WithHttpInfo(pkiUserID, body);
+    public UserSendPasswordResetV1Response userSendPasswordResetV1(Integer pkiUserID, Object body) throws ApiException {
+        ApiResponse<UserSendPasswordResetV1Response> localVarResp = userSendPasswordResetV1WithHttpInfo(pkiUserID, body);
         return localVarResp.getData();
     }
 
@@ -2250,7 +2251,7 @@ public class ObjectUserApi {
      * Send the password reset email
      * @param pkiUserID  (required)
      * @param body  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;UserSendPasswordResetV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -2261,9 +2262,9 @@ public class ObjectUserApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> userSendPasswordResetV1WithHttpInfo(Integer pkiUserID, Object body) throws ApiException {
+    public ApiResponse<UserSendPasswordResetV1Response> userSendPasswordResetV1WithHttpInfo(Integer pkiUserID, Object body) throws ApiException {
         okhttp3.Call localVarCall = userSendPasswordResetV1ValidateBeforeCall(pkiUserID, body, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UserSendPasswordResetV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -2284,10 +2285,10 @@ public class ObjectUserApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call userSendPasswordResetV1Async(Integer pkiUserID, Object body, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call userSendPasswordResetV1Async(Integer pkiUserID, Object body, final ApiCallback<UserSendPasswordResetV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = userSendPasswordResetV1ValidateBeforeCall(pkiUserID, body, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<UserSendPasswordResetV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -14,11 +14,11 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import com.ezmax.api.model.AddressResponse;
-import com.ezmax.api.model.EmailResponse;
+import com.ezmax.api.model.AddressResponseCompound;
+import com.ezmax.api.model.EmailResponseCompound;
 import com.ezmax.api.model.FieldEContactinformationsType;
 import com.ezmax.api.model.PhoneResponseCompound;
-import com.ezmax.api.model.WebsiteResponse;
+import com.ezmax.api.model.WebsiteResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class ContactinformationsResponse {
   public static final String SERIALIZED_NAME_PKI_CONTACTINFORMATIONS_I_D = "pkiContactinformationsID";
   @SerializedName(SERIALIZED_NAME_PKI_CONTACTINFORMATIONS_I_D)
@@ -93,7 +93,7 @@ public class ContactinformationsResponse {
   public static final String SERIALIZED_NAME_OBJ_ADDRESS_DEFAULT = "objAddressDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_ADDRESS_DEFAULT)
   @javax.annotation.Nullable
-  private AddressResponse objAddressDefault;
+  private AddressResponseCompound objAddressDefault;
 
   public static final String SERIALIZED_NAME_OBJ_PHONE_DEFAULT = "objPhoneDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_PHONE_DEFAULT)
@@ -103,12 +103,12 @@ public class ContactinformationsResponse {
   public static final String SERIALIZED_NAME_OBJ_EMAIL_DEFAULT = "objEmailDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_EMAIL_DEFAULT)
   @javax.annotation.Nullable
-  private EmailResponse objEmailDefault;
+  private EmailResponseCompound objEmailDefault;
 
   public static final String SERIALIZED_NAME_OBJ_WEBSITE_DEFAULT = "objWebsiteDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBSITE_DEFAULT)
   @javax.annotation.Nullable
-  private WebsiteResponse objWebsiteDefault;
+  private WebsiteResponseCompound objWebsiteDefault;
 
   public ContactinformationsResponse() {
   }
@@ -254,21 +254,21 @@ public class ContactinformationsResponse {
   }
 
 
-  public ContactinformationsResponse objAddressDefault(@javax.annotation.Nullable AddressResponse objAddressDefault) {
+  public ContactinformationsResponse objAddressDefault(@javax.annotation.Nullable AddressResponseCompound objAddressDefault) {
     this.objAddressDefault = objAddressDefault;
     return this;
   }
 
   /**
-   * An Address Object and children to create a complete structure
+   * Get objAddressDefault
    * @return objAddressDefault
    */
   @javax.annotation.Nullable
-  public AddressResponse getObjAddressDefault() {
+  public AddressResponseCompound getObjAddressDefault() {
     return objAddressDefault;
   }
 
-  public void setObjAddressDefault(@javax.annotation.Nullable AddressResponse objAddressDefault) {
+  public void setObjAddressDefault(@javax.annotation.Nullable AddressResponseCompound objAddressDefault) {
     this.objAddressDefault = objAddressDefault;
   }
 
@@ -292,40 +292,40 @@ public class ContactinformationsResponse {
   }
 
 
-  public ContactinformationsResponse objEmailDefault(@javax.annotation.Nullable EmailResponse objEmailDefault) {
+  public ContactinformationsResponse objEmailDefault(@javax.annotation.Nullable EmailResponseCompound objEmailDefault) {
     this.objEmailDefault = objEmailDefault;
     return this;
   }
 
   /**
-   * An Email Object and children to create a complete structure
+   * Get objEmailDefault
    * @return objEmailDefault
    */
   @javax.annotation.Nullable
-  public EmailResponse getObjEmailDefault() {
+  public EmailResponseCompound getObjEmailDefault() {
     return objEmailDefault;
   }
 
-  public void setObjEmailDefault(@javax.annotation.Nullable EmailResponse objEmailDefault) {
+  public void setObjEmailDefault(@javax.annotation.Nullable EmailResponseCompound objEmailDefault) {
     this.objEmailDefault = objEmailDefault;
   }
 
 
-  public ContactinformationsResponse objWebsiteDefault(@javax.annotation.Nullable WebsiteResponse objWebsiteDefault) {
+  public ContactinformationsResponse objWebsiteDefault(@javax.annotation.Nullable WebsiteResponseCompound objWebsiteDefault) {
     this.objWebsiteDefault = objWebsiteDefault;
     return this;
   }
 
   /**
-   * A Website Object and children to create a complete structure
+   * Get objWebsiteDefault
    * @return objWebsiteDefault
    */
   @javax.annotation.Nullable
-  public WebsiteResponse getObjWebsiteDefault() {
+  public WebsiteResponseCompound getObjWebsiteDefault() {
     return objWebsiteDefault;
   }
 
-  public void setObjWebsiteDefault(@javax.annotation.Nullable WebsiteResponse objWebsiteDefault) {
+  public void setObjWebsiteDefault(@javax.annotation.Nullable WebsiteResponseCompound objWebsiteDefault) {
     this.objWebsiteDefault = objWebsiteDefault;
   }
 
@@ -448,7 +448,7 @@ public class ContactinformationsResponse {
       }
       // validate the optional field `objAddressDefault`
       if (jsonObj.get("objAddressDefault") != null && !jsonObj.get("objAddressDefault").isJsonNull()) {
-        AddressResponse.validateJsonElement(jsonObj.get("objAddressDefault"));
+        AddressResponseCompound.validateJsonElement(jsonObj.get("objAddressDefault"));
       }
       // validate the optional field `objPhoneDefault`
       if (jsonObj.get("objPhoneDefault") != null && !jsonObj.get("objPhoneDefault").isJsonNull()) {
@@ -456,11 +456,11 @@ public class ContactinformationsResponse {
       }
       // validate the optional field `objEmailDefault`
       if (jsonObj.get("objEmailDefault") != null && !jsonObj.get("objEmailDefault").isJsonNull()) {
-        EmailResponse.validateJsonElement(jsonObj.get("objEmailDefault"));
+        EmailResponseCompound.validateJsonElement(jsonObj.get("objEmailDefault"));
       }
       // validate the optional field `objWebsiteDefault`
       if (jsonObj.get("objWebsiteDefault") != null && !jsonObj.get("objWebsiteDefault").isJsonNull()) {
-        WebsiteResponse.validateJsonElement(jsonObj.get("objWebsiteDefault"));
+        WebsiteResponseCompound.validateJsonElement(jsonObj.get("objWebsiteDefault"));
       }
   }
 

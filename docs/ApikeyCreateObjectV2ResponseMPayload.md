@@ -8,7 +8,7 @@ Payload for POST /2/object/apikey
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**aObjApikey** | [**List&lt;ApikeyResponse&gt;**](ApikeyResponse.md) |  |  |
+|**aObjApikey** | [**List&lt;ApikeyResponseCompound&gt;**](ApikeyResponseCompound.md) |  |  |
 
 
 

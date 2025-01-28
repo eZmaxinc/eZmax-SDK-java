@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.EzsigndocumentRequest;
+import com.ezmax.api.model.EzsigndocumentRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsigndocumentCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT = "objEzsigndocument";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT)
@@ -59,7 +60,7 @@ public class EzsigndocumentCreateObjectV1Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT_COMPOUND = "objEzsigndocumentCompound";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNDOCUMENT_COMPOUND)
   @javax.annotation.Nullable
-  private EzsigndocumentRequest objEzsigndocumentCompound;
+  private EzsigndocumentRequestCompound objEzsigndocumentCompound;
 
   public EzsigndocumentCreateObjectV1Request() {
   }
@@ -83,21 +84,21 @@ public class EzsigndocumentCreateObjectV1Request {
   }
 
 
-  public EzsigndocumentCreateObjectV1Request objEzsigndocumentCompound(@javax.annotation.Nullable EzsigndocumentRequest objEzsigndocumentCompound) {
+  public EzsigndocumentCreateObjectV1Request objEzsigndocumentCompound(@javax.annotation.Nullable EzsigndocumentRequestCompound objEzsigndocumentCompound) {
     this.objEzsigndocumentCompound = objEzsigndocumentCompound;
     return this;
   }
 
   /**
-   * An Ezsigndocument Object and children to create a complete structure
+   * Get objEzsigndocumentCompound
    * @return objEzsigndocumentCompound
    */
   @javax.annotation.Nullable
-  public EzsigndocumentRequest getObjEzsigndocumentCompound() {
+  public EzsigndocumentRequestCompound getObjEzsigndocumentCompound() {
     return objEzsigndocumentCompound;
   }
 
-  public void setObjEzsigndocumentCompound(@javax.annotation.Nullable EzsigndocumentRequest objEzsigndocumentCompound) {
+  public void setObjEzsigndocumentCompound(@javax.annotation.Nullable EzsigndocumentRequestCompound objEzsigndocumentCompound) {
     this.objEzsigndocumentCompound = objEzsigndocumentCompound;
   }
 
@@ -183,7 +184,7 @@ public class EzsigndocumentCreateObjectV1Request {
       }
       // validate the optional field `objEzsigndocumentCompound`
       if (jsonObj.get("objEzsigndocumentCompound") != null && !jsonObj.get("objEzsigndocumentCompound").isJsonNull()) {
-        EzsigndocumentRequest.validateJsonElement(jsonObj.get("objEzsigndocumentCompound"));
+        EzsigndocumentRequestCompound.validateJsonElement(jsonObj.get("objEzsigndocumentCompound"));
       }
   }
 

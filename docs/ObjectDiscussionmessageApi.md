@@ -80,7 +80,7 @@ public class Example {
 
 <a id="discussionmessageDeleteObjectV1"></a>
 # **discussionmessageDeleteObjectV1**
-> CommonResponse discussionmessageDeleteObjectV1(pkiDiscussionmessageID)
+> DiscussionmessageDeleteObjectV1Response discussionmessageDeleteObjectV1(pkiDiscussionmessageID)
 
 Delete an existing Discussionmessage
 
@@ -110,7 +110,7 @@ public class Example {
     ObjectDiscussionmessageApi apiInstance = new ObjectDiscussionmessageApi(defaultClient);
     Integer pkiDiscussionmessageID = 56; // Integer | The unique ID of the Discussionmessage
     try {
-      CommonResponse result = apiInstance.discussionmessageDeleteObjectV1(pkiDiscussionmessageID);
+      DiscussionmessageDeleteObjectV1Response result = apiInstance.discussionmessageDeleteObjectV1(pkiDiscussionmessageID);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectDiscussionmessageApi#discussionmessageDeleteObjectV1");
@@ -131,7 +131,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionmessageDeleteObjectV1Response**](DiscussionmessageDeleteObjectV1Response.md)
 
 ### Authorization
 
@@ -151,7 +151,7 @@ public class Example {
 
 <a id="discussionmessagePatchObjectV1"></a>
 # **discussionmessagePatchObjectV1**
-> CommonResponse discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request)
+> DiscussionmessagePatchObjectV1Response discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request)
 
 Patch an existing Discussionmessage
 
@@ -182,7 +182,7 @@ public class Example {
     Integer pkiDiscussionmessageID = 56; // Integer | The unique ID of the Discussionmessage
     DiscussionmessagePatchObjectV1Request discussionmessagePatchObjectV1Request = new DiscussionmessagePatchObjectV1Request(); // DiscussionmessagePatchObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request);
+      DiscussionmessagePatchObjectV1Response result = apiInstance.discussionmessagePatchObjectV1(pkiDiscussionmessageID, discussionmessagePatchObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectDiscussionmessageApi#discussionmessagePatchObjectV1");
@@ -204,7 +204,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**DiscussionmessagePatchObjectV1Response**](DiscussionmessagePatchObjectV1Response.md)
 
 ### Authorization
 

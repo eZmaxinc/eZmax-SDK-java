@@ -27,13 +27,13 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.PaymenttermCreateObjectV1Request;
 import com.ezmax.api.model.PaymenttermCreateObjectV1Response;
 import com.ezmax.api.model.PaymenttermEditObjectV1Request;
+import com.ezmax.api.model.PaymenttermEditObjectV1Response;
 import com.ezmax.api.model.PaymenttermGetAutocompleteV2Response;
 import com.ezmax.api.model.PaymenttermGetListV1Response;
 import com.ezmax.api.model.PaymenttermGetObjectV2Response;
@@ -295,7 +295,7 @@ public class ObjectPaymenttermApi {
      * 
      * @param pkiPaymenttermID  (required)
      * @param paymenttermEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return PaymenttermEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -306,8 +306,8 @@ public class ObjectPaymenttermApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse paymenttermEditObjectV1(Integer pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID, paymenttermEditObjectV1Request);
+    public PaymenttermEditObjectV1Response paymenttermEditObjectV1(Integer pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request) throws ApiException {
+        ApiResponse<PaymenttermEditObjectV1Response> localVarResp = paymenttermEditObjectV1WithHttpInfo(pkiPaymenttermID, paymenttermEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -316,7 +316,7 @@ public class ObjectPaymenttermApi {
      * 
      * @param pkiPaymenttermID  (required)
      * @param paymenttermEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;PaymenttermEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -327,9 +327,9 @@ public class ObjectPaymenttermApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> paymenttermEditObjectV1WithHttpInfo(Integer pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request) throws ApiException {
+    public ApiResponse<PaymenttermEditObjectV1Response> paymenttermEditObjectV1WithHttpInfo(Integer pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = paymenttermEditObjectV1ValidateBeforeCall(pkiPaymenttermID, paymenttermEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<PaymenttermEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -350,10 +350,10 @@ public class ObjectPaymenttermApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call paymenttermEditObjectV1Async(Integer pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call paymenttermEditObjectV1Async(Integer pkiPaymenttermID, PaymenttermEditObjectV1Request paymenttermEditObjectV1Request, final ApiCallback<PaymenttermEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = paymenttermEditObjectV1ValidateBeforeCall(pkiPaymenttermID, paymenttermEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<PaymenttermEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

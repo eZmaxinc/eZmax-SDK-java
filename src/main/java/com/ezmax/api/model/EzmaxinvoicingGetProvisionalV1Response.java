@@ -16,7 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CommonResponseObjDebug;
 import com.ezmax.api.model.CommonResponseObjDebugPayload;
-import com.ezmax.api.model.EzmaxinvoicingResponseCompound;
+import com.ezmax.api.model.EzmaxinvoicingGetProvisionalV1ResponseMPayload;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/ezmaxinvoicing/getProvisional
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzmaxinvoicingGetProvisionalV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
@@ -66,7 +66,7 @@ public class EzmaxinvoicingGetProvisionalV1Response {
   public static final String SERIALIZED_NAME_M_PAYLOAD = "mPayload";
   @SerializedName(SERIALIZED_NAME_M_PAYLOAD)
   @javax.annotation.Nonnull
-  private EzmaxinvoicingResponseCompound mPayload;
+  private EzmaxinvoicingGetProvisionalV1ResponseMPayload mPayload;
 
   public EzmaxinvoicingGetProvisionalV1Response() {
   }
@@ -109,21 +109,21 @@ public class EzmaxinvoicingGetProvisionalV1Response {
   }
 
 
-  public EzmaxinvoicingGetProvisionalV1Response mPayload(@javax.annotation.Nonnull EzmaxinvoicingResponseCompound mPayload) {
+  public EzmaxinvoicingGetProvisionalV1Response mPayload(@javax.annotation.Nonnull EzmaxinvoicingGetProvisionalV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
     return this;
   }
 
   /**
-   * Payload for GET /1/object/ezmaxinvoicing/getProvisional
+   * Get mPayload
    * @return mPayload
    */
   @javax.annotation.Nonnull
-  public EzmaxinvoicingResponseCompound getmPayload() {
+  public EzmaxinvoicingGetProvisionalV1ResponseMPayload getmPayload() {
     return mPayload;
   }
 
-  public void setmPayload(@javax.annotation.Nonnull EzmaxinvoicingResponseCompound mPayload) {
+  public void setmPayload(@javax.annotation.Nonnull EzmaxinvoicingGetProvisionalV1ResponseMPayload mPayload) {
     this.mPayload = mPayload;
   }
 
@@ -222,7 +222,7 @@ public class EzmaxinvoicingGetProvisionalV1Response {
         CommonResponseObjDebug.validateJsonElement(jsonObj.get("objDebug"));
       }
       // validate the required field `mPayload`
-      EzmaxinvoicingResponseCompound.validateJsonElement(jsonObj.get("mPayload"));
+      EzmaxinvoicingGetProvisionalV1ResponseMPayload.validateJsonElement(jsonObj.get("mPayload"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -14,9 +14,9 @@
 package com.ezmax.api;
 
 import eZmaxAPI.ApiException;
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EzsignuserEditObjectV1Request;
+import com.ezmax.api.model.EzsignuserEditObjectV1Response;
 import com.ezmax.api.model.EzsignuserGetObjectV2Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -45,7 +45,7 @@ public class ObjectEzsignuserApiTest {
     public void ezsignuserEditObjectV1Test() throws ApiException {
         Integer pkiEzsignuserID = null;
         EzsignuserEditObjectV1Request ezsignuserEditObjectV1Request = null;
-        CommonResponse response = api.ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request);
+        EzsignuserEditObjectV1Response response = api.ezsignuserEditObjectV1(pkiEzsignuserID, ezsignuserEditObjectV1Request);
         // TODO: test validations
     }
 

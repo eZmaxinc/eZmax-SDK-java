@@ -27,13 +27,13 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.CommonResponse;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.VariableexpenseCreateObjectV1Request;
 import com.ezmax.api.model.VariableexpenseCreateObjectV1Response;
 import com.ezmax.api.model.VariableexpenseEditObjectV1Request;
+import com.ezmax.api.model.VariableexpenseEditObjectV1Response;
 import com.ezmax.api.model.VariableexpenseGetAutocompleteV2Response;
 import com.ezmax.api.model.VariableexpenseGetListV1Response;
 import com.ezmax.api.model.VariableexpenseGetObjectV2Response;
@@ -291,7 +291,7 @@ public class ObjectVariableexpenseApi {
      * 
      * @param pkiVariableexpenseID  (required)
      * @param variableexpenseEditObjectV1Request  (required)
-     * @return CommonResponse
+     * @return VariableexpenseEditObjectV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -302,8 +302,8 @@ public class ObjectVariableexpenseApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public CommonResponse variableexpenseEditObjectV1(Integer pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request) throws ApiException {
-        ApiResponse<CommonResponse> localVarResp = variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
+    public VariableexpenseEditObjectV1Response variableexpenseEditObjectV1(Integer pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request) throws ApiException {
+        ApiResponse<VariableexpenseEditObjectV1Response> localVarResp = variableexpenseEditObjectV1WithHttpInfo(pkiVariableexpenseID, variableexpenseEditObjectV1Request);
         return localVarResp.getData();
     }
 
@@ -312,7 +312,7 @@ public class ObjectVariableexpenseApi {
      * 
      * @param pkiVariableexpenseID  (required)
      * @param variableexpenseEditObjectV1Request  (required)
-     * @return ApiResponse&lt;CommonResponse&gt;
+     * @return ApiResponse&lt;VariableexpenseEditObjectV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -323,9 +323,9 @@ public class ObjectVariableexpenseApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<CommonResponse> variableexpenseEditObjectV1WithHttpInfo(Integer pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request) throws ApiException {
+    public ApiResponse<VariableexpenseEditObjectV1Response> variableexpenseEditObjectV1WithHttpInfo(Integer pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request) throws ApiException {
         okhttp3.Call localVarCall = variableexpenseEditObjectV1ValidateBeforeCall(pkiVariableexpenseID, variableexpenseEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<VariableexpenseEditObjectV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -346,10 +346,10 @@ public class ObjectVariableexpenseApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call variableexpenseEditObjectV1Async(Integer pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, final ApiCallback<CommonResponse> _callback) throws ApiException {
+    public okhttp3.Call variableexpenseEditObjectV1Async(Integer pkiVariableexpenseID, VariableexpenseEditObjectV1Request variableexpenseEditObjectV1Request, final ApiCallback<VariableexpenseEditObjectV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = variableexpenseEditObjectV1ValidateBeforeCall(pkiVariableexpenseID, variableexpenseEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<CommonResponse>(){}.getType();
+        Type localVarReturnType = new TypeToken<VariableexpenseEditObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

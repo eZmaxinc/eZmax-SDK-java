@@ -88,7 +88,7 @@ public class Example {
 
 <a id="usergroupEditObjectV1"></a>
 # **usergroupEditObjectV1**
-> CommonResponse usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request)
+> UsergroupEditObjectV1Response usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request)
 
 Edit an existing Usergroup
 
@@ -119,7 +119,7 @@ public class Example {
     Integer pkiUsergroupID = 56; // Integer | 
     UsergroupEditObjectV1Request usergroupEditObjectV1Request = new UsergroupEditObjectV1Request(); // UsergroupEditObjectV1Request | 
     try {
-      CommonResponse result = apiInstance.usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request);
+      UsergroupEditObjectV1Response result = apiInstance.usergroupEditObjectV1(pkiUsergroupID, usergroupEditObjectV1Request);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectUsergroupApi#usergroupEditObjectV1");
@@ -141,7 +141,7 @@ public class Example {
 
 ### Return type
 
-[**CommonResponse**](CommonResponse.md)
+[**UsergroupEditObjectV1Response**](UsergroupEditObjectV1Response.md)
 
 ### Authorization
 

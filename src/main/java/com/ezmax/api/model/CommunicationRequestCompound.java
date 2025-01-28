@@ -16,7 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CommunicationexternalrecipientRequestCompound;
 import com.ezmax.api.model.CommunicationrecipientRequestCompound;
-import com.ezmax.api.model.CommunicationreferenceRequest;
+import com.ezmax.api.model.CommunicationreferenceRequestCompound;
 import com.ezmax.api.model.CustomCommunicationattachmentRequest;
 import com.ezmax.api.model.CustomCommunicationsenderRequest;
 import com.ezmax.api.model.FieldECommunicationImportance;
@@ -57,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/communication
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class CommunicationRequestCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
@@ -436,7 +436,7 @@ public class CommunicationRequestCompound {
     return this;
   }
 
-  public CommunicationRequestCompound addAObjCommunicationreferenceItem(CommunicationreferenceRequest aObjCommunicationreferenceItem) {
+  public CommunicationRequestCompound addAObjCommunicationreferenceItem(CommunicationreferenceRequestCompound aObjCommunicationreferenceItem) {
     if (this.aObjCommunicationreference == null) {
       this.aObjCommunicationreference = new ArrayList<>();
     }
@@ -661,7 +661,7 @@ public class CommunicationRequestCompound {
       JsonArray jsonArrayaObjCommunicationreference = jsonObj.getAsJsonArray("a_objCommunicationreference");
       // validate the required field `a_objCommunicationreference` (array)
       for (int i = 0; i < jsonArrayaObjCommunicationreference.size(); i++) {
-        CommunicationreferenceRequest.validateJsonElement(jsonArrayaObjCommunicationreference.get(i));
+        CommunicationreferenceRequestCompound.validateJsonElement(jsonArrayaObjCommunicationreference.get(i));
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objCommunicationexternalrecipient").isJsonArray()) {

@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.CustomDnsrecordResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Domain Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-20T21:23:27.769116941Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-28T21:41:20.249020914Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class DomainResponseCompound {
   public static final String SERIALIZED_NAME_PKI_DOMAIN_I_D = "pkiDomainID";
   @SerializedName(SERIALIZED_NAME_PKI_DOMAIN_I_D)
@@ -212,7 +213,7 @@ public class DomainResponseCompound {
     return this;
   }
 
-  public DomainResponseCompound addAObjDnsrecordItem(Object aObjDnsrecordItem) {
+  public DomainResponseCompound addAObjDnsrecordItem(CustomDnsrecordResponse aObjDnsrecordItem) {
     if (this.aObjDnsrecord == null) {
       this.aObjDnsrecord = new ArrayList<>();
     }
@@ -351,7 +352,7 @@ public class DomainResponseCompound {
       JsonArray jsonArrayaObjDnsrecord = jsonObj.getAsJsonArray("a_objDnsrecord");
       // validate the required field `a_objDnsrecord` (array)
       for (int i = 0; i < jsonArrayaObjDnsrecord.size(); i++) {
-        Object.validateJsonElement(jsonArrayaObjDnsrecord.get(i));
+        CustomDnsrecordResponse.validateJsonElement(jsonArrayaObjDnsrecord.get(i));
       };
   }
 

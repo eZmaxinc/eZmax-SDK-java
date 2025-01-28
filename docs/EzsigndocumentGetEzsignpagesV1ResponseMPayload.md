@@ -8,7 +8,7 @@ Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignpages
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**aObjEzsignpage** | [**List&lt;EzsignpageResponse&gt;**](EzsignpageResponse.md) |  |  |
+|**aObjEzsignpage** | [**List&lt;EzsignpageResponseCompound&gt;**](EzsignpageResponseCompound.md) |  |  |
 
 
 
