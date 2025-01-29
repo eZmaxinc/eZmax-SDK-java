@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /3/object/ezsigntemplate
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T00:49:27.181642374Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T18:53:15.033493285Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsigntemplateCreateObjectV3Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATE = "a_objEzsigntemplate";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATE)

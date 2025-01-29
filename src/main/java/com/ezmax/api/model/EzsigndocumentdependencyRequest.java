@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocumentdependency Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T00:49:27.181642374Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T18:53:15.033493285Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsigndocumentdependencyRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENTDEPENDENCY_I_D = "pkiEzsigndocumentdependencyID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENTDEPENDENCY_I_D)

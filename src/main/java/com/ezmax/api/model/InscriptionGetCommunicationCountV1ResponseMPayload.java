@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/inscription/{pkiInscriptionID}/getCommunicationCount
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T00:49:27.181642374Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T18:53:15.033493285Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class InscriptionGetCommunicationCountV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_COMMUNICATION_COUNT = "iCommunicationCount";
   @SerializedName(SERIALIZED_NAME_I_COMMUNICATION_COUNT)
