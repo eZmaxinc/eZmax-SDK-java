@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /2/object/authenticationexternal/{pkiAuthenticationexternalID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T18:53:15.033493285Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T20:38:29.409937921Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class AuthenticationexternalGetObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_AUTHENTICATIONEXTERNAL = "objAuthenticationexternal";
   @SerializedName(SERIALIZED_NAME_OBJ_AUTHENTICATIONEXTERNAL)

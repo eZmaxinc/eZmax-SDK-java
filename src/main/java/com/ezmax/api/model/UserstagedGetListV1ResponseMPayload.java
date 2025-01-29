@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/userstaged/getList
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T18:53:15.033493285Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T20:38:29.409937921Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class UserstagedGetListV1ResponseMPayload {
   public static final String SERIALIZED_NAME_I_ROW_RETURNED = "iRowReturned";
   @SerializedName(SERIALIZED_NAME_I_ROW_RETURNED)

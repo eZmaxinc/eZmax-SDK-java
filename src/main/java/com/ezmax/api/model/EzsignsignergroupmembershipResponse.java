@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignsignergroupmembership Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T18:53:15.033493285Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T20:38:29.409937921Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsignsignergroupmembershipResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUPMEMBERSHIP_I_D = "pkiEzsignsignergroupmembershipID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNERGROUPMEMBERSHIP_I_D)

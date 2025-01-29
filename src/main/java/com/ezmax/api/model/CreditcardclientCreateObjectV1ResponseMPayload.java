@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/creditcardclient
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T18:53:15.033493285Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-29T20:38:29.409937921Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class CreditcardclientCreateObjectV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_CREDITCARDCLIENT_I_D = "a_pkiCreditcardclientID";
   @SerializedName(SERIALIZED_NAME_A_PKI_CREDITCARDCLIENT_I_D)
