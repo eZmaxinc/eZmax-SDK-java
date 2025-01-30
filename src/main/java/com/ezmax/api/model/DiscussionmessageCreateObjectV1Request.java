@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/discussionmessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-30T18:06:46.926395278Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-30T20:25:06.858397322Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class DiscussionmessageCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_DISCUSSIONMESSAGE = "a_objDiscussionmessage";
   @SerializedName(SERIALIZED_NAME_A_OBJ_DISCUSSIONMESSAGE)

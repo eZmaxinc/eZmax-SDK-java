@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/report/xxx/xxx and and /1/module/report/getReportFromCache
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-30T18:06:46.926395278Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-30T20:25:06.858397322Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class CommonGetReportV1ResponseMPayload {
   public static final String SERIALIZED_NAME_OBJ_REPORTGROUP = "objReportgroup";
   @SerializedName(SERIALIZED_NAME_OBJ_REPORTGROUP)

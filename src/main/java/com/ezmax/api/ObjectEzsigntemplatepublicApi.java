@@ -32,6 +32,7 @@ import com.ezmax.api.model.EzsigntemplatepublicCreateEzsignfolderV1Request;
 import com.ezmax.api.model.EzsigntemplatepublicCreateEzsignfolderV1Response;
 import com.ezmax.api.model.EzsigntemplatepublicCreateObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatepublicCreateObjectV1Response;
+import com.ezmax.api.model.EzsigntemplatepublicDeleteObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepublicEditObjectV1Request;
 import com.ezmax.api.model.EzsigntemplatepublicEditObjectV1Response;
 import com.ezmax.api.model.EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request;
@@ -342,6 +343,141 @@ public class ObjectEzsigntemplatepublicApi {
 
         okhttp3.Call localVarCall = ezsigntemplatepublicCreateObjectV1ValidateBeforeCall(ezsigntemplatepublicCreateObjectV1Request, _callback);
         Type localVarReturnType = new TypeToken<EzsigntemplatepublicCreateObjectV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for ezsigntemplatepublicDeleteObjectV1
+     * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigntemplatepublicDeleteObjectV1Call(Integer pkiEzsigntemplatepublicID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/ezsigntemplatepublic/{pkiEzsigntemplatepublicID}"
+            .replace("{" + "pkiEzsigntemplatepublicID" + "}", localVarApiClient.escapeString(pkiEzsigntemplatepublicID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call ezsigntemplatepublicDeleteObjectV1ValidateBeforeCall(Integer pkiEzsigntemplatepublicID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEzsigntemplatepublicID' is set
+        if (pkiEzsigntemplatepublicID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEzsigntemplatepublicID' when calling ezsigntemplatepublicDeleteObjectV1(Async)");
+        }
+
+        return ezsigntemplatepublicDeleteObjectV1Call(pkiEzsigntemplatepublicID, _callback);
+
+    }
+
+    /**
+     * Delete an existing Ezsigntemplatepublic
+     * 
+     * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic (required)
+     * @return EzsigntemplatepublicDeleteObjectV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public EzsigntemplatepublicDeleteObjectV1Response ezsigntemplatepublicDeleteObjectV1(Integer pkiEzsigntemplatepublicID) throws ApiException {
+        ApiResponse<EzsigntemplatepublicDeleteObjectV1Response> localVarResp = ezsigntemplatepublicDeleteObjectV1WithHttpInfo(pkiEzsigntemplatepublicID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Delete an existing Ezsigntemplatepublic
+     * 
+     * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic (required)
+     * @return ApiResponse&lt;EzsigntemplatepublicDeleteObjectV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EzsigntemplatepublicDeleteObjectV1Response> ezsigntemplatepublicDeleteObjectV1WithHttpInfo(Integer pkiEzsigntemplatepublicID) throws ApiException {
+        okhttp3.Call localVarCall = ezsigntemplatepublicDeleteObjectV1ValidateBeforeCall(pkiEzsigntemplatepublicID, null);
+        Type localVarReturnType = new TypeToken<EzsigntemplatepublicDeleteObjectV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Delete an existing Ezsigntemplatepublic (asynchronously)
+     * 
+     * @param pkiEzsigntemplatepublicID The unique ID of the Ezsigntemplatepublic (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call ezsigntemplatepublicDeleteObjectV1Async(Integer pkiEzsigntemplatepublicID, final ApiCallback<EzsigntemplatepublicDeleteObjectV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = ezsigntemplatepublicDeleteObjectV1ValidateBeforeCall(pkiEzsigntemplatepublicID, _callback);
+        Type localVarReturnType = new TypeToken<EzsigntemplatepublicDeleteObjectV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

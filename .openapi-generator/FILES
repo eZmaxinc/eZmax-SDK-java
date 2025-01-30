@@ -1023,6 +1023,7 @@ docs/EzsigntemplatepublicCreateEzsignfolderV1ResponseMPayload.md
 docs/EzsigntemplatepublicCreateObjectV1Request.md
 docs/EzsigntemplatepublicCreateObjectV1Response.md
 docs/EzsigntemplatepublicCreateObjectV1ResponseMPayload.md
+docs/EzsigntemplatepublicDeleteObjectV1Response.md
 docs/EzsigntemplatepublicEditObjectV1Request.md
 docs/EzsigntemplatepublicEditObjectV1Response.md
 docs/EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request.md
@@ -2913,6 +2914,7 @@ src/main/java/com/ezmax/api/model/EzsigntemplatepublicCreateEzsignfolderV1Respon
 src/main/java/com/ezmax/api/model/EzsigntemplatepublicCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepublicCreateObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepublicCreateObjectV1ResponseMPayload.java
+src/main/java/com/ezmax/api/model/EzsigntemplatepublicDeleteObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepublicEditObjectV1Request.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepublicEditObjectV1Response.java
 src/main/java/com/ezmax/api/model/EzsigntemplatepublicGetEzsigntemplatepublicDetailsV1Request.java
