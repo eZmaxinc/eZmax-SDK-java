@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Phone Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T19:53:18.915192364Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T21:44:04.165556308Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class PhoneRequestCompound {
   public static final String SERIALIZED_NAME_PKI_PHONE_I_D = "pkiPhoneID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONE_I_D)
