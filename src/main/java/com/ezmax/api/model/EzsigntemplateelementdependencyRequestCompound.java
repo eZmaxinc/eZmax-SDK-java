@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigntemplateelementdependency Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T21:44:04.165556308Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T23:45:27.899975443Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsigntemplateelementdependencyRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEELEMENTDEPENDENCY_I_D = "pkiEzsigntemplateelementdependencyID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEELEMENTDEPENDENCY_I_D)

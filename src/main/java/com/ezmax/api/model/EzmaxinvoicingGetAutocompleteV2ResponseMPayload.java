@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezmaxinvoicing/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T21:44:04.165556308Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T23:45:27.899975443Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzmaxinvoicingGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZMAXINVOICING = "a_objEzmaxinvoicing";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZMAXINVOICING)

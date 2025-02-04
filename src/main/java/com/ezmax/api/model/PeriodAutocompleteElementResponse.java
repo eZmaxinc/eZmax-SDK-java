@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Period AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T21:44:04.165556308Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T23:45:27.899975443Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class PeriodAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_PERIOD_Y_Y_Y_Y_M_M = "sPeriodYYYYMM";
   @SerializedName(SERIALIZED_NAME_S_PERIOD_Y_Y_Y_Y_M_M)

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object in the context of an EzsignsignaturesAutomatic path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T21:44:04.165556308Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T23:45:27.899975443Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
