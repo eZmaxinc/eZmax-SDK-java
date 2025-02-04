@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for PUT /1/object/usergroup/{pkiUsergroupID}/editUsergroupmemberships
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-30T20:25:06.858397322Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T19:53:18.915192364Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class UsergroupEditUsergroupmembershipsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_USERGROUPMEMBERSHIP_I_D = "a_pkiUsergroupmembershipID";
   @SerializedName(SERIALIZED_NAME_A_PKI_USERGROUPMEMBERSHIP_I_D)

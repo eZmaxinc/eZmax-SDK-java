@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/billingentityexternal/{pkiBillingentityexternalID}/generateFederationToken
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-01-30T20:25:06.858397322Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T19:53:18.915192364Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class BillingentityexternalGenerateFederationTokenV1Request {
   public static final String SERIALIZED_NAME_FKS_EZMAXCUSTOMER_CODE = "fksEzmaxcustomerCode";
   @SerializedName(SERIALIZED_NAME_FKS_EZMAXCUSTOMER_CODE)
