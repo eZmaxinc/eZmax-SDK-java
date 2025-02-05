@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Franchisebroker AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-04T23:45:27.899975443Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:47:58.834564157Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class FranchisebrokerAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_S_FRANCHISEBROKER_NAME = "sFranchisebrokerName";
   @SerializedName(SERIALIZED_NAME_S_FRANCHISEBROKER_NAME)

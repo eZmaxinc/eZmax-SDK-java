@@ -267,6 +267,9 @@ docs/CreditcardmerchantResponseCompound.md
 docs/CreditcardtypeAutocompleteElementResponse.md
 docs/CreditcardtypeGetAutocompleteV2Response.md
 docs/CreditcardtypeGetAutocompleteV2ResponseMPayload.md
+docs/CurrencyAutocompleteElementResponse.md
+docs/CurrencyGetAutocompleteV2Response.md
+docs/CurrencyGetAutocompleteV2ResponseMPayload.md
 docs/CustomApikey.md
 docs/CustomApikeyfederation.md
 docs/CustomAttachmentResponse.md
@@ -1321,6 +1324,7 @@ docs/ObjectCountryApi.md
 docs/ObjectCreditcardclientApi.md
 docs/ObjectCreditcardmerchantApi.md
 docs/ObjectCreditcardtypeApi.md
+docs/ObjectCurrencyApi.md
 docs/ObjectCustomerApi.md
 docs/ObjectDepartmentApi.md
 docs/ObjectDiscussionApi.md
@@ -1808,6 +1812,7 @@ src/main/java/com/ezmax/api/ObjectCountryApi.java
 src/main/java/com/ezmax/api/ObjectCreditcardclientApi.java
 src/main/java/com/ezmax/api/ObjectCreditcardmerchantApi.java
 src/main/java/com/ezmax/api/ObjectCreditcardtypeApi.java
+src/main/java/com/ezmax/api/ObjectCurrencyApi.java
 src/main/java/com/ezmax/api/ObjectCustomerApi.java
 src/main/java/com/ezmax/api/ObjectDepartmentApi.java
 src/main/java/com/ezmax/api/ObjectDiscussionApi.java
@@ -2158,6 +2163,9 @@ src/main/java/com/ezmax/api/model/CreditcardmerchantResponseCompound.java
 src/main/java/com/ezmax/api/model/CreditcardtypeAutocompleteElementResponse.java
 src/main/java/com/ezmax/api/model/CreditcardtypeGetAutocompleteV2Response.java
 src/main/java/com/ezmax/api/model/CreditcardtypeGetAutocompleteV2ResponseMPayload.java
+src/main/java/com/ezmax/api/model/CurrencyAutocompleteElementResponse.java
+src/main/java/com/ezmax/api/model/CurrencyGetAutocompleteV2Response.java
+src/main/java/com/ezmax/api/model/CurrencyGetAutocompleteV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/CustomApikey.java
 src/main/java/com/ezmax/api/model/CustomApikeyfederation.java
 src/main/java/com/ezmax/api/model/CustomAttachmentResponse.java
