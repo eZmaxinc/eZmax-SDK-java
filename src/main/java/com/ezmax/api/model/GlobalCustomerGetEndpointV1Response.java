@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/customer/{pksCustomerCode}/endpoint
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:47:58.834564157Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class GlobalCustomerGetEndpointV1Response {
   public static final String SERIALIZED_NAME_S_ENDPOINT_U_R_L = "sEndpointURL";
   @SerializedName(SERIALIZED_NAME_S_ENDPOINT_U_R_L)

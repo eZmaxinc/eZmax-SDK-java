@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Phonetype AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:47:58.834564157Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class PhonetypeAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_PHONETYPE_I_D = "pkiPhonetypeID";
   @SerializedName(SERIALIZED_NAME_PKI_PHONETYPE_I_D)

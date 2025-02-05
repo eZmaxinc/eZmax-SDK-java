@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/creditcardmerchant
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:47:58.834564157Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class CreditcardmerchantCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_CREDITCARDMERCHANT = "a_objCreditcardmerchant";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CREDITCARDMERCHANT)

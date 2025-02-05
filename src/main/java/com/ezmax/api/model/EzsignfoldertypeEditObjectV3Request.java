@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for PUT /3/object/ezsignfoldertype/{pkiEzsignfoldertypeID}
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:47:58.834564157Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class EzsignfoldertypeEditObjectV3Request {
   public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE = "objEzsignfoldertype";
   @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE)

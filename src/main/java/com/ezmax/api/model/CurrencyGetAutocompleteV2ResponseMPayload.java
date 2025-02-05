@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/currency/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T14:47:58.834564157Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
 public class CurrencyGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_CURRENCY = "a_objCurrency";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CURRENCY)
