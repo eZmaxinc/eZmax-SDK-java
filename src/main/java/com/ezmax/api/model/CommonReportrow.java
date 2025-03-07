@@ -23,7 +23,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,12 +53,17 @@ import eZmaxAPI.JSON;
 /**
  * A row in a Reportsubsectionpart 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class CommonReportrow {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTCELL = "a_objReportcell";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTCELL)
   @javax.annotation.Nonnull
   private List<CommonReportcell> aObjReportcell = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_OBJ_VARIABLEOBJECT = "objVariableobject";
+  @SerializedName(SERIALIZED_NAME_OBJ_VARIABLEOBJECT)
+  @javax.annotation.Nonnull
+  private Map<String, Object> objVariableobject = new HashMap<>();
 
   public static final String SERIALIZED_NAME_I_REPORTROW_HEIGHT = "iReportrowHeight";
   @SerializedName(SERIALIZED_NAME_I_REPORTROW_HEIGHT)
@@ -93,6 +100,33 @@ public class CommonReportrow {
   }
 
 
+  public CommonReportrow objVariableobject(@javax.annotation.Nonnull Map<String, Object> objVariableobject) {
+    this.objVariableobject = objVariableobject;
+    return this;
+  }
+
+  public CommonReportrow putObjVariableobjectItem(String key, Object objVariableobjectItem) {
+    if (this.objVariableobject == null) {
+      this.objVariableobject = new HashMap<>();
+    }
+    this.objVariableobject.put(key, objVariableobjectItem);
+    return this;
+  }
+
+  /**
+   * A Variable object without predefined property names
+   * @return objVariableobject
+   */
+  @javax.annotation.Nonnull
+  public Map<String, Object> getObjVariableobject() {
+    return objVariableobject;
+  }
+
+  public void setObjVariableobject(@javax.annotation.Nonnull Map<String, Object> objVariableobject) {
+    this.objVariableobject = objVariableobject;
+  }
+
+
   public CommonReportrow iReportrowHeight(@javax.annotation.Nonnull Integer iReportrowHeight) {
     this.iReportrowHeight = iReportrowHeight;
     return this;
@@ -123,12 +157,13 @@ public class CommonReportrow {
     }
     CommonReportrow commonReportrow = (CommonReportrow) o;
     return Objects.equals(this.aObjReportcell, commonReportrow.aObjReportcell) &&
+        Objects.equals(this.objVariableobject, commonReportrow.objVariableobject) &&
         Objects.equals(this.iReportrowHeight, commonReportrow.iReportrowHeight);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjReportcell, iReportrowHeight);
+    return Objects.hash(aObjReportcell, objVariableobject, iReportrowHeight);
   }
 
   @Override
@@ -136,6 +171,7 @@ public class CommonReportrow {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonReportrow {\n");
     sb.append("    aObjReportcell: ").append(toIndentedString(aObjReportcell)).append("\n");
+    sb.append("    objVariableobject: ").append(toIndentedString(objVariableobject)).append("\n");
     sb.append("    iReportrowHeight: ").append(toIndentedString(iReportrowHeight)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -160,11 +196,13 @@ public class CommonReportrow {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("a_objReportcell");
+    openapiFields.add("objVariableobject");
     openapiFields.add("iReportrowHeight");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("a_objReportcell");
+    openapiRequiredFields.add("objVariableobject");
     openapiRequiredFields.add("iReportrowHeight");
   }
 

@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonFile;
+import com.ezmax.api.model.CustomCreditcardRequest;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class EzsignsignatureSignV1Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D = "fkiEzsignsigningreasonID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D)
@@ -139,6 +140,11 @@ public class EzsignsignatureSignV1Request {
   @SerializedName(SERIALIZED_NAME_A_OBJ_FILE)
   @javax.annotation.Nullable
   private List<CommonFile> aObjFile = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_OBJ_CREDITCARD = "objCreditcard";
+  @SerializedName(SERIALIZED_NAME_OBJ_CREDITCARD)
+  @javax.annotation.Nullable
+  private CustomCreditcardRequest objCreditcard;
 
   public static final String SERIALIZED_NAME_B_IS_AUTOMATIC = "bIsAutomatic";
   @SerializedName(SERIALIZED_NAME_B_IS_AUTOMATIC)
@@ -292,6 +298,25 @@ public class EzsignsignatureSignV1Request {
   }
 
 
+  public EzsignsignatureSignV1Request objCreditcard(@javax.annotation.Nullable CustomCreditcardRequest objCreditcard) {
+    this.objCreditcard = objCreditcard;
+    return this;
+  }
+
+  /**
+   * Get objCreditcard
+   * @return objCreditcard
+   */
+  @javax.annotation.Nullable
+  public CustomCreditcardRequest getObjCreditcard() {
+    return objCreditcard;
+  }
+
+  public void setObjCreditcard(@javax.annotation.Nullable CustomCreditcardRequest objCreditcard) {
+    this.objCreditcard = objCreditcard;
+  }
+
+
   public EzsignsignatureSignV1Request bIsAutomatic(@javax.annotation.Nonnull Boolean bIsAutomatic) {
     this.bIsAutomatic = bIsAutomatic;
     return this;
@@ -328,12 +353,13 @@ public class EzsignsignatureSignV1Request {
         Objects.equals(this.sAttachmentsRefusalReason, ezsignsignatureSignV1Request.sAttachmentsRefusalReason) &&
         Objects.equals(this.sSvg, ezsignsignatureSignV1Request.sSvg) &&
         Objects.equals(this.aObjFile, ezsignsignatureSignV1Request.aObjFile) &&
+        Objects.equals(this.objCreditcard, ezsignsignatureSignV1Request.objCreditcard) &&
         Objects.equals(this.bIsAutomatic, ezsignsignatureSignV1Request.bIsAutomatic);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiEzsignsigningreasonID, fkiFontID, sValue, eAttachmentsConfirmationDecision, sAttachmentsRefusalReason, sSvg, aObjFile, bIsAutomatic);
+    return Objects.hash(fkiEzsignsigningreasonID, fkiFontID, sValue, eAttachmentsConfirmationDecision, sAttachmentsRefusalReason, sSvg, aObjFile, objCreditcard, bIsAutomatic);
   }
 
   @Override
@@ -347,6 +373,7 @@ public class EzsignsignatureSignV1Request {
     sb.append("    sAttachmentsRefusalReason: ").append(toIndentedString(sAttachmentsRefusalReason)).append("\n");
     sb.append("    sSvg: ").append(toIndentedString(sSvg)).append("\n");
     sb.append("    aObjFile: ").append(toIndentedString(aObjFile)).append("\n");
+    sb.append("    objCreditcard: ").append(toIndentedString(objCreditcard)).append("\n");
     sb.append("    bIsAutomatic: ").append(toIndentedString(bIsAutomatic)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -377,6 +404,7 @@ public class EzsignsignatureSignV1Request {
     openapiFields.add("sAttachmentsRefusalReason");
     openapiFields.add("sSvg");
     openapiFields.add("a_objFile");
+    openapiFields.add("objCreditcard");
     openapiFields.add("bIsAutomatic");
 
     // a set of required properties/fields (JSON key names)
@@ -441,6 +469,10 @@ public class EzsignsignatureSignV1Request {
             CommonFile.validateJsonElement(jsonArrayaObjFile.get(i));
           };
         }
+      }
+      // validate the optional field `objCreditcard`
+      if (jsonObj.get("objCreditcard") != null && !jsonObj.get("objCreditcard").isJsonNull()) {
+        CustomCreditcardRequest.validateJsonElement(jsonObj.get("objCreditcard"));
       }
   }
 

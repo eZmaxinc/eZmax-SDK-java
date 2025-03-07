@@ -57,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class EzsignsignatureResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -83,6 +83,11 @@ public class EzsignsignatureResponse {
   @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
   @javax.annotation.Nullable
   private Integer fkiFontID;
+
+  public static final String SERIALIZED_NAME_S_CURRENCY_DESCRIPTION_X = "sCurrencyDescriptionX";
+  @SerializedName(SERIALIZED_NAME_S_CURRENCY_DESCRIPTION_X)
+  @javax.annotation.Nullable
+  private String sCurrencyDescriptionX;
 
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION_X = "sEzsignsigningreasonDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION_X)
@@ -345,6 +350,25 @@ public class EzsignsignatureResponse {
 
   public void setFkiFontID(@javax.annotation.Nullable Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
+  }
+
+
+  public EzsignsignatureResponse sCurrencyDescriptionX(@javax.annotation.Nullable String sCurrencyDescriptionX) {
+    this.sCurrencyDescriptionX = sCurrencyDescriptionX;
+    return this;
+  }
+
+  /**
+   * The description of the Currency in the language of the requester
+   * @return sCurrencyDescriptionX
+   */
+  @javax.annotation.Nullable
+  public String getsCurrencyDescriptionX() {
+    return sCurrencyDescriptionX;
+  }
+
+  public void setsCurrencyDescriptionX(@javax.annotation.Nullable String sCurrencyDescriptionX) {
+    this.sCurrencyDescriptionX = sCurrencyDescriptionX;
   }
 
 
@@ -979,6 +1003,7 @@ public class EzsignsignatureResponse {
         Objects.equals(this.fkiEzsignfoldersignerassociationID, ezsignsignatureResponse.fkiEzsignfoldersignerassociationID) &&
         Objects.equals(this.fkiEzsignsigningreasonID, ezsignsignatureResponse.fkiEzsignsigningreasonID) &&
         Objects.equals(this.fkiFontID, ezsignsignatureResponse.fkiFontID) &&
+        Objects.equals(this.sCurrencyDescriptionX, ezsignsignatureResponse.sCurrencyDescriptionX) &&
         Objects.equals(this.sEzsignsigningreasonDescriptionX, ezsignsignatureResponse.sEzsignsigningreasonDescriptionX) &&
         Objects.equals(this.iEzsignpagePagenumber, ezsignsignatureResponse.iEzsignpagePagenumber) &&
         Objects.equals(this.iEzsignsignatureX, ezsignsignatureResponse.iEzsignsignatureX) &&
@@ -1015,7 +1040,7 @@ public class EzsignsignatureResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignatureID, fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID, fkiFontID, sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureHeight, iEzsignsignatureWidth, iEzsignsignatureStep, iEzsignsignatureStepadjusted, eEzsignsignatureType, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource, eEzsignsignatureConsultationtrigger, bEzsignsignatureHandwritten, bEzsignsignatureReason, bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate, iEzsignsignatureattachmentCount, sEzsignsignatureDescription, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage, eEzsignsignatureDependencyrequirement, sEzsignsignatureDefaultvalue, sEzsignsignatureRegexp, objContactName, objContactNameDelegation, objSignature);
+    return Objects.hash(pkiEzsignsignatureID, fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID, fkiFontID, sCurrencyDescriptionX, sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureHeight, iEzsignsignatureWidth, iEzsignsignatureStep, iEzsignsignatureStepadjusted, eEzsignsignatureType, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource, eEzsignsignatureConsultationtrigger, bEzsignsignatureHandwritten, bEzsignsignatureReason, bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate, iEzsignsignatureattachmentCount, sEzsignsignatureDescription, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage, eEzsignsignatureDependencyrequirement, sEzsignsignatureDefaultvalue, sEzsignsignatureRegexp, objContactName, objContactNameDelegation, objSignature);
   }
 
   @Override
@@ -1027,6 +1052,7 @@ public class EzsignsignatureResponse {
     sb.append("    fkiEzsignfoldersignerassociationID: ").append(toIndentedString(fkiEzsignfoldersignerassociationID)).append("\n");
     sb.append("    fkiEzsignsigningreasonID: ").append(toIndentedString(fkiEzsignsigningreasonID)).append("\n");
     sb.append("    fkiFontID: ").append(toIndentedString(fkiFontID)).append("\n");
+    sb.append("    sCurrencyDescriptionX: ").append(toIndentedString(sCurrencyDescriptionX)).append("\n");
     sb.append("    sEzsignsigningreasonDescriptionX: ").append(toIndentedString(sEzsignsigningreasonDescriptionX)).append("\n");
     sb.append("    iEzsignpagePagenumber: ").append(toIndentedString(iEzsignpagePagenumber)).append("\n");
     sb.append("    iEzsignsignatureX: ").append(toIndentedString(iEzsignsignatureX)).append("\n");
@@ -1086,6 +1112,7 @@ public class EzsignsignatureResponse {
     openapiFields.add("fkiEzsignfoldersignerassociationID");
     openapiFields.add("fkiEzsignsigningreasonID");
     openapiFields.add("fkiFontID");
+    openapiFields.add("sCurrencyDescriptionX");
     openapiFields.add("sEzsignsigningreasonDescriptionX");
     openapiFields.add("iEzsignpagePagenumber");
     openapiFields.add("iEzsignsignatureX");
@@ -1160,6 +1187,9 @@ public class EzsignsignatureResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("sCurrencyDescriptionX") != null && !jsonObj.get("sCurrencyDescriptionX").isJsonNull()) && !jsonObj.get("sCurrencyDescriptionX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sCurrencyDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCurrencyDescriptionX").toString()));
+      }
       if ((jsonObj.get("sEzsignsigningreasonDescriptionX") != null && !jsonObj.get("sEzsignsigningreasonDescriptionX").isJsonNull()) && !jsonObj.get("sEzsignsigningreasonDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzsignsigningreasonDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsigningreasonDescriptionX").toString()));
       }

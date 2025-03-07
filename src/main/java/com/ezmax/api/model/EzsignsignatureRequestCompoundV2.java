@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.EzsignelementdependencyRequestCompound;
 import com.ezmax.api.model.EzsignsignaturecustomdateRequestCompoundV2;
+import com.ezmax.api.model.EzsignsignaturepaymentdetailRequestCompound;
 import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsignsignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
@@ -59,7 +60,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class EzsignsignatureRequestCompoundV2 {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -70,6 +71,11 @@ public class EzsignsignatureRequestCompoundV2 {
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
   @javax.annotation.Nonnull
   private Integer fkiEzsignfoldersignerassociationID;
+
+  public static final String SERIALIZED_NAME_FKI_PAYMENTGATEWAY_I_D = "fkiPaymentgatewayID";
+  @SerializedName(SERIALIZED_NAME_FKI_PAYMENTGATEWAY_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiPaymentgatewayID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER = "iEzsignpagePagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER)
@@ -211,6 +217,11 @@ public class EzsignsignatureRequestCompoundV2 {
   @javax.annotation.Nullable
   private List<EzsignelementdependencyRequestCompound> aObjEzsignelementdependency = new ArrayList<>();
 
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATUREPAYMENTDETAIL = "a_objEzsignsignaturepaymentdetail";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNATUREPAYMENTDETAIL)
+  @javax.annotation.Nullable
+  private List<EzsignsignaturepaymentdetailRequestCompound> aObjEzsignsignaturepaymentdetail = new ArrayList<>();
+
   public EzsignsignatureRequestCompoundV2() {
   }
 
@@ -251,6 +262,27 @@ public class EzsignsignatureRequestCompoundV2 {
 
   public void setFkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+  }
+
+
+  public EzsignsignatureRequestCompoundV2 fkiPaymentgatewayID(@javax.annotation.Nullable Integer fkiPaymentgatewayID) {
+    this.fkiPaymentgatewayID = fkiPaymentgatewayID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Paymentgateway
+   * minimum: 0
+   * maximum: 255
+   * @return fkiPaymentgatewayID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiPaymentgatewayID() {
+    return fkiPaymentgatewayID;
+  }
+
+  public void setFkiPaymentgatewayID(@javax.annotation.Nullable Integer fkiPaymentgatewayID) {
+    this.fkiPaymentgatewayID = fkiPaymentgatewayID;
   }
 
 
@@ -811,6 +843,33 @@ public class EzsignsignatureRequestCompoundV2 {
   }
 
 
+  public EzsignsignatureRequestCompoundV2 aObjEzsignsignaturepaymentdetail(@javax.annotation.Nullable List<EzsignsignaturepaymentdetailRequestCompound> aObjEzsignsignaturepaymentdetail) {
+    this.aObjEzsignsignaturepaymentdetail = aObjEzsignsignaturepaymentdetail;
+    return this;
+  }
+
+  public EzsignsignatureRequestCompoundV2 addAObjEzsignsignaturepaymentdetailItem(EzsignsignaturepaymentdetailRequestCompound aObjEzsignsignaturepaymentdetailItem) {
+    if (this.aObjEzsignsignaturepaymentdetail == null) {
+      this.aObjEzsignsignaturepaymentdetail = new ArrayList<>();
+    }
+    this.aObjEzsignsignaturepaymentdetail.add(aObjEzsignsignaturepaymentdetailItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzsignsignaturepaymentdetail
+   * @return aObjEzsignsignaturepaymentdetail
+   */
+  @javax.annotation.Nullable
+  public List<EzsignsignaturepaymentdetailRequestCompound> getaObjEzsignsignaturepaymentdetail() {
+    return aObjEzsignsignaturepaymentdetail;
+  }
+
+  public void setaObjEzsignsignaturepaymentdetail(@javax.annotation.Nullable List<EzsignsignaturepaymentdetailRequestCompound> aObjEzsignsignaturepaymentdetail) {
+    this.aObjEzsignsignaturepaymentdetail = aObjEzsignsignaturepaymentdetail;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -823,6 +882,7 @@ public class EzsignsignatureRequestCompoundV2 {
     EzsignsignatureRequestCompoundV2 ezsignsignatureRequestCompoundV2 = (EzsignsignatureRequestCompoundV2) o;
     return Objects.equals(this.pkiEzsignsignatureID, ezsignsignatureRequestCompoundV2.pkiEzsignsignatureID) &&
         Objects.equals(this.fkiEzsignfoldersignerassociationID, ezsignsignatureRequestCompoundV2.fkiEzsignfoldersignerassociationID) &&
+        Objects.equals(this.fkiPaymentgatewayID, ezsignsignatureRequestCompoundV2.fkiPaymentgatewayID) &&
         Objects.equals(this.iEzsignpagePagenumber, ezsignsignatureRequestCompoundV2.iEzsignpagePagenumber) &&
         Objects.equals(this.iEzsignsignatureX, ezsignsignatureRequestCompoundV2.iEzsignsignatureX) &&
         Objects.equals(this.iEzsignsignatureY, ezsignsignatureRequestCompoundV2.iEzsignsignatureY) &&
@@ -850,12 +910,13 @@ public class EzsignsignatureRequestCompoundV2 {
         Objects.equals(this.eEzsignsignatureDependencyrequirement, ezsignsignatureRequestCompoundV2.eEzsignsignatureDependencyrequirement) &&
         Objects.equals(this.bEzsignsignatureCustomdate, ezsignsignatureRequestCompoundV2.bEzsignsignatureCustomdate) &&
         Objects.equals(this.aObjEzsignsignaturecustomdate, ezsignsignatureRequestCompoundV2.aObjEzsignsignaturecustomdate) &&
-        Objects.equals(this.aObjEzsignelementdependency, ezsignsignatureRequestCompoundV2.aObjEzsignelementdependency);
+        Objects.equals(this.aObjEzsignelementdependency, ezsignsignatureRequestCompoundV2.aObjEzsignelementdependency) &&
+        Objects.equals(this.aObjEzsignsignaturepaymentdetail, ezsignsignatureRequestCompoundV2.aObjEzsignsignaturepaymentdetail);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureWidth, iEzsignsignatureHeight, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureHandwritten, bEzsignsignatureReason, bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription, eEzsignsignatureConsultationtrigger, iEzsignsignatureValidationstep, iEzsignsignatureMaxlength, sEzsignsignatureDefaultvalue, eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage, sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement, bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate, aObjEzsignelementdependency);
+    return Objects.hash(pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, fkiPaymentgatewayID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureWidth, iEzsignsignatureHeight, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureHandwritten, bEzsignsignatureReason, bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription, eEzsignsignatureConsultationtrigger, iEzsignsignatureValidationstep, iEzsignsignatureMaxlength, sEzsignsignatureDefaultvalue, eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage, sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement, bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate, aObjEzsignelementdependency, aObjEzsignsignaturepaymentdetail);
   }
 
   @Override
@@ -864,6 +925,7 @@ public class EzsignsignatureRequestCompoundV2 {
     sb.append("class EzsignsignatureRequestCompoundV2 {\n");
     sb.append("    pkiEzsignsignatureID: ").append(toIndentedString(pkiEzsignsignatureID)).append("\n");
     sb.append("    fkiEzsignfoldersignerassociationID: ").append(toIndentedString(fkiEzsignfoldersignerassociationID)).append("\n");
+    sb.append("    fkiPaymentgatewayID: ").append(toIndentedString(fkiPaymentgatewayID)).append("\n");
     sb.append("    iEzsignpagePagenumber: ").append(toIndentedString(iEzsignpagePagenumber)).append("\n");
     sb.append("    iEzsignsignatureX: ").append(toIndentedString(iEzsignsignatureX)).append("\n");
     sb.append("    iEzsignsignatureY: ").append(toIndentedString(iEzsignsignatureY)).append("\n");
@@ -892,6 +954,7 @@ public class EzsignsignatureRequestCompoundV2 {
     sb.append("    bEzsignsignatureCustomdate: ").append(toIndentedString(bEzsignsignatureCustomdate)).append("\n");
     sb.append("    aObjEzsignsignaturecustomdate: ").append(toIndentedString(aObjEzsignsignaturecustomdate)).append("\n");
     sb.append("    aObjEzsignelementdependency: ").append(toIndentedString(aObjEzsignelementdependency)).append("\n");
+    sb.append("    aObjEzsignsignaturepaymentdetail: ").append(toIndentedString(aObjEzsignsignaturepaymentdetail)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -916,6 +979,7 @@ public class EzsignsignatureRequestCompoundV2 {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsignsignatureID");
     openapiFields.add("fkiEzsignfoldersignerassociationID");
+    openapiFields.add("fkiPaymentgatewayID");
     openapiFields.add("iEzsignpagePagenumber");
     openapiFields.add("iEzsignsignatureX");
     openapiFields.add("iEzsignsignatureY");
@@ -944,6 +1008,7 @@ public class EzsignsignatureRequestCompoundV2 {
     openapiFields.add("bEzsignsignatureCustomdate");
     openapiFields.add("a_objEzsignsignaturecustomdate");
     openapiFields.add("a_objEzsignelementdependency");
+    openapiFields.add("a_objEzsignsignaturepaymentdetail");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -1050,6 +1115,20 @@ public class EzsignsignatureRequestCompoundV2 {
           // validate the optional field `a_objEzsignelementdependency` (array)
           for (int i = 0; i < jsonArrayaObjEzsignelementdependency.size(); i++) {
             EzsignelementdependencyRequestCompound.validateJsonElement(jsonArrayaObjEzsignelementdependency.get(i));
+          };
+        }
+      }
+      if (jsonObj.get("a_objEzsignsignaturepaymentdetail") != null && !jsonObj.get("a_objEzsignsignaturepaymentdetail").isJsonNull()) {
+        JsonArray jsonArrayaObjEzsignsignaturepaymentdetail = jsonObj.getAsJsonArray("a_objEzsignsignaturepaymentdetail");
+        if (jsonArrayaObjEzsignsignaturepaymentdetail != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("a_objEzsignsignaturepaymentdetail").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `a_objEzsignsignaturepaymentdetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsignaturepaymentdetail").toString()));
+          }
+
+          // validate the optional field `a_objEzsignsignaturepaymentdetail` (array)
+          for (int i = 0; i < jsonArrayaObjEzsignsignaturepaymentdetail.size(); i++) {
+            EzsignsignaturepaymentdetailRequestCompound.validateJsonElement(jsonArrayaObjEzsignsignaturepaymentdetail.get(i));
           };
         }
       }

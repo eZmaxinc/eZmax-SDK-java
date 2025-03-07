@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.CustomEzsignfoldertypeTemplateResponse;
 import com.ezmax.api.model.FieldEEzsigntemplateRecognition;
 import com.ezmax.api.model.FieldEEzsigntemplateType;
 import com.google.gson.TypeAdapter;
@@ -51,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class EzsigntemplateResponseV3 {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
@@ -67,6 +68,11 @@ public class EzsigntemplateResponseV3 {
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
   @javax.annotation.Nullable
   private Integer fkiEzsignfoldertypeID;
+
+  public static final String SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE = "objEzsignfoldertype";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZSIGNFOLDERTYPE)
+  @javax.annotation.Nullable
+  private CustomEzsignfoldertypeTemplateResponse objEzsignfoldertype;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
@@ -199,6 +205,25 @@ public class EzsigntemplateResponseV3 {
 
   public void setFkiEzsignfoldertypeID(@javax.annotation.Nullable Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+  }
+
+
+  public EzsigntemplateResponseV3 objEzsignfoldertype(@javax.annotation.Nullable CustomEzsignfoldertypeTemplateResponse objEzsignfoldertype) {
+    this.objEzsignfoldertype = objEzsignfoldertype;
+    return this;
+  }
+
+  /**
+   * Get objEzsignfoldertype
+   * @return objEzsignfoldertype
+   */
+  @javax.annotation.Nullable
+  public CustomEzsignfoldertypeTemplateResponse getObjEzsignfoldertype() {
+    return objEzsignfoldertype;
+  }
+
+  public void setObjEzsignfoldertype(@javax.annotation.Nullable CustomEzsignfoldertypeTemplateResponse objEzsignfoldertype) {
+    this.objEzsignfoldertype = objEzsignfoldertype;
   }
 
 
@@ -485,6 +510,7 @@ public class EzsigntemplateResponseV3 {
     return Objects.equals(this.pkiEzsigntemplateID, ezsigntemplateResponseV3.pkiEzsigntemplateID) &&
         Objects.equals(this.fkiEzsigntemplatedocumentID, ezsigntemplateResponseV3.fkiEzsigntemplatedocumentID) &&
         Objects.equals(this.fkiEzsignfoldertypeID, ezsigntemplateResponseV3.fkiEzsignfoldertypeID) &&
+        Objects.equals(this.objEzsignfoldertype, ezsigntemplateResponseV3.objEzsignfoldertype) &&
         Objects.equals(this.fkiLanguageID, ezsigntemplateResponseV3.fkiLanguageID) &&
         Objects.equals(this.fkiEzdoctemplatedocumentID, ezsigntemplateResponseV3.fkiEzdoctemplatedocumentID) &&
         Objects.equals(this.sEzdoctemplatedocumentNameX, ezsigntemplateResponseV3.sEzdoctemplatedocumentNameX) &&
@@ -503,7 +529,7 @@ public class EzsigntemplateResponseV3 {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplateID, fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID, fkiLanguageID, fkiEzdoctemplatedocumentID, sEzdoctemplatedocumentNameX, sLanguageNameX, sEzsigntemplateDescription, sEzsigntemplateExternaldescription, tEzsigntemplateComment, eEzsigntemplateRecognition, sEzsigntemplateFilenameregexp, bEzsigntemplateAdminonly, sEzsignfoldertypeNameX, objAudit, bEzsigntemplateEditallowed, eEzsigntemplateType);
+    return Objects.hash(pkiEzsigntemplateID, fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID, objEzsignfoldertype, fkiLanguageID, fkiEzdoctemplatedocumentID, sEzdoctemplatedocumentNameX, sLanguageNameX, sEzsigntemplateDescription, sEzsigntemplateExternaldescription, tEzsigntemplateComment, eEzsigntemplateRecognition, sEzsigntemplateFilenameregexp, bEzsigntemplateAdminonly, sEzsignfoldertypeNameX, objAudit, bEzsigntemplateEditallowed, eEzsigntemplateType);
   }
 
   @Override
@@ -513,6 +539,7 @@ public class EzsigntemplateResponseV3 {
     sb.append("    pkiEzsigntemplateID: ").append(toIndentedString(pkiEzsigntemplateID)).append("\n");
     sb.append("    fkiEzsigntemplatedocumentID: ").append(toIndentedString(fkiEzsigntemplatedocumentID)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
+    sb.append("    objEzsignfoldertype: ").append(toIndentedString(objEzsignfoldertype)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    fkiEzdoctemplatedocumentID: ").append(toIndentedString(fkiEzdoctemplatedocumentID)).append("\n");
     sb.append("    sEzdoctemplatedocumentNameX: ").append(toIndentedString(sEzdoctemplatedocumentNameX)).append("\n");
@@ -552,6 +579,7 @@ public class EzsigntemplateResponseV3 {
     openapiFields.add("pkiEzsigntemplateID");
     openapiFields.add("fkiEzsigntemplatedocumentID");
     openapiFields.add("fkiEzsignfoldertypeID");
+    openapiFields.add("objEzsignfoldertype");
     openapiFields.add("fkiLanguageID");
     openapiFields.add("fkiEzdoctemplatedocumentID");
     openapiFields.add("sEzdoctemplatedocumentNameX");
@@ -606,6 +634,10 @@ public class EzsigntemplateResponseV3 {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `objEzsignfoldertype`
+      if (jsonObj.get("objEzsignfoldertype") != null && !jsonObj.get("objEzsignfoldertype").isJsonNull()) {
+        CustomEzsignfoldertypeTemplateResponse.validateJsonElement(jsonObj.get("objEzsignfoldertype"));
+      }
       if ((jsonObj.get("sEzdoctemplatedocumentNameX") != null && !jsonObj.get("sEzdoctemplatedocumentNameX").isJsonNull()) && !jsonObj.get("sEzdoctemplatedocumentNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sEzdoctemplatedocumentNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzdoctemplatedocumentNameX").toString()));
       }

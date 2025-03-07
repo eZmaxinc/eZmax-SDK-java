@@ -10,6 +10,7 @@ A part in the Reportsubsection
 |------------ | ------------- | ------------- | -------------|
 |**eReportsubsectionpartType** | [**EReportsubsectionpartTypeEnum**](#EReportsubsectionpartTypeEnum) | The type of the Reportsubsectionpart |  |
 |**aObjReportrow** | [**List&lt;CommonReportrow&gt;**](CommonReportrow.md) |  |  |
+|**aSVariableobjectProperty** | **List&lt;String&gt;** |  |  |
 
 
 

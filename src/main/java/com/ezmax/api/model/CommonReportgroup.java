@@ -16,6 +16,7 @@ package com.ezmax.api.model;
 import java.util.Objects;
 import com.ezmax.api.model.CommonReport;
 import com.ezmax.api.model.CommonReportcellstyle;
+import com.ezmax.api.model.CommonReportgroupParameter;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -52,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A group of reports  Each Reportgroup is for a specific recipient or for a specific context.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class CommonReportgroup {
   public static final String SERIALIZED_NAME_A_OBJ_REPORT = "a_objReport";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORT)
@@ -63,6 +64,16 @@ public class CommonReportgroup {
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTCELLSTYLE_CUSTOM)
   @javax.annotation.Nonnull
   private List<CommonReportcellstyle> aObjReportcellstyleCustom = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_REPORTGROUP_PARAMETER = "a_objReportgroupParameter";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTGROUP_PARAMETER)
+  @javax.annotation.Nonnull
+  private List<CommonReportgroupParameter> aObjReportgroupParameter = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_S_REPORTGROUP_FILENAME = "sReportgroupFilename";
+  @SerializedName(SERIALIZED_NAME_S_REPORTGROUP_FILENAME)
+  @javax.annotation.Nonnull
+  private String sReportgroupFilename;
 
   public CommonReportgroup() {
   }
@@ -121,6 +132,52 @@ public class CommonReportgroup {
   }
 
 
+  public CommonReportgroup aObjReportgroupParameter(@javax.annotation.Nonnull List<CommonReportgroupParameter> aObjReportgroupParameter) {
+    this.aObjReportgroupParameter = aObjReportgroupParameter;
+    return this;
+  }
+
+  public CommonReportgroup addAObjReportgroupParameterItem(CommonReportgroupParameter aObjReportgroupParameterItem) {
+    if (this.aObjReportgroupParameter == null) {
+      this.aObjReportgroupParameter = new ArrayList<>();
+    }
+    this.aObjReportgroupParameter.add(aObjReportgroupParameterItem);
+    return this;
+  }
+
+  /**
+   * Get aObjReportgroupParameter
+   * @return aObjReportgroupParameter
+   */
+  @javax.annotation.Nonnull
+  public List<CommonReportgroupParameter> getaObjReportgroupParameter() {
+    return aObjReportgroupParameter;
+  }
+
+  public void setaObjReportgroupParameter(@javax.annotation.Nonnull List<CommonReportgroupParameter> aObjReportgroupParameter) {
+    this.aObjReportgroupParameter = aObjReportgroupParameter;
+  }
+
+
+  public CommonReportgroup sReportgroupFilename(@javax.annotation.Nonnull String sReportgroupFilename) {
+    this.sReportgroupFilename = sReportgroupFilename;
+    return this;
+  }
+
+  /**
+   * The name of the file
+   * @return sReportgroupFilename
+   */
+  @javax.annotation.Nonnull
+  public String getsReportgroupFilename() {
+    return sReportgroupFilename;
+  }
+
+  public void setsReportgroupFilename(@javax.annotation.Nonnull String sReportgroupFilename) {
+    this.sReportgroupFilename = sReportgroupFilename;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -132,12 +189,14 @@ public class CommonReportgroup {
     }
     CommonReportgroup commonReportgroup = (CommonReportgroup) o;
     return Objects.equals(this.aObjReport, commonReportgroup.aObjReport) &&
-        Objects.equals(this.aObjReportcellstyleCustom, commonReportgroup.aObjReportcellstyleCustom);
+        Objects.equals(this.aObjReportcellstyleCustom, commonReportgroup.aObjReportcellstyleCustom) &&
+        Objects.equals(this.aObjReportgroupParameter, commonReportgroup.aObjReportgroupParameter) &&
+        Objects.equals(this.sReportgroupFilename, commonReportgroup.sReportgroupFilename);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjReport, aObjReportcellstyleCustom);
+    return Objects.hash(aObjReport, aObjReportcellstyleCustom, aObjReportgroupParameter, sReportgroupFilename);
   }
 
   @Override
@@ -146,6 +205,8 @@ public class CommonReportgroup {
     sb.append("class CommonReportgroup {\n");
     sb.append("    aObjReport: ").append(toIndentedString(aObjReport)).append("\n");
     sb.append("    aObjReportcellstyleCustom: ").append(toIndentedString(aObjReportcellstyleCustom)).append("\n");
+    sb.append("    aObjReportgroupParameter: ").append(toIndentedString(aObjReportgroupParameter)).append("\n");
+    sb.append("    sReportgroupFilename: ").append(toIndentedString(sReportgroupFilename)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -170,11 +231,15 @@ public class CommonReportgroup {
     openapiFields = new HashSet<String>();
     openapiFields.add("a_objReport");
     openapiFields.add("a_objReportcellstyleCustom");
+    openapiFields.add("a_objReportgroupParameter");
+    openapiFields.add("sReportgroupFilename");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("a_objReport");
     openapiRequiredFields.add("a_objReportcellstyleCustom");
+    openapiRequiredFields.add("a_objReportgroupParameter");
+    openapiRequiredFields.add("sReportgroupFilename");
   }
 
   /**
@@ -225,6 +290,19 @@ public class CommonReportgroup {
       for (int i = 0; i < jsonArrayaObjReportcellstyleCustom.size(); i++) {
         CommonReportcellstyle.validateJsonElement(jsonArrayaObjReportcellstyleCustom.get(i));
       };
+      // ensure the json data is an array
+      if (!jsonObj.get("a_objReportgroupParameter").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_objReportgroupParameter` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportgroupParameter").toString()));
+      }
+
+      JsonArray jsonArrayaObjReportgroupParameter = jsonObj.getAsJsonArray("a_objReportgroupParameter");
+      // validate the required field `a_objReportgroupParameter` (array)
+      for (int i = 0; i < jsonArrayaObjReportgroupParameter.size(); i++) {
+        CommonReportgroupParameter.validateJsonElement(jsonArrayaObjReportgroupParameter.get(i));
+      };
+      if (!jsonObj.get("sReportgroupFilename").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sReportgroupFilename` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sReportgroupFilename").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

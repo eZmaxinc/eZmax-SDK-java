@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A cell in a Reportrow 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class CommonReportcell {
   public static final String SERIALIZED_NAME_I_REPORTCELL_COLUMNSPAN = "iReportcellColumnspan";
   @SerializedName(SERIALIZED_NAME_I_REPORTCELL_COLUMNSPAN)
@@ -59,6 +59,16 @@ public class CommonReportcell {
   @SerializedName(SERIALIZED_NAME_I_REPORTCELL_ROWSPAN)
   @javax.annotation.Nonnull
   private Integer iReportcellRowspan;
+
+  public static final String SERIALIZED_NAME_S_REPORTCELL_CONTENT = "sReportcellContent";
+  @SerializedName(SERIALIZED_NAME_S_REPORTCELL_CONTENT)
+  @javax.annotation.Nonnull
+  private String sReportcellContent;
+
+  public static final String SERIALIZED_NAME_I_REPORTCELL_COLUMN = "iReportcellColumn";
+  @SerializedName(SERIALIZED_NAME_I_REPORTCELL_COLUMN)
+  @javax.annotation.Nonnull
+  private Integer iReportcellColumn;
 
   public CommonReportcell() {
   }
@@ -101,6 +111,44 @@ public class CommonReportcell {
   }
 
 
+  public CommonReportcell sReportcellContent(@javax.annotation.Nonnull String sReportcellContent) {
+    this.sReportcellContent = sReportcellContent;
+    return this;
+  }
+
+  /**
+   * The content of this Reportcell
+   * @return sReportcellContent
+   */
+  @javax.annotation.Nonnull
+  public String getsReportcellContent() {
+    return sReportcellContent;
+  }
+
+  public void setsReportcellContent(@javax.annotation.Nonnull String sReportcellContent) {
+    this.sReportcellContent = sReportcellContent;
+  }
+
+
+  public CommonReportcell iReportcellColumn(@javax.annotation.Nonnull Integer iReportcellColumn) {
+    this.iReportcellColumn = iReportcellColumn;
+    return this;
+  }
+
+  /**
+   * Position of the column where it is placed
+   * @return iReportcellColumn
+   */
+  @javax.annotation.Nonnull
+  public Integer getiReportcellColumn() {
+    return iReportcellColumn;
+  }
+
+  public void setiReportcellColumn(@javax.annotation.Nonnull Integer iReportcellColumn) {
+    this.iReportcellColumn = iReportcellColumn;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -112,12 +160,14 @@ public class CommonReportcell {
     }
     CommonReportcell commonReportcell = (CommonReportcell) o;
     return Objects.equals(this.iReportcellColumnspan, commonReportcell.iReportcellColumnspan) &&
-        Objects.equals(this.iReportcellRowspan, commonReportcell.iReportcellRowspan);
+        Objects.equals(this.iReportcellRowspan, commonReportcell.iReportcellRowspan) &&
+        Objects.equals(this.sReportcellContent, commonReportcell.sReportcellContent) &&
+        Objects.equals(this.iReportcellColumn, commonReportcell.iReportcellColumn);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(iReportcellColumnspan, iReportcellRowspan);
+    return Objects.hash(iReportcellColumnspan, iReportcellRowspan, sReportcellContent, iReportcellColumn);
   }
 
   @Override
@@ -126,6 +176,8 @@ public class CommonReportcell {
     sb.append("class CommonReportcell {\n");
     sb.append("    iReportcellColumnspan: ").append(toIndentedString(iReportcellColumnspan)).append("\n");
     sb.append("    iReportcellRowspan: ").append(toIndentedString(iReportcellRowspan)).append("\n");
+    sb.append("    sReportcellContent: ").append(toIndentedString(sReportcellContent)).append("\n");
+    sb.append("    iReportcellColumn: ").append(toIndentedString(iReportcellColumn)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -150,11 +202,15 @@ public class CommonReportcell {
     openapiFields = new HashSet<String>();
     openapiFields.add("iReportcellColumnspan");
     openapiFields.add("iReportcellRowspan");
+    openapiFields.add("sReportcellContent");
+    openapiFields.add("iReportcellColumn");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("iReportcellColumnspan");
     openapiRequiredFields.add("iReportcellRowspan");
+    openapiRequiredFields.add("sReportcellContent");
+    openapiRequiredFields.add("iReportcellColumn");
   }
 
   /**
@@ -185,6 +241,9 @@ public class CommonReportcell {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sReportcellContent").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sReportcellContent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sReportcellContent").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

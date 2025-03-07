@@ -7,7 +7,19 @@
 
 * `ACKNOWLEDGEMENT` (value: `"Acknowledgement"`)
 
+* `ATTACHMENTS` (value: `"Attachments"`)
+
+* `ATTACHMENTS_CONFIRMATION` (value: `"AttachmentsConfirmation"`)
+
 * `CITY` (value: `"City"`)
+
+* `CONSULTATION` (value: `"Consultation"`)
+
+* `CREDITCARD` (value: `"Creditcard"`)
+
+* `FIELD_TEXT` (value: `"FieldText"`)
+
+* `FIELD_TEXTAREA` (value: `"FieldTextarea"`)
 
 * `HANDWRITTEN` (value: `"Handwritten"`)
 
@@ -16,16 +28,6 @@
 * `NAME` (value: `"Name"`)
 
 * `NAME_REASON` (value: `"NameReason"`)
-
-* `ATTACHMENTS` (value: `"Attachments"`)
-
-* `ATTACHMENTS_CONFIRMATION` (value: `"AttachmentsConfirmation"`)
-
-* `FIELD_TEXT` (value: `"FieldText"`)
-
-* `FIELD_TEXTAREA` (value: `"FieldTextarea"`)
-
-* `CONSULTATION` (value: `"Consultation"`)
 
 * `SIGNATURE` (value: `"Signature"`)
 

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A part in the Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class CommonReportsubsectionpart {
   /**
    * The type of the Reportsubsectionpart
@@ -117,6 +117,11 @@ public class CommonReportsubsectionpart {
   @javax.annotation.Nonnull
   private List<CommonReportrow> aObjReportrow = new ArrayList<>();
 
+  public static final String SERIALIZED_NAME_A_S_VARIABLEOBJECT_PROPERTY = "a_sVariableobjectProperty";
+  @SerializedName(SERIALIZED_NAME_A_S_VARIABLEOBJECT_PROPERTY)
+  @javax.annotation.Nonnull
+  private List<String> aSVariableobjectProperty = new ArrayList<>();
+
   public CommonReportsubsectionpart() {
   }
 
@@ -166,6 +171,33 @@ public class CommonReportsubsectionpart {
   }
 
 
+  public CommonReportsubsectionpart aSVariableobjectProperty(@javax.annotation.Nonnull List<String> aSVariableobjectProperty) {
+    this.aSVariableobjectProperty = aSVariableobjectProperty;
+    return this;
+  }
+
+  public CommonReportsubsectionpart addASVariableobjectPropertyItem(String aSVariableobjectPropertyItem) {
+    if (this.aSVariableobjectProperty == null) {
+      this.aSVariableobjectProperty = new ArrayList<>();
+    }
+    this.aSVariableobjectProperty.add(aSVariableobjectPropertyItem);
+    return this;
+  }
+
+  /**
+   * Get aSVariableobjectProperty
+   * @return aSVariableobjectProperty
+   */
+  @javax.annotation.Nonnull
+  public List<String> getaSVariableobjectProperty() {
+    return aSVariableobjectProperty;
+  }
+
+  public void setaSVariableobjectProperty(@javax.annotation.Nonnull List<String> aSVariableobjectProperty) {
+    this.aSVariableobjectProperty = aSVariableobjectProperty;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -177,12 +209,13 @@ public class CommonReportsubsectionpart {
     }
     CommonReportsubsectionpart commonReportsubsectionpart = (CommonReportsubsectionpart) o;
     return Objects.equals(this.eReportsubsectionpartType, commonReportsubsectionpart.eReportsubsectionpartType) &&
-        Objects.equals(this.aObjReportrow, commonReportsubsectionpart.aObjReportrow);
+        Objects.equals(this.aObjReportrow, commonReportsubsectionpart.aObjReportrow) &&
+        Objects.equals(this.aSVariableobjectProperty, commonReportsubsectionpart.aSVariableobjectProperty);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eReportsubsectionpartType, aObjReportrow);
+    return Objects.hash(eReportsubsectionpartType, aObjReportrow, aSVariableobjectProperty);
   }
 
   @Override
@@ -191,6 +224,7 @@ public class CommonReportsubsectionpart {
     sb.append("class CommonReportsubsectionpart {\n");
     sb.append("    eReportsubsectionpartType: ").append(toIndentedString(eReportsubsectionpartType)).append("\n");
     sb.append("    aObjReportrow: ").append(toIndentedString(aObjReportrow)).append("\n");
+    sb.append("    aSVariableobjectProperty: ").append(toIndentedString(aSVariableobjectProperty)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -215,11 +249,13 @@ public class CommonReportsubsectionpart {
     openapiFields = new HashSet<String>();
     openapiFields.add("eReportsubsectionpartType");
     openapiFields.add("a_objReportrow");
+    openapiFields.add("a_sVariableobjectProperty");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("eReportsubsectionpartType");
     openapiRequiredFields.add("a_objReportrow");
+    openapiRequiredFields.add("a_sVariableobjectProperty");
   }
 
   /**
@@ -265,6 +301,12 @@ public class CommonReportsubsectionpart {
       for (int i = 0; i < jsonArrayaObjReportrow.size(); i++) {
         CommonReportrow.validateJsonElement(jsonArrayaObjReportrow.get(i));
       };
+      // ensure the required json array is present
+      if (jsonObj.get("a_sVariableobjectProperty") == null) {
+        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
+      } else if (!jsonObj.get("a_sVariableobjectProperty").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `a_sVariableobjectProperty` to be an array in the JSON string but got `%s`", jsonObj.get("a_sVariableobjectProperty").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

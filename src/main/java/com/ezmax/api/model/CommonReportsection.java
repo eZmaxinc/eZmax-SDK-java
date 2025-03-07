@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class CommonReportsection {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION = "a_objReportsubsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION)
@@ -79,6 +79,11 @@ public class CommonReportsection {
   @SerializedName(SERIALIZED_NAME_I_REPORTSECTION_WIDTH)
   @javax.annotation.Nonnull
   private Integer iReportsectionWidth;
+
+  public static final String SERIALIZED_NAME_S_REPORTSECTION_TITLE = "sReportsectionTitle";
+  @SerializedName(SERIALIZED_NAME_S_REPORTSECTION_TITLE)
+  @javax.annotation.Nullable
+  private String sReportsectionTitle;
 
   public CommonReportsection() {
   }
@@ -194,6 +199,25 @@ public class CommonReportsection {
   }
 
 
+  public CommonReportsection sReportsectionTitle(@javax.annotation.Nullable String sReportsectionTitle) {
+    this.sReportsectionTitle = sReportsectionTitle;
+    return this;
+  }
+
+  /**
+   * The title of this Reportsection
+   * @return sReportsectionTitle
+   */
+  @javax.annotation.Nullable
+  public String getsReportsectionTitle() {
+    return sReportsectionTitle;
+  }
+
+  public void setsReportsectionTitle(@javax.annotation.Nullable String sReportsectionTitle) {
+    this.sReportsectionTitle = sReportsectionTitle;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -208,12 +232,13 @@ public class CommonReportsection {
         Objects.equals(this.aObjReportcolumn, commonReportsection.aObjReportcolumn) &&
         Objects.equals(this.eReportsectionHorizontalalignment, commonReportsection.eReportsectionHorizontalalignment) &&
         Objects.equals(this.iReportsectionColumncount, commonReportsection.iReportsectionColumncount) &&
-        Objects.equals(this.iReportsectionWidth, commonReportsection.iReportsectionWidth);
+        Objects.equals(this.iReportsectionWidth, commonReportsection.iReportsectionWidth) &&
+        Objects.equals(this.sReportsectionTitle, commonReportsection.sReportsectionTitle);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjReportsubsection, aObjReportcolumn, eReportsectionHorizontalalignment, iReportsectionColumncount, iReportsectionWidth);
+    return Objects.hash(aObjReportsubsection, aObjReportcolumn, eReportsectionHorizontalalignment, iReportsectionColumncount, iReportsectionWidth, sReportsectionTitle);
   }
 
   @Override
@@ -225,6 +250,7 @@ public class CommonReportsection {
     sb.append("    eReportsectionHorizontalalignment: ").append(toIndentedString(eReportsectionHorizontalalignment)).append("\n");
     sb.append("    iReportsectionColumncount: ").append(toIndentedString(iReportsectionColumncount)).append("\n");
     sb.append("    iReportsectionWidth: ").append(toIndentedString(iReportsectionWidth)).append("\n");
+    sb.append("    sReportsectionTitle: ").append(toIndentedString(sReportsectionTitle)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -252,6 +278,7 @@ public class CommonReportsection {
     openapiFields.add("eReportsectionHorizontalalignment");
     openapiFields.add("iReportsectionColumncount");
     openapiFields.add("iReportsectionWidth");
+    openapiFields.add("sReportsectionTitle");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -312,6 +339,9 @@ public class CommonReportsection {
       };
       // validate the required field `eReportsectionHorizontalalignment`
       EnumHorizontalalignment.validateJsonElement(jsonObj.get("eReportsectionHorizontalalignment"));
+      if ((jsonObj.get("sReportsectionTitle") != null && !jsonObj.get("sReportsectionTitle").isJsonNull()) && !jsonObj.get("sReportsectionTitle").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sReportsectionTitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sReportsectionTitle").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

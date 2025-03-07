@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class EzsignfolderResponseCompoundV3 {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -172,6 +172,16 @@ public class EzsignfolderResponseCompoundV3 {
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_CLOSE)
   @javax.annotation.Nullable
   private String dtEzsignfolderClose;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_ARCHIVE = "dtEzsignfolderArchive";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_ARCHIVE)
+  @javax.annotation.Nullable
+  private String dtEzsignfolderArchive;
+
+  public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_DISPOSE = "dtEzsignfolderDispose";
+  @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_DISPOSE)
+  @javax.annotation.Nullable
+  private String dtEzsignfolderDispose;
 
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE = "tEzsignfolderMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE)
@@ -653,6 +663,44 @@ public class EzsignfolderResponseCompoundV3 {
   }
 
 
+  public EzsignfolderResponseCompoundV3 dtEzsignfolderArchive(@javax.annotation.Nullable String dtEzsignfolderArchive) {
+    this.dtEzsignfolderArchive = dtEzsignfolderArchive;
+    return this;
+  }
+
+  /**
+   * The date and time at which the Ezsignfolder was archived.
+   * @return dtEzsignfolderArchive
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsignfolderArchive() {
+    return dtEzsignfolderArchive;
+  }
+
+  public void setDtEzsignfolderArchive(@javax.annotation.Nullable String dtEzsignfolderArchive) {
+    this.dtEzsignfolderArchive = dtEzsignfolderArchive;
+  }
+
+
+  public EzsignfolderResponseCompoundV3 dtEzsignfolderDispose(@javax.annotation.Nullable String dtEzsignfolderDispose) {
+    this.dtEzsignfolderDispose = dtEzsignfolderDispose;
+    return this;
+  }
+
+  /**
+   * The date and time at which the Ezsignfolder was disposed.
+   * @return dtEzsignfolderDispose
+   */
+  @javax.annotation.Nullable
+  public String getDtEzsignfolderDispose() {
+    return dtEzsignfolderDispose;
+  }
+
+  public void setDtEzsignfolderDispose(@javax.annotation.Nullable String dtEzsignfolderDispose) {
+    this.dtEzsignfolderDispose = dtEzsignfolderDispose;
+  }
+
+
   public EzsignfolderResponseCompoundV3 tEzsignfolderMessage(@javax.annotation.Nullable String tEzsignfolderMessage) {
     this.tEzsignfolderMessage = tEzsignfolderMessage;
     return this;
@@ -781,6 +829,8 @@ public class EzsignfolderResponseCompoundV3 {
         Objects.equals(this.dtEzsignfolderScheduleddispose, ezsignfolderResponseCompoundV3.dtEzsignfolderScheduleddispose) &&
         Objects.equals(this.eEzsignfolderStep, ezsignfolderResponseCompoundV3.eEzsignfolderStep) &&
         Objects.equals(this.dtEzsignfolderClose, ezsignfolderResponseCompoundV3.dtEzsignfolderClose) &&
+        Objects.equals(this.dtEzsignfolderArchive, ezsignfolderResponseCompoundV3.dtEzsignfolderArchive) &&
+        Objects.equals(this.dtEzsignfolderDispose, ezsignfolderResponseCompoundV3.dtEzsignfolderDispose) &&
         Objects.equals(this.tEzsignfolderMessage, ezsignfolderResponseCompoundV3.tEzsignfolderMessage) &&
         Objects.equals(this.objAudit, ezsignfolderResponseCompoundV3.objAudit) &&
         Objects.equals(this.sEzsignfolderExternalid, ezsignfolderResponseCompoundV3.sEzsignfolderExternalid) &&
@@ -790,7 +840,7 @@ public class EzsignfolderResponseCompoundV3 {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, objEzsignfoldertype, fkiTimezoneID, eEzsignfolderCompletion, eEzsignfolderDocumentdependency, sEzsignfoldertypeNameX, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX, sEzsignfolderDescription, tEzsignfolderNote, bEzsignfolderIsdisposable, iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate, dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose, eEzsignfolderStep, dtEzsignfolderClose, tEzsignfolderMessage, objAudit, sEzsignfolderExternalid, eEzsignfolderAccess, objTimezone);
+    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, objEzsignfoldertype, fkiTimezoneID, eEzsignfolderCompletion, eEzsignfolderDocumentdependency, sEzsignfoldertypeNameX, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX, sEzsignfolderDescription, tEzsignfolderNote, bEzsignfolderIsdisposable, iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate, dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose, eEzsignfolderStep, dtEzsignfolderClose, dtEzsignfolderArchive, dtEzsignfolderDispose, tEzsignfolderMessage, objAudit, sEzsignfolderExternalid, eEzsignfolderAccess, objTimezone);
   }
 
   @Override
@@ -820,6 +870,8 @@ public class EzsignfolderResponseCompoundV3 {
     sb.append("    dtEzsignfolderScheduleddispose: ").append(toIndentedString(dtEzsignfolderScheduleddispose)).append("\n");
     sb.append("    eEzsignfolderStep: ").append(toIndentedString(eEzsignfolderStep)).append("\n");
     sb.append("    dtEzsignfolderClose: ").append(toIndentedString(dtEzsignfolderClose)).append("\n");
+    sb.append("    dtEzsignfolderArchive: ").append(toIndentedString(dtEzsignfolderArchive)).append("\n");
+    sb.append("    dtEzsignfolderDispose: ").append(toIndentedString(dtEzsignfolderDispose)).append("\n");
     sb.append("    tEzsignfolderMessage: ").append(toIndentedString(tEzsignfolderMessage)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("    sEzsignfolderExternalid: ").append(toIndentedString(sEzsignfolderExternalid)).append("\n");
@@ -870,6 +922,8 @@ public class EzsignfolderResponseCompoundV3 {
     openapiFields.add("dtEzsignfolderScheduleddispose");
     openapiFields.add("eEzsignfolderStep");
     openapiFields.add("dtEzsignfolderClose");
+    openapiFields.add("dtEzsignfolderArchive");
+    openapiFields.add("dtEzsignfolderDispose");
     openapiFields.add("tEzsignfolderMessage");
     openapiFields.add("objAudit");
     openapiFields.add("sEzsignfolderExternalid");
@@ -957,6 +1011,12 @@ public class EzsignfolderResponseCompoundV3 {
       }
       if ((jsonObj.get("dtEzsignfolderClose") != null && !jsonObj.get("dtEzsignfolderClose").isJsonNull()) && !jsonObj.get("dtEzsignfolderClose").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderClose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderClose").toString()));
+      }
+      if ((jsonObj.get("dtEzsignfolderArchive") != null && !jsonObj.get("dtEzsignfolderArchive").isJsonNull()) && !jsonObj.get("dtEzsignfolderArchive").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderArchive` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderArchive").toString()));
+      }
+      if ((jsonObj.get("dtEzsignfolderDispose") != null && !jsonObj.get("dtEzsignfolderDispose").isJsonNull()) && !jsonObj.get("dtEzsignfolderDispose").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `dtEzsignfolderDispose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDispose").toString()));
       }
       if ((jsonObj.get("tEzsignfolderMessage") != null && !jsonObj.get("tEzsignfolderMessage").isJsonNull()) && !jsonObj.get("tEzsignfolderMessage").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `tEzsignfolderMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderMessage").toString()));

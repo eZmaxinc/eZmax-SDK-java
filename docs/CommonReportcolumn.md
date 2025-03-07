@@ -10,6 +10,7 @@ A column in a Reportsection
 |------------ | ------------- | ------------- | -------------|
 |**objReportcellstyleDefault** | [**CommonReportcellstyle**](CommonReportcellstyle.md) |  |  |
 |**iReportcolumnWidth** | **Integer** | The Reportcolumn width in pixels |  |
+|**eReportcolumnType** | **EnumReportdataType** |  |  |
 
 
 

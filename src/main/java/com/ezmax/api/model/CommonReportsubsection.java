@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Subsection in a Reportsection. It contains 3 Reportsubsectionparts (Header, Body and Footer) 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class CommonReportsubsection {
   public static final String SERIALIZED_NAME_OBJ_REPORTSUBSECTIONPART_HEADER = "objReportsubsectionpartHeader";
   @SerializedName(SERIALIZED_NAME_OBJ_REPORTSUBSECTIONPART_HEADER)
@@ -65,6 +65,11 @@ public class CommonReportsubsection {
   @SerializedName(SERIALIZED_NAME_OBJ_REPORTSUBSECTIONPART_FOOTER)
   @javax.annotation.Nonnull
   private CommonReportsubsectionpart objReportsubsectionpartFooter;
+
+  public static final String SERIALIZED_NAME_S_REPORTSUBSECTION_TITLE = "sReportsubsectionTitle";
+  @SerializedName(SERIALIZED_NAME_S_REPORTSUBSECTION_TITLE)
+  @javax.annotation.Nullable
+  private String sReportsubsectionTitle;
 
   public CommonReportsubsection() {
   }
@@ -126,6 +131,25 @@ public class CommonReportsubsection {
   }
 
 
+  public CommonReportsubsection sReportsubsectionTitle(@javax.annotation.Nullable String sReportsubsectionTitle) {
+    this.sReportsubsectionTitle = sReportsubsectionTitle;
+    return this;
+  }
+
+  /**
+   * The title of this Reportsubsection
+   * @return sReportsubsectionTitle
+   */
+  @javax.annotation.Nullable
+  public String getsReportsubsectionTitle() {
+    return sReportsubsectionTitle;
+  }
+
+  public void setsReportsubsectionTitle(@javax.annotation.Nullable String sReportsubsectionTitle) {
+    this.sReportsubsectionTitle = sReportsubsectionTitle;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -138,12 +162,13 @@ public class CommonReportsubsection {
     CommonReportsubsection commonReportsubsection = (CommonReportsubsection) o;
     return Objects.equals(this.objReportsubsectionpartHeader, commonReportsubsection.objReportsubsectionpartHeader) &&
         Objects.equals(this.objReportsubsectionpartBody, commonReportsubsection.objReportsubsectionpartBody) &&
-        Objects.equals(this.objReportsubsectionpartFooter, commonReportsubsection.objReportsubsectionpartFooter);
+        Objects.equals(this.objReportsubsectionpartFooter, commonReportsubsection.objReportsubsectionpartFooter) &&
+        Objects.equals(this.sReportsubsectionTitle, commonReportsubsection.sReportsubsectionTitle);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objReportsubsectionpartHeader, objReportsubsectionpartBody, objReportsubsectionpartFooter);
+    return Objects.hash(objReportsubsectionpartHeader, objReportsubsectionpartBody, objReportsubsectionpartFooter, sReportsubsectionTitle);
   }
 
   @Override
@@ -153,6 +178,7 @@ public class CommonReportsubsection {
     sb.append("    objReportsubsectionpartHeader: ").append(toIndentedString(objReportsubsectionpartHeader)).append("\n");
     sb.append("    objReportsubsectionpartBody: ").append(toIndentedString(objReportsubsectionpartBody)).append("\n");
     sb.append("    objReportsubsectionpartFooter: ").append(toIndentedString(objReportsubsectionpartFooter)).append("\n");
+    sb.append("    sReportsubsectionTitle: ").append(toIndentedString(sReportsubsectionTitle)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -178,6 +204,7 @@ public class CommonReportsubsection {
     openapiFields.add("objReportsubsectionpartHeader");
     openapiFields.add("objReportsubsectionpartBody");
     openapiFields.add("objReportsubsectionpartFooter");
+    openapiFields.add("sReportsubsectionTitle");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -220,6 +247,9 @@ public class CommonReportsubsection {
       CommonReportsubsectionpart.validateJsonElement(jsonObj.get("objReportsubsectionpartBody"));
       // validate the required field `objReportsubsectionpartFooter`
       CommonReportsubsectionpart.validateJsonElement(jsonObj.get("objReportsubsectionpartFooter"));
+      if ((jsonObj.get("sReportsubsectionTitle") != null && !jsonObj.get("sReportsubsectionTitle").isJsonNull()) && !jsonObj.get("sReportsubsectionTitle").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sReportsubsectionTitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sReportsubsectionTitle").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonReportcellstyle;
+import com.ezmax.api.model.EnumReportdataType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -49,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A column in a Reportsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class CommonReportcolumn {
   public static final String SERIALIZED_NAME_OBJ_REPORTCELLSTYLE_DEFAULT = "objReportcellstyleDefault";
   @SerializedName(SERIALIZED_NAME_OBJ_REPORTCELLSTYLE_DEFAULT)
@@ -60,6 +61,11 @@ public class CommonReportcolumn {
   @SerializedName(SERIALIZED_NAME_I_REPORTCOLUMN_WIDTH)
   @javax.annotation.Nonnull
   private Integer iReportcolumnWidth;
+
+  public static final String SERIALIZED_NAME_E_REPORTCOLUMN_TYPE = "eReportcolumnType";
+  @SerializedName(SERIALIZED_NAME_E_REPORTCOLUMN_TYPE)
+  @javax.annotation.Nonnull
+  private EnumReportdataType eReportcolumnType;
 
   public CommonReportcolumn() {
   }
@@ -102,6 +108,25 @@ public class CommonReportcolumn {
   }
 
 
+  public CommonReportcolumn eReportcolumnType(@javax.annotation.Nonnull EnumReportdataType eReportcolumnType) {
+    this.eReportcolumnType = eReportcolumnType;
+    return this;
+  }
+
+  /**
+   * Get eReportcolumnType
+   * @return eReportcolumnType
+   */
+  @javax.annotation.Nonnull
+  public EnumReportdataType geteReportcolumnType() {
+    return eReportcolumnType;
+  }
+
+  public void seteReportcolumnType(@javax.annotation.Nonnull EnumReportdataType eReportcolumnType) {
+    this.eReportcolumnType = eReportcolumnType;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -113,12 +138,13 @@ public class CommonReportcolumn {
     }
     CommonReportcolumn commonReportcolumn = (CommonReportcolumn) o;
     return Objects.equals(this.objReportcellstyleDefault, commonReportcolumn.objReportcellstyleDefault) &&
-        Objects.equals(this.iReportcolumnWidth, commonReportcolumn.iReportcolumnWidth);
+        Objects.equals(this.iReportcolumnWidth, commonReportcolumn.iReportcolumnWidth) &&
+        Objects.equals(this.eReportcolumnType, commonReportcolumn.eReportcolumnType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objReportcellstyleDefault, iReportcolumnWidth);
+    return Objects.hash(objReportcellstyleDefault, iReportcolumnWidth, eReportcolumnType);
   }
 
   @Override
@@ -127,6 +153,7 @@ public class CommonReportcolumn {
     sb.append("class CommonReportcolumn {\n");
     sb.append("    objReportcellstyleDefault: ").append(toIndentedString(objReportcellstyleDefault)).append("\n");
     sb.append("    iReportcolumnWidth: ").append(toIndentedString(iReportcolumnWidth)).append("\n");
+    sb.append("    eReportcolumnType: ").append(toIndentedString(eReportcolumnType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -151,11 +178,13 @@ public class CommonReportcolumn {
     openapiFields = new HashSet<String>();
     openapiFields.add("objReportcellstyleDefault");
     openapiFields.add("iReportcolumnWidth");
+    openapiFields.add("eReportcolumnType");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("objReportcellstyleDefault");
     openapiRequiredFields.add("iReportcolumnWidth");
+    openapiRequiredFields.add("eReportcolumnType");
   }
 
   /**
@@ -188,6 +217,8 @@ public class CommonReportcolumn {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objReportcellstyleDefault`
       CommonReportcellstyle.validateJsonElement(jsonObj.get("objReportcellstyleDefault"));
+      // validate the required field `eReportcolumnType`
+      EnumReportdataType.validateJsonElement(jsonObj.get("eReportcolumnType"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

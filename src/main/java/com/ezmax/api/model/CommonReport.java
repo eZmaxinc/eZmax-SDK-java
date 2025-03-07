@@ -51,12 +51,22 @@ import eZmaxAPI.JSON;
 /**
  * A Report containing Reportsections 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class CommonReport {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTSECTION = "a_objReportsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTSECTION)
   @javax.annotation.Nonnull
   private List<CommonReportsection> aObjReportsection = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_B_REPORT_PAGINATE = "bReportPaginate";
+  @SerializedName(SERIALIZED_NAME_B_REPORT_PAGINATE)
+  @javax.annotation.Nullable
+  private Boolean bReportPaginate;
+
+  public static final String SERIALIZED_NAME_S_REPORT_TITLE = "sReportTitle";
+  @SerializedName(SERIALIZED_NAME_S_REPORT_TITLE)
+  @javax.annotation.Nullable
+  private String sReportTitle;
 
   public CommonReport() {
   }
@@ -88,6 +98,44 @@ public class CommonReport {
   }
 
 
+  public CommonReport bReportPaginate(@javax.annotation.Nullable Boolean bReportPaginate) {
+    this.bReportPaginate = bReportPaginate;
+    return this;
+  }
+
+  /**
+   * Whether we display pagination in the report
+   * @return bReportPaginate
+   */
+  @javax.annotation.Nullable
+  public Boolean getbReportPaginate() {
+    return bReportPaginate;
+  }
+
+  public void setbReportPaginate(@javax.annotation.Nullable Boolean bReportPaginate) {
+    this.bReportPaginate = bReportPaginate;
+  }
+
+
+  public CommonReport sReportTitle(@javax.annotation.Nullable String sReportTitle) {
+    this.sReportTitle = sReportTitle;
+    return this;
+  }
+
+  /**
+   * The title of this Report
+   * @return sReportTitle
+   */
+  @javax.annotation.Nullable
+  public String getsReportTitle() {
+    return sReportTitle;
+  }
+
+  public void setsReportTitle(@javax.annotation.Nullable String sReportTitle) {
+    this.sReportTitle = sReportTitle;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -98,12 +146,14 @@ public class CommonReport {
       return false;
     }
     CommonReport commonReport = (CommonReport) o;
-    return Objects.equals(this.aObjReportsection, commonReport.aObjReportsection);
+    return Objects.equals(this.aObjReportsection, commonReport.aObjReportsection) &&
+        Objects.equals(this.bReportPaginate, commonReport.bReportPaginate) &&
+        Objects.equals(this.sReportTitle, commonReport.sReportTitle);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjReportsection);
+    return Objects.hash(aObjReportsection, bReportPaginate, sReportTitle);
   }
 
   @Override
@@ -111,6 +161,8 @@ public class CommonReport {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommonReport {\n");
     sb.append("    aObjReportsection: ").append(toIndentedString(aObjReportsection)).append("\n");
+    sb.append("    bReportPaginate: ").append(toIndentedString(bReportPaginate)).append("\n");
+    sb.append("    sReportTitle: ").append(toIndentedString(sReportTitle)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -134,6 +186,8 @@ public class CommonReport {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("a_objReportsection");
+    openapiFields.add("bReportPaginate");
+    openapiFields.add("sReportTitle");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -178,6 +232,9 @@ public class CommonReport {
       for (int i = 0; i < jsonArrayaObjReportsection.size(); i++) {
         CommonReportsection.validateJsonElement(jsonArrayaObjReportsection.get(i));
       };
+      if ((jsonObj.get("sReportTitle") != null && !jsonObj.get("sReportTitle").isJsonNull()) && !jsonObj.get("sReportTitle").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sReportTitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sReportTitle").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class EzsignsignatureRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -66,6 +66,11 @@ public class EzsignsignatureRequest {
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERSIGNERASSOCIATION_I_D)
   @javax.annotation.Nonnull
   private Integer fkiEzsignfoldersignerassociationID;
+
+  public static final String SERIALIZED_NAME_FKI_PAYMENTGATEWAY_I_D = "fkiPaymentgatewayID";
+  @SerializedName(SERIALIZED_NAME_FKI_PAYMENTGATEWAY_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiPaymentgatewayID;
 
   public static final String SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER = "iEzsignpagePagenumber";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNPAGE_PAGENUMBER)
@@ -232,6 +237,27 @@ public class EzsignsignatureRequest {
 
   public void setFkiEzsignfoldersignerassociationID(@javax.annotation.Nonnull Integer fkiEzsignfoldersignerassociationID) {
     this.fkiEzsignfoldersignerassociationID = fkiEzsignfoldersignerassociationID;
+  }
+
+
+  public EzsignsignatureRequest fkiPaymentgatewayID(@javax.annotation.Nullable Integer fkiPaymentgatewayID) {
+    this.fkiPaymentgatewayID = fkiPaymentgatewayID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Paymentgateway
+   * minimum: 0
+   * maximum: 255
+   * @return fkiPaymentgatewayID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiPaymentgatewayID() {
+    return fkiPaymentgatewayID;
+  }
+
+  public void setFkiPaymentgatewayID(@javax.annotation.Nullable Integer fkiPaymentgatewayID) {
+    this.fkiPaymentgatewayID = fkiPaymentgatewayID;
   }
 
 
@@ -731,6 +757,7 @@ public class EzsignsignatureRequest {
     EzsignsignatureRequest ezsignsignatureRequest = (EzsignsignatureRequest) o;
     return Objects.equals(this.pkiEzsignsignatureID, ezsignsignatureRequest.pkiEzsignsignatureID) &&
         Objects.equals(this.fkiEzsignfoldersignerassociationID, ezsignsignatureRequest.fkiEzsignfoldersignerassociationID) &&
+        Objects.equals(this.fkiPaymentgatewayID, ezsignsignatureRequest.fkiPaymentgatewayID) &&
         Objects.equals(this.iEzsignpagePagenumber, ezsignsignatureRequest.iEzsignpagePagenumber) &&
         Objects.equals(this.iEzsignsignatureX, ezsignsignatureRequest.iEzsignsignatureX) &&
         Objects.equals(this.iEzsignsignatureY, ezsignsignatureRequest.iEzsignsignatureY) &&
@@ -760,7 +787,7 @@ public class EzsignsignatureRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureWidth, iEzsignsignatureHeight, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureHandwritten, bEzsignsignatureReason, bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription, eEzsignsignatureConsultationtrigger, iEzsignsignatureValidationstep, iEzsignsignatureMaxlength, sEzsignsignatureDefaultvalue, eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage, sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement);
+    return Objects.hash(pkiEzsignsignatureID, fkiEzsignfoldersignerassociationID, fkiPaymentgatewayID, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureWidth, iEzsignsignatureHeight, iEzsignsignatureStep, eEzsignsignatureType, fkiEzsigndocumentID, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, fkiEzsignfoldersignerassociationIDValidation, bEzsignsignatureHandwritten, bEzsignsignatureReason, bEzsignsignatureRequired, eEzsignsignatureAttachmentnamesource, sEzsignsignatureAttachmentdescription, eEzsignsignatureConsultationtrigger, iEzsignsignatureValidationstep, iEzsignsignatureMaxlength, sEzsignsignatureDefaultvalue, eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage, sEzsignsignatureRegexp, eEzsignsignatureDependencyrequirement);
   }
 
   @Override
@@ -769,6 +796,7 @@ public class EzsignsignatureRequest {
     sb.append("class EzsignsignatureRequest {\n");
     sb.append("    pkiEzsignsignatureID: ").append(toIndentedString(pkiEzsignsignatureID)).append("\n");
     sb.append("    fkiEzsignfoldersignerassociationID: ").append(toIndentedString(fkiEzsignfoldersignerassociationID)).append("\n");
+    sb.append("    fkiPaymentgatewayID: ").append(toIndentedString(fkiPaymentgatewayID)).append("\n");
     sb.append("    iEzsignpagePagenumber: ").append(toIndentedString(iEzsignpagePagenumber)).append("\n");
     sb.append("    iEzsignsignatureX: ").append(toIndentedString(iEzsignsignatureX)).append("\n");
     sb.append("    iEzsignsignatureY: ").append(toIndentedString(iEzsignsignatureY)).append("\n");
@@ -818,6 +846,7 @@ public class EzsignsignatureRequest {
     openapiFields = new HashSet<String>();
     openapiFields.add("pkiEzsignsignatureID");
     openapiFields.add("fkiEzsignfoldersignerassociationID");
+    openapiFields.add("fkiPaymentgatewayID");
     openapiFields.add("iEzsignpagePagenumber");
     openapiFields.add("iEzsignsignatureX");
     openapiFields.add("iEzsignsignatureY");

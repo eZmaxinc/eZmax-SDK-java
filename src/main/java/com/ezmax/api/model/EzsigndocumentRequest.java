@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsigndocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-02-05T21:55:04.724341195Z[Etc/UTC]", comments = "Generator version: 7.11.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class EzsigndocumentRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -70,6 +70,11 @@ public class EzsigndocumentRequest {
   @javax.annotation.Nullable
   private Integer fkiEzsignfoldersignerassociationID;
 
+  public static final String SERIALIZED_NAME_FKI_EZSIGNIMPORTDOCUMENT_I_D = "fkiEzsignimportdocumentID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNIMPORTDOCUMENT_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiEzsignimportdocumentID;
+
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
   @SerializedName(SERIALIZED_NAME_FKI_LANGUAGE_I_D)
   @javax.annotation.Nonnull
@@ -81,6 +86,8 @@ public class EzsigndocumentRequest {
   @JsonAdapter(EEzsigndocumentSourceEnum.Adapter.class)
   public enum EEzsigndocumentSourceEnum {
     BASE64("Base64"),
+    
+    EZSIGNIMPORTDOCUMENT("Ezsignimportdocument"),
     
     EZSIGNTEMPLATE("Ezsigntemplate"),
     
@@ -380,6 +387,27 @@ public class EzsigndocumentRequest {
   }
 
 
+  public EzsigndocumentRequest fkiEzsignimportdocumentID(@javax.annotation.Nullable Integer fkiEzsignimportdocumentID) {
+    this.fkiEzsignimportdocumentID = fkiEzsignimportdocumentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignimportdocument
+   * minimum: 0
+   * maximum: 16777215
+   * @return fkiEzsignimportdocumentID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsignimportdocumentID() {
+    return fkiEzsignimportdocumentID;
+  }
+
+  public void setFkiEzsignimportdocumentID(@javax.annotation.Nullable Integer fkiEzsignimportdocumentID) {
+    this.fkiEzsignimportdocumentID = fkiEzsignimportdocumentID;
+  }
+
+
   public EzsigndocumentRequest fkiLanguageID(@javax.annotation.Nonnull Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
@@ -605,6 +633,7 @@ public class EzsigndocumentRequest {
         Objects.equals(this.fkiEzsignfolderID, ezsigndocumentRequest.fkiEzsignfolderID) &&
         Objects.equals(this.fkiEzsigntemplateID, ezsigndocumentRequest.fkiEzsigntemplateID) &&
         Objects.equals(this.fkiEzsignfoldersignerassociationID, ezsigndocumentRequest.fkiEzsignfoldersignerassociationID) &&
+        Objects.equals(this.fkiEzsignimportdocumentID, ezsigndocumentRequest.fkiEzsignimportdocumentID) &&
         Objects.equals(this.fkiLanguageID, ezsigndocumentRequest.fkiLanguageID) &&
         Objects.equals(this.eEzsigndocumentSource, ezsigndocumentRequest.eEzsigndocumentSource) &&
         Objects.equals(this.eEzsigndocumentFormat, ezsigndocumentRequest.eEzsigndocumentFormat) &&
@@ -620,7 +649,7 @@ public class EzsigndocumentRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsigntemplateID, fkiEzsignfoldersignerassociationID, fkiLanguageID, eEzsigndocumentSource, eEzsigndocumentFormat, Arrays.hashCode(sEzsigndocumentBase64), sEzsigndocumentUrl, bEzsigndocumentForcerepair, sEzsigndocumentPassword, eEzsigndocumentForm, dtEzsigndocumentDuedate, sEzsigndocumentName, sEzsigndocumentExternalid);
+    return Objects.hash(pkiEzsigndocumentID, fkiEzsignfolderID, fkiEzsigntemplateID, fkiEzsignfoldersignerassociationID, fkiEzsignimportdocumentID, fkiLanguageID, eEzsigndocumentSource, eEzsigndocumentFormat, Arrays.hashCode(sEzsigndocumentBase64), sEzsigndocumentUrl, bEzsigndocumentForcerepair, sEzsigndocumentPassword, eEzsigndocumentForm, dtEzsigndocumentDuedate, sEzsigndocumentName, sEzsigndocumentExternalid);
   }
 
   @Override
@@ -631,6 +660,7 @@ public class EzsigndocumentRequest {
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
     sb.append("    fkiEzsigntemplateID: ").append(toIndentedString(fkiEzsigntemplateID)).append("\n");
     sb.append("    fkiEzsignfoldersignerassociationID: ").append(toIndentedString(fkiEzsignfoldersignerassociationID)).append("\n");
+    sb.append("    fkiEzsignimportdocumentID: ").append(toIndentedString(fkiEzsignimportdocumentID)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
     sb.append("    eEzsigndocumentSource: ").append(toIndentedString(eEzsigndocumentSource)).append("\n");
     sb.append("    eEzsigndocumentFormat: ").append(toIndentedString(eEzsigndocumentFormat)).append("\n");
@@ -668,6 +698,7 @@ public class EzsigndocumentRequest {
     openapiFields.add("fkiEzsignfolderID");
     openapiFields.add("fkiEzsigntemplateID");
     openapiFields.add("fkiEzsignfoldersignerassociationID");
+    openapiFields.add("fkiEzsignimportdocumentID");
     openapiFields.add("fkiLanguageID");
     openapiFields.add("eEzsigndocumentSource");
     openapiFields.add("eEzsigndocumentFormat");

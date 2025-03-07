@@ -13,6 +13,7 @@ A section in a Report. Each Reportsection shares Reportcolumns disposition with 
 |**eReportsectionHorizontalalignment** | **EnumHorizontalalignment** |  |  |
 |**iReportsectionColumncount** | **Integer** | The number of Reportcolumns in the Reportsection |  |
 |**iReportsectionWidth** | **Integer** | The combined width of all the Reportcolumns in the Reportsection |  |
+|**sReportsectionTitle** | **String** | The title of this Reportsection |  [optional] |
 
 
 
