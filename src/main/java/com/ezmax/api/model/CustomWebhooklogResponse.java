@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A custom Webhooklog object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T19:20:13.445471985Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class CustomWebhooklogResponse {
   public static final String SERIALIZED_NAME_DT_WEBHOOKLOG_DATE = "dtWebhooklogDate";
   @SerializedName(SERIALIZED_NAME_DT_WEBHOOKLOG_DATE)

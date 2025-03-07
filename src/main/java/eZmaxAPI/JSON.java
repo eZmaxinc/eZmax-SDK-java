@@ -512,9 +512,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzdoctemplatetypeAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzdoctemplatetypeGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxcasePatchObjectV1Request.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxcasePatchObjectV1Response.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxcaseRequestPatch.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxinvoicingAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxinvoicingGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxinvoicingGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());

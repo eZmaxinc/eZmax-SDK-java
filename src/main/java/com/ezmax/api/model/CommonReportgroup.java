@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A group of reports  Each Reportgroup is for a specific recipient or for a specific context.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T15:28:42.505152975Z[Etc/UTC]", comments = "Generator version: 7.12.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-03-07T19:20:13.445471985Z[Etc/UTC]", comments = "Generator version: 7.12.0")
 public class CommonReportgroup {
   public static final String SERIALIZED_NAME_A_OBJ_REPORT = "a_objReport";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORT)

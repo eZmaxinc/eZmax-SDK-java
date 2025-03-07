@@ -436,9 +436,6 @@ docs/EzdoctemplatefieldtypecategoryGetAutocompleteV2ResponseMPayload.md
 docs/EzdoctemplatetypeAutocompleteElementResponse.md
 docs/EzdoctemplatetypeGetAutocompleteV2Response.md
 docs/EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.md
-docs/EzmaxcasePatchObjectV1Request.md
-docs/EzmaxcasePatchObjectV1Response.md
-docs/EzmaxcaseRequestPatch.md
 docs/EzmaxinvoicingAutocompleteElementResponse.md
 docs/EzmaxinvoicingGetAutocompleteV2Response.md
 docs/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.md
@@ -1361,7 +1358,6 @@ docs/ObjectEmailtypeApi.md
 docs/ObjectEzdoctemplatedocumentApi.md
 docs/ObjectEzdoctemplatefieldtypecategoryApi.md
 docs/ObjectEzdoctemplatetypeApi.md
-docs/ObjectEzmaxcaseApi.md
 docs/ObjectEzmaxinvoicingApi.md
 docs/ObjectEzmaxproductApi.md
 docs/ObjectEzsignannotationApi.md
@@ -1870,7 +1866,6 @@ src/main/java/com/ezmax/api/ObjectEmailtypeApi.java
 src/main/java/com/ezmax/api/ObjectEzdoctemplatedocumentApi.java
 src/main/java/com/ezmax/api/ObjectEzdoctemplatefieldtypecategoryApi.java
 src/main/java/com/ezmax/api/ObjectEzdoctemplatetypeApi.java
-src/main/java/com/ezmax/api/ObjectEzmaxcaseApi.java
 src/main/java/com/ezmax/api/ObjectEzmaxinvoicingApi.java
 src/main/java/com/ezmax/api/ObjectEzmaxproductApi.java
 src/main/java/com/ezmax/api/ObjectEzsignannotationApi.java
@@ -2382,9 +2377,6 @@ src/main/java/com/ezmax/api/model/EzdoctemplatefieldtypecategoryGetAutocompleteV
 src/main/java/com/ezmax/api/model/EzdoctemplatetypeAutocompleteElementResponse.java
 src/main/java/com/ezmax/api/model/EzdoctemplatetypeGetAutocompleteV2Response.java
 src/main/java/com/ezmax/api/model/EzdoctemplatetypeGetAutocompleteV2ResponseMPayload.java
-src/main/java/com/ezmax/api/model/EzmaxcasePatchObjectV1Request.java
-src/main/java/com/ezmax/api/model/EzmaxcasePatchObjectV1Response.java
-src/main/java/com/ezmax/api/model/EzmaxcaseRequestPatch.java
 src/main/java/com/ezmax/api/model/EzmaxinvoicingAutocompleteElementResponse.java
 src/main/java/com/ezmax/api/model/EzmaxinvoicingGetAutocompleteV2Response.java
 src/main/java/com/ezmax/api/model/EzmaxinvoicingGetAutocompleteV2ResponseMPayload.java
