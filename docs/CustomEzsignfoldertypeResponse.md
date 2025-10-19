@@ -25,6 +25,7 @@ A Custom Ezsignfoldertype Object
 |**iEzsignfoldertypeDeadlinedays** | **Integer** | The number of days to get all Ezsignsignatures |  [optional] |
 |**iEzsignfoldertypeFontsizeannotation** | **Integer** | Font size for annotations |  [optional] |
 |**iEzsignfoldertypeFontsizeformfield** | **Integer** | Font size for form fields |  [optional] |
+|**eEzsignfoldertypeDocumentmerge** | **FieldEEzsignfoldertypeDocumentmerge** |  |  [optional] |
 
 
 

@@ -13,6 +13,7 @@ A Ezsignfoldersignerassociation->User Object and children to create a complete s
 |**sUserFirstname** | **String** | The first name of the user |  |
 |**sUserLastname** | **String** | The last name of the user |  |
 |**sEmailAddress** | **String** | The email address. |  |
+|**eUserType** | **FieldEUserType** |  |  |
 
 
 

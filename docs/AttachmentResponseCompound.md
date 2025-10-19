@@ -62,7 +62,7 @@ A Attachment Object
 |**eAttachmentType** | **FieldEAttachmentType** |  |  |
 |**iAttachmentSize** | **Integer** | The size of the Attachment |  |
 |**iAttachmentEDMmoduleflag** | **Integer** | The edmmoduleflag of the Attachment |  [optional] |
-|**sAttachmentMD5** | **String** | The md5 of the Attachment |  |
+|**sAttachmentMD5** | **String** | The MD5 of the Attachment |  |
 |**bAttachmentDeleted** | **Boolean** | Whether if it&#39;s deleted |  |
 |**bAttachmentValid** | **Boolean** | Whether if it&#39;s valid |  |
 |**eAttachmentVerified** | **FieldEAttachmentVerified** |  |  |

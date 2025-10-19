@@ -8,6 +8,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**tranqcontractGetCommunicationListV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationListV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationList | Retrieve Communication list |
 | [**tranqcontractGetCommunicationrecipientsV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationrecipientsV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationrecipients | Retrieve Tranqcontract&#39;s Communicationrecipient |
 | [**tranqcontractGetCommunicationsendersV1**](ObjectTranqcontractApi.md#tranqcontractGetCommunicationsendersV1) | **GET** /1/object/tranqcontract/{pkiTranqcontractID}/getCommunicationsenders | Retrieve Tranqcontract&#39;s Communicationsender |
+| [**tranqcontractImportIntoEDMV1**](ObjectTranqcontractApi.md#tranqcontractImportIntoEDMV1) | **POST** /1/object/tranqcontract/{pkiTranqcontractID}/importIntoEDM | Import attachments into the Tranqcontract |
 
 
 <a id="tranqcontractGetCommunicationCountV1"></a>
@@ -282,6 +283,78 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+<a id="tranqcontractImportIntoEDMV1"></a>
+# **tranqcontractImportIntoEDMV1**
+> TranqcontractImportIntoEDMV1Response tranqcontractImportIntoEDMV1(pkiTranqcontractID, tranqcontractImportIntoEDMV1Request)
+
+Import attachments into the Tranqcontract
+
+
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectTranqcontractApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectTranqcontractApi apiInstance = new ObjectTranqcontractApi(defaultClient);
+    Integer pkiTranqcontractID = 56; // Integer | 
+    TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request = new TranqcontractImportIntoEDMV1Request(); // TranqcontractImportIntoEDMV1Request | 
+    try {
+      TranqcontractImportIntoEDMV1Response result = apiInstance.tranqcontractImportIntoEDMV1(pkiTranqcontractID, tranqcontractImportIntoEDMV1Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectTranqcontractApi#tranqcontractImportIntoEDMV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiTranqcontractID** | **Integer**|  | |
+| **tranqcontractImportIntoEDMV1Request** | [**TranqcontractImportIntoEDMV1Request**](TranqcontractImportIntoEDMV1Request.md)|  | |
+
+### Return type
+
+[**TranqcontractImportIntoEDMV1Response**](TranqcontractImportIntoEDMV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

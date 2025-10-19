@@ -13,6 +13,8 @@
 
 * `DECLINED_TO_SIGN` (value: `"DeclinedToSign"`)
 
+* `PENDING_PREMATURELY_ENDED` (value: `"PendingPrematurelyEnded"`)
+
 * `PREMATURELY_ENDED` (value: `"PrematurelyEnded"`)
 
 * `PENDING_COMPLETION` (value: `"PendingCompletion"`)

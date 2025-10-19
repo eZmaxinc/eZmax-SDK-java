@@ -2,7 +2,7 @@
 
 # EzsigndocumentGetEzsignsignaturesV1ResponseMPayload
 
-Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsignsignatures
+Payload for GET /1/object/ezsigndocument/{pkiEzsigndocumentID}/getEzsignsignatures
 
 ## Properties
 

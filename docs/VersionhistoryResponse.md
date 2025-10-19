@@ -15,8 +15,8 @@ A Versionhistory Object
 |**sModulesectionNameX** | **String** | The Name of the Modulesection in the language of the requester |  [optional] |
 |**eVersionhistoryUsertype** | **FieldEVersionhistoryUsertype** |  |  [optional] |
 |**objVersionhistoryDetail** | [**MultilingualVersionhistoryDetail**](MultilingualVersionhistoryDetail.md) |  |  |
-|**dtVersionhistoryDate** | **String** | The date  at which the Versionhistory was published or should be published |  |
-|**dtVersionhistoryDateend** | **String** | The date  at which the Versionhistory will no longer be visible |  [optional] |
+|**dtVersionhistoryDate** | **String** | The date at which the Versionhistory was published or should be published |  |
+|**dtVersionhistoryDateend** | **String** | The date at which the Versionhistory will no longer be visible |  [optional] |
 |**eVersionhistoryType** | **FieldEVersionhistoryType** |  |  |
 |**bVersionhistoryDraft** | **Boolean** | Whether the Versionhistory is published or still a draft |  |
 

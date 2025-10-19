@@ -6,14 +6,18 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 |------------- | ------------- | -------------|
 | [**ezsignbulksendCreateEzsignbulksendtransmissionV2**](ObjectEzsignbulksendApi.md#ezsignbulksendCreateEzsignbulksendtransmissionV2) | **POST** /2/object/ezsignbulksend/{pkiEzsignbulksendID}/createEzsignbulksendtransmission | Create a new Ezsignbulksendtransmission in the Ezsignbulksend |
 | [**ezsignbulksendCreateObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendCreateObjectV1) | **POST** /1/object/ezsignbulksend | Create a new Ezsignbulksend |
+| [**ezsignbulksendCreateObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendCreateObjectV2) | **POST** /2/object/ezsignbulksend | Create a new Ezsignbulksend |
 | [**ezsignbulksendDeleteObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendDeleteObjectV1) | **DELETE** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Delete an existing Ezsignbulksend |
 | [**ezsignbulksendEditObjectV1**](ObjectEzsignbulksendApi.md#ezsignbulksendEditObjectV1) | **PUT** /1/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend |
+| [**ezsignbulksendEditObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendEditObjectV2) | **PUT** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Edit an existing Ezsignbulksend |
+| [**ezsignbulksendGetBatchFileV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetBatchFileV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getBatchFile | Retrieve file to download documents in batch |
 | [**ezsignbulksendGetCsvTemplateV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetCsvTemplateV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getCsvTemplate | Retrieve an existing Ezsignbulksend&#39;s empty Csv template |
 | [**ezsignbulksendGetEzsignbulksendtransmissionsV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetEzsignbulksendtransmissionsV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignbulksendtransmissions | Retrieve an existing Ezsignbulksend&#39;s Ezsignbulksendtransmissions |
 | [**ezsignbulksendGetEzsignsignaturesAutomaticV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksend&#39;s automatic Ezsignsignatures |
 | [**ezsignbulksendGetFormsDataV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetFormsDataV1) | **GET** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getFormsData | Retrieve an existing Ezsignbulksend&#39;s forms data |
 | [**ezsignbulksendGetListV1**](ObjectEzsignbulksendApi.md#ezsignbulksendGetListV1) | **GET** /1/object/ezsignbulksend/getList | Retrieve Ezsignbulksend list |
 | [**ezsignbulksendGetObjectV2**](ObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV2) | **GET** /2/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend |
+| [**ezsignbulksendGetObjectV3**](ObjectEzsignbulksendApi.md#ezsignbulksendGetObjectV3) | **GET** /3/object/ezsignbulksend/{pkiEzsignbulksendID} | Retrieve an existing Ezsignbulksend |
 | [**ezsignbulksendReorderV1**](ObjectEzsignbulksendApi.md#ezsignbulksendReorderV1) | **POST** /1/object/ezsignbulksend/{pkiEzsignbulksendID}/reorder | Reorder Ezsignbulksenddocumentmappings in the Ezsignbulksend |
 
 
@@ -142,6 +146,75 @@ public class Example {
 ### Return type
 
 [**EzsignbulksendCreateObjectV1Response**](EzsignbulksendCreateObjectV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **201** | Successful response |  -  |
+
+<a id="ezsignbulksendCreateObjectV2"></a>
+# **ezsignbulksendCreateObjectV2**
+> EzsignbulksendCreateObjectV2Response ezsignbulksendCreateObjectV2(ezsignbulksendCreateObjectV2Request)
+
+Create a new Ezsignbulksend
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsignbulksendApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi(defaultClient);
+    EzsignbulksendCreateObjectV2Request ezsignbulksendCreateObjectV2Request = new EzsignbulksendCreateObjectV2Request(); // EzsignbulksendCreateObjectV2Request | 
+    try {
+      EzsignbulksendCreateObjectV2Response result = apiInstance.ezsignbulksendCreateObjectV2(ezsignbulksendCreateObjectV2Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendCreateObjectV2");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ezsignbulksendCreateObjectV2Request** | [**EzsignbulksendCreateObjectV2Request**](EzsignbulksendCreateObjectV2Request.md)|  | |
+
+### Return type
+
+[**EzsignbulksendCreateObjectV2Response**](EzsignbulksendCreateObjectV2Response.md)
 
 ### Authorization
 
@@ -299,6 +372,157 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+<a id="ezsignbulksendEditObjectV2"></a>
+# **ezsignbulksendEditObjectV2**
+> EzsignbulksendEditObjectV2Response ezsignbulksendEditObjectV2(pkiEzsignbulksendID, ezsignbulksendEditObjectV2Request)
+
+Edit an existing Ezsignbulksend
+
+
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsignbulksendApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi(defaultClient);
+    Integer pkiEzsignbulksendID = 56; // Integer | 
+    EzsignbulksendEditObjectV2Request ezsignbulksendEditObjectV2Request = new EzsignbulksendEditObjectV2Request(); // EzsignbulksendEditObjectV2Request | 
+    try {
+      EzsignbulksendEditObjectV2Response result = apiInstance.ezsignbulksendEditObjectV2(pkiEzsignbulksendID, ezsignbulksendEditObjectV2Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendEditObjectV2");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsignbulksendID** | **Integer**|  | |
+| **ezsignbulksendEditObjectV2Request** | [**EzsignbulksendEditObjectV2Request**](EzsignbulksendEditObjectV2Request.md)|  | |
+
+### Return type
+
+[**EzsignbulksendEditObjectV2Response**](EzsignbulksendEditObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+<a id="ezsignbulksendGetBatchFileV1"></a>
+# **ezsignbulksendGetBatchFileV1**
+> File ezsignbulksendGetBatchFileV1(pkiEzsignbulksendID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof)
+
+Retrieve file to download documents in batch
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsignbulksendApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi(defaultClient);
+    Integer pkiEzsignbulksendID = 56; // Integer | 
+    Boolean bIncludeSigned = true; // Boolean | Include final document once all signatures were applied
+    Boolean bIncludeAttachment = true; // Boolean | Include attached files in signatures
+    Boolean bIncludeProofdocument = true; // Boolean | Include the evidence report
+    Boolean bIncludeProof = true; // Boolean | include the complete evidence archive including all of the above and more
+    try {
+      File result = apiInstance.ezsignbulksendGetBatchFileV1(pkiEzsignbulksendID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendGetBatchFileV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsignbulksendID** | **Integer**|  | |
+| **bIncludeSigned** | **Boolean**| Include final document once all signatures were applied | [optional] |
+| **bIncludeAttachment** | **Boolean**| Include attached files in signatures | [optional] |
+| **bIncludeProofdocument** | **Boolean**| Include the evidence report | [optional] |
+| **bIncludeProof** | **Boolean**| include the complete evidence archive including all of the above and more | [optional] |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/xml, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
 <a id="ezsignbulksendGetCsvTemplateV1"></a>
@@ -719,6 +943,76 @@ public class Example {
 ### Return type
 
 [**EzsignbulksendGetObjectV2Response**](EzsignbulksendGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+<a id="ezsignbulksendGetObjectV3"></a>
+# **ezsignbulksendGetObjectV3**
+> EzsignbulksendGetObjectV3Response ezsignbulksendGetObjectV3(pkiEzsignbulksendID)
+
+Retrieve an existing Ezsignbulksend
+
+
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsignbulksendApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsignbulksendApi apiInstance = new ObjectEzsignbulksendApi(defaultClient);
+    Integer pkiEzsignbulksendID = 56; // Integer | 
+    try {
+      EzsignbulksendGetObjectV3Response result = apiInstance.ezsignbulksendGetObjectV3(pkiEzsignbulksendID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsignbulksendApi#ezsignbulksendGetObjectV3");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsignbulksendID** | **Integer**|  | |
+
+### Return type
+
+[**EzsignbulksendGetObjectV3Response**](EzsignbulksendGetObjectV3Response.md)
 
 ### Authorization
 

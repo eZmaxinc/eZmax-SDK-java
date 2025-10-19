@@ -14,6 +14,7 @@ An Ezsignfolder List Element
 |**sEzsignfoldertypeNameX** | **String** | The name of the Ezsignfoldertype in the language of the requester |  |
 |**sEzsignfolderDescription** | **String** | The description of the Ezsignfolder |  |
 |**eEzsignfolderStep** | **FieldEEzsignfolderStep** |  |  |
+|**eEzsignfolderCompletion** | **FieldEEzsignfolderCompletion** |  |  |
 |**dtCreatedDate** | **String** | The date and time at which the object was created |  |
 |**dtEzsignfolderDelayedsenddate** | **String** | The date and time at which the Ezsignfolder will be sent in the future. |  [optional] |
 |**dtEzsignfolderSentdate** | **String** | The date and time at which the Ezsignfolder was sent the last time. |  [optional] |

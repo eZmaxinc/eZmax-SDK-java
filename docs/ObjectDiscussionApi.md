@@ -4,12 +4,82 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**discussionChatV1**](ObjectDiscussionApi.md#discussionChatV1) | **POST** /1/object/discussion/chat | Have a Discussion with the AI Chatbot |
 | [**discussionCreateObjectV1**](ObjectDiscussionApi.md#discussionCreateObjectV1) | **POST** /1/object/discussion | Create a new Discussion |
 | [**discussionDeleteObjectV1**](ObjectDiscussionApi.md#discussionDeleteObjectV1) | **DELETE** /1/object/discussion/{pkiDiscussionID} | Delete an existing Discussion |
 | [**discussionGetObjectV2**](ObjectDiscussionApi.md#discussionGetObjectV2) | **GET** /2/object/discussion/{pkiDiscussionID} | Retrieve an existing Discussion |
 | [**discussionPatchObjectV1**](ObjectDiscussionApi.md#discussionPatchObjectV1) | **PATCH** /1/object/discussion/{pkiDiscussionID} | Patch an existing Discussion |
 | [**discussionUpdateDiscussionreadstatusV1**](ObjectDiscussionApi.md#discussionUpdateDiscussionreadstatusV1) | **POST** /1/object/discussion/{pkiDiscussionID}/updateDiscussionreadstatus | Update the read status of the discussion |
 
+
+<a id="discussionChatV1"></a>
+# **discussionChatV1**
+> DiscussionChatV1200Response discussionChatV1(discussionChatV1Request)
+
+Have a Discussion with the AI Chatbot
+
+The endpoint allows to create one or many elements at once.
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectDiscussionApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectDiscussionApi apiInstance = new ObjectDiscussionApi(defaultClient);
+    DiscussionChatV1Request discussionChatV1Request = new DiscussionChatV1Request(); // DiscussionChatV1Request | 
+    try {
+      DiscussionChatV1200Response result = apiInstance.discussionChatV1(discussionChatV1Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectDiscussionApi#discussionChatV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **discussionChatV1Request** | [**DiscussionChatV1Request**](DiscussionChatV1Request.md)|  | |
+
+### Return type
+
+[**DiscussionChatV1200Response**](DiscussionChatV1200Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: text/event-stream
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
 
 <a id="discussionCreateObjectV1"></a>
 # **discussionCreateObjectV1**

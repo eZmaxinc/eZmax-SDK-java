@@ -6,6 +6,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 |------------- | ------------- | -------------|
 | [**domainCreateObjectV1**](ObjectDomainApi.md#domainCreateObjectV1) | **POST** /1/object/domain | Create a new Domain |
 | [**domainDeleteObjectV1**](ObjectDomainApi.md#domainDeleteObjectV1) | **DELETE** /1/object/domain/{pkiDomainID} | Delete an existing Domain |
+| [**domainGetAutocompleteV2**](ObjectDomainApi.md#domainGetAutocompleteV2) | **GET** /2/object/domain/getAutocomplete/{sSelector} | Retrieve Domain and IDs |
 | [**domainGetListV1**](ObjectDomainApi.md#domainGetListV1) | **GET** /1/object/domain/getList | Retrieve Domain list |
 | [**domainGetObjectV2**](ObjectDomainApi.md#domainGetObjectV2) | **GET** /2/object/domain/{pkiDomainID} | Retrieve an existing Domain |
 
@@ -148,6 +149,81 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+<a id="domainGetAutocompleteV2"></a>
+# **domainGetAutocompleteV2**
+> DomainGetAutocompleteV2Response domainGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+
+Retrieve Domain and IDs
+
+Get the list of Domains to be used in a dropdown or autocomplete control.
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectDomainApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectDomainApi apiInstance = new ObjectDomainApi(defaultClient);
+    String sSelector = "All"; // String | The type of Domain to return
+    String eFilterActive = "All"; // String | Specify which results we want to display.
+    String sQuery = "sQuery_example"; // String | Allow to filter the returned results
+    HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
+    try {
+      DomainGetAutocompleteV2Response result = apiInstance.domainGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectDomainApi#domainGetAutocompleteV2");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sSelector** | **String**| The type of Domain to return | [enum: All, ValidEmail] |
+| **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
+| **sQuery** | **String**| Allow to filter the returned results | [optional] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+
+### Return type
+
+[**DomainGetAutocompleteV2Response**](DomainGetAutocompleteV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
 
 <a id="domainGetListV1"></a>
 # **domainGetListV1**

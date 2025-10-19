@@ -11,6 +11,7 @@ A row in a Reportsubsectionpart
 |**aObjReportcell** | [**List&lt;CommonReportcell&gt;**](CommonReportcell.md) |  |  |
 |**objVariableobject** | **Map&lt;String, Object&gt;** | A Variable object without predefined property names |  |
 |**iReportrowHeight** | **Integer** | The reportrow height in pixels |  |
+|**objReportcellstyleCustom** | [**CommonReportcellstylecustom**](CommonReportcellstylecustom.md) |  |  [optional] |
 
 
 

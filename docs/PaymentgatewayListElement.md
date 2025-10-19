@@ -12,6 +12,7 @@ A Paymentgateway List Element
 |**fkiCreditcardmerchantID** | **Integer** | The unique ID of the Creditcardmerchant |  |
 |**ePaymentgatewayProcessor** | **FieldEPaymentgatewayProcessor** |  |  |
 |**sPaymentgatewayDescriptionX** | **String** | The description of the Paymentgateway in the language of the requester |  |
+|**bPaymentgatewayIsactive** | **Boolean** | Whether the Paymentgateway is active or not |  |
 
 
 

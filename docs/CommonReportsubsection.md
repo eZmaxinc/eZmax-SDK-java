@@ -8,6 +8,9 @@ A Subsection in a Reportsection. It contains 3 Reportsubsectionparts (Header, Bo
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**aObjReportcolumn** | [**List&lt;CommonReportcolumn&gt;**](CommonReportcolumn.md) |  |  |
+|**iReportsubsectionColumncount** | **Integer** | The number of Reportcolumns in the Reportsection |  |
+|**iReportsubsectionWidth** | **Integer** | The combined width of all the Reportcolumns in the Reportsection |  |
 |**objReportsubsectionpartHeader** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  |  |
 |**objReportsubsectionpartBody** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  |  |
 |**objReportsubsectionpartFooter** | [**CommonReportsubsectionpart**](CommonReportsubsectionpart.md) |  |  |

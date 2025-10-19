@@ -4,11 +4,90 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**ezsignbulksendtransmissionGetBatchFileV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetBatchFileV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile | Retrieve file to download documents in batch |
 | [**ezsignbulksendtransmissionGetCsvErrorsV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetCsvErrorsV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getCsvErrors | Retrieve an existing Ezsignbulksendtransmission&#39;s Csv containing errors |
 | [**ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getEzsignsignaturesAutomatic | Retrieve an existing Ezsignbulksendtransmission&#39;s automatic Ezsignsignatures |
 | [**ezsignbulksendtransmissionGetFormsDataV1**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetFormsDataV1) | **GET** /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getFormsData | Retrieve an existing Ezsignbulksendtransmission&#39;s forms data |
 | [**ezsignbulksendtransmissionGetObjectV2**](ObjectEzsignbulksendtransmissionApi.md#ezsignbulksendtransmissionGetObjectV2) | **GET** /2/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID} | Retrieve an existing Ezsignbulksendtransmission |
 
+
+<a id="ezsignbulksendtransmissionGetBatchFileV1"></a>
+# **ezsignbulksendtransmissionGetBatchFileV1**
+> File ezsignbulksendtransmissionGetBatchFileV1(pkiEzsignbulksendtransmissionID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof)
+
+Retrieve file to download documents in batch
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsignbulksendtransmissionApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsignbulksendtransmissionApi apiInstance = new ObjectEzsignbulksendtransmissionApi(defaultClient);
+    Integer pkiEzsignbulksendtransmissionID = 56; // Integer | 
+    Boolean bIncludeSigned = true; // Boolean | Include final document once all signatures were applied
+    Boolean bIncludeAttachment = true; // Boolean | Include attached files in signatures
+    Boolean bIncludeProofdocument = true; // Boolean | Include the evidence report
+    Boolean bIncludeProof = true; // Boolean | include the complete evidence archive including all of the above and more
+    try {
+      File result = apiInstance.ezsignbulksendtransmissionGetBatchFileV1(pkiEzsignbulksendtransmissionID, bIncludeSigned, bIncludeAttachment, bIncludeProofdocument, bIncludeProof);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsignbulksendtransmissionApi#ezsignbulksendtransmissionGetBatchFileV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsignbulksendtransmissionID** | **Integer**|  | |
+| **bIncludeSigned** | **Boolean**| Include final document once all signatures were applied | [optional] |
+| **bIncludeAttachment** | **Boolean**| Include attached files in signatures | [optional] |
+| **bIncludeProofdocument** | **Boolean**| Include the evidence report | [optional] |
+| **bIncludeProof** | **Boolean**| include the complete evidence archive including all of the above and more | [optional] |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/xml, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
 <a id="ezsignbulksendtransmissionGetCsvErrorsV1"></a>
 # **ezsignbulksendtransmissionGetCsvErrorsV1**
