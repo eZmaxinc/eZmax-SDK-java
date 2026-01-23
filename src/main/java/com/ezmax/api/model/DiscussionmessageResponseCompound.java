@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.FieldEDiscussionmessageStatus;
 import com.google.gson.TypeAdapter;
@@ -45,14 +44,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Discussionmessage Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class DiscussionmessageResponseCompound {
   public static final String SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D = "pkiDiscussionmessageID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSIONMESSAGE_I_D)
@@ -356,7 +354,7 @@ public class DiscussionmessageResponseCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!DiscussionmessageResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in DiscussionmessageResponseCompound is not found in the empty JSON string", DiscussionmessageResponseCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in DiscussionmessageResponseCompound is not found in the empty JSON string", DiscussionmessageResponseCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -364,27 +362,27 @@ public class DiscussionmessageResponseCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!DiscussionmessageResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DiscussionmessageResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DiscussionmessageResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : DiscussionmessageResponseCompound.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `eDiscussionmessageStatus`
       FieldEDiscussionmessageStatus.validateJsonElement(jsonObj.get("eDiscussionmessageStatus"));
       if (!jsonObj.get("tDiscussionmessageContent").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tDiscussionmessageContent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tDiscussionmessageContent").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `tDiscussionmessageContent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tDiscussionmessageContent").toString()));
       }
       if (!jsonObj.get("sDiscussionmessageCreatorname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sDiscussionmessageCreatorname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDiscussionmessageCreatorname").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sDiscussionmessageCreatorname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDiscussionmessageCreatorname").toString()));
       }
       if ((jsonObj.get("sDiscussionmessageActionrequiredname") != null && !jsonObj.get("sDiscussionmessageActionrequiredname").isJsonNull()) && !jsonObj.get("sDiscussionmessageActionrequiredname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sDiscussionmessageActionrequiredname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDiscussionmessageActionrequiredname").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sDiscussionmessageActionrequiredname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDiscussionmessageActionrequiredname").toString()));
       }
       // validate the required field `objAudit`
       CommonAudit.validateJsonElement(jsonObj.get("objAudit"));

@@ -14,11 +14,9 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -28,6 +26,7 @@ import com.google.gson.stream.JsonWriter;
 /**
  * Frequency at which reminders will be sent to signers that haven&#39;t signed the documents
  */
+@Deprecated
 @JsonAdapter(FieldEEzsignfolderSendreminderfrequency.Adapter.class)
 public enum FieldEEzsignfolderSendreminderfrequency {
   

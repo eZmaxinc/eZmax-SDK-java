@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.EzmaxinvoicingsummaryexternaldetailResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -46,14 +45,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Ezmaxinvoicingsummaryexternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzmaxinvoicingsummaryexternalResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNAL_I_D = "pkiEzmaxinvoicingsummaryexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYEXTERNAL_I_D)
@@ -282,7 +280,7 @@ public class EzmaxinvoicingsummaryexternalResponseCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzmaxinvoicingsummaryexternalResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzmaxinvoicingsummaryexternalResponseCompound is not found in the empty JSON string", EzmaxinvoicingsummaryexternalResponseCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzmaxinvoicingsummaryexternalResponseCompound is not found in the empty JSON string", EzmaxinvoicingsummaryexternalResponseCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -290,26 +288,26 @@ public class EzmaxinvoicingsummaryexternalResponseCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzmaxinvoicingsummaryexternalResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzmaxinvoicingsummaryexternalResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzmaxinvoicingsummaryexternalResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzmaxinvoicingsummaryexternalResponseCompound.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sBillingentityexternalDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sBillingentityexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityexternalDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sBillingentityexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityexternalDescription").toString()));
       }
       if (!jsonObj.get("sEzmaxinvoicingsummaryexternalDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzmaxinvoicingsummaryexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzmaxinvoicingsummaryexternalDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzmaxinvoicingsummaryexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzmaxinvoicingsummaryexternalDescription").toString()));
       }
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzmaxinvoicingsummaryexternaldetail").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objEzmaxinvoicingsummaryexternaldetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryexternaldetail").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingsummaryexternaldetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryexternaldetail").toString()));
       }
 
       JsonArray jsonArrayaObjEzmaxinvoicingsummaryexternaldetail = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryexternaldetail");

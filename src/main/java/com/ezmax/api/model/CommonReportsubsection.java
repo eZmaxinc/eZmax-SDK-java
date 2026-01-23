@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.CommonReportcolumn;
 import com.ezmax.api.model.CommonReportsubsectionpart;
 import com.google.gson.TypeAdapter;
@@ -47,14 +46,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Subsection in a Reportsection. It contains 3 Reportsubsectionparts (Header, Body and Footer) 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class CommonReportsubsection {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTCOLUMN = "a_objReportcolumn";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTCOLUMN)
@@ -306,7 +304,7 @@ public class CommonReportsubsection {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommonReportsubsection.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in CommonReportsubsection is not found in the empty JSON string", CommonReportsubsection.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in CommonReportsubsection is not found in the empty JSON string", CommonReportsubsection.openapiRequiredFields.toString()));
         }
       }
 
@@ -314,20 +312,20 @@ public class CommonReportsubsection {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CommonReportsubsection.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CommonReportsubsection` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CommonReportsubsection` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CommonReportsubsection.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("a_objReportcolumn").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objReportcolumn` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportcolumn").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objReportcolumn` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportcolumn").toString()));
       }
 
       JsonArray jsonArrayaObjReportcolumn = jsonObj.getAsJsonArray("a_objReportcolumn");
@@ -342,7 +340,7 @@ public class CommonReportsubsection {
       // validate the required field `objReportsubsectionpartFooter`
       CommonReportsubsectionpart.validateJsonElement(jsonObj.get("objReportsubsectionpartFooter"));
       if ((jsonObj.get("sReportsubsectionTitle") != null && !jsonObj.get("sReportsubsectionTitle").isJsonNull()) && !jsonObj.get("sReportsubsectionTitle").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sReportsubsectionTitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sReportsubsectionTitle").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sReportsubsectionTitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sReportsubsectionTitle").toString()));
       }
   }
 

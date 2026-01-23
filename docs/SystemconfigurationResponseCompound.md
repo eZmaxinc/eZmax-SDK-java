@@ -11,6 +11,8 @@ A Systemconfiguration Object
 |**pkiSystemconfigurationID** | **Integer** | The unique ID of the Systemconfiguration |  |
 |**fkiSystemconfigurationtypeID** | **Integer** | The unique ID of the Systemconfigurationtype |  |
 |**fkiBrandingID** | **Integer** | The unique ID of the Branding |  [optional] |
+|**fkiTimezoneIDDefault** | **Integer** | The unique ID of the Timezone |  |
+|**sTimezoneNameDefault** | **String** | The description of the Timezone |  |
 |**sSystemconfigurationtypeDescriptionX** | **String** | The description of the Systemconfigurationtype in the language of the requester |  |
 |**eSystemconfigurationNewexternaluseraction** | **FieldESystemconfigurationNewexternaluseraction** |  |  |
 |**eSystemconfigurationLanguage1** | **FieldESystemconfigurationLanguage1** |  |  |
@@ -25,6 +27,7 @@ A Systemconfiguration Object
 |**dtSystemconfigurationReadonlyexpirationstart** | **String** | The start date where the system will be in read only |  [optional] |
 |**dtSystemconfigurationReadonlyexpirationend** | **String** | The end date where the system will be in read only |  [optional] |
 |**objBranding** | [**CustomBrandingResponse**](CustomBrandingResponse.md) |  |  [optional] |
+|**iSystemconfigurationEzsignreminderhoursend** | **Integer** | The hour we will send the eZsign reminders |  [optional] |
 
 
 

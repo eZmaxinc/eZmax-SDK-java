@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,14 +42,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * The description of the Userlogintype
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class MultilingualUserlogintypeDescription {
   public static final String SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION1 = "sUserlogintypeDescription1";
   @SerializedName(SERIALIZED_NAME_S_USERLOGINTYPE_DESCRIPTION1)
@@ -164,7 +162,7 @@ public class MultilingualUserlogintypeDescription {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!MultilingualUserlogintypeDescription.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in MultilingualUserlogintypeDescription is not found in the empty JSON string", MultilingualUserlogintypeDescription.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in MultilingualUserlogintypeDescription is not found in the empty JSON string", MultilingualUserlogintypeDescription.openapiRequiredFields.toString()));
         }
       }
 
@@ -172,15 +170,15 @@ public class MultilingualUserlogintypeDescription {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!MultilingualUserlogintypeDescription.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `MultilingualUserlogintypeDescription` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `MultilingualUserlogintypeDescription` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("sUserlogintypeDescription1") != null && !jsonObj.get("sUserlogintypeDescription1").isJsonNull()) && !jsonObj.get("sUserlogintypeDescription1").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sUserlogintypeDescription1` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserlogintypeDescription1").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sUserlogintypeDescription1` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserlogintypeDescription1").toString()));
       }
       if ((jsonObj.get("sUserlogintypeDescription2") != null && !jsonObj.get("sUserlogintypeDescription2").isJsonNull()) && !jsonObj.get("sUserlogintypeDescription2").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sUserlogintypeDescription2` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserlogintypeDescription2").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sUserlogintypeDescription2` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserlogintypeDescription2").toString()));
       }
   }
 

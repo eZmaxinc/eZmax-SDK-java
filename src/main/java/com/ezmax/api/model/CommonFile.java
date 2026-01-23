@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,14 +42,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * Object representing a file used in a request or response context 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class CommonFile {
   public static final String SERIALIZED_NAME_S_FILE_NAME = "sFileName";
   @SerializedName(SERIALIZED_NAME_S_FILE_NAME)
@@ -268,7 +266,7 @@ public class CommonFile {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommonFile.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in CommonFile is not found in the empty JSON string", CommonFile.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in CommonFile is not found in the empty JSON string", CommonFile.openapiRequiredFields.toString()));
         }
       }
 
@@ -276,25 +274,25 @@ public class CommonFile {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CommonFile.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CommonFile` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CommonFile` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CommonFile.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sFileName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sFileName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFileName").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sFileName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFileName").toString()));
       }
       if ((jsonObj.get("sFileUrl") != null && !jsonObj.get("sFileUrl").isJsonNull()) && !jsonObj.get("sFileUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sFileUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFileUrl").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sFileUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFileUrl").toString()));
       }
       if (!jsonObj.get("eFileSource").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `eFileSource` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eFileSource").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `eFileSource` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eFileSource").toString()));
       }
       // validate the required field `eFileSource`
       EFileSourceEnum.validateJsonElement(jsonObj.get("eFileSource"));

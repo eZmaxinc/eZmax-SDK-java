@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.EnumTextvalidation;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupSignerrequirement;
 import com.ezmax.api.model.FieldEEzsignformfieldgroupTooltipposition;
@@ -47,14 +46,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * An Ezsignformfieldgroup Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsignformfieldgroupResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -570,7 +568,7 @@ public class EzsignformfieldgroupResponse {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignformfieldgroupResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzsignformfieldgroupResponse is not found in the empty JSON string", EzsignformfieldgroupResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzsignformfieldgroupResponse is not found in the empty JSON string", EzsignformfieldgroupResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -578,14 +576,14 @@ public class EzsignformfieldgroupResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzsignformfieldgroupResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignformfieldgroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignformfieldgroupResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsignformfieldgroupResponse.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -596,23 +594,23 @@ public class EzsignformfieldgroupResponse {
         FieldEEzsignformfieldgroupSignerrequirement.validateJsonElement(jsonObj.get("eEzsignformfieldgroupSignerrequirement"));
       }
       if (!jsonObj.get("sEzsignformfieldgroupLabel").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignformfieldgroupLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupLabel").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignformfieldgroupLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupLabel").toString()));
       }
       if ((jsonObj.get("sEzsignformfieldgroupDefaultvalue") != null && !jsonObj.get("sEzsignformfieldgroupDefaultvalue").isJsonNull()) && !jsonObj.get("sEzsignformfieldgroupDefaultvalue").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignformfieldgroupDefaultvalue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupDefaultvalue").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignformfieldgroupDefaultvalue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupDefaultvalue").toString()));
       }
       // validate the optional field `eEzsignformfieldgroupTextvalidation`
       if (jsonObj.get("eEzsignformfieldgroupTextvalidation") != null && !jsonObj.get("eEzsignformfieldgroupTextvalidation").isJsonNull()) {
         EnumTextvalidation.validateJsonElement(jsonObj.get("eEzsignformfieldgroupTextvalidation"));
       }
       if ((jsonObj.get("sEzsignformfieldgroupRegexp") != null && !jsonObj.get("sEzsignformfieldgroupRegexp").isJsonNull()) && !jsonObj.get("sEzsignformfieldgroupRegexp").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignformfieldgroupRegexp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupRegexp").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignformfieldgroupRegexp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupRegexp").toString()));
       }
       if ((jsonObj.get("sEzsignformfieldgroupTextvalidationcustommessage") != null && !jsonObj.get("sEzsignformfieldgroupTextvalidationcustommessage").isJsonNull()) && !jsonObj.get("sEzsignformfieldgroupTextvalidationcustommessage").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignformfieldgroupTextvalidationcustommessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupTextvalidationcustommessage").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignformfieldgroupTextvalidationcustommessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignformfieldgroupTextvalidationcustommessage").toString()));
       }
       if ((jsonObj.get("tEzsignformfieldgroupTooltip") != null && !jsonObj.get("tEzsignformfieldgroupTooltip").isJsonNull()) && !jsonObj.get("tEzsignformfieldgroupTooltip").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tEzsignformfieldgroupTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignformfieldgroupTooltip").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `tEzsignformfieldgroupTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignformfieldgroupTooltip").toString()));
       }
       // validate the optional field `eEzsignformfieldgroupTooltipposition`
       if (jsonObj.get("eEzsignformfieldgroupTooltipposition") != null && !jsonObj.get("eEzsignformfieldgroupTooltipposition").isJsonNull()) {

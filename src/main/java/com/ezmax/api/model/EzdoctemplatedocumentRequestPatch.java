@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,14 +42,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * An Ezdoctemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzdoctemplatedocumentRequestPatch {
   /**
    * Indicates the format of the template.  This field is Required when sEzdoctemplatedocumentBase64 is set.
@@ -244,7 +242,7 @@ public class EzdoctemplatedocumentRequestPatch {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzdoctemplatedocumentRequestPatch.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzdoctemplatedocumentRequestPatch is not found in the empty JSON string", EzdoctemplatedocumentRequestPatch.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzdoctemplatedocumentRequestPatch is not found in the empty JSON string", EzdoctemplatedocumentRequestPatch.openapiRequiredFields.toString()));
         }
       }
 
@@ -252,19 +250,19 @@ public class EzdoctemplatedocumentRequestPatch {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzdoctemplatedocumentRequestPatch.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzdoctemplatedocumentRequestPatch` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzdoctemplatedocumentRequestPatch` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("eEzdoctemplatedocumentFormat") != null && !jsonObj.get("eEzdoctemplatedocumentFormat").isJsonNull()) && !jsonObj.get("eEzdoctemplatedocumentFormat").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `eEzdoctemplatedocumentFormat` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzdoctemplatedocumentFormat").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `eEzdoctemplatedocumentFormat` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eEzdoctemplatedocumentFormat").toString()));
       }
       // validate the optional field `eEzdoctemplatedocumentFormat`
       if (jsonObj.get("eEzdoctemplatedocumentFormat") != null && !jsonObj.get("eEzdoctemplatedocumentFormat").isJsonNull()) {
         EEzdoctemplatedocumentFormatEnum.validateJsonElement(jsonObj.get("eEzdoctemplatedocumentFormat"));
       }
       if ((jsonObj.get("sEzdoctemplatedocumentFields") != null && !jsonObj.get("sEzdoctemplatedocumentFields").isJsonNull()) && !jsonObj.get("sEzdoctemplatedocumentFields").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzdoctemplatedocumentFields` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzdoctemplatedocumentFields").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzdoctemplatedocumentFields` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzdoctemplatedocumentFields").toString()));
       }
   }
 

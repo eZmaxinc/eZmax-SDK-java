@@ -9,11 +9,9 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsignsignatureCreateObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV3) | **POST** /3/object/ezsignsignature | Create a new Ezsignsignature |
 | [**ezsignsignatureCreateObjectV4**](ObjectEzsignsignatureApi.md#ezsignsignatureCreateObjectV4) | **POST** /4/object/ezsignsignature | Create a new Ezsignsignature |
 | [**ezsignsignatureDeleteObjectV1**](ObjectEzsignsignatureApi.md#ezsignsignatureDeleteObjectV1) | **DELETE** /1/object/ezsignsignature/{pkiEzsignsignatureID} | Delete an existing Ezsignsignature |
-| [**ezsignsignatureEditObjectV2**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV2) | **PUT** /2/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature |
 | [**ezsignsignatureEditObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignatureEditObjectV3) | **PUT** /3/object/ezsignsignature/{pkiEzsignsignatureID} | Edit an existing Ezsignsignature |
 | [**ezsignsignatureGetEzsignsignatureattachmentV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignatureattachmentV1) | **GET** /1/object/ezsignsignature/{pkiEzsignsignatureID}/getEzsignsignatureattachment | Retrieve an existing Ezsignsignature&#39;s Ezsignsignatureattachments |
 | [**ezsignsignatureGetEzsignsignaturesAutomaticV1**](ObjectEzsignsignatureApi.md#ezsignsignatureGetEzsignsignaturesAutomaticV1) | **GET** /1/object/ezsignsignature/getEzsignsignaturesAutomatic | Retrieve all automatic Ezsignsignatures |
-| [**ezsignsignatureGetObjectV3**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV3) | **GET** /3/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature |
 | [**ezsignsignatureGetObjectV4**](ObjectEzsignsignatureApi.md#ezsignsignatureGetObjectV4) | **GET** /4/object/ezsignsignature/{pkiEzsignsignatureID} | Retrieve an existing Ezsignsignature |
 | [**ezsignsignatureSignV1**](ObjectEzsignsignatureApi.md#ezsignsignatureSignV1) | **POST** /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign | Sign the Ezsignsignature |
 
@@ -365,79 +363,6 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
-<a id="ezsignsignatureEditObjectV2"></a>
-# **ezsignsignatureEditObjectV2**
-> EzsignsignatureEditObjectV2Response ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request)
-
-Edit an existing Ezsignsignature
-
-Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-
-### Example
-```java
-// Import classes:
-import eZmaxAPI.ApiClient;
-import eZmaxAPI.ApiException;
-import eZmaxAPI.Configuration;
-import eZmaxAPI.auth.*;
-import eZmaxAPI.models.*;
-import com.ezmax.api.ObjectEzsignsignatureApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
-    
-    // Configure API key authorization: Authorization
-    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Authorization.setApiKeyPrefix("Token");
-
-    ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi(defaultClient);
-    Integer pkiEzsignsignatureID = 56; // Integer | 
-    EzsignsignatureEditObjectV2Request ezsignsignatureEditObjectV2Request = new EzsignsignatureEditObjectV2Request(); // EzsignsignatureEditObjectV2Request | 
-    try {
-      EzsignsignatureEditObjectV2Response result = apiInstance.ezsignsignatureEditObjectV2(pkiEzsignsignatureID, ezsignsignatureEditObjectV2Request);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureEditObjectV2");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pkiEzsignsignatureID** | **Integer**|  | |
-| **ezsignsignatureEditObjectV2Request** | [**EzsignsignatureEditObjectV2Request**](EzsignsignatureEditObjectV2Request.md)|  | |
-
-### Return type
-
-[**EzsignsignatureEditObjectV2Response**](EzsignsignatureEditObjectV2Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
-| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
-
 <a id="ezsignsignatureEditObjectV3"></a>
 # **ezsignsignatureEditObjectV3**
 > EzsignsignatureEditObjectV3Response ezsignsignatureEditObjectV3(pkiEzsignsignatureID, ezsignsignatureEditObjectV3Request)
@@ -644,76 +569,6 @@ This endpoint does not need any parameter.
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-
-<a id="ezsignsignatureGetObjectV3"></a>
-# **ezsignsignatureGetObjectV3**
-> EzsignsignatureGetObjectV3Response ezsignsignatureGetObjectV3(pkiEzsignsignatureID)
-
-Retrieve an existing Ezsignsignature
-
-Major step overhaul.  Endpoints that existed before version 1.3 do not allow you to combine forms and signatures in the same step. The step numbers are different from those indicated by endpoints added since version 1.3. This endpoint is compatible with endpoints that existed before 1.3 but are not compatible with those added since 1.3.
-
-### Example
-```java
-// Import classes:
-import eZmaxAPI.ApiClient;
-import eZmaxAPI.ApiException;
-import eZmaxAPI.Configuration;
-import eZmaxAPI.auth.*;
-import eZmaxAPI.models.*;
-import com.ezmax.api.ObjectEzsignsignatureApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
-    
-    // Configure API key authorization: Authorization
-    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
-    Authorization.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Authorization.setApiKeyPrefix("Token");
-
-    ObjectEzsignsignatureApi apiInstance = new ObjectEzsignsignatureApi(defaultClient);
-    Integer pkiEzsignsignatureID = 56; // Integer | 
-    try {
-      EzsignsignatureGetObjectV3Response result = apiInstance.ezsignsignatureGetObjectV3(pkiEzsignsignatureID);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectEzsignsignatureApi#ezsignsignatureGetObjectV3");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **pkiEzsignsignatureID** | **Integer**|  | |
-
-### Return type
-
-[**EzsignsignatureGetObjectV3Response**](EzsignsignatureGetObjectV3Response.md)
-
-### Authorization
-
-[Authorization](../README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 
 <a id="ezsignsignatureGetObjectV4"></a>
 # **ezsignsignatureGetObjectV4**

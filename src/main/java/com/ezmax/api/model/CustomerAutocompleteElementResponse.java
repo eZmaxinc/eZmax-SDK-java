@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,14 +42,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Customer AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class CustomerAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_CUSTOMER_I_D = "pkiCustomerID";
   @SerializedName(SERIALIZED_NAME_PKI_CUSTOMER_I_D)
@@ -66,6 +64,11 @@ public class CustomerAutocompleteElementResponse {
   @SerializedName(SERIALIZED_NAME_S_CUSTOMER_NAME)
   @javax.annotation.Nonnull
   private String sCustomerName;
+
+  public static final String SERIALIZED_NAME_S_CUSTOMER_CODE = "sCustomerCode";
+  @SerializedName(SERIALIZED_NAME_S_CUSTOMER_CODE)
+  @javax.annotation.Nonnull
+  private String sCustomerCode;
 
   public static final String SERIALIZED_NAME_B_CUSTOMER_ISACTIVE = "bCustomerIsactive";
   @SerializedName(SERIALIZED_NAME_B_CUSTOMER_ISACTIVE)
@@ -134,6 +137,25 @@ public class CustomerAutocompleteElementResponse {
   }
 
 
+  public CustomerAutocompleteElementResponse sCustomerCode(@javax.annotation.Nonnull String sCustomerCode) {
+    this.sCustomerCode = sCustomerCode;
+    return this;
+  }
+
+  /**
+   * The code of the Customer
+   * @return sCustomerCode
+   */
+  @javax.annotation.Nonnull
+  public String getsCustomerCode() {
+    return sCustomerCode;
+  }
+
+  public void setsCustomerCode(@javax.annotation.Nonnull String sCustomerCode) {
+    this.sCustomerCode = sCustomerCode;
+  }
+
+
   public CustomerAutocompleteElementResponse bCustomerIsactive(@javax.annotation.Nonnull Boolean bCustomerIsactive) {
     this.bCustomerIsactive = bCustomerIsactive;
     return this;
@@ -166,12 +188,13 @@ public class CustomerAutocompleteElementResponse {
     return Objects.equals(this.pkiCustomerID, customerAutocompleteElementResponse.pkiCustomerID) &&
         Objects.equals(this.fkiDepartmentID, customerAutocompleteElementResponse.fkiDepartmentID) &&
         Objects.equals(this.sCustomerName, customerAutocompleteElementResponse.sCustomerName) &&
+        Objects.equals(this.sCustomerCode, customerAutocompleteElementResponse.sCustomerCode) &&
         Objects.equals(this.bCustomerIsactive, customerAutocompleteElementResponse.bCustomerIsactive);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCustomerID, fkiDepartmentID, sCustomerName, bCustomerIsactive);
+    return Objects.hash(pkiCustomerID, fkiDepartmentID, sCustomerName, sCustomerCode, bCustomerIsactive);
   }
 
   @Override
@@ -181,6 +204,7 @@ public class CustomerAutocompleteElementResponse {
     sb.append("    pkiCustomerID: ").append(toIndentedString(pkiCustomerID)).append("\n");
     sb.append("    fkiDepartmentID: ").append(toIndentedString(fkiDepartmentID)).append("\n");
     sb.append("    sCustomerName: ").append(toIndentedString(sCustomerName)).append("\n");
+    sb.append("    sCustomerCode: ").append(toIndentedString(sCustomerCode)).append("\n");
     sb.append("    bCustomerIsactive: ").append(toIndentedString(bCustomerIsactive)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -203,10 +227,10 @@ public class CustomerAutocompleteElementResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiCustomerID", "fkiDepartmentID", "sCustomerName", "bCustomerIsactive"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiCustomerID", "fkiDepartmentID", "sCustomerName", "sCustomerCode", "bCustomerIsactive"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiCustomerID", "fkiDepartmentID", "sCustomerName", "bCustomerIsactive"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiCustomerID", "fkiDepartmentID", "sCustomerName", "sCustomerCode", "bCustomerIsactive"));
   }
 
   /**
@@ -218,7 +242,7 @@ public class CustomerAutocompleteElementResponse {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomerAutocompleteElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in CustomerAutocompleteElementResponse is not found in the empty JSON string", CustomerAutocompleteElementResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in CustomerAutocompleteElementResponse is not found in the empty JSON string", CustomerAutocompleteElementResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -226,19 +250,22 @@ public class CustomerAutocompleteElementResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CustomerAutocompleteElementResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CustomerAutocompleteElementResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CustomerAutocompleteElementResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CustomerAutocompleteElementResponse.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sCustomerName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCustomerName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCustomerName").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCustomerName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCustomerName").toString()));
+      }
+      if (!jsonObj.get("sCustomerCode").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCustomerCode").toString()));
       }
   }
 

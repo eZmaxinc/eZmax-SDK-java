@@ -28,8 +28,8 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
-import com.ezmax.api.model.SystemconfigurationEditObjectV1Request;
-import com.ezmax.api.model.SystemconfigurationEditObjectV1Response;
+import com.ezmax.api.model.SystemconfigurationEditObjectV2Request;
+import com.ezmax.api.model.SystemconfigurationEditObjectV2Response;
 import com.ezmax.api.model.SystemconfigurationGetObjectV2Response;
 
 import java.lang.reflect.Type;
@@ -76,9 +76,9 @@ public class ObjectSystemconfigurationApi {
     }
 
     /**
-     * Build call for systemconfigurationEditObjectV1
+     * Build call for systemconfigurationEditObjectV2
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration (required)
-     * @param systemconfigurationEditObjectV1Request  (required)
+     * @param systemconfigurationEditObjectV2Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -91,7 +91,7 @@ public class ObjectSystemconfigurationApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call systemconfigurationEditObjectV1Call(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call systemconfigurationEditObjectV2Call(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -105,10 +105,10 @@ public class ObjectSystemconfigurationApi {
             basePath = null;
         }
 
-        Object localVarPostBody = systemconfigurationEditObjectV1Request;
+        Object localVarPostBody = systemconfigurationEditObjectV2Request;
 
         // create path and map variables
-        String localVarPath = "/1/object/systemconfiguration/{pkiSystemconfigurationID}"
+        String localVarPath = "/2/object/systemconfiguration/{pkiSystemconfigurationID}"
             .replace("{" + "pkiSystemconfigurationID" + "}", localVarApiClient.escapeString(pkiSystemconfigurationID.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -138,18 +138,18 @@ public class ObjectSystemconfigurationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call systemconfigurationEditObjectV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call systemconfigurationEditObjectV2ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiSystemconfigurationID' is set
         if (pkiSystemconfigurationID == null) {
-            throw new ApiException("Missing the required parameter 'pkiSystemconfigurationID' when calling systemconfigurationEditObjectV1(Async)");
+            throw new ApiException("Missing the required parameter 'pkiSystemconfigurationID' when calling systemconfigurationEditObjectV2(Async)");
         }
 
-        // verify the required parameter 'systemconfigurationEditObjectV1Request' is set
-        if (systemconfigurationEditObjectV1Request == null) {
-            throw new ApiException("Missing the required parameter 'systemconfigurationEditObjectV1Request' when calling systemconfigurationEditObjectV1(Async)");
+        // verify the required parameter 'systemconfigurationEditObjectV2Request' is set
+        if (systemconfigurationEditObjectV2Request == null) {
+            throw new ApiException("Missing the required parameter 'systemconfigurationEditObjectV2Request' when calling systemconfigurationEditObjectV2(Async)");
         }
 
-        return systemconfigurationEditObjectV1Call(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request, _callback);
+        return systemconfigurationEditObjectV2Call(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request, _callback);
 
     }
 
@@ -157,8 +157,8 @@ public class ObjectSystemconfigurationApi {
      * Edit an existing Systemconfiguration
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration (required)
-     * @param systemconfigurationEditObjectV1Request  (required)
-     * @return SystemconfigurationEditObjectV1Response
+     * @param systemconfigurationEditObjectV2Request  (required)
+     * @return SystemconfigurationEditObjectV2Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -169,8 +169,8 @@ public class ObjectSystemconfigurationApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public SystemconfigurationEditObjectV1Response systemconfigurationEditObjectV1(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request) throws ApiException {
-        ApiResponse<SystemconfigurationEditObjectV1Response> localVarResp = systemconfigurationEditObjectV1WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+    public SystemconfigurationEditObjectV2Response systemconfigurationEditObjectV2(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request) throws ApiException {
+        ApiResponse<SystemconfigurationEditObjectV2Response> localVarResp = systemconfigurationEditObjectV2WithHttpInfo(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request);
         return localVarResp.getData();
     }
 
@@ -178,8 +178,8 @@ public class ObjectSystemconfigurationApi {
      * Edit an existing Systemconfiguration
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration (required)
-     * @param systemconfigurationEditObjectV1Request  (required)
-     * @return ApiResponse&lt;SystemconfigurationEditObjectV1Response&gt;
+     * @param systemconfigurationEditObjectV2Request  (required)
+     * @return ApiResponse&lt;SystemconfigurationEditObjectV2Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -190,9 +190,9 @@ public class ObjectSystemconfigurationApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<SystemconfigurationEditObjectV1Response> systemconfigurationEditObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request) throws ApiException {
-        okhttp3.Call localVarCall = systemconfigurationEditObjectV1ValidateBeforeCall(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request, null);
-        Type localVarReturnType = new TypeToken<SystemconfigurationEditObjectV1Response>(){}.getType();
+    public ApiResponse<SystemconfigurationEditObjectV2Response> systemconfigurationEditObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request) throws ApiException {
+        okhttp3.Call localVarCall = systemconfigurationEditObjectV2ValidateBeforeCall(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request, null);
+        Type localVarReturnType = new TypeToken<SystemconfigurationEditObjectV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -200,7 +200,7 @@ public class ObjectSystemconfigurationApi {
      * Edit an existing Systemconfiguration (asynchronously)
      * 
      * @param pkiSystemconfigurationID The unique ID of the Systemconfiguration (required)
-     * @param systemconfigurationEditObjectV1Request  (required)
+     * @param systemconfigurationEditObjectV2Request  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -213,10 +213,10 @@ public class ObjectSystemconfigurationApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call systemconfigurationEditObjectV1Async(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request, final ApiCallback<SystemconfigurationEditObjectV1Response> _callback) throws ApiException {
+    public okhttp3.Call systemconfigurationEditObjectV2Async(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, final ApiCallback<SystemconfigurationEditObjectV2Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = systemconfigurationEditObjectV1ValidateBeforeCall(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request, _callback);
-        Type localVarReturnType = new TypeToken<SystemconfigurationEditObjectV1Response>(){}.getType();
+        okhttp3.Call localVarCall = systemconfigurationEditObjectV2ValidateBeforeCall(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request, _callback);
+        Type localVarReturnType = new TypeToken<SystemconfigurationEditObjectV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CustomEzsignfoldertypeResponse;
 import com.ezmax.api.model.CustomTimezoneWithCodeResponse;
@@ -50,14 +49,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsignfolderResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -868,7 +866,7 @@ public class EzsignfolderResponseCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfolderResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzsignfolderResponseCompound is not found in the empty JSON string", EzsignfolderResponseCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzsignfolderResponseCompound is not found in the empty JSON string", EzsignfolderResponseCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -876,14 +874,14 @@ public class EzsignfolderResponseCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzsignfolderResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignfolderResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignfolderResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsignfolderResponseCompound.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -894,38 +892,38 @@ public class EzsignfolderResponseCompound {
       // validate the required field `eEzsignfolderCompletion`
       FieldEEzsignfolderCompletion.validateJsonElement(jsonObj.get("eEzsignfolderCompletion"));
       if ((jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonNull()) && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }
       if ((jsonObj.get("sBillingentityinternalDescriptionX") != null && !jsonObj.get("sBillingentityinternalDescriptionX").isJsonNull()) && !jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
       }
       if ((jsonObj.get("sEzsigntsarequirementDescriptionX") != null && !jsonObj.get("sEzsigntsarequirementDescriptionX").isJsonNull()) && !jsonObj.get("sEzsigntsarequirementDescriptionX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsigntsarequirementDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntsarequirementDescriptionX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsigntsarequirementDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntsarequirementDescriptionX").toString()));
       }
       if (!jsonObj.get("sEzsignfolderDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignfolderDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignfolderDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderDescription").toString()));
       }
       if ((jsonObj.get("tEzsignfolderNote") != null && !jsonObj.get("tEzsignfolderNote").isJsonNull()) && !jsonObj.get("tEzsignfolderNote").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tEzsignfolderNote` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderNote").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `tEzsignfolderNote` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderNote").toString()));
       }
       // validate the optional field `eEzsignfolderSendreminderfrequency`
       if (jsonObj.get("eEzsignfolderSendreminderfrequency") != null && !jsonObj.get("eEzsignfolderSendreminderfrequency").isJsonNull()) {
         FieldEEzsignfolderSendreminderfrequency.validateJsonElement(jsonObj.get("eEzsignfolderSendreminderfrequency"));
       }
       if ((jsonObj.get("dtEzsignfolderDelayedsenddate") != null && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonNull()) && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtEzsignfolderDelayedsenddate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDelayedsenddate").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtEzsignfolderDelayedsenddate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDelayedsenddate").toString()));
       }
       if ((jsonObj.get("dtEzsignfolderDuedate") != null && !jsonObj.get("dtEzsignfolderDuedate").isJsonNull()) && !jsonObj.get("dtEzsignfolderDuedate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtEzsignfolderDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDuedate").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtEzsignfolderDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDuedate").toString()));
       }
       if ((jsonObj.get("dtEzsignfolderSentdate") != null && !jsonObj.get("dtEzsignfolderSentdate").isJsonNull()) && !jsonObj.get("dtEzsignfolderSentdate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtEzsignfolderSentdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderSentdate").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtEzsignfolderSentdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderSentdate").toString()));
       }
       if ((jsonObj.get("dtEzsignfolderScheduledarchive") != null && !jsonObj.get("dtEzsignfolderScheduledarchive").isJsonNull()) && !jsonObj.get("dtEzsignfolderScheduledarchive").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtEzsignfolderScheduledarchive` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderScheduledarchive").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtEzsignfolderScheduledarchive` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderScheduledarchive").toString()));
       }
       if ((jsonObj.get("dtEzsignfolderScheduleddispose") != null && !jsonObj.get("dtEzsignfolderScheduleddispose").isJsonNull()) && !jsonObj.get("dtEzsignfolderScheduleddispose").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtEzsignfolderScheduleddispose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderScheduleddispose").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtEzsignfolderScheduleddispose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderScheduleddispose").toString()));
       }
       // validate the optional field `eEzsignfolderStep`
       if (jsonObj.get("eEzsignfolderStep") != null && !jsonObj.get("eEzsignfolderStep").isJsonNull()) {
@@ -936,17 +934,17 @@ public class EzsignfolderResponseCompound {
         FieldEEzsignfolderMessageorder.validateJsonElement(jsonObj.get("eEzsignfolderMessageorder"));
       }
       if ((jsonObj.get("dtEzsignfolderClose") != null && !jsonObj.get("dtEzsignfolderClose").isJsonNull()) && !jsonObj.get("dtEzsignfolderClose").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtEzsignfolderClose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderClose").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtEzsignfolderClose` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderClose").toString()));
       }
       if ((jsonObj.get("tEzsignfolderMessage") != null && !jsonObj.get("tEzsignfolderMessage").isJsonNull()) && !jsonObj.get("tEzsignfolderMessage").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tEzsignfolderMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderMessage").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `tEzsignfolderMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderMessage").toString()));
       }
       // validate the optional field `objAudit`
       if (jsonObj.get("objAudit") != null && !jsonObj.get("objAudit").isJsonNull()) {
         CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
       }
       if ((jsonObj.get("sEzsignfolderExternalid") != null && !jsonObj.get("sEzsignfolderExternalid").isJsonNull()) && !jsonObj.get("sEzsignfolderExternalid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignfolderExternalid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderExternalid").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignfolderExternalid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderExternalid").toString()));
       }
       // validate the optional field `objTimezone`
       if (jsonObj.get("objTimezone") != null && !jsonObj.get("objTimezone").isJsonNull()) {

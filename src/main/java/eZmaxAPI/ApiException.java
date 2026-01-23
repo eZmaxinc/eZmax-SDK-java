@@ -15,14 +15,13 @@ package eZmaxAPI;
 
 import java.util.Map;
 import java.util.List;
-import java.util.Locale;
 
 
 /**
  * <p>ApiException class.</p>
  */
 @SuppressWarnings("serial")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class ApiException extends Exception {
     private static final long serialVersionUID = 1L;
 
@@ -162,7 +161,7 @@ public class ApiException extends Exception {
      * @return The exception message
      */
     public String getMessage() {
-        return String.format(Locale.ROOT, "Message: %s%nHTTP response code: %s%nHTTP response body: %s%nHTTP response headers: %s",
+        return String.format(java.util.Locale.ROOT, "Message: %s%nHTTP response code: %s%nHTTP response body: %s%nHTTP response headers: %s",
                 super.getMessage(), this.getCode(), this.getResponseBody(), this.getResponseHeaders());
     }
 }

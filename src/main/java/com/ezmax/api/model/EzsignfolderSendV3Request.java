@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.FieldEEzsignfolderMessageorder;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -46,14 +45,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * Request for POST /3/object/ezsignfolder/{pkiEzsignfolderID}/send
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsignfolderSendV3Request {
   public static final String SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE = "tEzsignfolderMessage";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNFOLDER_MESSAGE)
@@ -227,7 +225,7 @@ public class EzsignfolderSendV3Request {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfolderSendV3Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzsignfolderSendV3Request is not found in the empty JSON string", EzsignfolderSendV3Request.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzsignfolderSendV3Request is not found in the empty JSON string", EzsignfolderSendV3Request.openapiRequiredFields.toString()));
         }
       }
 
@@ -235,32 +233,32 @@ public class EzsignfolderSendV3Request {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzsignfolderSendV3Request.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignfolderSendV3Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignfolderSendV3Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsignfolderSendV3Request.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("tEzsignfolderMessage") != null && !jsonObj.get("tEzsignfolderMessage").isJsonNull()) && !jsonObj.get("tEzsignfolderMessage").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tEzsignfolderMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderMessage").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `tEzsignfolderMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignfolderMessage").toString()));
       }
       // validate the optional field `eEzsignfolderMessageorder`
       if (jsonObj.get("eEzsignfolderMessageorder") != null && !jsonObj.get("eEzsignfolderMessageorder").isJsonNull()) {
         FieldEEzsignfolderMessageorder.validateJsonElement(jsonObj.get("eEzsignfolderMessageorder"));
       }
       if ((jsonObj.get("dtEzsignfolderDelayedsenddate") != null && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonNull()) && !jsonObj.get("dtEzsignfolderDelayedsenddate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtEzsignfolderDelayedsenddate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDelayedsenddate").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtEzsignfolderDelayedsenddate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignfolderDelayedsenddate").toString()));
       }
       // ensure the required json array is present
       if (jsonObj.get("a_fkiEzsignfoldersignerassociationID") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("a_fkiEzsignfoldersignerassociationID").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_fkiEzsignfoldersignerassociationID` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiEzsignfoldersignerassociationID").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_fkiEzsignfoldersignerassociationID` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiEzsignfoldersignerassociationID").toString()));
       }
   }
 

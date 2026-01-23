@@ -16,6 +16,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigndocumentDeleteObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentDeleteObjectV1) | **DELETE** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Delete an existing Ezsigndocument |
 | [**ezsigndocumentEditEzsignannotationsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignannotationsV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignannotations | Edit multiple Ezsignannotations |
 | [**ezsigndocumentEditEzsignformfieldgroupsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignformfieldgroupsV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups | Edit multiple Ezsignformfieldgroups |
+| [**ezsigndocumentEditEzsignformfieldgroupsV2**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignformfieldgroupsV2) | **PUT** /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignformfieldgroups | Edit multiple Ezsignformfieldgroups |
 | [**ezsigndocumentEditEzsignsignaturesV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignsignaturesV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple Ezsignsignatures |
 | [**ezsigndocumentEditEzsignsignaturesV2**](ObjectEzsigndocumentApi.md#ezsigndocumentEditEzsignsignaturesV2) | **PUT** /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures | Edit multiple Ezsignsignatures |
 | [**ezsigndocumentEditObjectV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEditObjectV1) | **PUT** /1/object/ezsigndocument/{pkiEzsigndocumentID} | Edit an existing Ezsigndocument |
@@ -24,6 +25,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigndocumentFlattenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentFlattenV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten |
 | [**ezsigndocumentGetActionableElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
 | [**ezsigndocumentGetActionableElementsV2**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV2) | **GET** /2/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
+| [**ezsigndocumentGetActionableElementsV3**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV3) | **GET** /3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
 | [**ezsigndocumentGetAttachmentsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetAttachmentsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getAttachments | Retrieve Ezsigndocument&#39;s Attachments |
 | [**ezsigndocumentGetCompletedElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetCompletedElementsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements | Retrieve completed elements for the Ezsigndocument |
 | [**ezsigndocumentGetCompletedElementsV2**](ObjectEzsigndocumentApi.md#ezsigndocumentGetCompletedElementsV2) | **GET** /2/object/ezsigndocument/{pkiEzsigndocumentID}/getCompletedElements | Retrieve completed elements for the Ezsigndocument |
@@ -913,6 +915,79 @@ public class Example {
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
 
+<a id="ezsigndocumentEditEzsignformfieldgroupsV2"></a>
+# **ezsigndocumentEditEzsignformfieldgroupsV2**
+> EzsigndocumentEditEzsignformfieldgroupsV2Response ezsigndocumentEditEzsignformfieldgroupsV2(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV2Request)
+
+Edit multiple Ezsignformfieldgroups
+
+Using this endpoint, you can edit multiple Ezsignformfieldgroups at the same time.
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsigndocumentApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi(defaultClient);
+    Integer pkiEzsigndocumentID = 56; // Integer | 
+    EzsigndocumentEditEzsignformfieldgroupsV2Request ezsigndocumentEditEzsignformfieldgroupsV2Request = new EzsigndocumentEditEzsignformfieldgroupsV2Request(); // EzsigndocumentEditEzsignformfieldgroupsV2Request | 
+    try {
+      EzsigndocumentEditEzsignformfieldgroupsV2Response result = apiInstance.ezsigndocumentEditEzsignformfieldgroupsV2(pkiEzsigndocumentID, ezsigndocumentEditEzsignformfieldgroupsV2Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentEditEzsignformfieldgroupsV2");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsigndocumentID** | **Integer**|  | |
+| **ezsigndocumentEditEzsignformfieldgroupsV2Request** | [**EzsigndocumentEditEzsignformfieldgroupsV2Request**](EzsigndocumentEditEzsignformfieldgroupsV2Request.md)|  | |
+
+### Return type
+
+[**EzsigndocumentEditEzsignformfieldgroupsV2Response**](EzsigndocumentEditEzsignformfieldgroupsV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
 <a id="ezsigndocumentEditEzsignsignaturesV1"></a>
 # **ezsigndocumentEditEzsignsignaturesV1**
 > EzsigndocumentEditEzsignsignaturesV1Response ezsigndocumentEditEzsignsignaturesV1(pkiEzsigndocumentID, ezsigndocumentEditEzsignsignaturesV1Request)
@@ -1476,6 +1551,77 @@ public class Example {
 ### Return type
 
 [**EzsigndocumentGetActionableElementsV2Response**](EzsigndocumentGetActionableElementsV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+<a id="ezsigndocumentGetActionableElementsV3"></a>
+# **ezsigndocumentGetActionableElementsV3**
+> EzsigndocumentGetActionableElementsV3Response ezsigndocumentGetActionableElementsV3(pkiEzsigndocumentID)
+
+Retrieve actionable elements for the Ezsigndocument
+
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by the current user at the current step in the process
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsigndocumentApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi(defaultClient);
+    Integer pkiEzsigndocumentID = 56; // Integer | 
+    try {
+      EzsigndocumentGetActionableElementsV3Response result = apiInstance.ezsigndocumentGetActionableElementsV3(pkiEzsigndocumentID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentGetActionableElementsV3");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsigndocumentID** | **Integer**|  | |
+
+### Return type
+
+[**EzsigndocumentGetActionableElementsV3Response**](EzsigndocumentGetActionableElementsV3Response.md)
 
 ### Authorization
 

@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.AddressRequest;
 import com.ezmax.api.model.ContactRequestCompound;
 import com.google.gson.TypeAdapter;
@@ -47,14 +46,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Franchisereferalincome Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class FranchisereferalincomeRequestCompound {
   public static final String SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D = "pkiFranchisereferalincomeID";
   @SerializedName(SERIALIZED_NAME_PKI_FRANCHISEREFERALINCOME_I_D)
@@ -493,7 +491,7 @@ public class FranchisereferalincomeRequestCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!FranchisereferalincomeRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in FranchisereferalincomeRequestCompound is not found in the empty JSON string", FranchisereferalincomeRequestCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in FranchisereferalincomeRequestCompound is not found in the empty JSON string", FranchisereferalincomeRequestCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -501,37 +499,37 @@ public class FranchisereferalincomeRequestCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!FranchisereferalincomeRequestCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `FranchisereferalincomeRequestCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `FranchisereferalincomeRequestCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : FranchisereferalincomeRequestCompound.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dFranchisereferalincomeLoan").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dFranchisereferalincomeLoan` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeLoan").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dFranchisereferalincomeLoan` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeLoan").toString()));
       }
       if (!jsonObj.get("dFranchisereferalincomeFranchiseamount").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dFranchisereferalincomeFranchiseamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeFranchiseamount").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dFranchisereferalincomeFranchiseamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeFranchiseamount").toString()));
       }
       if (!jsonObj.get("dFranchisereferalincomeFranchisoramount").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dFranchisereferalincomeFranchisoramount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeFranchisoramount").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dFranchisereferalincomeFranchisoramount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeFranchisoramount").toString()));
       }
       if (!jsonObj.get("dFranchisereferalincomeAgentamount").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dFranchisereferalincomeAgentamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeAgentamount").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dFranchisereferalincomeAgentamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dFranchisereferalincomeAgentamount").toString()));
       }
       if (!jsonObj.get("dtFranchisereferalincomeDisbursed").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtFranchisereferalincomeDisbursed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtFranchisereferalincomeDisbursed").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtFranchisereferalincomeDisbursed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtFranchisereferalincomeDisbursed").toString()));
       }
       if (!jsonObj.get("tFranchisereferalincomeComment").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tFranchisereferalincomeComment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tFranchisereferalincomeComment").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `tFranchisereferalincomeComment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tFranchisereferalincomeComment").toString()));
       }
       if (!jsonObj.get("sFranchisereferalincomeRemoteid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sFranchisereferalincomeRemoteid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFranchisereferalincomeRemoteid").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sFranchisereferalincomeRemoteid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sFranchisereferalincomeRemoteid").toString()));
       }
       // validate the optional field `objAddress`
       if (jsonObj.get("objAddress") != null && !jsonObj.get("objAddress").isJsonNull()) {
@@ -539,7 +537,7 @@ public class FranchisereferalincomeRequestCompound {
       }
       // ensure the json data is an array
       if (!jsonObj.get("a_objContact").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objContact` to be an array in the JSON string but got `%s`", jsonObj.get("a_objContact").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objContact` to be an array in the JSON string but got `%s`", jsonObj.get("a_objContact").toString()));
       }
 
       JsonArray jsonArrayaObjContact = jsonObj.getAsJsonArray("a_objContact");

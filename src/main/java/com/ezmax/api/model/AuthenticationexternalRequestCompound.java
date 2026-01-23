@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.FieldEAuthenticationexternalType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -44,14 +43,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Authenticationexternal Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class AuthenticationexternalRequestCompound {
   public static final String SERIALIZED_NAME_PKI_AUTHENTICATIONEXTERNAL_I_D = "pkiAuthenticationexternalID";
   @SerializedName(SERIALIZED_NAME_PKI_AUTHENTICATIONEXTERNAL_I_D)
@@ -193,7 +191,7 @@ public class AuthenticationexternalRequestCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AuthenticationexternalRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in AuthenticationexternalRequestCompound is not found in the empty JSON string", AuthenticationexternalRequestCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in AuthenticationexternalRequestCompound is not found in the empty JSON string", AuthenticationexternalRequestCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -201,19 +199,19 @@ public class AuthenticationexternalRequestCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!AuthenticationexternalRequestCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AuthenticationexternalRequestCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `AuthenticationexternalRequestCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : AuthenticationexternalRequestCompound.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sAuthenticationexternalDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sAuthenticationexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAuthenticationexternalDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sAuthenticationexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAuthenticationexternalDescription").toString()));
       }
       // validate the required field `eAuthenticationexternalType`
       FieldEAuthenticationexternalType.validateJsonElement(jsonObj.get("eAuthenticationexternalType"));

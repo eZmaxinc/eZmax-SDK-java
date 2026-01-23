@@ -14,11 +14,9 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -28,6 +26,7 @@ import com.google.gson.stream.JsonWriter;
 /**
  * Whether if Ezsign is paid by the company or not
  */
+@Deprecated
 @JsonAdapter(FieldESystemconfigurationEzsign.Adapter.class)
 public enum FieldESystemconfigurationEzsign {
   

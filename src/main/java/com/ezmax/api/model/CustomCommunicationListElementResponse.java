@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.ComputedECommunicationDirection;
 import com.ezmax.api.model.FieldECommunicationImportance;
 import com.ezmax.api.model.FieldECommunicationType;
@@ -46,14 +45,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Communication List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class CustomCommunicationListElementResponse {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
@@ -350,7 +348,7 @@ public class CustomCommunicationListElementResponse {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomCommunicationListElementResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in CustomCommunicationListElementResponse is not found in the empty JSON string", CustomCommunicationListElementResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in CustomCommunicationListElementResponse is not found in the empty JSON string", CustomCommunicationListElementResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -358,19 +356,19 @@ public class CustomCommunicationListElementResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CustomCommunicationListElementResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CustomCommunicationListElementResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CustomCommunicationListElementResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CustomCommunicationListElementResponse.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("dtCreatedDate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtCreatedDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCreatedDate").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtCreatedDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCreatedDate").toString()));
       }
       // validate the required field `eCommunicationDirection`
       ComputedECommunicationDirection.validateJsonElement(jsonObj.get("eCommunicationDirection"));
@@ -379,13 +377,13 @@ public class CustomCommunicationListElementResponse {
       // validate the required field `eCommunicationType`
       FieldECommunicationType.validateJsonElement(jsonObj.get("eCommunicationType"));
       if (!jsonObj.get("sCommunicationSubject").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCommunicationSubject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSubject").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCommunicationSubject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSubject").toString()));
       }
       if (!jsonObj.get("sCommunicationSender").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCommunicationSender` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSender").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCommunicationSender` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSender").toString()));
       }
       if (!jsonObj.get("sCommunicationRecipient").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCommunicationRecipient` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationRecipient").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCommunicationRecipient` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationRecipient").toString()));
       }
   }
 

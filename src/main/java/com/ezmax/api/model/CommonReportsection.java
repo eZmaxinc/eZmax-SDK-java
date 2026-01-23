@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.CommonReportsubsection;
 import com.ezmax.api.model.EnumHorizontalalignment;
 import com.google.gson.TypeAdapter;
@@ -47,14 +46,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class CommonReportsection {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION = "a_objReportsubsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION)
@@ -70,6 +68,11 @@ public class CommonReportsection {
   @SerializedName(SERIALIZED_NAME_S_REPORTSECTION_TITLE)
   @javax.annotation.Nullable
   private String sReportsectionTitle;
+
+  public static final String SERIALIZED_NAME_S_REPORTSECTION_TABNAME = "sReportsectionTabname";
+  @SerializedName(SERIALIZED_NAME_S_REPORTSECTION_TABNAME)
+  @javax.annotation.Nullable
+  private String sReportsectionTabname;
 
   public CommonReportsection() {
   }
@@ -139,6 +142,25 @@ public class CommonReportsection {
   }
 
 
+  public CommonReportsection sReportsectionTabname(@javax.annotation.Nullable String sReportsectionTabname) {
+    this.sReportsectionTabname = sReportsectionTabname;
+    return this;
+  }
+
+  /**
+   * The name of tab in excel version
+   * @return sReportsectionTabname
+   */
+  @javax.annotation.Nullable
+  public String getsReportsectionTabname() {
+    return sReportsectionTabname;
+  }
+
+  public void setsReportsectionTabname(@javax.annotation.Nullable String sReportsectionTabname) {
+    this.sReportsectionTabname = sReportsectionTabname;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -151,12 +173,13 @@ public class CommonReportsection {
     CommonReportsection commonReportsection = (CommonReportsection) o;
     return Objects.equals(this.aObjReportsubsection, commonReportsection.aObjReportsubsection) &&
         Objects.equals(this.eReportsectionHorizontalalignment, commonReportsection.eReportsectionHorizontalalignment) &&
-        Objects.equals(this.sReportsectionTitle, commonReportsection.sReportsectionTitle);
+        Objects.equals(this.sReportsectionTitle, commonReportsection.sReportsectionTitle) &&
+        Objects.equals(this.sReportsectionTabname, commonReportsection.sReportsectionTabname);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aObjReportsubsection, eReportsectionHorizontalalignment, sReportsectionTitle);
+    return Objects.hash(aObjReportsubsection, eReportsectionHorizontalalignment, sReportsectionTitle, sReportsectionTabname);
   }
 
   @Override
@@ -166,6 +189,7 @@ public class CommonReportsection {
     sb.append("    aObjReportsubsection: ").append(toIndentedString(aObjReportsubsection)).append("\n");
     sb.append("    eReportsectionHorizontalalignment: ").append(toIndentedString(eReportsectionHorizontalalignment)).append("\n");
     sb.append("    sReportsectionTitle: ").append(toIndentedString(sReportsectionTitle)).append("\n");
+    sb.append("    sReportsectionTabname: ").append(toIndentedString(sReportsectionTabname)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -187,7 +211,7 @@ public class CommonReportsection {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("a_objReportsubsection", "eReportsectionHorizontalalignment", "sReportsectionTitle"));
+    openapiFields = new HashSet<String>(Arrays.asList("a_objReportsubsection", "eReportsectionHorizontalalignment", "sReportsectionTitle", "sReportsectionTabname"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("a_objReportsubsection", "eReportsectionHorizontalalignment"));
@@ -202,7 +226,7 @@ public class CommonReportsection {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommonReportsection.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in CommonReportsection is not found in the empty JSON string", CommonReportsection.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in CommonReportsection is not found in the empty JSON string", CommonReportsection.openapiRequiredFields.toString()));
         }
       }
 
@@ -210,20 +234,20 @@ public class CommonReportsection {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CommonReportsection.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CommonReportsection` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CommonReportsection` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CommonReportsection.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("a_objReportsubsection").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objReportsubsection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportsubsection").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objReportsubsection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportsubsection").toString()));
       }
 
       JsonArray jsonArrayaObjReportsubsection = jsonObj.getAsJsonArray("a_objReportsubsection");
@@ -234,7 +258,10 @@ public class CommonReportsection {
       // validate the required field `eReportsectionHorizontalalignment`
       EnumHorizontalalignment.validateJsonElement(jsonObj.get("eReportsectionHorizontalalignment"));
       if ((jsonObj.get("sReportsectionTitle") != null && !jsonObj.get("sReportsectionTitle").isJsonNull()) && !jsonObj.get("sReportsectionTitle").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sReportsectionTitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sReportsectionTitle").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sReportsectionTitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sReportsectionTitle").toString()));
+      }
+      if ((jsonObj.get("sReportsectionTabname") != null && !jsonObj.get("sReportsectionTabname").isJsonNull()) && !jsonObj.get("sReportsectionTabname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sReportsectionTabname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sReportsectionTabname").toString()));
       }
   }
 

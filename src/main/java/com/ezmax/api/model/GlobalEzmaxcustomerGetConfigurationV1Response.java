@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,14 +42,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * Response for GET /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class GlobalEzmaxcustomerGetConfigurationV1Response {
   public static final String SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE = "sInfrastructureregionCode";
   @SerializedName(SERIALIZED_NAME_S_INFRASTRUCTUREREGION_CODE)
@@ -242,7 +240,7 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!GlobalEzmaxcustomerGetConfigurationV1Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in GlobalEzmaxcustomerGetConfigurationV1Response is not found in the empty JSON string", GlobalEzmaxcustomerGetConfigurationV1Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in GlobalEzmaxcustomerGetConfigurationV1Response is not found in the empty JSON string", GlobalEzmaxcustomerGetConfigurationV1Response.openapiRequiredFields.toString()));
         }
       }
 
@@ -250,31 +248,31 @@ public class GlobalEzmaxcustomerGetConfigurationV1Response {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!GlobalEzmaxcustomerGetConfigurationV1Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `GlobalEzmaxcustomerGetConfigurationV1Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `GlobalEzmaxcustomerGetConfigurationV1Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : GlobalEzmaxcustomerGetConfigurationV1Response.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sInfrastructureregionCode").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sInfrastructureregionCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sInfrastructureregionCode").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sInfrastructureregionCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sInfrastructureregionCode").toString()));
       }
       if (!jsonObj.get("sInfrastructureregionCodeWeb").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sInfrastructureregionCodeWeb` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sInfrastructureregionCodeWeb").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sInfrastructureregionCodeWeb` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sInfrastructureregionCodeWeb").toString()));
       }
       if (!jsonObj.get("sInfrastructureenvironmenttypeDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sInfrastructureenvironmenttypeDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sInfrastructureenvironmenttypeDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sInfrastructureenvironmenttypeDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sInfrastructureenvironmenttypeDescription").toString()));
       }
       if ((jsonObj.get("sCognitoClientIDExternal") != null && !jsonObj.get("sCognitoClientIDExternal").isJsonNull()) && !jsonObj.get("sCognitoClientIDExternal").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCognitoClientIDExternal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCognitoClientIDExternal").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCognitoClientIDExternal` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCognitoClientIDExternal").toString()));
       }
       if (!jsonObj.get("sCognitoClientIDEzmaxpublic").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCognitoClientIDEzmaxpublic` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCognitoClientIDEzmaxpublic").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCognitoClientIDEzmaxpublic` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCognitoClientIDEzmaxpublic").toString()));
       }
   }
 

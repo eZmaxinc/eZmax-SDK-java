@@ -4,13 +4,13 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**systemconfigurationEditObjectV1**](ObjectSystemconfigurationApi.md#systemconfigurationEditObjectV1) | **PUT** /1/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration |
+| [**systemconfigurationEditObjectV2**](ObjectSystemconfigurationApi.md#systemconfigurationEditObjectV2) | **PUT** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Edit an existing Systemconfiguration |
 | [**systemconfigurationGetObjectV2**](ObjectSystemconfigurationApi.md#systemconfigurationGetObjectV2) | **GET** /2/object/systemconfiguration/{pkiSystemconfigurationID} | Retrieve an existing Systemconfiguration |
 
 
-<a id="systemconfigurationEditObjectV1"></a>
-# **systemconfigurationEditObjectV1**
-> SystemconfigurationEditObjectV1Response systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request)
+<a id="systemconfigurationEditObjectV2"></a>
+# **systemconfigurationEditObjectV2**
+> SystemconfigurationEditObjectV2Response systemconfigurationEditObjectV2(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request)
 
 Edit an existing Systemconfiguration
 
@@ -39,12 +39,12 @@ public class Example {
 
     ObjectSystemconfigurationApi apiInstance = new ObjectSystemconfigurationApi(defaultClient);
     Integer pkiSystemconfigurationID = 56; // Integer | The unique ID of the Systemconfiguration
-    SystemconfigurationEditObjectV1Request systemconfigurationEditObjectV1Request = new SystemconfigurationEditObjectV1Request(); // SystemconfigurationEditObjectV1Request | 
+    SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request = new SystemconfigurationEditObjectV2Request(); // SystemconfigurationEditObjectV2Request | 
     try {
-      SystemconfigurationEditObjectV1Response result = apiInstance.systemconfigurationEditObjectV1(pkiSystemconfigurationID, systemconfigurationEditObjectV1Request);
+      SystemconfigurationEditObjectV2Response result = apiInstance.systemconfigurationEditObjectV2(pkiSystemconfigurationID, systemconfigurationEditObjectV2Request);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ObjectSystemconfigurationApi#systemconfigurationEditObjectV1");
+      System.err.println("Exception when calling ObjectSystemconfigurationApi#systemconfigurationEditObjectV2");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -59,11 +59,11 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **pkiSystemconfigurationID** | **Integer**| The unique ID of the Systemconfiguration | |
-| **systemconfigurationEditObjectV1Request** | [**SystemconfigurationEditObjectV1Request**](SystemconfigurationEditObjectV1Request.md)|  | |
+| **systemconfigurationEditObjectV2Request** | [**SystemconfigurationEditObjectV2Request**](SystemconfigurationEditObjectV2Request.md)|  | |
 
 ### Return type
 
-[**SystemconfigurationEditObjectV1Response**](SystemconfigurationEditObjectV1Response.md)
+[**SystemconfigurationEditObjectV2Response**](SystemconfigurationEditObjectV2Response.md)
 
 ### Authorization
 

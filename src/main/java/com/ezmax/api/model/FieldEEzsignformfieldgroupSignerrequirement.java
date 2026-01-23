@@ -14,11 +14,9 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -28,6 +26,7 @@ import com.google.gson.stream.JsonWriter;
 /**
  * The Signer requirement of the Ezsignformfieldgroup. **All** means anyone can fill it, **One** means a specific person must fill it.
  */
+@Deprecated
 @JsonAdapter(FieldEEzsignformfieldgroupSignerrequirement.Adapter.class)
 public enum FieldEEzsignformfieldgroupSignerrequirement {
   

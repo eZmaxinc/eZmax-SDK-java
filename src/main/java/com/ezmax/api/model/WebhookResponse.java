@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.FieldEWebhookEzsignevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
@@ -47,14 +46,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class WebhookResponse {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -562,7 +560,7 @@ public class WebhookResponse {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!WebhookResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in WebhookResponse is not found in the empty JSON string", WebhookResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in WebhookResponse is not found in the empty JSON string", WebhookResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -570,22 +568,22 @@ public class WebhookResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!WebhookResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `WebhookResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `WebhookResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : WebhookResponse.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sWebhookDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sWebhookDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sWebhookDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookDescription").toString()));
       }
       if ((jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonNull()) && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }
       // validate the required field `eWebhookModule`
       FieldEWebhookModule.validateJsonElement(jsonObj.get("eWebhookModule"));
@@ -598,19 +596,19 @@ public class WebhookResponse {
         FieldEWebhookManagementevent.validateJsonElement(jsonObj.get("eWebhookManagementevent"));
       }
       if (!jsonObj.get("sWebhookUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sWebhookUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookUrl").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sWebhookUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookUrl").toString()));
       }
       if (!jsonObj.get("sWebhookEmailfailed").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sWebhookEmailfailed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEmailfailed").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sWebhookEmailfailed` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEmailfailed").toString()));
       }
       if ((jsonObj.get("sWebhookApikey") != null && !jsonObj.get("sWebhookApikey").isJsonNull()) && !jsonObj.get("sWebhookApikey").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sWebhookApikey` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookApikey").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sWebhookApikey` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookApikey").toString()));
       }
       if ((jsonObj.get("sWebhookSecret") != null && !jsonObj.get("sWebhookSecret").isJsonNull()) && !jsonObj.get("sWebhookSecret").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sWebhookSecret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookSecret").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sWebhookSecret` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookSecret").toString()));
       }
       if ((jsonObj.get("sAuthenticationexternalDescription") != null && !jsonObj.get("sAuthenticationexternalDescription").isJsonNull()) && !jsonObj.get("sAuthenticationexternalDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sAuthenticationexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAuthenticationexternalDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sAuthenticationexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAuthenticationexternalDescription").toString()));
       }
       // validate the required field `objAudit`
       CommonAudit.validateJsonElement(jsonObj.get("objAudit"));

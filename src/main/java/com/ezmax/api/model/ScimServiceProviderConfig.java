@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.ScimAuthenticationScheme;
 import com.ezmax.api.model.ScimServiceProviderConfigBulk;
 import com.ezmax.api.model.ScimServiceProviderConfigChangePassword;
@@ -52,14 +51,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * ScimServiceProviderConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class ScimServiceProviderConfig {
   public static final String SERIALIZED_NAME_AUTHENTICATION_SCHEMES = "authenticationSchemes";
   @SerializedName(SERIALIZED_NAME_AUTHENTICATION_SCHEMES)
@@ -337,7 +335,7 @@ public class ScimServiceProviderConfig {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ScimServiceProviderConfig.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ScimServiceProviderConfig is not found in the empty JSON string", ScimServiceProviderConfig.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ScimServiceProviderConfig is not found in the empty JSON string", ScimServiceProviderConfig.openapiRequiredFields.toString()));
         }
       }
 
@@ -345,20 +343,20 @@ public class ScimServiceProviderConfig {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ScimServiceProviderConfig.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ScimServiceProviderConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ScimServiceProviderConfig` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ScimServiceProviderConfig.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("authenticationSchemes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `authenticationSchemes` to be an array in the JSON string but got `%s`", jsonObj.get("authenticationSchemes").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `authenticationSchemes` to be an array in the JSON string but got `%s`", jsonObj.get("authenticationSchemes").toString()));
       }
 
       JsonArray jsonArrayauthenticationSchemes = jsonObj.getAsJsonArray("authenticationSchemes");
@@ -371,7 +369,7 @@ public class ScimServiceProviderConfig {
       // validate the required field `changePassword`
       ScimServiceProviderConfigChangePassword.validateJsonElement(jsonObj.get("changePassword"));
       if (!jsonObj.get("documentationUri").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `documentationUri` to be a primitive type in the JSON string but got `%s`", jsonObj.get("documentationUri").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `documentationUri` to be a primitive type in the JSON string but got `%s`", jsonObj.get("documentationUri").toString()));
       }
       // validate the required field `etag`
       ScimServiceProviderConfigEtag.validateJsonElement(jsonObj.get("etag"));

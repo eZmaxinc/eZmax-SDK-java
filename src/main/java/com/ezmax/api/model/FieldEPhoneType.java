@@ -14,11 +14,9 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.IOException;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.JsonElement;
 import com.google.gson.annotations.JsonAdapter;
@@ -28,6 +26,7 @@ import com.google.gson.stream.JsonWriter;
 /**
  * The type of phone number.  **Local** refers to a north American phone number. You would then need to specify sPhoneRegion, sPhoneExchange, sPhoneNumber. **International** would be used for numbers outside of north america. You would then need to specify sPhoneInternational
  */
+@Deprecated
 @JsonAdapter(FieldEPhoneType.Adapter.class)
 public enum FieldEPhoneType {
   

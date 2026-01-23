@@ -17,6 +17,7 @@ An Ezsignsignature Object and children to create a complete structure
 |**sCurrencyDescriptionX** | **String** | The description of the Currency in the language of the requester |  [optional] |
 |**dEzsignsignatureCreditcardamount** | **String** | The amount of the Creditcard signature |  [optional] |
 |**sEzsignsignatureCreditcardamountdescription** | **String** | The description of the Creditcard signature |  [optional] |
+|**bEzsignsignatureCreditcardcustomamount** | **Boolean** | Whether we can enter a custom amount while signing an Ezsignsignature &#39;Creditcard&#39; or not |  [optional] |
 |**sEzsignsigningreasonDescriptionX** | **String** | The description of the Ezsignsigningreason in the language of the requester |  [optional] |
 |**iEzsignpagePagenumber** | **Integer** | The page number in the Ezsigndocument |  |
 |**iEzsignsignatureX** | **Integer** | The X coordinate (Horizontal) where to put the Ezsignsignature on the page.  Coordinate is calculated at 100dpi (dot per inch). So for example, if you want to put the Ezsignsignature 2 inches from the left border of the page, you would use \&quot;200\&quot; for the X coordinate. |  |
@@ -26,6 +27,8 @@ An Ezsignsignature Object and children to create a complete structure
 |**iEzsignsignatureStep** | **Integer** | The step when the Ezsignsigner will be invited to sign |  |
 |**iEzsignsignatureStepadjusted** | **Integer** | The step when the Ezsignsigner will be invited to sign |  [optional] |
 |**eEzsignsignatureType** | **FieldEEzsignsignatureType** |  |  |
+|**eEzsignsignatureSignaturepad** | **FieldEEzsignsignatureSignaturepad** |  |  [optional] |
+|**eEzsignsignatureSignaturepadrequired** | **FieldEEzsignsignatureSignaturepadrequired** |  |  [optional] |
 |**tEzsignsignatureTooltip** | **String** | A tooltip that will be presented to Ezsignsigner about the Ezsignsignature |  [optional] |
 |**eEzsignsignatureTooltipposition** | **FieldEEzsignsignatureTooltipposition** |  |  [optional] |
 |**eEzsignsignatureFont** | **FieldEEzsignsignatureFont** |  |  [optional] |

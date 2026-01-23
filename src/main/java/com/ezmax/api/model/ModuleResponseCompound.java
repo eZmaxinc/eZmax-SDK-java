@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.ModulesectionResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -46,14 +45,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Module Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class ModuleResponseCompound {
   public static final String SERIALIZED_NAME_PKI_MODULE_I_D = "pkiModuleID";
   @SerializedName(SERIALIZED_NAME_PKI_MODULE_I_D)
@@ -308,7 +306,7 @@ public class ModuleResponseCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ModuleResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ModuleResponseCompound is not found in the empty JSON string", ModuleResponseCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ModuleResponseCompound is not found in the empty JSON string", ModuleResponseCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -316,29 +314,29 @@ public class ModuleResponseCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ModuleResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ModuleResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ModuleResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ModuleResponseCompound.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("eModuleInternalname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `eModuleInternalname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eModuleInternalname").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `eModuleInternalname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eModuleInternalname").toString()));
       }
       if (!jsonObj.get("sModuleNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sModuleNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModuleNameX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sModuleNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModuleNameX").toString()));
       }
       if (jsonObj.get("a_objModulesection") != null && !jsonObj.get("a_objModulesection").isJsonNull()) {
         JsonArray jsonArrayaObjModulesection = jsonObj.getAsJsonArray("a_objModulesection");
         if (jsonArrayaObjModulesection != null) {
           // ensure the json data is an array
           if (!jsonObj.get("a_objModulesection").isJsonArray()) {
-            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objModulesection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objModulesection").toString()));
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objModulesection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objModulesection").toString()));
           }
 
           // validate the optional field `a_objModulesection` (array)

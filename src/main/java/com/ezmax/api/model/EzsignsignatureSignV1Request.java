@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.CommonFile;
 import com.ezmax.api.model.CustomCreditcardRequest;
 import com.google.gson.TypeAdapter;
@@ -47,14 +46,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * Request for POST /1/object/ezsignsignature/{pkiEzsignsignatureID}/sign
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsignsignatureSignV1Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D = "fkiEzsignsigningreasonID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNSIGNINGREASON_I_D)
@@ -65,6 +63,11 @@ public class EzsignsignatureSignV1Request {
   @SerializedName(SERIALIZED_NAME_FKI_FONT_I_D)
   @javax.annotation.Nullable
   private Integer fkiFontID;
+
+  public static final String SERIALIZED_NAME_D_EZSIGNSIGNATURE_CREDITCARDAMOUNT = "dEzsignsignatureCreditcardamount";
+  @SerializedName(SERIALIZED_NAME_D_EZSIGNSIGNATURE_CREDITCARDAMOUNT)
+  @javax.annotation.Nullable
+  private String dEzsignsignatureCreditcardamount;
 
   public static final String SERIALIZED_NAME_S_VALUE = "sValue";
   @SerializedName(SERIALIZED_NAME_S_VALUE)
@@ -194,6 +197,25 @@ public class EzsignsignatureSignV1Request {
 
   public void setFkiFontID(@javax.annotation.Nullable Integer fkiFontID) {
     this.fkiFontID = fkiFontID;
+  }
+
+
+  public EzsignsignatureSignV1Request dEzsignsignatureCreditcardamount(@javax.annotation.Nullable String dEzsignsignatureCreditcardamount) {
+    this.dEzsignsignatureCreditcardamount = dEzsignsignatureCreditcardamount;
+    return this;
+  }
+
+  /**
+   * The amount of the Creditcard signature
+   * @return dEzsignsignatureCreditcardamount
+   */
+  @javax.annotation.Nullable
+  public String getdEzsignsignatureCreditcardamount() {
+    return dEzsignsignatureCreditcardamount;
+  }
+
+  public void setdEzsignsignatureCreditcardamount(@javax.annotation.Nullable String dEzsignsignatureCreditcardamount) {
+    this.dEzsignsignatureCreditcardamount = dEzsignsignatureCreditcardamount;
   }
 
 
@@ -350,6 +372,7 @@ public class EzsignsignatureSignV1Request {
     EzsignsignatureSignV1Request ezsignsignatureSignV1Request = (EzsignsignatureSignV1Request) o;
     return Objects.equals(this.fkiEzsignsigningreasonID, ezsignsignatureSignV1Request.fkiEzsignsigningreasonID) &&
         Objects.equals(this.fkiFontID, ezsignsignatureSignV1Request.fkiFontID) &&
+        Objects.equals(this.dEzsignsignatureCreditcardamount, ezsignsignatureSignV1Request.dEzsignsignatureCreditcardamount) &&
         Objects.equals(this.sValue, ezsignsignatureSignV1Request.sValue) &&
         Objects.equals(this.eAttachmentsConfirmationDecision, ezsignsignatureSignV1Request.eAttachmentsConfirmationDecision) &&
         Objects.equals(this.sAttachmentsRefusalReason, ezsignsignatureSignV1Request.sAttachmentsRefusalReason) &&
@@ -361,7 +384,7 @@ public class EzsignsignatureSignV1Request {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiEzsignsigningreasonID, fkiFontID, sValue, eAttachmentsConfirmationDecision, sAttachmentsRefusalReason, sSvg, aObjFile, objCreditcard, bIsAutomatic);
+    return Objects.hash(fkiEzsignsigningreasonID, fkiFontID, dEzsignsignatureCreditcardamount, sValue, eAttachmentsConfirmationDecision, sAttachmentsRefusalReason, sSvg, aObjFile, objCreditcard, bIsAutomatic);
   }
 
   @Override
@@ -370,6 +393,7 @@ public class EzsignsignatureSignV1Request {
     sb.append("class EzsignsignatureSignV1Request {\n");
     sb.append("    fkiEzsignsigningreasonID: ").append(toIndentedString(fkiEzsignsigningreasonID)).append("\n");
     sb.append("    fkiFontID: ").append(toIndentedString(fkiFontID)).append("\n");
+    sb.append("    dEzsignsignatureCreditcardamount: ").append(toIndentedString(dEzsignsignatureCreditcardamount)).append("\n");
     sb.append("    sValue: ").append(toIndentedString(sValue)).append("\n");
     sb.append("    eAttachmentsConfirmationDecision: ").append(toIndentedString(eAttachmentsConfirmationDecision)).append("\n");
     sb.append("    sAttachmentsRefusalReason: ").append(toIndentedString(sAttachmentsRefusalReason)).append("\n");
@@ -398,7 +422,7 @@ public class EzsignsignatureSignV1Request {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("fkiEzsignsigningreasonID", "fkiFontID", "sValue", "eAttachmentsConfirmationDecision", "sAttachmentsRefusalReason", "sSvg", "a_objFile", "objCreditcard", "bIsAutomatic"));
+    openapiFields = new HashSet<String>(Arrays.asList("fkiEzsignsigningreasonID", "fkiFontID", "dEzsignsignatureCreditcardamount", "sValue", "eAttachmentsConfirmationDecision", "sAttachmentsRefusalReason", "sSvg", "a_objFile", "objCreditcard", "bIsAutomatic"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("bIsAutomatic"));
@@ -413,7 +437,7 @@ public class EzsignsignatureSignV1Request {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignsignatureSignV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzsignsignatureSignV1Request is not found in the empty JSON string", EzsignsignatureSignV1Request.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzsignsignatureSignV1Request is not found in the empty JSON string", EzsignsignatureSignV1Request.openapiRequiredFields.toString()));
         }
       }
 
@@ -421,39 +445,42 @@ public class EzsignsignatureSignV1Request {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzsignsignatureSignV1Request.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignsignatureSignV1Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignsignatureSignV1Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsignsignatureSignV1Request.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("dEzsignsignatureCreditcardamount") != null && !jsonObj.get("dEzsignsignatureCreditcardamount").isJsonNull()) && !jsonObj.get("dEzsignsignatureCreditcardamount").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dEzsignsignatureCreditcardamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzsignsignatureCreditcardamount").toString()));
+      }
       if ((jsonObj.get("sValue") != null && !jsonObj.get("sValue").isJsonNull()) && !jsonObj.get("sValue").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sValue").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sValue").toString()));
       }
       if ((jsonObj.get("eAttachmentsConfirmationDecision") != null && !jsonObj.get("eAttachmentsConfirmationDecision").isJsonNull()) && !jsonObj.get("eAttachmentsConfirmationDecision").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `eAttachmentsConfirmationDecision` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eAttachmentsConfirmationDecision").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `eAttachmentsConfirmationDecision` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eAttachmentsConfirmationDecision").toString()));
       }
       // validate the optional field `eAttachmentsConfirmationDecision`
       if (jsonObj.get("eAttachmentsConfirmationDecision") != null && !jsonObj.get("eAttachmentsConfirmationDecision").isJsonNull()) {
         EAttachmentsConfirmationDecisionEnum.validateJsonElement(jsonObj.get("eAttachmentsConfirmationDecision"));
       }
       if ((jsonObj.get("sAttachmentsRefusalReason") != null && !jsonObj.get("sAttachmentsRefusalReason").isJsonNull()) && !jsonObj.get("sAttachmentsRefusalReason").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sAttachmentsRefusalReason` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAttachmentsRefusalReason").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sAttachmentsRefusalReason` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAttachmentsRefusalReason").toString()));
       }
       if ((jsonObj.get("sSvg") != null && !jsonObj.get("sSvg").isJsonNull()) && !jsonObj.get("sSvg").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sSvg` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sSvg").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sSvg` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sSvg").toString()));
       }
       if (jsonObj.get("a_objFile") != null && !jsonObj.get("a_objFile").isJsonNull()) {
         JsonArray jsonArrayaObjFile = jsonObj.getAsJsonArray("a_objFile");
         if (jsonArrayaObjFile != null) {
           // ensure the json data is an array
           if (!jsonObj.get("a_objFile").isJsonArray()) {
-            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objFile` to be an array in the JSON string but got `%s`", jsonObj.get("a_objFile").toString()));
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objFile` to be an array in the JSON string but got `%s`", jsonObj.get("a_objFile").toString()));
           }
 
           // validate the optional field `a_objFile` (array)

@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.FieldECreditcardtypeCodename;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -44,14 +43,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A custom Creditcardtransaction Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class CustomCreditcardtransactionResponse {
   public static final String SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME = "eCreditcardtypeCodename";
   @SerializedName(SERIALIZED_NAME_E_CREDITCARDTYPE_CODENAME)
@@ -217,7 +215,7 @@ public class CustomCreditcardtransactionResponse {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CustomCreditcardtransactionResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in CustomCreditcardtransactionResponse is not found in the empty JSON string", CustomCreditcardtransactionResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in CustomCreditcardtransactionResponse is not found in the empty JSON string", CustomCreditcardtransactionResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -225,27 +223,27 @@ public class CustomCreditcardtransactionResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CustomCreditcardtransactionResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CustomCreditcardtransactionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CustomCreditcardtransactionResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CustomCreditcardtransactionResponse.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `eCreditcardtypeCodename`
       FieldECreditcardtypeCodename.validateJsonElement(jsonObj.get("eCreditcardtypeCodename"));
       if (!jsonObj.get("dCreditcardtransactionAmount").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dCreditcardtransactionAmount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dCreditcardtransactionAmount").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dCreditcardtransactionAmount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dCreditcardtransactionAmount").toString()));
       }
       if (!jsonObj.get("sCreditcardtransactionPartiallydecryptednumber").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCreditcardtransactionPartiallydecryptednumber` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcardtransactionPartiallydecryptednumber").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCreditcardtransactionPartiallydecryptednumber` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcardtransactionPartiallydecryptednumber").toString()));
       }
       if (!jsonObj.get("sCreditcardtransactionReferencenumber").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCreditcardtransactionReferencenumber` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcardtransactionReferencenumber").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCreditcardtransactionReferencenumber` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcardtransactionReferencenumber").toString()));
       }
   }
 

@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.CommunicationexternalrecipientRequestCompound;
 import com.ezmax.api.model.CommunicationrecipientRequestCompound;
 import com.ezmax.api.model.CommunicationreferenceRequestCompound;
@@ -52,14 +51,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * Request for POST /1/object/communication
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class CommunicationRequestCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
@@ -572,7 +570,7 @@ public class CommunicationRequestCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommunicationRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in CommunicationRequestCompound is not found in the empty JSON string", CommunicationRequestCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in CommunicationRequestCompound is not found in the empty JSON string", CommunicationRequestCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -580,14 +578,14 @@ public class CommunicationRequestCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CommunicationRequestCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CommunicationRequestCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CommunicationRequestCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CommunicationRequestCompound.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -602,13 +600,13 @@ public class CommunicationRequestCompound {
         CustomCommunicationsenderRequest.validateJsonElement(jsonObj.get("objCommunicationsender"));
       }
       if ((jsonObj.get("sCommunicationSubject") != null && !jsonObj.get("sCommunicationSubject").isJsonNull()) && !jsonObj.get("sCommunicationSubject").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCommunicationSubject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSubject").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCommunicationSubject` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationSubject").toString()));
       }
       if (!jsonObj.get("tCommunicationBody").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tCommunicationBody` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tCommunicationBody").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `tCommunicationBody` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tCommunicationBody").toString()));
       }
       if ((jsonObj.get("eCommunicationAttachmenttype") != null && !jsonObj.get("eCommunicationAttachmenttype").isJsonNull()) && !jsonObj.get("eCommunicationAttachmenttype").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `eCommunicationAttachmenttype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eCommunicationAttachmenttype").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `eCommunicationAttachmenttype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("eCommunicationAttachmenttype").toString()));
       }
       // validate the optional field `eCommunicationAttachmenttype`
       if (jsonObj.get("eCommunicationAttachmenttype") != null && !jsonObj.get("eCommunicationAttachmenttype").isJsonNull()) {
@@ -616,7 +614,7 @@ public class CommunicationRequestCompound {
       }
       // ensure the json data is an array
       if (!jsonObj.get("a_objCommunicationattachment").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objCommunicationattachment` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationattachment").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationattachment` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationattachment").toString()));
       }
 
       JsonArray jsonArrayaObjCommunicationattachment = jsonObj.getAsJsonArray("a_objCommunicationattachment");
@@ -626,7 +624,7 @@ public class CommunicationRequestCompound {
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objCommunicationrecipient").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objCommunicationrecipient` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationrecipient").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationrecipient` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationrecipient").toString()));
       }
 
       JsonArray jsonArrayaObjCommunicationrecipient = jsonObj.getAsJsonArray("a_objCommunicationrecipient");
@@ -636,7 +634,7 @@ public class CommunicationRequestCompound {
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objCommunicationreference").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objCommunicationreference` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationreference").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationreference` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationreference").toString()));
       }
 
       JsonArray jsonArrayaObjCommunicationreference = jsonObj.getAsJsonArray("a_objCommunicationreference");
@@ -646,7 +644,7 @@ public class CommunicationRequestCompound {
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objCommunicationexternalrecipient").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objCommunicationexternalrecipient` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationexternalrecipient").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationexternalrecipient` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationexternalrecipient").toString()));
       }
 
       JsonArray jsonArrayaObjCommunicationexternalrecipient = jsonObj.getAsJsonArray("a_objCommunicationexternalrecipient");

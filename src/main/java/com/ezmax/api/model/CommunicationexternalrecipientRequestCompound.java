@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.FieldECommunicationexternalrecipientType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -44,14 +43,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Communicationexternalrecipient Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class CommunicationexternalrecipientRequestCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALRECIPIENT_I_D = "pkiCommunicationexternalrecipientID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONEXTERNALRECIPIENT_I_D)
@@ -243,7 +241,7 @@ public class CommunicationexternalrecipientRequestCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CommunicationexternalrecipientRequestCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in CommunicationexternalrecipientRequestCompound is not found in the empty JSON string", CommunicationexternalrecipientRequestCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in CommunicationexternalrecipientRequestCompound is not found in the empty JSON string", CommunicationexternalrecipientRequestCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -251,22 +249,22 @@ public class CommunicationexternalrecipientRequestCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CommunicationexternalrecipientRequestCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CommunicationexternalrecipientRequestCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CommunicationexternalrecipientRequestCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
       }
       if ((jsonObj.get("sPhoneE164") != null && !jsonObj.get("sPhoneE164").isJsonNull()) && !jsonObj.get("sPhoneE164").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sPhoneE164` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneE164").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sPhoneE164` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sPhoneE164").toString()));
       }
       // validate the optional field `eCommunicationexternalrecipientType`
       if (jsonObj.get("eCommunicationexternalrecipientType") != null && !jsonObj.get("eCommunicationexternalrecipientType").isJsonNull()) {
         FieldECommunicationexternalrecipientType.validateJsonElement(jsonObj.get("eCommunicationexternalrecipientType"));
       }
       if ((jsonObj.get("sCommunicationexternalrecipientName") != null && !jsonObj.get("sCommunicationexternalrecipientName").isJsonNull()) && !jsonObj.get("sCommunicationexternalrecipientName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCommunicationexternalrecipientName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationexternalrecipientName").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCommunicationexternalrecipientName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCommunicationexternalrecipientName").toString()));
       }
   }
 

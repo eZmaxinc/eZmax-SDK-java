@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,14 +42,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Creditcardclient List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class CreditcardclientListElement {
   public static final String SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D = "pkiCreditcardclientID";
   @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDCLIENT_I_D)
@@ -71,6 +69,11 @@ public class CreditcardclientListElement {
   @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENTRELATION_ISDEFAULT)
   @javax.annotation.Nonnull
   private Boolean bCreditcardclientrelationIsdefault;
+
+  public static final String SERIALIZED_NAME_B_CREDITCARDCLIENT_LEGACY = "bCreditcardclientLegacy";
+  @SerializedName(SERIALIZED_NAME_B_CREDITCARDCLIENT_LEGACY)
+  @javax.annotation.Nonnull
+  private Boolean bCreditcardclientLegacy;
 
   public static final String SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION = "sCreditcardclientDescription";
   @SerializedName(SERIALIZED_NAME_S_CREDITCARDCLIENT_DESCRIPTION)
@@ -184,6 +187,25 @@ public class CreditcardclientListElement {
 
   public void setbCreditcardclientrelationIsdefault(@javax.annotation.Nonnull Boolean bCreditcardclientrelationIsdefault) {
     this.bCreditcardclientrelationIsdefault = bCreditcardclientrelationIsdefault;
+  }
+
+
+  public CreditcardclientListElement bCreditcardclientLegacy(@javax.annotation.Nonnull Boolean bCreditcardclientLegacy) {
+    this.bCreditcardclientLegacy = bCreditcardclientLegacy;
+    return this;
+  }
+
+  /**
+   * Whether the Creditcardclient is legacy or not
+   * @return bCreditcardclientLegacy
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbCreditcardclientLegacy() {
+    return bCreditcardclientLegacy;
+  }
+
+  public void setbCreditcardclientLegacy(@javax.annotation.Nonnull Boolean bCreditcardclientLegacy) {
+    this.bCreditcardclientLegacy = bCreditcardclientLegacy;
   }
 
 
@@ -321,6 +343,7 @@ public class CreditcardclientListElement {
         Objects.equals(this.fkiCreditcarddetailID, creditcardclientListElement.fkiCreditcarddetailID) &&
         Objects.equals(this.fkiCreditcardtypeID, creditcardclientListElement.fkiCreditcardtypeID) &&
         Objects.equals(this.bCreditcardclientrelationIsdefault, creditcardclientListElement.bCreditcardclientrelationIsdefault) &&
+        Objects.equals(this.bCreditcardclientLegacy, creditcardclientListElement.bCreditcardclientLegacy) &&
         Objects.equals(this.sCreditcardclientDescription, creditcardclientListElement.sCreditcardclientDescription) &&
         Objects.equals(this.bCreditcardclientAllowedcompanypayment, creditcardclientListElement.bCreditcardclientAllowedcompanypayment) &&
         Objects.equals(this.bCreditcardclientAllowedtranquillit, creditcardclientListElement.bCreditcardclientAllowedtranquillit) &&
@@ -331,7 +354,7 @@ public class CreditcardclientListElement {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCreditcardclientID, fkiCreditcarddetailID, fkiCreditcardtypeID, bCreditcardclientrelationIsdefault, sCreditcardclientDescription, bCreditcardclientAllowedcompanypayment, bCreditcardclientAllowedtranquillit, iCreditcarddetailExpirationmonth, iCreditcarddetailExpirationyear, iCreditcarddetailLastdigits);
+    return Objects.hash(pkiCreditcardclientID, fkiCreditcarddetailID, fkiCreditcardtypeID, bCreditcardclientrelationIsdefault, bCreditcardclientLegacy, sCreditcardclientDescription, bCreditcardclientAllowedcompanypayment, bCreditcardclientAllowedtranquillit, iCreditcarddetailExpirationmonth, iCreditcarddetailExpirationyear, iCreditcarddetailLastdigits);
   }
 
   @Override
@@ -342,6 +365,7 @@ public class CreditcardclientListElement {
     sb.append("    fkiCreditcarddetailID: ").append(toIndentedString(fkiCreditcarddetailID)).append("\n");
     sb.append("    fkiCreditcardtypeID: ").append(toIndentedString(fkiCreditcardtypeID)).append("\n");
     sb.append("    bCreditcardclientrelationIsdefault: ").append(toIndentedString(bCreditcardclientrelationIsdefault)).append("\n");
+    sb.append("    bCreditcardclientLegacy: ").append(toIndentedString(bCreditcardclientLegacy)).append("\n");
     sb.append("    sCreditcardclientDescription: ").append(toIndentedString(sCreditcardclientDescription)).append("\n");
     sb.append("    bCreditcardclientAllowedcompanypayment: ").append(toIndentedString(bCreditcardclientAllowedcompanypayment)).append("\n");
     sb.append("    bCreditcardclientAllowedtranquillit: ").append(toIndentedString(bCreditcardclientAllowedtranquillit)).append("\n");
@@ -369,10 +393,10 @@ public class CreditcardclientListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiCreditcardclientID", "fkiCreditcarddetailID", "fkiCreditcardtypeID", "bCreditcardclientrelationIsdefault", "sCreditcardclientDescription", "bCreditcardclientAllowedcompanypayment", "bCreditcardclientAllowedtranquillit", "iCreditcarddetailExpirationmonth", "iCreditcarddetailExpirationyear", "iCreditcarddetailLastdigits"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiCreditcardclientID", "fkiCreditcarddetailID", "fkiCreditcardtypeID", "bCreditcardclientrelationIsdefault", "bCreditcardclientLegacy", "sCreditcardclientDescription", "bCreditcardclientAllowedcompanypayment", "bCreditcardclientAllowedtranquillit", "iCreditcarddetailExpirationmonth", "iCreditcarddetailExpirationyear", "iCreditcarddetailLastdigits"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiCreditcardclientID", "fkiCreditcarddetailID", "fkiCreditcardtypeID", "bCreditcardclientrelationIsdefault", "sCreditcardclientDescription", "bCreditcardclientAllowedcompanypayment", "bCreditcardclientAllowedtranquillit", "iCreditcarddetailExpirationmonth", "iCreditcarddetailExpirationyear", "iCreditcarddetailLastdigits"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiCreditcardclientID", "fkiCreditcarddetailID", "fkiCreditcardtypeID", "bCreditcardclientrelationIsdefault", "bCreditcardclientLegacy", "sCreditcardclientDescription", "bCreditcardclientAllowedcompanypayment", "bCreditcardclientAllowedtranquillit", "iCreditcarddetailExpirationmonth", "iCreditcarddetailExpirationyear", "iCreditcarddetailLastdigits"));
   }
 
   /**
@@ -384,7 +408,7 @@ public class CreditcardclientListElement {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!CreditcardclientListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in CreditcardclientListElement is not found in the empty JSON string", CreditcardclientListElement.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in CreditcardclientListElement is not found in the empty JSON string", CreditcardclientListElement.openapiRequiredFields.toString()));
         }
       }
 
@@ -392,19 +416,19 @@ public class CreditcardclientListElement {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!CreditcardclientListElement.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CreditcardclientListElement` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `CreditcardclientListElement` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : CreditcardclientListElement.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sCreditcardclientDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCreditcardclientDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcardclientDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCreditcardclientDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCreditcardclientDescription").toString()));
       }
   }
 

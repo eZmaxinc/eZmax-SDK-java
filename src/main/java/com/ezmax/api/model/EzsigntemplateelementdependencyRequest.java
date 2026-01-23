@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.FieldEEzsigntemplateelementdependencyOperator;
 import com.ezmax.api.model.FieldEEzsigntemplateelementdependencyValidation;
 import com.google.gson.TypeAdapter;
@@ -45,14 +44,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * An Ezsigntemplateelementdependency Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsigntemplateelementdependencyRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEELEMENTDEPENDENCY_I_D = "pkiEzsigntemplateelementdependencyID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEELEMENTDEPENDENCY_I_D)
@@ -352,7 +350,7 @@ public class EzsigntemplateelementdependencyRequest {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplateelementdependencyRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzsigntemplateelementdependencyRequest is not found in the empty JSON string", EzsigntemplateelementdependencyRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzsigntemplateelementdependencyRequest is not found in the empty JSON string", EzsigntemplateelementdependencyRequest.openapiRequiredFields.toString()));
         }
       }
 
@@ -360,22 +358,22 @@ public class EzsigntemplateelementdependencyRequest {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzsigntemplateelementdependencyRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsigntemplateelementdependencyRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsigntemplateelementdependencyRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsigntemplateelementdependencyRequest.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel") != null && !jsonObj.get("sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel").isJsonNull()) && !jsonObj.get("sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateelementdependencyEzsigntemplateformfieldgrouplabel").toString()));
       }
       if ((jsonObj.get("sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel") != null && !jsonObj.get("sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel").isJsonNull()) && !jsonObj.get("sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateelementdependencyEzsigntemplateformfieldlabel").toString()));
       }
       // validate the required field `eEzsigntemplateelementdependencyValidation`
       FieldEEzsigntemplateelementdependencyValidation.validateJsonElement(jsonObj.get("eEzsigntemplateelementdependencyValidation"));
@@ -384,7 +382,7 @@ public class EzsigntemplateelementdependencyRequest {
         FieldEEzsigntemplateelementdependencyOperator.validateJsonElement(jsonObj.get("eEzsigntemplateelementdependencyOperator"));
       }
       if ((jsonObj.get("sEzsigntemplateelementdependencyValue") != null && !jsonObj.get("sEzsigntemplateelementdependencyValue").isJsonNull()) && !jsonObj.get("sEzsigntemplateelementdependencyValue").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsigntemplateelementdependencyValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateelementdependencyValue").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsigntemplateelementdependencyValue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateelementdependencyValue").toString()));
       }
   }
 

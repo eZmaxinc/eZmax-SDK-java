@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.EzsigntemplatesignatureRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -46,14 +45,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * Request for PUT /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATESIGNATURE = "a_objEzsigntemplatesignature";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATESIGNATURE)
@@ -149,7 +147,7 @@ public class EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request is not found in the empty JSON string", EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request is not found in the empty JSON string", EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request.openapiRequiredFields.toString()));
         }
       }
 
@@ -157,20 +155,20 @@ public class EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsigntemplatesignature").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objEzsigntemplatesignature` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplatesignature").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsigntemplatesignature` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplatesignature").toString()));
       }
 
       JsonArray jsonArrayaObjEzsigntemplatesignature = jsonObj.getAsJsonArray("a_objEzsigntemplatesignature");

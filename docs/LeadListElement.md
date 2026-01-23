@@ -15,6 +15,7 @@ A Lead List Element
 |**dtLeadExpiration** | **String** | The expiration of the Lead |  |
 |**bLeadIsactive** | **Boolean** | Whether the lead is active or not |  |
 |**sLeadCode** | **String** | The code of the Lead |  |
+|**sLeadContacts** | **String** | The contacts&#39; name of the Lead |  [optional] |
 
 
 

@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,14 +42,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Activesession List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class ActivesessionListElement {
   public static final String SERIALIZED_NAME_PKI_ACTIVESESSION_I_D = "pkiActivesessionID";
   @SerializedName(SERIALIZED_NAME_PKI_ACTIVESESSION_I_D)
@@ -64,7 +62,7 @@ public class ActivesessionListElement {
 
   public static final String SERIALIZED_NAME_FKI_COMPUTER_I_D = "fkiComputerID";
   @SerializedName(SERIALIZED_NAME_FKI_COMPUTER_I_D)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiComputerID;
 
   public static final String SERIALIZED_NAME_FKI_COMPANY_I_D = "fkiCompanyID";
@@ -94,7 +92,7 @@ public class ActivesessionListElement {
 
   public static final String SERIALIZED_NAME_S_COMPUTER_DESCRIPTION = "sComputerDescription";
   @SerializedName(SERIALIZED_NAME_S_COMPUTER_DESCRIPTION)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private String sComputerDescription;
 
   public static final String SERIALIZED_NAME_DT_ACTIVESESSION_FIRSTHIT = "dtActivesessionFirsthit";
@@ -154,7 +152,7 @@ public class ActivesessionListElement {
   }
 
 
-  public ActivesessionListElement fkiComputerID(@javax.annotation.Nonnull Integer fkiComputerID) {
+  public ActivesessionListElement fkiComputerID(@javax.annotation.Nullable Integer fkiComputerID) {
     this.fkiComputerID = fkiComputerID;
     return this;
   }
@@ -165,12 +163,12 @@ public class ActivesessionListElement {
    * maximum: 65535
    * @return fkiComputerID
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiComputerID() {
     return fkiComputerID;
   }
 
-  public void setFkiComputerID(@javax.annotation.Nonnull Integer fkiComputerID) {
+  public void setFkiComputerID(@javax.annotation.Nullable Integer fkiComputerID) {
     this.fkiComputerID = fkiComputerID;
   }
 
@@ -273,7 +271,7 @@ public class ActivesessionListElement {
   }
 
 
-  public ActivesessionListElement sComputerDescription(@javax.annotation.Nonnull String sComputerDescription) {
+  public ActivesessionListElement sComputerDescription(@javax.annotation.Nullable String sComputerDescription) {
     this.sComputerDescription = sComputerDescription;
     return this;
   }
@@ -282,12 +280,12 @@ public class ActivesessionListElement {
    * The description of the Computer
    * @return sComputerDescription
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsComputerDescription() {
     return sComputerDescription;
   }
 
-  public void setsComputerDescription(@javax.annotation.Nonnull String sComputerDescription) {
+  public void setsComputerDescription(@javax.annotation.Nullable String sComputerDescription) {
     this.sComputerDescription = sComputerDescription;
   }
 
@@ -418,7 +416,7 @@ public class ActivesessionListElement {
     openapiFields = new HashSet<String>(Arrays.asList("pkiActivesessionID", "fkiUserID", "fkiComputerID", "fkiCompanyID", "fkiDepartmentID", "sCompanyNameX", "sDepartmentNameX", "sActivesessionLoginname", "sComputerDescription", "dtActivesessionFirsthit", "dtActivesessionLasthit", "sActivesessionIP"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiActivesessionID", "fkiUserID", "fkiComputerID", "fkiCompanyID", "fkiDepartmentID", "sCompanyNameX", "sDepartmentNameX", "sActivesessionLoginname", "sComputerDescription", "dtActivesessionFirsthit", "dtActivesessionLasthit", "sActivesessionIP"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiActivesessionID", "fkiUserID", "fkiCompanyID", "fkiDepartmentID", "sCompanyNameX", "sDepartmentNameX", "sActivesessionLoginname", "dtActivesessionFirsthit", "dtActivesessionLasthit", "sActivesessionIP"));
   }
 
   /**
@@ -430,7 +428,7 @@ public class ActivesessionListElement {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ActivesessionListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in ActivesessionListElement is not found in the empty JSON string", ActivesessionListElement.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in ActivesessionListElement is not found in the empty JSON string", ActivesessionListElement.openapiRequiredFields.toString()));
         }
       }
 
@@ -438,37 +436,37 @@ public class ActivesessionListElement {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!ActivesessionListElement.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ActivesessionListElement` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `ActivesessionListElement` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ActivesessionListElement.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sCompanyNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCompanyNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCompanyNameX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCompanyNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCompanyNameX").toString()));
       }
       if (!jsonObj.get("sDepartmentNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sDepartmentNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDepartmentNameX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sDepartmentNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDepartmentNameX").toString()));
       }
       if (!jsonObj.get("sActivesessionLoginname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sActivesessionLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sActivesessionLoginname").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sActivesessionLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sActivesessionLoginname").toString()));
       }
-      if (!jsonObj.get("sComputerDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sComputerDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sComputerDescription").toString()));
+      if ((jsonObj.get("sComputerDescription") != null && !jsonObj.get("sComputerDescription").isJsonNull()) && !jsonObj.get("sComputerDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sComputerDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sComputerDescription").toString()));
       }
       if (!jsonObj.get("dtActivesessionFirsthit").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtActivesessionFirsthit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtActivesessionFirsthit").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtActivesessionFirsthit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtActivesessionFirsthit").toString()));
       }
       if (!jsonObj.get("dtActivesessionLasthit").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtActivesessionLasthit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtActivesessionLasthit").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtActivesessionLasthit` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtActivesessionLasthit").toString()));
       }
       if (!jsonObj.get("sActivesessionIP").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sActivesessionIP` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sActivesessionIP").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sActivesessionIP` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sActivesessionIP").toString()));
       }
   }
 

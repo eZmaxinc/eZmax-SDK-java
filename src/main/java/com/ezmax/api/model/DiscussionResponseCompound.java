@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.CustomDiscussionconfigurationResponse;
 import com.ezmax.api.model.DiscussionmembershipResponseCompound;
 import com.ezmax.api.model.DiscussionmessageResponseCompound;
@@ -48,14 +47,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Discussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class DiscussionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_DISCUSSION_I_D = "pkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSION_I_D)
@@ -369,7 +367,7 @@ public class DiscussionResponseCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!DiscussionResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in DiscussionResponseCompound is not found in the empty JSON string", DiscussionResponseCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in DiscussionResponseCompound is not found in the empty JSON string", DiscussionResponseCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -377,22 +375,22 @@ public class DiscussionResponseCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!DiscussionResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DiscussionResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DiscussionResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : DiscussionResponseCompound.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sDiscussionDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sDiscussionDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDiscussionDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sDiscussionDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDiscussionDescription").toString()));
       }
       if ((jsonObj.get("dtDiscussionLastread") != null && !jsonObj.get("dtDiscussionLastread").isJsonNull()) && !jsonObj.get("dtDiscussionLastread").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtDiscussionLastread` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtDiscussionLastread").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtDiscussionLastread` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtDiscussionLastread").toString()));
       }
       // validate the optional field `objDiscussionconfiguration`
       if (jsonObj.get("objDiscussionconfiguration") != null && !jsonObj.get("objDiscussionconfiguration").isJsonNull()) {
@@ -400,7 +398,7 @@ public class DiscussionResponseCompound {
       }
       // ensure the json data is an array
       if (!jsonObj.get("a_objDiscussionmembership").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objDiscussionmembership` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDiscussionmembership").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objDiscussionmembership` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDiscussionmembership").toString()));
       }
 
       JsonArray jsonArrayaObjDiscussionmembership = jsonObj.getAsJsonArray("a_objDiscussionmembership");
@@ -410,7 +408,7 @@ public class DiscussionResponseCompound {
       };
       // ensure the json data is an array
       if (!jsonObj.get("a_objDiscussionmessage").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objDiscussionmessage` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDiscussionmessage").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objDiscussionmessage` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDiscussionmessage").toString()));
       }
 
       JsonArray jsonArrayaObjDiscussionmessage = jsonObj.getAsJsonArray("a_objDiscussionmessage");

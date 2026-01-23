@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.CommonAudit;
 import com.ezmax.api.model.CustomEzsignfolderezsigntemplatepublicResponse;
 import com.ezmax.api.model.FieldEEzsigntemplatepublicLimittype;
@@ -48,14 +47,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Ezsigntemplatepublic Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsigntemplatepublicResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPUBLIC_I_D = "pkiEzsigntemplatepublicID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEPUBLIC_I_D)
@@ -630,7 +628,7 @@ public class EzsigntemplatepublicResponseCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatepublicResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzsigntemplatepublicResponseCompound is not found in the empty JSON string", EzsigntemplatepublicResponseCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzsigntemplatepublicResponseCompound is not found in the empty JSON string", EzsigntemplatepublicResponseCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -638,42 +636,42 @@ public class EzsigntemplatepublicResponseCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzsigntemplatepublicResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsigntemplatepublicResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsigntemplatepublicResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsigntemplatepublicResponseCompound.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }
       if (!jsonObj.get("sUserlogintypeDescriptionX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sUserlogintypeDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserlogintypeDescriptionX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sUserlogintypeDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserlogintypeDescriptionX").toString()));
       }
       if (!jsonObj.get("sEzsigntemplatepublicDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsigntemplatepublicDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsigntemplatepublicDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicDescription").toString()));
       }
       if (!jsonObj.get("sEzsigntemplatepublicReferenceid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsigntemplatepublicReferenceid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicReferenceid").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsigntemplatepublicReferenceid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicReferenceid").toString()));
       }
       if (!jsonObj.get("tEzsigntemplatepublicNote").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tEzsigntemplatepublicNote` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsigntemplatepublicNote").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `tEzsigntemplatepublicNote` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsigntemplatepublicNote").toString()));
       }
       // validate the required field `eEzsigntemplatepublicLimittype`
       FieldEEzsigntemplatepublicLimittype.validateJsonElement(jsonObj.get("eEzsigntemplatepublicLimittype"));
       if (!jsonObj.get("dtEzsigntemplatepublicLimitexceededsince").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtEzsigntemplatepublicLimitexceededsince` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigntemplatepublicLimitexceededsince").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtEzsigntemplatepublicLimitexceededsince` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigntemplatepublicLimitexceededsince").toString()));
       }
       if (!jsonObj.get("sEzsigntemplatepublicUrl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsigntemplatepublicUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicUrl").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsigntemplatepublicUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicUrl").toString()));
       }
       if (!jsonObj.get("sEzsigntemplatepublicEzsigntemplatedescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsigntemplatepublicEzsigntemplatedescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicEzsigntemplatedescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsigntemplatepublicEzsigntemplatedescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicEzsigntemplatedescription").toString()));
       }
       // validate the optional field `objAudit`
       if (jsonObj.get("objAudit") != null && !jsonObj.get("objAudit").isJsonNull()) {
@@ -681,7 +679,7 @@ public class EzsigntemplatepublicResponseCompound {
       }
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignfolderezsigntemplatepublic").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objEzsignfolderezsigntemplatepublic` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignfolderezsigntemplatepublic").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignfolderezsigntemplatepublic` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignfolderezsigntemplatepublic").toString()));
       }
 
       JsonArray jsonArrayaObjEzsignfolderezsigntemplatepublic = jsonObj.getAsJsonArray("a_objEzsignfolderezsigntemplatepublic");

@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.FieldELeadStatus;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -44,14 +43,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Lead List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class LeadListElement {
   public static final String SERIALIZED_NAME_PKI_LEAD_I_D = "pkiLeadID";
   @SerializedName(SERIALIZED_NAME_PKI_LEAD_I_D)
@@ -87,6 +85,11 @@ public class LeadListElement {
   @SerializedName(SERIALIZED_NAME_S_LEAD_CODE)
   @javax.annotation.Nonnull
   private String sLeadCode;
+
+  public static final String SERIALIZED_NAME_S_LEAD_CONTACTS = "sLeadContacts";
+  @SerializedName(SERIALIZED_NAME_S_LEAD_CONTACTS)
+  @javax.annotation.Nullable
+  private String sLeadContacts;
 
   public LeadListElement() {
   }
@@ -228,6 +231,25 @@ public class LeadListElement {
   }
 
 
+  public LeadListElement sLeadContacts(@javax.annotation.Nullable String sLeadContacts) {
+    this.sLeadContacts = sLeadContacts;
+    return this;
+  }
+
+  /**
+   * The contacts&#39; name of the Lead
+   * @return sLeadContacts
+   */
+  @javax.annotation.Nullable
+  public String getsLeadContacts() {
+    return sLeadContacts;
+  }
+
+  public void setsLeadContacts(@javax.annotation.Nullable String sLeadContacts) {
+    this.sLeadContacts = sLeadContacts;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -244,12 +266,13 @@ public class LeadListElement {
         Objects.equals(this.eLeadStatus, leadListElement.eLeadStatus) &&
         Objects.equals(this.dtLeadExpiration, leadListElement.dtLeadExpiration) &&
         Objects.equals(this.bLeadIsactive, leadListElement.bLeadIsactive) &&
-        Objects.equals(this.sLeadCode, leadListElement.sLeadCode);
+        Objects.equals(this.sLeadCode, leadListElement.sLeadCode) &&
+        Objects.equals(this.sLeadContacts, leadListElement.sLeadContacts);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiLeadID, fkiLeadsourceID, sLeadsourceNameX, eLeadStatus, dtLeadExpiration, bLeadIsactive, sLeadCode);
+    return Objects.hash(pkiLeadID, fkiLeadsourceID, sLeadsourceNameX, eLeadStatus, dtLeadExpiration, bLeadIsactive, sLeadCode, sLeadContacts);
   }
 
   @Override
@@ -263,6 +286,7 @@ public class LeadListElement {
     sb.append("    dtLeadExpiration: ").append(toIndentedString(dtLeadExpiration)).append("\n");
     sb.append("    bLeadIsactive: ").append(toIndentedString(bLeadIsactive)).append("\n");
     sb.append("    sLeadCode: ").append(toIndentedString(sLeadCode)).append("\n");
+    sb.append("    sLeadContacts: ").append(toIndentedString(sLeadContacts)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -284,7 +308,7 @@ public class LeadListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiLeadID", "fkiLeadsourceID", "sLeadsourceNameX", "eLeadStatus", "dtLeadExpiration", "bLeadIsactive", "sLeadCode"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiLeadID", "fkiLeadsourceID", "sLeadsourceNameX", "eLeadStatus", "dtLeadExpiration", "bLeadIsactive", "sLeadCode", "sLeadContacts"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiLeadID", "fkiLeadsourceID", "sLeadsourceNameX", "eLeadStatus", "dtLeadExpiration", "bLeadIsactive", "sLeadCode"));
@@ -299,7 +323,7 @@ public class LeadListElement {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!LeadListElement.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in LeadListElement is not found in the empty JSON string", LeadListElement.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in LeadListElement is not found in the empty JSON string", LeadListElement.openapiRequiredFields.toString()));
         }
       }
 
@@ -307,27 +331,30 @@ public class LeadListElement {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!LeadListElement.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `LeadListElement` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `LeadListElement` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : LeadListElement.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sLeadsourceNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sLeadsourceNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sLeadsourceNameX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sLeadsourceNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sLeadsourceNameX").toString()));
       }
       // validate the required field `eLeadStatus`
       FieldELeadStatus.validateJsonElement(jsonObj.get("eLeadStatus"));
       if (!jsonObj.get("dtLeadExpiration").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtLeadExpiration` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtLeadExpiration").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtLeadExpiration` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtLeadExpiration").toString()));
       }
       if (!jsonObj.get("sLeadCode").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sLeadCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sLeadCode").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sLeadCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sLeadCode").toString()));
+      }
+      if ((jsonObj.get("sLeadContacts") != null && !jsonObj.get("sLeadContacts").isJsonNull()) && !jsonObj.get("sLeadContacts").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sLeadContacts` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sLeadContacts").toString()));
       }
   }
 

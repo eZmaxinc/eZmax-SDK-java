@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.FieldEEzsignfoldertypeCompletion;
 import com.ezmax.api.model.FieldEEzsignfoldertypeDisposal;
 import com.ezmax.api.model.FieldEEzsignfoldertypeDocumentdependency;
@@ -54,14 +53,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Ezsignfoldertype Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsignfoldertypeRequestCompoundV3 {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -1974,7 +1972,7 @@ public class EzsignfoldertypeRequestCompoundV3 {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignfoldertypeRequestCompoundV3.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzsignfoldertypeRequestCompoundV3 is not found in the empty JSON string", EzsignfoldertypeRequestCompoundV3.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzsignfoldertypeRequestCompoundV3 is not found in the empty JSON string", EzsignfoldertypeRequestCompoundV3.openapiRequiredFields.toString()));
         }
       }
 
@@ -1982,14 +1980,14 @@ public class EzsignfoldertypeRequestCompoundV3 {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzsignfoldertypeRequestCompoundV3.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignfoldertypeRequestCompoundV3` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignfoldertypeRequestCompoundV3` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsignfoldertypeRequestCompoundV3.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -1997,25 +1995,25 @@ public class EzsignfoldertypeRequestCompoundV3 {
       MultilingualEzsignfoldertypeName.validateJsonElement(jsonObj.get("objEzsignfoldertypeName"));
       // ensure the optional json data is an array if present
       if (jsonObj.get("a_fkiPdfalevelID") != null && !jsonObj.get("a_fkiPdfalevelID").isJsonNull() && !jsonObj.get("a_fkiPdfalevelID").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_fkiPdfalevelID` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiPdfalevelID").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_fkiPdfalevelID` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiPdfalevelID").toString()));
       }
       // ensure the required json array is present
       if (jsonObj.get("a_fkiUserlogintypeID") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("a_fkiUserlogintypeID").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_fkiUserlogintypeID` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUserlogintypeID").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_fkiUserlogintypeID` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUserlogintypeID").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("a_fkiUsergroupIDAll") != null && !jsonObj.get("a_fkiUsergroupIDAll").isJsonNull() && !jsonObj.get("a_fkiUsergroupIDAll").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_fkiUsergroupIDAll` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUsergroupIDAll").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_fkiUsergroupIDAll` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUsergroupIDAll").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("a_fkiUsergroupIDRestricted") != null && !jsonObj.get("a_fkiUsergroupIDRestricted").isJsonNull() && !jsonObj.get("a_fkiUsergroupIDRestricted").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_fkiUsergroupIDRestricted` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUsergroupIDRestricted").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_fkiUsergroupIDRestricted` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUsergroupIDRestricted").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("a_fkiUsergroupIDTemplate") != null && !jsonObj.get("a_fkiUsergroupIDTemplate").isJsonNull() && !jsonObj.get("a_fkiUsergroupIDTemplate").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_fkiUsergroupIDTemplate` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUsergroupIDTemplate").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_fkiUsergroupIDTemplate` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUsergroupIDTemplate").toString()));
       }
       // validate the optional field `eEzsignfoldertypeDocumentdependency`
       if (jsonObj.get("eEzsignfoldertypeDocumentdependency") != null && !jsonObj.get("eEzsignfoldertypeDocumentdependency").isJsonNull()) {
@@ -2026,10 +2024,10 @@ public class EzsignfoldertypeRequestCompoundV3 {
         FieldEEzsignfoldertypeDocumentmerge.validateJsonElement(jsonObj.get("eEzsignfoldertypeDocumentmerge"));
       }
       if ((jsonObj.get("sEmailAddressSigned") != null && !jsonObj.get("sEmailAddressSigned").isJsonNull()) && !jsonObj.get("sEmailAddressSigned").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEmailAddressSigned` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddressSigned").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEmailAddressSigned` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddressSigned").toString()));
       }
       if ((jsonObj.get("sEmailAddressSummary") != null && !jsonObj.get("sEmailAddressSummary").isJsonNull()) && !jsonObj.get("sEmailAddressSummary").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEmailAddressSummary` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddressSummary").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEmailAddressSummary` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddressSummary").toString()));
       }
       // validate the optional field `eEzsignfoldertypePdfarequirement`
       if (jsonObj.get("eEzsignfoldertypePdfarequirement") != null && !jsonObj.get("eEzsignfoldertypePdfarequirement").isJsonNull()) {
@@ -2051,11 +2049,11 @@ public class EzsignfoldertypeRequestCompoundV3 {
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("a_fkiUserIDSigned") != null && !jsonObj.get("a_fkiUserIDSigned").isJsonNull() && !jsonObj.get("a_fkiUserIDSigned").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_fkiUserIDSigned` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUserIDSigned").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_fkiUserIDSigned` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUserIDSigned").toString()));
       }
       // ensure the optional json data is an array if present
       if (jsonObj.get("a_fkiUserIDSummary") != null && !jsonObj.get("a_fkiUserIDSummary").isJsonNull() && !jsonObj.get("a_fkiUserIDSummary").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_fkiUserIDSummary` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUserIDSummary").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_fkiUserIDSummary` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUserIDSummary").toString()));
       }
   }
 

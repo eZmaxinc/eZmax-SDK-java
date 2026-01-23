@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -43,14 +42,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Usergroupdelegation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class UsergroupdelegationResponse {
   public static final String SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D = "pkiUsergroupdelegationID";
   @SerializedName(SERIALIZED_NAME_PKI_USERGROUPDELEGATION_I_D)
@@ -86,6 +84,11 @@ public class UsergroupdelegationResponse {
   @SerializedName(SERIALIZED_NAME_S_EMAIL_ADDRESS)
   @javax.annotation.Nullable
   private String sEmailAddress;
+
+  public static final String SERIALIZED_NAME_B_USER_ISACTIVE = "bUserIsactive";
+  @SerializedName(SERIALIZED_NAME_B_USER_ISACTIVE)
+  @javax.annotation.Nonnull
+  private Boolean bUserIsactive;
 
   public static final String SERIALIZED_NAME_S_USERGROUP_NAME_X = "sUsergroupNameX";
   @SerializedName(SERIALIZED_NAME_S_USERGROUP_NAME_X)
@@ -233,6 +236,25 @@ public class UsergroupdelegationResponse {
   }
 
 
+  public UsergroupdelegationResponse bUserIsactive(@javax.annotation.Nonnull Boolean bUserIsactive) {
+    this.bUserIsactive = bUserIsactive;
+    return this;
+  }
+
+  /**
+   * Whether the User is active or not
+   * @return bUserIsactive
+   */
+  @javax.annotation.Nonnull
+  public Boolean getbUserIsactive() {
+    return bUserIsactive;
+  }
+
+  public void setbUserIsactive(@javax.annotation.Nonnull Boolean bUserIsactive) {
+    this.bUserIsactive = bUserIsactive;
+  }
+
+
   public UsergroupdelegationResponse sUsergroupNameX(@javax.annotation.Nonnull String sUsergroupNameX) {
     this.sUsergroupNameX = sUsergroupNameX;
     return this;
@@ -269,12 +291,13 @@ public class UsergroupdelegationResponse {
         Objects.equals(this.sUserLastname, usergroupdelegationResponse.sUserLastname) &&
         Objects.equals(this.sUserLoginname, usergroupdelegationResponse.sUserLoginname) &&
         Objects.equals(this.sEmailAddress, usergroupdelegationResponse.sEmailAddress) &&
+        Objects.equals(this.bUserIsactive, usergroupdelegationResponse.bUserIsactive) &&
         Objects.equals(this.sUsergroupNameX, usergroupdelegationResponse.sUsergroupNameX);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUsergroupdelegationID, fkiUsergroupID, fkiUserID, sUserFirstname, sUserLastname, sUserLoginname, sEmailAddress, sUsergroupNameX);
+    return Objects.hash(pkiUsergroupdelegationID, fkiUsergroupID, fkiUserID, sUserFirstname, sUserLastname, sUserLoginname, sEmailAddress, bUserIsactive, sUsergroupNameX);
   }
 
   @Override
@@ -288,6 +311,7 @@ public class UsergroupdelegationResponse {
     sb.append("    sUserLastname: ").append(toIndentedString(sUserLastname)).append("\n");
     sb.append("    sUserLoginname: ").append(toIndentedString(sUserLoginname)).append("\n");
     sb.append("    sEmailAddress: ").append(toIndentedString(sEmailAddress)).append("\n");
+    sb.append("    bUserIsactive: ").append(toIndentedString(bUserIsactive)).append("\n");
     sb.append("    sUsergroupNameX: ").append(toIndentedString(sUsergroupNameX)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -310,10 +334,10 @@ public class UsergroupdelegationResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiUsergroupdelegationID", "fkiUsergroupID", "fkiUserID", "sUserFirstname", "sUserLastname", "sUserLoginname", "sEmailAddress", "sUsergroupNameX"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiUsergroupdelegationID", "fkiUsergroupID", "fkiUserID", "sUserFirstname", "sUserLastname", "sUserLoginname", "sEmailAddress", "bUserIsactive", "sUsergroupNameX"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiUsergroupdelegationID", "fkiUsergroupID", "fkiUserID", "sUserFirstname", "sUserLastname", "sUserLoginname", "sUsergroupNameX"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiUsergroupdelegationID", "fkiUsergroupID", "fkiUserID", "sUserFirstname", "sUserLastname", "sUserLoginname", "bUserIsactive", "sUsergroupNameX"));
   }
 
   /**
@@ -325,7 +349,7 @@ public class UsergroupdelegationResponse {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UsergroupdelegationResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in UsergroupdelegationResponse is not found in the empty JSON string", UsergroupdelegationResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in UsergroupdelegationResponse is not found in the empty JSON string", UsergroupdelegationResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -333,31 +357,31 @@ public class UsergroupdelegationResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!UsergroupdelegationResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `UsergroupdelegationResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `UsergroupdelegationResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : UsergroupdelegationResponse.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("sUserFirstname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
       }
       if (!jsonObj.get("sUserLastname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sUserLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLastname").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sUserLastname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLastname").toString()));
       }
       if (!jsonObj.get("sUserLoginname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sUserLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLoginname").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sUserLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLoginname").toString()));
       }
       if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
       }
       if (!jsonObj.get("sUsergroupNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sUsergroupNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUsergroupNameX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sUsergroupNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUsergroupNameX").toString()));
       }
   }
 

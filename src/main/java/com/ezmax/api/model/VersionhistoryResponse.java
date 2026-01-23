@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.FieldEVersionhistoryType;
 import com.ezmax.api.model.FieldEVersionhistoryUsertype;
 import com.ezmax.api.model.MultilingualVersionhistoryDetail;
@@ -46,14 +45,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Versionhistory Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class VersionhistoryResponse {
   public static final String SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D = "pkiVersionhistoryID";
   @SerializedName(SERIALIZED_NAME_PKI_VERSIONHISTORY_I_D)
@@ -404,7 +402,7 @@ public class VersionhistoryResponse {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!VersionhistoryResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in VersionhistoryResponse is not found in the empty JSON string", VersionhistoryResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in VersionhistoryResponse is not found in the empty JSON string", VersionhistoryResponse.openapiRequiredFields.toString()));
         }
       }
 
@@ -412,22 +410,22 @@ public class VersionhistoryResponse {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!VersionhistoryResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `VersionhistoryResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `VersionhistoryResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : VersionhistoryResponse.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("sModuleNameX") != null && !jsonObj.get("sModuleNameX").isJsonNull()) && !jsonObj.get("sModuleNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sModuleNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModuleNameX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sModuleNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModuleNameX").toString()));
       }
       if ((jsonObj.get("sModulesectionNameX") != null && !jsonObj.get("sModulesectionNameX").isJsonNull()) && !jsonObj.get("sModulesectionNameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sModulesectionNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModulesectionNameX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sModulesectionNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sModulesectionNameX").toString()));
       }
       // validate the optional field `eVersionhistoryUsertype`
       if (jsonObj.get("eVersionhistoryUsertype") != null && !jsonObj.get("eVersionhistoryUsertype").isJsonNull()) {
@@ -436,10 +434,10 @@ public class VersionhistoryResponse {
       // validate the required field `objVersionhistoryDetail`
       MultilingualVersionhistoryDetail.validateJsonElement(jsonObj.get("objVersionhistoryDetail"));
       if (!jsonObj.get("dtVersionhistoryDate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtVersionhistoryDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtVersionhistoryDate").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtVersionhistoryDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtVersionhistoryDate").toString()));
       }
       if ((jsonObj.get("dtVersionhistoryDateend") != null && !jsonObj.get("dtVersionhistoryDateend").isJsonNull()) && !jsonObj.get("dtVersionhistoryDateend").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtVersionhistoryDateend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtVersionhistoryDateend").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtVersionhistoryDateend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtVersionhistoryDateend").toString()));
       }
       // validate the required field `eVersionhistoryType`
       FieldEVersionhistoryType.validateJsonElement(jsonObj.get("eVersionhistoryType"));

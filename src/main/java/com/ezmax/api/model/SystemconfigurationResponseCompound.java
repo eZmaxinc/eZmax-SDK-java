@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.CustomBrandingResponse;
 import com.ezmax.api.model.FieldESystemconfigurationEzsign;
 import com.ezmax.api.model.FieldESystemconfigurationEzsignofficeplan;
@@ -49,14 +48,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Systemconfiguration Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class SystemconfigurationResponseCompound {
   public static final String SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D = "pkiSystemconfigurationID";
   @SerializedName(SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D)
@@ -72,6 +70,16 @@ public class SystemconfigurationResponseCompound {
   @SerializedName(SERIALIZED_NAME_FKI_BRANDING_I_D)
   @javax.annotation.Nullable
   private Integer fkiBrandingID;
+
+  public static final String SERIALIZED_NAME_FKI_TIMEZONE_I_D_DEFAULT = "fkiTimezoneIDDefault";
+  @SerializedName(SERIALIZED_NAME_FKI_TIMEZONE_I_D_DEFAULT)
+  @javax.annotation.Nonnull
+  private Integer fkiTimezoneIDDefault;
+
+  public static final String SERIALIZED_NAME_S_TIMEZONE_NAME_DEFAULT = "sTimezoneNameDefault";
+  @SerializedName(SERIALIZED_NAME_S_TIMEZONE_NAME_DEFAULT)
+  @javax.annotation.Nonnull
+  private String sTimezoneNameDefault;
 
   public static final String SERIALIZED_NAME_S_SYSTEMCONFIGURATIONTYPE_DESCRIPTION_X = "sSystemconfigurationtypeDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_SYSTEMCONFIGURATIONTYPE_DESCRIPTION_X)
@@ -144,6 +152,11 @@ public class SystemconfigurationResponseCompound {
   @javax.annotation.Nullable
   private CustomBrandingResponse objBranding;
 
+  public static final String SERIALIZED_NAME_I_SYSTEMCONFIGURATION_EZSIGNREMINDERHOURSEND = "iSystemconfigurationEzsignreminderhoursend";
+  @SerializedName(SERIALIZED_NAME_I_SYSTEMCONFIGURATION_EZSIGNREMINDERHOURSEND)
+  @javax.annotation.Nullable
+  private Integer iSystemconfigurationEzsignreminderhoursend;
+
   public SystemconfigurationResponseCompound() {
   }
 
@@ -205,6 +218,45 @@ public class SystemconfigurationResponseCompound {
 
   public void setFkiBrandingID(@javax.annotation.Nullable Integer fkiBrandingID) {
     this.fkiBrandingID = fkiBrandingID;
+  }
+
+
+  public SystemconfigurationResponseCompound fkiTimezoneIDDefault(@javax.annotation.Nonnull Integer fkiTimezoneIDDefault) {
+    this.fkiTimezoneIDDefault = fkiTimezoneIDDefault;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Timezone
+   * minimum: 0
+   * @return fkiTimezoneIDDefault
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiTimezoneIDDefault() {
+    return fkiTimezoneIDDefault;
+  }
+
+  public void setFkiTimezoneIDDefault(@javax.annotation.Nonnull Integer fkiTimezoneIDDefault) {
+    this.fkiTimezoneIDDefault = fkiTimezoneIDDefault;
+  }
+
+
+  public SystemconfigurationResponseCompound sTimezoneNameDefault(@javax.annotation.Nonnull String sTimezoneNameDefault) {
+    this.sTimezoneNameDefault = sTimezoneNameDefault;
+    return this;
+  }
+
+  /**
+   * The description of the Timezone
+   * @return sTimezoneNameDefault
+   */
+  @javax.annotation.Nonnull
+  public String getsTimezoneNameDefault() {
+    return sTimezoneNameDefault;
+  }
+
+  public void setsTimezoneNameDefault(@javax.annotation.Nonnull String sTimezoneNameDefault) {
+    this.sTimezoneNameDefault = sTimezoneNameDefault;
   }
 
 
@@ -478,6 +530,27 @@ public class SystemconfigurationResponseCompound {
   }
 
 
+  public SystemconfigurationResponseCompound iSystemconfigurationEzsignreminderhoursend(@javax.annotation.Nullable Integer iSystemconfigurationEzsignreminderhoursend) {
+    this.iSystemconfigurationEzsignreminderhoursend = iSystemconfigurationEzsignreminderhoursend;
+    return this;
+  }
+
+  /**
+   * The hour we will send the eZsign reminders
+   * minimum: 0
+   * maximum: 23
+   * @return iSystemconfigurationEzsignreminderhoursend
+   */
+  @javax.annotation.Nullable
+  public Integer getiSystemconfigurationEzsignreminderhoursend() {
+    return iSystemconfigurationEzsignreminderhoursend;
+  }
+
+  public void setiSystemconfigurationEzsignreminderhoursend(@javax.annotation.Nullable Integer iSystemconfigurationEzsignreminderhoursend) {
+    this.iSystemconfigurationEzsignreminderhoursend = iSystemconfigurationEzsignreminderhoursend;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -491,6 +564,8 @@ public class SystemconfigurationResponseCompound {
     return Objects.equals(this.pkiSystemconfigurationID, systemconfigurationResponseCompound.pkiSystemconfigurationID) &&
         Objects.equals(this.fkiSystemconfigurationtypeID, systemconfigurationResponseCompound.fkiSystemconfigurationtypeID) &&
         Objects.equals(this.fkiBrandingID, systemconfigurationResponseCompound.fkiBrandingID) &&
+        Objects.equals(this.fkiTimezoneIDDefault, systemconfigurationResponseCompound.fkiTimezoneIDDefault) &&
+        Objects.equals(this.sTimezoneNameDefault, systemconfigurationResponseCompound.sTimezoneNameDefault) &&
         Objects.equals(this.sSystemconfigurationtypeDescriptionX, systemconfigurationResponseCompound.sSystemconfigurationtypeDescriptionX) &&
         Objects.equals(this.eSystemconfigurationNewexternaluseraction, systemconfigurationResponseCompound.eSystemconfigurationNewexternaluseraction) &&
         Objects.equals(this.eSystemconfigurationLanguage1, systemconfigurationResponseCompound.eSystemconfigurationLanguage1) &&
@@ -504,12 +579,13 @@ public class SystemconfigurationResponseCompound {
         Objects.equals(this.bSystemconfigurationSspr, systemconfigurationResponseCompound.bSystemconfigurationSspr) &&
         Objects.equals(this.dtSystemconfigurationReadonlyexpirationstart, systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationstart) &&
         Objects.equals(this.dtSystemconfigurationReadonlyexpirationend, systemconfigurationResponseCompound.dtSystemconfigurationReadonlyexpirationend) &&
-        Objects.equals(this.objBranding, systemconfigurationResponseCompound.objBranding);
+        Objects.equals(this.objBranding, systemconfigurationResponseCompound.objBranding) &&
+        Objects.equals(this.iSystemconfigurationEzsignreminderhoursend, systemconfigurationResponseCompound.iSystemconfigurationEzsignreminderhoursend);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiSystemconfigurationID, fkiSystemconfigurationtypeID, fkiBrandingID, sSystemconfigurationtypeDescriptionX, eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1, eSystemconfigurationLanguage2, eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal, bSystemconfigurationHascreditcardmerchant, bSystemconfigurationIsdisposalactive, bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend, objBranding);
+    return Objects.hash(pkiSystemconfigurationID, fkiSystemconfigurationtypeID, fkiBrandingID, fkiTimezoneIDDefault, sTimezoneNameDefault, sSystemconfigurationtypeDescriptionX, eSystemconfigurationNewexternaluseraction, eSystemconfigurationLanguage1, eSystemconfigurationLanguage2, eSystemconfigurationEzsign, eSystemconfigurationEzsignofficeplan, bSystemconfigurationEzsignpaidbyoffice, bSystemconfigurationEzsignpersonnal, bSystemconfigurationHascreditcardmerchant, bSystemconfigurationIsdisposalactive, bSystemconfigurationSspr, dtSystemconfigurationReadonlyexpirationstart, dtSystemconfigurationReadonlyexpirationend, objBranding, iSystemconfigurationEzsignreminderhoursend);
   }
 
   @Override
@@ -519,6 +595,8 @@ public class SystemconfigurationResponseCompound {
     sb.append("    pkiSystemconfigurationID: ").append(toIndentedString(pkiSystemconfigurationID)).append("\n");
     sb.append("    fkiSystemconfigurationtypeID: ").append(toIndentedString(fkiSystemconfigurationtypeID)).append("\n");
     sb.append("    fkiBrandingID: ").append(toIndentedString(fkiBrandingID)).append("\n");
+    sb.append("    fkiTimezoneIDDefault: ").append(toIndentedString(fkiTimezoneIDDefault)).append("\n");
+    sb.append("    sTimezoneNameDefault: ").append(toIndentedString(sTimezoneNameDefault)).append("\n");
     sb.append("    sSystemconfigurationtypeDescriptionX: ").append(toIndentedString(sSystemconfigurationtypeDescriptionX)).append("\n");
     sb.append("    eSystemconfigurationNewexternaluseraction: ").append(toIndentedString(eSystemconfigurationNewexternaluseraction)).append("\n");
     sb.append("    eSystemconfigurationLanguage1: ").append(toIndentedString(eSystemconfigurationLanguage1)).append("\n");
@@ -533,6 +611,7 @@ public class SystemconfigurationResponseCompound {
     sb.append("    dtSystemconfigurationReadonlyexpirationstart: ").append(toIndentedString(dtSystemconfigurationReadonlyexpirationstart)).append("\n");
     sb.append("    dtSystemconfigurationReadonlyexpirationend: ").append(toIndentedString(dtSystemconfigurationReadonlyexpirationend)).append("\n");
     sb.append("    objBranding: ").append(toIndentedString(objBranding)).append("\n");
+    sb.append("    iSystemconfigurationEzsignreminderhoursend: ").append(toIndentedString(iSystemconfigurationEzsignreminderhoursend)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -554,10 +633,10 @@ public class SystemconfigurationResponseCompound {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiSystemconfigurationID", "fkiSystemconfigurationtypeID", "fkiBrandingID", "sSystemconfigurationtypeDescriptionX", "eSystemconfigurationNewexternaluseraction", "eSystemconfigurationLanguage1", "eSystemconfigurationLanguage2", "eSystemconfigurationEzsign", "eSystemconfigurationEzsignofficeplan", "bSystemconfigurationEzsignpaidbyoffice", "bSystemconfigurationEzsignpersonnal", "bSystemconfigurationHascreditcardmerchant", "bSystemconfigurationIsdisposalactive", "bSystemconfigurationSspr", "dtSystemconfigurationReadonlyexpirationstart", "dtSystemconfigurationReadonlyexpirationend", "objBranding"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiSystemconfigurationID", "fkiSystemconfigurationtypeID", "fkiBrandingID", "fkiTimezoneIDDefault", "sTimezoneNameDefault", "sSystemconfigurationtypeDescriptionX", "eSystemconfigurationNewexternaluseraction", "eSystemconfigurationLanguage1", "eSystemconfigurationLanguage2", "eSystemconfigurationEzsign", "eSystemconfigurationEzsignofficeplan", "bSystemconfigurationEzsignpaidbyoffice", "bSystemconfigurationEzsignpersonnal", "bSystemconfigurationHascreditcardmerchant", "bSystemconfigurationIsdisposalactive", "bSystemconfigurationSspr", "dtSystemconfigurationReadonlyexpirationstart", "dtSystemconfigurationReadonlyexpirationend", "objBranding", "iSystemconfigurationEzsignreminderhoursend"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiSystemconfigurationID", "fkiSystemconfigurationtypeID", "sSystemconfigurationtypeDescriptionX", "eSystemconfigurationNewexternaluseraction", "eSystemconfigurationLanguage1", "eSystemconfigurationLanguage2", "bSystemconfigurationEzsignpersonnal", "bSystemconfigurationSspr"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiSystemconfigurationID", "fkiSystemconfigurationtypeID", "fkiTimezoneIDDefault", "sTimezoneNameDefault", "sSystemconfigurationtypeDescriptionX", "eSystemconfigurationNewexternaluseraction", "eSystemconfigurationLanguage1", "eSystemconfigurationLanguage2", "bSystemconfigurationEzsignpersonnal", "bSystemconfigurationSspr"));
   }
 
   /**
@@ -569,7 +648,7 @@ public class SystemconfigurationResponseCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!SystemconfigurationResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in SystemconfigurationResponseCompound is not found in the empty JSON string", SystemconfigurationResponseCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in SystemconfigurationResponseCompound is not found in the empty JSON string", SystemconfigurationResponseCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -577,19 +656,22 @@ public class SystemconfigurationResponseCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!SystemconfigurationResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `SystemconfigurationResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `SystemconfigurationResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : SystemconfigurationResponseCompound.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("sTimezoneNameDefault").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sTimezoneNameDefault` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sTimezoneNameDefault").toString()));
+      }
       if (!jsonObj.get("sSystemconfigurationtypeDescriptionX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sSystemconfigurationtypeDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sSystemconfigurationtypeDescriptionX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sSystemconfigurationtypeDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sSystemconfigurationtypeDescriptionX").toString()));
       }
       // validate the required field `eSystemconfigurationNewexternaluseraction`
       FieldESystemconfigurationNewexternaluseraction.validateJsonElement(jsonObj.get("eSystemconfigurationNewexternaluseraction"));
@@ -606,10 +688,10 @@ public class SystemconfigurationResponseCompound {
         FieldESystemconfigurationEzsignofficeplan.validateJsonElement(jsonObj.get("eSystemconfigurationEzsignofficeplan"));
       }
       if ((jsonObj.get("dtSystemconfigurationReadonlyexpirationstart") != null && !jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").isJsonNull()) && !jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtSystemconfigurationReadonlyexpirationstart` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtSystemconfigurationReadonlyexpirationstart` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtSystemconfigurationReadonlyexpirationstart").toString()));
       }
       if ((jsonObj.get("dtSystemconfigurationReadonlyexpirationend") != null && !jsonObj.get("dtSystemconfigurationReadonlyexpirationend").isJsonNull()) && !jsonObj.get("dtSystemconfigurationReadonlyexpirationend").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtSystemconfigurationReadonlyexpirationend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtSystemconfigurationReadonlyexpirationend").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtSystemconfigurationReadonlyexpirationend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtSystemconfigurationReadonlyexpirationend").toString()));
       }
       // validate the optional field `objBranding`
       if (jsonObj.get("objBranding") != null && !jsonObj.get("objBranding").isJsonNull()) {

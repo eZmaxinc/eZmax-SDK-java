@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.CustomContactNameResponse;
 import com.ezmax.api.model.CustomCreditcardtransactionResponse;
 import com.ezmax.api.model.CustomTimezoneWithCodeResponse;
@@ -26,6 +25,8 @@ import com.ezmax.api.model.FieldEEzsignsignatureAttachmentnamesource;
 import com.ezmax.api.model.FieldEEzsignsignatureConsultationtrigger;
 import com.ezmax.api.model.FieldEEzsignsignatureDependencyrequirement;
 import com.ezmax.api.model.FieldEEzsignsignatureFont;
+import com.ezmax.api.model.FieldEEzsignsignatureSignaturepad;
+import com.ezmax.api.model.FieldEEzsignsignatureSignaturepadrequired;
 import com.ezmax.api.model.FieldEEzsignsignatureTooltipposition;
 import com.ezmax.api.model.FieldEEzsignsignatureType;
 import com.ezmax.api.model.SignatureResponseCompound;
@@ -59,14 +60,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * An Ezsignsignature Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsignsignatureResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)
@@ -113,6 +113,11 @@ public class EzsignsignatureResponseCompound {
   @javax.annotation.Nullable
   private String sEzsignsignatureCreditcardamountdescription;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNSIGNATURE_CREDITCARDCUSTOMAMOUNT = "bEzsignsignatureCreditcardcustomamount";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNSIGNATURE_CREDITCARDCUSTOMAMOUNT)
+  @javax.annotation.Nullable
+  private Boolean bEzsignsignatureCreditcardcustomamount;
+
   public static final String SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION_X = "sEzsignsigningreasonDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNSIGNINGREASON_DESCRIPTION_X)
   @javax.annotation.Nullable
@@ -157,6 +162,16 @@ public class EzsignsignatureResponseCompound {
   @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_TYPE)
   @javax.annotation.Nonnull
   private FieldEEzsignsignatureType eEzsignsignatureType;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_SIGNATUREPAD = "eEzsignsignatureSignaturepad";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_SIGNATUREPAD)
+  @javax.annotation.Nullable
+  private FieldEEzsignsignatureSignaturepad eEzsignsignatureSignaturepad;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNSIGNATURE_SIGNATUREPADREQUIRED = "eEzsignsignatureSignaturepadrequired";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNSIGNATURE_SIGNATUREPADREQUIRED)
+  @javax.annotation.Nullable
+  private FieldEEzsignsignatureSignaturepadrequired eEzsignsignatureSignaturepadrequired;
 
   public static final String SERIALIZED_NAME_T_EZSIGNSIGNATURE_TOOLTIP = "tEzsignsignatureTooltip";
   @SerializedName(SERIALIZED_NAME_T_EZSIGNSIGNATURE_TOOLTIP)
@@ -495,6 +510,25 @@ public class EzsignsignatureResponseCompound {
   }
 
 
+  public EzsignsignatureResponseCompound bEzsignsignatureCreditcardcustomamount(@javax.annotation.Nullable Boolean bEzsignsignatureCreditcardcustomamount) {
+    this.bEzsignsignatureCreditcardcustomamount = bEzsignsignatureCreditcardcustomamount;
+    return this;
+  }
+
+  /**
+   * Whether we can enter a custom amount while signing an Ezsignsignature &#39;Creditcard&#39; or not
+   * @return bEzsignsignatureCreditcardcustomamount
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsignsignatureCreditcardcustomamount() {
+    return bEzsignsignatureCreditcardcustomamount;
+  }
+
+  public void setbEzsignsignatureCreditcardcustomamount(@javax.annotation.Nullable Boolean bEzsignsignatureCreditcardcustomamount) {
+    this.bEzsignsignatureCreditcardcustomamount = bEzsignsignatureCreditcardcustomamount;
+  }
+
+
   public EzsignsignatureResponseCompound sEzsignsigningreasonDescriptionX(@javax.annotation.Nullable String sEzsignsigningreasonDescriptionX) {
     this.sEzsignsigningreasonDescriptionX = sEzsignsigningreasonDescriptionX;
     return this;
@@ -668,6 +702,44 @@ public class EzsignsignatureResponseCompound {
 
   public void seteEzsignsignatureType(@javax.annotation.Nonnull FieldEEzsignsignatureType eEzsignsignatureType) {
     this.eEzsignsignatureType = eEzsignsignatureType;
+  }
+
+
+  public EzsignsignatureResponseCompound eEzsignsignatureSignaturepad(@javax.annotation.Nullable FieldEEzsignsignatureSignaturepad eEzsignsignatureSignaturepad) {
+    this.eEzsignsignatureSignaturepad = eEzsignsignatureSignaturepad;
+    return this;
+  }
+
+  /**
+   * Get eEzsignsignatureSignaturepad
+   * @return eEzsignsignatureSignaturepad
+   */
+  @javax.annotation.Nullable
+  public FieldEEzsignsignatureSignaturepad geteEzsignsignatureSignaturepad() {
+    return eEzsignsignatureSignaturepad;
+  }
+
+  public void seteEzsignsignatureSignaturepad(@javax.annotation.Nullable FieldEEzsignsignatureSignaturepad eEzsignsignatureSignaturepad) {
+    this.eEzsignsignatureSignaturepad = eEzsignsignatureSignaturepad;
+  }
+
+
+  public EzsignsignatureResponseCompound eEzsignsignatureSignaturepadrequired(@javax.annotation.Nullable FieldEEzsignsignatureSignaturepadrequired eEzsignsignatureSignaturepadrequired) {
+    this.eEzsignsignatureSignaturepadrequired = eEzsignsignatureSignaturepadrequired;
+    return this;
+  }
+
+  /**
+   * Get eEzsignsignatureSignaturepadrequired
+   * @return eEzsignsignatureSignaturepadrequired
+   */
+  @javax.annotation.Nullable
+  public FieldEEzsignsignatureSignaturepadrequired geteEzsignsignatureSignaturepadrequired() {
+    return eEzsignsignatureSignaturepadrequired;
+  }
+
+  public void seteEzsignsignatureSignaturepadrequired(@javax.annotation.Nullable FieldEEzsignsignatureSignaturepadrequired eEzsignsignatureSignaturepadrequired) {
+    this.eEzsignsignatureSignaturepadrequired = eEzsignsignatureSignaturepadrequired;
   }
 
 
@@ -1306,6 +1378,7 @@ public class EzsignsignatureResponseCompound {
         Objects.equals(this.sCurrencyDescriptionX, ezsignsignatureResponseCompound.sCurrencyDescriptionX) &&
         Objects.equals(this.dEzsignsignatureCreditcardamount, ezsignsignatureResponseCompound.dEzsignsignatureCreditcardamount) &&
         Objects.equals(this.sEzsignsignatureCreditcardamountdescription, ezsignsignatureResponseCompound.sEzsignsignatureCreditcardamountdescription) &&
+        Objects.equals(this.bEzsignsignatureCreditcardcustomamount, ezsignsignatureResponseCompound.bEzsignsignatureCreditcardcustomamount) &&
         Objects.equals(this.sEzsignsigningreasonDescriptionX, ezsignsignatureResponseCompound.sEzsignsigningreasonDescriptionX) &&
         Objects.equals(this.iEzsignpagePagenumber, ezsignsignatureResponseCompound.iEzsignpagePagenumber) &&
         Objects.equals(this.iEzsignsignatureX, ezsignsignatureResponseCompound.iEzsignsignatureX) &&
@@ -1315,6 +1388,8 @@ public class EzsignsignatureResponseCompound {
         Objects.equals(this.iEzsignsignatureStep, ezsignsignatureResponseCompound.iEzsignsignatureStep) &&
         Objects.equals(this.iEzsignsignatureStepadjusted, ezsignsignatureResponseCompound.iEzsignsignatureStepadjusted) &&
         Objects.equals(this.eEzsignsignatureType, ezsignsignatureResponseCompound.eEzsignsignatureType) &&
+        Objects.equals(this.eEzsignsignatureSignaturepad, ezsignsignatureResponseCompound.eEzsignsignatureSignaturepad) &&
+        Objects.equals(this.eEzsignsignatureSignaturepadrequired, ezsignsignatureResponseCompound.eEzsignsignatureSignaturepadrequired) &&
         Objects.equals(this.tEzsignsignatureTooltip, ezsignsignatureResponseCompound.tEzsignsignatureTooltip) &&
         Objects.equals(this.eEzsignsignatureTooltipposition, ezsignsignatureResponseCompound.eEzsignsignatureTooltipposition) &&
         Objects.equals(this.eEzsignsignatureFont, ezsignsignatureResponseCompound.eEzsignsignatureFont) &&
@@ -1350,7 +1425,7 @@ public class EzsignsignatureResponseCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignsignatureID, fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID, fkiFontID, fkiPaymentgatewayID, sCurrencyDescriptionX, dEzsignsignatureCreditcardamount, sEzsignsignatureCreditcardamountdescription, sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureHeight, iEzsignsignatureWidth, iEzsignsignatureStep, iEzsignsignatureStepadjusted, eEzsignsignatureType, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource, eEzsignsignatureConsultationtrigger, bEzsignsignatureHandwritten, bEzsignsignatureReason, bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate, iEzsignsignatureattachmentCount, sEzsignsignatureDescription, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage, eEzsignsignatureDependencyrequirement, sEzsignsignatureDefaultvalue, sEzsignsignatureRegexp, objContactName, objContactNameDelegation, objSignature, dtEzsignsignatureDateInFolderTimezone, sEzsignsignergroupDescriptionX, bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate, objCreditcardtransaction, aObjEzsignelementdependency, objTimezone, aObjEzsignsignaturepaymentdetail);
+    return Objects.hash(pkiEzsignsignatureID, fkiEzsigndocumentID, fkiEzsignfoldersignerassociationID, fkiEzsignsigningreasonID, fkiFontID, fkiPaymentgatewayID, sCurrencyDescriptionX, dEzsignsignatureCreditcardamount, sEzsignsignatureCreditcardamountdescription, bEzsignsignatureCreditcardcustomamount, sEzsignsigningreasonDescriptionX, iEzsignpagePagenumber, iEzsignsignatureX, iEzsignsignatureY, iEzsignsignatureHeight, iEzsignsignatureWidth, iEzsignsignatureStep, iEzsignsignatureStepadjusted, eEzsignsignatureType, eEzsignsignatureSignaturepad, eEzsignsignatureSignaturepadrequired, tEzsignsignatureTooltip, eEzsignsignatureTooltipposition, eEzsignsignatureFont, iEzsignsignatureValidationstep, sEzsignsignatureAttachmentdescription, eEzsignsignatureAttachmentnamesource, eEzsignsignatureConsultationtrigger, bEzsignsignatureHandwritten, bEzsignsignatureReason, bEzsignsignatureRequired, fkiEzsignfoldersignerassociationIDValidation, dtEzsignsignatureDate, iEzsignsignatureattachmentCount, sEzsignsignatureDescription, iEzsignsignatureMaxlength, eEzsignsignatureTextvalidation, sEzsignsignatureTextvalidationcustommessage, eEzsignsignatureDependencyrequirement, sEzsignsignatureDefaultvalue, sEzsignsignatureRegexp, objContactName, objContactNameDelegation, objSignature, dtEzsignsignatureDateInFolderTimezone, sEzsignsignergroupDescriptionX, bEzsignsignatureCustomdate, aObjEzsignsignaturecustomdate, objCreditcardtransaction, aObjEzsignelementdependency, objTimezone, aObjEzsignsignaturepaymentdetail);
   }
 
   @Override
@@ -1366,6 +1441,7 @@ public class EzsignsignatureResponseCompound {
     sb.append("    sCurrencyDescriptionX: ").append(toIndentedString(sCurrencyDescriptionX)).append("\n");
     sb.append("    dEzsignsignatureCreditcardamount: ").append(toIndentedString(dEzsignsignatureCreditcardamount)).append("\n");
     sb.append("    sEzsignsignatureCreditcardamountdescription: ").append(toIndentedString(sEzsignsignatureCreditcardamountdescription)).append("\n");
+    sb.append("    bEzsignsignatureCreditcardcustomamount: ").append(toIndentedString(bEzsignsignatureCreditcardcustomamount)).append("\n");
     sb.append("    sEzsignsigningreasonDescriptionX: ").append(toIndentedString(sEzsignsigningreasonDescriptionX)).append("\n");
     sb.append("    iEzsignpagePagenumber: ").append(toIndentedString(iEzsignpagePagenumber)).append("\n");
     sb.append("    iEzsignsignatureX: ").append(toIndentedString(iEzsignsignatureX)).append("\n");
@@ -1375,6 +1451,8 @@ public class EzsignsignatureResponseCompound {
     sb.append("    iEzsignsignatureStep: ").append(toIndentedString(iEzsignsignatureStep)).append("\n");
     sb.append("    iEzsignsignatureStepadjusted: ").append(toIndentedString(iEzsignsignatureStepadjusted)).append("\n");
     sb.append("    eEzsignsignatureType: ").append(toIndentedString(eEzsignsignatureType)).append("\n");
+    sb.append("    eEzsignsignatureSignaturepad: ").append(toIndentedString(eEzsignsignatureSignaturepad)).append("\n");
+    sb.append("    eEzsignsignatureSignaturepadrequired: ").append(toIndentedString(eEzsignsignatureSignaturepadrequired)).append("\n");
     sb.append("    tEzsignsignatureTooltip: ").append(toIndentedString(tEzsignsignatureTooltip)).append("\n");
     sb.append("    eEzsignsignatureTooltipposition: ").append(toIndentedString(eEzsignsignatureTooltipposition)).append("\n");
     sb.append("    eEzsignsignatureFont: ").append(toIndentedString(eEzsignsignatureFont)).append("\n");
@@ -1427,7 +1505,7 @@ public class EzsignsignatureResponseCompound {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsignsignatureID", "fkiEzsigndocumentID", "fkiEzsignfoldersignerassociationID", "fkiEzsignsigningreasonID", "fkiFontID", "fkiPaymentgatewayID", "sCurrencyDescriptionX", "dEzsignsignatureCreditcardamount", "sEzsignsignatureCreditcardamountdescription", "sEzsignsigningreasonDescriptionX", "iEzsignpagePagenumber", "iEzsignsignatureX", "iEzsignsignatureY", "iEzsignsignatureHeight", "iEzsignsignatureWidth", "iEzsignsignatureStep", "iEzsignsignatureStepadjusted", "eEzsignsignatureType", "tEzsignsignatureTooltip", "eEzsignsignatureTooltipposition", "eEzsignsignatureFont", "iEzsignsignatureValidationstep", "sEzsignsignatureAttachmentdescription", "eEzsignsignatureAttachmentnamesource", "eEzsignsignatureConsultationtrigger", "bEzsignsignatureHandwritten", "bEzsignsignatureReason", "bEzsignsignatureRequired", "fkiEzsignfoldersignerassociationIDValidation", "dtEzsignsignatureDate", "iEzsignsignatureattachmentCount", "sEzsignsignatureDescription", "iEzsignsignatureMaxlength", "eEzsignsignatureTextvalidation", "sEzsignsignatureTextvalidationcustommessage", "eEzsignsignatureDependencyrequirement", "sEzsignsignatureDefaultvalue", "sEzsignsignatureRegexp", "objContactName", "objContactNameDelegation", "objSignature", "dtEzsignsignatureDateInFolderTimezone", "sEzsignsignergroupDescriptionX", "bEzsignsignatureCustomdate", "a_objEzsignsignaturecustomdate", "objCreditcardtransaction", "a_objEzsignelementdependency", "objTimezone", "a_objEzsignsignaturepaymentdetail"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsignsignatureID", "fkiEzsigndocumentID", "fkiEzsignfoldersignerassociationID", "fkiEzsignsigningreasonID", "fkiFontID", "fkiPaymentgatewayID", "sCurrencyDescriptionX", "dEzsignsignatureCreditcardamount", "sEzsignsignatureCreditcardamountdescription", "bEzsignsignatureCreditcardcustomamount", "sEzsignsigningreasonDescriptionX", "iEzsignpagePagenumber", "iEzsignsignatureX", "iEzsignsignatureY", "iEzsignsignatureHeight", "iEzsignsignatureWidth", "iEzsignsignatureStep", "iEzsignsignatureStepadjusted", "eEzsignsignatureType", "eEzsignsignatureSignaturepad", "eEzsignsignatureSignaturepadrequired", "tEzsignsignatureTooltip", "eEzsignsignatureTooltipposition", "eEzsignsignatureFont", "iEzsignsignatureValidationstep", "sEzsignsignatureAttachmentdescription", "eEzsignsignatureAttachmentnamesource", "eEzsignsignatureConsultationtrigger", "bEzsignsignatureHandwritten", "bEzsignsignatureReason", "bEzsignsignatureRequired", "fkiEzsignfoldersignerassociationIDValidation", "dtEzsignsignatureDate", "iEzsignsignatureattachmentCount", "sEzsignsignatureDescription", "iEzsignsignatureMaxlength", "eEzsignsignatureTextvalidation", "sEzsignsignatureTextvalidationcustommessage", "eEzsignsignatureDependencyrequirement", "sEzsignsignatureDefaultvalue", "sEzsignsignatureRegexp", "objContactName", "objContactNameDelegation", "objSignature", "dtEzsignsignatureDateInFolderTimezone", "sEzsignsignergroupDescriptionX", "bEzsignsignatureCustomdate", "a_objEzsignsignaturecustomdate", "objCreditcardtransaction", "a_objEzsignelementdependency", "objTimezone", "a_objEzsignsignaturepaymentdetail"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzsignsignatureID", "fkiEzsigndocumentID", "fkiEzsignfoldersignerassociationID", "iEzsignpagePagenumber", "iEzsignsignatureX", "iEzsignsignatureY", "iEzsignsignatureStep", "eEzsignsignatureType", "objContactName"));
@@ -1442,7 +1520,7 @@ public class EzsignsignatureResponseCompound {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsignsignatureResponseCompound.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzsignsignatureResponseCompound is not found in the empty JSON string", EzsignsignatureResponseCompound.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzsignsignatureResponseCompound is not found in the empty JSON string", EzsignsignatureResponseCompound.openapiRequiredFields.toString()));
         }
       }
 
@@ -1450,33 +1528,41 @@ public class EzsignsignatureResponseCompound {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzsignsignatureResponseCompound.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignsignatureResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsignsignatureResponseCompound` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsignsignatureResponseCompound.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("sCurrencyDescriptionX") != null && !jsonObj.get("sCurrencyDescriptionX").isJsonNull()) && !jsonObj.get("sCurrencyDescriptionX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sCurrencyDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCurrencyDescriptionX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCurrencyDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCurrencyDescriptionX").toString()));
       }
       if ((jsonObj.get("dEzsignsignatureCreditcardamount") != null && !jsonObj.get("dEzsignsignatureCreditcardamount").isJsonNull()) && !jsonObj.get("dEzsignsignatureCreditcardamount").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dEzsignsignatureCreditcardamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzsignsignatureCreditcardamount").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dEzsignsignatureCreditcardamount` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dEzsignsignatureCreditcardamount").toString()));
       }
       if ((jsonObj.get("sEzsignsignatureCreditcardamountdescription") != null && !jsonObj.get("sEzsignsignatureCreditcardamountdescription").isJsonNull()) && !jsonObj.get("sEzsignsignatureCreditcardamountdescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignsignatureCreditcardamountdescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureCreditcardamountdescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignsignatureCreditcardamountdescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureCreditcardamountdescription").toString()));
       }
       if ((jsonObj.get("sEzsignsigningreasonDescriptionX") != null && !jsonObj.get("sEzsignsigningreasonDescriptionX").isJsonNull()) && !jsonObj.get("sEzsignsigningreasonDescriptionX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignsigningreasonDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsigningreasonDescriptionX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignsigningreasonDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsigningreasonDescriptionX").toString()));
       }
       // validate the required field `eEzsignsignatureType`
       FieldEEzsignsignatureType.validateJsonElement(jsonObj.get("eEzsignsignatureType"));
+      // validate the optional field `eEzsignsignatureSignaturepad`
+      if (jsonObj.get("eEzsignsignatureSignaturepad") != null && !jsonObj.get("eEzsignsignatureSignaturepad").isJsonNull()) {
+        FieldEEzsignsignatureSignaturepad.validateJsonElement(jsonObj.get("eEzsignsignatureSignaturepad"));
+      }
+      // validate the optional field `eEzsignsignatureSignaturepadrequired`
+      if (jsonObj.get("eEzsignsignatureSignaturepadrequired") != null && !jsonObj.get("eEzsignsignatureSignaturepadrequired").isJsonNull()) {
+        FieldEEzsignsignatureSignaturepadrequired.validateJsonElement(jsonObj.get("eEzsignsignatureSignaturepadrequired"));
+      }
       if ((jsonObj.get("tEzsignsignatureTooltip") != null && !jsonObj.get("tEzsignsignatureTooltip").isJsonNull()) && !jsonObj.get("tEzsignsignatureTooltip").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `tEzsignsignatureTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignsignatureTooltip").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `tEzsignsignatureTooltip` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tEzsignsignatureTooltip").toString()));
       }
       // validate the optional field `eEzsignsignatureTooltipposition`
       if (jsonObj.get("eEzsignsignatureTooltipposition") != null && !jsonObj.get("eEzsignsignatureTooltipposition").isJsonNull()) {
@@ -1487,7 +1573,7 @@ public class EzsignsignatureResponseCompound {
         FieldEEzsignsignatureFont.validateJsonElement(jsonObj.get("eEzsignsignatureFont"));
       }
       if ((jsonObj.get("sEzsignsignatureAttachmentdescription") != null && !jsonObj.get("sEzsignsignatureAttachmentdescription").isJsonNull()) && !jsonObj.get("sEzsignsignatureAttachmentdescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignsignatureAttachmentdescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureAttachmentdescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignsignatureAttachmentdescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureAttachmentdescription").toString()));
       }
       // validate the optional field `eEzsignsignatureAttachmentnamesource`
       if (jsonObj.get("eEzsignsignatureAttachmentnamesource") != null && !jsonObj.get("eEzsignsignatureAttachmentnamesource").isJsonNull()) {
@@ -1498,27 +1584,27 @@ public class EzsignsignatureResponseCompound {
         FieldEEzsignsignatureConsultationtrigger.validateJsonElement(jsonObj.get("eEzsignsignatureConsultationtrigger"));
       }
       if ((jsonObj.get("dtEzsignsignatureDate") != null && !jsonObj.get("dtEzsignsignatureDate").isJsonNull()) && !jsonObj.get("dtEzsignsignatureDate").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtEzsignsignatureDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignsignatureDate").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtEzsignsignatureDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignsignatureDate").toString()));
       }
       if ((jsonObj.get("sEzsignsignatureDescription") != null && !jsonObj.get("sEzsignsignatureDescription").isJsonNull()) && !jsonObj.get("sEzsignsignatureDescription").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignsignatureDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignsignatureDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureDescription").toString()));
       }
       // validate the optional field `eEzsignsignatureTextvalidation`
       if (jsonObj.get("eEzsignsignatureTextvalidation") != null && !jsonObj.get("eEzsignsignatureTextvalidation").isJsonNull()) {
         EnumTextvalidation.validateJsonElement(jsonObj.get("eEzsignsignatureTextvalidation"));
       }
       if ((jsonObj.get("sEzsignsignatureTextvalidationcustommessage") != null && !jsonObj.get("sEzsignsignatureTextvalidationcustommessage").isJsonNull()) && !jsonObj.get("sEzsignsignatureTextvalidationcustommessage").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignsignatureTextvalidationcustommessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureTextvalidationcustommessage").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignsignatureTextvalidationcustommessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureTextvalidationcustommessage").toString()));
       }
       // validate the optional field `eEzsignsignatureDependencyrequirement`
       if (jsonObj.get("eEzsignsignatureDependencyrequirement") != null && !jsonObj.get("eEzsignsignatureDependencyrequirement").isJsonNull()) {
         FieldEEzsignsignatureDependencyrequirement.validateJsonElement(jsonObj.get("eEzsignsignatureDependencyrequirement"));
       }
       if ((jsonObj.get("sEzsignsignatureDefaultvalue") != null && !jsonObj.get("sEzsignsignatureDefaultvalue").isJsonNull()) && !jsonObj.get("sEzsignsignatureDefaultvalue").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignsignatureDefaultvalue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureDefaultvalue").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignsignatureDefaultvalue` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureDefaultvalue").toString()));
       }
       if ((jsonObj.get("sEzsignsignatureRegexp") != null && !jsonObj.get("sEzsignsignatureRegexp").isJsonNull()) && !jsonObj.get("sEzsignsignatureRegexp").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignsignatureRegexp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureRegexp").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignsignatureRegexp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignatureRegexp").toString()));
       }
       // validate the required field `objContactName`
       CustomContactNameResponse.validateJsonElement(jsonObj.get("objContactName"));
@@ -1531,17 +1617,17 @@ public class EzsignsignatureResponseCompound {
         SignatureResponseCompound.validateJsonElement(jsonObj.get("objSignature"));
       }
       if ((jsonObj.get("dtEzsignsignatureDateInFolderTimezone") != null && !jsonObj.get("dtEzsignsignatureDateInFolderTimezone").isJsonNull()) && !jsonObj.get("dtEzsignsignatureDateInFolderTimezone").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `dtEzsignsignatureDateInFolderTimezone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignsignatureDateInFolderTimezone").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtEzsignsignatureDateInFolderTimezone` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsignsignatureDateInFolderTimezone").toString()));
       }
       if ((jsonObj.get("sEzsignsignergroupDescriptionX") != null && !jsonObj.get("sEzsignsignergroupDescriptionX").isJsonNull()) && !jsonObj.get("sEzsignsignergroupDescriptionX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsignsignergroupDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignergroupDescriptionX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignsignergroupDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignsignergroupDescriptionX").toString()));
       }
       if (jsonObj.get("a_objEzsignsignaturecustomdate") != null && !jsonObj.get("a_objEzsignsignaturecustomdate").isJsonNull()) {
         JsonArray jsonArrayaObjEzsignsignaturecustomdate = jsonObj.getAsJsonArray("a_objEzsignsignaturecustomdate");
         if (jsonArrayaObjEzsignsignaturecustomdate != null) {
           // ensure the json data is an array
           if (!jsonObj.get("a_objEzsignsignaturecustomdate").isJsonArray()) {
-            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objEzsignsignaturecustomdate` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsignaturecustomdate").toString()));
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignsignaturecustomdate` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsignaturecustomdate").toString()));
           }
 
           // validate the optional field `a_objEzsignsignaturecustomdate` (array)
@@ -1559,7 +1645,7 @@ public class EzsignsignatureResponseCompound {
         if (jsonArrayaObjEzsignelementdependency != null) {
           // ensure the json data is an array
           if (!jsonObj.get("a_objEzsignelementdependency").isJsonArray()) {
-            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objEzsignelementdependency` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignelementdependency").toString()));
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignelementdependency` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignelementdependency").toString()));
           }
 
           // validate the optional field `a_objEzsignelementdependency` (array)
@@ -1577,7 +1663,7 @@ public class EzsignsignatureResponseCompound {
         if (jsonArrayaObjEzsignsignaturepaymentdetail != null) {
           // ensure the json data is an array
           if (!jsonObj.get("a_objEzsignsignaturepaymentdetail").isJsonArray()) {
-            throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objEzsignsignaturepaymentdetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsignaturepaymentdetail").toString()));
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignsignaturepaymentdetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsignaturepaymentdetail").toString()));
           }
 
           // validate the optional field `a_objEzsignsignaturepaymentdetail` (array)

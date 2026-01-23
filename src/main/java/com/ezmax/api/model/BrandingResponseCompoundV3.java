@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.FieldEBrandingAlignlogo;
 import com.ezmax.api.model.FieldEBrandingLogo;
 import com.ezmax.api.model.MultilingualBrandingDescription;
@@ -46,14 +45,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * A Branding Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class BrandingResponseCompoundV3 {
   public static final String SERIALIZED_NAME_PKI_BRANDING_I_D = "pkiBrandingID";
   @SerializedName(SERIALIZED_NAME_PKI_BRANDING_I_D)
@@ -512,7 +510,7 @@ public class BrandingResponseCompoundV3 {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!BrandingResponseCompoundV3.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in BrandingResponseCompoundV3 is not found in the empty JSON string", BrandingResponseCompoundV3.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in BrandingResponseCompoundV3 is not found in the empty JSON string", BrandingResponseCompoundV3.openapiRequiredFields.toString()));
         }
       }
 
@@ -520,43 +518,43 @@ public class BrandingResponseCompoundV3 {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!BrandingResponseCompoundV3.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `BrandingResponseCompoundV3` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `BrandingResponseCompoundV3` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : BrandingResponseCompoundV3.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("sDomainName") != null && !jsonObj.get("sDomainName").isJsonNull()) && !jsonObj.get("sDomainName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sDomainName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDomainName").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sDomainName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDomainName").toString()));
       }
       // validate the required field `objBrandingDescription`
       MultilingualBrandingDescription.validateJsonElement(jsonObj.get("objBrandingDescription"));
       if (!jsonObj.get("sBrandingDescriptionX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sBrandingDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingDescriptionX").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sBrandingDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingDescriptionX").toString()));
       }
       if ((jsonObj.get("sBrandingName") != null && !jsonObj.get("sBrandingName").isJsonNull()) && !jsonObj.get("sBrandingName").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sBrandingName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingName").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sBrandingName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingName").toString()));
       }
       if ((jsonObj.get("sEmailAddress") != null && !jsonObj.get("sEmailAddress").isJsonNull()) && !jsonObj.get("sEmailAddress").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEmailAddress` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEmailAddress").toString()));
       }
       // validate the required field `eBrandingLogo`
       FieldEBrandingLogo.validateJsonElement(jsonObj.get("eBrandingLogo"));
       // validate the required field `eBrandingAlignlogo`
       FieldEBrandingAlignlogo.validateJsonElement(jsonObj.get("eBrandingAlignlogo"));
       if ((jsonObj.get("sBrandingLogourl") != null && !jsonObj.get("sBrandingLogourl").isJsonNull()) && !jsonObj.get("sBrandingLogourl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sBrandingLogourl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingLogourl").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sBrandingLogourl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingLogourl").toString()));
       }
       if ((jsonObj.get("sBrandingLogoemailurl") != null && !jsonObj.get("sBrandingLogoemailurl").isJsonNull()) && !jsonObj.get("sBrandingLogoemailurl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sBrandingLogoemailurl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingLogoemailurl").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sBrandingLogoemailurl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingLogoemailurl").toString()));
       }
       if ((jsonObj.get("sBrandingLogointerfaceurl") != null && !jsonObj.get("sBrandingLogointerfaceurl").isJsonNull()) && !jsonObj.get("sBrandingLogointerfaceurl").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sBrandingLogointerfaceurl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingLogointerfaceurl").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sBrandingLogointerfaceurl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBrandingLogointerfaceurl").toString()));
       }
   }
 

@@ -14,7 +14,6 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
-import java.util.Locale;
 import com.ezmax.api.model.EzsignsignerRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -46,14 +45,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Locale;
 
 import eZmaxAPI.JSON;
 
 /**
  * Request for POST /1/object/ezsigntemplatepublic/createEzsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-19T04:31:05.740372915Z[Etc/UTC]", comments = "Generator version: 7.16.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsigntemplatepublicCreateEzsignfolderV1Request {
   public static final String SERIALIZED_NAME_PKS_EZMAXCUSTOMER_CODE = "pksEzmaxcustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_EZMAXCUSTOMER_CODE)
@@ -235,7 +233,7 @@ public class EzsigntemplatepublicCreateEzsignfolderV1Request {
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!EzsigntemplatepublicCreateEzsignfolderV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field(s) %s in EzsigntemplatepublicCreateEzsignfolderV1Request is not found in the empty JSON string", EzsigntemplatepublicCreateEzsignfolderV1Request.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzsigntemplatepublicCreateEzsignfolderV1Request is not found in the empty JSON string", EzsigntemplatepublicCreateEzsignfolderV1Request.openapiRequiredFields.toString()));
         }
       }
 
@@ -243,32 +241,32 @@ public class EzsigntemplatepublicCreateEzsignfolderV1Request {
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
         if (!EzsigntemplatepublicCreateEzsignfolderV1Request.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsigntemplatepublicCreateEzsignfolderV1Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzsigntemplatepublicCreateEzsignfolderV1Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : EzsigntemplatepublicCreateEzsignfolderV1Request.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format(Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("pksEzmaxcustomerCode").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `pksEzmaxcustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksEzmaxcustomerCode").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `pksEzmaxcustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pksEzmaxcustomerCode").toString()));
       }
       if (!jsonObj.get("sEzsigntemplatepublicReferenceid").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `sEzsigntemplatepublicReferenceid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicReferenceid").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsigntemplatepublicReferenceid` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicReferenceid").toString()));
       }
       // ensure the required json array is present
       if (jsonObj.get("a_sEzsigntemplatesignerDescription") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
       } else if (!jsonObj.get("a_sEzsigntemplatesignerDescription").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_sEzsigntemplatesignerDescription` to be an array in the JSON string but got `%s`", jsonObj.get("a_sEzsigntemplatesignerDescription").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_sEzsigntemplatesignerDescription` to be an array in the JSON string but got `%s`", jsonObj.get("a_sEzsigntemplatesignerDescription").toString()));
       }
       // ensure the json data is an array
       if (!jsonObj.get("a_objEzsignsigner").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(Locale.ROOT, "Expected the field `a_objEzsignsigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsigner").toString()));
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignsigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsigner").toString()));
       }
 
       JsonArray jsonArrayaObjEzsignsigner = jsonObj.getAsJsonArray("a_objEzsignsigner");
