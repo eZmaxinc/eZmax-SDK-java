@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezdoctemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-24T00:04:12.084882928Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzdoctemplatedocumentRequestPatch {
   /**
    * Indicates the format of the template.  This field is Required when sEzdoctemplatedocumentBase64 is set.

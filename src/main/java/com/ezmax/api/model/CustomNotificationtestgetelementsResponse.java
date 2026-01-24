@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Element Object in the context of Notificationtest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-23T23:18:31.346384695Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-01-24T00:04:12.084882928Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class CustomNotificationtestgetelementsResponse {
   public static final String SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D = "pkiNotificationtestID";
   @SerializedName(SERIALIZED_NAME_PKI_NOTIFICATIONTEST_I_D)
