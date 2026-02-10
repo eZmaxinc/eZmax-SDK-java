@@ -269,7 +269,6 @@ public class ObjectEzsignfolderApi {
      * Build call for ezsignfolderBatchDownloadV1
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderBatchDownloadV1Request  (required)
-     * @param accept Test csharp (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -283,7 +282,7 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderBatchDownloadV1Call(@javax.annotation.Nonnull Integer pkiEzsignfolderID, @javax.annotation.Nonnull EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, @javax.annotation.Nullable String accept, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderBatchDownloadV1Call(@javax.annotation.Nonnull Integer pkiEzsignfolderID, @javax.annotation.Nonnull EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -327,17 +326,12 @@ public class ObjectEzsignfolderApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        if (accept != null) {
-            localVarHeaderParams.put("Accept", localVarApiClient.parameterToString(accept));
-        }
-
-
         String[] localVarAuthNames = new String[] { "Authorization" };
         return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ezsignfolderBatchDownloadV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiEzsignfolderID, @javax.annotation.Nonnull EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, @javax.annotation.Nullable String accept, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ezsignfolderBatchDownloadV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiEzsignfolderID, @javax.annotation.Nonnull EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'pkiEzsignfolderID' is set
         if (pkiEzsignfolderID == null) {
             throw new ApiException("Missing the required parameter 'pkiEzsignfolderID' when calling ezsignfolderBatchDownloadV1(Async)");
@@ -348,7 +342,7 @@ public class ObjectEzsignfolderApi {
             throw new ApiException("Missing the required parameter 'ezsignfolderBatchDownloadV1Request' when calling ezsignfolderBatchDownloadV1(Async)");
         }
 
-        return ezsignfolderBatchDownloadV1Call(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept, _callback);
+        return ezsignfolderBatchDownloadV1Call(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, _callback);
 
     }
 
@@ -357,7 +351,6 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderBatchDownloadV1Request  (required)
-     * @param accept Test csharp (optional)
      * @return File
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -370,8 +363,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public File ezsignfolderBatchDownloadV1(@javax.annotation.Nonnull Integer pkiEzsignfolderID, @javax.annotation.Nonnull EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, @javax.annotation.Nullable String accept) throws ApiException {
-        ApiResponse<File> localVarResp = ezsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept);
+    public File ezsignfolderBatchDownloadV1(@javax.annotation.Nonnull Integer pkiEzsignfolderID, @javax.annotation.Nonnull EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request) throws ApiException {
+        ApiResponse<File> localVarResp = ezsignfolderBatchDownloadV1WithHttpInfo(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
         return localVarResp.getData();
     }
 
@@ -380,7 +373,6 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderBatchDownloadV1Request  (required)
-     * @param accept Test csharp (optional)
      * @return ApiResponse&lt;File&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -393,8 +385,8 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<File> ezsignfolderBatchDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsignfolderID, @javax.annotation.Nonnull EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, @javax.annotation.Nullable String accept) throws ApiException {
-        okhttp3.Call localVarCall = ezsignfolderBatchDownloadV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept, null);
+    public ApiResponse<File> ezsignfolderBatchDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsignfolderID, @javax.annotation.Nonnull EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request) throws ApiException {
+        okhttp3.Call localVarCall = ezsignfolderBatchDownloadV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, null);
         Type localVarReturnType = new TypeToken<File>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -404,7 +396,6 @@ public class ObjectEzsignfolderApi {
      * 
      * @param pkiEzsignfolderID  (required)
      * @param ezsignfolderBatchDownloadV1Request  (required)
-     * @param accept Test csharp (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -418,9 +409,9 @@ public class ObjectEzsignfolderApi {
         <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ezsignfolderBatchDownloadV1Async(@javax.annotation.Nonnull Integer pkiEzsignfolderID, @javax.annotation.Nonnull EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, @javax.annotation.Nullable String accept, final ApiCallback<File> _callback) throws ApiException {
+    public okhttp3.Call ezsignfolderBatchDownloadV1Async(@javax.annotation.Nonnull Integer pkiEzsignfolderID, @javax.annotation.Nonnull EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request, final ApiCallback<File> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ezsignfolderBatchDownloadV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept, _callback);
+        okhttp3.Call localVarCall = ezsignfolderBatchDownloadV1ValidateBeforeCall(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, _callback);
         Type localVarReturnType = new TypeToken<File>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

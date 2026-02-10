@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A complex type that specifies configuration options related to changing a password.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-10T03:53:50.878604379Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-10T04:28:03.976300983Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class ScimServiceProviderConfigChangePassword {
   public static final String SERIALIZED_NAME_SUPPORTED = "supported";
   @SerializedName(SERIALIZED_NAME_SUPPORTED)
