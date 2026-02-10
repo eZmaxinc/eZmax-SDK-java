@@ -116,7 +116,7 @@ public class Example {
 
 <a id="ezsignfolderBatchDownloadV1"></a>
 # **ezsignfolderBatchDownloadV1**
-> File ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request)
+> File ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept)
 
 Download multiples files from an Ezsignfolder
 
@@ -144,8 +144,9 @@ public class Example {
     ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi(defaultClient);
     Integer pkiEzsignfolderID = 56; // Integer | 
     EzsignfolderBatchDownloadV1Request ezsignfolderBatchDownloadV1Request = new EzsignfolderBatchDownloadV1Request(); // EzsignfolderBatchDownloadV1Request | 
+    String accept = "application/json"; // String | Test csharp
     try {
-      File result = apiInstance.ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request);
+      File result = apiInstance.ezsignfolderBatchDownloadV1(pkiEzsignfolderID, ezsignfolderBatchDownloadV1Request, accept);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderBatchDownloadV1");
@@ -164,6 +165,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **pkiEzsignfolderID** | **Integer**|  | |
 | **ezsignfolderBatchDownloadV1Request** | [**EzsignfolderBatchDownloadV1Request**](EzsignfolderBatchDownloadV1Request.md)|  | |
+| **accept** | **String**| Test csharp | [optional] [enum: application/json, application/zip, application/pdf] |
 
 ### Return type
 
