@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/getWordsPositions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-10T02:45:35.205016939Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-10T03:53:50.878604379Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsigndocumentGetWordsPositionsV1Request {
   /**
    * Specify if you want to retrieve *All* words or specific *Words* from the document. If you specify *Words*, you must send the list of words to search for in *a_sWord*.

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Gives informations about the user that created the object and the last user to have modified it.  If the object was never modified after creation, objAuditdetailModified won&#39;t be returned. 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-10T02:45:35.205016939Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-10T03:53:50.878604379Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class CommonAudit {
   public static final String SERIALIZED_NAME_OBJ_AUDITDETAIL_CREATED = "objAuditdetailCreated";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDITDETAIL_CREATED)

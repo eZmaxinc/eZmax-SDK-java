@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignaturecustomdate Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-10T02:45:35.205016939Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-10T03:53:50.878604379Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsignsignaturecustomdateResponseV2 {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURECUSTOMDATE_I_D = "pkiEzsignsignaturecustomdateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURECUSTOMDATE_I_D)
