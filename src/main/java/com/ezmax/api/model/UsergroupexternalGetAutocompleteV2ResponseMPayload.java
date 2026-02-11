@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/usergroupexternal/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-10T04:28:03.976300983Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class UsergroupexternalGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUPEXTERNAL = "a_objUsergroupexternal";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUPEXTERNAL)

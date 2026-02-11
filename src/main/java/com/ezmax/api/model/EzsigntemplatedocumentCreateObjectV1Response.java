@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for POST /1/object/ezsigntemplatedocument
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-10T04:28:03.976300983Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
 public class EzsigntemplatedocumentCreateObjectV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)
