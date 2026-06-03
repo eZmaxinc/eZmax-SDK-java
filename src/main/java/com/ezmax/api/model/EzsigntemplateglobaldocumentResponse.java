@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.FieldEEzsigntemplateglobaldocumentAcceptationtype;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateglobaldocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsigntemplateglobaldocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALDOCUMENT_I_D = "pkiEzsigntemplateglobaldocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALDOCUMENT_I_D)
@@ -59,6 +60,11 @@ public class EzsigntemplateglobaldocumentResponse {
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBALDOCUMENT_NAME)
   @javax.annotation.Nonnull
   private String sEzsigntemplateglobaldocumentName;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEGLOBALDOCUMENT_ACCEPTATIONTYPE = "eEzsigntemplateglobaldocumentAcceptationtype";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEGLOBALDOCUMENT_ACCEPTATIONTYPE)
+  @javax.annotation.Nonnull
+  private FieldEEzsigntemplateglobaldocumentAcceptationtype eEzsigntemplateglobaldocumentAcceptationtype;
 
   public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEGLOBALDOCUMENT_PAGETOTAL = "iEzsigntemplateglobaldocumentPagetotal";
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEGLOBALDOCUMENT_PAGETOTAL)
@@ -109,6 +115,25 @@ public class EzsigntemplateglobaldocumentResponse {
 
   public void setsEzsigntemplateglobaldocumentName(@javax.annotation.Nonnull String sEzsigntemplateglobaldocumentName) {
     this.sEzsigntemplateglobaldocumentName = sEzsigntemplateglobaldocumentName;
+  }
+
+
+  public EzsigntemplateglobaldocumentResponse eEzsigntemplateglobaldocumentAcceptationtype(@javax.annotation.Nonnull FieldEEzsigntemplateglobaldocumentAcceptationtype eEzsigntemplateglobaldocumentAcceptationtype) {
+    this.eEzsigntemplateglobaldocumentAcceptationtype = eEzsigntemplateglobaldocumentAcceptationtype;
+    return this;
+  }
+
+  /**
+   * Get eEzsigntemplateglobaldocumentAcceptationtype
+   * @return eEzsigntemplateglobaldocumentAcceptationtype
+   */
+  @javax.annotation.Nonnull
+  public FieldEEzsigntemplateglobaldocumentAcceptationtype geteEzsigntemplateglobaldocumentAcceptationtype() {
+    return eEzsigntemplateglobaldocumentAcceptationtype;
+  }
+
+  public void seteEzsigntemplateglobaldocumentAcceptationtype(@javax.annotation.Nonnull FieldEEzsigntemplateglobaldocumentAcceptationtype eEzsigntemplateglobaldocumentAcceptationtype) {
+    this.eEzsigntemplateglobaldocumentAcceptationtype = eEzsigntemplateglobaldocumentAcceptationtype;
   }
 
 
@@ -163,13 +188,14 @@ public class EzsigntemplateglobaldocumentResponse {
     EzsigntemplateglobaldocumentResponse ezsigntemplateglobaldocumentResponse = (EzsigntemplateglobaldocumentResponse) o;
     return Objects.equals(this.pkiEzsigntemplateglobaldocumentID, ezsigntemplateglobaldocumentResponse.pkiEzsigntemplateglobaldocumentID) &&
         Objects.equals(this.sEzsigntemplateglobaldocumentName, ezsigntemplateglobaldocumentResponse.sEzsigntemplateglobaldocumentName) &&
+        Objects.equals(this.eEzsigntemplateglobaldocumentAcceptationtype, ezsigntemplateglobaldocumentResponse.eEzsigntemplateglobaldocumentAcceptationtype) &&
         Objects.equals(this.iEzsigntemplateglobaldocumentPagetotal, ezsigntemplateglobaldocumentResponse.iEzsigntemplateglobaldocumentPagetotal) &&
         Objects.equals(this.iEzsigntemplateglobaldocumentSignaturetotal, ezsigntemplateglobaldocumentResponse.iEzsigntemplateglobaldocumentSignaturetotal);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplateglobaldocumentID, sEzsigntemplateglobaldocumentName, iEzsigntemplateglobaldocumentPagetotal, iEzsigntemplateglobaldocumentSignaturetotal);
+    return Objects.hash(pkiEzsigntemplateglobaldocumentID, sEzsigntemplateglobaldocumentName, eEzsigntemplateglobaldocumentAcceptationtype, iEzsigntemplateglobaldocumentPagetotal, iEzsigntemplateglobaldocumentSignaturetotal);
   }
 
   @Override
@@ -178,6 +204,7 @@ public class EzsigntemplateglobaldocumentResponse {
     sb.append("class EzsigntemplateglobaldocumentResponse {\n");
     sb.append("    pkiEzsigntemplateglobaldocumentID: ").append(toIndentedString(pkiEzsigntemplateglobaldocumentID)).append("\n");
     sb.append("    sEzsigntemplateglobaldocumentName: ").append(toIndentedString(sEzsigntemplateglobaldocumentName)).append("\n");
+    sb.append("    eEzsigntemplateglobaldocumentAcceptationtype: ").append(toIndentedString(eEzsigntemplateglobaldocumentAcceptationtype)).append("\n");
     sb.append("    iEzsigntemplateglobaldocumentPagetotal: ").append(toIndentedString(iEzsigntemplateglobaldocumentPagetotal)).append("\n");
     sb.append("    iEzsigntemplateglobaldocumentSignaturetotal: ").append(toIndentedString(iEzsigntemplateglobaldocumentSignaturetotal)).append("\n");
     sb.append("}");
@@ -189,10 +216,7 @@ public class EzsigntemplateglobaldocumentResponse {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -201,10 +225,10 @@ public class EzsigntemplateglobaldocumentResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateglobaldocumentID", "sEzsigntemplateglobaldocumentName", "iEzsigntemplateglobaldocumentPagetotal", "iEzsigntemplateglobaldocumentSignaturetotal"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateglobaldocumentID", "sEzsigntemplateglobaldocumentName", "eEzsigntemplateglobaldocumentAcceptationtype", "iEzsigntemplateglobaldocumentPagetotal", "iEzsigntemplateglobaldocumentSignaturetotal"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateglobaldocumentID", "sEzsigntemplateglobaldocumentName", "iEzsigntemplateglobaldocumentPagetotal", "iEzsigntemplateglobaldocumentSignaturetotal"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateglobaldocumentID", "sEzsigntemplateglobaldocumentName", "eEzsigntemplateglobaldocumentAcceptationtype", "iEzsigntemplateglobaldocumentPagetotal", "iEzsigntemplateglobaldocumentSignaturetotal"));
   }
 
   /**
@@ -238,6 +262,8 @@ public class EzsigntemplateglobaldocumentResponse {
       if (!jsonObj.get("sEzsigntemplateglobaldocumentName").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsigntemplateglobaldocumentName` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplateglobaldocumentName").toString()));
       }
+      // validate the required field `eEzsigntemplateglobaldocumentAcceptationtype`
+      FieldEEzsigntemplateglobaldocumentAcceptationtype.validateJsonElement(jsonObj.get("eEzsigntemplateglobaldocumentAcceptationtype"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

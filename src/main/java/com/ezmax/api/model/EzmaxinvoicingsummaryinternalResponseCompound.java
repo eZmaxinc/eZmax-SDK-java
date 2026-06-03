@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicingsummaryinternal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzmaxinvoicingsummaryinternalResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D = "pkiEzmaxinvoicingsummaryinternalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICINGSUMMARYINTERNAL_I_D)
@@ -280,10 +280,7 @@ public class EzmaxinvoicingsummaryinternalResponseCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -334,16 +331,16 @@ public class EzmaxinvoicingsummaryinternalResponseCompound {
       if (!jsonObj.get("sBillingentityinternalDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sBillingentityinternalDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBillingentityinternalDescriptionX").toString()));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzmaxinvoicingsummaryinternaldetail").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingsummaryinternaldetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryinternaldetail").toString()));
+      if (jsonObj.get("a_objEzmaxinvoicingsummaryinternaldetail") != null) {
+        if (!jsonObj.get("a_objEzmaxinvoicingsummaryinternaldetail").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingsummaryinternaldetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryinternaldetail").toString()));
+        }
+        JsonArray jsonArrayaObjEzmaxinvoicingsummaryinternaldetail = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryinternaldetail");
+        // validate the required field `a_objEzmaxinvoicingsummaryinternaldetail` (array)
+        for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryinternaldetail.size(); i++) {
+          EzmaxinvoicingsummaryinternaldetailResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryinternaldetail.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzmaxinvoicingsummaryinternaldetail = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryinternaldetail");
-      // validate the required field `a_objEzmaxinvoicingsummaryinternaldetail` (array)
-      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryinternaldetail.size(); i++) {
-        EzmaxinvoicingsummaryinternaldetailResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryinternaldetail.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Word Position Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CustomWordPositionWordResponse {
   public static final String SERIALIZED_NAME_S_WORD = "sWord";
   @SerializedName(SERIALIZED_NAME_S_WORD)
@@ -146,10 +146,7 @@ public class CustomWordPositionWordResponse {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -195,16 +192,16 @@ public class CustomWordPositionWordResponse {
       if (!jsonObj.get("sWord").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sWord` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWord").toString()));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objWordPositionOccurence").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objWordPositionOccurence` to be an array in the JSON string but got `%s`", jsonObj.get("a_objWordPositionOccurence").toString()));
+      if (jsonObj.get("a_objWordPositionOccurence") != null) {
+        if (!jsonObj.get("a_objWordPositionOccurence").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objWordPositionOccurence` to be an array in the JSON string but got `%s`", jsonObj.get("a_objWordPositionOccurence").toString()));
+        }
+        JsonArray jsonArrayaObjWordPositionOccurence = jsonObj.getAsJsonArray("a_objWordPositionOccurence");
+        // validate the required field `a_objWordPositionOccurence` (array)
+        for (int i = 0; i < jsonArrayaObjWordPositionOccurence.size(); i++) {
+          CustomWordPositionOccurenceResponse.validateJsonElement(jsonArrayaObjWordPositionOccurence.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjWordPositionOccurence = jsonObj.getAsJsonArray("a_objWordPositionOccurence");
-      // validate the required field `a_objWordPositionOccurence` (array)
-      for (int i = 0; i < jsonArrayaObjWordPositionOccurence.size(); i++) {
-        CustomWordPositionOccurenceResponse.validateJsonElement(jsonArrayaObjWordPositionOccurence.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

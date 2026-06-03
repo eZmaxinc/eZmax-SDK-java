@@ -57,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/communication
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CommunicationRequestCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATION_I_D = "pkiCommunicationID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATION_I_D)
@@ -543,10 +543,7 @@ public class CommunicationRequestCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -612,46 +609,46 @@ public class CommunicationRequestCompound {
       if (jsonObj.get("eCommunicationAttachmenttype") != null && !jsonObj.get("eCommunicationAttachmenttype").isJsonNull()) {
         ECommunicationAttachmenttypeEnum.validateJsonElement(jsonObj.get("eCommunicationAttachmenttype"));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objCommunicationattachment").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationattachment` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationattachment").toString()));
+      if (jsonObj.get("a_objCommunicationattachment") != null) {
+        if (!jsonObj.get("a_objCommunicationattachment").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationattachment` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationattachment").toString()));
+        }
+        JsonArray jsonArrayaObjCommunicationattachment = jsonObj.getAsJsonArray("a_objCommunicationattachment");
+        // validate the required field `a_objCommunicationattachment` (array)
+        for (int i = 0; i < jsonArrayaObjCommunicationattachment.size(); i++) {
+          CustomCommunicationattachmentRequest.validateJsonElement(jsonArrayaObjCommunicationattachment.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjCommunicationattachment = jsonObj.getAsJsonArray("a_objCommunicationattachment");
-      // validate the required field `a_objCommunicationattachment` (array)
-      for (int i = 0; i < jsonArrayaObjCommunicationattachment.size(); i++) {
-        CustomCommunicationattachmentRequest.validateJsonElement(jsonArrayaObjCommunicationattachment.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objCommunicationrecipient").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationrecipient` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationrecipient").toString()));
+      if (jsonObj.get("a_objCommunicationrecipient") != null) {
+        if (!jsonObj.get("a_objCommunicationrecipient").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationrecipient` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationrecipient").toString()));
+        }
+        JsonArray jsonArrayaObjCommunicationrecipient = jsonObj.getAsJsonArray("a_objCommunicationrecipient");
+        // validate the required field `a_objCommunicationrecipient` (array)
+        for (int i = 0; i < jsonArrayaObjCommunicationrecipient.size(); i++) {
+          CommunicationrecipientRequestCompound.validateJsonElement(jsonArrayaObjCommunicationrecipient.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjCommunicationrecipient = jsonObj.getAsJsonArray("a_objCommunicationrecipient");
-      // validate the required field `a_objCommunicationrecipient` (array)
-      for (int i = 0; i < jsonArrayaObjCommunicationrecipient.size(); i++) {
-        CommunicationrecipientRequestCompound.validateJsonElement(jsonArrayaObjCommunicationrecipient.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objCommunicationreference").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationreference` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationreference").toString()));
+      if (jsonObj.get("a_objCommunicationreference") != null) {
+        if (!jsonObj.get("a_objCommunicationreference").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationreference` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationreference").toString()));
+        }
+        JsonArray jsonArrayaObjCommunicationreference = jsonObj.getAsJsonArray("a_objCommunicationreference");
+        // validate the required field `a_objCommunicationreference` (array)
+        for (int i = 0; i < jsonArrayaObjCommunicationreference.size(); i++) {
+          CommunicationreferenceRequestCompound.validateJsonElement(jsonArrayaObjCommunicationreference.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjCommunicationreference = jsonObj.getAsJsonArray("a_objCommunicationreference");
-      // validate the required field `a_objCommunicationreference` (array)
-      for (int i = 0; i < jsonArrayaObjCommunicationreference.size(); i++) {
-        CommunicationreferenceRequestCompound.validateJsonElement(jsonArrayaObjCommunicationreference.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objCommunicationexternalrecipient").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationexternalrecipient` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationexternalrecipient").toString()));
+      if (jsonObj.get("a_objCommunicationexternalrecipient") != null) {
+        if (!jsonObj.get("a_objCommunicationexternalrecipient").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCommunicationexternalrecipient` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCommunicationexternalrecipient").toString()));
+        }
+        JsonArray jsonArrayaObjCommunicationexternalrecipient = jsonObj.getAsJsonArray("a_objCommunicationexternalrecipient");
+        // validate the required field `a_objCommunicationexternalrecipient` (array)
+        for (int i = 0; i < jsonArrayaObjCommunicationexternalrecipient.size(); i++) {
+          CommunicationexternalrecipientRequestCompound.validateJsonElement(jsonArrayaObjCommunicationexternalrecipient.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjCommunicationexternalrecipient = jsonObj.getAsJsonArray("a_objCommunicationexternalrecipient");
-      // validate the required field `a_objCommunicationexternalrecipient` (array)
-      for (int i = 0; i < jsonArrayaObjCommunicationexternalrecipient.size(); i++) {
-        CommunicationexternalrecipientRequestCompound.validateJsonElement(jsonArrayaObjCommunicationexternalrecipient.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

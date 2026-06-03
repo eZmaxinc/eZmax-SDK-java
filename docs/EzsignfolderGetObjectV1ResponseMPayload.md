@@ -22,7 +22,7 @@ Payload for GET /1/object/ezsignfolder/{pkiEzsignfolderID}
 |**tEzsignfolderNote** | **String** | Note about the Ezsignfolder |  [optional] |
 |**bEzsignfolderIsdisposable** | **Boolean** | If the Ezsigndocument can be disposed |  [optional] |
 |**eEzsignfolderSendreminderfrequency** | **FieldEEzsignfolderSendreminderfrequency** |  |  [optional] |
-|**iEzsignfolderSendreminderfirstdays** | **Integer** | The number of days before the the first reminder sending |  [optional] |
+|**iEzsignfolderSendreminderfirstdays** | **Integer** | The number of days before the first reminder sending |  [optional] |
 |**iEzsignfolderSendreminderotherdays** | **Integer** | The number of days after the first reminder sending |  [optional] |
 |**dtEzsignfolderDelayedsenddate** | **String** | The date and time at which the Ezsignfolder will be sent in the future. |  [optional] |
 |**dtEzsignfolderDuedate** | **String** | The maximum date and time at which the Ezsignfolder can be signed. |  [optional] |

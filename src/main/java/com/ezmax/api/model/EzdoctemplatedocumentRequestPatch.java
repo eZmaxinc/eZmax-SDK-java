@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezdoctemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzdoctemplatedocumentRequestPatch {
   /**
    * Indicates the format of the template.  This field is Required when sEzdoctemplatedocumentBase64 is set.
@@ -215,10 +215,7 @@ public class EzdoctemplatedocumentRequestPatch {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 

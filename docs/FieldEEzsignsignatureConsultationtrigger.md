@@ -9,5 +9,7 @@
 
 * `MANUAL` (value: `"Manual"`)
 
+* `OPTIONAL` (value: `"Optional"`)
+
 
 

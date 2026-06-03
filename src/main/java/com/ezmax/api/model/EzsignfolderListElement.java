@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.FieldEEzsignfolderCompletion;
+import com.ezmax.api.model.FieldEEzsignfolderSource;
 import com.ezmax.api.model.FieldEEzsignfolderStep;
 import com.ezmax.api.model.FieldEEzsignfoldertypePrivacylevel;
 import com.google.gson.TypeAdapter;
@@ -51,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsignfolderListElement {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -62,6 +63,41 @@ public class EzsignfolderListElement {
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNFOLDERTYPE_I_D)
   @javax.annotation.Nonnull
   private Integer fkiEzsignfoldertypeID;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D = "fkiEzsignbulksendID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNBULKSEND_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiEzsignbulksendID;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION = "sEzsignbulksendDescription";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSEND_DESCRIPTION)
+  @javax.annotation.Nullable
+  private String sEzsignbulksendDescription;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNBULKSENDTRANSMISSION_I_D = "fkiEzsignbulksendtransmissionID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNBULKSENDTRANSMISSION_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiEzsignbulksendtransmissionID;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNBULKSENDTRANSMISSION_DESCRIPTION = "sEzsignbulksendtransmissionDescription";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNBULKSENDTRANSMISSION_DESCRIPTION)
+  @javax.annotation.Nullable
+  private String sEzsignbulksendtransmissionDescription;
+
+  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPUBLIC_I_D = "fkiEzsigntemplatepublicID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPUBLIC_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiEzsigntemplatepublicID;
+
+  public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_DESCRIPTION = "sEzsigntemplatepublicDescription";
+  @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_DESCRIPTION)
+  @javax.annotation.Nullable
+  private String sEzsigntemplatepublicDescription;
+
+  public static final String SERIALIZED_NAME_E_EZSIGNFOLDER_SOURCE = "eEzsignfolderSource";
+  @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_SOURCE)
+  @javax.annotation.Nonnull
+  private FieldEEzsignfolderSource eEzsignfolderSource;
 
   public static final String SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL = "eEzsignfoldertypePrivacylevel";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDERTYPE_PRIVACYLEVEL)
@@ -178,6 +214,11 @@ public class EzsignfolderListElement {
   @javax.annotation.Nullable
   private Boolean bEzsignfolderSigner;
 
+  public static final String SERIALIZED_NAME_B_EZSIGNFOLDER_ISMYOWN = "bEzsignfolderIsmyown";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNFOLDER_ISMYOWN)
+  @javax.annotation.Nullable
+  private Boolean bEzsignfolderIsmyown;
+
   public EzsignfolderListElement() {
   }
 
@@ -219,6 +260,143 @@ public class EzsignfolderListElement {
 
   public void setFkiEzsignfoldertypeID(@javax.annotation.Nonnull Integer fkiEzsignfoldertypeID) {
     this.fkiEzsignfoldertypeID = fkiEzsignfoldertypeID;
+  }
+
+
+  public EzsignfolderListElement fkiEzsignbulksendID(@javax.annotation.Nullable Integer fkiEzsignbulksendID) {
+    this.fkiEzsignbulksendID = fkiEzsignbulksendID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignbulksend
+   * minimum: 0
+   * @return fkiEzsignbulksendID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsignbulksendID() {
+    return fkiEzsignbulksendID;
+  }
+
+  public void setFkiEzsignbulksendID(@javax.annotation.Nullable Integer fkiEzsignbulksendID) {
+    this.fkiEzsignbulksendID = fkiEzsignbulksendID;
+  }
+
+
+  public EzsignfolderListElement sEzsignbulksendDescription(@javax.annotation.Nullable String sEzsignbulksendDescription) {
+    this.sEzsignbulksendDescription = sEzsignbulksendDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Ezsignbulksend
+   * @return sEzsignbulksendDescription
+   */
+  @javax.annotation.Nullable
+  public String getsEzsignbulksendDescription() {
+    return sEzsignbulksendDescription;
+  }
+
+  public void setsEzsignbulksendDescription(@javax.annotation.Nullable String sEzsignbulksendDescription) {
+    this.sEzsignbulksendDescription = sEzsignbulksendDescription;
+  }
+
+
+  public EzsignfolderListElement fkiEzsignbulksendtransmissionID(@javax.annotation.Nullable Integer fkiEzsignbulksendtransmissionID) {
+    this.fkiEzsignbulksendtransmissionID = fkiEzsignbulksendtransmissionID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsignbulksendtransmission
+   * minimum: 0
+   * @return fkiEzsignbulksendtransmissionID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsignbulksendtransmissionID() {
+    return fkiEzsignbulksendtransmissionID;
+  }
+
+  public void setFkiEzsignbulksendtransmissionID(@javax.annotation.Nullable Integer fkiEzsignbulksendtransmissionID) {
+    this.fkiEzsignbulksendtransmissionID = fkiEzsignbulksendtransmissionID;
+  }
+
+
+  public EzsignfolderListElement sEzsignbulksendtransmissionDescription(@javax.annotation.Nullable String sEzsignbulksendtransmissionDescription) {
+    this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Ezsignbulksendtransmission
+   * @return sEzsignbulksendtransmissionDescription
+   */
+  @javax.annotation.Nullable
+  public String getsEzsignbulksendtransmissionDescription() {
+    return sEzsignbulksendtransmissionDescription;
+  }
+
+  public void setsEzsignbulksendtransmissionDescription(@javax.annotation.Nullable String sEzsignbulksendtransmissionDescription) {
+    this.sEzsignbulksendtransmissionDescription = sEzsignbulksendtransmissionDescription;
+  }
+
+
+  public EzsignfolderListElement fkiEzsigntemplatepublicID(@javax.annotation.Nullable Integer fkiEzsigntemplatepublicID) {
+    this.fkiEzsigntemplatepublicID = fkiEzsigntemplatepublicID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezsigntemplatepublic
+   * minimum: 0
+   * maximum: 65535
+   * @return fkiEzsigntemplatepublicID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzsigntemplatepublicID() {
+    return fkiEzsigntemplatepublicID;
+  }
+
+  public void setFkiEzsigntemplatepublicID(@javax.annotation.Nullable Integer fkiEzsigntemplatepublicID) {
+    this.fkiEzsigntemplatepublicID = fkiEzsigntemplatepublicID;
+  }
+
+
+  public EzsignfolderListElement sEzsigntemplatepublicDescription(@javax.annotation.Nullable String sEzsigntemplatepublicDescription) {
+    this.sEzsigntemplatepublicDescription = sEzsigntemplatepublicDescription;
+    return this;
+  }
+
+  /**
+   * The description of the Ezsigntemplatepublic
+   * @return sEzsigntemplatepublicDescription
+   */
+  @javax.annotation.Nullable
+  public String getsEzsigntemplatepublicDescription() {
+    return sEzsigntemplatepublicDescription;
+  }
+
+  public void setsEzsigntemplatepublicDescription(@javax.annotation.Nullable String sEzsigntemplatepublicDescription) {
+    this.sEzsigntemplatepublicDescription = sEzsigntemplatepublicDescription;
+  }
+
+
+  public EzsignfolderListElement eEzsignfolderSource(@javax.annotation.Nonnull FieldEEzsignfolderSource eEzsignfolderSource) {
+    this.eEzsignfolderSource = eEzsignfolderSource;
+    return this;
+  }
+
+  /**
+   * Get eEzsignfolderSource
+   * @return eEzsignfolderSource
+   */
+  @javax.annotation.Nonnull
+  public FieldEEzsignfolderSource geteEzsignfolderSource() {
+    return eEzsignfolderSource;
+  }
+
+  public void seteEzsignfolderSource(@javax.annotation.Nonnull FieldEEzsignfolderSource eEzsignfolderSource) {
+    this.eEzsignfolderSource = eEzsignfolderSource;
   }
 
 
@@ -659,6 +837,25 @@ public class EzsignfolderListElement {
   }
 
 
+  public EzsignfolderListElement bEzsignfolderIsmyown(@javax.annotation.Nullable Boolean bEzsignfolderIsmyown) {
+    this.bEzsignfolderIsmyown = bEzsignfolderIsmyown;
+    return this;
+  }
+
+  /**
+   * Whether the Ezsignfolder is my own or not
+   * @return bEzsignfolderIsmyown
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsignfolderIsmyown() {
+    return bEzsignfolderIsmyown;
+  }
+
+  public void setbEzsignfolderIsmyown(@javax.annotation.Nullable Boolean bEzsignfolderIsmyown) {
+    this.bEzsignfolderIsmyown = bEzsignfolderIsmyown;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -671,6 +868,13 @@ public class EzsignfolderListElement {
     EzsignfolderListElement ezsignfolderListElement = (EzsignfolderListElement) o;
     return Objects.equals(this.pkiEzsignfolderID, ezsignfolderListElement.pkiEzsignfolderID) &&
         Objects.equals(this.fkiEzsignfoldertypeID, ezsignfolderListElement.fkiEzsignfoldertypeID) &&
+        Objects.equals(this.fkiEzsignbulksendID, ezsignfolderListElement.fkiEzsignbulksendID) &&
+        Objects.equals(this.sEzsignbulksendDescription, ezsignfolderListElement.sEzsignbulksendDescription) &&
+        Objects.equals(this.fkiEzsignbulksendtransmissionID, ezsignfolderListElement.fkiEzsignbulksendtransmissionID) &&
+        Objects.equals(this.sEzsignbulksendtransmissionDescription, ezsignfolderListElement.sEzsignbulksendtransmissionDescription) &&
+        Objects.equals(this.fkiEzsigntemplatepublicID, ezsignfolderListElement.fkiEzsigntemplatepublicID) &&
+        Objects.equals(this.sEzsigntemplatepublicDescription, ezsignfolderListElement.sEzsigntemplatepublicDescription) &&
+        Objects.equals(this.eEzsignfolderSource, ezsignfolderListElement.eEzsignfolderSource) &&
         Objects.equals(this.eEzsignfoldertypePrivacylevel, ezsignfolderListElement.eEzsignfoldertypePrivacylevel) &&
         Objects.equals(this.sEzsignfoldertypeNameX, ezsignfolderListElement.sEzsignfoldertypeNameX) &&
         Objects.equals(this.sEzsignfolderDescription, ezsignfolderListElement.sEzsignfolderDescription) &&
@@ -693,12 +897,13 @@ public class EzsignfolderListElement {
         Objects.equals(this.dtEzsignfolderClose, ezsignfolderListElement.dtEzsignfolderClose) &&
         Objects.equals(this.dtEzsignfolderArchive, ezsignfolderListElement.dtEzsignfolderArchive) &&
         Objects.equals(this.dtEzsignfolderDispose, ezsignfolderListElement.dtEzsignfolderDispose) &&
-        Objects.equals(this.bEzsignfolderSigner, ezsignfolderListElement.bEzsignfolderSigner);
+        Objects.equals(this.bEzsignfolderSigner, ezsignfolderListElement.bEzsignfolderSigner) &&
+        Objects.equals(this.bEzsignfolderIsmyown, ezsignfolderListElement.bEzsignfolderIsmyown);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX, sEzsignfolderDescription, eEzsignfolderStep, eEzsignfolderCompletion, dtCreatedDate, dtEzsignfolderDelayedsenddate, dtEzsignfolderSentdate, dtEzsignfolderDuedate, iEzsigndocument, iEzsigndocumentEdm, iEzsignsignature, iEzsignsignatureSigned, iEzsignformfieldgroup, iEzsignformfieldgroupCompleted, bEzsignformHasdependencies, dEzsignfolderCompletedpercentage, dEzsignfolderFormcompletedpercentage, dEzsignfolderSignaturecompletedpercentage, dtEzsignfolderClose, dtEzsignfolderArchive, dtEzsignfolderDispose, bEzsignfolderSigner);
+    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, fkiEzsignbulksendID, sEzsignbulksendDescription, fkiEzsignbulksendtransmissionID, sEzsignbulksendtransmissionDescription, fkiEzsigntemplatepublicID, sEzsigntemplatepublicDescription, eEzsignfolderSource, eEzsignfoldertypePrivacylevel, sEzsignfoldertypeNameX, sEzsignfolderDescription, eEzsignfolderStep, eEzsignfolderCompletion, dtCreatedDate, dtEzsignfolderDelayedsenddate, dtEzsignfolderSentdate, dtEzsignfolderDuedate, iEzsigndocument, iEzsigndocumentEdm, iEzsignsignature, iEzsignsignatureSigned, iEzsignformfieldgroup, iEzsignformfieldgroupCompleted, bEzsignformHasdependencies, dEzsignfolderCompletedpercentage, dEzsignfolderFormcompletedpercentage, dEzsignfolderSignaturecompletedpercentage, dtEzsignfolderClose, dtEzsignfolderArchive, dtEzsignfolderDispose, bEzsignfolderSigner, bEzsignfolderIsmyown);
   }
 
   @Override
@@ -707,6 +912,13 @@ public class EzsignfolderListElement {
     sb.append("class EzsignfolderListElement {\n");
     sb.append("    pkiEzsignfolderID: ").append(toIndentedString(pkiEzsignfolderID)).append("\n");
     sb.append("    fkiEzsignfoldertypeID: ").append(toIndentedString(fkiEzsignfoldertypeID)).append("\n");
+    sb.append("    fkiEzsignbulksendID: ").append(toIndentedString(fkiEzsignbulksendID)).append("\n");
+    sb.append("    sEzsignbulksendDescription: ").append(toIndentedString(sEzsignbulksendDescription)).append("\n");
+    sb.append("    fkiEzsignbulksendtransmissionID: ").append(toIndentedString(fkiEzsignbulksendtransmissionID)).append("\n");
+    sb.append("    sEzsignbulksendtransmissionDescription: ").append(toIndentedString(sEzsignbulksendtransmissionDescription)).append("\n");
+    sb.append("    fkiEzsigntemplatepublicID: ").append(toIndentedString(fkiEzsigntemplatepublicID)).append("\n");
+    sb.append("    sEzsigntemplatepublicDescription: ").append(toIndentedString(sEzsigntemplatepublicDescription)).append("\n");
+    sb.append("    eEzsignfolderSource: ").append(toIndentedString(eEzsignfolderSource)).append("\n");
     sb.append("    eEzsignfoldertypePrivacylevel: ").append(toIndentedString(eEzsignfoldertypePrivacylevel)).append("\n");
     sb.append("    sEzsignfoldertypeNameX: ").append(toIndentedString(sEzsignfoldertypeNameX)).append("\n");
     sb.append("    sEzsignfolderDescription: ").append(toIndentedString(sEzsignfolderDescription)).append("\n");
@@ -730,6 +942,7 @@ public class EzsignfolderListElement {
     sb.append("    dtEzsignfolderArchive: ").append(toIndentedString(dtEzsignfolderArchive)).append("\n");
     sb.append("    dtEzsignfolderDispose: ").append(toIndentedString(dtEzsignfolderDispose)).append("\n");
     sb.append("    bEzsignfolderSigner: ").append(toIndentedString(bEzsignfolderSigner)).append("\n");
+    sb.append("    bEzsignfolderIsmyown: ").append(toIndentedString(bEzsignfolderIsmyown)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -739,10 +952,7 @@ public class EzsignfolderListElement {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -751,10 +961,10 @@ public class EzsignfolderListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsignfolderID", "fkiEzsignfoldertypeID", "eEzsignfoldertypePrivacylevel", "sEzsignfoldertypeNameX", "sEzsignfolderDescription", "eEzsignfolderStep", "eEzsignfolderCompletion", "dtCreatedDate", "dtEzsignfolderDelayedsenddate", "dtEzsignfolderSentdate", "dtEzsignfolderDuedate", "iEzsigndocument", "iEzsigndocumentEdm", "iEzsignsignature", "iEzsignsignatureSigned", "iEzsignformfieldgroup", "iEzsignformfieldgroupCompleted", "bEzsignformHasdependencies", "dEzsignfolderCompletedpercentage", "dEzsignfolderFormcompletedpercentage", "dEzsignfolderSignaturecompletedpercentage", "dtEzsignfolderClose", "dtEzsignfolderArchive", "dtEzsignfolderDispose", "bEzsignfolderSigner"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsignfolderID", "fkiEzsignfoldertypeID", "fkiEzsignbulksendID", "sEzsignbulksendDescription", "fkiEzsignbulksendtransmissionID", "sEzsignbulksendtransmissionDescription", "fkiEzsigntemplatepublicID", "sEzsigntemplatepublicDescription", "eEzsignfolderSource", "eEzsignfoldertypePrivacylevel", "sEzsignfoldertypeNameX", "sEzsignfolderDescription", "eEzsignfolderStep", "eEzsignfolderCompletion", "dtCreatedDate", "dtEzsignfolderDelayedsenddate", "dtEzsignfolderSentdate", "dtEzsignfolderDuedate", "iEzsigndocument", "iEzsigndocumentEdm", "iEzsignsignature", "iEzsignsignatureSigned", "iEzsignformfieldgroup", "iEzsignformfieldgroupCompleted", "bEzsignformHasdependencies", "dEzsignfolderCompletedpercentage", "dEzsignfolderFormcompletedpercentage", "dEzsignfolderSignaturecompletedpercentage", "dtEzsignfolderClose", "dtEzsignfolderArchive", "dtEzsignfolderDispose", "bEzsignfolderSigner", "bEzsignfolderIsmyown"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzsignfolderID", "fkiEzsignfoldertypeID", "eEzsignfoldertypePrivacylevel", "sEzsignfoldertypeNameX", "sEzsignfolderDescription", "eEzsignfolderStep", "eEzsignfolderCompletion", "dtCreatedDate", "iEzsigndocument", "iEzsigndocumentEdm", "iEzsignsignature", "iEzsignsignatureSigned", "iEzsignformfieldgroup", "iEzsignformfieldgroupCompleted", "dEzsignfolderCompletedpercentage", "dEzsignfolderFormcompletedpercentage", "dEzsignfolderSignaturecompletedpercentage"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzsignfolderID", "fkiEzsignfoldertypeID", "eEzsignfolderSource", "eEzsignfoldertypePrivacylevel", "sEzsignfoldertypeNameX", "sEzsignfolderDescription", "eEzsignfolderStep", "eEzsignfolderCompletion", "dtCreatedDate", "iEzsigndocument", "iEzsigndocumentEdm", "iEzsignsignature", "iEzsignsignatureSigned", "iEzsignformfieldgroup", "iEzsignformfieldgroupCompleted", "dEzsignfolderCompletedpercentage", "dEzsignfolderFormcompletedpercentage", "dEzsignfolderSignaturecompletedpercentage"));
   }
 
   /**
@@ -785,6 +995,17 @@ public class EzsignfolderListElement {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("sEzsignbulksendDescription") != null && !jsonObj.get("sEzsignbulksendDescription").isJsonNull()) && !jsonObj.get("sEzsignbulksendDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignbulksendDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignbulksendDescription").toString()));
+      }
+      if ((jsonObj.get("sEzsignbulksendtransmissionDescription") != null && !jsonObj.get("sEzsignbulksendtransmissionDescription").isJsonNull()) && !jsonObj.get("sEzsignbulksendtransmissionDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignbulksendtransmissionDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignbulksendtransmissionDescription").toString()));
+      }
+      if ((jsonObj.get("sEzsigntemplatepublicDescription") != null && !jsonObj.get("sEzsigntemplatepublicDescription").isJsonNull()) && !jsonObj.get("sEzsigntemplatepublicDescription").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsigntemplatepublicDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsigntemplatepublicDescription").toString()));
+      }
+      // validate the required field `eEzsignfolderSource`
+      FieldEEzsignfolderSource.validateJsonElement(jsonObj.get("eEzsignfolderSource"));
       // validate the required field `eEzsignfoldertypePrivacylevel`
       FieldEEzsignfoldertypePrivacylevel.validateJsonElement(jsonObj.get("eEzsignfoldertypePrivacylevel"));
       if (!jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {

@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class UserRequestCompoundV2 {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -194,6 +194,11 @@ public class UserRequestCompoundV2 {
   @SerializedName(SERIALIZED_NAME_B_USER_CHANGEPASSWORD)
   @javax.annotation.Nullable
   private Boolean bUserChangepassword;
+
+  public static final String SERIALIZED_NAME_B_USER_EZSIGNTEMPLATEROLEGROUPING = "bUserEzsigntemplaterolegrouping";
+  @SerializedName(SERIALIZED_NAME_B_USER_EZSIGNTEMPLATEROLEGROUPING)
+  @javax.annotation.Nullable
+  private Boolean bUserEzsigntemplaterolegrouping;
 
   public UserRequestCompoundV2() {
   }
@@ -463,7 +468,7 @@ public class UserRequestCompoundV2 {
   }
 
   /**
-   * The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+   * The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|
    * minimum: 0
    * @return fkiSecretquestionID
    */
@@ -744,6 +749,25 @@ public class UserRequestCompoundV2 {
   }
 
 
+  public UserRequestCompoundV2 bUserEzsigntemplaterolegrouping(@javax.annotation.Nullable Boolean bUserEzsigntemplaterolegrouping) {
+    this.bUserEzsigntemplaterolegrouping = bUserEzsigntemplaterolegrouping;
+    return this;
+  }
+
+  /**
+   * Whether we group or not the Ezsigntemplate roles
+   * @return bUserEzsigntemplaterolegrouping
+   */
+  @javax.annotation.Nullable
+  public Boolean getbUserEzsigntemplaterolegrouping() {
+    return bUserEzsigntemplaterolegrouping;
+  }
+
+  public void setbUserEzsigntemplaterolegrouping(@javax.annotation.Nullable Boolean bUserEzsigntemplaterolegrouping) {
+    this.bUserEzsigntemplaterolegrouping = bUserEzsigntemplaterolegrouping;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -781,12 +805,13 @@ public class UserRequestCompoundV2 {
         Objects.equals(this.bUserValidatebyadministration, userRequestCompoundV2.bUserValidatebyadministration) &&
         Objects.equals(this.bUserValidatebydirector, userRequestCompoundV2.bUserValidatebydirector) &&
         Objects.equals(this.bUserAttachmentautoverified, userRequestCompoundV2.bUserAttachmentautoverified) &&
-        Objects.equals(this.bUserChangepassword, userRequestCompoundV2.bUserChangepassword);
+        Objects.equals(this.bUserChangepassword, userRequestCompoundV2.bUserChangepassword) &&
+        Objects.equals(this.bUserEzsigntemplaterolegrouping, userRequestCompoundV2.bUserEzsigntemplaterolegrouping);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUserID, fkiAgentID, fkiBrokerID, fkiAssistantID, fkiEmployeeID, fkiCompanyIDDefault, fkiDepartmentIDDefault, fkiTimezoneID, fkiLanguageID, objEmail, fkiBillingentityinternalID, objPhoneHome, objPhoneSMS, fkiSecretquestionID, sUserSecretresponse, fkiModuleIDForm, eUserType, eUserLogintype, sUserFirstname, sUserLastname, sUserLoginname, sUserJobtitle, eUserEzsignaccess, bUserIsactive, bUserValidatebyadministration, bUserValidatebydirector, bUserAttachmentautoverified, bUserChangepassword);
+    return Objects.hash(pkiUserID, fkiAgentID, fkiBrokerID, fkiAssistantID, fkiEmployeeID, fkiCompanyIDDefault, fkiDepartmentIDDefault, fkiTimezoneID, fkiLanguageID, objEmail, fkiBillingentityinternalID, objPhoneHome, objPhoneSMS, fkiSecretquestionID, sUserSecretresponse, fkiModuleIDForm, eUserType, eUserLogintype, sUserFirstname, sUserLastname, sUserLoginname, sUserJobtitle, eUserEzsignaccess, bUserIsactive, bUserValidatebyadministration, bUserValidatebydirector, bUserAttachmentautoverified, bUserChangepassword, bUserEzsigntemplaterolegrouping);
   }
 
   @Override
@@ -821,6 +846,7 @@ public class UserRequestCompoundV2 {
     sb.append("    bUserValidatebydirector: ").append(toIndentedString(bUserValidatebydirector)).append("\n");
     sb.append("    bUserAttachmentautoverified: ").append(toIndentedString(bUserAttachmentautoverified)).append("\n");
     sb.append("    bUserChangepassword: ").append(toIndentedString(bUserChangepassword)).append("\n");
+    sb.append("    bUserEzsigntemplaterolegrouping: ").append(toIndentedString(bUserEzsigntemplaterolegrouping)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -830,10 +856,7 @@ public class UserRequestCompoundV2 {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -842,7 +865,7 @@ public class UserRequestCompoundV2 {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiUserID", "fkiAgentID", "fkiBrokerID", "fkiAssistantID", "fkiEmployeeID", "fkiCompanyIDDefault", "fkiDepartmentIDDefault", "fkiTimezoneID", "fkiLanguageID", "objEmail", "fkiBillingentityinternalID", "objPhoneHome", "objPhoneSMS", "fkiSecretquestionID", "sUserSecretresponse", "fkiModuleIDForm", "eUserType", "eUserLogintype", "sUserFirstname", "sUserLastname", "sUserLoginname", "sUserJobtitle", "eUserEzsignaccess", "bUserIsactive", "bUserValidatebyadministration", "bUserValidatebydirector", "bUserAttachmentautoverified", "bUserChangepassword"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiUserID", "fkiAgentID", "fkiBrokerID", "fkiAssistantID", "fkiEmployeeID", "fkiCompanyIDDefault", "fkiDepartmentIDDefault", "fkiTimezoneID", "fkiLanguageID", "objEmail", "fkiBillingentityinternalID", "objPhoneHome", "objPhoneSMS", "fkiSecretquestionID", "sUserSecretresponse", "fkiModuleIDForm", "eUserType", "eUserLogintype", "sUserFirstname", "sUserLastname", "sUserLoginname", "sUserJobtitle", "eUserEzsignaccess", "bUserIsactive", "bUserValidatebyadministration", "bUserValidatebydirector", "bUserAttachmentautoverified", "bUserChangepassword", "bUserEzsigntemplaterolegrouping"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("fkiCompanyIDDefault", "fkiDepartmentIDDefault", "fkiTimezoneID", "fkiLanguageID", "objEmail", "fkiBillingentityinternalID", "eUserType", "eUserLogintype", "sUserFirstname", "sUserLastname", "sUserLoginname", "eUserEzsignaccess", "bUserIsactive"));

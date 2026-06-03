@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/franchisereferalincome
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class FranchisereferalincomeCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_FRANCHISEREFERALINCOME = "a_objFranchisereferalincome";
   @SerializedName(SERIALIZED_NAME_A_OBJ_FRANCHISEREFERALINCOME)
@@ -120,10 +120,7 @@ public class FranchisereferalincomeCreateObjectV2Request {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -166,16 +163,16 @@ public class FranchisereferalincomeCreateObjectV2Request {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objFranchisereferalincome").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objFranchisereferalincome` to be an array in the JSON string but got `%s`", jsonObj.get("a_objFranchisereferalincome").toString()));
+      if (jsonObj.get("a_objFranchisereferalincome") != null) {
+        if (!jsonObj.get("a_objFranchisereferalincome").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objFranchisereferalincome` to be an array in the JSON string but got `%s`", jsonObj.get("a_objFranchisereferalincome").toString()));
+        }
+        JsonArray jsonArrayaObjFranchisereferalincome = jsonObj.getAsJsonArray("a_objFranchisereferalincome");
+        // validate the required field `a_objFranchisereferalincome` (array)
+        for (int i = 0; i < jsonArrayaObjFranchisereferalincome.size(); i++) {
+          FranchisereferalincomeRequestCompound.validateJsonElement(jsonArrayaObjFranchisereferalincome.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjFranchisereferalincome = jsonObj.getAsJsonArray("a_objFranchisereferalincome");
-      // validate the required field `a_objFranchisereferalincome` (array)
-      for (int i = 0; i < jsonArrayaObjFranchisereferalincome.size(); i++) {
-        FranchisereferalincomeRequestCompound.validateJsonElement(jsonArrayaObjFranchisereferalincome.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

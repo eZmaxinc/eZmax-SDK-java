@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/ezsignfolder/{pkiEzsignfolderID}/importEzsigntemplatepackage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsignfolderImportEzsigntemplatepackageV2Request {
   public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D = "fkiEzsigntemplatepackageID";
   @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEPACKAGE_I_D)
@@ -173,10 +173,7 @@ public class EzsignfolderImportEzsigntemplatepackageV2Request {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -222,16 +219,16 @@ public class EzsignfolderImportEzsigntemplatepackageV2Request {
       if (!jsonObj.get("dtEzsigndocumentDuedate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtEzsigndocumentDuedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtEzsigndocumentDuedate").toString()));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objImportEzsigntemplatepackageRelation").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objImportEzsigntemplatepackageRelation` to be an array in the JSON string but got `%s`", jsonObj.get("a_objImportEzsigntemplatepackageRelation").toString()));
+      if (jsonObj.get("a_objImportEzsigntemplatepackageRelation") != null) {
+        if (!jsonObj.get("a_objImportEzsigntemplatepackageRelation").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objImportEzsigntemplatepackageRelation` to be an array in the JSON string but got `%s`", jsonObj.get("a_objImportEzsigntemplatepackageRelation").toString()));
+        }
+        JsonArray jsonArrayaObjImportEzsigntemplatepackageRelation = jsonObj.getAsJsonArray("a_objImportEzsigntemplatepackageRelation");
+        // validate the required field `a_objImportEzsigntemplatepackageRelation` (array)
+        for (int i = 0; i < jsonArrayaObjImportEzsigntemplatepackageRelation.size(); i++) {
+          CustomImportEzsigntemplatepackageRelationRequest.validateJsonElement(jsonArrayaObjImportEzsigntemplatepackageRelation.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjImportEzsigntemplatepackageRelation = jsonObj.getAsJsonArray("a_objImportEzsigntemplatepackageRelation");
-      // validate the required field `a_objImportEzsigntemplatepackageRelation` (array)
-      for (int i = 0; i < jsonArrayaObjImportEzsigntemplatepackageRelation.size(); i++) {
-        CustomImportEzsigntemplatepackageRelationRequest.validateJsonElement(jsonArrayaObjImportEzsigntemplatepackageRelation.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

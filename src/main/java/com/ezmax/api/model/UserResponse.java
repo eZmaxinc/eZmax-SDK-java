@@ -55,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A User Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class UserResponse {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -81,6 +81,11 @@ public class UserResponse {
   @SerializedName(SERIALIZED_NAME_FKI_EMPLOYEE_I_D)
   @javax.annotation.Nullable
   private Integer fkiEmployeeID;
+
+  public static final String SERIALIZED_NAME_FKI_EZMAXPARTNER_I_D = "fkiEzmaxpartnerID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZMAXPARTNER_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiEzmaxpartnerID;
 
   public static final String SERIALIZED_NAME_FKI_COMPANY_I_D_DEFAULT = "fkiCompanyIDDefault";
   @SerializedName(SERIALIZED_NAME_FKI_COMPANY_I_D_DEFAULT)
@@ -222,6 +227,11 @@ public class UserResponse {
   @javax.annotation.Nonnull
   private Boolean bUserIsactive;
 
+  public static final String SERIALIZED_NAME_B_USER_SUSPENDED = "bUserSuspended";
+  @SerializedName(SERIALIZED_NAME_B_USER_SUSPENDED)
+  @javax.annotation.Nullable
+  private Boolean bUserSuspended;
+
   public static final String SERIALIZED_NAME_B_USER_VALIDATEBYADMINISTRATION = "bUserValidatebyadministration";
   @SerializedName(SERIALIZED_NAME_B_USER_VALIDATEBYADMINISTRATION)
   @javax.annotation.Nullable
@@ -241,6 +251,11 @@ public class UserResponse {
   @SerializedName(SERIALIZED_NAME_B_USER_CHANGEPASSWORD)
   @javax.annotation.Nonnull
   private Boolean bUserChangepassword;
+
+  public static final String SERIALIZED_NAME_B_USER_EZSIGNTEMPLATEROLEGROUPING = "bUserEzsigntemplaterolegrouping";
+  @SerializedName(SERIALIZED_NAME_B_USER_EZSIGNTEMPLATEROLEGROUPING)
+  @javax.annotation.Nullable
+  private Boolean bUserEzsigntemplaterolegrouping;
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
@@ -347,6 +362,26 @@ public class UserResponse {
 
   public void setFkiEmployeeID(@javax.annotation.Nullable Integer fkiEmployeeID) {
     this.fkiEmployeeID = fkiEmployeeID;
+  }
+
+
+  public UserResponse fkiEzmaxpartnerID(@javax.annotation.Nullable Integer fkiEzmaxpartnerID) {
+    this.fkiEzmaxpartnerID = fkiEzmaxpartnerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezmaxpartner
+   * minimum: 1
+   * @return fkiEzmaxpartnerID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzmaxpartnerID() {
+    return fkiEzmaxpartnerID;
+  }
+
+  public void setFkiEzmaxpartnerID(@javax.annotation.Nullable Integer fkiEzmaxpartnerID) {
+    this.fkiEzmaxpartnerID = fkiEzmaxpartnerID;
   }
 
 
@@ -610,7 +645,7 @@ public class UserResponse {
   }
 
   /**
-   * The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |22|Secret Code| |22|Your reference code|
+   * The unique ID of the Secretquestion.  Valid values:  |Value|Description| |-|-| |1|The name of the hospital in which you were born| |2|The name of your grade school| |3|The last name of your favorite teacher| |4|Your favorite sports team| |5|Your favorite TV show| |6|Your favorite movie| |7|The name of the street on which you grew up| |8|The name of your first employer| |9|Your first car| |10|Your favorite food| |11|The name of your first pet| |12|Favorite musician/band| |13|What instrument you play| |14|Your father&#39;s middle name| |15|Your mother&#39;s maiden name| |16|Name of your eldest child| |17|Your spouse&#39;s middle name| |18|Favorite restaurant| |19|Childhood nickname| |20|Favorite vacation destination| |21|Your boat&#39;s name| |22|Date of Birth (YYYY-MM-DD)| |23|Secret Code| |24|Your reference code| |25|What are the last 4 digits of your SIN| |26|What is your postal code| |27|What is your employee number| |28|What is your manager’s first name| |29|What is your file number| |30|What is your client/member number| |31|What is your license number| |32|What are the last 4 digits of your phone number| |33|What is your student number|
    * minimum: 0
    * @return fkiSecretquestionID
    */
@@ -891,6 +926,25 @@ public class UserResponse {
   }
 
 
+  public UserResponse bUserSuspended(@javax.annotation.Nullable Boolean bUserSuspended) {
+    this.bUserSuspended = bUserSuspended;
+    return this;
+  }
+
+  /**
+   * Whether the User is suspended or not
+   * @return bUserSuspended
+   */
+  @javax.annotation.Nullable
+  public Boolean getbUserSuspended() {
+    return bUserSuspended;
+  }
+
+  public void setbUserSuspended(@javax.annotation.Nullable Boolean bUserSuspended) {
+    this.bUserSuspended = bUserSuspended;
+  }
+
+
   public UserResponse bUserValidatebyadministration(@javax.annotation.Nullable Boolean bUserValidatebyadministration) {
     this.bUserValidatebyadministration = bUserValidatebyadministration;
     return this;
@@ -967,6 +1021,25 @@ public class UserResponse {
   }
 
 
+  public UserResponse bUserEzsigntemplaterolegrouping(@javax.annotation.Nullable Boolean bUserEzsigntemplaterolegrouping) {
+    this.bUserEzsigntemplaterolegrouping = bUserEzsigntemplaterolegrouping;
+    return this;
+  }
+
+  /**
+   * Whether we group or not the Ezsigntemplate roles
+   * @return bUserEzsigntemplaterolegrouping
+   */
+  @javax.annotation.Nullable
+  public Boolean getbUserEzsigntemplaterolegrouping() {
+    return bUserEzsigntemplaterolegrouping;
+  }
+
+  public void setbUserEzsigntemplaterolegrouping(@javax.annotation.Nullable Boolean bUserEzsigntemplaterolegrouping) {
+    this.bUserEzsigntemplaterolegrouping = bUserEzsigntemplaterolegrouping;
+  }
+
+
   public UserResponse objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
@@ -1001,6 +1074,7 @@ public class UserResponse {
         Objects.equals(this.fkiBrokerID, userResponse.fkiBrokerID) &&
         Objects.equals(this.fkiAssistantID, userResponse.fkiAssistantID) &&
         Objects.equals(this.fkiEmployeeID, userResponse.fkiEmployeeID) &&
+        Objects.equals(this.fkiEzmaxpartnerID, userResponse.fkiEzmaxpartnerID) &&
         Objects.equals(this.fkiCompanyIDDefault, userResponse.fkiCompanyIDDefault) &&
         Objects.equals(this.sCompanyNameX, userResponse.sCompanyNameX) &&
         Objects.equals(this.fkiDepartmentIDDefault, userResponse.fkiDepartmentIDDefault) &&
@@ -1029,16 +1103,18 @@ public class UserResponse {
         Objects.equals(this.dtUserPasswordchanged, userResponse.dtUserPasswordchanged) &&
         Objects.equals(this.dtUserEzsignprepaidexpiration, userResponse.dtUserEzsignprepaidexpiration) &&
         Objects.equals(this.bUserIsactive, userResponse.bUserIsactive) &&
+        Objects.equals(this.bUserSuspended, userResponse.bUserSuspended) &&
         Objects.equals(this.bUserValidatebyadministration, userResponse.bUserValidatebyadministration) &&
         Objects.equals(this.bUserValidatebydirector, userResponse.bUserValidatebydirector) &&
         Objects.equals(this.bUserAttachmentautoverified, userResponse.bUserAttachmentautoverified) &&
         Objects.equals(this.bUserChangepassword, userResponse.bUserChangepassword) &&
+        Objects.equals(this.bUserEzsigntemplaterolegrouping, userResponse.bUserEzsigntemplaterolegrouping) &&
         Objects.equals(this.objAudit, userResponse.objAudit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUserID, fkiAgentID, fkiBrokerID, fkiAssistantID, fkiEmployeeID, fkiCompanyIDDefault, sCompanyNameX, fkiDepartmentIDDefault, sDepartmentNameX, fkiTimezoneID, sTimezoneName, fkiLanguageID, sLanguageNameX, objEmail, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, objPhoneHome, objPhoneSMS, fkiSecretquestionID, fkiModuleIDForm, sModuleNameX, eUserOrigin, eUserType, eUserLogintype, sUserFirstname, sUserLastname, sUserLoginname, sUserJobtitle, eUserEzsignaccess, dtUserLastlogondate, dtUserPasswordchanged, dtUserEzsignprepaidexpiration, bUserIsactive, bUserValidatebyadministration, bUserValidatebydirector, bUserAttachmentautoverified, bUserChangepassword, objAudit);
+    return Objects.hash(pkiUserID, fkiAgentID, fkiBrokerID, fkiAssistantID, fkiEmployeeID, fkiEzmaxpartnerID, fkiCompanyIDDefault, sCompanyNameX, fkiDepartmentIDDefault, sDepartmentNameX, fkiTimezoneID, sTimezoneName, fkiLanguageID, sLanguageNameX, objEmail, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, objPhoneHome, objPhoneSMS, fkiSecretquestionID, fkiModuleIDForm, sModuleNameX, eUserOrigin, eUserType, eUserLogintype, sUserFirstname, sUserLastname, sUserLoginname, sUserJobtitle, eUserEzsignaccess, dtUserLastlogondate, dtUserPasswordchanged, dtUserEzsignprepaidexpiration, bUserIsactive, bUserSuspended, bUserValidatebyadministration, bUserValidatebydirector, bUserAttachmentautoverified, bUserChangepassword, bUserEzsigntemplaterolegrouping, objAudit);
   }
 
   @Override
@@ -1050,6 +1126,7 @@ public class UserResponse {
     sb.append("    fkiBrokerID: ").append(toIndentedString(fkiBrokerID)).append("\n");
     sb.append("    fkiAssistantID: ").append(toIndentedString(fkiAssistantID)).append("\n");
     sb.append("    fkiEmployeeID: ").append(toIndentedString(fkiEmployeeID)).append("\n");
+    sb.append("    fkiEzmaxpartnerID: ").append(toIndentedString(fkiEzmaxpartnerID)).append("\n");
     sb.append("    fkiCompanyIDDefault: ").append(toIndentedString(fkiCompanyIDDefault)).append("\n");
     sb.append("    sCompanyNameX: ").append(toIndentedString(sCompanyNameX)).append("\n");
     sb.append("    fkiDepartmentIDDefault: ").append(toIndentedString(fkiDepartmentIDDefault)).append("\n");
@@ -1078,10 +1155,12 @@ public class UserResponse {
     sb.append("    dtUserPasswordchanged: ").append(toIndentedString(dtUserPasswordchanged)).append("\n");
     sb.append("    dtUserEzsignprepaidexpiration: ").append(toIndentedString(dtUserEzsignprepaidexpiration)).append("\n");
     sb.append("    bUserIsactive: ").append(toIndentedString(bUserIsactive)).append("\n");
+    sb.append("    bUserSuspended: ").append(toIndentedString(bUserSuspended)).append("\n");
     sb.append("    bUserValidatebyadministration: ").append(toIndentedString(bUserValidatebyadministration)).append("\n");
     sb.append("    bUserValidatebydirector: ").append(toIndentedString(bUserValidatebydirector)).append("\n");
     sb.append("    bUserAttachmentautoverified: ").append(toIndentedString(bUserAttachmentautoverified)).append("\n");
     sb.append("    bUserChangepassword: ").append(toIndentedString(bUserChangepassword)).append("\n");
+    sb.append("    bUserEzsigntemplaterolegrouping: ").append(toIndentedString(bUserEzsigntemplaterolegrouping)).append("\n");
     sb.append("    objAudit: ").append(toIndentedString(objAudit)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -1092,10 +1171,7 @@ public class UserResponse {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -1104,7 +1180,7 @@ public class UserResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiUserID", "fkiAgentID", "fkiBrokerID", "fkiAssistantID", "fkiEmployeeID", "fkiCompanyIDDefault", "sCompanyNameX", "fkiDepartmentIDDefault", "sDepartmentNameX", "fkiTimezoneID", "sTimezoneName", "fkiLanguageID", "sLanguageNameX", "objEmail", "fkiBillingentityinternalID", "sBillingentityinternalDescriptionX", "objPhoneHome", "objPhoneSMS", "fkiSecretquestionID", "fkiModuleIDForm", "sModuleNameX", "eUserOrigin", "eUserType", "eUserLogintype", "sUserFirstname", "sUserLastname", "sUserLoginname", "sUserJobtitle", "eUserEzsignaccess", "dtUserLastlogondate", "dtUserPasswordchanged", "dtUserEzsignprepaidexpiration", "bUserIsactive", "bUserValidatebyadministration", "bUserValidatebydirector", "bUserAttachmentautoverified", "bUserChangepassword", "objAudit"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiUserID", "fkiAgentID", "fkiBrokerID", "fkiAssistantID", "fkiEmployeeID", "fkiEzmaxpartnerID", "fkiCompanyIDDefault", "sCompanyNameX", "fkiDepartmentIDDefault", "sDepartmentNameX", "fkiTimezoneID", "sTimezoneName", "fkiLanguageID", "sLanguageNameX", "objEmail", "fkiBillingentityinternalID", "sBillingentityinternalDescriptionX", "objPhoneHome", "objPhoneSMS", "fkiSecretquestionID", "fkiModuleIDForm", "sModuleNameX", "eUserOrigin", "eUserType", "eUserLogintype", "sUserFirstname", "sUserLastname", "sUserLoginname", "sUserJobtitle", "eUserEzsignaccess", "dtUserLastlogondate", "dtUserPasswordchanged", "dtUserEzsignprepaidexpiration", "bUserIsactive", "bUserSuspended", "bUserValidatebyadministration", "bUserValidatebydirector", "bUserAttachmentautoverified", "bUserChangepassword", "bUserEzsigntemplaterolegrouping", "objAudit"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiUserID", "fkiCompanyIDDefault", "sCompanyNameX", "fkiDepartmentIDDefault", "sDepartmentNameX", "fkiTimezoneID", "sTimezoneName", "fkiLanguageID", "sLanguageNameX", "objEmail", "fkiBillingentityinternalID", "sBillingentityinternalDescriptionX", "eUserOrigin", "eUserType", "eUserLogintype", "sUserFirstname", "sUserLastname", "sUserLoginname", "eUserEzsignaccess", "bUserIsactive", "bUserChangepassword", "objAudit"));

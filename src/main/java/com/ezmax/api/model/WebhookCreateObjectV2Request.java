@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /2/object/webhook
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class WebhookCreateObjectV2Request {
   public static final String SERIALIZED_NAME_A_OBJ_WEBHOOK = "a_objWebhook";
   @SerializedName(SERIALIZED_NAME_A_OBJ_WEBHOOK)
@@ -120,10 +120,7 @@ public class WebhookCreateObjectV2Request {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -166,16 +163,16 @@ public class WebhookCreateObjectV2Request {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objWebhook").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objWebhook` to be an array in the JSON string but got `%s`", jsonObj.get("a_objWebhook").toString()));
+      if (jsonObj.get("a_objWebhook") != null) {
+        if (!jsonObj.get("a_objWebhook").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objWebhook` to be an array in the JSON string but got `%s`", jsonObj.get("a_objWebhook").toString()));
+        }
+        JsonArray jsonArrayaObjWebhook = jsonObj.getAsJsonArray("a_objWebhook");
+        // validate the required field `a_objWebhook` (array)
+        for (int i = 0; i < jsonArrayaObjWebhook.size(); i++) {
+          WebhookRequestCompound.validateJsonElement(jsonArrayaObjWebhook.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjWebhook = jsonObj.getAsJsonArray("a_objWebhook");
-      // validate the required field `a_objWebhook` (array)
-      for (int i = 0; i < jsonArrayaObjWebhook.size(); i++) {
-        WebhookRequestCompound.validateJsonElement(jsonArrayaObjWebhook.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

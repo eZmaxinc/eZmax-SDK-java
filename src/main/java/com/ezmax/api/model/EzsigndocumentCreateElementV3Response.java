@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigndocument createObject Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsigndocumentCreateElementV3Response {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -147,10 +147,7 @@ public class EzsigndocumentCreateElementV3Response {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -193,16 +190,16 @@ public class EzsigndocumentCreateElementV3Response {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objMatchingtemplate").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objMatchingtemplate` to be an array in the JSON string but got `%s`", jsonObj.get("a_objMatchingtemplate").toString()));
+      if (jsonObj.get("a_objMatchingtemplate") != null) {
+        if (!jsonObj.get("a_objMatchingtemplate").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objMatchingtemplate` to be an array in the JSON string but got `%s`", jsonObj.get("a_objMatchingtemplate").toString()));
+        }
+        JsonArray jsonArrayaObjMatchingtemplate = jsonObj.getAsJsonArray("a_objMatchingtemplate");
+        // validate the required field `a_objMatchingtemplate` (array)
+        for (int i = 0; i < jsonArrayaObjMatchingtemplate.size(); i++) {
+          EzsigndocumentMatchingtemplateV3Response.validateJsonElement(jsonArrayaObjMatchingtemplate.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjMatchingtemplate = jsonObj.getAsJsonArray("a_objMatchingtemplate");
-      // validate the required field `a_objMatchingtemplate` (array)
-      for (int i = 0; i < jsonArrayaObjMatchingtemplate.size(); i++) {
-        EzsigndocumentMatchingtemplateV3Response.validateJsonElement(jsonArrayaObjMatchingtemplate.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

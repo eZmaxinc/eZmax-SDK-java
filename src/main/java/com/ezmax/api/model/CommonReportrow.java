@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A row in a Reportsubsectionpart 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CommonReportrow {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTCELL = "a_objReportcell";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTCELL)
@@ -209,10 +209,7 @@ public class CommonReportrow {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -255,16 +252,16 @@ public class CommonReportrow {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objReportcell").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objReportcell` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportcell").toString()));
+      if (jsonObj.get("a_objReportcell") != null) {
+        if (!jsonObj.get("a_objReportcell").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objReportcell` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportcell").toString()));
+        }
+        JsonArray jsonArrayaObjReportcell = jsonObj.getAsJsonArray("a_objReportcell");
+        // validate the required field `a_objReportcell` (array)
+        for (int i = 0; i < jsonArrayaObjReportcell.size(); i++) {
+          CommonReportcell.validateJsonElement(jsonArrayaObjReportcell.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjReportcell = jsonObj.getAsJsonArray("a_objReportcell");
-      // validate the required field `a_objReportcell` (array)
-      for (int i = 0; i < jsonArrayaObjReportcell.size(); i++) {
-        CommonReportcell.validateJsonElement(jsonArrayaObjReportcell.get(i));
-      };
       // validate the optional field `objReportcellstyleCustom`
       if (jsonObj.get("objReportcellstyleCustom") != null && !jsonObj.get("objReportcellstyleCustom").isJsonNull()) {
         CommonReportcellstylecustom.validateJsonElement(jsonObj.get("objReportcellstyleCustom"));

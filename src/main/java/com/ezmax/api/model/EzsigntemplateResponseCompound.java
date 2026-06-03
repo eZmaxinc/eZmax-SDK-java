@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.EzsigntemplateannotationResponseCompound;
 import com.ezmax.api.model.EzsigntemplatedocumentResponse;
 import com.ezmax.api.model.EzsigntemplatesignerResponseCompound;
 import com.ezmax.api.model.FieldEEzsigntemplateType;
@@ -54,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplate Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsigntemplateResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D = "pkiEzsigntemplateID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATE_I_D)
@@ -140,6 +141,11 @@ public class EzsigntemplateResponseCompound {
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATESIGNER)
   @javax.annotation.Nonnull
   private List<EzsigntemplatesignerResponseCompound> aObjEzsigntemplatesigner = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEANNOTATION = "a_objEzsigntemplateannotation";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEANNOTATION)
+  @javax.annotation.Nullable
+  private List<EzsigntemplateannotationResponseCompound> aObjEzsigntemplateannotation = new ArrayList<>();
 
   public EzsigntemplateResponseCompound() {
   }
@@ -483,6 +489,33 @@ public class EzsigntemplateResponseCompound {
   }
 
 
+  public EzsigntemplateResponseCompound aObjEzsigntemplateannotation(@javax.annotation.Nullable List<EzsigntemplateannotationResponseCompound> aObjEzsigntemplateannotation) {
+    this.aObjEzsigntemplateannotation = aObjEzsigntemplateannotation;
+    return this;
+  }
+
+  public EzsigntemplateResponseCompound addAObjEzsigntemplateannotationItem(EzsigntemplateannotationResponseCompound aObjEzsigntemplateannotationItem) {
+    if (this.aObjEzsigntemplateannotation == null) {
+      this.aObjEzsigntemplateannotation = new ArrayList<>();
+    }
+    this.aObjEzsigntemplateannotation.add(aObjEzsigntemplateannotationItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzsigntemplateannotation
+   * @return aObjEzsigntemplateannotation
+   */
+  @javax.annotation.Nullable
+  public List<EzsigntemplateannotationResponseCompound> getaObjEzsigntemplateannotation() {
+    return aObjEzsigntemplateannotation;
+  }
+
+  public void setaObjEzsigntemplateannotation(@javax.annotation.Nullable List<EzsigntemplateannotationResponseCompound> aObjEzsigntemplateannotation) {
+    this.aObjEzsigntemplateannotation = aObjEzsigntemplateannotation;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -509,12 +542,13 @@ public class EzsigntemplateResponseCompound {
         Objects.equals(this.bEzsigntemplateEditallowed, ezsigntemplateResponseCompound.bEzsigntemplateEditallowed) &&
         Objects.equals(this.eEzsigntemplateType, ezsigntemplateResponseCompound.eEzsigntemplateType) &&
         Objects.equals(this.objEzsigntemplatedocument, ezsigntemplateResponseCompound.objEzsigntemplatedocument) &&
-        Objects.equals(this.aObjEzsigntemplatesigner, ezsigntemplateResponseCompound.aObjEzsigntemplatesigner);
+        Objects.equals(this.aObjEzsigntemplatesigner, ezsigntemplateResponseCompound.aObjEzsigntemplatesigner) &&
+        Objects.equals(this.aObjEzsigntemplateannotation, ezsigntemplateResponseCompound.aObjEzsigntemplateannotation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplateID, fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID, fkiLanguageID, fkiEzdoctemplatedocumentID, sLanguageNameX, sEzsigntemplateDescription, sEzsigntemplateExternaldescription, tEzsigntemplateComment, sEzsigntemplateFilenamepattern, bEzsigntemplateAdminonly, sEzsignfoldertypeNameX, objAudit, bEzsigntemplateEditallowed, eEzsigntemplateType, objEzsigntemplatedocument, aObjEzsigntemplatesigner);
+    return Objects.hash(pkiEzsigntemplateID, fkiEzsigntemplatedocumentID, fkiEzsignfoldertypeID, fkiLanguageID, fkiEzdoctemplatedocumentID, sLanguageNameX, sEzsigntemplateDescription, sEzsigntemplateExternaldescription, tEzsigntemplateComment, sEzsigntemplateFilenamepattern, bEzsigntemplateAdminonly, sEzsignfoldertypeNameX, objAudit, bEzsigntemplateEditallowed, eEzsigntemplateType, objEzsigntemplatedocument, aObjEzsigntemplatesigner, aObjEzsigntemplateannotation);
   }
 
   @Override
@@ -538,6 +572,7 @@ public class EzsigntemplateResponseCompound {
     sb.append("    eEzsigntemplateType: ").append(toIndentedString(eEzsigntemplateType)).append("\n");
     sb.append("    objEzsigntemplatedocument: ").append(toIndentedString(objEzsigntemplatedocument)).append("\n");
     sb.append("    aObjEzsigntemplatesigner: ").append(toIndentedString(aObjEzsigntemplatesigner)).append("\n");
+    sb.append("    aObjEzsigntemplateannotation: ").append(toIndentedString(aObjEzsigntemplateannotation)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -547,10 +582,7 @@ public class EzsigntemplateResponseCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -559,7 +591,7 @@ public class EzsigntemplateResponseCompound {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateID", "fkiEzsigntemplatedocumentID", "fkiEzsignfoldertypeID", "fkiLanguageID", "fkiEzdoctemplatedocumentID", "sLanguageNameX", "sEzsigntemplateDescription", "sEzsigntemplateExternaldescription", "tEzsigntemplateComment", "sEzsigntemplateFilenamepattern", "bEzsigntemplateAdminonly", "sEzsignfoldertypeNameX", "objAudit", "bEzsigntemplateEditallowed", "eEzsigntemplateType", "objEzsigntemplatedocument", "a_objEzsigntemplatesigner"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateID", "fkiEzsigntemplatedocumentID", "fkiEzsignfoldertypeID", "fkiLanguageID", "fkiEzdoctemplatedocumentID", "sLanguageNameX", "sEzsigntemplateDescription", "sEzsigntemplateExternaldescription", "tEzsigntemplateComment", "sEzsigntemplateFilenamepattern", "bEzsigntemplateAdminonly", "sEzsignfoldertypeNameX", "objAudit", "bEzsigntemplateEditallowed", "eEzsigntemplateType", "objEzsigntemplatedocument", "a_objEzsigntemplatesigner", "a_objEzsigntemplateannotation"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateID", "fkiLanguageID", "sLanguageNameX", "sEzsigntemplateDescription", "bEzsigntemplateAdminonly", "objAudit", "bEzsigntemplateEditallowed", "a_objEzsigntemplatesigner"));
@@ -621,16 +653,30 @@ public class EzsigntemplateResponseCompound {
       if (jsonObj.get("objEzsigntemplatedocument") != null && !jsonObj.get("objEzsigntemplatedocument").isJsonNull()) {
         EzsigntemplatedocumentResponse.validateJsonElement(jsonObj.get("objEzsigntemplatedocument"));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzsigntemplatesigner").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsigntemplatesigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplatesigner").toString()));
+      if (jsonObj.get("a_objEzsigntemplatesigner") != null) {
+        if (!jsonObj.get("a_objEzsigntemplatesigner").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsigntemplatesigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplatesigner").toString()));
+        }
+        JsonArray jsonArrayaObjEzsigntemplatesigner = jsonObj.getAsJsonArray("a_objEzsigntemplatesigner");
+        // validate the required field `a_objEzsigntemplatesigner` (array)
+        for (int i = 0; i < jsonArrayaObjEzsigntemplatesigner.size(); i++) {
+          EzsigntemplatesignerResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplatesigner.get(i));
+        }
       }
+      if (jsonObj.get("a_objEzsigntemplateannotation") != null && !jsonObj.get("a_objEzsigntemplateannotation").isJsonNull()) {
+        JsonArray jsonArrayaObjEzsigntemplateannotation = jsonObj.getAsJsonArray("a_objEzsigntemplateannotation");
+        if (jsonArrayaObjEzsigntemplateannotation != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("a_objEzsigntemplateannotation").isJsonArray()) {
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsigntemplateannotation` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplateannotation").toString()));
+          }
 
-      JsonArray jsonArrayaObjEzsigntemplatesigner = jsonObj.getAsJsonArray("a_objEzsigntemplatesigner");
-      // validate the required field `a_objEzsigntemplatesigner` (array)
-      for (int i = 0; i < jsonArrayaObjEzsigntemplatesigner.size(); i++) {
-        EzsigntemplatesignerResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplatesigner.get(i));
-      };
+          // validate the optional field `a_objEzsigntemplateannotation` (array)
+          for (int i = 0; i < jsonArrayaObjEzsigntemplateannotation.size(); i++) {
+            EzsigntemplateannotationResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplateannotation.get(i));
+          };
+        }
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

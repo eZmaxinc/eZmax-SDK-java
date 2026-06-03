@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A part in the Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CommonReportsubsectionpart {
   /**
    * The type of the Reportsubsectionpart
@@ -234,10 +234,7 @@ public class CommonReportsubsectionpart {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -285,16 +282,16 @@ public class CommonReportsubsectionpart {
       }
       // validate the required field `eReportsubsectionpartType`
       EReportsubsectionpartTypeEnum.validateJsonElement(jsonObj.get("eReportsubsectionpartType"));
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objReportrow").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objReportrow` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportrow").toString()));
+      if (jsonObj.get("a_objReportrow") != null) {
+        if (!jsonObj.get("a_objReportrow").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objReportrow` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportrow").toString()));
+        }
+        JsonArray jsonArrayaObjReportrow = jsonObj.getAsJsonArray("a_objReportrow");
+        // validate the required field `a_objReportrow` (array)
+        for (int i = 0; i < jsonArrayaObjReportrow.size(); i++) {
+          CommonReportrow.validateJsonElement(jsonArrayaObjReportrow.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjReportrow = jsonObj.getAsJsonArray("a_objReportrow");
-      // validate the required field `a_objReportrow` (array)
-      for (int i = 0; i < jsonArrayaObjReportrow.size(); i++) {
-        CommonReportrow.validateJsonElement(jsonArrayaObjReportrow.get(i));
-      };
       // ensure the required json array is present
       if (jsonObj.get("a_sVariableobjectProperty") == null) {
         throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");

@@ -55,11 +55,11 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class WebhookResponseCompound {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer pkiWebhookID;
 
   public static final String SERIALIZED_NAME_FKI_AUTHENTICATIONEXTERNAL_I_D = "fkiAuthenticationexternalID";
@@ -139,7 +139,7 @@ public class WebhookResponseCompound {
 
   public static final String SERIALIZED_NAME_OBJ_AUDIT = "objAudit";
   @SerializedName(SERIALIZED_NAME_OBJ_AUDIT)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private CommonAudit objAudit;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_EVENT = "sWebhookEvent";
@@ -160,7 +160,7 @@ public class WebhookResponseCompound {
   public WebhookResponseCompound() {
   }
 
-  public WebhookResponseCompound pkiWebhookID(@javax.annotation.Nonnull Integer pkiWebhookID) {
+  public WebhookResponseCompound pkiWebhookID(@javax.annotation.Nullable Integer pkiWebhookID) {
     this.pkiWebhookID = pkiWebhookID;
     return this;
   }
@@ -169,12 +169,12 @@ public class WebhookResponseCompound {
    * The unique ID of the Webhook
    * @return pkiWebhookID
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getPkiWebhookID() {
     return pkiWebhookID;
   }
 
-  public void setPkiWebhookID(@javax.annotation.Nonnull Integer pkiWebhookID) {
+  public void setPkiWebhookID(@javax.annotation.Nullable Integer pkiWebhookID) {
     this.pkiWebhookID = pkiWebhookID;
   }
 
@@ -468,7 +468,7 @@ public class WebhookResponseCompound {
   }
 
 
-  public WebhookResponseCompound objAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public WebhookResponseCompound objAudit(@javax.annotation.Nullable CommonAudit objAudit) {
     this.objAudit = objAudit;
     return this;
   }
@@ -477,12 +477,12 @@ public class WebhookResponseCompound {
    * Get objAudit
    * @return objAudit
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public CommonAudit getObjAudit() {
     return objAudit;
   }
 
-  public void setObjAudit(@javax.annotation.Nonnull CommonAudit objAudit) {
+  public void setObjAudit(@javax.annotation.Nullable CommonAudit objAudit) {
     this.objAudit = objAudit;
   }
 
@@ -622,10 +622,7 @@ public class WebhookResponseCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -637,7 +634,7 @@ public class WebhookResponseCompound {
     openapiFields = new HashSet<String>(Arrays.asList("pkiWebhookID", "fkiAuthenticationexternalID", "sWebhookDescription", "fkiEzsignfoldertypeID", "sEzsignfoldertypeNameX", "eWebhookModule", "eWebhookEzsignevent", "eWebhookManagementevent", "sWebhookUrl", "sWebhookEmailfailed", "sWebhookApikey", "sWebhookSecret", "bWebhookIsactive", "bWebhookIssigned", "bWebhookSkipsslvalidation", "sAuthenticationexternalDescription", "objAudit", "sWebhookEvent", "sWebhookAuthentificationexternalerror", "a_objWebhookheader"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiWebhookID", "sWebhookDescription", "eWebhookModule", "sWebhookUrl", "sWebhookEmailfailed", "bWebhookIsactive", "bWebhookIssigned", "bWebhookSkipsslvalidation", "objAudit"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("sWebhookDescription", "eWebhookModule", "sWebhookUrl", "sWebhookEmailfailed", "bWebhookIsactive", "bWebhookIssigned", "bWebhookSkipsslvalidation"));
   }
 
   /**
@@ -699,8 +696,10 @@ public class WebhookResponseCompound {
       if ((jsonObj.get("sAuthenticationexternalDescription") != null && !jsonObj.get("sAuthenticationexternalDescription").isJsonNull()) && !jsonObj.get("sAuthenticationexternalDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sAuthenticationexternalDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAuthenticationexternalDescription").toString()));
       }
-      // validate the required field `objAudit`
-      CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
+      // validate the optional field `objAudit`
+      if (jsonObj.get("objAudit") != null && !jsonObj.get("objAudit").isJsonNull()) {
+        CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
+      }
       if ((jsonObj.get("sWebhookEvent") != null && !jsonObj.get("sWebhookEvent").isJsonNull()) && !jsonObj.get("sWebhookEvent").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sWebhookEvent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookEvent").toString()));
       }

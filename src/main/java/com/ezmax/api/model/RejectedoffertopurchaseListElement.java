@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Rejectedoffertopurchase List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class RejectedoffertopurchaseListElement {
   public static final String SERIALIZED_NAME_PKI_REJECTEDOFFERTOPURCHASE_I_D = "pkiRejectedoffertopurchaseID";
   @SerializedName(SERIALIZED_NAME_PKI_REJECTEDOFFERTOPURCHASE_I_D)
@@ -100,10 +100,20 @@ public class RejectedoffertopurchaseListElement {
   @javax.annotation.Nullable
   private String sAddressZip;
 
+  public static final String SERIALIZED_NAME_FKI_PROVINCE_I_D = "fkiProvinceID";
+  @SerializedName(SERIALIZED_NAME_FKI_PROVINCE_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiProvinceID;
+
   public static final String SERIALIZED_NAME_S_PROVINCE_NAME_X = "sProvinceNameX";
   @SerializedName(SERIALIZED_NAME_S_PROVINCE_NAME_X)
   @javax.annotation.Nullable
   private String sProvinceNameX;
+
+  public static final String SERIALIZED_NAME_FKI_COUNTRY_I_D = "fkiCountryID";
+  @SerializedName(SERIALIZED_NAME_FKI_COUNTRY_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiCountryID;
 
   public static final String SERIALIZED_NAME_S_COUNTRY_NAME_X = "sCountryNameX";
   @SerializedName(SERIALIZED_NAME_S_COUNTRY_NAME_X)
@@ -310,6 +320,26 @@ public class RejectedoffertopurchaseListElement {
   }
 
 
+  public RejectedoffertopurchaseListElement fkiProvinceID(@javax.annotation.Nullable Integer fkiProvinceID) {
+    this.fkiProvinceID = fkiProvinceID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|
+   * minimum: 0
+   * @return fkiProvinceID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiProvinceID() {
+    return fkiProvinceID;
+  }
+
+  public void setFkiProvinceID(@javax.annotation.Nullable Integer fkiProvinceID) {
+    this.fkiProvinceID = fkiProvinceID;
+  }
+
+
   public RejectedoffertopurchaseListElement sProvinceNameX(@javax.annotation.Nullable String sProvinceNameX) {
     this.sProvinceNameX = sProvinceNameX;
     return this;
@@ -326,6 +356,26 @@ public class RejectedoffertopurchaseListElement {
 
   public void setsProvinceNameX(@javax.annotation.Nullable String sProvinceNameX) {
     this.sProvinceNameX = sProvinceNameX;
+  }
+
+
+  public RejectedoffertopurchaseListElement fkiCountryID(@javax.annotation.Nullable Integer fkiCountryID) {
+    this.fkiCountryID = fkiCountryID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|
+   * minimum: 0
+   * @return fkiCountryID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiCountryID() {
+    return fkiCountryID;
+  }
+
+  public void setFkiCountryID(@javax.annotation.Nullable Integer fkiCountryID) {
+    this.fkiCountryID = fkiCountryID;
   }
 
 
@@ -387,14 +437,16 @@ public class RejectedoffertopurchaseListElement {
         Objects.equals(this.sAddressSuite, rejectedoffertopurchaseListElement.sAddressSuite) &&
         Objects.equals(this.sAddressCity, rejectedoffertopurchaseListElement.sAddressCity) &&
         Objects.equals(this.sAddressZip, rejectedoffertopurchaseListElement.sAddressZip) &&
+        Objects.equals(this.fkiProvinceID, rejectedoffertopurchaseListElement.fkiProvinceID) &&
         Objects.equals(this.sProvinceNameX, rejectedoffertopurchaseListElement.sProvinceNameX) &&
+        Objects.equals(this.fkiCountryID, rejectedoffertopurchaseListElement.fkiCountryID) &&
         Objects.equals(this.sCountryNameX, rejectedoffertopurchaseListElement.sCountryNameX) &&
         Objects.equals(this.bRejectedoffertopurchaseLinkedtoinscription, rejectedoffertopurchaseListElement.bRejectedoffertopurchaseLinkedtoinscription);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiRejectedoffertopurchaseID, sRejectedoffertopurchaseNumber, dtRejectedoffertopurchaseDate, bRejectedoffertopurchaseIsactive, dtCreatedDate, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, sAddressZip, sProvinceNameX, sCountryNameX, bRejectedoffertopurchaseLinkedtoinscription);
+    return Objects.hash(pkiRejectedoffertopurchaseID, sRejectedoffertopurchaseNumber, dtRejectedoffertopurchaseDate, bRejectedoffertopurchaseIsactive, dtCreatedDate, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, sAddressZip, fkiProvinceID, sProvinceNameX, fkiCountryID, sCountryNameX, bRejectedoffertopurchaseLinkedtoinscription);
   }
 
   @Override
@@ -411,7 +463,9 @@ public class RejectedoffertopurchaseListElement {
     sb.append("    sAddressSuite: ").append(toIndentedString(sAddressSuite)).append("\n");
     sb.append("    sAddressCity: ").append(toIndentedString(sAddressCity)).append("\n");
     sb.append("    sAddressZip: ").append(toIndentedString(sAddressZip)).append("\n");
+    sb.append("    fkiProvinceID: ").append(toIndentedString(fkiProvinceID)).append("\n");
     sb.append("    sProvinceNameX: ").append(toIndentedString(sProvinceNameX)).append("\n");
+    sb.append("    fkiCountryID: ").append(toIndentedString(fkiCountryID)).append("\n");
     sb.append("    sCountryNameX: ").append(toIndentedString(sCountryNameX)).append("\n");
     sb.append("    bRejectedoffertopurchaseLinkedtoinscription: ").append(toIndentedString(bRejectedoffertopurchaseLinkedtoinscription)).append("\n");
     sb.append("}");
@@ -423,10 +477,7 @@ public class RejectedoffertopurchaseListElement {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -435,7 +486,7 @@ public class RejectedoffertopurchaseListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiRejectedoffertopurchaseID", "sRejectedoffertopurchaseNumber", "dtRejectedoffertopurchaseDate", "bRejectedoffertopurchaseIsactive", "dtCreatedDate", "sAddressCivic", "sAddressStreet", "sAddressSuite", "sAddressCity", "sAddressZip", "sProvinceNameX", "sCountryNameX", "bRejectedoffertopurchaseLinkedtoinscription"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiRejectedoffertopurchaseID", "sRejectedoffertopurchaseNumber", "dtRejectedoffertopurchaseDate", "bRejectedoffertopurchaseIsactive", "dtCreatedDate", "sAddressCivic", "sAddressStreet", "sAddressSuite", "sAddressCity", "sAddressZip", "fkiProvinceID", "sProvinceNameX", "fkiCountryID", "sCountryNameX", "bRejectedoffertopurchaseLinkedtoinscription"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiRejectedoffertopurchaseID", "sRejectedoffertopurchaseNumber", "dtRejectedoffertopurchaseDate", "bRejectedoffertopurchaseIsactive", "dtCreatedDate", "bRejectedoffertopurchaseLinkedtoinscription"));

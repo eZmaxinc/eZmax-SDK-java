@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/secretquestion/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class SecretquestionGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_SECRETQUESTION = "a_objSecretquestion";
   @SerializedName(SERIALIZED_NAME_A_OBJ_SECRETQUESTION)
@@ -120,10 +120,7 @@ public class SecretquestionGetAutocompleteV2ResponseMPayload {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -166,16 +163,16 @@ public class SecretquestionGetAutocompleteV2ResponseMPayload {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objSecretquestion").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objSecretquestion` to be an array in the JSON string but got `%s`", jsonObj.get("a_objSecretquestion").toString()));
+      if (jsonObj.get("a_objSecretquestion") != null) {
+        if (!jsonObj.get("a_objSecretquestion").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objSecretquestion` to be an array in the JSON string but got `%s`", jsonObj.get("a_objSecretquestion").toString()));
+        }
+        JsonArray jsonArrayaObjSecretquestion = jsonObj.getAsJsonArray("a_objSecretquestion");
+        // validate the required field `a_objSecretquestion` (array)
+        for (int i = 0; i < jsonArrayaObjSecretquestion.size(); i++) {
+          SecretquestionAutocompleteElementResponse.validateJsonElement(jsonArrayaObjSecretquestion.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjSecretquestion = jsonObj.getAsJsonArray("a_objSecretquestion");
-      // validate the required field `a_objSecretquestion` (array)
-      for (int i = 0; i < jsonArrayaObjSecretquestion.size(); i++) {
-        SecretquestionAutocompleteElementResponse.validateJsonElement(jsonArrayaObjSecretquestion.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezdoctemplatedocument Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzdoctemplatedocumentRequestCompound {
   public static final String SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D = "pkiEzdoctemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D)
@@ -74,7 +74,7 @@ public class EzdoctemplatedocumentRequestCompound {
 
   public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATEFIELDTYPECATEGORY_I_D = "fkiEzdoctemplatefieldtypecategoryID";
   @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATEFIELDTYPECATEGORY_I_D)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiEzdoctemplatefieldtypecategoryID;
 
   public static final String SERIALIZED_NAME_E_EZDOCTEMPLATEDOCUMENT_PRIVACYLEVEL = "eEzdoctemplatedocumentPrivacylevel";
@@ -179,7 +179,7 @@ public class EzdoctemplatedocumentRequestCompound {
   }
 
 
-  public EzdoctemplatedocumentRequestCompound fkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nonnull Integer fkiEzdoctemplatefieldtypecategoryID) {
+  public EzdoctemplatedocumentRequestCompound fkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nullable Integer fkiEzdoctemplatefieldtypecategoryID) {
     this.fkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
     return this;
   }
@@ -190,12 +190,12 @@ public class EzdoctemplatedocumentRequestCompound {
    * maximum: 255
    * @return fkiEzdoctemplatefieldtypecategoryID
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiEzdoctemplatefieldtypecategoryID() {
     return fkiEzdoctemplatefieldtypecategoryID;
   }
 
-  public void setFkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nonnull Integer fkiEzdoctemplatefieldtypecategoryID) {
+  public void setFkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nullable Integer fkiEzdoctemplatefieldtypecategoryID) {
     this.fkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
   }
 
@@ -303,10 +303,7 @@ public class EzdoctemplatedocumentRequestCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -318,7 +315,7 @@ public class EzdoctemplatedocumentRequestCompound {
     openapiFields = new HashSet<String>(Arrays.asList("pkiEzdoctemplatedocumentID", "fkiLanguageID", "fkiEzsignfoldertypeID", "fkiEzdoctemplatetypeID", "fkiEzdoctemplatefieldtypecategoryID", "eEzdoctemplatedocumentPrivacylevel", "bEzdoctemplatedocumentIsactive", "objEzdoctemplatedocumentName"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("fkiLanguageID", "fkiEzdoctemplatetypeID", "fkiEzdoctemplatefieldtypecategoryID", "bEzdoctemplatedocumentIsactive", "objEzdoctemplatedocumentName"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("fkiLanguageID", "fkiEzdoctemplatetypeID", "bEzdoctemplatedocumentIsactive", "objEzdoctemplatedocumentName"));
   }
 
   /**

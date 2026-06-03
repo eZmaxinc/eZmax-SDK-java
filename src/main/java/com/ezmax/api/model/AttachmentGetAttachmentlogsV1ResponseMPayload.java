@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class AttachmentGetAttachmentlogsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_ATTACHMENTLOG = "a_objAttachmentlog";
   @SerializedName(SERIALIZED_NAME_A_OBJ_ATTACHMENTLOG)
@@ -120,10 +120,7 @@ public class AttachmentGetAttachmentlogsV1ResponseMPayload {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -166,16 +163,16 @@ public class AttachmentGetAttachmentlogsV1ResponseMPayload {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objAttachmentlog").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objAttachmentlog` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAttachmentlog").toString()));
+      if (jsonObj.get("a_objAttachmentlog") != null) {
+        if (!jsonObj.get("a_objAttachmentlog").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objAttachmentlog` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAttachmentlog").toString()));
+        }
+        JsonArray jsonArrayaObjAttachmentlog = jsonObj.getAsJsonArray("a_objAttachmentlog");
+        // validate the required field `a_objAttachmentlog` (array)
+        for (int i = 0; i < jsonArrayaObjAttachmentlog.size(); i++) {
+          AttachmentlogResponseCompound.validateJsonElement(jsonArrayaObjAttachmentlog.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjAttachmentlog = jsonObj.getAsJsonArray("a_objAttachmentlog");
-      // validate the required field `a_objAttachmentlog` (array)
-      for (int i = 0; i < jsonArrayaObjAttachmentlog.size(); i++) {
-        AttachmentlogResponseCompound.validateJsonElement(jsonArrayaObjAttachmentlog.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

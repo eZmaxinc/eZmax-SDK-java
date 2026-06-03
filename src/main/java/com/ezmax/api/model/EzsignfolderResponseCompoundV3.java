@@ -56,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsignfolderResponseCompoundV3 {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -168,6 +168,11 @@ public class EzsignfolderResponseCompoundV3 {
   @SerializedName(SERIALIZED_NAME_E_EZSIGNFOLDER_STEP)
   @javax.annotation.Nullable
   private FieldEEzsignfolderStep eEzsignfolderStep;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNFOLDER_STEPCURRENT = "iEzsignfolderStepcurrent";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNFOLDER_STEPCURRENT)
+  @javax.annotation.Nullable
+  private Integer iEzsignfolderStepcurrent;
 
   public static final String SERIALIZED_NAME_DT_EZSIGNFOLDER_CLOSE = "dtEzsignfolderClose";
   @SerializedName(SERIALIZED_NAME_DT_EZSIGNFOLDER_CLOSE)
@@ -500,7 +505,7 @@ public class EzsignfolderResponseCompoundV3 {
   }
 
   /**
-   * The number of days before the the first reminder sending
+   * The number of days before the first reminder sending
    * minimum: 0
    * maximum: 255
    * @return iEzsignfolderSendreminderfirstdays
@@ -647,6 +652,27 @@ public class EzsignfolderResponseCompoundV3 {
 
   public void seteEzsignfolderStep(@javax.annotation.Nullable FieldEEzsignfolderStep eEzsignfolderStep) {
     this.eEzsignfolderStep = eEzsignfolderStep;
+  }
+
+
+  public EzsignfolderResponseCompoundV3 iEzsignfolderStepcurrent(@javax.annotation.Nullable Integer iEzsignfolderStepcurrent) {
+    this.iEzsignfolderStepcurrent = iEzsignfolderStepcurrent;
+    return this;
+  }
+
+  /**
+   * The current step of the ezsignfolder when eEzsignfolderCompletion &#x3D; &#39;PerEzsignfolderStepSync&#39;
+   * minimum: 0
+   * maximum: 255
+   * @return iEzsignfolderStepcurrent
+   */
+  @javax.annotation.Nullable
+  public Integer getiEzsignfolderStepcurrent() {
+    return iEzsignfolderStepcurrent;
+  }
+
+  public void setiEzsignfolderStepcurrent(@javax.annotation.Nullable Integer iEzsignfolderStepcurrent) {
+    this.iEzsignfolderStepcurrent = iEzsignfolderStepcurrent;
   }
 
 
@@ -853,6 +879,7 @@ public class EzsignfolderResponseCompoundV3 {
         Objects.equals(this.dtEzsignfolderScheduledarchive, ezsignfolderResponseCompoundV3.dtEzsignfolderScheduledarchive) &&
         Objects.equals(this.dtEzsignfolderScheduleddispose, ezsignfolderResponseCompoundV3.dtEzsignfolderScheduleddispose) &&
         Objects.equals(this.eEzsignfolderStep, ezsignfolderResponseCompoundV3.eEzsignfolderStep) &&
+        Objects.equals(this.iEzsignfolderStepcurrent, ezsignfolderResponseCompoundV3.iEzsignfolderStepcurrent) &&
         Objects.equals(this.dtEzsignfolderClose, ezsignfolderResponseCompoundV3.dtEzsignfolderClose) &&
         Objects.equals(this.dtEzsignfolderArchive, ezsignfolderResponseCompoundV3.dtEzsignfolderArchive) &&
         Objects.equals(this.dtEzsignfolderDispose, ezsignfolderResponseCompoundV3.dtEzsignfolderDispose) &&
@@ -866,7 +893,7 @@ public class EzsignfolderResponseCompoundV3 {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, objEzsignfoldertype, fkiTimezoneID, eEzsignfolderCompletion, eEzsignfolderDocumentdependency, sEzsignfoldertypeNameX, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX, sEzsignfolderDescription, tEzsignfolderNote, bEzsignfolderIsdisposable, iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate, dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose, eEzsignfolderStep, dtEzsignfolderClose, dtEzsignfolderArchive, dtEzsignfolderDispose, tEzsignfolderMessage, eEzsignfolderMessageorder, objAudit, sEzsignfolderExternalid, eEzsignfolderAccess, objTimezone);
+    return Objects.hash(pkiEzsignfolderID, fkiEzsignfoldertypeID, objEzsignfoldertype, fkiTimezoneID, eEzsignfolderCompletion, eEzsignfolderDocumentdependency, sEzsignfoldertypeNameX, fkiBillingentityinternalID, sBillingentityinternalDescriptionX, fkiEzsigntsarequirementID, sEzsigntsarequirementDescriptionX, sEzsignfolderDescription, tEzsignfolderNote, bEzsignfolderIsdisposable, iEzsignfolderSendreminderfirstdays, iEzsignfolderSendreminderotherdays, dtEzsignfolderDelayedsenddate, dtEzsignfolderDuedate, dtEzsignfolderSentdate, dtEzsignfolderScheduledarchive, dtEzsignfolderScheduleddispose, eEzsignfolderStep, iEzsignfolderStepcurrent, dtEzsignfolderClose, dtEzsignfolderArchive, dtEzsignfolderDispose, tEzsignfolderMessage, eEzsignfolderMessageorder, objAudit, sEzsignfolderExternalid, eEzsignfolderAccess, objTimezone);
   }
 
   @Override
@@ -895,6 +922,7 @@ public class EzsignfolderResponseCompoundV3 {
     sb.append("    dtEzsignfolderScheduledarchive: ").append(toIndentedString(dtEzsignfolderScheduledarchive)).append("\n");
     sb.append("    dtEzsignfolderScheduleddispose: ").append(toIndentedString(dtEzsignfolderScheduleddispose)).append("\n");
     sb.append("    eEzsignfolderStep: ").append(toIndentedString(eEzsignfolderStep)).append("\n");
+    sb.append("    iEzsignfolderStepcurrent: ").append(toIndentedString(iEzsignfolderStepcurrent)).append("\n");
     sb.append("    dtEzsignfolderClose: ").append(toIndentedString(dtEzsignfolderClose)).append("\n");
     sb.append("    dtEzsignfolderArchive: ").append(toIndentedString(dtEzsignfolderArchive)).append("\n");
     sb.append("    dtEzsignfolderDispose: ").append(toIndentedString(dtEzsignfolderDispose)).append("\n");
@@ -913,10 +941,7 @@ public class EzsignfolderResponseCompoundV3 {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -925,7 +950,7 @@ public class EzsignfolderResponseCompoundV3 {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsignfolderID", "fkiEzsignfoldertypeID", "objEzsignfoldertype", "fkiTimezoneID", "eEzsignfolderCompletion", "eEzsignfolderDocumentdependency", "sEzsignfoldertypeNameX", "fkiBillingentityinternalID", "sBillingentityinternalDescriptionX", "fkiEzsigntsarequirementID", "sEzsigntsarequirementDescriptionX", "sEzsignfolderDescription", "tEzsignfolderNote", "bEzsignfolderIsdisposable", "iEzsignfolderSendreminderfirstdays", "iEzsignfolderSendreminderotherdays", "dtEzsignfolderDelayedsenddate", "dtEzsignfolderDuedate", "dtEzsignfolderSentdate", "dtEzsignfolderScheduledarchive", "dtEzsignfolderScheduleddispose", "eEzsignfolderStep", "dtEzsignfolderClose", "dtEzsignfolderArchive", "dtEzsignfolderDispose", "tEzsignfolderMessage", "eEzsignfolderMessageorder", "objAudit", "sEzsignfolderExternalid", "eEzsignfolderAccess", "objTimezone"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsignfolderID", "fkiEzsignfoldertypeID", "objEzsignfoldertype", "fkiTimezoneID", "eEzsignfolderCompletion", "eEzsignfolderDocumentdependency", "sEzsignfoldertypeNameX", "fkiBillingentityinternalID", "sBillingentityinternalDescriptionX", "fkiEzsigntsarequirementID", "sEzsigntsarequirementDescriptionX", "sEzsignfolderDescription", "tEzsignfolderNote", "bEzsignfolderIsdisposable", "iEzsignfolderSendreminderfirstdays", "iEzsignfolderSendreminderotherdays", "dtEzsignfolderDelayedsenddate", "dtEzsignfolderDuedate", "dtEzsignfolderSentdate", "dtEzsignfolderScheduledarchive", "dtEzsignfolderScheduleddispose", "eEzsignfolderStep", "iEzsignfolderStepcurrent", "dtEzsignfolderClose", "dtEzsignfolderArchive", "dtEzsignfolderDispose", "tEzsignfolderMessage", "eEzsignfolderMessageorder", "objAudit", "sEzsignfolderExternalid", "eEzsignfolderAccess", "objTimezone"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzsignfolderID", "eEzsignfolderCompletion", "sEzsignfolderDescription"));

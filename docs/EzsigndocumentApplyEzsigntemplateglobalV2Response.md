@@ -1,0 +1,16 @@
+
+
+# EzsigndocumentApplyEzsigntemplateglobalV2Response
+
+Response for POST /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplateglobal
+
+## Properties
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**objDebugPayload** | [**CommonResponseObjDebugPayload**](CommonResponseObjDebugPayload.md) |  |  |
+|**objDebug** | [**CommonResponseObjDebug**](CommonResponseObjDebug.md) |  |  [optional] |
+|**aObjWarning** | [**List&lt;CommonResponseWarning&gt;**](CommonResponseWarning.md) |  |  [optional] |
+
+
+

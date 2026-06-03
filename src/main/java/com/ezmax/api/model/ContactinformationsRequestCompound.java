@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A Contactinformations Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class ContactinformationsRequestCompound {
   public static final String SERIALIZED_NAME_I_ADDRESS_DEFAULT = "iAddressDefault";
   @SerializedName(SERIALIZED_NAME_I_ADDRESS_DEFAULT)
@@ -329,10 +329,7 @@ public class ContactinformationsRequestCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -375,46 +372,46 @@ public class ContactinformationsRequestCompound {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objAddress").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objAddress` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAddress").toString()));
+      if (jsonObj.get("a_objAddress") != null) {
+        if (!jsonObj.get("a_objAddress").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objAddress` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAddress").toString()));
+        }
+        JsonArray jsonArrayaObjAddress = jsonObj.getAsJsonArray("a_objAddress");
+        // validate the required field `a_objAddress` (array)
+        for (int i = 0; i < jsonArrayaObjAddress.size(); i++) {
+          AddressRequestCompound.validateJsonElement(jsonArrayaObjAddress.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjAddress = jsonObj.getAsJsonArray("a_objAddress");
-      // validate the required field `a_objAddress` (array)
-      for (int i = 0; i < jsonArrayaObjAddress.size(); i++) {
-        AddressRequestCompound.validateJsonElement(jsonArrayaObjAddress.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objPhone").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objPhone` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPhone").toString()));
+      if (jsonObj.get("a_objPhone") != null) {
+        if (!jsonObj.get("a_objPhone").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objPhone` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPhone").toString()));
+        }
+        JsonArray jsonArrayaObjPhone = jsonObj.getAsJsonArray("a_objPhone");
+        // validate the required field `a_objPhone` (array)
+        for (int i = 0; i < jsonArrayaObjPhone.size(); i++) {
+          PhoneRequestCompound.validateJsonElement(jsonArrayaObjPhone.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjPhone = jsonObj.getAsJsonArray("a_objPhone");
-      // validate the required field `a_objPhone` (array)
-      for (int i = 0; i < jsonArrayaObjPhone.size(); i++) {
-        PhoneRequestCompound.validateJsonElement(jsonArrayaObjPhone.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEmail").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEmail` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEmail").toString()));
+      if (jsonObj.get("a_objEmail") != null) {
+        if (!jsonObj.get("a_objEmail").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEmail` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEmail").toString()));
+        }
+        JsonArray jsonArrayaObjEmail = jsonObj.getAsJsonArray("a_objEmail");
+        // validate the required field `a_objEmail` (array)
+        for (int i = 0; i < jsonArrayaObjEmail.size(); i++) {
+          EmailRequestCompound.validateJsonElement(jsonArrayaObjEmail.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEmail = jsonObj.getAsJsonArray("a_objEmail");
-      // validate the required field `a_objEmail` (array)
-      for (int i = 0; i < jsonArrayaObjEmail.size(); i++) {
-        EmailRequestCompound.validateJsonElement(jsonArrayaObjEmail.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objWebsite").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objWebsite` to be an array in the JSON string but got `%s`", jsonObj.get("a_objWebsite").toString()));
+      if (jsonObj.get("a_objWebsite") != null) {
+        if (!jsonObj.get("a_objWebsite").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objWebsite` to be an array in the JSON string but got `%s`", jsonObj.get("a_objWebsite").toString()));
+        }
+        JsonArray jsonArrayaObjWebsite = jsonObj.getAsJsonArray("a_objWebsite");
+        // validate the required field `a_objWebsite` (array)
+        for (int i = 0; i < jsonArrayaObjWebsite.size(); i++) {
+          WebsiteRequestCompound.validateJsonElement(jsonArrayaObjWebsite.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjWebsite = jsonObj.getAsJsonArray("a_objWebsite");
-      // validate the required field `a_objWebsite` (array)
-      for (int i = 0; i < jsonArrayaObjWebsite.size(); i++) {
-        WebsiteRequestCompound.validateJsonElement(jsonArrayaObjWebsite.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

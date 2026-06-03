@@ -55,7 +55,9 @@ public enum FieldESessionhistoryEndby {
   
   BAD_IP("BadIP"),
   
-  FORCED_LOGOFF("ForcedLogoff");
+  FORCED_LOGOFF("ForcedLogoff"),
+  
+  SUSPENDED("Suspended");
 
   private String value;
 

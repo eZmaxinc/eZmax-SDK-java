@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/paymentgateway
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class PaymentgatewayCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_PAYMENTGATEWAY = "a_objPaymentgateway";
   @SerializedName(SERIALIZED_NAME_A_OBJ_PAYMENTGATEWAY)
@@ -120,10 +120,7 @@ public class PaymentgatewayCreateObjectV1Request {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -166,16 +163,16 @@ public class PaymentgatewayCreateObjectV1Request {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objPaymentgateway").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objPaymentgateway` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPaymentgateway").toString()));
+      if (jsonObj.get("a_objPaymentgateway") != null) {
+        if (!jsonObj.get("a_objPaymentgateway").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objPaymentgateway` to be an array in the JSON string but got `%s`", jsonObj.get("a_objPaymentgateway").toString()));
+        }
+        JsonArray jsonArrayaObjPaymentgateway = jsonObj.getAsJsonArray("a_objPaymentgateway");
+        // validate the required field `a_objPaymentgateway` (array)
+        for (int i = 0; i < jsonArrayaObjPaymentgateway.size(); i++) {
+          PaymentgatewayRequestCompound.validateJsonElement(jsonArrayaObjPaymentgateway.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjPaymentgateway = jsonObj.getAsJsonArray("a_objPaymentgateway");
-      // validate the required field `a_objPaymentgateway` (array)
-      for (int i = 0; i < jsonArrayaObjPaymentgateway.size(); i++) {
-        PaymentgatewayRequestCompound.validateJsonElement(jsonArrayaObjPaymentgateway.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

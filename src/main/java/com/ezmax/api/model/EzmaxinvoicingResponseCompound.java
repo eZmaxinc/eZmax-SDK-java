@@ -61,7 +61,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezmaxinvoicing Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzmaxinvoicingResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D = "pkiEzmaxinvoicingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXINVOICING_I_D)
@@ -730,10 +730,7 @@ public class EzmaxinvoicingResponseCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -798,76 +795,76 @@ public class EzmaxinvoicingResponseCompound {
       EzmaxinvoicingcontractResponseCompound.validateJsonElement(jsonObj.get("objEzmaxinvoicingcontract"));
       // validate the required field `objEzmaxpricing`
       CustomEzmaxpricingResponse.validateJsonElement(jsonObj.get("objEzmaxpricing"));
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzmaxinvoicingsummaryglobal").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingsummaryglobal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryglobal").toString()));
+      if (jsonObj.get("a_objEzmaxinvoicingsummaryglobal") != null) {
+        if (!jsonObj.get("a_objEzmaxinvoicingsummaryglobal").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingsummaryglobal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryglobal").toString()));
+        }
+        JsonArray jsonArrayaObjEzmaxinvoicingsummaryglobal = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryglobal");
+        // validate the required field `a_objEzmaxinvoicingsummaryglobal` (array)
+        for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryglobal.size(); i++) {
+          EzmaxinvoicingsummaryglobalResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryglobal.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzmaxinvoicingsummaryglobal = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryglobal");
-      // validate the required field `a_objEzmaxinvoicingsummaryglobal` (array)
-      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryglobal.size(); i++) {
-        EzmaxinvoicingsummaryglobalResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryglobal.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzmaxinvoicingsummaryexternal").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingsummaryexternal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryexternal").toString()));
+      if (jsonObj.get("a_objEzmaxinvoicingsummaryexternal") != null) {
+        if (!jsonObj.get("a_objEzmaxinvoicingsummaryexternal").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingsummaryexternal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryexternal").toString()));
+        }
+        JsonArray jsonArrayaObjEzmaxinvoicingsummaryexternal = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryexternal");
+        // validate the required field `a_objEzmaxinvoicingsummaryexternal` (array)
+        for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryexternal.size(); i++) {
+          EzmaxinvoicingsummaryexternalResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryexternal.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzmaxinvoicingsummaryexternal = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryexternal");
-      // validate the required field `a_objEzmaxinvoicingsummaryexternal` (array)
-      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryexternal.size(); i++) {
-        EzmaxinvoicingsummaryexternalResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryexternal.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzmaxinvoicingsummaryinternal").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingsummaryinternal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryinternal").toString()));
+      if (jsonObj.get("a_objEzmaxinvoicingsummaryinternal") != null) {
+        if (!jsonObj.get("a_objEzmaxinvoicingsummaryinternal").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingsummaryinternal` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingsummaryinternal").toString()));
+        }
+        JsonArray jsonArrayaObjEzmaxinvoicingsummaryinternal = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryinternal");
+        // validate the required field `a_objEzmaxinvoicingsummaryinternal` (array)
+        for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryinternal.size(); i++) {
+          EzmaxinvoicingsummaryinternalResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryinternal.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzmaxinvoicingsummaryinternal = jsonObj.getAsJsonArray("a_objEzmaxinvoicingsummaryinternal");
-      // validate the required field `a_objEzmaxinvoicingsummaryinternal` (array)
-      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingsummaryinternal.size(); i++) {
-        EzmaxinvoicingsummaryinternalResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingsummaryinternal.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzmaxinvoicingagent").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingagent` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingagent").toString()));
+      if (jsonObj.get("a_objEzmaxinvoicingagent") != null) {
+        if (!jsonObj.get("a_objEzmaxinvoicingagent").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingagent` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingagent").toString()));
+        }
+        JsonArray jsonArrayaObjEzmaxinvoicingagent = jsonObj.getAsJsonArray("a_objEzmaxinvoicingagent");
+        // validate the required field `a_objEzmaxinvoicingagent` (array)
+        for (int i = 0; i < jsonArrayaObjEzmaxinvoicingagent.size(); i++) {
+          EzmaxinvoicingagentResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingagent.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzmaxinvoicingagent = jsonObj.getAsJsonArray("a_objEzmaxinvoicingagent");
-      // validate the required field `a_objEzmaxinvoicingagent` (array)
-      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingagent.size(); i++) {
-        EzmaxinvoicingagentResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicingagent.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzmaxinvoicinguser").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicinguser` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicinguser").toString()));
+      if (jsonObj.get("a_objEzmaxinvoicinguser") != null) {
+        if (!jsonObj.get("a_objEzmaxinvoicinguser").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicinguser` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicinguser").toString()));
+        }
+        JsonArray jsonArrayaObjEzmaxinvoicinguser = jsonObj.getAsJsonArray("a_objEzmaxinvoicinguser");
+        // validate the required field `a_objEzmaxinvoicinguser` (array)
+        for (int i = 0; i < jsonArrayaObjEzmaxinvoicinguser.size(); i++) {
+          EzmaxinvoicinguserResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicinguser.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzmaxinvoicinguser = jsonObj.getAsJsonArray("a_objEzmaxinvoicinguser");
-      // validate the required field `a_objEzmaxinvoicinguser` (array)
-      for (int i = 0; i < jsonArrayaObjEzmaxinvoicinguser.size(); i++) {
-        EzmaxinvoicinguserResponseCompound.validateJsonElement(jsonArrayaObjEzmaxinvoicinguser.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzmaxinvoicingezsignfolder").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingezsignfolder` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingezsignfolder").toString()));
+      if (jsonObj.get("a_objEzmaxinvoicingezsignfolder") != null) {
+        if (!jsonObj.get("a_objEzmaxinvoicingezsignfolder").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingezsignfolder` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingezsignfolder").toString()));
+        }
+        JsonArray jsonArrayaObjEzmaxinvoicingezsignfolder = jsonObj.getAsJsonArray("a_objEzmaxinvoicingezsignfolder");
+        // validate the required field `a_objEzmaxinvoicingezsignfolder` (array)
+        for (int i = 0; i < jsonArrayaObjEzmaxinvoicingezsignfolder.size(); i++) {
+          CustomEzmaxinvoicingEzsignfolderResponse.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsignfolder.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzmaxinvoicingezsignfolder = jsonObj.getAsJsonArray("a_objEzmaxinvoicingezsignfolder");
-      // validate the required field `a_objEzmaxinvoicingezsignfolder` (array)
-      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingezsignfolder.size(); i++) {
-        CustomEzmaxinvoicingEzsignfolderResponse.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsignfolder.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzmaxinvoicingezsigndocument").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingezsigndocument` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingezsigndocument").toString()));
+      if (jsonObj.get("a_objEzmaxinvoicingezsigndocument") != null) {
+        if (!jsonObj.get("a_objEzmaxinvoicingezsigndocument").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzmaxinvoicingezsigndocument` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzmaxinvoicingezsigndocument").toString()));
+        }
+        JsonArray jsonArrayaObjEzmaxinvoicingezsigndocument = jsonObj.getAsJsonArray("a_objEzmaxinvoicingezsigndocument");
+        // validate the required field `a_objEzmaxinvoicingezsigndocument` (array)
+        for (int i = 0; i < jsonArrayaObjEzmaxinvoicingezsigndocument.size(); i++) {
+          CustomEzmaxinvoicingEzsigndocumentResponse.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsigndocument.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzmaxinvoicingezsigndocument = jsonObj.getAsJsonArray("a_objEzmaxinvoicingezsigndocument");
-      // validate the required field `a_objEzmaxinvoicingezsigndocument` (array)
-      for (int i = 0; i < jsonArrayaObjEzmaxinvoicingezsigndocument.size(); i++) {
-        CustomEzmaxinvoicingEzsigndocumentResponse.validateJsonElement(jsonArrayaObjEzmaxinvoicingezsigndocument.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

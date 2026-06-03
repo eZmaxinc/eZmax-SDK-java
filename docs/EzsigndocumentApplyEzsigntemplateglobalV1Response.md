@@ -2,7 +2,7 @@
 
 # EzsigndocumentApplyEzsigntemplateglobalV1Response
 
-Response for POST /2/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplate
+Response for POST /1/object/ezsigndocument/{pkiEzsigndocument}/applyEzsigntemplateglobal
 
 ## Properties
 

@@ -57,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignformfieldgroup Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsignformfieldgroupResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D = "pkiEzsignformfieldgroupID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFORMFIELDGROUP_I_D)
@@ -648,10 +648,7 @@ public class EzsignformfieldgroupResponseCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -723,16 +720,16 @@ public class EzsignformfieldgroupResponseCompound {
       if (jsonObj.get("eEzsignformfieldgroupTooltipposition") != null && !jsonObj.get("eEzsignformfieldgroupTooltipposition").isJsonNull()) {
         FieldEEzsignformfieldgroupTooltipposition.validateJsonElement(jsonObj.get("eEzsignformfieldgroupTooltipposition"));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzsignformfield").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignformfield` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfield").toString()));
+      if (jsonObj.get("a_objEzsignformfield") != null) {
+        if (!jsonObj.get("a_objEzsignformfield").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignformfield` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfield").toString()));
+        }
+        JsonArray jsonArrayaObjEzsignformfield = jsonObj.getAsJsonArray("a_objEzsignformfield");
+        // validate the required field `a_objEzsignformfield` (array)
+        for (int i = 0; i < jsonArrayaObjEzsignformfield.size(); i++) {
+          EzsignformfieldResponseCompound.validateJsonElement(jsonArrayaObjEzsignformfield.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzsignformfield = jsonObj.getAsJsonArray("a_objEzsignformfield");
-      // validate the required field `a_objEzsignformfield` (array)
-      for (int i = 0; i < jsonArrayaObjEzsignformfield.size(); i++) {
-        EzsignformfieldResponseCompound.validateJsonElement(jsonArrayaObjEzsignformfield.get(i));
-      };
       if (jsonObj.get("a_objDropdownElement") != null && !jsonObj.get("a_objDropdownElement").isJsonNull()) {
         JsonArray jsonArrayaObjDropdownElement = jsonObj.getAsJsonArray("a_objDropdownElement");
         if (jsonArrayaObjDropdownElement != null) {
@@ -747,16 +744,16 @@ public class EzsignformfieldgroupResponseCompound {
           };
         }
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzsignformfieldgroupsigner").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignformfieldgroupsigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfieldgroupsigner").toString()));
+      if (jsonObj.get("a_objEzsignformfieldgroupsigner") != null) {
+        if (!jsonObj.get("a_objEzsignformfieldgroupsigner").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignformfieldgroupsigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfieldgroupsigner").toString()));
+        }
+        JsonArray jsonArrayaObjEzsignformfieldgroupsigner = jsonObj.getAsJsonArray("a_objEzsignformfieldgroupsigner");
+        // validate the required field `a_objEzsignformfieldgroupsigner` (array)
+        for (int i = 0; i < jsonArrayaObjEzsignformfieldgroupsigner.size(); i++) {
+          EzsignformfieldgroupsignerResponseCompound.validateJsonElement(jsonArrayaObjEzsignformfieldgroupsigner.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzsignformfieldgroupsigner = jsonObj.getAsJsonArray("a_objEzsignformfieldgroupsigner");
-      // validate the required field `a_objEzsignformfieldgroupsigner` (array)
-      for (int i = 0; i < jsonArrayaObjEzsignformfieldgroupsigner.size(); i++) {
-        EzsignformfieldgroupsignerResponseCompound.validateJsonElement(jsonArrayaObjEzsignformfieldgroupsigner.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Domain Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class DomainResponseCompound {
   public static final String SERIALIZED_NAME_PKI_DOMAIN_I_D = "pkiDomainID";
   @SerializedName(SERIALIZED_NAME_PKI_DOMAIN_I_D)
@@ -279,10 +279,7 @@ public class DomainResponseCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -330,16 +327,16 @@ public class DomainResponseCompound {
       }
       // validate the required field `objAudit`
       CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objDnsrecord").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objDnsrecord` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDnsrecord").toString()));
+      if (jsonObj.get("a_objDnsrecord") != null) {
+        if (!jsonObj.get("a_objDnsrecord").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objDnsrecord` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDnsrecord").toString()));
+        }
+        JsonArray jsonArrayaObjDnsrecord = jsonObj.getAsJsonArray("a_objDnsrecord");
+        // validate the required field `a_objDnsrecord` (array)
+        for (int i = 0; i < jsonArrayaObjDnsrecord.size(); i++) {
+          CustomDnsrecordResponse.validateJsonElement(jsonArrayaObjDnsrecord.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjDnsrecord = jsonObj.getAsJsonArray("a_objDnsrecord");
-      // validate the required field `a_objDnsrecord` (array)
-      for (int i = 0; i < jsonArrayaObjDnsrecord.size(); i++) {
-        CustomDnsrecordResponse.validateJsonElement(jsonArrayaObjDnsrecord.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

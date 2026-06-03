@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/otherincometype/getAutocomplete
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class OtherincometypeGetAutocompleteV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_OTHERINCOMETYPE = "a_objOtherincometype";
   @SerializedName(SERIALIZED_NAME_A_OBJ_OTHERINCOMETYPE)
@@ -120,10 +120,7 @@ public class OtherincometypeGetAutocompleteV2ResponseMPayload {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -166,16 +163,16 @@ public class OtherincometypeGetAutocompleteV2ResponseMPayload {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objOtherincometype").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objOtherincometype` to be an array in the JSON string but got `%s`", jsonObj.get("a_objOtherincometype").toString()));
+      if (jsonObj.get("a_objOtherincometype") != null) {
+        if (!jsonObj.get("a_objOtherincometype").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objOtherincometype` to be an array in the JSON string but got `%s`", jsonObj.get("a_objOtherincometype").toString()));
+        }
+        JsonArray jsonArrayaObjOtherincometype = jsonObj.getAsJsonArray("a_objOtherincometype");
+        // validate the required field `a_objOtherincometype` (array)
+        for (int i = 0; i < jsonArrayaObjOtherincometype.size(); i++) {
+          OtherincometypeAutocompleteElementResponse.validateJsonElement(jsonArrayaObjOtherincometype.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjOtherincometype = jsonObj.getAsJsonArray("a_objOtherincometype");
-      // validate the required field `a_objOtherincometype` (array)
-      for (int i = 0; i < jsonArrayaObjOtherincometype.size(); i++) {
-        OtherincometypeAutocompleteElementResponse.validateJsonElement(jsonArrayaObjOtherincometype.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

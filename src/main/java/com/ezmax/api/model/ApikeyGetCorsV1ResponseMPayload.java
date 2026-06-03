@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/apikey/{pkiApikeyID}/getCors
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class ApikeyGetCorsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_CORS = "a_objCors";
   @SerializedName(SERIALIZED_NAME_A_OBJ_CORS)
@@ -120,10 +120,7 @@ public class ApikeyGetCorsV1ResponseMPayload {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -166,16 +163,16 @@ public class ApikeyGetCorsV1ResponseMPayload {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objCors").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCors` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCors").toString()));
+      if (jsonObj.get("a_objCors") != null) {
+        if (!jsonObj.get("a_objCors").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objCors` to be an array in the JSON string but got `%s`", jsonObj.get("a_objCors").toString()));
+        }
+        JsonArray jsonArrayaObjCors = jsonObj.getAsJsonArray("a_objCors");
+        // validate the required field `a_objCors` (array)
+        for (int i = 0; i < jsonArrayaObjCors.size(); i++) {
+          CorsResponseCompound.validateJsonElement(jsonArrayaObjCors.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjCors = jsonObj.getAsJsonArray("a_objCors");
-      // validate the required field `a_objCors` (array)
-      for (int i = 0; i < jsonArrayaObjCors.size(); i++) {
-        CorsResponseCompound.validateJsonElement(jsonArrayaObjCors.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

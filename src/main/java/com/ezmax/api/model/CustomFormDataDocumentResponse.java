@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A form Data Document Object 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CustomFormDataDocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D = "pkiEzsigndocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNDOCUMENT_I_D)
@@ -226,10 +226,7 @@ public class CustomFormDataDocumentResponse {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -278,16 +275,16 @@ public class CustomFormDataDocumentResponse {
       if (!jsonObj.get("dtModifiedDate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtModifiedDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtModifiedDate").toString()));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objFormDataSigner").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objFormDataSigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objFormDataSigner").toString()));
+      if (jsonObj.get("a_objFormDataSigner") != null) {
+        if (!jsonObj.get("a_objFormDataSigner").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objFormDataSigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objFormDataSigner").toString()));
+        }
+        JsonArray jsonArrayaObjFormDataSigner = jsonObj.getAsJsonArray("a_objFormDataSigner");
+        // validate the required field `a_objFormDataSigner` (array)
+        for (int i = 0; i < jsonArrayaObjFormDataSigner.size(); i++) {
+          CustomFormDataSignerResponse.validateJsonElement(jsonArrayaObjFormDataSigner.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjFormDataSigner = jsonObj.getAsJsonArray("a_objFormDataSigner");
-      // validate the required field `a_objFormDataSigner` (array)
-      for (int i = 0; i < jsonArrayaObjFormDataSigner.size(); i++) {
-        CustomFormDataSignerResponse.validateJsonElement(jsonArrayaObjFormDataSigner.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

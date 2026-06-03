@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsignsigningreason
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsignsigningreasonCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNSIGNINGREASON = "a_objEzsignsigningreason";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNSIGNINGREASON)
@@ -120,10 +120,7 @@ public class EzsignsigningreasonCreateObjectV1Request {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -166,16 +163,16 @@ public class EzsignsigningreasonCreateObjectV1Request {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzsignsigningreason").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignsigningreason` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsigningreason").toString()));
+      if (jsonObj.get("a_objEzsignsigningreason") != null) {
+        if (!jsonObj.get("a_objEzsignsigningreason").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignsigningreason` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignsigningreason").toString()));
+        }
+        JsonArray jsonArrayaObjEzsignsigningreason = jsonObj.getAsJsonArray("a_objEzsignsigningreason");
+        // validate the required field `a_objEzsignsigningreason` (array)
+        for (int i = 0; i < jsonArrayaObjEzsignsigningreason.size(); i++) {
+          EzsignsigningreasonRequestCompound.validateJsonElement(jsonArrayaObjEzsignsigningreason.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzsignsigningreason = jsonObj.getAsJsonArray("a_objEzsignsigningreason");
-      // validate the required field `a_objEzsignsigningreason` (array)
-      for (int i = 0; i < jsonArrayaObjEzsignsigningreason.size(); i++) {
-        EzsignsigningreasonRequestCompound.validateJsonElement(jsonArrayaObjEzsignsigningreason.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

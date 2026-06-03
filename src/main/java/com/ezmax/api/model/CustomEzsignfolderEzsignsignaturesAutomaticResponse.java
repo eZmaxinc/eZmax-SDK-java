@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignfolder Object in the context of an EzsignsignaturesAutomatic path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D = "pkiEzsignfolderID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDER_I_D)
@@ -173,10 +173,7 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -222,16 +219,16 @@ public class CustomEzsignfolderEzsignsignaturesAutomaticResponse {
       if (!jsonObj.get("sEzsignfolderDescription").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignfolderDescription` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfolderDescription").toString()));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzsigndocument").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsigndocument` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigndocument").toString()));
+      if (jsonObj.get("a_objEzsigndocument") != null) {
+        if (!jsonObj.get("a_objEzsigndocument").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsigndocument` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigndocument").toString()));
+        }
+        JsonArray jsonArrayaObjEzsigndocument = jsonObj.getAsJsonArray("a_objEzsigndocument");
+        // validate the required field `a_objEzsigndocument` (array)
+        for (int i = 0; i < jsonArrayaObjEzsigndocument.size(); i++) {
+          CustomEzsigndocumentEzsignsignaturesAutomaticResponse.validateJsonElement(jsonArrayaObjEzsigndocument.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzsigndocument = jsonObj.getAsJsonArray("a_objEzsigndocument");
-      // validate the required field `a_objEzsigndocument` (array)
-      for (int i = 0; i < jsonArrayaObjEzsigndocument.size(); i++) {
-        CustomEzsigndocumentEzsignsignaturesAutomaticResponse.validateJsonElement(jsonArrayaObjEzsigndocument.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

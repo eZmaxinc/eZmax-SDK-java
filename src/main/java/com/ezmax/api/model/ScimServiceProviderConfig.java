@@ -57,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * ScimServiceProviderConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class ScimServiceProviderConfig {
   public static final String SERIALIZED_NAME_AUTHENTICATION_SCHEMES = "authenticationSchemes";
   @SerializedName(SERIALIZED_NAME_AUTHENTICATION_SCHEMES)
@@ -308,10 +308,7 @@ public class ScimServiceProviderConfig {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -354,16 +351,16 @@ public class ScimServiceProviderConfig {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("authenticationSchemes").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `authenticationSchemes` to be an array in the JSON string but got `%s`", jsonObj.get("authenticationSchemes").toString()));
+      if (jsonObj.get("authenticationSchemes") != null) {
+        if (!jsonObj.get("authenticationSchemes").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `authenticationSchemes` to be an array in the JSON string but got `%s`", jsonObj.get("authenticationSchemes").toString()));
+        }
+        JsonArray jsonArrayauthenticationSchemes = jsonObj.getAsJsonArray("authenticationSchemes");
+        // validate the required field `authenticationSchemes` (array)
+        for (int i = 0; i < jsonArrayauthenticationSchemes.size(); i++) {
+          ScimAuthenticationScheme.validateJsonElement(jsonArrayauthenticationSchemes.get(i));
+        }
       }
-
-      JsonArray jsonArrayauthenticationSchemes = jsonObj.getAsJsonArray("authenticationSchemes");
-      // validate the required field `authenticationSchemes` (array)
-      for (int i = 0; i < jsonArrayauthenticationSchemes.size(); i++) {
-        ScimAuthenticationScheme.validateJsonElement(jsonArrayauthenticationSchemes.get(i));
-      };
       // validate the required field `bulk`
       ScimServiceProviderConfigBulk.validateJsonElement(jsonObj.get("bulk"));
       // validate the required field `changePassword`

@@ -25,6 +25,7 @@ A Ezsigntemplate Object
 |**eEzsigntemplateType** | **FieldEEzsigntemplateType** |  |  [optional] |
 |**objEzsigntemplatedocument** | [**EzsigntemplatedocumentResponse**](EzsigntemplatedocumentResponse.md) |  |  [optional] |
 |**aObjEzsigntemplatesigner** | [**List&lt;EzsigntemplatesignerResponseCompound&gt;**](EzsigntemplatesignerResponseCompound.md) |  |  |
+|**aObjEzsigntemplateannotation** | [**List&lt;EzsigntemplateannotationResponseCompound&gt;**](EzsigntemplateannotationResponseCompound.md) |  |  [optional] |
 
 
 

@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class WebhookUserstagedUserstagedCreated {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
@@ -174,10 +174,7 @@ public class WebhookUserstagedUserstagedCreated {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -222,16 +219,16 @@ public class WebhookUserstagedUserstagedCreated {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objWebhook`
       CustomWebhookResponse.validateJsonElement(jsonObj.get("objWebhook"));
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objAttempt").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objAttempt` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAttempt").toString()));
+      if (jsonObj.get("a_objAttempt") != null) {
+        if (!jsonObj.get("a_objAttempt").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objAttempt` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAttempt").toString()));
+        }
+        JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
+        // validate the required field `a_objAttempt` (array)
+        for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
+          AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjAttempt = jsonObj.getAsJsonArray("a_objAttempt");
-      // validate the required field `a_objAttempt` (array)
-      for (int i = 0; i < jsonArrayaObjAttempt.size(); i++) {
-        AttemptResponseCompound.validateJsonElement(jsonArrayaObjAttempt.get(i));
-      };
       // validate the required field `objUserstaged`
       UserstagedResponseCompound.validateJsonElement(jsonObj.get("objUserstaged"));
   }

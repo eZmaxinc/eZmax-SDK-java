@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigntemplatepackagemembership
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsigntemplatepackagemembershipCreateObjectV1Request {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGEMEMBERSHIP = "a_objEzsigntemplatepackagemembership";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEPACKAGEMEMBERSHIP)
@@ -120,10 +120,7 @@ public class EzsigntemplatepackagemembershipCreateObjectV1Request {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -166,16 +163,16 @@ public class EzsigntemplatepackagemembershipCreateObjectV1Request {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzsigntemplatepackagemembership").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsigntemplatepackagemembership` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplatepackagemembership").toString()));
+      if (jsonObj.get("a_objEzsigntemplatepackagemembership") != null) {
+        if (!jsonObj.get("a_objEzsigntemplatepackagemembership").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsigntemplatepackagemembership` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplatepackagemembership").toString()));
+        }
+        JsonArray jsonArrayaObjEzsigntemplatepackagemembership = jsonObj.getAsJsonArray("a_objEzsigntemplatepackagemembership");
+        // validate the required field `a_objEzsigntemplatepackagemembership` (array)
+        for (int i = 0; i < jsonArrayaObjEzsigntemplatepackagemembership.size(); i++) {
+          EzsigntemplatepackagemembershipRequestCompound.validateJsonElement(jsonArrayaObjEzsigntemplatepackagemembership.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzsigntemplatepackagemembership = jsonObj.getAsJsonArray("a_objEzsigntemplatepackagemembership");
-      // validate the required field `a_objEzsigntemplatepackagemembership` (array)
-      for (int i = 0; i < jsonArrayaObjEzsigntemplatepackagemembership.size(); i++) {
-        EzsigntemplatepackagemembershipRequestCompound.validateJsonElement(jsonArrayaObjEzsigntemplatepackagemembership.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Creditcardmerchant List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CreditcardmerchantListElement {
   public static final String SERIALIZED_NAME_PKI_CREDITCARDMERCHANT_I_D = "pkiCreditcardmerchantID";
   @SerializedName(SERIALIZED_NAME_PKI_CREDITCARDMERCHANT_I_D)
@@ -57,7 +57,7 @@ public class CreditcardmerchantListElement {
 
   public static final String SERIALIZED_NAME_FKI_BANKACCOUNT_I_D = "fkiBankaccountID";
   @SerializedName(SERIALIZED_NAME_FKI_BANKACCOUNT_I_D)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiBankaccountID;
 
   public static final String SERIALIZED_NAME_FKI_LANGUAGE_I_D = "fkiLanguageID";
@@ -119,7 +119,7 @@ public class CreditcardmerchantListElement {
   }
 
 
-  public CreditcardmerchantListElement fkiBankaccountID(@javax.annotation.Nonnull Integer fkiBankaccountID) {
+  public CreditcardmerchantListElement fkiBankaccountID(@javax.annotation.Nullable Integer fkiBankaccountID) {
     this.fkiBankaccountID = fkiBankaccountID;
     return this;
   }
@@ -130,12 +130,12 @@ public class CreditcardmerchantListElement {
    * maximum: 255
    * @return fkiBankaccountID
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiBankaccountID() {
     return fkiBankaccountID;
   }
 
-  public void setFkiBankaccountID(@javax.annotation.Nonnull Integer fkiBankaccountID) {
+  public void setFkiBankaccountID(@javax.annotation.Nullable Integer fkiBankaccountID) {
     this.fkiBankaccountID = fkiBankaccountID;
   }
 
@@ -323,10 +323,7 @@ public class CreditcardmerchantListElement {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -338,7 +335,7 @@ public class CreditcardmerchantListElement {
     openapiFields = new HashSet<String>(Arrays.asList("pkiCreditcardmerchantID", "fkiBankaccountID", "fkiLanguageID", "bCreditcardmerchantDenyvisa", "bCreditcardmerchantDenymastercard", "bCreditcardmerchantDenyamex", "bCreditcardmerchantIsactive", "sCreditcardmerchantDescription", "sCreditcardmerchantStoreid"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiCreditcardmerchantID", "fkiBankaccountID", "bCreditcardmerchantDenyvisa", "bCreditcardmerchantDenymastercard", "bCreditcardmerchantDenyamex", "bCreditcardmerchantIsactive", "sCreditcardmerchantDescription", "sCreditcardmerchantStoreid"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiCreditcardmerchantID", "bCreditcardmerchantDenyvisa", "bCreditcardmerchantDenymastercard", "bCreditcardmerchantDenyamex", "bCreditcardmerchantIsactive", "sCreditcardmerchantDescription", "sCreditcardmerchantStoreid"));
   }
 
   /**

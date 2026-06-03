@@ -56,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsignfoldertype Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsignfoldertypeResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D = "pkiEzsignfoldertypeID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNFOLDERTYPE_I_D)
@@ -1457,10 +1457,7 @@ public class EzsignfoldertypeResponseCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -1536,16 +1533,16 @@ public class EzsignfoldertypeResponseCompound {
       FieldEEzsignfoldertypeDisposal.validateJsonElement(jsonObj.get("eEzsignfoldertypeDisposal"));
       // validate the required field `eEzsignfoldertypeCompletion`
       FieldEEzsignfoldertypeCompletion.validateJsonElement(jsonObj.get("eEzsignfoldertypeCompletion"));
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objUserlogintype").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objUserlogintype` to be an array in the JSON string but got `%s`", jsonObj.get("a_objUserlogintype").toString()));
+      if (jsonObj.get("a_objUserlogintype") != null) {
+        if (!jsonObj.get("a_objUserlogintype").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objUserlogintype` to be an array in the JSON string but got `%s`", jsonObj.get("a_objUserlogintype").toString()));
+        }
+        JsonArray jsonArrayaObjUserlogintype = jsonObj.getAsJsonArray("a_objUserlogintype");
+        // validate the required field `a_objUserlogintype` (array)
+        for (int i = 0; i < jsonArrayaObjUserlogintype.size(); i++) {
+          UserlogintypeResponse.validateJsonElement(jsonArrayaObjUserlogintype.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjUserlogintype = jsonObj.getAsJsonArray("a_objUserlogintype");
-      // validate the required field `a_objUserlogintype` (array)
-      for (int i = 0; i < jsonArrayaObjUserlogintype.size(); i++) {
-        UserlogintypeResponse.validateJsonElement(jsonArrayaObjUserlogintype.get(i));
-      };
       // ensure the optional json data is an array if present
       if (jsonObj.get("a_fkiUserIDSigned") != null && !jsonObj.get("a_fkiUserIDSigned").isJsonNull() && !jsonObj.get("a_fkiUserIDSigned").isJsonArray()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_fkiUserIDSigned` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiUserIDSigned").toString()));

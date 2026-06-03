@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /2/object/user/{pkiUserID}/getColleagues
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class UserGetColleaguesV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_COLLEAGUE = "a_objColleague";
   @SerializedName(SERIALIZED_NAME_A_OBJ_COLLEAGUE)
@@ -154,10 +154,7 @@ public class UserGetColleaguesV2ResponseMPayload {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -200,26 +197,26 @@ public class UserGetColleaguesV2ResponseMPayload {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objColleague").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objColleague` to be an array in the JSON string but got `%s`", jsonObj.get("a_objColleague").toString()));
+      if (jsonObj.get("a_objColleague") != null) {
+        if (!jsonObj.get("a_objColleague").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objColleague` to be an array in the JSON string but got `%s`", jsonObj.get("a_objColleague").toString()));
+        }
+        JsonArray jsonArrayaObjColleague = jsonObj.getAsJsonArray("a_objColleague");
+        // validate the required field `a_objColleague` (array)
+        for (int i = 0; i < jsonArrayaObjColleague.size(); i++) {
+          ColleagueResponseCompoundV2.validateJsonElement(jsonArrayaObjColleague.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjColleague = jsonObj.getAsJsonArray("a_objColleague");
-      // validate the required field `a_objColleague` (array)
-      for (int i = 0; i < jsonArrayaObjColleague.size(); i++) {
-        ColleagueResponseCompoundV2.validateJsonElement(jsonArrayaObjColleague.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objColleagueClonable").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objColleagueClonable` to be an array in the JSON string but got `%s`", jsonObj.get("a_objColleagueClonable").toString()));
+      if (jsonObj.get("a_objColleagueClonable") != null) {
+        if (!jsonObj.get("a_objColleagueClonable").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objColleagueClonable` to be an array in the JSON string but got `%s`", jsonObj.get("a_objColleagueClonable").toString()));
+        }
+        JsonArray jsonArrayaObjColleagueClonable = jsonObj.getAsJsonArray("a_objColleagueClonable");
+        // validate the required field `a_objColleagueClonable` (array)
+        for (int i = 0; i < jsonArrayaObjColleagueClonable.size(); i++) {
+          ColleagueResponseCompoundV2.validateJsonElement(jsonArrayaObjColleagueClonable.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjColleagueClonable = jsonObj.getAsJsonArray("a_objColleagueClonable");
-      // validate the required field `a_objColleagueClonable` (array)
-      for (int i = 0; i < jsonArrayaObjColleagueClonable.size(); i++) {
-        ColleagueResponseCompoundV2.validateJsonElement(jsonArrayaObjColleagueClonable.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

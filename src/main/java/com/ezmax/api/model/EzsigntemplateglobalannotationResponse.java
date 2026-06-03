@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.ezmax.api.model.FieldEEzsigntemplateglobalannotationHorizontalalignment;
 import com.ezmax.api.model.FieldEEzsigntemplateglobalannotationType;
 import com.ezmax.api.model.FieldEEzsigntemplateglobalannotationVerticalalignment;
+import com.ezmax.api.model.TextstylestaticRequestCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,22 +52,22 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateglobalannotation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsigntemplateglobalannotationResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALANNOTATION_I_D = "pkiEzsigntemplateglobalannotationID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBALANNOTATION_I_D)
   @javax.annotation.Nonnull
   private Integer pkiEzsigntemplateglobalannotationID;
 
-  public static final String SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBALDOCUMENTPAGE_I_D = "fkiEzsigntemplateglobaldocumentpageID";
-  @SerializedName(SERIALIZED_NAME_FKI_EZSIGNTEMPLATEGLOBALDOCUMENTPAGE_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiEzsigntemplateglobaldocumentpageID;
-
   public static final String SERIALIZED_NAME_FKI_TEXTSTYLESTATIC_I_D = "fkiTextstylestaticID";
   @SerializedName(SERIALIZED_NAME_FKI_TEXTSTYLESTATIC_I_D)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiTextstylestaticID;
+
+  public static final String SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC = "objTextstylestatic";
+  @SerializedName(SERIALIZED_NAME_OBJ_TEXTSTYLESTATIC)
+  @javax.annotation.Nullable
+  private TextstylestaticRequestCompound objTextstylestatic;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATEGLOBALANNOTATION_HORIZONTALALIGNMENT = "eEzsigntemplateglobalannotationHorizontalalignment";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATEGLOBALANNOTATION_HORIZONTALALIGNMENT)
@@ -102,6 +103,11 @@ public class EzsigntemplateglobalannotationResponse {
   @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEGLOBALANNOTATION_HEIGHT)
   @javax.annotation.Nonnull
   private Integer iEzsigntemplateglobalannotationHeight;
+
+  public static final String SERIALIZED_NAME_I_EZSIGNTEMPLATEGLOBALDOCUMENTPAGE_PAGENUMBER = "iEzsigntemplateglobaldocumentpagePagenumber";
+  @SerializedName(SERIALIZED_NAME_I_EZSIGNTEMPLATEGLOBALDOCUMENTPAGE_PAGENUMBER)
+  @javax.annotation.Nonnull
+  private Integer iEzsigntemplateglobaldocumentpagePagenumber;
 
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBALANNOTATION_DESCRIPTION = "sEzsigntemplateglobalannotationDescription";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEGLOBALANNOTATION_DESCRIPTION)
@@ -142,28 +148,7 @@ public class EzsigntemplateglobalannotationResponse {
   }
 
 
-  public EzsigntemplateglobalannotationResponse fkiEzsigntemplateglobaldocumentpageID(@javax.annotation.Nonnull Integer fkiEzsigntemplateglobaldocumentpageID) {
-    this.fkiEzsigntemplateglobaldocumentpageID = fkiEzsigntemplateglobaldocumentpageID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the Ezsigntemplateglobaldocumentpage
-   * minimum: 0
-   * maximum: 16777215
-   * @return fkiEzsigntemplateglobaldocumentpageID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiEzsigntemplateglobaldocumentpageID() {
-    return fkiEzsigntemplateglobaldocumentpageID;
-  }
-
-  public void setFkiEzsigntemplateglobaldocumentpageID(@javax.annotation.Nonnull Integer fkiEzsigntemplateglobaldocumentpageID) {
-    this.fkiEzsigntemplateglobaldocumentpageID = fkiEzsigntemplateglobaldocumentpageID;
-  }
-
-
-  public EzsigntemplateglobalannotationResponse fkiTextstylestaticID(@javax.annotation.Nonnull Integer fkiTextstylestaticID) {
+  public EzsigntemplateglobalannotationResponse fkiTextstylestaticID(@javax.annotation.Nullable Integer fkiTextstylestaticID) {
     this.fkiTextstylestaticID = fkiTextstylestaticID;
     return this;
   }
@@ -173,13 +158,32 @@ public class EzsigntemplateglobalannotationResponse {
    * minimum: 0
    * @return fkiTextstylestaticID
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiTextstylestaticID() {
     return fkiTextstylestaticID;
   }
 
-  public void setFkiTextstylestaticID(@javax.annotation.Nonnull Integer fkiTextstylestaticID) {
+  public void setFkiTextstylestaticID(@javax.annotation.Nullable Integer fkiTextstylestaticID) {
     this.fkiTextstylestaticID = fkiTextstylestaticID;
+  }
+
+
+  public EzsigntemplateglobalannotationResponse objTextstylestatic(@javax.annotation.Nullable TextstylestaticRequestCompound objTextstylestatic) {
+    this.objTextstylestatic = objTextstylestatic;
+    return this;
+  }
+
+  /**
+   * Get objTextstylestatic
+   * @return objTextstylestatic
+   */
+  @javax.annotation.Nullable
+  public TextstylestaticRequestCompound getObjTextstylestatic() {
+    return objTextstylestatic;
+  }
+
+  public void setObjTextstylestatic(@javax.annotation.Nullable TextstylestaticRequestCompound objTextstylestatic) {
+    this.objTextstylestatic = objTextstylestatic;
   }
 
 
@@ -324,6 +328,26 @@ public class EzsigntemplateglobalannotationResponse {
   }
 
 
+  public EzsigntemplateglobalannotationResponse iEzsigntemplateglobaldocumentpagePagenumber(@javax.annotation.Nonnull Integer iEzsigntemplateglobaldocumentpagePagenumber) {
+    this.iEzsigntemplateglobaldocumentpagePagenumber = iEzsigntemplateglobaldocumentpagePagenumber;
+    return this;
+  }
+
+  /**
+   * The page number in the Ezsigntemplateglobaldocument
+   * minimum: 1
+   * @return iEzsigntemplateglobaldocumentpagePagenumber
+   */
+  @javax.annotation.Nonnull
+  public Integer getiEzsigntemplateglobaldocumentpagePagenumber() {
+    return iEzsigntemplateglobaldocumentpagePagenumber;
+  }
+
+  public void setiEzsigntemplateglobaldocumentpagePagenumber(@javax.annotation.Nonnull Integer iEzsigntemplateglobaldocumentpagePagenumber) {
+    this.iEzsigntemplateglobaldocumentpagePagenumber = iEzsigntemplateglobaldocumentpagePagenumber;
+  }
+
+
   public EzsigntemplateglobalannotationResponse sEzsigntemplateglobalannotationDescription(@javax.annotation.Nonnull String sEzsigntemplateglobalannotationDescription) {
     this.sEzsigntemplateglobalannotationDescription = sEzsigntemplateglobalannotationDescription;
     return this;
@@ -392,8 +416,8 @@ public class EzsigntemplateglobalannotationResponse {
     }
     EzsigntemplateglobalannotationResponse ezsigntemplateglobalannotationResponse = (EzsigntemplateglobalannotationResponse) o;
     return Objects.equals(this.pkiEzsigntemplateglobalannotationID, ezsigntemplateglobalannotationResponse.pkiEzsigntemplateglobalannotationID) &&
-        Objects.equals(this.fkiEzsigntemplateglobaldocumentpageID, ezsigntemplateglobalannotationResponse.fkiEzsigntemplateglobaldocumentpageID) &&
         Objects.equals(this.fkiTextstylestaticID, ezsigntemplateglobalannotationResponse.fkiTextstylestaticID) &&
+        Objects.equals(this.objTextstylestatic, ezsigntemplateglobalannotationResponse.objTextstylestatic) &&
         Objects.equals(this.eEzsigntemplateglobalannotationHorizontalalignment, ezsigntemplateglobalannotationResponse.eEzsigntemplateglobalannotationHorizontalalignment) &&
         Objects.equals(this.eEzsigntemplateglobalannotationVerticalalignment, ezsigntemplateglobalannotationResponse.eEzsigntemplateglobalannotationVerticalalignment) &&
         Objects.equals(this.eEzsigntemplateglobalannotationType, ezsigntemplateglobalannotationResponse.eEzsigntemplateglobalannotationType) &&
@@ -401,6 +425,7 @@ public class EzsigntemplateglobalannotationResponse {
         Objects.equals(this.iEzsigntemplateglobalannotationY, ezsigntemplateglobalannotationResponse.iEzsigntemplateglobalannotationY) &&
         Objects.equals(this.iEzsigntemplateglobalannotationWidth, ezsigntemplateglobalannotationResponse.iEzsigntemplateglobalannotationWidth) &&
         Objects.equals(this.iEzsigntemplateglobalannotationHeight, ezsigntemplateglobalannotationResponse.iEzsigntemplateglobalannotationHeight) &&
+        Objects.equals(this.iEzsigntemplateglobaldocumentpagePagenumber, ezsigntemplateglobalannotationResponse.iEzsigntemplateglobaldocumentpagePagenumber) &&
         Objects.equals(this.sEzsigntemplateglobalannotationDescription, ezsigntemplateglobalannotationResponse.sEzsigntemplateglobalannotationDescription) &&
         Objects.equals(this.sEzsigntemplateglobalannotationDefaulttext, ezsigntemplateglobalannotationResponse.sEzsigntemplateglobalannotationDefaulttext) &&
         Objects.equals(this.sEzsigntemplateglobalannotationDropdownvalues, ezsigntemplateglobalannotationResponse.sEzsigntemplateglobalannotationDropdownvalues);
@@ -408,7 +433,7 @@ public class EzsigntemplateglobalannotationResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplateglobalannotationID, fkiEzsigntemplateglobaldocumentpageID, fkiTextstylestaticID, eEzsigntemplateglobalannotationHorizontalalignment, eEzsigntemplateglobalannotationVerticalalignment, eEzsigntemplateglobalannotationType, iEzsigntemplateglobalannotationX, iEzsigntemplateglobalannotationY, iEzsigntemplateglobalannotationWidth, iEzsigntemplateglobalannotationHeight, sEzsigntemplateglobalannotationDescription, sEzsigntemplateglobalannotationDefaulttext, sEzsigntemplateglobalannotationDropdownvalues);
+    return Objects.hash(pkiEzsigntemplateglobalannotationID, fkiTextstylestaticID, objTextstylestatic, eEzsigntemplateglobalannotationHorizontalalignment, eEzsigntemplateglobalannotationVerticalalignment, eEzsigntemplateglobalannotationType, iEzsigntemplateglobalannotationX, iEzsigntemplateglobalannotationY, iEzsigntemplateglobalannotationWidth, iEzsigntemplateglobalannotationHeight, iEzsigntemplateglobaldocumentpagePagenumber, sEzsigntemplateglobalannotationDescription, sEzsigntemplateglobalannotationDefaulttext, sEzsigntemplateglobalannotationDropdownvalues);
   }
 
   @Override
@@ -416,8 +441,8 @@ public class EzsigntemplateglobalannotationResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class EzsigntemplateglobalannotationResponse {\n");
     sb.append("    pkiEzsigntemplateglobalannotationID: ").append(toIndentedString(pkiEzsigntemplateglobalannotationID)).append("\n");
-    sb.append("    fkiEzsigntemplateglobaldocumentpageID: ").append(toIndentedString(fkiEzsigntemplateglobaldocumentpageID)).append("\n");
     sb.append("    fkiTextstylestaticID: ").append(toIndentedString(fkiTextstylestaticID)).append("\n");
+    sb.append("    objTextstylestatic: ").append(toIndentedString(objTextstylestatic)).append("\n");
     sb.append("    eEzsigntemplateglobalannotationHorizontalalignment: ").append(toIndentedString(eEzsigntemplateglobalannotationHorizontalalignment)).append("\n");
     sb.append("    eEzsigntemplateglobalannotationVerticalalignment: ").append(toIndentedString(eEzsigntemplateglobalannotationVerticalalignment)).append("\n");
     sb.append("    eEzsigntemplateglobalannotationType: ").append(toIndentedString(eEzsigntemplateglobalannotationType)).append("\n");
@@ -425,6 +450,7 @@ public class EzsigntemplateglobalannotationResponse {
     sb.append("    iEzsigntemplateglobalannotationY: ").append(toIndentedString(iEzsigntemplateglobalannotationY)).append("\n");
     sb.append("    iEzsigntemplateglobalannotationWidth: ").append(toIndentedString(iEzsigntemplateglobalannotationWidth)).append("\n");
     sb.append("    iEzsigntemplateglobalannotationHeight: ").append(toIndentedString(iEzsigntemplateglobalannotationHeight)).append("\n");
+    sb.append("    iEzsigntemplateglobaldocumentpagePagenumber: ").append(toIndentedString(iEzsigntemplateglobaldocumentpagePagenumber)).append("\n");
     sb.append("    sEzsigntemplateglobalannotationDescription: ").append(toIndentedString(sEzsigntemplateglobalannotationDescription)).append("\n");
     sb.append("    sEzsigntemplateglobalannotationDefaulttext: ").append(toIndentedString(sEzsigntemplateglobalannotationDefaulttext)).append("\n");
     sb.append("    sEzsigntemplateglobalannotationDropdownvalues: ").append(toIndentedString(sEzsigntemplateglobalannotationDropdownvalues)).append("\n");
@@ -437,10 +463,7 @@ public class EzsigntemplateglobalannotationResponse {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -449,10 +472,10 @@ public class EzsigntemplateglobalannotationResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateglobalannotationID", "fkiEzsigntemplateglobaldocumentpageID", "fkiTextstylestaticID", "eEzsigntemplateglobalannotationHorizontalalignment", "eEzsigntemplateglobalannotationVerticalalignment", "eEzsigntemplateglobalannotationType", "iEzsigntemplateglobalannotationX", "iEzsigntemplateglobalannotationY", "iEzsigntemplateglobalannotationWidth", "iEzsigntemplateglobalannotationHeight", "sEzsigntemplateglobalannotationDescription", "sEzsigntemplateglobalannotationDefaulttext", "sEzsigntemplateglobalannotationDropdownvalues"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateglobalannotationID", "fkiTextstylestaticID", "objTextstylestatic", "eEzsigntemplateglobalannotationHorizontalalignment", "eEzsigntemplateglobalannotationVerticalalignment", "eEzsigntemplateglobalannotationType", "iEzsigntemplateglobalannotationX", "iEzsigntemplateglobalannotationY", "iEzsigntemplateglobalannotationWidth", "iEzsigntemplateglobalannotationHeight", "iEzsigntemplateglobaldocumentpagePagenumber", "sEzsigntemplateglobalannotationDescription", "sEzsigntemplateglobalannotationDefaulttext", "sEzsigntemplateglobalannotationDropdownvalues"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateglobalannotationID", "fkiEzsigntemplateglobaldocumentpageID", "fkiTextstylestaticID", "eEzsigntemplateglobalannotationHorizontalalignment", "eEzsigntemplateglobalannotationVerticalalignment", "eEzsigntemplateglobalannotationType", "iEzsigntemplateglobalannotationX", "iEzsigntemplateglobalannotationY", "iEzsigntemplateglobalannotationWidth", "iEzsigntemplateglobalannotationHeight", "sEzsigntemplateglobalannotationDescription", "sEzsigntemplateglobalannotationDefaulttext", "sEzsigntemplateglobalannotationDropdownvalues"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateglobalannotationID", "eEzsigntemplateglobalannotationHorizontalalignment", "eEzsigntemplateglobalannotationVerticalalignment", "eEzsigntemplateglobalannotationType", "iEzsigntemplateglobalannotationX", "iEzsigntemplateglobalannotationY", "iEzsigntemplateglobalannotationWidth", "iEzsigntemplateglobalannotationHeight", "iEzsigntemplateglobaldocumentpagePagenumber", "sEzsigntemplateglobalannotationDescription", "sEzsigntemplateglobalannotationDefaulttext", "sEzsigntemplateglobalannotationDropdownvalues"));
   }
 
   /**
@@ -483,6 +506,10 @@ public class EzsigntemplateglobalannotationResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the optional field `objTextstylestatic`
+      if (jsonObj.get("objTextstylestatic") != null && !jsonObj.get("objTextstylestatic").isJsonNull()) {
+        TextstylestaticRequestCompound.validateJsonElement(jsonObj.get("objTextstylestatic"));
+      }
       // validate the required field `eEzsigntemplateglobalannotationHorizontalalignment`
       FieldEEzsigntemplateglobalannotationHorizontalalignment.validateJsonElement(jsonObj.get("eEzsigntemplateglobalannotationHorizontalalignment"));
       // validate the required field `eEzsigntemplateglobalannotationVerticalalignment`

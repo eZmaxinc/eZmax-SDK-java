@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Report containing Reportsections 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CommonReport {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTSECTION = "a_objReportsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTSECTION)
@@ -172,10 +172,7 @@ public class CommonReport {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -218,16 +215,16 @@ public class CommonReport {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objReportsection").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objReportsection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportsection").toString()));
+      if (jsonObj.get("a_objReportsection") != null) {
+        if (!jsonObj.get("a_objReportsection").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objReportsection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportsection").toString()));
+        }
+        JsonArray jsonArrayaObjReportsection = jsonObj.getAsJsonArray("a_objReportsection");
+        // validate the required field `a_objReportsection` (array)
+        for (int i = 0; i < jsonArrayaObjReportsection.size(); i++) {
+          CommonReportsection.validateJsonElement(jsonArrayaObjReportsection.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjReportsection = jsonObj.getAsJsonArray("a_objReportsection");
-      // validate the required field `a_objReportsection` (array)
-      for (int i = 0; i < jsonArrayaObjReportsection.size(); i++) {
-        CommonReportsection.validateJsonElement(jsonArrayaObjReportsection.get(i));
-      };
       if ((jsonObj.get("sReportTitle") != null && !jsonObj.get("sReportTitle").isJsonNull()) && !jsonObj.get("sReportTitle").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sReportTitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sReportTitle").toString()));
       }

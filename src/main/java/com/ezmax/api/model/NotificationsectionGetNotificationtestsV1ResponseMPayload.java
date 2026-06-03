@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/notificationsection/{pkiNotificationsectionID}/getNotificationtests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class NotificationsectionGetNotificationtestsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_NOTIFICATIONSUBSECTION = "a_objNotificationsubsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_NOTIFICATIONSUBSECTION)
@@ -120,10 +120,7 @@ public class NotificationsectionGetNotificationtestsV1ResponseMPayload {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -166,16 +163,16 @@ public class NotificationsectionGetNotificationtestsV1ResponseMPayload {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objNotificationsubsection").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objNotificationsubsection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objNotificationsubsection").toString()));
+      if (jsonObj.get("a_objNotificationsubsection") != null) {
+        if (!jsonObj.get("a_objNotificationsubsection").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objNotificationsubsection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objNotificationsubsection").toString()));
+        }
+        JsonArray jsonArrayaObjNotificationsubsection = jsonObj.getAsJsonArray("a_objNotificationsubsection");
+        // validate the required field `a_objNotificationsubsection` (array)
+        for (int i = 0; i < jsonArrayaObjNotificationsubsection.size(); i++) {
+          CustomNotificationsubsectiongetnotificationtestsResponse.validateJsonElement(jsonArrayaObjNotificationsubsection.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjNotificationsubsection = jsonObj.getAsJsonArray("a_objNotificationsubsection");
-      // validate the required field `a_objNotificationsubsection` (array)
-      for (int i = 0; i < jsonArrayaObjNotificationsubsection.size(); i++) {
-        CustomNotificationsubsectiongetnotificationtestsResponse.validateJsonElement(jsonArrayaObjNotificationsubsection.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

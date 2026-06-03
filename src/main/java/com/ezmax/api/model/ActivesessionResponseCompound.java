@@ -62,7 +62,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class ActivesessionResponseCompound {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -189,6 +189,11 @@ public class ActivesessionResponseCompound {
   @javax.annotation.Nullable
   private Boolean bUserEzsigntrial;
 
+  public static final String SERIALIZED_NAME_B_USER_EZSIGNTEMPLATEROLEGROUPING = "bUserEzsigntemplaterolegrouping";
+  @SerializedName(SERIALIZED_NAME_B_USER_EZSIGNTEMPLATEROLEGROUPING)
+  @javax.annotation.Nullable
+  private Boolean bUserEzsigntemplaterolegrouping;
+
   public static final String SERIALIZED_NAME_DT_USER_EZSIGNPREPAIDEXPIRATION = "dtUserEzsignprepaidexpiration";
   @SerializedName(SERIALIZED_NAME_DT_USER_EZSIGNPREPAIDEXPIRATION)
   @javax.annotation.Nullable
@@ -223,6 +228,11 @@ public class ActivesessionResponseCompound {
   @SerializedName(SERIALIZED_NAME_A_E_MODULE_INTERNALNAME)
   @javax.annotation.Nonnull
   private List<String> aEModuleInternalname = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_B_ACTIVESESSION_MAILLINGLISTREQUEST = "bActivesessionMaillinglistrequest";
+  @SerializedName(SERIALIZED_NAME_B_ACTIVESESSION_MAILLINGLISTREQUEST)
+  @javax.annotation.Nullable
+  private Boolean bActivesessionMaillinglistrequest;
 
   public ActivesessionResponseCompound() {
   }
@@ -709,6 +719,25 @@ public class ActivesessionResponseCompound {
   }
 
 
+  public ActivesessionResponseCompound bUserEzsigntemplaterolegrouping(@javax.annotation.Nullable Boolean bUserEzsigntemplaterolegrouping) {
+    this.bUserEzsigntemplaterolegrouping = bUserEzsigntemplaterolegrouping;
+    return this;
+  }
+
+  /**
+   * Whether we group or not the Ezsigntemplate roles
+   * @return bUserEzsigntemplaterolegrouping
+   */
+  @javax.annotation.Nullable
+  public Boolean getbUserEzsigntemplaterolegrouping() {
+    return bUserEzsigntemplaterolegrouping;
+  }
+
+  public void setbUserEzsigntemplaterolegrouping(@javax.annotation.Nullable Boolean bUserEzsigntemplaterolegrouping) {
+    this.bUserEzsigntemplaterolegrouping = bUserEzsigntemplaterolegrouping;
+  }
+
+
   public ActivesessionResponseCompound dtUserEzsignprepaidexpiration(@javax.annotation.Nullable String dtUserEzsignprepaidexpiration) {
     this.dtUserEzsignprepaidexpiration = dtUserEzsignprepaidexpiration;
     return this;
@@ -858,6 +887,25 @@ public class ActivesessionResponseCompound {
   }
 
 
+  public ActivesessionResponseCompound bActivesessionMaillinglistrequest(@javax.annotation.Nullable Boolean bActivesessionMaillinglistrequest) {
+    this.bActivesessionMaillinglistrequest = bActivesessionMaillinglistrequest;
+    return this;
+  }
+
+  /**
+   * If you need to ask which mailing lists this user wants to subscribe to
+   * @return bActivesessionMaillinglistrequest
+   */
+  @javax.annotation.Nullable
+  public Boolean getbActivesessionMaillinglistrequest() {
+    return bActivesessionMaillinglistrequest;
+  }
+
+  public void setbActivesessionMaillinglistrequest(@javax.annotation.Nullable Boolean bActivesessionMaillinglistrequest) {
+    this.bActivesessionMaillinglistrequest = bActivesessionMaillinglistrequest;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -893,18 +941,20 @@ public class ActivesessionResponseCompound {
         Objects.equals(this.eUserEzsignaccess, activesessionResponseCompound.eUserEzsignaccess) &&
         Objects.equals(this.eUserEzsignprepaid, activesessionResponseCompound.eUserEzsignprepaid) &&
         Objects.equals(this.bUserEzsigntrial, activesessionResponseCompound.bUserEzsigntrial) &&
+        Objects.equals(this.bUserEzsigntemplaterolegrouping, activesessionResponseCompound.bUserEzsigntemplaterolegrouping) &&
         Objects.equals(this.dtUserEzsignprepaidexpiration, activesessionResponseCompound.dtUserEzsignprepaidexpiration) &&
         Objects.equals(this.dtUserNpsrequest, activesessionResponseCompound.dtUserNpsrequest) &&
         Objects.equals(this.aPkiPermissionID, activesessionResponseCompound.aPkiPermissionID) &&
         Objects.equals(this.objUserReal, activesessionResponseCompound.objUserReal) &&
         Objects.equals(this.objUserCloned, activesessionResponseCompound.objUserCloned) &&
         Objects.equals(this.objApikey, activesessionResponseCompound.objApikey) &&
-        Objects.equals(this.aEModuleInternalname, activesessionResponseCompound.aEModuleInternalname);
+        Objects.equals(this.aEModuleInternalname, activesessionResponseCompound.aEModuleInternalname) &&
+        Objects.equals(this.bActivesessionMaillinglistrequest, activesessionResponseCompound.bActivesessionMaillinglistrequest);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, bActivesessionAttachment, bActivesessionCanafe, bActivesessionFinancial, bActivesessionRealestatecompleted, eActivesessionEzsign, eActivesessionEzsignaccess, eActivesessionEzsignprepaid, eActivesessionRealestateinprogress, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID, fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan, eUserEzsignaccess, eUserEzsignprepaid, bUserEzsigntrial, dtUserEzsignprepaidexpiration, dtUserNpsrequest, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname);
+    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, bActivesessionAttachment, bActivesessionCanafe, bActivesessionFinancial, bActivesessionRealestatecompleted, eActivesessionEzsign, eActivesessionEzsignaccess, eActivesessionEzsignprepaid, eActivesessionRealestateinprogress, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID, fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan, eUserEzsignaccess, eUserEzsignprepaid, bUserEzsigntrial, bUserEzsigntemplaterolegrouping, dtUserEzsignprepaidexpiration, dtUserNpsrequest, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname, bActivesessionMaillinglistrequest);
   }
 
   @Override
@@ -936,6 +986,7 @@ public class ActivesessionResponseCompound {
     sb.append("    eUserEzsignaccess: ").append(toIndentedString(eUserEzsignaccess)).append("\n");
     sb.append("    eUserEzsignprepaid: ").append(toIndentedString(eUserEzsignprepaid)).append("\n");
     sb.append("    bUserEzsigntrial: ").append(toIndentedString(bUserEzsigntrial)).append("\n");
+    sb.append("    bUserEzsigntemplaterolegrouping: ").append(toIndentedString(bUserEzsigntemplaterolegrouping)).append("\n");
     sb.append("    dtUserEzsignprepaidexpiration: ").append(toIndentedString(dtUserEzsignprepaidexpiration)).append("\n");
     sb.append("    dtUserNpsrequest: ").append(toIndentedString(dtUserNpsrequest)).append("\n");
     sb.append("    aPkiPermissionID: ").append(toIndentedString(aPkiPermissionID)).append("\n");
@@ -943,6 +994,7 @@ public class ActivesessionResponseCompound {
     sb.append("    objUserCloned: ").append(toIndentedString(objUserCloned)).append("\n");
     sb.append("    objApikey: ").append(toIndentedString(objApikey)).append("\n");
     sb.append("    aEModuleInternalname: ").append(toIndentedString(aEModuleInternalname)).append("\n");
+    sb.append("    bActivesessionMaillinglistrequest: ").append(toIndentedString(bActivesessionMaillinglistrequest)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -952,10 +1004,7 @@ public class ActivesessionResponseCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -964,7 +1013,7 @@ public class ActivesessionResponseCompound {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("eActivesessionUsertype", "eActivesessionOrigin", "eActivesessionWeekdaystart", "fkiLanguageID", "sCompanyNameX", "sDepartmentNameX", "bActivesessionDebug", "bActivesessionIssuperadmin", "bActivesessionAttachment", "bActivesessionCanafe", "bActivesessionFinancial", "bActivesessionRealestatecompleted", "eActivesessionEzsign", "eActivesessionEzsignaccess", "eActivesessionEzsignprepaid", "eActivesessionRealestateinprogress", "pksCustomerCode", "fkiSystemconfigurationtypeID", "fkiSignatureID", "fkiEzsignuserID", "bSystemconfigurationEzsignpaidbyoffice", "eSystemconfigurationEzsignofficeplan", "eUserEzsignaccess", "eUserEzsignprepaid", "bUserEzsigntrial", "dtUserEzsignprepaidexpiration", "dtUserNpsrequest", "a_pkiPermissionID", "objUserReal", "objUserCloned", "objApikey", "a_eModuleInternalname"));
+    openapiFields = new HashSet<String>(Arrays.asList("eActivesessionUsertype", "eActivesessionOrigin", "eActivesessionWeekdaystart", "fkiLanguageID", "sCompanyNameX", "sDepartmentNameX", "bActivesessionDebug", "bActivesessionIssuperadmin", "bActivesessionAttachment", "bActivesessionCanafe", "bActivesessionFinancial", "bActivesessionRealestatecompleted", "eActivesessionEzsign", "eActivesessionEzsignaccess", "eActivesessionEzsignprepaid", "eActivesessionRealestateinprogress", "pksCustomerCode", "fkiSystemconfigurationtypeID", "fkiSignatureID", "fkiEzsignuserID", "bSystemconfigurationEzsignpaidbyoffice", "eSystemconfigurationEzsignofficeplan", "eUserEzsignaccess", "eUserEzsignprepaid", "bUserEzsigntrial", "bUserEzsigntemplaterolegrouping", "dtUserEzsignprepaidexpiration", "dtUserNpsrequest", "a_pkiPermissionID", "objUserReal", "objUserCloned", "objApikey", "a_eModuleInternalname", "bActivesessionMaillinglistrequest"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("eActivesessionUsertype", "eActivesessionOrigin", "eActivesessionWeekdaystart", "fkiLanguageID", "sCompanyNameX", "sDepartmentNameX", "bActivesessionDebug", "bActivesessionIssuperadmin", "eActivesessionEzsignaccess", "pksCustomerCode", "fkiSystemconfigurationtypeID", "eUserEzsignaccess", "a_pkiPermissionID", "objUserReal", "a_eModuleInternalname"));

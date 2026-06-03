@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.EzsigntemplateglobalannotationResponseCompound;
 import com.ezmax.api.model.EzsigntemplateglobaldocumentResponse;
 import com.ezmax.api.model.EzsigntemplateglobalsignerResponseCompound;
 import com.ezmax.api.model.FieldEEzsigntemplateglobalModule;
@@ -54,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplateglobal Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsigntemplateglobalResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D = "pkiEzsigntemplateglobalID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATEGLOBAL_I_D)
@@ -115,6 +116,11 @@ public class EzsigntemplateglobalResponseCompound {
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEGLOBALSIGNER)
   @javax.annotation.Nonnull
   private List<EzsigntemplateglobalsignerResponseCompound> aObjEzsigntemplateglobalsigner = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEGLOBALANNOTATION = "a_objEzsigntemplateglobalannotation";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNTEMPLATEGLOBALANNOTATION)
+  @javax.annotation.Nullable
+  private List<EzsigntemplateglobalannotationResponseCompound> aObjEzsigntemplateglobalannotation = new ArrayList<>();
 
   public EzsigntemplateglobalResponseCompound() {
   }
@@ -360,6 +366,33 @@ public class EzsigntemplateglobalResponseCompound {
   }
 
 
+  public EzsigntemplateglobalResponseCompound aObjEzsigntemplateglobalannotation(@javax.annotation.Nullable List<EzsigntemplateglobalannotationResponseCompound> aObjEzsigntemplateglobalannotation) {
+    this.aObjEzsigntemplateglobalannotation = aObjEzsigntemplateglobalannotation;
+    return this;
+  }
+
+  public EzsigntemplateglobalResponseCompound addAObjEzsigntemplateglobalannotationItem(EzsigntemplateglobalannotationResponseCompound aObjEzsigntemplateglobalannotationItem) {
+    if (this.aObjEzsigntemplateglobalannotation == null) {
+      this.aObjEzsigntemplateglobalannotation = new ArrayList<>();
+    }
+    this.aObjEzsigntemplateglobalannotation.add(aObjEzsigntemplateglobalannotationItem);
+    return this;
+  }
+
+  /**
+   * Get aObjEzsigntemplateglobalannotation
+   * @return aObjEzsigntemplateglobalannotation
+   */
+  @javax.annotation.Nullable
+  public List<EzsigntemplateglobalannotationResponseCompound> getaObjEzsigntemplateglobalannotation() {
+    return aObjEzsigntemplateglobalannotation;
+  }
+
+  public void setaObjEzsigntemplateglobalannotation(@javax.annotation.Nullable List<EzsigntemplateglobalannotationResponseCompound> aObjEzsigntemplateglobalannotation) {
+    this.aObjEzsigntemplateglobalannotation = aObjEzsigntemplateglobalannotation;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -381,12 +414,13 @@ public class EzsigntemplateglobalResponseCompound {
         Objects.equals(this.sEzsigntemplateglobalCode, ezsigntemplateglobalResponseCompound.sEzsigntemplateglobalCode) &&
         Objects.equals(this.sEzsigntemplateglobalDescription, ezsigntemplateglobalResponseCompound.sEzsigntemplateglobalDescription) &&
         Objects.equals(this.objEzsigntemplateglobaldocument, ezsigntemplateglobalResponseCompound.objEzsigntemplateglobaldocument) &&
-        Objects.equals(this.aObjEzsigntemplateglobalsigner, ezsigntemplateglobalResponseCompound.aObjEzsigntemplateglobalsigner);
+        Objects.equals(this.aObjEzsigntemplateglobalsigner, ezsigntemplateglobalResponseCompound.aObjEzsigntemplateglobalsigner) &&
+        Objects.equals(this.aObjEzsigntemplateglobalannotation, ezsigntemplateglobalResponseCompound.aObjEzsigntemplateglobalannotation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplateglobalID, fkiEzsigntemplateglobaldocumentID, fkiModuleID, sModuleNameX, fkiLanguageID, sLanguageNameX, eEzsigntemplateglobalModule, eEzsigntemplateglobalSupplier, sEzsigntemplateglobalCode, sEzsigntemplateglobalDescription, objEzsigntemplateglobaldocument, aObjEzsigntemplateglobalsigner);
+    return Objects.hash(pkiEzsigntemplateglobalID, fkiEzsigntemplateglobaldocumentID, fkiModuleID, sModuleNameX, fkiLanguageID, sLanguageNameX, eEzsigntemplateglobalModule, eEzsigntemplateglobalSupplier, sEzsigntemplateglobalCode, sEzsigntemplateglobalDescription, objEzsigntemplateglobaldocument, aObjEzsigntemplateglobalsigner, aObjEzsigntemplateglobalannotation);
   }
 
   @Override
@@ -405,6 +439,7 @@ public class EzsigntemplateglobalResponseCompound {
     sb.append("    sEzsigntemplateglobalDescription: ").append(toIndentedString(sEzsigntemplateglobalDescription)).append("\n");
     sb.append("    objEzsigntemplateglobaldocument: ").append(toIndentedString(objEzsigntemplateglobaldocument)).append("\n");
     sb.append("    aObjEzsigntemplateglobalsigner: ").append(toIndentedString(aObjEzsigntemplateglobalsigner)).append("\n");
+    sb.append("    aObjEzsigntemplateglobalannotation: ").append(toIndentedString(aObjEzsigntemplateglobalannotation)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -414,10 +449,7 @@ public class EzsigntemplateglobalResponseCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -426,7 +458,7 @@ public class EzsigntemplateglobalResponseCompound {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateglobalID", "fkiEzsigntemplateglobaldocumentID", "fkiModuleID", "sModuleNameX", "fkiLanguageID", "sLanguageNameX", "eEzsigntemplateglobalModule", "eEzsigntemplateglobalSupplier", "sEzsigntemplateglobalCode", "sEzsigntemplateglobalDescription", "objEzsigntemplateglobaldocument", "a_objEzsigntemplateglobalsigner"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateglobalID", "fkiEzsigntemplateglobaldocumentID", "fkiModuleID", "sModuleNameX", "fkiLanguageID", "sLanguageNameX", "eEzsigntemplateglobalModule", "eEzsigntemplateglobalSupplier", "sEzsigntemplateglobalCode", "sEzsigntemplateglobalDescription", "objEzsigntemplateglobaldocument", "a_objEzsigntemplateglobalsigner", "a_objEzsigntemplateglobalannotation"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplateglobalID", "fkiEzsigntemplateglobaldocumentID", "fkiModuleID", "fkiLanguageID", "sLanguageNameX", "eEzsigntemplateglobalModule", "eEzsigntemplateglobalSupplier", "sEzsigntemplateglobalCode", "sEzsigntemplateglobalDescription", "a_objEzsigntemplateglobalsigner"));
@@ -480,16 +512,30 @@ public class EzsigntemplateglobalResponseCompound {
       if (jsonObj.get("objEzsigntemplateglobaldocument") != null && !jsonObj.get("objEzsigntemplateglobaldocument").isJsonNull()) {
         EzsigntemplateglobaldocumentResponse.validateJsonElement(jsonObj.get("objEzsigntemplateglobaldocument"));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzsigntemplateglobalsigner").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsigntemplateglobalsigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplateglobalsigner").toString()));
+      if (jsonObj.get("a_objEzsigntemplateglobalsigner") != null) {
+        if (!jsonObj.get("a_objEzsigntemplateglobalsigner").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsigntemplateglobalsigner` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplateglobalsigner").toString()));
+        }
+        JsonArray jsonArrayaObjEzsigntemplateglobalsigner = jsonObj.getAsJsonArray("a_objEzsigntemplateglobalsigner");
+        // validate the required field `a_objEzsigntemplateglobalsigner` (array)
+        for (int i = 0; i < jsonArrayaObjEzsigntemplateglobalsigner.size(); i++) {
+          EzsigntemplateglobalsignerResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplateglobalsigner.get(i));
+        }
       }
+      if (jsonObj.get("a_objEzsigntemplateglobalannotation") != null && !jsonObj.get("a_objEzsigntemplateglobalannotation").isJsonNull()) {
+        JsonArray jsonArrayaObjEzsigntemplateglobalannotation = jsonObj.getAsJsonArray("a_objEzsigntemplateglobalannotation");
+        if (jsonArrayaObjEzsigntemplateglobalannotation != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("a_objEzsigntemplateglobalannotation").isJsonArray()) {
+            throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsigntemplateglobalannotation` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsigntemplateglobalannotation").toString()));
+          }
 
-      JsonArray jsonArrayaObjEzsigntemplateglobalsigner = jsonObj.getAsJsonArray("a_objEzsigntemplateglobalsigner");
-      // validate the required field `a_objEzsigntemplateglobalsigner` (array)
-      for (int i = 0; i < jsonArrayaObjEzsigntemplateglobalsigner.size(); i++) {
-        EzsigntemplateglobalsignerResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplateglobalsigner.get(i));
-      };
+          // validate the optional field `a_objEzsigntemplateglobalannotation` (array)
+          for (int i = 0; i < jsonArrayaObjEzsigntemplateglobalannotation.size(); i++) {
+            EzsigntemplateglobalannotationResponseCompound.validateJsonElement(jsonArrayaObjEzsigntemplateglobalannotation.get(i));
+          };
+        }
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -54,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignbulksend Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzsignbulksendResponseCompound {
   public static final String SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D = "pkiEzsignbulksendID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNBULKSEND_I_D)
@@ -448,10 +448,7 @@ public class EzsignbulksendResponseCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -510,26 +507,26 @@ public class EzsignbulksendResponseCompound {
       }
       // validate the required field `objAudit`
       CommonAudit.validateJsonElement(jsonObj.get("objAudit"));
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzsignbulksenddocumentmapping").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignbulksenddocumentmapping` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignbulksenddocumentmapping").toString()));
+      if (jsonObj.get("a_objEzsignbulksenddocumentmapping") != null) {
+        if (!jsonObj.get("a_objEzsignbulksenddocumentmapping").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignbulksenddocumentmapping` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignbulksenddocumentmapping").toString()));
+        }
+        JsonArray jsonArrayaObjEzsignbulksenddocumentmapping = jsonObj.getAsJsonArray("a_objEzsignbulksenddocumentmapping");
+        // validate the required field `a_objEzsignbulksenddocumentmapping` (array)
+        for (int i = 0; i < jsonArrayaObjEzsignbulksenddocumentmapping.size(); i++) {
+          EzsignbulksenddocumentmappingResponseCompound.validateJsonElement(jsonArrayaObjEzsignbulksenddocumentmapping.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzsignbulksenddocumentmapping = jsonObj.getAsJsonArray("a_objEzsignbulksenddocumentmapping");
-      // validate the required field `a_objEzsignbulksenddocumentmapping` (array)
-      for (int i = 0; i < jsonArrayaObjEzsignbulksenddocumentmapping.size(); i++) {
-        EzsignbulksenddocumentmappingResponseCompound.validateJsonElement(jsonArrayaObjEzsignbulksenddocumentmapping.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzsignbulksendsignermapping").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignbulksendsignermapping` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignbulksendsignermapping").toString()));
+      if (jsonObj.get("a_objEzsignbulksendsignermapping") != null) {
+        if (!jsonObj.get("a_objEzsignbulksendsignermapping").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignbulksendsignermapping` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignbulksendsignermapping").toString()));
+        }
+        JsonArray jsonArrayaObjEzsignbulksendsignermapping = jsonObj.getAsJsonArray("a_objEzsignbulksendsignermapping");
+        // validate the required field `a_objEzsignbulksendsignermapping` (array)
+        for (int i = 0; i < jsonArrayaObjEzsignbulksendsignermapping.size(); i++) {
+          EzsignbulksendsignermappingResponse.validateJsonElement(jsonArrayaObjEzsignbulksendsignermapping.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzsignbulksendsignermapping = jsonObj.getAsJsonArray("a_objEzsignbulksendsignermapping");
-      // validate the required field `a_objEzsignbulksendsignermapping` (array)
-      for (int i = 0; i < jsonArrayaObjEzsignbulksendsignermapping.size(); i++) {
-        EzsignbulksendsignermappingResponse.validateJsonElement(jsonArrayaObjEzsignbulksendsignermapping.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

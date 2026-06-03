@@ -15,6 +15,7 @@ A Buyercontract List Element
 |**dBuyercontractMinimumprice** | **String** | The minimumprice of the Buyercontract |  |
 |**dBuyercontractMaximumprice** | **String** | The maximumprice of the Buyercontract |  |
 |**eBuyercontractType** | **FieldEBuyercontractType** |  |  |
+|**sBuyercontractContract** | **String** | The number of the Buyercontract |  [optional] |
 |**dtBuyercontractDate** | **String** | The date of the Buyercontract |  |
 |**dtBuyercontractExpirationdate** | **String** | The expirationdate of the Buyercontract |  [optional] |
 |**bBuyercontractIsactive** | **Boolean** | Whether the buyercontract is active or not |  |

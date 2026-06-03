@@ -24,14 +24,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Indicates when the “consultation” type signature must be signed.  1. **Automatic** When the document is displayed . 2. **Manual** The user must indicate that he has viewed the document.
+ * Indicates when the “consultation” type signature must be signed.  1. **Automatic** When the document is displayed . 2. **Manual** The user must indicate that he has viewed the document. 3. **Optional** The user can view the document, but they are not required to do so. Same as **Automatic** when user view the document.
  */
 @JsonAdapter(FieldEEzsignsignatureConsultationtrigger.Adapter.class)
 public enum FieldEEzsignsignatureConsultationtrigger {
   
   AUTOMATIC("Automatic"),
   
-  MANUAL("Manual");
+  MANUAL("Manual"),
+  
+  OPTIONAL("Optional");
 
   private String value;
 

@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A section in a Report. Each Reportsection shares Reportcolumns disposition with all its Reportsubsection 
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CommonReportsection {
   public static final String SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION = "a_objReportsubsection";
   @SerializedName(SERIALIZED_NAME_A_OBJ_REPORTSUBSECTION)
@@ -199,10 +199,7 @@ public class CommonReportsection {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -245,16 +242,16 @@ public class CommonReportsection {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objReportsubsection").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objReportsubsection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportsubsection").toString()));
+      if (jsonObj.get("a_objReportsubsection") != null) {
+        if (!jsonObj.get("a_objReportsubsection").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objReportsubsection` to be an array in the JSON string but got `%s`", jsonObj.get("a_objReportsubsection").toString()));
+        }
+        JsonArray jsonArrayaObjReportsubsection = jsonObj.getAsJsonArray("a_objReportsubsection");
+        // validate the required field `a_objReportsubsection` (array)
+        for (int i = 0; i < jsonArrayaObjReportsubsection.size(); i++) {
+          CommonReportsubsection.validateJsonElement(jsonArrayaObjReportsubsection.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjReportsubsection = jsonObj.getAsJsonArray("a_objReportsubsection");
-      // validate the required field `a_objReportsubsection` (array)
-      for (int i = 0; i < jsonArrayaObjReportsubsection.size(); i++) {
-        CommonReportsubsection.validateJsonElement(jsonArrayaObjReportsubsection.get(i));
-      };
       // validate the required field `eReportsectionHorizontalalignment`
       EnumHorizontalalignment.validateJsonElement(jsonObj.get("eReportsectionHorizontalalignment"));
       if ((jsonObj.get("sReportsectionTitle") != null && !jsonObj.get("sReportsectionTitle").isJsonNull()) && !jsonObj.get("sReportsectionTitle").isJsonPrimitive()) {

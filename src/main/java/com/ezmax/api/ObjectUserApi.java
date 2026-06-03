@@ -44,12 +44,15 @@ import com.ezmax.api.model.UserGetApikeysV1Response;
 import com.ezmax.api.model.UserGetAutocompleteV2Response;
 import com.ezmax.api.model.UserGetColleaguesV2Response;
 import com.ezmax.api.model.UserGetEffectivePermissionsV1Response;
+import com.ezmax.api.model.UserGetEzmaxcustomeruserV1Response;
 import com.ezmax.api.model.UserGetListV1Response;
 import com.ezmax.api.model.UserGetObjectV2Response;
 import com.ezmax.api.model.UserGetPermissionsV1Response;
 import com.ezmax.api.model.UserGetSubnetsV1Response;
 import com.ezmax.api.model.UserGetUsergroupexternalsV1Response;
 import com.ezmax.api.model.UserGetUsergroupsV1Response;
+import com.ezmax.api.model.UserImpersonateV1Request;
+import com.ezmax.api.model.UserImpersonateV1Response;
 import com.ezmax.api.model.UserSendPasswordResetV1Response;
 
 import java.lang.reflect.Type;
@@ -1339,6 +1342,141 @@ public class ObjectUserApi {
         return localVarCall;
     }
     /**
+     * Build call for userGetEzmaxcustomeruserV1
+     * @param pkiUserID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userGetEzmaxcustomeruserV1Call(@javax.annotation.Nonnull Integer pkiUserID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/user/{pkiUserID}/getEzmaxcustomeruser"
+            .replace("{" + "pkiUserID" + "}", localVarApiClient.escapeString(pkiUserID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call userGetEzmaxcustomeruserV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiUserID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiUserID' is set
+        if (pkiUserID == null) {
+            throw new ApiException("Missing the required parameter 'pkiUserID' when calling userGetEzmaxcustomeruserV1(Async)");
+        }
+
+        return userGetEzmaxcustomeruserV1Call(pkiUserID, _callback);
+
+    }
+
+    /**
+     * Returns the Ezmaxcustomeruser for the User
+     * Returns the Ezmaxcustomeruser for the User
+     * @param pkiUserID  (required)
+     * @return UserGetEzmaxcustomeruserV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public UserGetEzmaxcustomeruserV1Response userGetEzmaxcustomeruserV1(@javax.annotation.Nonnull Integer pkiUserID) throws ApiException {
+        ApiResponse<UserGetEzmaxcustomeruserV1Response> localVarResp = userGetEzmaxcustomeruserV1WithHttpInfo(pkiUserID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Returns the Ezmaxcustomeruser for the User
+     * Returns the Ezmaxcustomeruser for the User
+     * @param pkiUserID  (required)
+     * @return ApiResponse&lt;UserGetEzmaxcustomeruserV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UserGetEzmaxcustomeruserV1Response> userGetEzmaxcustomeruserV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiUserID) throws ApiException {
+        okhttp3.Call localVarCall = userGetEzmaxcustomeruserV1ValidateBeforeCall(pkiUserID, null);
+        Type localVarReturnType = new TypeToken<UserGetEzmaxcustomeruserV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Returns the Ezmaxcustomeruser for the User (asynchronously)
+     * Returns the Ezmaxcustomeruser for the User
+     * @param pkiUserID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userGetEzmaxcustomeruserV1Async(@javax.annotation.Nonnull Integer pkiUserID, final ApiCallback<UserGetEzmaxcustomeruserV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = userGetEzmaxcustomeruserV1ValidateBeforeCall(pkiUserID, _callback);
+        Type localVarReturnType = new TypeToken<UserGetEzmaxcustomeruserV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for userGetListV1
      * @param eOrderBy Specify how you want the results to be sorted (optional)
      * @param iRowMax  (optional)
@@ -2153,6 +2291,151 @@ public class ObjectUserApi {
 
         okhttp3.Call localVarCall = userGetUsergroupsV1ValidateBeforeCall(pkiUserID, _callback);
         Type localVarReturnType = new TypeToken<UserGetUsergroupsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for userImpersonateV1
+     * @param pkiUserID  (required)
+     * @param userImpersonateV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userImpersonateV1Call(@javax.annotation.Nonnull Integer pkiUserID, @javax.annotation.Nonnull UserImpersonateV1Request userImpersonateV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = userImpersonateV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/user/{pkiUserID}/impersonate"
+            .replace("{" + "pkiUserID" + "}", localVarApiClient.escapeString(pkiUserID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call userImpersonateV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiUserID, @javax.annotation.Nonnull UserImpersonateV1Request userImpersonateV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiUserID' is set
+        if (pkiUserID == null) {
+            throw new ApiException("Missing the required parameter 'pkiUserID' when calling userImpersonateV1(Async)");
+        }
+
+        // verify the required parameter 'userImpersonateV1Request' is set
+        if (userImpersonateV1Request == null) {
+            throw new ApiException("Missing the required parameter 'userImpersonateV1Request' when calling userImpersonateV1(Async)");
+        }
+
+        return userImpersonateV1Call(pkiUserID, userImpersonateV1Request, _callback);
+
+    }
+
+    /**
+     * Impersonate the user
+     * Using this endpoint, you can impersonate the user.
+     * @param pkiUserID  (required)
+     * @param userImpersonateV1Request  (required)
+     * @return UserImpersonateV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public UserImpersonateV1Response userImpersonateV1(@javax.annotation.Nonnull Integer pkiUserID, @javax.annotation.Nonnull UserImpersonateV1Request userImpersonateV1Request) throws ApiException {
+        ApiResponse<UserImpersonateV1Response> localVarResp = userImpersonateV1WithHttpInfo(pkiUserID, userImpersonateV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Impersonate the user
+     * Using this endpoint, you can impersonate the user.
+     * @param pkiUserID  (required)
+     * @param userImpersonateV1Request  (required)
+     * @return ApiResponse&lt;UserImpersonateV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UserImpersonateV1Response> userImpersonateV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiUserID, @javax.annotation.Nonnull UserImpersonateV1Request userImpersonateV1Request) throws ApiException {
+        okhttp3.Call localVarCall = userImpersonateV1ValidateBeforeCall(pkiUserID, userImpersonateV1Request, null);
+        Type localVarReturnType = new TypeToken<UserImpersonateV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Impersonate the user (asynchronously)
+     * Using this endpoint, you can impersonate the user.
+     * @param pkiUserID  (required)
+     * @param userImpersonateV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call userImpersonateV1Async(@javax.annotation.Nonnull Integer pkiUserID, @javax.annotation.Nonnull UserImpersonateV1Request userImpersonateV1Request, final ApiCallback<UserImpersonateV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = userImpersonateV1ValidateBeforeCall(pkiUserID, userImpersonateV1Request, _callback);
+        Type localVarReturnType = new TypeToken<UserImpersonateV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

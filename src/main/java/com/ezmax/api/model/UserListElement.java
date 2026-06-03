@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A User List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class UserListElement {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
@@ -77,6 +77,11 @@ public class UserListElement {
   @SerializedName(SERIALIZED_NAME_B_USER_ISACTIVE)
   @javax.annotation.Nonnull
   private Boolean bUserIsactive;
+
+  public static final String SERIALIZED_NAME_B_USER_SUSPENDED = "bUserSuspended";
+  @SerializedName(SERIALIZED_NAME_B_USER_SUSPENDED)
+  @javax.annotation.Nullable
+  private Boolean bUserSuspended;
 
   public static final String SERIALIZED_NAME_E_USER_TYPE = "eUserType";
   @SerializedName(SERIALIZED_NAME_E_USER_TYPE)
@@ -204,6 +209,25 @@ public class UserListElement {
 
   public void setbUserIsactive(@javax.annotation.Nonnull Boolean bUserIsactive) {
     this.bUserIsactive = bUserIsactive;
+  }
+
+
+  public UserListElement bUserSuspended(@javax.annotation.Nullable Boolean bUserSuspended) {
+    this.bUserSuspended = bUserSuspended;
+    return this;
+  }
+
+  /**
+   * Whether the User is suspended or not
+   * @return bUserSuspended
+   */
+  @javax.annotation.Nullable
+  public Boolean getbUserSuspended() {
+    return bUserSuspended;
+  }
+
+  public void setbUserSuspended(@javax.annotation.Nullable Boolean bUserSuspended) {
+    this.bUserSuspended = bUserSuspended;
   }
 
 
@@ -336,6 +360,7 @@ public class UserListElement {
         Objects.equals(this.sUserLastname, userListElement.sUserLastname) &&
         Objects.equals(this.sUserLoginname, userListElement.sUserLoginname) &&
         Objects.equals(this.bUserIsactive, userListElement.bUserIsactive) &&
+        Objects.equals(this.bUserSuspended, userListElement.bUserSuspended) &&
         Objects.equals(this.eUserType, userListElement.eUserType) &&
         Objects.equals(this.eUserOrigin, userListElement.eUserOrigin) &&
         Objects.equals(this.eUserEzsignaccess, userListElement.eUserEzsignaccess) &&
@@ -346,7 +371,7 @@ public class UserListElement {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUserID, sUserFirstname, sUserLastname, sUserLoginname, bUserIsactive, eUserType, eUserOrigin, eUserEzsignaccess, dtUserEzsignprepaidexpiration, sEmailAddress, sUserJobtitle);
+    return Objects.hash(pkiUserID, sUserFirstname, sUserLastname, sUserLoginname, bUserIsactive, bUserSuspended, eUserType, eUserOrigin, eUserEzsignaccess, dtUserEzsignprepaidexpiration, sEmailAddress, sUserJobtitle);
   }
 
   @Override
@@ -358,6 +383,7 @@ public class UserListElement {
     sb.append("    sUserLastname: ").append(toIndentedString(sUserLastname)).append("\n");
     sb.append("    sUserLoginname: ").append(toIndentedString(sUserLoginname)).append("\n");
     sb.append("    bUserIsactive: ").append(toIndentedString(bUserIsactive)).append("\n");
+    sb.append("    bUserSuspended: ").append(toIndentedString(bUserSuspended)).append("\n");
     sb.append("    eUserType: ").append(toIndentedString(eUserType)).append("\n");
     sb.append("    eUserOrigin: ").append(toIndentedString(eUserOrigin)).append("\n");
     sb.append("    eUserEzsignaccess: ").append(toIndentedString(eUserEzsignaccess)).append("\n");
@@ -373,10 +399,7 @@ public class UserListElement {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -385,7 +408,7 @@ public class UserListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiUserID", "sUserFirstname", "sUserLastname", "sUserLoginname", "bUserIsactive", "eUserType", "eUserOrigin", "eUserEzsignaccess", "dtUserEzsignprepaidexpiration", "sEmailAddress", "sUserJobtitle"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiUserID", "sUserFirstname", "sUserLastname", "sUserLoginname", "bUserIsactive", "bUserSuspended", "eUserType", "eUserOrigin", "eUserEzsignaccess", "dtUserEzsignprepaidexpiration", "sEmailAddress", "sUserJobtitle"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiUserID", "sUserFirstname", "sUserLastname", "sUserLoginname", "bUserIsactive", "eUserType", "eUserOrigin", "eUserEzsignaccess", "sEmailAddress"));

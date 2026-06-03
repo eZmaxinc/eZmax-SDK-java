@@ -13,6 +13,7 @@ A User List Element
 |**sUserLastname** | **String** | The last name of the user |  |
 |**sUserLoginname** | **String** | The login name of the User. |  |
 |**bUserIsactive** | **Boolean** | Whether the User is active or not |  |
+|**bUserSuspended** | **Boolean** | Whether the User is suspended or not |  [optional] |
 |**eUserType** | **FieldEUserType** |  |  |
 |**eUserOrigin** | **FieldEUserOrigin** |  |  |
 |**eUserEzsignaccess** | **FieldEUserEzsignaccess** |  |  |

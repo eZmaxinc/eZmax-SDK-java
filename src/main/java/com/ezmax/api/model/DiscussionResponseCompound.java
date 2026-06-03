@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * A Discussion Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class DiscussionResponseCompound {
   public static final String SERIALIZED_NAME_PKI_DISCUSSION_I_D = "pkiDiscussionID";
   @SerializedName(SERIALIZED_NAME_PKI_DISCUSSION_I_D)
@@ -340,10 +340,7 @@ public class DiscussionResponseCompound {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -396,26 +393,26 @@ public class DiscussionResponseCompound {
       if (jsonObj.get("objDiscussionconfiguration") != null && !jsonObj.get("objDiscussionconfiguration").isJsonNull()) {
         CustomDiscussionconfigurationResponse.validateJsonElement(jsonObj.get("objDiscussionconfiguration"));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objDiscussionmembership").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objDiscussionmembership` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDiscussionmembership").toString()));
+      if (jsonObj.get("a_objDiscussionmembership") != null) {
+        if (!jsonObj.get("a_objDiscussionmembership").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objDiscussionmembership` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDiscussionmembership").toString()));
+        }
+        JsonArray jsonArrayaObjDiscussionmembership = jsonObj.getAsJsonArray("a_objDiscussionmembership");
+        // validate the required field `a_objDiscussionmembership` (array)
+        for (int i = 0; i < jsonArrayaObjDiscussionmembership.size(); i++) {
+          DiscussionmembershipResponseCompound.validateJsonElement(jsonArrayaObjDiscussionmembership.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjDiscussionmembership = jsonObj.getAsJsonArray("a_objDiscussionmembership");
-      // validate the required field `a_objDiscussionmembership` (array)
-      for (int i = 0; i < jsonArrayaObjDiscussionmembership.size(); i++) {
-        DiscussionmembershipResponseCompound.validateJsonElement(jsonArrayaObjDiscussionmembership.get(i));
-      };
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objDiscussionmessage").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objDiscussionmessage` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDiscussionmessage").toString()));
+      if (jsonObj.get("a_objDiscussionmessage") != null) {
+        if (!jsonObj.get("a_objDiscussionmessage").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objDiscussionmessage` to be an array in the JSON string but got `%s`", jsonObj.get("a_objDiscussionmessage").toString()));
+        }
+        JsonArray jsonArrayaObjDiscussionmessage = jsonObj.getAsJsonArray("a_objDiscussionmessage");
+        // validate the required field `a_objDiscussionmessage` (array)
+        for (int i = 0; i < jsonArrayaObjDiscussionmessage.size(); i++) {
+          DiscussionmessageResponseCompound.validateJsonElement(jsonArrayaObjDiscussionmessage.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjDiscussionmessage = jsonObj.getAsJsonArray("a_objDiscussionmessage");
-      // validate the required field `a_objDiscussionmessage` (array)
-      for (int i = 0; i < jsonArrayaObjDiscussionmessage.size(); i++) {
-        DiscussionmessageResponseCompound.validateJsonElement(jsonArrayaObjDiscussionmessage.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

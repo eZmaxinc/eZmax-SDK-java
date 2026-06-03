@@ -8,7 +8,7 @@ A Webhook Object
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**pkiWebhookID** | **Integer** | The unique ID of the Webhook |  |
+|**pkiWebhookID** | **Integer** | The unique ID of the Webhook |  [optional] |
 |**fkiAuthenticationexternalID** | **Integer** | The unique ID of the Authenticationexternal |  [optional] |
 |**sWebhookDescription** | **String** | The description of the Webhook |  |
 |**fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional] |
@@ -24,7 +24,7 @@ A Webhook Object
 |**bWebhookIssigned** | **Boolean** | Whether the requests will be signed or not |  |
 |**bWebhookSkipsslvalidation** | **Boolean** | Wheter the server&#39;s SSL certificate should be validated or not. Not recommended to skip for production use |  |
 |**sAuthenticationexternalDescription** | **String** | The description of the Authenticationexternal |  [optional] |
-|**objAudit** | [**CommonAudit**](CommonAudit.md) |  |  |
+|**objAudit** | [**CommonAudit**](CommonAudit.md) |  |  [optional] |
 |**sWebhookEvent** | **String** | The concatenated string to describe the Webhook event |  [optional] |
 |**sWebhookAuthentificationexternalerror** | **String** | Error message when token renewal failed or is not configured. Only if an Authenticationexternal is set. |  [optional] |
 |**aObjWebhookheader** | [**List&lt;WebhookheaderResponseCompound&gt;**](WebhookheaderResponseCompound.md) |  |  [optional] |

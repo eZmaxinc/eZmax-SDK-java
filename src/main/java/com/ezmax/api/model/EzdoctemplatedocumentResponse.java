@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezdoctemplatedocument Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class EzdoctemplatedocumentResponse {
   public static final String SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D = "pkiEzdoctemplatedocumentID";
   @SerializedName(SERIALIZED_NAME_PKI_EZDOCTEMPLATEDOCUMENT_I_D)
@@ -74,7 +74,7 @@ public class EzdoctemplatedocumentResponse {
 
   public static final String SERIALIZED_NAME_FKI_EZDOCTEMPLATEFIELDTYPECATEGORY_I_D = "fkiEzdoctemplatefieldtypecategoryID";
   @SerializedName(SERIALIZED_NAME_FKI_EZDOCTEMPLATEFIELDTYPECATEGORY_I_D)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiEzdoctemplatefieldtypecategoryID;
 
   public static final String SERIALIZED_NAME_E_EZDOCTEMPLATEDOCUMENT_PRIVACYLEVEL = "eEzdoctemplatedocumentPrivacylevel";
@@ -104,7 +104,7 @@ public class EzdoctemplatedocumentResponse {
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATEFIELDTYPECATEGORY_DESCRIPTION_X = "sEzdoctemplatefieldtypecategoryDescriptionX";
   @SerializedName(SERIALIZED_NAME_S_EZDOCTEMPLATEFIELDTYPECATEGORY_DESCRIPTION_X)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private String sEzdoctemplatefieldtypecategoryDescriptionX;
 
   public static final String SERIALIZED_NAME_S_EZDOCTEMPLATETYPE_DESCRIPTION_X = "sEzdoctemplatetypeDescriptionX";
@@ -199,7 +199,7 @@ public class EzdoctemplatedocumentResponse {
   }
 
 
-  public EzdoctemplatedocumentResponse fkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nonnull Integer fkiEzdoctemplatefieldtypecategoryID) {
+  public EzdoctemplatedocumentResponse fkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nullable Integer fkiEzdoctemplatefieldtypecategoryID) {
     this.fkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
     return this;
   }
@@ -210,12 +210,12 @@ public class EzdoctemplatedocumentResponse {
    * maximum: 255
    * @return fkiEzdoctemplatefieldtypecategoryID
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiEzdoctemplatefieldtypecategoryID() {
     return fkiEzdoctemplatefieldtypecategoryID;
   }
 
-  public void setFkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nonnull Integer fkiEzdoctemplatefieldtypecategoryID) {
+  public void setFkiEzdoctemplatefieldtypecategoryID(@javax.annotation.Nullable Integer fkiEzdoctemplatefieldtypecategoryID) {
     this.fkiEzdoctemplatefieldtypecategoryID = fkiEzdoctemplatefieldtypecategoryID;
   }
 
@@ -315,7 +315,7 @@ public class EzdoctemplatedocumentResponse {
   }
 
 
-  public EzdoctemplatedocumentResponse sEzdoctemplatefieldtypecategoryDescriptionX(@javax.annotation.Nonnull String sEzdoctemplatefieldtypecategoryDescriptionX) {
+  public EzdoctemplatedocumentResponse sEzdoctemplatefieldtypecategoryDescriptionX(@javax.annotation.Nullable String sEzdoctemplatefieldtypecategoryDescriptionX) {
     this.sEzdoctemplatefieldtypecategoryDescriptionX = sEzdoctemplatefieldtypecategoryDescriptionX;
     return this;
   }
@@ -324,12 +324,12 @@ public class EzdoctemplatedocumentResponse {
    * The description of the Ezdoctemplatefieldtypecategory in the language of the requester
    * @return sEzdoctemplatefieldtypecategoryDescriptionX
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getsEzdoctemplatefieldtypecategoryDescriptionX() {
     return sEzdoctemplatefieldtypecategoryDescriptionX;
   }
 
-  public void setsEzdoctemplatefieldtypecategoryDescriptionX(@javax.annotation.Nonnull String sEzdoctemplatefieldtypecategoryDescriptionX) {
+  public void setsEzdoctemplatefieldtypecategoryDescriptionX(@javax.annotation.Nullable String sEzdoctemplatefieldtypecategoryDescriptionX) {
     this.sEzdoctemplatefieldtypecategoryDescriptionX = sEzdoctemplatefieldtypecategoryDescriptionX;
   }
 
@@ -407,10 +407,7 @@ public class EzdoctemplatedocumentResponse {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -422,7 +419,7 @@ public class EzdoctemplatedocumentResponse {
     openapiFields = new HashSet<String>(Arrays.asList("pkiEzdoctemplatedocumentID", "fkiLanguageID", "fkiEzsignfoldertypeID", "fkiEzdoctemplatetypeID", "fkiEzdoctemplatefieldtypecategoryID", "eEzdoctemplatedocumentPrivacylevel", "bEzdoctemplatedocumentIsactive", "objEzdoctemplatedocumentName", "sEzdoctemplatedocumentNameX", "sEzsignfoldertypeNameX", "sEzdoctemplatefieldtypecategoryDescriptionX", "sEzdoctemplatetypeDescriptionX"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzdoctemplatedocumentID", "fkiLanguageID", "fkiEzdoctemplatetypeID", "fkiEzdoctemplatefieldtypecategoryID", "bEzdoctemplatedocumentIsactive", "objEzdoctemplatedocumentName", "sEzdoctemplatefieldtypecategoryDescriptionX", "sEzdoctemplatetypeDescriptionX"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzdoctemplatedocumentID", "fkiLanguageID", "fkiEzdoctemplatetypeID", "bEzdoctemplatedocumentIsactive", "objEzdoctemplatedocumentName", "sEzdoctemplatetypeDescriptionX"));
   }
 
   /**
@@ -465,7 +462,7 @@ public class EzdoctemplatedocumentResponse {
       if ((jsonObj.get("sEzsignfoldertypeNameX") != null && !jsonObj.get("sEzsignfoldertypeNameX").isJsonNull()) && !jsonObj.get("sEzsignfoldertypeNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzsignfoldertypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzsignfoldertypeNameX").toString()));
       }
-      if (!jsonObj.get("sEzdoctemplatefieldtypecategoryDescriptionX").isJsonPrimitive()) {
+      if ((jsonObj.get("sEzdoctemplatefieldtypecategoryDescriptionX") != null && !jsonObj.get("sEzdoctemplatefieldtypecategoryDescriptionX").isJsonNull()) && !jsonObj.get("sEzdoctemplatefieldtypecategoryDescriptionX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzdoctemplatefieldtypecategoryDescriptionX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzdoctemplatefieldtypecategoryDescriptionX").toString()));
       }
       if (!jsonObj.get("sEzdoctemplatetypeDescriptionX").isJsonPrimitive()) {

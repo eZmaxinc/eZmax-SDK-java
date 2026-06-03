@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Generic Error Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CommonResponseErrorEzsignformValidation {
   public static final String SERIALIZED_NAME_S_ERROR_MESSAGE = "sErrorMessage";
   @SerializedName(SERIALIZED_NAME_S_ERROR_MESSAGE)
@@ -207,10 +207,7 @@ public class CommonResponseErrorEzsignformValidation {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -262,16 +259,16 @@ public class CommonResponseErrorEzsignformValidation {
       if (jsonObj.get("a_sErrorMessagedetail") != null && !jsonObj.get("a_sErrorMessagedetail").isJsonNull() && !jsonObj.get("a_sErrorMessagedetail").isJsonArray()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_sErrorMessagedetail` to be an array in the JSON string but got `%s`", jsonObj.get("a_sErrorMessagedetail").toString()));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objEzsignformfielderror").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignformfielderror` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfielderror").toString()));
+      if (jsonObj.get("a_objEzsignformfielderror") != null) {
+        if (!jsonObj.get("a_objEzsignformfielderror").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objEzsignformfielderror` to be an array in the JSON string but got `%s`", jsonObj.get("a_objEzsignformfielderror").toString()));
+        }
+        JsonArray jsonArrayaObjEzsignformfielderror = jsonObj.getAsJsonArray("a_objEzsignformfielderror");
+        // validate the required field `a_objEzsignformfielderror` (array)
+        for (int i = 0; i < jsonArrayaObjEzsignformfielderror.size(); i++) {
+          CustomEzsignformfielderrorResponse.validateJsonElement(jsonArrayaObjEzsignformfielderror.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjEzsignformfielderror = jsonObj.getAsJsonArray("a_objEzsignformfielderror");
-      // validate the required field `a_objEzsignformfielderror` (array)
-      for (int i = 0; i < jsonArrayaObjEzsignformfielderror.size(); i++) {
-        CustomEzsignformfielderrorResponse.validateJsonElement(jsonArrayaObjEzsignformfielderror.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

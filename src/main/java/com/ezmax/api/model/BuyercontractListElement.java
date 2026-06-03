@@ -50,7 +50,7 @@ import eZmaxAPI.JSON;
 /**
  * A Buyercontract List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class BuyercontractListElement {
   public static final String SERIALIZED_NAME_PKI_BUYERCONTRACT_I_D = "pkiBuyercontractID";
   @SerializedName(SERIALIZED_NAME_PKI_BUYERCONTRACT_I_D)
@@ -86,6 +86,11 @@ public class BuyercontractListElement {
   @SerializedName(SERIALIZED_NAME_E_BUYERCONTRACT_TYPE)
   @javax.annotation.Nonnull
   private FieldEBuyercontractType eBuyercontractType;
+
+  public static final String SERIALIZED_NAME_S_BUYERCONTRACT_CONTRACT = "sBuyercontractContract";
+  @SerializedName(SERIALIZED_NAME_S_BUYERCONTRACT_CONTRACT)
+  @javax.annotation.Nullable
+  private String sBuyercontractContract;
 
   public static final String SERIALIZED_NAME_DT_BUYERCONTRACT_DATE = "dtBuyercontractDate";
   @SerializedName(SERIALIZED_NAME_DT_BUYERCONTRACT_DATE)
@@ -252,6 +257,25 @@ public class BuyercontractListElement {
   }
 
 
+  public BuyercontractListElement sBuyercontractContract(@javax.annotation.Nullable String sBuyercontractContract) {
+    this.sBuyercontractContract = sBuyercontractContract;
+    return this;
+  }
+
+  /**
+   * The number of the Buyercontract
+   * @return sBuyercontractContract
+   */
+  @javax.annotation.Nullable
+  public String getsBuyercontractContract() {
+    return sBuyercontractContract;
+  }
+
+  public void setsBuyercontractContract(@javax.annotation.Nullable String sBuyercontractContract) {
+    this.sBuyercontractContract = sBuyercontractContract;
+  }
+
+
   public BuyercontractListElement dtBuyercontractDate(@javax.annotation.Nonnull String dtBuyercontractDate) {
     this.dtBuyercontractDate = dtBuyercontractDate;
     return this;
@@ -364,6 +388,7 @@ public class BuyercontractListElement {
         Objects.equals(this.dBuyercontractMinimumprice, buyercontractListElement.dBuyercontractMinimumprice) &&
         Objects.equals(this.dBuyercontractMaximumprice, buyercontractListElement.dBuyercontractMaximumprice) &&
         Objects.equals(this.eBuyercontractType, buyercontractListElement.eBuyercontractType) &&
+        Objects.equals(this.sBuyercontractContract, buyercontractListElement.sBuyercontractContract) &&
         Objects.equals(this.dtBuyercontractDate, buyercontractListElement.dtBuyercontractDate) &&
         Objects.equals(this.dtBuyercontractExpirationdate, buyercontractListElement.dtBuyercontractExpirationdate) &&
         Objects.equals(this.bBuyercontractIsactive, buyercontractListElement.bBuyercontractIsactive) &&
@@ -373,7 +398,7 @@ public class BuyercontractListElement {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiBuyercontractID, fkiInscriptiontypeID, sInscriptiontypeNameX, eBuyercontractStep, dBuyercontractMinimumprice, dBuyercontractMaximumprice, eBuyercontractType, dtBuyercontractDate, dtBuyercontractExpirationdate, bBuyercontractIsactive, sBuyercontractBrokers, sBuyercontractBuyers);
+    return Objects.hash(pkiBuyercontractID, fkiInscriptiontypeID, sInscriptiontypeNameX, eBuyercontractStep, dBuyercontractMinimumprice, dBuyercontractMaximumprice, eBuyercontractType, sBuyercontractContract, dtBuyercontractDate, dtBuyercontractExpirationdate, bBuyercontractIsactive, sBuyercontractBrokers, sBuyercontractBuyers);
   }
 
   @Override
@@ -387,6 +412,7 @@ public class BuyercontractListElement {
     sb.append("    dBuyercontractMinimumprice: ").append(toIndentedString(dBuyercontractMinimumprice)).append("\n");
     sb.append("    dBuyercontractMaximumprice: ").append(toIndentedString(dBuyercontractMaximumprice)).append("\n");
     sb.append("    eBuyercontractType: ").append(toIndentedString(eBuyercontractType)).append("\n");
+    sb.append("    sBuyercontractContract: ").append(toIndentedString(sBuyercontractContract)).append("\n");
     sb.append("    dtBuyercontractDate: ").append(toIndentedString(dtBuyercontractDate)).append("\n");
     sb.append("    dtBuyercontractExpirationdate: ").append(toIndentedString(dtBuyercontractExpirationdate)).append("\n");
     sb.append("    bBuyercontractIsactive: ").append(toIndentedString(bBuyercontractIsactive)).append("\n");
@@ -401,10 +427,7 @@ public class BuyercontractListElement {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -413,7 +436,7 @@ public class BuyercontractListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiBuyercontractID", "fkiInscriptiontypeID", "sInscriptiontypeNameX", "eBuyercontractStep", "dBuyercontractMinimumprice", "dBuyercontractMaximumprice", "eBuyercontractType", "dtBuyercontractDate", "dtBuyercontractExpirationdate", "bBuyercontractIsactive", "sBuyercontractBrokers", "sBuyercontractBuyers"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiBuyercontractID", "fkiInscriptiontypeID", "sInscriptiontypeNameX", "eBuyercontractStep", "dBuyercontractMinimumprice", "dBuyercontractMaximumprice", "eBuyercontractType", "sBuyercontractContract", "dtBuyercontractDate", "dtBuyercontractExpirationdate", "bBuyercontractIsactive", "sBuyercontractBrokers", "sBuyercontractBuyers"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiBuyercontractID", "fkiInscriptiontypeID", "sInscriptiontypeNameX", "eBuyercontractStep", "dBuyercontractMinimumprice", "dBuyercontractMaximumprice", "eBuyercontractType", "dtBuyercontractDate", "bBuyercontractIsactive", "sBuyercontractBrokers", "sBuyercontractBuyers"));
@@ -460,6 +483,9 @@ public class BuyercontractListElement {
       }
       // validate the required field `eBuyercontractType`
       FieldEBuyercontractType.validateJsonElement(jsonObj.get("eBuyercontractType"));
+      if ((jsonObj.get("sBuyercontractContract") != null && !jsonObj.get("sBuyercontractContract").isJsonNull()) && !jsonObj.get("sBuyercontractContract").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sBuyercontractContract` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBuyercontractContract").toString()));
+      }
       if (!jsonObj.get("dtBuyercontractDate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtBuyercontractDate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtBuyercontractDate").toString()));
       }

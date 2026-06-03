@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Agent List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class AgentListElement {
   public static final String SERIALIZED_NAME_PKI_AGENT_I_D = "pkiAgentID";
   @SerializedName(SERIALIZED_NAME_PKI_AGENT_I_D)
@@ -135,6 +135,31 @@ public class AgentListElement {
   @javax.annotation.Nullable
   private String dtAgentLeavedate;
 
+  public static final String SERIALIZED_NAME_DT_AGENT_CONTRACTDATE = "dtAgentContractdate";
+  @SerializedName(SERIALIZED_NAME_DT_AGENT_CONTRACTDATE)
+  @javax.annotation.Nullable
+  private String dtAgentContractdate;
+
+  public static final String SERIALIZED_NAME_DT_AGENT_TRANSFERDATE = "dtAgentTransferdate";
+  @SerializedName(SERIALIZED_NAME_DT_AGENT_TRANSFERDATE)
+  @javax.annotation.Nullable
+  private String dtAgentTransferdate;
+
+  public static final String SERIALIZED_NAME_DT_AGENT_SENIORITYDATE = "dtAgentSenioritydate";
+  @SerializedName(SERIALIZED_NAME_DT_AGENT_SENIORITYDATE)
+  @javax.annotation.Nullable
+  private String dtAgentSenioritydate;
+
+  public static final String SERIALIZED_NAME_DT_AGENT_SICKLEAVESTART = "dtAgentSickleavestart";
+  @SerializedName(SERIALIZED_NAME_DT_AGENT_SICKLEAVESTART)
+  @javax.annotation.Nullable
+  private String dtAgentSickleavestart;
+
+  public static final String SERIALIZED_NAME_DT_AGENT_SICKLEAVEEND = "dtAgentSickleaveend";
+  @SerializedName(SERIALIZED_NAME_DT_AGENT_SICKLEAVEEND)
+  @javax.annotation.Nullable
+  private String dtAgentSickleaveend;
+
   public static final String SERIALIZED_NAME_B_AGENT_TRANQUILLIT = "bAgentTranquillit";
   @SerializedName(SERIALIZED_NAME_B_AGENT_TRANQUILLIT)
   @javax.annotation.Nonnull
@@ -220,10 +245,20 @@ public class AgentListElement {
   @javax.annotation.Nullable
   private String sAddressZip;
 
+  public static final String SERIALIZED_NAME_FKI_PROVINCE_I_D = "fkiProvinceID";
+  @SerializedName(SERIALIZED_NAME_FKI_PROVINCE_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiProvinceID;
+
   public static final String SERIALIZED_NAME_S_PROVINCE_NAME_X = "sProvinceNameX";
   @SerializedName(SERIALIZED_NAME_S_PROVINCE_NAME_X)
   @javax.annotation.Nullable
   private String sProvinceNameX;
+
+  public static final String SERIALIZED_NAME_FKI_COUNTRY_I_D = "fkiCountryID";
+  @SerializedName(SERIALIZED_NAME_FKI_COUNTRY_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiCountryID;
 
   public static final String SERIALIZED_NAME_S_COUNTRY_NAME_X = "sCountryNameX";
   @SerializedName(SERIALIZED_NAME_S_COUNTRY_NAME_X)
@@ -569,6 +604,101 @@ public class AgentListElement {
   }
 
 
+  public AgentListElement dtAgentContractdate(@javax.annotation.Nullable String dtAgentContractdate) {
+    this.dtAgentContractdate = dtAgentContractdate;
+    return this;
+  }
+
+  /**
+   * The contract date of the Agent
+   * @return dtAgentContractdate
+   */
+  @javax.annotation.Nullable
+  public String getDtAgentContractdate() {
+    return dtAgentContractdate;
+  }
+
+  public void setDtAgentContractdate(@javax.annotation.Nullable String dtAgentContractdate) {
+    this.dtAgentContractdate = dtAgentContractdate;
+  }
+
+
+  public AgentListElement dtAgentTransferdate(@javax.annotation.Nullable String dtAgentTransferdate) {
+    this.dtAgentTransferdate = dtAgentTransferdate;
+    return this;
+  }
+
+  /**
+   * The transfer date of the Agent
+   * @return dtAgentTransferdate
+   */
+  @javax.annotation.Nullable
+  public String getDtAgentTransferdate() {
+    return dtAgentTransferdate;
+  }
+
+  public void setDtAgentTransferdate(@javax.annotation.Nullable String dtAgentTransferdate) {
+    this.dtAgentTransferdate = dtAgentTransferdate;
+  }
+
+
+  public AgentListElement dtAgentSenioritydate(@javax.annotation.Nullable String dtAgentSenioritydate) {
+    this.dtAgentSenioritydate = dtAgentSenioritydate;
+    return this;
+  }
+
+  /**
+   * The seniority date of the Agent
+   * @return dtAgentSenioritydate
+   */
+  @javax.annotation.Nullable
+  public String getDtAgentSenioritydate() {
+    return dtAgentSenioritydate;
+  }
+
+  public void setDtAgentSenioritydate(@javax.annotation.Nullable String dtAgentSenioritydate) {
+    this.dtAgentSenioritydate = dtAgentSenioritydate;
+  }
+
+
+  public AgentListElement dtAgentSickleavestart(@javax.annotation.Nullable String dtAgentSickleavestart) {
+    this.dtAgentSickleavestart = dtAgentSickleavestart;
+    return this;
+  }
+
+  /**
+   * The sick leave start date of the Agent
+   * @return dtAgentSickleavestart
+   */
+  @javax.annotation.Nullable
+  public String getDtAgentSickleavestart() {
+    return dtAgentSickleavestart;
+  }
+
+  public void setDtAgentSickleavestart(@javax.annotation.Nullable String dtAgentSickleavestart) {
+    this.dtAgentSickleavestart = dtAgentSickleavestart;
+  }
+
+
+  public AgentListElement dtAgentSickleaveend(@javax.annotation.Nullable String dtAgentSickleaveend) {
+    this.dtAgentSickleaveend = dtAgentSickleaveend;
+    return this;
+  }
+
+  /**
+   * The sick leave end date of the Agent
+   * @return dtAgentSickleaveend
+   */
+  @javax.annotation.Nullable
+  public String getDtAgentSickleaveend() {
+    return dtAgentSickleaveend;
+  }
+
+  public void setDtAgentSickleaveend(@javax.annotation.Nullable String dtAgentSickleaveend) {
+    this.dtAgentSickleaveend = dtAgentSickleaveend;
+  }
+
+
   public AgentListElement bAgentTranquillit(@javax.annotation.Nonnull Boolean bAgentTranquillit) {
     this.bAgentTranquillit = bAgentTranquillit;
     return this;
@@ -892,6 +1022,26 @@ public class AgentListElement {
   }
 
 
+  public AgentListElement fkiProvinceID(@javax.annotation.Nullable Integer fkiProvinceID) {
+    this.fkiProvinceID = fkiProvinceID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Province.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|(Canada) Alberta |2|(Canada) British Columbia| |3|(Canada) Manitoba| |3|(Canada) Manitoba| |4|(Canada) New Brunswick| |5|(Canada) Newfoundland| |6|(Canada) Northwest Territories| |7|(Canada) Nova Scotia| |8|(Canada) Nunavut| |9|(Canada) Ontario| |10|(Canada) Prince Edward Island| |11|(Canada) Quebec| |12|(Canada) Saskatchewan| |13|(Canada) Yukon| |14|(United-States) Alabama| |15|(United-States) Alaska| |16|(United-States) Arizona| |17|(United-States) Arkansas| |18|(United-States) California| |19|(United-States) Colorado| |20|(United-States) Connecticut| |21|(United-States) Delaware| |22|(United-States) District of Columbia| |23|(United-States) Florida| |24|(United-States) Georgia| |25|(United-States) Hawaii| |26|(United-States) Idaho| |27|(United-States) Illinois| |28|(United-States) Indiana| |29|(United-States) Iowa| |30|(United-States) Kansas| |31|(United-States) Kentucky| |32|(United-States) Louisiane| |33|(United-States) Maine| |34|(United-States) Maryland| |35|(United-States) Massachusetts| |36|(United-States) Michigan| |37|(United-States) Minnesota| |38|(United-States) Mississippi| |39|(United-States) Missouri| |40|(United-States) Montana| |41|(United-States) Nebraska| |42|(United-States) Nevada| |43|(United-States) New Hampshire| |44|(United-States) New Jersey| |45|(United-States) New Mexico| |46|(United-States) New York| |47|(United-States) North Carolina| |48|(United-States) North Dakota| |49|(United-States) Ohio| |50|(United-States) Oklahoma| |51|(United-States) Oregon| |52|(United-States) Pennsylvania| |53|(United-States) Rhode Island| |54|(United-States) South Carolina| |55|(United-States) South Dakota| |56|(United-States) Tennessee| |57|(United-States) Texas| |58|(United-States) Utah| |60|(United-States) Vermont| |59|(United-States) Virginia| |61|(United-States) Washington| |62|(United-States) West Virginia| |63|(United-States) Wisconsin| |64|(United-States) Wyoming|
+   * minimum: 0
+   * @return fkiProvinceID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiProvinceID() {
+    return fkiProvinceID;
+  }
+
+  public void setFkiProvinceID(@javax.annotation.Nullable Integer fkiProvinceID) {
+    this.fkiProvinceID = fkiProvinceID;
+  }
+
+
   public AgentListElement sProvinceNameX(@javax.annotation.Nullable String sProvinceNameX) {
     this.sProvinceNameX = sProvinceNameX;
     return this;
@@ -908,6 +1058,26 @@ public class AgentListElement {
 
   public void setsProvinceNameX(@javax.annotation.Nullable String sProvinceNameX) {
     this.sProvinceNameX = sProvinceNameX;
+  }
+
+
+  public AgentListElement fkiCountryID(@javax.annotation.Nullable Integer fkiCountryID) {
+    this.fkiCountryID = fkiCountryID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Country.  Here are some common values (Complete list must be retrieved from API):  |Value|Description| |-|-| |1|Canada| |2|United-States|
+   * minimum: 0
+   * @return fkiCountryID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiCountryID() {
+    return fkiCountryID;
+  }
+
+  public void setFkiCountryID(@javax.annotation.Nullable Integer fkiCountryID) {
+    this.fkiCountryID = fkiCountryID;
   }
 
 
@@ -957,6 +1127,11 @@ public class AgentListElement {
         Objects.equals(this.sAgentRealestateassociationlicense, agentListElement.sAgentRealestateassociationlicense) &&
         Objects.equals(this.dtAgentHiredate, agentListElement.dtAgentHiredate) &&
         Objects.equals(this.dtAgentLeavedate, agentListElement.dtAgentLeavedate) &&
+        Objects.equals(this.dtAgentContractdate, agentListElement.dtAgentContractdate) &&
+        Objects.equals(this.dtAgentTransferdate, agentListElement.dtAgentTransferdate) &&
+        Objects.equals(this.dtAgentSenioritydate, agentListElement.dtAgentSenioritydate) &&
+        Objects.equals(this.dtAgentSickleavestart, agentListElement.dtAgentSickleavestart) &&
+        Objects.equals(this.dtAgentSickleaveend, agentListElement.dtAgentSickleaveend) &&
         Objects.equals(this.bAgentTranquillit, agentListElement.bAgentTranquillit) &&
         Objects.equals(this.bAgentResidentiallicense, agentListElement.bAgentResidentiallicense) &&
         Objects.equals(this.bAgentCommerciallicense, agentListElement.bAgentCommerciallicense) &&
@@ -974,13 +1149,15 @@ public class AgentListElement {
         Objects.equals(this.sAddressSuite, agentListElement.sAddressSuite) &&
         Objects.equals(this.sAddressCity, agentListElement.sAddressCity) &&
         Objects.equals(this.sAddressZip, agentListElement.sAddressZip) &&
+        Objects.equals(this.fkiProvinceID, agentListElement.fkiProvinceID) &&
         Objects.equals(this.sProvinceNameX, agentListElement.sProvinceNameX) &&
+        Objects.equals(this.fkiCountryID, agentListElement.fkiCountryID) &&
         Objects.equals(this.sCountryNameX, agentListElement.sCountryNameX);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiAgentID, fkiAgenttypeID, sAgenttypeNameX, fkiAgentincorporationID, sAgentincorporationName, fkiDepartmentID, sDepartmentNameX, fkiLanguageID, sLanguageNameX, sRealestateboardnumberNumber, sAgentCode, iAgentPhotocopiercode, iAgentLongdistancecode, iAgentBannernumber, sAgentRealestateassociationlicense, dtAgentHiredate, dtAgentLeavedate, bAgentTranquillit, bAgentResidentiallicense, bAgentCommerciallicense, bAgentMortgagelicense, bAgentPaidbyofficetranquillit, dtAgentFintraccertification, bAgentIsactive, sContactFirstname, sContactLastname, dtContactBirthdate, sEmailAddress, sPhoneE164, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, sAddressZip, sProvinceNameX, sCountryNameX);
+    return Objects.hash(pkiAgentID, fkiAgenttypeID, sAgenttypeNameX, fkiAgentincorporationID, sAgentincorporationName, fkiDepartmentID, sDepartmentNameX, fkiLanguageID, sLanguageNameX, sRealestateboardnumberNumber, sAgentCode, iAgentPhotocopiercode, iAgentLongdistancecode, iAgentBannernumber, sAgentRealestateassociationlicense, dtAgentHiredate, dtAgentLeavedate, dtAgentContractdate, dtAgentTransferdate, dtAgentSenioritydate, dtAgentSickleavestart, dtAgentSickleaveend, bAgentTranquillit, bAgentResidentiallicense, bAgentCommerciallicense, bAgentMortgagelicense, bAgentPaidbyofficetranquillit, dtAgentFintraccertification, bAgentIsactive, sContactFirstname, sContactLastname, dtContactBirthdate, sEmailAddress, sPhoneE164, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, sAddressZip, fkiProvinceID, sProvinceNameX, fkiCountryID, sCountryNameX);
   }
 
   @Override
@@ -1004,6 +1181,11 @@ public class AgentListElement {
     sb.append("    sAgentRealestateassociationlicense: ").append(toIndentedString(sAgentRealestateassociationlicense)).append("\n");
     sb.append("    dtAgentHiredate: ").append(toIndentedString(dtAgentHiredate)).append("\n");
     sb.append("    dtAgentLeavedate: ").append(toIndentedString(dtAgentLeavedate)).append("\n");
+    sb.append("    dtAgentContractdate: ").append(toIndentedString(dtAgentContractdate)).append("\n");
+    sb.append("    dtAgentTransferdate: ").append(toIndentedString(dtAgentTransferdate)).append("\n");
+    sb.append("    dtAgentSenioritydate: ").append(toIndentedString(dtAgentSenioritydate)).append("\n");
+    sb.append("    dtAgentSickleavestart: ").append(toIndentedString(dtAgentSickleavestart)).append("\n");
+    sb.append("    dtAgentSickleaveend: ").append(toIndentedString(dtAgentSickleaveend)).append("\n");
     sb.append("    bAgentTranquillit: ").append(toIndentedString(bAgentTranquillit)).append("\n");
     sb.append("    bAgentResidentiallicense: ").append(toIndentedString(bAgentResidentiallicense)).append("\n");
     sb.append("    bAgentCommerciallicense: ").append(toIndentedString(bAgentCommerciallicense)).append("\n");
@@ -1021,7 +1203,9 @@ public class AgentListElement {
     sb.append("    sAddressSuite: ").append(toIndentedString(sAddressSuite)).append("\n");
     sb.append("    sAddressCity: ").append(toIndentedString(sAddressCity)).append("\n");
     sb.append("    sAddressZip: ").append(toIndentedString(sAddressZip)).append("\n");
+    sb.append("    fkiProvinceID: ").append(toIndentedString(fkiProvinceID)).append("\n");
     sb.append("    sProvinceNameX: ").append(toIndentedString(sProvinceNameX)).append("\n");
+    sb.append("    fkiCountryID: ").append(toIndentedString(fkiCountryID)).append("\n");
     sb.append("    sCountryNameX: ").append(toIndentedString(sCountryNameX)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -1032,10 +1216,7 @@ public class AgentListElement {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -1044,7 +1225,7 @@ public class AgentListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiAgentID", "fkiAgenttypeID", "sAgenttypeNameX", "fkiAgentincorporationID", "sAgentincorporationName", "fkiDepartmentID", "sDepartmentNameX", "fkiLanguageID", "sLanguageNameX", "sRealestateboardnumberNumber", "sAgentCode", "iAgentPhotocopiercode", "iAgentLongdistancecode", "iAgentBannernumber", "sAgentRealestateassociationlicense", "dtAgentHiredate", "dtAgentLeavedate", "bAgentTranquillit", "bAgentResidentiallicense", "bAgentCommerciallicense", "bAgentMortgagelicense", "bAgentPaidbyofficetranquillit", "dtAgentFintraccertification", "bAgentIsactive", "sContactFirstname", "sContactLastname", "dtContactBirthdate", "sEmailAddress", "sPhoneE164", "sAddressCivic", "sAddressStreet", "sAddressSuite", "sAddressCity", "sAddressZip", "sProvinceNameX", "sCountryNameX"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiAgentID", "fkiAgenttypeID", "sAgenttypeNameX", "fkiAgentincorporationID", "sAgentincorporationName", "fkiDepartmentID", "sDepartmentNameX", "fkiLanguageID", "sLanguageNameX", "sRealestateboardnumberNumber", "sAgentCode", "iAgentPhotocopiercode", "iAgentLongdistancecode", "iAgentBannernumber", "sAgentRealestateassociationlicense", "dtAgentHiredate", "dtAgentLeavedate", "dtAgentContractdate", "dtAgentTransferdate", "dtAgentSenioritydate", "dtAgentSickleavestart", "dtAgentSickleaveend", "bAgentTranquillit", "bAgentResidentiallicense", "bAgentCommerciallicense", "bAgentMortgagelicense", "bAgentPaidbyofficetranquillit", "dtAgentFintraccertification", "bAgentIsactive", "sContactFirstname", "sContactLastname", "dtContactBirthdate", "sEmailAddress", "sPhoneE164", "sAddressCivic", "sAddressStreet", "sAddressSuite", "sAddressCity", "sAddressZip", "fkiProvinceID", "sProvinceNameX", "fkiCountryID", "sCountryNameX"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiAgentID", "fkiAgenttypeID", "sAgenttypeNameX", "fkiDepartmentID", "sDepartmentNameX", "fkiLanguageID", "sLanguageNameX", "sAgentCode", "iAgentPhotocopiercode", "iAgentLongdistancecode", "iAgentBannernumber", "sAgentRealestateassociationlicense", "bAgentTranquillit", "bAgentResidentiallicense", "bAgentCommerciallicense", "bAgentMortgagelicense", "bAgentPaidbyofficetranquillit", "bAgentIsactive", "sContactFirstname", "sContactLastname"));
@@ -1104,6 +1285,21 @@ public class AgentListElement {
       }
       if ((jsonObj.get("dtAgentLeavedate") != null && !jsonObj.get("dtAgentLeavedate").isJsonNull()) && !jsonObj.get("dtAgentLeavedate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtAgentLeavedate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAgentLeavedate").toString()));
+      }
+      if ((jsonObj.get("dtAgentContractdate") != null && !jsonObj.get("dtAgentContractdate").isJsonNull()) && !jsonObj.get("dtAgentContractdate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtAgentContractdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAgentContractdate").toString()));
+      }
+      if ((jsonObj.get("dtAgentTransferdate") != null && !jsonObj.get("dtAgentTransferdate").isJsonNull()) && !jsonObj.get("dtAgentTransferdate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtAgentTransferdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAgentTransferdate").toString()));
+      }
+      if ((jsonObj.get("dtAgentSenioritydate") != null && !jsonObj.get("dtAgentSenioritydate").isJsonNull()) && !jsonObj.get("dtAgentSenioritydate").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtAgentSenioritydate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAgentSenioritydate").toString()));
+      }
+      if ((jsonObj.get("dtAgentSickleavestart") != null && !jsonObj.get("dtAgentSickleavestart").isJsonNull()) && !jsonObj.get("dtAgentSickleavestart").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtAgentSickleavestart` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAgentSickleavestart").toString()));
+      }
+      if ((jsonObj.get("dtAgentSickleaveend") != null && !jsonObj.get("dtAgentSickleaveend").isJsonNull()) && !jsonObj.get("dtAgentSickleaveend").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtAgentSickleaveend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAgentSickleaveend").toString()));
       }
       if ((jsonObj.get("dtAgentFintraccertification") != null && !jsonObj.get("dtAgentFintraccertification").isJsonNull()) && !jsonObj.get("dtAgentFintraccertification").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtAgentFintraccertification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAgentFintraccertification").toString()));

@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * This is a generic debug object that is returned by all API requests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-02-11T04:02:32.834766280Z[Etc/UTC]", comments = "Generator version: 7.19.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
 public class CommonResponseObjDebug {
   public static final String SERIALIZED_NAME_S_MEMORY_USAGE = "sMemoryUsage";
   @SerializedName(SERIALIZED_NAME_S_MEMORY_USAGE)
@@ -224,10 +224,7 @@ public class CommonResponseObjDebug {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 
@@ -276,16 +273,16 @@ public class CommonResponseObjDebug {
       if (!jsonObj.get("sRunTime").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sRunTime` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sRunTime").toString()));
       }
-      // ensure the json data is an array
-      if (!jsonObj.get("a_objSQLQuery").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objSQLQuery` to be an array in the JSON string but got `%s`", jsonObj.get("a_objSQLQuery").toString()));
+      if (jsonObj.get("a_objSQLQuery") != null) {
+        if (!jsonObj.get("a_objSQLQuery").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objSQLQuery` to be an array in the JSON string but got `%s`", jsonObj.get("a_objSQLQuery").toString()));
+        }
+        JsonArray jsonArrayaObjSQLQuery = jsonObj.getAsJsonArray("a_objSQLQuery");
+        // validate the required field `a_objSQLQuery` (array)
+        for (int i = 0; i < jsonArrayaObjSQLQuery.size(); i++) {
+          CommonResponseObjSQLQuery.validateJsonElement(jsonArrayaObjSQLQuery.get(i));
+        }
       }
-
-      JsonArray jsonArrayaObjSQLQuery = jsonObj.getAsJsonArray("a_objSQLQuery");
-      // validate the required field `a_objSQLQuery` (array)
-      for (int i = 0; i < jsonArrayaObjSQLQuery.size(); i++) {
-        CommonResponseObjSQLQuery.validateJsonElement(jsonArrayaObjSQLQuery.get(i));
-      };
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
