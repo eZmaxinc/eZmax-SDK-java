@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Apikey Object and children to create a complete structure
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-09T20:59:45.508304892Z[Etc/UTC]", comments = "Generator version: 7.23.0")
 public class ApikeyResponseCompound {
   public static final String SERIALIZED_NAME_PKI_APIKEY_I_D = "pkiApikeyID";
   @SerializedName(SERIALIZED_NAME_PKI_APIKEY_I_D)
@@ -62,6 +62,11 @@ public class ApikeyResponseCompound {
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
   @javax.annotation.Nonnull
   private Integer fkiUserID;
+
+  public static final String SERIALIZED_NAME_FKI_EZMAXPARTNERPRODUCTSTAGE_I_D = "fkiEzmaxpartnerproductstageID";
+  @SerializedName(SERIALIZED_NAME_FKI_EZMAXPARTNERPRODUCTSTAGE_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiEzmaxpartnerproductstageID;
 
   public static final String SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION = "objApikeyDescription";
   @SerializedName(SERIALIZED_NAME_OBJ_APIKEY_DESCRIPTION)
@@ -138,6 +143,27 @@ public class ApikeyResponseCompound {
 
   public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
+  }
+
+
+  public ApikeyResponseCompound fkiEzmaxpartnerproductstageID(@javax.annotation.Nullable Integer fkiEzmaxpartnerproductstageID) {
+    this.fkiEzmaxpartnerproductstageID = fkiEzmaxpartnerproductstageID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Ezmaxpartnerproductstage
+   * minimum: 0
+   * maximum: 255
+   * @return fkiEzmaxpartnerproductstageID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiEzmaxpartnerproductstageID() {
+    return fkiEzmaxpartnerproductstageID;
+  }
+
+  public void setFkiEzmaxpartnerproductstageID(@javax.annotation.Nullable Integer fkiEzmaxpartnerproductstageID) {
+    this.fkiEzmaxpartnerproductstageID = fkiEzmaxpartnerproductstageID;
   }
 
 
@@ -286,6 +312,7 @@ public class ApikeyResponseCompound {
     ApikeyResponseCompound apikeyResponseCompound = (ApikeyResponseCompound) o;
     return Objects.equals(this.pkiApikeyID, apikeyResponseCompound.pkiApikeyID) &&
         Objects.equals(this.fkiUserID, apikeyResponseCompound.fkiUserID) &&
+        Objects.equals(this.fkiEzmaxpartnerproductstageID, apikeyResponseCompound.fkiEzmaxpartnerproductstageID) &&
         Objects.equals(this.objApikeyDescription, apikeyResponseCompound.objApikeyDescription) &&
         Objects.equals(this.objContactName, apikeyResponseCompound.objContactName) &&
         Objects.equals(this.sApikeyApikey, apikeyResponseCompound.sApikeyApikey) &&
@@ -297,7 +324,7 @@ public class ApikeyResponseCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiApikeyID, fkiUserID, objApikeyDescription, objContactName, sApikeyApikey, sApikeySecret, bApikeyIsactive, bApikeyIssigned, objAudit);
+    return Objects.hash(pkiApikeyID, fkiUserID, fkiEzmaxpartnerproductstageID, objApikeyDescription, objContactName, sApikeyApikey, sApikeySecret, bApikeyIsactive, bApikeyIssigned, objAudit);
   }
 
   @Override
@@ -306,6 +333,7 @@ public class ApikeyResponseCompound {
     sb.append("class ApikeyResponseCompound {\n");
     sb.append("    pkiApikeyID: ").append(toIndentedString(pkiApikeyID)).append("\n");
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
+    sb.append("    fkiEzmaxpartnerproductstageID: ").append(toIndentedString(fkiEzmaxpartnerproductstageID)).append("\n");
     sb.append("    objApikeyDescription: ").append(toIndentedString(objApikeyDescription)).append("\n");
     sb.append("    objContactName: ").append(toIndentedString(objContactName)).append("\n");
     sb.append("    sApikeyApikey: ").append(toIndentedString(sApikeyApikey)).append("\n");
@@ -331,7 +359,7 @@ public class ApikeyResponseCompound {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiApikeyID", "fkiUserID", "objApikeyDescription", "objContactName", "sApikeyApikey", "sApikeySecret", "bApikeyIsactive", "bApikeyIssigned", "objAudit"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiApikeyID", "fkiUserID", "fkiEzmaxpartnerproductstageID", "objApikeyDescription", "objContactName", "sApikeyApikey", "sApikeySecret", "bApikeyIsactive", "bApikeyIssigned", "objAudit"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiApikeyID", "fkiUserID", "objApikeyDescription", "objContactName", "bApikeyIsactive", "objAudit"));

@@ -10,6 +10,7 @@ An Apikey Object and children to create a complete structure
 |------------ | ------------- | ------------- | -------------|
 |**pkiApikeyID** | **Integer** | The unique ID of the Apikey |  |
 |**fkiUserID** | **Integer** | The unique ID of the User |  |
+|**fkiEzmaxpartnerproductstageID** | **Integer** | The unique ID of the Ezmaxpartnerproductstage |  [optional] |
 |**objApikeyDescription** | [**MultilingualApikeyDescription**](MultilingualApikeyDescription.md) |  |  |
 |**objContactName** | [**CustomContactNameResponse**](CustomContactNameResponse.md) |  |  |
 |**sApikeyApikey** | **String** | The Apikey for the API key.  This will be hidden if we are not creating or regenerating the Apikey. |  [optional] |

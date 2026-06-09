@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/usergroupexternal/{pkiUsergroupexternalID}/getUsergroups
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-09T20:59:45.508304892Z[Etc/UTC]", comments = "Generator version: 7.23.0")
 public class UsergroupexternalGetUsergroupsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_USERGROUP = "a_objUsergroup";
   @SerializedName(SERIALIZED_NAME_A_OBJ_USERGROUP)

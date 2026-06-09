@@ -1629,10 +1629,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimServiceProviderConfig.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimServiceProviderConfigBulk.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimServiceProviderConfigChangePassword.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimServiceProviderConfigEtag.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimServiceProviderConfigFilter.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimServiceProviderConfigPatch.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimServiceProviderConfigSort.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimUser.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimUserList.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SecretquestionAutocompleteElementResponse.CustomTypeAdapterFactory());

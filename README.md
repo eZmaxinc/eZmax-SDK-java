@@ -2,8 +2,8 @@
 
 eZmax API Definition (Full)
 - API version: 1.3.1
-  - Build date: 2026-06-03T15:00:06.998941493Z[Etc/UTC]
-  - Generator version: 7.22.0
+  - Build date: 2026-06-09T20:59:45.508304892Z[Etc/UTC]
+  - Generator version: 7.23.0
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -2364,10 +2364,7 @@ Class | Method | HTTP request | Description
  - [ScimServiceProviderConfig](docs/ScimServiceProviderConfig.md)
  - [ScimServiceProviderConfigBulk](docs/ScimServiceProviderConfigBulk.md)
  - [ScimServiceProviderConfigChangePassword](docs/ScimServiceProviderConfigChangePassword.md)
- - [ScimServiceProviderConfigEtag](docs/ScimServiceProviderConfigEtag.md)
  - [ScimServiceProviderConfigFilter](docs/ScimServiceProviderConfigFilter.md)
- - [ScimServiceProviderConfigPatch](docs/ScimServiceProviderConfigPatch.md)
- - [ScimServiceProviderConfigSort](docs/ScimServiceProviderConfigSort.md)
  - [ScimUser](docs/ScimUser.md)
  - [ScimUserList](docs/ScimUserList.md)
  - [SecretquestionAutocompleteElementResponse](docs/SecretquestionAutocompleteElementResponse.md)

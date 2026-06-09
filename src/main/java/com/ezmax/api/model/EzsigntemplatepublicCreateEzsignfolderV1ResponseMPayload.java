@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/ezsigntemplatepublic/createEzsignfolder
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-03T15:00:06.998941493Z[Etc/UTC]", comments = "Generator version: 7.22.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-09T20:59:45.508304892Z[Etc/UTC]", comments = "Generator version: 7.23.0")
 public class EzsigntemplatepublicCreateEzsignfolderV1ResponseMPayload {
   public static final String SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_SIGNINGURL = "sEzsigntemplatepublicSigningurl";
   @SerializedName(SERIALIZED_NAME_S_EZSIGNTEMPLATEPUBLIC_SIGNINGURL)

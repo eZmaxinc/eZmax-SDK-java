@@ -1827,10 +1827,7 @@ docs/ScimServiceProviderConfig.md
 docs/ScimServiceProviderConfigApi.md
 docs/ScimServiceProviderConfigBulk.md
 docs/ScimServiceProviderConfigChangePassword.md
-docs/ScimServiceProviderConfigEtag.md
 docs/ScimServiceProviderConfigFilter.md
-docs/ScimServiceProviderConfigPatch.md
-docs/ScimServiceProviderConfigSort.md
 docs/ScimUser.md
 docs/ScimUserList.md
 docs/ScimUsersApi.md
@@ -3972,10 +3969,7 @@ src/main/java/com/ezmax/api/model/ScimGroupMember.java
 src/main/java/com/ezmax/api/model/ScimServiceProviderConfig.java
 src/main/java/com/ezmax/api/model/ScimServiceProviderConfigBulk.java
 src/main/java/com/ezmax/api/model/ScimServiceProviderConfigChangePassword.java
-src/main/java/com/ezmax/api/model/ScimServiceProviderConfigEtag.java
 src/main/java/com/ezmax/api/model/ScimServiceProviderConfigFilter.java
-src/main/java/com/ezmax/api/model/ScimServiceProviderConfigPatch.java
-src/main/java/com/ezmax/api/model/ScimServiceProviderConfigSort.java
 src/main/java/com/ezmax/api/model/ScimUser.java
 src/main/java/com/ezmax/api/model/ScimUserList.java
 src/main/java/com/ezmax/api/model/SecretquestionAutocompleteElementResponse.java
