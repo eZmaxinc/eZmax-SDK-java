@@ -48,13 +48,8 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/user/{pkiUserID}/impersonate
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-09T20:59:45.508304892Z[Etc/UTC]", comments = "Generator version: 7.23.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-17T23:06:06.857063645Z[Etc/UTC]", comments = "Generator version: 7.23.0")
 public class UserImpersonateV1Request {
-  public static final String SERIALIZED_NAME_FKI_USER_I_D = "fkiUserID";
-  @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
-  @javax.annotation.Nonnull
-  private Integer fkiUserID;
-
   public static final String SERIALIZED_NAME_I_EXPIRATION_MINUTES = "iExpirationMinutes";
   @SerializedName(SERIALIZED_NAME_I_EXPIRATION_MINUTES)
   @javax.annotation.Nonnull
@@ -62,26 +57,6 @@ public class UserImpersonateV1Request {
 
   public UserImpersonateV1Request() {
   }
-
-  public UserImpersonateV1Request fkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-    return this;
-  }
-
-  /**
-   * The unique ID of the User
-   * minimum: 0
-   * @return fkiUserID
-   */
-  @javax.annotation.Nonnull
-  public Integer getFkiUserID() {
-    return fkiUserID;
-  }
-
-  public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
-    this.fkiUserID = fkiUserID;
-  }
-
 
   public UserImpersonateV1Request iExpirationMinutes(@javax.annotation.Nonnull Integer iExpirationMinutes) {
     this.iExpirationMinutes = iExpirationMinutes;
@@ -114,20 +89,18 @@ public class UserImpersonateV1Request {
       return false;
     }
     UserImpersonateV1Request userImpersonateV1Request = (UserImpersonateV1Request) o;
-    return Objects.equals(this.fkiUserID, userImpersonateV1Request.fkiUserID) &&
-        Objects.equals(this.iExpirationMinutes, userImpersonateV1Request.iExpirationMinutes);
+    return Objects.equals(this.iExpirationMinutes, userImpersonateV1Request.iExpirationMinutes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiUserID, iExpirationMinutes);
+    return Objects.hash(iExpirationMinutes);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserImpersonateV1Request {\n");
-    sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
     sb.append("    iExpirationMinutes: ").append(toIndentedString(iExpirationMinutes)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -147,10 +120,10 @@ public class UserImpersonateV1Request {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("fkiUserID", "iExpirationMinutes"));
+    openapiFields = new HashSet<String>(Arrays.asList("iExpirationMinutes"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("fkiUserID", "iExpirationMinutes"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("iExpirationMinutes"));
   }
 
   /**

@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Inscriptionnotauthenticated List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-09T20:59:45.508304892Z[Etc/UTC]", comments = "Generator version: 7.23.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-17T23:06:06.857063645Z[Etc/UTC]", comments = "Generator version: 7.23.0")
 public class InscriptionnotauthenticatedListElement {
   public static final String SERIALIZED_NAME_PKI_INSCRIPTION_I_D = "pkiInscriptionID";
   @SerializedName(SERIALIZED_NAME_PKI_INSCRIPTION_I_D)
@@ -65,6 +65,16 @@ public class InscriptionnotauthenticatedListElement {
   @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTIONTYPE_I_D)
   @javax.annotation.Nonnull
   private Integer fkiInscriptiontypeID;
+
+  public static final String SERIALIZED_NAME_FKI_BUYERCONTRACT_I_D = "fkiBuyercontractID";
+  @SerializedName(SERIALIZED_NAME_FKI_BUYERCONTRACT_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiBuyercontractID;
+
+  public static final String SERIALIZED_NAME_S_BUYERCONTRACT_CONTRACT = "sBuyercontractContract";
+  @SerializedName(SERIALIZED_NAME_S_BUYERCONTRACT_CONTRACT)
+  @javax.annotation.Nullable
+  private String sBuyercontractContract;
 
   public static final String SERIALIZED_NAME_S_INSCRIPTIONTYPE_NAME_X = "sInscriptiontypeNameX";
   @SerializedName(SERIALIZED_NAME_S_INSCRIPTIONTYPE_NAME_X)
@@ -85,6 +95,11 @@ public class InscriptionnotauthenticatedListElement {
   @SerializedName(SERIALIZED_NAME_S_INSCRIPTION_M_L_S)
   @javax.annotation.Nullable
   private String sInscriptionMLS;
+
+  public static final String SERIALIZED_NAME_S_INSCRIPTION_CONTRACT = "sInscriptionContract";
+  @SerializedName(SERIALIZED_NAME_S_INSCRIPTION_CONTRACT)
+  @javax.annotation.Nullable
+  private String sInscriptionContract;
 
   public static final String SERIALIZED_NAME_D_INSCRIPTION_SALEPRICE = "dInscriptionSaleprice";
   @SerializedName(SERIALIZED_NAME_D_INSCRIPTION_SALEPRICE)
@@ -265,6 +280,46 @@ public class InscriptionnotauthenticatedListElement {
   }
 
 
+  public InscriptionnotauthenticatedListElement fkiBuyercontractID(@javax.annotation.Nullable Integer fkiBuyercontractID) {
+    this.fkiBuyercontractID = fkiBuyercontractID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Buyercontract
+   * minimum: 1
+   * maximum: 65535
+   * @return fkiBuyercontractID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiBuyercontractID() {
+    return fkiBuyercontractID;
+  }
+
+  public void setFkiBuyercontractID(@javax.annotation.Nullable Integer fkiBuyercontractID) {
+    this.fkiBuyercontractID = fkiBuyercontractID;
+  }
+
+
+  public InscriptionnotauthenticatedListElement sBuyercontractContract(@javax.annotation.Nullable String sBuyercontractContract) {
+    this.sBuyercontractContract = sBuyercontractContract;
+    return this;
+  }
+
+  /**
+   * The number of the Buyercontract
+   * @return sBuyercontractContract
+   */
+  @javax.annotation.Nullable
+  public String getsBuyercontractContract() {
+    return sBuyercontractContract;
+  }
+
+  public void setsBuyercontractContract(@javax.annotation.Nullable String sBuyercontractContract) {
+    this.sBuyercontractContract = sBuyercontractContract;
+  }
+
+
   public InscriptionnotauthenticatedListElement sInscriptiontypeNameX(@javax.annotation.Nonnull String sInscriptiontypeNameX) {
     this.sInscriptiontypeNameX = sInscriptiontypeNameX;
     return this;
@@ -338,6 +393,25 @@ public class InscriptionnotauthenticatedListElement {
 
   public void setsInscriptionMLS(@javax.annotation.Nullable String sInscriptionMLS) {
     this.sInscriptionMLS = sInscriptionMLS;
+  }
+
+
+  public InscriptionnotauthenticatedListElement sInscriptionContract(@javax.annotation.Nullable String sInscriptionContract) {
+    this.sInscriptionContract = sInscriptionContract;
+    return this;
+  }
+
+  /**
+   * The sale contract number
+   * @return sInscriptionContract
+   */
+  @javax.annotation.Nullable
+  public String getsInscriptionContract() {
+    return sInscriptionContract;
+  }
+
+  public void setsInscriptionContract(@javax.annotation.Nullable String sInscriptionContract) {
+    this.sInscriptionContract = sInscriptionContract;
   }
 
 
@@ -793,10 +867,13 @@ public class InscriptionnotauthenticatedListElement {
     return Objects.equals(this.pkiInscriptionID, inscriptionnotauthenticatedListElement.pkiInscriptionID) &&
         Objects.equals(this.pkiInscriptionnotauthenticatedID, inscriptionnotauthenticatedListElement.pkiInscriptionnotauthenticatedID) &&
         Objects.equals(this.fkiInscriptiontypeID, inscriptionnotauthenticatedListElement.fkiInscriptiontypeID) &&
+        Objects.equals(this.fkiBuyercontractID, inscriptionnotauthenticatedListElement.fkiBuyercontractID) &&
+        Objects.equals(this.sBuyercontractContract, inscriptionnotauthenticatedListElement.sBuyercontractContract) &&
         Objects.equals(this.sInscriptiontypeNameX, inscriptionnotauthenticatedListElement.sInscriptiontypeNameX) &&
         Objects.equals(this.eInscriptionStep, inscriptionnotauthenticatedListElement.eInscriptionStep) &&
         Objects.equals(this.sInscriptionCivicend, inscriptionnotauthenticatedListElement.sInscriptionCivicend) &&
         Objects.equals(this.sInscriptionMLS, inscriptionnotauthenticatedListElement.sInscriptionMLS) &&
+        Objects.equals(this.sInscriptionContract, inscriptionnotauthenticatedListElement.sInscriptionContract) &&
         Objects.equals(this.dInscriptionSaleprice, inscriptionnotauthenticatedListElement.dInscriptionSaleprice) &&
         Objects.equals(this.dInscriptionRentprice, inscriptionnotauthenticatedListElement.dInscriptionRentprice) &&
         Objects.equals(this.dtInscriptionDate, inscriptionnotauthenticatedListElement.dtInscriptionDate) &&
@@ -824,7 +901,7 @@ public class InscriptionnotauthenticatedListElement {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiInscriptionID, pkiInscriptionnotauthenticatedID, fkiInscriptiontypeID, sInscriptiontypeNameX, eInscriptionStep, sInscriptionCivicend, sInscriptionMLS, dInscriptionSaleprice, dInscriptionRentprice, dtInscriptionDate, dtInscriptionExpirationdate, dtInscriptionNotarydate, bInscriptionInspection, bInscriptionIsactive, bInscriptionArchived, dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal, bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedIsactive, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, sAddressZip, fkiProvinceID, sProvinceNameX, fkiCountryID, sCountryNameX, sInscriptionnotauthenticatedOffertopurchasenumber);
+    return Objects.hash(pkiInscriptionID, pkiInscriptionnotauthenticatedID, fkiInscriptiontypeID, fkiBuyercontractID, sBuyercontractContract, sInscriptiontypeNameX, eInscriptionStep, sInscriptionCivicend, sInscriptionMLS, sInscriptionContract, dInscriptionSaleprice, dInscriptionRentprice, dtInscriptionDate, dtInscriptionExpirationdate, dtInscriptionNotarydate, bInscriptionInspection, bInscriptionIsactive, bInscriptionArchived, dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal, bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedIsactive, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, sAddressZip, fkiProvinceID, sProvinceNameX, fkiCountryID, sCountryNameX, sInscriptionnotauthenticatedOffertopurchasenumber);
   }
 
   @Override
@@ -834,10 +911,13 @@ public class InscriptionnotauthenticatedListElement {
     sb.append("    pkiInscriptionID: ").append(toIndentedString(pkiInscriptionID)).append("\n");
     sb.append("    pkiInscriptionnotauthenticatedID: ").append(toIndentedString(pkiInscriptionnotauthenticatedID)).append("\n");
     sb.append("    fkiInscriptiontypeID: ").append(toIndentedString(fkiInscriptiontypeID)).append("\n");
+    sb.append("    fkiBuyercontractID: ").append(toIndentedString(fkiBuyercontractID)).append("\n");
+    sb.append("    sBuyercontractContract: ").append(toIndentedString(sBuyercontractContract)).append("\n");
     sb.append("    sInscriptiontypeNameX: ").append(toIndentedString(sInscriptiontypeNameX)).append("\n");
     sb.append("    eInscriptionStep: ").append(toIndentedString(eInscriptionStep)).append("\n");
     sb.append("    sInscriptionCivicend: ").append(toIndentedString(sInscriptionCivicend)).append("\n");
     sb.append("    sInscriptionMLS: ").append(toIndentedString(sInscriptionMLS)).append("\n");
+    sb.append("    sInscriptionContract: ").append(toIndentedString(sInscriptionContract)).append("\n");
     sb.append("    dInscriptionSaleprice: ").append(toIndentedString(dInscriptionSaleprice)).append("\n");
     sb.append("    dInscriptionRentprice: ").append(toIndentedString(dInscriptionRentprice)).append("\n");
     sb.append("    dtInscriptionDate: ").append(toIndentedString(dtInscriptionDate)).append("\n");
@@ -879,7 +959,7 @@ public class InscriptionnotauthenticatedListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiInscriptionID", "pkiInscriptionnotauthenticatedID", "fkiInscriptiontypeID", "sInscriptiontypeNameX", "eInscriptionStep", "sInscriptionCivicend", "sInscriptionMLS", "dInscriptionSaleprice", "dInscriptionRentprice", "dtInscriptionDate", "dtInscriptionExpirationdate", "dtInscriptionNotarydate", "bInscriptionInspection", "bInscriptionIsactive", "bInscriptionArchived", "dtInscriptionnotauthenticatedNotaryscheduledate", "dtInscriptionnotauthenticatedTransactiondate", "dtInscriptionnotauthenticatedTransactiondateReal", "bInscriptionnotauthenticatedConditional", "bInscriptionnotauthenticatedIsactive", "sAddressCivic", "sAddressStreet", "sAddressSuite", "sAddressCity", "sAddressZip", "fkiProvinceID", "sProvinceNameX", "fkiCountryID", "sCountryNameX", "sInscriptionnotauthenticatedOffertopurchasenumber"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiInscriptionID", "pkiInscriptionnotauthenticatedID", "fkiInscriptiontypeID", "fkiBuyercontractID", "sBuyercontractContract", "sInscriptiontypeNameX", "eInscriptionStep", "sInscriptionCivicend", "sInscriptionMLS", "sInscriptionContract", "dInscriptionSaleprice", "dInscriptionRentprice", "dtInscriptionDate", "dtInscriptionExpirationdate", "dtInscriptionNotarydate", "bInscriptionInspection", "bInscriptionIsactive", "bInscriptionArchived", "dtInscriptionnotauthenticatedNotaryscheduledate", "dtInscriptionnotauthenticatedTransactiondate", "dtInscriptionnotauthenticatedTransactiondateReal", "bInscriptionnotauthenticatedConditional", "bInscriptionnotauthenticatedIsactive", "sAddressCivic", "sAddressStreet", "sAddressSuite", "sAddressCity", "sAddressZip", "fkiProvinceID", "sProvinceNameX", "fkiCountryID", "sCountryNameX", "sInscriptionnotauthenticatedOffertopurchasenumber"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiInscriptionID", "fkiInscriptiontypeID", "sInscriptiontypeNameX", "eInscriptionStep", "sInscriptionCivicend", "dInscriptionSaleprice", "dInscriptionRentprice", "bInscriptionIsactive", "bInscriptionArchived", "sInscriptionnotauthenticatedOffertopurchasenumber"));
@@ -913,6 +993,9 @@ public class InscriptionnotauthenticatedListElement {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("sBuyercontractContract") != null && !jsonObj.get("sBuyercontractContract").isJsonNull()) && !jsonObj.get("sBuyercontractContract").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sBuyercontractContract` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sBuyercontractContract").toString()));
+      }
       if (!jsonObj.get("sInscriptiontypeNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sInscriptiontypeNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sInscriptiontypeNameX").toString()));
       }
@@ -923,6 +1006,9 @@ public class InscriptionnotauthenticatedListElement {
       }
       if ((jsonObj.get("sInscriptionMLS") != null && !jsonObj.get("sInscriptionMLS").isJsonNull()) && !jsonObj.get("sInscriptionMLS").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sInscriptionMLS` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sInscriptionMLS").toString()));
+      }
+      if ((jsonObj.get("sInscriptionContract") != null && !jsonObj.get("sInscriptionContract").isJsonNull()) && !jsonObj.get("sInscriptionContract").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sInscriptionContract` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sInscriptionContract").toString()));
       }
       if (!jsonObj.get("dInscriptionSaleprice").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dInscriptionSaleprice` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dInscriptionSaleprice").toString()));

@@ -25,6 +25,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigndocumentEndPrematurelyV1**](ObjectEzsigndocumentApi.md#ezsigndocumentEndPrematurelyV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/endPrematurely | End prematurely |
 | [**ezsigndocumentExtractTextV1**](ObjectEzsigndocumentApi.md#ezsigndocumentExtractTextV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/extractText | Extract text from Ezsigndocument area |
 | [**ezsigndocumentFlattenV1**](ObjectEzsigndocumentApi.md#ezsigndocumentFlattenV1) | **POST** /1/object/ezsigndocument/{pkiEzsigndocumentID}/flatten | Flatten |
+| [**ezsigndocumentGetActionableElementsForSignerV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsForSignerV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElementsForSigner | Retrieve actionable elements of a user for the Ezsigndocument |
 | [**ezsigndocumentGetActionableElementsV1**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV1) | **GET** /1/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
 | [**ezsigndocumentGetActionableElementsV2**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV2) | **GET** /2/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
 | [**ezsigndocumentGetActionableElementsV3**](ObjectEzsigndocumentApi.md#ezsigndocumentGetActionableElementsV3) | **GET** /3/object/ezsigndocument/{pkiEzsigndocumentID}/getActionableElements | Retrieve actionable elements for the Ezsigndocument |
@@ -1565,6 +1566,83 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+<a id="ezsigndocumentGetActionableElementsForSignerV1"></a>
+# **ezsigndocumentGetActionableElementsForSignerV1**
+> EzsigndocumentGetActionableElementsForSignerV1Response ezsigndocumentGetActionableElementsForSignerV1(pkiEzsigndocumentID, eSignerType, fkiEzsignsignerID, fkiUserID)
+
+Retrieve actionable elements of a user for the Ezsigndocument
+
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by a user at the current step in the process
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsigndocumentApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsigndocumentApi apiInstance = new ObjectEzsigndocumentApi(defaultClient);
+    Integer pkiEzsigndocumentID = 56; // Integer | 
+    String eSignerType = "Ezsignsigner"; // String | 
+    Integer fkiEzsignsignerID = 56; // Integer | 
+    Integer fkiUserID = 56; // Integer | 
+    try {
+      EzsigndocumentGetActionableElementsForSignerV1Response result = apiInstance.ezsigndocumentGetActionableElementsForSignerV1(pkiEzsigndocumentID, eSignerType, fkiEzsignsignerID, fkiUserID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsigndocumentApi#ezsigndocumentGetActionableElementsForSignerV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsigndocumentID** | **Integer**|  | |
+| **eSignerType** | **String**|  | [enum: Ezsignsigner, User] |
+| **fkiEzsignsignerID** | **Integer**|  | [optional] |
+| **fkiUserID** | **Integer**|  | [optional] |
+
+### Return type
+
+[**EzsigndocumentGetActionableElementsForSignerV1Response**](EzsigndocumentGetActionableElementsForSignerV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details

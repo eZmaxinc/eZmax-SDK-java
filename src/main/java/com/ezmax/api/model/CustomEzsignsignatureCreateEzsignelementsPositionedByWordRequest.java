@@ -63,7 +63,7 @@ import eZmaxAPI.JSON;
 /**
  * An Ezsignsignature Object in the context of an CreateEzsignelementsPositionedByWord path
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-09T20:59:45.508304892Z[Etc/UTC]", comments = "Generator version: 7.23.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-17T23:06:06.857063645Z[Etc/UTC]", comments = "Generator version: 7.23.0")
 public class CustomEzsignsignatureCreateEzsignelementsPositionedByWordRequest {
   public static final String SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D = "pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNSIGNATURE_I_D)

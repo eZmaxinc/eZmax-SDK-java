@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Apikeyfederation Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-09T20:59:45.508304892Z[Etc/UTC]", comments = "Generator version: 7.23.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-06-17T23:06:06.857063645Z[Etc/UTC]", comments = "Generator version: 7.23.0")
 public class CustomApikeyfederation {
   public static final String SERIALIZED_NAME_S_APIKEYFEDERATION_KEY = "sApikeyfederationKey";
   @SerializedName(SERIALIZED_NAME_S_APIKEYFEDERATION_KEY)

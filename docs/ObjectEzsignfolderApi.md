@@ -15,6 +15,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsignfolderDuplicateV1**](ObjectEzsignfolderApi.md#ezsignfolderDuplicateV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/duplicate | Duplicate the Ezsignfolder |
 | [**ezsignfolderEditObjectV3**](ObjectEzsignfolderApi.md#ezsignfolderEditObjectV3) | **PUT** /3/object/ezsignfolder/{pkiEzsignfolderID} | Edit an existing Ezsignfolder |
 | [**ezsignfolderEndPrematurelyV1**](ObjectEzsignfolderApi.md#ezsignfolderEndPrematurelyV1) | **POST** /1/object/ezsignfolder/{pkiEzsignfolderID}/endPrematurely | End prematurely |
+| [**ezsignfolderGetActionableElementsForSignerV1**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsForSignerV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElementsForSigner | Retrieve actionable elements of a user for the Ezsignfolder |
 | [**ezsignfolderGetActionableElementsV1**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV1) | **GET** /1/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder |
 | [**ezsignfolderGetActionableElementsV2**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV2) | **GET** /2/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder |
 | [**ezsignfolderGetActionableElementsV3**](ObjectEzsignfolderApi.md#ezsignfolderGetActionableElementsV3) | **GET** /3/object/ezsignfolder/{pkiEzsignfolderID}/getActionableElements | Retrieve actionable elements for the Ezsignfolder |
@@ -821,6 +822,83 @@ public class Example {
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+<a id="ezsignfolderGetActionableElementsForSignerV1"></a>
+# **ezsignfolderGetActionableElementsForSignerV1**
+> EzsignfolderGetActionableElementsForSignerV1Response ezsignfolderGetActionableElementsForSignerV1(pkiEzsignfolderID, eSignerType, fkiEzsignsignerID, fkiUserID)
+
+Retrieve actionable elements of a user for the Ezsignfolder
+
+Return the Ezsignsignatures that can be signed and Ezsignformfieldgroups that can be filled by an user at the current step in the process
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsignfolderApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsignfolderApi apiInstance = new ObjectEzsignfolderApi(defaultClient);
+    Integer pkiEzsignfolderID = 56; // Integer | 
+    String eSignerType = "Ezsignsigner"; // String | 
+    Integer fkiEzsignsignerID = 56; // Integer | 
+    Integer fkiUserID = 56; // Integer | 
+    try {
+      EzsignfolderGetActionableElementsForSignerV1Response result = apiInstance.ezsignfolderGetActionableElementsForSignerV1(pkiEzsignfolderID, eSignerType, fkiEzsignsignerID, fkiUserID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsignfolderApi#ezsignfolderGetActionableElementsForSignerV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsignfolderID** | **Integer**|  | |
+| **eSignerType** | **String**|  | [enum: Ezsignsigner, User] |
+| **fkiEzsignsignerID** | **Integer**|  | [optional] |
+| **fkiUserID** | **Integer**|  | [optional] |
+
+### Return type
+
+[**EzsignfolderGetActionableElementsForSignerV1Response**](EzsignfolderGetActionableElementsForSignerV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
