@@ -17,6 +17,7 @@ An Ezmaxpartner Object
 |**objEzmaxpartnerShortdescription** | [**MultilingualEzmaxpartnerShortdescription**](MultilingualEzmaxpartnerShortdescription.md) |  |  |
 |**objEzmaxpartnerUrl** | [**MultilingualEzmaxpartnerUrl**](MultilingualEzmaxpartnerUrl.md) |  |  |
 |**bEzmaxpartnerIsactive** | **Boolean** | Whether the Ezmaxpartner is active or not |  [optional] |
+|**objEzmaxpartnerLogourl** | [**MultilingualEzmaxpartnerLogourl**](MultilingualEzmaxpartnerLogourl.md) |  |  |
 
 
 

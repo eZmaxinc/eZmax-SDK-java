@@ -14,6 +14,7 @@ A custom Webhook object
 |**fkiEzsignfoldertypeID** | **Integer** | The unique ID of the Ezsignfoldertype. |  [optional] |
 |**sEzsignfoldertypeNameX** | **String** | The name of the Ezsignfoldertype in the language of the requester |  [optional] |
 |**eWebhookModule** | **FieldEWebhookModule** |  |  |
+|**eWebhookEzmaxpartnerevent** | **FieldEWebhookEzmaxpartnerevent** |  |  [optional] |
 |**eWebhookEzsignevent** | **FieldEWebhookEzsignevent** |  |  [optional] |
 |**eWebhookManagementevent** | **FieldEWebhookManagementevent** |  |  [optional] |
 |**sWebhookUrl** | **String** | The URL of the Webhook callback |  |
