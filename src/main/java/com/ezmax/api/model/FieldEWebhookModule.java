@@ -33,7 +33,9 @@ public enum FieldEWebhookModule {
   
   EZSIGN("Ezsign"),
   
-  MANAGEMENT("Management");
+  MANAGEMENT("Management"),
+  
+  REALESTATE("Realestate");
 
   private String value;
 

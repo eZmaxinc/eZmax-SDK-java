@@ -2,8 +2,8 @@
 
 eZmax API Definition (Full)
 - API version: 1.3.2
-  - Build date: 2026-07-10T18:25:54.597833926Z[Etc/UTC]
-  - Generator version: 7.23.0
+  - Build date: 2026-07-20T18:26:49.212059189Z[Etc/UTC]
+  - Generator version: 7.24.0
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
 
@@ -87,7 +87,7 @@ import eZmaxAPI.ApiException;
 import eZmaxAPI.Configuration;
 import eZmaxAPI.auth.*;
 import com.ezmax.api.model.*;
-import com.ezmax.api.DocumentationEzmaxpartnerApi;
+import com.ezmax.api.ExternalEzmaxpartnerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -100,13 +100,13 @@ public class Example {
     // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
     //Authorization.setApiKeyPrefix("Token");
 
-    DocumentationEzmaxpartnerApi apiInstance = new DocumentationEzmaxpartnerApi(defaultClient);
+    ExternalEzmaxpartnerApi apiInstance = new ExternalEzmaxpartnerApi(defaultClient);
     DocumentationSubscribeV1Request documentationSubscribeV1Request = new DocumentationSubscribeV1Request(); // DocumentationSubscribeV1Request | 
     try {
-      DocumentationSubscribeV1Response result = apiInstance.documentationSubscribeV1(documentationSubscribeV1Request);
+      DocumentationSubscribeV1Response result = apiInstance.externalpartnerSubscribeV1(documentationSubscribeV1Request);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DocumentationEzmaxpartnerApi#documentationSubscribeV1");
+      System.err.println("Exception when calling ExternalEzmaxpartnerApi#externalpartnerSubscribeV1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -123,7 +123,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DocumentationEzmaxpartnerApi* | [**documentationSubscribeV1**](docs/DocumentationEzmaxpartnerApi.md#documentationSubscribeV1) | **POST** /1/documentation/subscribe | Subscribe to an Ezmaxparnerproductstage
+*ExternalEzmaxpartnerApi* | [**externalpartnerSubscribeV1**](docs/ExternalEzmaxpartnerApi.md#externalpartnerSubscribeV1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *GlobalEzmaxclientApi* | [**globalEzmaxclientVersionV1**](docs/GlobalEzmaxclientApi.md#globalEzmaxclientVersionV1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient
 *GlobalEzmaxcustomerApi* | [**globalEzmaxcustomerGetConfigurationV1**](docs/GlobalEzmaxcustomerApi.md#globalEzmaxcustomerGetConfigurationV1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration
@@ -2003,6 +2003,7 @@ Class | Method | HTTP request | Description
  - [FieldEActivesessionRealestateinprogress](docs/FieldEActivesessionRealestateinprogress.md)
  - [FieldEActivesessionUsertype](docs/FieldEActivesessionUsertype.md)
  - [FieldEActivesessionWeekdaystart](docs/FieldEActivesessionWeekdaystart.md)
+ - [FieldEAgentSchedule](docs/FieldEAgentSchedule.md)
  - [FieldEAttachmentDocumenttype](docs/FieldEAttachmentDocumenttype.md)
  - [FieldEAttachmentPrivacy](docs/FieldEAttachmentPrivacy.md)
  - [FieldEAttachmentType](docs/FieldEAttachmentType.md)
@@ -2144,6 +2145,7 @@ Class | Method | HTTP request | Description
  - [FieldEWebhookEzsignevent](docs/FieldEWebhookEzsignevent.md)
  - [FieldEWebhookManagementevent](docs/FieldEWebhookManagementevent.md)
  - [FieldEWebhookModule](docs/FieldEWebhookModule.md)
+ - [FieldEWebhookRealestateevent](docs/FieldEWebhookRealestateevent.md)
  - [FieldEtInscriptionnotauthenticatedMortgagetype](docs/FieldEtInscriptionnotauthenticatedMortgagetype.md)
  - [FieldPksEzmaxclientOs](docs/FieldPksEzmaxclientOs.md)
  - [FontAutocompleteElementResponse](docs/FontAutocompleteElementResponse.md)
@@ -2423,7 +2425,10 @@ Class | Method | HTTP request | Description
  - [ScimServiceProviderConfig](docs/ScimServiceProviderConfig.md)
  - [ScimServiceProviderConfigBulk](docs/ScimServiceProviderConfigBulk.md)
  - [ScimServiceProviderConfigChangePassword](docs/ScimServiceProviderConfigChangePassword.md)
+ - [ScimServiceProviderConfigEtag](docs/ScimServiceProviderConfigEtag.md)
  - [ScimServiceProviderConfigFilter](docs/ScimServiceProviderConfigFilter.md)
+ - [ScimServiceProviderConfigPatch](docs/ScimServiceProviderConfigPatch.md)
+ - [ScimServiceProviderConfigSort](docs/ScimServiceProviderConfigSort.md)
  - [ScimUser](docs/ScimUser.md)
  - [ScimUserList](docs/ScimUserList.md)
  - [SecretquestionAutocompleteElementResponse](docs/SecretquestionAutocompleteElementResponse.md)
@@ -2707,6 +2712,10 @@ Class | Method | HTTP request | Description
  - [WebhookGetObjectV2Response](docs/WebhookGetObjectV2Response.md)
  - [WebhookGetObjectV2ResponseMPayload](docs/WebhookGetObjectV2ResponseMPayload.md)
  - [WebhookListElement](docs/WebhookListElement.md)
+ - [WebhookRealestateInscriptionCreated](docs/WebhookRealestateInscriptionCreated.md)
+ - [WebhookRealestateInscriptionModified](docs/WebhookRealestateInscriptionModified.md)
+ - [WebhookRealestateInscriptionnotauthenticatedCreated](docs/WebhookRealestateInscriptionnotauthenticatedCreated.md)
+ - [WebhookRealestateInscriptionnotauthenticatedModified](docs/WebhookRealestateInscriptionnotauthenticatedModified.md)
  - [WebhookRegenerateApikeyV1Request](docs/WebhookRegenerateApikeyV1Request.md)
  - [WebhookRegenerateApikeyV1Response](docs/WebhookRegenerateApikeyV1Response.md)
  - [WebhookRegenerateApikeyV1ResponseMPayload](docs/WebhookRegenerateApikeyV1ResponseMPayload.md)

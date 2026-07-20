@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.MultilingualEzmaxpartnerLogourl;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A custom Ezmaxpartner List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-10T18:25:54.597833926Z[Etc/UTC]", comments = "Generator version: 7.23.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T18:26:49.212059189Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class CustomEzmaxpartnerListElement {
   public static final String SERIALIZED_NAME_PKI_EZMAXPARTNER_I_D = "pkiEzmaxpartnerID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXPARTNER_I_D)
@@ -84,6 +85,11 @@ public class CustomEzmaxpartnerListElement {
   @SerializedName(SERIALIZED_NAME_S_EZMAXPARTNER_URL_X)
   @javax.annotation.Nonnull
   private String sEzmaxpartnerUrlX;
+
+  public static final String SERIALIZED_NAME_OBJ_EZMAXPARTNER_LOGOURL = "objEzmaxpartnerLogourl";
+  @SerializedName(SERIALIZED_NAME_OBJ_EZMAXPARTNER_LOGOURL)
+  @javax.annotation.Nonnull
+  private MultilingualEzmaxpartnerLogourl objEzmaxpartnerLogourl;
 
   public CustomEzmaxpartnerListElement() {
   }
@@ -222,6 +228,25 @@ public class CustomEzmaxpartnerListElement {
   }
 
 
+  public CustomEzmaxpartnerListElement objEzmaxpartnerLogourl(@javax.annotation.Nonnull MultilingualEzmaxpartnerLogourl objEzmaxpartnerLogourl) {
+    this.objEzmaxpartnerLogourl = objEzmaxpartnerLogourl;
+    return this;
+  }
+
+  /**
+   * Get objEzmaxpartnerLogourl
+   * @return objEzmaxpartnerLogourl
+   */
+  @javax.annotation.Nonnull
+  public MultilingualEzmaxpartnerLogourl getObjEzmaxpartnerLogourl() {
+    return objEzmaxpartnerLogourl;
+  }
+
+  public void setObjEzmaxpartnerLogourl(@javax.annotation.Nonnull MultilingualEzmaxpartnerLogourl objEzmaxpartnerLogourl) {
+    this.objEzmaxpartnerLogourl = objEzmaxpartnerLogourl;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -238,12 +263,13 @@ public class CustomEzmaxpartnerListElement {
         Objects.equals(this.sEzmaxpartnerShortdescriptionX, customEzmaxpartnerListElement.sEzmaxpartnerShortdescriptionX) &&
         Objects.equals(this.sEzmaxpartnerNameX, customEzmaxpartnerListElement.sEzmaxpartnerNameX) &&
         Objects.equals(this.sEzmaxpartnerPhoneE164X, customEzmaxpartnerListElement.sEzmaxpartnerPhoneE164X) &&
-        Objects.equals(this.sEzmaxpartnerUrlX, customEzmaxpartnerListElement.sEzmaxpartnerUrlX);
+        Objects.equals(this.sEzmaxpartnerUrlX, customEzmaxpartnerListElement.sEzmaxpartnerUrlX) &&
+        Objects.equals(this.objEzmaxpartnerLogourl, customEzmaxpartnerListElement.objEzmaxpartnerLogourl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzmaxpartnerID, sEzmaxpartnerAddressX, sEzmaxpartnerEmailaddressX, sEzmaxpartnerShortdescriptionX, sEzmaxpartnerNameX, sEzmaxpartnerPhoneE164X, sEzmaxpartnerUrlX);
+    return Objects.hash(pkiEzmaxpartnerID, sEzmaxpartnerAddressX, sEzmaxpartnerEmailaddressX, sEzmaxpartnerShortdescriptionX, sEzmaxpartnerNameX, sEzmaxpartnerPhoneE164X, sEzmaxpartnerUrlX, objEzmaxpartnerLogourl);
   }
 
   @Override
@@ -257,6 +283,7 @@ public class CustomEzmaxpartnerListElement {
     sb.append("    sEzmaxpartnerNameX: ").append(toIndentedString(sEzmaxpartnerNameX)).append("\n");
     sb.append("    sEzmaxpartnerPhoneE164X: ").append(toIndentedString(sEzmaxpartnerPhoneE164X)).append("\n");
     sb.append("    sEzmaxpartnerUrlX: ").append(toIndentedString(sEzmaxpartnerUrlX)).append("\n");
+    sb.append("    objEzmaxpartnerLogourl: ").append(toIndentedString(objEzmaxpartnerLogourl)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -275,10 +302,10 @@ public class CustomEzmaxpartnerListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiEzmaxpartnerID", "sEzmaxpartnerAddressX", "sEzmaxpartnerEmailaddressX", "sEzmaxpartnerShortdescriptionX", "sEzmaxpartnerNameX", "sEzmaxpartnerPhoneE164X", "sEzmaxpartnerUrlX"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiEzmaxpartnerID", "sEzmaxpartnerAddressX", "sEzmaxpartnerEmailaddressX", "sEzmaxpartnerShortdescriptionX", "sEzmaxpartnerNameX", "sEzmaxpartnerPhoneE164X", "sEzmaxpartnerUrlX", "objEzmaxpartnerLogourl"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzmaxpartnerID", "sEzmaxpartnerAddressX", "sEzmaxpartnerEmailaddressX", "sEzmaxpartnerShortdescriptionX", "sEzmaxpartnerNameX", "sEzmaxpartnerPhoneE164X", "sEzmaxpartnerUrlX"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzmaxpartnerID", "sEzmaxpartnerAddressX", "sEzmaxpartnerEmailaddressX", "sEzmaxpartnerShortdescriptionX", "sEzmaxpartnerNameX", "sEzmaxpartnerPhoneE164X", "sEzmaxpartnerUrlX", "objEzmaxpartnerLogourl"));
   }
 
   /**
@@ -327,6 +354,8 @@ public class CustomEzmaxpartnerListElement {
       if (!jsonObj.get("sEzmaxpartnerUrlX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sEzmaxpartnerUrlX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sEzmaxpartnerUrlX").toString()));
       }
+      // validate the required field `objEzmaxpartnerLogourl`
+      MultilingualEzmaxpartnerLogourl.validateJsonElement(jsonObj.get("objEzmaxpartnerLogourl"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

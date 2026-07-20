@@ -17,7 +17,10 @@ import java.util.Objects;
 import com.ezmax.api.model.ScimAuthenticationScheme;
 import com.ezmax.api.model.ScimServiceProviderConfigBulk;
 import com.ezmax.api.model.ScimServiceProviderConfigChangePassword;
+import com.ezmax.api.model.ScimServiceProviderConfigEtag;
 import com.ezmax.api.model.ScimServiceProviderConfigFilter;
+import com.ezmax.api.model.ScimServiceProviderConfigPatch;
+import com.ezmax.api.model.ScimServiceProviderConfigSort;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -54,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * ScimServiceProviderConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-10T18:25:54.597833926Z[Etc/UTC]", comments = "Generator version: 7.23.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T18:26:49.212059189Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class ScimServiceProviderConfig {
   public static final String SERIALIZED_NAME_AUTHENTICATION_SCHEMES = "authenticationSchemes";
   @SerializedName(SERIALIZED_NAME_AUTHENTICATION_SCHEMES)
@@ -79,7 +82,7 @@ public class ScimServiceProviderConfig {
   public static final String SERIALIZED_NAME_ETAG = "etag";
   @SerializedName(SERIALIZED_NAME_ETAG)
   @javax.annotation.Nonnull
-  private ScimServiceProviderConfigChangePassword etag;
+  private ScimServiceProviderConfigEtag etag;
 
   public static final String SERIALIZED_NAME_FILTER = "filter";
   @SerializedName(SERIALIZED_NAME_FILTER)
@@ -89,12 +92,12 @@ public class ScimServiceProviderConfig {
   public static final String SERIALIZED_NAME_PATCH = "patch";
   @SerializedName(SERIALIZED_NAME_PATCH)
   @javax.annotation.Nonnull
-  private ScimServiceProviderConfigChangePassword patch;
+  private ScimServiceProviderConfigPatch patch;
 
   public static final String SERIALIZED_NAME_SORT = "sort";
   @SerializedName(SERIALIZED_NAME_SORT)
   @javax.annotation.Nonnull
-  private ScimServiceProviderConfigChangePassword sort;
+  private ScimServiceProviderConfigSort sort;
 
   public ScimServiceProviderConfig() {
   }
@@ -183,7 +186,7 @@ public class ScimServiceProviderConfig {
   }
 
 
-  public ScimServiceProviderConfig etag(@javax.annotation.Nonnull ScimServiceProviderConfigChangePassword etag) {
+  public ScimServiceProviderConfig etag(@javax.annotation.Nonnull ScimServiceProviderConfigEtag etag) {
     this.etag = etag;
     return this;
   }
@@ -193,11 +196,11 @@ public class ScimServiceProviderConfig {
    * @return etag
    */
   @javax.annotation.Nonnull
-  public ScimServiceProviderConfigChangePassword getEtag() {
+  public ScimServiceProviderConfigEtag getEtag() {
     return etag;
   }
 
-  public void setEtag(@javax.annotation.Nonnull ScimServiceProviderConfigChangePassword etag) {
+  public void setEtag(@javax.annotation.Nonnull ScimServiceProviderConfigEtag etag) {
     this.etag = etag;
   }
 
@@ -221,7 +224,7 @@ public class ScimServiceProviderConfig {
   }
 
 
-  public ScimServiceProviderConfig patch(@javax.annotation.Nonnull ScimServiceProviderConfigChangePassword patch) {
+  public ScimServiceProviderConfig patch(@javax.annotation.Nonnull ScimServiceProviderConfigPatch patch) {
     this.patch = patch;
     return this;
   }
@@ -231,16 +234,16 @@ public class ScimServiceProviderConfig {
    * @return patch
    */
   @javax.annotation.Nonnull
-  public ScimServiceProviderConfigChangePassword getPatch() {
+  public ScimServiceProviderConfigPatch getPatch() {
     return patch;
   }
 
-  public void setPatch(@javax.annotation.Nonnull ScimServiceProviderConfigChangePassword patch) {
+  public void setPatch(@javax.annotation.Nonnull ScimServiceProviderConfigPatch patch) {
     this.patch = patch;
   }
 
 
-  public ScimServiceProviderConfig sort(@javax.annotation.Nonnull ScimServiceProviderConfigChangePassword sort) {
+  public ScimServiceProviderConfig sort(@javax.annotation.Nonnull ScimServiceProviderConfigSort sort) {
     this.sort = sort;
     return this;
   }
@@ -250,11 +253,11 @@ public class ScimServiceProviderConfig {
    * @return sort
    */
   @javax.annotation.Nonnull
-  public ScimServiceProviderConfigChangePassword getSort() {
+  public ScimServiceProviderConfigSort getSort() {
     return sort;
   }
 
-  public void setSort(@javax.annotation.Nonnull ScimServiceProviderConfigChangePassword sort) {
+  public void setSort(@javax.annotation.Nonnull ScimServiceProviderConfigSort sort) {
     this.sort = sort;
   }
 
@@ -366,13 +369,13 @@ public class ScimServiceProviderConfig {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `documentationUri` to be a primitive type in the JSON string but got `%s`", jsonObj.get("documentationUri").toString()));
       }
       // validate the required field `etag`
-      ScimServiceProviderConfigChangePassword.validateJsonElement(jsonObj.get("etag"));
+      ScimServiceProviderConfigEtag.validateJsonElement(jsonObj.get("etag"));
       // validate the required field `filter`
       ScimServiceProviderConfigFilter.validateJsonElement(jsonObj.get("filter"));
       // validate the required field `patch`
-      ScimServiceProviderConfigChangePassword.validateJsonElement(jsonObj.get("patch"));
+      ScimServiceProviderConfigPatch.validateJsonElement(jsonObj.get("patch"));
       // validate the required field `sort`
-      ScimServiceProviderConfigChangePassword.validateJsonElement(jsonObj.get("sort"));
+      ScimServiceProviderConfigSort.validateJsonElement(jsonObj.get("sort"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

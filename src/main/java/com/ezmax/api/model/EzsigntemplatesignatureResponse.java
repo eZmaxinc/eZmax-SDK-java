@@ -59,7 +59,7 @@ import eZmaxAPI.JSON;
 /**
  * A Ezsigntemplatesignature Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-10T18:25:54.597833926Z[Etc/UTC]", comments = "Generator version: 7.23.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T18:26:49.212059189Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class EzsigntemplatesignatureResponse {
   public static final String SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D = "pkiEzsigntemplatesignatureID";
   @SerializedName(SERIALIZED_NAME_PKI_EZSIGNTEMPLATESIGNATURE_I_D)
@@ -95,6 +95,11 @@ public class EzsigntemplatesignatureResponse {
   @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_REASON)
   @javax.annotation.Nullable
   private Boolean bEzsigntemplatesignatureReason;
+
+  public static final String SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_CREDITCARDCUSTOMAMOUNT = "bEzsigntemplatesignatureCreditcardcustomamount";
+  @SerializedName(SERIALIZED_NAME_B_EZSIGNTEMPLATESIGNATURE_CREDITCARDCUSTOMAMOUNT)
+  @javax.annotation.Nullable
+  private Boolean bEzsigntemplatesignatureCreditcardcustomamount;
 
   public static final String SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_POSITIONING = "eEzsigntemplatesignaturePositioning";
   @SerializedName(SERIALIZED_NAME_E_EZSIGNTEMPLATESIGNATURE_POSITIONING)
@@ -385,6 +390,25 @@ public class EzsigntemplatesignatureResponse {
 
   public void setbEzsigntemplatesignatureReason(@javax.annotation.Nullable Boolean bEzsigntemplatesignatureReason) {
     this.bEzsigntemplatesignatureReason = bEzsigntemplatesignatureReason;
+  }
+
+
+  public EzsigntemplatesignatureResponse bEzsigntemplatesignatureCreditcardcustomamount(@javax.annotation.Nullable Boolean bEzsigntemplatesignatureCreditcardcustomamount) {
+    this.bEzsigntemplatesignatureCreditcardcustomamount = bEzsigntemplatesignatureCreditcardcustomamount;
+    return this;
+  }
+
+  /**
+   * Whether we can enter a custom amount while signing an Ezsigntemplatesignature &#39;Creditcard&#39; or not
+   * @return bEzsigntemplatesignatureCreditcardcustomamount
+   */
+  @javax.annotation.Nullable
+  public Boolean getbEzsigntemplatesignatureCreditcardcustomamount() {
+    return bEzsigntemplatesignatureCreditcardcustomamount;
+  }
+
+  public void setbEzsigntemplatesignatureCreditcardcustomamount(@javax.annotation.Nullable Boolean bEzsigntemplatesignatureCreditcardcustomamount) {
+    this.bEzsigntemplatesignatureCreditcardcustomamount = bEzsigntemplatesignatureCreditcardcustomamount;
   }
 
 
@@ -983,6 +1007,7 @@ public class EzsigntemplatesignatureResponse {
         Objects.equals(this.fkiPaymentgatewayID, ezsigntemplatesignatureResponse.fkiPaymentgatewayID) &&
         Objects.equals(this.bEzsigntemplatesignatureHandwritten, ezsigntemplatesignatureResponse.bEzsigntemplatesignatureHandwritten) &&
         Objects.equals(this.bEzsigntemplatesignatureReason, ezsigntemplatesignatureResponse.bEzsigntemplatesignatureReason) &&
+        Objects.equals(this.bEzsigntemplatesignatureCreditcardcustomamount, ezsigntemplatesignatureResponse.bEzsigntemplatesignatureCreditcardcustomamount) &&
         Objects.equals(this.eEzsigntemplatesignaturePositioning, ezsigntemplatesignatureResponse.eEzsigntemplatesignaturePositioning) &&
         Objects.equals(this.iEzsigntemplatedocumentpagePagenumber, ezsigntemplatesignatureResponse.iEzsigntemplatedocumentpagePagenumber) &&
         Objects.equals(this.iEzsigntemplatesignatureX, ezsigntemplatesignatureResponse.iEzsigntemplatesignatureX) &&
@@ -1017,7 +1042,7 @@ public class EzsigntemplatesignatureResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation, fkiPaymentgatewayID, bEzsigntemplatesignatureHandwritten, bEzsigntemplatesignatureReason, eEzsigntemplatesignaturePositioning, iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX, iEzsigntemplatesignatureY, iEzsigntemplatesignatureWidth, iEzsigntemplatesignatureHeight, iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType, eEzsigntemplatesignatureSignaturepad, eEzsigntemplatesignatureSignaturepadrequired, eEzsigntemplatesignatureConsultationtrigger, tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont, iEzsigntemplatesignatureValidationstep, sEzsigntemplatesignatureAttachmentdescription, eEzsigntemplatesignatureAttachmentnamesource, bEzsigntemplatesignatureRequired, iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureDefaultvalue, sEzsigntemplatesignatureRegexp, eEzsigntemplatesignatureTextvalidation, sEzsigntemplatesignatureTextvalidationcustommessage, eEzsigntemplatesignatureDependencyrequirement, sEzsigntemplatesignaturePositioningpattern, iEzsigntemplatesignaturePositioningoffsetx, iEzsigntemplatesignaturePositioningoffsety, eEzsigntemplatesignaturePositioningoccurence, sEzsigntemplatesignatureCreditcardamountdescription, dEzsigntemplatesignatureCreditcardamount);
+    return Objects.hash(pkiEzsigntemplatesignatureID, fkiEzsigntemplatedocumentID, fkiEzsigntemplatesignerID, fkiEzsigntemplatesignerIDValidation, fkiPaymentgatewayID, bEzsigntemplatesignatureHandwritten, bEzsigntemplatesignatureReason, bEzsigntemplatesignatureCreditcardcustomamount, eEzsigntemplatesignaturePositioning, iEzsigntemplatedocumentpagePagenumber, iEzsigntemplatesignatureX, iEzsigntemplatesignatureY, iEzsigntemplatesignatureWidth, iEzsigntemplatesignatureHeight, iEzsigntemplatesignatureStep, eEzsigntemplatesignatureType, eEzsigntemplatesignatureSignaturepad, eEzsigntemplatesignatureSignaturepadrequired, eEzsigntemplatesignatureConsultationtrigger, tEzsigntemplatesignatureTooltip, eEzsigntemplatesignatureTooltipposition, eEzsigntemplatesignatureFont, iEzsigntemplatesignatureValidationstep, sEzsigntemplatesignatureAttachmentdescription, eEzsigntemplatesignatureAttachmentnamesource, bEzsigntemplatesignatureRequired, iEzsigntemplatesignatureMaxlength, sEzsigntemplatesignatureDefaultvalue, sEzsigntemplatesignatureRegexp, eEzsigntemplatesignatureTextvalidation, sEzsigntemplatesignatureTextvalidationcustommessage, eEzsigntemplatesignatureDependencyrequirement, sEzsigntemplatesignaturePositioningpattern, iEzsigntemplatesignaturePositioningoffsetx, iEzsigntemplatesignaturePositioningoffsety, eEzsigntemplatesignaturePositioningoccurence, sEzsigntemplatesignatureCreditcardamountdescription, dEzsigntemplatesignatureCreditcardamount);
   }
 
   @Override
@@ -1031,6 +1056,7 @@ public class EzsigntemplatesignatureResponse {
     sb.append("    fkiPaymentgatewayID: ").append(toIndentedString(fkiPaymentgatewayID)).append("\n");
     sb.append("    bEzsigntemplatesignatureHandwritten: ").append(toIndentedString(bEzsigntemplatesignatureHandwritten)).append("\n");
     sb.append("    bEzsigntemplatesignatureReason: ").append(toIndentedString(bEzsigntemplatesignatureReason)).append("\n");
+    sb.append("    bEzsigntemplatesignatureCreditcardcustomamount: ").append(toIndentedString(bEzsigntemplatesignatureCreditcardcustomamount)).append("\n");
     sb.append("    eEzsigntemplatesignaturePositioning: ").append(toIndentedString(eEzsigntemplatesignaturePositioning)).append("\n");
     sb.append("    iEzsigntemplatedocumentpagePagenumber: ").append(toIndentedString(iEzsigntemplatedocumentpagePagenumber)).append("\n");
     sb.append("    iEzsigntemplatesignatureX: ").append(toIndentedString(iEzsigntemplatesignatureX)).append("\n");
@@ -1079,7 +1105,7 @@ public class EzsigntemplatesignatureResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplatesignatureID", "fkiEzsigntemplatedocumentID", "fkiEzsigntemplatesignerID", "fkiEzsigntemplatesignerIDValidation", "fkiPaymentgatewayID", "bEzsigntemplatesignatureHandwritten", "bEzsigntemplatesignatureReason", "eEzsigntemplatesignaturePositioning", "iEzsigntemplatedocumentpagePagenumber", "iEzsigntemplatesignatureX", "iEzsigntemplatesignatureY", "iEzsigntemplatesignatureWidth", "iEzsigntemplatesignatureHeight", "iEzsigntemplatesignatureStep", "eEzsigntemplatesignatureType", "eEzsigntemplatesignatureSignaturepad", "eEzsigntemplatesignatureSignaturepadrequired", "eEzsigntemplatesignatureConsultationtrigger", "tEzsigntemplatesignatureTooltip", "eEzsigntemplatesignatureTooltipposition", "eEzsigntemplatesignatureFont", "iEzsigntemplatesignatureValidationstep", "sEzsigntemplatesignatureAttachmentdescription", "eEzsigntemplatesignatureAttachmentnamesource", "bEzsigntemplatesignatureRequired", "iEzsigntemplatesignatureMaxlength", "sEzsigntemplatesignatureDefaultvalue", "sEzsigntemplatesignatureRegexp", "eEzsigntemplatesignatureTextvalidation", "sEzsigntemplatesignatureTextvalidationcustommessage", "eEzsigntemplatesignatureDependencyrequirement", "sEzsigntemplatesignaturePositioningpattern", "iEzsigntemplatesignaturePositioningoffsetx", "iEzsigntemplatesignaturePositioningoffsety", "eEzsigntemplatesignaturePositioningoccurence", "sEzsigntemplatesignatureCreditcardamountdescription", "dEzsigntemplatesignatureCreditcardamount"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplatesignatureID", "fkiEzsigntemplatedocumentID", "fkiEzsigntemplatesignerID", "fkiEzsigntemplatesignerIDValidation", "fkiPaymentgatewayID", "bEzsigntemplatesignatureHandwritten", "bEzsigntemplatesignatureReason", "bEzsigntemplatesignatureCreditcardcustomamount", "eEzsigntemplatesignaturePositioning", "iEzsigntemplatedocumentpagePagenumber", "iEzsigntemplatesignatureX", "iEzsigntemplatesignatureY", "iEzsigntemplatesignatureWidth", "iEzsigntemplatesignatureHeight", "iEzsigntemplatesignatureStep", "eEzsigntemplatesignatureType", "eEzsigntemplatesignatureSignaturepad", "eEzsigntemplatesignatureSignaturepadrequired", "eEzsigntemplatesignatureConsultationtrigger", "tEzsigntemplatesignatureTooltip", "eEzsigntemplatesignatureTooltipposition", "eEzsigntemplatesignatureFont", "iEzsigntemplatesignatureValidationstep", "sEzsigntemplatesignatureAttachmentdescription", "eEzsigntemplatesignatureAttachmentnamesource", "bEzsigntemplatesignatureRequired", "iEzsigntemplatesignatureMaxlength", "sEzsigntemplatesignatureDefaultvalue", "sEzsigntemplatesignatureRegexp", "eEzsigntemplatesignatureTextvalidation", "sEzsigntemplatesignatureTextvalidationcustommessage", "eEzsigntemplatesignatureDependencyrequirement", "sEzsigntemplatesignaturePositioningpattern", "iEzsigntemplatesignaturePositioningoffsetx", "iEzsigntemplatesignaturePositioningoffsety", "eEzsigntemplatesignaturePositioningoccurence", "sEzsigntemplatesignatureCreditcardamountdescription", "dEzsigntemplatesignatureCreditcardamount"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiEzsigntemplatesignatureID", "fkiEzsigntemplatedocumentID", "fkiEzsigntemplatesignerID", "iEzsigntemplatedocumentpagePagenumber", "iEzsigntemplatesignatureStep", "eEzsigntemplatesignatureType"));

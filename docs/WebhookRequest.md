@@ -15,6 +15,7 @@ A Webhook Object
 |**eWebhookModule** | **FieldEWebhookModule** |  |  |
 |**eWebhookEzsignevent** | **FieldEWebhookEzsignevent** |  |  [optional] |
 |**eWebhookManagementevent** | **FieldEWebhookManagementevent** |  |  [optional] |
+|**eWebhookRealestateevent** | **FieldEWebhookRealestateevent** |  |  [optional] |
 |**sWebhookUrl** | **String** | The URL of the Webhook callback |  |
 |**sWebhookEmailfailed** | **String** | The email that will receive the Webhook in case all attempts fail |  |
 |**bWebhookIsactive** | **Boolean** | Whether the Webhook is active or not |  |

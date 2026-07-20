@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.ezmax.api.model.FieldEWebhookEzsignevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
 import com.ezmax.api.model.FieldEWebhookModule;
+import com.ezmax.api.model.FieldEWebhookRealestateevent;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-10T18:25:54.597833926Z[Etc/UTC]", comments = "Generator version: 7.23.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T18:26:49.212059189Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class WebhookListElement {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -92,6 +93,11 @@ public class WebhookListElement {
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT)
   @javax.annotation.Nullable
   private FieldEWebhookManagementevent eWebhookManagementevent;
+
+  public static final String SERIALIZED_NAME_E_WEBHOOK_REALESTATEEVENT = "eWebhookRealestateevent";
+  @SerializedName(SERIALIZED_NAME_E_WEBHOOK_REALESTATEEVENT)
+  @javax.annotation.Nullable
+  private FieldEWebhookRealestateevent eWebhookRealestateevent;
 
   public static final String SERIALIZED_NAME_B_WEBHOOK_ISACTIVE = "bWebhookIsactive";
   @SerializedName(SERIALIZED_NAME_B_WEBHOOK_ISACTIVE)
@@ -258,6 +264,25 @@ public class WebhookListElement {
   }
 
 
+  public WebhookListElement eWebhookRealestateevent(@javax.annotation.Nullable FieldEWebhookRealestateevent eWebhookRealestateevent) {
+    this.eWebhookRealestateevent = eWebhookRealestateevent;
+    return this;
+  }
+
+  /**
+   * Get eWebhookRealestateevent
+   * @return eWebhookRealestateevent
+   */
+  @javax.annotation.Nullable
+  public FieldEWebhookRealestateevent geteWebhookRealestateevent() {
+    return eWebhookRealestateevent;
+  }
+
+  public void seteWebhookRealestateevent(@javax.annotation.Nullable FieldEWebhookRealestateevent eWebhookRealestateevent) {
+    this.eWebhookRealestateevent = eWebhookRealestateevent;
+  }
+
+
   public WebhookListElement bWebhookIsactive(@javax.annotation.Nonnull Boolean bWebhookIsactive) {
     this.bWebhookIsactive = bWebhookIsactive;
     return this;
@@ -314,13 +339,14 @@ public class WebhookListElement {
         Objects.equals(this.eWebhookModule, webhookListElement.eWebhookModule) &&
         Objects.equals(this.eWebhookEzsignevent, webhookListElement.eWebhookEzsignevent) &&
         Objects.equals(this.eWebhookManagementevent, webhookListElement.eWebhookManagementevent) &&
+        Objects.equals(this.eWebhookRealestateevent, webhookListElement.eWebhookRealestateevent) &&
         Objects.equals(this.bWebhookIsactive, webhookListElement.bWebhookIsactive) &&
         Objects.equals(this.bWebhookIssigned, webhookListElement.bWebhookIssigned);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiWebhookID, sWebhookDescription, sWebhookUrl, sWebhookEvent, sWebhookEmailfailed, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, bWebhookIsactive, bWebhookIssigned);
+    return Objects.hash(pkiWebhookID, sWebhookDescription, sWebhookUrl, sWebhookEvent, sWebhookEmailfailed, eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, eWebhookRealestateevent, bWebhookIsactive, bWebhookIssigned);
   }
 
   @Override
@@ -335,6 +361,7 @@ public class WebhookListElement {
     sb.append("    eWebhookModule: ").append(toIndentedString(eWebhookModule)).append("\n");
     sb.append("    eWebhookEzsignevent: ").append(toIndentedString(eWebhookEzsignevent)).append("\n");
     sb.append("    eWebhookManagementevent: ").append(toIndentedString(eWebhookManagementevent)).append("\n");
+    sb.append("    eWebhookRealestateevent: ").append(toIndentedString(eWebhookRealestateevent)).append("\n");
     sb.append("    bWebhookIsactive: ").append(toIndentedString(bWebhookIsactive)).append("\n");
     sb.append("    bWebhookIssigned: ").append(toIndentedString(bWebhookIssigned)).append("\n");
     sb.append("}");
@@ -355,7 +382,7 @@ public class WebhookListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiWebhookID", "sWebhookDescription", "sWebhookUrl", "sWebhookEvent", "sWebhookEmailfailed", "eWebhookModule", "eWebhookEzsignevent", "eWebhookManagementevent", "bWebhookIsactive", "bWebhookIssigned"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiWebhookID", "sWebhookDescription", "sWebhookUrl", "sWebhookEvent", "sWebhookEmailfailed", "eWebhookModule", "eWebhookEzsignevent", "eWebhookManagementevent", "eWebhookRealestateevent", "bWebhookIsactive", "bWebhookIssigned"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiWebhookID", "sWebhookDescription", "sWebhookUrl", "sWebhookEvent", "sWebhookEmailfailed", "eWebhookModule", "bWebhookIsactive", "bWebhookIssigned"));
@@ -410,6 +437,10 @@ public class WebhookListElement {
       // validate the optional field `eWebhookManagementevent`
       if (jsonObj.get("eWebhookManagementevent") != null && !jsonObj.get("eWebhookManagementevent").isJsonNull()) {
         FieldEWebhookManagementevent.validateJsonElement(jsonObj.get("eWebhookManagementevent"));
+      }
+      // validate the optional field `eWebhookRealestateevent`
+      if (jsonObj.get("eWebhookRealestateevent") != null && !jsonObj.get("eWebhookRealestateevent").isJsonNull()) {
+        FieldEWebhookRealestateevent.validateJsonElement(jsonObj.get("eWebhookRealestateevent"));
       }
   }
 

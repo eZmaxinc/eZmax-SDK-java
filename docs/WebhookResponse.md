@@ -17,6 +17,7 @@ A webhook object
 |**eWebhookEzmaxpartnerevent** | **FieldEWebhookEzmaxpartnerevent** |  |  [optional] |
 |**eWebhookEzsignevent** | **FieldEWebhookEzsignevent** |  |  [optional] |
 |**eWebhookManagementevent** | **FieldEWebhookManagementevent** |  |  [optional] |
+|**eWebhookRealestateevent** | **FieldEWebhookRealestateevent** |  |  [optional] |
 |**sWebhookUrl** | **String** | The URL of the Webhook callback |  |
 |**sWebhookEmailfailed** | **String** | The email that will receive the Webhook in case all attempts fail |  |
 |**sWebhookApikey** | **String** | The Apikey for the Webhook.  This will be hidden if we are not creating or regenerating the Apikey. |  [optional] |

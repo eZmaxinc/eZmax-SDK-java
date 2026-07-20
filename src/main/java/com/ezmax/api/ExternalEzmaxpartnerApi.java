@@ -36,16 +36,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DocumentationEzmaxpartnerApi {
+public class ExternalEzmaxpartnerApi {
     private ApiClient localVarApiClient;
     private int localHostIndex;
     private String localCustomBaseUrl;
 
-    public DocumentationEzmaxpartnerApi() {
+    public ExternalEzmaxpartnerApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public DocumentationEzmaxpartnerApi(ApiClient apiClient) {
+    public ExternalEzmaxpartnerApi(ApiClient apiClient) {
         this.localVarApiClient = apiClient;
     }
 
@@ -74,7 +74,7 @@ public class DocumentationEzmaxpartnerApi {
     }
 
     /**
-     * Build call for documentationSubscribeV1
+     * Build call for externalpartnerSubscribeV1
      * @param documentationSubscribeV1Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -86,7 +86,7 @@ public class DocumentationEzmaxpartnerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call documentationSubscribeV1Call(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call externalpartnerSubscribeV1Call(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -103,7 +103,7 @@ public class DocumentationEzmaxpartnerApi {
         Object localVarPostBody = documentationSubscribeV1Request;
 
         // create path and map variables
-        String localVarPath = "/1/documentation/subscribe";
+        String localVarPath = "/1/external/ezmaxpartner/subscribe";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -132,13 +132,13 @@ public class DocumentationEzmaxpartnerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call documentationSubscribeV1ValidateBeforeCall(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call externalpartnerSubscribeV1ValidateBeforeCall(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'documentationSubscribeV1Request' is set
         if (documentationSubscribeV1Request == null) {
-            throw new ApiException("Missing the required parameter 'documentationSubscribeV1Request' when calling documentationSubscribeV1(Async)");
+            throw new ApiException("Missing the required parameter 'documentationSubscribeV1Request' when calling externalpartnerSubscribeV1(Async)");
         }
 
-        return documentationSubscribeV1Call(documentationSubscribeV1Request, _callback);
+        return externalpartnerSubscribeV1Call(documentationSubscribeV1Request, _callback);
 
     }
 
@@ -155,8 +155,8 @@ public class DocumentationEzmaxpartnerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public DocumentationSubscribeV1Response documentationSubscribeV1(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request) throws ApiException {
-        ApiResponse<DocumentationSubscribeV1Response> localVarResp = documentationSubscribeV1WithHttpInfo(documentationSubscribeV1Request);
+    public DocumentationSubscribeV1Response externalpartnerSubscribeV1(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request) throws ApiException {
+        ApiResponse<DocumentationSubscribeV1Response> localVarResp = externalpartnerSubscribeV1WithHttpInfo(documentationSubscribeV1Request);
         return localVarResp.getData();
     }
 
@@ -173,8 +173,8 @@ public class DocumentationEzmaxpartnerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DocumentationSubscribeV1Response> documentationSubscribeV1WithHttpInfo(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request) throws ApiException {
-        okhttp3.Call localVarCall = documentationSubscribeV1ValidateBeforeCall(documentationSubscribeV1Request, null);
+    public ApiResponse<DocumentationSubscribeV1Response> externalpartnerSubscribeV1WithHttpInfo(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request) throws ApiException {
+        okhttp3.Call localVarCall = externalpartnerSubscribeV1ValidateBeforeCall(documentationSubscribeV1Request, null);
         Type localVarReturnType = new TypeToken<DocumentationSubscribeV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -193,9 +193,9 @@ public class DocumentationEzmaxpartnerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call documentationSubscribeV1Async(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request, final ApiCallback<DocumentationSubscribeV1Response> _callback) throws ApiException {
+    public okhttp3.Call externalpartnerSubscribeV1Async(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request, final ApiCallback<DocumentationSubscribeV1Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = documentationSubscribeV1ValidateBeforeCall(documentationSubscribeV1Request, _callback);
+        okhttp3.Call localVarCall = externalpartnerSubscribeV1ValidateBeforeCall(documentationSubscribeV1Request, _callback);
         Type localVarReturnType = new TypeToken<DocumentationSubscribeV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

@@ -11,5 +11,7 @@
 
 * `MANAGEMENT` (value: `"Management"`)
 
+* `REALESTATE` (value: `"Realestate"`)
+
 
 

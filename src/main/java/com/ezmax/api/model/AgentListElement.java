@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.FieldEAgentSchedule;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Agent List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-10T18:25:54.597833926Z[Etc/UTC]", comments = "Generator version: 7.23.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T18:26:49.212059189Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class AgentListElement {
   public static final String SERIALIZED_NAME_PKI_AGENT_I_D = "pkiAgentID";
   @SerializedName(SERIALIZED_NAME_PKI_AGENT_I_D)
@@ -159,6 +160,11 @@ public class AgentListElement {
   @SerializedName(SERIALIZED_NAME_DT_AGENT_SICKLEAVEEND)
   @javax.annotation.Nullable
   private String dtAgentSickleaveend;
+
+  public static final String SERIALIZED_NAME_E_AGENT_SCHEDULE = "eAgentSchedule";
+  @SerializedName(SERIALIZED_NAME_E_AGENT_SCHEDULE)
+  @javax.annotation.Nonnull
+  private FieldEAgentSchedule eAgentSchedule;
 
   public static final String SERIALIZED_NAME_B_AGENT_TRANQUILLIT = "bAgentTranquillit";
   @SerializedName(SERIALIZED_NAME_B_AGENT_TRANQUILLIT)
@@ -699,6 +705,25 @@ public class AgentListElement {
   }
 
 
+  public AgentListElement eAgentSchedule(@javax.annotation.Nonnull FieldEAgentSchedule eAgentSchedule) {
+    this.eAgentSchedule = eAgentSchedule;
+    return this;
+  }
+
+  /**
+   * Get eAgentSchedule
+   * @return eAgentSchedule
+   */
+  @javax.annotation.Nonnull
+  public FieldEAgentSchedule geteAgentSchedule() {
+    return eAgentSchedule;
+  }
+
+  public void seteAgentSchedule(@javax.annotation.Nonnull FieldEAgentSchedule eAgentSchedule) {
+    this.eAgentSchedule = eAgentSchedule;
+  }
+
+
   public AgentListElement bAgentTranquillit(@javax.annotation.Nonnull Boolean bAgentTranquillit) {
     this.bAgentTranquillit = bAgentTranquillit;
     return this;
@@ -1132,6 +1157,7 @@ public class AgentListElement {
         Objects.equals(this.dtAgentSenioritydate, agentListElement.dtAgentSenioritydate) &&
         Objects.equals(this.dtAgentSickleavestart, agentListElement.dtAgentSickleavestart) &&
         Objects.equals(this.dtAgentSickleaveend, agentListElement.dtAgentSickleaveend) &&
+        Objects.equals(this.eAgentSchedule, agentListElement.eAgentSchedule) &&
         Objects.equals(this.bAgentTranquillit, agentListElement.bAgentTranquillit) &&
         Objects.equals(this.bAgentResidentiallicense, agentListElement.bAgentResidentiallicense) &&
         Objects.equals(this.bAgentCommerciallicense, agentListElement.bAgentCommerciallicense) &&
@@ -1157,7 +1183,7 @@ public class AgentListElement {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiAgentID, fkiAgenttypeID, sAgenttypeNameX, fkiAgentincorporationID, sAgentincorporationName, fkiDepartmentID, sDepartmentNameX, fkiLanguageID, sLanguageNameX, sRealestateboardnumberNumber, sAgentCode, iAgentPhotocopiercode, iAgentLongdistancecode, iAgentBannernumber, sAgentRealestateassociationlicense, dtAgentHiredate, dtAgentLeavedate, dtAgentContractdate, dtAgentTransferdate, dtAgentSenioritydate, dtAgentSickleavestart, dtAgentSickleaveend, bAgentTranquillit, bAgentResidentiallicense, bAgentCommerciallicense, bAgentMortgagelicense, bAgentPaidbyofficetranquillit, dtAgentFintraccertification, bAgentIsactive, sContactFirstname, sContactLastname, dtContactBirthdate, sEmailAddress, sPhoneE164, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, sAddressZip, fkiProvinceID, sProvinceNameX, fkiCountryID, sCountryNameX);
+    return Objects.hash(pkiAgentID, fkiAgenttypeID, sAgenttypeNameX, fkiAgentincorporationID, sAgentincorporationName, fkiDepartmentID, sDepartmentNameX, fkiLanguageID, sLanguageNameX, sRealestateboardnumberNumber, sAgentCode, iAgentPhotocopiercode, iAgentLongdistancecode, iAgentBannernumber, sAgentRealestateassociationlicense, dtAgentHiredate, dtAgentLeavedate, dtAgentContractdate, dtAgentTransferdate, dtAgentSenioritydate, dtAgentSickleavestart, dtAgentSickleaveend, eAgentSchedule, bAgentTranquillit, bAgentResidentiallicense, bAgentCommerciallicense, bAgentMortgagelicense, bAgentPaidbyofficetranquillit, dtAgentFintraccertification, bAgentIsactive, sContactFirstname, sContactLastname, dtContactBirthdate, sEmailAddress, sPhoneE164, sAddressCivic, sAddressStreet, sAddressSuite, sAddressCity, sAddressZip, fkiProvinceID, sProvinceNameX, fkiCountryID, sCountryNameX);
   }
 
   @Override
@@ -1186,6 +1212,7 @@ public class AgentListElement {
     sb.append("    dtAgentSenioritydate: ").append(toIndentedString(dtAgentSenioritydate)).append("\n");
     sb.append("    dtAgentSickleavestart: ").append(toIndentedString(dtAgentSickleavestart)).append("\n");
     sb.append("    dtAgentSickleaveend: ").append(toIndentedString(dtAgentSickleaveend)).append("\n");
+    sb.append("    eAgentSchedule: ").append(toIndentedString(eAgentSchedule)).append("\n");
     sb.append("    bAgentTranquillit: ").append(toIndentedString(bAgentTranquillit)).append("\n");
     sb.append("    bAgentResidentiallicense: ").append(toIndentedString(bAgentResidentiallicense)).append("\n");
     sb.append("    bAgentCommerciallicense: ").append(toIndentedString(bAgentCommerciallicense)).append("\n");
@@ -1225,10 +1252,10 @@ public class AgentListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiAgentID", "fkiAgenttypeID", "sAgenttypeNameX", "fkiAgentincorporationID", "sAgentincorporationName", "fkiDepartmentID", "sDepartmentNameX", "fkiLanguageID", "sLanguageNameX", "sRealestateboardnumberNumber", "sAgentCode", "iAgentPhotocopiercode", "iAgentLongdistancecode", "iAgentBannernumber", "sAgentRealestateassociationlicense", "dtAgentHiredate", "dtAgentLeavedate", "dtAgentContractdate", "dtAgentTransferdate", "dtAgentSenioritydate", "dtAgentSickleavestart", "dtAgentSickleaveend", "bAgentTranquillit", "bAgentResidentiallicense", "bAgentCommerciallicense", "bAgentMortgagelicense", "bAgentPaidbyofficetranquillit", "dtAgentFintraccertification", "bAgentIsactive", "sContactFirstname", "sContactLastname", "dtContactBirthdate", "sEmailAddress", "sPhoneE164", "sAddressCivic", "sAddressStreet", "sAddressSuite", "sAddressCity", "sAddressZip", "fkiProvinceID", "sProvinceNameX", "fkiCountryID", "sCountryNameX"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiAgentID", "fkiAgenttypeID", "sAgenttypeNameX", "fkiAgentincorporationID", "sAgentincorporationName", "fkiDepartmentID", "sDepartmentNameX", "fkiLanguageID", "sLanguageNameX", "sRealestateboardnumberNumber", "sAgentCode", "iAgentPhotocopiercode", "iAgentLongdistancecode", "iAgentBannernumber", "sAgentRealestateassociationlicense", "dtAgentHiredate", "dtAgentLeavedate", "dtAgentContractdate", "dtAgentTransferdate", "dtAgentSenioritydate", "dtAgentSickleavestart", "dtAgentSickleaveend", "eAgentSchedule", "bAgentTranquillit", "bAgentResidentiallicense", "bAgentCommerciallicense", "bAgentMortgagelicense", "bAgentPaidbyofficetranquillit", "dtAgentFintraccertification", "bAgentIsactive", "sContactFirstname", "sContactLastname", "dtContactBirthdate", "sEmailAddress", "sPhoneE164", "sAddressCivic", "sAddressStreet", "sAddressSuite", "sAddressCity", "sAddressZip", "fkiProvinceID", "sProvinceNameX", "fkiCountryID", "sCountryNameX"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiAgentID", "fkiAgenttypeID", "sAgenttypeNameX", "fkiDepartmentID", "sDepartmentNameX", "fkiLanguageID", "sLanguageNameX", "sAgentCode", "iAgentPhotocopiercode", "iAgentLongdistancecode", "iAgentBannernumber", "sAgentRealestateassociationlicense", "bAgentTranquillit", "bAgentResidentiallicense", "bAgentCommerciallicense", "bAgentMortgagelicense", "bAgentPaidbyofficetranquillit", "bAgentIsactive", "sContactFirstname", "sContactLastname"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiAgentID", "fkiAgenttypeID", "sAgenttypeNameX", "fkiDepartmentID", "sDepartmentNameX", "fkiLanguageID", "sLanguageNameX", "sAgentCode", "iAgentPhotocopiercode", "iAgentLongdistancecode", "iAgentBannernumber", "sAgentRealestateassociationlicense", "eAgentSchedule", "bAgentTranquillit", "bAgentResidentiallicense", "bAgentCommerciallicense", "bAgentMortgagelicense", "bAgentPaidbyofficetranquillit", "bAgentIsactive", "sContactFirstname", "sContactLastname"));
   }
 
   /**
@@ -1301,6 +1328,8 @@ public class AgentListElement {
       if ((jsonObj.get("dtAgentSickleaveend") != null && !jsonObj.get("dtAgentSickleaveend").isJsonNull()) && !jsonObj.get("dtAgentSickleaveend").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtAgentSickleaveend` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAgentSickleaveend").toString()));
       }
+      // validate the required field `eAgentSchedule`
+      FieldEAgentSchedule.validateJsonElement(jsonObj.get("eAgentSchedule"));
       if ((jsonObj.get("dtAgentFintraccertification") != null && !jsonObj.get("dtAgentFintraccertification").isJsonNull()) && !jsonObj.get("dtAgentFintraccertification").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtAgentFintraccertification` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAgentFintraccertification").toString()));
       }

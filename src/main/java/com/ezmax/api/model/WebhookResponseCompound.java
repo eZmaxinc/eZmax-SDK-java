@@ -19,6 +19,7 @@ import com.ezmax.api.model.FieldEWebhookEzmaxpartnerevent;
 import com.ezmax.api.model.FieldEWebhookEzsignevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
 import com.ezmax.api.model.FieldEWebhookModule;
+import com.ezmax.api.model.FieldEWebhookRealestateevent;
 import com.ezmax.api.model.WebhookheaderResponseCompound;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -56,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * A Webhook Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-10T18:25:54.597833926Z[Etc/UTC]", comments = "Generator version: 7.23.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T18:26:49.212059189Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class WebhookResponseCompound {
   public static final String SERIALIZED_NAME_PKI_WEBHOOK_I_D = "pkiWebhookID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOK_I_D)
@@ -102,6 +103,11 @@ public class WebhookResponseCompound {
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT)
   @javax.annotation.Nullable
   private FieldEWebhookManagementevent eWebhookManagementevent;
+
+  public static final String SERIALIZED_NAME_E_WEBHOOK_REALESTATEEVENT = "eWebhookRealestateevent";
+  @SerializedName(SERIALIZED_NAME_E_WEBHOOK_REALESTATEEVENT)
+  @javax.annotation.Nullable
+  private FieldEWebhookRealestateevent eWebhookRealestateevent;
 
   public static final String SERIALIZED_NAME_S_WEBHOOK_URL = "sWebhookUrl";
   @SerializedName(SERIALIZED_NAME_S_WEBHOOK_URL)
@@ -338,6 +344,25 @@ public class WebhookResponseCompound {
 
   public void seteWebhookManagementevent(@javax.annotation.Nullable FieldEWebhookManagementevent eWebhookManagementevent) {
     this.eWebhookManagementevent = eWebhookManagementevent;
+  }
+
+
+  public WebhookResponseCompound eWebhookRealestateevent(@javax.annotation.Nullable FieldEWebhookRealestateevent eWebhookRealestateevent) {
+    this.eWebhookRealestateevent = eWebhookRealestateevent;
+    return this;
+  }
+
+  /**
+   * Get eWebhookRealestateevent
+   * @return eWebhookRealestateevent
+   */
+  @javax.annotation.Nullable
+  public FieldEWebhookRealestateevent geteWebhookRealestateevent() {
+    return eWebhookRealestateevent;
+  }
+
+  public void seteWebhookRealestateevent(@javax.annotation.Nullable FieldEWebhookRealestateevent eWebhookRealestateevent) {
+    this.eWebhookRealestateevent = eWebhookRealestateevent;
   }
 
 
@@ -596,6 +621,7 @@ public class WebhookResponseCompound {
         Objects.equals(this.eWebhookEzmaxpartnerevent, webhookResponseCompound.eWebhookEzmaxpartnerevent) &&
         Objects.equals(this.eWebhookEzsignevent, webhookResponseCompound.eWebhookEzsignevent) &&
         Objects.equals(this.eWebhookManagementevent, webhookResponseCompound.eWebhookManagementevent) &&
+        Objects.equals(this.eWebhookRealestateevent, webhookResponseCompound.eWebhookRealestateevent) &&
         Objects.equals(this.sWebhookUrl, webhookResponseCompound.sWebhookUrl) &&
         Objects.equals(this.sWebhookEmailfailed, webhookResponseCompound.sWebhookEmailfailed) &&
         Objects.equals(this.sWebhookApikey, webhookResponseCompound.sWebhookApikey) &&
@@ -612,7 +638,7 @@ public class WebhookResponseCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiWebhookID, fkiAuthenticationexternalID, sWebhookDescription, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, eWebhookModule, eWebhookEzmaxpartnerevent, eWebhookEzsignevent, eWebhookManagementevent, sWebhookUrl, sWebhookEmailfailed, sWebhookApikey, sWebhookSecret, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation, sAuthenticationexternalDescription, objAudit, sWebhookEvent, sWebhookAuthentificationexternalerror, aObjWebhookheader);
+    return Objects.hash(pkiWebhookID, fkiAuthenticationexternalID, sWebhookDescription, fkiEzsignfoldertypeID, sEzsignfoldertypeNameX, eWebhookModule, eWebhookEzmaxpartnerevent, eWebhookEzsignevent, eWebhookManagementevent, eWebhookRealestateevent, sWebhookUrl, sWebhookEmailfailed, sWebhookApikey, sWebhookSecret, bWebhookIsactive, bWebhookIssigned, bWebhookSkipsslvalidation, sAuthenticationexternalDescription, objAudit, sWebhookEvent, sWebhookAuthentificationexternalerror, aObjWebhookheader);
   }
 
   @Override
@@ -628,6 +654,7 @@ public class WebhookResponseCompound {
     sb.append("    eWebhookEzmaxpartnerevent: ").append(toIndentedString(eWebhookEzmaxpartnerevent)).append("\n");
     sb.append("    eWebhookEzsignevent: ").append(toIndentedString(eWebhookEzsignevent)).append("\n");
     sb.append("    eWebhookManagementevent: ").append(toIndentedString(eWebhookManagementevent)).append("\n");
+    sb.append("    eWebhookRealestateevent: ").append(toIndentedString(eWebhookRealestateevent)).append("\n");
     sb.append("    sWebhookUrl: ").append(toIndentedString(sWebhookUrl)).append("\n");
     sb.append("    sWebhookEmailfailed: ").append(toIndentedString(sWebhookEmailfailed)).append("\n");
     sb.append("    sWebhookApikey: ").append(toIndentedString(sWebhookApikey)).append("\n");
@@ -658,7 +685,7 @@ public class WebhookResponseCompound {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiWebhookID", "fkiAuthenticationexternalID", "sWebhookDescription", "fkiEzsignfoldertypeID", "sEzsignfoldertypeNameX", "eWebhookModule", "eWebhookEzmaxpartnerevent", "eWebhookEzsignevent", "eWebhookManagementevent", "sWebhookUrl", "sWebhookEmailfailed", "sWebhookApikey", "sWebhookSecret", "bWebhookIsactive", "bWebhookIssigned", "bWebhookSkipsslvalidation", "sAuthenticationexternalDescription", "objAudit", "sWebhookEvent", "sWebhookAuthentificationexternalerror", "a_objWebhookheader"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiWebhookID", "fkiAuthenticationexternalID", "sWebhookDescription", "fkiEzsignfoldertypeID", "sEzsignfoldertypeNameX", "eWebhookModule", "eWebhookEzmaxpartnerevent", "eWebhookEzsignevent", "eWebhookManagementevent", "eWebhookRealestateevent", "sWebhookUrl", "sWebhookEmailfailed", "sWebhookApikey", "sWebhookSecret", "bWebhookIsactive", "bWebhookIssigned", "bWebhookSkipsslvalidation", "sAuthenticationexternalDescription", "objAudit", "sWebhookEvent", "sWebhookAuthentificationexternalerror", "a_objWebhookheader"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("sWebhookDescription", "eWebhookModule", "sWebhookUrl", "sWebhookEmailfailed", "bWebhookIsactive", "bWebhookIssigned", "bWebhookSkipsslvalidation"));
@@ -711,6 +738,10 @@ public class WebhookResponseCompound {
       // validate the optional field `eWebhookManagementevent`
       if (jsonObj.get("eWebhookManagementevent") != null && !jsonObj.get("eWebhookManagementevent").isJsonNull()) {
         FieldEWebhookManagementevent.validateJsonElement(jsonObj.get("eWebhookManagementevent"));
+      }
+      // validate the optional field `eWebhookRealestateevent`
+      if (jsonObj.get("eWebhookRealestateevent") != null && !jsonObj.get("eWebhookRealestateevent").isJsonNull()) {
+        FieldEWebhookRealestateevent.validateJsonElement(jsonObj.get("eWebhookRealestateevent"));
       }
       if (!jsonObj.get("sWebhookUrl").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sWebhookUrl` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sWebhookUrl").toString()));

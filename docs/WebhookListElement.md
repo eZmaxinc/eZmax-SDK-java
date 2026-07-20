@@ -16,6 +16,7 @@ A Webhook List Element
 |**eWebhookModule** | **FieldEWebhookModule** |  |  |
 |**eWebhookEzsignevent** | **FieldEWebhookEzsignevent** |  |  [optional] |
 |**eWebhookManagementevent** | **FieldEWebhookManagementevent** |  |  [optional] |
+|**eWebhookRealestateevent** | **FieldEWebhookRealestateevent** |  |  [optional] |
 |**bWebhookIsactive** | **Boolean** | Whether the Webhook is active or not |  |
 |**bWebhookIssigned** | **Boolean** | Whether the requests will be signed or not |  |
 

@@ -1,15 +1,15 @@
-# DocumentationEzmaxpartnerApi
+# ExternalEzmaxpartnerApi
 
 All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/rest*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**documentationSubscribeV1**](DocumentationEzmaxpartnerApi.md#documentationSubscribeV1) | **POST** /1/documentation/subscribe | Subscribe to an Ezmaxparnerproductstage |
+| [**externalpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#externalpartnerSubscribeV1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage |
 
 
-<a id="documentationSubscribeV1"></a>
-# **documentationSubscribeV1**
-> DocumentationSubscribeV1Response documentationSubscribeV1(documentationSubscribeV1Request)
+<a id="externalpartnerSubscribeV1"></a>
+# **externalpartnerSubscribeV1**
+> DocumentationSubscribeV1Response externalpartnerSubscribeV1(documentationSubscribeV1Request)
 
 Subscribe to an Ezmaxparnerproductstage
 
@@ -23,7 +23,7 @@ import eZmaxAPI.ApiException;
 import eZmaxAPI.Configuration;
 import eZmaxAPI.auth.*;
 import eZmaxAPI.models.*;
-import com.ezmax.api.DocumentationEzmaxpartnerApi;
+import com.ezmax.api.ExternalEzmaxpartnerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -36,13 +36,13 @@ public class Example {
     // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
     //Authorization.setApiKeyPrefix("Token");
 
-    DocumentationEzmaxpartnerApi apiInstance = new DocumentationEzmaxpartnerApi(defaultClient);
+    ExternalEzmaxpartnerApi apiInstance = new ExternalEzmaxpartnerApi(defaultClient);
     DocumentationSubscribeV1Request documentationSubscribeV1Request = new DocumentationSubscribeV1Request(); // DocumentationSubscribeV1Request | 
     try {
-      DocumentationSubscribeV1Response result = apiInstance.documentationSubscribeV1(documentationSubscribeV1Request);
+      DocumentationSubscribeV1Response result = apiInstance.externalpartnerSubscribeV1(documentationSubscribeV1Request);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DocumentationEzmaxpartnerApi#documentationSubscribeV1");
+      System.err.println("Exception when calling ExternalEzmaxpartnerApi#externalpartnerSubscribeV1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
