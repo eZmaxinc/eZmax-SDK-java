@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Ezmaxpricing Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T18:26:49.212059189Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T19:15:40.633314043Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class CustomEzmaxpricingResponse {
   public static final String SERIALIZED_NAME_PKI_EZMAXPRICING_I_D = "pkiEzmaxpricingID";
   @SerializedName(SERIALIZED_NAME_PKI_EZMAXPRICING_I_D)
