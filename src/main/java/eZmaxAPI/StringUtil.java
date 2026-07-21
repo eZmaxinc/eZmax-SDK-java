@@ -16,7 +16,7 @@ package eZmaxAPI;
 import java.util.Collection;
 import java.util.Iterator;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T19:15:40.633314043Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-21T20:02:41.721850157Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).

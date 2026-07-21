@@ -4,12 +4,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**externalpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#externalpartnerSubscribeV1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage |
+| [**ezmaxpartnerSubscribeV1**](ExternalEzmaxpartnerApi.md#ezmaxpartnerSubscribeV1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage |
 
 
-<a id="externalpartnerSubscribeV1"></a>
-# **externalpartnerSubscribeV1**
-> DocumentationSubscribeV1Response externalpartnerSubscribeV1(documentationSubscribeV1Request)
+<a id="ezmaxpartnerSubscribeV1"></a>
+# **ezmaxpartnerSubscribeV1**
+> EzmaxpartnerSubscribeV1Response ezmaxpartnerSubscribeV1(ezmaxpartnerSubscribeV1Request)
 
 Subscribe to an Ezmaxparnerproductstage
 
@@ -37,12 +37,12 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ExternalEzmaxpartnerApi apiInstance = new ExternalEzmaxpartnerApi(defaultClient);
-    DocumentationSubscribeV1Request documentationSubscribeV1Request = new DocumentationSubscribeV1Request(); // DocumentationSubscribeV1Request | 
+    EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request = new EzmaxpartnerSubscribeV1Request(); // EzmaxpartnerSubscribeV1Request | 
     try {
-      DocumentationSubscribeV1Response result = apiInstance.externalpartnerSubscribeV1(documentationSubscribeV1Request);
+      EzmaxpartnerSubscribeV1Response result = apiInstance.ezmaxpartnerSubscribeV1(ezmaxpartnerSubscribeV1Request);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ExternalEzmaxpartnerApi#externalpartnerSubscribeV1");
+      System.err.println("Exception when calling ExternalEzmaxpartnerApi#ezmaxpartnerSubscribeV1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -56,11 +56,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **documentationSubscribeV1Request** | [**DocumentationSubscribeV1Request**](DocumentationSubscribeV1Request.md)|  | |
+| **ezmaxpartnerSubscribeV1Request** | [**EzmaxpartnerSubscribeV1Request**](EzmaxpartnerSubscribeV1Request.md)|  | |
 
 ### Return type
 
-[**DocumentationSubscribeV1Response**](DocumentationSubscribeV1Response.md)
+[**EzmaxpartnerSubscribeV1Response**](EzmaxpartnerSubscribeV1Response.md)
 
 ### Authorization
 

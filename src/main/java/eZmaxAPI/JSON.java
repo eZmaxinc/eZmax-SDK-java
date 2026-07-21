@@ -508,8 +508,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DiscussionmessageRequestPatch.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DiscussionmessageResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DiscussionmessageResponseCompound.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DocumentationSubscribeV1Request.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DocumentationSubscribeV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DomainAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DomainCreateObjectV1Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DomainCreateObjectV1Response.CustomTypeAdapterFactory());
@@ -623,6 +621,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxpartnerGetObjectV2ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxpartnerResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxpartnerResponseCompound.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxpartnerSubscribeV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxpartnerSubscribeV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxproductAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxproductGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzmaxproductGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());

@@ -48,17 +48,17 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/module/ezmaxmaillinglist/subscribe
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T19:15:40.633314043Z[Etc/UTC]", comments = "Generator version: 7.24.0")
-public class DocumentationSubscribeV1Response {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-21T20:02:41.721850157Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+public class EzmaxpartnerSubscribeV1Response {
   public static final String SERIALIZED_NAME_S_EXTERNAL_I_D = "sExternalID";
   @SerializedName(SERIALIZED_NAME_S_EXTERNAL_I_D)
   @javax.annotation.Nonnull
   private String sExternalID;
 
-  public DocumentationSubscribeV1Response() {
+  public EzmaxpartnerSubscribeV1Response() {
   }
 
-  public DocumentationSubscribeV1Response sExternalID(@javax.annotation.Nonnull String sExternalID) {
+  public EzmaxpartnerSubscribeV1Response sExternalID(@javax.annotation.Nonnull String sExternalID) {
     this.sExternalID = sExternalID;
     return this;
   }
@@ -86,8 +86,8 @@ public class DocumentationSubscribeV1Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DocumentationSubscribeV1Response documentationSubscribeV1Response = (DocumentationSubscribeV1Response) o;
-    return Objects.equals(this.sExternalID, documentationSubscribeV1Response.sExternalID);
+    EzmaxpartnerSubscribeV1Response ezmaxpartnerSubscribeV1Response = (EzmaxpartnerSubscribeV1Response) o;
+    return Objects.equals(this.sExternalID, ezmaxpartnerSubscribeV1Response.sExternalID);
   }
 
   @Override
@@ -98,7 +98,7 @@ public class DocumentationSubscribeV1Response {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentationSubscribeV1Response {\n");
+    sb.append("class EzmaxpartnerSubscribeV1Response {\n");
     sb.append("    sExternalID: ").append(toIndentedString(sExternalID)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -128,25 +128,25 @@ public class DocumentationSubscribeV1Response {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to DocumentationSubscribeV1Response
+   * @throws IOException if the JSON Element is invalid with respect to EzmaxpartnerSubscribeV1Response
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!DocumentationSubscribeV1Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in DocumentationSubscribeV1Response is not found in the empty JSON string", DocumentationSubscribeV1Response.openapiRequiredFields.toString()));
+        if (!EzmaxpartnerSubscribeV1Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzmaxpartnerSubscribeV1Response is not found in the empty JSON string", EzmaxpartnerSubscribeV1Response.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!DocumentationSubscribeV1Response.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DocumentationSubscribeV1Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!EzmaxpartnerSubscribeV1Response.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzmaxpartnerSubscribeV1Response` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : DocumentationSubscribeV1Response.openapiRequiredFields) {
+      for (String requiredField : EzmaxpartnerSubscribeV1Response.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
@@ -161,22 +161,22 @@ public class DocumentationSubscribeV1Response {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!DocumentationSubscribeV1Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'DocumentationSubscribeV1Response' and its subtypes
+       if (!EzmaxpartnerSubscribeV1Response.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzmaxpartnerSubscribeV1Response' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<DocumentationSubscribeV1Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(DocumentationSubscribeV1Response.class));
+       final TypeAdapter<EzmaxpartnerSubscribeV1Response> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzmaxpartnerSubscribeV1Response.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<DocumentationSubscribeV1Response>() {
+       return (TypeAdapter<T>) new TypeAdapter<EzmaxpartnerSubscribeV1Response>() {
            @Override
-           public void write(JsonWriter out, DocumentationSubscribeV1Response value) throws IOException {
+           public void write(JsonWriter out, EzmaxpartnerSubscribeV1Response value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public DocumentationSubscribeV1Response read(JsonReader in) throws IOException {
+           public EzmaxpartnerSubscribeV1Response read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -187,18 +187,18 @@ public class DocumentationSubscribeV1Response {
   }
 
   /**
-   * Create an instance of DocumentationSubscribeV1Response given an JSON string
+   * Create an instance of EzmaxpartnerSubscribeV1Response given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of DocumentationSubscribeV1Response
-   * @throws IOException if the JSON string is invalid with respect to DocumentationSubscribeV1Response
+   * @return An instance of EzmaxpartnerSubscribeV1Response
+   * @throws IOException if the JSON string is invalid with respect to EzmaxpartnerSubscribeV1Response
    */
-  public static DocumentationSubscribeV1Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, DocumentationSubscribeV1Response.class);
+  public static EzmaxpartnerSubscribeV1Response fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, EzmaxpartnerSubscribeV1Response.class);
   }
 
   /**
-   * Convert an instance of DocumentationSubscribeV1Response to an JSON string
+   * Convert an instance of EzmaxpartnerSubscribeV1Response to an JSON string
    *
    * @return JSON string
    */

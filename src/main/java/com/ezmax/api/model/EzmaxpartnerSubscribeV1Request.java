@@ -51,8 +51,8 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/webhookdocumentation/subscribe
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T19:15:40.633314043Z[Etc/UTC]", comments = "Generator version: 7.24.0")
-public class DocumentationSubscribeV1Request {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-21T20:02:41.721850157Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+public class EzmaxpartnerSubscribeV1Request {
   public static final String SERIALIZED_NAME_PKS_EZMAXCUSTOMER_CODE = "pksEzmaxcustomerCode";
   @SerializedName(SERIALIZED_NAME_PKS_EZMAXCUSTOMER_CODE)
   @javax.annotation.Nullable
@@ -168,10 +168,10 @@ public class DocumentationSubscribeV1Request {
   @javax.annotation.Nullable
   private EmailRequestCompound objEmail;
 
-  public DocumentationSubscribeV1Request() {
+  public EzmaxpartnerSubscribeV1Request() {
   }
 
-  public DocumentationSubscribeV1Request pksEzmaxcustomerCode(@javax.annotation.Nullable String pksEzmaxcustomerCode) {
+  public EzmaxpartnerSubscribeV1Request pksEzmaxcustomerCode(@javax.annotation.Nullable String pksEzmaxcustomerCode) {
     this.pksEzmaxcustomerCode = pksEzmaxcustomerCode;
     return this;
   }
@@ -190,7 +190,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sInfrastructureenvironmenttypeDescription(@javax.annotation.Nullable String sInfrastructureenvironmenttypeDescription) {
+  public EzmaxpartnerSubscribeV1Request sInfrastructureenvironmenttypeDescription(@javax.annotation.Nullable String sInfrastructureenvironmenttypeDescription) {
     this.sInfrastructureenvironmenttypeDescription = sInfrastructureenvironmenttypeDescription;
     return this;
   }
@@ -209,7 +209,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sCompanyName1(@javax.annotation.Nullable String sCompanyName1) {
+  public EzmaxpartnerSubscribeV1Request sCompanyName1(@javax.annotation.Nullable String sCompanyName1) {
     this.sCompanyName1 = sCompanyName1;
     return this;
   }
@@ -228,7 +228,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sCompanyName2(@javax.annotation.Nullable String sCompanyName2) {
+  public EzmaxpartnerSubscribeV1Request sCompanyName2(@javax.annotation.Nullable String sCompanyName2) {
     this.sCompanyName2 = sCompanyName2;
     return this;
   }
@@ -247,7 +247,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request fkiSystemconfigurationtypeID(@javax.annotation.Nullable Integer fkiSystemconfigurationtypeID) {
+  public EzmaxpartnerSubscribeV1Request fkiSystemconfigurationtypeID(@javax.annotation.Nullable Integer fkiSystemconfigurationtypeID) {
     this.fkiSystemconfigurationtypeID = fkiSystemconfigurationtypeID;
     return this;
   }
@@ -267,7 +267,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sSystemconfigurationtypeDescription1(@javax.annotation.Nullable String sSystemconfigurationtypeDescription1) {
+  public EzmaxpartnerSubscribeV1Request sSystemconfigurationtypeDescription1(@javax.annotation.Nullable String sSystemconfigurationtypeDescription1) {
     this.sSystemconfigurationtypeDescription1 = sSystemconfigurationtypeDescription1;
     return this;
   }
@@ -286,7 +286,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sSystemconfigurationtypeDescription2(@javax.annotation.Nullable String sSystemconfigurationtypeDescription2) {
+  public EzmaxpartnerSubscribeV1Request sSystemconfigurationtypeDescription2(@javax.annotation.Nullable String sSystemconfigurationtypeDescription2) {
     this.sSystemconfigurationtypeDescription2 = sSystemconfigurationtypeDescription2;
     return this;
   }
@@ -305,7 +305,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request fkiEzmaxpartnerID(@javax.annotation.Nullable Integer fkiEzmaxpartnerID) {
+  public EzmaxpartnerSubscribeV1Request fkiEzmaxpartnerID(@javax.annotation.Nullable Integer fkiEzmaxpartnerID) {
     this.fkiEzmaxpartnerID = fkiEzmaxpartnerID;
     return this;
   }
@@ -325,7 +325,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sEzmaxpartnerName1(@javax.annotation.Nullable String sEzmaxpartnerName1) {
+  public EzmaxpartnerSubscribeV1Request sEzmaxpartnerName1(@javax.annotation.Nullable String sEzmaxpartnerName1) {
     this.sEzmaxpartnerName1 = sEzmaxpartnerName1;
     return this;
   }
@@ -344,7 +344,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sEzmaxpartnerName2(@javax.annotation.Nullable String sEzmaxpartnerName2) {
+  public EzmaxpartnerSubscribeV1Request sEzmaxpartnerName2(@javax.annotation.Nullable String sEzmaxpartnerName2) {
     this.sEzmaxpartnerName2 = sEzmaxpartnerName2;
     return this;
   }
@@ -363,7 +363,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request fkiEzmaxpartnerproductID(@javax.annotation.Nullable Integer fkiEzmaxpartnerproductID) {
+  public EzmaxpartnerSubscribeV1Request fkiEzmaxpartnerproductID(@javax.annotation.Nullable Integer fkiEzmaxpartnerproductID) {
     this.fkiEzmaxpartnerproductID = fkiEzmaxpartnerproductID;
     return this;
   }
@@ -384,7 +384,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sEzmaxpartnerproductName1(@javax.annotation.Nullable String sEzmaxpartnerproductName1) {
+  public EzmaxpartnerSubscribeV1Request sEzmaxpartnerproductName1(@javax.annotation.Nullable String sEzmaxpartnerproductName1) {
     this.sEzmaxpartnerproductName1 = sEzmaxpartnerproductName1;
     return this;
   }
@@ -403,7 +403,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sEzmaxpartnerproductName2(@javax.annotation.Nullable String sEzmaxpartnerproductName2) {
+  public EzmaxpartnerSubscribeV1Request sEzmaxpartnerproductName2(@javax.annotation.Nullable String sEzmaxpartnerproductName2) {
     this.sEzmaxpartnerproductName2 = sEzmaxpartnerproductName2;
     return this;
   }
@@ -422,7 +422,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request fkiEzmaxpartnerproductstageID(@javax.annotation.Nullable Integer fkiEzmaxpartnerproductstageID) {
+  public EzmaxpartnerSubscribeV1Request fkiEzmaxpartnerproductstageID(@javax.annotation.Nullable Integer fkiEzmaxpartnerproductstageID) {
     this.fkiEzmaxpartnerproductstageID = fkiEzmaxpartnerproductstageID;
     return this;
   }
@@ -443,7 +443,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sEzmaxpartnerproductstageCode(@javax.annotation.Nullable String sEzmaxpartnerproductstageCode) {
+  public EzmaxpartnerSubscribeV1Request sEzmaxpartnerproductstageCode(@javax.annotation.Nullable String sEzmaxpartnerproductstageCode) {
     this.sEzmaxpartnerproductstageCode = sEzmaxpartnerproductstageCode;
     return this;
   }
@@ -462,7 +462,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sUserLoginName(@javax.annotation.Nullable String sUserLoginName) {
+  public EzmaxpartnerSubscribeV1Request sUserLoginName(@javax.annotation.Nullable String sUserLoginName) {
     this.sUserLoginName = sUserLoginName;
     return this;
   }
@@ -481,7 +481,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sUserFirstName(@javax.annotation.Nullable String sUserFirstName) {
+  public EzmaxpartnerSubscribeV1Request sUserFirstName(@javax.annotation.Nullable String sUserFirstName) {
     this.sUserFirstName = sUserFirstName;
     return this;
   }
@@ -500,7 +500,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request sUserLastName(@javax.annotation.Nullable String sUserLastName) {
+  public EzmaxpartnerSubscribeV1Request sUserLastName(@javax.annotation.Nullable String sUserLastName) {
     this.sUserLastName = sUserLastName;
     return this;
   }
@@ -519,7 +519,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
+  public EzmaxpartnerSubscribeV1Request fkiUserID(@javax.annotation.Nullable Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
     return this;
   }
@@ -539,7 +539,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request fkiLanguageID(@javax.annotation.Nullable Integer fkiLanguageID) {
+  public EzmaxpartnerSubscribeV1Request fkiLanguageID(@javax.annotation.Nullable Integer fkiLanguageID) {
     this.fkiLanguageID = fkiLanguageID;
     return this;
   }
@@ -560,7 +560,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request objAddress(@javax.annotation.Nullable AddressRequestCompound objAddress) {
+  public EzmaxpartnerSubscribeV1Request objAddress(@javax.annotation.Nullable AddressRequestCompound objAddress) {
     this.objAddress = objAddress;
     return this;
   }
@@ -579,7 +579,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request objphone(@javax.annotation.Nullable PhoneRequestCompoundV2 objphone) {
+  public EzmaxpartnerSubscribeV1Request objphone(@javax.annotation.Nullable PhoneRequestCompoundV2 objphone) {
     this.objphone = objphone;
     return this;
   }
@@ -598,7 +598,7 @@ public class DocumentationSubscribeV1Request {
   }
 
 
-  public DocumentationSubscribeV1Request objEmail(@javax.annotation.Nullable EmailRequestCompound objEmail) {
+  public EzmaxpartnerSubscribeV1Request objEmail(@javax.annotation.Nullable EmailRequestCompound objEmail) {
     this.objEmail = objEmail;
     return this;
   }
@@ -626,30 +626,30 @@ public class DocumentationSubscribeV1Request {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DocumentationSubscribeV1Request documentationSubscribeV1Request = (DocumentationSubscribeV1Request) o;
-    return Objects.equals(this.pksEzmaxcustomerCode, documentationSubscribeV1Request.pksEzmaxcustomerCode) &&
-        Objects.equals(this.sInfrastructureenvironmenttypeDescription, documentationSubscribeV1Request.sInfrastructureenvironmenttypeDescription) &&
-        Objects.equals(this.sCompanyName1, documentationSubscribeV1Request.sCompanyName1) &&
-        Objects.equals(this.sCompanyName2, documentationSubscribeV1Request.sCompanyName2) &&
-        Objects.equals(this.fkiSystemconfigurationtypeID, documentationSubscribeV1Request.fkiSystemconfigurationtypeID) &&
-        Objects.equals(this.sSystemconfigurationtypeDescription1, documentationSubscribeV1Request.sSystemconfigurationtypeDescription1) &&
-        Objects.equals(this.sSystemconfigurationtypeDescription2, documentationSubscribeV1Request.sSystemconfigurationtypeDescription2) &&
-        Objects.equals(this.fkiEzmaxpartnerID, documentationSubscribeV1Request.fkiEzmaxpartnerID) &&
-        Objects.equals(this.sEzmaxpartnerName1, documentationSubscribeV1Request.sEzmaxpartnerName1) &&
-        Objects.equals(this.sEzmaxpartnerName2, documentationSubscribeV1Request.sEzmaxpartnerName2) &&
-        Objects.equals(this.fkiEzmaxpartnerproductID, documentationSubscribeV1Request.fkiEzmaxpartnerproductID) &&
-        Objects.equals(this.sEzmaxpartnerproductName1, documentationSubscribeV1Request.sEzmaxpartnerproductName1) &&
-        Objects.equals(this.sEzmaxpartnerproductName2, documentationSubscribeV1Request.sEzmaxpartnerproductName2) &&
-        Objects.equals(this.fkiEzmaxpartnerproductstageID, documentationSubscribeV1Request.fkiEzmaxpartnerproductstageID) &&
-        Objects.equals(this.sEzmaxpartnerproductstageCode, documentationSubscribeV1Request.sEzmaxpartnerproductstageCode) &&
-        Objects.equals(this.sUserLoginName, documentationSubscribeV1Request.sUserLoginName) &&
-        Objects.equals(this.sUserFirstName, documentationSubscribeV1Request.sUserFirstName) &&
-        Objects.equals(this.sUserLastName, documentationSubscribeV1Request.sUserLastName) &&
-        Objects.equals(this.fkiUserID, documentationSubscribeV1Request.fkiUserID) &&
-        Objects.equals(this.fkiLanguageID, documentationSubscribeV1Request.fkiLanguageID) &&
-        Objects.equals(this.objAddress, documentationSubscribeV1Request.objAddress) &&
-        Objects.equals(this.objphone, documentationSubscribeV1Request.objphone) &&
-        Objects.equals(this.objEmail, documentationSubscribeV1Request.objEmail);
+    EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request = (EzmaxpartnerSubscribeV1Request) o;
+    return Objects.equals(this.pksEzmaxcustomerCode, ezmaxpartnerSubscribeV1Request.pksEzmaxcustomerCode) &&
+        Objects.equals(this.sInfrastructureenvironmenttypeDescription, ezmaxpartnerSubscribeV1Request.sInfrastructureenvironmenttypeDescription) &&
+        Objects.equals(this.sCompanyName1, ezmaxpartnerSubscribeV1Request.sCompanyName1) &&
+        Objects.equals(this.sCompanyName2, ezmaxpartnerSubscribeV1Request.sCompanyName2) &&
+        Objects.equals(this.fkiSystemconfigurationtypeID, ezmaxpartnerSubscribeV1Request.fkiSystemconfigurationtypeID) &&
+        Objects.equals(this.sSystemconfigurationtypeDescription1, ezmaxpartnerSubscribeV1Request.sSystemconfigurationtypeDescription1) &&
+        Objects.equals(this.sSystemconfigurationtypeDescription2, ezmaxpartnerSubscribeV1Request.sSystemconfigurationtypeDescription2) &&
+        Objects.equals(this.fkiEzmaxpartnerID, ezmaxpartnerSubscribeV1Request.fkiEzmaxpartnerID) &&
+        Objects.equals(this.sEzmaxpartnerName1, ezmaxpartnerSubscribeV1Request.sEzmaxpartnerName1) &&
+        Objects.equals(this.sEzmaxpartnerName2, ezmaxpartnerSubscribeV1Request.sEzmaxpartnerName2) &&
+        Objects.equals(this.fkiEzmaxpartnerproductID, ezmaxpartnerSubscribeV1Request.fkiEzmaxpartnerproductID) &&
+        Objects.equals(this.sEzmaxpartnerproductName1, ezmaxpartnerSubscribeV1Request.sEzmaxpartnerproductName1) &&
+        Objects.equals(this.sEzmaxpartnerproductName2, ezmaxpartnerSubscribeV1Request.sEzmaxpartnerproductName2) &&
+        Objects.equals(this.fkiEzmaxpartnerproductstageID, ezmaxpartnerSubscribeV1Request.fkiEzmaxpartnerproductstageID) &&
+        Objects.equals(this.sEzmaxpartnerproductstageCode, ezmaxpartnerSubscribeV1Request.sEzmaxpartnerproductstageCode) &&
+        Objects.equals(this.sUserLoginName, ezmaxpartnerSubscribeV1Request.sUserLoginName) &&
+        Objects.equals(this.sUserFirstName, ezmaxpartnerSubscribeV1Request.sUserFirstName) &&
+        Objects.equals(this.sUserLastName, ezmaxpartnerSubscribeV1Request.sUserLastName) &&
+        Objects.equals(this.fkiUserID, ezmaxpartnerSubscribeV1Request.fkiUserID) &&
+        Objects.equals(this.fkiLanguageID, ezmaxpartnerSubscribeV1Request.fkiLanguageID) &&
+        Objects.equals(this.objAddress, ezmaxpartnerSubscribeV1Request.objAddress) &&
+        Objects.equals(this.objphone, ezmaxpartnerSubscribeV1Request.objphone) &&
+        Objects.equals(this.objEmail, ezmaxpartnerSubscribeV1Request.objEmail);
   }
 
   @Override
@@ -660,7 +660,7 @@ public class DocumentationSubscribeV1Request {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DocumentationSubscribeV1Request {\n");
+    sb.append("class EzmaxpartnerSubscribeV1Request {\n");
     sb.append("    pksEzmaxcustomerCode: ").append(toIndentedString(pksEzmaxcustomerCode)).append("\n");
     sb.append("    sInfrastructureenvironmenttypeDescription: ").append(toIndentedString(sInfrastructureenvironmenttypeDescription)).append("\n");
     sb.append("    sCompanyName1: ").append(toIndentedString(sCompanyName1)).append("\n");
@@ -712,20 +712,20 @@ public class DocumentationSubscribeV1Request {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to DocumentationSubscribeV1Request
+   * @throws IOException if the JSON Element is invalid with respect to EzmaxpartnerSubscribeV1Request
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!DocumentationSubscribeV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in DocumentationSubscribeV1Request is not found in the empty JSON string", DocumentationSubscribeV1Request.openapiRequiredFields.toString()));
+        if (!EzmaxpartnerSubscribeV1Request.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The required field(s) %s in EzmaxpartnerSubscribeV1Request is not found in the empty JSON string", EzmaxpartnerSubscribeV1Request.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!DocumentationSubscribeV1Request.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `DocumentationSubscribeV1Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!EzmaxpartnerSubscribeV1Request.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "The field `%s` in the JSON string is not defined in the `EzmaxpartnerSubscribeV1Request` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -789,22 +789,22 @@ public class DocumentationSubscribeV1Request {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!DocumentationSubscribeV1Request.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'DocumentationSubscribeV1Request' and its subtypes
+       if (!EzmaxpartnerSubscribeV1Request.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'EzmaxpartnerSubscribeV1Request' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<DocumentationSubscribeV1Request> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(DocumentationSubscribeV1Request.class));
+       final TypeAdapter<EzmaxpartnerSubscribeV1Request> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(EzmaxpartnerSubscribeV1Request.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<DocumentationSubscribeV1Request>() {
+       return (TypeAdapter<T>) new TypeAdapter<EzmaxpartnerSubscribeV1Request>() {
            @Override
-           public void write(JsonWriter out, DocumentationSubscribeV1Request value) throws IOException {
+           public void write(JsonWriter out, EzmaxpartnerSubscribeV1Request value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public DocumentationSubscribeV1Request read(JsonReader in) throws IOException {
+           public EzmaxpartnerSubscribeV1Request read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -815,18 +815,18 @@ public class DocumentationSubscribeV1Request {
   }
 
   /**
-   * Create an instance of DocumentationSubscribeV1Request given an JSON string
+   * Create an instance of EzmaxpartnerSubscribeV1Request given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of DocumentationSubscribeV1Request
-   * @throws IOException if the JSON string is invalid with respect to DocumentationSubscribeV1Request
+   * @return An instance of EzmaxpartnerSubscribeV1Request
+   * @throws IOException if the JSON string is invalid with respect to EzmaxpartnerSubscribeV1Request
    */
-  public static DocumentationSubscribeV1Request fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, DocumentationSubscribeV1Request.class);
+  public static EzmaxpartnerSubscribeV1Request fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, EzmaxpartnerSubscribeV1Request.class);
   }
 
   /**
-   * Convert an instance of DocumentationSubscribeV1Request to an JSON string
+   * Convert an instance of EzmaxpartnerSubscribeV1Request to an JSON string
    *
    * @return JSON string
    */

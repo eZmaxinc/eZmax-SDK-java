@@ -27,8 +27,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.ezmax.api.model.DocumentationSubscribeV1Request;
-import com.ezmax.api.model.DocumentationSubscribeV1Response;
+import com.ezmax.api.model.EzmaxpartnerSubscribeV1Request;
+import com.ezmax.api.model.EzmaxpartnerSubscribeV1Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -74,8 +74,8 @@ public class ExternalEzmaxpartnerApi {
     }
 
     /**
-     * Build call for externalpartnerSubscribeV1
-     * @param documentationSubscribeV1Request  (required)
+     * Build call for ezmaxpartnerSubscribeV1
+     * @param ezmaxpartnerSubscribeV1Request  (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -86,7 +86,7 @@ public class ExternalEzmaxpartnerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call externalpartnerSubscribeV1Call(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ezmaxpartnerSubscribeV1Call(@javax.annotation.Nonnull EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -100,7 +100,7 @@ public class ExternalEzmaxpartnerApi {
             basePath = null;
         }
 
-        Object localVarPostBody = documentationSubscribeV1Request;
+        Object localVarPostBody = ezmaxpartnerSubscribeV1Request;
 
         // create path and map variables
         String localVarPath = "/1/external/ezmaxpartner/subscribe";
@@ -132,21 +132,21 @@ public class ExternalEzmaxpartnerApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call externalpartnerSubscribeV1ValidateBeforeCall(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'documentationSubscribeV1Request' is set
-        if (documentationSubscribeV1Request == null) {
-            throw new ApiException("Missing the required parameter 'documentationSubscribeV1Request' when calling externalpartnerSubscribeV1(Async)");
+    private okhttp3.Call ezmaxpartnerSubscribeV1ValidateBeforeCall(@javax.annotation.Nonnull EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'ezmaxpartnerSubscribeV1Request' is set
+        if (ezmaxpartnerSubscribeV1Request == null) {
+            throw new ApiException("Missing the required parameter 'ezmaxpartnerSubscribeV1Request' when calling ezmaxpartnerSubscribeV1(Async)");
         }
 
-        return externalpartnerSubscribeV1Call(documentationSubscribeV1Request, _callback);
+        return ezmaxpartnerSubscribeV1Call(ezmaxpartnerSubscribeV1Request, _callback);
 
     }
 
     /**
      * Subscribe to an Ezmaxparnerproductstage
      * Subscribe to an Ezmaxparnerproductstage
-     * @param documentationSubscribeV1Request  (required)
-     * @return DocumentationSubscribeV1Response
+     * @param ezmaxpartnerSubscribeV1Request  (required)
+     * @return EzmaxpartnerSubscribeV1Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -155,16 +155,16 @@ public class ExternalEzmaxpartnerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public DocumentationSubscribeV1Response externalpartnerSubscribeV1(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request) throws ApiException {
-        ApiResponse<DocumentationSubscribeV1Response> localVarResp = externalpartnerSubscribeV1WithHttpInfo(documentationSubscribeV1Request);
+    public EzmaxpartnerSubscribeV1Response ezmaxpartnerSubscribeV1(@javax.annotation.Nonnull EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request) throws ApiException {
+        ApiResponse<EzmaxpartnerSubscribeV1Response> localVarResp = ezmaxpartnerSubscribeV1WithHttpInfo(ezmaxpartnerSubscribeV1Request);
         return localVarResp.getData();
     }
 
     /**
      * Subscribe to an Ezmaxparnerproductstage
      * Subscribe to an Ezmaxparnerproductstage
-     * @param documentationSubscribeV1Request  (required)
-     * @return ApiResponse&lt;DocumentationSubscribeV1Response&gt;
+     * @param ezmaxpartnerSubscribeV1Request  (required)
+     * @return ApiResponse&lt;EzmaxpartnerSubscribeV1Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table border="1">
@@ -173,16 +173,16 @@ public class ExternalEzmaxpartnerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<DocumentationSubscribeV1Response> externalpartnerSubscribeV1WithHttpInfo(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request) throws ApiException {
-        okhttp3.Call localVarCall = externalpartnerSubscribeV1ValidateBeforeCall(documentationSubscribeV1Request, null);
-        Type localVarReturnType = new TypeToken<DocumentationSubscribeV1Response>(){}.getType();
+    public ApiResponse<EzmaxpartnerSubscribeV1Response> ezmaxpartnerSubscribeV1WithHttpInfo(@javax.annotation.Nonnull EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request) throws ApiException {
+        okhttp3.Call localVarCall = ezmaxpartnerSubscribeV1ValidateBeforeCall(ezmaxpartnerSubscribeV1Request, null);
+        Type localVarReturnType = new TypeToken<EzmaxpartnerSubscribeV1Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Subscribe to an Ezmaxparnerproductstage (asynchronously)
      * Subscribe to an Ezmaxparnerproductstage
-     * @param documentationSubscribeV1Request  (required)
+     * @param ezmaxpartnerSubscribeV1Request  (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -193,10 +193,10 @@ public class ExternalEzmaxpartnerApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call externalpartnerSubscribeV1Async(@javax.annotation.Nonnull DocumentationSubscribeV1Request documentationSubscribeV1Request, final ApiCallback<DocumentationSubscribeV1Response> _callback) throws ApiException {
+    public okhttp3.Call ezmaxpartnerSubscribeV1Async(@javax.annotation.Nonnull EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request, final ApiCallback<EzmaxpartnerSubscribeV1Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = externalpartnerSubscribeV1ValidateBeforeCall(documentationSubscribeV1Request, _callback);
-        Type localVarReturnType = new TypeToken<DocumentationSubscribeV1Response>(){}.getType();
+        okhttp3.Call localVarCall = ezmaxpartnerSubscribeV1ValidateBeforeCall(ezmaxpartnerSubscribeV1Request, _callback);
+        Type localVarReturnType = new TypeToken<EzmaxpartnerSubscribeV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

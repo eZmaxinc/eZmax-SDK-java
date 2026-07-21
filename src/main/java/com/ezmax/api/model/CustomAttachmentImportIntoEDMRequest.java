@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A AttachmentImportIntoEDM object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T19:15:40.633314043Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-21T20:02:41.721850157Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class CustomAttachmentImportIntoEDMRequest {
   /**
    * The source of the Attachment

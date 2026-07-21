@@ -53,7 +53,7 @@ import eZmaxAPI.JSON;
 /**
  * This is the base Webhook object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T19:15:40.633314043Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-21T20:02:41.721850157Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class WebhookEzmaxpartnerproductUnsubscribe {
   public static final String SERIALIZED_NAME_OBJ_WEBHOOK = "objWebhook";
   @SerializedName(SERIALIZED_NAME_OBJ_WEBHOOK)
@@ -69,6 +69,11 @@ public class WebhookEzmaxpartnerproductUnsubscribe {
   @SerializedName(SERIALIZED_NAME_OBJ_EZMAXPARTNERPRODUCT)
   @javax.annotation.Nonnull
   private CustomEzmaxpartnerproductSubscribe objEzmaxpartnerproduct;
+
+  public static final String SERIALIZED_NAME_S_EXTERNAL_I_D = "sExternalID";
+  @SerializedName(SERIALIZED_NAME_S_EXTERNAL_I_D)
+  @javax.annotation.Nullable
+  private String sExternalID;
 
   public WebhookEzmaxpartnerproductUnsubscribe() {
   }
@@ -138,6 +143,25 @@ public class WebhookEzmaxpartnerproductUnsubscribe {
   }
 
 
+  public WebhookEzmaxpartnerproductUnsubscribe sExternalID(@javax.annotation.Nullable String sExternalID) {
+    this.sExternalID = sExternalID;
+    return this;
+  }
+
+  /**
+   * Get sExternalID
+   * @return sExternalID
+   */
+  @javax.annotation.Nullable
+  public String getsExternalID() {
+    return sExternalID;
+  }
+
+  public void setsExternalID(@javax.annotation.Nullable String sExternalID) {
+    this.sExternalID = sExternalID;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -150,12 +174,13 @@ public class WebhookEzmaxpartnerproductUnsubscribe {
     WebhookEzmaxpartnerproductUnsubscribe webhookEzmaxpartnerproductUnsubscribe = (WebhookEzmaxpartnerproductUnsubscribe) o;
     return Objects.equals(this.objWebhook, webhookEzmaxpartnerproductUnsubscribe.objWebhook) &&
         Objects.equals(this.aObjAttempt, webhookEzmaxpartnerproductUnsubscribe.aObjAttempt) &&
-        Objects.equals(this.objEzmaxpartnerproduct, webhookEzmaxpartnerproductUnsubscribe.objEzmaxpartnerproduct);
+        Objects.equals(this.objEzmaxpartnerproduct, webhookEzmaxpartnerproductUnsubscribe.objEzmaxpartnerproduct) &&
+        Objects.equals(this.sExternalID, webhookEzmaxpartnerproductUnsubscribe.sExternalID);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objWebhook, aObjAttempt, objEzmaxpartnerproduct);
+    return Objects.hash(objWebhook, aObjAttempt, objEzmaxpartnerproduct, sExternalID);
   }
 
   @Override
@@ -165,6 +190,7 @@ public class WebhookEzmaxpartnerproductUnsubscribe {
     sb.append("    objWebhook: ").append(toIndentedString(objWebhook)).append("\n");
     sb.append("    aObjAttempt: ").append(toIndentedString(aObjAttempt)).append("\n");
     sb.append("    objEzmaxpartnerproduct: ").append(toIndentedString(objEzmaxpartnerproduct)).append("\n");
+    sb.append("    sExternalID: ").append(toIndentedString(sExternalID)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -183,7 +209,7 @@ public class WebhookEzmaxpartnerproductUnsubscribe {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("objWebhook", "a_objAttempt", "objEzmaxpartnerproduct"));
+    openapiFields = new HashSet<String>(Arrays.asList("objWebhook", "a_objAttempt", "objEzmaxpartnerproduct", "sExternalID"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("objWebhook", "a_objAttempt", "objEzmaxpartnerproduct"));
@@ -231,6 +257,9 @@ public class WebhookEzmaxpartnerproductUnsubscribe {
       }
       // validate the required field `objEzmaxpartnerproduct`
       CustomEzmaxpartnerproductSubscribe.validateJsonElement(jsonObj.get("objEzmaxpartnerproduct"));
+      if ((jsonObj.get("sExternalID") != null && !jsonObj.get("sExternalID").isJsonNull()) && !jsonObj.get("sExternalID").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sExternalID` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sExternalID").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

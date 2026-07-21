@@ -2,7 +2,7 @@
 
 eZmax API Definition (Full)
 - API version: 1.3.2
-  - Build date: 2026-07-20T19:15:40.633314043Z[Etc/UTC]
+  - Build date: 2026-07-21T20:02:41.721850157Z[Etc/UTC]
   - Generator version: 7.24.0
 
 This API expose all the functionnalities for the eZmax and eZsign applications.
@@ -101,12 +101,12 @@ public class Example {
     //Authorization.setApiKeyPrefix("Token");
 
     ExternalEzmaxpartnerApi apiInstance = new ExternalEzmaxpartnerApi(defaultClient);
-    DocumentationSubscribeV1Request documentationSubscribeV1Request = new DocumentationSubscribeV1Request(); // DocumentationSubscribeV1Request | 
+    EzmaxpartnerSubscribeV1Request ezmaxpartnerSubscribeV1Request = new EzmaxpartnerSubscribeV1Request(); // EzmaxpartnerSubscribeV1Request | 
     try {
-      DocumentationSubscribeV1Response result = apiInstance.externalpartnerSubscribeV1(documentationSubscribeV1Request);
+      EzmaxpartnerSubscribeV1Response result = apiInstance.ezmaxpartnerSubscribeV1(ezmaxpartnerSubscribeV1Request);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ExternalEzmaxpartnerApi#externalpartnerSubscribeV1");
+      System.err.println("Exception when calling ExternalEzmaxpartnerApi#ezmaxpartnerSubscribeV1");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -123,7 +123,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ExternalEzmaxpartnerApi* | [**externalpartnerSubscribeV1**](docs/ExternalEzmaxpartnerApi.md#externalpartnerSubscribeV1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
+*ExternalEzmaxpartnerApi* | [**ezmaxpartnerSubscribeV1**](docs/ExternalEzmaxpartnerApi.md#ezmaxpartnerSubscribeV1) | **POST** /1/external/ezmaxpartner/subscribe | Subscribe to an Ezmaxparnerproductstage
 *GlobalCustomerApi* | [**globalCustomerGetEndpointV1**](docs/GlobalCustomerApi.md#globalCustomerGetEndpointV1) | **GET** /1/customer/{pksCustomerCode}/endpoint | Get customer endpoint
 *GlobalEzmaxclientApi* | [**globalEzmaxclientVersionV1**](docs/GlobalEzmaxclientApi.md#globalEzmaxclientVersionV1) | **GET** /1/ezmaxclient/{pksEzmaxclientOs}/version | Retrieve the latest version of the Ezmaxclient
 *GlobalEzmaxcustomerApi* | [**globalEzmaxcustomerGetConfigurationV1**](docs/GlobalEzmaxcustomerApi.md#globalEzmaxcustomerGetConfigurationV1) | **GET** /1/ezmaxcustomer/{pksEzmaxcustomerCode}/getConfiguration | Get ezmaxcustomer configuration
@@ -1114,8 +1114,6 @@ Class | Method | HTTP request | Description
  - [DiscussionmessageRequestPatch](docs/DiscussionmessageRequestPatch.md)
  - [DiscussionmessageResponse](docs/DiscussionmessageResponse.md)
  - [DiscussionmessageResponseCompound](docs/DiscussionmessageResponseCompound.md)
- - [DocumentationSubscribeV1Request](docs/DocumentationSubscribeV1Request.md)
- - [DocumentationSubscribeV1Response](docs/DocumentationSubscribeV1Response.md)
  - [DomainAutocompleteElementResponse](docs/DomainAutocompleteElementResponse.md)
  - [DomainCreateObjectV1Request](docs/DomainCreateObjectV1Request.md)
  - [DomainCreateObjectV1Response](docs/DomainCreateObjectV1Response.md)
@@ -1235,6 +1233,8 @@ Class | Method | HTTP request | Description
  - [EzmaxpartnerGetObjectV2ResponseMPayload](docs/EzmaxpartnerGetObjectV2ResponseMPayload.md)
  - [EzmaxpartnerResponse](docs/EzmaxpartnerResponse.md)
  - [EzmaxpartnerResponseCompound](docs/EzmaxpartnerResponseCompound.md)
+ - [EzmaxpartnerSubscribeV1Request](docs/EzmaxpartnerSubscribeV1Request.md)
+ - [EzmaxpartnerSubscribeV1Response](docs/EzmaxpartnerSubscribeV1Response.md)
  - [EzmaxproductAutocompleteElementResponse](docs/EzmaxproductAutocompleteElementResponse.md)
  - [EzmaxproductGetAutocompleteV2Response](docs/EzmaxproductGetAutocompleteV2Response.md)
  - [EzmaxproductGetAutocompleteV2ResponseMPayload](docs/EzmaxproductGetAutocompleteV2ResponseMPayload.md)

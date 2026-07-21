@@ -48,7 +48,7 @@ import eZmaxAPI.JSON;
 /**
  * Address of the Ezmaxpartner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T19:15:40.633314043Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-21T20:02:41.721850157Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class MultilingualEzmaxpartnerAddress {
   public static final String SERIALIZED_NAME_S_EZMAXPARTNER_ADDRESS1 = "sEzmaxpartnerAddress1";
   @SerializedName(SERIALIZED_NAME_S_EZMAXPARTNER_ADDRESS1)

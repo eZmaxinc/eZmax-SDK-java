@@ -1,6 +1,6 @@
 
 
-# DocumentationSubscribeV1Response
+# EzmaxpartnerSubscribeV1Response
 
 Request for POST /1/module/ezmaxmaillinglist/subscribe
 

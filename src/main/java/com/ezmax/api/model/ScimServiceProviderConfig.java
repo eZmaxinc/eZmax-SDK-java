@@ -57,7 +57,7 @@ import eZmaxAPI.JSON;
 /**
  * ScimServiceProviderConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-20T19:15:40.633314043Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-07-21T20:02:41.721850157Z[Etc/UTC]", comments = "Generator version: 7.24.0")
 public class ScimServiceProviderConfig {
   public static final String SERIALIZED_NAME_AUTHENTICATION_SCHEMES = "authenticationSchemes";
   @SerializedName(SERIALIZED_NAME_AUTHENTICATION_SCHEMES)

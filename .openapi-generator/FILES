@@ -423,8 +423,6 @@ docs/DiscussionmessageRequestCompound.md
 docs/DiscussionmessageRequestPatch.md
 docs/DiscussionmessageResponse.md
 docs/DiscussionmessageResponseCompound.md
-docs/DocumentationSubscribeV1Request.md
-docs/DocumentationSubscribeV1Response.md
 docs/DomainAutocompleteElementResponse.md
 docs/DomainCreateObjectV1Request.md
 docs/DomainCreateObjectV1Response.md
@@ -545,6 +543,8 @@ docs/EzmaxpartnerGetObjectV2Response.md
 docs/EzmaxpartnerGetObjectV2ResponseMPayload.md
 docs/EzmaxpartnerResponse.md
 docs/EzmaxpartnerResponseCompound.md
+docs/EzmaxpartnerSubscribeV1Request.md
+docs/EzmaxpartnerSubscribeV1Response.md
 docs/EzmaxproductAutocompleteElementResponse.md
 docs/EzmaxproductGetAutocompleteV2Response.md
 docs/EzmaxproductGetAutocompleteV2ResponseMPayload.md
@@ -2759,8 +2759,6 @@ src/main/java/com/ezmax/api/model/DiscussionmessageRequestCompound.java
 src/main/java/com/ezmax/api/model/DiscussionmessageRequestPatch.java
 src/main/java/com/ezmax/api/model/DiscussionmessageResponse.java
 src/main/java/com/ezmax/api/model/DiscussionmessageResponseCompound.java
-src/main/java/com/ezmax/api/model/DocumentationSubscribeV1Request.java
-src/main/java/com/ezmax/api/model/DocumentationSubscribeV1Response.java
 src/main/java/com/ezmax/api/model/DomainAutocompleteElementResponse.java
 src/main/java/com/ezmax/api/model/DomainCreateObjectV1Request.java
 src/main/java/com/ezmax/api/model/DomainCreateObjectV1Response.java
@@ -2880,6 +2878,8 @@ src/main/java/com/ezmax/api/model/EzmaxpartnerGetObjectV2Response.java
 src/main/java/com/ezmax/api/model/EzmaxpartnerGetObjectV2ResponseMPayload.java
 src/main/java/com/ezmax/api/model/EzmaxpartnerResponse.java
 src/main/java/com/ezmax/api/model/EzmaxpartnerResponseCompound.java
+src/main/java/com/ezmax/api/model/EzmaxpartnerSubscribeV1Request.java
+src/main/java/com/ezmax/api/model/EzmaxpartnerSubscribeV1Response.java
 src/main/java/com/ezmax/api/model/EzmaxproductAutocompleteElementResponse.java
 src/main/java/com/ezmax/api/model/EzmaxproductGetAutocompleteV2Response.java
 src/main/java/com/ezmax/api/model/EzmaxproductGetAutocompleteV2ResponseMPayload.java

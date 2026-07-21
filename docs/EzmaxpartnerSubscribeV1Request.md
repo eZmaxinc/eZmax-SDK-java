@@ -1,6 +1,6 @@
 
 
-# DocumentationSubscribeV1Request
+# EzmaxpartnerSubscribeV1Request
 
 Request for POST /1/webhookdocumentation/subscribe
 
