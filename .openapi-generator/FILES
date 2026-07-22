@@ -1499,6 +1499,7 @@ docs/InscriptionGetCommunicationrecipientsV1ResponseMPayload.md
 docs/InscriptionGetCommunicationsendersV1Response.md
 docs/InscriptionGetCommunicationsendersV1ResponseMPayload.md
 docs/InscriptionGetInscriptionnotauthenticatedsV1Response.md
+docs/InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload.md
 docs/InscriptionGetListV1Response.md
 docs/InscriptionGetListV1ResponseMPayload.md
 docs/InscriptionGetObjectV2Response.md
@@ -3831,6 +3832,7 @@ src/main/java/com/ezmax/api/model/InscriptionGetCommunicationrecipientsV1Respons
 src/main/java/com/ezmax/api/model/InscriptionGetCommunicationsendersV1Response.java
 src/main/java/com/ezmax/api/model/InscriptionGetCommunicationsendersV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/InscriptionGetInscriptionnotauthenticatedsV1Response.java
+src/main/java/com/ezmax/api/model/InscriptionGetInscriptionnotauthenticatedsV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/InscriptionGetListV1Response.java
 src/main/java/com/ezmax/api/model/InscriptionGetListV1ResponseMPayload.java
 src/main/java/com/ezmax/api/model/InscriptionGetObjectV2Response.java
