@@ -25,6 +25,7 @@ An Ezsignformfieldgroup Object and children to create a complete structure
 |**sEzsignformfieldgroupTextvalidationcustommessage** | **String** | Description of validation rule. Show by signatory. |  [optional] |
 |**tEzsignformfieldgroupTooltip** | **String** | A tooltip that will be presented to Ezsignsigner about the Ezsignformfieldgroup |  [optional] |
 |**eEzsignformfieldgroupTooltipposition** | **FieldEEzsignformfieldgroupTooltipposition** |  |  [optional] |
+|**dtEzsignformfieldgroupCompleted** | **String** | The date the Ezsignformfieldgroup was completed. |  [optional] |
 |**aObjEzsignformfield** | [**List&lt;EzsignformfieldResponseCompound&gt;**](EzsignformfieldResponseCompound.md) |  |  |
 |**aObjDropdownElement** | [**List&lt;CustomDropdownElementResponseCompound&gt;**](CustomDropdownElementResponseCompound.md) |  |  [optional] |
 |**aObjEzsignformfieldgroupsigner** | [**List&lt;EzsignformfieldgroupsignerResponseCompound&gt;**](EzsignformfieldgroupsignerResponseCompound.md) |  |  |

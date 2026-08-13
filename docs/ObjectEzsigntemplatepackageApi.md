@@ -7,10 +7,12 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigntemplatepackageCreateObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageCreateObjectV1) | **POST** /1/object/ezsigntemplatepackage | Create a new Ezsigntemplatepackage |
 | [**ezsigntemplatepackageDeleteObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageDeleteObjectV1) | **DELETE** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Delete an existing Ezsigntemplatepackage |
 | [**ezsigntemplatepackageEditEzsigntemplatepackagesignersV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageEditEzsigntemplatepackagesignersV1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners |
+| [**ezsigntemplatepackageEditEzsigntemplatepackagesignersV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageEditEzsigntemplatepackagesignersV2) | **PUT** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners | Edit multiple Ezsigntemplatepackagesigners |
 | [**ezsigntemplatepackageEditObjectV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageEditObjectV1) | **PUT** /1/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Edit an existing Ezsigntemplatepackage |
 | [**ezsigntemplatepackageGetAutocompleteV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetAutocompleteV2) | **GET** /2/object/ezsigntemplatepackage/getAutocomplete/{sSelector} | Retrieve Ezsigntemplatepackages and IDs |
 | [**ezsigntemplatepackageGetListV1**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetListV1) | **GET** /1/object/ezsigntemplatepackage/getList | Retrieve Ezsigntemplatepackage list |
 | [**ezsigntemplatepackageGetObjectV2**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetObjectV2) | **GET** /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage |
+| [**ezsigntemplatepackageGetObjectV3**](ObjectEzsigntemplatepackageApi.md#ezsigntemplatepackageGetObjectV3) | **GET** /3/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID} | Retrieve an existing Ezsigntemplatepackage |
 
 
 <a id="ezsigntemplatepackageCreateObjectV1"></a>
@@ -208,6 +210,79 @@ public class Example {
 ### Return type
 
 [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response**](EzsigntemplatepackageEditEzsigntemplatepackagesignersV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body |  -  |
+
+<a id="ezsigntemplatepackageEditEzsigntemplatepackagesignersV2"></a>
+# **ezsigntemplatepackageEditEzsigntemplatepackagesignersV2**
+> EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response ezsigntemplatepackageEditEzsigntemplatepackagesignersV2(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request)
+
+Edit multiple Ezsigntemplatepackagesigners
+
+Using this endpoint, you can edit multiple Ezsigntemplatepackagesigners at the same time.
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsigntemplatepackageApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsigntemplatepackageApi apiInstance = new ObjectEzsigntemplatepackageApi(defaultClient);
+    Integer pkiEzsigntemplatepackageID = 56; // Integer | 
+    EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request = new EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request(); // EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request | 
+    try {
+      EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response result = apiInstance.ezsigntemplatepackageEditEzsigntemplatepackagesignersV2(pkiEzsigntemplatepackageID, ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageEditEzsigntemplatepackagesignersV2");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsigntemplatepackageID** | **Integer**|  | |
+| **ezsigntemplatepackageEditEzsigntemplatepackagesignersV2Request** | [**EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request**](EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Request.md)|  | |
+
+### Return type
+
+[**EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response**](EzsigntemplatepackageEditEzsigntemplatepackagesignersV2Response.md)
 
 ### Authorization
 
@@ -428,7 +503,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsigntemplatepackageID_ASC, pkiEzsigntemplatepackageID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplatepackageType_ASC, eEzsigntemplatepackageType_DESC, sEzsigntemplatepackageTypedescriptionX_ASC, sEzsigntemplatepackageTypedescriptionX_DESC, sEzsigntemplatepackageDescription_ASC, sEzsigntemplatepackageDescription_DESC, bEzsigntemplatepackageNeedvalidation_ASC, bEzsigntemplatepackageNeedvalidation_DESC, iEzsigntemplatepackagemembership_ASC, iEzsigntemplatepackagemembership_DESC, bEzsigntemplatepackageIsactive_ASC, bEzsigntemplatepackageIsactive_DESC] |
+| **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiEzsigntemplatepackageID_ASC, pkiEzsigntemplatepackageID_DESC, fkiTeamID_ASC, fkiTeamID_DESC, fkiEzsignfoldertypeID_ASC, fkiEzsignfoldertypeID_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, eEzsigntemplatepackageType_ASC, eEzsigntemplatepackageType_DESC, sEzsigntemplatepackageDescription_ASC, sEzsigntemplatepackageDescription_DESC, bEzsigntemplatepackageNeedvalidation_ASC, bEzsigntemplatepackageNeedvalidation_DESC, iEzsigntemplatepackagemembership_ASC, iEzsigntemplatepackagemembership_DESC, bEzsigntemplatepackageIsactive_ASC, bEzsigntemplatepackageIsactive_DESC] |
 | **iRowMax** | **Integer**|  | [optional] |
 | **iRowOffset** | **Integer**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
@@ -507,6 +582,76 @@ public class Example {
 ### Return type
 
 [**EzsigntemplatepackageGetObjectV2Response**](EzsigntemplatepackageGetObjectV2Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+<a id="ezsigntemplatepackageGetObjectV3"></a>
+# **ezsigntemplatepackageGetObjectV3**
+> EzsigntemplatepackageGetObjectV3Response ezsigntemplatepackageGetObjectV3(pkiEzsigntemplatepackageID)
+
+Retrieve an existing Ezsigntemplatepackage
+
+
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsigntemplatepackageApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsigntemplatepackageApi apiInstance = new ObjectEzsigntemplatepackageApi(defaultClient);
+    Integer pkiEzsigntemplatepackageID = 56; // Integer | 
+    try {
+      EzsigntemplatepackageGetObjectV3Response result = apiInstance.ezsigntemplatepackageGetObjectV3(pkiEzsigntemplatepackageID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsigntemplatepackageApi#ezsigntemplatepackageGetObjectV3");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsigntemplatepackageID** | **Integer**|  | |
+
+### Return type
+
+[**EzsigntemplatepackageGetObjectV3Response**](EzsigntemplatepackageGetObjectV3Response.md)
 
 ### Authorization
 

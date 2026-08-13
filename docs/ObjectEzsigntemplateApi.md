@@ -11,6 +11,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**ezsigntemplateGetAutocompleteV2**](ObjectEzsigntemplateApi.md#ezsigntemplateGetAutocompleteV2) | **GET** /2/object/ezsigntemplate/getAutocomplete/{sSelector} | Retrieve Ezsigntemplates and IDs |
 | [**ezsigntemplateGetListV1**](ObjectEzsigntemplateApi.md#ezsigntemplateGetListV1) | **GET** /1/object/ezsigntemplate/getList | Retrieve Ezsigntemplate list |
 | [**ezsigntemplateGetObjectV3**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV3) | **GET** /3/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate |
+| [**ezsigntemplateGetObjectV4**](ObjectEzsigntemplateApi.md#ezsigntemplateGetObjectV4) | **GET** /4/object/ezsigntemplate/{pkiEzsigntemplateID} | Retrieve an existing Ezsigntemplate |
 
 
 <a id="ezsigntemplateCopyV1"></a>
@@ -506,6 +507,76 @@ public class Example {
 ### Return type
 
 [**EzsigntemplateGetObjectV3Response**](EzsigntemplateGetObjectV3Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+
+<a id="ezsigntemplateGetObjectV4"></a>
+# **ezsigntemplateGetObjectV4**
+> EzsigntemplateGetObjectV4Response ezsigntemplateGetObjectV4(pkiEzsigntemplateID)
+
+Retrieve an existing Ezsigntemplate
+
+
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectEzsigntemplateApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectEzsigntemplateApi apiInstance = new ObjectEzsigntemplateApi(defaultClient);
+    Integer pkiEzsigntemplateID = 56; // Integer | 
+    try {
+      EzsigntemplateGetObjectV4Response result = apiInstance.ezsigntemplateGetObjectV4(pkiEzsigntemplateID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectEzsigntemplateApi#ezsigntemplateGetObjectV4");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiEzsigntemplateID** | **Integer**|  | |
+
+### Return type
+
+[**EzsigntemplateGetObjectV4Response**](EzsigntemplateGetObjectV4Response.md)
 
 ### Authorization
 

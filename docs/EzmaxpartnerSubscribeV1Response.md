@@ -8,7 +8,7 @@ Request for POST /1/module/ezmaxmaillinglist/subscribe
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**sExternalID** | **String** |  |  |
+|**sExternalID** | **String** |  |  [optional] |
 
 
 
