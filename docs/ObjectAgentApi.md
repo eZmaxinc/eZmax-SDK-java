@@ -4,10 +4,150 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**agentBatchDownloadV1**](ObjectAgentApi.md#agentBatchDownloadV1) | **POST** /1/object/agent/{pkiAgentID}/batchDownload | Download multiples attachments from a Agent |
+| [**agentGetAttachmentsV1**](ObjectAgentApi.md#agentGetAttachmentsV1) | **GET** /1/object/agent/{pkiAgentID}/getAttachments | Retrieve Agent&#39;s attachments |
 | [**agentGetAutocompleteV2**](ObjectAgentApi.md#agentGetAutocompleteV2) | **GET** /2/object/agent/getAutocomplete/{sSelector} | Retrieve Agents and IDs |
 | [**agentGetListV1**](ObjectAgentApi.md#agentGetListV1) | **GET** /1/object/agent/getList | Retrieve Agent list |
 | [**agentImportIntoEDMV1**](ObjectAgentApi.md#agentImportIntoEDMV1) | **POST** /1/object/agent/{pkiAgentID}/importIntoEDM | Import attachments into the Agent |
 
+
+<a id="agentBatchDownloadV1"></a>
+# **agentBatchDownloadV1**
+> File agentBatchDownloadV1(pkiAgentID, agentBatchDownloadV1Request)
+
+Download multiples attachments from a Agent
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectAgentApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectAgentApi apiInstance = new ObjectAgentApi(defaultClient);
+    Integer pkiAgentID = 56; // Integer | 
+    AgentBatchDownloadV1Request agentBatchDownloadV1Request = new AgentBatchDownloadV1Request(); // AgentBatchDownloadV1Request | 
+    try {
+      File result = apiInstance.agentBatchDownloadV1(pkiAgentID, agentBatchDownloadV1Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectAgentApi#agentBatchDownloadV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiAgentID** | **Integer**|  | |
+| **agentBatchDownloadV1Request** | [**AgentBatchDownloadV1Request**](AgentBatchDownloadV1Request.md)|  | |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/zip, text/xml, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+<a id="agentGetAttachmentsV1"></a>
+# **agentGetAttachmentsV1**
+> AgentGetAttachmentsV1Response agentGetAttachmentsV1(pkiAgentID)
+
+Retrieve Agent&#39;s attachments
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectAgentApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectAgentApi apiInstance = new ObjectAgentApi(defaultClient);
+    Integer pkiAgentID = 56; // Integer | 
+    try {
+      AgentGetAttachmentsV1Response result = apiInstance.agentGetAttachmentsV1(pkiAgentID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectAgentApi#agentGetAttachmentsV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiAgentID** | **Integer**|  | |
+
+### Return type
+
+[**AgentGetAttachmentsV1Response**](AgentGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 
 <a id="agentGetAutocompleteV2"></a>
 # **agentGetAutocompleteV2**
@@ -137,7 +277,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiAgentID_ASC, pkiAgentID_DESC, fkiAgenttypeID_ASC, fkiAgenttypeID_DESC, sAgenttypeNameX_ASC, sAgenttypeNameX_DESC, fkiAgentincorporationID_ASC, fkiAgentincorporationID_DESC, sAgentincorporationName_ASC, sAgentincorporationName_DESC, fkiDepartmentID_ASC, fkiDepartmentID_DESC, sDepartmentNameX_ASC, sDepartmentNameX_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, sLanguageNameX_ASC, sLanguageNameX_DESC, sRealestateboardnumberNumber_ASC, sRealestateboardnumberNumber_DESC, sAgentCode_ASC, sAgentCode_DESC, iAgentPhotocopiercode_ASC, iAgentPhotocopiercode_DESC, iAgentLongdistancecode_ASC, iAgentLongdistancecode_DESC, iAgentBannernumber_ASC, iAgentBannernumber_DESC, sAgentRealestateassociationlicense_ASC, sAgentRealestateassociationlicense_DESC, dtAgentHiredate_ASC, dtAgentHiredate_DESC, dtAgentLeavedate_ASC, dtAgentLeavedate_DESC, bAgentTranquillit_ASC, bAgentTranquillit_DESC, bAgentResidentiallicense_ASC, bAgentResidentiallicense_DESC, bAgentCommerciallicense_ASC, bAgentCommerciallicense_DESC, bAgentMortgagelicense_ASC, bAgentMortgagelicense_DESC, bAgentPaidbyofficetranquillit_ASC, bAgentPaidbyofficetranquillit_DESC, dtAgentFintraccertification_ASC, dtAgentFintraccertification_DESC, sContactFirstname_ASC, sContactFirstname_DESC, sContactLastname_ASC, sContactLastname_DESC, dtContactBirthdate_ASC, dtContactBirthdate_DESC, sEmailAddress_ASC, sEmailAddress_DESC, sPhoneE164_ASC, sPhoneE164_DESC, sAddressCivic_ASC, sAddressCivic_DESC, sAddressStreet_ASC, sAddressStreet_DESC, sAddressSuite_ASC, sAddressSuite_DESC, sAddressCity_ASC, sAddressCity_DESC, sAddressZip_ASC, sAddressZip_DESC, sProvinceNameX_ASC, sProvinceNameX_DESC, sCountryNameX_ASC, sCountryNameX_DESC, bAgentIsactive_ASC, bAgentIsactive_DESC] |
+| **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiAgentID_ASC, pkiAgentID_DESC, fkiAgenttypeID_ASC, fkiAgenttypeID_DESC, sAgenttypeNameX_ASC, sAgenttypeNameX_DESC, fkiAgentincorporationID_ASC, fkiAgentincorporationID_DESC, sAgentincorporationName_ASC, sAgentincorporationName_DESC, fkiDepartmentID_ASC, fkiDepartmentID_DESC, sDepartmentNameX_ASC, sDepartmentNameX_DESC, fkiLanguageID_ASC, fkiLanguageID_DESC, sLanguageNameX_ASC, sLanguageNameX_DESC, sRealestateboardnumberNumber_ASC, sRealestateboardnumberNumber_DESC, sAgentCode_ASC, sAgentCode_DESC, iAgentPhotocopiercode_ASC, iAgentPhotocopiercode_DESC, iAgentLongdistancecode_ASC, iAgentLongdistancecode_DESC, iAgentBannernumber_ASC, iAgentBannernumber_DESC, sAgentRealestateassociationlicense_ASC, sAgentRealestateassociationlicense_DESC, dtAgentPermitexpiration_ASC, dtAgentPermitexpiration_DESC, dtAgentHiredate_ASC, dtAgentHiredate_DESC, dtAgentLeavedate_ASC, dtAgentLeavedate_DESC, bAgentTranquillit_ASC, bAgentTranquillit_DESC, bAgentResidentiallicense_ASC, bAgentResidentiallicense_DESC, bAgentCommerciallicense_ASC, bAgentCommerciallicense_DESC, bAgentMortgagelicense_ASC, bAgentMortgagelicense_DESC, bAgentPaidbyofficetranquillit_ASC, bAgentPaidbyofficetranquillit_DESC, dtAgentFintraccertification_ASC, dtAgentFintraccertification_DESC, sContactFirstname_ASC, sContactFirstname_DESC, sContactLastname_ASC, sContactLastname_DESC, dtContactBirthdate_ASC, dtContactBirthdate_DESC, sEmailAddress_ASC, sEmailAddress_DESC, sPhoneE164_ASC, sPhoneE164_DESC, sAddressCivic_ASC, sAddressCivic_DESC, sAddressStreet_ASC, sAddressStreet_DESC, sAddressSuite_ASC, sAddressSuite_DESC, sAddressCity_ASC, sAddressCity_DESC, sAddressZip_ASC, sAddressZip_DESC, sProvinceNameX_ASC, sProvinceNameX_DESC, sCountryNameX_ASC, sCountryNameX_DESC, bAgentIsactive_ASC, bAgentIsactive_DESC] |
 | **iRowMax** | **Integer**|  | [optional] |
 | **iRowOffset** | **Integer**|  | [optional] [default to 0] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
@@ -232,5 +372,5 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 

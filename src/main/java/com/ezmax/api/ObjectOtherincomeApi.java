@@ -30,6 +30,8 @@ import java.io.IOException;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
+import com.ezmax.api.model.OtherincomeBatchDownloadV1Request;
+import com.ezmax.api.model.OtherincomeGetAttachmentsV1Response;
 import com.ezmax.api.model.OtherincomeGetCommunicationCountV1Response;
 import com.ezmax.api.model.OtherincomeGetCommunicationListV1Response;
 import com.ezmax.api.model.OtherincomeGetCommunicationrecipientsV1Response;
@@ -82,6 +84,280 @@ public class ObjectOtherincomeApi {
     }
 
     /**
+     * Build call for otherincomeBatchDownloadV1
+     * @param pkiOtherincomeID  (required)
+     * @param otherincomeBatchDownloadV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call otherincomeBatchDownloadV1Call(@javax.annotation.Nonnull Integer pkiOtherincomeID, @javax.annotation.Nonnull OtherincomeBatchDownloadV1Request otherincomeBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = otherincomeBatchDownloadV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/otherincome/{pkiOtherincomeID}/batchDownload"
+            .replace("{" + "pkiOtherincomeID" + "}", localVarApiClient.escapeString(pkiOtherincomeID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/zip",
+            "text/xml",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call otherincomeBatchDownloadV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiOtherincomeID, @javax.annotation.Nonnull OtherincomeBatchDownloadV1Request otherincomeBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiOtherincomeID' is set
+        if (pkiOtherincomeID == null) {
+            throw new ApiException("Missing the required parameter 'pkiOtherincomeID' when calling otherincomeBatchDownloadV1(Async)");
+        }
+
+        // verify the required parameter 'otherincomeBatchDownloadV1Request' is set
+        if (otherincomeBatchDownloadV1Request == null) {
+            throw new ApiException("Missing the required parameter 'otherincomeBatchDownloadV1Request' when calling otherincomeBatchDownloadV1(Async)");
+        }
+
+        return otherincomeBatchDownloadV1Call(pkiOtherincomeID, otherincomeBatchDownloadV1Request, _callback);
+
+    }
+
+    /**
+     * Download multiples attachments from a Otherincome
+     * 
+     * @param pkiOtherincomeID  (required)
+     * @param otherincomeBatchDownloadV1Request  (required)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public File otherincomeBatchDownloadV1(@javax.annotation.Nonnull Integer pkiOtherincomeID, @javax.annotation.Nonnull OtherincomeBatchDownloadV1Request otherincomeBatchDownloadV1Request) throws ApiException {
+        ApiResponse<File> localVarResp = otherincomeBatchDownloadV1WithHttpInfo(pkiOtherincomeID, otherincomeBatchDownloadV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Download multiples attachments from a Otherincome
+     * 
+     * @param pkiOtherincomeID  (required)
+     * @param otherincomeBatchDownloadV1Request  (required)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<File> otherincomeBatchDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiOtherincomeID, @javax.annotation.Nonnull OtherincomeBatchDownloadV1Request otherincomeBatchDownloadV1Request) throws ApiException {
+        okhttp3.Call localVarCall = otherincomeBatchDownloadV1ValidateBeforeCall(pkiOtherincomeID, otherincomeBatchDownloadV1Request, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Download multiples attachments from a Otherincome (asynchronously)
+     * 
+     * @param pkiOtherincomeID  (required)
+     * @param otherincomeBatchDownloadV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call otherincomeBatchDownloadV1Async(@javax.annotation.Nonnull Integer pkiOtherincomeID, @javax.annotation.Nonnull OtherincomeBatchDownloadV1Request otherincomeBatchDownloadV1Request, final ApiCallback<File> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = otherincomeBatchDownloadV1ValidateBeforeCall(pkiOtherincomeID, otherincomeBatchDownloadV1Request, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for otherincomeGetAttachmentsV1
+     * @param pkiOtherincomeID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call otherincomeGetAttachmentsV1Call(@javax.annotation.Nonnull Integer pkiOtherincomeID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/otherincome/{pkiOtherincomeID}/getAttachments"
+            .replace("{" + "pkiOtherincomeID" + "}", localVarApiClient.escapeString(pkiOtherincomeID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call otherincomeGetAttachmentsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiOtherincomeID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiOtherincomeID' is set
+        if (pkiOtherincomeID == null) {
+            throw new ApiException("Missing the required parameter 'pkiOtherincomeID' when calling otherincomeGetAttachmentsV1(Async)");
+        }
+
+        return otherincomeGetAttachmentsV1Call(pkiOtherincomeID, _callback);
+
+    }
+
+    /**
+     * Retrieve Otherincome&#39;s attachments
+     * 
+     * @param pkiOtherincomeID  (required)
+     * @return OtherincomeGetAttachmentsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public OtherincomeGetAttachmentsV1Response otherincomeGetAttachmentsV1(@javax.annotation.Nonnull Integer pkiOtherincomeID) throws ApiException {
+        ApiResponse<OtherincomeGetAttachmentsV1Response> localVarResp = otherincomeGetAttachmentsV1WithHttpInfo(pkiOtherincomeID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Otherincome&#39;s attachments
+     * 
+     * @param pkiOtherincomeID  (required)
+     * @return ApiResponse&lt;OtherincomeGetAttachmentsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<OtherincomeGetAttachmentsV1Response> otherincomeGetAttachmentsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiOtherincomeID) throws ApiException {
+        okhttp3.Call localVarCall = otherincomeGetAttachmentsV1ValidateBeforeCall(pkiOtherincomeID, null);
+        Type localVarReturnType = new TypeToken<OtherincomeGetAttachmentsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Otherincome&#39;s attachments (asynchronously)
+     * 
+     * @param pkiOtherincomeID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call otherincomeGetAttachmentsV1Async(@javax.annotation.Nonnull Integer pkiOtherincomeID, final ApiCallback<OtherincomeGetAttachmentsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = otherincomeGetAttachmentsV1ValidateBeforeCall(pkiOtherincomeID, _callback);
+        Type localVarReturnType = new TypeToken<OtherincomeGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for otherincomeGetCommunicationCountV1
      * @param pkiOtherincomeID  (required)
      * @param _callback Callback for upload/download progress
@@ -92,7 +368,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call otherincomeGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiOtherincomeID, final ApiCallback _callback) throws ApiException {
@@ -162,7 +438,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public OtherincomeGetCommunicationCountV1Response otherincomeGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiOtherincomeID) throws ApiException {
@@ -181,7 +457,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OtherincomeGetCommunicationCountV1Response> otherincomeGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiOtherincomeID) throws ApiException {
@@ -202,7 +478,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call otherincomeGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiOtherincomeID, final ApiCallback<OtherincomeGetCommunicationCountV1Response> _callback) throws ApiException {
@@ -223,7 +499,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call otherincomeGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiOtherincomeID, final ApiCallback _callback) throws ApiException {
@@ -293,7 +569,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public OtherincomeGetCommunicationListV1Response otherincomeGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiOtherincomeID) throws ApiException {
@@ -312,7 +588,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OtherincomeGetCommunicationListV1Response> otherincomeGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiOtherincomeID) throws ApiException {
@@ -333,7 +609,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call otherincomeGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiOtherincomeID, final ApiCallback<OtherincomeGetCommunicationListV1Response> _callback) throws ApiException {
@@ -354,7 +630,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call otherincomeGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiOtherincomeID, final ApiCallback _callback) throws ApiException {
@@ -424,7 +700,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public OtherincomeGetCommunicationrecipientsV1Response otherincomeGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiOtherincomeID) throws ApiException {
@@ -443,7 +719,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OtherincomeGetCommunicationrecipientsV1Response> otherincomeGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiOtherincomeID) throws ApiException {
@@ -464,7 +740,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call otherincomeGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiOtherincomeID, final ApiCallback<OtherincomeGetCommunicationrecipientsV1Response> _callback) throws ApiException {
@@ -485,7 +761,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call otherincomeGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiOtherincomeID, final ApiCallback _callback) throws ApiException {
@@ -555,7 +831,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public OtherincomeGetCommunicationsendersV1Response otherincomeGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiOtherincomeID) throws ApiException {
@@ -574,7 +850,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OtherincomeGetCommunicationsendersV1Response> otherincomeGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiOtherincomeID) throws ApiException {
@@ -595,7 +871,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call otherincomeGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiOtherincomeID, final ApiCallback<OtherincomeGetCommunicationsendersV1Response> _callback) throws ApiException {
@@ -780,7 +1056,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call otherincomeImportIntoEDMV1Call(@javax.annotation.Nonnull Integer pkiOtherincomeID, @javax.annotation.Nonnull OtherincomeImportIntoEDMV1Request otherincomeImportIntoEDMV1Request, final ApiCallback _callback) throws ApiException {
@@ -857,7 +1133,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public OtherincomeImportIntoEDMV1Response otherincomeImportIntoEDMV1(@javax.annotation.Nonnull Integer pkiOtherincomeID, @javax.annotation.Nonnull OtherincomeImportIntoEDMV1Request otherincomeImportIntoEDMV1Request) throws ApiException {
@@ -877,7 +1153,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<OtherincomeImportIntoEDMV1Response> otherincomeImportIntoEDMV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiOtherincomeID, @javax.annotation.Nonnull OtherincomeImportIntoEDMV1Request otherincomeImportIntoEDMV1Request) throws ApiException {
@@ -899,7 +1175,7 @@ public class ObjectOtherincomeApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call otherincomeImportIntoEDMV1Async(@javax.annotation.Nonnull Integer pkiOtherincomeID, @javax.annotation.Nonnull OtherincomeImportIntoEDMV1Request otherincomeImportIntoEDMV1Request, final ApiCallback<OtherincomeImportIntoEDMV1Response> _callback) throws ApiException {

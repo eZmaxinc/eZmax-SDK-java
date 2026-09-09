@@ -13,7 +13,7 @@
 
 package eZmaxAPI;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-13T03:44:35.375198799Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-09T17:23:07.900861575Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class Pair {
   private final String name;
   private final String value;

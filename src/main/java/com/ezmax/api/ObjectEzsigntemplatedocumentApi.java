@@ -111,8 +111,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 413 </td><td> The request was large. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+        <tr><td> 413 </td><td> The request was large. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentCreateObjectV1Call(@javax.annotation.Nonnull EzsigntemplatedocumentCreateObjectV1Request ezsigntemplatedocumentCreateObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -182,8 +182,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 413 </td><td> The request was large. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+        <tr><td> 413 </td><td> The request was large. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentCreateObjectV1Response ezsigntemplatedocumentCreateObjectV1(@javax.annotation.Nonnull EzsigntemplatedocumentCreateObjectV1Request ezsigntemplatedocumentCreateObjectV1Request) throws ApiException {
@@ -202,8 +202,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 413 </td><td> The request was large. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+        <tr><td> 413 </td><td> The request was large. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentCreateObjectV1Response> ezsigntemplatedocumentCreateObjectV1WithHttpInfo(@javax.annotation.Nonnull EzsigntemplatedocumentCreateObjectV1Request ezsigntemplatedocumentCreateObjectV1Request) throws ApiException {
@@ -224,8 +224,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 201 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 413 </td><td> The request was large. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+        <tr><td> 413 </td><td> The request was large. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentCreateObjectV1Async(@javax.annotation.Nonnull EzsigntemplatedocumentCreateObjectV1Request ezsigntemplatedocumentCreateObjectV1Request, final ApiCallback<EzsigntemplatedocumentCreateObjectV1Response> _callback) throws ApiException {
@@ -246,7 +246,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentDownloadV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback _callback) throws ApiException {
@@ -315,7 +315,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public void ezsigntemplatedocumentDownloadV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -333,7 +333,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Void> ezsigntemplatedocumentDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -353,7 +353,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentDownloadV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback<Void> _callback) throws ApiException {
@@ -374,8 +374,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentEditEzsigntemplateannotationsV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, final ApiCallback _callback) throws ApiException {
@@ -452,8 +452,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response ezsigntemplatedocumentEditEzsigntemplateannotationsV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request) throws ApiException {
@@ -473,8 +473,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response> ezsigntemplatedocumentEditEzsigntemplateannotationsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request) throws ApiException {
@@ -496,8 +496,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentEditEzsigntemplateannotationsV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplateannotationsV1Request ezsigntemplatedocumentEditEzsigntemplateannotationsV1Request, final ApiCallback<EzsigntemplatedocumentEditEzsigntemplateannotationsV1Response> _callback) throws ApiException {
@@ -519,8 +519,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request, final ApiCallback _callback) throws ApiException {
@@ -597,8 +597,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request) throws ApiException {
@@ -618,8 +618,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response> ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request) throws ApiException {
@@ -641,8 +641,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request ezsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Request, final ApiCallback<EzsigntemplatedocumentEditEzsigntemplatedocumentpagerecognitionsV1Response> _callback) throws ApiException {
@@ -664,8 +664,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request, final ApiCallback _callback) throws ApiException {
@@ -742,8 +742,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request) throws ApiException {
@@ -763,8 +763,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response> ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request) throws ApiException {
@@ -786,8 +786,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request ezsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Request, final ApiCallback<EzsigntemplatedocumentEditEzsigntemplateformfieldgroupsV1Response> _callback) throws ApiException {
@@ -809,8 +809,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      * @deprecated
      */
@@ -890,8 +890,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      * @deprecated
      */
@@ -913,8 +913,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      * @deprecated
      */
@@ -938,8 +938,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      * @deprecated
      */
@@ -963,8 +963,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request, final ApiCallback _callback) throws ApiException {
@@ -1041,8 +1041,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Response ezsigntemplatedocumentEditEzsigntemplatesignaturesV2(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request) throws ApiException {
@@ -1062,8 +1062,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Response> ezsigntemplatedocumentEditEzsigntemplatesignaturesV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request) throws ApiException {
@@ -1085,8 +1085,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Request ezsigntemplatedocumentEditEzsigntemplatesignaturesV2Request, final ApiCallback<EzsigntemplatedocumentEditEzsigntemplatesignaturesV2Response> _callback) throws ApiException {
@@ -1108,8 +1108,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentEditObjectV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditObjectV1Request ezsigntemplatedocumentEditObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -1186,8 +1186,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentEditObjectV1Response ezsigntemplatedocumentEditObjectV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditObjectV1Request ezsigntemplatedocumentEditObjectV1Request) throws ApiException {
@@ -1207,8 +1207,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentEditObjectV1Response> ezsigntemplatedocumentEditObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditObjectV1Request ezsigntemplatedocumentEditObjectV1Request) throws ApiException {
@@ -1230,8 +1230,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. If the error is recoverable sTemporaryFileUrl will be set and you can use this url to try a new request without sending the file over again. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentEditObjectV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentEditObjectV1Request ezsigntemplatedocumentEditObjectV1Request, final ApiCallback<EzsigntemplatedocumentEditObjectV1Response> _callback) throws ApiException {
@@ -1253,8 +1253,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentExtractTextV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request, final ApiCallback _callback) throws ApiException {
@@ -1331,8 +1331,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentExtractTextV1Response ezsigntemplatedocumentExtractTextV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request) throws ApiException {
@@ -1352,8 +1352,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentExtractTextV1Response> ezsigntemplatedocumentExtractTextV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request) throws ApiException {
@@ -1375,8 +1375,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentExtractTextV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentExtractTextV1Request ezsigntemplatedocumentExtractTextV1Request, final ApiCallback<EzsigntemplatedocumentExtractTextV1Response> _callback) throws ApiException {
@@ -1398,8 +1398,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentFlattenV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
@@ -1476,8 +1476,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentFlattenV1Response ezsigntemplatedocumentFlattenV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull Object body) throws ApiException {
@@ -1497,8 +1497,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentFlattenV1Response> ezsigntemplatedocumentFlattenV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull Object body) throws ApiException {
@@ -1520,8 +1520,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentFlattenV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull Object body, final ApiCallback<EzsigntemplatedocumentFlattenV1Response> _callback) throws ApiException {
@@ -1542,8 +1542,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetEzsigntemplateannotationsV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback _callback) throws ApiException {
@@ -1613,8 +1613,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response ezsigntemplatedocumentGetEzsigntemplateannotationsV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -1633,8 +1633,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response> ezsigntemplatedocumentGetEzsigntemplateannotationsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -1655,8 +1655,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetEzsigntemplateannotationsV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback<EzsigntemplatedocumentGetEzsigntemplateannotationsV1Response> _callback) throws ApiException {
@@ -1677,8 +1677,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback _callback) throws ApiException {
@@ -1748,8 +1748,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -1768,8 +1768,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response> ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -1790,8 +1790,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback<EzsigntemplatedocumentGetEzsigntemplatedocumentpagerecognitionsV1Response> _callback) throws ApiException {
@@ -1812,7 +1812,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback _callback) throws ApiException {
@@ -1882,7 +1882,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -1901,7 +1901,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response> ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -1922,7 +1922,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback<EzsigntemplatedocumentGetEzsigntemplatedocumentpagesV1Response> _callback) throws ApiException {
@@ -1943,8 +1943,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback _callback) throws ApiException {
@@ -2014,8 +2014,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -2034,8 +2034,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response> ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -2056,8 +2056,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback<EzsigntemplatedocumentGetEzsigntemplateformfieldgroupsV1Response> _callback) throws ApiException {
@@ -2078,8 +2078,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetEzsigntemplatesignaturesV2Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback _callback) throws ApiException {
@@ -2149,8 +2149,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentGetEzsigntemplatesignaturesV2Response ezsigntemplatedocumentGetEzsigntemplatesignaturesV2(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -2169,8 +2169,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentGetEzsigntemplatesignaturesV2Response> ezsigntemplatedocumentGetEzsigntemplatesignaturesV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -2191,8 +2191,8 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetEzsigntemplatesignaturesV2Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback<EzsigntemplatedocumentGetEzsigntemplatesignaturesV2Response> _callback) throws ApiException {
@@ -2213,7 +2213,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetObjectV2Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback _callback) throws ApiException {
@@ -2283,7 +2283,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentGetObjectV2Response ezsigntemplatedocumentGetObjectV2(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -2302,7 +2302,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentGetObjectV2Response> ezsigntemplatedocumentGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID) throws ApiException {
@@ -2323,7 +2323,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetObjectV2Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, final ApiCallback<EzsigntemplatedocumentGetObjectV2Response> _callback) throws ApiException {
@@ -2345,7 +2345,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetWordsPositionsV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentGetWordsPositionsV1Request ezsigntemplatedocumentGetWordsPositionsV1Request, final ApiCallback _callback) throws ApiException {
@@ -2422,7 +2422,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentGetWordsPositionsV1Response ezsigntemplatedocumentGetWordsPositionsV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentGetWordsPositionsV1Request ezsigntemplatedocumentGetWordsPositionsV1Request) throws ApiException {
@@ -2442,7 +2442,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentGetWordsPositionsV1Response> ezsigntemplatedocumentGetWordsPositionsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentGetWordsPositionsV1Request ezsigntemplatedocumentGetWordsPositionsV1Request) throws ApiException {
@@ -2464,7 +2464,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentGetWordsPositionsV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentGetWordsPositionsV1Request ezsigntemplatedocumentGetWordsPositionsV1Request, final ApiCallback<EzsigntemplatedocumentGetWordsPositionsV1Response> _callback) throws ApiException {
@@ -2486,7 +2486,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentPatchObjectV1Call(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -2563,7 +2563,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplatedocumentPatchObjectV1Response ezsigntemplatedocumentPatchObjectV1(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request) throws ApiException {
@@ -2583,7 +2583,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplatedocumentPatchObjectV1Response> ezsigntemplatedocumentPatchObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request) throws ApiException {
@@ -2605,7 +2605,7 @@ public class ObjectEzsigntemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplatedocumentPatchObjectV1Async(@javax.annotation.Nonnull Integer pkiEzsigntemplatedocumentID, @javax.annotation.Nonnull EzsigntemplatedocumentPatchObjectV1Request ezsigntemplatedocumentPatchObjectV1Request, final ApiCallback<EzsigntemplatedocumentPatchObjectV1Response> _callback) throws ApiException {

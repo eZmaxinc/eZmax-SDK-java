@@ -85,7 +85,7 @@ public class ObjectNotificationsectionApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call notificationsectionGetNotificationtestsV1Call(@javax.annotation.Nonnull Integer pkiNotificationsectionID, @javax.annotation.Nonnull Boolean bShowHidden, final ApiCallback _callback) throws ApiException {
@@ -165,7 +165,7 @@ public class ObjectNotificationsectionApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public NotificationsectionGetNotificationtestsV1Response notificationsectionGetNotificationtestsV1(@javax.annotation.Nonnull Integer pkiNotificationsectionID, @javax.annotation.Nonnull Boolean bShowHidden) throws ApiException {
@@ -185,7 +185,7 @@ public class ObjectNotificationsectionApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<NotificationsectionGetNotificationtestsV1Response> notificationsectionGetNotificationtestsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiNotificationsectionID, @javax.annotation.Nonnull Boolean bShowHidden) throws ApiException {
@@ -207,7 +207,7 @@ public class ObjectNotificationsectionApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call notificationsectionGetNotificationtestsV1Async(@javax.annotation.Nonnull Integer pkiNotificationsectionID, @javax.annotation.Nonnull Boolean bShowHidden, final ApiCallback<NotificationsectionGetNotificationtestsV1Response> _callback) throws ApiException {

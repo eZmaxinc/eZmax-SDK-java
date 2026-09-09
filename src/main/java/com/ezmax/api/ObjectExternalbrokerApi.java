@@ -28,8 +28,11 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.ExternalbrokerBatchDownloadV1Request;
+import com.ezmax.api.model.ExternalbrokerGetAttachmentsV1Response;
 import com.ezmax.api.model.ExternalbrokerImportIntoEDMV1Request;
 import com.ezmax.api.model.ExternalbrokerImportIntoEDMV1Response;
+import java.io.File;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -75,6 +78,288 @@ public class ObjectExternalbrokerApi {
     }
 
     /**
+     * Build call for externalbrokerBatchDownloadV1
+     * @param pkiExternalbrokerID  (required)
+     * @param externalbrokerBatchDownloadV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call externalbrokerBatchDownloadV1Call(@javax.annotation.Nonnull Integer pkiExternalbrokerID, @javax.annotation.Nonnull ExternalbrokerBatchDownloadV1Request externalbrokerBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = externalbrokerBatchDownloadV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/externalbroker/{pkiExternalbrokerID}/batchDownload"
+            .replace("{" + "pkiExternalbrokerID" + "}", localVarApiClient.escapeString(pkiExternalbrokerID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/zip",
+            "text/xml",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call externalbrokerBatchDownloadV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiExternalbrokerID, @javax.annotation.Nonnull ExternalbrokerBatchDownloadV1Request externalbrokerBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiExternalbrokerID' is set
+        if (pkiExternalbrokerID == null) {
+            throw new ApiException("Missing the required parameter 'pkiExternalbrokerID' when calling externalbrokerBatchDownloadV1(Async)");
+        }
+
+        // verify the required parameter 'externalbrokerBatchDownloadV1Request' is set
+        if (externalbrokerBatchDownloadV1Request == null) {
+            throw new ApiException("Missing the required parameter 'externalbrokerBatchDownloadV1Request' when calling externalbrokerBatchDownloadV1(Async)");
+        }
+
+        return externalbrokerBatchDownloadV1Call(pkiExternalbrokerID, externalbrokerBatchDownloadV1Request, _callback);
+
+    }
+
+    /**
+     * Download multiples attachments from an Externalbroker
+     * 
+     * @param pkiExternalbrokerID  (required)
+     * @param externalbrokerBatchDownloadV1Request  (required)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public File externalbrokerBatchDownloadV1(@javax.annotation.Nonnull Integer pkiExternalbrokerID, @javax.annotation.Nonnull ExternalbrokerBatchDownloadV1Request externalbrokerBatchDownloadV1Request) throws ApiException {
+        ApiResponse<File> localVarResp = externalbrokerBatchDownloadV1WithHttpInfo(pkiExternalbrokerID, externalbrokerBatchDownloadV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Download multiples attachments from an Externalbroker
+     * 
+     * @param pkiExternalbrokerID  (required)
+     * @param externalbrokerBatchDownloadV1Request  (required)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<File> externalbrokerBatchDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiExternalbrokerID, @javax.annotation.Nonnull ExternalbrokerBatchDownloadV1Request externalbrokerBatchDownloadV1Request) throws ApiException {
+        okhttp3.Call localVarCall = externalbrokerBatchDownloadV1ValidateBeforeCall(pkiExternalbrokerID, externalbrokerBatchDownloadV1Request, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Download multiples attachments from an Externalbroker (asynchronously)
+     * 
+     * @param pkiExternalbrokerID  (required)
+     * @param externalbrokerBatchDownloadV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call externalbrokerBatchDownloadV1Async(@javax.annotation.Nonnull Integer pkiExternalbrokerID, @javax.annotation.Nonnull ExternalbrokerBatchDownloadV1Request externalbrokerBatchDownloadV1Request, final ApiCallback<File> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = externalbrokerBatchDownloadV1ValidateBeforeCall(pkiExternalbrokerID, externalbrokerBatchDownloadV1Request, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for externalbrokerGetAttachmentsV1
+     * @param pkiExternalbrokerID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call externalbrokerGetAttachmentsV1Call(@javax.annotation.Nonnull Integer pkiExternalbrokerID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/externalbroker/{pkiExternalbrokerID}/getAttachments"
+            .replace("{" + "pkiExternalbrokerID" + "}", localVarApiClient.escapeString(pkiExternalbrokerID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call externalbrokerGetAttachmentsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiExternalbrokerID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiExternalbrokerID' is set
+        if (pkiExternalbrokerID == null) {
+            throw new ApiException("Missing the required parameter 'pkiExternalbrokerID' when calling externalbrokerGetAttachmentsV1(Async)");
+        }
+
+        return externalbrokerGetAttachmentsV1Call(pkiExternalbrokerID, _callback);
+
+    }
+
+    /**
+     * Retrieve Externalbroker&#39;s attachments
+     * 
+     * @param pkiExternalbrokerID  (required)
+     * @return ExternalbrokerGetAttachmentsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ExternalbrokerGetAttachmentsV1Response externalbrokerGetAttachmentsV1(@javax.annotation.Nonnull Integer pkiExternalbrokerID) throws ApiException {
+        ApiResponse<ExternalbrokerGetAttachmentsV1Response> localVarResp = externalbrokerGetAttachmentsV1WithHttpInfo(pkiExternalbrokerID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Externalbroker&#39;s attachments
+     * 
+     * @param pkiExternalbrokerID  (required)
+     * @return ApiResponse&lt;ExternalbrokerGetAttachmentsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ExternalbrokerGetAttachmentsV1Response> externalbrokerGetAttachmentsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiExternalbrokerID) throws ApiException {
+        okhttp3.Call localVarCall = externalbrokerGetAttachmentsV1ValidateBeforeCall(pkiExternalbrokerID, null);
+        Type localVarReturnType = new TypeToken<ExternalbrokerGetAttachmentsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Externalbroker&#39;s attachments (asynchronously)
+     * 
+     * @param pkiExternalbrokerID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call externalbrokerGetAttachmentsV1Async(@javax.annotation.Nonnull Integer pkiExternalbrokerID, final ApiCallback<ExternalbrokerGetAttachmentsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = externalbrokerGetAttachmentsV1ValidateBeforeCall(pkiExternalbrokerID, _callback);
+        Type localVarReturnType = new TypeToken<ExternalbrokerGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for externalbrokerImportIntoEDMV1
      * @param pkiExternalbrokerID  (required)
      * @param externalbrokerImportIntoEDMV1Request  (required)
@@ -86,7 +371,7 @@ public class ObjectExternalbrokerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call externalbrokerImportIntoEDMV1Call(@javax.annotation.Nonnull Integer pkiExternalbrokerID, @javax.annotation.Nonnull ExternalbrokerImportIntoEDMV1Request externalbrokerImportIntoEDMV1Request, final ApiCallback _callback) throws ApiException {
@@ -163,7 +448,7 @@ public class ObjectExternalbrokerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ExternalbrokerImportIntoEDMV1Response externalbrokerImportIntoEDMV1(@javax.annotation.Nonnull Integer pkiExternalbrokerID, @javax.annotation.Nonnull ExternalbrokerImportIntoEDMV1Request externalbrokerImportIntoEDMV1Request) throws ApiException {
@@ -183,7 +468,7 @@ public class ObjectExternalbrokerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<ExternalbrokerImportIntoEDMV1Response> externalbrokerImportIntoEDMV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiExternalbrokerID, @javax.annotation.Nonnull ExternalbrokerImportIntoEDMV1Request externalbrokerImportIntoEDMV1Request) throws ApiException {
@@ -205,7 +490,7 @@ public class ObjectExternalbrokerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call externalbrokerImportIntoEDMV1Async(@javax.annotation.Nonnull Integer pkiExternalbrokerID, @javax.annotation.Nonnull ExternalbrokerImportIntoEDMV1Request externalbrokerImportIntoEDMV1Request, final ApiCallback<ExternalbrokerImportIntoEDMV1Response> _callback) throws ApiException {

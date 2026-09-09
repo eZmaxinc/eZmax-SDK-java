@@ -220,8 +220,8 @@ public class ObjectBillingentityinternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call billingentityinternalEditObjectV1Call(@javax.annotation.Nonnull Integer pkiBillingentityinternalID, @javax.annotation.Nonnull BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -298,8 +298,8 @@ public class ObjectBillingentityinternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public BillingentityinternalEditObjectV1Response billingentityinternalEditObjectV1(@javax.annotation.Nonnull Integer pkiBillingentityinternalID, @javax.annotation.Nonnull BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
@@ -319,8 +319,8 @@ public class ObjectBillingentityinternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<BillingentityinternalEditObjectV1Response> billingentityinternalEditObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBillingentityinternalID, @javax.annotation.Nonnull BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request) throws ApiException {
@@ -342,8 +342,8 @@ public class ObjectBillingentityinternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call billingentityinternalEditObjectV1Async(@javax.annotation.Nonnull Integer pkiBillingentityinternalID, @javax.annotation.Nonnull BillingentityinternalEditObjectV1Request billingentityinternalEditObjectV1Request, final ApiCallback<BillingentityinternalEditObjectV1Response> _callback) throws ApiException {
@@ -679,7 +679,7 @@ public class ObjectBillingentityinternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call billingentityinternalGetObjectV2Call(@javax.annotation.Nonnull Integer pkiBillingentityinternalID, final ApiCallback _callback) throws ApiException {
@@ -749,7 +749,7 @@ public class ObjectBillingentityinternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public BillingentityinternalGetObjectV2Response billingentityinternalGetObjectV2(@javax.annotation.Nonnull Integer pkiBillingentityinternalID) throws ApiException {
@@ -768,7 +768,7 @@ public class ObjectBillingentityinternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<BillingentityinternalGetObjectV2Response> billingentityinternalGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiBillingentityinternalID) throws ApiException {
@@ -789,7 +789,7 @@ public class ObjectBillingentityinternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call billingentityinternalGetObjectV2Async(@javax.annotation.Nonnull Integer pkiBillingentityinternalID, final ApiCallback<BillingentityinternalGetObjectV2Response> _callback) throws ApiException {

@@ -28,10 +28,13 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.CustomerBatchDownloadV1Request;
+import com.ezmax.api.model.CustomerGetAttachmentsV1Response;
 import com.ezmax.api.model.CustomerGetAutocompleteV2Response;
 import com.ezmax.api.model.CustomerGetObjectV2Response;
 import com.ezmax.api.model.CustomerImportIntoEDMV1Request;
 import com.ezmax.api.model.CustomerImportIntoEDMV1Response;
+import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 
 import java.lang.reflect.Type;
@@ -77,6 +80,280 @@ public class ObjectCustomerApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
+    /**
+     * Build call for customerBatchDownloadV1
+     * @param pkiCustomerID  (required)
+     * @param customerBatchDownloadV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call customerBatchDownloadV1Call(@javax.annotation.Nonnull Integer pkiCustomerID, @javax.annotation.Nonnull CustomerBatchDownloadV1Request customerBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = customerBatchDownloadV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/customer/{pkiCustomerID}/batchDownload"
+            .replace("{" + "pkiCustomerID" + "}", localVarApiClient.escapeString(pkiCustomerID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/zip",
+            "text/xml",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call customerBatchDownloadV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiCustomerID, @javax.annotation.Nonnull CustomerBatchDownloadV1Request customerBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiCustomerID' is set
+        if (pkiCustomerID == null) {
+            throw new ApiException("Missing the required parameter 'pkiCustomerID' when calling customerBatchDownloadV1(Async)");
+        }
+
+        // verify the required parameter 'customerBatchDownloadV1Request' is set
+        if (customerBatchDownloadV1Request == null) {
+            throw new ApiException("Missing the required parameter 'customerBatchDownloadV1Request' when calling customerBatchDownloadV1(Async)");
+        }
+
+        return customerBatchDownloadV1Call(pkiCustomerID, customerBatchDownloadV1Request, _callback);
+
+    }
+
+    /**
+     * Download multiples attachments from a Customer
+     * 
+     * @param pkiCustomerID  (required)
+     * @param customerBatchDownloadV1Request  (required)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public File customerBatchDownloadV1(@javax.annotation.Nonnull Integer pkiCustomerID, @javax.annotation.Nonnull CustomerBatchDownloadV1Request customerBatchDownloadV1Request) throws ApiException {
+        ApiResponse<File> localVarResp = customerBatchDownloadV1WithHttpInfo(pkiCustomerID, customerBatchDownloadV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Download multiples attachments from a Customer
+     * 
+     * @param pkiCustomerID  (required)
+     * @param customerBatchDownloadV1Request  (required)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<File> customerBatchDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiCustomerID, @javax.annotation.Nonnull CustomerBatchDownloadV1Request customerBatchDownloadV1Request) throws ApiException {
+        okhttp3.Call localVarCall = customerBatchDownloadV1ValidateBeforeCall(pkiCustomerID, customerBatchDownloadV1Request, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Download multiples attachments from a Customer (asynchronously)
+     * 
+     * @param pkiCustomerID  (required)
+     * @param customerBatchDownloadV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call customerBatchDownloadV1Async(@javax.annotation.Nonnull Integer pkiCustomerID, @javax.annotation.Nonnull CustomerBatchDownloadV1Request customerBatchDownloadV1Request, final ApiCallback<File> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = customerBatchDownloadV1ValidateBeforeCall(pkiCustomerID, customerBatchDownloadV1Request, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for customerGetAttachmentsV1
+     * @param pkiCustomerID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call customerGetAttachmentsV1Call(@javax.annotation.Nonnull Integer pkiCustomerID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/customer/{pkiCustomerID}/getAttachments"
+            .replace("{" + "pkiCustomerID" + "}", localVarApiClient.escapeString(pkiCustomerID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call customerGetAttachmentsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiCustomerID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiCustomerID' is set
+        if (pkiCustomerID == null) {
+            throw new ApiException("Missing the required parameter 'pkiCustomerID' when calling customerGetAttachmentsV1(Async)");
+        }
+
+        return customerGetAttachmentsV1Call(pkiCustomerID, _callback);
+
+    }
+
+    /**
+     * Retrieve Customer&#39;s attachments
+     * 
+     * @param pkiCustomerID  (required)
+     * @return CustomerGetAttachmentsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public CustomerGetAttachmentsV1Response customerGetAttachmentsV1(@javax.annotation.Nonnull Integer pkiCustomerID) throws ApiException {
+        ApiResponse<CustomerGetAttachmentsV1Response> localVarResp = customerGetAttachmentsV1WithHttpInfo(pkiCustomerID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Customer&#39;s attachments
+     * 
+     * @param pkiCustomerID  (required)
+     * @return ApiResponse&lt;CustomerGetAttachmentsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<CustomerGetAttachmentsV1Response> customerGetAttachmentsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiCustomerID) throws ApiException {
+        okhttp3.Call localVarCall = customerGetAttachmentsV1ValidateBeforeCall(pkiCustomerID, null);
+        Type localVarReturnType = new TypeToken<CustomerGetAttachmentsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Customer&#39;s attachments (asynchronously)
+     * 
+     * @param pkiCustomerID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call customerGetAttachmentsV1Async(@javax.annotation.Nonnull Integer pkiCustomerID, final ApiCallback<CustomerGetAttachmentsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = customerGetAttachmentsV1ValidateBeforeCall(pkiCustomerID, _callback);
+        Type localVarReturnType = new TypeToken<CustomerGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for customerGetAutocompleteV2
      * @param sSelector The type of Customers to return (required)
@@ -240,7 +517,7 @@ public class ObjectCustomerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call customerGetObjectV2Call(@javax.annotation.Nonnull Integer pkiCustomerID, final ApiCallback _callback) throws ApiException {
@@ -310,7 +587,7 @@ public class ObjectCustomerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public CustomerGetObjectV2Response customerGetObjectV2(@javax.annotation.Nonnull Integer pkiCustomerID) throws ApiException {
@@ -329,7 +606,7 @@ public class ObjectCustomerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<CustomerGetObjectV2Response> customerGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiCustomerID) throws ApiException {
@@ -350,7 +627,7 @@ public class ObjectCustomerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call customerGetObjectV2Async(@javax.annotation.Nonnull Integer pkiCustomerID, final ApiCallback<CustomerGetObjectV2Response> _callback) throws ApiException {
@@ -372,7 +649,7 @@ public class ObjectCustomerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call customerImportIntoEDMV1Call(@javax.annotation.Nonnull Integer pkiCustomerID, @javax.annotation.Nonnull CustomerImportIntoEDMV1Request customerImportIntoEDMV1Request, final ApiCallback _callback) throws ApiException {
@@ -449,7 +726,7 @@ public class ObjectCustomerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public CustomerImportIntoEDMV1Response customerImportIntoEDMV1(@javax.annotation.Nonnull Integer pkiCustomerID, @javax.annotation.Nonnull CustomerImportIntoEDMV1Request customerImportIntoEDMV1Request) throws ApiException {
@@ -469,7 +746,7 @@ public class ObjectCustomerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<CustomerImportIntoEDMV1Response> customerImportIntoEDMV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiCustomerID, @javax.annotation.Nonnull CustomerImportIntoEDMV1Request customerImportIntoEDMV1Request) throws ApiException {
@@ -491,7 +768,7 @@ public class ObjectCustomerApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call customerImportIntoEDMV1Async(@javax.annotation.Nonnull Integer pkiCustomerID, @javax.annotation.Nonnull CustomerImportIntoEDMV1Request customerImportIntoEDMV1Request, final ApiCallback<CustomerImportIntoEDMV1Response> _callback) throws ApiException {

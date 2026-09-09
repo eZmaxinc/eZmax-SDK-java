@@ -84,7 +84,7 @@ public class ObjectEzsignimportdocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignimportdocumentDownloadV1Call(@javax.annotation.Nonnull Integer pkiEzsignimportdocumentID, final ApiCallback _callback) throws ApiException {
@@ -154,7 +154,7 @@ public class ObjectEzsignimportdocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsignimportdocumentDownloadV1Response ezsignimportdocumentDownloadV1(@javax.annotation.Nonnull Integer pkiEzsignimportdocumentID) throws ApiException {
@@ -173,7 +173,7 @@ public class ObjectEzsignimportdocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsignimportdocumentDownloadV1Response> ezsignimportdocumentDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsignimportdocumentID) throws ApiException {
@@ -194,7 +194,7 @@ public class ObjectEzsignimportdocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignimportdocumentDownloadV1Async(@javax.annotation.Nonnull Integer pkiEzsignimportdocumentID, final ApiCallback<EzsignimportdocumentDownloadV1Response> _callback) throws ApiException {

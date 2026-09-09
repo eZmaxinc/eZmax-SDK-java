@@ -27,6 +27,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.BuyercontractBatchDownloadV1Request;
+import com.ezmax.api.model.BuyercontractGetAttachmentsV1Response;
 import com.ezmax.api.model.BuyercontractGetCommunicationCountV1Response;
 import com.ezmax.api.model.BuyercontractGetCommunicationListV1Response;
 import com.ezmax.api.model.BuyercontractGetCommunicationrecipientsV1Response;
@@ -82,6 +84,280 @@ public class ObjectBuyercontractApi {
     }
 
     /**
+     * Build call for buyercontractBatchDownloadV1
+     * @param pkiBuyercontractID  (required)
+     * @param buyercontractBatchDownloadV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call buyercontractBatchDownloadV1Call(@javax.annotation.Nonnull Integer pkiBuyercontractID, @javax.annotation.Nonnull BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = buyercontractBatchDownloadV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/buyercontract/{pkiBuyercontractID}/batchDownload"
+            .replace("{" + "pkiBuyercontractID" + "}", localVarApiClient.escapeString(pkiBuyercontractID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/zip",
+            "text/xml",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call buyercontractBatchDownloadV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiBuyercontractID, @javax.annotation.Nonnull BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBuyercontractID' is set
+        if (pkiBuyercontractID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBuyercontractID' when calling buyercontractBatchDownloadV1(Async)");
+        }
+
+        // verify the required parameter 'buyercontractBatchDownloadV1Request' is set
+        if (buyercontractBatchDownloadV1Request == null) {
+            throw new ApiException("Missing the required parameter 'buyercontractBatchDownloadV1Request' when calling buyercontractBatchDownloadV1(Async)");
+        }
+
+        return buyercontractBatchDownloadV1Call(pkiBuyercontractID, buyercontractBatchDownloadV1Request, _callback);
+
+    }
+
+    /**
+     * Download multiples attachments from a Buyercontract
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @param buyercontractBatchDownloadV1Request  (required)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public File buyercontractBatchDownloadV1(@javax.annotation.Nonnull Integer pkiBuyercontractID, @javax.annotation.Nonnull BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request) throws ApiException {
+        ApiResponse<File> localVarResp = buyercontractBatchDownloadV1WithHttpInfo(pkiBuyercontractID, buyercontractBatchDownloadV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Download multiples attachments from a Buyercontract
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @param buyercontractBatchDownloadV1Request  (required)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<File> buyercontractBatchDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBuyercontractID, @javax.annotation.Nonnull BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request) throws ApiException {
+        okhttp3.Call localVarCall = buyercontractBatchDownloadV1ValidateBeforeCall(pkiBuyercontractID, buyercontractBatchDownloadV1Request, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Download multiples attachments from a Buyercontract (asynchronously)
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @param buyercontractBatchDownloadV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call buyercontractBatchDownloadV1Async(@javax.annotation.Nonnull Integer pkiBuyercontractID, @javax.annotation.Nonnull BuyercontractBatchDownloadV1Request buyercontractBatchDownloadV1Request, final ApiCallback<File> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = buyercontractBatchDownloadV1ValidateBeforeCall(pkiBuyercontractID, buyercontractBatchDownloadV1Request, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for buyercontractGetAttachmentsV1
+     * @param pkiBuyercontractID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call buyercontractGetAttachmentsV1Call(@javax.annotation.Nonnull Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/buyercontract/{pkiBuyercontractID}/getAttachments"
+            .replace("{" + "pkiBuyercontractID" + "}", localVarApiClient.escapeString(pkiBuyercontractID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call buyercontractGetAttachmentsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBuyercontractID' is set
+        if (pkiBuyercontractID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBuyercontractID' when calling buyercontractGetAttachmentsV1(Async)");
+        }
+
+        return buyercontractGetAttachmentsV1Call(pkiBuyercontractID, _callback);
+
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s attachments
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @return BuyercontractGetAttachmentsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public BuyercontractGetAttachmentsV1Response buyercontractGetAttachmentsV1(@javax.annotation.Nonnull Integer pkiBuyercontractID) throws ApiException {
+        ApiResponse<BuyercontractGetAttachmentsV1Response> localVarResp = buyercontractGetAttachmentsV1WithHttpInfo(pkiBuyercontractID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s attachments
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @return ApiResponse&lt;BuyercontractGetAttachmentsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BuyercontractGetAttachmentsV1Response> buyercontractGetAttachmentsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBuyercontractID) throws ApiException {
+        okhttp3.Call localVarCall = buyercontractGetAttachmentsV1ValidateBeforeCall(pkiBuyercontractID, null);
+        Type localVarReturnType = new TypeToken<BuyercontractGetAttachmentsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Buyercontract&#39;s attachments (asynchronously)
+     * 
+     * @param pkiBuyercontractID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call buyercontractGetAttachmentsV1Async(@javax.annotation.Nonnull Integer pkiBuyercontractID, final ApiCallback<BuyercontractGetAttachmentsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = buyercontractGetAttachmentsV1ValidateBeforeCall(pkiBuyercontractID, _callback);
+        Type localVarReturnType = new TypeToken<BuyercontractGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for buyercontractGetCommunicationCountV1
      * @param pkiBuyercontractID  (required)
      * @param _callback Callback for upload/download progress
@@ -92,7 +368,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call buyercontractGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
@@ -162,7 +438,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public BuyercontractGetCommunicationCountV1Response buyercontractGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiBuyercontractID) throws ApiException {
@@ -181,7 +457,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<BuyercontractGetCommunicationCountV1Response> buyercontractGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBuyercontractID) throws ApiException {
@@ -202,7 +478,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call buyercontractGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiBuyercontractID, final ApiCallback<BuyercontractGetCommunicationCountV1Response> _callback) throws ApiException {
@@ -223,7 +499,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call buyercontractGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
@@ -293,7 +569,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public BuyercontractGetCommunicationListV1Response buyercontractGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiBuyercontractID) throws ApiException {
@@ -312,7 +588,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<BuyercontractGetCommunicationListV1Response> buyercontractGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBuyercontractID) throws ApiException {
@@ -333,7 +609,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call buyercontractGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiBuyercontractID, final ApiCallback<BuyercontractGetCommunicationListV1Response> _callback) throws ApiException {
@@ -354,7 +630,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call buyercontractGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
@@ -424,7 +700,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public BuyercontractGetCommunicationrecipientsV1Response buyercontractGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiBuyercontractID) throws ApiException {
@@ -443,7 +719,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<BuyercontractGetCommunicationrecipientsV1Response> buyercontractGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBuyercontractID) throws ApiException {
@@ -464,7 +740,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call buyercontractGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiBuyercontractID, final ApiCallback<BuyercontractGetCommunicationrecipientsV1Response> _callback) throws ApiException {
@@ -485,7 +761,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call buyercontractGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiBuyercontractID, final ApiCallback _callback) throws ApiException {
@@ -555,7 +831,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public BuyercontractGetCommunicationsendersV1Response buyercontractGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiBuyercontractID) throws ApiException {
@@ -574,7 +850,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<BuyercontractGetCommunicationsendersV1Response> buyercontractGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBuyercontractID) throws ApiException {
@@ -595,7 +871,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call buyercontractGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiBuyercontractID, final ApiCallback<BuyercontractGetCommunicationsendersV1Response> _callback) throws ApiException {
@@ -780,7 +1056,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call buyercontractImportIntoEDMV1Call(@javax.annotation.Nonnull Integer pkiBuyercontractID, @javax.annotation.Nonnull BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request, final ApiCallback _callback) throws ApiException {
@@ -857,7 +1133,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public BuyercontractImportIntoEDMV1Response buyercontractImportIntoEDMV1(@javax.annotation.Nonnull Integer pkiBuyercontractID, @javax.annotation.Nonnull BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request) throws ApiException {
@@ -877,7 +1153,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<BuyercontractImportIntoEDMV1Response> buyercontractImportIntoEDMV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBuyercontractID, @javax.annotation.Nonnull BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request) throws ApiException {
@@ -899,7 +1175,7 @@ public class ObjectBuyercontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call buyercontractImportIntoEDMV1Async(@javax.annotation.Nonnull Integer pkiBuyercontractID, @javax.annotation.Nonnull BuyercontractImportIntoEDMV1Request buyercontractImportIntoEDMV1Request, final ApiCallback<BuyercontractImportIntoEDMV1Response> _callback) throws ApiException {

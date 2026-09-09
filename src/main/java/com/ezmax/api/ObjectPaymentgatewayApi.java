@@ -220,8 +220,8 @@ public class ObjectPaymentgatewayApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call paymentgatewayEditObjectV1Call(@javax.annotation.Nonnull Integer pkiPaymentgatewayID, @javax.annotation.Nonnull PaymentgatewayEditObjectV1Request paymentgatewayEditObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -298,8 +298,8 @@ public class ObjectPaymentgatewayApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public PaymentgatewayEditObjectV1Response paymentgatewayEditObjectV1(@javax.annotation.Nonnull Integer pkiPaymentgatewayID, @javax.annotation.Nonnull PaymentgatewayEditObjectV1Request paymentgatewayEditObjectV1Request) throws ApiException {
@@ -319,8 +319,8 @@ public class ObjectPaymentgatewayApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<PaymentgatewayEditObjectV1Response> paymentgatewayEditObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiPaymentgatewayID, @javax.annotation.Nonnull PaymentgatewayEditObjectV1Request paymentgatewayEditObjectV1Request) throws ApiException {
@@ -342,8 +342,8 @@ public class ObjectPaymentgatewayApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call paymentgatewayEditObjectV1Async(@javax.annotation.Nonnull Integer pkiPaymentgatewayID, @javax.annotation.Nonnull PaymentgatewayEditObjectV1Request paymentgatewayEditObjectV1Request, final ApiCallback<PaymentgatewayEditObjectV1Response> _callback) throws ApiException {
@@ -679,7 +679,7 @@ public class ObjectPaymentgatewayApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call paymentgatewayGetObjectV2Call(@javax.annotation.Nonnull Integer pkiPaymentgatewayID, final ApiCallback _callback) throws ApiException {
@@ -749,7 +749,7 @@ public class ObjectPaymentgatewayApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public PaymentgatewayGetObjectV2Response paymentgatewayGetObjectV2(@javax.annotation.Nonnull Integer pkiPaymentgatewayID) throws ApiException {
@@ -768,7 +768,7 @@ public class ObjectPaymentgatewayApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<PaymentgatewayGetObjectV2Response> paymentgatewayGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiPaymentgatewayID) throws ApiException {
@@ -789,7 +789,7 @@ public class ObjectPaymentgatewayApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call paymentgatewayGetObjectV2Async(@javax.annotation.Nonnull Integer pkiPaymentgatewayID, final ApiCallback<PaymentgatewayGetObjectV2Response> _callback) throws ApiException {

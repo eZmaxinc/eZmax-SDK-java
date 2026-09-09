@@ -84,7 +84,7 @@ public class ObjectEzsigntemplateglobalannotationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplateglobalannotationGetObjectV2Call(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobalannotationID, final ApiCallback _callback) throws ApiException {
@@ -154,7 +154,7 @@ public class ObjectEzsigntemplateglobalannotationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsigntemplateglobalannotationGetObjectV2Response ezsigntemplateglobalannotationGetObjectV2(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobalannotationID) throws ApiException {
@@ -173,7 +173,7 @@ public class ObjectEzsigntemplateglobalannotationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsigntemplateglobalannotationGetObjectV2Response> ezsigntemplateglobalannotationGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobalannotationID) throws ApiException {
@@ -194,7 +194,7 @@ public class ObjectEzsigntemplateglobalannotationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsigntemplateglobalannotationGetObjectV2Async(@javax.annotation.Nonnull Integer pkiEzsigntemplateglobalannotationID, final ApiCallback<EzsigntemplateglobalannotationGetObjectV2Response> _callback) throws ApiException {

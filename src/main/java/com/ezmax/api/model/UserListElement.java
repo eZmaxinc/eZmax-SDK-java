@@ -32,6 +32,7 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonNull;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
@@ -51,12 +52,22 @@ import eZmaxAPI.JSON;
 /**
  * A User List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-08-13T03:44:35.375198799Z[Etc/UTC]", comments = "Generator version: 7.24.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-09T17:23:07.900861575Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class UserListElement {
   public static final String SERIALIZED_NAME_PKI_USER_I_D = "pkiUserID";
   @SerializedName(SERIALIZED_NAME_PKI_USER_I_D)
   @javax.annotation.Nonnull
   private Integer pkiUserID;
+
+  public static final String SERIALIZED_NAME_FKI_AGENT_I_D = "fkiAgentID";
+  @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiAgentID;
+
+  public static final String SERIALIZED_NAME_FKI_BROKER_I_D = "fkiBrokerID";
+  @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiBrokerID;
 
   public static final String SERIALIZED_NAME_S_USER_FIRSTNAME = "sUserFirstname";
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
@@ -133,6 +144,46 @@ public class UserListElement {
 
   public void setPkiUserID(@javax.annotation.Nonnull Integer pkiUserID) {
     this.pkiUserID = pkiUserID;
+  }
+
+
+  public UserListElement fkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
+    this.fkiAgentID = fkiAgentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Agent.
+   * minimum: 0
+   * @return fkiAgentID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiAgentID() {
+    return fkiAgentID;
+  }
+
+  public void setFkiAgentID(@javax.annotation.Nullable Integer fkiAgentID) {
+    this.fkiAgentID = fkiAgentID;
+  }
+
+
+  public UserListElement fkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
+    this.fkiBrokerID = fkiBrokerID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Broker.
+   * minimum: 0
+   * @return fkiBrokerID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiBrokerID() {
+    return fkiBrokerID;
+  }
+
+  public void setFkiBrokerID(@javax.annotation.Nullable Integer fkiBrokerID) {
+    this.fkiBrokerID = fkiBrokerID;
   }
 
 
@@ -356,6 +407,8 @@ public class UserListElement {
     }
     UserListElement userListElement = (UserListElement) o;
     return Objects.equals(this.pkiUserID, userListElement.pkiUserID) &&
+        Objects.equals(this.fkiAgentID, userListElement.fkiAgentID) &&
+        Objects.equals(this.fkiBrokerID, userListElement.fkiBrokerID) &&
         Objects.equals(this.sUserFirstname, userListElement.sUserFirstname) &&
         Objects.equals(this.sUserLastname, userListElement.sUserLastname) &&
         Objects.equals(this.sUserLoginname, userListElement.sUserLoginname) &&
@@ -371,7 +424,7 @@ public class UserListElement {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiUserID, sUserFirstname, sUserLastname, sUserLoginname, bUserIsactive, bUserSuspended, eUserType, eUserOrigin, eUserEzsignaccess, dtUserEzsignprepaidexpiration, sEmailAddress, sUserJobtitle);
+    return Objects.hash(pkiUserID, fkiAgentID, fkiBrokerID, sUserFirstname, sUserLastname, sUserLoginname, bUserIsactive, bUserSuspended, eUserType, eUserOrigin, eUserEzsignaccess, dtUserEzsignprepaidexpiration, sEmailAddress, sUserJobtitle);
   }
 
   @Override
@@ -379,6 +432,8 @@ public class UserListElement {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserListElement {\n");
     sb.append("    pkiUserID: ").append(toIndentedString(pkiUserID)).append("\n");
+    sb.append("    fkiAgentID: ").append(toIndentedString(fkiAgentID)).append("\n");
+    sb.append("    fkiBrokerID: ").append(toIndentedString(fkiBrokerID)).append("\n");
     sb.append("    sUserFirstname: ").append(toIndentedString(sUserFirstname)).append("\n");
     sb.append("    sUserLastname: ").append(toIndentedString(sUserLastname)).append("\n");
     sb.append("    sUserLoginname: ").append(toIndentedString(sUserLoginname)).append("\n");
@@ -408,7 +463,7 @@ public class UserListElement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiUserID", "sUserFirstname", "sUserLastname", "sUserLoginname", "bUserIsactive", "bUserSuspended", "eUserType", "eUserOrigin", "eUserEzsignaccess", "dtUserEzsignprepaidexpiration", "sEmailAddress", "sUserJobtitle"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiUserID", "fkiAgentID", "fkiBrokerID", "sUserFirstname", "sUserLastname", "sUserLoginname", "bUserIsactive", "bUserSuspended", "eUserType", "eUserOrigin", "eUserEzsignaccess", "dtUserEzsignprepaidexpiration", "sEmailAddress", "sUserJobtitle"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiUserID", "sUserFirstname", "sUserLastname", "sUserLoginname", "bUserIsactive", "eUserType", "eUserOrigin", "eUserEzsignaccess", "sEmailAddress"));

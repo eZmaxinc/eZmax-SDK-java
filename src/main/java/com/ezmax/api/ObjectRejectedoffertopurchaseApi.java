@@ -30,6 +30,8 @@ import java.io.IOException;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
+import com.ezmax.api.model.RejectedoffertopurchaseBatchDownloadV1Request;
+import com.ezmax.api.model.RejectedoffertopurchaseGetAttachmentsV1Response;
 import com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationCountV1Response;
 import com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationListV1Response;
 import com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationrecipientsV1Response;
@@ -82,6 +84,280 @@ public class ObjectRejectedoffertopurchaseApi {
     }
 
     /**
+     * Build call for rejectedoffertopurchaseBatchDownloadV1
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param rejectedoffertopurchaseBatchDownloadV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call rejectedoffertopurchaseBatchDownloadV1Call(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, @javax.annotation.Nonnull RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = rejectedoffertopurchaseBatchDownloadV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload"
+            .replace("{" + "pkiRejectedoffertopurchaseID" + "}", localVarApiClient.escapeString(pkiRejectedoffertopurchaseID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/zip",
+            "text/xml",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call rejectedoffertopurchaseBatchDownloadV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, @javax.annotation.Nonnull RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiRejectedoffertopurchaseID' is set
+        if (pkiRejectedoffertopurchaseID == null) {
+            throw new ApiException("Missing the required parameter 'pkiRejectedoffertopurchaseID' when calling rejectedoffertopurchaseBatchDownloadV1(Async)");
+        }
+
+        // verify the required parameter 'rejectedoffertopurchaseBatchDownloadV1Request' is set
+        if (rejectedoffertopurchaseBatchDownloadV1Request == null) {
+            throw new ApiException("Missing the required parameter 'rejectedoffertopurchaseBatchDownloadV1Request' when calling rejectedoffertopurchaseBatchDownloadV1(Async)");
+        }
+
+        return rejectedoffertopurchaseBatchDownloadV1Call(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request, _callback);
+
+    }
+
+    /**
+     * Download multiples attachments from a Rejectedoffertopurchase
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param rejectedoffertopurchaseBatchDownloadV1Request  (required)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public File rejectedoffertopurchaseBatchDownloadV1(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, @javax.annotation.Nonnull RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request) throws ApiException {
+        ApiResponse<File> localVarResp = rejectedoffertopurchaseBatchDownloadV1WithHttpInfo(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Download multiples attachments from a Rejectedoffertopurchase
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param rejectedoffertopurchaseBatchDownloadV1Request  (required)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<File> rejectedoffertopurchaseBatchDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, @javax.annotation.Nonnull RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request) throws ApiException {
+        okhttp3.Call localVarCall = rejectedoffertopurchaseBatchDownloadV1ValidateBeforeCall(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Download multiples attachments from a Rejectedoffertopurchase (asynchronously)
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param rejectedoffertopurchaseBatchDownloadV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call rejectedoffertopurchaseBatchDownloadV1Async(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, @javax.annotation.Nonnull RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request, final ApiCallback<File> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = rejectedoffertopurchaseBatchDownloadV1ValidateBeforeCall(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for rejectedoffertopurchaseGetAttachmentsV1
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call rejectedoffertopurchaseGetAttachmentsV1Call(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments"
+            .replace("{" + "pkiRejectedoffertopurchaseID" + "}", localVarApiClient.escapeString(pkiRejectedoffertopurchaseID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call rejectedoffertopurchaseGetAttachmentsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiRejectedoffertopurchaseID' is set
+        if (pkiRejectedoffertopurchaseID == null) {
+            throw new ApiException("Missing the required parameter 'pkiRejectedoffertopurchaseID' when calling rejectedoffertopurchaseGetAttachmentsV1(Async)");
+        }
+
+        return rejectedoffertopurchaseGetAttachmentsV1Call(pkiRejectedoffertopurchaseID, _callback);
+
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s attachments
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @return RejectedoffertopurchaseGetAttachmentsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public RejectedoffertopurchaseGetAttachmentsV1Response rejectedoffertopurchaseGetAttachmentsV1(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID) throws ApiException {
+        ApiResponse<RejectedoffertopurchaseGetAttachmentsV1Response> localVarResp = rejectedoffertopurchaseGetAttachmentsV1WithHttpInfo(pkiRejectedoffertopurchaseID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s attachments
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @return ApiResponse&lt;RejectedoffertopurchaseGetAttachmentsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<RejectedoffertopurchaseGetAttachmentsV1Response> rejectedoffertopurchaseGetAttachmentsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID) throws ApiException {
+        okhttp3.Call localVarCall = rejectedoffertopurchaseGetAttachmentsV1ValidateBeforeCall(pkiRejectedoffertopurchaseID, null);
+        Type localVarReturnType = new TypeToken<RejectedoffertopurchaseGetAttachmentsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Rejectedoffertopurchase&#39;s attachments (asynchronously)
+     * 
+     * @param pkiRejectedoffertopurchaseID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call rejectedoffertopurchaseGetAttachmentsV1Async(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, final ApiCallback<RejectedoffertopurchaseGetAttachmentsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = rejectedoffertopurchaseGetAttachmentsV1ValidateBeforeCall(pkiRejectedoffertopurchaseID, _callback);
+        Type localVarReturnType = new TypeToken<RejectedoffertopurchaseGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for rejectedoffertopurchaseGetCommunicationCountV1
      * @param pkiRejectedoffertopurchaseID  (required)
      * @param _callback Callback for upload/download progress
@@ -92,7 +368,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call rejectedoffertopurchaseGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
@@ -162,7 +438,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public RejectedoffertopurchaseGetCommunicationCountV1Response rejectedoffertopurchaseGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID) throws ApiException {
@@ -181,7 +457,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<RejectedoffertopurchaseGetCommunicationCountV1Response> rejectedoffertopurchaseGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID) throws ApiException {
@@ -202,7 +478,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call rejectedoffertopurchaseGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, final ApiCallback<RejectedoffertopurchaseGetCommunicationCountV1Response> _callback) throws ApiException {
@@ -223,7 +499,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call rejectedoffertopurchaseGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
@@ -293,7 +569,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public RejectedoffertopurchaseGetCommunicationListV1Response rejectedoffertopurchaseGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID) throws ApiException {
@@ -312,7 +588,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<RejectedoffertopurchaseGetCommunicationListV1Response> rejectedoffertopurchaseGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID) throws ApiException {
@@ -333,7 +609,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call rejectedoffertopurchaseGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, final ApiCallback<RejectedoffertopurchaseGetCommunicationListV1Response> _callback) throws ApiException {
@@ -354,7 +630,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call rejectedoffertopurchaseGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
@@ -424,7 +700,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public RejectedoffertopurchaseGetCommunicationrecipientsV1Response rejectedoffertopurchaseGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID) throws ApiException {
@@ -443,7 +719,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> rejectedoffertopurchaseGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID) throws ApiException {
@@ -464,7 +740,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call rejectedoffertopurchaseGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, final ApiCallback<RejectedoffertopurchaseGetCommunicationrecipientsV1Response> _callback) throws ApiException {
@@ -485,7 +761,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call rejectedoffertopurchaseGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, final ApiCallback _callback) throws ApiException {
@@ -555,7 +831,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public RejectedoffertopurchaseGetCommunicationsendersV1Response rejectedoffertopurchaseGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID) throws ApiException {
@@ -574,7 +850,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<RejectedoffertopurchaseGetCommunicationsendersV1Response> rejectedoffertopurchaseGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID) throws ApiException {
@@ -595,7 +871,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call rejectedoffertopurchaseGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, final ApiCallback<RejectedoffertopurchaseGetCommunicationsendersV1Response> _callback) throws ApiException {
@@ -780,7 +1056,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call rejectedoffertopurchaseImportIntoEDMV1Call(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, @javax.annotation.Nonnull RejectedoffertopurchaseImportIntoEDMV1Request rejectedoffertopurchaseImportIntoEDMV1Request, final ApiCallback _callback) throws ApiException {
@@ -857,7 +1133,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public RejectedoffertopurchaseImportIntoEDMV1Response rejectedoffertopurchaseImportIntoEDMV1(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, @javax.annotation.Nonnull RejectedoffertopurchaseImportIntoEDMV1Request rejectedoffertopurchaseImportIntoEDMV1Request) throws ApiException {
@@ -877,7 +1153,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<RejectedoffertopurchaseImportIntoEDMV1Response> rejectedoffertopurchaseImportIntoEDMV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, @javax.annotation.Nonnull RejectedoffertopurchaseImportIntoEDMV1Request rejectedoffertopurchaseImportIntoEDMV1Request) throws ApiException {
@@ -899,7 +1175,7 @@ public class ObjectRejectedoffertopurchaseApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call rejectedoffertopurchaseImportIntoEDMV1Async(@javax.annotation.Nonnull Integer pkiRejectedoffertopurchaseID, @javax.annotation.Nonnull RejectedoffertopurchaseImportIntoEDMV1Request rejectedoffertopurchaseImportIntoEDMV1Request, final ApiCallback<RejectedoffertopurchaseImportIntoEDMV1Response> _callback) throws ApiException {

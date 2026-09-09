@@ -27,7 +27,13 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.BankaccountBatchDownloadV1Request;
+import com.ezmax.api.model.BankaccountGetAttachmentsV1Response;
 import com.ezmax.api.model.BankaccountGetAutocompleteV2Response;
+import com.ezmax.api.model.BankaccountImportIntoEDMV1Request;
+import com.ezmax.api.model.BankaccountImportIntoEDMV1Response;
+import com.ezmax.api.model.CommonResponseError;
+import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
 
 import java.lang.reflect.Type;
@@ -73,6 +79,288 @@ public class ObjectBankaccountApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
+    /**
+     * Build call for bankaccountBatchDownloadV1
+     * @param pkiBankaccountID  (required)
+     * @param bankaccountBatchDownloadV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call bankaccountBatchDownloadV1Call(@javax.annotation.Nonnull Integer pkiBankaccountID, @javax.annotation.Nonnull BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = bankaccountBatchDownloadV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/bankaccount/{pkiBankaccountID}/batchDownload"
+            .replace("{" + "pkiBankaccountID" + "}", localVarApiClient.escapeString(pkiBankaccountID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/zip",
+            "text/xml",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call bankaccountBatchDownloadV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiBankaccountID, @javax.annotation.Nonnull BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBankaccountID' is set
+        if (pkiBankaccountID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBankaccountID' when calling bankaccountBatchDownloadV1(Async)");
+        }
+
+        // verify the required parameter 'bankaccountBatchDownloadV1Request' is set
+        if (bankaccountBatchDownloadV1Request == null) {
+            throw new ApiException("Missing the required parameter 'bankaccountBatchDownloadV1Request' when calling bankaccountBatchDownloadV1(Async)");
+        }
+
+        return bankaccountBatchDownloadV1Call(pkiBankaccountID, bankaccountBatchDownloadV1Request, _callback);
+
+    }
+
+    /**
+     * Download multiples attachments from a Bankaccount
+     * 
+     * @param pkiBankaccountID  (required)
+     * @param bankaccountBatchDownloadV1Request  (required)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public File bankaccountBatchDownloadV1(@javax.annotation.Nonnull Integer pkiBankaccountID, @javax.annotation.Nonnull BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request) throws ApiException {
+        ApiResponse<File> localVarResp = bankaccountBatchDownloadV1WithHttpInfo(pkiBankaccountID, bankaccountBatchDownloadV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Download multiples attachments from a Bankaccount
+     * 
+     * @param pkiBankaccountID  (required)
+     * @param bankaccountBatchDownloadV1Request  (required)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<File> bankaccountBatchDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBankaccountID, @javax.annotation.Nonnull BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request) throws ApiException {
+        okhttp3.Call localVarCall = bankaccountBatchDownloadV1ValidateBeforeCall(pkiBankaccountID, bankaccountBatchDownloadV1Request, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Download multiples attachments from a Bankaccount (asynchronously)
+     * 
+     * @param pkiBankaccountID  (required)
+     * @param bankaccountBatchDownloadV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call bankaccountBatchDownloadV1Async(@javax.annotation.Nonnull Integer pkiBankaccountID, @javax.annotation.Nonnull BankaccountBatchDownloadV1Request bankaccountBatchDownloadV1Request, final ApiCallback<File> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = bankaccountBatchDownloadV1ValidateBeforeCall(pkiBankaccountID, bankaccountBatchDownloadV1Request, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for bankaccountGetAttachmentsV1
+     * @param pkiBankaccountID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call bankaccountGetAttachmentsV1Call(@javax.annotation.Nonnull Integer pkiBankaccountID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/bankaccount/{pkiBankaccountID}/getAttachments"
+            .replace("{" + "pkiBankaccountID" + "}", localVarApiClient.escapeString(pkiBankaccountID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call bankaccountGetAttachmentsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiBankaccountID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBankaccountID' is set
+        if (pkiBankaccountID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBankaccountID' when calling bankaccountGetAttachmentsV1(Async)");
+        }
+
+        return bankaccountGetAttachmentsV1Call(pkiBankaccountID, _callback);
+
+    }
+
+    /**
+     * Retrieve Bankaccount&#39;s attachments
+     * 
+     * @param pkiBankaccountID  (required)
+     * @return BankaccountGetAttachmentsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public BankaccountGetAttachmentsV1Response bankaccountGetAttachmentsV1(@javax.annotation.Nonnull Integer pkiBankaccountID) throws ApiException {
+        ApiResponse<BankaccountGetAttachmentsV1Response> localVarResp = bankaccountGetAttachmentsV1WithHttpInfo(pkiBankaccountID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Bankaccount&#39;s attachments
+     * 
+     * @param pkiBankaccountID  (required)
+     * @return ApiResponse&lt;BankaccountGetAttachmentsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BankaccountGetAttachmentsV1Response> bankaccountGetAttachmentsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBankaccountID) throws ApiException {
+        okhttp3.Call localVarCall = bankaccountGetAttachmentsV1ValidateBeforeCall(pkiBankaccountID, null);
+        Type localVarReturnType = new TypeToken<BankaccountGetAttachmentsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Bankaccount&#39;s attachments (asynchronously)
+     * 
+     * @param pkiBankaccountID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call bankaccountGetAttachmentsV1Async(@javax.annotation.Nonnull Integer pkiBankaccountID, final ApiCallback<BankaccountGetAttachmentsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = bankaccountGetAttachmentsV1ValidateBeforeCall(pkiBankaccountID, _callback);
+        Type localVarReturnType = new TypeToken<BankaccountGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for bankaccountGetAutocompleteV2
      * @param sSelector The type of Bankaccounts to return (required)
@@ -222,6 +510,147 @@ public class ObjectBankaccountApi {
 
         okhttp3.Call localVarCall = bankaccountGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
         Type localVarReturnType = new TypeToken<BankaccountGetAutocompleteV2Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for bankaccountImportIntoEDMV1
+     * @param pkiBankaccountID  (required)
+     * @param bankaccountImportIntoEDMV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call bankaccountImportIntoEDMV1Call(@javax.annotation.Nonnull Integer pkiBankaccountID, @javax.annotation.Nonnull BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = bankaccountImportIntoEDMV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/bankaccount/{pkiBankaccountID}/importIntoEDM"
+            .replace("{" + "pkiBankaccountID" + "}", localVarApiClient.escapeString(pkiBankaccountID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call bankaccountImportIntoEDMV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiBankaccountID, @javax.annotation.Nonnull BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBankaccountID' is set
+        if (pkiBankaccountID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBankaccountID' when calling bankaccountImportIntoEDMV1(Async)");
+        }
+
+        // verify the required parameter 'bankaccountImportIntoEDMV1Request' is set
+        if (bankaccountImportIntoEDMV1Request == null) {
+            throw new ApiException("Missing the required parameter 'bankaccountImportIntoEDMV1Request' when calling bankaccountImportIntoEDMV1(Async)");
+        }
+
+        return bankaccountImportIntoEDMV1Call(pkiBankaccountID, bankaccountImportIntoEDMV1Request, _callback);
+
+    }
+
+    /**
+     * Import attachments into the Bankaccount
+     * 
+     * @param pkiBankaccountID  (required)
+     * @param bankaccountImportIntoEDMV1Request  (required)
+     * @return BankaccountImportIntoEDMV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public BankaccountImportIntoEDMV1Response bankaccountImportIntoEDMV1(@javax.annotation.Nonnull Integer pkiBankaccountID, @javax.annotation.Nonnull BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request) throws ApiException {
+        ApiResponse<BankaccountImportIntoEDMV1Response> localVarResp = bankaccountImportIntoEDMV1WithHttpInfo(pkiBankaccountID, bankaccountImportIntoEDMV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Import attachments into the Bankaccount
+     * 
+     * @param pkiBankaccountID  (required)
+     * @param bankaccountImportIntoEDMV1Request  (required)
+     * @return ApiResponse&lt;BankaccountImportIntoEDMV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BankaccountImportIntoEDMV1Response> bankaccountImportIntoEDMV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBankaccountID, @javax.annotation.Nonnull BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request) throws ApiException {
+        okhttp3.Call localVarCall = bankaccountImportIntoEDMV1ValidateBeforeCall(pkiBankaccountID, bankaccountImportIntoEDMV1Request, null);
+        Type localVarReturnType = new TypeToken<BankaccountImportIntoEDMV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Import attachments into the Bankaccount (asynchronously)
+     * 
+     * @param pkiBankaccountID  (required)
+     * @param bankaccountImportIntoEDMV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call bankaccountImportIntoEDMV1Async(@javax.annotation.Nonnull Integer pkiBankaccountID, @javax.annotation.Nonnull BankaccountImportIntoEDMV1Request bankaccountImportIntoEDMV1Request, final ApiCallback<BankaccountImportIntoEDMV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = bankaccountImportIntoEDMV1ValidateBeforeCall(pkiBankaccountID, bankaccountImportIntoEDMV1Request, _callback);
+        Type localVarReturnType = new TypeToken<BankaccountImportIntoEDMV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

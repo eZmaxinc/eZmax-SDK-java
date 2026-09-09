@@ -4,6 +4,8 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**rejectedoffertopurchaseBatchDownloadV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseBatchDownloadV1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/batchDownload | Download multiples attachments from a Rejectedoffertopurchase |
+| [**rejectedoffertopurchaseGetAttachmentsV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetAttachmentsV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getAttachments | Retrieve Rejectedoffertopurchase&#39;s attachments |
 | [**rejectedoffertopurchaseGetCommunicationCountV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationCountV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationCount | Retrieve Communication count |
 | [**rejectedoffertopurchaseGetCommunicationListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationListV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationList | Retrieve Communication list |
 | [**rejectedoffertopurchaseGetCommunicationrecipientsV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetCommunicationrecipientsV1) | **GET** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/getCommunicationrecipients | Retrieve Rejectedoffertopurchase&#39;s Communicationrecipient |
@@ -11,6 +13,144 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**rejectedoffertopurchaseGetListV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseGetListV1) | **GET** /1/object/rejectedoffertopurchase/getList | Retrieve Rejectedoffertopurchase list |
 | [**rejectedoffertopurchaseImportIntoEDMV1**](ObjectRejectedoffertopurchaseApi.md#rejectedoffertopurchaseImportIntoEDMV1) | **POST** /1/object/rejectedoffertopurchase/{pkiRejectedoffertopurchaseID}/importIntoEDM | Import attachments into the Rejectedoffertopurchase |
 
+
+<a id="rejectedoffertopurchaseBatchDownloadV1"></a>
+# **rejectedoffertopurchaseBatchDownloadV1**
+> File rejectedoffertopurchaseBatchDownloadV1(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request)
+
+Download multiples attachments from a Rejectedoffertopurchase
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectRejectedoffertopurchaseApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectRejectedoffertopurchaseApi apiInstance = new ObjectRejectedoffertopurchaseApi(defaultClient);
+    Integer pkiRejectedoffertopurchaseID = 56; // Integer | 
+    RejectedoffertopurchaseBatchDownloadV1Request rejectedoffertopurchaseBatchDownloadV1Request = new RejectedoffertopurchaseBatchDownloadV1Request(); // RejectedoffertopurchaseBatchDownloadV1Request | 
+    try {
+      File result = apiInstance.rejectedoffertopurchaseBatchDownloadV1(pkiRejectedoffertopurchaseID, rejectedoffertopurchaseBatchDownloadV1Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseBatchDownloadV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiRejectedoffertopurchaseID** | **Integer**|  | |
+| **rejectedoffertopurchaseBatchDownloadV1Request** | [**RejectedoffertopurchaseBatchDownloadV1Request**](RejectedoffertopurchaseBatchDownloadV1Request.md)|  | |
+
+### Return type
+
+[**File**](File.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/zip, text/xml, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+<a id="rejectedoffertopurchaseGetAttachmentsV1"></a>
+# **rejectedoffertopurchaseGetAttachmentsV1**
+> RejectedoffertopurchaseGetAttachmentsV1Response rejectedoffertopurchaseGetAttachmentsV1(pkiRejectedoffertopurchaseID)
+
+Retrieve Rejectedoffertopurchase&#39;s attachments
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectRejectedoffertopurchaseApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectRejectedoffertopurchaseApi apiInstance = new ObjectRejectedoffertopurchaseApi(defaultClient);
+    Integer pkiRejectedoffertopurchaseID = 56; // Integer | 
+    try {
+      RejectedoffertopurchaseGetAttachmentsV1Response result = apiInstance.rejectedoffertopurchaseGetAttachmentsV1(pkiRejectedoffertopurchaseID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectRejectedoffertopurchaseApi#rejectedoffertopurchaseGetAttachmentsV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiRejectedoffertopurchaseID** | **Integer**|  | |
+
+### Return type
+
+[**RejectedoffertopurchaseGetAttachmentsV1Response**](RejectedoffertopurchaseGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 
 <a id="rejectedoffertopurchaseGetCommunicationCountV1"></a>
 # **rejectedoffertopurchaseGetCommunicationCountV1**
@@ -80,7 +220,7 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 
 <a id="rejectedoffertopurchaseGetCommunicationListV1"></a>
 # **rejectedoffertopurchaseGetCommunicationListV1**
@@ -150,7 +290,7 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 
 <a id="rejectedoffertopurchaseGetCommunicationrecipientsV1"></a>
 # **rejectedoffertopurchaseGetCommunicationrecipientsV1**
@@ -220,7 +360,7 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 
 <a id="rejectedoffertopurchaseGetCommunicationsendersV1"></a>
 # **rejectedoffertopurchaseGetCommunicationsendersV1**
@@ -290,7 +430,7 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 
 <a id="rejectedoffertopurchaseGetListV1"></a>
 # **rejectedoffertopurchaseGetListV1**
@@ -440,5 +580,5 @@ public class Example {
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
-| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 

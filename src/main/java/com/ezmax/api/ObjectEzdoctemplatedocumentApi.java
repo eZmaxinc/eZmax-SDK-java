@@ -221,7 +221,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezdoctemplatedocumentDownloadV1Call(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, final ApiCallback _callback) throws ApiException {
@@ -290,7 +290,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public void ezdoctemplatedocumentDownloadV1(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID) throws ApiException {
@@ -308,7 +308,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Void> ezdoctemplatedocumentDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID) throws ApiException {
@@ -328,7 +328,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezdoctemplatedocumentDownloadV1Async(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, final ApiCallback<Void> _callback) throws ApiException {
@@ -349,8 +349,8 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezdoctemplatedocumentEditObjectV1Call(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, @javax.annotation.Nonnull EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -427,8 +427,8 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzdoctemplatedocumentEditObjectV1Response ezdoctemplatedocumentEditObjectV1(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, @javax.annotation.Nonnull EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request) throws ApiException {
@@ -448,8 +448,8 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzdoctemplatedocumentEditObjectV1Response> ezdoctemplatedocumentEditObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, @javax.annotation.Nonnull EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request) throws ApiException {
@@ -471,8 +471,8 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezdoctemplatedocumentEditObjectV1Async(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, @javax.annotation.Nonnull EzdoctemplatedocumentEditObjectV1Request ezdoctemplatedocumentEditObjectV1Request, final ApiCallback<EzdoctemplatedocumentEditObjectV1Response> _callback) throws ApiException {
@@ -829,7 +829,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezdoctemplatedocumentGetObjectV2Call(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, final ApiCallback _callback) throws ApiException {
@@ -899,7 +899,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzdoctemplatedocumentGetObjectV2Response ezdoctemplatedocumentGetObjectV2(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID) throws ApiException {
@@ -918,7 +918,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzdoctemplatedocumentGetObjectV2Response> ezdoctemplatedocumentGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID) throws ApiException {
@@ -939,7 +939,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezdoctemplatedocumentGetObjectV2Async(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, final ApiCallback<EzdoctemplatedocumentGetObjectV2Response> _callback) throws ApiException {
@@ -961,7 +961,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezdoctemplatedocumentPatchObjectV1Call(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, @javax.annotation.Nonnull EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -1038,7 +1038,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzdoctemplatedocumentPatchObjectV1Response ezdoctemplatedocumentPatchObjectV1(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, @javax.annotation.Nonnull EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request) throws ApiException {
@@ -1058,7 +1058,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzdoctemplatedocumentPatchObjectV1Response> ezdoctemplatedocumentPatchObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, @javax.annotation.Nonnull EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request) throws ApiException {
@@ -1080,7 +1080,7 @@ public class ObjectEzdoctemplatedocumentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezdoctemplatedocumentPatchObjectV1Async(@javax.annotation.Nonnull Integer pkiEzdoctemplatedocumentID, @javax.annotation.Nonnull EzdoctemplatedocumentPatchObjectV1Request ezdoctemplatedocumentPatchObjectV1Request, final ApiCallback<EzdoctemplatedocumentPatchObjectV1Response> _callback) throws ApiException {

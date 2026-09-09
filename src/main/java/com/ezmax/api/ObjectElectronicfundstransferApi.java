@@ -28,12 +28,15 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import com.ezmax.api.model.ElectronicfundstransferBatchDownloadV1Request;
+import com.ezmax.api.model.ElectronicfundstransferGetAttachmentsV1Response;
 import com.ezmax.api.model.ElectronicfundstransferGetCommunicationCountV1Response;
 import com.ezmax.api.model.ElectronicfundstransferGetCommunicationListV1Response;
 import com.ezmax.api.model.ElectronicfundstransferGetCommunicationrecipientsV1Response;
 import com.ezmax.api.model.ElectronicfundstransferGetCommunicationsendersV1Response;
 import com.ezmax.api.model.ElectronicfundstransferImportIntoEDMV1Request;
 import com.ezmax.api.model.ElectronicfundstransferImportIntoEDMV1Response;
+import java.io.File;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -79,6 +82,288 @@ public class ObjectElectronicfundstransferApi {
     }
 
     /**
+     * Build call for electronicfundstransferBatchDownloadV1
+     * @param pkiElectronicfundstransferID  (required)
+     * @param electronicfundstransferBatchDownloadV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call electronicfundstransferBatchDownloadV1Call(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, @javax.annotation.Nonnull ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = electronicfundstransferBatchDownloadV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/batchDownload"
+            .replace("{" + "pkiElectronicfundstransferID" + "}", localVarApiClient.escapeString(pkiElectronicfundstransferID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/zip",
+            "text/xml",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call electronicfundstransferBatchDownloadV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, @javax.annotation.Nonnull ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiElectronicfundstransferID' is set
+        if (pkiElectronicfundstransferID == null) {
+            throw new ApiException("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferBatchDownloadV1(Async)");
+        }
+
+        // verify the required parameter 'electronicfundstransferBatchDownloadV1Request' is set
+        if (electronicfundstransferBatchDownloadV1Request == null) {
+            throw new ApiException("Missing the required parameter 'electronicfundstransferBatchDownloadV1Request' when calling electronicfundstransferBatchDownloadV1(Async)");
+        }
+
+        return electronicfundstransferBatchDownloadV1Call(pkiElectronicfundstransferID, electronicfundstransferBatchDownloadV1Request, _callback);
+
+    }
+
+    /**
+     * Download multiples attachments from an Electronicfundstransfer
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @param electronicfundstransferBatchDownloadV1Request  (required)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public File electronicfundstransferBatchDownloadV1(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, @javax.annotation.Nonnull ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request) throws ApiException {
+        ApiResponse<File> localVarResp = electronicfundstransferBatchDownloadV1WithHttpInfo(pkiElectronicfundstransferID, electronicfundstransferBatchDownloadV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Download multiples attachments from an Electronicfundstransfer
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @param electronicfundstransferBatchDownloadV1Request  (required)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<File> electronicfundstransferBatchDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, @javax.annotation.Nonnull ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request) throws ApiException {
+        okhttp3.Call localVarCall = electronicfundstransferBatchDownloadV1ValidateBeforeCall(pkiElectronicfundstransferID, electronicfundstransferBatchDownloadV1Request, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Download multiples attachments from an Electronicfundstransfer (asynchronously)
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @param electronicfundstransferBatchDownloadV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call electronicfundstransferBatchDownloadV1Async(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, @javax.annotation.Nonnull ElectronicfundstransferBatchDownloadV1Request electronicfundstransferBatchDownloadV1Request, final ApiCallback<File> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = electronicfundstransferBatchDownloadV1ValidateBeforeCall(pkiElectronicfundstransferID, electronicfundstransferBatchDownloadV1Request, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for electronicfundstransferGetAttachmentsV1
+     * @param pkiElectronicfundstransferID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call electronicfundstransferGetAttachmentsV1Call(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/electronicfundstransfer/{pkiElectronicfundstransferID}/getAttachments"
+            .replace("{" + "pkiElectronicfundstransferID" + "}", localVarApiClient.escapeString(pkiElectronicfundstransferID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call electronicfundstransferGetAttachmentsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiElectronicfundstransferID' is set
+        if (pkiElectronicfundstransferID == null) {
+            throw new ApiException("Missing the required parameter 'pkiElectronicfundstransferID' when calling electronicfundstransferGetAttachmentsV1(Async)");
+        }
+
+        return electronicfundstransferGetAttachmentsV1Call(pkiElectronicfundstransferID, _callback);
+
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s attachments
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @return ElectronicfundstransferGetAttachmentsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ElectronicfundstransferGetAttachmentsV1Response electronicfundstransferGetAttachmentsV1(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID) throws ApiException {
+        ApiResponse<ElectronicfundstransferGetAttachmentsV1Response> localVarResp = electronicfundstransferGetAttachmentsV1WithHttpInfo(pkiElectronicfundstransferID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s attachments
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @return ApiResponse&lt;ElectronicfundstransferGetAttachmentsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ElectronicfundstransferGetAttachmentsV1Response> electronicfundstransferGetAttachmentsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID) throws ApiException {
+        okhttp3.Call localVarCall = electronicfundstransferGetAttachmentsV1ValidateBeforeCall(pkiElectronicfundstransferID, null);
+        Type localVarReturnType = new TypeToken<ElectronicfundstransferGetAttachmentsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Electronicfundstransfer&#39;s attachments (asynchronously)
+     * 
+     * @param pkiElectronicfundstransferID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call electronicfundstransferGetAttachmentsV1Async(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, final ApiCallback<ElectronicfundstransferGetAttachmentsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = electronicfundstransferGetAttachmentsV1ValidateBeforeCall(pkiElectronicfundstransferID, _callback);
+        Type localVarReturnType = new TypeToken<ElectronicfundstransferGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for electronicfundstransferGetCommunicationCountV1
      * @param pkiElectronicfundstransferID  (required)
      * @param _callback Callback for upload/download progress
@@ -89,7 +374,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call electronicfundstransferGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
@@ -159,7 +444,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ElectronicfundstransferGetCommunicationCountV1Response electronicfundstransferGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID) throws ApiException {
@@ -178,7 +463,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<ElectronicfundstransferGetCommunicationCountV1Response> electronicfundstransferGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID) throws ApiException {
@@ -199,7 +484,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call electronicfundstransferGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, final ApiCallback<ElectronicfundstransferGetCommunicationCountV1Response> _callback) throws ApiException {
@@ -220,7 +505,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call electronicfundstransferGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
@@ -290,7 +575,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ElectronicfundstransferGetCommunicationListV1Response electronicfundstransferGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID) throws ApiException {
@@ -309,7 +594,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<ElectronicfundstransferGetCommunicationListV1Response> electronicfundstransferGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID) throws ApiException {
@@ -330,7 +615,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call electronicfundstransferGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, final ApiCallback<ElectronicfundstransferGetCommunicationListV1Response> _callback) throws ApiException {
@@ -351,7 +636,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call electronicfundstransferGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
@@ -421,7 +706,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ElectronicfundstransferGetCommunicationrecipientsV1Response electronicfundstransferGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID) throws ApiException {
@@ -440,7 +725,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<ElectronicfundstransferGetCommunicationrecipientsV1Response> electronicfundstransferGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID) throws ApiException {
@@ -461,7 +746,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call electronicfundstransferGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, final ApiCallback<ElectronicfundstransferGetCommunicationrecipientsV1Response> _callback) throws ApiException {
@@ -482,7 +767,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call electronicfundstransferGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, final ApiCallback _callback) throws ApiException {
@@ -552,7 +837,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ElectronicfundstransferGetCommunicationsendersV1Response electronicfundstransferGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID) throws ApiException {
@@ -571,7 +856,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<ElectronicfundstransferGetCommunicationsendersV1Response> electronicfundstransferGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID) throws ApiException {
@@ -592,7 +877,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call electronicfundstransferGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, final ApiCallback<ElectronicfundstransferGetCommunicationsendersV1Response> _callback) throws ApiException {
@@ -614,7 +899,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call electronicfundstransferImportIntoEDMV1Call(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, @javax.annotation.Nonnull ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request, final ApiCallback _callback) throws ApiException {
@@ -691,7 +976,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ElectronicfundstransferImportIntoEDMV1Response electronicfundstransferImportIntoEDMV1(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, @javax.annotation.Nonnull ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request) throws ApiException {
@@ -711,7 +996,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<ElectronicfundstransferImportIntoEDMV1Response> electronicfundstransferImportIntoEDMV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, @javax.annotation.Nonnull ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request) throws ApiException {
@@ -733,7 +1018,7 @@ public class ObjectElectronicfundstransferApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call electronicfundstransferImportIntoEDMV1Async(@javax.annotation.Nonnull Integer pkiElectronicfundstransferID, @javax.annotation.Nonnull ElectronicfundstransferImportIntoEDMV1Request electronicfundstransferImportIntoEDMV1Request, final ApiCallback<ElectronicfundstransferImportIntoEDMV1Response> _callback) throws ApiException {

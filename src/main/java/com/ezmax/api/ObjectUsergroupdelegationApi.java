@@ -216,7 +216,7 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call usergroupdelegationDeleteObjectV1Call(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID, final ApiCallback _callback) throws ApiException {
@@ -286,7 +286,7 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public UsergroupdelegationDeleteObjectV1Response usergroupdelegationDeleteObjectV1(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID) throws ApiException {
@@ -305,7 +305,7 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<UsergroupdelegationDeleteObjectV1Response> usergroupdelegationDeleteObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID) throws ApiException {
@@ -326,7 +326,7 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call usergroupdelegationDeleteObjectV1Async(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID, final ApiCallback<UsergroupdelegationDeleteObjectV1Response> _callback) throws ApiException {
@@ -348,8 +348,8 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call usergroupdelegationEditObjectV1Call(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID, @javax.annotation.Nonnull UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -426,8 +426,8 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public UsergroupdelegationEditObjectV1Response usergroupdelegationEditObjectV1(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID, @javax.annotation.Nonnull UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request) throws ApiException {
@@ -447,8 +447,8 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<UsergroupdelegationEditObjectV1Response> usergroupdelegationEditObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID, @javax.annotation.Nonnull UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request) throws ApiException {
@@ -470,8 +470,8 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call usergroupdelegationEditObjectV1Async(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID, @javax.annotation.Nonnull UsergroupdelegationEditObjectV1Request usergroupdelegationEditObjectV1Request, final ApiCallback<UsergroupdelegationEditObjectV1Response> _callback) throws ApiException {
@@ -492,7 +492,7 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call usergroupdelegationGetObjectV2Call(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID, final ApiCallback _callback) throws ApiException {
@@ -562,7 +562,7 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public UsergroupdelegationGetObjectV2Response usergroupdelegationGetObjectV2(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID) throws ApiException {
@@ -581,7 +581,7 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<UsergroupdelegationGetObjectV2Response> usergroupdelegationGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID) throws ApiException {
@@ -602,7 +602,7 @@ public class ObjectUsergroupdelegationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call usergroupdelegationGetObjectV2Async(@javax.annotation.Nonnull Integer pkiUsergroupdelegationID, final ApiCallback<UsergroupdelegationGetObjectV2Response> _callback) throws ApiException {

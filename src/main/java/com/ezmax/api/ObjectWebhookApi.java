@@ -226,7 +226,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookDeleteObjectV1Call(@javax.annotation.Nonnull Integer pkiWebhookID, final ApiCallback _callback) throws ApiException {
@@ -296,7 +296,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public WebhookDeleteObjectV1Response webhookDeleteObjectV1(@javax.annotation.Nonnull Integer pkiWebhookID) throws ApiException {
@@ -315,7 +315,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<WebhookDeleteObjectV1Response> webhookDeleteObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiWebhookID) throws ApiException {
@@ -336,7 +336,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookDeleteObjectV1Async(@javax.annotation.Nonnull Integer pkiWebhookID, final ApiCallback<WebhookDeleteObjectV1Response> _callback) throws ApiException {
@@ -358,7 +358,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookEditObjectV1Call(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull WebhookEditObjectV1Request webhookEditObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -435,7 +435,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public WebhookEditObjectV1Response webhookEditObjectV1(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull WebhookEditObjectV1Request webhookEditObjectV1Request) throws ApiException {
@@ -455,7 +455,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<WebhookEditObjectV1Response> webhookEditObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull WebhookEditObjectV1Request webhookEditObjectV1Request) throws ApiException {
@@ -477,7 +477,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookEditObjectV1Async(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull WebhookEditObjectV1Request webhookEditObjectV1Request, final ApiCallback<WebhookEditObjectV1Response> _callback) throws ApiException {
@@ -499,7 +499,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
         <tr><td> 429 </td><td> Too Many Requests </td><td>  -  </td></tr>
      </table>
      */
@@ -580,7 +580,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
         <tr><td> 429 </td><td> Too Many Requests </td><td>  -  </td></tr>
      </table>
      */
@@ -601,7 +601,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
         <tr><td> 429 </td><td> Too Many Requests </td><td>  -  </td></tr>
      </table>
      */
@@ -624,7 +624,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
         <tr><td> 429 </td><td> Too Many Requests </td><td>  -  </td></tr>
      </table>
      */
@@ -809,7 +809,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookGetObjectV2Call(@javax.annotation.Nonnull Integer pkiWebhookID, final ApiCallback _callback) throws ApiException {
@@ -879,7 +879,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public WebhookGetObjectV2Response webhookGetObjectV2(@javax.annotation.Nonnull Integer pkiWebhookID) throws ApiException {
@@ -898,7 +898,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<WebhookGetObjectV2Response> webhookGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiWebhookID) throws ApiException {
@@ -919,7 +919,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookGetObjectV2Async(@javax.annotation.Nonnull Integer pkiWebhookID, final ApiCallback<WebhookGetObjectV2Response> _callback) throws ApiException {
@@ -941,7 +941,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookRegenerateApikeyV1Call(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, final ApiCallback _callback) throws ApiException {
@@ -1018,7 +1018,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public WebhookRegenerateApikeyV1Response webhookRegenerateApikeyV1(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request) throws ApiException {
@@ -1038,7 +1038,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<WebhookRegenerateApikeyV1Response> webhookRegenerateApikeyV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request) throws ApiException {
@@ -1060,7 +1060,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookRegenerateApikeyV1Async(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull WebhookRegenerateApikeyV1Request webhookRegenerateApikeyV1Request, final ApiCallback<WebhookRegenerateApikeyV1Response> _callback) throws ApiException {
@@ -1081,7 +1081,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookSendWebhookV1Call(@javax.annotation.Nonnull WebhookSendWebhookV1Request webhookSendWebhookV1Request, final ApiCallback _callback) throws ApiException {
@@ -1151,7 +1151,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public WebhookSendWebhookV1Response webhookSendWebhookV1(@javax.annotation.Nonnull WebhookSendWebhookV1Request webhookSendWebhookV1Request) throws ApiException {
@@ -1170,7 +1170,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<WebhookSendWebhookV1Response> webhookSendWebhookV1WithHttpInfo(@javax.annotation.Nonnull WebhookSendWebhookV1Request webhookSendWebhookV1Request) throws ApiException {
@@ -1191,7 +1191,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookSendWebhookV1Async(@javax.annotation.Nonnull WebhookSendWebhookV1Request webhookSendWebhookV1Request, final ApiCallback<WebhookSendWebhookV1Response> _callback) throws ApiException {
@@ -1213,7 +1213,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookTestV1Call(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
@@ -1290,7 +1290,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public WebhookTestV1Response webhookTestV1(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull Object body) throws ApiException {
@@ -1310,7 +1310,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<WebhookTestV1Response> webhookTestV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull Object body) throws ApiException {
@@ -1332,7 +1332,7 @@ public class ObjectWebhookApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call webhookTestV1Async(@javax.annotation.Nonnull Integer pkiWebhookID, @javax.annotation.Nonnull Object body, final ApiCallback<WebhookTestV1Response> _callback) throws ApiException {

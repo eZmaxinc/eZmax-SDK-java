@@ -36,8 +36,10 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.ParsePosition;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
@@ -56,6 +58,7 @@ public class JSON {
     private static SqlDateTypeAdapter sqlDateTypeAdapter = new SqlDateTypeAdapter();
     private static OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
     private static LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
+    private static LocalDateTimeTypeAdapter localDateTimeTypeAdapter = new LocalDateTimeTypeAdapter();
     private static ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
 
     @SuppressWarnings("unchecked")
@@ -95,6 +98,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter);
         gsonBuilder.registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter);
         gsonBuilder.registerTypeAdapter(LocalDate.class, localDateTypeAdapter);
+        gsonBuilder.registerTypeAdapter(LocalDateTime.class, localDateTimeTypeAdapter);
         gsonBuilder.registerTypeAdapter(byte[].class, byteArrayAdapter);
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGenerateFederationTokenV1Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ActivesessionGenerateFederationTokenV1Response.CustomTypeAdapterFactory());
@@ -114,7 +118,24 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AddressRequestCompound.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AddressResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AddressResponseCompound.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentGetCommunicationCountV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentGetCommunicationCountV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentGetCommunicationListV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentGetCommunicationListV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentGetCommunicationrecipientsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentGetCommunicationrecipientsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentGetCommunicationsendersV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentGetCommunicationsendersV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AdjustmentImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AgentAutocompleteElementResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AgentBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AgentGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AgentGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AgentGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AgentGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AgentGetListV1Response.CustomTypeAdapterFactory());
@@ -157,6 +178,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ApikeyResponseCompound.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AttachmentGetAttachmentlogsV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AttachmentGetAttachmentlogsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AttachmentRenameV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AttachmentRenameV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AttachmentRenameV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AttachmentResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AttachmentResponseCompound.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AttachmentlogResponse.CustomTypeAdapterFactory());
@@ -183,8 +207,14 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AuthenticationexternalResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.AuthenticationexternalResponseCompound.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BankaccountAutocompleteElementResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BankaccountBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BankaccountGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BankaccountGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BankaccountGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BankaccountGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BankaccountImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BankaccountImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BankaccountImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BillingentityexternalAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BillingentityexternalGenerateFederationTokenV1Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BillingentityexternalGenerateFederationTokenV1Response.CustomTypeAdapterFactory());
@@ -230,6 +260,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrandingResponseCompoundV3.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrandingResponseV3.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrokerAutocompleteElementResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrokerBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrokerGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrokerGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrokerGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrokerGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrokerGetListV1Response.CustomTypeAdapterFactory());
@@ -241,6 +274,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrokertypeAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrokertypeGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BrokertypeGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BuyercontractBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BuyercontractGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BuyercontractGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BuyercontractGetCommunicationCountV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BuyercontractGetCommunicationCountV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BuyercontractGetCommunicationListV1Response.CustomTypeAdapterFactory());
@@ -255,6 +291,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BuyercontractImportIntoEDMV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BuyercontractImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BuyercontractListElement.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.BuyercontractResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ClonehistoryGetListV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ClonehistoryGetListV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ClonehistoryListElement.CustomTypeAdapterFactory());
@@ -262,6 +299,12 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ColleagueRequestV2.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ColleagueResponseCompoundV2.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ColleagueResponseV2.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CommissionadvanceBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CommissionadvanceGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CommissionadvanceGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CommissionadvanceImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CommissionadvanceImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CommissionadvanceImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CommonAudit.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CommonAuditdetail.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CommonFile.CustomTypeAdapterFactory());
@@ -460,6 +503,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomWordPositionOccurenceResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomWordPositionWordResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomerAutocompleteElementResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomerBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomerGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomerGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomerGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomerGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.CustomerGetObjectV2Response.CustomTypeAdapterFactory());
@@ -472,6 +518,24 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DepartmentAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DepartmentGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DepartmentGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DepositBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DepositGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DepositGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DepositImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DepositImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DepositImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DeposittransitchequeBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DeposittransitchequeGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DeposittransitchequeGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DeposittransitchequeImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DeposittransitchequeImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DeposittransitchequeImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DisclosureBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DisclosureGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DisclosureGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DisclosureImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DisclosureImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DisclosureImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DiscussionChatV1200Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DiscussionChatV1Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DiscussionCreateObjectV1Request.CustomTypeAdapterFactory());
@@ -524,6 +588,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DomainRequestCompound.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DomainResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.DomainResponseCompound.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ElectronicfundstransferBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ElectronicfundstransferGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ElectronicfundstransferGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ElectronicfundstransferGetCommunicationCountV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ElectronicfundstransferGetCommunicationCountV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ElectronicfundstransferGetCommunicationListV1Response.CustomTypeAdapterFactory());
@@ -542,12 +609,18 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmailtypeAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmailtypeGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmailtypeGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmployeeBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmployeeGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmployeeGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmployeeGetListV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmployeeGetListV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmployeeImportIntoEDMV1Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmployeeImportIntoEDMV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmployeeImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EmployeeListElement.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ExternalbrokerBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ExternalbrokerGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ExternalbrokerGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ExternalbrokerImportIntoEDMV1Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ExternalbrokerImportIntoEDMV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ExternalbrokerImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
@@ -1436,6 +1509,12 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzsignuserRequestCompound.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzsignuserResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.EzsignuserResponseCompound.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.FolderBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.FolderGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.FolderGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.FolderImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.FolderImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.FolderImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.FontAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.FontGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.FontGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
@@ -1462,6 +1541,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InfrastructureregionAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InfrastructureregionGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InfrastructureregionGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionBatchDownloadV1Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionGetAttachmentsV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionGetCommunicationCountV1Response.CustomTypeAdapterFactory());
@@ -1490,8 +1570,11 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionchecklistAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionchecklistGetAutocompleteV3Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionchecklistGetAutocompleteV3ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionnotauthenticatedBatchDownloadV1Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionnotauthenticatedFillInscriptionnotauthenticatedconditionV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionnotauthenticatedGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionnotauthenticatedGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionnotauthenticatedGetCommunicationCountV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionnotauthenticatedGetCommunicationCountV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionnotauthenticatedGetCommunicationListV1Response.CustomTypeAdapterFactory());
@@ -1514,6 +1597,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionnotauthenticatedResponseCompound.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionnotauthenticatedconditionResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptionnotauthenticatedconditionResponseCompound.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptiontempBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptiontempGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptiontempGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptiontempGetCommunicationCountV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptiontempGetCommunicationCountV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptiontempGetCommunicationListV1Response.CustomTypeAdapterFactory());
@@ -1531,6 +1617,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptiontypeAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptiontypeGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InscriptiontypeGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InvoiceBatchDownloadV1Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InvoiceGetAttachmentsV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InvoiceGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.InvoiceGetCommunicationCountV1Response.CustomTypeAdapterFactory());
@@ -1547,6 +1634,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.LanguageAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.LanguageGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.LanguageGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.LeadBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.LeadGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.LeadGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.LeadGetListV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.LeadGetListV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.LeadImportIntoEDMV1Request.CustomTypeAdapterFactory());
@@ -1596,12 +1686,27 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.MultilingualUserlogintypeDescription.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.MultilingualVariableexpenseDescription.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.MultilingualVersionhistoryDetail.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotaryBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotaryGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotaryGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotaryImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotaryImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotaryImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotificationsectionGetNotificationtestsV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotificationsectionGetNotificationtestsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotificationsubsectionResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotificationtestGetElementsV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotificationtestGetElementsV2ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.NotificationtestResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OfficetaxreportBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OfficetaxreportGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OfficetaxreportGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OfficetaxreportImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OfficetaxreportImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OfficetaxreportImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OtherincomeBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OtherincomeGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OtherincomeGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OtherincomeGetCommunicationCountV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OtherincomeGetCommunicationCountV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.OtherincomeGetCommunicationListV1Response.CustomTypeAdapterFactory());
@@ -1639,6 +1744,12 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymentmethodAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymentmethodGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymentmethodGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymentpreparationBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymentpreparationGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymentpreparationGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymentpreparationImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymentpreparationImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymentpreparationImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymenttermAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymenttermCreateObjectV1Request.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PaymenttermCreateObjectV1Response.CustomTypeAdapterFactory());
@@ -1686,12 +1797,27 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ProvinceAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ProvinceGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ProvinceGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PurchaseBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PurchaseGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PurchaseGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PurchaseImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PurchaseImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.PurchaseImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RealestateassociationAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RealestateassociationGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RealestateassociationGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RealestateboardAutocompleteElementResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RealestateboardGetAutocompleteV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RealestateboardGetAutocompleteV2ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ReconciliationBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ReconciliationGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ReconciliationGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ReconciliationImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ReconciliationImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ReconciliationImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RejectedoffertopurchaseBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RejectedoffertopurchaseGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RejectedoffertopurchaseGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationCountV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationCountV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RejectedoffertopurchaseGetCommunicationListV1Response.CustomTypeAdapterFactory());
@@ -1706,6 +1832,12 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RejectedoffertopurchaseImportIntoEDMV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RejectedoffertopurchaseImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.RejectedoffertopurchaseListElement.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SalaryBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SalaryGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SalaryGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SalaryImportIntoEDMV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SalaryImportIntoEDMV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SalaryImportIntoEDMV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimAuthenticationScheme.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimEmail.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.ScimGroup.CustomTypeAdapterFactory());
@@ -1751,6 +1883,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SubnetRequestCompound.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SubnetResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SubnetResponseCompound.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SupplierBatchDownloadV1Request.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SupplierGetAttachmentsV1Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SupplierGetAttachmentsV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SupplierGetListV1Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SupplierGetListV1ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.SupplierImportIntoEDMV1Request.CustomTypeAdapterFactory());
@@ -2000,6 +2135,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.WebhookGetObjectV2Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.WebhookGetObjectV2ResponseMPayload.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.WebhookListElement.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.WebhookRealestateBuyercontractCreated.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.WebhookRealestateBuyercontractModified.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.WebhookRealestateInscriptionCreated.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.WebhookRealestateInscriptionModified.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new com.ezmax.api.model.WebhookRealestateInscriptionnotauthenticatedCreated.CustomTypeAdapterFactory());
@@ -2231,12 +2368,65 @@ public class JSON {
         }
     }
 
+    /**
+     * Gson TypeAdapter for JSR310 LocalDateTime type
+     */
+    public static class LocalDateTimeTypeAdapter extends TypeAdapter<LocalDateTime> {
+
+        private DateTimeFormatter formatter;
+
+        public LocalDateTimeTypeAdapter() {
+            this(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+        }
+
+        public LocalDateTimeTypeAdapter(DateTimeFormatter formatter) {
+            this.formatter = formatter;
+        }
+
+        public void setFormat(DateTimeFormatter dateFormat) {
+            this.formatter = dateFormat;
+        }
+
+        @Override
+        public void write(JsonWriter out, LocalDateTime date) throws IOException {
+            if (date == null) {
+                out.nullValue();
+            } else {
+                out.value(formatter.format(date));
+            }
+        }
+
+        @Override
+        public LocalDateTime read(JsonReader in) throws IOException {
+            switch (in.peek()) {
+                case NULL:
+                    in.nextNull();
+                    return null;
+                default:
+                    String date = in.nextString();
+                    try {
+                        return LocalDateTime.parse(date, formatter);
+                    } catch (DateTimeParseException e) {
+                        if (date.length() > 10 && date.charAt(10) == ' ') {
+                            date = date.substring(0, 10) + 'T' + date.substring(11);
+                            return LocalDateTime.parse(date, formatter);
+                        }
+                        throw e;
+                    }
+            }
+        }
+    }
+
     public static void setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
         offsetDateTimeTypeAdapter.setFormat(dateFormat);
     }
 
     public static void setLocalDateFormat(DateTimeFormatter dateFormat) {
         localDateTypeAdapter.setFormat(dateFormat);
+    }
+
+    public static void setLocalDateTimeFormat(DateTimeFormatter dateFormat) {
+        localDateTimeTypeAdapter.setFormat(dateFormat);
     }
 
     /**

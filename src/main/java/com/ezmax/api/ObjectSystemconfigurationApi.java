@@ -87,8 +87,8 @@ public class ObjectSystemconfigurationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call systemconfigurationEditObjectV2Call(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, final ApiCallback _callback) throws ApiException {
@@ -165,8 +165,8 @@ public class ObjectSystemconfigurationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public SystemconfigurationEditObjectV2Response systemconfigurationEditObjectV2(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request) throws ApiException {
@@ -186,8 +186,8 @@ public class ObjectSystemconfigurationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<SystemconfigurationEditObjectV2Response> systemconfigurationEditObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request) throws ApiException {
@@ -209,8 +209,8 @@ public class ObjectSystemconfigurationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call systemconfigurationEditObjectV2Async(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, @javax.annotation.Nonnull SystemconfigurationEditObjectV2Request systemconfigurationEditObjectV2Request, final ApiCallback<SystemconfigurationEditObjectV2Response> _callback) throws ApiException {
@@ -231,7 +231,7 @@ public class ObjectSystemconfigurationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call systemconfigurationGetObjectV2Call(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, final ApiCallback _callback) throws ApiException {
@@ -301,7 +301,7 @@ public class ObjectSystemconfigurationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public SystemconfigurationGetObjectV2Response systemconfigurationGetObjectV2(@javax.annotation.Nonnull Integer pkiSystemconfigurationID) throws ApiException {
@@ -320,7 +320,7 @@ public class ObjectSystemconfigurationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<SystemconfigurationGetObjectV2Response> systemconfigurationGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiSystemconfigurationID) throws ApiException {
@@ -341,7 +341,7 @@ public class ObjectSystemconfigurationApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call systemconfigurationGetObjectV2Async(@javax.annotation.Nonnull Integer pkiSystemconfigurationID, final ApiCallback<SystemconfigurationGetObjectV2Response> _callback) throws ApiException {

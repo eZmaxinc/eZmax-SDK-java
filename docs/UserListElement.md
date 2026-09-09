@@ -9,6 +9,8 @@ A User List Element
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**pkiUserID** | **Integer** | The unique ID of the User |  |
+|**fkiAgentID** | **Integer** | The unique ID of the Agent. |  [optional] |
+|**fkiBrokerID** | **Integer** | The unique ID of the Broker. |  [optional] |
 |**sUserFirstname** | **String** | The first name of the user |  |
 |**sUserLastname** | **String** | The last name of the user |  |
 |**sUserLoginname** | **String** | The login name of the User. |  |

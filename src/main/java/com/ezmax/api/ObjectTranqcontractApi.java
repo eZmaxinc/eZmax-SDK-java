@@ -89,7 +89,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call tranqcontractGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiTranqcontractID, final ApiCallback _callback) throws ApiException {
@@ -159,7 +159,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public TranqcontractGetCommunicationCountV1Response tranqcontractGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiTranqcontractID) throws ApiException {
@@ -178,7 +178,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<TranqcontractGetCommunicationCountV1Response> tranqcontractGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiTranqcontractID) throws ApiException {
@@ -199,7 +199,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call tranqcontractGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiTranqcontractID, final ApiCallback<TranqcontractGetCommunicationCountV1Response> _callback) throws ApiException {
@@ -220,7 +220,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call tranqcontractGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiTranqcontractID, final ApiCallback _callback) throws ApiException {
@@ -290,7 +290,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public TranqcontractGetCommunicationListV1Response tranqcontractGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiTranqcontractID) throws ApiException {
@@ -309,7 +309,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<TranqcontractGetCommunicationListV1Response> tranqcontractGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiTranqcontractID) throws ApiException {
@@ -330,7 +330,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call tranqcontractGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiTranqcontractID, final ApiCallback<TranqcontractGetCommunicationListV1Response> _callback) throws ApiException {
@@ -351,7 +351,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call tranqcontractGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiTranqcontractID, final ApiCallback _callback) throws ApiException {
@@ -421,7 +421,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public TranqcontractGetCommunicationrecipientsV1Response tranqcontractGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiTranqcontractID) throws ApiException {
@@ -440,7 +440,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<TranqcontractGetCommunicationrecipientsV1Response> tranqcontractGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiTranqcontractID) throws ApiException {
@@ -461,7 +461,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call tranqcontractGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiTranqcontractID, final ApiCallback<TranqcontractGetCommunicationrecipientsV1Response> _callback) throws ApiException {
@@ -482,7 +482,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call tranqcontractGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiTranqcontractID, final ApiCallback _callback) throws ApiException {
@@ -552,7 +552,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public TranqcontractGetCommunicationsendersV1Response tranqcontractGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiTranqcontractID) throws ApiException {
@@ -571,7 +571,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<TranqcontractGetCommunicationsendersV1Response> tranqcontractGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiTranqcontractID) throws ApiException {
@@ -592,7 +592,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call tranqcontractGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiTranqcontractID, final ApiCallback<TranqcontractGetCommunicationsendersV1Response> _callback) throws ApiException {
@@ -614,7 +614,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call tranqcontractImportIntoEDMV1Call(@javax.annotation.Nonnull Integer pkiTranqcontractID, @javax.annotation.Nonnull TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request, final ApiCallback _callback) throws ApiException {
@@ -691,7 +691,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public TranqcontractImportIntoEDMV1Response tranqcontractImportIntoEDMV1(@javax.annotation.Nonnull Integer pkiTranqcontractID, @javax.annotation.Nonnull TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request) throws ApiException {
@@ -711,7 +711,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<TranqcontractImportIntoEDMV1Response> tranqcontractImportIntoEDMV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiTranqcontractID, @javax.annotation.Nonnull TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request) throws ApiException {
@@ -733,7 +733,7 @@ public class ObjectTranqcontractApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call tranqcontractImportIntoEDMV1Async(@javax.annotation.Nonnull Integer pkiTranqcontractID, @javax.annotation.Nonnull TranqcontractImportIntoEDMV1Request tranqcontractImportIntoEDMV1Request, final ApiCallback<TranqcontractImportIntoEDMV1Response> _callback) throws ApiException {

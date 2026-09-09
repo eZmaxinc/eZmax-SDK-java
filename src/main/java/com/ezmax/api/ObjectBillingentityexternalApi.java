@@ -88,7 +88,7 @@ public class ObjectBillingentityexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call billingentityexternalGenerateFederationTokenV1Call(@javax.annotation.Nonnull Integer pkiBillingentityexternalID, @javax.annotation.Nonnull BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, final ApiCallback _callback) throws ApiException {
@@ -165,7 +165,7 @@ public class ObjectBillingentityexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public BillingentityexternalGenerateFederationTokenV1Response billingentityexternalGenerateFederationTokenV1(@javax.annotation.Nonnull Integer pkiBillingentityexternalID, @javax.annotation.Nonnull BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request) throws ApiException {
@@ -185,7 +185,7 @@ public class ObjectBillingentityexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<BillingentityexternalGenerateFederationTokenV1Response> billingentityexternalGenerateFederationTokenV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBillingentityexternalID, @javax.annotation.Nonnull BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request) throws ApiException {
@@ -207,7 +207,7 @@ public class ObjectBillingentityexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call billingentityexternalGenerateFederationTokenV1Async(@javax.annotation.Nonnull Integer pkiBillingentityexternalID, @javax.annotation.Nonnull BillingentityexternalGenerateFederationTokenV1Request billingentityexternalGenerateFederationTokenV1Request, final ApiCallback<BillingentityexternalGenerateFederationTokenV1Response> _callback) throws ApiException {

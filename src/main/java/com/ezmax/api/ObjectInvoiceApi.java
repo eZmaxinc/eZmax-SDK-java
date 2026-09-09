@@ -28,6 +28,8 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.CommonResponseError;
+import java.io.File;
+import com.ezmax.api.model.InvoiceBatchDownloadV1Request;
 import com.ezmax.api.model.InvoiceGetAttachmentsV1Response;
 import com.ezmax.api.model.InvoiceGetCommunicationCountV1Response;
 import com.ezmax.api.model.InvoiceGetCommunicationListV1Response;
@@ -80,6 +82,157 @@ public class ObjectInvoiceApi {
     }
 
     /**
+     * Build call for invoiceBatchDownloadV1
+     * @param pkiInvoiceID  (required)
+     * @param invoiceBatchDownloadV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call invoiceBatchDownloadV1Call(@javax.annotation.Nonnull Integer pkiInvoiceID, @javax.annotation.Nonnull InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = invoiceBatchDownloadV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/invoice/{pkiInvoiceID}/batchDownload"
+            .replace("{" + "pkiInvoiceID" + "}", localVarApiClient.escapeString(pkiInvoiceID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/zip",
+            "text/xml",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call invoiceBatchDownloadV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiInvoiceID, @javax.annotation.Nonnull InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiInvoiceID' is set
+        if (pkiInvoiceID == null) {
+            throw new ApiException("Missing the required parameter 'pkiInvoiceID' when calling invoiceBatchDownloadV1(Async)");
+        }
+
+        // verify the required parameter 'invoiceBatchDownloadV1Request' is set
+        if (invoiceBatchDownloadV1Request == null) {
+            throw new ApiException("Missing the required parameter 'invoiceBatchDownloadV1Request' when calling invoiceBatchDownloadV1(Async)");
+        }
+
+        return invoiceBatchDownloadV1Call(pkiInvoiceID, invoiceBatchDownloadV1Request, _callback);
+
+    }
+
+    /**
+     * Download multiples attachments from an Invoice
+     * 
+     * @param pkiInvoiceID  (required)
+     * @param invoiceBatchDownloadV1Request  (required)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public File invoiceBatchDownloadV1(@javax.annotation.Nonnull Integer pkiInvoiceID, @javax.annotation.Nonnull InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request) throws ApiException {
+        ApiResponse<File> localVarResp = invoiceBatchDownloadV1WithHttpInfo(pkiInvoiceID, invoiceBatchDownloadV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Download multiples attachments from an Invoice
+     * 
+     * @param pkiInvoiceID  (required)
+     * @param invoiceBatchDownloadV1Request  (required)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<File> invoiceBatchDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInvoiceID, @javax.annotation.Nonnull InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request) throws ApiException {
+        okhttp3.Call localVarCall = invoiceBatchDownloadV1ValidateBeforeCall(pkiInvoiceID, invoiceBatchDownloadV1Request, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Download multiples attachments from an Invoice (asynchronously)
+     * 
+     * @param pkiInvoiceID  (required)
+     * @param invoiceBatchDownloadV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call invoiceBatchDownloadV1Async(@javax.annotation.Nonnull Integer pkiInvoiceID, @javax.annotation.Nonnull InvoiceBatchDownloadV1Request invoiceBatchDownloadV1Request, final ApiCallback<File> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = invoiceBatchDownloadV1ValidateBeforeCall(pkiInvoiceID, invoiceBatchDownloadV1Request, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for invoiceGetAttachmentsV1
      * @param pkiInvoiceID  (required)
      * @param _callback Callback for upload/download progress
@@ -90,7 +243,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceGetAttachmentsV1Call(@javax.annotation.Nonnull Integer pkiInvoiceID, final ApiCallback _callback) throws ApiException {
@@ -160,7 +313,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public InvoiceGetAttachmentsV1Response invoiceGetAttachmentsV1(@javax.annotation.Nonnull Integer pkiInvoiceID) throws ApiException {
@@ -179,7 +332,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<InvoiceGetAttachmentsV1Response> invoiceGetAttachmentsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInvoiceID) throws ApiException {
@@ -200,7 +353,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceGetAttachmentsV1Async(@javax.annotation.Nonnull Integer pkiInvoiceID, final ApiCallback<InvoiceGetAttachmentsV1Response> _callback) throws ApiException {
@@ -221,7 +374,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiInvoiceID, final ApiCallback _callback) throws ApiException {
@@ -291,7 +444,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public InvoiceGetCommunicationCountV1Response invoiceGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiInvoiceID) throws ApiException {
@@ -310,7 +463,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<InvoiceGetCommunicationCountV1Response> invoiceGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInvoiceID) throws ApiException {
@@ -331,7 +484,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiInvoiceID, final ApiCallback<InvoiceGetCommunicationCountV1Response> _callback) throws ApiException {
@@ -352,7 +505,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiInvoiceID, final ApiCallback _callback) throws ApiException {
@@ -422,7 +575,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public InvoiceGetCommunicationListV1Response invoiceGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiInvoiceID) throws ApiException {
@@ -441,7 +594,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<InvoiceGetCommunicationListV1Response> invoiceGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInvoiceID) throws ApiException {
@@ -462,7 +615,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiInvoiceID, final ApiCallback<InvoiceGetCommunicationListV1Response> _callback) throws ApiException {
@@ -483,7 +636,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiInvoiceID, final ApiCallback _callback) throws ApiException {
@@ -553,7 +706,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public InvoiceGetCommunicationrecipientsV1Response invoiceGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiInvoiceID) throws ApiException {
@@ -572,7 +725,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<InvoiceGetCommunicationrecipientsV1Response> invoiceGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInvoiceID) throws ApiException {
@@ -593,7 +746,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiInvoiceID, final ApiCallback<InvoiceGetCommunicationrecipientsV1Response> _callback) throws ApiException {
@@ -614,7 +767,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiInvoiceID, final ApiCallback _callback) throws ApiException {
@@ -684,7 +837,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public InvoiceGetCommunicationsendersV1Response invoiceGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiInvoiceID) throws ApiException {
@@ -703,7 +856,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<InvoiceGetCommunicationsendersV1Response> invoiceGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInvoiceID) throws ApiException {
@@ -724,7 +877,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiInvoiceID, final ApiCallback<InvoiceGetCommunicationsendersV1Response> _callback) throws ApiException {
@@ -746,7 +899,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceImportIntoEDMV1Call(@javax.annotation.Nonnull Integer pkiInvoiceID, @javax.annotation.Nonnull InvoiceImportIntoEDMV1Request invoiceImportIntoEDMV1Request, final ApiCallback _callback) throws ApiException {
@@ -823,7 +976,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public InvoiceImportIntoEDMV1Response invoiceImportIntoEDMV1(@javax.annotation.Nonnull Integer pkiInvoiceID, @javax.annotation.Nonnull InvoiceImportIntoEDMV1Request invoiceImportIntoEDMV1Request) throws ApiException {
@@ -843,7 +996,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<InvoiceImportIntoEDMV1Response> invoiceImportIntoEDMV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInvoiceID, @javax.annotation.Nonnull InvoiceImportIntoEDMV1Request invoiceImportIntoEDMV1Request) throws ApiException {
@@ -865,7 +1018,7 @@ public class ObjectInvoiceApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call invoiceImportIntoEDMV1Async(@javax.annotation.Nonnull Integer pkiInvoiceID, @javax.annotation.Nonnull InvoiceImportIntoEDMV1Request invoiceImportIntoEDMV1Request, final ApiCallback<InvoiceImportIntoEDMV1Response> _callback) throws ApiException {

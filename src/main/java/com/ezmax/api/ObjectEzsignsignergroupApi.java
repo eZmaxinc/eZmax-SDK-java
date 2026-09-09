@@ -219,7 +219,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignsignergroupDeleteObjectV1Call(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, final ApiCallback _callback) throws ApiException {
@@ -289,7 +289,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsignsignergroupDeleteObjectV1Response ezsignsignergroupDeleteObjectV1(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID) throws ApiException {
@@ -308,7 +308,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsignsignergroupDeleteObjectV1Response> ezsignsignergroupDeleteObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID) throws ApiException {
@@ -329,7 +329,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignsignergroupDeleteObjectV1Async(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, final ApiCallback<EzsignsignergroupDeleteObjectV1Response> _callback) throws ApiException {
@@ -351,8 +351,8 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignsignergroupEditEzsignsignergroupmembershipsV1Call(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, @javax.annotation.Nonnull EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, final ApiCallback _callback) throws ApiException {
@@ -429,8 +429,8 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsignsignergroupEditEzsignsignergroupmembershipsV1Response ezsignsignergroupEditEzsignsignergroupmembershipsV1(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, @javax.annotation.Nonnull EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request) throws ApiException {
@@ -450,8 +450,8 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response> ezsignsignergroupEditEzsignsignergroupmembershipsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, @javax.annotation.Nonnull EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request) throws ApiException {
@@ -473,8 +473,8 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignsignergroupEditEzsignsignergroupmembershipsV1Async(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, @javax.annotation.Nonnull EzsignsignergroupEditEzsignsignergroupmembershipsV1Request ezsignsignergroupEditEzsignsignergroupmembershipsV1Request, final ApiCallback<EzsignsignergroupEditEzsignsignergroupmembershipsV1Response> _callback) throws ApiException {
@@ -496,7 +496,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignsignergroupEditObjectV1Call(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, @javax.annotation.Nonnull EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -573,7 +573,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsignsignergroupEditObjectV1Response ezsignsignergroupEditObjectV1(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, @javax.annotation.Nonnull EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request) throws ApiException {
@@ -593,7 +593,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsignsignergroupEditObjectV1Response> ezsignsignergroupEditObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, @javax.annotation.Nonnull EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request) throws ApiException {
@@ -615,7 +615,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignsignergroupEditObjectV1Async(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, @javax.annotation.Nonnull EzsignsignergroupEditObjectV1Request ezsignsignergroupEditObjectV1Request, final ApiCallback<EzsignsignergroupEditObjectV1Response> _callback) throws ApiException {
@@ -636,7 +636,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignsignergroupGetEzsignsignergroupmembershipsV1Call(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, final ApiCallback _callback) throws ApiException {
@@ -706,7 +706,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsignsignergroupGetEzsignsignergroupmembershipsV1Response ezsignsignergroupGetEzsignsignergroupmembershipsV1(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID) throws ApiException {
@@ -725,7 +725,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response> ezsignsignergroupGetEzsignsignergroupmembershipsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID) throws ApiException {
@@ -746,7 +746,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignsignergroupGetEzsignsignergroupmembershipsV1Async(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, final ApiCallback<EzsignsignergroupGetEzsignsignergroupmembershipsV1Response> _callback) throws ApiException {
@@ -767,7 +767,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignsignergroupGetObjectV2Call(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, final ApiCallback _callback) throws ApiException {
@@ -837,7 +837,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzsignsignergroupGetObjectV2Response ezsignsignergroupGetObjectV2(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID) throws ApiException {
@@ -856,7 +856,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzsignsignergroupGetObjectV2Response> ezsignsignergroupGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID) throws ApiException {
@@ -877,7 +877,7 @@ public class ObjectEzsignsignergroupApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezsignsignergroupGetObjectV2Async(@javax.annotation.Nonnull Integer pkiEzsignsignergroupID, final ApiCallback<EzsignsignergroupGetObjectV2Response> _callback) throws ApiException {

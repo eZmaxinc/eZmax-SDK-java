@@ -29,6 +29,10 @@ import com.google.gson.stream.JsonWriter;
 @JsonAdapter(FieldEWebhookRealestateevent.Adapter.class)
 public enum FieldEWebhookRealestateevent {
   
+  BUYERCONTRACT_CREATED("BuyercontractCreated"),
+  
+  BUYERCONTRACT_MODIFIED("BuyercontractModified"),
+  
   INSCRIPTION_CREATED("InscriptionCreated"),
   
   INSCRIPTION_MODIFIED("InscriptionModified"),

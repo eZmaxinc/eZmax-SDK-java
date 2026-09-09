@@ -220,7 +220,7 @@ public class ObjectBrandingApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call brandingEditObjectV2Call(@javax.annotation.Nonnull Integer pkiBrandingID, @javax.annotation.Nonnull BrandingEditObjectV2Request brandingEditObjectV2Request, final ApiCallback _callback) throws ApiException {
@@ -297,7 +297,7 @@ public class ObjectBrandingApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public BrandingEditObjectV2Response brandingEditObjectV2(@javax.annotation.Nonnull Integer pkiBrandingID, @javax.annotation.Nonnull BrandingEditObjectV2Request brandingEditObjectV2Request) throws ApiException {
@@ -317,7 +317,7 @@ public class ObjectBrandingApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<BrandingEditObjectV2Response> brandingEditObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiBrandingID, @javax.annotation.Nonnull BrandingEditObjectV2Request brandingEditObjectV2Request) throws ApiException {
@@ -339,7 +339,7 @@ public class ObjectBrandingApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call brandingEditObjectV2Async(@javax.annotation.Nonnull Integer pkiBrandingID, @javax.annotation.Nonnull BrandingEditObjectV2Request brandingEditObjectV2Request, final ApiCallback<BrandingEditObjectV2Response> _callback) throws ApiException {
@@ -675,7 +675,7 @@ public class ObjectBrandingApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call brandingGetObjectV3Call(@javax.annotation.Nonnull Integer pkiBrandingID, final ApiCallback _callback) throws ApiException {
@@ -745,7 +745,7 @@ public class ObjectBrandingApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public BrandingGetObjectV3Response brandingGetObjectV3(@javax.annotation.Nonnull Integer pkiBrandingID) throws ApiException {
@@ -764,7 +764,7 @@ public class ObjectBrandingApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<BrandingGetObjectV3Response> brandingGetObjectV3WithHttpInfo(@javax.annotation.Nonnull Integer pkiBrandingID) throws ApiException {
@@ -785,7 +785,7 @@ public class ObjectBrandingApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call brandingGetObjectV3Async(@javax.annotation.Nonnull Integer pkiBrandingID, final ApiCallback<BrandingGetObjectV3Response> _callback) throws ApiException {

@@ -28,6 +28,8 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.AttachmentGetAttachmentlogsV1Response;
+import com.ezmax.api.model.AttachmentRenameV1Request;
+import com.ezmax.api.model.AttachmentRenameV1Response;
 import com.ezmax.api.model.CommonResponseError;
 
 import java.lang.reflect.Type;
@@ -84,7 +86,7 @@ public class ObjectAttachmentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call attachmentDownloadV1Call(@javax.annotation.Nonnull Integer pkiAttachmentID, final ApiCallback _callback) throws ApiException {
@@ -153,7 +155,7 @@ public class ObjectAttachmentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public void attachmentDownloadV1(@javax.annotation.Nonnull Integer pkiAttachmentID) throws ApiException {
@@ -171,7 +173,7 @@ public class ObjectAttachmentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Void> attachmentDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAttachmentID) throws ApiException {
@@ -191,7 +193,7 @@ public class ObjectAttachmentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 302 </td><td> The user has been redirected </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call attachmentDownloadV1Async(@javax.annotation.Nonnull Integer pkiAttachmentID, final ApiCallback<Void> _callback) throws ApiException {
@@ -211,7 +213,7 @@ public class ObjectAttachmentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call attachmentGetAttachmentlogsV1Call(@javax.annotation.Nonnull Integer pkiAttachmentID, final ApiCallback _callback) throws ApiException {
@@ -281,7 +283,7 @@ public class ObjectAttachmentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public AttachmentGetAttachmentlogsV1Response attachmentGetAttachmentlogsV1(@javax.annotation.Nonnull Integer pkiAttachmentID) throws ApiException {
@@ -300,7 +302,7 @@ public class ObjectAttachmentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<AttachmentGetAttachmentlogsV1Response> attachmentGetAttachmentlogsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAttachmentID) throws ApiException {
@@ -321,13 +323,166 @@ public class ObjectAttachmentApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call attachmentGetAttachmentlogsV1Async(@javax.annotation.Nonnull Integer pkiAttachmentID, final ApiCallback<AttachmentGetAttachmentlogsV1Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = attachmentGetAttachmentlogsV1ValidateBeforeCall(pkiAttachmentID, _callback);
         Type localVarReturnType = new TypeToken<AttachmentGetAttachmentlogsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for attachmentRenameV1
+     * @param pkiAttachmentID  (required)
+     * @param attachmentRenameV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> The request failed due to a conflict with the resource state. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentRenameV1Call(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentRenameV1Request attachmentRenameV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = attachmentRenameV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/attachment/{pkiAttachmentID}/rename"
+            .replace("{" + "pkiAttachmentID" + "}", localVarApiClient.escapeString(pkiAttachmentID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call attachmentRenameV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentRenameV1Request attachmentRenameV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiAttachmentID' is set
+        if (pkiAttachmentID == null) {
+            throw new ApiException("Missing the required parameter 'pkiAttachmentID' when calling attachmentRenameV1(Async)");
+        }
+
+        // verify the required parameter 'attachmentRenameV1Request' is set
+        if (attachmentRenameV1Request == null) {
+            throw new ApiException("Missing the required parameter 'attachmentRenameV1Request' when calling attachmentRenameV1(Async)");
+        }
+
+        return attachmentRenameV1Call(pkiAttachmentID, attachmentRenameV1Request, _callback);
+
+    }
+
+    /**
+     * Rename an Attachment
+     * The endpoint allows to change the attachment&#39;s file name and category.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentRenameV1Request  (required)
+     * @return AttachmentRenameV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> The request failed due to a conflict with the resource state. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public AttachmentRenameV1Response attachmentRenameV1(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentRenameV1Request attachmentRenameV1Request) throws ApiException {
+        ApiResponse<AttachmentRenameV1Response> localVarResp = attachmentRenameV1WithHttpInfo(pkiAttachmentID, attachmentRenameV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Rename an Attachment
+     * The endpoint allows to change the attachment&#39;s file name and category.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentRenameV1Request  (required)
+     * @return ApiResponse&lt;AttachmentRenameV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> The request failed due to a conflict with the resource state. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<AttachmentRenameV1Response> attachmentRenameV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentRenameV1Request attachmentRenameV1Request) throws ApiException {
+        okhttp3.Call localVarCall = attachmentRenameV1ValidateBeforeCall(pkiAttachmentID, attachmentRenameV1Request, null);
+        Type localVarReturnType = new TypeToken<AttachmentRenameV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Rename an Attachment (asynchronously)
+     * The endpoint allows to change the attachment&#39;s file name and category.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentRenameV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> The request failed due to a conflict with the resource state. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentRenameV1Async(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentRenameV1Request attachmentRenameV1Request, final ApiCallback<AttachmentRenameV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = attachmentRenameV1ValidateBeforeCall(pkiAttachmentID, attachmentRenameV1Request, _callback);
+        Type localVarReturnType = new TypeToken<AttachmentRenameV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -91,7 +91,7 @@ public class ObjectActivesessionApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call activesessionGenerateFederationTokenV1Call(@javax.annotation.Nonnull ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, final ApiCallback _callback) throws ApiException {
@@ -161,7 +161,7 @@ public class ObjectActivesessionApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ActivesessionGenerateFederationTokenV1Response activesessionGenerateFederationTokenV1(@javax.annotation.Nonnull ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request) throws ApiException {
@@ -180,7 +180,7 @@ public class ObjectActivesessionApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<ActivesessionGenerateFederationTokenV1Response> activesessionGenerateFederationTokenV1WithHttpInfo(@javax.annotation.Nonnull ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request) throws ApiException {
@@ -201,7 +201,7 @@ public class ObjectActivesessionApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call activesessionGenerateFederationTokenV1Async(@javax.annotation.Nonnull ActivesessionGenerateFederationTokenV1Request activesessionGenerateFederationTokenV1Request, final ApiCallback<ActivesessionGenerateFederationTokenV1Response> _callback) throws ApiException {

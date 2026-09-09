@@ -31,6 +31,8 @@ public enum FieldEEzsignfoldersignerassociationRole {
   
   CC("CC"),
   
+  CC_DELETED("CCDeleted"),
+  
   SIGNER("Signer"),
   
   SIGNER_AND_CC("SignerAndCC");

@@ -86,8 +86,8 @@ public class ObjectEzmaxcustomeruserApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezmaxcustomeruserPatchObjectV1Call(@javax.annotation.Nonnull Integer pkiEzmaxcustomeruserID, @javax.annotation.Nonnull EzmaxcustomeruserPatchObjectV1Request ezmaxcustomeruserPatchObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -164,8 +164,8 @@ public class ObjectEzmaxcustomeruserApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public EzmaxcustomeruserPatchObjectV1Response ezmaxcustomeruserPatchObjectV1(@javax.annotation.Nonnull Integer pkiEzmaxcustomeruserID, @javax.annotation.Nonnull EzmaxcustomeruserPatchObjectV1Request ezmaxcustomeruserPatchObjectV1Request) throws ApiException {
@@ -185,8 +185,8 @@ public class ObjectEzmaxcustomeruserApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<EzmaxcustomeruserPatchObjectV1Response> ezmaxcustomeruserPatchObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEzmaxcustomeruserID, @javax.annotation.Nonnull EzmaxcustomeruserPatchObjectV1Request ezmaxcustomeruserPatchObjectV1Request) throws ApiException {
@@ -208,8 +208,8 @@ public class ObjectEzmaxcustomeruserApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call ezmaxcustomeruserPatchObjectV1Async(@javax.annotation.Nonnull Integer pkiEzmaxcustomeruserID, @javax.annotation.Nonnull EzmaxcustomeruserPatchObjectV1Request ezmaxcustomeruserPatchObjectV1Request, final ApiCallback<EzmaxcustomeruserPatchObjectV1Response> _callback) throws ApiException {

@@ -84,7 +84,7 @@ public class ObjectVersionhistoryApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call versionhistoryGetObjectV2Call(@javax.annotation.Nonnull Integer pkiVersionhistoryID, final ApiCallback _callback) throws ApiException {
@@ -154,7 +154,7 @@ public class ObjectVersionhistoryApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public VersionhistoryGetObjectV2Response versionhistoryGetObjectV2(@javax.annotation.Nonnull Integer pkiVersionhistoryID) throws ApiException {
@@ -173,7 +173,7 @@ public class ObjectVersionhistoryApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<VersionhistoryGetObjectV2Response> versionhistoryGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiVersionhistoryID) throws ApiException {
@@ -194,7 +194,7 @@ public class ObjectVersionhistoryApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call versionhistoryGetObjectV2Async(@javax.annotation.Nonnull Integer pkiVersionhistoryID, final ApiCallback<VersionhistoryGetObjectV2Response> _callback) throws ApiException {

@@ -30,6 +30,8 @@ import java.io.IOException;
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.HeaderAcceptLanguage;
+import com.ezmax.api.model.InscriptiontempBatchDownloadV1Request;
+import com.ezmax.api.model.InscriptiontempGetAttachmentsV1Response;
 import com.ezmax.api.model.InscriptiontempGetCommunicationCountV1Response;
 import com.ezmax.api.model.InscriptiontempGetCommunicationListV1Response;
 import com.ezmax.api.model.InscriptiontempGetCommunicationrecipientsV1Response;
@@ -82,6 +84,280 @@ public class ObjectInscriptiontempApi {
     }
 
     /**
+     * Build call for inscriptiontempBatchDownloadV1
+     * @param pkiInscriptiontempID  (required)
+     * @param inscriptiontempBatchDownloadV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptiontempBatchDownloadV1Call(@javax.annotation.Nonnull Integer pkiInscriptiontempID, @javax.annotation.Nonnull InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = inscriptiontempBatchDownloadV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/batchDownload"
+            .replace("{" + "pkiInscriptiontempID" + "}", localVarApiClient.escapeString(pkiInscriptiontempID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/zip",
+            "text/xml",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call inscriptiontempBatchDownloadV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiInscriptiontempID, @javax.annotation.Nonnull InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiInscriptiontempID' is set
+        if (pkiInscriptiontempID == null) {
+            throw new ApiException("Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempBatchDownloadV1(Async)");
+        }
+
+        // verify the required parameter 'inscriptiontempBatchDownloadV1Request' is set
+        if (inscriptiontempBatchDownloadV1Request == null) {
+            throw new ApiException("Missing the required parameter 'inscriptiontempBatchDownloadV1Request' when calling inscriptiontempBatchDownloadV1(Async)");
+        }
+
+        return inscriptiontempBatchDownloadV1Call(pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request, _callback);
+
+    }
+
+    /**
+     * Download multiples attachments from a Inscriptiontemp
+     * 
+     * @param pkiInscriptiontempID  (required)
+     * @param inscriptiontempBatchDownloadV1Request  (required)
+     * @return File
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public File inscriptiontempBatchDownloadV1(@javax.annotation.Nonnull Integer pkiInscriptiontempID, @javax.annotation.Nonnull InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request) throws ApiException {
+        ApiResponse<File> localVarResp = inscriptiontempBatchDownloadV1WithHttpInfo(pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Download multiples attachments from a Inscriptiontemp
+     * 
+     * @param pkiInscriptiontempID  (required)
+     * @param inscriptiontempBatchDownloadV1Request  (required)
+     * @return ApiResponse&lt;File&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<File> inscriptiontempBatchDownloadV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInscriptiontempID, @javax.annotation.Nonnull InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request) throws ApiException {
+        okhttp3.Call localVarCall = inscriptiontempBatchDownloadV1ValidateBeforeCall(pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request, null);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Download multiples attachments from a Inscriptiontemp (asynchronously)
+     * 
+     * @param pkiInscriptiontempID  (required)
+     * @param inscriptiontempBatchDownloadV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptiontempBatchDownloadV1Async(@javax.annotation.Nonnull Integer pkiInscriptiontempID, @javax.annotation.Nonnull InscriptiontempBatchDownloadV1Request inscriptiontempBatchDownloadV1Request, final ApiCallback<File> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = inscriptiontempBatchDownloadV1ValidateBeforeCall(pkiInscriptiontempID, inscriptiontempBatchDownloadV1Request, _callback);
+        Type localVarReturnType = new TypeToken<File>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for inscriptiontempGetAttachmentsV1
+     * @param pkiInscriptiontempID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptiontempGetAttachmentsV1Call(@javax.annotation.Nonnull Integer pkiInscriptiontempID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/inscriptiontemp/{pkiInscriptiontempID}/getAttachments"
+            .replace("{" + "pkiInscriptiontempID" + "}", localVarApiClient.escapeString(pkiInscriptiontempID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call inscriptiontempGetAttachmentsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiInscriptiontempID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiInscriptiontempID' is set
+        if (pkiInscriptiontempID == null) {
+            throw new ApiException("Missing the required parameter 'pkiInscriptiontempID' when calling inscriptiontempGetAttachmentsV1(Async)");
+        }
+
+        return inscriptiontempGetAttachmentsV1Call(pkiInscriptiontempID, _callback);
+
+    }
+
+    /**
+     * Retrieve Inscriptiontemp&#39;s attachments
+     * 
+     * @param pkiInscriptiontempID  (required)
+     * @return InscriptiontempGetAttachmentsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public InscriptiontempGetAttachmentsV1Response inscriptiontempGetAttachmentsV1(@javax.annotation.Nonnull Integer pkiInscriptiontempID) throws ApiException {
+        ApiResponse<InscriptiontempGetAttachmentsV1Response> localVarResp = inscriptiontempGetAttachmentsV1WithHttpInfo(pkiInscriptiontempID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Inscriptiontemp&#39;s attachments
+     * 
+     * @param pkiInscriptiontempID  (required)
+     * @return ApiResponse&lt;InscriptiontempGetAttachmentsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InscriptiontempGetAttachmentsV1Response> inscriptiontempGetAttachmentsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInscriptiontempID) throws ApiException {
+        okhttp3.Call localVarCall = inscriptiontempGetAttachmentsV1ValidateBeforeCall(pkiInscriptiontempID, null);
+        Type localVarReturnType = new TypeToken<InscriptiontempGetAttachmentsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Inscriptiontemp&#39;s attachments (asynchronously)
+     * 
+     * @param pkiInscriptiontempID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call inscriptiontempGetAttachmentsV1Async(@javax.annotation.Nonnull Integer pkiInscriptiontempID, final ApiCallback<InscriptiontempGetAttachmentsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = inscriptiontempGetAttachmentsV1ValidateBeforeCall(pkiInscriptiontempID, _callback);
+        Type localVarReturnType = new TypeToken<InscriptiontempGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for inscriptiontempGetCommunicationCountV1
      * @param pkiInscriptiontempID  (required)
      * @param _callback Callback for upload/download progress
@@ -92,7 +368,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call inscriptiontempGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiInscriptiontempID, final ApiCallback _callback) throws ApiException {
@@ -162,7 +438,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public InscriptiontempGetCommunicationCountV1Response inscriptiontempGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiInscriptiontempID) throws ApiException {
@@ -181,7 +457,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<InscriptiontempGetCommunicationCountV1Response> inscriptiontempGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInscriptiontempID) throws ApiException {
@@ -202,7 +478,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call inscriptiontempGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiInscriptiontempID, final ApiCallback<InscriptiontempGetCommunicationCountV1Response> _callback) throws ApiException {
@@ -223,7 +499,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call inscriptiontempGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiInscriptiontempID, final ApiCallback _callback) throws ApiException {
@@ -293,7 +569,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public InscriptiontempGetCommunicationListV1Response inscriptiontempGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiInscriptiontempID) throws ApiException {
@@ -312,7 +588,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<InscriptiontempGetCommunicationListV1Response> inscriptiontempGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInscriptiontempID) throws ApiException {
@@ -333,7 +609,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call inscriptiontempGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiInscriptiontempID, final ApiCallback<InscriptiontempGetCommunicationListV1Response> _callback) throws ApiException {
@@ -354,7 +630,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call inscriptiontempGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiInscriptiontempID, final ApiCallback _callback) throws ApiException {
@@ -424,7 +700,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public InscriptiontempGetCommunicationrecipientsV1Response inscriptiontempGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiInscriptiontempID) throws ApiException {
@@ -443,7 +719,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<InscriptiontempGetCommunicationrecipientsV1Response> inscriptiontempGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInscriptiontempID) throws ApiException {
@@ -464,7 +740,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call inscriptiontempGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiInscriptiontempID, final ApiCallback<InscriptiontempGetCommunicationrecipientsV1Response> _callback) throws ApiException {
@@ -485,7 +761,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call inscriptiontempGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiInscriptiontempID, final ApiCallback _callback) throws ApiException {
@@ -555,7 +831,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public InscriptiontempGetCommunicationsendersV1Response inscriptiontempGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiInscriptiontempID) throws ApiException {
@@ -574,7 +850,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<InscriptiontempGetCommunicationsendersV1Response> inscriptiontempGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInscriptiontempID) throws ApiException {
@@ -595,7 +871,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call inscriptiontempGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiInscriptiontempID, final ApiCallback<InscriptiontempGetCommunicationsendersV1Response> _callback) throws ApiException {
@@ -780,7 +1056,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call inscriptiontempImportIntoEDMV1Call(@javax.annotation.Nonnull Integer pkiInscriptiontempID, @javax.annotation.Nonnull InscriptiontempImportIntoEDMV1Request inscriptiontempImportIntoEDMV1Request, final ApiCallback _callback) throws ApiException {
@@ -857,7 +1133,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public InscriptiontempImportIntoEDMV1Response inscriptiontempImportIntoEDMV1(@javax.annotation.Nonnull Integer pkiInscriptiontempID, @javax.annotation.Nonnull InscriptiontempImportIntoEDMV1Request inscriptiontempImportIntoEDMV1Request) throws ApiException {
@@ -877,7 +1153,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<InscriptiontempImportIntoEDMV1Response> inscriptiontempImportIntoEDMV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiInscriptiontempID, @javax.annotation.Nonnull InscriptiontempImportIntoEDMV1Request inscriptiontempImportIntoEDMV1Request) throws ApiException {
@@ -899,7 +1175,7 @@ public class ObjectInscriptiontempApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call inscriptiontempImportIntoEDMV1Async(@javax.annotation.Nonnull Integer pkiInscriptiontempID, @javax.annotation.Nonnull InscriptiontempImportIntoEDMV1Request inscriptiontempImportIntoEDMV1Request, final ApiCallback<InscriptiontempImportIntoEDMV1Response> _callback) throws ApiException {

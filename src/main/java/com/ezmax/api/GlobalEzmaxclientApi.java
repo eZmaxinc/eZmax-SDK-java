@@ -85,7 +85,7 @@ public class GlobalEzmaxclientApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call globalEzmaxclientVersionV1Call(@javax.annotation.Nonnull FieldPksEzmaxclientOs pksEzmaxclientOs, final ApiCallback _callback) throws ApiException {
@@ -155,7 +155,7 @@ public class GlobalEzmaxclientApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public GlobalEzmaxclientVersionV1Response globalEzmaxclientVersionV1(@javax.annotation.Nonnull FieldPksEzmaxclientOs pksEzmaxclientOs) throws ApiException {
@@ -174,7 +174,7 @@ public class GlobalEzmaxclientApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<GlobalEzmaxclientVersionV1Response> globalEzmaxclientVersionV1WithHttpInfo(@javax.annotation.Nonnull FieldPksEzmaxclientOs pksEzmaxclientOs) throws ApiException {
@@ -195,7 +195,7 @@ public class GlobalEzmaxclientApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call globalEzmaxclientVersionV1Async(@javax.annotation.Nonnull FieldPksEzmaxclientOs pksEzmaxclientOs, final ApiCallback<GlobalEzmaxclientVersionV1Response> _callback) throws ApiException {

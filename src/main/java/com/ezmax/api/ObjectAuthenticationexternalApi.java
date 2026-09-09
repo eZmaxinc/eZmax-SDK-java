@@ -221,7 +221,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call authenticationexternalDeleteObjectV1Call(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, final ApiCallback _callback) throws ApiException {
@@ -291,7 +291,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public AuthenticationexternalDeleteObjectV1Response authenticationexternalDeleteObjectV1(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID) throws ApiException {
@@ -310,7 +310,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<AuthenticationexternalDeleteObjectV1Response> authenticationexternalDeleteObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID) throws ApiException {
@@ -331,7 +331,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call authenticationexternalDeleteObjectV1Async(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, final ApiCallback<AuthenticationexternalDeleteObjectV1Response> _callback) throws ApiException {
@@ -353,8 +353,8 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call authenticationexternalEditObjectV1Call(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, @javax.annotation.Nonnull AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, final ApiCallback _callback) throws ApiException {
@@ -431,8 +431,8 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public AuthenticationexternalEditObjectV1Response authenticationexternalEditObjectV1(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, @javax.annotation.Nonnull AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request) throws ApiException {
@@ -452,8 +452,8 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<AuthenticationexternalEditObjectV1Response> authenticationexternalEditObjectV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, @javax.annotation.Nonnull AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request) throws ApiException {
@@ -475,8 +475,8 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call authenticationexternalEditObjectV1Async(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, @javax.annotation.Nonnull AuthenticationexternalEditObjectV1Request authenticationexternalEditObjectV1Request, final ApiCallback<AuthenticationexternalEditObjectV1Response> _callback) throws ApiException {
@@ -812,7 +812,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call authenticationexternalGetObjectV2Call(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, final ApiCallback _callback) throws ApiException {
@@ -882,7 +882,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public AuthenticationexternalGetObjectV2Response authenticationexternalGetObjectV2(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID) throws ApiException {
@@ -901,7 +901,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<AuthenticationexternalGetObjectV2Response> authenticationexternalGetObjectV2WithHttpInfo(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID) throws ApiException {
@@ -922,7 +922,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call authenticationexternalGetObjectV2Async(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, final ApiCallback<AuthenticationexternalGetObjectV2Response> _callback) throws ApiException {
@@ -944,7 +944,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call authenticationexternalResetAuthorizationV1Call(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, @javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
@@ -1021,7 +1021,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public AuthenticationexternalResetAuthorizationV1Response authenticationexternalResetAuthorizationV1(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, @javax.annotation.Nonnull Object body) throws ApiException {
@@ -1041,7 +1041,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<AuthenticationexternalResetAuthorizationV1Response> authenticationexternalResetAuthorizationV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, @javax.annotation.Nonnull Object body) throws ApiException {
@@ -1063,7 +1063,7 @@ public class ObjectAuthenticationexternalApi {
        <caption>Response Details</caption>
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call authenticationexternalResetAuthorizationV1Async(@javax.annotation.Nonnull Integer pkiAuthenticationexternalID, @javax.annotation.Nonnull Object body, final ApiCallback<AuthenticationexternalResetAuthorizationV1Response> _callback) throws ApiException {
