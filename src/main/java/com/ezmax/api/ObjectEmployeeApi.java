@@ -30,6 +30,10 @@ import java.io.IOException;
 import com.ezmax.api.model.CommonResponseError;
 import com.ezmax.api.model.EmployeeBatchDownloadV1Request;
 import com.ezmax.api.model.EmployeeGetAttachmentsV1Response;
+import com.ezmax.api.model.EmployeeGetCommunicationCountV1Response;
+import com.ezmax.api.model.EmployeeGetCommunicationListV1Response;
+import com.ezmax.api.model.EmployeeGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.EmployeeGetCommunicationsendersV1Response;
 import com.ezmax.api.model.EmployeeGetListV1Response;
 import com.ezmax.api.model.EmployeeImportIntoEDMV1Request;
 import com.ezmax.api.model.EmployeeImportIntoEDMV1Response;
@@ -350,6 +354,530 @@ public class ObjectEmployeeApi {
 
         okhttp3.Call localVarCall = employeeGetAttachmentsV1ValidateBeforeCall(pkiEmployeeID, _callback);
         Type localVarReturnType = new TypeToken<EmployeeGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for employeeGetCommunicationCountV1
+     * @param pkiEmployeeID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call employeeGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/employee/{pkiEmployeeID}/getCommunicationCount"
+            .replace("{" + "pkiEmployeeID" + "}", localVarApiClient.escapeString(pkiEmployeeID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call employeeGetCommunicationCountV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEmployeeID' is set
+        if (pkiEmployeeID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationCountV1(Async)");
+        }
+
+        return employeeGetCommunicationCountV1Call(pkiEmployeeID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiEmployeeID  (required)
+     * @return EmployeeGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public EmployeeGetCommunicationCountV1Response employeeGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiEmployeeID) throws ApiException {
+        ApiResponse<EmployeeGetCommunicationCountV1Response> localVarResp = employeeGetCommunicationCountV1WithHttpInfo(pkiEmployeeID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiEmployeeID  (required)
+     * @return ApiResponse&lt;EmployeeGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EmployeeGetCommunicationCountV1Response> employeeGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEmployeeID) throws ApiException {
+        okhttp3.Call localVarCall = employeeGetCommunicationCountV1ValidateBeforeCall(pkiEmployeeID, null);
+        Type localVarReturnType = new TypeToken<EmployeeGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiEmployeeID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call employeeGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback<EmployeeGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = employeeGetCommunicationCountV1ValidateBeforeCall(pkiEmployeeID, _callback);
+        Type localVarReturnType = new TypeToken<EmployeeGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for employeeGetCommunicationListV1
+     * @param pkiEmployeeID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call employeeGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/employee/{pkiEmployeeID}/getCommunicationList"
+            .replace("{" + "pkiEmployeeID" + "}", localVarApiClient.escapeString(pkiEmployeeID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call employeeGetCommunicationListV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEmployeeID' is set
+        if (pkiEmployeeID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationListV1(Async)");
+        }
+
+        return employeeGetCommunicationListV1Call(pkiEmployeeID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiEmployeeID  (required)
+     * @return EmployeeGetCommunicationListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public EmployeeGetCommunicationListV1Response employeeGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiEmployeeID) throws ApiException {
+        ApiResponse<EmployeeGetCommunicationListV1Response> localVarResp = employeeGetCommunicationListV1WithHttpInfo(pkiEmployeeID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiEmployeeID  (required)
+     * @return ApiResponse&lt;EmployeeGetCommunicationListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EmployeeGetCommunicationListV1Response> employeeGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEmployeeID) throws ApiException {
+        okhttp3.Call localVarCall = employeeGetCommunicationListV1ValidateBeforeCall(pkiEmployeeID, null);
+        Type localVarReturnType = new TypeToken<EmployeeGetCommunicationListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication list (asynchronously)
+     * 
+     * @param pkiEmployeeID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call employeeGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback<EmployeeGetCommunicationListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = employeeGetCommunicationListV1ValidateBeforeCall(pkiEmployeeID, _callback);
+        Type localVarReturnType = new TypeToken<EmployeeGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for employeeGetCommunicationrecipientsV1
+     * @param pkiEmployeeID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call employeeGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/employee/{pkiEmployeeID}/getCommunicationrecipients"
+            .replace("{" + "pkiEmployeeID" + "}", localVarApiClient.escapeString(pkiEmployeeID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call employeeGetCommunicationrecipientsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEmployeeID' is set
+        if (pkiEmployeeID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationrecipientsV1(Async)");
+        }
+
+        return employeeGetCommunicationrecipientsV1Call(pkiEmployeeID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiEmployeeID  (required)
+     * @return EmployeeGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public EmployeeGetCommunicationrecipientsV1Response employeeGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiEmployeeID) throws ApiException {
+        ApiResponse<EmployeeGetCommunicationrecipientsV1Response> localVarResp = employeeGetCommunicationrecipientsV1WithHttpInfo(pkiEmployeeID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiEmployeeID  (required)
+     * @return ApiResponse&lt;EmployeeGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EmployeeGetCommunicationrecipientsV1Response> employeeGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEmployeeID) throws ApiException {
+        okhttp3.Call localVarCall = employeeGetCommunicationrecipientsV1ValidateBeforeCall(pkiEmployeeID, null);
+        Type localVarReturnType = new TypeToken<EmployeeGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication recipients (asynchronously)
+     * 
+     * @param pkiEmployeeID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call employeeGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback<EmployeeGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = employeeGetCommunicationrecipientsV1ValidateBeforeCall(pkiEmployeeID, _callback);
+        Type localVarReturnType = new TypeToken<EmployeeGetCommunicationrecipientsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for employeeGetCommunicationsendersV1
+     * @param pkiEmployeeID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call employeeGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/employee/{pkiEmployeeID}/getCommunicationsenders"
+            .replace("{" + "pkiEmployeeID" + "}", localVarApiClient.escapeString(pkiEmployeeID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call employeeGetCommunicationsendersV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiEmployeeID' is set
+        if (pkiEmployeeID == null) {
+            throw new ApiException("Missing the required parameter 'pkiEmployeeID' when calling employeeGetCommunicationsendersV1(Async)");
+        }
+
+        return employeeGetCommunicationsendersV1Call(pkiEmployeeID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiEmployeeID  (required)
+     * @return EmployeeGetCommunicationsendersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public EmployeeGetCommunicationsendersV1Response employeeGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiEmployeeID) throws ApiException {
+        ApiResponse<EmployeeGetCommunicationsendersV1Response> localVarResp = employeeGetCommunicationsendersV1WithHttpInfo(pkiEmployeeID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiEmployeeID  (required)
+     * @return ApiResponse&lt;EmployeeGetCommunicationsendersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<EmployeeGetCommunicationsendersV1Response> employeeGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiEmployeeID) throws ApiException {
+        okhttp3.Call localVarCall = employeeGetCommunicationsendersV1ValidateBeforeCall(pkiEmployeeID, null);
+        Type localVarReturnType = new TypeToken<EmployeeGetCommunicationsendersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication senders (asynchronously)
+     * 
+     * @param pkiEmployeeID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call employeeGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiEmployeeID, final ApiCallback<EmployeeGetCommunicationsendersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = employeeGetCommunicationsendersV1ValidateBeforeCall(pkiEmployeeID, _callback);
+        Type localVarReturnType = new TypeToken<EmployeeGetCommunicationsendersV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

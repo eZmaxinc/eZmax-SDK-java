@@ -29,6 +29,10 @@ import java.io.IOException;
 
 import com.ezmax.api.model.CommissionadvanceBatchDownloadV1Request;
 import com.ezmax.api.model.CommissionadvanceGetAttachmentsV1Response;
+import com.ezmax.api.model.CommissionadvanceGetCommunicationCountV1Response;
+import com.ezmax.api.model.CommissionadvanceGetCommunicationListV1Response;
+import com.ezmax.api.model.CommissionadvanceGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.CommissionadvanceGetCommunicationsendersV1Response;
 import com.ezmax.api.model.CommissionadvanceImportIntoEDMV1Request;
 import com.ezmax.api.model.CommissionadvanceImportIntoEDMV1Response;
 import com.ezmax.api.model.CommonResponseError;
@@ -356,6 +360,530 @@ public class ObjectCommissionadvanceApi {
 
         okhttp3.Call localVarCall = commissionadvanceGetAttachmentsV1ValidateBeforeCall(pkiCommissionadvanceID, _callback);
         Type localVarReturnType = new TypeToken<CommissionadvanceGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for commissionadvanceGetCommunicationCountV1
+     * @param pkiCommissionadvanceID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call commissionadvanceGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationCount"
+            .replace("{" + "pkiCommissionadvanceID" + "}", localVarApiClient.escapeString(pkiCommissionadvanceID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call commissionadvanceGetCommunicationCountV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiCommissionadvanceID' is set
+        if (pkiCommissionadvanceID == null) {
+            throw new ApiException("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationCountV1(Async)");
+        }
+
+        return commissionadvanceGetCommunicationCountV1Call(pkiCommissionadvanceID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @return CommissionadvanceGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public CommissionadvanceGetCommunicationCountV1Response commissionadvanceGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiCommissionadvanceID) throws ApiException {
+        ApiResponse<CommissionadvanceGetCommunicationCountV1Response> localVarResp = commissionadvanceGetCommunicationCountV1WithHttpInfo(pkiCommissionadvanceID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @return ApiResponse&lt;CommissionadvanceGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<CommissionadvanceGetCommunicationCountV1Response> commissionadvanceGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiCommissionadvanceID) throws ApiException {
+        okhttp3.Call localVarCall = commissionadvanceGetCommunicationCountV1ValidateBeforeCall(pkiCommissionadvanceID, null);
+        Type localVarReturnType = new TypeToken<CommissionadvanceGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call commissionadvanceGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback<CommissionadvanceGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = commissionadvanceGetCommunicationCountV1ValidateBeforeCall(pkiCommissionadvanceID, _callback);
+        Type localVarReturnType = new TypeToken<CommissionadvanceGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for commissionadvanceGetCommunicationListV1
+     * @param pkiCommissionadvanceID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call commissionadvanceGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationList"
+            .replace("{" + "pkiCommissionadvanceID" + "}", localVarApiClient.escapeString(pkiCommissionadvanceID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call commissionadvanceGetCommunicationListV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiCommissionadvanceID' is set
+        if (pkiCommissionadvanceID == null) {
+            throw new ApiException("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationListV1(Async)");
+        }
+
+        return commissionadvanceGetCommunicationListV1Call(pkiCommissionadvanceID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @return CommissionadvanceGetCommunicationListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public CommissionadvanceGetCommunicationListV1Response commissionadvanceGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiCommissionadvanceID) throws ApiException {
+        ApiResponse<CommissionadvanceGetCommunicationListV1Response> localVarResp = commissionadvanceGetCommunicationListV1WithHttpInfo(pkiCommissionadvanceID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @return ApiResponse&lt;CommissionadvanceGetCommunicationListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<CommissionadvanceGetCommunicationListV1Response> commissionadvanceGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiCommissionadvanceID) throws ApiException {
+        okhttp3.Call localVarCall = commissionadvanceGetCommunicationListV1ValidateBeforeCall(pkiCommissionadvanceID, null);
+        Type localVarReturnType = new TypeToken<CommissionadvanceGetCommunicationListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication list (asynchronously)
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call commissionadvanceGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback<CommissionadvanceGetCommunicationListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = commissionadvanceGetCommunicationListV1ValidateBeforeCall(pkiCommissionadvanceID, _callback);
+        Type localVarReturnType = new TypeToken<CommissionadvanceGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for commissionadvanceGetCommunicationrecipientsV1
+     * @param pkiCommissionadvanceID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call commissionadvanceGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationrecipients"
+            .replace("{" + "pkiCommissionadvanceID" + "}", localVarApiClient.escapeString(pkiCommissionadvanceID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call commissionadvanceGetCommunicationrecipientsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiCommissionadvanceID' is set
+        if (pkiCommissionadvanceID == null) {
+            throw new ApiException("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationrecipientsV1(Async)");
+        }
+
+        return commissionadvanceGetCommunicationrecipientsV1Call(pkiCommissionadvanceID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @return CommissionadvanceGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public CommissionadvanceGetCommunicationrecipientsV1Response commissionadvanceGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiCommissionadvanceID) throws ApiException {
+        ApiResponse<CommissionadvanceGetCommunicationrecipientsV1Response> localVarResp = commissionadvanceGetCommunicationrecipientsV1WithHttpInfo(pkiCommissionadvanceID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @return ApiResponse&lt;CommissionadvanceGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<CommissionadvanceGetCommunicationrecipientsV1Response> commissionadvanceGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiCommissionadvanceID) throws ApiException {
+        okhttp3.Call localVarCall = commissionadvanceGetCommunicationrecipientsV1ValidateBeforeCall(pkiCommissionadvanceID, null);
+        Type localVarReturnType = new TypeToken<CommissionadvanceGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication recipients (asynchronously)
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call commissionadvanceGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback<CommissionadvanceGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = commissionadvanceGetCommunicationrecipientsV1ValidateBeforeCall(pkiCommissionadvanceID, _callback);
+        Type localVarReturnType = new TypeToken<CommissionadvanceGetCommunicationrecipientsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for commissionadvanceGetCommunicationsendersV1
+     * @param pkiCommissionadvanceID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call commissionadvanceGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/commissionadvance/{pkiCommissionadvanceID}/getCommunicationsenders"
+            .replace("{" + "pkiCommissionadvanceID" + "}", localVarApiClient.escapeString(pkiCommissionadvanceID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call commissionadvanceGetCommunicationsendersV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiCommissionadvanceID' is set
+        if (pkiCommissionadvanceID == null) {
+            throw new ApiException("Missing the required parameter 'pkiCommissionadvanceID' when calling commissionadvanceGetCommunicationsendersV1(Async)");
+        }
+
+        return commissionadvanceGetCommunicationsendersV1Call(pkiCommissionadvanceID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @return CommissionadvanceGetCommunicationsendersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public CommissionadvanceGetCommunicationsendersV1Response commissionadvanceGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiCommissionadvanceID) throws ApiException {
+        ApiResponse<CommissionadvanceGetCommunicationsendersV1Response> localVarResp = commissionadvanceGetCommunicationsendersV1WithHttpInfo(pkiCommissionadvanceID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @return ApiResponse&lt;CommissionadvanceGetCommunicationsendersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<CommissionadvanceGetCommunicationsendersV1Response> commissionadvanceGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiCommissionadvanceID) throws ApiException {
+        okhttp3.Call localVarCall = commissionadvanceGetCommunicationsendersV1ValidateBeforeCall(pkiCommissionadvanceID, null);
+        Type localVarReturnType = new TypeToken<CommissionadvanceGetCommunicationsendersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication senders (asynchronously)
+     * 
+     * @param pkiCommissionadvanceID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call commissionadvanceGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiCommissionadvanceID, final ApiCallback<CommissionadvanceGetCommunicationsendersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = commissionadvanceGetCommunicationsendersV1ValidateBeforeCall(pkiCommissionadvanceID, _callback);
+        Type localVarReturnType = new TypeToken<CommissionadvanceGetCommunicationsendersV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

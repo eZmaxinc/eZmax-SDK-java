@@ -27,9 +27,14 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import com.ezmax.api.model.AttachmentDeleteV1Response;
 import com.ezmax.api.model.AttachmentGetAttachmentlogsV1Response;
 import com.ezmax.api.model.AttachmentRenameV1Request;
 import com.ezmax.api.model.AttachmentRenameV1Response;
+import com.ezmax.api.model.AttachmentRestoreV1Request;
+import com.ezmax.api.model.AttachmentRestoreV1Response;
+import com.ezmax.api.model.AttachmentValidateV1Request;
+import com.ezmax.api.model.AttachmentValidateV1Response;
 import com.ezmax.api.model.CommonResponseError;
 
 import java.lang.reflect.Type;
@@ -75,6 +80,155 @@ public class ObjectAttachmentApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
+    /**
+     * Build call for attachmentDeleteV1
+     * @param pkiAttachmentID  (required)
+     * @param body  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentDeleteV1Call(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = body;
+
+        // create path and map variables
+        String localVarPath = "/1/object/attachment/{pkiAttachmentID}/delete"
+            .replace("{" + "pkiAttachmentID" + "}", localVarApiClient.escapeString(pkiAttachmentID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call attachmentDeleteV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull Object body, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiAttachmentID' is set
+        if (pkiAttachmentID == null) {
+            throw new ApiException("Missing the required parameter 'pkiAttachmentID' when calling attachmentDeleteV1(Async)");
+        }
+
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling attachmentDeleteV1(Async)");
+        }
+
+        return attachmentDeleteV1Call(pkiAttachmentID, body, _callback);
+
+    }
+
+    /**
+     * Delete an existing attachment
+     * Te endpoint allows to delete an attachment.
+     * @param pkiAttachmentID  (required)
+     * @param body  (required)
+     * @return AttachmentDeleteV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public AttachmentDeleteV1Response attachmentDeleteV1(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull Object body) throws ApiException {
+        ApiResponse<AttachmentDeleteV1Response> localVarResp = attachmentDeleteV1WithHttpInfo(pkiAttachmentID, body);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Delete an existing attachment
+     * Te endpoint allows to delete an attachment.
+     * @param pkiAttachmentID  (required)
+     * @param body  (required)
+     * @return ApiResponse&lt;AttachmentDeleteV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<AttachmentDeleteV1Response> attachmentDeleteV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull Object body) throws ApiException {
+        okhttp3.Call localVarCall = attachmentDeleteV1ValidateBeforeCall(pkiAttachmentID, body, null);
+        Type localVarReturnType = new TypeToken<AttachmentDeleteV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Delete an existing attachment (asynchronously)
+     * Te endpoint allows to delete an attachment.
+     * @param pkiAttachmentID  (required)
+     * @param body  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentDeleteV1Async(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull Object body, final ApiCallback<AttachmentDeleteV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = attachmentDeleteV1ValidateBeforeCall(pkiAttachmentID, body, _callback);
+        Type localVarReturnType = new TypeToken<AttachmentDeleteV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for attachmentDownloadV1
      * @param pkiAttachmentID  (required)
@@ -414,7 +568,7 @@ public class ObjectAttachmentApi {
     }
 
     /**
-     * Rename an Attachment
+     * Rename an attachment
      * The endpoint allows to change the attachment&#39;s file name and category.
      * @param pkiAttachmentID  (required)
      * @param attachmentRenameV1Request  (required)
@@ -437,7 +591,7 @@ public class ObjectAttachmentApi {
     }
 
     /**
-     * Rename an Attachment
+     * Rename an attachment
      * The endpoint allows to change the attachment&#39;s file name and category.
      * @param pkiAttachmentID  (required)
      * @param attachmentRenameV1Request  (required)
@@ -461,7 +615,7 @@ public class ObjectAttachmentApi {
     }
 
     /**
-     * Rename an Attachment (asynchronously)
+     * Rename an attachment (asynchronously)
      * The endpoint allows to change the attachment&#39;s file name and category.
      * @param pkiAttachmentID  (required)
      * @param attachmentRenameV1Request  (required)
@@ -483,6 +637,308 @@ public class ObjectAttachmentApi {
 
         okhttp3.Call localVarCall = attachmentRenameV1ValidateBeforeCall(pkiAttachmentID, attachmentRenameV1Request, _callback);
         Type localVarReturnType = new TypeToken<AttachmentRenameV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for attachmentRestoreV1
+     * @param pkiAttachmentID  (required)
+     * @param attachmentRestoreV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> The request failed due to a conflict with the resource state. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentRestoreV1Call(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentRestoreV1Request attachmentRestoreV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = attachmentRestoreV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/attachment/{pkiAttachmentID}/restore"
+            .replace("{" + "pkiAttachmentID" + "}", localVarApiClient.escapeString(pkiAttachmentID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call attachmentRestoreV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentRestoreV1Request attachmentRestoreV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiAttachmentID' is set
+        if (pkiAttachmentID == null) {
+            throw new ApiException("Missing the required parameter 'pkiAttachmentID' when calling attachmentRestoreV1(Async)");
+        }
+
+        // verify the required parameter 'attachmentRestoreV1Request' is set
+        if (attachmentRestoreV1Request == null) {
+            throw new ApiException("Missing the required parameter 'attachmentRestoreV1Request' when calling attachmentRestoreV1(Async)");
+        }
+
+        return attachmentRestoreV1Call(pkiAttachmentID, attachmentRestoreV1Request, _callback);
+
+    }
+
+    /**
+     * Restore a deleted attachment
+     * The endpoints allows to restore a previously deleted attachment.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentRestoreV1Request  (required)
+     * @return AttachmentRestoreV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> The request failed due to a conflict with the resource state. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public AttachmentRestoreV1Response attachmentRestoreV1(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentRestoreV1Request attachmentRestoreV1Request) throws ApiException {
+        ApiResponse<AttachmentRestoreV1Response> localVarResp = attachmentRestoreV1WithHttpInfo(pkiAttachmentID, attachmentRestoreV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Restore a deleted attachment
+     * The endpoints allows to restore a previously deleted attachment.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentRestoreV1Request  (required)
+     * @return ApiResponse&lt;AttachmentRestoreV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> The request failed due to a conflict with the resource state. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<AttachmentRestoreV1Response> attachmentRestoreV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentRestoreV1Request attachmentRestoreV1Request) throws ApiException {
+        okhttp3.Call localVarCall = attachmentRestoreV1ValidateBeforeCall(pkiAttachmentID, attachmentRestoreV1Request, null);
+        Type localVarReturnType = new TypeToken<AttachmentRestoreV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Restore a deleted attachment (asynchronously)
+     * The endpoints allows to restore a previously deleted attachment.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentRestoreV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> The request failed due to a conflict with the resource state. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentRestoreV1Async(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentRestoreV1Request attachmentRestoreV1Request, final ApiCallback<AttachmentRestoreV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = attachmentRestoreV1ValidateBeforeCall(pkiAttachmentID, attachmentRestoreV1Request, _callback);
+        Type localVarReturnType = new TypeToken<AttachmentRestoreV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for attachmentValidateV1
+     * @param pkiAttachmentID  (required)
+     * @param attachmentValidateV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentValidateV1Call(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentValidateV1Request attachmentValidateV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = attachmentValidateV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/attachment/{pkiAttachmentID}/validate"
+            .replace("{" + "pkiAttachmentID" + "}", localVarApiClient.escapeString(pkiAttachmentID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call attachmentValidateV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentValidateV1Request attachmentValidateV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiAttachmentID' is set
+        if (pkiAttachmentID == null) {
+            throw new ApiException("Missing the required parameter 'pkiAttachmentID' when calling attachmentValidateV1(Async)");
+        }
+
+        // verify the required parameter 'attachmentValidateV1Request' is set
+        if (attachmentValidateV1Request == null) {
+            throw new ApiException("Missing the required parameter 'attachmentValidateV1Request' when calling attachmentValidateV1(Async)");
+        }
+
+        return attachmentValidateV1Call(pkiAttachmentID, attachmentValidateV1Request, _callback);
+
+    }
+
+    /**
+     * Validate an existing attachment
+     * This endpoint allows to validate or reject an attachment.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentValidateV1Request  (required)
+     * @return AttachmentValidateV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public AttachmentValidateV1Response attachmentValidateV1(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentValidateV1Request attachmentValidateV1Request) throws ApiException {
+        ApiResponse<AttachmentValidateV1Response> localVarResp = attachmentValidateV1WithHttpInfo(pkiAttachmentID, attachmentValidateV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Validate an existing attachment
+     * This endpoint allows to validate or reject an attachment.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentValidateV1Request  (required)
+     * @return ApiResponse&lt;AttachmentValidateV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<AttachmentValidateV1Response> attachmentValidateV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentValidateV1Request attachmentValidateV1Request) throws ApiException {
+        okhttp3.Call localVarCall = attachmentValidateV1ValidateBeforeCall(pkiAttachmentID, attachmentValidateV1Request, null);
+        Type localVarReturnType = new TypeToken<AttachmentValidateV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Validate an existing attachment (asynchronously)
+     * This endpoint allows to validate or reject an attachment.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentValidateV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentValidateV1Async(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentValidateV1Request attachmentValidateV1Request, final ApiCallback<AttachmentValidateV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = attachmentValidateV1ValidateBeforeCall(pkiAttachmentID, attachmentValidateV1Request, _callback);
+        Type localVarReturnType = new TypeToken<AttachmentValidateV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -30,6 +30,10 @@ import java.io.IOException;
 import com.ezmax.api.model.BrokerBatchDownloadV1Request;
 import com.ezmax.api.model.BrokerGetAttachmentsV1Response;
 import com.ezmax.api.model.BrokerGetAutocompleteV2Response;
+import com.ezmax.api.model.BrokerGetCommunicationCountV1Response;
+import com.ezmax.api.model.BrokerGetCommunicationListV1Response;
+import com.ezmax.api.model.BrokerGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.BrokerGetCommunicationsendersV1Response;
 import com.ezmax.api.model.BrokerGetListV1Response;
 import com.ezmax.api.model.BrokerImportIntoEDMV1Request;
 import com.ezmax.api.model.BrokerImportIntoEDMV1Response;
@@ -503,6 +507,530 @@ public class ObjectBrokerApi {
 
         okhttp3.Call localVarCall = brokerGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
         Type localVarReturnType = new TypeToken<BrokerGetAutocompleteV2Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for brokerGetCommunicationCountV1
+     * @param pkiBrokerID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call brokerGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/broker/{pkiBrokerID}/getCommunicationCount"
+            .replace("{" + "pkiBrokerID" + "}", localVarApiClient.escapeString(pkiBrokerID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call brokerGetCommunicationCountV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBrokerID' is set
+        if (pkiBrokerID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBrokerID' when calling brokerGetCommunicationCountV1(Async)");
+        }
+
+        return brokerGetCommunicationCountV1Call(pkiBrokerID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiBrokerID  (required)
+     * @return BrokerGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public BrokerGetCommunicationCountV1Response brokerGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiBrokerID) throws ApiException {
+        ApiResponse<BrokerGetCommunicationCountV1Response> localVarResp = brokerGetCommunicationCountV1WithHttpInfo(pkiBrokerID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiBrokerID  (required)
+     * @return ApiResponse&lt;BrokerGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BrokerGetCommunicationCountV1Response> brokerGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBrokerID) throws ApiException {
+        okhttp3.Call localVarCall = brokerGetCommunicationCountV1ValidateBeforeCall(pkiBrokerID, null);
+        Type localVarReturnType = new TypeToken<BrokerGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiBrokerID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call brokerGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback<BrokerGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = brokerGetCommunicationCountV1ValidateBeforeCall(pkiBrokerID, _callback);
+        Type localVarReturnType = new TypeToken<BrokerGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for brokerGetCommunicationListV1
+     * @param pkiBrokerID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call brokerGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/broker/{pkiBrokerID}/getCommunicationList"
+            .replace("{" + "pkiBrokerID" + "}", localVarApiClient.escapeString(pkiBrokerID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call brokerGetCommunicationListV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBrokerID' is set
+        if (pkiBrokerID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBrokerID' when calling brokerGetCommunicationListV1(Async)");
+        }
+
+        return brokerGetCommunicationListV1Call(pkiBrokerID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiBrokerID  (required)
+     * @return BrokerGetCommunicationListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public BrokerGetCommunicationListV1Response brokerGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiBrokerID) throws ApiException {
+        ApiResponse<BrokerGetCommunicationListV1Response> localVarResp = brokerGetCommunicationListV1WithHttpInfo(pkiBrokerID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiBrokerID  (required)
+     * @return ApiResponse&lt;BrokerGetCommunicationListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BrokerGetCommunicationListV1Response> brokerGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBrokerID) throws ApiException {
+        okhttp3.Call localVarCall = brokerGetCommunicationListV1ValidateBeforeCall(pkiBrokerID, null);
+        Type localVarReturnType = new TypeToken<BrokerGetCommunicationListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication list (asynchronously)
+     * 
+     * @param pkiBrokerID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call brokerGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback<BrokerGetCommunicationListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = brokerGetCommunicationListV1ValidateBeforeCall(pkiBrokerID, _callback);
+        Type localVarReturnType = new TypeToken<BrokerGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for brokerGetCommunicationrecipientsV1
+     * @param pkiBrokerID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call brokerGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/broker/{pkiBrokerID}/getCommunicationrecipients"
+            .replace("{" + "pkiBrokerID" + "}", localVarApiClient.escapeString(pkiBrokerID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call brokerGetCommunicationrecipientsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBrokerID' is set
+        if (pkiBrokerID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBrokerID' when calling brokerGetCommunicationrecipientsV1(Async)");
+        }
+
+        return brokerGetCommunicationrecipientsV1Call(pkiBrokerID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiBrokerID  (required)
+     * @return BrokerGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public BrokerGetCommunicationrecipientsV1Response brokerGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiBrokerID) throws ApiException {
+        ApiResponse<BrokerGetCommunicationrecipientsV1Response> localVarResp = brokerGetCommunicationrecipientsV1WithHttpInfo(pkiBrokerID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiBrokerID  (required)
+     * @return ApiResponse&lt;BrokerGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BrokerGetCommunicationrecipientsV1Response> brokerGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBrokerID) throws ApiException {
+        okhttp3.Call localVarCall = brokerGetCommunicationrecipientsV1ValidateBeforeCall(pkiBrokerID, null);
+        Type localVarReturnType = new TypeToken<BrokerGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication recipients (asynchronously)
+     * 
+     * @param pkiBrokerID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call brokerGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback<BrokerGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = brokerGetCommunicationrecipientsV1ValidateBeforeCall(pkiBrokerID, _callback);
+        Type localVarReturnType = new TypeToken<BrokerGetCommunicationrecipientsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for brokerGetCommunicationsendersV1
+     * @param pkiBrokerID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call brokerGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/broker/{pkiBrokerID}/getCommunicationsenders"
+            .replace("{" + "pkiBrokerID" + "}", localVarApiClient.escapeString(pkiBrokerID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call brokerGetCommunicationsendersV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiBrokerID' is set
+        if (pkiBrokerID == null) {
+            throw new ApiException("Missing the required parameter 'pkiBrokerID' when calling brokerGetCommunicationsendersV1(Async)");
+        }
+
+        return brokerGetCommunicationsendersV1Call(pkiBrokerID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiBrokerID  (required)
+     * @return BrokerGetCommunicationsendersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public BrokerGetCommunicationsendersV1Response brokerGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiBrokerID) throws ApiException {
+        ApiResponse<BrokerGetCommunicationsendersV1Response> localVarResp = brokerGetCommunicationsendersV1WithHttpInfo(pkiBrokerID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiBrokerID  (required)
+     * @return ApiResponse&lt;BrokerGetCommunicationsendersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BrokerGetCommunicationsendersV1Response> brokerGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiBrokerID) throws ApiException {
+        okhttp3.Call localVarCall = brokerGetCommunicationsendersV1ValidateBeforeCall(pkiBrokerID, null);
+        Type localVarReturnType = new TypeToken<BrokerGetCommunicationsendersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication senders (asynchronously)
+     * 
+     * @param pkiBrokerID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call brokerGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiBrokerID, final ApiCallback<BrokerGetCommunicationsendersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = brokerGetCommunicationsendersV1ValidateBeforeCall(pkiBrokerID, _callback);
+        Type localVarReturnType = new TypeToken<BrokerGetCommunicationsendersV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

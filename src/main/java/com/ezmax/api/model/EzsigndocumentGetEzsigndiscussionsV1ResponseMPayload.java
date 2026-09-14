@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/ezsigndocument/{pkiEzsigndocument}/getEzsigndiscussions
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-09T17:23:07.900861575Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-14T13:22:40.767762870Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class EzsigndocumentGetEzsigndiscussionsV1ResponseMPayload {
   public static final String SERIALIZED_NAME_A_OBJ_EZSIGNDISCUSSION = "a_objEzsigndiscussion";
   @SerializedName(SERIALIZED_NAME_A_OBJ_EZSIGNDISCUSSION)

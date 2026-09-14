@@ -57,6 +57,7 @@ A Custom Attachment Object
 |**fkiEzsigndocumentIDReference** | **Integer** | The unique ID of the Ezsigndocument |  [optional] |
 |**eAttachmentDocumenttype** | **FieldEAttachmentDocumenttype** |  |  |
 |**sAttachmentName** | **String** | The name of the Attachment |  |
+|**sAttachmentCategory** | **String** | The attachment category |  |
 |**eAttachmentPrivacy** | **FieldEAttachmentPrivacy** |  |  |
 |**fkiUserIDSpecific** | **Integer** | The unique ID of the User |  [optional] |
 |**eAttachmentType** | **FieldEAttachmentType** |  |  |
