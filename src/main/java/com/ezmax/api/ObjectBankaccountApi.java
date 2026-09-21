@@ -34,6 +34,7 @@ import com.ezmax.api.model.BankaccountGetCommunicationCountV1Response;
 import com.ezmax.api.model.BankaccountGetCommunicationListV1Response;
 import com.ezmax.api.model.BankaccountGetCommunicationrecipientsV1Response;
 import com.ezmax.api.model.BankaccountGetCommunicationsendersV1Response;
+import com.ezmax.api.model.BankaccountGetListV1Response;
 import com.ezmax.api.model.BankaccountImportIntoEDMV1Request;
 import com.ezmax.api.model.BankaccountImportIntoEDMV1Response;
 import com.ezmax.api.model.CommonResponseError;
@@ -1038,6 +1039,169 @@ public class ObjectBankaccountApi {
 
         okhttp3.Call localVarCall = bankaccountGetCommunicationsendersV1ValidateBeforeCall(pkiBankaccountID, _callback);
         Type localVarReturnType = new TypeToken<BankaccountGetCommunicationsendersV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for bankaccountGetListV1
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call bankaccountGetListV1Call(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/bankaccount/getList";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (eOrderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("eOrderBy", eOrderBy));
+        }
+
+        if (iRowMax != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowMax", iRowMax));
+        }
+
+        if (iRowOffset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowOffset", iRowOffset));
+        }
+
+        if (sFilter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sFilter", sFilter));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        if (acceptLanguage != null) {
+            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
+        }
+
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call bankaccountGetListV1ValidateBeforeCall(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback _callback) throws ApiException {
+        return bankaccountGetListV1Call(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+
+    }
+
+    /**
+     * Retrieve Bankaccount list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBankaccountType | Chequing&lt;br&gt;Trust |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return BankaccountGetListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public BankaccountGetListV1Response bankaccountGetListV1(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter) throws ApiException {
+        ApiResponse<BankaccountGetListV1Response> localVarResp = bankaccountGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Bankaccount list
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBankaccountType | Chequing&lt;br&gt;Trust |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse&lt;BankaccountGetListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<BankaccountGetListV1Response> bankaccountGetListV1WithHttpInfo(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter) throws ApiException {
+        okhttp3.Call localVarCall = bankaccountGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
+        Type localVarReturnType = new TypeToken<BankaccountGetListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Bankaccount list (asynchronously)
+     * Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBankaccountType | Chequing&lt;br&gt;Trust |
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call bankaccountGetListV1Async(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback<BankaccountGetListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = bankaccountGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+        Type localVarReturnType = new TypeToken<BankaccountGetListV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

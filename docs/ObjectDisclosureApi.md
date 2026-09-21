@@ -10,6 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**disclosureGetCommunicationListV1**](ObjectDisclosureApi.md#disclosureGetCommunicationListV1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationList | Retrieve Communication list |
 | [**disclosureGetCommunicationrecipientsV1**](ObjectDisclosureApi.md#disclosureGetCommunicationrecipientsV1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**disclosureGetCommunicationsendersV1**](ObjectDisclosureApi.md#disclosureGetCommunicationsendersV1) | **GET** /1/object/disclosure/{pkiDisclosureID}/getCommunicationsenders | Retrieve Communication senders |
+| [**disclosureGetListV1**](ObjectDisclosureApi.md#disclosureGetListV1) | **GET** /1/object/disclosure/getList | Retrieve Disclosure list |
 | [**disclosureImportIntoEDMV1**](ObjectDisclosureApi.md#disclosureImportIntoEDMV1) | **POST** /1/object/disclosure/{pkiDisclosureID}/importIntoEDM | Import attachments into the Disclosure |
 
 
@@ -424,6 +425,84 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+<a id="disclosureGetListV1"></a>
+# **disclosureGetListV1**
+> DisclosureGetListV1Response disclosureGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Disclosure list
+
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eDisclosureInteresttype | Direct&lt;br&gt;Indirect |
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectDisclosureApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectDisclosureApi apiInstance = new ObjectDisclosureApi(defaultClient);
+    String eOrderBy = "pkiDisclosureID_ASC"; // String | Specify how you want the results to be sorted
+    Integer iRowMax = 56; // Integer | 
+    Integer iRowOffset = 0; // Integer | 
+    HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
+    String sFilter = "sFilter_example"; // String | 
+    try {
+      DisclosureGetListV1Response result = apiInstance.disclosureGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectDisclosureApi#disclosureGetListV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiDisclosureID_ASC, pkiDisclosureID_DESC, fkiAgentID_ASC, fkiAgentID_DESC, fkiBrokerID_ASC, fkiBrokerID_DESC, eDisclosureInteresttype_ASC, eDisclosureInteresttype_DESC, sDisclosureRelation_ASC, sDisclosureRelation_DESC, dtDisclosureRedactiondate_ASC, dtDisclosureRedactiondate_DESC, dtDisclosureAcceptationdate_ASC, dtDisclosureAcceptationdate_DESC, dtDisclosureReceptiondate_ASC, dtDisclosureReceptiondate_DESC, bDisclosureIsactive_ASC, bDisclosureIsactive_DESC, sDisclosureNumber_ASC, sDisclosureNumber_DESC, sContactFirstname_ASC, sContactFirstname_DESC, sContactLastname_ASC, sContactLastname_DESC, sBrokerName_ASC, sBrokerName_DESC] |
+| **iRowMax** | **Integer**|  | [optional] |
+| **iRowOffset** | **Integer**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **sFilter** | **String**|  | [optional] |
+
+### Return type
+
+[**DisclosureGetListV1Response**](DisclosureGetListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
 <a id="disclosureImportIntoEDMV1"></a>
 # **disclosureImportIntoEDMV1**

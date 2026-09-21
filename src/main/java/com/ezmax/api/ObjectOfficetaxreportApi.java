@@ -29,8 +29,14 @@ import java.io.IOException;
 
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
+import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.OfficetaxreportBatchDownloadV1Request;
 import com.ezmax.api.model.OfficetaxreportGetAttachmentsV1Response;
+import com.ezmax.api.model.OfficetaxreportGetCommunicationCountV1Response;
+import com.ezmax.api.model.OfficetaxreportGetCommunicationListV1Response;
+import com.ezmax.api.model.OfficetaxreportGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.OfficetaxreportGetCommunicationsendersV1Response;
+import com.ezmax.api.model.OfficetaxreportGetListV1Response;
 import com.ezmax.api.model.OfficetaxreportImportIntoEDMV1Request;
 import com.ezmax.api.model.OfficetaxreportImportIntoEDMV1Response;
 
@@ -356,6 +362,693 @@ public class ObjectOfficetaxreportApi {
 
         okhttp3.Call localVarCall = officetaxreportGetAttachmentsV1ValidateBeforeCall(pkiOfficetaxreportID, _callback);
         Type localVarReturnType = new TypeToken<OfficetaxreportGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for officetaxreportGetCommunicationCountV1
+     * @param pkiOfficetaxreportID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call officetaxreportGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationCount"
+            .replace("{" + "pkiOfficetaxreportID" + "}", localVarApiClient.escapeString(pkiOfficetaxreportID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call officetaxreportGetCommunicationCountV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiOfficetaxreportID' is set
+        if (pkiOfficetaxreportID == null) {
+            throw new ApiException("Missing the required parameter 'pkiOfficetaxreportID' when calling officetaxreportGetCommunicationCountV1(Async)");
+        }
+
+        return officetaxreportGetCommunicationCountV1Call(pkiOfficetaxreportID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @return OfficetaxreportGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public OfficetaxreportGetCommunicationCountV1Response officetaxreportGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiOfficetaxreportID) throws ApiException {
+        ApiResponse<OfficetaxreportGetCommunicationCountV1Response> localVarResp = officetaxreportGetCommunicationCountV1WithHttpInfo(pkiOfficetaxreportID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @return ApiResponse&lt;OfficetaxreportGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<OfficetaxreportGetCommunicationCountV1Response> officetaxreportGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiOfficetaxreportID) throws ApiException {
+        okhttp3.Call localVarCall = officetaxreportGetCommunicationCountV1ValidateBeforeCall(pkiOfficetaxreportID, null);
+        Type localVarReturnType = new TypeToken<OfficetaxreportGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call officetaxreportGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback<OfficetaxreportGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = officetaxreportGetCommunicationCountV1ValidateBeforeCall(pkiOfficetaxreportID, _callback);
+        Type localVarReturnType = new TypeToken<OfficetaxreportGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for officetaxreportGetCommunicationListV1
+     * @param pkiOfficetaxreportID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call officetaxreportGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationList"
+            .replace("{" + "pkiOfficetaxreportID" + "}", localVarApiClient.escapeString(pkiOfficetaxreportID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call officetaxreportGetCommunicationListV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiOfficetaxreportID' is set
+        if (pkiOfficetaxreportID == null) {
+            throw new ApiException("Missing the required parameter 'pkiOfficetaxreportID' when calling officetaxreportGetCommunicationListV1(Async)");
+        }
+
+        return officetaxreportGetCommunicationListV1Call(pkiOfficetaxreportID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @return OfficetaxreportGetCommunicationListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public OfficetaxreportGetCommunicationListV1Response officetaxreportGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiOfficetaxreportID) throws ApiException {
+        ApiResponse<OfficetaxreportGetCommunicationListV1Response> localVarResp = officetaxreportGetCommunicationListV1WithHttpInfo(pkiOfficetaxreportID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @return ApiResponse&lt;OfficetaxreportGetCommunicationListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<OfficetaxreportGetCommunicationListV1Response> officetaxreportGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiOfficetaxreportID) throws ApiException {
+        okhttp3.Call localVarCall = officetaxreportGetCommunicationListV1ValidateBeforeCall(pkiOfficetaxreportID, null);
+        Type localVarReturnType = new TypeToken<OfficetaxreportGetCommunicationListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication list (asynchronously)
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call officetaxreportGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback<OfficetaxreportGetCommunicationListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = officetaxreportGetCommunicationListV1ValidateBeforeCall(pkiOfficetaxreportID, _callback);
+        Type localVarReturnType = new TypeToken<OfficetaxreportGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for officetaxreportGetCommunicationrecipientsV1
+     * @param pkiOfficetaxreportID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call officetaxreportGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationrecipients"
+            .replace("{" + "pkiOfficetaxreportID" + "}", localVarApiClient.escapeString(pkiOfficetaxreportID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call officetaxreportGetCommunicationrecipientsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiOfficetaxreportID' is set
+        if (pkiOfficetaxreportID == null) {
+            throw new ApiException("Missing the required parameter 'pkiOfficetaxreportID' when calling officetaxreportGetCommunicationrecipientsV1(Async)");
+        }
+
+        return officetaxreportGetCommunicationrecipientsV1Call(pkiOfficetaxreportID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @return OfficetaxreportGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public OfficetaxreportGetCommunicationrecipientsV1Response officetaxreportGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiOfficetaxreportID) throws ApiException {
+        ApiResponse<OfficetaxreportGetCommunicationrecipientsV1Response> localVarResp = officetaxreportGetCommunicationrecipientsV1WithHttpInfo(pkiOfficetaxreportID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @return ApiResponse&lt;OfficetaxreportGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<OfficetaxreportGetCommunicationrecipientsV1Response> officetaxreportGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiOfficetaxreportID) throws ApiException {
+        okhttp3.Call localVarCall = officetaxreportGetCommunicationrecipientsV1ValidateBeforeCall(pkiOfficetaxreportID, null);
+        Type localVarReturnType = new TypeToken<OfficetaxreportGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication recipients (asynchronously)
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call officetaxreportGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback<OfficetaxreportGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = officetaxreportGetCommunicationrecipientsV1ValidateBeforeCall(pkiOfficetaxreportID, _callback);
+        Type localVarReturnType = new TypeToken<OfficetaxreportGetCommunicationrecipientsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for officetaxreportGetCommunicationsendersV1
+     * @param pkiOfficetaxreportID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call officetaxreportGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/officetaxreport/{pkiOfficetaxreportID}/getCommunicationsenders"
+            .replace("{" + "pkiOfficetaxreportID" + "}", localVarApiClient.escapeString(pkiOfficetaxreportID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call officetaxreportGetCommunicationsendersV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiOfficetaxreportID' is set
+        if (pkiOfficetaxreportID == null) {
+            throw new ApiException("Missing the required parameter 'pkiOfficetaxreportID' when calling officetaxreportGetCommunicationsendersV1(Async)");
+        }
+
+        return officetaxreportGetCommunicationsendersV1Call(pkiOfficetaxreportID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @return OfficetaxreportGetCommunicationsendersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public OfficetaxreportGetCommunicationsendersV1Response officetaxreportGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiOfficetaxreportID) throws ApiException {
+        ApiResponse<OfficetaxreportGetCommunicationsendersV1Response> localVarResp = officetaxreportGetCommunicationsendersV1WithHttpInfo(pkiOfficetaxreportID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @return ApiResponse&lt;OfficetaxreportGetCommunicationsendersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<OfficetaxreportGetCommunicationsendersV1Response> officetaxreportGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiOfficetaxreportID) throws ApiException {
+        okhttp3.Call localVarCall = officetaxreportGetCommunicationsendersV1ValidateBeforeCall(pkiOfficetaxreportID, null);
+        Type localVarReturnType = new TypeToken<OfficetaxreportGetCommunicationsendersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication senders (asynchronously)
+     * 
+     * @param pkiOfficetaxreportID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call officetaxreportGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiOfficetaxreportID, final ApiCallback<OfficetaxreportGetCommunicationsendersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = officetaxreportGetCommunicationsendersV1ValidateBeforeCall(pkiOfficetaxreportID, _callback);
+        Type localVarReturnType = new TypeToken<OfficetaxreportGetCommunicationsendersV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for officetaxreportGetListV1
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call officetaxreportGetListV1Call(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/officetaxreport/getList";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (eOrderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("eOrderBy", eOrderBy));
+        }
+
+        if (iRowMax != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowMax", iRowMax));
+        }
+
+        if (iRowOffset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowOffset", iRowOffset));
+        }
+
+        if (sFilter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sFilter", sFilter));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        if (acceptLanguage != null) {
+            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
+        }
+
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call officetaxreportGetListV1ValidateBeforeCall(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback _callback) throws ApiException {
+        return officetaxreportGetListV1Call(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+
+    }
+
+    /**
+     * Retrieve Officetaxreport list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return OfficetaxreportGetListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public OfficetaxreportGetListV1Response officetaxreportGetListV1(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter) throws ApiException {
+        ApiResponse<OfficetaxreportGetListV1Response> localVarResp = officetaxreportGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Officetaxreport list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse&lt;OfficetaxreportGetListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<OfficetaxreportGetListV1Response> officetaxreportGetListV1WithHttpInfo(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter) throws ApiException {
+        okhttp3.Call localVarCall = officetaxreportGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
+        Type localVarReturnType = new TypeToken<OfficetaxreportGetListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Officetaxreport list (asynchronously)
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call officetaxreportGetListV1Async(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback<OfficetaxreportGetListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = officetaxreportGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+        Type localVarReturnType = new TypeToken<OfficetaxreportGetListV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

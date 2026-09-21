@@ -11,6 +11,7 @@ A User name Object
 |**sContacttitleNameX** | **String** | The name of the Contacttitle in the language of the requester |  [optional] |
 |**sUserLastname** | **String** | The last name of the user |  |
 |**sUserFirstname** | **String** | The first name of the user |  |
+|**sUserLoginname** | **String** | The login name of the User. |  [optional] |
 |**sUserJobtitle** | **String** | The job title of the user |  [optional] |
 
 

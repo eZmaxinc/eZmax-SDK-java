@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Response for GET /1/object/attachment/{pkiAttachmentID}/download
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-14T13:22:40.767762870Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class EzsignfolderSendV1Response {
   public static final String SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD = "objDebugPayload";
   @SerializedName(SERIALIZED_NAME_OBJ_DEBUG_PAYLOAD)

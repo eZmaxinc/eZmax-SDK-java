@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CustomUserNameResponse;
 import com.ezmax.api.model.FieldEAttachmentlogType;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
@@ -50,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * An Attachmentlog Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-14T13:22:40.767762870Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class AttachmentlogResponse {
   public static final String SERIALIZED_NAME_FKI_ATTACHMENT_I_D = "fkiAttachmentID";
   @SerializedName(SERIALIZED_NAME_FKI_ATTACHMENT_I_D)
@@ -61,6 +62,11 @@ public class AttachmentlogResponse {
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D)
   @javax.annotation.Nonnull
   private Integer fkiUserID;
+
+  public static final String SERIALIZED_NAME_OBJ_USER = "objUser";
+  @SerializedName(SERIALIZED_NAME_OBJ_USER)
+  @javax.annotation.Nonnull
+  private CustomUserNameResponse objUser;
 
   public static final String SERIALIZED_NAME_DT_ATTACHMENTLOG_DATETIME = "dtAttachmentlogDatetime";
   @SerializedName(SERIALIZED_NAME_DT_ATTACHMENTLOG_DATETIME)
@@ -117,6 +123,25 @@ public class AttachmentlogResponse {
 
   public void setFkiUserID(@javax.annotation.Nonnull Integer fkiUserID) {
     this.fkiUserID = fkiUserID;
+  }
+
+
+  public AttachmentlogResponse objUser(@javax.annotation.Nonnull CustomUserNameResponse objUser) {
+    this.objUser = objUser;
+    return this;
+  }
+
+  /**
+   * Get objUser
+   * @return objUser
+   */
+  @javax.annotation.Nonnull
+  public CustomUserNameResponse getObjUser() {
+    return objUser;
+  }
+
+  public void setObjUser(@javax.annotation.Nonnull CustomUserNameResponse objUser) {
+    this.objUser = objUser;
   }
 
 
@@ -189,6 +214,7 @@ public class AttachmentlogResponse {
     AttachmentlogResponse attachmentlogResponse = (AttachmentlogResponse) o;
     return Objects.equals(this.fkiAttachmentID, attachmentlogResponse.fkiAttachmentID) &&
         Objects.equals(this.fkiUserID, attachmentlogResponse.fkiUserID) &&
+        Objects.equals(this.objUser, attachmentlogResponse.objUser) &&
         Objects.equals(this.dtAttachmentlogDatetime, attachmentlogResponse.dtAttachmentlogDatetime) &&
         Objects.equals(this.eAttachmentlogType, attachmentlogResponse.eAttachmentlogType) &&
         Objects.equals(this.sAttachmentlogDetail, attachmentlogResponse.sAttachmentlogDetail);
@@ -196,7 +222,7 @@ public class AttachmentlogResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fkiAttachmentID, fkiUserID, dtAttachmentlogDatetime, eAttachmentlogType, sAttachmentlogDetail);
+    return Objects.hash(fkiAttachmentID, fkiUserID, objUser, dtAttachmentlogDatetime, eAttachmentlogType, sAttachmentlogDetail);
   }
 
   @Override
@@ -205,6 +231,7 @@ public class AttachmentlogResponse {
     sb.append("class AttachmentlogResponse {\n");
     sb.append("    fkiAttachmentID: ").append(toIndentedString(fkiAttachmentID)).append("\n");
     sb.append("    fkiUserID: ").append(toIndentedString(fkiUserID)).append("\n");
+    sb.append("    objUser: ").append(toIndentedString(objUser)).append("\n");
     sb.append("    dtAttachmentlogDatetime: ").append(toIndentedString(dtAttachmentlogDatetime)).append("\n");
     sb.append("    eAttachmentlogType: ").append(toIndentedString(eAttachmentlogType)).append("\n");
     sb.append("    sAttachmentlogDetail: ").append(toIndentedString(sAttachmentlogDetail)).append("\n");
@@ -226,10 +253,10 @@ public class AttachmentlogResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("fkiAttachmentID", "fkiUserID", "dtAttachmentlogDatetime", "eAttachmentlogType", "sAttachmentlogDetail"));
+    openapiFields = new HashSet<String>(Arrays.asList("fkiAttachmentID", "fkiUserID", "objUser", "dtAttachmentlogDatetime", "eAttachmentlogType", "sAttachmentlogDetail"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("fkiAttachmentID", "fkiUserID", "dtAttachmentlogDatetime", "eAttachmentlogType"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("fkiAttachmentID", "fkiUserID", "objUser", "dtAttachmentlogDatetime", "eAttachmentlogType"));
   }
 
   /**
@@ -260,6 +287,8 @@ public class AttachmentlogResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objUser`
+      CustomUserNameResponse.validateJsonElement(jsonObj.get("objUser"));
       if (!jsonObj.get("dtAttachmentlogDatetime").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtAttachmentlogDatetime` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtAttachmentlogDatetime").toString()));
       }

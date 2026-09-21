@@ -22,6 +22,8 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,17 +50,63 @@ import java.util.Set;
 import eZmaxAPI.JSON;
 
 /**
- * Request for PATCH /1/object/attachment/{pkiAttachmentID}/validate
+ * Request for POST /1/object/attachment/{pkiAttachmentID}/validate
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-14T13:22:40.767762870Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class AttachmentValidateV1Request {
+  public static final String SERIALIZED_NAME_FKI_ATTACHMENTREJECTREASON_I_D = "fkiAttachmentrejectreasonID";
+  @SerializedName(SERIALIZED_NAME_FKI_ATTACHMENTREJECTREASON_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiAttachmentrejectreasonID;
+
   public static final String SERIALIZED_NAME_E_ATTACHMENT_VERIFIED = "eAttachmentVerified";
   @SerializedName(SERIALIZED_NAME_E_ATTACHMENT_VERIFIED)
   @javax.annotation.Nonnull
   private FieldEAttachmentVerified eAttachmentVerified;
 
+  public static final String SERIALIZED_NAME_T_ATTACHMENT_REJECTIONCOMMENT = "tAttachmentRejectioncomment";
+  @SerializedName(SERIALIZED_NAME_T_ATTACHMENT_REJECTIONCOMMENT)
+  @javax.annotation.Nullable
+  private String tAttachmentRejectioncomment;
+
+  public static final String SERIALIZED_NAME_A_S_NOTIFICATION_EMAIL_ADDRESS = "a_sNotificationEmailAddress";
+  @SerializedName(SERIALIZED_NAME_A_S_NOTIFICATION_EMAIL_ADDRESS)
+  @javax.annotation.Nullable
+  private Set<String> aSNotificationEmailAddress = new LinkedHashSet<>();
+
+  public static final String SERIALIZED_NAME_T_NOTIFICATION_MESSAGE = "tNotificationMessage";
+  @SerializedName(SERIALIZED_NAME_T_NOTIFICATION_MESSAGE)
+  @javax.annotation.Nullable
+  private String tNotificationMessage;
+
+  public static final String SERIALIZED_NAME_B_NOTIFICATION_INCLUDE_ATTACHMENT = "bNotificationIncludeAttachment";
+  @SerializedName(SERIALIZED_NAME_B_NOTIFICATION_INCLUDE_ATTACHMENT)
+  @javax.annotation.Nullable
+  private Boolean bNotificationIncludeAttachment;
+
   public AttachmentValidateV1Request() {
   }
+
+  public AttachmentValidateV1Request fkiAttachmentrejectreasonID(@javax.annotation.Nullable Integer fkiAttachmentrejectreasonID) {
+    this.fkiAttachmentrejectreasonID = fkiAttachmentrejectreasonID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Attachmentrejectreason
+   * minimum: 0
+   * maximum: 255
+   * @return fkiAttachmentrejectreasonID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiAttachmentrejectreasonID() {
+    return fkiAttachmentrejectreasonID;
+  }
+
+  public void setFkiAttachmentrejectreasonID(@javax.annotation.Nullable Integer fkiAttachmentrejectreasonID) {
+    this.fkiAttachmentrejectreasonID = fkiAttachmentrejectreasonID;
+  }
+
 
   public AttachmentValidateV1Request eAttachmentVerified(@javax.annotation.Nonnull FieldEAttachmentVerified eAttachmentVerified) {
     this.eAttachmentVerified = eAttachmentVerified;
@@ -79,6 +127,90 @@ public class AttachmentValidateV1Request {
   }
 
 
+  public AttachmentValidateV1Request tAttachmentRejectioncomment(@javax.annotation.Nullable String tAttachmentRejectioncomment) {
+    this.tAttachmentRejectioncomment = tAttachmentRejectioncomment;
+    return this;
+  }
+
+  /**
+   * The rejectioncomment of the Attachment
+   * @return tAttachmentRejectioncomment
+   */
+  @javax.annotation.Nullable
+  public String gettAttachmentRejectioncomment() {
+    return tAttachmentRejectioncomment;
+  }
+
+  public void settAttachmentRejectioncomment(@javax.annotation.Nullable String tAttachmentRejectioncomment) {
+    this.tAttachmentRejectioncomment = tAttachmentRejectioncomment;
+  }
+
+
+  public AttachmentValidateV1Request aSNotificationEmailAddress(@javax.annotation.Nullable Set<String> aSNotificationEmailAddress) {
+    this.aSNotificationEmailAddress = aSNotificationEmailAddress;
+    return this;
+  }
+
+  public AttachmentValidateV1Request addASNotificationEmailAddressItem(String aSNotificationEmailAddressItem) {
+    if (this.aSNotificationEmailAddress == null) {
+      this.aSNotificationEmailAddress = new LinkedHashSet<>();
+    }
+    this.aSNotificationEmailAddress.add(aSNotificationEmailAddressItem);
+    return this;
+  }
+
+  /**
+   * A list of email addresses to send a rejection notification to.
+   * @return aSNotificationEmailAddress
+   */
+  @javax.annotation.Nullable
+  public Set<String> getaSNotificationEmailAddress() {
+    return aSNotificationEmailAddress;
+  }
+
+  public void setaSNotificationEmailAddress(@javax.annotation.Nullable Set<String> aSNotificationEmailAddress) {
+    this.aSNotificationEmailAddress = aSNotificationEmailAddress;
+  }
+
+
+  public AttachmentValidateV1Request tNotificationMessage(@javax.annotation.Nullable String tNotificationMessage) {
+    this.tNotificationMessage = tNotificationMessage;
+    return this;
+  }
+
+  /**
+   * The email body to send to the notification recipients.
+   * @return tNotificationMessage
+   */
+  @javax.annotation.Nullable
+  public String gettNotificationMessage() {
+    return tNotificationMessage;
+  }
+
+  public void settNotificationMessage(@javax.annotation.Nullable String tNotificationMessage) {
+    this.tNotificationMessage = tNotificationMessage;
+  }
+
+
+  public AttachmentValidateV1Request bNotificationIncludeAttachment(@javax.annotation.Nullable Boolean bNotificationIncludeAttachment) {
+    this.bNotificationIncludeAttachment = bNotificationIncludeAttachment;
+    return this;
+  }
+
+  /**
+   * Should a copy of the attachment be included in the email.
+   * @return bNotificationIncludeAttachment
+   */
+  @javax.annotation.Nullable
+  public Boolean getbNotificationIncludeAttachment() {
+    return bNotificationIncludeAttachment;
+  }
+
+  public void setbNotificationIncludeAttachment(@javax.annotation.Nullable Boolean bNotificationIncludeAttachment) {
+    this.bNotificationIncludeAttachment = bNotificationIncludeAttachment;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -89,19 +221,29 @@ public class AttachmentValidateV1Request {
       return false;
     }
     AttachmentValidateV1Request attachmentValidateV1Request = (AttachmentValidateV1Request) o;
-    return Objects.equals(this.eAttachmentVerified, attachmentValidateV1Request.eAttachmentVerified);
+    return Objects.equals(this.fkiAttachmentrejectreasonID, attachmentValidateV1Request.fkiAttachmentrejectreasonID) &&
+        Objects.equals(this.eAttachmentVerified, attachmentValidateV1Request.eAttachmentVerified) &&
+        Objects.equals(this.tAttachmentRejectioncomment, attachmentValidateV1Request.tAttachmentRejectioncomment) &&
+        Objects.equals(this.aSNotificationEmailAddress, attachmentValidateV1Request.aSNotificationEmailAddress) &&
+        Objects.equals(this.tNotificationMessage, attachmentValidateV1Request.tNotificationMessage) &&
+        Objects.equals(this.bNotificationIncludeAttachment, attachmentValidateV1Request.bNotificationIncludeAttachment);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eAttachmentVerified);
+    return Objects.hash(fkiAttachmentrejectreasonID, eAttachmentVerified, tAttachmentRejectioncomment, aSNotificationEmailAddress, tNotificationMessage, bNotificationIncludeAttachment);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AttachmentValidateV1Request {\n");
+    sb.append("    fkiAttachmentrejectreasonID: ").append(toIndentedString(fkiAttachmentrejectreasonID)).append("\n");
     sb.append("    eAttachmentVerified: ").append(toIndentedString(eAttachmentVerified)).append("\n");
+    sb.append("    tAttachmentRejectioncomment: ").append(toIndentedString(tAttachmentRejectioncomment)).append("\n");
+    sb.append("    aSNotificationEmailAddress: ").append(toIndentedString(aSNotificationEmailAddress)).append("\n");
+    sb.append("    tNotificationMessage: ").append(toIndentedString(tNotificationMessage)).append("\n");
+    sb.append("    bNotificationIncludeAttachment: ").append(toIndentedString(bNotificationIncludeAttachment)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -120,7 +262,7 @@ public class AttachmentValidateV1Request {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("eAttachmentVerified"));
+    openapiFields = new HashSet<String>(Arrays.asList("fkiAttachmentrejectreasonID", "eAttachmentVerified", "tAttachmentRejectioncomment", "a_sNotificationEmailAddress", "tNotificationMessage", "bNotificationIncludeAttachment"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("eAttachmentVerified"));
@@ -156,6 +298,16 @@ public class AttachmentValidateV1Request {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `eAttachmentVerified`
       FieldEAttachmentVerified.validateJsonElement(jsonObj.get("eAttachmentVerified"));
+      if ((jsonObj.get("tAttachmentRejectioncomment") != null && !jsonObj.get("tAttachmentRejectioncomment").isJsonNull()) && !jsonObj.get("tAttachmentRejectioncomment").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `tAttachmentRejectioncomment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tAttachmentRejectioncomment").toString()));
+      }
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("a_sNotificationEmailAddress") != null && !jsonObj.get("a_sNotificationEmailAddress").isJsonNull() && !jsonObj.get("a_sNotificationEmailAddress").isJsonArray()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_sNotificationEmailAddress` to be an array in the JSON string but got `%s`", jsonObj.get("a_sNotificationEmailAddress").toString()));
+      }
+      if ((jsonObj.get("tNotificationMessage") != null && !jsonObj.get("tNotificationMessage").isJsonNull()) && !jsonObj.get("tNotificationMessage").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `tNotificationMessage` to be a primitive type in the JSON string but got `%s`", jsonObj.get("tNotificationMessage").toString()));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

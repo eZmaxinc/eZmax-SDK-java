@@ -6,6 +6,10 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 |------------- | ------------- | -------------|
 | [**leadBatchDownloadV1**](ObjectLeadApi.md#leadBatchDownloadV1) | **POST** /1/object/lead/{pkiLeadID}/batchDownload | Download multiples attachments from a Lead |
 | [**leadGetAttachmentsV1**](ObjectLeadApi.md#leadGetAttachmentsV1) | **GET** /1/object/lead/{pkiLeadID}/getAttachments | Retrieve Lead&#39;s attachments |
+| [**leadGetCommunicationCountV1**](ObjectLeadApi.md#leadGetCommunicationCountV1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationCount | Retrieve Communication count |
+| [**leadGetCommunicationListV1**](ObjectLeadApi.md#leadGetCommunicationListV1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationList | Retrieve Communication list |
+| [**leadGetCommunicationrecipientsV1**](ObjectLeadApi.md#leadGetCommunicationrecipientsV1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationrecipients | Retrieve Communication recipients |
+| [**leadGetCommunicationsendersV1**](ObjectLeadApi.md#leadGetCommunicationsendersV1) | **GET** /1/object/lead/{pkiLeadID}/getCommunicationsenders | Retrieve Communication senders |
 | [**leadGetListV1**](ObjectLeadApi.md#leadGetListV1) | **GET** /1/object/lead/getList | Retrieve Lead list |
 | [**leadImportIntoEDMV1**](ObjectLeadApi.md#leadImportIntoEDMV1) | **POST** /1/object/lead/{pkiLeadID}/importIntoEDM | Import attachments into the Lead |
 
@@ -132,6 +136,278 @@ public class Example {
 ### Return type
 
 [**LeadGetAttachmentsV1Response**](LeadGetAttachmentsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+<a id="leadGetCommunicationCountV1"></a>
+# **leadGetCommunicationCountV1**
+> LeadGetCommunicationCountV1Response leadGetCommunicationCountV1(pkiLeadID)
+
+Retrieve Communication count
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectLeadApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectLeadApi apiInstance = new ObjectLeadApi(defaultClient);
+    Integer pkiLeadID = 56; // Integer | 
+    try {
+      LeadGetCommunicationCountV1Response result = apiInstance.leadGetCommunicationCountV1(pkiLeadID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectLeadApi#leadGetCommunicationCountV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiLeadID** | **Integer**|  | |
+
+### Return type
+
+[**LeadGetCommunicationCountV1Response**](LeadGetCommunicationCountV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+<a id="leadGetCommunicationListV1"></a>
+# **leadGetCommunicationListV1**
+> LeadGetCommunicationListV1Response leadGetCommunicationListV1(pkiLeadID)
+
+Retrieve Communication list
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectLeadApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectLeadApi apiInstance = new ObjectLeadApi(defaultClient);
+    Integer pkiLeadID = 56; // Integer | 
+    try {
+      LeadGetCommunicationListV1Response result = apiInstance.leadGetCommunicationListV1(pkiLeadID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectLeadApi#leadGetCommunicationListV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiLeadID** | **Integer**|  | |
+
+### Return type
+
+[**LeadGetCommunicationListV1Response**](LeadGetCommunicationListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+<a id="leadGetCommunicationrecipientsV1"></a>
+# **leadGetCommunicationrecipientsV1**
+> LeadGetCommunicationrecipientsV1Response leadGetCommunicationrecipientsV1(pkiLeadID)
+
+Retrieve Communication recipients
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectLeadApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectLeadApi apiInstance = new ObjectLeadApi(defaultClient);
+    Integer pkiLeadID = 56; // Integer | 
+    try {
+      LeadGetCommunicationrecipientsV1Response result = apiInstance.leadGetCommunicationrecipientsV1(pkiLeadID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectLeadApi#leadGetCommunicationrecipientsV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiLeadID** | **Integer**|  | |
+
+### Return type
+
+[**LeadGetCommunicationrecipientsV1Response**](LeadGetCommunicationrecipientsV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+<a id="leadGetCommunicationsendersV1"></a>
+# **leadGetCommunicationsendersV1**
+> LeadGetCommunicationsendersV1Response leadGetCommunicationsendersV1(pkiLeadID)
+
+Retrieve Communication senders
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectLeadApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectLeadApi apiInstance = new ObjectLeadApi(defaultClient);
+    Integer pkiLeadID = 56; // Integer | 
+    try {
+      LeadGetCommunicationsendersV1Response result = apiInstance.leadGetCommunicationsendersV1(pkiLeadID);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectLeadApi#leadGetCommunicationsendersV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiLeadID** | **Integer**|  | |
+
+### Return type
+
+[**LeadGetCommunicationsendersV1Response**](LeadGetCommunicationsendersV1Response.md)
 
 ### Authorization
 

@@ -33,7 +33,9 @@ public enum FieldEAttachmentVerified {
   
   YES("Yes"),
   
-  REJECTED("Rejected");
+  REJECTED("Rejected"),
+  
+  PENDING("Pending");
 
   private String value;
 

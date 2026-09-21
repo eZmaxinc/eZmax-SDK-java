@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Webhookheader Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-14T13:22:40.767762870Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class WebhookheaderRequestCompound {
   public static final String SERIALIZED_NAME_PKI_WEBHOOKHEADER_I_D = "pkiWebhookheaderID";
   @SerializedName(SERIALIZED_NAME_PKI_WEBHOOKHEADER_I_D)

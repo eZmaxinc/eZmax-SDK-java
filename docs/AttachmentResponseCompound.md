@@ -49,7 +49,8 @@ A Attachment Object
 |**fkiSupplierID** | **Integer** | The unique ID of the Supplier. |  [optional] |
 |**fkiTranqcontractID** | **Integer** | The unique ID of the Tranqcontract |  [optional] |
 |**fkiTemplateID** | **Integer** | The unique ID of the Template |  [optional] |
-|**fkiInscriptionchecklistID** | **Integer** | The unique ID of the Inscriptionchecklist |  [optional] |
+|**fkiDocumenttypechecklistID** | **Integer** | The unique ID of the Documenttypechecklist |  [optional] |
+|**sDocumenttypeNameX** | **String** | The name of the Documenttype in the language of the requester |  [optional] |
 |**fkiFolderID** | **Integer** | The unique ID of the Folder |  [optional] |
 |**fkiRejectedoffertopurchaseID** | **Integer** | The unique ID of the Rejectedoffertopurchase |  [optional] |
 |**fkiDisclosureID** | **Integer** | The unique ID of the Disclosure |  [optional] |

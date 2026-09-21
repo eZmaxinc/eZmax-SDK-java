@@ -34,9 +34,11 @@ import com.ezmax.api.model.DepositGetCommunicationCountV1Response;
 import com.ezmax.api.model.DepositGetCommunicationListV1Response;
 import com.ezmax.api.model.DepositGetCommunicationrecipientsV1Response;
 import com.ezmax.api.model.DepositGetCommunicationsendersV1Response;
+import com.ezmax.api.model.DepositGetListV1Response;
 import com.ezmax.api.model.DepositImportIntoEDMV1Request;
 import com.ezmax.api.model.DepositImportIntoEDMV1Response;
 import java.io.File;
+import com.ezmax.api.model.HeaderAcceptLanguage;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -884,6 +886,169 @@ public class ObjectDepositApi {
 
         okhttp3.Call localVarCall = depositGetCommunicationsendersV1ValidateBeforeCall(pkiDepositID, _callback);
         Type localVarReturnType = new TypeToken<DepositGetCommunicationsendersV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for depositGetListV1
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call depositGetListV1Call(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/deposit/getList";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (eOrderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("eOrderBy", eOrderBy));
+        }
+
+        if (iRowMax != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowMax", iRowMax));
+        }
+
+        if (iRowOffset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowOffset", iRowOffset));
+        }
+
+        if (sFilter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sFilter", sFilter));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        if (acceptLanguage != null) {
+            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
+        }
+
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call depositGetListV1ValidateBeforeCall(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback _callback) throws ApiException {
+        return depositGetListV1Call(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+
+    }
+
+    /**
+     * Retrieve Deposit list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return DepositGetListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public DepositGetListV1Response depositGetListV1(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter) throws ApiException {
+        ApiResponse<DepositGetListV1Response> localVarResp = depositGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Deposit list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse&lt;DepositGetListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<DepositGetListV1Response> depositGetListV1WithHttpInfo(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter) throws ApiException {
+        okhttp3.Call localVarCall = depositGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
+        Type localVarReturnType = new TypeToken<DepositGetListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Deposit list (asynchronously)
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call depositGetListV1Async(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback<DepositGetListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = depositGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+        Type localVarReturnType = new TypeToken<DepositGetListV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

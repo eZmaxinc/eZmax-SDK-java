@@ -10,6 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**depositGetCommunicationListV1**](ObjectDepositApi.md#depositGetCommunicationListV1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationList | Retrieve Communication list |
 | [**depositGetCommunicationrecipientsV1**](ObjectDepositApi.md#depositGetCommunicationrecipientsV1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**depositGetCommunicationsendersV1**](ObjectDepositApi.md#depositGetCommunicationsendersV1) | **GET** /1/object/deposit/{pkiDepositID}/getCommunicationsenders | Retrieve Communication senders |
+| [**depositGetListV1**](ObjectDepositApi.md#depositGetListV1) | **GET** /1/object/deposit/getList | Retrieve Deposit list |
 | [**depositImportIntoEDMV1**](ObjectDepositApi.md#depositImportIntoEDMV1) | **POST** /1/object/deposit/{pkiDepositID}/importIntoEDM | Import attachments into the Deposit |
 
 
@@ -424,6 +425,84 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+<a id="depositGetListV1"></a>
+# **depositGetListV1**
+> DepositGetListV1Response depositGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Deposit list
+
+
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectDepositApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectDepositApi apiInstance = new ObjectDepositApi(defaultClient);
+    String eOrderBy = "pkiDepositID_ASC"; // String | Specify how you want the results to be sorted
+    Integer iRowMax = 56; // Integer | 
+    Integer iRowOffset = 0; // Integer | 
+    HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
+    String sFilter = "sFilter_example"; // String | 
+    try {
+      DepositGetListV1Response result = apiInstance.depositGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectDepositApi#depositGetListV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiDepositID_ASC, pkiDepositID_DESC, fkiPeriodID_ASC, fkiPeriodID_DESC, fkiBankaccountID_ASC, fkiBankaccountID_DESC, fkiUserIDCreated_ASC, fkiUserIDCreated_DESC, sDepositNumber_ASC, sDepositNumber_DESC, dtDepositDate_ASC, dtDepositDate_DESC, dDepositTotal_ASC, dDepositTotal_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, bDepositDraft_ASC, bDepositDraft_DESC, bDepositReconciled_ASC, bDepositReconciled_DESC, fkiReconciliationID_ASC, fkiReconciliationID_DESC, sBankaccountBankname_ASC, sBankaccountBankname_DESC, sPeriodYYYYMM_ASC, sPeriodYYYYMM_DESC, sUserLoginname_ASC, sUserLoginname_DESC] |
+| **iRowMax** | **Integer**|  | [optional] |
+| **iRowOffset** | **Integer**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **sFilter** | **String**|  | [optional] |
+
+### Return type
+
+[**DepositGetListV1Response**](DepositGetListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
 <a id="depositImportIntoEDMV1"></a>
 # **depositImportIntoEDMV1**

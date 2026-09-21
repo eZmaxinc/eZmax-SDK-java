@@ -5,11 +5,13 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**attachmentDeleteV1**](ObjectAttachmentApi.md#attachmentDeleteV1) | **POST** /1/object/attachment/{pkiAttachmentID}/delete | Delete an existing attachment |
+| [**attachmentDocumentTypeV1**](ObjectAttachmentApi.md#attachmentDocumentTypeV1) | **POST** /1/object/attachment/{pkiAttachmentID}/documentType | Change attachment document type |
 | [**attachmentDownloadV1**](ObjectAttachmentApi.md#attachmentDownloadV1) | **GET** /1/object/attachment/{pkiAttachmentID}/download | Retrieve the content |
 | [**attachmentGetAttachmentlogsV1**](ObjectAttachmentApi.md#attachmentGetAttachmentlogsV1) | **GET** /1/object/attachment/{pkiAttachmentID}/getAttachmentlogs | Retrieve the Attachmentlogs |
+| [**attachmentPrivacyV1**](ObjectAttachmentApi.md#attachmentPrivacyV1) | **POST** /1/object/attachment/{pkiAttachmentID}/privacy | Change the attachment privacy |
 | [**attachmentRenameV1**](ObjectAttachmentApi.md#attachmentRenameV1) | **POST** /1/object/attachment/{pkiAttachmentID}/rename | Rename an attachment |
 | [**attachmentRestoreV1**](ObjectAttachmentApi.md#attachmentRestoreV1) | **POST** /1/object/attachment/{pkiAttachmentID}/restore | Restore a deleted attachment |
-| [**attachmentValidateV1**](ObjectAttachmentApi.md#attachmentValidateV1) | **PATCH** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment |
+| [**attachmentValidateV1**](ObjectAttachmentApi.md#attachmentValidateV1) | **POST** /1/object/attachment/{pkiAttachmentID}/validate | Validate an existing attachment |
 
 
 <a id="attachmentDeleteV1"></a>
@@ -68,6 +70,80 @@ public class Example {
 ### Return type
 
 [**AttachmentDeleteV1Response**](AttachmentDeleteV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **403** | The request is not allowed to be executed. Look for detail about the error in the body. |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. |  -  |
+
+<a id="attachmentDocumentTypeV1"></a>
+# **attachmentDocumentTypeV1**
+> AttachmentDocumentTypeV1Response attachmentDocumentTypeV1(pkiAttachmentID, attachmentDocumentTypeV1Request)
+
+Change attachment document type
+
+The endpoint allows to change the checklist document type for an attachment.
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectAttachmentApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectAttachmentApi apiInstance = new ObjectAttachmentApi(defaultClient);
+    Integer pkiAttachmentID = 56; // Integer | 
+    AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request = new AttachmentDocumentTypeV1Request(); // AttachmentDocumentTypeV1Request | 
+    try {
+      AttachmentDocumentTypeV1Response result = apiInstance.attachmentDocumentTypeV1(pkiAttachmentID, attachmentDocumentTypeV1Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectAttachmentApi#attachmentDocumentTypeV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiAttachmentID** | **Integer**|  | |
+| **attachmentDocumentTypeV1Request** | [**AttachmentDocumentTypeV1Request**](AttachmentDocumentTypeV1Request.md)|  | |
+
+### Return type
+
+[**AttachmentDocumentTypeV1Response**](AttachmentDocumentTypeV1Response.md)
 
 ### Authorization
 
@@ -230,6 +306,80 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+<a id="attachmentPrivacyV1"></a>
+# **attachmentPrivacyV1**
+> AttachmentPrivacyV1Response attachmentPrivacyV1(pkiAttachmentID, attachmentPrivacyV1Request)
+
+Change the attachment privacy
+
+The endpoint allows to change an attachment&#39;s access privacy.
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectAttachmentApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectAttachmentApi apiInstance = new ObjectAttachmentApi(defaultClient);
+    Integer pkiAttachmentID = 56; // Integer | 
+    AttachmentPrivacyV1Request attachmentPrivacyV1Request = new AttachmentPrivacyV1Request(); // AttachmentPrivacyV1Request | 
+    try {
+      AttachmentPrivacyV1Response result = apiInstance.attachmentPrivacyV1(pkiAttachmentID, attachmentPrivacyV1Request);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectAttachmentApi#attachmentPrivacyV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pkiAttachmentID** | **Integer**|  | |
+| **attachmentPrivacyV1Request** | [**AttachmentPrivacyV1Request**](AttachmentPrivacyV1Request.md)|  | |
+
+### Return type
+
+[**AttachmentPrivacyV1Response**](AttachmentPrivacyV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **403** | The request is not allowed to be executed. Look for detail about the error in the body. |  -  |
+| **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+| **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. |  -  |
 
 <a id="attachmentRenameV1"></a>
 # **attachmentRenameV1**

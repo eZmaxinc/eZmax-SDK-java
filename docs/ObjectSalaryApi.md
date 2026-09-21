@@ -6,6 +6,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 |------------- | ------------- | -------------|
 | [**salaryBatchDownloadV1**](ObjectSalaryApi.md#salaryBatchDownloadV1) | **POST** /1/object/salary/{pkiSalaryID}/batchDownload | Download multiples attachments from a Reconciliation |
 | [**salaryGetAttachmentsV1**](ObjectSalaryApi.md#salaryGetAttachmentsV1) | **GET** /1/object/salary/{pkiSalaryID}/getAttachments | Retrieve Salary&#39;s attachments |
+| [**salaryGetListV1**](ObjectSalaryApi.md#salaryGetListV1) | **GET** /1/object/salary/getList | Retrieve Salary list |
 | [**salaryImportIntoEDMV1**](ObjectSalaryApi.md#salaryImportIntoEDMV1) | **POST** /1/object/salary/{pkiSalaryID}/importIntoEDM | Import attachments into the Salary |
 
 
@@ -148,6 +149,84 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+<a id="salaryGetListV1"></a>
+# **salaryGetListV1**
+> SalaryGetListV1Response salaryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Salary list
+
+
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectSalaryApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectSalaryApi apiInstance = new ObjectSalaryApi(defaultClient);
+    String eOrderBy = "pkiSalaryID_ASC"; // String | Specify how you want the results to be sorted
+    Integer iRowMax = 56; // Integer | 
+    Integer iRowOffset = 0; // Integer | 
+    HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
+    String sFilter = "sFilter_example"; // String | 
+    try {
+      SalaryGetListV1Response result = apiInstance.salaryGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectSalaryApi#salaryGetListV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiSalaryID_ASC, pkiSalaryID_DESC, fkiPeriodID_ASC, fkiPeriodID_DESC, fkiUSerIDCreated_ASC, fkiUSerIDCreated_DESC, fkiSalaryperiodID_ASC, fkiSalaryperiodID_DESC, dtSalaryPaymentdate_ASC, dtSalaryPaymentdate_DESC, sSalaryperiod_ASC, sSalaryperiod_DESC, sPeriodYYYYMM_ASC, sPeriodYYYYMM_DESC, iSalarypreparationCount_ASC, iSalarypreparationCount_DESC, dSalarypreparationTotal_ASC, dSalarypreparationTotal_DESC, dtSalaryperiodStart_ASC, dtSalaryperiodStart_DESC, dtSalaryperiodEnd_ASC, dtSalaryperiodEnd_DESC, sUserLoginname_ASC, sUserLoginname_DESC, dtCreatedDate_ASC, dtCreatedDate_DESC, bSalarypreparationIspaid_ASC, bSalarypreparationIspaid_DESC, iSalaryperiodgroupYear_ASC, iSalaryperiodgroupYear_DESC] |
+| **iRowMax** | **Integer**|  | [optional] |
+| **iRowOffset** | **Integer**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **sFilter** | **String**|  | [optional] |
+
+### Return type
+
+[**SalaryGetListV1Response**](SalaryGetListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
 <a id="salaryImportIntoEDMV1"></a>
 # **salaryImportIntoEDMV1**

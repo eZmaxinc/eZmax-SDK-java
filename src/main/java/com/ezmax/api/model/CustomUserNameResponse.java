@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A User name Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-14T13:22:40.767762870Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
 public class CustomUserNameResponse {
   public static final String SERIALIZED_NAME_S_CONTACTTITLE_NAME_X = "sContacttitleNameX";
   @SerializedName(SERIALIZED_NAME_S_CONTACTTITLE_NAME_X)
@@ -65,6 +65,11 @@ public class CustomUserNameResponse {
   @SerializedName(SERIALIZED_NAME_S_USER_FIRSTNAME)
   @javax.annotation.Nonnull
   private String sUserFirstname;
+
+  public static final String SERIALIZED_NAME_S_USER_LOGINNAME = "sUserLoginname";
+  @SerializedName(SERIALIZED_NAME_S_USER_LOGINNAME)
+  @javax.annotation.Nullable
+  private String sUserLoginname;
 
   public static final String SERIALIZED_NAME_S_USER_JOBTITLE = "sUserJobtitle";
   @SerializedName(SERIALIZED_NAME_S_USER_JOBTITLE)
@@ -131,6 +136,25 @@ public class CustomUserNameResponse {
   }
 
 
+  public CustomUserNameResponse sUserLoginname(@javax.annotation.Nullable String sUserLoginname) {
+    this.sUserLoginname = sUserLoginname;
+    return this;
+  }
+
+  /**
+   * The login name of the User.
+   * @return sUserLoginname
+   */
+  @javax.annotation.Nullable
+  public String getsUserLoginname() {
+    return sUserLoginname;
+  }
+
+  public void setsUserLoginname(@javax.annotation.Nullable String sUserLoginname) {
+    this.sUserLoginname = sUserLoginname;
+  }
+
+
   public CustomUserNameResponse sUserJobtitle(@javax.annotation.Nullable String sUserJobtitle) {
     this.sUserJobtitle = sUserJobtitle;
     return this;
@@ -163,12 +187,13 @@ public class CustomUserNameResponse {
     return Objects.equals(this.sContacttitleNameX, customUserNameResponse.sContacttitleNameX) &&
         Objects.equals(this.sUserLastname, customUserNameResponse.sUserLastname) &&
         Objects.equals(this.sUserFirstname, customUserNameResponse.sUserFirstname) &&
+        Objects.equals(this.sUserLoginname, customUserNameResponse.sUserLoginname) &&
         Objects.equals(this.sUserJobtitle, customUserNameResponse.sUserJobtitle);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sContacttitleNameX, sUserLastname, sUserFirstname, sUserJobtitle);
+    return Objects.hash(sContacttitleNameX, sUserLastname, sUserFirstname, sUserLoginname, sUserJobtitle);
   }
 
   @Override
@@ -178,6 +203,7 @@ public class CustomUserNameResponse {
     sb.append("    sContacttitleNameX: ").append(toIndentedString(sContacttitleNameX)).append("\n");
     sb.append("    sUserLastname: ").append(toIndentedString(sUserLastname)).append("\n");
     sb.append("    sUserFirstname: ").append(toIndentedString(sUserFirstname)).append("\n");
+    sb.append("    sUserLoginname: ").append(toIndentedString(sUserLoginname)).append("\n");
     sb.append("    sUserJobtitle: ").append(toIndentedString(sUserJobtitle)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -197,7 +223,7 @@ public class CustomUserNameResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("sContacttitleNameX", "sUserLastname", "sUserFirstname", "sUserJobtitle"));
+    openapiFields = new HashSet<String>(Arrays.asList("sContacttitleNameX", "sUserLastname", "sUserFirstname", "sUserLoginname", "sUserJobtitle"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("sUserLastname", "sUserFirstname"));
@@ -239,6 +265,9 @@ public class CustomUserNameResponse {
       }
       if (!jsonObj.get("sUserFirstname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sUserFirstname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserFirstname").toString()));
+      }
+      if ((jsonObj.get("sUserLoginname") != null && !jsonObj.get("sUserLoginname").isJsonNull()) && !jsonObj.get("sUserLoginname").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sUserLoginname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserLoginname").toString()));
       }
       if ((jsonObj.get("sUserJobtitle") != null && !jsonObj.get("sUserJobtitle").isJsonNull()) && !jsonObj.get("sUserJobtitle").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sUserJobtitle` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sUserJobtitle").toString()));

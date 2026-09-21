@@ -2,7 +2,7 @@
 
 # AttachmentValidateV1Response
 
-Response for PATCH /1/object/attachment/{pkiAttachmentID}/validate
+Response for POST /1/object/attachment/{pkiAttachmentID}/validate
 
 ## Properties
 

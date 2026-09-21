@@ -11,6 +11,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**bankaccountGetCommunicationListV1**](ObjectBankaccountApi.md#bankaccountGetCommunicationListV1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationList | Retrieve Communication list |
 | [**bankaccountGetCommunicationrecipientsV1**](ObjectBankaccountApi.md#bankaccountGetCommunicationrecipientsV1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**bankaccountGetCommunicationsendersV1**](ObjectBankaccountApi.md#bankaccountGetCommunicationsendersV1) | **GET** /1/object/bankaccount/{pkiBankaccountID}/getCommunicationsenders | Retrieve Communication senders |
+| [**bankaccountGetListV1**](ObjectBankaccountApi.md#bankaccountGetListV1) | **GET** /1/object/bankaccount/getList | Retrieve Bankaccount list |
 | [**bankaccountImportIntoEDMV1**](ObjectBankaccountApi.md#bankaccountImportIntoEDMV1) | **POST** /1/object/bankaccount/{pkiBankaccountID}/importIntoEDM | Import attachments into the Bankaccount |
 
 
@@ -500,6 +501,84 @@ public class Example {
 |-------------|-------------|------------------|
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
+
+<a id="bankaccountGetListV1"></a>
+# **bankaccountGetListV1**
+> BankaccountGetListV1Response bankaccountGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Bankaccount list
+
+Enum values that can be filtered in query parameter *sFilter*:  | Variable | Valid values | |---|---| | eBankaccountType | Chequing&lt;br&gt;Trust |
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectBankaccountApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectBankaccountApi apiInstance = new ObjectBankaccountApi(defaultClient);
+    String eOrderBy = "pkiBankaccountID_ASC"; // String | Specify how you want the results to be sorted
+    Integer iRowMax = 56; // Integer | 
+    Integer iRowOffset = 0; // Integer | 
+    HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
+    String sFilter = "sFilter_example"; // String | 
+    try {
+      BankaccountGetListV1Response result = apiInstance.bankaccountGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectBankaccountApi#bankaccountGetListV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiBankaccountID_ASC, pkiBankaccountID_DESC, sBankaccountBankname_ASC, sBankaccountBankname_DESC, sBankaccountTransit_ASC, sBankaccountTransit_DESC, sBankaccountInstitution_ASC, sBankaccountInstitution_DESC, sBankaccountAccount_ASC, sBankaccountAccount_DESC, sBankaccountNumber_ASC, sBankaccountNumber_DESC, eBankaccountType_ASC, eBankaccountType_DESC, bBankaccountCommissionprocessing_ASC, bBankaccountCommissionprocessing_DESC, bBankaccountIsactive_ASC, bBankaccountIsactive_DESC, iGlaccountCode_ASC, iGlaccountCode_DESC, sGlaccountDescriptionX_ASC, sGlaccountDescriptionX_DESC] |
+| **iRowMax** | **Integer**|  | [optional] |
+| **iRowOffset** | **Integer**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **sFilter** | **String**|  | [optional] |
+
+### Return type
+
+[**BankaccountGetListV1Response**](BankaccountGetListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
 <a id="bankaccountImportIntoEDMV1"></a>
 # **bankaccountImportIntoEDMV1**

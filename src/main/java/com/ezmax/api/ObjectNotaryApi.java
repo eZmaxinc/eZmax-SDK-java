@@ -29,8 +29,14 @@ import java.io.IOException;
 
 import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
+import com.ezmax.api.model.HeaderAcceptLanguage;
 import com.ezmax.api.model.NotaryBatchDownloadV1Request;
 import com.ezmax.api.model.NotaryGetAttachmentsV1Response;
+import com.ezmax.api.model.NotaryGetCommunicationCountV1Response;
+import com.ezmax.api.model.NotaryGetCommunicationListV1Response;
+import com.ezmax.api.model.NotaryGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.NotaryGetCommunicationsendersV1Response;
+import com.ezmax.api.model.NotaryGetListV1Response;
 import com.ezmax.api.model.NotaryImportIntoEDMV1Request;
 import com.ezmax.api.model.NotaryImportIntoEDMV1Response;
 
@@ -356,6 +362,693 @@ public class ObjectNotaryApi {
 
         okhttp3.Call localVarCall = notaryGetAttachmentsV1ValidateBeforeCall(pkiNotaryID, _callback);
         Type localVarReturnType = new TypeToken<NotaryGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for notaryGetCommunicationCountV1
+     * @param pkiNotaryID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call notaryGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/notary/{pkiNotaryID}/getCommunicationCount"
+            .replace("{" + "pkiNotaryID" + "}", localVarApiClient.escapeString(pkiNotaryID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call notaryGetCommunicationCountV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiNotaryID' is set
+        if (pkiNotaryID == null) {
+            throw new ApiException("Missing the required parameter 'pkiNotaryID' when calling notaryGetCommunicationCountV1(Async)");
+        }
+
+        return notaryGetCommunicationCountV1Call(pkiNotaryID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiNotaryID  (required)
+     * @return NotaryGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public NotaryGetCommunicationCountV1Response notaryGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiNotaryID) throws ApiException {
+        ApiResponse<NotaryGetCommunicationCountV1Response> localVarResp = notaryGetCommunicationCountV1WithHttpInfo(pkiNotaryID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiNotaryID  (required)
+     * @return ApiResponse&lt;NotaryGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<NotaryGetCommunicationCountV1Response> notaryGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiNotaryID) throws ApiException {
+        okhttp3.Call localVarCall = notaryGetCommunicationCountV1ValidateBeforeCall(pkiNotaryID, null);
+        Type localVarReturnType = new TypeToken<NotaryGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiNotaryID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call notaryGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback<NotaryGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = notaryGetCommunicationCountV1ValidateBeforeCall(pkiNotaryID, _callback);
+        Type localVarReturnType = new TypeToken<NotaryGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for notaryGetCommunicationListV1
+     * @param pkiNotaryID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call notaryGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/notary/{pkiNotaryID}/getCommunicationList"
+            .replace("{" + "pkiNotaryID" + "}", localVarApiClient.escapeString(pkiNotaryID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call notaryGetCommunicationListV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiNotaryID' is set
+        if (pkiNotaryID == null) {
+            throw new ApiException("Missing the required parameter 'pkiNotaryID' when calling notaryGetCommunicationListV1(Async)");
+        }
+
+        return notaryGetCommunicationListV1Call(pkiNotaryID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiNotaryID  (required)
+     * @return NotaryGetCommunicationListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public NotaryGetCommunicationListV1Response notaryGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiNotaryID) throws ApiException {
+        ApiResponse<NotaryGetCommunicationListV1Response> localVarResp = notaryGetCommunicationListV1WithHttpInfo(pkiNotaryID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiNotaryID  (required)
+     * @return ApiResponse&lt;NotaryGetCommunicationListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<NotaryGetCommunicationListV1Response> notaryGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiNotaryID) throws ApiException {
+        okhttp3.Call localVarCall = notaryGetCommunicationListV1ValidateBeforeCall(pkiNotaryID, null);
+        Type localVarReturnType = new TypeToken<NotaryGetCommunicationListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication list (asynchronously)
+     * 
+     * @param pkiNotaryID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call notaryGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback<NotaryGetCommunicationListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = notaryGetCommunicationListV1ValidateBeforeCall(pkiNotaryID, _callback);
+        Type localVarReturnType = new TypeToken<NotaryGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for notaryGetCommunicationrecipientsV1
+     * @param pkiNotaryID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call notaryGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/notary/{pkiNotaryID}/getCommunicationrecipients"
+            .replace("{" + "pkiNotaryID" + "}", localVarApiClient.escapeString(pkiNotaryID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call notaryGetCommunicationrecipientsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiNotaryID' is set
+        if (pkiNotaryID == null) {
+            throw new ApiException("Missing the required parameter 'pkiNotaryID' when calling notaryGetCommunicationrecipientsV1(Async)");
+        }
+
+        return notaryGetCommunicationrecipientsV1Call(pkiNotaryID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiNotaryID  (required)
+     * @return NotaryGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public NotaryGetCommunicationrecipientsV1Response notaryGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiNotaryID) throws ApiException {
+        ApiResponse<NotaryGetCommunicationrecipientsV1Response> localVarResp = notaryGetCommunicationrecipientsV1WithHttpInfo(pkiNotaryID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiNotaryID  (required)
+     * @return ApiResponse&lt;NotaryGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<NotaryGetCommunicationrecipientsV1Response> notaryGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiNotaryID) throws ApiException {
+        okhttp3.Call localVarCall = notaryGetCommunicationrecipientsV1ValidateBeforeCall(pkiNotaryID, null);
+        Type localVarReturnType = new TypeToken<NotaryGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication recipients (asynchronously)
+     * 
+     * @param pkiNotaryID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call notaryGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback<NotaryGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = notaryGetCommunicationrecipientsV1ValidateBeforeCall(pkiNotaryID, _callback);
+        Type localVarReturnType = new TypeToken<NotaryGetCommunicationrecipientsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for notaryGetCommunicationsendersV1
+     * @param pkiNotaryID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call notaryGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/notary/{pkiNotaryID}/getCommunicationsenders"
+            .replace("{" + "pkiNotaryID" + "}", localVarApiClient.escapeString(pkiNotaryID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call notaryGetCommunicationsendersV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiNotaryID' is set
+        if (pkiNotaryID == null) {
+            throw new ApiException("Missing the required parameter 'pkiNotaryID' when calling notaryGetCommunicationsendersV1(Async)");
+        }
+
+        return notaryGetCommunicationsendersV1Call(pkiNotaryID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiNotaryID  (required)
+     * @return NotaryGetCommunicationsendersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public NotaryGetCommunicationsendersV1Response notaryGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiNotaryID) throws ApiException {
+        ApiResponse<NotaryGetCommunicationsendersV1Response> localVarResp = notaryGetCommunicationsendersV1WithHttpInfo(pkiNotaryID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiNotaryID  (required)
+     * @return ApiResponse&lt;NotaryGetCommunicationsendersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<NotaryGetCommunicationsendersV1Response> notaryGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiNotaryID) throws ApiException {
+        okhttp3.Call localVarCall = notaryGetCommunicationsendersV1ValidateBeforeCall(pkiNotaryID, null);
+        Type localVarReturnType = new TypeToken<NotaryGetCommunicationsendersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication senders (asynchronously)
+     * 
+     * @param pkiNotaryID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call notaryGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiNotaryID, final ApiCallback<NotaryGetCommunicationsendersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = notaryGetCommunicationsendersV1ValidateBeforeCall(pkiNotaryID, _callback);
+        Type localVarReturnType = new TypeToken<NotaryGetCommunicationsendersV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for notaryGetListV1
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call notaryGetListV1Call(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/notary/getList";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (eOrderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("eOrderBy", eOrderBy));
+        }
+
+        if (iRowMax != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowMax", iRowMax));
+        }
+
+        if (iRowOffset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("iRowOffset", iRowOffset));
+        }
+
+        if (sFilter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("sFilter", sFilter));
+        }
+
+        final String[] localVarAccepts = {
+            "application/json",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        if (acceptLanguage != null) {
+            localVarHeaderParams.put("Accept-Language", localVarApiClient.parameterToString(acceptLanguage));
+        }
+
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call notaryGetListV1ValidateBeforeCall(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback _callback) throws ApiException {
+        return notaryGetListV1Call(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+
+    }
+
+    /**
+     * Retrieve Notary list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return NotaryGetListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public NotaryGetListV1Response notaryGetListV1(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter) throws ApiException {
+        ApiResponse<NotaryGetListV1Response> localVarResp = notaryGetListV1WithHttpInfo(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Notary list
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @return ApiResponse&lt;NotaryGetListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<NotaryGetListV1Response> notaryGetListV1WithHttpInfo(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter) throws ApiException {
+        okhttp3.Call localVarCall = notaryGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, null);
+        Type localVarReturnType = new TypeToken<NotaryGetListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Notary list (asynchronously)
+     * 
+     * @param eOrderBy Specify how you want the results to be sorted (optional)
+     * @param iRowMax  (optional)
+     * @param iRowOffset  (optional, default to 0)
+     * @param acceptLanguage  (optional)
+     * @param sFilter  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 406 </td><td> The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call notaryGetListV1Async(@javax.annotation.Nullable String eOrderBy, @javax.annotation.Nullable Integer iRowMax, @javax.annotation.Nullable Integer iRowOffset, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, @javax.annotation.Nullable String sFilter, final ApiCallback<NotaryGetListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = notaryGetListV1ValidateBeforeCall(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter, _callback);
+        Type localVarReturnType = new TypeToken<NotaryGetListV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

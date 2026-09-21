@@ -11,5 +11,7 @@
 
 * `REJECTED` (value: `"Rejected"`)
 
+* `PENDING` (value: `"Pending"`)
+
 
 
