@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CustomAttachmentImportIntoEDMResponse;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -51,40 +52,40 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /1/object/invoice/{pkiInvoiceID}/importIntoEDM
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T14:13:41.766962896Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class InvoiceImportIntoEDMV1ResponseMPayload {
-  public static final String SERIALIZED_NAME_A_PKI_ATTACHMENT_I_D = "a_pkiAttachmentID";
-  @SerializedName(SERIALIZED_NAME_A_PKI_ATTACHMENT_I_D)
+  public static final String SERIALIZED_NAME_A_OBJ_ATTACHMENT = "a_objAttachment";
+  @SerializedName(SERIALIZED_NAME_A_OBJ_ATTACHMENT)
   @javax.annotation.Nonnull
-  private List<Integer> aPkiAttachmentID = new ArrayList<>();
+  private List<CustomAttachmentImportIntoEDMResponse> aObjAttachment = new ArrayList<>();
 
   public InvoiceImportIntoEDMV1ResponseMPayload() {
   }
 
-  public InvoiceImportIntoEDMV1ResponseMPayload aPkiAttachmentID(@javax.annotation.Nonnull List<Integer> aPkiAttachmentID) {
-    this.aPkiAttachmentID = aPkiAttachmentID;
+  public InvoiceImportIntoEDMV1ResponseMPayload aObjAttachment(@javax.annotation.Nonnull List<CustomAttachmentImportIntoEDMResponse> aObjAttachment) {
+    this.aObjAttachment = aObjAttachment;
     return this;
   }
 
-  public InvoiceImportIntoEDMV1ResponseMPayload addAPkiAttachmentIDItem(Integer aPkiAttachmentIDItem) {
-    if (this.aPkiAttachmentID == null) {
-      this.aPkiAttachmentID = new ArrayList<>();
+  public InvoiceImportIntoEDMV1ResponseMPayload addAObjAttachmentItem(CustomAttachmentImportIntoEDMResponse aObjAttachmentItem) {
+    if (this.aObjAttachment == null) {
+      this.aObjAttachment = new ArrayList<>();
     }
-    this.aPkiAttachmentID.add(aPkiAttachmentIDItem);
+    this.aObjAttachment.add(aObjAttachmentItem);
     return this;
   }
 
   /**
-   * Get aPkiAttachmentID
-   * @return aPkiAttachmentID
+   * Get aObjAttachment
+   * @return aObjAttachment
    */
   @javax.annotation.Nonnull
-  public List<Integer> getaPkiAttachmentID() {
-    return aPkiAttachmentID;
+  public List<CustomAttachmentImportIntoEDMResponse> getaObjAttachment() {
+    return aObjAttachment;
   }
 
-  public void setaPkiAttachmentID(@javax.annotation.Nonnull List<Integer> aPkiAttachmentID) {
-    this.aPkiAttachmentID = aPkiAttachmentID;
+  public void setaObjAttachment(@javax.annotation.Nonnull List<CustomAttachmentImportIntoEDMResponse> aObjAttachment) {
+    this.aObjAttachment = aObjAttachment;
   }
 
 
@@ -98,19 +99,19 @@ public class InvoiceImportIntoEDMV1ResponseMPayload {
       return false;
     }
     InvoiceImportIntoEDMV1ResponseMPayload invoiceImportIntoEDMV1ResponseMPayload = (InvoiceImportIntoEDMV1ResponseMPayload) o;
-    return Objects.equals(this.aPkiAttachmentID, invoiceImportIntoEDMV1ResponseMPayload.aPkiAttachmentID);
+    return Objects.equals(this.aObjAttachment, invoiceImportIntoEDMV1ResponseMPayload.aObjAttachment);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aPkiAttachmentID);
+    return Objects.hash(aObjAttachment);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InvoiceImportIntoEDMV1ResponseMPayload {\n");
-    sb.append("    aPkiAttachmentID: ").append(toIndentedString(aPkiAttachmentID)).append("\n");
+    sb.append("    aObjAttachment: ").append(toIndentedString(aObjAttachment)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -129,10 +130,10 @@ public class InvoiceImportIntoEDMV1ResponseMPayload {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("a_pkiAttachmentID"));
+    openapiFields = new HashSet<String>(Arrays.asList("a_objAttachment"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("a_pkiAttachmentID"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("a_objAttachment"));
   }
 
   /**
@@ -163,11 +164,15 @@ public class InvoiceImportIntoEDMV1ResponseMPayload {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the required json array is present
-      if (jsonObj.get("a_pkiAttachmentID") == null) {
-        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
-      } else if (!jsonObj.get("a_pkiAttachmentID").isJsonArray()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_pkiAttachmentID` to be an array in the JSON string but got `%s`", jsonObj.get("a_pkiAttachmentID").toString()));
+      if (jsonObj.get("a_objAttachment") != null) {
+        if (!jsonObj.get("a_objAttachment").isJsonArray()) {
+          throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_objAttachment` to be an array in the JSON string but got `%s`", jsonObj.get("a_objAttachment").toString()));
+        }
+        JsonArray jsonArrayaObjAttachment = jsonObj.getAsJsonArray("a_objAttachment");
+        // validate the required field `a_objAttachment` (array)
+        for (int i = 0; i < jsonArrayaObjAttachment.size(); i++) {
+          CustomAttachmentImportIntoEDMResponse.validateJsonElement(jsonArrayaObjAttachment.get(i));
+        }
       }
   }
 

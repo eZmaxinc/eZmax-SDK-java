@@ -61,6 +61,7 @@ A Attachment Object
 |**sAttachmentCategory** | **String** | The attachment category |  |
 |**eAttachmentPrivacy** | **FieldEAttachmentPrivacy** |  |  |
 |**fkiUserIDSpecific** | **Integer** | The unique ID of the User |  [optional] |
+|**objUserSpecific** | [**CustomUserNameResponse**](CustomUserNameResponse.md) |  |  [optional] |
 |**eAttachmentType** | **FieldEAttachmentType** |  |  |
 |**iAttachmentSize** | **Integer** | The size of the Attachment |  |
 |**iAttachmentEDMmoduleflag** | **Integer** | The edmmoduleflag of the Attachment |  [optional] |

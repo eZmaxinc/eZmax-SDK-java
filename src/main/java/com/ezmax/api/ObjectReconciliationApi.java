@@ -31,6 +31,10 @@ import com.ezmax.api.model.CommonResponseError;
 import java.io.File;
 import com.ezmax.api.model.ReconciliationBatchDownloadV1Request;
 import com.ezmax.api.model.ReconciliationGetAttachmentsV1Response;
+import com.ezmax.api.model.ReconciliationGetCommunicationCountV1Response;
+import com.ezmax.api.model.ReconciliationGetCommunicationListV1Response;
+import com.ezmax.api.model.ReconciliationGetCommunicationrecipientsV1Response;
+import com.ezmax.api.model.ReconciliationGetCommunicationsendersV1Response;
 import com.ezmax.api.model.ReconciliationImportIntoEDMV1Request;
 import com.ezmax.api.model.ReconciliationImportIntoEDMV1Response;
 
@@ -356,6 +360,530 @@ public class ObjectReconciliationApi {
 
         okhttp3.Call localVarCall = reconciliationGetAttachmentsV1ValidateBeforeCall(pkiReconciliationID, _callback);
         Type localVarReturnType = new TypeToken<ReconciliationGetAttachmentsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reconciliationGetCommunicationCountV1
+     * @param pkiReconciliationID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reconciliationGetCommunicationCountV1Call(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/reconciliation/{pkiReconciliationID}/getCommunicationCount"
+            .replace("{" + "pkiReconciliationID" + "}", localVarApiClient.escapeString(pkiReconciliationID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reconciliationGetCommunicationCountV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiReconciliationID' is set
+        if (pkiReconciliationID == null) {
+            throw new ApiException("Missing the required parameter 'pkiReconciliationID' when calling reconciliationGetCommunicationCountV1(Async)");
+        }
+
+        return reconciliationGetCommunicationCountV1Call(pkiReconciliationID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiReconciliationID  (required)
+     * @return ReconciliationGetCommunicationCountV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ReconciliationGetCommunicationCountV1Response reconciliationGetCommunicationCountV1(@javax.annotation.Nonnull Integer pkiReconciliationID) throws ApiException {
+        ApiResponse<ReconciliationGetCommunicationCountV1Response> localVarResp = reconciliationGetCommunicationCountV1WithHttpInfo(pkiReconciliationID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication count
+     * 
+     * @param pkiReconciliationID  (required)
+     * @return ApiResponse&lt;ReconciliationGetCommunicationCountV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ReconciliationGetCommunicationCountV1Response> reconciliationGetCommunicationCountV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiReconciliationID) throws ApiException {
+        okhttp3.Call localVarCall = reconciliationGetCommunicationCountV1ValidateBeforeCall(pkiReconciliationID, null);
+        Type localVarReturnType = new TypeToken<ReconciliationGetCommunicationCountV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication count (asynchronously)
+     * 
+     * @param pkiReconciliationID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reconciliationGetCommunicationCountV1Async(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback<ReconciliationGetCommunicationCountV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reconciliationGetCommunicationCountV1ValidateBeforeCall(pkiReconciliationID, _callback);
+        Type localVarReturnType = new TypeToken<ReconciliationGetCommunicationCountV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reconciliationGetCommunicationListV1
+     * @param pkiReconciliationID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reconciliationGetCommunicationListV1Call(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/reconciliation/{pkiReconciliationID}/getCommunicationList"
+            .replace("{" + "pkiReconciliationID" + "}", localVarApiClient.escapeString(pkiReconciliationID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reconciliationGetCommunicationListV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiReconciliationID' is set
+        if (pkiReconciliationID == null) {
+            throw new ApiException("Missing the required parameter 'pkiReconciliationID' when calling reconciliationGetCommunicationListV1(Async)");
+        }
+
+        return reconciliationGetCommunicationListV1Call(pkiReconciliationID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiReconciliationID  (required)
+     * @return ReconciliationGetCommunicationListV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ReconciliationGetCommunicationListV1Response reconciliationGetCommunicationListV1(@javax.annotation.Nonnull Integer pkiReconciliationID) throws ApiException {
+        ApiResponse<ReconciliationGetCommunicationListV1Response> localVarResp = reconciliationGetCommunicationListV1WithHttpInfo(pkiReconciliationID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication list
+     * 
+     * @param pkiReconciliationID  (required)
+     * @return ApiResponse&lt;ReconciliationGetCommunicationListV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ReconciliationGetCommunicationListV1Response> reconciliationGetCommunicationListV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiReconciliationID) throws ApiException {
+        okhttp3.Call localVarCall = reconciliationGetCommunicationListV1ValidateBeforeCall(pkiReconciliationID, null);
+        Type localVarReturnType = new TypeToken<ReconciliationGetCommunicationListV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication list (asynchronously)
+     * 
+     * @param pkiReconciliationID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reconciliationGetCommunicationListV1Async(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback<ReconciliationGetCommunicationListV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reconciliationGetCommunicationListV1ValidateBeforeCall(pkiReconciliationID, _callback);
+        Type localVarReturnType = new TypeToken<ReconciliationGetCommunicationListV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reconciliationGetCommunicationrecipientsV1
+     * @param pkiReconciliationID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reconciliationGetCommunicationrecipientsV1Call(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/reconciliation/{pkiReconciliationID}/getCommunicationrecipients"
+            .replace("{" + "pkiReconciliationID" + "}", localVarApiClient.escapeString(pkiReconciliationID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reconciliationGetCommunicationrecipientsV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiReconciliationID' is set
+        if (pkiReconciliationID == null) {
+            throw new ApiException("Missing the required parameter 'pkiReconciliationID' when calling reconciliationGetCommunicationrecipientsV1(Async)");
+        }
+
+        return reconciliationGetCommunicationrecipientsV1Call(pkiReconciliationID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiReconciliationID  (required)
+     * @return ReconciliationGetCommunicationrecipientsV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ReconciliationGetCommunicationrecipientsV1Response reconciliationGetCommunicationrecipientsV1(@javax.annotation.Nonnull Integer pkiReconciliationID) throws ApiException {
+        ApiResponse<ReconciliationGetCommunicationrecipientsV1Response> localVarResp = reconciliationGetCommunicationrecipientsV1WithHttpInfo(pkiReconciliationID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication recipients
+     * 
+     * @param pkiReconciliationID  (required)
+     * @return ApiResponse&lt;ReconciliationGetCommunicationrecipientsV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ReconciliationGetCommunicationrecipientsV1Response> reconciliationGetCommunicationrecipientsV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiReconciliationID) throws ApiException {
+        okhttp3.Call localVarCall = reconciliationGetCommunicationrecipientsV1ValidateBeforeCall(pkiReconciliationID, null);
+        Type localVarReturnType = new TypeToken<ReconciliationGetCommunicationrecipientsV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication recipients (asynchronously)
+     * 
+     * @param pkiReconciliationID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reconciliationGetCommunicationrecipientsV1Async(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback<ReconciliationGetCommunicationrecipientsV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reconciliationGetCommunicationrecipientsV1ValidateBeforeCall(pkiReconciliationID, _callback);
+        Type localVarReturnType = new TypeToken<ReconciliationGetCommunicationrecipientsV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for reconciliationGetCommunicationsendersV1
+     * @param pkiReconciliationID  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reconciliationGetCommunicationsendersV1Call(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/1/object/reconciliation/{pkiReconciliationID}/getCommunicationsenders"
+            .replace("{" + "pkiReconciliationID" + "}", localVarApiClient.escapeString(pkiReconciliationID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call reconciliationGetCommunicationsendersV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiReconciliationID' is set
+        if (pkiReconciliationID == null) {
+            throw new ApiException("Missing the required parameter 'pkiReconciliationID' when calling reconciliationGetCommunicationsendersV1(Async)");
+        }
+
+        return reconciliationGetCommunicationsendersV1Call(pkiReconciliationID, _callback);
+
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiReconciliationID  (required)
+     * @return ReconciliationGetCommunicationsendersV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ReconciliationGetCommunicationsendersV1Response reconciliationGetCommunicationsendersV1(@javax.annotation.Nonnull Integer pkiReconciliationID) throws ApiException {
+        ApiResponse<ReconciliationGetCommunicationsendersV1Response> localVarResp = reconciliationGetCommunicationsendersV1WithHttpInfo(pkiReconciliationID);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Retrieve Communication senders
+     * 
+     * @param pkiReconciliationID  (required)
+     * @return ApiResponse&lt;ReconciliationGetCommunicationsendersV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ReconciliationGetCommunicationsendersV1Response> reconciliationGetCommunicationsendersV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiReconciliationID) throws ApiException {
+        okhttp3.Call localVarCall = reconciliationGetCommunicationsendersV1ValidateBeforeCall(pkiReconciliationID, null);
+        Type localVarReturnType = new TypeToken<ReconciliationGetCommunicationsendersV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Retrieve Communication senders (asynchronously)
+     * 
+     * @param pkiReconciliationID  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call reconciliationGetCommunicationsendersV1Async(@javax.annotation.Nonnull Integer pkiReconciliationID, final ApiCallback<ReconciliationGetCommunicationsendersV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = reconciliationGetCommunicationsendersV1ValidateBeforeCall(pkiReconciliationID, _callback);
+        Type localVarReturnType = new TypeToken<ReconciliationGetCommunicationsendersV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

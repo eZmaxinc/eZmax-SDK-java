@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * A Customer Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T14:13:41.766962896Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class CustomerResponseCompound {
   public static final String SERIALIZED_NAME_PKI_CUSTOMER_I_D = "pkiCustomerID";
   @SerializedName(SERIALIZED_NAME_PKI_CUSTOMER_I_D)
@@ -65,7 +65,7 @@ public class CustomerResponseCompound {
 
   public static final String SERIALIZED_NAME_FKI_CUSTOMERGROUP_I_D = "fkiCustomergroupID";
   @SerializedName(SERIALIZED_NAME_FKI_CUSTOMERGROUP_I_D)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiCustomergroupID;
 
   public static final String SERIALIZED_NAME_S_CUSTOMER_NAME = "sCustomerName";
@@ -90,7 +90,7 @@ public class CustomerResponseCompound {
 
   public static final String SERIALIZED_NAME_FKI_IMAGE_I_D = "fkiImageID";
   @SerializedName(SERIALIZED_NAME_FKI_IMAGE_I_D)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiImageID;
 
   public static final String SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D = "fkiGlaccountcontainerID";
@@ -115,12 +115,12 @@ public class CustomerResponseCompound {
 
   public static final String SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D = "fkiElectronicfundstransferbankaccountID";
   @SerializedName(SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiElectronicfundstransferbankaccountID;
 
   public static final String SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D_DIRECTDEBIT = "fkiElectronicfundstransferbankaccountIDDirectdebit";
   @SerializedName(SERIALIZED_NAME_FKI_ELECTRONICFUNDSTRANSFERBANKACCOUNT_I_D_DIRECTDEBIT)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiElectronicfundstransferbankaccountIDDirectdebit;
 
   public static final String SERIALIZED_NAME_FKI_SENDINGMETHOD_I_D = "fkiSendingmethodID";
@@ -140,52 +140,52 @@ public class CustomerResponseCompound {
 
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D_VARIABLEEXPENSECHARGETO = "fkiAgentIDVariableexpensechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D_VARIABLEEXPENSECHARGETO)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiAgentIDVariableexpensechargeto;
 
   public static final String SERIALIZED_NAME_FKI_BROKER_I_D_VARIABLEEXPENSECHARGETO = "fkiBrokerIDVariableexpensechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D_VARIABLEEXPENSECHARGETO)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiBrokerIDVariableexpensechargeto;
 
   public static final String SERIALIZED_NAME_FKI_CUSTOMER_I_D_VARIABLEEXPENSECHARGETO = "fkiCustomerIDVariableexpensechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_CUSTOMER_I_D_VARIABLEEXPENSECHARGETO)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiCustomerIDVariableexpensechargeto;
 
   public static final String SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_VARIABLEEXPENSECHARGETO = "fkiGlaccountcontainerIDVariableexpensechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_VARIABLEEXPENSECHARGETO)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiGlaccountcontainerIDVariableexpensechargeto;
 
   public static final String SERIALIZED_NAME_FKI_AGENT_I_D_SUPPLYCHARGECHARGETO = "fkiAgentIDSupplychargechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_AGENT_I_D_SUPPLYCHARGECHARGETO)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiAgentIDSupplychargechargeto;
 
   public static final String SERIALIZED_NAME_FKI_BROKER_I_D_SUPPLYCHARGECHARGETO = "fkiBrokerIDSupplychargechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_BROKER_I_D_SUPPLYCHARGECHARGETO)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiBrokerIDSupplychargechargeto;
 
   public static final String SERIALIZED_NAME_FKI_CUSTOMER_I_D_SUPPLYCHARGECHARGETO = "fkiCustomerIDSupplychargechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_CUSTOMER_I_D_SUPPLYCHARGECHARGETO)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiCustomerIDSupplychargechargeto;
 
   public static final String SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_SUPPLYCHARGECHARGETO = "fkiGlaccountcontainerIDSupplychargechargeto";
   @SerializedName(SERIALIZED_NAME_FKI_GLACCOUNTCONTAINER_I_D_SUPPLYCHARGECHARGETO)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiGlaccountcontainerIDSupplychargechargeto;
 
   public static final String SERIALIZED_NAME_FKI_INVOICEALTERNATELOGO_I_D = "fkiInvoicealternatelogoID";
   @SerializedName(SERIALIZED_NAME_FKI_INVOICEALTERNATELOGO_I_D)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiInvoicealternatelogoID;
 
   public static final String SERIALIZED_NAME_FKI_SYNCHRONIZATIONLINKSERVER_I_D = "fkiSynchronizationlinkserverID";
   @SerializedName(SERIALIZED_NAME_FKI_SYNCHRONIZATIONLINKSERVER_I_D)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private Integer fkiSynchronizationlinkserverID;
 
   public static final String SERIALIZED_NAME_EFKI_USER_I_D = "efkiUserID";
@@ -205,7 +205,7 @@ public class CustomerResponseCompound {
 
   public static final String SERIALIZED_NAME_D_CUSTOMER_FULLTIMEEQUIVALENT = "dCustomerFulltimeequivalent";
   @SerializedName(SERIALIZED_NAME_D_CUSTOMER_FULLTIMEEQUIVALENT)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private String dCustomerFulltimeequivalent;
 
   public static final String SERIALIZED_NAME_I_CUSTOMER_PHOTOCOPIERCODE = "iCustomerPhotocopiercode";
@@ -235,7 +235,7 @@ public class CustomerResponseCompound {
 
   public static final String SERIALIZED_NAME_DT_CUSTOMER_BIRTHDATE = "dtCustomerBirthdate";
   @SerializedName(SERIALIZED_NAME_DT_CUSTOMER_BIRTHDATE)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private String dtCustomerBirthdate;
 
   public static final String SERIALIZED_NAME_DT_CUSTOMER_TRANSFER = "dtCustomerTransfer";
@@ -250,7 +250,7 @@ public class CustomerResponseCompound {
 
   public static final String SERIALIZED_NAME_DT_CUSTOMER_TRANSFERSURVEY = "dtCustomerTransfersurvey";
   @SerializedName(SERIALIZED_NAME_DT_CUSTOMER_TRANSFERSURVEY)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private String dtCustomerTransfersurvey;
 
   public static final String SERIALIZED_NAME_B_CUSTOMER_ISACTIVE = "bCustomerIsactive";
@@ -357,7 +357,7 @@ public class CustomerResponseCompound {
   }
 
 
-  public CustomerResponseCompound fkiCustomergroupID(@javax.annotation.Nonnull Integer fkiCustomergroupID) {
+  public CustomerResponseCompound fkiCustomergroupID(@javax.annotation.Nullable Integer fkiCustomergroupID) {
     this.fkiCustomergroupID = fkiCustomergroupID;
     return this;
   }
@@ -368,12 +368,12 @@ public class CustomerResponseCompound {
    * maximum: 255
    * @return fkiCustomergroupID
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiCustomergroupID() {
     return fkiCustomergroupID;
   }
 
-  public void setFkiCustomergroupID(@javax.annotation.Nonnull Integer fkiCustomergroupID) {
+  public void setFkiCustomergroupID(@javax.annotation.Nullable Integer fkiCustomergroupID) {
     this.fkiCustomergroupID = fkiCustomergroupID;
   }
 
@@ -458,7 +458,7 @@ public class CustomerResponseCompound {
   }
 
 
-  public CustomerResponseCompound fkiImageID(@javax.annotation.Nonnull Integer fkiImageID) {
+  public CustomerResponseCompound fkiImageID(@javax.annotation.Nullable Integer fkiImageID) {
     this.fkiImageID = fkiImageID;
     return this;
   }
@@ -467,12 +467,12 @@ public class CustomerResponseCompound {
    * The unique ID of the Image
    * @return fkiImageID
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiImageID() {
     return fkiImageID;
   }
 
-  public void setFkiImageID(@javax.annotation.Nonnull Integer fkiImageID) {
+  public void setFkiImageID(@javax.annotation.Nullable Integer fkiImageID) {
     this.fkiImageID = fkiImageID;
   }
 
@@ -559,7 +559,7 @@ public class CustomerResponseCompound {
   }
 
 
-  public CustomerResponseCompound fkiElectronicfundstransferbankaccountID(@javax.annotation.Nonnull Integer fkiElectronicfundstransferbankaccountID) {
+  public CustomerResponseCompound fkiElectronicfundstransferbankaccountID(@javax.annotation.Nullable Integer fkiElectronicfundstransferbankaccountID) {
     this.fkiElectronicfundstransferbankaccountID = fkiElectronicfundstransferbankaccountID;
     return this;
   }
@@ -570,17 +570,17 @@ public class CustomerResponseCompound {
    * maximum: 65535
    * @return fkiElectronicfundstransferbankaccountID
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiElectronicfundstransferbankaccountID() {
     return fkiElectronicfundstransferbankaccountID;
   }
 
-  public void setFkiElectronicfundstransferbankaccountID(@javax.annotation.Nonnull Integer fkiElectronicfundstransferbankaccountID) {
+  public void setFkiElectronicfundstransferbankaccountID(@javax.annotation.Nullable Integer fkiElectronicfundstransferbankaccountID) {
     this.fkiElectronicfundstransferbankaccountID = fkiElectronicfundstransferbankaccountID;
   }
 
 
-  public CustomerResponseCompound fkiElectronicfundstransferbankaccountIDDirectdebit(@javax.annotation.Nonnull Integer fkiElectronicfundstransferbankaccountIDDirectdebit) {
+  public CustomerResponseCompound fkiElectronicfundstransferbankaccountIDDirectdebit(@javax.annotation.Nullable Integer fkiElectronicfundstransferbankaccountIDDirectdebit) {
     this.fkiElectronicfundstransferbankaccountIDDirectdebit = fkiElectronicfundstransferbankaccountIDDirectdebit;
     return this;
   }
@@ -591,12 +591,12 @@ public class CustomerResponseCompound {
    * maximum: 65535
    * @return fkiElectronicfundstransferbankaccountIDDirectdebit
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiElectronicfundstransferbankaccountIDDirectdebit() {
     return fkiElectronicfundstransferbankaccountIDDirectdebit;
   }
 
-  public void setFkiElectronicfundstransferbankaccountIDDirectdebit(@javax.annotation.Nonnull Integer fkiElectronicfundstransferbankaccountIDDirectdebit) {
+  public void setFkiElectronicfundstransferbankaccountIDDirectdebit(@javax.annotation.Nullable Integer fkiElectronicfundstransferbankaccountIDDirectdebit) {
     this.fkiElectronicfundstransferbankaccountIDDirectdebit = fkiElectronicfundstransferbankaccountIDDirectdebit;
   }
 
@@ -664,7 +664,7 @@ public class CustomerResponseCompound {
   }
 
 
-  public CustomerResponseCompound fkiAgentIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiAgentIDVariableexpensechargeto) {
+  public CustomerResponseCompound fkiAgentIDVariableexpensechargeto(@javax.annotation.Nullable Integer fkiAgentIDVariableexpensechargeto) {
     this.fkiAgentIDVariableexpensechargeto = fkiAgentIDVariableexpensechargeto;
     return this;
   }
@@ -674,17 +674,17 @@ public class CustomerResponseCompound {
    * minimum: 0
    * @return fkiAgentIDVariableexpensechargeto
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiAgentIDVariableexpensechargeto() {
     return fkiAgentIDVariableexpensechargeto;
   }
 
-  public void setFkiAgentIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiAgentIDVariableexpensechargeto) {
+  public void setFkiAgentIDVariableexpensechargeto(@javax.annotation.Nullable Integer fkiAgentIDVariableexpensechargeto) {
     this.fkiAgentIDVariableexpensechargeto = fkiAgentIDVariableexpensechargeto;
   }
 
 
-  public CustomerResponseCompound fkiBrokerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiBrokerIDVariableexpensechargeto) {
+  public CustomerResponseCompound fkiBrokerIDVariableexpensechargeto(@javax.annotation.Nullable Integer fkiBrokerIDVariableexpensechargeto) {
     this.fkiBrokerIDVariableexpensechargeto = fkiBrokerIDVariableexpensechargeto;
     return this;
   }
@@ -694,17 +694,17 @@ public class CustomerResponseCompound {
    * minimum: 0
    * @return fkiBrokerIDVariableexpensechargeto
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiBrokerIDVariableexpensechargeto() {
     return fkiBrokerIDVariableexpensechargeto;
   }
 
-  public void setFkiBrokerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiBrokerIDVariableexpensechargeto) {
+  public void setFkiBrokerIDVariableexpensechargeto(@javax.annotation.Nullable Integer fkiBrokerIDVariableexpensechargeto) {
     this.fkiBrokerIDVariableexpensechargeto = fkiBrokerIDVariableexpensechargeto;
   }
 
 
-  public CustomerResponseCompound fkiCustomerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiCustomerIDVariableexpensechargeto) {
+  public CustomerResponseCompound fkiCustomerIDVariableexpensechargeto(@javax.annotation.Nullable Integer fkiCustomerIDVariableexpensechargeto) {
     this.fkiCustomerIDVariableexpensechargeto = fkiCustomerIDVariableexpensechargeto;
     return this;
   }
@@ -714,17 +714,17 @@ public class CustomerResponseCompound {
    * minimum: 0
    * @return fkiCustomerIDVariableexpensechargeto
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiCustomerIDVariableexpensechargeto() {
     return fkiCustomerIDVariableexpensechargeto;
   }
 
-  public void setFkiCustomerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiCustomerIDVariableexpensechargeto) {
+  public void setFkiCustomerIDVariableexpensechargeto(@javax.annotation.Nullable Integer fkiCustomerIDVariableexpensechargeto) {
     this.fkiCustomerIDVariableexpensechargeto = fkiCustomerIDVariableexpensechargeto;
   }
 
 
-  public CustomerResponseCompound fkiGlaccountcontainerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiGlaccountcontainerIDVariableexpensechargeto) {
+  public CustomerResponseCompound fkiGlaccountcontainerIDVariableexpensechargeto(@javax.annotation.Nullable Integer fkiGlaccountcontainerIDVariableexpensechargeto) {
     this.fkiGlaccountcontainerIDVariableexpensechargeto = fkiGlaccountcontainerIDVariableexpensechargeto;
     return this;
   }
@@ -734,17 +734,17 @@ public class CustomerResponseCompound {
    * minimum: 0
    * @return fkiGlaccountcontainerIDVariableexpensechargeto
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiGlaccountcontainerIDVariableexpensechargeto() {
     return fkiGlaccountcontainerIDVariableexpensechargeto;
   }
 
-  public void setFkiGlaccountcontainerIDVariableexpensechargeto(@javax.annotation.Nonnull Integer fkiGlaccountcontainerIDVariableexpensechargeto) {
+  public void setFkiGlaccountcontainerIDVariableexpensechargeto(@javax.annotation.Nullable Integer fkiGlaccountcontainerIDVariableexpensechargeto) {
     this.fkiGlaccountcontainerIDVariableexpensechargeto = fkiGlaccountcontainerIDVariableexpensechargeto;
   }
 
 
-  public CustomerResponseCompound fkiAgentIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiAgentIDSupplychargechargeto) {
+  public CustomerResponseCompound fkiAgentIDSupplychargechargeto(@javax.annotation.Nullable Integer fkiAgentIDSupplychargechargeto) {
     this.fkiAgentIDSupplychargechargeto = fkiAgentIDSupplychargechargeto;
     return this;
   }
@@ -754,17 +754,17 @@ public class CustomerResponseCompound {
    * minimum: 0
    * @return fkiAgentIDSupplychargechargeto
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiAgentIDSupplychargechargeto() {
     return fkiAgentIDSupplychargechargeto;
   }
 
-  public void setFkiAgentIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiAgentIDSupplychargechargeto) {
+  public void setFkiAgentIDSupplychargechargeto(@javax.annotation.Nullable Integer fkiAgentIDSupplychargechargeto) {
     this.fkiAgentIDSupplychargechargeto = fkiAgentIDSupplychargechargeto;
   }
 
 
-  public CustomerResponseCompound fkiBrokerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiBrokerIDSupplychargechargeto) {
+  public CustomerResponseCompound fkiBrokerIDSupplychargechargeto(@javax.annotation.Nullable Integer fkiBrokerIDSupplychargechargeto) {
     this.fkiBrokerIDSupplychargechargeto = fkiBrokerIDSupplychargechargeto;
     return this;
   }
@@ -774,17 +774,17 @@ public class CustomerResponseCompound {
    * minimum: 0
    * @return fkiBrokerIDSupplychargechargeto
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiBrokerIDSupplychargechargeto() {
     return fkiBrokerIDSupplychargechargeto;
   }
 
-  public void setFkiBrokerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiBrokerIDSupplychargechargeto) {
+  public void setFkiBrokerIDSupplychargechargeto(@javax.annotation.Nullable Integer fkiBrokerIDSupplychargechargeto) {
     this.fkiBrokerIDSupplychargechargeto = fkiBrokerIDSupplychargechargeto;
   }
 
 
-  public CustomerResponseCompound fkiCustomerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiCustomerIDSupplychargechargeto) {
+  public CustomerResponseCompound fkiCustomerIDSupplychargechargeto(@javax.annotation.Nullable Integer fkiCustomerIDSupplychargechargeto) {
     this.fkiCustomerIDSupplychargechargeto = fkiCustomerIDSupplychargechargeto;
     return this;
   }
@@ -794,17 +794,17 @@ public class CustomerResponseCompound {
    * minimum: 0
    * @return fkiCustomerIDSupplychargechargeto
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiCustomerIDSupplychargechargeto() {
     return fkiCustomerIDSupplychargechargeto;
   }
 
-  public void setFkiCustomerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiCustomerIDSupplychargechargeto) {
+  public void setFkiCustomerIDSupplychargechargeto(@javax.annotation.Nullable Integer fkiCustomerIDSupplychargechargeto) {
     this.fkiCustomerIDSupplychargechargeto = fkiCustomerIDSupplychargechargeto;
   }
 
 
-  public CustomerResponseCompound fkiGlaccountcontainerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiGlaccountcontainerIDSupplychargechargeto) {
+  public CustomerResponseCompound fkiGlaccountcontainerIDSupplychargechargeto(@javax.annotation.Nullable Integer fkiGlaccountcontainerIDSupplychargechargeto) {
     this.fkiGlaccountcontainerIDSupplychargechargeto = fkiGlaccountcontainerIDSupplychargechargeto;
     return this;
   }
@@ -814,17 +814,17 @@ public class CustomerResponseCompound {
    * minimum: 0
    * @return fkiGlaccountcontainerIDSupplychargechargeto
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiGlaccountcontainerIDSupplychargechargeto() {
     return fkiGlaccountcontainerIDSupplychargechargeto;
   }
 
-  public void setFkiGlaccountcontainerIDSupplychargechargeto(@javax.annotation.Nonnull Integer fkiGlaccountcontainerIDSupplychargechargeto) {
+  public void setFkiGlaccountcontainerIDSupplychargechargeto(@javax.annotation.Nullable Integer fkiGlaccountcontainerIDSupplychargechargeto) {
     this.fkiGlaccountcontainerIDSupplychargechargeto = fkiGlaccountcontainerIDSupplychargechargeto;
   }
 
 
-  public CustomerResponseCompound fkiInvoicealternatelogoID(@javax.annotation.Nonnull Integer fkiInvoicealternatelogoID) {
+  public CustomerResponseCompound fkiInvoicealternatelogoID(@javax.annotation.Nullable Integer fkiInvoicealternatelogoID) {
     this.fkiInvoicealternatelogoID = fkiInvoicealternatelogoID;
     return this;
   }
@@ -835,17 +835,17 @@ public class CustomerResponseCompound {
    * maximum: 255
    * @return fkiInvoicealternatelogoID
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiInvoicealternatelogoID() {
     return fkiInvoicealternatelogoID;
   }
 
-  public void setFkiInvoicealternatelogoID(@javax.annotation.Nonnull Integer fkiInvoicealternatelogoID) {
+  public void setFkiInvoicealternatelogoID(@javax.annotation.Nullable Integer fkiInvoicealternatelogoID) {
     this.fkiInvoicealternatelogoID = fkiInvoicealternatelogoID;
   }
 
 
-  public CustomerResponseCompound fkiSynchronizationlinkserverID(@javax.annotation.Nonnull Integer fkiSynchronizationlinkserverID) {
+  public CustomerResponseCompound fkiSynchronizationlinkserverID(@javax.annotation.Nullable Integer fkiSynchronizationlinkserverID) {
     this.fkiSynchronizationlinkserverID = fkiSynchronizationlinkserverID;
     return this;
   }
@@ -856,12 +856,12 @@ public class CustomerResponseCompound {
    * maximum: 255
    * @return fkiSynchronizationlinkserverID
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public Integer getFkiSynchronizationlinkserverID() {
     return fkiSynchronizationlinkserverID;
   }
 
-  public void setFkiSynchronizationlinkserverID(@javax.annotation.Nonnull Integer fkiSynchronizationlinkserverID) {
+  public void setFkiSynchronizationlinkserverID(@javax.annotation.Nullable Integer fkiSynchronizationlinkserverID) {
     this.fkiSynchronizationlinkserverID = fkiSynchronizationlinkserverID;
   }
 
@@ -924,7 +924,7 @@ public class CustomerResponseCompound {
   }
 
 
-  public CustomerResponseCompound dCustomerFulltimeequivalent(@javax.annotation.Nonnull String dCustomerFulltimeequivalent) {
+  public CustomerResponseCompound dCustomerFulltimeequivalent(@javax.annotation.Nullable String dCustomerFulltimeequivalent) {
     this.dCustomerFulltimeequivalent = dCustomerFulltimeequivalent;
     return this;
   }
@@ -933,12 +933,12 @@ public class CustomerResponseCompound {
    * The fulltimeequivalent of the Customer
    * @return dCustomerFulltimeequivalent
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getdCustomerFulltimeequivalent() {
     return dCustomerFulltimeequivalent;
   }
 
-  public void setdCustomerFulltimeequivalent(@javax.annotation.Nonnull String dCustomerFulltimeequivalent) {
+  public void setdCustomerFulltimeequivalent(@javax.annotation.Nullable String dCustomerFulltimeequivalent) {
     this.dCustomerFulltimeequivalent = dCustomerFulltimeequivalent;
   }
 
@@ -1046,7 +1046,7 @@ public class CustomerResponseCompound {
   }
 
 
-  public CustomerResponseCompound dtCustomerBirthdate(@javax.annotation.Nonnull String dtCustomerBirthdate) {
+  public CustomerResponseCompound dtCustomerBirthdate(@javax.annotation.Nullable String dtCustomerBirthdate) {
     this.dtCustomerBirthdate = dtCustomerBirthdate;
     return this;
   }
@@ -1055,12 +1055,12 @@ public class CustomerResponseCompound {
    * The birthdate of the Customer
    * @return dtCustomerBirthdate
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getDtCustomerBirthdate() {
     return dtCustomerBirthdate;
   }
 
-  public void setDtCustomerBirthdate(@javax.annotation.Nonnull String dtCustomerBirthdate) {
+  public void setDtCustomerBirthdate(@javax.annotation.Nullable String dtCustomerBirthdate) {
     this.dtCustomerBirthdate = dtCustomerBirthdate;
   }
 
@@ -1103,7 +1103,7 @@ public class CustomerResponseCompound {
   }
 
 
-  public CustomerResponseCompound dtCustomerTransfersurvey(@javax.annotation.Nonnull String dtCustomerTransfersurvey) {
+  public CustomerResponseCompound dtCustomerTransfersurvey(@javax.annotation.Nullable String dtCustomerTransfersurvey) {
     this.dtCustomerTransfersurvey = dtCustomerTransfersurvey;
     return this;
   }
@@ -1112,12 +1112,12 @@ public class CustomerResponseCompound {
    * The transfersurvey of the Customer
    * @return dtCustomerTransfersurvey
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public String getDtCustomerTransfersurvey() {
     return dtCustomerTransfersurvey;
   }
 
-  public void setDtCustomerTransfersurvey(@javax.annotation.Nonnull String dtCustomerTransfersurvey) {
+  public void setDtCustomerTransfersurvey(@javax.annotation.Nullable String dtCustomerTransfersurvey) {
     this.dtCustomerTransfersurvey = dtCustomerTransfersurvey;
   }
 
@@ -1496,7 +1496,7 @@ public class CustomerResponseCompound {
     openapiFields = new HashSet<String>(Arrays.asList("pkiCustomerID", "fkiCompanyID", "fkiCustomergroupID", "sCustomerName", "sCustomerNote", "fkiContactinformationsID", "fkiContactcontainerID", "fkiImageID", "fkiGlaccountcontainerID", "fkiLanguageID", "fkiDepartmentID", "fkiPaymentmethodID", "fkiElectronicfundstransferbankaccountID", "fkiElectronicfundstransferbankaccountIDDirectdebit", "fkiSendingmethodID", "fkiTaxassignmentID", "fkiAttendancestatusID", "fkiAgentIDVariableexpensechargeto", "fkiBrokerIDVariableexpensechargeto", "fkiCustomerIDVariableexpensechargeto", "fkiGlaccountcontainerIDVariableexpensechargeto", "fkiAgentIDSupplychargechargeto", "fkiBrokerIDSupplychargechargeto", "fkiCustomerIDSupplychargechargeto", "fkiGlaccountcontainerIDSupplychargechargeto", "fkiInvoicealternatelogoID", "fkiSynchronizationlinkserverID", "efkiUserID", "efksCustomerCode", "sCustomerCode", "dCustomerFulltimeequivalent", "iCustomerPhotocopiercode", "iCustomerLongdistancecode", "iCustomerTimewindowstart", "iCustomerTimewindowend", "dCustomerMinimumchargeableinterests", "dtCustomerBirthdate", "dtCustomerTransfer", "dtCustomerTransferappointment", "dtCustomerTransfersurvey", "bCustomerIsactive", "bCustomerVariableexpensefinanced", "bCustomerVariableexpensefinancedtaxes", "bCustomerSupplychargefinanced", "bCustomerSupplychargefinancedtaxes", "bCustomerAttendance", "eCustomerType", "eCustomerMarketingcorrespondence", "bCustomerBlackcopycarbon", "bCustomerUnsubscribeinfo", "tCustomerComment", "IMPORTID"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiCustomerID", "fkiCompanyID", "fkiCustomergroupID", "sCustomerName", "fkiContactinformationsID", "fkiContactcontainerID", "fkiImageID", "fkiGlaccountcontainerID", "fkiLanguageID", "fkiDepartmentID", "fkiPaymentmethodID", "fkiElectronicfundstransferbankaccountID", "fkiElectronicfundstransferbankaccountIDDirectdebit", "fkiSendingmethodID", "fkiTaxassignmentID", "fkiAttendancestatusID", "fkiAgentIDVariableexpensechargeto", "fkiBrokerIDVariableexpensechargeto", "fkiCustomerIDVariableexpensechargeto", "fkiGlaccountcontainerIDVariableexpensechargeto", "fkiAgentIDSupplychargechargeto", "fkiBrokerIDSupplychargechargeto", "fkiCustomerIDSupplychargechargeto", "fkiGlaccountcontainerIDSupplychargechargeto", "fkiInvoicealternatelogoID", "fkiSynchronizationlinkserverID", "sCustomerCode", "dCustomerFulltimeequivalent", "iCustomerPhotocopiercode", "iCustomerLongdistancecode", "iCustomerTimewindowstart", "iCustomerTimewindowend", "dCustomerMinimumchargeableinterests", "dtCustomerBirthdate", "dtCustomerTransfer", "dtCustomerTransferappointment", "dtCustomerTransfersurvey", "bCustomerIsactive", "bCustomerVariableexpensefinanced", "bCustomerVariableexpensefinancedtaxes", "bCustomerSupplychargefinanced", "bCustomerSupplychargefinancedtaxes", "bCustomerAttendance", "eCustomerType", "eCustomerMarketingcorrespondence", "bCustomerBlackcopycarbon", "bCustomerUnsubscribeinfo", "tCustomerComment"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiCustomerID", "fkiCompanyID", "sCustomerName", "fkiContactinformationsID", "fkiContactcontainerID", "fkiGlaccountcontainerID", "fkiLanguageID", "fkiDepartmentID", "fkiPaymentmethodID", "fkiSendingmethodID", "fkiTaxassignmentID", "fkiAttendancestatusID", "sCustomerCode", "iCustomerPhotocopiercode", "iCustomerLongdistancecode", "iCustomerTimewindowstart", "iCustomerTimewindowend", "dCustomerMinimumchargeableinterests", "dtCustomerTransfer", "dtCustomerTransferappointment", "bCustomerIsactive", "bCustomerVariableexpensefinanced", "bCustomerVariableexpensefinancedtaxes", "bCustomerSupplychargefinanced", "bCustomerSupplychargefinancedtaxes", "bCustomerAttendance", "eCustomerType", "eCustomerMarketingcorrespondence", "bCustomerBlackcopycarbon", "bCustomerUnsubscribeinfo", "tCustomerComment"));
   }
 
   /**
@@ -1539,13 +1539,13 @@ public class CustomerResponseCompound {
       if (!jsonObj.get("sCustomerCode").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sCustomerCode` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sCustomerCode").toString()));
       }
-      if (!jsonObj.get("dCustomerFulltimeequivalent").isJsonPrimitive()) {
+      if ((jsonObj.get("dCustomerFulltimeequivalent") != null && !jsonObj.get("dCustomerFulltimeequivalent").isJsonNull()) && !jsonObj.get("dCustomerFulltimeequivalent").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dCustomerFulltimeequivalent` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dCustomerFulltimeequivalent").toString()));
       }
       if (!jsonObj.get("dCustomerMinimumchargeableinterests").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dCustomerMinimumchargeableinterests` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dCustomerMinimumchargeableinterests").toString()));
       }
-      if (!jsonObj.get("dtCustomerBirthdate").isJsonPrimitive()) {
+      if ((jsonObj.get("dtCustomerBirthdate") != null && !jsonObj.get("dtCustomerBirthdate").isJsonNull()) && !jsonObj.get("dtCustomerBirthdate").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtCustomerBirthdate` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCustomerBirthdate").toString()));
       }
       if (!jsonObj.get("dtCustomerTransfer").isJsonPrimitive()) {
@@ -1554,7 +1554,7 @@ public class CustomerResponseCompound {
       if (!jsonObj.get("dtCustomerTransferappointment").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtCustomerTransferappointment` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCustomerTransferappointment").toString()));
       }
-      if (!jsonObj.get("dtCustomerTransfersurvey").isJsonPrimitive()) {
+      if ((jsonObj.get("dtCustomerTransfersurvey") != null && !jsonObj.get("dtCustomerTransfersurvey").isJsonNull()) && !jsonObj.get("dtCustomerTransfersurvey").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `dtCustomerTransfersurvey` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dtCustomerTransfersurvey").toString()));
       }
       // validate the required field `eCustomerType`

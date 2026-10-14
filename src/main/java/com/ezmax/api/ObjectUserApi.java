@@ -931,6 +931,7 @@ public class ObjectUserApi {
      * Build call for userGetAutocompleteV2
      * @param sSelector The type of Users to return (required)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param fkiAttachmentID Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @param _callback Callback for upload/download progress
@@ -943,7 +944,7 @@ public class ObjectUserApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call userGetAutocompleteV2Call(@javax.annotation.Nonnull String sSelector, @javax.annotation.Nullable String eFilterActive, @javax.annotation.Nullable String sQuery, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call userGetAutocompleteV2Call(@javax.annotation.Nonnull String sSelector, @javax.annotation.Nullable String eFilterActive, @javax.annotation.Nullable String fkiAttachmentID, @javax.annotation.Nullable String sQuery, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -971,6 +972,10 @@ public class ObjectUserApi {
 
         if (eFilterActive != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("eFilterActive", eFilterActive));
+        }
+
+        if (fkiAttachmentID != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("fkiAttachmentID", fkiAttachmentID));
         }
 
         if (sQuery != null) {
@@ -1002,13 +1007,13 @@ public class ObjectUserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call userGetAutocompleteV2ValidateBeforeCall(@javax.annotation.Nonnull String sSelector, @javax.annotation.Nullable String eFilterActive, @javax.annotation.Nullable String sQuery, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call userGetAutocompleteV2ValidateBeforeCall(@javax.annotation.Nonnull String sSelector, @javax.annotation.Nullable String eFilterActive, @javax.annotation.Nullable String fkiAttachmentID, @javax.annotation.Nullable String sQuery, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, final ApiCallback _callback) throws ApiException {
         // verify the required parameter 'sSelector' is set
         if (sSelector == null) {
             throw new ApiException("Missing the required parameter 'sSelector' when calling userGetAutocompleteV2(Async)");
         }
 
-        return userGetAutocompleteV2Call(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
+        return userGetAutocompleteV2Call(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage, _callback);
 
     }
 
@@ -1017,6 +1022,7 @@ public class ObjectUserApi {
      * Get the list of User to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Users to return (required)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param fkiAttachmentID Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return UserGetAutocompleteV2Response
@@ -1028,8 +1034,8 @@ public class ObjectUserApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public UserGetAutocompleteV2Response userGetAutocompleteV2(@javax.annotation.Nonnull String sSelector, @javax.annotation.Nullable String eFilterActive, @javax.annotation.Nullable String sQuery, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage) throws ApiException {
-        ApiResponse<UserGetAutocompleteV2Response> localVarResp = userGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, sQuery, acceptLanguage);
+    public UserGetAutocompleteV2Response userGetAutocompleteV2(@javax.annotation.Nonnull String sSelector, @javax.annotation.Nullable String eFilterActive, @javax.annotation.Nullable String fkiAttachmentID, @javax.annotation.Nullable String sQuery, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage) throws ApiException {
+        ApiResponse<UserGetAutocompleteV2Response> localVarResp = userGetAutocompleteV2WithHttpInfo(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage);
         return localVarResp.getData();
     }
 
@@ -1038,6 +1044,7 @@ public class ObjectUserApi {
      * Get the list of User to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Users to return (required)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param fkiAttachmentID Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @return ApiResponse&lt;UserGetAutocompleteV2Response&gt;
@@ -1049,8 +1056,8 @@ public class ObjectUserApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<UserGetAutocompleteV2Response> userGetAutocompleteV2WithHttpInfo(@javax.annotation.Nonnull String sSelector, @javax.annotation.Nullable String eFilterActive, @javax.annotation.Nullable String sQuery, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage) throws ApiException {
-        okhttp3.Call localVarCall = userGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, null);
+    public ApiResponse<UserGetAutocompleteV2Response> userGetAutocompleteV2WithHttpInfo(@javax.annotation.Nonnull String sSelector, @javax.annotation.Nullable String eFilterActive, @javax.annotation.Nullable String fkiAttachmentID, @javax.annotation.Nullable String sQuery, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage) throws ApiException {
+        okhttp3.Call localVarCall = userGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage, null);
         Type localVarReturnType = new TypeToken<UserGetAutocompleteV2Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1060,6 +1067,7 @@ public class ObjectUserApi {
      * Get the list of User to be used in a dropdown or autocomplete control.
      * @param sSelector The type of Users to return (required)
      * @param eFilterActive Specify which results we want to display. (optional, default to Active)
+     * @param fkiAttachmentID Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. (optional)
      * @param sQuery Allow to filter the returned results (optional)
      * @param acceptLanguage  (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -1072,9 +1080,9 @@ public class ObjectUserApi {
         <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call userGetAutocompleteV2Async(@javax.annotation.Nonnull String sSelector, @javax.annotation.Nullable String eFilterActive, @javax.annotation.Nullable String sQuery, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, final ApiCallback<UserGetAutocompleteV2Response> _callback) throws ApiException {
+    public okhttp3.Call userGetAutocompleteV2Async(@javax.annotation.Nonnull String sSelector, @javax.annotation.Nullable String eFilterActive, @javax.annotation.Nullable String fkiAttachmentID, @javax.annotation.Nullable String sQuery, @javax.annotation.Nullable HeaderAcceptLanguage acceptLanguage, final ApiCallback<UserGetAutocompleteV2Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = userGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, sQuery, acceptLanguage, _callback);
+        okhttp3.Call localVarCall = userGetAutocompleteV2ValidateBeforeCall(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage, _callback);
         Type localVarReturnType = new TypeToken<UserGetAutocompleteV2Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

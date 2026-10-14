@@ -451,7 +451,7 @@ public class Example {
 
 <a id="userGetAutocompleteV2"></a>
 # **userGetAutocompleteV2**
-> UserGetAutocompleteV2Response userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage)
+> UserGetAutocompleteV2Response userGetAutocompleteV2(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage)
 
 Retrieve Users and IDs
 
@@ -481,10 +481,11 @@ public class Example {
     ObjectUserApi apiInstance = new ObjectUserApi(defaultClient);
     String sSelector = "AgentBrokerAssistant"; // String | The type of Users to return
     String eFilterActive = "All"; // String | Specify which results we want to display.
+    String fkiAttachmentID = "fkiAttachmentID_example"; // String | Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser.
     String sQuery = "sQuery_example"; // String | Allow to filter the returned results
     HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
     try {
-      UserGetAutocompleteV2Response result = apiInstance.userGetAutocompleteV2(sSelector, eFilterActive, sQuery, acceptLanguage);
+      UserGetAutocompleteV2Response result = apiInstance.userGetAutocompleteV2(sSelector, eFilterActive, fkiAttachmentID, sQuery, acceptLanguage);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ObjectUserApi#userGetAutocompleteV2");
@@ -501,8 +502,9 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **sSelector** | **String**| The type of Users to return | [enum: AgentBrokerAssistant, AgentBrokerEmployeeEzsignUserNormalWithoutEzmaxpartner, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, ClonableUsers, EzsignuserBuiltIn, Ezsignuser, Normal, UsergroupDelegated] |
+| **sSelector** | **String**| The type of Users to return | [enum: AgentBrokerAssistant, AgentBrokerEmployeeEzsignUserNormalWithoutEzmaxpartner, AgentBrokerEmployeeEzsignUserNormal, AgentBrokerEmployeeNormalBuiltIn, AgentBrokerEzsignuserNormal, AttachmentSpecificUser, ClonableUsers, EzsignuserBuiltIn, Ezsignuser, Normal, UsergroupDelegated] |
 | **eFilterActive** | **String**| Specify which results we want to display. | [optional] [default to Active] [enum: All, Active, Inactive] |
+| **fkiAttachmentID** | **String**| Specify for which fkiAttachmentID we want to find users for. Only used when sSelector is AttachmentSpecificUser. | [optional] |
 | **sQuery** | **String**| Allow to filter the returned results | [optional] |
 | **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
 

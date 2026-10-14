@@ -12,6 +12,7 @@ A Communicationreference Object
 |**fkiBuyercontractID** | **Integer** | The unique ID of the Buyercontract |  [optional] |
 |**fkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder |  [optional] |
 |**fkiInscriptionID** | **Integer** | The unique ID of the Inscription. |  [optional] |
+|**fkiInscriptionnotauthenticatedID** | **Integer** | The unique ID of the Inscriptionnotauthenticated. |  [optional] |
 |**fkiInscriptiontempID** | **Integer** | The unique ID of the Inscriptiontemp |  [optional] |
 |**fkiInvoiceID** | **Integer** | The unique ID of the Invoice. |  [optional] |
 |**fkiOtherincomeID** | **Integer** | The unique ID of the Otherincome |  [optional] |

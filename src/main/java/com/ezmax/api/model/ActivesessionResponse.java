@@ -56,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * An Activesession Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T14:13:41.766962896Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class ActivesessionResponse {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -78,10 +78,20 @@ public class ActivesessionResponse {
   @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
+  public static final String SERIALIZED_NAME_FKI_COMPANY_I_D = "fkiCompanyID";
+  @SerializedName(SERIALIZED_NAME_FKI_COMPANY_I_D)
+  @javax.annotation.Nonnull
+  private Integer fkiCompanyID;
+
   public static final String SERIALIZED_NAME_S_COMPANY_NAME_X = "sCompanyNameX";
   @SerializedName(SERIALIZED_NAME_S_COMPANY_NAME_X)
   @javax.annotation.Nonnull
   private String sCompanyNameX;
+
+  public static final String SERIALIZED_NAME_FKI_DEPARTMENT_I_D = "fkiDepartmentID";
+  @SerializedName(SERIALIZED_NAME_FKI_DEPARTMENT_I_D)
+  @javax.annotation.Nonnull
+  private Integer fkiDepartmentID;
 
   public static final String SERIALIZED_NAME_S_DEPARTMENT_NAME_X = "sDepartmentNameX";
   @SerializedName(SERIALIZED_NAME_S_DEPARTMENT_NAME_X)
@@ -234,6 +244,27 @@ public class ActivesessionResponse {
   }
 
 
+  public ActivesessionResponse fkiCompanyID(@javax.annotation.Nonnull Integer fkiCompanyID) {
+    this.fkiCompanyID = fkiCompanyID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Company
+   * minimum: 1
+   * maximum: 255
+   * @return fkiCompanyID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiCompanyID() {
+    return fkiCompanyID;
+  }
+
+  public void setFkiCompanyID(@javax.annotation.Nonnull Integer fkiCompanyID) {
+    this.fkiCompanyID = fkiCompanyID;
+  }
+
+
   public ActivesessionResponse sCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
     return this;
@@ -250,6 +281,26 @@ public class ActivesessionResponse {
 
   public void setsCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
+  }
+
+
+  public ActivesessionResponse fkiDepartmentID(@javax.annotation.Nonnull Integer fkiDepartmentID) {
+    this.fkiDepartmentID = fkiDepartmentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Department
+   * minimum: 0
+   * @return fkiDepartmentID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiDepartmentID() {
+    return fkiDepartmentID;
+  }
+
+  public void setFkiDepartmentID(@javax.annotation.Nonnull Integer fkiDepartmentID) {
+    this.fkiDepartmentID = fkiDepartmentID;
   }
 
 
@@ -536,7 +587,9 @@ public class ActivesessionResponse {
         Objects.equals(this.eActivesessionOrigin, activesessionResponse.eActivesessionOrigin) &&
         Objects.equals(this.eActivesessionWeekdaystart, activesessionResponse.eActivesessionWeekdaystart) &&
         Objects.equals(this.fkiLanguageID, activesessionResponse.fkiLanguageID) &&
+        Objects.equals(this.fkiCompanyID, activesessionResponse.fkiCompanyID) &&
         Objects.equals(this.sCompanyNameX, activesessionResponse.sCompanyNameX) &&
+        Objects.equals(this.fkiDepartmentID, activesessionResponse.fkiDepartmentID) &&
         Objects.equals(this.sDepartmentNameX, activesessionResponse.sDepartmentNameX) &&
         Objects.equals(this.bActivesessionDebug, activesessionResponse.bActivesessionDebug) &&
         Objects.equals(this.bActivesessionIssuperadmin, activesessionResponse.bActivesessionIssuperadmin) &&
@@ -555,7 +608,7 @@ public class ActivesessionResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, bActivesessionAttachment, bActivesessionCanafe, bActivesessionFinancial, bActivesessionRealestatecompleted, eActivesessionEzsign, eActivesessionEzsignaccess, eActivesessionEzsignprepaid, eActivesessionRealestateinprogress, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID);
+    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, fkiCompanyID, sCompanyNameX, fkiDepartmentID, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, bActivesessionAttachment, bActivesessionCanafe, bActivesessionFinancial, bActivesessionRealestatecompleted, eActivesessionEzsign, eActivesessionEzsignaccess, eActivesessionEzsignprepaid, eActivesessionRealestateinprogress, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID);
   }
 
   @Override
@@ -566,7 +619,9 @@ public class ActivesessionResponse {
     sb.append("    eActivesessionOrigin: ").append(toIndentedString(eActivesessionOrigin)).append("\n");
     sb.append("    eActivesessionWeekdaystart: ").append(toIndentedString(eActivesessionWeekdaystart)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
+    sb.append("    fkiCompanyID: ").append(toIndentedString(fkiCompanyID)).append("\n");
     sb.append("    sCompanyNameX: ").append(toIndentedString(sCompanyNameX)).append("\n");
+    sb.append("    fkiDepartmentID: ").append(toIndentedString(fkiDepartmentID)).append("\n");
     sb.append("    sDepartmentNameX: ").append(toIndentedString(sDepartmentNameX)).append("\n");
     sb.append("    bActivesessionDebug: ").append(toIndentedString(bActivesessionDebug)).append("\n");
     sb.append("    bActivesessionIssuperadmin: ").append(toIndentedString(bActivesessionIssuperadmin)).append("\n");
@@ -599,10 +654,10 @@ public class ActivesessionResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("eActivesessionUsertype", "eActivesessionOrigin", "eActivesessionWeekdaystart", "fkiLanguageID", "sCompanyNameX", "sDepartmentNameX", "bActivesessionDebug", "bActivesessionIssuperadmin", "bActivesessionAttachment", "bActivesessionCanafe", "bActivesessionFinancial", "bActivesessionRealestatecompleted", "eActivesessionEzsign", "eActivesessionEzsignaccess", "eActivesessionEzsignprepaid", "eActivesessionRealestateinprogress", "pksCustomerCode", "fkiSystemconfigurationtypeID", "fkiSignatureID"));
+    openapiFields = new HashSet<String>(Arrays.asList("eActivesessionUsertype", "eActivesessionOrigin", "eActivesessionWeekdaystart", "fkiLanguageID", "fkiCompanyID", "sCompanyNameX", "fkiDepartmentID", "sDepartmentNameX", "bActivesessionDebug", "bActivesessionIssuperadmin", "bActivesessionAttachment", "bActivesessionCanafe", "bActivesessionFinancial", "bActivesessionRealestatecompleted", "eActivesessionEzsign", "eActivesessionEzsignaccess", "eActivesessionEzsignprepaid", "eActivesessionRealestateinprogress", "pksCustomerCode", "fkiSystemconfigurationtypeID", "fkiSignatureID"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("eActivesessionUsertype", "eActivesessionOrigin", "eActivesessionWeekdaystart", "fkiLanguageID", "sCompanyNameX", "sDepartmentNameX", "bActivesessionDebug", "bActivesessionIssuperadmin", "eActivesessionEzsignaccess", "pksCustomerCode", "fkiSystemconfigurationtypeID"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("eActivesessionUsertype", "eActivesessionOrigin", "eActivesessionWeekdaystart", "fkiLanguageID", "fkiCompanyID", "sCompanyNameX", "fkiDepartmentID", "sDepartmentNameX", "bActivesessionDebug", "bActivesessionIssuperadmin", "eActivesessionEzsignaccess", "pksCustomerCode", "fkiSystemconfigurationtypeID"));
   }
 
   /**

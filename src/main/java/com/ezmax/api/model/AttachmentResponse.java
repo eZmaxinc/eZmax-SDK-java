@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CommonAudit;
+import com.ezmax.api.model.CustomUserNameResponse;
 import com.ezmax.api.model.FieldEAttachmentDocumenttype;
 import com.ezmax.api.model.FieldEAttachmentPrivacy;
 import com.ezmax.api.model.FieldEAttachmentType;
@@ -54,7 +55,7 @@ import eZmaxAPI.JSON;
 /**
  * An Attachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T14:13:41.766962896Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class AttachmentResponse {
   public static final String SERIALIZED_NAME_PKI_ATTACHMENT_I_D = "pkiAttachmentID";
   @SerializedName(SERIALIZED_NAME_PKI_ATTACHMENT_I_D)
@@ -320,6 +321,11 @@ public class AttachmentResponse {
   @SerializedName(SERIALIZED_NAME_FKI_USER_I_D_SPECIFIC)
   @javax.annotation.Nullable
   private Integer fkiUserIDSpecific;
+
+  public static final String SERIALIZED_NAME_OBJ_USER_SPECIFIC = "objUserSpecific";
+  @SerializedName(SERIALIZED_NAME_OBJ_USER_SPECIFIC)
+  @javax.annotation.Nullable
+  private CustomUserNameResponse objUserSpecific;
 
   public static final String SERIALIZED_NAME_E_ATTACHMENT_TYPE = "eAttachmentType";
   @SerializedName(SERIALIZED_NAME_E_ATTACHMENT_TYPE)
@@ -1458,6 +1464,25 @@ public class AttachmentResponse {
   }
 
 
+  public AttachmentResponse objUserSpecific(@javax.annotation.Nullable CustomUserNameResponse objUserSpecific) {
+    this.objUserSpecific = objUserSpecific;
+    return this;
+  }
+
+  /**
+   * Get objUserSpecific
+   * @return objUserSpecific
+   */
+  @javax.annotation.Nullable
+  public CustomUserNameResponse getObjUserSpecific() {
+    return objUserSpecific;
+  }
+
+  public void setObjUserSpecific(@javax.annotation.Nullable CustomUserNameResponse objUserSpecific) {
+    this.objUserSpecific = objUserSpecific;
+  }
+
+
   public AttachmentResponse eAttachmentType(@javax.annotation.Nonnull FieldEAttachmentType eAttachmentType) {
     this.eAttachmentType = eAttachmentType;
     return this;
@@ -1716,6 +1741,7 @@ public class AttachmentResponse {
         Objects.equals(this.sAttachmentCategory, attachmentResponse.sAttachmentCategory) &&
         Objects.equals(this.eAttachmentPrivacy, attachmentResponse.eAttachmentPrivacy) &&
         Objects.equals(this.fkiUserIDSpecific, attachmentResponse.fkiUserIDSpecific) &&
+        Objects.equals(this.objUserSpecific, attachmentResponse.objUserSpecific) &&
         Objects.equals(this.eAttachmentType, attachmentResponse.eAttachmentType) &&
         Objects.equals(this.iAttachmentSize, attachmentResponse.iAttachmentSize) &&
         Objects.equals(this.iAttachmentEDMmoduleflag, attachmentResponse.iAttachmentEDMmoduleflag) &&
@@ -1730,7 +1756,7 @@ public class AttachmentResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiAttachmentID, fkiComputerID, fkiAdjustmentID, fkiAgentID, fkiBankaccountID, fkiBrokerID, fkiCommissionadvanceID, fkiCommunicationID, fkiCustomerID, fkiCustomertemplateID, fkiDepositID, fkiDeposittransitchequeID, fkiElectronicfundstransferID, fkiEmployeeID, fkiExternalbrokerID, fkiEzcomadvanceserverID, fkiEzcomcompanyID, fkiEzsigndocumentID, fkiGhacqcontractID, fkiInscriptionID, fkiInscriptiontempID, fkiInscriptionnotauthenticatedID, fkiInvoiceID, fkiBuyercontractID, fkiFranchisebrokerID, fkiFranchiseagenceID, fkiFranchiseofficeID, fkiFranchisefranchiseID, fkiFranchisecomplaintID, fkiLeadID, fkiMarketingprogramID, fkiMarketingfollowID, fkiNotaryID, fkiOfficetaxreportID, fkiOtherincomeID, fkiPaymentpreparationID, fkiPurchaseID, fkiSalaryID, fkiSupplierID, fkiTranqcontractID, fkiTemplateID, fkiDocumenttypechecklistID, sDocumenttypeNameX, fkiFolderID, fkiRejectedoffertopurchaseID, fkiDisclosureID, fkiReconciliationID, fkiEzsigndocumentIDReference, eAttachmentDocumenttype, sAttachmentName, sAttachmentCategory, eAttachmentPrivacy, fkiUserIDSpecific, eAttachmentType, iAttachmentSize, iAttachmentEDMmoduleflag, sAttachmentMD5, bAttachmentDeleted, bAttachmentValid, eAttachmentVerified, tAttachmentRejectioncomment, fkiUserIDOwner, objAudit);
+    return Objects.hash(pkiAttachmentID, fkiComputerID, fkiAdjustmentID, fkiAgentID, fkiBankaccountID, fkiBrokerID, fkiCommissionadvanceID, fkiCommunicationID, fkiCustomerID, fkiCustomertemplateID, fkiDepositID, fkiDeposittransitchequeID, fkiElectronicfundstransferID, fkiEmployeeID, fkiExternalbrokerID, fkiEzcomadvanceserverID, fkiEzcomcompanyID, fkiEzsigndocumentID, fkiGhacqcontractID, fkiInscriptionID, fkiInscriptiontempID, fkiInscriptionnotauthenticatedID, fkiInvoiceID, fkiBuyercontractID, fkiFranchisebrokerID, fkiFranchiseagenceID, fkiFranchiseofficeID, fkiFranchisefranchiseID, fkiFranchisecomplaintID, fkiLeadID, fkiMarketingprogramID, fkiMarketingfollowID, fkiNotaryID, fkiOfficetaxreportID, fkiOtherincomeID, fkiPaymentpreparationID, fkiPurchaseID, fkiSalaryID, fkiSupplierID, fkiTranqcontractID, fkiTemplateID, fkiDocumenttypechecklistID, sDocumenttypeNameX, fkiFolderID, fkiRejectedoffertopurchaseID, fkiDisclosureID, fkiReconciliationID, fkiEzsigndocumentIDReference, eAttachmentDocumenttype, sAttachmentName, sAttachmentCategory, eAttachmentPrivacy, fkiUserIDSpecific, objUserSpecific, eAttachmentType, iAttachmentSize, iAttachmentEDMmoduleflag, sAttachmentMD5, bAttachmentDeleted, bAttachmentValid, eAttachmentVerified, tAttachmentRejectioncomment, fkiUserIDOwner, objAudit);
   }
 
   @Override
@@ -1790,6 +1816,7 @@ public class AttachmentResponse {
     sb.append("    sAttachmentCategory: ").append(toIndentedString(sAttachmentCategory)).append("\n");
     sb.append("    eAttachmentPrivacy: ").append(toIndentedString(eAttachmentPrivacy)).append("\n");
     sb.append("    fkiUserIDSpecific: ").append(toIndentedString(fkiUserIDSpecific)).append("\n");
+    sb.append("    objUserSpecific: ").append(toIndentedString(objUserSpecific)).append("\n");
     sb.append("    eAttachmentType: ").append(toIndentedString(eAttachmentType)).append("\n");
     sb.append("    iAttachmentSize: ").append(toIndentedString(iAttachmentSize)).append("\n");
     sb.append("    iAttachmentEDMmoduleflag: ").append(toIndentedString(iAttachmentEDMmoduleflag)).append("\n");
@@ -1818,7 +1845,7 @@ public class AttachmentResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiAttachmentID", "fkiComputerID", "fkiAdjustmentID", "fkiAgentID", "fkiBankaccountID", "fkiBrokerID", "fkiCommissionadvanceID", "fkiCommunicationID", "fkiCustomerID", "fkiCustomertemplateID", "fkiDepositID", "fkiDeposittransitchequeID", "fkiElectronicfundstransferID", "fkiEmployeeID", "fkiExternalbrokerID", "fkiEzcomadvanceserverID", "fkiEzcomcompanyID", "fkiEzsigndocumentID", "fkiGhacqcontractID", "fkiInscriptionID", "fkiInscriptiontempID", "fkiInscriptionnotauthenticatedID", "fkiInvoiceID", "fkiBuyercontractID", "fkiFranchisebrokerID", "fkiFranchiseagenceID", "fkiFranchiseofficeID", "fkiFranchisefranchiseID", "fkiFranchisecomplaintID", "fkiLeadID", "fkiMarketingprogramID", "fkiMarketingfollowID", "fkiNotaryID", "fkiOfficetaxreportID", "fkiOtherincomeID", "fkiPaymentpreparationID", "fkiPurchaseID", "fkiSalaryID", "fkiSupplierID", "fkiTranqcontractID", "fkiTemplateID", "fkiDocumenttypechecklistID", "sDocumenttypeNameX", "fkiFolderID", "fkiRejectedoffertopurchaseID", "fkiDisclosureID", "fkiReconciliationID", "fkiEzsigndocumentIDReference", "eAttachmentDocumenttype", "sAttachmentName", "sAttachmentCategory", "eAttachmentPrivacy", "fkiUserIDSpecific", "eAttachmentType", "iAttachmentSize", "iAttachmentEDMmoduleflag", "sAttachmentMD5", "bAttachmentDeleted", "bAttachmentValid", "eAttachmentVerified", "tAttachmentRejectioncomment", "fkiUserIDOwner", "objAudit"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiAttachmentID", "fkiComputerID", "fkiAdjustmentID", "fkiAgentID", "fkiBankaccountID", "fkiBrokerID", "fkiCommissionadvanceID", "fkiCommunicationID", "fkiCustomerID", "fkiCustomertemplateID", "fkiDepositID", "fkiDeposittransitchequeID", "fkiElectronicfundstransferID", "fkiEmployeeID", "fkiExternalbrokerID", "fkiEzcomadvanceserverID", "fkiEzcomcompanyID", "fkiEzsigndocumentID", "fkiGhacqcontractID", "fkiInscriptionID", "fkiInscriptiontempID", "fkiInscriptionnotauthenticatedID", "fkiInvoiceID", "fkiBuyercontractID", "fkiFranchisebrokerID", "fkiFranchiseagenceID", "fkiFranchiseofficeID", "fkiFranchisefranchiseID", "fkiFranchisecomplaintID", "fkiLeadID", "fkiMarketingprogramID", "fkiMarketingfollowID", "fkiNotaryID", "fkiOfficetaxreportID", "fkiOtherincomeID", "fkiPaymentpreparationID", "fkiPurchaseID", "fkiSalaryID", "fkiSupplierID", "fkiTranqcontractID", "fkiTemplateID", "fkiDocumenttypechecklistID", "sDocumenttypeNameX", "fkiFolderID", "fkiRejectedoffertopurchaseID", "fkiDisclosureID", "fkiReconciliationID", "fkiEzsigndocumentIDReference", "eAttachmentDocumenttype", "sAttachmentName", "sAttachmentCategory", "eAttachmentPrivacy", "fkiUserIDSpecific", "objUserSpecific", "eAttachmentType", "iAttachmentSize", "iAttachmentEDMmoduleflag", "sAttachmentMD5", "bAttachmentDeleted", "bAttachmentValid", "eAttachmentVerified", "tAttachmentRejectioncomment", "fkiUserIDOwner", "objAudit"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiAttachmentID", "eAttachmentDocumenttype", "sAttachmentName", "sAttachmentCategory", "eAttachmentPrivacy", "eAttachmentType", "iAttachmentSize", "sAttachmentMD5", "bAttachmentDeleted", "bAttachmentValid", "eAttachmentVerified"));
@@ -1865,6 +1892,10 @@ public class AttachmentResponse {
       }
       // validate the required field `eAttachmentPrivacy`
       FieldEAttachmentPrivacy.validateJsonElement(jsonObj.get("eAttachmentPrivacy"));
+      // validate the optional field `objUserSpecific`
+      if (jsonObj.get("objUserSpecific") != null && !jsonObj.get("objUserSpecific").isJsonNull()) {
+        CustomUserNameResponse.validateJsonElement(jsonObj.get("objUserSpecific"));
+      }
       // validate the required field `eAttachmentType`
       FieldEAttachmentType.validateJsonElement(jsonObj.get("eAttachmentType"));
       if (!jsonObj.get("sAttachmentMD5").isJsonPrimitive()) {

@@ -50,7 +50,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+import com.ezmax.api.RequestSignature;
 import eZmaxAPI.auth.Authentication;
 import eZmaxAPI.auth.HttpBasicAuth;
 import eZmaxAPI.auth.HttpBearerAuth;
@@ -793,6 +793,46 @@ public class ApiClient {
     }
 
     /**
+     * Format the given parameter object as an ASCII-safe JSON string.
+     *
+     * @param param Parameter
+     * @return JSON representation of the parameter
+     */
+    public String parameterToJsonString(Object param) {
+        if (param == null) {
+            return "";
+        }
+        String json = JSON.serialize(param);
+        int firstUnsafe = -1;
+        for (int i = 0; i < json.length(); i++) {
+            if (json.charAt(i) >= 0x7f) {
+                firstUnsafe = i;
+                break;
+            }
+        }
+        if (firstUnsafe == -1) {
+            return json;
+        }
+
+        StringBuilder escaped = new StringBuilder(json.length());
+        escaped.append(json, 0, firstUnsafe);
+        for (int i = firstUnsafe; i < json.length(); i++) {
+            char c = json.charAt(i);
+            if (c >= 0x7f) {
+                escaped.append("\\u");
+                escaped.append(Character.forDigit((c >> 12) & 0xf, 16));
+                escaped.append(Character.forDigit((c >> 8) & 0xf, 16));
+                escaped.append(Character.forDigit((c >> 4) & 0xf, 16));
+                escaped.append(Character.forDigit(c & 0xf, 16));
+            } else {
+                escaped.append(c);
+            }
+        }
+
+        return escaped.toString();
+    }
+
+    /**
      * Formats the specified query parameter to a list containing a single {@code Pair} object.
      *
      * Note that {@code value} must not be a collection.
@@ -1366,7 +1406,22 @@ public class ApiClient {
 
         // update parameters with authentication settings
         updateParamsForAuth(authNames, updatedQueryParams, headerParams, cookieParams, requestBodyToString(reqBody), method, URI.create(url));
-
+        ApiKeyAuth auth = (ApiKeyAuth) getAuthentication("Authorization");
+        String apiKey = (auth != null) ? auth.getApiKey() : null;
+        if (apiKey != null) {
+            String secret = (auth != null) ? auth.getSecret() : null;
+            String bodyString = (reqBody != null) ? requestBodyToString(reqBody) : "";
+        
+            Map<String, String> signatureHeaders = RequestSignature.getHeadersV1(
+                apiKey,
+                secret,
+                method,
+                url,
+                bodyString,
+                null
+            );
+            headerParams.putAll(signatureHeaders);
+        }
         final Request.Builder reqBuilder = new Request.Builder().url(buildUrl(baseUrl, path, updatedQueryParams, collectionQueryParams));
         processHeaderParams(headerParams, reqBuilder);
         processCookieParams(cookieParams, reqBuilder);

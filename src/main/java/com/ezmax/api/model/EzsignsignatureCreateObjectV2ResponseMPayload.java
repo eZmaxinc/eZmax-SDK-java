@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for POST /2/object/ezsignsignature
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T14:13:41.766962896Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class EzsignsignatureCreateObjectV2ResponseMPayload {
   public static final String SERIALIZED_NAME_A_PKI_EZSIGNSIGNATURE_I_D = "a_pkiEzsignsignatureID";
   @SerializedName(SERIALIZED_NAME_A_PKI_EZSIGNSIGNATURE_I_D)

@@ -10,6 +10,7 @@ All URIs are relative to *https://prod.api.appcluster01.ca-central-1.ezmax.com/r
 | [**adjustmentGetCommunicationListV1**](ObjectAdjustmentApi.md#adjustmentGetCommunicationListV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationList | Retrieve Communication list |
 | [**adjustmentGetCommunicationrecipientsV1**](ObjectAdjustmentApi.md#adjustmentGetCommunicationrecipientsV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationrecipients | Retrieve Communication recipients |
 | [**adjustmentGetCommunicationsendersV1**](ObjectAdjustmentApi.md#adjustmentGetCommunicationsendersV1) | **GET** /1/object/adjustment/{pkiAdjustmentID}/getCommunicationsenders | Retrieve Communication senders |
+| [**adjustmentGetListV1**](ObjectAdjustmentApi.md#adjustmentGetListV1) | **GET** /1/object/adjustment/getList | Retrieve Adjustment list |
 | [**adjustmentImportIntoEDMV1**](ObjectAdjustmentApi.md#adjustmentImportIntoEDMV1) | **POST** /1/object/adjustment/{pkiAdjustmentID}/importIntoEDM | Import attachments into the Adjustment |
 
 
@@ -429,6 +430,84 @@ public class Example {
 | **200** | Successful response |  -  |
 | **404** | The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. |  -  |
 | **422** | The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. |  -  |
+
+<a id="adjustmentGetListV1"></a>
+# **adjustmentGetListV1**
+> AdjustmentGetListV1Response adjustmentGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter)
+
+Retrieve Adjustment list
+
+
+
+### Example
+```java
+// Import classes:
+import eZmaxAPI.ApiClient;
+import eZmaxAPI.ApiException;
+import eZmaxAPI.Configuration;
+import eZmaxAPI.auth.*;
+import eZmaxAPI.models.*;
+import com.ezmax.api.ObjectAdjustmentApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://prod.api.appcluster01.ca-central-1.ezmax.com/rest");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ObjectAdjustmentApi apiInstance = new ObjectAdjustmentApi(defaultClient);
+    String eOrderBy = "pkiAdjustmentID_ASC"; // String | Specify how you want the results to be sorted
+    Integer iRowMax = 56; // Integer | 
+    Integer iRowOffset = 0; // Integer | 
+    HeaderAcceptLanguage acceptLanguage = HeaderAcceptLanguage.fromValue("*"); // HeaderAcceptLanguage | 
+    String sFilter = "sFilter_example"; // String | 
+    try {
+      AdjustmentGetListV1Response result = apiInstance.adjustmentGetListV1(eOrderBy, iRowMax, iRowOffset, acceptLanguage, sFilter);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ObjectAdjustmentApi#adjustmentGetListV1");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **eOrderBy** | **String**| Specify how you want the results to be sorted | [optional] [enum: pkiAdjustmentID_ASC, pkiAdjustmentID_DESC, fkiPeriodID_ASC, fkiPeriodID_DESC, sPeriodYYYYMM_ASC, sPeriodYYYYMM_DESC, fkiUserIDCreated_ASC, fkiUserIDCreated_DESC, sUserLoginname_ASC, sUserLoginname_DESC, dtAdjustmentDate_ASC, dtAdjustmentDate_DESC, sAdjustmentNumber_ASC, sAdjustmentNumber_DESC, sAdjustmentComment_ASC, sAdjustmentComment_DESC, dAdjustmentTotaldebit_ASC, dAdjustmentTotaldebit_DESC, dAdjustmentTotalcredit_ASC, dAdjustmentTotalcredit_DESC] |
+| **iRowMax** | **Integer**|  | [optional] |
+| **iRowOffset** | **Integer**|  | [optional] [default to 0] |
+| **acceptLanguage** | [**HeaderAcceptLanguage**](.md)|  | [optional] [enum: *, en, fr] |
+| **sFilter** | **String**|  | [optional] |
+
+### Return type
+
+[**AdjustmentGetListV1Response**](AdjustmentGetListV1Response.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Successful response |  -  |
+| **406** | The URL is valid, but one of the Accept header is not defined or invalid. For example, you set the header \&quot;Accept: application/json\&quot; but the function can only return \&quot;Content-type: image/png\&quot; |  -  |
 
 <a id="adjustmentImportIntoEDMV1"></a>
 # **adjustmentImportIntoEDMV1**

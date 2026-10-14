@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Communicationreference Object and children
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T14:13:41.766962896Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class CommunicationreferenceRequestCompound {
   public static final String SERIALIZED_NAME_PKI_COMMUNICATIONREFERENCE_I_D = "pkiCommunicationreferenceID";
   @SerializedName(SERIALIZED_NAME_PKI_COMMUNICATIONREFERENCE_I_D)
@@ -70,6 +70,11 @@ public class CommunicationreferenceRequestCompound {
   @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTION_I_D)
   @javax.annotation.Nullable
   private Integer fkiInscriptionID;
+
+  public static final String SERIALIZED_NAME_FKI_INSCRIPTIONNOTAUTHENTICATED_I_D = "fkiInscriptionnotauthenticatedID";
+  @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTIONNOTAUTHENTICATED_I_D)
+  @javax.annotation.Nullable
+  private Integer fkiInscriptionnotauthenticatedID;
 
   public static final String SERIALIZED_NAME_FKI_INSCRIPTIONTEMP_I_D = "fkiInscriptiontempID";
   @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTIONTEMP_I_D)
@@ -178,6 +183,26 @@ public class CommunicationreferenceRequestCompound {
 
   public void setFkiInscriptionID(@javax.annotation.Nullable Integer fkiInscriptionID) {
     this.fkiInscriptionID = fkiInscriptionID;
+  }
+
+
+  public CommunicationreferenceRequestCompound fkiInscriptionnotauthenticatedID(@javax.annotation.Nullable Integer fkiInscriptionnotauthenticatedID) {
+    this.fkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Inscriptionnotauthenticated.
+   * minimum: 0
+   * @return fkiInscriptionnotauthenticatedID
+   */
+  @javax.annotation.Nullable
+  public Integer getFkiInscriptionnotauthenticatedID() {
+    return fkiInscriptionnotauthenticatedID;
+  }
+
+  public void setFkiInscriptionnotauthenticatedID(@javax.annotation.Nullable Integer fkiInscriptionnotauthenticatedID) {
+    this.fkiInscriptionnotauthenticatedID = fkiInscriptionnotauthenticatedID;
   }
 
 
@@ -299,6 +324,7 @@ public class CommunicationreferenceRequestCompound {
         Objects.equals(this.fkiBuyercontractID, communicationreferenceRequestCompound.fkiBuyercontractID) &&
         Objects.equals(this.fkiEzsignfolderID, communicationreferenceRequestCompound.fkiEzsignfolderID) &&
         Objects.equals(this.fkiInscriptionID, communicationreferenceRequestCompound.fkiInscriptionID) &&
+        Objects.equals(this.fkiInscriptionnotauthenticatedID, communicationreferenceRequestCompound.fkiInscriptionnotauthenticatedID) &&
         Objects.equals(this.fkiInscriptiontempID, communicationreferenceRequestCompound.fkiInscriptiontempID) &&
         Objects.equals(this.fkiInvoiceID, communicationreferenceRequestCompound.fkiInvoiceID) &&
         Objects.equals(this.fkiOtherincomeID, communicationreferenceRequestCompound.fkiOtherincomeID) &&
@@ -308,7 +334,7 @@ public class CommunicationreferenceRequestCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiCommunicationreferenceID, fkiBuyercontractID, fkiEzsignfolderID, fkiInscriptionID, fkiInscriptiontempID, fkiInvoiceID, fkiOtherincomeID, fkiElectronicfundstransferID, fkiRejectedoffertopurchaseID);
+    return Objects.hash(pkiCommunicationreferenceID, fkiBuyercontractID, fkiEzsignfolderID, fkiInscriptionID, fkiInscriptionnotauthenticatedID, fkiInscriptiontempID, fkiInvoiceID, fkiOtherincomeID, fkiElectronicfundstransferID, fkiRejectedoffertopurchaseID);
   }
 
   @Override
@@ -319,6 +345,7 @@ public class CommunicationreferenceRequestCompound {
     sb.append("    fkiBuyercontractID: ").append(toIndentedString(fkiBuyercontractID)).append("\n");
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
     sb.append("    fkiInscriptionID: ").append(toIndentedString(fkiInscriptionID)).append("\n");
+    sb.append("    fkiInscriptionnotauthenticatedID: ").append(toIndentedString(fkiInscriptionnotauthenticatedID)).append("\n");
     sb.append("    fkiInscriptiontempID: ").append(toIndentedString(fkiInscriptiontempID)).append("\n");
     sb.append("    fkiInvoiceID: ").append(toIndentedString(fkiInvoiceID)).append("\n");
     sb.append("    fkiOtherincomeID: ").append(toIndentedString(fkiOtherincomeID)).append("\n");
@@ -342,7 +369,7 @@ public class CommunicationreferenceRequestCompound {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiCommunicationreferenceID", "fkiBuyercontractID", "fkiEzsignfolderID", "fkiInscriptionID", "fkiInscriptiontempID", "fkiInvoiceID", "fkiOtherincomeID", "fkiElectronicfundstransferID", "fkiRejectedoffertopurchaseID"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiCommunicationreferenceID", "fkiBuyercontractID", "fkiEzsignfolderID", "fkiInscriptionID", "fkiInscriptionnotauthenticatedID", "fkiInscriptiontempID", "fkiInvoiceID", "fkiOtherincomeID", "fkiElectronicfundstransferID", "fkiRejectedoffertopurchaseID"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(0);

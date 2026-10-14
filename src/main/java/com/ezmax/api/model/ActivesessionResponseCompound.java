@@ -63,7 +63,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for GET /1/object/activesession/getCurrent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-21T19:52:24.770378174Z[Etc/UTC]", comments = "Generator version: 7.25.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T14:13:41.766962896Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class ActivesessionResponseCompound {
   public static final String SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE = "eActivesessionUsertype";
   @SerializedName(SERIALIZED_NAME_E_ACTIVESESSION_USERTYPE)
@@ -85,10 +85,20 @@ public class ActivesessionResponseCompound {
   @javax.annotation.Nonnull
   private Integer fkiLanguageID;
 
+  public static final String SERIALIZED_NAME_FKI_COMPANY_I_D = "fkiCompanyID";
+  @SerializedName(SERIALIZED_NAME_FKI_COMPANY_I_D)
+  @javax.annotation.Nonnull
+  private Integer fkiCompanyID;
+
   public static final String SERIALIZED_NAME_S_COMPANY_NAME_X = "sCompanyNameX";
   @SerializedName(SERIALIZED_NAME_S_COMPANY_NAME_X)
   @javax.annotation.Nonnull
   private String sCompanyNameX;
+
+  public static final String SERIALIZED_NAME_FKI_DEPARTMENT_I_D = "fkiDepartmentID";
+  @SerializedName(SERIALIZED_NAME_FKI_DEPARTMENT_I_D)
+  @javax.annotation.Nonnull
+  private Integer fkiDepartmentID;
 
   public static final String SERIALIZED_NAME_S_DEPARTMENT_NAME_X = "sDepartmentNameX";
   @SerializedName(SERIALIZED_NAME_S_DEPARTMENT_NAME_X)
@@ -316,6 +326,27 @@ public class ActivesessionResponseCompound {
   }
 
 
+  public ActivesessionResponseCompound fkiCompanyID(@javax.annotation.Nonnull Integer fkiCompanyID) {
+    this.fkiCompanyID = fkiCompanyID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Company
+   * minimum: 1
+   * maximum: 255
+   * @return fkiCompanyID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiCompanyID() {
+    return fkiCompanyID;
+  }
+
+  public void setFkiCompanyID(@javax.annotation.Nonnull Integer fkiCompanyID) {
+    this.fkiCompanyID = fkiCompanyID;
+  }
+
+
   public ActivesessionResponseCompound sCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
     return this;
@@ -332,6 +363,26 @@ public class ActivesessionResponseCompound {
 
   public void setsCompanyNameX(@javax.annotation.Nonnull String sCompanyNameX) {
     this.sCompanyNameX = sCompanyNameX;
+  }
+
+
+  public ActivesessionResponseCompound fkiDepartmentID(@javax.annotation.Nonnull Integer fkiDepartmentID) {
+    this.fkiDepartmentID = fkiDepartmentID;
+    return this;
+  }
+
+  /**
+   * The unique ID of the Department
+   * minimum: 0
+   * @return fkiDepartmentID
+   */
+  @javax.annotation.Nonnull
+  public Integer getFkiDepartmentID() {
+    return fkiDepartmentID;
+  }
+
+  public void setFkiDepartmentID(@javax.annotation.Nonnull Integer fkiDepartmentID) {
+    this.fkiDepartmentID = fkiDepartmentID;
   }
 
 
@@ -921,7 +972,9 @@ public class ActivesessionResponseCompound {
         Objects.equals(this.eActivesessionOrigin, activesessionResponseCompound.eActivesessionOrigin) &&
         Objects.equals(this.eActivesessionWeekdaystart, activesessionResponseCompound.eActivesessionWeekdaystart) &&
         Objects.equals(this.fkiLanguageID, activesessionResponseCompound.fkiLanguageID) &&
+        Objects.equals(this.fkiCompanyID, activesessionResponseCompound.fkiCompanyID) &&
         Objects.equals(this.sCompanyNameX, activesessionResponseCompound.sCompanyNameX) &&
+        Objects.equals(this.fkiDepartmentID, activesessionResponseCompound.fkiDepartmentID) &&
         Objects.equals(this.sDepartmentNameX, activesessionResponseCompound.sDepartmentNameX) &&
         Objects.equals(this.bActivesessionDebug, activesessionResponseCompound.bActivesessionDebug) &&
         Objects.equals(this.bActivesessionIssuperadmin, activesessionResponseCompound.bActivesessionIssuperadmin) &&
@@ -955,7 +1008,7 @@ public class ActivesessionResponseCompound {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, sCompanyNameX, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, bActivesessionAttachment, bActivesessionCanafe, bActivesessionFinancial, bActivesessionRealestatecompleted, eActivesessionEzsign, eActivesessionEzsignaccess, eActivesessionEzsignprepaid, eActivesessionRealestateinprogress, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID, fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan, eUserEzsignaccess, eUserEzsignprepaid, bUserEzsigntrial, bUserEzsigntemplaterolegrouping, dtUserEzsignprepaidexpiration, dtUserNpsrequest, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname, bActivesessionMaillinglistrequest);
+    return Objects.hash(eActivesessionUsertype, eActivesessionOrigin, eActivesessionWeekdaystart, fkiLanguageID, fkiCompanyID, sCompanyNameX, fkiDepartmentID, sDepartmentNameX, bActivesessionDebug, bActivesessionIssuperadmin, bActivesessionAttachment, bActivesessionCanafe, bActivesessionFinancial, bActivesessionRealestatecompleted, eActivesessionEzsign, eActivesessionEzsignaccess, eActivesessionEzsignprepaid, eActivesessionRealestateinprogress, pksCustomerCode, fkiSystemconfigurationtypeID, fkiSignatureID, fkiEzsignuserID, bSystemconfigurationEzsignpaidbyoffice, eSystemconfigurationEzsignofficeplan, eUserEzsignaccess, eUserEzsignprepaid, bUserEzsigntrial, bUserEzsigntemplaterolegrouping, dtUserEzsignprepaidexpiration, dtUserNpsrequest, aPkiPermissionID, objUserReal, objUserCloned, objApikey, aEModuleInternalname, bActivesessionMaillinglistrequest);
   }
 
   @Override
@@ -966,7 +1019,9 @@ public class ActivesessionResponseCompound {
     sb.append("    eActivesessionOrigin: ").append(toIndentedString(eActivesessionOrigin)).append("\n");
     sb.append("    eActivesessionWeekdaystart: ").append(toIndentedString(eActivesessionWeekdaystart)).append("\n");
     sb.append("    fkiLanguageID: ").append(toIndentedString(fkiLanguageID)).append("\n");
+    sb.append("    fkiCompanyID: ").append(toIndentedString(fkiCompanyID)).append("\n");
     sb.append("    sCompanyNameX: ").append(toIndentedString(sCompanyNameX)).append("\n");
+    sb.append("    fkiDepartmentID: ").append(toIndentedString(fkiDepartmentID)).append("\n");
     sb.append("    sDepartmentNameX: ").append(toIndentedString(sDepartmentNameX)).append("\n");
     sb.append("    bActivesessionDebug: ").append(toIndentedString(bActivesessionDebug)).append("\n");
     sb.append("    bActivesessionIssuperadmin: ").append(toIndentedString(bActivesessionIssuperadmin)).append("\n");
@@ -1014,10 +1069,10 @@ public class ActivesessionResponseCompound {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("eActivesessionUsertype", "eActivesessionOrigin", "eActivesessionWeekdaystart", "fkiLanguageID", "sCompanyNameX", "sDepartmentNameX", "bActivesessionDebug", "bActivesessionIssuperadmin", "bActivesessionAttachment", "bActivesessionCanafe", "bActivesessionFinancial", "bActivesessionRealestatecompleted", "eActivesessionEzsign", "eActivesessionEzsignaccess", "eActivesessionEzsignprepaid", "eActivesessionRealestateinprogress", "pksCustomerCode", "fkiSystemconfigurationtypeID", "fkiSignatureID", "fkiEzsignuserID", "bSystemconfigurationEzsignpaidbyoffice", "eSystemconfigurationEzsignofficeplan", "eUserEzsignaccess", "eUserEzsignprepaid", "bUserEzsigntrial", "bUserEzsigntemplaterolegrouping", "dtUserEzsignprepaidexpiration", "dtUserNpsrequest", "a_pkiPermissionID", "objUserReal", "objUserCloned", "objApikey", "a_eModuleInternalname", "bActivesessionMaillinglistrequest"));
+    openapiFields = new HashSet<String>(Arrays.asList("eActivesessionUsertype", "eActivesessionOrigin", "eActivesessionWeekdaystart", "fkiLanguageID", "fkiCompanyID", "sCompanyNameX", "fkiDepartmentID", "sDepartmentNameX", "bActivesessionDebug", "bActivesessionIssuperadmin", "bActivesessionAttachment", "bActivesessionCanafe", "bActivesessionFinancial", "bActivesessionRealestatecompleted", "eActivesessionEzsign", "eActivesessionEzsignaccess", "eActivesessionEzsignprepaid", "eActivesessionRealestateinprogress", "pksCustomerCode", "fkiSystemconfigurationtypeID", "fkiSignatureID", "fkiEzsignuserID", "bSystemconfigurationEzsignpaidbyoffice", "eSystemconfigurationEzsignofficeplan", "eUserEzsignaccess", "eUserEzsignprepaid", "bUserEzsigntrial", "bUserEzsigntemplaterolegrouping", "dtUserEzsignprepaidexpiration", "dtUserNpsrequest", "a_pkiPermissionID", "objUserReal", "objUserCloned", "objApikey", "a_eModuleInternalname", "bActivesessionMaillinglistrequest"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("eActivesessionUsertype", "eActivesessionOrigin", "eActivesessionWeekdaystart", "fkiLanguageID", "sCompanyNameX", "sDepartmentNameX", "bActivesessionDebug", "bActivesessionIssuperadmin", "eActivesessionEzsignaccess", "pksCustomerCode", "fkiSystemconfigurationtypeID", "eUserEzsignaccess", "a_pkiPermissionID", "objUserReal", "a_eModuleInternalname"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("eActivesessionUsertype", "eActivesessionOrigin", "eActivesessionWeekdaystart", "fkiLanguageID", "fkiCompanyID", "sCompanyNameX", "fkiDepartmentID", "sDepartmentNameX", "bActivesessionDebug", "bActivesessionIssuperadmin", "eActivesessionEzsignaccess", "pksCustomerCode", "fkiSystemconfigurationtypeID", "eUserEzsignaccess", "a_pkiPermissionID", "objUserReal", "a_eModuleInternalname"));
   }
 
   /**
