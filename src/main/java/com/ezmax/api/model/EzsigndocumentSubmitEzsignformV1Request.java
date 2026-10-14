@@ -52,7 +52,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/ezsigndocument/{pkiEzsigndocumentID}/submitEzsignform
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T14:13:41.766962896Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T19:57:34.097405566Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class EzsigndocumentSubmitEzsignformV1Request {
   public static final String SERIALIZED_NAME_B_EZSIGNFORM_ISDRAFT = "bEzsignformIsdraft";
   @SerializedName(SERIALIZED_NAME_B_EZSIGNFORM_ISDRAFT)

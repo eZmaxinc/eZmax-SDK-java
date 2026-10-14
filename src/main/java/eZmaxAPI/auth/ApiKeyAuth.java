@@ -20,12 +20,13 @@ import java.net.URI;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T14:13:41.766962896Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T19:57:34.097405566Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;
 
   private String apiKey;
+  private String secret;
   private String apiKeyPrefix;
 
   public ApiKeyAuth(String location, String paramName) {
@@ -55,6 +56,15 @@ public class ApiKeyAuth implements Authentication {
 
   public void setApiKeyPrefix(String apiKeyPrefix) {
     this.apiKeyPrefix = apiKeyPrefix;
+  }
+
+  public String getSecret() {
+      return this.secret;
+  }
+  
+  public ApiKeyAuth setSecret(String secret) {
+      this.secret = secret;
+      return this;
   }
 
   @Override
