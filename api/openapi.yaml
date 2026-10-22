@@ -121,7 +121,8 @@ tags:
     * PUT /2/object/ezsigndocument/{pkiEzsigndocumentID}/editEzsignsignatures\n* PUT\
     \ /2/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/editEzsigntemplatesignatures\n\
     * PUT /3/object/ezsignsignature/{pkiEzsignsignatureID}\n* PUT /3/object/ezsigntemplatesignature/{pkiEzsigntemplatesignatureID}\n\
-    \n---\n\n### [1.3.4] - 2026-XX-XX\n\n#### Added\n- GET /1/object/adjustment/{pkiAdjustmentID}/getAttachments\n\
+    \n---\n\n### [1.3.4] - 2026-XX-XX\n\n#### Added\n- DELETE /1/object/documenttype/{pkiDocumenttypeID}\n\
+    - DELETE /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}\n- GET /1/object/adjustment/{pkiAdjustmentID}/getAttachments\n\
     - GET /1/object/adjustment/{pkiAdjustmentID}/getCommunicationCount\n- GET /1/object/adjustment/{pkiAdjustmentID}/getCommunicationList\n\
     - GET /1/object/adjustment/{pkiAdjustmentID}/getCommunicationrecipients\n- GET\
     \ /1/object/adjustment/{pkiAdjustmentID}/getCommunicationsenders\n- GET /1/object/adjustment/getList\n\
@@ -136,17 +137,23 @@ tags:
     - GET /3/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}\n- GET /3/object/ezsigntemplatepackagemembership/{pkiEzsigntemplatepackagemembershipID}\n\
     - GET /3/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\n\
     - GET /3/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\n- GET /4/object/ezsignbulksend/{pkiEzsignbulksendID}\n\
-    - GET /4/object/ezsigntemplate/{pkiEzsigntemplateID}\n- PUT /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners\n\
+    - GET /4/object/ezsigntemplate/{pkiEzsigntemplateID}\n- GET /1/object/documenttype/getList\n\
+    - GET /2/object/documenttype/{pkiDocumenttypeID}\n- GET /2/object/documenttype/getAutocomplete/{sSelector}\n\
+    - GET /1/object/documenttypechecklist/getList\n- GET /2/object/documenttypechecklist/{pkiDocumenttypechecklistID}\n\
+    - PUT /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners\n\
     - PUT /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\n\
-    - PUT /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\n- POST /1/object/adjustment/{pkiAdjustmentID}/importIntoEDM\n\
+    - PUT /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\n- PUT /1/object/documenttype/{pkiDocumenttypeID}\n\
+    - PUT /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}\n- POST /1/object/adjustment/{pkiAdjustmentID}/importIntoEDM\n\
     - POST /2/object/ezsignbulksendsignermapping\n- POST /2/object/ezsigntemplatepackagesigner\n\
     - POST /2/object/ezsigntemplatesigner\n- POST /1/object/attachment/{pkiAttachmentID}/delete\n\
     - POST /1/object/attachment/{pkiAttachmentID}/rename\n- POST /1/object/attachment/{pkiAttachmentID}/restore\n\
-    - POST /1/object/attachment/{pkiAttachmentID}/validate\n- PATCH /1/object/attachment/{pkiAttachmentID}/documentType\n\
+    - POST /1/object/attachment/{pkiAttachmentID}/validate\n- POST /1/object/documenttype\n\
+    - POST /1/object/documenttypechecklist\n- PATCH /1/object/attachment/{pkiAttachmentID}/documentType\n\
     - PATCH /1/object/attachment/{pkiAttachmentID}/permission\n- Selector AttachmentSpecificUser\
     \ in GET /2/object/user/getAutocomplete/{sSelector}\n- Parameter fkiAttachmentID\
     \ in GET /2/object/user/getAutocomplete/{sSelector}\n- Property dtAgentPermitexpiration\
     \ in agent-ListElement\n- Property dtEzsignformfieldgroupCompleted in ezsignformfieldgroup-Response\n\
+    - Property eEzmaxcaseGooddaytaskstatus in ezmaxcase-Response and ezmaxcase-Listelement\n\
     - Property eEzsignfoldersignerassociationRole in ezsignfoldersignerassociation-RequestPatch\n\
     - Property fkiAgentID in user-ListElement\n- Property fkiBrokerID in user-ListElement\n\
     - Property sAttachmentCategory in attachment-Response\n- Property objUserSpecific\
@@ -433,6 +440,12 @@ tags:
 - description: Discussionmessage contains details about Discussionmessages
   name: Object_Discussionmessage
   x-displayName: Discussionmessage
+- description: Documenttype contains details about Documenttypes
+  name: Object_Documenttype
+  x-displayName: Documenttype
+- description: Documenttypechecklist contains details about Documenttypechecklists
+  name: Object_Documenttypechecklist
+  x-displayName: Documenttypechecklist
 - description: Domain contains details about Domains
   name: Object_Domain
   x-displayName: Domain
@@ -9607,6 +9620,604 @@ paths:
       x-content-type: application/json
       x-accepts:
       - application/json
+  /1/object/documenttype:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Documenttype_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/documenttype-createObject-v1-Request"
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documenttype-createObject-v1-Response"
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Documenttype
+      tags:
+      - Object_Documenttype
+      x-systemconfigurationtype:
+      - All
+      x-permissions: []
+      x-usertypeextra: []
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /2/object/documenttype/{pkiDocumenttypeID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Documenttype_GetObject_V2
+      parameters:
+      - description: The unique ID of the Documenttype
+        explode: false
+        in: path
+        name: pkiDocumenttypeID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiDocumenttypeID"
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documenttype-getObject-v2-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Documenttype
+      tags:
+      - Object_Documenttype
+      x-systemconfigurationtype:
+      - All
+      x-permissions: []
+      x-usertypeextra: []
+      x-accepts:
+      - application/json
+  /1/object/documenttype/{pkiDocumenttypeID}:
+    delete:
+      description: ""
+      operationId: Documenttype_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Documenttype
+        explode: false
+        in: path
+        name: pkiDocumenttypeID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiDocumenttypeID"
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documenttype-deleteObject-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Delete an existing Documenttype
+      tags:
+      - Object_Documenttype
+      x-systemconfigurationtype:
+      - All
+      x-permissions: []
+      x-usertypeextra: []
+      x-accepts:
+      - application/json
+    description: ""
+    put:
+      description: ""
+      operationId: Documenttype_EditObject_V1
+      parameters:
+      - description: The unique ID of the Documenttype
+        explode: false
+        in: path
+        name: pkiDocumenttypeID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiDocumenttypeID"
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/documenttype-editObject-v1-Request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documenttype-editObject-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Edit an existing Documenttype
+      tags:
+      - Object_Documenttype
+      x-systemconfigurationtype:
+      - All
+      x-permissions: []
+      x-usertypeextra: []
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /2/object/documenttype/getAutocomplete/{sSelector}:
+    description: ""
+    get:
+      description: Get the list of Documenttype to be used in a dropdown or autocomplete
+        control.
+      operationId: Documenttype_GetAutocomplete_V2
+      parameters:
+      - description: The type of Documenttypes to return
+        explode: false
+        in: path
+        name: sSelector
+        required: true
+        schema:
+          enum:
+          - All
+          type: string
+        style: simple
+      - description: Specify which results we want to display.
+        explode: true
+        in: query
+        name: eFilterActive
+        required: false
+        schema:
+          default: Active
+          enum:
+          - All
+          - Active
+          - Inactive
+          type: string
+        style: form
+      - description: Allow to filter the returned results
+        explode: true
+        in: query
+        name: sQuery
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: "#/components/schemas/Header-Accept-Language"
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documenttype-getAutocomplete-v2-Response"
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Retrieve Documenttypes and IDs
+      tags:
+      - Object_Documenttype
+      x-systemconfigurationtype:
+      - All
+      x-permissions: []
+      x-usertypeextra: []
+      x-accepts:
+      - application/json
+  /1/object/documenttype/getList:
+    description: ""
+    get:
+      description: |-
+        Enum values that can be filtered in query parameter *sFilter*:
+
+        | Variable | Valid values |
+        |---|---|
+         | Agentbroker<br>Buyercontract<br>Inscription<br>NotAuthenticated<br>Otherincome<br>RejectedOfferToPurchase |
+        | eDocumenttypeEzcom | PromiseToPurchase<br>Annex<br>Modification<br>CounterOffer<br>Conditions<br>BankApproval<br>Other |
+        | eDocumenttypePrivacydefault | Administration<br>Administrator<br>All<br>Creator<br>Inscriptor<br>Myself<br>Seller |
+        | eDocumenttypeStatusdefault | Not required<br>Required |
+        | eDocumenttypeSalebyowner | All<br>Yes<br>No |
+        | eDocumenttypeSaledisplaybyrole | InscriptorSeller<br>Inscriptor<br>Seller |
+        | eDocumenttypeTransactiontype | All<br>Inscriptor<br>InscriptorOnly<br>Seller<br>SellerOnly<br>InscriptorSeller |
+        | eDocumenttypeRepossession | All<br>No<br>Yes |
+      operationId: Documenttype_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiDocumenttypeID_ASC
+          - pkiDocumenttypeID_DESC
+          - sDocumenttypeNameX_ASC
+          - sDocumenttypeNameX_DESC
+          - sDocumenttypeDefaultfilename_ASC
+          - sDocumenttypeDefaultfilename_DESC
+          - bDocumenttypeShowagent_ASC
+          - bDocumenttypeShowagent_DESC
+          - bDocumenttypeIsactive_ASC
+          - bDocumenttypeIsactive_DESC
+          - bDocumenttypeIsrequired_ASC
+          - bDocumenttypeIsrequired_DESC
+          - bDocumenttypeSale_ASC
+          - bDocumenttypeSale_DESC
+          - bDocumenttypeRental_ASC
+          - bDocumenttypeRental_DESC
+          - bDocumenttypeReference_ASC
+          - bDocumenttypeReference_DESC
+          - bDocumenttypeMortgagereference_ASC
+          - bDocumenttypeMortgagereference_DESC
+          - bDocumenttypeEvaluation_ASC
+          - bDocumenttypeEvaluation_DESC
+          - bDocumenttypeConsultation_ASC
+          - bDocumenttypeConsultation_DESC
+          - bDocumenttypeOtherservices_ASC
+          - bDocumenttypeOtherservices_DESC
+          - bDocumenttypeForeclosedsale_ASC
+          - bDocumenttypeForeclosedsale_DESC
+          - bDocumenttypeCommercialfunding_ASC
+          - bDocumenttypeCommercialfunding_DESC
+          - bDocumenttypeCanafe_ASC
+          - bDocumenttypeCanafe_DESC
+          - eDocumenttypeEzcom_ASC
+          - eDocumenttypeEzcom_DESC
+          - eDocumenttypePrivacydefault_ASC
+          - eDocumenttypePrivacydefault_DESC
+          - eDocumenttypeStatusdefault_ASC
+          - eDocumenttypeStatusdefault_DESC
+          - eDocumenttypeSalebyowner_ASC
+          - eDocumenttypeSalebyowner_DESC
+          - eDocumenttypeSaledisplaybyrole_ASC
+          - eDocumenttypeSaledisplaybyrole_DESC
+          - eDocumenttypeTransactiontype_ASC
+          - eDocumenttypeTransactiontype_DESC
+          - eDocumenttypeRepossession_ASC
+          - eDocumenttypeRepossession_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-iRowMax"
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-iRowOffset"
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: "#/components/schemas/Header-Accept-Language"
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-sFilter"
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documenttype-getList-v1-Response"
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: "#/components/schemas/File-Xlsx"
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: "The URL is valid, but one of the Accept header is not defined\
+            \ or invalid. For example, you set the header \"Accept: application/json\"\
+            \ but the function can only return \"Content-type: image/png\""
+      security:
+      - Authorization: []
+      summary: Retrieve Documenttype list
+      tags:
+      - Object_Documenttype
+      x-systemconfigurationtype:
+      - All
+      x-permissions: []
+      x-usertypeextra: []
+      x-accepts:
+      - application/json
+      - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  /1/object/documenttypechecklist:
+    description: ""
+    post:
+      description: The endpoint allows to create one or many elements at once.
+      operationId: Documenttypechecklist_CreateObject_V1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/documenttypechecklist-createObject-v1-Request"
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documenttypechecklist-createObject-v1-Response"
+          description: Successful response
+      security:
+      - Authorization: []
+      summary: Create a new Documenttypechecklist
+      tags:
+      - Object_Documenttypechecklist
+      x-systemconfigurationtype:
+      - All
+      x-permissions: []
+      x-usertypeextra: []
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /2/object/documenttypechecklist/{pkiDocumenttypechecklistID}:
+    description: ""
+    get:
+      description: ""
+      operationId: Documenttypechecklist_GetObject_V2
+      parameters:
+      - description: The unique ID of the Documenttypechecklist
+        explode: false
+        in: path
+        name: pkiDocumenttypechecklistID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiDocumenttypechecklistID"
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documenttypechecklist-getObject-v2-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Retrieve an existing Documenttypechecklist
+      tags:
+      - Object_Documenttypechecklist
+      x-systemconfigurationtype:
+      - All
+      x-permissions: []
+      x-usertypeextra: []
+      x-accepts:
+      - application/json
+  /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}:
+    delete:
+      description: ""
+      operationId: Documenttypechecklist_DeleteObject_V1
+      parameters:
+      - description: The unique ID of the Documenttypechecklist
+        explode: false
+        in: path
+        name: pkiDocumenttypechecklistID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiDocumenttypechecklistID"
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documenttypechecklist-deleteObject-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Delete an existing Documenttypechecklist
+      tags:
+      - Object_Documenttypechecklist
+      x-systemconfigurationtype:
+      - All
+      x-permissions: []
+      x-usertypeextra: []
+      x-accepts:
+      - application/json
+    description: ""
+    put:
+      description: ""
+      operationId: Documenttypechecklist_EditObject_V1
+      parameters:
+      - description: The unique ID of the Documenttypechecklist
+        explode: false
+        in: path
+        name: pkiDocumenttypechecklistID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiDocumenttypechecklistID"
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/documenttypechecklist-editObject-v1-Request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documenttypechecklist-editObject-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Edit an existing Documenttypechecklist
+      tags:
+      - Object_Documenttypechecklist
+      x-systemconfigurationtype:
+      - All
+      x-permissions: []
+      x-usertypeextra: []
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /1/object/documenttypechecklist/getList:
+    description: ""
+    get:
+      description: |-
+        Enum values that can be filtered in query parameter *sFilter*:
+
+        | Variable | Valid values |
+        |---|---|
+        | eDocumenttypechecklistStatus | Not required<br>Required<br>Filed<br>Justified |
+      operationId: Documenttypechecklist_GetList_V1
+      parameters:
+      - description: Specify how you want the results to be sorted
+        explode: true
+        in: query
+        name: eOrderBy
+        required: false
+        schema:
+          enum:
+          - pkiDocumenttypechecklistID_ASC
+          - pkiDocumenttypechecklistID_DESC
+          - fkiDocumenttypeID_ASC
+          - fkiDocumenttypeID_DESC
+          - eDocumenttypechecklistStatus_ASC
+          - eDocumenttypechecklistStatus_DESC
+          - tDocumenttypechecklistComment_ASC
+          - tDocumenttypechecklistComment_DESC
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: iRowMax
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-iRowMax"
+        style: form
+      - explode: true
+        in: query
+        name: iRowOffset
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-iRowOffset"
+        style: form
+      - explode: false
+        in: header
+        name: Accept-Language
+        required: false
+        schema:
+          $ref: "#/components/schemas/Header-Accept-Language"
+        style: simple
+      - explode: true
+        in: query
+        name: sFilter
+        required: false
+        schema:
+          $ref: "#/components/schemas/Field-sFilter"
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/documenttypechecklist-getList-v1-Response"
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                $ref: "#/components/schemas/File-Xlsx"
+          description: Successful response
+        "406":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: "The URL is valid, but one of the Accept header is not defined\
+            \ or invalid. For example, you set the header \"Accept: application/json\"\
+            \ but the function can only return \"Content-type: image/png\""
+      security:
+      - Authorization: []
+      summary: Retrieve Documenttypechecklist list
+      tags:
+      - Object_Documenttypechecklist
+      x-systemconfigurationtype:
+      - All
+      x-permissions: []
+      x-usertypeextra: []
+      x-accepts:
+      - application/json
+      - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
   /1/object/domain:
     description: ""
     post:
@@ -51035,6 +51646,58 @@ components:
       description: Whether if it's an closed
       example: true
       type: boolean
+    Field-bDocumenttypeCanafe:
+      description: Whether if it's an canafe
+      example: true
+      type: boolean
+    Field-bDocumenttypeCommercialfunding:
+      description: Whether if it's an commercialfunding
+      example: true
+      type: boolean
+    Field-bDocumenttypeConsultation:
+      description: Whether if it's an consultation
+      example: true
+      type: boolean
+    Field-bDocumenttypeEvaluation:
+      description: Whether if it's an evaluation
+      example: true
+      type: boolean
+    Field-bDocumenttypeForeclosedsale:
+      description: Whether if it's an foreclosedsale
+      example: true
+      type: boolean
+    Field-bDocumenttypeIsactive:
+      description: Whether the documenttype is active or not
+      example: true
+      type: boolean
+    Field-bDocumenttypeIsrequired:
+      description: Whether if it's an isrequired
+      example: true
+      type: boolean
+    Field-bDocumenttypeMortgagereference:
+      description: Whether if it's an mortgagereference
+      example: true
+      type: boolean
+    Field-bDocumenttypeOtherservices:
+      description: Whether if it's an otherservices
+      example: true
+      type: boolean
+    Field-bDocumenttypeReference:
+      description: Whether if it's an reference
+      example: true
+      type: boolean
+    Field-bDocumenttypeRental:
+      description: Whether if it's an rental
+      example: true
+      type: boolean
+    Field-bDocumenttypeSale:
+      description: Whether if it's an sale
+      example: true
+      type: boolean
+    Field-bDocumenttypeShowagent:
+      description: Whether if it's an showagent
+      example: true
+      type: boolean
     Field-bDomainIsactive:
       description: Whether the Domain is active or not
       example: true
@@ -53049,6 +53712,81 @@ components:
       - Edited
       - Deleted
       example: New
+      type: string
+    Field-eDocumenttypeEzcom:
+      description: The ezcom of the Documenttype
+      enum:
+      - PromiseToPurchase
+      - Annex
+      - Modification
+      - CounterOffer
+      - Conditions
+      - BankApproval
+      - Other
+      example: PromiseToPurchase
+      type: string
+    Field-eDocumenttypePrivacydefault:
+      description: The privacydefault of the Documenttype
+      enum:
+      - Administration
+      - Administrator
+      - All
+      - Creator
+      - Inscriptor
+      - Myself
+      - Seller
+      example: Administration
+      type: string
+    Field-eDocumenttypeRepossession:
+      description: The repossession of the Documenttype
+      enum:
+      - All
+      - "No"
+      - "Yes"
+      example: All
+      type: string
+    Field-eDocumenttypeSalebyowner:
+      description: The salebyowner of the Documenttype
+      enum:
+      - All
+      - "Yes"
+      - "No"
+      example: All
+      type: string
+    Field-eDocumenttypeSaledisplaybyrole:
+      description: The saledisplaybyrole of the Documenttype
+      enum:
+      - InscriptorSeller
+      - Inscriptor
+      - Seller
+      example: InscriptorSeller
+      type: string
+    Field-eDocumenttypeStatusdefault:
+      description: The statusdefault of the Documenttype
+      enum:
+      - Not required
+      - Required
+      example: Not required
+      type: string
+    Field-eDocumenttypeTransactiontype:
+      description: The transactiontype of the Documenttype
+      enum:
+      - All
+      - Inscriptor
+      - InscriptorOnly
+      - Seller
+      - SellerOnly
+      - InscriptorSeller
+      example: All
+      type: string
+    Field-eDocumenttypechecklistStatus:
+      description: The status of the Documenttypechecklist
+      enum:
+      - Not required
+      - Required
+      - Filed
+      - Justified
+      example: Not required
       type: string
     Field-eErrorCode:
       description: The error code. See documentation for valid values
@@ -55637,6 +56375,12 @@ components:
       maximum: 16777215
       minimum: 0
       type: integer
+    Field-pkiDocumenttypeID:
+      description: The unique ID of the Documenttype
+      example: 172
+      maximum: 65535
+      minimum: 0
+      type: integer
     Field-pkiDocumenttypechecklistID:
       description: The unique ID of the Documenttypechecklist
       example: 191
@@ -57218,6 +57962,21 @@ components:
       example: John Doe
       pattern: "^.{0,75}$"
       type: string
+    Field-sDocumenttypeDefaultfilename:
+      description: The defaultfilename of the Documenttype
+      example: invoice.pdf
+      pattern: "^.{0,50}$"
+      type: string
+    Field-sDocumenttypeName1:
+      description: The name1 of the Documenttype
+      example: Facture
+      pattern: "^.{0,50}$"
+      type: string
+    Field-sDocumenttypeName2:
+      description: The name2 of the Documenttype
+      example: Invoice
+      pattern: "^.{0,50}$"
+      type: string
     Field-sDocumenttypeNameX:
       description: The name of the Documenttype in the language of the requester
       example: Loan deed
@@ -58408,6 +59167,11 @@ components:
       example: "Hello, this is an example of content in a message"
       pattern: "^[\\s\\S]{0,65535}$"
       type: string
+    Field-tDocumenttypechecklistComment:
+      description: The comment of the Documenttypechecklist
+      example: This document is optional.
+      pattern: "^.{0,255}$"
+      type: string
     Field-tExtraMessage:
       description: A custom text message that will be added to the email sent.
       example: |-
@@ -58657,6 +59421,23 @@ components:
         sBrandingDescription2:
           description: The description of the Branding in English
           example: Company X
+          type: string
+      type: object
+    Multilingual-DocumenttypeName:
+      description: The name1 of the Documenttype
+      example:
+        sDocumenttypeName1: Facture
+        sDocumenttypeName2: Invoice
+      properties:
+        sDocumenttypeName1:
+          description: The name1 of the Documenttype
+          example: Facture
+          pattern: "^.{0,50}$"
+          type: string
+        sDocumenttypeName2:
+          description: The name2 of the Documenttype
+          example: Invoice
+          pattern: "^.{0,50}$"
           type: string
       type: object
     Multilingual-EzdoctemplatedocumentName:
@@ -128863,6 +129644,1742 @@ components:
             fDuration: 1.0E-4
           - sQuery: SELECT * FROM table
             fDuration: 1.0E-4
+      type: object
+    documenttype-AutocompleteElement-Response:
+      description: A Documenttype AutocompleteElement Response
+      example:
+        pkiDocumenttypeID: 172
+        sDocumenttypeNameX: Loan deed
+        bDocumenttypeIsactive: true
+      properties:
+        pkiDocumenttypeID:
+          description: The unique ID of the Documenttype
+          example: 172
+          maximum: 65535
+          minimum: 0
+          type: integer
+        sDocumenttypeNameX:
+          description: The name of the Documenttype in the language of the requester
+          example: Loan deed
+          pattern: "^.{0,55}$"
+          type: string
+        bDocumenttypeIsactive:
+          description: Whether the documenttype is active or not
+          example: true
+          type: boolean
+      required:
+      - bDocumenttypeIsactive
+      - pkiDocumenttypeID
+      - sDocumenttypeNameX
+      type: object
+    documenttype-ListElement:
+      description: A Documenttype List Element
+      example:
+        pkiDocumenttypeID: 172
+        sDocumenttypeNameX: Loan deed
+        sDocumenttypeDefaultfilename: invoice.pdf
+        bDocumenttypeShowagent: true
+        bDocumenttypeIsactive: true
+        bDocumenttypeIsrequired: true
+        bDocumenttypeSale: true
+        bDocumenttypeRental: true
+        bDocumenttypeReference: true
+        bDocumenttypeMortgagereference: true
+        bDocumenttypeEvaluation: true
+        bDocumenttypeConsultation: true
+        bDocumenttypeOtherservices: true
+        bDocumenttypeForeclosedsale: true
+        bDocumenttypeCommercialfunding: true
+        bDocumenttypeCanafe: true
+        eDocumenttypeEzcom: PromiseToPurchase
+        eDocumenttypePrivacydefault: Administration
+        eDocumenttypeStatusdefault: Not required
+        eDocumenttypeSalebyowner: All
+        eDocumenttypeSaledisplaybyrole: InscriptorSeller
+        eDocumenttypeTransactiontype: All
+        eDocumenttypeRepossession: All
+      properties:
+        pkiDocumenttypeID:
+          description: The unique ID of the Documenttype
+          example: 172
+          maximum: 65535
+          minimum: 0
+          type: integer
+        sDocumenttypeNameX:
+          description: The name of the Documenttype in the language of the requester
+          example: Loan deed
+          pattern: "^.{0,55}$"
+          type: string
+        sDocumenttypeDefaultfilename:
+          description: The defaultfilename of the Documenttype
+          example: invoice.pdf
+          pattern: "^.{0,50}$"
+          type: string
+        bDocumenttypeShowagent:
+          description: Whether if it's an showagent
+          example: true
+          type: boolean
+        bDocumenttypeIsactive:
+          description: Whether the documenttype is active or not
+          example: true
+          type: boolean
+        bDocumenttypeIsrequired:
+          description: Whether if it's an isrequired
+          example: true
+          type: boolean
+        bDocumenttypeSale:
+          description: Whether if it's an sale
+          example: true
+          type: boolean
+        bDocumenttypeRental:
+          description: Whether if it's an rental
+          example: true
+          type: boolean
+        bDocumenttypeReference:
+          description: Whether if it's an reference
+          example: true
+          type: boolean
+        bDocumenttypeMortgagereference:
+          description: Whether if it's an mortgagereference
+          example: true
+          type: boolean
+        bDocumenttypeEvaluation:
+          description: Whether if it's an evaluation
+          example: true
+          type: boolean
+        bDocumenttypeConsultation:
+          description: Whether if it's an consultation
+          example: true
+          type: boolean
+        bDocumenttypeOtherservices:
+          description: Whether if it's an otherservices
+          example: true
+          type: boolean
+        bDocumenttypeForeclosedsale:
+          description: Whether if it's an foreclosedsale
+          example: true
+          type: boolean
+        bDocumenttypeCommercialfunding:
+          description: Whether if it's an commercialfunding
+          example: true
+          type: boolean
+        bDocumenttypeCanafe:
+          description: Whether if it's an canafe
+          example: true
+          type: boolean
+        eDocumenttypeEzcom:
+          $ref: "#/components/schemas/Field-eDocumenttypeEzcom"
+        eDocumenttypePrivacydefault:
+          $ref: "#/components/schemas/Field-eDocumenttypePrivacydefault"
+        eDocumenttypeStatusdefault:
+          $ref: "#/components/schemas/Field-eDocumenttypeStatusdefault"
+        eDocumenttypeSalebyowner:
+          $ref: "#/components/schemas/Field-eDocumenttypeSalebyowner"
+        eDocumenttypeSaledisplaybyrole:
+          $ref: "#/components/schemas/Field-eDocumenttypeSaledisplaybyrole"
+        eDocumenttypeTransactiontype:
+          $ref: "#/components/schemas/Field-eDocumenttypeTransactiontype"
+        eDocumenttypeRepossession:
+          $ref: "#/components/schemas/Field-eDocumenttypeRepossession"
+      required:
+      - bDocumenttypeCanafe
+      - bDocumenttypeCommercialfunding
+      - bDocumenttypeConsultation
+      - bDocumenttypeEvaluation
+      - bDocumenttypeForeclosedsale
+      - bDocumenttypeIsactive
+      - bDocumenttypeIsrequired
+      - bDocumenttypeMortgagereference
+      - bDocumenttypeOtherservices
+      - bDocumenttypeReference
+      - bDocumenttypeRental
+      - bDocumenttypeSale
+      - bDocumenttypeShowagent
+      - eDocumenttypeEzcom
+      - eDocumenttypePrivacydefault
+      - eDocumenttypeRepossession
+      - eDocumenttypeSalebyowner
+      - eDocumenttypeSaledisplaybyrole
+      - eDocumenttypeStatusdefault
+      - eDocumenttypeTransactiontype
+      - pkiDocumenttypeID
+      - sDocumenttypeDefaultfilename
+      - sDocumenttypeNameX
+      type: object
+    documenttype-Request:
+      description: A Documenttype Object
+      properties:
+        pkiDocumenttypeID:
+          description: The unique ID of the Documenttype
+          example: 172
+          maximum: 65535
+          minimum: 0
+          type: integer
+        objDocumenttypeName:
+          $ref: "#/components/schemas/Multilingual-DocumenttypeName"
+        sDocumenttypeDefaultfilename:
+          description: The defaultfilename of the Documenttype
+          example: invoice.pdf
+          pattern: "^.{0,50}$"
+          type: string
+        bDocumenttypeShowagent:
+          description: Whether if it's an showagent
+          example: true
+          type: boolean
+        bDocumenttypeIsactive:
+          description: Whether the documenttype is active or not
+          example: true
+          type: boolean
+        bDocumenttypeIsrequired:
+          description: Whether if it's an isrequired
+          example: true
+          type: boolean
+        bDocumenttypeSale:
+          description: Whether if it's an sale
+          example: true
+          type: boolean
+        bDocumenttypeRental:
+          description: Whether if it's an rental
+          example: true
+          type: boolean
+        bDocumenttypeReference:
+          description: Whether if it's an reference
+          example: true
+          type: boolean
+        bDocumenttypeMortgagereference:
+          description: Whether if it's an mortgagereference
+          example: true
+          type: boolean
+        bDocumenttypeEvaluation:
+          description: Whether if it's an evaluation
+          example: true
+          type: boolean
+        bDocumenttypeConsultation:
+          description: Whether if it's an consultation
+          example: true
+          type: boolean
+        bDocumenttypeOtherservices:
+          description: Whether if it's an otherservices
+          example: true
+          type: boolean
+        bDocumenttypeForeclosedsale:
+          description: Whether if it's an foreclosedsale
+          example: true
+          type: boolean
+        bDocumenttypeCommercialfunding:
+          description: Whether if it's an commercialfunding
+          example: true
+          type: boolean
+        bDocumenttypeCanafe:
+          description: Whether if it's an canafe
+          example: true
+          type: boolean
+        eDocumenttypeEzcom:
+          $ref: "#/components/schemas/Field-eDocumenttypeEzcom"
+        eDocumenttypePrivacydefault:
+          $ref: "#/components/schemas/Field-eDocumenttypePrivacydefault"
+        eDocumenttypeStatusdefault:
+          $ref: "#/components/schemas/Field-eDocumenttypeStatusdefault"
+        eDocumenttypeSalebyowner:
+          $ref: "#/components/schemas/Field-eDocumenttypeSalebyowner"
+        eDocumenttypeSaledisplaybyrole:
+          $ref: "#/components/schemas/Field-eDocumenttypeSaledisplaybyrole"
+        eDocumenttypeTransactiontype:
+          $ref: "#/components/schemas/Field-eDocumenttypeTransactiontype"
+        eDocumenttypeRepossession:
+          $ref: "#/components/schemas/Field-eDocumenttypeRepossession"
+      required:
+      - bDocumenttypeCanafe
+      - bDocumenttypeCommercialfunding
+      - bDocumenttypeConsultation
+      - bDocumenttypeEvaluation
+      - bDocumenttypeForeclosedsale
+      - bDocumenttypeIsactive
+      - bDocumenttypeIsrequired
+      - bDocumenttypeMortgagereference
+      - bDocumenttypeOtherservices
+      - bDocumenttypeReference
+      - bDocumenttypeRental
+      - bDocumenttypeSale
+      - bDocumenttypeShowagent
+      - eDocumenttypeEzcom
+      - eDocumenttypePrivacydefault
+      - eDocumenttypeRepossession
+      - eDocumenttypeSalebyowner
+      - eDocumenttypeSaledisplaybyrole
+      - eDocumenttypeStatusdefault
+      - eDocumenttypeTransactiontype
+      - objDocumenttypeName
+      - sDocumenttypeDefaultfilename
+      type: object
+    documenttype-RequestCompound:
+      allOf:
+      - $ref: "#/components/schemas/documenttype-Request"
+      - properties: {}
+        type: object
+      description: A Documenttype Object and children
+      type: object
+    documenttype-Response:
+      description: A Documenttype Object
+      properties:
+        pkiDocumenttypeID:
+          description: The unique ID of the Documenttype
+          example: 172
+          maximum: 65535
+          minimum: 0
+          type: integer
+        objDocumenttypeName:
+          $ref: "#/components/schemas/Multilingual-DocumenttypeName"
+        sDocumenttypeDefaultfilename:
+          description: The defaultfilename of the Documenttype
+          example: invoice.pdf
+          pattern: "^.{0,50}$"
+          type: string
+        bDocumenttypeShowagent:
+          description: Whether if it's an showagent
+          example: true
+          type: boolean
+        bDocumenttypeIsactive:
+          description: Whether the documenttype is active or not
+          example: true
+          type: boolean
+        bDocumenttypeIsrequired:
+          description: Whether if it's an isrequired
+          example: true
+          type: boolean
+        bDocumenttypeSale:
+          description: Whether if it's an sale
+          example: true
+          type: boolean
+        bDocumenttypeRental:
+          description: Whether if it's an rental
+          example: true
+          type: boolean
+        bDocumenttypeReference:
+          description: Whether if it's an reference
+          example: true
+          type: boolean
+        bDocumenttypeMortgagereference:
+          description: Whether if it's an mortgagereference
+          example: true
+          type: boolean
+        bDocumenttypeEvaluation:
+          description: Whether if it's an evaluation
+          example: true
+          type: boolean
+        bDocumenttypeConsultation:
+          description: Whether if it's an consultation
+          example: true
+          type: boolean
+        bDocumenttypeOtherservices:
+          description: Whether if it's an otherservices
+          example: true
+          type: boolean
+        bDocumenttypeForeclosedsale:
+          description: Whether if it's an foreclosedsale
+          example: true
+          type: boolean
+        bDocumenttypeCommercialfunding:
+          description: Whether if it's an commercialfunding
+          example: true
+          type: boolean
+        bDocumenttypeCanafe:
+          description: Whether if it's an canafe
+          example: true
+          type: boolean
+        eDocumenttypeEzcom:
+          $ref: "#/components/schemas/Field-eDocumenttypeEzcom"
+        eDocumenttypePrivacydefault:
+          $ref: "#/components/schemas/Field-eDocumenttypePrivacydefault"
+        eDocumenttypeStatusdefault:
+          $ref: "#/components/schemas/Field-eDocumenttypeStatusdefault"
+        eDocumenttypeSalebyowner:
+          $ref: "#/components/schemas/Field-eDocumenttypeSalebyowner"
+        eDocumenttypeSaledisplaybyrole:
+          $ref: "#/components/schemas/Field-eDocumenttypeSaledisplaybyrole"
+        eDocumenttypeTransactiontype:
+          $ref: "#/components/schemas/Field-eDocumenttypeTransactiontype"
+        eDocumenttypeRepossession:
+          $ref: "#/components/schemas/Field-eDocumenttypeRepossession"
+      required:
+      - bDocumenttypeIsactive
+      - bDocumenttypeIsrequired
+      - bDocumenttypeShowagent
+      - objDocumenttypeName
+      - pkiDocumenttypeID
+      - sDocumenttypeDefaultfilename
+      type: object
+    documenttype-ResponseCompound:
+      allOf:
+      - $ref: "#/components/schemas/documenttype-Response"
+      - properties: {}
+        type: object
+      description: A Documenttype Object
+      example:
+        pkiDocumenttypeID: 172
+        objDocumenttypeName:
+          sDocumenttypeName1: Facture
+          sDocumenttypeName2: Invoice
+        sDocumenttypeDefaultfilename: invoice.pdf
+        bDocumenttypeShowagent: true
+        bDocumenttypeIsactive: true
+        bDocumenttypeIsrequired: true
+        bDocumenttypeSale: true
+        bDocumenttypeRental: true
+        bDocumenttypeReference: true
+        bDocumenttypeMortgagereference: true
+        bDocumenttypeEvaluation: true
+        bDocumenttypeConsultation: true
+        bDocumenttypeOtherservices: true
+        bDocumenttypeForeclosedsale: true
+        bDocumenttypeCommercialfunding: true
+        bDocumenttypeCanafe: true
+        eDocumenttypeEzcom: PromiseToPurchase
+        eDocumenttypePrivacydefault: Administration
+        eDocumenttypeStatusdefault: Not required
+        eDocumenttypeSalebyowner: All
+        eDocumenttypeSaledisplaybyrole: InscriptorSeller
+        eDocumenttypeTransactiontype: All
+        eDocumenttypeRepossession: All
+      type: object
+    documenttype-createObject-v1-Request:
+      description: Request for POST /1/object/documenttype
+      properties:
+        a_objDocumenttype:
+          items:
+            $ref: "#/components/schemas/documenttype-RequestCompound"
+          minItems: 1
+          type: array
+      required:
+      - a_objDocumenttype
+      type: object
+    documenttype-createObject-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/documenttype-createObject-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: Response for POST /1/object/documenttype
+      example:
+        mPayload:
+          a_pkiDocumenttypeID:
+          - 172
+          - 172
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    documenttype-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/documenttype
+      example:
+        a_pkiDocumenttypeID:
+        - 172
+        - 172
+      properties:
+        a_pkiDocumenttypeID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: "#/components/schemas/Field-pkiDocumenttypeID"
+          type: array
+      required:
+      - a_pkiDocumenttypeID
+      type: object
+    documenttype-deleteObject-v1-Response:
+      allOf:
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for DELETE /1/object/documenttype/{pkiDocumenttypeID}"
+      example:
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    documenttype-editObject-v1-Request:
+      description: "Request for PUT /1/object/documenttype/{pkiDocumenttypeID}"
+      properties:
+        objDocumenttype:
+          $ref: "#/components/schemas/documenttype-RequestCompound"
+      required:
+      - objDocumenttype
+      type: object
+    documenttype-editObject-v1-Response:
+      allOf:
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for PUT /1/object/documenttype/{pkiDocumenttypeID}"
+      example:
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    documenttype-getAutocomplete-v2-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/documenttype-getAutocomplete-v2-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: Response for GET /2/object/documenttype/getAutocomplete
+      example:
+        mPayload:
+          a_objDocumenttype:
+          - pkiDocumenttypeID: 172
+            sDocumenttypeNameX: Loan deed
+            bDocumenttypeIsactive: true
+          - pkiDocumenttypeID: 172
+            sDocumenttypeNameX: Loan deed
+            bDocumenttypeIsactive: true
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    documenttype-getAutocomplete-v2-Response-mPayload:
+      description: Payload for POST /2/object/documenttype/getAutocomplete
+      example:
+        a_objDocumenttype:
+        - pkiDocumenttypeID: 172
+          sDocumenttypeNameX: Loan deed
+          bDocumenttypeIsactive: true
+        - pkiDocumenttypeID: 172
+          sDocumenttypeNameX: Loan deed
+          bDocumenttypeIsactive: true
+      properties:
+        a_objDocumenttype:
+          description: An array of Documenttype autocomplete element response.
+          items:
+            $ref: "#/components/schemas/documenttype-AutocompleteElement-Response"
+          type: array
+      required:
+      - a_objDocumenttype
+      type: object
+    documenttype-getList-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/documenttype-getList-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response_getList"
+      description: Response for GET /1/object/documenttype/getList
+      example:
+        mPayload:
+          a_objDocumenttype:
+          - pkiDocumenttypeID: 172
+            sDocumenttypeNameX: Loan deed
+            sDocumenttypeDefaultfilename: invoice.pdf
+            bDocumenttypeShowagent: true
+            bDocumenttypeIsactive: true
+            bDocumenttypeIsrequired: true
+            bDocumenttypeSale: true
+            bDocumenttypeRental: true
+            bDocumenttypeReference: true
+            bDocumenttypeMortgagereference: true
+            bDocumenttypeEvaluation: true
+            bDocumenttypeConsultation: true
+            bDocumenttypeOtherservices: true
+            bDocumenttypeForeclosedsale: true
+            bDocumenttypeCommercialfunding: true
+            bDocumenttypeCanafe: true
+            eDocumenttypeEzcom: PromiseToPurchase
+            eDocumenttypePrivacydefault: Administration
+            eDocumenttypeStatusdefault: Not required
+            eDocumenttypeSalebyowner: All
+            eDocumenttypeSaledisplaybyrole: InscriptorSeller
+            eDocumenttypeTransactiontype: All
+            eDocumenttypeRepossession: All
+          - pkiDocumenttypeID: 172
+            sDocumenttypeNameX: Loan deed
+            sDocumenttypeDefaultfilename: invoice.pdf
+            bDocumenttypeShowagent: true
+            bDocumenttypeIsactive: true
+            bDocumenttypeIsrequired: true
+            bDocumenttypeSale: true
+            bDocumenttypeRental: true
+            bDocumenttypeReference: true
+            bDocumenttypeMortgagereference: true
+            bDocumenttypeEvaluation: true
+            bDocumenttypeConsultation: true
+            bDocumenttypeOtherservices: true
+            bDocumenttypeForeclosedsale: true
+            bDocumenttypeCommercialfunding: true
+            bDocumenttypeCanafe: true
+            eDocumenttypeEzcom: PromiseToPurchase
+            eDocumenttypePrivacydefault: Administration
+            eDocumenttypeStatusdefault: Not required
+            eDocumenttypeSalebyowner: All
+            eDocumenttypeSaledisplaybyrole: InscriptorSeller
+            eDocumenttypeTransactiontype: All
+            eDocumenttypeRepossession: All
+          iRowReturned: 100
+          iRowFiltered: 533
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+          a_Filter:
+            a_AutoType:
+              key: a_AutoType
+            a_AutoTypeHaving:
+              key: a_AutoTypeHaving
+            a_Enum:
+              key:
+                key: a_Enum
+          a_OrderBy:
+            key: a_OrderBy
+          iRowMax: 100
+          iRowOffset: 0
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    documenttype-getList-v1-Response-mPayload:
+      allOf:
+      - properties:
+          a_objDocumenttype:
+            items:
+              $ref: "#/components/schemas/documenttype-ListElement"
+            type: array
+        required:
+        - a_objDocumenttype
+        type: object
+      - $ref: "#/components/schemas/Common-getList-v1-Response-mPayload"
+      description: Payload for GET /1/object/documenttype/getList
+      example:
+        a_objDocumenttype:
+        - pkiDocumenttypeID: 172
+          sDocumenttypeNameX: Loan deed
+          sDocumenttypeDefaultfilename: invoice.pdf
+          bDocumenttypeShowagent: true
+          bDocumenttypeIsactive: true
+          bDocumenttypeIsrequired: true
+          bDocumenttypeSale: true
+          bDocumenttypeRental: true
+          bDocumenttypeReference: true
+          bDocumenttypeMortgagereference: true
+          bDocumenttypeEvaluation: true
+          bDocumenttypeConsultation: true
+          bDocumenttypeOtherservices: true
+          bDocumenttypeForeclosedsale: true
+          bDocumenttypeCommercialfunding: true
+          bDocumenttypeCanafe: true
+          eDocumenttypeEzcom: PromiseToPurchase
+          eDocumenttypePrivacydefault: Administration
+          eDocumenttypeStatusdefault: Not required
+          eDocumenttypeSalebyowner: All
+          eDocumenttypeSaledisplaybyrole: InscriptorSeller
+          eDocumenttypeTransactiontype: All
+          eDocumenttypeRepossession: All
+        - pkiDocumenttypeID: 172
+          sDocumenttypeNameX: Loan deed
+          sDocumenttypeDefaultfilename: invoice.pdf
+          bDocumenttypeShowagent: true
+          bDocumenttypeIsactive: true
+          bDocumenttypeIsrequired: true
+          bDocumenttypeSale: true
+          bDocumenttypeRental: true
+          bDocumenttypeReference: true
+          bDocumenttypeMortgagereference: true
+          bDocumenttypeEvaluation: true
+          bDocumenttypeConsultation: true
+          bDocumenttypeOtherservices: true
+          bDocumenttypeForeclosedsale: true
+          bDocumenttypeCommercialfunding: true
+          bDocumenttypeCanafe: true
+          eDocumenttypeEzcom: PromiseToPurchase
+          eDocumenttypePrivacydefault: Administration
+          eDocumenttypeStatusdefault: Not required
+          eDocumenttypeSalebyowner: All
+          eDocumenttypeSaledisplaybyrole: InscriptorSeller
+          eDocumenttypeTransactiontype: All
+          eDocumenttypeRepossession: All
+        iRowReturned: 100
+        iRowFiltered: 533
+      type: object
+    documenttype-getObject-v2-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/documenttype-getObject-v2-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for GET /2/object/documenttype/{pkiDocumenttypeID}"
+      example:
+        mPayload:
+          objDocumenttype:
+            pkiDocumenttypeID: 172
+            objDocumenttypeName:
+              sDocumenttypeName1: Facture
+              sDocumenttypeName2: Invoice
+            sDocumenttypeDefaultfilename: invoice.pdf
+            bDocumenttypeShowagent: true
+            bDocumenttypeIsactive: true
+            bDocumenttypeIsrequired: true
+            bDocumenttypeSale: true
+            bDocumenttypeRental: true
+            bDocumenttypeReference: true
+            bDocumenttypeMortgagereference: true
+            bDocumenttypeEvaluation: true
+            bDocumenttypeConsultation: true
+            bDocumenttypeOtherservices: true
+            bDocumenttypeForeclosedsale: true
+            bDocumenttypeCommercialfunding: true
+            bDocumenttypeCanafe: true
+            eDocumenttypeEzcom: PromiseToPurchase
+            eDocumenttypePrivacydefault: Administration
+            eDocumenttypeStatusdefault: Not required
+            eDocumenttypeSalebyowner: All
+            eDocumenttypeSaledisplaybyrole: InscriptorSeller
+            eDocumenttypeTransactiontype: All
+            eDocumenttypeRepossession: All
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    documenttype-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/documenttype/{pkiDocumenttypeID}"
+      example:
+        objDocumenttype:
+          pkiDocumenttypeID: 172
+          objDocumenttypeName:
+            sDocumenttypeName1: Facture
+            sDocumenttypeName2: Invoice
+          sDocumenttypeDefaultfilename: invoice.pdf
+          bDocumenttypeShowagent: true
+          bDocumenttypeIsactive: true
+          bDocumenttypeIsrequired: true
+          bDocumenttypeSale: true
+          bDocumenttypeRental: true
+          bDocumenttypeReference: true
+          bDocumenttypeMortgagereference: true
+          bDocumenttypeEvaluation: true
+          bDocumenttypeConsultation: true
+          bDocumenttypeOtherservices: true
+          bDocumenttypeForeclosedsale: true
+          bDocumenttypeCommercialfunding: true
+          bDocumenttypeCanafe: true
+          eDocumenttypeEzcom: PromiseToPurchase
+          eDocumenttypePrivacydefault: Administration
+          eDocumenttypeStatusdefault: Not required
+          eDocumenttypeSalebyowner: All
+          eDocumenttypeSaledisplaybyrole: InscriptorSeller
+          eDocumenttypeTransactiontype: All
+          eDocumenttypeRepossession: All
+      properties:
+        objDocumenttype:
+          $ref: "#/components/schemas/documenttype-ResponseCompound"
+      required:
+      - objDocumenttype
+      type: object
+    documenttypechecklist-ListElement:
+      description: A Documenttypechecklist List Element
+      example:
+        pkiDocumenttypechecklistID: 191
+        fkiDocumenttypeID: 172
+        eDocumenttypechecklistStatus: Not required
+        tDocumenttypechecklistComment: This document is optional.
+      properties:
+        pkiDocumenttypechecklistID:
+          description: The unique ID of the Documenttypechecklist
+          example: 191
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDocumenttypeID:
+          description: The unique ID of the Documenttype
+          example: 172
+          maximum: 65535
+          minimum: 0
+          type: integer
+        eDocumenttypechecklistStatus:
+          $ref: "#/components/schemas/Field-eDocumenttypechecklistStatus"
+        tDocumenttypechecklistComment:
+          description: The comment of the Documenttypechecklist
+          example: This document is optional.
+          pattern: "^.{0,255}$"
+          type: string
+      required:
+      - eDocumenttypechecklistStatus
+      - fkiDocumenttypeID
+      - pkiDocumenttypechecklistID
+      - tDocumenttypechecklistComment
+      type: object
+    documenttypechecklist-Request:
+      description: A Documenttypechecklist Object
+      properties:
+        pkiDocumenttypechecklistID:
+          description: The unique ID of the Documenttypechecklist
+          example: 191
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDocumenttypeID:
+          description: The unique ID of the Documenttype
+          example: 172
+          maximum: 65535
+          minimum: 0
+          type: integer
+        eDocumenttypechecklistStatus:
+          $ref: "#/components/schemas/Field-eDocumenttypechecklistStatus"
+        tDocumenttypechecklistComment:
+          description: The comment of the Documenttypechecklist
+          example: This document is optional.
+          pattern: "^.{0,255}$"
+          type: string
+        fkiAdjustmentID:
+          description: The unique ID of the Adjustment
+          example: 202
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiAgentID:
+          description: The unique ID of the Agent.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiBankaccountID:
+          description: The unique ID of the Bankaccount
+          example: 46
+          maximum: 255
+          minimum: 0
+          type: integer
+        fkiBrokerID:
+          description: The unique ID of the Broker.
+          example: 26
+          minimum: 0
+          type: integer
+        fkiCommissionadvanceID:
+          description: The unique ID of the Commissionadvance
+          example: 115
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiCommunicationID:
+          description: The unique ID of the Communication.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiCustomerID:
+          description: The unique ID of the Customer.
+          example: 18
+          minimum: 0
+          type: integer
+        fkiCustomertemplateID:
+          description: The unique ID of the Customertemplate
+          example: 152
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiDepositID:
+          description: The unique ID of the Deposit
+          example: 54
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDeposittransitchequeID:
+          description: The unique ID of the Deposittransitcheque
+          example: 251
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiElectronicfundstransferID:
+          description: The unique ID of the Electronicfundstransfer
+          example: 1262
+          maximum: 65535
+          minimum: 1
+          type: integer
+        fkiEmployeeID:
+          description: The unique ID of the Employee.
+          example: 31
+          minimum: 0
+          type: integer
+        fkiExternalbrokerID:
+          description: The unique ID of the Externalbroker.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiEzcomadvanceserverID:
+          description: The unique ID of the Ezcomadvanceserver
+          example: 238
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiEzcomcompanyID:
+          description: The unique ID of the Ezcomcompany
+          example: 170
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiEzsigndocumentID:
+          description: The unique ID of the Ezsigndocument
+          example: 97
+          minimum: 0
+          type: integer
+        fkiGhacqcontractID:
+          description: The unique ID of the Ghacqcontract
+          example: 217
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiInscriptionID:
+          description: The unique ID of the Inscription.
+          example: 17
+          minimum: 0
+          type: integer
+        fkiInscriptiontempID:
+          description: The unique ID of the Inscriptiontemp
+          example: 2445
+          maximum: 16777215
+          minimum: 1
+          type: integer
+        fkiInscriptionnotauthenticatedID:
+          description: The unique ID of the Inscriptionnotauthenticated.
+          example: 24
+          minimum: 0
+          type: integer
+        fkiInvoiceID:
+          description: The unique ID of the Invoice.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiBuyercontractID:
+          description: The unique ID of the Buyercontract
+          example: 38
+          maximum: 65535
+          minimum: 1
+          type: integer
+        fkiFranchisebrokerID:
+          description: The unique ID of the Franchisebroker
+          example: 61
+          minimum: 0
+          type: integer
+        fkiFranchiseagenceID:
+          description: The unique ID of the Franchiseagence
+          example: 117
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiFranchiseofficeID:
+          description: The unique ID of the Franchisereoffice
+          example: 50
+          minimum: 0
+          type: integer
+        fkiFranchisefranchiseID:
+          description: The unique ID of the Franchisefranchise
+          example: 156
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiFranchisecomplaintID:
+          description: The unique ID of the Franchisecomplaint
+          example: 24
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiLeadID:
+          description: The unique ID of the Lead
+          example: 117
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiMarketingprogramID:
+          description: The unique ID of the Marketingprogram
+          example: 178
+          maximum: 255
+          minimum: 0
+          type: integer
+        fkiMarketingfollowID:
+          description: The unique ID of the Marketingfollow
+          example: 45
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiNotaryID:
+          description: The unique ID of the Notary.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiOfficetaxreportID:
+          description: The unique ID of the Officetaxreport
+          example: 200
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiOtherincomeID:
+          description: The unique ID of the Otherincome
+          example: 142
+          maximum: 65535
+          minimum: 1
+          type: integer
+        fkiPaymentpreparationID:
+          description: The unique ID of the Paymentpreparation
+          example: 124
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiPurchaseID:
+          description: The unique ID of the Purchase
+          example: 155
+          type: integer
+        fkiSalaryID:
+          description: The unique ID of the Salary
+          example: 73
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiSupplierID:
+          description: The unique ID of the Supplier.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiTranqcontractID:
+          description: The unique ID of the Tranqcontract
+          example: 39
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiTemplateID:
+          description: The unique ID of the Template
+          example: 232
+          maximum: 65535
+          minimum: 0
+          type: integer
+      required:
+      - eDocumenttypechecklistStatus
+      - fkiDocumenttypeID
+      - tDocumenttypechecklistComment
+      type: object
+    documenttypechecklist-RequestCompound:
+      allOf:
+      - $ref: "#/components/schemas/documenttypechecklist-Request"
+      - properties: {}
+        type: object
+      description: A Documenttypechecklist Object and children
+      type: object
+    documenttypechecklist-Response:
+      description: A Documenttypechecklist Object
+      properties:
+        pkiDocumenttypechecklistID:
+          description: The unique ID of the Documenttypechecklist
+          example: 191
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDocumenttypeID:
+          description: The unique ID of the Documenttype
+          example: 172
+          maximum: 65535
+          minimum: 0
+          type: integer
+        sDocumenttypeNameX:
+          description: The name of the Documenttype in the language of the requester
+          example: Loan deed
+          pattern: "^.{0,55}$"
+          type: string
+        eDocumenttypechecklistStatus:
+          $ref: "#/components/schemas/Field-eDocumenttypechecklistStatus"
+        tDocumenttypechecklistComment:
+          description: The comment of the Documenttypechecklist
+          example: This document is optional.
+          pattern: "^.{0,255}$"
+          type: string
+        fkiAdjustmentID:
+          description: The unique ID of the Adjustment
+          example: 202
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiAgentID:
+          description: The unique ID of the Agent.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiBankaccountID:
+          description: The unique ID of the Bankaccount
+          example: 46
+          maximum: 255
+          minimum: 0
+          type: integer
+        fkiBrokerID:
+          description: The unique ID of the Broker.
+          example: 26
+          minimum: 0
+          type: integer
+        fkiCommissionadvanceID:
+          description: The unique ID of the Commissionadvance
+          example: 115
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiCommunicationID:
+          description: The unique ID of the Communication.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiCustomerID:
+          description: The unique ID of the Customer.
+          example: 18
+          minimum: 0
+          type: integer
+        fkiCustomertemplateID:
+          description: The unique ID of the Customertemplate
+          example: 152
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiDepositID:
+          description: The unique ID of the Deposit
+          example: 54
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiDeposittransitchequeID:
+          description: The unique ID of the Deposittransitcheque
+          example: 251
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiElectronicfundstransferID:
+          description: The unique ID of the Electronicfundstransfer
+          example: 1262
+          maximum: 65535
+          minimum: 1
+          type: integer
+        fkiEmployeeID:
+          description: The unique ID of the Employee.
+          example: 31
+          minimum: 0
+          type: integer
+        fkiExternalbrokerID:
+          description: The unique ID of the Externalbroker.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiEzcomadvanceserverID:
+          description: The unique ID of the Ezcomadvanceserver
+          example: 238
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiEzcomcompanyID:
+          description: The unique ID of the Ezcomcompany
+          example: 170
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiEzsigndocumentID:
+          description: The unique ID of the Ezsigndocument
+          example: 97
+          minimum: 0
+          type: integer
+        fkiGhacqcontractID:
+          description: The unique ID of the Ghacqcontract
+          example: 217
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiInscriptionID:
+          description: The unique ID of the Inscription.
+          example: 17
+          minimum: 0
+          type: integer
+        fkiInscriptiontempID:
+          description: The unique ID of the Inscriptiontemp
+          example: 2445
+          maximum: 16777215
+          minimum: 1
+          type: integer
+        fkiInscriptionnotauthenticatedID:
+          description: The unique ID of the Inscriptionnotauthenticated.
+          example: 24
+          minimum: 0
+          type: integer
+        fkiInvoiceID:
+          description: The unique ID of the Invoice.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiBuyercontractID:
+          description: The unique ID of the Buyercontract
+          example: 38
+          maximum: 65535
+          minimum: 1
+          type: integer
+        fkiFranchisebrokerID:
+          description: The unique ID of the Franchisebroker
+          example: 61
+          minimum: 0
+          type: integer
+        fkiFranchiseagenceID:
+          description: The unique ID of the Franchiseagence
+          example: 117
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiFranchiseofficeID:
+          description: The unique ID of the Franchisereoffice
+          example: 50
+          minimum: 0
+          type: integer
+        fkiFranchisefranchiseID:
+          description: The unique ID of the Franchisefranchise
+          example: 156
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiFranchisecomplaintID:
+          description: The unique ID of the Franchisecomplaint
+          example: 24
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiLeadID:
+          description: The unique ID of the Lead
+          example: 117
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiMarketingprogramID:
+          description: The unique ID of the Marketingprogram
+          example: 178
+          maximum: 255
+          minimum: 0
+          type: integer
+        fkiMarketingfollowID:
+          description: The unique ID of the Marketingfollow
+          example: 45
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiNotaryID:
+          description: The unique ID of the Notary.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiOfficetaxreportID:
+          description: The unique ID of the Officetaxreport
+          example: 200
+          maximum: 65535
+          minimum: 0
+          type: integer
+        fkiOtherincomeID:
+          description: The unique ID of the Otherincome
+          example: 142
+          maximum: 65535
+          minimum: 1
+          type: integer
+        fkiPaymentpreparationID:
+          description: The unique ID of the Paymentpreparation
+          example: 124
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiPurchaseID:
+          description: The unique ID of the Purchase
+          example: 155
+          type: integer
+        fkiSalaryID:
+          description: The unique ID of the Salary
+          example: 73
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiSupplierID:
+          description: The unique ID of the Supplier.
+          example: 1
+          minimum: 0
+          type: integer
+        fkiTranqcontractID:
+          description: The unique ID of the Tranqcontract
+          example: 39
+          maximum: 16777215
+          minimum: 0
+          type: integer
+        fkiTemplateID:
+          description: The unique ID of the Template
+          example: 232
+          maximum: 65535
+          minimum: 0
+          type: integer
+      required:
+      - eDocumenttypechecklistStatus
+      - fkiDocumenttypeID
+      - pkiDocumenttypechecklistID
+      - tDocumenttypechecklistComment
+      type: object
+    documenttypechecklist-ResponseCompound:
+      allOf:
+      - $ref: "#/components/schemas/documenttypechecklist-Response"
+      - properties: {}
+        type: object
+      description: A Documenttypechecklist Object
+      example:
+        pkiDocumenttypechecklistID: 191
+        fkiDocumenttypeID: 172
+        sDocumenttypeNameX: Loan deed
+        eDocumenttypechecklistStatus: Not required
+        tDocumenttypechecklistComment: This document is optional.
+        fkiAdjustmentID: 202
+        fkiAgentID: 1
+        fkiBankaccountID: 46
+        fkiBrokerID: 26
+        fkiCommissionadvanceID: 115
+        fkiCommunicationID: 1
+        fkiCustomerID: 18
+        fkiCustomertemplateID: 152
+        fkiDepositID: 54
+        fkiDeposittransitchequeID: 251
+        fkiElectronicfundstransferID: 1262
+        fkiEmployeeID: 31
+        fkiExternalbrokerID: 1
+        fkiEzcomadvanceserverID: 238
+        fkiEzcomcompanyID: 170
+        fkiEzsigndocumentID: 97
+        fkiGhacqcontractID: 217
+        fkiInscriptionID: 17
+        fkiInscriptiontempID: 2445
+        fkiInscriptionnotauthenticatedID: 24
+        fkiInvoiceID: 1
+        fkiBuyercontractID: 38
+        fkiFranchisebrokerID: 61
+        fkiFranchiseagenceID: 117
+        fkiFranchiseofficeID: 50
+        fkiFranchisefranchiseID: 156
+        fkiFranchisecomplaintID: 24
+        fkiLeadID: 117
+        fkiMarketingprogramID: 178
+        fkiMarketingfollowID: 45
+        fkiNotaryID: 1
+        fkiOfficetaxreportID: 200
+        fkiOtherincomeID: 142
+        fkiPaymentpreparationID: 124
+        fkiPurchaseID: 155
+        fkiSalaryID: 73
+        fkiSupplierID: 1
+        fkiTranqcontractID: 39
+        fkiTemplateID: 232
+      type: object
+    documenttypechecklist-createObject-v1-Request:
+      description: Request for POST /1/object/documenttypechecklist
+      properties:
+        a_objDocumenttypechecklist:
+          items:
+            $ref: "#/components/schemas/documenttypechecklist-RequestCompound"
+          minItems: 1
+          type: array
+      required:
+      - a_objDocumenttypechecklist
+      type: object
+    documenttypechecklist-createObject-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/documenttypechecklist-createObject-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: Response for POST /1/object/documenttypechecklist
+      example:
+        mPayload:
+          a_pkiDocumenttypechecklistID:
+          - 191
+          - 191
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    documenttypechecklist-createObject-v1-Response-mPayload:
+      description: Payload for POST /1/object/documenttypechecklist
+      example:
+        a_pkiDocumenttypechecklistID:
+        - 191
+        - 191
+      properties:
+        a_pkiDocumenttypechecklistID:
+          description: |-
+            An array of unique IDs representing the object that were requested to be created.
+
+            They are returned in the same order as the array containing the objects to be created that was sent in the request.
+          items:
+            $ref: "#/components/schemas/Field-pkiDocumenttypechecklistID"
+          type: array
+      required:
+      - a_pkiDocumenttypechecklistID
+      type: object
+    documenttypechecklist-deleteObject-v1-Response:
+      allOf:
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for DELETE /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
+      example:
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    documenttypechecklist-editObject-v1-Request:
+      description: "Request for PUT /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
+      properties:
+        objDocumenttypechecklist:
+          $ref: "#/components/schemas/documenttypechecklist-RequestCompound"
+      required:
+      - objDocumenttypechecklist
+      type: object
+    documenttypechecklist-editObject-v1-Response:
+      allOf:
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for PUT /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
+      example:
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    documenttypechecklist-getList-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/documenttypechecklist-getList-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response_getList"
+      description: Response for GET /1/object/documenttypechecklist/getList
+      example:
+        mPayload:
+          a_objDocumenttypechecklist:
+          - pkiDocumenttypechecklistID: 191
+            fkiDocumenttypeID: 172
+            eDocumenttypechecklistStatus: Not required
+            tDocumenttypechecklistComment: This document is optional.
+          - pkiDocumenttypechecklistID: 191
+            fkiDocumenttypeID: 172
+            eDocumenttypechecklistStatus: Not required
+            tDocumenttypechecklistComment: This document is optional.
+          iRowReturned: 100
+          iRowFiltered: 533
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+          a_Filter:
+            a_AutoType:
+              key: a_AutoType
+            a_AutoTypeHaving:
+              key: a_AutoTypeHaving
+            a_Enum:
+              key:
+                key: a_Enum
+          a_OrderBy:
+            key: a_OrderBy
+          iRowMax: 100
+          iRowOffset: 0
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    documenttypechecklist-getList-v1-Response-mPayload:
+      allOf:
+      - properties:
+          a_objDocumenttypechecklist:
+            items:
+              $ref: "#/components/schemas/documenttypechecklist-ListElement"
+            type: array
+        required:
+        - a_objDocumenttypechecklist
+        type: object
+      - $ref: "#/components/schemas/Common-getList-v1-Response-mPayload"
+      description: Payload for GET /1/object/documenttypechecklist/getList
+      example:
+        a_objDocumenttypechecklist:
+        - pkiDocumenttypechecklistID: 191
+          fkiDocumenttypeID: 172
+          eDocumenttypechecklistStatus: Not required
+          tDocumenttypechecklistComment: This document is optional.
+        - pkiDocumenttypechecklistID: 191
+          fkiDocumenttypeID: 172
+          eDocumenttypechecklistStatus: Not required
+          tDocumenttypechecklistComment: This document is optional.
+        iRowReturned: 100
+        iRowFiltered: 533
+      type: object
+    documenttypechecklist-getObject-v2-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/documenttypechecklist-getObject-v2-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for GET /2/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
+      example:
+        mPayload:
+          objDocumenttypechecklist:
+            pkiDocumenttypechecklistID: 191
+            fkiDocumenttypeID: 172
+            sDocumenttypeNameX: Loan deed
+            eDocumenttypechecklistStatus: Not required
+            tDocumenttypechecklistComment: This document is optional.
+            fkiAdjustmentID: 202
+            fkiAgentID: 1
+            fkiBankaccountID: 46
+            fkiBrokerID: 26
+            fkiCommissionadvanceID: 115
+            fkiCommunicationID: 1
+            fkiCustomerID: 18
+            fkiCustomertemplateID: 152
+            fkiDepositID: 54
+            fkiDeposittransitchequeID: 251
+            fkiElectronicfundstransferID: 1262
+            fkiEmployeeID: 31
+            fkiExternalbrokerID: 1
+            fkiEzcomadvanceserverID: 238
+            fkiEzcomcompanyID: 170
+            fkiEzsigndocumentID: 97
+            fkiGhacqcontractID: 217
+            fkiInscriptionID: 17
+            fkiInscriptiontempID: 2445
+            fkiInscriptionnotauthenticatedID: 24
+            fkiInvoiceID: 1
+            fkiBuyercontractID: 38
+            fkiFranchisebrokerID: 61
+            fkiFranchiseagenceID: 117
+            fkiFranchiseofficeID: 50
+            fkiFranchisefranchiseID: 156
+            fkiFranchisecomplaintID: 24
+            fkiLeadID: 117
+            fkiMarketingprogramID: 178
+            fkiMarketingfollowID: 45
+            fkiNotaryID: 1
+            fkiOfficetaxreportID: 200
+            fkiOtherincomeID: 142
+            fkiPaymentpreparationID: 124
+            fkiPurchaseID: 155
+            fkiSalaryID: 73
+            fkiSupplierID: 1
+            fkiTranqcontractID: 39
+            fkiTemplateID: 232
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    documenttypechecklist-getObject-v2-Response-mPayload:
+      description: "Payload for GET /2/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
+      example:
+        objDocumenttypechecklist:
+          pkiDocumenttypechecklistID: 191
+          fkiDocumenttypeID: 172
+          sDocumenttypeNameX: Loan deed
+          eDocumenttypechecklistStatus: Not required
+          tDocumenttypechecklistComment: This document is optional.
+          fkiAdjustmentID: 202
+          fkiAgentID: 1
+          fkiBankaccountID: 46
+          fkiBrokerID: 26
+          fkiCommissionadvanceID: 115
+          fkiCommunicationID: 1
+          fkiCustomerID: 18
+          fkiCustomertemplateID: 152
+          fkiDepositID: 54
+          fkiDeposittransitchequeID: 251
+          fkiElectronicfundstransferID: 1262
+          fkiEmployeeID: 31
+          fkiExternalbrokerID: 1
+          fkiEzcomadvanceserverID: 238
+          fkiEzcomcompanyID: 170
+          fkiEzsigndocumentID: 97
+          fkiGhacqcontractID: 217
+          fkiInscriptionID: 17
+          fkiInscriptiontempID: 2445
+          fkiInscriptionnotauthenticatedID: 24
+          fkiInvoiceID: 1
+          fkiBuyercontractID: 38
+          fkiFranchisebrokerID: 61
+          fkiFranchiseagenceID: 117
+          fkiFranchiseofficeID: 50
+          fkiFranchisefranchiseID: 156
+          fkiFranchisecomplaintID: 24
+          fkiLeadID: 117
+          fkiMarketingprogramID: 178
+          fkiMarketingfollowID: 45
+          fkiNotaryID: 1
+          fkiOfficetaxreportID: 200
+          fkiOtherincomeID: 142
+          fkiPaymentpreparationID: 124
+          fkiPurchaseID: 155
+          fkiSalaryID: 73
+          fkiSupplierID: 1
+          fkiTranqcontractID: 39
+          fkiTemplateID: 232
+      properties:
+        objDocumenttypechecklist:
+          $ref: "#/components/schemas/documenttypechecklist-ResponseCompound"
+      required:
+      - objDocumenttypechecklist
       type: object
     domain-AutocompleteElement-Response:
       description: A Domain AutocompleteElement Response
@@ -325883,6 +328400,8 @@ x-tagGroups:
   - Object_Discussion
   - Object_Discussionmembership
   - Object_Discussionmessage
+  - Object_Documenttype
+  - Object_Documenttypechecklist
   - Object_Domain
   - Object_Electronicfundstransfer
   - Object_Electronicfundstransfertransaction

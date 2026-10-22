@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * A Attachmentrejectreason AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-14T19:57:34.097405566Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-22T16:10:42.689875394Z[Etc/UTC]", comments = "Generator version: 7.26.0")
 public class AttachmentrejectreasonAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_ATTACHMENTREJECTREASON_I_D = "pkiAttachmentrejectreasonID";
   @SerializedName(SERIALIZED_NAME_PKI_ATTACHMENTREJECTREASON_I_D)
