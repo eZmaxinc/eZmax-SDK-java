@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Description of the Branding
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-03T20:09:37.818429184Z[Etc/UTC]", comments = "Generator version: 7.27.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-03T20:40:23.702299288Z[Etc/UTC]", comments = "Generator version: 7.27.0")
 public class MultilingualBrandingDescription {
   public static final String SERIALIZED_NAME_S_BRANDING_DESCRIPTION1 = "sBrandingDescription1";
   @SerializedName(SERIALIZED_NAME_S_BRANDING_DESCRIPTION1)
