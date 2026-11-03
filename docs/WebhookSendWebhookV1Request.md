@@ -10,6 +10,7 @@ Request for POST /1/object/webhook/sendWebhook
 |------------ | ------------- | ------------- | -------------|
 |**eWebhookModule** | **FieldEWebhookModule** |  |  |
 |**eWebhookEzsignevent** | **CustomEWebhookEzsignevent** |  |  [optional] |
+|**eWebhookEzmaxpartnerevent** | **FieldEWebhookEzmaxpartnerevent** |  |  [optional] |
 |**eWebhookManagementevent** | **FieldEWebhookManagementevent** |  |  [optional] |
 |**eWebhookRealestateevent** | **FieldEWebhookRealestateevent** |  |  [optional] |
 |**fkiEzsignfolderID** | **Integer** | The unique ID of the Ezsignfolder |  [optional] |

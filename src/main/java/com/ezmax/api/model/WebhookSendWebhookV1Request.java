@@ -15,6 +15,7 @@ package com.ezmax.api.model;
 
 import java.util.Objects;
 import com.ezmax.api.model.CustomEWebhookEzsignevent;
+import com.ezmax.api.model.FieldEWebhookEzmaxpartnerevent;
 import com.ezmax.api.model.FieldEWebhookManagementevent;
 import com.ezmax.api.model.FieldEWebhookModule;
 import com.ezmax.api.model.FieldEWebhookRealestateevent;
@@ -53,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/webhook/sendWebhook
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-22T16:10:42.689875394Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-03T20:09:37.818429184Z[Etc/UTC]", comments = "Generator version: 7.27.0")
 public class WebhookSendWebhookV1Request {
   public static final String SERIALIZED_NAME_E_WEBHOOK_MODULE = "eWebhookModule";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MODULE)
@@ -64,6 +65,11 @@ public class WebhookSendWebhookV1Request {
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_EZSIGNEVENT)
   @javax.annotation.Nullable
   private CustomEWebhookEzsignevent eWebhookEzsignevent;
+
+  public static final String SERIALIZED_NAME_E_WEBHOOK_EZMAXPARTNEREVENT = "eWebhookEzmaxpartnerevent";
+  @SerializedName(SERIALIZED_NAME_E_WEBHOOK_EZMAXPARTNEREVENT)
+  @javax.annotation.Nullable
+  private FieldEWebhookEzmaxpartnerevent eWebhookEzmaxpartnerevent;
 
   public static final String SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT = "eWebhookManagementevent";
   @SerializedName(SERIALIZED_NAME_E_WEBHOOK_MANAGEMENTEVENT)
@@ -138,6 +144,25 @@ public class WebhookSendWebhookV1Request {
 
   public void seteWebhookEzsignevent(@javax.annotation.Nullable CustomEWebhookEzsignevent eWebhookEzsignevent) {
     this.eWebhookEzsignevent = eWebhookEzsignevent;
+  }
+
+
+  public WebhookSendWebhookV1Request eWebhookEzmaxpartnerevent(@javax.annotation.Nullable FieldEWebhookEzmaxpartnerevent eWebhookEzmaxpartnerevent) {
+    this.eWebhookEzmaxpartnerevent = eWebhookEzmaxpartnerevent;
+    return this;
+  }
+
+  /**
+   * Get eWebhookEzmaxpartnerevent
+   * @return eWebhookEzmaxpartnerevent
+   */
+  @javax.annotation.Nullable
+  public FieldEWebhookEzmaxpartnerevent geteWebhookEzmaxpartnerevent() {
+    return eWebhookEzmaxpartnerevent;
+  }
+
+  public void seteWebhookEzmaxpartnerevent(@javax.annotation.Nullable FieldEWebhookEzmaxpartnerevent eWebhookEzmaxpartnerevent) {
+    this.eWebhookEzmaxpartnerevent = eWebhookEzmaxpartnerevent;
   }
 
 
@@ -292,6 +317,7 @@ public class WebhookSendWebhookV1Request {
     WebhookSendWebhookV1Request webhookSendWebhookV1Request = (WebhookSendWebhookV1Request) o;
     return Objects.equals(this.eWebhookModule, webhookSendWebhookV1Request.eWebhookModule) &&
         Objects.equals(this.eWebhookEzsignevent, webhookSendWebhookV1Request.eWebhookEzsignevent) &&
+        Objects.equals(this.eWebhookEzmaxpartnerevent, webhookSendWebhookV1Request.eWebhookEzmaxpartnerevent) &&
         Objects.equals(this.eWebhookManagementevent, webhookSendWebhookV1Request.eWebhookManagementevent) &&
         Objects.equals(this.eWebhookRealestateevent, webhookSendWebhookV1Request.eWebhookRealestateevent) &&
         Objects.equals(this.fkiEzsignfolderID, webhookSendWebhookV1Request.fkiEzsignfolderID) &&
@@ -303,7 +329,7 @@ public class WebhookSendWebhookV1Request {
 
   @Override
   public int hashCode() {
-    return Objects.hash(eWebhookModule, eWebhookEzsignevent, eWebhookManagementevent, eWebhookRealestateevent, fkiEzsignfolderID, fkiEzsigndocumentID, fkiEzsignsignerID, fkiUserID, fkiUserstagedID);
+    return Objects.hash(eWebhookModule, eWebhookEzsignevent, eWebhookEzmaxpartnerevent, eWebhookManagementevent, eWebhookRealestateevent, fkiEzsignfolderID, fkiEzsigndocumentID, fkiEzsignsignerID, fkiUserID, fkiUserstagedID);
   }
 
   @Override
@@ -312,6 +338,7 @@ public class WebhookSendWebhookV1Request {
     sb.append("class WebhookSendWebhookV1Request {\n");
     sb.append("    eWebhookModule: ").append(toIndentedString(eWebhookModule)).append("\n");
     sb.append("    eWebhookEzsignevent: ").append(toIndentedString(eWebhookEzsignevent)).append("\n");
+    sb.append("    eWebhookEzmaxpartnerevent: ").append(toIndentedString(eWebhookEzmaxpartnerevent)).append("\n");
     sb.append("    eWebhookManagementevent: ").append(toIndentedString(eWebhookManagementevent)).append("\n");
     sb.append("    eWebhookRealestateevent: ").append(toIndentedString(eWebhookRealestateevent)).append("\n");
     sb.append("    fkiEzsignfolderID: ").append(toIndentedString(fkiEzsignfolderID)).append("\n");
@@ -337,7 +364,7 @@ public class WebhookSendWebhookV1Request {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("eWebhookModule", "eWebhookEzsignevent", "eWebhookManagementevent", "eWebhookRealestateevent", "fkiEzsignfolderID", "fkiEzsigndocumentID", "fkiEzsignsignerID", "fkiUserID", "fkiUserstagedID"));
+    openapiFields = new HashSet<String>(Arrays.asList("eWebhookModule", "eWebhookEzsignevent", "eWebhookEzmaxpartnerevent", "eWebhookManagementevent", "eWebhookRealestateevent", "fkiEzsignfolderID", "fkiEzsigndocumentID", "fkiEzsignsignerID", "fkiUserID", "fkiUserstagedID"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("eWebhookModule"));
@@ -376,6 +403,10 @@ public class WebhookSendWebhookV1Request {
       // validate the optional field `eWebhookEzsignevent`
       if (jsonObj.get("eWebhookEzsignevent") != null && !jsonObj.get("eWebhookEzsignevent").isJsonNull()) {
         CustomEWebhookEzsignevent.validateJsonElement(jsonObj.get("eWebhookEzsignevent"));
+      }
+      // validate the optional field `eWebhookEzmaxpartnerevent`
+      if (jsonObj.get("eWebhookEzmaxpartnerevent") != null && !jsonObj.get("eWebhookEzmaxpartnerevent").isJsonNull()) {
+        FieldEWebhookEzmaxpartnerevent.validateJsonElement(jsonObj.get("eWebhookEzmaxpartnerevent"));
       }
       // validate the optional field `eWebhookManagementevent`
       if (jsonObj.get("eWebhookManagementevent") != null && !jsonObj.get("eWebhookManagementevent").isJsonNull()) {

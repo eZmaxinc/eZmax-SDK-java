@@ -67,6 +67,8 @@ public enum FieldEAttachmentlogType {
   
   OPEN_FROM_EMAIL("OpenFromEmail"),
   
+  PENDING("Pending"),
+  
   PURGED("Purged"),
   
   REJECT("Reject"),

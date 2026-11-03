@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.CustomInscription;
 import com.ezmax.api.model.FieldEInscriptionnotauthenticatedRemunerationtype;
 import com.ezmax.api.model.FieldEInscriptionnotauthenticatedResidenceType;
 import com.ezmax.api.model.FieldEInscriptionnotauthenticatedType;
@@ -53,7 +54,7 @@ import eZmaxAPI.JSON;
 /**
  * A Inscriptionnotauthenticated Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-22T16:10:42.689875394Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-03T20:09:37.818429184Z[Etc/UTC]", comments = "Generator version: 7.27.0")
 public class InscriptionnotauthenticatedResponse {
   public static final String SERIALIZED_NAME_PKI_INSCRIPTIONNOTAUTHENTICATED_I_D = "pkiInscriptionnotauthenticatedID";
   @SerializedName(SERIALIZED_NAME_PKI_INSCRIPTIONNOTAUTHENTICATED_I_D)
@@ -64,6 +65,11 @@ public class InscriptionnotauthenticatedResponse {
   @SerializedName(SERIALIZED_NAME_FKI_INSCRIPTION_I_D)
   @javax.annotation.Nonnull
   private Integer fkiInscriptionID;
+
+  public static final String SERIALIZED_NAME_OBJ_INSCRIPTION = "objInscription";
+  @SerializedName(SERIALIZED_NAME_OBJ_INSCRIPTION)
+  @javax.annotation.Nonnull
+  private CustomInscription objInscription;
 
   public static final String SERIALIZED_NAME_FKI_DEPARTMENT_I_D = "fkiDepartmentID";
   @SerializedName(SERIALIZED_NAME_FKI_DEPARTMENT_I_D)
@@ -290,6 +296,25 @@ public class InscriptionnotauthenticatedResponse {
 
   public void setFkiInscriptionID(@javax.annotation.Nonnull Integer fkiInscriptionID) {
     this.fkiInscriptionID = fkiInscriptionID;
+  }
+
+
+  public InscriptionnotauthenticatedResponse objInscription(@javax.annotation.Nonnull CustomInscription objInscription) {
+    this.objInscription = objInscription;
+    return this;
+  }
+
+  /**
+   * Get objInscription
+   * @return objInscription
+   */
+  @javax.annotation.Nonnull
+  public CustomInscription getObjInscription() {
+    return objInscription;
+  }
+
+  public void setObjInscription(@javax.annotation.Nonnull CustomInscription objInscription) {
+    this.objInscription = objInscription;
   }
 
 
@@ -1019,6 +1044,7 @@ public class InscriptionnotauthenticatedResponse {
     InscriptionnotauthenticatedResponse inscriptionnotauthenticatedResponse = (InscriptionnotauthenticatedResponse) o;
     return Objects.equals(this.pkiInscriptionnotauthenticatedID, inscriptionnotauthenticatedResponse.pkiInscriptionnotauthenticatedID) &&
         Objects.equals(this.fkiInscriptionID, inscriptionnotauthenticatedResponse.fkiInscriptionID) &&
+        Objects.equals(this.objInscription, inscriptionnotauthenticatedResponse.objInscription) &&
         Objects.equals(this.fkiDepartmentID, inscriptionnotauthenticatedResponse.fkiDepartmentID) &&
         Objects.equals(this.sDepartmentNameX, inscriptionnotauthenticatedResponse.sDepartmentNameX) &&
         Objects.equals(this.fkiFinancialinstitutionID, inscriptionnotauthenticatedResponse.fkiFinancialinstitutionID) &&
@@ -1060,7 +1086,7 @@ public class InscriptionnotauthenticatedResponse {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiInscriptionnotauthenticatedID, fkiInscriptionID, fkiDepartmentID, sDepartmentNameX, fkiFinancialinstitutionID, sFinancialinstitutionNameX, fkiBuyercontractID, sBuyercontractContract, fkiMortgagesupplierID, sMortgagesupplierNameX, fkiTaxassignmentID, sTaxassignmentDescriptionX, dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal, dtInscriptionnotauthenticatedDepositdate, eInscriptionnotauthenticatedType, dInscriptionnotauthenticatedMortgageloan, etInscriptionnotauthenticatedMortgagetype, dInscriptionnotauthenticatedTransactionprice, eInscriptionnotauthenticatedRemunerationtype, dInscriptionnotauthenticatedRemuneration, dInscriptionnotauthenticatedRemunerationsubtotal, dInscriptionnotauthenticatedRemunerationtotal, dtInscriptionnotauthenticatedCancellationdate, dtInscriptionnotauthenticatedPossessiondate, sInscriptionnotauthenticatedOffertopurchasenumber, dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedFinancingscheduledate, bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedMortgageisreferenced, bInscriptionnotauthenticatedHomeowner, tInscriptionnotauthenticatedConditions, dtInscriptionnotauthenticatedConditiondeadlinedate, iInscriptionnotauthenticatedOrder, bInscriptionnotauthenticatedIsactive, eInscriptionnotauthenticatedResidenceType, tInscriptionnotauthenticatedChecklistnote, dInscriptionnotauthenticatedSelleronlyretribution, bInscriptionnotauthenticatedDraft);
+    return Objects.hash(pkiInscriptionnotauthenticatedID, fkiInscriptionID, objInscription, fkiDepartmentID, sDepartmentNameX, fkiFinancialinstitutionID, sFinancialinstitutionNameX, fkiBuyercontractID, sBuyercontractContract, fkiMortgagesupplierID, sMortgagesupplierNameX, fkiTaxassignmentID, sTaxassignmentDescriptionX, dtInscriptionnotauthenticatedTransactiondate, dtInscriptionnotauthenticatedTransactiondateReal, dtInscriptionnotauthenticatedDepositdate, eInscriptionnotauthenticatedType, dInscriptionnotauthenticatedMortgageloan, etInscriptionnotauthenticatedMortgagetype, dInscriptionnotauthenticatedTransactionprice, eInscriptionnotauthenticatedRemunerationtype, dInscriptionnotauthenticatedRemuneration, dInscriptionnotauthenticatedRemunerationsubtotal, dInscriptionnotauthenticatedRemunerationtotal, dtInscriptionnotauthenticatedCancellationdate, dtInscriptionnotauthenticatedPossessiondate, sInscriptionnotauthenticatedOffertopurchasenumber, dtInscriptionnotauthenticatedNotaryscheduledate, dtInscriptionnotauthenticatedFinancingscheduledate, bInscriptionnotauthenticatedConditional, bInscriptionnotauthenticatedMortgageisreferenced, bInscriptionnotauthenticatedHomeowner, tInscriptionnotauthenticatedConditions, dtInscriptionnotauthenticatedConditiondeadlinedate, iInscriptionnotauthenticatedOrder, bInscriptionnotauthenticatedIsactive, eInscriptionnotauthenticatedResidenceType, tInscriptionnotauthenticatedChecklistnote, dInscriptionnotauthenticatedSelleronlyretribution, bInscriptionnotauthenticatedDraft);
   }
 
   @Override
@@ -1069,6 +1095,7 @@ public class InscriptionnotauthenticatedResponse {
     sb.append("class InscriptionnotauthenticatedResponse {\n");
     sb.append("    pkiInscriptionnotauthenticatedID: ").append(toIndentedString(pkiInscriptionnotauthenticatedID)).append("\n");
     sb.append("    fkiInscriptionID: ").append(toIndentedString(fkiInscriptionID)).append("\n");
+    sb.append("    objInscription: ").append(toIndentedString(objInscription)).append("\n");
     sb.append("    fkiDepartmentID: ").append(toIndentedString(fkiDepartmentID)).append("\n");
     sb.append("    sDepartmentNameX: ").append(toIndentedString(sDepartmentNameX)).append("\n");
     sb.append("    fkiFinancialinstitutionID: ").append(toIndentedString(fkiFinancialinstitutionID)).append("\n");
@@ -1124,10 +1151,10 @@ public class InscriptionnotauthenticatedResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiInscriptionnotauthenticatedID", "fkiInscriptionID", "fkiDepartmentID", "sDepartmentNameX", "fkiFinancialinstitutionID", "sFinancialinstitutionNameX", "fkiBuyercontractID", "sBuyercontractContract", "fkiMortgagesupplierID", "sMortgagesupplierNameX", "fkiTaxassignmentID", "sTaxassignmentDescriptionX", "dtInscriptionnotauthenticatedTransactiondate", "dtInscriptionnotauthenticatedTransactiondateReal", "dtInscriptionnotauthenticatedDepositdate", "eInscriptionnotauthenticatedType", "dInscriptionnotauthenticatedMortgageloan", "etInscriptionnotauthenticatedMortgagetype", "dInscriptionnotauthenticatedTransactionprice", "eInscriptionnotauthenticatedRemunerationtype", "dInscriptionnotauthenticatedRemuneration", "dInscriptionnotauthenticatedRemunerationsubtotal", "dInscriptionnotauthenticatedRemunerationtotal", "dtInscriptionnotauthenticatedCancellationdate", "dtInscriptionnotauthenticatedPossessiondate", "sInscriptionnotauthenticatedOffertopurchasenumber", "dtInscriptionnotauthenticatedNotaryscheduledate", "dtInscriptionnotauthenticatedFinancingscheduledate", "bInscriptionnotauthenticatedConditional", "bInscriptionnotauthenticatedMortgageisreferenced", "bInscriptionnotauthenticatedHomeowner", "tInscriptionnotauthenticatedConditions", "dtInscriptionnotauthenticatedConditiondeadlinedate", "iInscriptionnotauthenticatedOrder", "bInscriptionnotauthenticatedIsactive", "eInscriptionnotauthenticatedResidenceType", "tInscriptionnotauthenticatedChecklistnote", "dInscriptionnotauthenticatedSelleronlyretribution", "bInscriptionnotauthenticatedDraft"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiInscriptionnotauthenticatedID", "fkiInscriptionID", "objInscription", "fkiDepartmentID", "sDepartmentNameX", "fkiFinancialinstitutionID", "sFinancialinstitutionNameX", "fkiBuyercontractID", "sBuyercontractContract", "fkiMortgagesupplierID", "sMortgagesupplierNameX", "fkiTaxassignmentID", "sTaxassignmentDescriptionX", "dtInscriptionnotauthenticatedTransactiondate", "dtInscriptionnotauthenticatedTransactiondateReal", "dtInscriptionnotauthenticatedDepositdate", "eInscriptionnotauthenticatedType", "dInscriptionnotauthenticatedMortgageloan", "etInscriptionnotauthenticatedMortgagetype", "dInscriptionnotauthenticatedTransactionprice", "eInscriptionnotauthenticatedRemunerationtype", "dInscriptionnotauthenticatedRemuneration", "dInscriptionnotauthenticatedRemunerationsubtotal", "dInscriptionnotauthenticatedRemunerationtotal", "dtInscriptionnotauthenticatedCancellationdate", "dtInscriptionnotauthenticatedPossessiondate", "sInscriptionnotauthenticatedOffertopurchasenumber", "dtInscriptionnotauthenticatedNotaryscheduledate", "dtInscriptionnotauthenticatedFinancingscheduledate", "bInscriptionnotauthenticatedConditional", "bInscriptionnotauthenticatedMortgageisreferenced", "bInscriptionnotauthenticatedHomeowner", "tInscriptionnotauthenticatedConditions", "dtInscriptionnotauthenticatedConditiondeadlinedate", "iInscriptionnotauthenticatedOrder", "bInscriptionnotauthenticatedIsactive", "eInscriptionnotauthenticatedResidenceType", "tInscriptionnotauthenticatedChecklistnote", "dInscriptionnotauthenticatedSelleronlyretribution", "bInscriptionnotauthenticatedDraft"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiInscriptionnotauthenticatedID", "fkiInscriptionID", "fkiTaxassignmentID", "eInscriptionnotauthenticatedType", "dInscriptionnotauthenticatedMortgageloan", "etInscriptionnotauthenticatedMortgagetype", "dInscriptionnotauthenticatedTransactionprice", "eInscriptionnotauthenticatedRemunerationtype", "dInscriptionnotauthenticatedRemuneration", "dInscriptionnotauthenticatedRemunerationsubtotal", "dInscriptionnotauthenticatedRemunerationtotal", "sInscriptionnotauthenticatedOffertopurchasenumber", "bInscriptionnotauthenticatedConditional", "bInscriptionnotauthenticatedMortgageisreferenced", "bInscriptionnotauthenticatedHomeowner", "tInscriptionnotauthenticatedConditions", "iInscriptionnotauthenticatedOrder", "bInscriptionnotauthenticatedIsactive", "eInscriptionnotauthenticatedResidenceType", "tInscriptionnotauthenticatedChecklistnote", "dInscriptionnotauthenticatedSelleronlyretribution", "bInscriptionnotauthenticatedDraft"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiInscriptionnotauthenticatedID", "fkiInscriptionID", "objInscription", "fkiTaxassignmentID", "eInscriptionnotauthenticatedType", "dInscriptionnotauthenticatedMortgageloan", "etInscriptionnotauthenticatedMortgagetype", "dInscriptionnotauthenticatedTransactionprice", "eInscriptionnotauthenticatedRemunerationtype", "dInscriptionnotauthenticatedRemuneration", "dInscriptionnotauthenticatedRemunerationsubtotal", "dInscriptionnotauthenticatedRemunerationtotal", "sInscriptionnotauthenticatedOffertopurchasenumber", "bInscriptionnotauthenticatedConditional", "bInscriptionnotauthenticatedMortgageisreferenced", "bInscriptionnotauthenticatedHomeowner", "tInscriptionnotauthenticatedConditions", "iInscriptionnotauthenticatedOrder", "bInscriptionnotauthenticatedIsactive", "eInscriptionnotauthenticatedResidenceType", "tInscriptionnotauthenticatedChecklistnote", "dInscriptionnotauthenticatedSelleronlyretribution", "bInscriptionnotauthenticatedDraft"));
   }
 
   /**
@@ -1158,6 +1185,8 @@ public class InscriptionnotauthenticatedResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `objInscription`
+      CustomInscription.validateJsonElement(jsonObj.get("objInscription"));
       if ((jsonObj.get("sDepartmentNameX") != null && !jsonObj.get("sDepartmentNameX").isJsonNull()) && !jsonObj.get("sDepartmentNameX").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sDepartmentNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDepartmentNameX").toString()));
       }

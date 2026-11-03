@@ -24,7 +24,7 @@ A Documenttype List Element
 |**bDocumenttypeForeclosedsale** | **Boolean** | Whether if it&#39;s an foreclosedsale |  |
 |**bDocumenttypeCommercialfunding** | **Boolean** | Whether if it&#39;s an commercialfunding |  |
 |**bDocumenttypeCanafe** | **Boolean** | Whether if it&#39;s an canafe |  |
-|**eDocumenttypeEzcom** | **FieldEDocumenttypeEzcom** |  |  |
+|**eDocumenttypeEzcom** | **FieldEDocumenttypeEzcom** |  |  [optional] |
 |**eDocumenttypePrivacydefault** | **FieldEDocumenttypePrivacydefault** |  |  |
 |**eDocumenttypeStatusdefault** | **FieldEDocumenttypeStatusdefault** |  |  |
 |**eDocumenttypeSalebyowner** | **FieldEDocumenttypeSalebyowner** |  |  |

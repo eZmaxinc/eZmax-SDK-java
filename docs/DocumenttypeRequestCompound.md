@@ -10,6 +10,7 @@ A Documenttype Object and children
 |------------ | ------------- | ------------- | -------------|
 |**pkiDocumenttypeID** | **Integer** | The unique ID of the Documenttype |  [optional] |
 |**objDocumenttypeName** | [**MultilingualDocumenttypeName**](MultilingualDocumenttypeName.md) |  |  |
+|**eDocumenttypeStep** | **ComputedEDocumenttypeStep** |  |  |
 |**sDocumenttypeDefaultfilename** | **String** | The defaultfilename of the Documenttype |  |
 |**bDocumenttypeShowagent** | **Boolean** | Whether if it&#39;s an showagent |  |
 |**bDocumenttypeIsactive** | **Boolean** | Whether the documenttype is active or not |  |
@@ -24,13 +25,14 @@ A Documenttype Object and children
 |**bDocumenttypeForeclosedsale** | **Boolean** | Whether if it&#39;s an foreclosedsale |  |
 |**bDocumenttypeCommercialfunding** | **Boolean** | Whether if it&#39;s an commercialfunding |  |
 |**bDocumenttypeCanafe** | **Boolean** | Whether if it&#39;s an canafe |  |
-|**eDocumenttypeEzcom** | **FieldEDocumenttypeEzcom** |  |  |
+|**eDocumenttypeEzcom** | **FieldEDocumenttypeEzcom** |  |  [optional] |
 |**eDocumenttypePrivacydefault** | **FieldEDocumenttypePrivacydefault** |  |  |
 |**eDocumenttypeStatusdefault** | **FieldEDocumenttypeStatusdefault** |  |  |
 |**eDocumenttypeSalebyowner** | **FieldEDocumenttypeSalebyowner** |  |  |
 |**eDocumenttypeSaledisplaybyrole** | **FieldEDocumenttypeSaledisplaybyrole** |  |  |
 |**eDocumenttypeTransactiontype** | **FieldEDocumenttypeTransactiontype** |  |  |
 |**eDocumenttypeRepossession** | **FieldEDocumenttypeRepossession** |  |  |
+|**aFkiInscriptiontypeID** | **List&lt;Integer&gt;** |  |  |
 
 
 

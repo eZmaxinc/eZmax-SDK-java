@@ -10,6 +10,7 @@ A Documenttype Object
 |------------ | ------------- | ------------- | -------------|
 |**pkiDocumenttypeID** | **Integer** | The unique ID of the Documenttype |  |
 |**objDocumenttypeName** | [**MultilingualDocumenttypeName**](MultilingualDocumenttypeName.md) |  |  |
+|**eDocumenttypeStep** | **ComputedEDocumenttypeStep** |  |  |
 |**sDocumenttypeDefaultfilename** | **String** | The defaultfilename of the Documenttype |  |
 |**bDocumenttypeShowagent** | **Boolean** | Whether if it&#39;s an showagent |  |
 |**bDocumenttypeIsactive** | **Boolean** | Whether the documenttype is active or not |  |
@@ -31,6 +32,7 @@ A Documenttype Object
 |**eDocumenttypeSaledisplaybyrole** | **FieldEDocumenttypeSaledisplaybyrole** |  |  [optional] |
 |**eDocumenttypeTransactiontype** | **FieldEDocumenttypeTransactiontype** |  |  [optional] |
 |**eDocumenttypeRepossession** | **FieldEDocumenttypeRepossession** |  |  [optional] |
+|**aFkiInscriptiontypeID** | **List&lt;Integer&gt;** |  |  |
 
 
 

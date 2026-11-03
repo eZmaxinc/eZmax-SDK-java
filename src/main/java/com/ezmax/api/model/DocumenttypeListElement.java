@@ -56,7 +56,7 @@ import eZmaxAPI.JSON;
 /**
  * A Documenttype List Element
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-22T16:10:42.689875394Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-03T20:09:37.818429184Z[Etc/UTC]", comments = "Generator version: 7.27.0")
 public class DocumenttypeListElement {
   public static final String SERIALIZED_NAME_PKI_DOCUMENTTYPE_I_D = "pkiDocumenttypeID";
   @SerializedName(SERIALIZED_NAME_PKI_DOCUMENTTYPE_I_D)
@@ -140,7 +140,7 @@ public class DocumenttypeListElement {
 
   public static final String SERIALIZED_NAME_E_DOCUMENTTYPE_EZCOM = "eDocumenttypeEzcom";
   @SerializedName(SERIALIZED_NAME_E_DOCUMENTTYPE_EZCOM)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private FieldEDocumenttypeEzcom eDocumenttypeEzcom;
 
   public static final String SERIALIZED_NAME_E_DOCUMENTTYPE_PRIVACYDEFAULT = "eDocumenttypePrivacydefault";
@@ -482,7 +482,7 @@ public class DocumenttypeListElement {
   }
 
 
-  public DocumenttypeListElement eDocumenttypeEzcom(@javax.annotation.Nonnull FieldEDocumenttypeEzcom eDocumenttypeEzcom) {
+  public DocumenttypeListElement eDocumenttypeEzcom(@javax.annotation.Nullable FieldEDocumenttypeEzcom eDocumenttypeEzcom) {
     this.eDocumenttypeEzcom = eDocumenttypeEzcom;
     return this;
   }
@@ -491,12 +491,12 @@ public class DocumenttypeListElement {
    * Get eDocumenttypeEzcom
    * @return eDocumenttypeEzcom
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public FieldEDocumenttypeEzcom geteDocumenttypeEzcom() {
     return eDocumenttypeEzcom;
   }
 
-  public void seteDocumenttypeEzcom(@javax.annotation.Nonnull FieldEDocumenttypeEzcom eDocumenttypeEzcom) {
+  public void seteDocumenttypeEzcom(@javax.annotation.Nullable FieldEDocumenttypeEzcom eDocumenttypeEzcom) {
     this.eDocumenttypeEzcom = eDocumenttypeEzcom;
   }
 
@@ -703,7 +703,7 @@ public class DocumenttypeListElement {
     openapiFields = new HashSet<String>(Arrays.asList("pkiDocumenttypeID", "sDocumenttypeNameX", "sDocumenttypeDefaultfilename", "bDocumenttypeShowagent", "bDocumenttypeIsactive", "bDocumenttypeIsrequired", "bDocumenttypeSale", "bDocumenttypeRental", "bDocumenttypeReference", "bDocumenttypeMortgagereference", "bDocumenttypeEvaluation", "bDocumenttypeConsultation", "bDocumenttypeOtherservices", "bDocumenttypeForeclosedsale", "bDocumenttypeCommercialfunding", "bDocumenttypeCanafe", "eDocumenttypeEzcom", "eDocumenttypePrivacydefault", "eDocumenttypeStatusdefault", "eDocumenttypeSalebyowner", "eDocumenttypeSaledisplaybyrole", "eDocumenttypeTransactiontype", "eDocumenttypeRepossession"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiDocumenttypeID", "sDocumenttypeNameX", "sDocumenttypeDefaultfilename", "bDocumenttypeShowagent", "bDocumenttypeIsactive", "bDocumenttypeIsrequired", "bDocumenttypeSale", "bDocumenttypeRental", "bDocumenttypeReference", "bDocumenttypeMortgagereference", "bDocumenttypeEvaluation", "bDocumenttypeConsultation", "bDocumenttypeOtherservices", "bDocumenttypeForeclosedsale", "bDocumenttypeCommercialfunding", "bDocumenttypeCanafe", "eDocumenttypeEzcom", "eDocumenttypePrivacydefault", "eDocumenttypeStatusdefault", "eDocumenttypeSalebyowner", "eDocumenttypeSaledisplaybyrole", "eDocumenttypeTransactiontype", "eDocumenttypeRepossession"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiDocumenttypeID", "sDocumenttypeNameX", "sDocumenttypeDefaultfilename", "bDocumenttypeShowagent", "bDocumenttypeIsactive", "bDocumenttypeIsrequired", "bDocumenttypeSale", "bDocumenttypeRental", "bDocumenttypeReference", "bDocumenttypeMortgagereference", "bDocumenttypeEvaluation", "bDocumenttypeConsultation", "bDocumenttypeOtherservices", "bDocumenttypeForeclosedsale", "bDocumenttypeCommercialfunding", "bDocumenttypeCanafe", "eDocumenttypePrivacydefault", "eDocumenttypeStatusdefault", "eDocumenttypeSalebyowner", "eDocumenttypeSaledisplaybyrole", "eDocumenttypeTransactiontype", "eDocumenttypeRepossession"));
   }
 
   /**
@@ -740,8 +740,10 @@ public class DocumenttypeListElement {
       if (!jsonObj.get("sDocumenttypeDefaultfilename").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sDocumenttypeDefaultfilename` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDocumenttypeDefaultfilename").toString()));
       }
-      // validate the required field `eDocumenttypeEzcom`
-      FieldEDocumenttypeEzcom.validateJsonElement(jsonObj.get("eDocumenttypeEzcom"));
+      // validate the optional field `eDocumenttypeEzcom`
+      if (jsonObj.get("eDocumenttypeEzcom") != null && !jsonObj.get("eDocumenttypeEzcom").isJsonNull()) {
+        FieldEDocumenttypeEzcom.validateJsonElement(jsonObj.get("eDocumenttypeEzcom"));
+      }
       // validate the required field `eDocumenttypePrivacydefault`
       FieldEDocumenttypePrivacydefault.validateJsonElement(jsonObj.get("eDocumenttypePrivacydefault"));
       // validate the required field `eDocumenttypeStatusdefault`

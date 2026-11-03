@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * Payload for Websocket Information V1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-22T16:10:42.689875394Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-03T20:09:37.818429184Z[Etc/UTC]", comments = "Generator version: 7.27.0")
 public class WebsocketResponseInformationV1MPayload {
   public static final String SERIALIZED_NAME_S_INFORMATION_MESSAGE = "sInformationMessage";
   @SerializedName(SERIALIZED_NAME_S_INFORMATION_MESSAGE)

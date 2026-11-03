@@ -14,6 +14,7 @@
 package com.ezmax.api.model;
 
 import java.util.Objects;
+import com.ezmax.api.model.ComputedEDocumenttypeStep;
 import com.ezmax.api.model.FieldEDocumenttypeEzcom;
 import com.ezmax.api.model.FieldEDocumenttypePrivacydefault;
 import com.ezmax.api.model.FieldEDocumenttypeRepossession;
@@ -28,7 +29,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -57,7 +60,7 @@ import eZmaxAPI.JSON;
 /**
  * A Documenttype Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-22T16:10:42.689875394Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-03T20:09:37.818429184Z[Etc/UTC]", comments = "Generator version: 7.27.0")
 public class DocumenttypeResponse {
   public static final String SERIALIZED_NAME_PKI_DOCUMENTTYPE_I_D = "pkiDocumenttypeID";
   @SerializedName(SERIALIZED_NAME_PKI_DOCUMENTTYPE_I_D)
@@ -68,6 +71,11 @@ public class DocumenttypeResponse {
   @SerializedName(SERIALIZED_NAME_OBJ_DOCUMENTTYPE_NAME)
   @javax.annotation.Nonnull
   private MultilingualDocumenttypeName objDocumenttypeName;
+
+  public static final String SERIALIZED_NAME_E_DOCUMENTTYPE_STEP = "eDocumenttypeStep";
+  @SerializedName(SERIALIZED_NAME_E_DOCUMENTTYPE_STEP)
+  @javax.annotation.Nonnull
+  private ComputedEDocumenttypeStep eDocumenttypeStep;
 
   public static final String SERIALIZED_NAME_S_DOCUMENTTYPE_DEFAULTFILENAME = "sDocumenttypeDefaultfilename";
   @SerializedName(SERIALIZED_NAME_S_DOCUMENTTYPE_DEFAULTFILENAME)
@@ -174,6 +182,11 @@ public class DocumenttypeResponse {
   @javax.annotation.Nullable
   private FieldEDocumenttypeRepossession eDocumenttypeRepossession;
 
+  public static final String SERIALIZED_NAME_A_FKI_INSCRIPTIONTYPE_I_D = "a_fkiInscriptiontypeID";
+  @SerializedName(SERIALIZED_NAME_A_FKI_INSCRIPTIONTYPE_I_D)
+  @javax.annotation.Nonnull
+  private List<Integer> aFkiInscriptiontypeID = new ArrayList<>();
+
   public DocumenttypeResponse() {
   }
 
@@ -214,6 +227,25 @@ public class DocumenttypeResponse {
 
   public void setObjDocumenttypeName(@javax.annotation.Nonnull MultilingualDocumenttypeName objDocumenttypeName) {
     this.objDocumenttypeName = objDocumenttypeName;
+  }
+
+
+  public DocumenttypeResponse eDocumenttypeStep(@javax.annotation.Nonnull ComputedEDocumenttypeStep eDocumenttypeStep) {
+    this.eDocumenttypeStep = eDocumenttypeStep;
+    return this;
+  }
+
+  /**
+   * Get eDocumenttypeStep
+   * @return eDocumenttypeStep
+   */
+  @javax.annotation.Nonnull
+  public ComputedEDocumenttypeStep geteDocumenttypeStep() {
+    return eDocumenttypeStep;
+  }
+
+  public void seteDocumenttypeStep(@javax.annotation.Nonnull ComputedEDocumenttypeStep eDocumenttypeStep) {
+    this.eDocumenttypeStep = eDocumenttypeStep;
   }
 
 
@@ -616,6 +648,33 @@ public class DocumenttypeResponse {
   }
 
 
+  public DocumenttypeResponse aFkiInscriptiontypeID(@javax.annotation.Nonnull List<Integer> aFkiInscriptiontypeID) {
+    this.aFkiInscriptiontypeID = aFkiInscriptiontypeID;
+    return this;
+  }
+
+  public DocumenttypeResponse addAFkiInscriptiontypeIDItem(Integer aFkiInscriptiontypeIDItem) {
+    if (this.aFkiInscriptiontypeID == null) {
+      this.aFkiInscriptiontypeID = new ArrayList<>();
+    }
+    this.aFkiInscriptiontypeID.add(aFkiInscriptiontypeIDItem);
+    return this;
+  }
+
+  /**
+   * Get aFkiInscriptiontypeID
+   * @return aFkiInscriptiontypeID
+   */
+  @javax.annotation.Nonnull
+  public List<Integer> getaFkiInscriptiontypeID() {
+    return aFkiInscriptiontypeID;
+  }
+
+  public void setaFkiInscriptiontypeID(@javax.annotation.Nonnull List<Integer> aFkiInscriptiontypeID) {
+    this.aFkiInscriptiontypeID = aFkiInscriptiontypeID;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -628,6 +687,7 @@ public class DocumenttypeResponse {
     DocumenttypeResponse documenttypeResponse = (DocumenttypeResponse) o;
     return Objects.equals(this.pkiDocumenttypeID, documenttypeResponse.pkiDocumenttypeID) &&
         Objects.equals(this.objDocumenttypeName, documenttypeResponse.objDocumenttypeName) &&
+        Objects.equals(this.eDocumenttypeStep, documenttypeResponse.eDocumenttypeStep) &&
         Objects.equals(this.sDocumenttypeDefaultfilename, documenttypeResponse.sDocumenttypeDefaultfilename) &&
         Objects.equals(this.bDocumenttypeShowagent, documenttypeResponse.bDocumenttypeShowagent) &&
         Objects.equals(this.bDocumenttypeIsactive, documenttypeResponse.bDocumenttypeIsactive) &&
@@ -648,12 +708,13 @@ public class DocumenttypeResponse {
         Objects.equals(this.eDocumenttypeSalebyowner, documenttypeResponse.eDocumenttypeSalebyowner) &&
         Objects.equals(this.eDocumenttypeSaledisplaybyrole, documenttypeResponse.eDocumenttypeSaledisplaybyrole) &&
         Objects.equals(this.eDocumenttypeTransactiontype, documenttypeResponse.eDocumenttypeTransactiontype) &&
-        Objects.equals(this.eDocumenttypeRepossession, documenttypeResponse.eDocumenttypeRepossession);
+        Objects.equals(this.eDocumenttypeRepossession, documenttypeResponse.eDocumenttypeRepossession) &&
+        Objects.equals(this.aFkiInscriptiontypeID, documenttypeResponse.aFkiInscriptiontypeID);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiDocumenttypeID, objDocumenttypeName, sDocumenttypeDefaultfilename, bDocumenttypeShowagent, bDocumenttypeIsactive, bDocumenttypeIsrequired, bDocumenttypeSale, bDocumenttypeRental, bDocumenttypeReference, bDocumenttypeMortgagereference, bDocumenttypeEvaluation, bDocumenttypeConsultation, bDocumenttypeOtherservices, bDocumenttypeForeclosedsale, bDocumenttypeCommercialfunding, bDocumenttypeCanafe, eDocumenttypeEzcom, eDocumenttypePrivacydefault, eDocumenttypeStatusdefault, eDocumenttypeSalebyowner, eDocumenttypeSaledisplaybyrole, eDocumenttypeTransactiontype, eDocumenttypeRepossession);
+    return Objects.hash(pkiDocumenttypeID, objDocumenttypeName, eDocumenttypeStep, sDocumenttypeDefaultfilename, bDocumenttypeShowagent, bDocumenttypeIsactive, bDocumenttypeIsrequired, bDocumenttypeSale, bDocumenttypeRental, bDocumenttypeReference, bDocumenttypeMortgagereference, bDocumenttypeEvaluation, bDocumenttypeConsultation, bDocumenttypeOtherservices, bDocumenttypeForeclosedsale, bDocumenttypeCommercialfunding, bDocumenttypeCanafe, eDocumenttypeEzcom, eDocumenttypePrivacydefault, eDocumenttypeStatusdefault, eDocumenttypeSalebyowner, eDocumenttypeSaledisplaybyrole, eDocumenttypeTransactiontype, eDocumenttypeRepossession, aFkiInscriptiontypeID);
   }
 
   @Override
@@ -662,6 +723,7 @@ public class DocumenttypeResponse {
     sb.append("class DocumenttypeResponse {\n");
     sb.append("    pkiDocumenttypeID: ").append(toIndentedString(pkiDocumenttypeID)).append("\n");
     sb.append("    objDocumenttypeName: ").append(toIndentedString(objDocumenttypeName)).append("\n");
+    sb.append("    eDocumenttypeStep: ").append(toIndentedString(eDocumenttypeStep)).append("\n");
     sb.append("    sDocumenttypeDefaultfilename: ").append(toIndentedString(sDocumenttypeDefaultfilename)).append("\n");
     sb.append("    bDocumenttypeShowagent: ").append(toIndentedString(bDocumenttypeShowagent)).append("\n");
     sb.append("    bDocumenttypeIsactive: ").append(toIndentedString(bDocumenttypeIsactive)).append("\n");
@@ -683,6 +745,7 @@ public class DocumenttypeResponse {
     sb.append("    eDocumenttypeSaledisplaybyrole: ").append(toIndentedString(eDocumenttypeSaledisplaybyrole)).append("\n");
     sb.append("    eDocumenttypeTransactiontype: ").append(toIndentedString(eDocumenttypeTransactiontype)).append("\n");
     sb.append("    eDocumenttypeRepossession: ").append(toIndentedString(eDocumenttypeRepossession)).append("\n");
+    sb.append("    aFkiInscriptiontypeID: ").append(toIndentedString(aFkiInscriptiontypeID)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -701,10 +764,10 @@ public class DocumenttypeResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiDocumenttypeID", "objDocumenttypeName", "sDocumenttypeDefaultfilename", "bDocumenttypeShowagent", "bDocumenttypeIsactive", "bDocumenttypeIsrequired", "bDocumenttypeSale", "bDocumenttypeRental", "bDocumenttypeReference", "bDocumenttypeMortgagereference", "bDocumenttypeEvaluation", "bDocumenttypeConsultation", "bDocumenttypeOtherservices", "bDocumenttypeForeclosedsale", "bDocumenttypeCommercialfunding", "bDocumenttypeCanafe", "eDocumenttypeEzcom", "eDocumenttypePrivacydefault", "eDocumenttypeStatusdefault", "eDocumenttypeSalebyowner", "eDocumenttypeSaledisplaybyrole", "eDocumenttypeTransactiontype", "eDocumenttypeRepossession"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiDocumenttypeID", "objDocumenttypeName", "eDocumenttypeStep", "sDocumenttypeDefaultfilename", "bDocumenttypeShowagent", "bDocumenttypeIsactive", "bDocumenttypeIsrequired", "bDocumenttypeSale", "bDocumenttypeRental", "bDocumenttypeReference", "bDocumenttypeMortgagereference", "bDocumenttypeEvaluation", "bDocumenttypeConsultation", "bDocumenttypeOtherservices", "bDocumenttypeForeclosedsale", "bDocumenttypeCommercialfunding", "bDocumenttypeCanafe", "eDocumenttypeEzcom", "eDocumenttypePrivacydefault", "eDocumenttypeStatusdefault", "eDocumenttypeSalebyowner", "eDocumenttypeSaledisplaybyrole", "eDocumenttypeTransactiontype", "eDocumenttypeRepossession", "a_fkiInscriptiontypeID"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiDocumenttypeID", "objDocumenttypeName", "sDocumenttypeDefaultfilename", "bDocumenttypeShowagent", "bDocumenttypeIsactive", "bDocumenttypeIsrequired"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiDocumenttypeID", "objDocumenttypeName", "eDocumenttypeStep", "sDocumenttypeDefaultfilename", "bDocumenttypeShowagent", "bDocumenttypeIsactive", "bDocumenttypeIsrequired", "a_fkiInscriptiontypeID"));
   }
 
   /**
@@ -737,6 +800,8 @@ public class DocumenttypeResponse {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the required field `objDocumenttypeName`
       MultilingualDocumenttypeName.validateJsonElement(jsonObj.get("objDocumenttypeName"));
+      // validate the required field `eDocumenttypeStep`
+      ComputedEDocumenttypeStep.validateJsonElement(jsonObj.get("eDocumenttypeStep"));
       if (!jsonObj.get("sDocumenttypeDefaultfilename").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sDocumenttypeDefaultfilename` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sDocumenttypeDefaultfilename").toString()));
       }
@@ -767,6 +832,12 @@ public class DocumenttypeResponse {
       // validate the optional field `eDocumenttypeRepossession`
       if (jsonObj.get("eDocumenttypeRepossession") != null && !jsonObj.get("eDocumenttypeRepossession").isJsonNull()) {
         FieldEDocumenttypeRepossession.validateJsonElement(jsonObj.get("eDocumenttypeRepossession"));
+      }
+      // ensure the required json array is present
+      if (jsonObj.get("a_fkiInscriptiontypeID") == null) {
+        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
+      } else if (!jsonObj.get("a_fkiInscriptiontypeID").isJsonArray()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `a_fkiInscriptiontypeID` to be an array in the JSON string but got `%s`", jsonObj.get("a_fkiInscriptiontypeID").toString()));
       }
   }
 

@@ -139,33 +139,33 @@ tags:
     - GET /3/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\n- GET /4/object/ezsignbulksend/{pkiEzsignbulksendID}\n\
     - GET /4/object/ezsigntemplate/{pkiEzsigntemplateID}\n- GET /1/object/documenttype/getList\n\
     - GET /2/object/documenttype/{pkiDocumenttypeID}\n- GET /2/object/documenttype/getAutocomplete/{sSelector}\n\
-    - GET /1/object/documenttypechecklist/getList\n- GET /2/object/documenttypechecklist/{pkiDocumenttypechecklistID}\n\
     - PUT /2/object/ezsigntemplatepackage/{pkiEzsigntemplatepackageID}/editEzsigntemplatepackagesigners\n\
     - PUT /2/object/ezsigntemplatepackagesigner/{pkiEzsigntemplatepackagesignerID}\n\
     - PUT /2/object/ezsigntemplatesigner/{pkiEzsigntemplatesignerID}\n- PUT /1/object/documenttype/{pkiDocumenttypeID}\n\
-    - PUT /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}\n- POST /1/object/adjustment/{pkiAdjustmentID}/importIntoEDM\n\
-    - POST /2/object/ezsignbulksendsignermapping\n- POST /2/object/ezsigntemplatepackagesigner\n\
-    - POST /2/object/ezsigntemplatesigner\n- POST /1/object/attachment/{pkiAttachmentID}/delete\n\
-    - POST /1/object/attachment/{pkiAttachmentID}/rename\n- POST /1/object/attachment/{pkiAttachmentID}/restore\n\
-    - POST /1/object/attachment/{pkiAttachmentID}/validate\n- POST /1/object/documenttype\n\
-    - POST /1/object/documenttypechecklist\n- PATCH /1/object/attachment/{pkiAttachmentID}/documentType\n\
-    - PATCH /1/object/attachment/{pkiAttachmentID}/permission\n- Selector AttachmentSpecificUser\
-    \ in GET /2/object/user/getAutocomplete/{sSelector}\n- Parameter fkiAttachmentID\
-    \ in GET /2/object/user/getAutocomplete/{sSelector}\n- Property dtAgentPermitexpiration\
-    \ in agent-ListElement\n- Property dtEzsignformfieldgroupCompleted in ezsignformfieldgroup-Response\n\
-    - Property eEzmaxcaseGooddaytaskstatus in ezmaxcase-Response and ezmaxcase-Listelement\n\
-    - Property eEzsignfoldersignerassociationRole in ezsignfoldersignerassociation-RequestPatch\n\
-    - Property fkiAgentID in user-ListElement\n- Property fkiBrokerID in user-ListElement\n\
-    - Property sAttachmentCategory in attachment-Response\n- Property objUserSpecific\
-    \ in attachment-Response\n- Enum value 'Optional' for Field-eEzsigntemplatesignatureConsultationtrigger\n\
-    - Enum value 'CCDeleted' for Field-eEzsignfoldersignerassociationRole\n- Enum\
-    \ value 'BuyercontractCreated' for Field-eWebhookRealestateevent\n- Enum value\
-    \ 'BuyercontractModified' for Field-eWebhookRealestateevent\n- Enum value 'CONFLICT'\
-    \ for Field-eErrorCode\n- Enum value 'Pending' for Field-eAttachmentVerified\n\
-    - Webhook Buyercontract BuyercontractCreated\n- Webhook Buyercontract BuyercontractModified\n\
-    \n\n### [1.3.3] - 2026-07-22\n\n#### Fixed\n- Minor structurals changes\n\n\n\
-    ### [1.3.2] - 2026-07-21\n\n#### Added\n- GET /2/module/ezsign/suggestSigners\n\
-    - GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\n\
+    - POST /1/object/adjustment/{pkiAdjustmentID}/importIntoEDM\n- POST /2/object/ezsignbulksendsignermapping\n\
+    - POST /2/object/ezsigntemplatepackagesigner\n- POST /2/object/ezsigntemplatesigner\n\
+    - POST /1/object/attachment/{pkiAttachmentID}/delete\n- POST /1/object/attachment/{pkiAttachmentID}/rename\n\
+    - POST /1/object/attachment/{pkiAttachmentID}/restore\n- POST /1/object/attachment/{pkiAttachmentID}/validate\n\
+    - POST /1/object/documenttype\n- PATCH /1/object/attachment/{pkiAttachmentID}/setDocumentType\n\
+    - PATCH /1/object/attachment/{pkiAttachmentID}/setPrivacy\n- PATCH /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}\n\
+    - Selector AttachmentSpecificUser in GET /2/object/user/getAutocomplete/{sSelector}\n\
+    - Parameter fkiAttachmentID in GET /2/object/user/getAutocomplete/{sSelector}\n\
+    - Property dtAgentPermitexpiration in agent-ListElement\n- Property dtEzsignformfieldgroupCompleted\
+    \ in ezsignformfieldgroup-Response\n- Property eEzmaxcaseGooddaytaskstatus in\
+    \ ezmaxcase-Response and ezmaxcase-Listelement\n- Property eEzsignfoldersignerassociationRole\
+    \ in ezsignfoldersignerassociation-RequestPatch\n- Property fkiAgentID in user-ListElement\n\
+    - Property fkiBrokerID in user-ListElement\n- Property sAttachmentCategory in\
+    \ attachment-Response\n- Property objUserSpecific in attachment-Response\n- Property\
+    \ eWebhookEzmaxpartnerevent in webhook-sendWebhook-v1-Request\n- Enum value 'Optional'\
+    \ for Field-eEzsigntemplatesignatureConsultationtrigger\n- Enum value 'CCDeleted'\
+    \ for Field-eEzsignfoldersignerassociationRole\n- Enum value 'BuyercontractCreated'\
+    \ for Field-eWebhookRealestateevent\n- Enum value 'BuyercontractModified' for\
+    \ Field-eWebhookRealestateevent\n- Enum value 'CONFLICT' for Field-eErrorCode\n\
+    - Enum value 'Pending' for Field-eAttachmentVerified\n- Enum value 'Pending' for\
+    \ Field-eAttachmentlogType\n- Webhook Buyercontract BuyercontractCreated\n- Webhook\
+    \ Buyercontract BuyercontractModified\n\n\n### [1.3.3] - 2026-07-22\n\n#### Fixed\n\
+    - Minor structurals changes\n\n\n### [1.3.2] - 2026-07-21\n\n#### Added\n- GET\
+    \ /2/module/ezsign/suggestSigners\n- GET /2/object/ezsignfolder/{pkiEzsignfolderID}/getEzsignfoldersignerassociations\n\
     - GET /3/object/ezsignfoldersignerassociation/{pkiEzsignfoldersignerassociationID}\n\
     - GET /2/object/inscription/{pkiInscriptionID}\n- GET /1/object/inscription/{pkiInscriptionID}/getInscriptionnotauthenticateds\n\
     - GET /2/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}\n\
@@ -211,11 +211,12 @@ tags:
     - Property fkiEzmaxpartnerID in user-Response\n- Property fkiEzmaxpartnerproductstageID\
     \ in apikey-ResponseCompound\n- Property iEzsignfolderStepcurrent in ezsignfolder-ResponseV3\n\
     - Property iEzsignfoldertypeArchivaldays in ezsignfoldertype-getDefaults-v2-Response-mPayload\n\
-    - Property sBuyercontractContract in buyercontract-ListElement\n- Value Optional\
-    \ in Field-eEzsignsignatureConsultationtrigger\n- Value Suspended in Field-eSessionhistoryEndby\n\
-    \n\n### [1.3.0] - 2026-01-24\n\n#### Added\n- GET /1/object/agent/getList\n- GET\
-    \ /1/object/broker/getList\n- GET /1/object/buyercontract/getList\n- GET /1/object/customer/getList\n\
-    - GET /1/object/employee/getList\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getBatchFile\n\
+    - Property sBuyercontractContract in buyercontract-ListElement\n- Property objInscription\
+    \ in inscriptionnotauthenticated-Response\n- Value Optional in Field-eEzsignsignatureConsultationtrigger\n\
+    - Value Suspended in Field-eSessionhistoryEndby\n\n\n### [1.3.0] - 2026-01-24\n\
+    \n#### Added\n- GET /1/object/agent/getList\n- GET /1/object/broker/getList\n\
+    - GET /1/object/buyercontract/getList\n- GET /1/object/customer/getList\n- GET\
+    \ /1/object/employee/getList\n- GET /1/object/ezsignbulksend/{pkiEzsignbulksendID}/getBatchFile\n\
     - GET /1/object/ezsignbulksendtransmission/{pkiEzsignbulksendtransmissionID}/getBatchFile\n\
     - GET /1/object/ezsigntemplatedocument/{pkiEzsigntemplatedocumentID}/download\n\
     - GET /1/object/inscriptiontemp/getList\n- GET /1/object/lead/getList\n- GET /1/object/otherincome/getList\n\
@@ -3016,67 +3017,8 @@ paths:
       - All
       x-permissions:
       - All
-      x-usertypeextra: []
-      x-content-type: application/json
-      x-accepts:
-      - application/json
-  /1/object/attachment/{pkiAttachmentID}/documentType:
-    post:
-      description: The endpoint allows to change the checklist document type for an
-        attachment.
-      operationId: Attachment_DocumentType_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiAttachmentID
-        required: true
-        schema:
-          $ref: "#/components/schemas/Field-pkiAttachmentID"
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/attachment-documentType-v1-Request"
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/attachment-documentType-v1-Response"
-          description: Successful response
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Common-Response-Error"
-          description: The request is not allowed to be executed. Look for detail
-            about the error in the body.
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Common-Response-Error"
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body.
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Common-Response-Error"
-          description: The request was syntactically valid but failed because of an
-            interdependance condition. Look for detail about the error in the body.
-      security:
-      - Authorization: []
-      summary: Change attachment document type
-      tags:
-      - Object_Attachment
-      x-systemconfigurationtype:
-      - All
-      x-permissions:
-      - All
-      x-usertypeextra: []
+      x-usertypeextra:
+      - AgentBroker
       x-content-type: application/json
       x-accepts:
       - application/json
@@ -3155,65 +3097,6 @@ paths:
       - AgentBroker
       x-systemconfigurationtype:
       - All
-      x-accepts:
-      - application/json
-  /1/object/attachment/{pkiAttachmentID}/privacy:
-    post:
-      description: The endpoint allows to change an attachment's access privacy.
-      operationId: Attachment_Privacy_V1
-      parameters:
-      - explode: false
-        in: path
-        name: pkiAttachmentID
-        required: true
-        schema:
-          $ref: "#/components/schemas/Field-pkiAttachmentID"
-        style: simple
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/attachment-privacy-v1-Request"
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/attachment-privacy-v1-Response"
-          description: Successful response
-        "403":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Common-Response-Error"
-          description: The request is not allowed to be executed. Look for detail
-            about the error in the body.
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Common-Response-Error"
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body.
-        "422":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Common-Response-Error"
-          description: The request was syntactically valid but failed because of an
-            interdependance condition. Look for detail about the error in the body.
-      security:
-      - Authorization: []
-      summary: Change the attachment privacy
-      tags:
-      - Object_Attachment
-      x-systemconfigurationtype:
-      - All
-      x-permissions:
-      - All
-      x-usertypeextra: []
-      x-content-type: application/json
       x-accepts:
       - application/json
   /1/object/attachment/{pkiAttachmentID}/rename:
@@ -3345,7 +3228,129 @@ paths:
       - All
       x-permissions:
       - All
-      x-usertypeextra: []
+      x-usertypeextra:
+      - AgentBroker
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /1/object/attachment/{pkiAttachmentID}/setDocumentType:
+    post:
+      description: The endpoint allows to change the checklist document type for an
+        attachment.
+      operationId: Attachment_SetDocumentType_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiAttachmentID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiAttachmentID"
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/attachment-setDocumentType-v1-Request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/attachment-setDocumentType-v1-Response"
+          description: Successful response
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request is not allowed to be executed. Look for detail
+            about the error in the body.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Change attachment document type
+      tags:
+      - Object_Attachment
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+  /1/object/attachment/{pkiAttachmentID}/setPrivacy:
+    post:
+      description: The endpoint allows to change an attachment's access privacy.
+      operationId: Attachment_SetPrivacy_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiAttachmentID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiAttachmentID"
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/attachment-setPrivacy-v1-Request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/attachment-setPrivacy-v1-Response"
+          description: Successful response
+        "403":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request is not allowed to be executed. Look for detail
+            about the error in the body.
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+        "422":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request was syntactically valid but failed because of an
+            interdependance condition. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Change the attachment privacy
+      tags:
+      - Object_Attachment
+      x-systemconfigurationtype:
+      - All
+      x-permissions:
+      - All
+      x-usertypeextra:
+      - AgentBroker
       x-content-type: application/json
       x-accepts:
       - application/json
@@ -9645,7 +9650,8 @@ paths:
       - Object_Documenttype
       x-systemconfigurationtype:
       - All
-      x-permissions: []
+      x-permissions:
+      - Management_RequiredDocuments
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts:
@@ -9685,48 +9691,12 @@ paths:
       - Object_Documenttype
       x-systemconfigurationtype:
       - All
-      x-permissions: []
+      x-permissions:
+      - All
       x-usertypeextra: []
       x-accepts:
       - application/json
   /1/object/documenttype/{pkiDocumenttypeID}:
-    delete:
-      description: ""
-      operationId: Documenttype_DeleteObject_V1
-      parameters:
-      - description: The unique ID of the Documenttype
-        explode: false
-        in: path
-        name: pkiDocumenttypeID
-        required: true
-        schema:
-          $ref: "#/components/schemas/Field-pkiDocumenttypeID"
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/documenttype-deleteObject-v1-Response"
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Common-Response-Error"
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body.
-      security:
-      - Authorization: []
-      summary: Delete an existing Documenttype
-      tags:
-      - Object_Documenttype
-      x-systemconfigurationtype:
-      - All
-      x-permissions: []
-      x-usertypeextra: []
-      x-accepts:
-      - application/json
     description: ""
     put:
       description: ""
@@ -9774,7 +9744,8 @@ paths:
       - Object_Documenttype
       x-systemconfigurationtype:
       - All
-      x-permissions: []
+      x-permissions:
+      - Management_RequiredDocuments
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts:
@@ -9838,7 +9809,8 @@ paths:
       - Object_Documenttype
       x-systemconfigurationtype:
       - All
-      x-permissions: []
+      x-permissions:
+      - All
       x-usertypeextra: []
       x-accepts:
       - application/json
@@ -9968,80 +9940,12 @@ paths:
       - Object_Documenttype
       x-systemconfigurationtype:
       - All
-      x-permissions: []
+      x-permissions:
+      - All
       x-usertypeextra: []
       x-accepts:
       - application/json
       - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-  /1/object/documenttypechecklist:
-    description: ""
-    post:
-      description: The endpoint allows to create one or many elements at once.
-      operationId: Documenttypechecklist_CreateObject_V1
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/documenttypechecklist-createObject-v1-Request"
-        required: true
-      responses:
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/documenttypechecklist-createObject-v1-Response"
-          description: Successful response
-      security:
-      - Authorization: []
-      summary: Create a new Documenttypechecklist
-      tags:
-      - Object_Documenttypechecklist
-      x-systemconfigurationtype:
-      - All
-      x-permissions: []
-      x-usertypeextra: []
-      x-content-type: application/json
-      x-accepts:
-      - application/json
-  /2/object/documenttypechecklist/{pkiDocumenttypechecklistID}:
-    description: ""
-    get:
-      description: ""
-      operationId: Documenttypechecklist_GetObject_V2
-      parameters:
-      - description: The unique ID of the Documenttypechecklist
-        explode: false
-        in: path
-        name: pkiDocumenttypechecklistID
-        required: true
-        schema:
-          $ref: "#/components/schemas/Field-pkiDocumenttypechecklistID"
-        style: simple
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/documenttypechecklist-getObject-v2-Response"
-          description: Successful response
-        "404":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Common-Response-Error"
-          description: The request failed. The element on which you were trying to
-            work does not exists. Look for detail about the error in the body.
-      security:
-      - Authorization: []
-      summary: Retrieve an existing Documenttypechecklist
-      tags:
-      - Object_Documenttypechecklist
-      x-systemconfigurationtype:
-      - All
-      x-permissions: []
-      x-usertypeextra: []
-      x-accepts:
-      - application/json
   /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}:
     delete:
       description: ""
@@ -10076,14 +9980,15 @@ paths:
       - Object_Documenttypechecklist
       x-systemconfigurationtype:
       - All
-      x-permissions: []
+      x-permissions:
+      - All
       x-usertypeextra: []
       x-accepts:
       - application/json
     description: ""
-    put:
+    patch:
       description: ""
-      operationId: Documenttypechecklist_EditObject_V1
+      operationId: Documenttypechecklist_PatchObject_V1
       parameters:
       - description: The unique ID of the Documenttypechecklist
         explode: false
@@ -10097,14 +10002,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/documenttypechecklist-editObject-v1-Request"
+              $ref: "#/components/schemas/documenttypechecklist-patchObject-v1-Request"
         required: true
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/documenttypechecklist-editObject-v1-Response"
+                $ref: "#/components/schemas/documenttypechecklist-patchObject-v1-Response"
           description: Successful response
         "404":
           content:
@@ -10122,102 +10027,17 @@ paths:
             interdependance condition. Look for detail about the error in the body.
       security:
       - Authorization: []
-      summary: Edit an existing Documenttypechecklist
+      summary: Patch an existing Documenttypechecklist
       tags:
       - Object_Documenttypechecklist
       x-systemconfigurationtype:
       - All
-      x-permissions: []
+      x-permissions:
+      - All
       x-usertypeextra: []
       x-content-type: application/json
       x-accepts:
       - application/json
-  /1/object/documenttypechecklist/getList:
-    description: ""
-    get:
-      description: |-
-        Enum values that can be filtered in query parameter *sFilter*:
-
-        | Variable | Valid values |
-        |---|---|
-        | eDocumenttypechecklistStatus | Not required<br>Required<br>Filed<br>Justified |
-      operationId: Documenttypechecklist_GetList_V1
-      parameters:
-      - description: Specify how you want the results to be sorted
-        explode: true
-        in: query
-        name: eOrderBy
-        required: false
-        schema:
-          enum:
-          - pkiDocumenttypechecklistID_ASC
-          - pkiDocumenttypechecklistID_DESC
-          - fkiDocumenttypeID_ASC
-          - fkiDocumenttypeID_DESC
-          - eDocumenttypechecklistStatus_ASC
-          - eDocumenttypechecklistStatus_DESC
-          - tDocumenttypechecklistComment_ASC
-          - tDocumenttypechecklistComment_DESC
-          type: string
-        style: form
-      - explode: true
-        in: query
-        name: iRowMax
-        required: false
-        schema:
-          $ref: "#/components/schemas/Field-iRowMax"
-        style: form
-      - explode: true
-        in: query
-        name: iRowOffset
-        required: false
-        schema:
-          $ref: "#/components/schemas/Field-iRowOffset"
-        style: form
-      - explode: false
-        in: header
-        name: Accept-Language
-        required: false
-        schema:
-          $ref: "#/components/schemas/Header-Accept-Language"
-        style: simple
-      - explode: true
-        in: query
-        name: sFilter
-        required: false
-        schema:
-          $ref: "#/components/schemas/Field-sFilter"
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/documenttypechecklist-getList-v1-Response"
-            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
-              schema:
-                $ref: "#/components/schemas/File-Xlsx"
-          description: Successful response
-        "406":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Common-Response-Error"
-          description: "The URL is valid, but one of the Accept header is not defined\
-            \ or invalid. For example, you set the header \"Accept: application/json\"\
-            \ but the function can only return \"Content-type: image/png\""
-      security:
-      - Authorization: []
-      summary: Retrieve Documenttypechecklist list
-      tags:
-      - Object_Documenttypechecklist
-      x-systemconfigurationtype:
-      - All
-      x-permissions: []
-      x-usertypeextra: []
-      x-accepts:
-      - application/json
-      - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
   /1/object/domain:
     description: ""
     post:
@@ -26886,6 +26706,55 @@ paths:
       x-content-type: application/json
       x-accepts:
       - application/json
+  /1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype:
+    post:
+      description: ""
+      operationId: Inscription_synchronizationDocumenttype_V1
+      parameters:
+      - explode: false
+        in: path
+        name: pkiInscriptionID
+        required: true
+        schema:
+          $ref: "#/components/schemas/Field-pkiInscriptionID"
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/inscription-synchronizationDocumenttype-v1-Request"
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/inscription-synchronizationDocumenttype-v1-Response"
+          description: Successful response
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Common-Response-Error"
+          description: The request failed. The element on which you were trying to
+            work does not exists. Look for detail about the error in the body.
+      security:
+      - Authorization: []
+      summary: Synchronization of the Documenttype in the Inscription
+      tags:
+      - Object_Inscription
+      x-permissions:
+      - Inscription_ReadOnlyMode
+      - Inscription_Inspections
+      - Inscription_Deals
+      x-usertypeextra:
+      - AgentBroker
+      x-systemconfigurationtype:
+      - EdmStandalone
+      - RealEstate
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /1/object/inscription/getList:
     description: ""
     get:
@@ -41793,6 +41662,8 @@ components:
         objVariableobject:
           additionalProperties: true
           description: A Variable object without predefined property names
+          example:
+            key: ""
           type: object
         iReportrowHeight:
           description: The reportrow height in pixels
@@ -45871,6 +45742,17 @@ components:
       - Outbound
       - Inbound
       example: Outbound
+      type: string
+    Computed-eDocumenttypeStep:
+      description: The step of the Documenttype
+      enum:
+      - Agentbroker
+      - Buyercontract
+      - Inscription
+      - NotAuthenticated
+      - Otherincome
+      - RejectedOfferToPurchase
+      example: Inscription
       type: string
     Computed-eEzsigndocumentSteptype:
       description: Indicates whether the current step is a form or signatures.
@@ -51019,6 +50901,43 @@ components:
       required:
       - fkiEzsignfoldersignerassociationID
       type: object
+    Custom-Inscription:
+      description: A custom Inscription object
+      example:
+        pkiInscriptionID: 17
+        fkiAddressID: 142
+        objAddress:
+          pkiAddressID: 142
+          fkiAddresstypeID: 1
+          sAddressCivic: "2540"
+          sAddressStreet: Daniel-Johnson Blvd.
+          sAddressSuite: "610"
+          sAddressCity: Laval
+          fkiProvinceID: 11
+          sProvinceNameX: Quebec
+          fkiCountryID: 1
+          sCountryNameX: Canada
+          sAddressZip: H7T2S3
+          fAddressLongitude: "73.5674"
+          fAddressLatitude: "45.5019"
+      properties:
+        pkiInscriptionID:
+          description: The unique ID of the Inscription.
+          example: 17
+          minimum: 0
+          type: integer
+        fkiAddressID:
+          description: The unique ID of the Address
+          example: 142
+          minimum: 0
+          type: integer
+        objAddress:
+          $ref: "#/components/schemas/address-ResponseCompound"
+      required:
+      - fkiAddressID
+      - objAddress
+      - pkiInscriptionID
+      type: object
     Custom-Inscriptionnotauthenticatedcondition-Request:
       description: A custom Inscriptionnotauthenticatedcondition object
       properties:
@@ -51084,8 +51003,8 @@ components:
         - PropertyName1
         - PropertyName1
         a_objVariableobject:
-        - null
-        - null
+        - key: ""
+        - key: ""
       properties:
         pkiNotificationtestID:
           description: The unique ID of the Notificationtest
@@ -51219,6 +51138,8 @@ components:
     Custom-Variableobject-Response:
       additionalProperties: true
       description: A Variable object without predefined property names
+      example:
+        key: ""
       type: object
     Custom-Webhook-Response:
       allOf:
@@ -53463,6 +53384,7 @@ components:
       - ImportedFromProspects
       - Move
       - OpenFromEmail
+      - Pending
       - Purged
       - Reject
       - Rename
@@ -57684,9 +57606,9 @@ components:
     Field-sAttachmentlogDetail:
       description: The additionnal detail
       example: System
-      pattern: "^.{0,75}$"
+      pattern: "[\\s\\S]{0,65535}$"
       type: string
-    Field-sAttachmentrejectreasonnameX:
+    Field-sAttachmentrejectreasonNameX:
       description: The name of the Attachmentrejectreason in the language of the requester
       example: Wrong Document
       pattern: "^.{0,75}$"
@@ -75848,64 +75770,6 @@ components:
       required:
       - pkiAttachmentID
       type: object
-    attachment-documentType-v1-Request:
-      description: "Request for POST /1/object/attachment/{pkiAttachmentID}/documentType"
-      properties:
-        fkiDocumenttypechecklistID:
-          description: The unique ID of the Documenttypechecklist or null
-          example: 191
-          maximum: 16777215
-          minimum: 0
-          nullable: true
-          type: integer
-      required:
-      - fkiDocumenttypechecklistID
-      type: object
-    attachment-documentType-v1-Response:
-      allOf:
-      - properties:
-          mPayload:
-            $ref: "#/components/schemas/attachment-documentType-v1-Response-mPayload"
-        required:
-        - mPayload
-        type: object
-      - $ref: "#/components/schemas/Common-Response"
-      description: "Response for POST /1/object/attachment/{pkiAttachmentID}/documentType"
-      example:
-        mPayload:
-          pkiAttachmentID: 1
-        objDebugPayload:
-          iVersionMin: 1
-          iVersionMax: 2
-          a_RequiredPermission:
-          - 117
-          - 117
-          bVersionDeprecated: false
-          dtResponseDate: 2020-12-31 23:59:59
-        objDebug:
-          sMemoryUsage: "11,923MB"
-          sRunTime: 0.6084s
-          iSQLSelects: 3
-          iSQLQueries: 6
-          a_objSQLQuery:
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-      type: object
-    attachment-documentType-v1-Response-mPayload:
-      description: "Response for POST /1/object/attachment/{pkiAttachmentID}/documentType"
-      example:
-        pkiAttachmentID: 1
-      properties:
-        pkiAttachmentID:
-          description: The unique ID of the Attachment.
-          example: 1
-          minimum: 0
-          type: integer
-      required:
-      - pkiAttachmentID
-      type: object
     attachment-getAttachmentlogs-v1-Response:
       allOf:
       - properties:
@@ -75993,64 +75857,6 @@ components:
           type: array
       required:
       - a_objAttachmentlog
-      type: object
-    attachment-privacy-v1-Request:
-      description: "Request for POST /1/object/attachment/{pkiAttachmentID}/privacy"
-      properties:
-        eAttachmentPrivacy:
-          $ref: "#/components/schemas/Field-eAttachmentPrivacy"
-        fkiUserIDSpecific:
-          description: The unique ID of the User
-          example: 70
-          minimum: 0
-          type: integer
-      required:
-      - eAttachmentPrivacy
-      type: object
-    attachment-privacy-v1-Response:
-      allOf:
-      - properties:
-          mPayload:
-            $ref: "#/components/schemas/attachment-privacy-v1-Response-mPayload"
-        required:
-        - mPayload
-        type: object
-      - $ref: "#/components/schemas/Common-Response"
-      description: "Response for POST /1/object/attachment/{pkiAttachmentID}/privacy"
-      example:
-        mPayload:
-          pkiAttachmentID: 1
-        objDebugPayload:
-          iVersionMin: 1
-          iVersionMax: 2
-          a_RequiredPermission:
-          - 117
-          - 117
-          bVersionDeprecated: false
-          dtResponseDate: 2020-12-31 23:59:59
-        objDebug:
-          sMemoryUsage: "11,923MB"
-          sRunTime: 0.6084s
-          iSQLSelects: 3
-          iSQLQueries: 6
-          a_objSQLQuery:
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-      type: object
-    attachment-privacy-v1-Response-mPayload:
-      description: "Response for POST /1/object/attachment/{pkiAttachmentID}/privacy"
-      example:
-        pkiAttachmentID: 1
-      properties:
-        pkiAttachmentID:
-          description: The unique ID of the Attachment.
-          example: 1
-          minimum: 0
-          type: integer
-      required:
-      - pkiAttachmentID
       type: object
     attachment-rename-v1-Request:
       description: "Request for POST /1/object/attachment/{pkiAttachmentID}/rename"
@@ -76175,6 +75981,122 @@ components:
       required:
       - pkiAttachmentID
       type: object
+    attachment-setDocumentType-v1-Request:
+      description: "Request for POST /1/object/attachment/{pkiAttachmentID}/setDocumentType"
+      properties:
+        fkiDocumenttypechecklistID:
+          description: The unique ID of the Documenttypechecklist or null
+          example: 191
+          maximum: 16777215
+          minimum: 0
+          nullable: true
+          type: integer
+      required:
+      - fkiDocumenttypechecklistID
+      type: object
+    attachment-setDocumentType-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/attachment-setDocumentType-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for POST /1/object/attachment/{pkiAttachmentID}/setDocumentType"
+      example:
+        mPayload:
+          pkiAttachmentID: 1
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    attachment-setDocumentType-v1-Response-mPayload:
+      description: "Response for POST /1/object/attachment/{pkiAttachmentID}/setDocumentType"
+      example:
+        pkiAttachmentID: 1
+      properties:
+        pkiAttachmentID:
+          description: The unique ID of the Attachment.
+          example: 1
+          minimum: 0
+          type: integer
+      required:
+      - pkiAttachmentID
+      type: object
+    attachment-setPrivacy-v1-Request:
+      description: "Request for POST /1/object/attachment/{pkiAttachmentID}/setPrivacy"
+      properties:
+        eAttachmentPrivacy:
+          $ref: "#/components/schemas/Field-eAttachmentPrivacy"
+        fkiUserIDSpecific:
+          description: The unique ID of the User
+          example: 70
+          minimum: 0
+          type: integer
+      required:
+      - eAttachmentPrivacy
+      type: object
+    attachment-setPrivacy-v1-Response:
+      allOf:
+      - properties:
+          mPayload:
+            $ref: "#/components/schemas/attachment-setPrivacy-v1-Response-mPayload"
+        required:
+        - mPayload
+        type: object
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for POST /1/object/attachment/{pkiAttachmentID}/setPrivacy"
+      example:
+        mPayload:
+          pkiAttachmentID: 1
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
+    attachment-setPrivacy-v1-Response-mPayload:
+      description: "Response for POST /1/object/attachment/{pkiAttachmentID}/setPrivacy"
+      example:
+        pkiAttachmentID: 1
+      properties:
+        pkiAttachmentID:
+          description: The unique ID of the Attachment.
+          example: 1
+          minimum: 0
+          type: integer
+      required:
+      - pkiAttachmentID
+      type: object
     attachment-validate-v1-Request:
       description: "Request for POST /1/object/attachment/{pkiAttachmentID}/validate"
       properties:
@@ -76280,7 +76202,7 @@ components:
         sAttachmentlogDetail:
           description: The additionnal detail
           example: System
-          pattern: "^.{0,75}$"
+          pattern: "[\\s\\S]{0,65535}$"
           type: string
       required:
       - dtAttachmentlogDatetime
@@ -76311,7 +76233,7 @@ components:
       description: A Attachmentrejectreason AutocompleteElement Response
       example:
         pkiAttachmentrejectreasonID: 41
-        sAttachmentrejectreasonnameX: Wrong Document
+        sAttachmentrejectreasonNameX: Wrong Document
         bAttachmentrejectreasonIsactive: true
       properties:
         pkiAttachmentrejectreasonID:
@@ -76320,7 +76242,7 @@ components:
           maximum: 255
           minimum: 0
           type: integer
-        sAttachmentrejectreasonnameX:
+        sAttachmentrejectreasonNameX:
           description: The name of the Attachmentrejectreason in the language of the
             requester
           example: Wrong Document
@@ -76333,7 +76255,7 @@ components:
       required:
       - bAttachmentrejectreasonIsactive
       - pkiAttachmentrejectreasonID
-      - sAttachmentrejectreasonnameX
+      - sAttachmentrejectreasonNameX
       type: object
     attachmentrejectreason-getAutocomplete-v2-Response:
       allOf:
@@ -76349,10 +76271,10 @@ components:
         mPayload:
           a_objAttachmentrejectreason:
           - pkiAttachmentrejectreasonID: 41
-            sAttachmentrejectreasonnameX: Wrong Document
+            sAttachmentrejectreasonNameX: Wrong Document
             bAttachmentrejectreasonIsactive: true
           - pkiAttachmentrejectreasonID: 41
-            sAttachmentrejectreasonnameX: Wrong Document
+            sAttachmentrejectreasonNameX: Wrong Document
             bAttachmentrejectreasonIsactive: true
         objDebugPayload:
           iVersionMin: 1
@@ -76378,10 +76300,10 @@ components:
       example:
         a_objAttachmentrejectreason:
         - pkiAttachmentrejectreasonID: 41
-          sAttachmentrejectreasonnameX: Wrong Document
+          sAttachmentrejectreasonNameX: Wrong Document
           bAttachmentrejectreasonIsactive: true
         - pkiAttachmentrejectreasonID: 41
-          sAttachmentrejectreasonnameX: Wrong Document
+          sAttachmentrejectreasonNameX: Wrong Document
           bAttachmentrejectreasonIsactive: true
       properties:
         a_objAttachmentrejectreason:
@@ -129795,7 +129717,6 @@ components:
       - bDocumenttypeRental
       - bDocumenttypeSale
       - bDocumenttypeShowagent
-      - eDocumenttypeEzcom
       - eDocumenttypePrivacydefault
       - eDocumenttypeRepossession
       - eDocumenttypeSalebyowner
@@ -129817,6 +129738,8 @@ components:
           type: integer
         objDocumenttypeName:
           $ref: "#/components/schemas/Multilingual-DocumenttypeName"
+        eDocumenttypeStep:
+          $ref: "#/components/schemas/Computed-eDocumenttypeStep"
         sDocumenttypeDefaultfilename:
           description: The defaultfilename of the Documenttype
           example: invoice.pdf
@@ -129888,7 +129811,12 @@ components:
           $ref: "#/components/schemas/Field-eDocumenttypeTransactiontype"
         eDocumenttypeRepossession:
           $ref: "#/components/schemas/Field-eDocumenttypeRepossession"
+        a_fkiInscriptiontypeID:
+          items:
+            $ref: "#/components/schemas/Field-pkiInscriptiontypeID"
+          type: array
       required:
+      - a_fkiInscriptiontypeID
       - bDocumenttypeCanafe
       - bDocumenttypeCommercialfunding
       - bDocumenttypeConsultation
@@ -129902,12 +129830,12 @@ components:
       - bDocumenttypeRental
       - bDocumenttypeSale
       - bDocumenttypeShowagent
-      - eDocumenttypeEzcom
       - eDocumenttypePrivacydefault
       - eDocumenttypeRepossession
       - eDocumenttypeSalebyowner
       - eDocumenttypeSaledisplaybyrole
       - eDocumenttypeStatusdefault
+      - eDocumenttypeStep
       - eDocumenttypeTransactiontype
       - objDocumenttypeName
       - sDocumenttypeDefaultfilename
@@ -129915,8 +129843,7 @@ components:
     documenttype-RequestCompound:
       allOf:
       - $ref: "#/components/schemas/documenttype-Request"
-      - properties: {}
-        type: object
+      - type: object
       description: A Documenttype Object and children
       type: object
     documenttype-Response:
@@ -129930,6 +129857,8 @@ components:
           type: integer
         objDocumenttypeName:
           $ref: "#/components/schemas/Multilingual-DocumenttypeName"
+        eDocumenttypeStep:
+          $ref: "#/components/schemas/Computed-eDocumenttypeStep"
         sDocumenttypeDefaultfilename:
           description: The defaultfilename of the Documenttype
           example: invoice.pdf
@@ -130001,10 +129930,16 @@ components:
           $ref: "#/components/schemas/Field-eDocumenttypeTransactiontype"
         eDocumenttypeRepossession:
           $ref: "#/components/schemas/Field-eDocumenttypeRepossession"
+        a_fkiInscriptiontypeID:
+          items:
+            $ref: "#/components/schemas/Field-pkiInscriptiontypeID"
+          type: array
       required:
+      - a_fkiInscriptiontypeID
       - bDocumenttypeIsactive
       - bDocumenttypeIsrequired
       - bDocumenttypeShowagent
+      - eDocumenttypeStep
       - objDocumenttypeName
       - pkiDocumenttypeID
       - sDocumenttypeDefaultfilename
@@ -130012,14 +129947,14 @@ components:
     documenttype-ResponseCompound:
       allOf:
       - $ref: "#/components/schemas/documenttype-Response"
-      - properties: {}
-        type: object
+      - type: object
       description: A Documenttype Object
       example:
         pkiDocumenttypeID: 172
         objDocumenttypeName:
           sDocumenttypeName1: Facture
           sDocumenttypeName2: Invoice
+        eDocumenttypeStep: Inscription
         sDocumenttypeDefaultfilename: invoice.pdf
         bDocumenttypeShowagent: true
         bDocumenttypeIsactive: true
@@ -130041,6 +129976,9 @@ components:
         eDocumenttypeSaledisplaybyrole: InscriptorSeller
         eDocumenttypeTransactiontype: All
         eDocumenttypeRepossession: All
+        a_fkiInscriptiontypeID:
+        - 51
+        - 51
       type: object
     documenttype-createObject-v1-Request:
       description: Request for POST /1/object/documenttype
@@ -130104,30 +130042,6 @@ components:
           type: array
       required:
       - a_pkiDocumenttypeID
-      type: object
-    documenttype-deleteObject-v1-Response:
-      allOf:
-      - $ref: "#/components/schemas/Common-Response"
-      description: "Response for DELETE /1/object/documenttype/{pkiDocumenttypeID}"
-      example:
-        objDebugPayload:
-          iVersionMin: 1
-          iVersionMax: 2
-          a_RequiredPermission:
-          - 117
-          - 117
-          bVersionDeprecated: false
-          dtResponseDate: 2020-12-31 23:59:59
-        objDebug:
-          sMemoryUsage: "11,923MB"
-          sRunTime: 0.6084s
-          iSQLSelects: 3
-          iSQLQueries: 6
-          a_objSQLQuery:
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
       type: object
     documenttype-editObject-v1-Request:
       description: "Request for PUT /1/object/documenttype/{pkiDocumenttypeID}"
@@ -130390,6 +130304,7 @@ components:
             objDocumenttypeName:
               sDocumenttypeName1: Facture
               sDocumenttypeName2: Invoice
+            eDocumenttypeStep: Inscription
             sDocumenttypeDefaultfilename: invoice.pdf
             bDocumenttypeShowagent: true
             bDocumenttypeIsactive: true
@@ -130411,6 +130326,9 @@ components:
             eDocumenttypeSaledisplaybyrole: InscriptorSeller
             eDocumenttypeTransactiontype: All
             eDocumenttypeRepossession: All
+            a_fkiInscriptiontypeID:
+            - 51
+            - 51
         objDebugPayload:
           iVersionMin: 1
           iVersionMax: 2
@@ -130438,6 +130356,7 @@ components:
           objDocumenttypeName:
             sDocumenttypeName1: Facture
             sDocumenttypeName2: Invoice
+          eDocumenttypeStep: Inscription
           sDocumenttypeDefaultfilename: invoice.pdf
           bDocumenttypeShowagent: true
           bDocumenttypeIsactive: true
@@ -130459,32 +130378,18 @@ components:
           eDocumenttypeSaledisplaybyrole: InscriptorSeller
           eDocumenttypeTransactiontype: All
           eDocumenttypeRepossession: All
+          a_fkiInscriptiontypeID:
+          - 51
+          - 51
       properties:
         objDocumenttype:
           $ref: "#/components/schemas/documenttype-ResponseCompound"
       required:
       - objDocumenttype
       type: object
-    documenttypechecklist-ListElement:
-      description: A Documenttypechecklist List Element
-      example:
-        pkiDocumenttypechecklistID: 191
-        fkiDocumenttypeID: 172
-        eDocumenttypechecklistStatus: Not required
-        tDocumenttypechecklistComment: This document is optional.
+    documenttypechecklist-RequestPatch:
+      description: A Documenttypechecklist Object
       properties:
-        pkiDocumenttypechecklistID:
-          description: The unique ID of the Documenttypechecklist
-          example: 191
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiDocumenttypeID:
-          description: The unique ID of the Documenttype
-          example: 172
-          maximum: 65535
-          minimum: 0
-          type: integer
         eDocumenttypechecklistStatus:
           $ref: "#/components/schemas/Field-eDocumenttypechecklistStatus"
         tDocumenttypechecklistComment:
@@ -130492,629 +130397,6 @@ components:
           example: This document is optional.
           pattern: "^.{0,255}$"
           type: string
-      required:
-      - eDocumenttypechecklistStatus
-      - fkiDocumenttypeID
-      - pkiDocumenttypechecklistID
-      - tDocumenttypechecklistComment
-      type: object
-    documenttypechecklist-Request:
-      description: A Documenttypechecklist Object
-      properties:
-        pkiDocumenttypechecklistID:
-          description: The unique ID of the Documenttypechecklist
-          example: 191
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiDocumenttypeID:
-          description: The unique ID of the Documenttype
-          example: 172
-          maximum: 65535
-          minimum: 0
-          type: integer
-        eDocumenttypechecklistStatus:
-          $ref: "#/components/schemas/Field-eDocumenttypechecklistStatus"
-        tDocumenttypechecklistComment:
-          description: The comment of the Documenttypechecklist
-          example: This document is optional.
-          pattern: "^.{0,255}$"
-          type: string
-        fkiAdjustmentID:
-          description: The unique ID of the Adjustment
-          example: 202
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiAgentID:
-          description: The unique ID of the Agent.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiBankaccountID:
-          description: The unique ID of the Bankaccount
-          example: 46
-          maximum: 255
-          minimum: 0
-          type: integer
-        fkiBrokerID:
-          description: The unique ID of the Broker.
-          example: 26
-          minimum: 0
-          type: integer
-        fkiCommissionadvanceID:
-          description: The unique ID of the Commissionadvance
-          example: 115
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiCommunicationID:
-          description: The unique ID of the Communication.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiCustomerID:
-          description: The unique ID of the Customer.
-          example: 18
-          minimum: 0
-          type: integer
-        fkiCustomertemplateID:
-          description: The unique ID of the Customertemplate
-          example: 152
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiDepositID:
-          description: The unique ID of the Deposit
-          example: 54
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiDeposittransitchequeID:
-          description: The unique ID of the Deposittransitcheque
-          example: 251
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiElectronicfundstransferID:
-          description: The unique ID of the Electronicfundstransfer
-          example: 1262
-          maximum: 65535
-          minimum: 1
-          type: integer
-        fkiEmployeeID:
-          description: The unique ID of the Employee.
-          example: 31
-          minimum: 0
-          type: integer
-        fkiExternalbrokerID:
-          description: The unique ID of the Externalbroker.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiEzcomadvanceserverID:
-          description: The unique ID of the Ezcomadvanceserver
-          example: 238
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiEzcomcompanyID:
-          description: The unique ID of the Ezcomcompany
-          example: 170
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiEzsigndocumentID:
-          description: The unique ID of the Ezsigndocument
-          example: 97
-          minimum: 0
-          type: integer
-        fkiGhacqcontractID:
-          description: The unique ID of the Ghacqcontract
-          example: 217
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiInscriptionID:
-          description: The unique ID of the Inscription.
-          example: 17
-          minimum: 0
-          type: integer
-        fkiInscriptiontempID:
-          description: The unique ID of the Inscriptiontemp
-          example: 2445
-          maximum: 16777215
-          minimum: 1
-          type: integer
-        fkiInscriptionnotauthenticatedID:
-          description: The unique ID of the Inscriptionnotauthenticated.
-          example: 24
-          minimum: 0
-          type: integer
-        fkiInvoiceID:
-          description: The unique ID of the Invoice.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiBuyercontractID:
-          description: The unique ID of the Buyercontract
-          example: 38
-          maximum: 65535
-          minimum: 1
-          type: integer
-        fkiFranchisebrokerID:
-          description: The unique ID of the Franchisebroker
-          example: 61
-          minimum: 0
-          type: integer
-        fkiFranchiseagenceID:
-          description: The unique ID of the Franchiseagence
-          example: 117
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiFranchiseofficeID:
-          description: The unique ID of the Franchisereoffice
-          example: 50
-          minimum: 0
-          type: integer
-        fkiFranchisefranchiseID:
-          description: The unique ID of the Franchisefranchise
-          example: 156
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiFranchisecomplaintID:
-          description: The unique ID of the Franchisecomplaint
-          example: 24
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiLeadID:
-          description: The unique ID of the Lead
-          example: 117
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiMarketingprogramID:
-          description: The unique ID of the Marketingprogram
-          example: 178
-          maximum: 255
-          minimum: 0
-          type: integer
-        fkiMarketingfollowID:
-          description: The unique ID of the Marketingfollow
-          example: 45
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiNotaryID:
-          description: The unique ID of the Notary.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiOfficetaxreportID:
-          description: The unique ID of the Officetaxreport
-          example: 200
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiOtherincomeID:
-          description: The unique ID of the Otherincome
-          example: 142
-          maximum: 65535
-          minimum: 1
-          type: integer
-        fkiPaymentpreparationID:
-          description: The unique ID of the Paymentpreparation
-          example: 124
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiPurchaseID:
-          description: The unique ID of the Purchase
-          example: 155
-          type: integer
-        fkiSalaryID:
-          description: The unique ID of the Salary
-          example: 73
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiSupplierID:
-          description: The unique ID of the Supplier.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiTranqcontractID:
-          description: The unique ID of the Tranqcontract
-          example: 39
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiTemplateID:
-          description: The unique ID of the Template
-          example: 232
-          maximum: 65535
-          minimum: 0
-          type: integer
-      required:
-      - eDocumenttypechecklistStatus
-      - fkiDocumenttypeID
-      - tDocumenttypechecklistComment
-      type: object
-    documenttypechecklist-RequestCompound:
-      allOf:
-      - $ref: "#/components/schemas/documenttypechecklist-Request"
-      - properties: {}
-        type: object
-      description: A Documenttypechecklist Object and children
-      type: object
-    documenttypechecklist-Response:
-      description: A Documenttypechecklist Object
-      properties:
-        pkiDocumenttypechecklistID:
-          description: The unique ID of the Documenttypechecklist
-          example: 191
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiDocumenttypeID:
-          description: The unique ID of the Documenttype
-          example: 172
-          maximum: 65535
-          minimum: 0
-          type: integer
-        sDocumenttypeNameX:
-          description: The name of the Documenttype in the language of the requester
-          example: Loan deed
-          pattern: "^.{0,55}$"
-          type: string
-        eDocumenttypechecklistStatus:
-          $ref: "#/components/schemas/Field-eDocumenttypechecklistStatus"
-        tDocumenttypechecklistComment:
-          description: The comment of the Documenttypechecklist
-          example: This document is optional.
-          pattern: "^.{0,255}$"
-          type: string
-        fkiAdjustmentID:
-          description: The unique ID of the Adjustment
-          example: 202
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiAgentID:
-          description: The unique ID of the Agent.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiBankaccountID:
-          description: The unique ID of the Bankaccount
-          example: 46
-          maximum: 255
-          minimum: 0
-          type: integer
-        fkiBrokerID:
-          description: The unique ID of the Broker.
-          example: 26
-          minimum: 0
-          type: integer
-        fkiCommissionadvanceID:
-          description: The unique ID of the Commissionadvance
-          example: 115
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiCommunicationID:
-          description: The unique ID of the Communication.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiCustomerID:
-          description: The unique ID of the Customer.
-          example: 18
-          minimum: 0
-          type: integer
-        fkiCustomertemplateID:
-          description: The unique ID of the Customertemplate
-          example: 152
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiDepositID:
-          description: The unique ID of the Deposit
-          example: 54
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiDeposittransitchequeID:
-          description: The unique ID of the Deposittransitcheque
-          example: 251
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiElectronicfundstransferID:
-          description: The unique ID of the Electronicfundstransfer
-          example: 1262
-          maximum: 65535
-          minimum: 1
-          type: integer
-        fkiEmployeeID:
-          description: The unique ID of the Employee.
-          example: 31
-          minimum: 0
-          type: integer
-        fkiExternalbrokerID:
-          description: The unique ID of the Externalbroker.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiEzcomadvanceserverID:
-          description: The unique ID of the Ezcomadvanceserver
-          example: 238
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiEzcomcompanyID:
-          description: The unique ID of the Ezcomcompany
-          example: 170
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiEzsigndocumentID:
-          description: The unique ID of the Ezsigndocument
-          example: 97
-          minimum: 0
-          type: integer
-        fkiGhacqcontractID:
-          description: The unique ID of the Ghacqcontract
-          example: 217
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiInscriptionID:
-          description: The unique ID of the Inscription.
-          example: 17
-          minimum: 0
-          type: integer
-        fkiInscriptiontempID:
-          description: The unique ID of the Inscriptiontemp
-          example: 2445
-          maximum: 16777215
-          minimum: 1
-          type: integer
-        fkiInscriptionnotauthenticatedID:
-          description: The unique ID of the Inscriptionnotauthenticated.
-          example: 24
-          minimum: 0
-          type: integer
-        fkiInvoiceID:
-          description: The unique ID of the Invoice.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiBuyercontractID:
-          description: The unique ID of the Buyercontract
-          example: 38
-          maximum: 65535
-          minimum: 1
-          type: integer
-        fkiFranchisebrokerID:
-          description: The unique ID of the Franchisebroker
-          example: 61
-          minimum: 0
-          type: integer
-        fkiFranchiseagenceID:
-          description: The unique ID of the Franchiseagence
-          example: 117
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiFranchiseofficeID:
-          description: The unique ID of the Franchisereoffice
-          example: 50
-          minimum: 0
-          type: integer
-        fkiFranchisefranchiseID:
-          description: The unique ID of the Franchisefranchise
-          example: 156
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiFranchisecomplaintID:
-          description: The unique ID of the Franchisecomplaint
-          example: 24
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiLeadID:
-          description: The unique ID of the Lead
-          example: 117
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiMarketingprogramID:
-          description: The unique ID of the Marketingprogram
-          example: 178
-          maximum: 255
-          minimum: 0
-          type: integer
-        fkiMarketingfollowID:
-          description: The unique ID of the Marketingfollow
-          example: 45
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiNotaryID:
-          description: The unique ID of the Notary.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiOfficetaxreportID:
-          description: The unique ID of the Officetaxreport
-          example: 200
-          maximum: 65535
-          minimum: 0
-          type: integer
-        fkiOtherincomeID:
-          description: The unique ID of the Otherincome
-          example: 142
-          maximum: 65535
-          minimum: 1
-          type: integer
-        fkiPaymentpreparationID:
-          description: The unique ID of the Paymentpreparation
-          example: 124
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiPurchaseID:
-          description: The unique ID of the Purchase
-          example: 155
-          type: integer
-        fkiSalaryID:
-          description: The unique ID of the Salary
-          example: 73
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiSupplierID:
-          description: The unique ID of the Supplier.
-          example: 1
-          minimum: 0
-          type: integer
-        fkiTranqcontractID:
-          description: The unique ID of the Tranqcontract
-          example: 39
-          maximum: 16777215
-          minimum: 0
-          type: integer
-        fkiTemplateID:
-          description: The unique ID of the Template
-          example: 232
-          maximum: 65535
-          minimum: 0
-          type: integer
-      required:
-      - eDocumenttypechecklistStatus
-      - fkiDocumenttypeID
-      - pkiDocumenttypechecklistID
-      - tDocumenttypechecklistComment
-      type: object
-    documenttypechecklist-ResponseCompound:
-      allOf:
-      - $ref: "#/components/schemas/documenttypechecklist-Response"
-      - properties: {}
-        type: object
-      description: A Documenttypechecklist Object
-      example:
-        pkiDocumenttypechecklistID: 191
-        fkiDocumenttypeID: 172
-        sDocumenttypeNameX: Loan deed
-        eDocumenttypechecklistStatus: Not required
-        tDocumenttypechecklistComment: This document is optional.
-        fkiAdjustmentID: 202
-        fkiAgentID: 1
-        fkiBankaccountID: 46
-        fkiBrokerID: 26
-        fkiCommissionadvanceID: 115
-        fkiCommunicationID: 1
-        fkiCustomerID: 18
-        fkiCustomertemplateID: 152
-        fkiDepositID: 54
-        fkiDeposittransitchequeID: 251
-        fkiElectronicfundstransferID: 1262
-        fkiEmployeeID: 31
-        fkiExternalbrokerID: 1
-        fkiEzcomadvanceserverID: 238
-        fkiEzcomcompanyID: 170
-        fkiEzsigndocumentID: 97
-        fkiGhacqcontractID: 217
-        fkiInscriptionID: 17
-        fkiInscriptiontempID: 2445
-        fkiInscriptionnotauthenticatedID: 24
-        fkiInvoiceID: 1
-        fkiBuyercontractID: 38
-        fkiFranchisebrokerID: 61
-        fkiFranchiseagenceID: 117
-        fkiFranchiseofficeID: 50
-        fkiFranchisefranchiseID: 156
-        fkiFranchisecomplaintID: 24
-        fkiLeadID: 117
-        fkiMarketingprogramID: 178
-        fkiMarketingfollowID: 45
-        fkiNotaryID: 1
-        fkiOfficetaxreportID: 200
-        fkiOtherincomeID: 142
-        fkiPaymentpreparationID: 124
-        fkiPurchaseID: 155
-        fkiSalaryID: 73
-        fkiSupplierID: 1
-        fkiTranqcontractID: 39
-        fkiTemplateID: 232
-      type: object
-    documenttypechecklist-createObject-v1-Request:
-      description: Request for POST /1/object/documenttypechecklist
-      properties:
-        a_objDocumenttypechecklist:
-          items:
-            $ref: "#/components/schemas/documenttypechecklist-RequestCompound"
-          minItems: 1
-          type: array
-      required:
-      - a_objDocumenttypechecklist
-      type: object
-    documenttypechecklist-createObject-v1-Response:
-      allOf:
-      - properties:
-          mPayload:
-            $ref: "#/components/schemas/documenttypechecklist-createObject-v1-Response-mPayload"
-        required:
-        - mPayload
-        type: object
-      - $ref: "#/components/schemas/Common-Response"
-      description: Response for POST /1/object/documenttypechecklist
-      example:
-        mPayload:
-          a_pkiDocumenttypechecklistID:
-          - 191
-          - 191
-        objDebugPayload:
-          iVersionMin: 1
-          iVersionMax: 2
-          a_RequiredPermission:
-          - 117
-          - 117
-          bVersionDeprecated: false
-          dtResponseDate: 2020-12-31 23:59:59
-        objDebug:
-          sMemoryUsage: "11,923MB"
-          sRunTime: 0.6084s
-          iSQLSelects: 3
-          iSQLQueries: 6
-          a_objSQLQuery:
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-      type: object
-    documenttypechecklist-createObject-v1-Response-mPayload:
-      description: Payload for POST /1/object/documenttypechecklist
-      example:
-        a_pkiDocumenttypechecklistID:
-        - 191
-        - 191
-      properties:
-        a_pkiDocumenttypechecklistID:
-          description: |-
-            An array of unique IDs representing the object that were requested to be created.
-
-            They are returned in the same order as the array containing the objects to be created that was sent in the request.
-          items:
-            $ref: "#/components/schemas/Field-pkiDocumenttypechecklistID"
-          type: array
-      required:
-      - a_pkiDocumenttypechecklistID
       type: object
     documenttypechecklist-deleteObject-v1-Response:
       allOf:
@@ -131140,18 +130422,18 @@ components:
           - sQuery: SELECT * FROM table
             fDuration: 1.0E-4
       type: object
-    documenttypechecklist-editObject-v1-Request:
-      description: "Request for PUT /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
+    documenttypechecklist-patchObject-v1-Request:
+      description: "Request for PATCH /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
       properties:
         objDocumenttypechecklist:
-          $ref: "#/components/schemas/documenttypechecklist-RequestCompound"
+          $ref: "#/components/schemas/documenttypechecklist-RequestPatch"
       required:
       - objDocumenttypechecklist
       type: object
-    documenttypechecklist-editObject-v1-Response:
+    documenttypechecklist-patchObject-v1-Response:
       allOf:
       - $ref: "#/components/schemas/Common-Response"
-      description: "Response for PUT /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
+      description: "Response for PATCH /1/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
       example:
         objDebugPayload:
           iVersionMin: 1
@@ -131171,215 +130453,6 @@ components:
             fDuration: 1.0E-4
           - sQuery: SELECT * FROM table
             fDuration: 1.0E-4
-      type: object
-    documenttypechecklist-getList-v1-Response:
-      allOf:
-      - properties:
-          mPayload:
-            $ref: "#/components/schemas/documenttypechecklist-getList-v1-Response-mPayload"
-        required:
-        - mPayload
-        type: object
-      - $ref: "#/components/schemas/Common-Response_getList"
-      description: Response for GET /1/object/documenttypechecklist/getList
-      example:
-        mPayload:
-          a_objDocumenttypechecklist:
-          - pkiDocumenttypechecklistID: 191
-            fkiDocumenttypeID: 172
-            eDocumenttypechecklistStatus: Not required
-            tDocumenttypechecklistComment: This document is optional.
-          - pkiDocumenttypechecklistID: 191
-            fkiDocumenttypeID: 172
-            eDocumenttypechecklistStatus: Not required
-            tDocumenttypechecklistComment: This document is optional.
-          iRowReturned: 100
-          iRowFiltered: 533
-        objDebugPayload:
-          iVersionMin: 1
-          iVersionMax: 2
-          a_RequiredPermission:
-          - 117
-          - 117
-          bVersionDeprecated: false
-          dtResponseDate: 2020-12-31 23:59:59
-          a_Filter:
-            a_AutoType:
-              key: a_AutoType
-            a_AutoTypeHaving:
-              key: a_AutoTypeHaving
-            a_Enum:
-              key:
-                key: a_Enum
-          a_OrderBy:
-            key: a_OrderBy
-          iRowMax: 100
-          iRowOffset: 0
-        objDebug:
-          sMemoryUsage: "11,923MB"
-          sRunTime: 0.6084s
-          iSQLSelects: 3
-          iSQLQueries: 6
-          a_objSQLQuery:
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-      type: object
-    documenttypechecklist-getList-v1-Response-mPayload:
-      allOf:
-      - properties:
-          a_objDocumenttypechecklist:
-            items:
-              $ref: "#/components/schemas/documenttypechecklist-ListElement"
-            type: array
-        required:
-        - a_objDocumenttypechecklist
-        type: object
-      - $ref: "#/components/schemas/Common-getList-v1-Response-mPayload"
-      description: Payload for GET /1/object/documenttypechecklist/getList
-      example:
-        a_objDocumenttypechecklist:
-        - pkiDocumenttypechecklistID: 191
-          fkiDocumenttypeID: 172
-          eDocumenttypechecklistStatus: Not required
-          tDocumenttypechecklistComment: This document is optional.
-        - pkiDocumenttypechecklistID: 191
-          fkiDocumenttypeID: 172
-          eDocumenttypechecklistStatus: Not required
-          tDocumenttypechecklistComment: This document is optional.
-        iRowReturned: 100
-        iRowFiltered: 533
-      type: object
-    documenttypechecklist-getObject-v2-Response:
-      allOf:
-      - properties:
-          mPayload:
-            $ref: "#/components/schemas/documenttypechecklist-getObject-v2-Response-mPayload"
-        required:
-        - mPayload
-        type: object
-      - $ref: "#/components/schemas/Common-Response"
-      description: "Response for GET /2/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
-      example:
-        mPayload:
-          objDocumenttypechecklist:
-            pkiDocumenttypechecklistID: 191
-            fkiDocumenttypeID: 172
-            sDocumenttypeNameX: Loan deed
-            eDocumenttypechecklistStatus: Not required
-            tDocumenttypechecklistComment: This document is optional.
-            fkiAdjustmentID: 202
-            fkiAgentID: 1
-            fkiBankaccountID: 46
-            fkiBrokerID: 26
-            fkiCommissionadvanceID: 115
-            fkiCommunicationID: 1
-            fkiCustomerID: 18
-            fkiCustomertemplateID: 152
-            fkiDepositID: 54
-            fkiDeposittransitchequeID: 251
-            fkiElectronicfundstransferID: 1262
-            fkiEmployeeID: 31
-            fkiExternalbrokerID: 1
-            fkiEzcomadvanceserverID: 238
-            fkiEzcomcompanyID: 170
-            fkiEzsigndocumentID: 97
-            fkiGhacqcontractID: 217
-            fkiInscriptionID: 17
-            fkiInscriptiontempID: 2445
-            fkiInscriptionnotauthenticatedID: 24
-            fkiInvoiceID: 1
-            fkiBuyercontractID: 38
-            fkiFranchisebrokerID: 61
-            fkiFranchiseagenceID: 117
-            fkiFranchiseofficeID: 50
-            fkiFranchisefranchiseID: 156
-            fkiFranchisecomplaintID: 24
-            fkiLeadID: 117
-            fkiMarketingprogramID: 178
-            fkiMarketingfollowID: 45
-            fkiNotaryID: 1
-            fkiOfficetaxreportID: 200
-            fkiOtherincomeID: 142
-            fkiPaymentpreparationID: 124
-            fkiPurchaseID: 155
-            fkiSalaryID: 73
-            fkiSupplierID: 1
-            fkiTranqcontractID: 39
-            fkiTemplateID: 232
-        objDebugPayload:
-          iVersionMin: 1
-          iVersionMax: 2
-          a_RequiredPermission:
-          - 117
-          - 117
-          bVersionDeprecated: false
-          dtResponseDate: 2020-12-31 23:59:59
-        objDebug:
-          sMemoryUsage: "11,923MB"
-          sRunTime: 0.6084s
-          iSQLSelects: 3
-          iSQLQueries: 6
-          a_objSQLQuery:
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-          - sQuery: SELECT * FROM table
-            fDuration: 1.0E-4
-      type: object
-    documenttypechecklist-getObject-v2-Response-mPayload:
-      description: "Payload for GET /2/object/documenttypechecklist/{pkiDocumenttypechecklistID}"
-      example:
-        objDocumenttypechecklist:
-          pkiDocumenttypechecklistID: 191
-          fkiDocumenttypeID: 172
-          sDocumenttypeNameX: Loan deed
-          eDocumenttypechecklistStatus: Not required
-          tDocumenttypechecklistComment: This document is optional.
-          fkiAdjustmentID: 202
-          fkiAgentID: 1
-          fkiBankaccountID: 46
-          fkiBrokerID: 26
-          fkiCommissionadvanceID: 115
-          fkiCommunicationID: 1
-          fkiCustomerID: 18
-          fkiCustomertemplateID: 152
-          fkiDepositID: 54
-          fkiDeposittransitchequeID: 251
-          fkiElectronicfundstransferID: 1262
-          fkiEmployeeID: 31
-          fkiExternalbrokerID: 1
-          fkiEzcomadvanceserverID: 238
-          fkiEzcomcompanyID: 170
-          fkiEzsigndocumentID: 97
-          fkiGhacqcontractID: 217
-          fkiInscriptionID: 17
-          fkiInscriptiontempID: 2445
-          fkiInscriptionnotauthenticatedID: 24
-          fkiInvoiceID: 1
-          fkiBuyercontractID: 38
-          fkiFranchisebrokerID: 61
-          fkiFranchiseagenceID: 117
-          fkiFranchiseofficeID: 50
-          fkiFranchisefranchiseID: 156
-          fkiFranchisecomplaintID: 24
-          fkiLeadID: 117
-          fkiMarketingprogramID: 178
-          fkiMarketingfollowID: 45
-          fkiNotaryID: 1
-          fkiOfficetaxreportID: 200
-          fkiOtherincomeID: 142
-          fkiPaymentpreparationID: 124
-          fkiPurchaseID: 155
-          fkiSalaryID: 73
-          fkiSupplierID: 1
-          fkiTranqcontractID: 39
-          fkiTemplateID: 232
-      properties:
-        objDocumenttypechecklist:
-          $ref: "#/components/schemas/documenttypechecklist-ResponseCompound"
-      required:
-      - objDocumenttypechecklist
       type: object
     domain-AutocompleteElement-Response:
       description: A Domain AutocompleteElement Response
@@ -205341,7 +204414,7 @@ components:
       - $ref: "#/components/schemas/Common-Response"
       description: "Response for GET /1/object/ezsignimportdocument/{pkiEzsignimportdocumentID}/download"
       example:
-        mPayload: null
+        mPayload: {}
         objDebugPayload:
           iVersionMin: 1
           iVersionMax: 2
@@ -205363,6 +204436,7 @@ components:
       type: object
     ezsignimportdocument-download-v1-Response-mPayload:
       description: "Response for GET /1/object/ezsignimportdocument/{pkiEzsignimportdocumentID}/download"
+      example: {}
       type: object
     ezsignimportfolder-ListElement:
       description: A Ezsignimportfolder List Element
@@ -236621,6 +235695,23 @@ components:
           a_objInscriptionnotauthenticated:
           - pkiInscriptionnotauthenticatedID: 24
             fkiInscriptionID: 17
+            objInscription:
+              pkiInscriptionID: 17
+              fkiAddressID: 142
+              objAddress:
+                pkiAddressID: 142
+                fkiAddresstypeID: 1
+                sAddressCivic: "2540"
+                sAddressStreet: Daniel-Johnson Blvd.
+                sAddressSuite: "610"
+                sAddressCity: Laval
+                fkiProvinceID: 11
+                sProvinceNameX: Quebec
+                fkiCountryID: 1
+                sCountryNameX: Canada
+                sAddressZip: H7T2S3
+                fAddressLongitude: "73.5674"
+                fAddressLatitude: "45.5019"
             fkiDepartmentID: 21
             sDepartmentNameX: Head Office
             fkiFinancialinstitutionID: 211
@@ -236660,6 +235751,23 @@ components:
             bInscriptionnotauthenticatedDraft: true
           - pkiInscriptionnotauthenticatedID: 24
             fkiInscriptionID: 17
+            objInscription:
+              pkiInscriptionID: 17
+              fkiAddressID: 142
+              objAddress:
+                pkiAddressID: 142
+                fkiAddresstypeID: 1
+                sAddressCivic: "2540"
+                sAddressStreet: Daniel-Johnson Blvd.
+                sAddressSuite: "610"
+                sAddressCity: Laval
+                fkiProvinceID: 11
+                sProvinceNameX: Quebec
+                fkiCountryID: 1
+                sCountryNameX: Canada
+                sAddressZip: H7T2S3
+                fAddressLongitude: "73.5674"
+                fAddressLatitude: "45.5019"
             fkiDepartmentID: 21
             sDepartmentNameX: Head Office
             fkiFinancialinstitutionID: 211
@@ -236722,6 +235830,23 @@ components:
         a_objInscriptionnotauthenticated:
         - pkiInscriptionnotauthenticatedID: 24
           fkiInscriptionID: 17
+          objInscription:
+            pkiInscriptionID: 17
+            fkiAddressID: 142
+            objAddress:
+              pkiAddressID: 142
+              fkiAddresstypeID: 1
+              sAddressCivic: "2540"
+              sAddressStreet: Daniel-Johnson Blvd.
+              sAddressSuite: "610"
+              sAddressCity: Laval
+              fkiProvinceID: 11
+              sProvinceNameX: Quebec
+              fkiCountryID: 1
+              sCountryNameX: Canada
+              sAddressZip: H7T2S3
+              fAddressLongitude: "73.5674"
+              fAddressLatitude: "45.5019"
           fkiDepartmentID: 21
           sDepartmentNameX: Head Office
           fkiFinancialinstitutionID: 211
@@ -236761,6 +235886,23 @@ components:
           bInscriptionnotauthenticatedDraft: true
         - pkiInscriptionnotauthenticatedID: 24
           fkiInscriptionID: 17
+          objInscription:
+            pkiInscriptionID: 17
+            fkiAddressID: 142
+            objAddress:
+              pkiAddressID: 142
+              fkiAddresstypeID: 1
+              sAddressCivic: "2540"
+              sAddressStreet: Daniel-Johnson Blvd.
+              sAddressSuite: "610"
+              sAddressCity: Laval
+              fkiProvinceID: 11
+              sProvinceNameX: Quebec
+              fkiCountryID: 1
+              sCountryNameX: Canada
+              sAddressZip: H7T2S3
+              fAddressLongitude: "73.5674"
+              fAddressLatitude: "45.5019"
           fkiDepartmentID: 21
           sDepartmentNameX: Head Office
           fkiFinancialinstitutionID: 211
@@ -237365,6 +236507,34 @@ components:
       required:
       - a_objAttachment
       type: object
+    inscription-synchronizationDocumenttype-v1-Request:
+      description: "Request for POST /1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype\\\
+        n\\nIntentionally empty for future-proofing,"
+      type: object
+    inscription-synchronizationDocumenttype-v1-Response:
+      allOf:
+      - $ref: "#/components/schemas/Common-Response"
+      description: "Response for POST /1/object/inscription/{pkiInscriptionID}/synchronizationDocumenttype"
+      example:
+        objDebugPayload:
+          iVersionMin: 1
+          iVersionMax: 2
+          a_RequiredPermission:
+          - 117
+          - 117
+          bVersionDeprecated: false
+          dtResponseDate: 2020-12-31 23:59:59
+        objDebug:
+          sMemoryUsage: "11,923MB"
+          sRunTime: 0.6084s
+          iSQLSelects: 3
+          iSQLQueries: 6
+          a_objSQLQuery:
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+          - sQuery: SELECT * FROM table
+            fDuration: 1.0E-4
+      type: object
     inscriptionchecklist-AutocompleteElement-Response:
       description: A Inscriptionchecklist AutocompleteElement Response
       example:
@@ -237801,6 +236971,8 @@ components:
           example: 17
           minimum: 0
           type: integer
+        objInscription:
+          $ref: "#/components/schemas/Custom-Inscription"
         fkiDepartmentID:
           description: The unique ID of the Department
           example: 21
@@ -238025,6 +237197,7 @@ components:
       - fkiInscriptionID
       - fkiTaxassignmentID
       - iInscriptionnotauthenticatedOrder
+      - objInscription
       - pkiInscriptionnotauthenticatedID
       - sInscriptionnotauthenticatedOffertopurchasenumber
       - tInscriptionnotauthenticatedChecklistnote
@@ -238038,6 +237211,23 @@ components:
       example:
         pkiInscriptionnotauthenticatedID: 24
         fkiInscriptionID: 17
+        objInscription:
+          pkiInscriptionID: 17
+          fkiAddressID: 142
+          objAddress:
+            pkiAddressID: 142
+            fkiAddresstypeID: 1
+            sAddressCivic: "2540"
+            sAddressStreet: Daniel-Johnson Blvd.
+            sAddressSuite: "610"
+            sAddressCity: Laval
+            fkiProvinceID: 11
+            sProvinceNameX: Quebec
+            fkiCountryID: 1
+            sCountryNameX: Canada
+            sAddressZip: H7T2S3
+            fAddressLongitude: "73.5674"
+            fAddressLatitude: "45.5019"
         fkiDepartmentID: 21
         sDepartmentNameX: Head Office
         fkiFinancialinstitutionID: 211
@@ -243932,6 +243122,23 @@ components:
           objInscriptionnotauthenticated:
             pkiInscriptionnotauthenticatedID: 24
             fkiInscriptionID: 17
+            objInscription:
+              pkiInscriptionID: 17
+              fkiAddressID: 142
+              objAddress:
+                pkiAddressID: 142
+                fkiAddresstypeID: 1
+                sAddressCivic: "2540"
+                sAddressStreet: Daniel-Johnson Blvd.
+                sAddressSuite: "610"
+                sAddressCity: Laval
+                fkiProvinceID: 11
+                sProvinceNameX: Quebec
+                fkiCountryID: 1
+                sCountryNameX: Canada
+                sAddressZip: H7T2S3
+                fAddressLongitude: "73.5674"
+                fAddressLatitude: "45.5019"
             fkiDepartmentID: 21
             sDepartmentNameX: Head Office
             fkiFinancialinstitutionID: 211
@@ -243994,6 +243201,23 @@ components:
         objInscriptionnotauthenticated:
           pkiInscriptionnotauthenticatedID: 24
           fkiInscriptionID: 17
+          objInscription:
+            pkiInscriptionID: 17
+            fkiAddressID: 142
+            objAddress:
+              pkiAddressID: 142
+              fkiAddresstypeID: 1
+              sAddressCivic: "2540"
+              sAddressStreet: Daniel-Johnson Blvd.
+              sAddressSuite: "610"
+              sAddressCity: Laval
+              fkiProvinceID: 11
+              sProvinceNameX: Quebec
+              fkiCountryID: 1
+              sCountryNameX: Canada
+              sAddressZip: H7T2S3
+              fAddressLongitude: "73.5674"
+              fAddressLatitude: "45.5019"
           fkiDepartmentID: 21
           sDepartmentNameX: Head Office
           fkiFinancialinstitutionID: 211
@@ -268522,8 +267746,8 @@ components:
             - PropertyName1
             - PropertyName1
             a_objVariableobject:
-            - null
-            - null
+            - key: ""
+            - key: ""
         objDebugPayload:
           iVersionMin: 1
           iVersionMax: 2
@@ -268553,8 +267777,8 @@ components:
           - PropertyName1
           - PropertyName1
           a_objVariableobject:
-          - null
-          - null
+          - key: ""
+          - key: ""
       properties:
         objNotificationtest:
           $ref: "#/components/schemas/Custom-Notificationtestgetelements-Response"
@@ -327545,6 +326769,8 @@ components:
             $ref: "#/components/schemas/Field-eWebhookModule"
           eWebhookEzsignevent:
             $ref: "#/components/schemas/Custom-eWebhookEzsignevent"
+          eWebhookEzmaxpartnerevent:
+            $ref: "#/components/schemas/Field-eWebhookEzmaxpartnerevent"
           eWebhookManagementevent:
             $ref: "#/components/schemas/Field-eWebhookManagementevent"
           eWebhookRealestateevent:

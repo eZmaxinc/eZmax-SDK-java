@@ -49,17 +49,17 @@ import eZmaxAPI.JSON;
 /**
  * A Attachmentrejectreason AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-10-22T16:10:42.689875394Z[Etc/UTC]", comments = "Generator version: 7.26.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-03T20:09:37.818429184Z[Etc/UTC]", comments = "Generator version: 7.27.0")
 public class AttachmentrejectreasonAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_ATTACHMENTREJECTREASON_I_D = "pkiAttachmentrejectreasonID";
   @SerializedName(SERIALIZED_NAME_PKI_ATTACHMENTREJECTREASON_I_D)
   @javax.annotation.Nonnull
   private Integer pkiAttachmentrejectreasonID;
 
-  public static final String SERIALIZED_NAME_S_ATTACHMENTREJECTREASONNAME_X = "sAttachmentrejectreasonnameX";
-  @SerializedName(SERIALIZED_NAME_S_ATTACHMENTREJECTREASONNAME_X)
+  public static final String SERIALIZED_NAME_S_ATTACHMENTREJECTREASON_NAME_X = "sAttachmentrejectreasonNameX";
+  @SerializedName(SERIALIZED_NAME_S_ATTACHMENTREJECTREASON_NAME_X)
   @javax.annotation.Nonnull
-  private String sAttachmentrejectreasonnameX;
+  private String sAttachmentrejectreasonNameX;
 
   public static final String SERIALIZED_NAME_B_ATTACHMENTREJECTREASON_ISACTIVE = "bAttachmentrejectreasonIsactive";
   @SerializedName(SERIALIZED_NAME_B_ATTACHMENTREJECTREASON_ISACTIVE)
@@ -90,22 +90,22 @@ public class AttachmentrejectreasonAutocompleteElementResponse {
   }
 
 
-  public AttachmentrejectreasonAutocompleteElementResponse sAttachmentrejectreasonnameX(@javax.annotation.Nonnull String sAttachmentrejectreasonnameX) {
-    this.sAttachmentrejectreasonnameX = sAttachmentrejectreasonnameX;
+  public AttachmentrejectreasonAutocompleteElementResponse sAttachmentrejectreasonNameX(@javax.annotation.Nonnull String sAttachmentrejectreasonNameX) {
+    this.sAttachmentrejectreasonNameX = sAttachmentrejectreasonNameX;
     return this;
   }
 
   /**
    * The name of the Attachmentrejectreason in the language of the requester
-   * @return sAttachmentrejectreasonnameX
+   * @return sAttachmentrejectreasonNameX
    */
   @javax.annotation.Nonnull
-  public String getsAttachmentrejectreasonnameX() {
-    return sAttachmentrejectreasonnameX;
+  public String getsAttachmentrejectreasonNameX() {
+    return sAttachmentrejectreasonNameX;
   }
 
-  public void setsAttachmentrejectreasonnameX(@javax.annotation.Nonnull String sAttachmentrejectreasonnameX) {
-    this.sAttachmentrejectreasonnameX = sAttachmentrejectreasonnameX;
+  public void setsAttachmentrejectreasonNameX(@javax.annotation.Nonnull String sAttachmentrejectreasonNameX) {
+    this.sAttachmentrejectreasonNameX = sAttachmentrejectreasonNameX;
   }
 
 
@@ -139,13 +139,13 @@ public class AttachmentrejectreasonAutocompleteElementResponse {
     }
     AttachmentrejectreasonAutocompleteElementResponse attachmentrejectreasonAutocompleteElementResponse = (AttachmentrejectreasonAutocompleteElementResponse) o;
     return Objects.equals(this.pkiAttachmentrejectreasonID, attachmentrejectreasonAutocompleteElementResponse.pkiAttachmentrejectreasonID) &&
-        Objects.equals(this.sAttachmentrejectreasonnameX, attachmentrejectreasonAutocompleteElementResponse.sAttachmentrejectreasonnameX) &&
+        Objects.equals(this.sAttachmentrejectreasonNameX, attachmentrejectreasonAutocompleteElementResponse.sAttachmentrejectreasonNameX) &&
         Objects.equals(this.bAttachmentrejectreasonIsactive, attachmentrejectreasonAutocompleteElementResponse.bAttachmentrejectreasonIsactive);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pkiAttachmentrejectreasonID, sAttachmentrejectreasonnameX, bAttachmentrejectreasonIsactive);
+    return Objects.hash(pkiAttachmentrejectreasonID, sAttachmentrejectreasonNameX, bAttachmentrejectreasonIsactive);
   }
 
   @Override
@@ -153,7 +153,7 @@ public class AttachmentrejectreasonAutocompleteElementResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class AttachmentrejectreasonAutocompleteElementResponse {\n");
     sb.append("    pkiAttachmentrejectreasonID: ").append(toIndentedString(pkiAttachmentrejectreasonID)).append("\n");
-    sb.append("    sAttachmentrejectreasonnameX: ").append(toIndentedString(sAttachmentrejectreasonnameX)).append("\n");
+    sb.append("    sAttachmentrejectreasonNameX: ").append(toIndentedString(sAttachmentrejectreasonNameX)).append("\n");
     sb.append("    bAttachmentrejectreasonIsactive: ").append(toIndentedString(bAttachmentrejectreasonIsactive)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -173,10 +173,10 @@ public class AttachmentrejectreasonAutocompleteElementResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("pkiAttachmentrejectreasonID", "sAttachmentrejectreasonnameX", "bAttachmentrejectreasonIsactive"));
+    openapiFields = new HashSet<String>(Arrays.asList("pkiAttachmentrejectreasonID", "sAttachmentrejectreasonNameX", "bAttachmentrejectreasonIsactive"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiAttachmentrejectreasonID", "sAttachmentrejectreasonnameX", "bAttachmentrejectreasonIsactive"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("pkiAttachmentrejectreasonID", "sAttachmentrejectreasonNameX", "bAttachmentrejectreasonIsactive"));
   }
 
   /**
@@ -207,8 +207,8 @@ public class AttachmentrejectreasonAutocompleteElementResponse {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("sAttachmentrejectreasonnameX").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sAttachmentrejectreasonnameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAttachmentrejectreasonnameX").toString()));
+      if (!jsonObj.get("sAttachmentrejectreasonNameX").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `sAttachmentrejectreasonNameX` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sAttachmentrejectreasonNameX").toString()));
       }
   }
 

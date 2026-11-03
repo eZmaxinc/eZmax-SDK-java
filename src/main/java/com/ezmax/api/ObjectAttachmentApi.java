@@ -28,15 +28,15 @@ import java.io.IOException;
 
 
 import com.ezmax.api.model.AttachmentDeleteV1Response;
-import com.ezmax.api.model.AttachmentDocumentTypeV1Request;
-import com.ezmax.api.model.AttachmentDocumentTypeV1Response;
 import com.ezmax.api.model.AttachmentGetAttachmentlogsV1Response;
-import com.ezmax.api.model.AttachmentPrivacyV1Request;
-import com.ezmax.api.model.AttachmentPrivacyV1Response;
 import com.ezmax.api.model.AttachmentRenameV1Request;
 import com.ezmax.api.model.AttachmentRenameV1Response;
 import com.ezmax.api.model.AttachmentRestoreV1Request;
 import com.ezmax.api.model.AttachmentRestoreV1Response;
+import com.ezmax.api.model.AttachmentSetDocumentTypeV1Request;
+import com.ezmax.api.model.AttachmentSetDocumentTypeV1Response;
+import com.ezmax.api.model.AttachmentSetPrivacyV1Request;
+import com.ezmax.api.model.AttachmentSetPrivacyV1Response;
 import com.ezmax.api.model.AttachmentValidateV1Request;
 import com.ezmax.api.model.AttachmentValidateV1Response;
 import com.ezmax.api.model.CommonResponseError;
@@ -230,155 +230,6 @@ public class ObjectAttachmentApi {
 
         okhttp3.Call localVarCall = attachmentDeleteV1ValidateBeforeCall(pkiAttachmentID, body, _callback);
         Type localVarReturnType = new TypeToken<AttachmentDeleteV1Response>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for attachmentDocumentTypeV1
-     * @param pkiAttachmentID  (required)
-     * @param attachmentDocumentTypeV1Request  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call attachmentDocumentTypeV1Call(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = attachmentDocumentTypeV1Request;
-
-        // create path and map variables
-        String localVarPath = "/1/object/attachment/{pkiAttachmentID}/documentType"
-            .replace("{" + "pkiAttachmentID" + "}", localVarApiClient.escapeString(pkiAttachmentID.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call attachmentDocumentTypeV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'pkiAttachmentID' is set
-        if (pkiAttachmentID == null) {
-            throw new ApiException("Missing the required parameter 'pkiAttachmentID' when calling attachmentDocumentTypeV1(Async)");
-        }
-
-        // verify the required parameter 'attachmentDocumentTypeV1Request' is set
-        if (attachmentDocumentTypeV1Request == null) {
-            throw new ApiException("Missing the required parameter 'attachmentDocumentTypeV1Request' when calling attachmentDocumentTypeV1(Async)");
-        }
-
-        return attachmentDocumentTypeV1Call(pkiAttachmentID, attachmentDocumentTypeV1Request, _callback);
-
-    }
-
-    /**
-     * Change attachment document type
-     * The endpoint allows to change the checklist document type for an attachment.
-     * @param pkiAttachmentID  (required)
-     * @param attachmentDocumentTypeV1Request  (required)
-     * @return AttachmentDocumentTypeV1Response
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
-     </table>
-     */
-    public AttachmentDocumentTypeV1Response attachmentDocumentTypeV1(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request) throws ApiException {
-        ApiResponse<AttachmentDocumentTypeV1Response> localVarResp = attachmentDocumentTypeV1WithHttpInfo(pkiAttachmentID, attachmentDocumentTypeV1Request);
-        return localVarResp.getData();
-    }
-
-    /**
-     * Change attachment document type
-     * The endpoint allows to change the checklist document type for an attachment.
-     * @param pkiAttachmentID  (required)
-     * @param attachmentDocumentTypeV1Request  (required)
-     * @return ApiResponse&lt;AttachmentDocumentTypeV1Response&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<AttachmentDocumentTypeV1Response> attachmentDocumentTypeV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request) throws ApiException {
-        okhttp3.Call localVarCall = attachmentDocumentTypeV1ValidateBeforeCall(pkiAttachmentID, attachmentDocumentTypeV1Request, null);
-        Type localVarReturnType = new TypeToken<AttachmentDocumentTypeV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Change attachment document type (asynchronously)
-     * The endpoint allows to change the checklist document type for an attachment.
-     * @param pkiAttachmentID  (required)
-     * @param attachmentDocumentTypeV1Request  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call attachmentDocumentTypeV1Async(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentDocumentTypeV1Request attachmentDocumentTypeV1Request, final ApiCallback<AttachmentDocumentTypeV1Response> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = attachmentDocumentTypeV1ValidateBeforeCall(pkiAttachmentID, attachmentDocumentTypeV1Request, _callback);
-        Type localVarReturnType = new TypeToken<AttachmentDocumentTypeV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -637,155 +488,6 @@ public class ObjectAttachmentApi {
 
         okhttp3.Call localVarCall = attachmentGetAttachmentlogsV1ValidateBeforeCall(pkiAttachmentID, _callback);
         Type localVarReturnType = new TypeToken<AttachmentGetAttachmentlogsV1Response>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
-        return localVarCall;
-    }
-    /**
-     * Build call for attachmentPrivacyV1
-     * @param pkiAttachmentID  (required)
-     * @param attachmentPrivacyV1Request  (required)
-     * @param _callback Callback for upload/download progress
-     * @return Call to execute
-     * @throws ApiException If fail to serialize the request body object
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call attachmentPrivacyV1Call(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentPrivacyV1Request attachmentPrivacyV1Request, final ApiCallback _callback) throws ApiException {
-        String basePath = null;
-        // Operation Servers
-        String[] localBasePaths = new String[] {  };
-
-        // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
-            basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
-            basePath = localBasePaths[localHostIndex];
-        } else {
-            basePath = null;
-        }
-
-        Object localVarPostBody = attachmentPrivacyV1Request;
-
-        // create path and map variables
-        String localVarPath = "/1/object/attachment/{pkiAttachmentID}/privacy"
-            .replace("{" + "pkiAttachmentID" + "}", localVarApiClient.escapeString(pkiAttachmentID.toString()));
-
-        List<Pair> localVarQueryParams = new ArrayList<Pair>();
-        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-        Map<String, String> localVarCookieParams = new HashMap<String, String>();
-        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-        final String[] localVarAccepts = {
-            "application/json"
-        };
-        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
-        if (localVarAccept != null) {
-            localVarHeaderParams.put("Accept", localVarAccept);
-        }
-
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
-        if (localVarContentType != null) {
-            localVarHeaderParams.put("Content-Type", localVarContentType);
-        }
-
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
-    }
-
-    @SuppressWarnings("rawtypes")
-    private okhttp3.Call attachmentPrivacyV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentPrivacyV1Request attachmentPrivacyV1Request, final ApiCallback _callback) throws ApiException {
-        // verify the required parameter 'pkiAttachmentID' is set
-        if (pkiAttachmentID == null) {
-            throw new ApiException("Missing the required parameter 'pkiAttachmentID' when calling attachmentPrivacyV1(Async)");
-        }
-
-        // verify the required parameter 'attachmentPrivacyV1Request' is set
-        if (attachmentPrivacyV1Request == null) {
-            throw new ApiException("Missing the required parameter 'attachmentPrivacyV1Request' when calling attachmentPrivacyV1(Async)");
-        }
-
-        return attachmentPrivacyV1Call(pkiAttachmentID, attachmentPrivacyV1Request, _callback);
-
-    }
-
-    /**
-     * Change the attachment privacy
-     * The endpoint allows to change an attachment&#39;s access privacy.
-     * @param pkiAttachmentID  (required)
-     * @param attachmentPrivacyV1Request  (required)
-     * @return AttachmentPrivacyV1Response
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
-     </table>
-     */
-    public AttachmentPrivacyV1Response attachmentPrivacyV1(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentPrivacyV1Request attachmentPrivacyV1Request) throws ApiException {
-        ApiResponse<AttachmentPrivacyV1Response> localVarResp = attachmentPrivacyV1WithHttpInfo(pkiAttachmentID, attachmentPrivacyV1Request);
-        return localVarResp.getData();
-    }
-
-    /**
-     * Change the attachment privacy
-     * The endpoint allows to change an attachment&#39;s access privacy.
-     * @param pkiAttachmentID  (required)
-     * @param attachmentPrivacyV1Request  (required)
-     * @return ApiResponse&lt;AttachmentPrivacyV1Response&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
-     </table>
-     */
-    public ApiResponse<AttachmentPrivacyV1Response> attachmentPrivacyV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentPrivacyV1Request attachmentPrivacyV1Request) throws ApiException {
-        okhttp3.Call localVarCall = attachmentPrivacyV1ValidateBeforeCall(pkiAttachmentID, attachmentPrivacyV1Request, null);
-        Type localVarReturnType = new TypeToken<AttachmentPrivacyV1Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
-    }
-
-    /**
-     * Change the attachment privacy (asynchronously)
-     * The endpoint allows to change an attachment&#39;s access privacy.
-     * @param pkiAttachmentID  (required)
-     * @param attachmentPrivacyV1Request  (required)
-     * @param _callback The callback to be executed when the API call finishes
-     * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-     * @http.response.details
-     <table border="1">
-       <caption>Response Details</caption>
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
-        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
-        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
-     </table>
-     */
-    public okhttp3.Call attachmentPrivacyV1Async(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentPrivacyV1Request attachmentPrivacyV1Request, final ApiCallback<AttachmentPrivacyV1Response> _callback) throws ApiException {
-
-        okhttp3.Call localVarCall = attachmentPrivacyV1ValidateBeforeCall(pkiAttachmentID, attachmentPrivacyV1Request, _callback);
-        Type localVarReturnType = new TypeToken<AttachmentPrivacyV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1092,6 +794,304 @@ public class ObjectAttachmentApi {
 
         okhttp3.Call localVarCall = attachmentRestoreV1ValidateBeforeCall(pkiAttachmentID, attachmentRestoreV1Request, _callback);
         Type localVarReturnType = new TypeToken<AttachmentRestoreV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for attachmentSetDocumentTypeV1
+     * @param pkiAttachmentID  (required)
+     * @param attachmentSetDocumentTypeV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentSetDocumentTypeV1Call(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = attachmentSetDocumentTypeV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/attachment/{pkiAttachmentID}/setDocumentType"
+            .replace("{" + "pkiAttachmentID" + "}", localVarApiClient.escapeString(pkiAttachmentID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call attachmentSetDocumentTypeV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiAttachmentID' is set
+        if (pkiAttachmentID == null) {
+            throw new ApiException("Missing the required parameter 'pkiAttachmentID' when calling attachmentSetDocumentTypeV1(Async)");
+        }
+
+        // verify the required parameter 'attachmentSetDocumentTypeV1Request' is set
+        if (attachmentSetDocumentTypeV1Request == null) {
+            throw new ApiException("Missing the required parameter 'attachmentSetDocumentTypeV1Request' when calling attachmentSetDocumentTypeV1(Async)");
+        }
+
+        return attachmentSetDocumentTypeV1Call(pkiAttachmentID, attachmentSetDocumentTypeV1Request, _callback);
+
+    }
+
+    /**
+     * Change attachment document type
+     * The endpoint allows to change the checklist document type for an attachment.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentSetDocumentTypeV1Request  (required)
+     * @return AttachmentSetDocumentTypeV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public AttachmentSetDocumentTypeV1Response attachmentSetDocumentTypeV1(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request) throws ApiException {
+        ApiResponse<AttachmentSetDocumentTypeV1Response> localVarResp = attachmentSetDocumentTypeV1WithHttpInfo(pkiAttachmentID, attachmentSetDocumentTypeV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Change attachment document type
+     * The endpoint allows to change the checklist document type for an attachment.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentSetDocumentTypeV1Request  (required)
+     * @return ApiResponse&lt;AttachmentSetDocumentTypeV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<AttachmentSetDocumentTypeV1Response> attachmentSetDocumentTypeV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request) throws ApiException {
+        okhttp3.Call localVarCall = attachmentSetDocumentTypeV1ValidateBeforeCall(pkiAttachmentID, attachmentSetDocumentTypeV1Request, null);
+        Type localVarReturnType = new TypeToken<AttachmentSetDocumentTypeV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Change attachment document type (asynchronously)
+     * The endpoint allows to change the checklist document type for an attachment.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentSetDocumentTypeV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentSetDocumentTypeV1Async(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentSetDocumentTypeV1Request attachmentSetDocumentTypeV1Request, final ApiCallback<AttachmentSetDocumentTypeV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = attachmentSetDocumentTypeV1ValidateBeforeCall(pkiAttachmentID, attachmentSetDocumentTypeV1Request, _callback);
+        Type localVarReturnType = new TypeToken<AttachmentSetDocumentTypeV1Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for attachmentSetPrivacyV1
+     * @param pkiAttachmentID  (required)
+     * @param attachmentSetPrivacyV1Request  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentSetPrivacyV1Call(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = attachmentSetPrivacyV1Request;
+
+        // create path and map variables
+        String localVarPath = "/1/object/attachment/{pkiAttachmentID}/setPrivacy"
+            .replace("{" + "pkiAttachmentID" + "}", localVarApiClient.escapeString(pkiAttachmentID.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "Authorization" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call attachmentSetPrivacyV1ValidateBeforeCall(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'pkiAttachmentID' is set
+        if (pkiAttachmentID == null) {
+            throw new ApiException("Missing the required parameter 'pkiAttachmentID' when calling attachmentSetPrivacyV1(Async)");
+        }
+
+        // verify the required parameter 'attachmentSetPrivacyV1Request' is set
+        if (attachmentSetPrivacyV1Request == null) {
+            throw new ApiException("Missing the required parameter 'attachmentSetPrivacyV1Request' when calling attachmentSetPrivacyV1(Async)");
+        }
+
+        return attachmentSetPrivacyV1Call(pkiAttachmentID, attachmentSetPrivacyV1Request, _callback);
+
+    }
+
+    /**
+     * Change the attachment privacy
+     * The endpoint allows to change an attachment&#39;s access privacy.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentSetPrivacyV1Request  (required)
+     * @return AttachmentSetPrivacyV1Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public AttachmentSetPrivacyV1Response attachmentSetPrivacyV1(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request) throws ApiException {
+        ApiResponse<AttachmentSetPrivacyV1Response> localVarResp = attachmentSetPrivacyV1WithHttpInfo(pkiAttachmentID, attachmentSetPrivacyV1Request);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Change the attachment privacy
+     * The endpoint allows to change an attachment&#39;s access privacy.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentSetPrivacyV1Request  (required)
+     * @return ApiResponse&lt;AttachmentSetPrivacyV1Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<AttachmentSetPrivacyV1Response> attachmentSetPrivacyV1WithHttpInfo(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request) throws ApiException {
+        okhttp3.Call localVarCall = attachmentSetPrivacyV1ValidateBeforeCall(pkiAttachmentID, attachmentSetPrivacyV1Request, null);
+        Type localVarReturnType = new TypeToken<AttachmentSetPrivacyV1Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Change the attachment privacy (asynchronously)
+     * The endpoint allows to change an attachment&#39;s access privacy.
+     * @param pkiAttachmentID  (required)
+     * @param attachmentSetPrivacyV1Request  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table border="1">
+       <caption>Response Details</caption>
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful response </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> The request is not allowed to be executed. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> The request failed. The element on which you were trying to work does not exists. Look for detail about the error in the body. </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> The request was syntactically valid but failed because of an interdependance condition. Look for detail about the error in the body. </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call attachmentSetPrivacyV1Async(@javax.annotation.Nonnull Integer pkiAttachmentID, @javax.annotation.Nonnull AttachmentSetPrivacyV1Request attachmentSetPrivacyV1Request, final ApiCallback<AttachmentSetPrivacyV1Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = attachmentSetPrivacyV1ValidateBeforeCall(pkiAttachmentID, attachmentSetPrivacyV1Request, _callback);
+        Type localVarReturnType = new TypeToken<AttachmentSetPrivacyV1Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
