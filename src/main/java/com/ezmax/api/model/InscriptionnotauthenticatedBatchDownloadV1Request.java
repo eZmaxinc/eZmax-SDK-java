@@ -51,7 +51,7 @@ import eZmaxAPI.JSON;
 /**
  * Request for POST /1/object/inscriptionnotauthenticated/{pkiInscriptionnotauthenticatedID}/batchDownload
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-03T20:40:23.702299288Z[Etc/UTC]", comments = "Generator version: 7.27.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-04T16:45:54.895124311Z[Etc/UTC]", comments = "Generator version: 7.27.0")
 public class InscriptionnotauthenticatedBatchDownloadV1Request {
   public static final String SERIALIZED_NAME_A_PKI_ATTACHMENT_I_D = "a_pkiAttachmentID";
   @SerializedName(SERIALIZED_NAME_A_PKI_ATTACHMENT_I_D)

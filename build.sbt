@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).
   settings(
     organization := "com.ezmax",
-    name := "ezmax-java",
+    name := "eZmax-SDK-java",
     version := "1.3.4",
     scalaVersion := "2.13.6",
     scalacOptions ++= Seq("-feature"),

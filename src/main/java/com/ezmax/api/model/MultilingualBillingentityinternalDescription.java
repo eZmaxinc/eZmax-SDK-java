@@ -49,7 +49,7 @@ import eZmaxAPI.JSON;
 /**
  * The description of the Billingentityinternal
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-03T20:40:23.702299288Z[Etc/UTC]", comments = "Generator version: 7.27.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-04T16:45:54.895124311Z[Etc/UTC]", comments = "Generator version: 7.27.0")
 public class MultilingualBillingentityinternalDescription {
   public static final String SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION1 = "sBillingentityinternalDescription1";
   @SerializedName(SERIALIZED_NAME_S_BILLINGENTITYINTERNAL_DESCRIPTION1)
