@@ -58,7 +58,7 @@ import eZmaxAPI.JSON;
 /**
  * A Custom Attachment Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-04T16:45:54.895124311Z[Etc/UTC]", comments = "Generator version: 7.27.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-05T15:20:40.178289161Z[Etc/UTC]", comments = "Generator version: 7.27.0")
 public class CustomAttachmentResponse {
   public static final String SERIALIZED_NAME_PKI_ATTACHMENT_I_D = "pkiAttachmentID";
   @SerializedName(SERIALIZED_NAME_PKI_ATTACHMENT_I_D)
