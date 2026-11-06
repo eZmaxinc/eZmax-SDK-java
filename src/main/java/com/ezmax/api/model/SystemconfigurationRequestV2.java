@@ -53,7 +53,9 @@ import eZmaxAPI.JSON;
 /**
  * A Systemconfiguration Object
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-05T15:20:40.178289161Z[Etc/UTC]", comments = "Generator version: 7.27.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.27.0")
+
+
 public class SystemconfigurationRequestV2 {
   public static final String SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D = "pkiSystemconfigurationID";
   @SerializedName(SERIALIZED_NAME_PKI_SYSTEMCONFIGURATION_I_D)

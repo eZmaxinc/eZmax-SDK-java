@@ -49,7 +49,9 @@ import eZmaxAPI.JSON;
 /**
  * A Contacttitle AutocompleteElement Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-11-05T15:20:40.178289161Z[Etc/UTC]", comments = "Generator version: 7.27.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.27.0")
+
+
 public class ContacttitleAutocompleteElementResponse {
   public static final String SERIALIZED_NAME_PKI_CONTACTTITLE_I_D = "pkiContacttitleID";
   @SerializedName(SERIALIZED_NAME_PKI_CONTACTTITLE_I_D)
